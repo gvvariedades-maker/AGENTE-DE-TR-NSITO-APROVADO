@@ -61,11 +61,11 @@ Escala via `--radius` (0.625rem base):
 
 Não inventar `rounded-3xl` em tudo.
 
-## Dark mode
+## Tema claro (padrão)
 
-O `<html>` já tem classe `dark` em `layout.tsx`. Testar sempre em dark — é o modo primário de estudo noturno.
+Tema claro ativo por padrão em `layout.tsx`. Fundo `bg-background` quase branco com leve tom azul institucional.
 
-Contraste mínimo: 4.5:1 texto normal, 3:1 texto grande e componentes UI.
+Contraste mínimo: 4.5:1 texto normal, 3:1 texto grande — validar em fundo claro.
 
 ## Proibido
 

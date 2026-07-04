@@ -43,7 +43,7 @@ export function SemaforoVisual({
     >
       <div
         className={cn(
-          "flex flex-col items-center bg-foreground/10 ring-1 ring-border/60",
+          "flex flex-col items-center bg-semaforo-housing ring-1 ring-border",
           housing,
         )}
       >

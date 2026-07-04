@@ -50,7 +50,7 @@ export function DashboardHero({ diasParaProva, semaforo }: DashboardHeroProps) {
             <Badge className="border-transito/40 bg-transito/15 text-transito-foreground">
               IDECAN · Edital 04/2026
             </Badge>
-            <Badge variant="outline" className="border-faixa/30 text-faixa">
+            <Badge variant="outline" className="border-transito/25 text-transito-foreground">
               STTP Campina Grande/PB
             </Badge>
           </div>

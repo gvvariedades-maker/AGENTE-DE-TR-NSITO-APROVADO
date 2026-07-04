@@ -14,8 +14,18 @@ export const DISCIPLINAS_ESPECIFICOS = [
   "legislacao_transito",
 ] as const satisfies readonly Disciplina[];
 
-/** Cada questão vale 100/60 pontos na prova objetiva */
+/** Cada questão vale 100/60 pontos na projeção por tentativas (dashboard sem simulado). */
 export const PONTOS_POR_QUESTAO = 100 / 60;
+
+/** Peso por acerto na prova objetiva real (edital 04/2026). */
+export const PESO_ACERTO_GERAL = 1;
+export const PESO_ACERTO_ESPECIFICO = 2;
+
+export function pesoAcerto(disciplina: Disciplina): number {
+  return isDisciplinaGeral(disciplina)
+    ? PESO_ACERTO_GERAL
+    : PESO_ACERTO_ESPECIFICO;
+}
 
 export const MIN_PONTOS_TOTAL = 50;
 export const MIN_PONTOS_DISCIPLINA_GERAL = 1;

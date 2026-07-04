@@ -1,6 +1,5 @@
 import type { RetencaoResumo, AtividadeDia, EstadoRetencao } from "@/lib/retencao";
 import { cn } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
@@ -8,8 +7,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button";
 
 const ESTADOS: {
   key: EstadoRetencao;
@@ -55,7 +52,7 @@ export function CicloRetencao({ resumo, atividade }: CicloRetencaoProps) {
           Ciclo de retenção
         </h2>
         <p className="text-sm text-muted-foreground">
-          Estados SRS inspirados no Anki/FSRS — consolidação visível
+          Acompanhe como o conteúdo vai fixando na memória ao longo dos dias
         </p>
       </div>
 
@@ -65,7 +62,7 @@ export function CicloRetencao({ resumo, atividade }: CicloRetencaoProps) {
             <CardTitle className="text-base">Mapa de memória</CardTitle>
             <CardDescription>
               {resumo.hasData
-                ? `${total} cartões no ciclo espaçado`
+                ? `${total} itens no ciclo de revisão`
                 : "Resolva questões para ativar o ciclo"}
             </CardDescription>
           </CardHeader>
@@ -109,16 +106,11 @@ export function CicloRetencao({ resumo, atividade }: CicloRetencaoProps) {
               </>
             ) : (
               <p className="text-sm text-muted-foreground">
-                O algoritmo SRS agenda revisões em +1, +3, +7, +14 e +30 dias.
-                Cada acerto empurra a revisão; cada erro reinicia o ciclo.
+                Quanto mais você pratica, mais espaçadas ficam as revisões — o
+                app lembra o que revisar e quando.
               </p>
             )}
 
-            {resumo.revisoesHoje > 0 && (
-              <Badge variant="outline" className="w-fit border-semaforo-amarelo/50 text-semaforo-amarelo">
-                {resumo.revisoesHoje} revisões pendentes hoje
-              </Badge>
-            )}
           </CardContent>
         </Card>
 
@@ -132,37 +124,39 @@ export function CicloRetencao({ resumo, atividade }: CicloRetencaoProps) {
           <CardContent>
             <div
               className="flex h-24 items-end justify-between gap-1.5"
-              role="img"
+              role="list"
               aria-label="Atividade de estudo nos últimos 7 dias"
             >
               {atividade.map((dia, i) => (
                 <div
                   key={dia.data}
                   className="flex flex-1 flex-col items-center gap-1"
+                  role="listitem"
+                  aria-label={`${diasLabel[i]}: ${dia.total} questões`}
                 >
+                  <span className="text-xs font-medium tabular-nums text-muted-foreground">
+                    {dia.total > 0 ? dia.total : "·"}
+                  </span>
                   <div
                     className={cn(
                       "w-full min-h-1 rounded-sm bg-transito/20",
                       dia.total > 0 && "bg-transito",
                     )}
                     style={{
-                      height: `${Math.max(8, (dia.total / maxAtividade) * 72)}px`,
+                      height: `${Math.max(8, (dia.total / maxAtividade) * 56)}px`,
                     }}
-                    title={`${dia.total} questões`}
                   />
-                  <span className="text-[10px] text-muted-foreground">
+                  <span className="text-xs text-muted-foreground">
                     {diasLabel[i]}
                   </span>
                 </div>
               ))}
             </div>
             {!atividade.some((a) => a.total > 0) && (
-              <Link
-                href="/estudo"
-                className={cn(buttonVariants({ size: "sm" }), "mt-4 w-full")}
-              >
-                Iniciar sessão de hoje
-              </Link>
+              <p className="mt-3 text-center text-sm text-muted-foreground">
+                Nenhuma questão nos últimos 7 dias. Use &quot;Sua prova hoje&quot;
+                acima para iniciar.
+              </p>
             )}
           </CardContent>
         </Card>

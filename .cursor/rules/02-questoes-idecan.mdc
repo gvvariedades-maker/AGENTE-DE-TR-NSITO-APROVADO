@@ -11,7 +11,8 @@ Referência de estilo: PDFs em `conteúdo/questões reais/` (CTB, Português, In
 ## Regras obrigatórias
 
 - Questões **100% inéditas**; inspiradas no estilo IDECAN, nunca cópia literal
-- Todo gabarito exige **fundamento legal citável** (artigo, resolução, lei)
+- **4 alternativas (A–D)** — edital item 10.4
+- Todo gabarito exige **fundamento legal citável** (artigo, resolução, lei) — versão vigente (retificação prevalece)
 - Alternativas com comprimento e tom **homogêneos**
 - Comandos típicos: "assinale a CORRETA/INCORRETA", assertivas I–V, correspondência
 
@@ -27,7 +28,7 @@ Referência de estilo: PDFs em `conteúdo/questões reais/` (CTB, Português, In
 ```json
 {
   "disciplina": "legislacao_transito",
-  "topico": "CTB_art_165_168",
+  "topico": "CTB_conducao_embriaguez",
   "tipo": "caso_pratico",
   "estilo_idecan": "pegadinha_pode_deve",
   "dificuldade": 3,
@@ -36,11 +37,11 @@ Referência de estilo: PDFs em `conteúdo/questões reais/` (CTB, Português, In
   "gabarito": "C",
   "comentario": {
     "o_que_testa": "...",
-    "fundamento_legal": "CTB, art. 165...",
+    "fundamento_legal": "CTB, art. 165-A...",
     "passo_a_passo": ["1...", "2..."],
     "pegadinha": "...",
     "macete": "...",
-    "estudo_reverso": ["CTB art. 166", "Res. CONTRAN 432"]
+    "estudo_reverso": ["CTB art. 165", "CTB art. 165-A", "CTB art. 277"]
   },
   "tags": ["embriaguez", "etilometro"]
 }
@@ -58,6 +59,10 @@ Referência de estilo: PDFs em `conteúdo/questões reais/` (CTB, Português, In
 
 ## Validação antes de importar
 
+- `npm run validate:questoes -- content/questoes/.../lote.json` (schema + citações legais)
+- `npm run validate:indistinguibilidade -- content/questoes/.../lote.json` (heurísticas de paridade IDECAN)
+- Rubrica manual: `.cursor/skills/examinador-idecan/rubrica-indistinguibilidade.md` (≥ 85/questão)
+- Teste cego: `.cursor/skills/examinador-idecan/teste-cego.md` (acurácia ≤ 55%)
 - Gabarito existe nas alternativas
 - `comentario.fundamento_legal` preenchido
 - `dificuldade` entre 1–5

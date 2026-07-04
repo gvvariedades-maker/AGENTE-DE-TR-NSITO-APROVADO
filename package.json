@@ -12,7 +12,10 @@
     "db:studio": "drizzle-kit studio",
     "db:seed": "tsx scripts/seed-questions.ts",
     "check:env": "tsx scripts/check-env.ts",
-    "validate:questoes": "tsx .cursor/skills/examinador-idecan/scripts/validate-questao.ts"
+    "validate:questoes": "tsx .cursor/skills/examinador-idecan/scripts/validate-questao.ts",
+    "validate:citacoes": "tsx .cursor/skills/examinador-idecan/scripts/validate-citacoes.ts",
+    "validate:indistinguibilidade": "tsx .cursor/skills/examinador-idecan/scripts/validate-indistinguibilidade.ts",
+    "analyze:idecan": "python .cursor/skills/examinador-idecan/scripts/analisar-pdfs-idecan.py"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

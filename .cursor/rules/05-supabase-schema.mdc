@@ -12,7 +12,10 @@ alwaysApply: false
 - `questions` — banco de questões (`topic_id`, `enunciado`, `alt_a`…`alt_e`, `gabarito`, `tipo`, `estilo_idecan`, `dificuldade`, `comentario_json`, `tags`)
 - `attempts` — respostas (`user_id`, `question_id`, `resposta`, `acertou`, `tempo_seg`, `modo`)
 - `simulados` — tentativas completas (`nota_total`, `notas_disciplina_json`, `zerou_disciplina`, `duracao_min`)
-- `srs_cards` — repetição espaçada por usuário/questão
+- `srs_cards` — repetição espaçada FSRS-4.5 por usuário/questão
+  (`difficulty`, `stability`, `reps`, `lapses`, `state`, `next_review`,
+  `interval_days`; algoritmo em `src/lib/srs.ts`, ver
+  `.cursor/rules/03-estudo-reverso.mdc`)
 
 ## RLS (obrigatório)
 

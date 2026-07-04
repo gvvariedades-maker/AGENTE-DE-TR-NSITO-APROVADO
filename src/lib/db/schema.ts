@@ -4,6 +4,7 @@ import {
   jsonb,
   pgEnum,
   pgTable,
+  real,
   text,
   timestamp,
   uuid,
@@ -80,6 +81,7 @@ export const simulados = pgTable("simulados", {
     .notNull(),
 });
 
+/** Estado FSRS-4.5 do card. Ver src/lib/srs.ts para o algoritmo. */
 export const srsCards = pgTable("srs_cards", {
   id: uuid("id").defaultRandom().primaryKey(),
   userId: uuid("user_id").notNull(),
@@ -88,7 +90,14 @@ export const srsCards = pgTable("srs_cards", {
     .notNull(),
   nextReview: timestamp("next_review", { withTimezone: true }).notNull(),
   intervalDays: integer("interval_days").notNull().default(1),
-  easeFactor: integer("ease_factor").notNull().default(250),
+  /** FSRS: dificuldade do item, escala 1-10 (default = w4). */
+  difficulty: real("difficulty").notNull().default(5.1618),
+  /** FSRS: estabilidade da memória em dias (R=90% quando t=stability). */
+  stability: real("stability").notNull().default(0),
+  reps: integer("reps").notNull().default(0),
+  lapses: integer("lapses").notNull().default(0),
+  state: text("state").notNull().default("new"),
+  lastReview: timestamp("last_review", { withTimezone: true }),
   createdAt: timestamp("created_at", { withTimezone: true })
     .defaultNow()
     .notNull(),

@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import type { ZonaMetrica } from "@/lib/semaforo";
-import { formatPontos } from "@/lib/semaforo";
+import { formatPontos } from "@/lib/semaforo-format";
 import { SemaforoVisual } from "@/components/dashboard/semaforo-visual";
 import {
   Card,

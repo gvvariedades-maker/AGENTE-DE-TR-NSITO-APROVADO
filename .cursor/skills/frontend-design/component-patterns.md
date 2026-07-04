@@ -105,7 +105,7 @@ Item simples com borda — sem card pesado:
 </button>
 ```
 
-Desktop: suportar atalhos de teclado A–D (e E se 5 alternativas) via `"use client"`.
+Desktop: atalhos de teclado **A–D** via `"use client"` (4 alternativas neste edital).
 
 ## Barra de simulado (fixa)
 

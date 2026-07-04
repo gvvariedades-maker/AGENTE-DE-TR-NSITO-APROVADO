@@ -6,25 +6,75 @@ alwaysApply: false
 
 # Motor pedagógico
 
+Base científica desta regra (auditada e corrigida — ver changelog no fim):
+testing effect (Roediger & Karpicke, 2006), spacing effect (Cepeda et al.,
+2006/2008), interleaving via discriminative-contrast hypothesis (Rohrer &
+Taylor, 2007; Rohrer, Dedrick & Stershic, 2015), FSRS como scheduler de
+repetição espaçada (open-spaced-repetition, benchmark de ~350-700M revisões
+reais). "Neuro visual"/estilos de aprendizagem NÃO é usado aqui — é
+neuromito sem sustentação empírica (Pashler et al., 2008); onde o produto
+usa visual, é por Cognitive Load Theory + Dual Coding, não por "tipo de
+aluno" (ver `.cursor/skills/frontend-design/retencao-visual.md`).
+
 ## Simulado Espelho
 
 - Exatamente 60 questões na proporção do edital
-- Timer 4h; modo prova = zero feedback até o fim
+- Timer 4h; modo prova = zero feedback até o fim (transfer-appropriate
+  processing — testar nas condições reais da prova)
+- Ao **finalizar**, grava em `simulados`: `nota_total`, `notas_disciplina_json`,
+  `zerou_disciplina`, `duracao_min` (`src/app/actions/simulado.ts` +
+  `src/lib/simulado-nota.ts`)
+- Nota: Gerais = 1 pt/acerto; Específicos = 2 pts/acerto (peso do edital)
+- `zerou_disciplina` = disciplina presente na prova abaixo do mínimo (1 pt
+  Gerais / 2 pts Específicos)
 - Resultado: nota total + nota por disciplina + flag `zerou_disciplina`
 - Critérios eliminatórios idênticos ao edital (50 pts + mínimos)
 
 ## Estudo Reverso (ao errar)
 
-1. Classificar erro: `decoreba` | `interpretacao` | `pegadinha_idecan` | `confusao_artigos`
-2. Exibir comentário Professor Elite + lei seca grifada (link para Resoluções CONTRAN quando aplicável)
-3. Liberar 3 questões irmãs no mesmo microtópico
-4. Domínio: acertar **2 seguidas** antes de avançar
+1. Classificar erro: `decoreba` | `interpretacao` | `pegadinha_idecan` |
+   `confusao_artigos` — **heurística de produto**, não taxonomia de
+   pesquisa; útil para direcionar o comentário, não citar como "cientificamente
+   validada"
+2. Exibir comentário Professor Elite + lei seca grifada (link para
+   Resoluções CONTRAN quando aplicável) — elaboration (Roediger & Karpicke)
+3. Gerar 3 questões irmãs no mesmo microtópico, mas **NUNCA entregá-las em
+   sequência imediata (AAA)** — isso é prática maciça e infla acerto por
+   fluência ilusória de curtíssimo prazo (Bjork), não por consolidação.
+   Distribuir intercaladas com outras questões/tópicos na mesma sessão
+   (ABAB/ABCA) antes de repetir o padrão, ou empurrar 1-2 delas para a
+   próxima sessão via `srs_cards`. Nunca mostrar a 2ª irmã logo após a 1ª
+   sem pelo menos 1 questão de outro tópico no meio.
+4. Domínio: acertar **2 seguidas** (mesmo critério usado no dashboard e no
+   skill `professor-cadeia`) — mas as 2 tentativas devem estar espaçadas
+   (itens 3 acima), nunca nas 2 primeiras respostas consecutivas da mesma
+   sessão
 
-## Repetição espaçada (SM-2 simplificado)
+## Repetição espaçada — FSRS-4.5
 
-- Errou: revisar em 1 dia
-- Acertou: 1d → 3d → 7d → 15d → 30d
-- Persistir em `srs_cards`: `next_review`, `interval_days`, `ease_factor`
+Algoritmo implementado em `src/lib/srs.ts` (`agendarProximaRevisao`).
+Substitui o antigo "SM-2 simplificado" (nunca chegou a ser implementado —
+o schema tinha `ease_factor` mas nada o lia). FSRS modela cada card por
+`difficulty` (1-10) + `stability` (dias, R=90% quando t=stability), com
+pesos padrão publicados (`FSRS_DEFAULT_WEIGHTS`), não um cronograma fixo
+igual para todo mundo.
+
+- Acertou → `nextRecallStability`; errou → `nextForgetStability` (fórmulas
+  oficiais do FSRS-4.5, não craveadas por nós)
+- Intervalo cresce/encolhe por item e por usuário — sem teto artificial de
+  30 dias; card muito consolidado pode ir a 60, 90+ dias
+- `agendarProximaRevisao` nunca agenda `next_review` depois de `PROVA_DATA`
+  (`src/types/index.ts`) — não há ROI em relembrar algo depois da prova
+- Persistir em `srs_cards`: `next_review`, `interval_days`, `difficulty`,
+  `stability`, `reps`, `lapses`, `state`
+- Limitação assumida no MVP: `attempts.acertou` é booleano, então só existem
+  as notas Again/Good (não Hard/Easy do FSRS original) — ainda assim muito
+  mais preciso que um cronograma fixo. Evoluir para 4 notas exige UI de
+  confiança na resposta (fora de escopo desta regra)
+
+Classificação de maturidade em `src/lib/retencao.ts` usa `stability` (não
+mais `interval_days`): `aprendendo` (<7d) → `jovem` (7-21d) → `maduro`
+(≥21d), convenção Anki/FSRS.
 
 ## Modos de treino
 
@@ -41,3 +91,13 @@ alwaysApply: false
 - Heatmap CTB por capítulo
 - Meta diária: questões + revisões SRS pendentes
 - Contagem regressiva para 30/08/2026
+
+## Changelog
+
+- **2026-07-04** — auditoria científica: SM-2 (nunca implementado) trocado
+  por FSRS-4.5 real em `src/lib/srs.ts`; migration `upgrade_srs_fsrs`
+  remove `ease_factor` morto e adiciona `difficulty`/`stability`/`reps`/
+  `lapses`/`state`; corrigida prática maciça das "3 questões irmãs"
+  (agora intercaladas, nunca em sequência); removido teto fixo de 30 dias;
+  taxonomia de erro relabelada como heurística de produto, não achado
+  científico.

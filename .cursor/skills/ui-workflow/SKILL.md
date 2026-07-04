@@ -51,3 +51,7 @@ Só quando o usuário fornecer URL Figma (`https://figma.com/design/...?node-id=
 - `.cursor/skills/frontend-design/` — design system e implementação
 - `.cursor/skills/figma-implement-design/` — Figma → código
 - Skill global `canvas` — protótipos `.canvas.tsx`
+
+## Documentação
+
+- **[prompts.md](prompts.md)** — guia de skills, evidência de retenção e prompts prontos para copiar

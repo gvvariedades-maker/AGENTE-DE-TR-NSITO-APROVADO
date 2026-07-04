@@ -10,7 +10,7 @@ Baseado em pesquisa (testing effect, CLT, SRS, feedback elaborado). Aplicar em t
 | Feedback imediato adaptativo | Frontiers Psych 2021 | `FeedbackElaborado` — acerto = KR breve; erro = EF em blocos |
 | Carga cognitiva baixa | CLT / IJCSIT 2025 | Uma questão/tela, modo foco, progressive disclosure |
 | Chunking mobile | TechClass microlearning | Enunciado scrollável; feedback em etapas |
-| SRS visual | Anki / FSRS | `CicloRetencao` — aprendendo / jovem / maduro |
+| SRS visual | Anki / FSRS-4.5 (`src/lib/srs.ts`) | `CicloRetencao` — aprendendo / jovem / maduro (por `stability`) |
 | Consistência | Duolingo/Anki heatmaps | Barra 7 dias no dashboard |
 | Uma ação primária | Peps McCrea LID | Um CTA por fase (revelar → confirmar → próximo) |
 

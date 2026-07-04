@@ -10,7 +10,7 @@ alwaysApply: false
 
 - PDFs reais IDECAN: `conteúdo/questões reais/` (referência de estilo e extração)
 - Edital e retificação: `conteúdo/` (mapeamento de tópicos)
-- Resoluções CONTRAN: `conteúdo/RESOLUÇÃO CONTRAN Nº...` (fundamento legal)
+- Resoluções CONTRAN: `conteúdo/resoluções CONTRAN/` (lista retificada em `conteudo-programatico.md`)
 
 ## Destino estruturado
 
@@ -31,7 +31,7 @@ alwaysApply: false
 
 ## Fluxo de import
 
-1. Validar JSON com schema Zod (regra `02-questoes-idecan`)
+1. Validar JSON com schema Zod + citações (`npm run validate:questoes -- ...`)
 2. Upsert `topics` conforme Anexo I retificado
 3. Insert `questions` com `comentario_json`
 4. Log: total importado, erros por arquivo

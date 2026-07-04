@@ -7,7 +7,7 @@ Checklist bloqueante antes de entregar qualquer tela.
 - [ ] Texto normal: ratio ≥ 4.5:1 contra o fundo
 - [ ] Texto grande (≥18px ou ≥14px bold): ratio ≥ 3:1
 - [ ] Componentes UI e bordas de foco: ratio ≥ 3:1
-- [ ] Testar em **dark mode** (modo primário do app)
+- [ ] Testar em **tema claro** (modo padrão do app)
 
 ## Teclado e foco
 

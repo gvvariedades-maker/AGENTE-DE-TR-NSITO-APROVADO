@@ -151,29 +151,44 @@ export type Database = {
       srs_cards: {
         Row: {
           created_at: string;
-          ease_factor: number;
+          difficulty: number;
           id: string;
           interval_days: number;
+          lapses: number;
+          last_review: string | null;
           next_review: string;
           question_id: string;
+          reps: number;
+          stability: number;
+          state: string;
           user_id: string;
         };
         Insert: {
           created_at?: string;
-          ease_factor?: number;
+          difficulty?: number;
           id?: string;
           interval_days?: number;
+          lapses?: number;
+          last_review?: string | null;
           next_review: string;
           question_id: string;
+          reps?: number;
+          stability?: number;
+          state?: string;
           user_id: string;
         };
         Update: {
           created_at?: string;
-          ease_factor?: number;
+          difficulty?: number;
           id?: string;
           interval_days?: number;
+          lapses?: number;
+          last_review?: string | null;
           next_review?: string;
           question_id?: string;
+          reps?: number;
+          stability?: number;
+          state?: string;
           user_id?: string;
         };
         Relationships: [

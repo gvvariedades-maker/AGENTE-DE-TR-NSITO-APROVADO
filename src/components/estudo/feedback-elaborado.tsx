@@ -16,6 +16,8 @@ interface FeedbackElaboradoProps {
   acertou: boolean;
   gabarito: string;
   comentario: ComentarioQuestao;
+  dominioAlcancado?: boolean;
+  tipoErroLabel?: string;
 }
 
 /**
@@ -26,6 +28,8 @@ export function FeedbackElaborado({
   acertou,
   gabarito,
   comentario,
+  dominioAlcancado,
+  tipoErroLabel,
 }: FeedbackElaboradoProps) {
   const [passo, setPasso] = useState(acertou ? 0 : 1);
 
@@ -47,9 +51,19 @@ export function FeedbackElaborado({
         </CardHeader>
         <CardContent>
           <p className="text-sm text-muted-foreground">
-            Boa recuperação ativa. Reforce em{" "}
-            <span className="font-medium text-foreground">3 dias</span> via
-            estudo reverso.
+            {dominioAlcancado ? (
+              <>
+                <span className="font-medium text-semaforo-verde">
+                  Microtópico dominado
+                </span>{" "}
+                — 2 acertos seguidos. Próxima revisão agendada pelo FSRS.
+              </>
+            ) : (
+              <>
+                Boa recuperação ativa. Próxima revisão agendada pelo algoritmo
+                FSRS conforme sua retenção.
+              </>
+            )}
           </p>
           <details className="mt-3 text-sm">
             <summary className="cursor-pointer font-medium text-foreground">
@@ -121,6 +135,11 @@ export function FeedbackElaborado({
         <CardTitle className="text-base text-semaforo-vermelho">
           Incorreto — feedback elaborado
         </CardTitle>
+        {tipoErroLabel && (
+          <Badge variant="outline" className="mt-1 w-fit text-xs">
+            {tipoErroLabel}
+          </Badge>
+        )}
         <p className="text-xs text-muted-foreground">
           Um bloco por vez para fixar o conteúdo (carga cognitiva controlada)
         </p>
@@ -157,7 +176,7 @@ export function FeedbackElaborado({
           </button>
         ) : (
           <p className="text-center text-xs text-muted-foreground">
-            Revise os tópicos acima em 24h para consolidar.
+            Questões irmãs serão intercaladas na sessão. Revisão SRS em 1 dia.
           </p>
         )}
 

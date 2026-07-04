@@ -28,15 +28,19 @@ const QUESTAO_DEMO: QuestaoUI = {
     o_que_testa:
       "Conhecimento sobre embriaguez ao volante e consequência jurídica da recusa ao etilômetro.",
     fundamento_legal:
-      "CTB, art. 165, §3º: recusa ao teste configura infração autônoma (art. 165-A).",
+      "CTB, art. 165-A: recusar-se a ser submetido a teste, exame clínico, perícia ou outro procedimento que permita certificar influência de álcool ou outra substância psicoativa, na forma do art. 277, configura infração autônoma de trânsito.",
     passo_a_passo: [
       "O enunciado descreve sinais de alteração psicomotora + recusa ao etilômetro.",
-      "A) Erra: a recusa não impede autuação.",
-      "C) Correta: recusa = infração autônoma.",
+      "A) Erra: a recusa não impede autuação — é infração autônoma (art. 165-A).",
+      "B) Erra: não é necessário aguardar perito para autuação administrativa.",
+      "C) Correta: a recusa configura infração autônoma prevista no art. 165-A do CTB.",
+      "D) Erra: confunde necessidade de confirmação etílica com a recusa em si.",
     ],
-    pegadinha: "IDECAN troca recusa por necessidade de confirmação etílica.",
-    macete: "Recusou o bafômetro = infração autônoma.",
-    estudo_reverso: ["CTB art. 165", "CTB art. 165-A"],
+    pegadinha:
+      "IDECAN troca recusa por necessidade de confirmação etílica — candidato acha que sem teste positivo não há infração.",
+    macete:
+      "Recusou o bafômetro = infração autônoma (art. 165-A). Não precisa estar bêbado no teste.",
+    estudo_reverso: ["CTB art. 165", "CTB art. 165-A", "CTB art. 277"],
   },
 };
 
@@ -96,9 +100,16 @@ export async function getQuestaoById(id: string): Promise<QuestaoUI | null> {
   }
 }
 
-export async function getQuestoesLista(limit = 60): Promise<QuestaoUI[]> {
+export async function getQuestoesLista(
+  limit = 60,
+  disciplina?: Disciplina,
+): Promise<QuestaoUI[]> {
   try {
-    const rows = await db
+    const conditions = disciplina
+      ? eq(topics.disciplina, disciplina)
+      : undefined;
+
+    const query = db
       .select({
         id: questions.id,
         enunciado: questions.enunciado,
@@ -112,8 +123,11 @@ export async function getQuestoesLista(limit = 60): Promise<QuestaoUI[]> {
         disciplina: topics.disciplina,
       })
       .from(questions)
-      .innerJoin(topics, eq(questions.topicId, topics.id))
-      .limit(limit);
+      .innerJoin(topics, eq(questions.topicId, topics.id));
+
+    const rows = await (conditions
+      ? query.where(conditions).limit(limit)
+      : query.limit(limit));
 
     return rows.map(mapRowToQuestao);
   } catch {

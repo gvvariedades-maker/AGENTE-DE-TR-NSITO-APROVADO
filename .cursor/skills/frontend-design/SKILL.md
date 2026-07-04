@@ -17,7 +17,7 @@ Designer front-end sênior + engenheiro UI para o **Agente de Trânsito Aprovado
 | Design system (globs) | `.cursor/rules/08-design-system.mdc` |
 | Tokens CSS | `src/app/globals.css` |
 | Componentes base | `src/components/ui/` |
-| Layout raiz | `src/app/layout.tsx` (`dark` fixo no `<html>`) |
+| Layout raiz | `src/app/layout.tsx` (tema claro padrão) |
 
 **Prioridade:** regras do projeto > tokens existentes > pesquisa externa.
 
@@ -73,7 +73,7 @@ Padrões por tela: [component-patterns.md](component-patterns.md)
 Da rule `06-ui-ux-estudo.mdc`:
 
 - Enunciados: `text-lg` mínimo (≥18px), `leading-relaxed`
-- Dark mode obrigatório (já ativo no layout)
+- Tema claro padrão (fundo claro, azul institucional)
 - Semáforo: verde acerto, vermelho erro, amarelo revisão, azul institucional
 - Simulado: barra de progresso, timer visível, alerta 30 min finais
 - Desktop: atalhos A/B/C/D/E nas alternativas
@@ -120,6 +120,7 @@ Ao auditar código existente:
 
 ## Recursos
 
+- [prompts.md](../ui-workflow/prompts.md) — guia de retenção, skills e prompts prontos
 - [design-tokens.md](design-tokens.md) — paleta OKLCH e escala
 - [retencao-visual.md](retencao-visual.md) — padrões com evidência para retenção
 - [anti-slop.md](anti-slop.md) — padrões proibidos

@@ -1,6 +1,17 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState, useTransition } from "react";
+import { salvarTentativa } from "@/app/actions/estudo";
+import {
+  finalizarSimulado,
+  type FinalizarSimuladoResult,
+} from "@/app/actions/simulado";
+import {
+  intercalarIrmas,
+  labelTipoErro,
+} from "@/lib/estudo-reverso-utils";
+import { montarRespostasSimulado } from "@/lib/simulado-nota";
+import { SimuladoResultado } from "@/components/estudo/simulado-resultado";
 import { DISCIPLINA_LABELS } from "@/types";
 import type { QuestaoUI } from "@/lib/questoes";
 import { AlternativaButton } from "@/components/estudo/alternativa-button";
@@ -22,7 +33,18 @@ interface QuestaoViewProps {
   duracaoMinutos?: number;
 }
 
-const LETRAS = ["A", "B", "C", "D", "E"] as const;
+const TECLA_PARA_LETRA: Record<string, string> = {
+  A: "A",
+  B: "B",
+  C: "C",
+  D: "D",
+  E: "E",
+  "1": "A",
+  "2": "B",
+  "3": "C",
+  "4": "D",
+  "5": "E",
+};
 const DURACAO_SIMULADO_MS = 4 * 60 * 60 * 1000;
 const ALERTA_MINUTOS = 30;
 
@@ -35,11 +57,12 @@ function formatarTempo(ms: number): string {
 }
 
 export function QuestaoView({
-  questoes,
+  questoes: questoesIniciais,
   modo,
   indiceInicial = 0,
   duracaoMinutos,
 }: QuestaoViewProps) {
+  const [lista, setLista] = useState(questoesIniciais);
   const [indice, setIndice] = useState(indiceInicial);
   const [selecionada, setSelecionada] = useState<string | null>(null);
   const [confirmada, setConfirmada] = useState(false);
@@ -49,6 +72,17 @@ export function QuestaoView({
   );
   const [acertos, setAcertos] = useState(0);
   const [erros, setErros] = useState(0);
+  const [dominioAlcancado, setDominioAlcancado] = useState(false);
+  const [tipoErroLabel, setTipoErroLabel] = useState<string | undefined>();
+  const [salvando, startSalvar] = useTransition();
+  const [finalizando, startFinalizar] = useTransition();
+  const [resultadoSimulado, setResultadoSimulado] =
+    useState<FinalizarSimuladoResult | null>(null);
+  const [marcacoesSimulado, setMarcacoesSimulado] = useState<
+    Map<string, string>
+  >(() => new Map());
+  const inicioQuestaoRef = useRef(Date.now());
+  const inicioSimuladoRef = useRef(Date.now());
   const [fimMs] = useState(
     () => Date.now() + (duracaoMinutos ?? 240) * 60 * 1000,
   );
@@ -56,8 +90,8 @@ export function QuestaoView({
     duracaoMinutos ? duracaoMinutos * 60 * 1000 : DURACAO_SIMULADO_MS,
   );
 
-  const questao = questoes[indice];
-  const total = questoes.length;
+  const questao = lista[indice];
+  const total = lista.length;
   const isSimulado = modo === "simulado";
   const isEstudo = modo === "estudo";
   const minutosRestantes = tempoRestante / (60 * 1000);
@@ -74,6 +108,9 @@ export function QuestaoView({
     setConfirmada(false);
     setRevelada(false);
     setAlternativasVisiveis(isSimulado);
+    setDominioAlcancado(false);
+    setTipoErroLabel(undefined);
+    inicioQuestaoRef.current = Date.now();
   }, [isSimulado]);
 
   const selecionar = useCallback(
@@ -86,14 +123,65 @@ export function QuestaoView({
 
   const confirmar = useCallback(() => {
     if (!selecionada || !questao) return;
+
+    const acertou = selecionada === questao.gabarito;
+    const tempoSeg = Math.round((Date.now() - inicioQuestaoRef.current) / 1000);
+
     setConfirmada(true);
+
     if (isEstudo) {
       setRevelada(true);
-      const acertou = selecionada === questao.gabarito;
       if (acertou) setAcertos((n) => n + 1);
       else setErros((n) => n + 1);
+
+      startSalvar(async () => {
+        const result = await salvarTentativa({
+          questionId: questao.id,
+          resposta: selecionada,
+          acertou,
+          modo: "estudo",
+          tempoSeg,
+        });
+
+        if (result.dominioAlcancado) setDominioAlcancado(true);
+        if (result.tipoErro) setTipoErroLabel(labelTipoErro(result.tipoErro));
+        if (result.irmaAs?.length) {
+          setLista((prev) => intercalarIrmas(prev, indice, result.irmaAs!));
+        }
+      });
+    } else if (isSimulado) {
+      setMarcacoesSimulado((prev) => {
+        const next = new Map(prev);
+        next.set(questao.id, selecionada);
+        return next;
+      });
+
+      startSalvar(async () => {
+        await salvarTentativa({
+          questionId: questao.id,
+          resposta: selecionada,
+          acertou,
+          modo: "simulado",
+          tempoSeg,
+        });
+      });
     }
-  }, [selecionada, questao, isEstudo]);
+  }, [selecionada, questao, isEstudo, isSimulado, indice]);
+
+  const finalizarSimuladoHandler = useCallback(() => {
+    if (!isSimulado) return;
+
+    const respostas = montarRespostasSimulado(lista, marcacoesSimulado);
+    const duracaoMin = Math.max(
+      1,
+      Math.round((Date.now() - inicioSimuladoRef.current) / 60_000),
+    );
+
+    startFinalizar(async () => {
+      const result = await finalizarSimulado({ respostas, duracaoMin });
+      setResultadoSimulado(result);
+    });
+  }, [isSimulado, lista, marcacoesSimulado]);
 
   const proxima = useCallback(() => {
     if (indice < total - 1) {
@@ -120,22 +208,66 @@ export function QuestaoView({
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      const key = e.key.toUpperCase();
-      if (!LETRAS.includes(key as (typeof LETRAS)[number])) return;
+      if (
+        e.target instanceof HTMLInputElement ||
+        e.target instanceof HTMLTextAreaElement
+      ) {
+        return;
+      }
 
-      if (e.key === "Enter" && selecionada && !confirmada) {
+      if (e.key === "Enter" && selecionada && !confirmada && alternativasVisiveis) {
+        e.preventDefault();
         confirmar();
         return;
       }
 
-      if (!confirmada && alternativasVisiveis) {
-        selecionar(key);
+      if (confirmada && isEstudo) {
+        if (e.key === "ArrowRight" && indice < total - 1) {
+          e.preventDefault();
+          proxima();
+        }
+        if (e.key === "ArrowLeft" && indice > 0) {
+          e.preventDefault();
+          anterior();
+        }
+        return;
       }
+
+      const letra = TECLA_PARA_LETRA[e.key.toUpperCase()];
+      if (!letra || !alternativasVisiveis || confirmada) return;
+
+      const letrasQuestao = Object.keys(questao?.alternativas ?? {});
+      if (!letrasQuestao.includes(letra)) return;
+
+      e.preventDefault();
+      selecionar(letra);
     };
 
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [selecionar, confirmar, selecionada, confirmada, alternativasVisiveis]);
+  }, [
+    selecionar,
+    confirmar,
+    proxima,
+    anterior,
+    selecionada,
+    confirmada,
+    alternativasVisiveis,
+    isEstudo,
+    indice,
+    total,
+    questao,
+  ]);
+
+  if (resultadoSimulado) {
+    const duracaoMs = Date.now() - inicioSimuladoRef.current;
+    return (
+      <SimuladoResultado
+        data={resultadoSimulado}
+        duracaoLabel={formatarTempo(duracaoMs)}
+      />
+    );
+  }
 
   if (!questao) {
     return (
@@ -228,11 +360,14 @@ export function QuestaoView({
               acertou={acertou}
               gabarito={questao.gabarito}
               comentario={questao.comentario}
+              dominioAlcancado={dominioAlcancado}
+              tipoErroLabel={tipoErroLabel}
             />
           </div>
         )}
 
-        <footer className="flex gap-2 border-t border-border p-4">
+        <footer className="flex flex-col gap-2 border-t border-border p-4">
+          <div className="flex gap-2">
           {(isSimulado || indice > 0) && (
             <Button
               variant="outline"
@@ -248,9 +383,17 @@ export function QuestaoView({
             <Button
               className="flex-1"
               onClick={confirmar}
-              disabled={!selecionada}
+              disabled={!selecionada || salvando}
             >
               {isEstudo ? "Confirmar resposta" : "Marcar"}
+            </Button>
+          ) : isSimulado && ultimaQuestao ? (
+            <Button
+              className="flex-1"
+              onClick={finalizarSimuladoHandler}
+              disabled={finalizando}
+            >
+              Finalizar simulado
             </Button>
           ) : (
             <Button
@@ -258,8 +401,22 @@ export function QuestaoView({
               onClick={proxima}
               disabled={ultimaQuestao}
             >
-              {ultimaQuestao ? "Última questão" : "Próxima"}
+              Próxima
             </Button>
+          )}
+          </div>
+          {isEstudo && (
+            <p className="hidden text-center text-xs text-muted-foreground sm:block">
+              Atalhos:{" "}
+              <kbd className="rounded border border-border px-1">1–4</kbd> ou{" "}
+              <kbd className="rounded border border-border px-1">A–D</kbd>{" "}
+              selecionar ·{" "}
+              <kbd className="rounded border border-border px-1">Enter</kbd>{" "}
+              confirmar ·{" "}
+              <kbd className="rounded border border-border px-1">←</kbd>
+              <kbd className="rounded border border-border px-1">→</kbd>{" "}
+              navegar
+            </p>
           )}
         </footer>
       </article>

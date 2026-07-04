@@ -17,11 +17,13 @@ export interface AtividadeDia {
   total: number;
 }
 
+/** Limiares de maturidade (convenção Anki/FSRS por estabilidade em dias). */
 const MATURE_DIAS = 21;
+const JOVEM_DIAS = 7;
 
-function classificarEstado(intervalDays: number): EstadoRetencao {
-  if (intervalDays >= MATURE_DIAS) return "maduro";
-  if (intervalDays >= 7) return "jovem";
+function classificarEstado(stabilityDias: number): EstadoRetencao {
+  if (stabilityDias >= MATURE_DIAS) return "maduro";
+  if (stabilityDias >= JOVEM_DIAS) return "jovem";
   return "aprendendo";
 }
 
@@ -40,7 +42,7 @@ export async function getRetencaoResumo(
 
   try {
     const cards = await db
-      .select({ intervalDays: srsCards.intervalDays })
+      .select({ stability: srsCards.stability })
       .from(srsCards)
       .where(eq(srsCards.userId, userId));
 
@@ -63,7 +65,7 @@ export async function getRetencaoResumo(
 
     const resumo = { aprendendo: 0, jovem: 0, maduro: 0 };
     for (const card of cards) {
-      const estado = classificarEstado(card.intervalDays);
+      const estado = classificarEstado(card.stability);
       resumo[estado] += 1;
     }
 

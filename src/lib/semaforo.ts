@@ -116,7 +116,7 @@ function buildZona(
   };
 }
 
-function calcularDeSimulado(
+export function calcularDeSimulado(
   notaTotal: number,
   notasJson: Record<string, number>,
 ): Omit<SemaforoData, "diasParaProva" | "fonte"> {
@@ -312,9 +312,5 @@ export async function getSemaforoData(
   }
 }
 
-export function formatPontos(pontos: number | null): string {
-  if (pontos === null) return "—";
-  return `${pontos.toFixed(1)} pts`;
-}
-
+export { formatPontos } from "@/lib/semaforo-format";
 export { DISCIPLINA_LABELS };
