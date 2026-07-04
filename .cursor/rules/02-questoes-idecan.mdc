@@ -1,0 +1,64 @@
+---
+description: Formato, validação e estilo IDECAN para questões e comentários
+globs: "**/*.{ts,tsx,json,sql}"
+alwaysApply: false
+---
+
+# Questões no DNA IDECAN
+
+Referência de estilo: PDFs em `conteúdo/questões reais/` (CTB, Português, Informática, Constitucional, Dir. Adm, Ética, Resoluções CONTRAN).
+
+## Regras obrigatórias
+
+- Questões **100% inéditas**; inspiradas no estilo IDECAN, nunca cópia literal
+- Todo gabarito exige **fundamento legal citável** (artigo, resolução, lei)
+- Alternativas com comprimento e tom **homogêneos**
+- Comandos típicos: "assinale a CORRETA/INCORRETA", assertivas I–V, correspondência
+
+## Padrões IDECAN a replicar
+
+- Pegadinhas: "pode" vs "deve", prazos, percentuais, poder vs dever
+- Trânsito: caso prático de fiscalização + lei seca (CTB + CONTRAN)
+- Português: textos longos (crônica, HQ) + gramática aplicada
+- Direito: situação concreta + ato administrativo/constitucional
+
+## Schema JSON de questão
+
+```json
+{
+  "disciplina": "legislacao_transito",
+  "topico": "CTB_art_165_168",
+  "tipo": "caso_pratico",
+  "estilo_idecan": "pegadinha_pode_deve",
+  "dificuldade": 3,
+  "enunciado": "...",
+  "alternativas": { "A": "...", "B": "...", "C": "...", "D": "..." },
+  "gabarito": "C",
+  "comentario": {
+    "o_que_testa": "...",
+    "fundamento_legal": "CTB, art. 165...",
+    "passo_a_passo": ["1...", "2..."],
+    "pegadinha": "...",
+    "macete": "...",
+    "estudo_reverso": ["CTB art. 166", "Res. CONTRAN 432"]
+  },
+  "tags": ["embriaguez", "etilometro"]
+}
+```
+
+## Comentário Professor Elite (sempre nesta ordem)
+
+1. Gabarito
+2. O que a IDECAN quer testar
+3. Fundamento legal (trecho relevante)
+4. Raciocínio passo a passo (por alternativa)
+5. Pegadinha IDECAN
+6. Macete de prova
+7. Estudo reverso (leis + questões irmãs)
+
+## Validação antes de importar
+
+- Gabarito existe nas alternativas
+- `comentario.fundamento_legal` preenchido
+- `dificuldade` entre 1–5
+- `topico` mapeado ao Anexo I do edital retificado

@@ -1,0 +1,42 @@
+---
+description: UI/UX para estudo focado — mobile, acessibilidade e modo prova
+globs: "**/*.{tsx,css}"
+alwaysApply: false
+---
+
+# UI/UX de estudo
+
+## Princípios
+
+- Mobile-first; uma questão por tela no celular
+- Modo escuro obrigatório (estudo noturno)
+- Enunciados: fonte ≥ 18px, line-height confortável
+- Cores: verde acerto, vermelho erro, amarelo revisão pendente, azul institucional
+
+## Interação
+
+- Atalhos teclado A/B/C/D/E no desktop
+- **Recall gate:** enunciado visível antes das alternativas (modo estudo)
+- **Feedback adaptativo:** acerto = confirmação breve; erro = feedback elaborado em blocos
+- **Modo foco:** esconde navegação (`data-foco` no html)
+- Barra de progresso em simulados e sessões de estudo
+- Timer visível em simulado; alerta aos 30 min finais
+
+## Retenção (evidência)
+
+- Uma questão por tela (chunking / CLT)
+- Divulgação progressiva no feedback (não despejar tudo de uma vez)
+- Ciclo SRS visual: aprendendo → jovem → maduro (Anki/FSRS)
+- Heatmap de consistência 7 dias no dashboard
+
+## Dashboard "Semáforo de Aprovação"
+
+- Verde/amarelo/vermelho para Gerais, Específicos e Total
+- Contagem regressiva para 30/08/2026
+- Card "Sua prova hoje": SRS + piores tópicos
+
+## Componentes shadcn
+
+- Reutilizar `Card`, `Button`, `Progress`, `Tabs`, `Badge`, `Alert`
+- Não criar design system paralelo
+- Textos sempre em português BR

@@ -1,0 +1,43 @@
+---
+description: Lógica de estudo reverso, simulado espelho e repetição espaçada
+globs: "**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# Motor pedagógico
+
+## Simulado Espelho
+
+- Exatamente 60 questões na proporção do edital
+- Timer 4h; modo prova = zero feedback até o fim
+- Resultado: nota total + nota por disciplina + flag `zerou_disciplina`
+- Critérios eliminatórios idênticos ao edital (50 pts + mínimos)
+
+## Estudo Reverso (ao errar)
+
+1. Classificar erro: `decoreba` | `interpretacao` | `pegadinha_idecan` | `confusao_artigos`
+2. Exibir comentário Professor Elite + lei seca grifada (link para Resoluções CONTRAN quando aplicável)
+3. Liberar 3 questões irmãs no mesmo microtópico
+4. Domínio: acertar **2 seguidas** antes de avançar
+
+## Repetição espaçada (SM-2 simplificado)
+
+- Errou: revisar em 1 dia
+- Acertou: 1d → 3d → 7d → 15d → 30d
+- Persistir em `srs_cards`: `next_review`, `interval_days`, `ease_factor`
+
+## Modos de treino
+
+- `simulado_espelho` — prova completa
+- `sniper_ctb` — só legislação de trânsito
+- `anti_zerar` — disciplinas abaixo do mínimo
+- `pegadinha_idecan` — tag `estilo_idecan` com pegadinha
+- `prova_real` — sem gabarito até finalizar
+
+## Dashboard (métricas essenciais)
+
+- Score espelho 60Q e previsão de aprovação
+- Alerta vermelho: risco de zerar disciplina
+- Heatmap CTB por capítulo
+- Meta diária: questões + revisões SRS pendentes
+- Contagem regressiva para 30/08/2026

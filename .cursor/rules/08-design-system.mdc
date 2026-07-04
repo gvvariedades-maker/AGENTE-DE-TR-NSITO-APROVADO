@@ -1,0 +1,77 @@
+---
+description: Design system — tokens, componentes shadcn e padrões visuais
+globs: "**/*.{tsx,css}"
+alwaysApply: false
+---
+
+# Design System
+
+Complementa `06-ui-ux-estudo.mdc` (domínio) com regras visuais e de implementação.
+
+## Componentes
+
+**Sempre** importar de `@/components/ui/`:
+
+- `Button`, `Card`, `Badge`, `Progress`, `Tabs`, `Alert`
+
+**Nunca** criar versões paralelas de Button, Card, Input ou Checkbox.
+
+Utilitário: `cn()` de `@/lib/utils`.
+
+## Cores
+
+Usar tokens semânticos definidos em `src/app/globals.css`:
+
+```
+bg-background, text-foreground, bg-card, bg-muted, text-muted-foreground,
+bg-primary, text-primary-foreground, bg-secondary, bg-destructive,
+border-border, ring-ring
+```
+
+**Proibido:** `bg-blue-500`, `text-gray-400`, cores hex inline no JSX.
+
+Destaque sutil (padrão aprovado): `border-primary/30 bg-primary/5`.
+
+## Tipografia
+
+| Uso | Classe |
+|-----|--------|
+| Título de página | `text-2xl font-bold tracking-tight` |
+| Seção | `text-lg font-semibold` |
+| Enunciado | `text-lg leading-relaxed` (mín. 18px) |
+| Corpo | `text-sm` |
+| Números | `tabular-nums` |
+
+Fonte: Geist Sans. Mono: `font-mono` para código/lei seca.
+
+## Espaçamento
+
+- Página: `p-4 md:p-8`
+- Seções: `gap-6`
+- Cards: `gap-3` ou `gap-4`
+- Conteúdo centralizado: `max-w-5xl mx-auto`
+
+## Layout
+
+- Mobile-first: base mobile, breakpoints `sm:` / `md:` para desktop
+- Grid responsivo: `grid gap-4 sm:grid-cols-2` ou `sm:grid-cols-3`
+- Dark mode fixo no `<html className="dark">` — sempre testar em dark
+
+## Interação
+
+- Focus: `focus-visible:ring-3 focus-visible:ring-ring/50` (padrão shadcn)
+- Touch targets: `min-h-11` em botões de alternativa e CTAs mobile
+- Uma ação primária (`Button` default) por tela
+
+## Anti-padrões (rejeitar no review)
+
+- Gradientes decorativos
+- Emojis como ícones de UI
+- `box-shadow` custom pesado
+- Wall of identical cards sem hierarquia
+- Cores Tailwind arbitrárias fora dos tokens
+- Placeholder "Lorem ipsum" ou "No data"
+
+## Skill detalhada
+
+Para workflow completo, pesquisa Firecrawl, Canvas e exemplos: `.cursor/skills/frontend-design/SKILL.md`

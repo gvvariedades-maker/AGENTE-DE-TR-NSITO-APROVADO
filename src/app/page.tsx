@@ -1,64 +1,113 @@
-import Image from "next/image";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { PROVA_DATA, SIMULADO_ESPELHO_DISTRIBUICAO } from "@/types";
 
-export default function Home() {
+function diasParaProva() {
+  const hoje = new Date();
+  const diff = PROVA_DATA.getTime() - hoje.getTime();
+  return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
+}
+
+export default function HomePage() {
+  const dias = diasParaProva();
+  const totalQuestoes = Object.values(SIMULADO_ESPELHO_DISTRIBUICAO).reduce(
+    (a, b) => a + b,
+    0,
+  );
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="flex flex-1 flex-col">
+      <header className="border-b border-border px-4 py-6 md:px-8">
+        <div className="mx-auto flex max-w-5xl flex-col gap-2">
+          <Badge variant="secondary" className="w-fit">
+            IDECAN · STTP Campina Grande/PB
+          </Badge>
+          <h1 className="text-2xl font-bold tracking-tight md:text-3xl">
+            Agente de Trânsito Aprovado
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-muted-foreground">
+            Simulados espelho, estudo reverso e questões no DNA IDECAN.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-6 px-4 py-8 md:px-8">
+        <Card className="border-primary/30 bg-primary/5">
+          <CardHeader>
+            <CardTitle className="text-lg">Contagem regressiva</CardTitle>
+            <CardDescription>Prova objetiva — 30/08/2026</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="text-4xl font-bold tabular-nums">{dias} dias</p>
+          </CardContent>
+        </Card>
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-base">Simulado Espelho</CardTitle>
+              <CardDescription>
+                {totalQuestoes} questões · 4 horas · proporção do edital
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Link
+                href="/dashboard"
+                className={cn(buttonVariants(), "w-full")}
+              >
+                Ir para o painel
+              </Link>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-base">Estudo Reverso</CardTitle>
+              <CardDescription>
+                Errou → lei seca → 3 questões irmãs → domínio
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Link
+                href="/dashboard"
+                className={cn(buttonVariants({ variant: "outline" }), "w-full")}
+              >
+                Começar a estudar
+              </Link>
+            </CardContent>
+          </Card>
         </div>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base">Distribuição da prova</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="grid gap-2 text-sm">
+              <li className="flex justify-between">
+                <span>Legislação de Trânsito</span>
+                <span className="font-medium">30 questões</span>
+              </li>
+              <li className="flex justify-between">
+                <span>Língua Portuguesa</span>
+                <span className="font-medium">8 questões</span>
+              </li>
+              <li className="flex justify-between text-muted-foreground">
+                <span>+ 5 demais disciplinas</span>
+                <span className="font-medium">22 questões</span>
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
       </main>
     </div>
   );

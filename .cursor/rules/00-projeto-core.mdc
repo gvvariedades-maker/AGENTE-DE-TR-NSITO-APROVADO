@@ -1,0 +1,45 @@
+---
+description: Visão, stack e convenções gerais do projeto Agente de Trânsito Aprovado
+alwaysApply: true
+---
+
+# Agente de Trânsito Aprovado
+
+Plataforma PWA pessoal de estudos para o concurso **Agente de Trânsito STTP Campina Grande/PB** (Edital 04/2026, banca **IDECAN**, prova 30/08/2026).
+
+## Objetivo
+
+Maximizar chance de aprovação com: simulados espelho 60Q, estudo reverso, questões inéditas no estilo IDECAN e métricas de risco de eliminação.
+
+## Stack (não alterar sem pedido explícito)
+
+- Next.js 15 App Router + TypeScript strict
+- Tailwind CSS + shadcn/ui
+- Supabase (Auth + PostgreSQL + RLS)
+- Drizzle ORM
+- Deploy: Vercel (free tier)
+- PWA: next-pwa (Android + PC, um código)
+
+## Material de referência no repositório
+
+- `conteúdo/EDITAL Nº 042026...` — edital oficial
+- `conteúdo/Retificação do conteúdo programático...` — Anexo I pós-retificação
+- `conteúdo/questões reais/` — PDFs IDECAN por disciplina (base para perfil da banca)
+- `conteúdo/RESOLUÇÃO CONTRAN Nº...` — base legal para comentários e estudo reverso
+
+## Convenções de código
+
+- Arquivos: `kebab-case`; componentes/tipos: `PascalCase`
+- Server Components por padrão; `"use client"` só com interatividade
+- Imports com alias `@/`
+- UI e textos de usuário: **português BR**
+- Variáveis de domínio em inglês no código (`question`, `attempt`, `topic`)
+- Não commitar `.env`, chaves Supabase ou dados pessoais
+- Escopo mínimo: uma feature por conversa; não over-engineer
+
+## O que NÃO fazer
+
+- Não trocar stack (Firebase, Mongo, etc.) sem pedido
+- Não criar módulos TAF ou avaliação psicológica
+- Não copiar questões literalmente de cursinhos pagos
+- Não gerar questões sem fundamento legal verificável

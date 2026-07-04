@@ -1,0 +1,47 @@
+---
+description: Padrões Next.js App Router e TypeScript do projeto
+globs: "**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# Next.js e TypeScript
+
+## Estrutura de pastas
+
+```
+src/app/(auth)/       # login
+src/app/(dashboard)/  # área logada
+src/app/admin/        # CRUD conteúdo
+src/components/ui/    # shadcn
+src/components/questao/
+src/components/simulado/
+src/lib/db/           # Drizzle schema + queries
+src/lib/spaced-repetition/
+src/types/
+content/questoes/     # JSON seed
+scripts/              # import seed
+```
+
+## Padrões
+
+- Data fetching em Server Components; mutations via Server Actions
+- Validação com Zod em boundaries (API, forms, import)
+- Tipos de domínio em `src/types/`; inferir do schema Drizzle quando possível
+- Erros: mensagens amigáveis em PT-BR; log técnico no servidor
+- Env: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY` (só server)
+
+## PWA
+
+- `manifest.json` com nome "Agente de Trânsito Aprovado"
+- Cache de questões já carregadas para uso offline parcial
+- Layout mobile-first (estudo no Android é prioridade)
+
+## Exemplo
+
+```tsx
+// Server Component busca questão; client só para interação
+export function QuestaoCard({ questao }: { questao: Questao }) {
+  "use client";
+  // teclas A/B/C/D, feedback só em modo estudo
+}
+```
