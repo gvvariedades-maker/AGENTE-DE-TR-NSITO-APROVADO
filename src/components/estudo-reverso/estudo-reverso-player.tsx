@@ -6,6 +6,25 @@ import type { EstudoReversoVisual } from "@/types/estudo-reverso-visual";
 import { EstudoReversoProgress } from "./estudo-reverso-progress";
 import { TelaRenderer } from "./telas/tela-renderer";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+
+const FOCUSABLE =
+  'button:not([disabled]), input:not([disabled]), [href], [tabindex]:not([tabindex="-1"])';
+
+function trapFocus(container: HTMLElement, event: KeyboardEvent) {
+  if (event.key !== "Tab") return;
+  const nodes = container.querySelectorAll<HTMLElement>(FOCUSABLE);
+  if (nodes.length === 0) return;
+  const first = nodes[0];
+  const last = nodes[nodes.length - 1];
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+}
 
 export interface EstudoReversoConclusao {
   telasVistas: string[];
@@ -29,6 +48,8 @@ export function EstudoReversoPlayer({
   const [vistas, setVistas] = useState<string[]>([]);
   const [recallAcertou, setRecallAcertou] = useState<boolean | null>(null);
   const inicioRef = useRef(Date.now());
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const fecharRef = useRef<HTMLButtonElement>(null);
 
   const telas = visual.telas;
   const tela = telas[passo];
@@ -37,8 +58,18 @@ export function EstudoReversoPlayer({
 
   useEffect(() => {
     document.documentElement.dataset.foco = "true";
+    fecharRef.current?.focus();
+    const el = dialogRef.current;
+    if (!el) {
+      return () => {
+        delete document.documentElement.dataset.foco;
+      };
+    }
+    const onKeyDown = (e: KeyboardEvent) => trapFocus(el, e);
+    el.addEventListener("keydown", onKeyDown);
     return () => {
       delete document.documentElement.dataset.foco;
+      el.removeEventListener("keydown", onKeyDown);
     };
   }, []);
 
@@ -65,6 +96,7 @@ export function EstudoReversoPlayer({
 
   return (
     <div
+      ref={dialogRef}
       className="fixed inset-0 z-50 flex flex-col bg-background"
       role="dialog"
       aria-modal="true"
@@ -80,6 +112,7 @@ export function EstudoReversoPlayer({
           </p>
         </div>
         <Button
+          ref={fecharRef}
           type="button"
           variant="ghost"
           size="icon"
@@ -92,15 +125,31 @@ export function EstudoReversoPlayer({
 
       <EstudoReversoProgress atual={passo + 1} total={telas.length} />
 
-      <div className="flex-1 overflow-y-auto px-4 py-4">
-        <h2 className="mb-3 text-base font-semibold">{tela.titulo}</h2>
-        <TelaRenderer
-          tela={tela}
-          onRecallResultado={setRecallAcertou}
-        />
+      <div className="flex flex-1 flex-col overflow-y-auto px-4 py-4">
+        <div className="mx-auto w-full max-w-lg flex-1">
+          <h2 className="mb-4 text-lg font-semibold">{tela.titulo}</h2>
+          <TelaRenderer
+            tela={tela}
+            onRecallResultado={setRecallAcertou}
+          />
+        </div>
       </div>
 
       <footer className="border-t border-border p-4">
+        {visual.links_fonte.length > 0 && (
+          <div className="mb-3 flex flex-wrap justify-center gap-1.5">
+            {visual.links_fonte.map((link) => (
+              <Badge
+                key={link.rotulo}
+                variant="outline"
+                className="text-xs font-normal"
+                title={link.path}
+              >
+                {link.rotulo}
+              </Badge>
+            ))}
+          </div>
+        )}
         {!ultima ? (
           <Button
             type="button"

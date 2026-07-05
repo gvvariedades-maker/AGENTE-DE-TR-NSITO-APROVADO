@@ -11,7 +11,6 @@ import {
 } from "@/lib/srs";
 import { PROVA_DATA } from "@/types";
 import { isQuestaoPersistivel } from "@/lib/estudo-reverso";
-import type { EstudoReversoConclusao } from "@/components/estudo-reverso/estudo-reverso-player";
 
 export interface RegistrarEstudoReversoPayload {
   questionId: string;
@@ -120,5 +119,3 @@ export async function registrarEstudoReverso(
 
   return { ok: true };
 }
-
-export type { EstudoReversoConclusao };

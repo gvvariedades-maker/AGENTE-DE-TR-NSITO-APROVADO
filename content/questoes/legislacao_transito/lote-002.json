@@ -366,10 +366,10 @@
     },
     "estudo_reverso_visual": {
       "versao": 1,
-      "arquetipo": "diagrama_competencia",
-      "arquetipo_secundario": "comparacao",
+      "arquetipo": "comparacao",
+      "arquetipo_secundario": "trecho_legal",
       "duracao_estimada_seg": 80,
-      "fundamento_slug": "CTB_art_24",
+      "fundamento_slug": "CTB_art_24_VI",
       "macete_visual": "Via municipal = órgão executivo municipal autua estacionamento",
       "telas": [
         {
@@ -377,7 +377,7 @@
           "titulo": "O que a IDECAN testou",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Cobrança de quem autua estacionamento em via municipal — não é exclusividade da PM.",
+            "texto": "Quem autua estacionamento em via municipal — STTP, não exclusividade da PM.",
             "destaques": [
               "municipal",
               "STTP",
@@ -386,44 +386,29 @@
           }
         },
         {
-          "id": "snt",
-          "titulo": "Hierarquia SNT",
-          "tipo": "diagrama_competencia",
+          "id": "competencias",
+          "titulo": "PM vs órgão municipal",
+          "tipo": "comparacao",
           "conteudo": {
-            "nos": [
-              {
-                "id": "contran",
-                "label": "CONTRAN (normas)",
-                "nivel": 0
-              },
-              {
-                "id": "detran",
-                "label": "DETRAN/PB",
-                "nivel": 1
-              },
-              {
-                "id": "sttp",
-                "label": "STTP Campina Grande",
-                "nivel": 2
-              }
+            "colunas": [
+              "PM (art. 23)",
+              "Município (art. 24, VI)"
             ],
-            "arestas": [
-              {
-                "de": "contran",
-                "para": "detran",
-                "rotulo": "diretrizes"
-              },
-              {
-                "de": "detran",
-                "para": "sttp",
-                "rotulo": "fiscalização municipal"
-              }
+            "linhas": [
+              [
+                "Policiamento ostensivo de trânsito",
+                "Fiscalizar e autuar circulação, estacionamento e parada"
+              ],
+              [
+                "Não tem exclusividade de autuação",
+                "Órgão executivo municipal autua (STTP)"
+              ]
             ]
           }
         },
         {
           "id": "pegadinha",
-          "titulo": "PM vs STTP",
+          "titulo": "Armadilha IDECAN",
           "tipo": "comparacao",
           "conteudo": {
             "colunas": [
@@ -433,7 +418,7 @@
             "linhas": [
               [
                 "Só PM autua estacionamento",
-                "Órgão executivo municipal autua (art. 24)"
+                "Órgão executivo municipal autua (art. 24, VI)"
               ]
             ]
           }
@@ -443,13 +428,13 @@
           "titulo": "Lei seca",
           "tipo": "trecho_legal",
           "conteudo": {
-            "fonte": "CTB art. 24",
-            "texto": "Compete aos órgãos executivos de trânsito dos Municípios executar a legislação de trânsito, incluindo autuação de infrações.",
+            "fonte": "CTB art. 24, VI",
+            "texto": "Compete aos órgãos executivos de trânsito dos Municípios fiscalizar o trânsito e autuar infrações de circulação, estacionamento e parada.",
             "trechos_grifados": [
               {
-                "inicio": 0,
-                "fim": 45,
-                "motivo": "competência municipal"
+                "inicio": 72,
+                "fim": 130,
+                "motivo": "autuação municipal"
               }
             ]
           }
@@ -459,9 +444,10 @@
           "titulo": "Macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Via municipal + estacionamento = STTP/órgão executivo municipal.",
+            "texto": "Via municipal + estacionamento = STTP (art. 24, VI). PM patrulha (art. 23).",
             "destaques": [
-              "municipal"
+              "municipal",
+              "24, VI"
             ]
           }
         },
@@ -470,19 +456,23 @@
           "titulo": "Fixação ativa",
           "tipo": "micro_recall",
           "conteudo": {
-            "pergunta": "Qual artigo trata da competência dos órgãos executivos de trânsito?",
-            "resposta_esperada": "24",
+            "pergunta": "Qual inciso do art. 24 trata de autuação por estacionamento em via municipal?",
+            "resposta_esperada": "VI",
             "aceitar_variacoes": [
-              "art. 24",
-              "artigo 24",
-              "CTB art. 24"
+              "inciso VI",
+              "art. 24, VI",
+              "24 VI"
             ]
           }
         }
       ],
       "links_fonte": [
         {
-          "rotulo": "CTB art. 24",
+          "rotulo": "CTB art. 23",
+          "path": "conteúdo/legislação federal/"
+        },
+        {
+          "rotulo": "CTB art. 24, VI",
           "path": "conteúdo/legislação federal/"
         }
       ]

@@ -1,0 +1,80 @@
+{
+  "versao": 1,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "duracao_estimada_seg": 90,
+  "fundamento_slug": "CTB_art_44-A",
+  "macete_visual": "Vermelho + placa conversão à direita = art. 44-A (exceção ao 208)",
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "O que a IDECAN testou",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Conversão à direita no sinal vermelho com placa autorizativa — exceção ao art. 208 pelo art. 44-A.",
+        "destaques": ["vermelho", "44-A", "208"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Raciocínio em 3 passos",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "n1", "label": "Placa autoriza conversão à direita no vermelho?", "tipo": "pergunta" },
+          { "id": "n2", "label": "Art. 44-A permite a conversão", "tipo": "lei", "ref": "CTB art. 44-A" },
+          { "id": "n3", "label": "Art. 208 não se aplica (exceção)", "tipo": "resultado", "ref": "CTB art. 208" }
+        ],
+        "arestas": [
+          { "de": "n1", "para": "n2", "rotulo": "sim" },
+          { "de": "n2", "para": "n3" }
+        ]
+      }
+    },
+    {
+      "id": "pegadinha",
+      "titulo": "Armadilha IDECAN",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Pegadinha", "Correto"],
+        "linhas": [
+          ["Vermelho sempre configura art. 208", "Com placa do art. 44-A, conversão é lícita"],
+          ["Exige seta verde exclusiva", "Basta sinalização indicativa permissiva"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Lei seca",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 44-A",
+        "texto": "É livre o movimento de conversão à direita diante de sinal vermelho onde houver sinalização indicativa que permita essa conversão.",
+        "trechos_grifados": [{ "inicio": 0, "fim": 45, "motivo": "exceção ao avanço do vermelho" }]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Vermelho + placa de conversão à direita = pode converter (art. 44-A), com prudência.",
+        "destaques": ["44-A"]
+      }
+    },
+    {
+      "id": "recall",
+      "titulo": "Fixação ativa",
+      "tipo": "micro_recall",
+      "conteudo": {
+        "pergunta": "Qual artigo autoriza conversão à direita no sinal vermelho com placa indicativa?",
+        "resposta_esperada": "44-A",
+        "aceitar_variacoes": ["art. 44-A", "44A", "artigo 44-A"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 44-A", "path": "conteúdo/legislação federal/" },
+    { "rotulo": "CTB art. 208", "path": "conteúdo/legislação federal/" }
+  ]
+}

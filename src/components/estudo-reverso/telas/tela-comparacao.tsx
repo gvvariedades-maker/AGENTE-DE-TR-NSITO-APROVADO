@@ -15,8 +15,12 @@ export function TelaComparacao({ conteudo }: { conteudo: ConteudoComparacao }) {
         <tbody>
           {conteudo.linhas.map(([a, b], i) => (
             <tr key={i} className="border-b border-border last:border-0">
-              <td className="px-3 py-2 text-muted-foreground">{a}</td>
-              <td className="px-3 py-2 font-medium text-foreground">{b}</td>
+              <td className="bg-semaforo-vermelho/5 px-3 py-2 text-muted-foreground">
+                {a}
+              </td>
+              <td className="bg-semaforo-verde/5 px-3 py-2 font-medium text-foreground">
+                {b}
+              </td>
             </tr>
           ))}
         </tbody>

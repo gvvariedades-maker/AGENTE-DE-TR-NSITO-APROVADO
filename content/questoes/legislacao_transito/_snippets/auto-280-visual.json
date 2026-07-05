@@ -1,0 +1,73 @@
+{
+  "versao": 1,
+  "arquetipo": "matriz_assertivas",
+  "arquetipo_secundario": "comparacao",
+  "duracao_estimada_seg": 80,
+  "fundamento_slug": "CTB_art_280",
+  "macete_visual": "Auto completo (art. 280) + assinatura quando possível",
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "O que a IDECAN testou",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Conteúdo do auto de infração e natureza da assinatura do infrator — art. 280.",
+        "destaques": ["auto", "280", "assinatura"]
+      }
+    },
+    {
+      "id": "assertivas",
+      "titulo": "Mapa I–II–III",
+      "tipo": "matriz_assertivas",
+      "conteudo": {
+        "itens": [
+          { "id": "I", "texto": "Tipificação, local, data e hora", "correto": true },
+          { "id": "II", "texto": "Placa, marca e espécie do veículo", "correto": true },
+          { "id": "III", "texto": "Assinatura indispensável em qualquer caso", "correto": false }
+        ],
+        "gabarito_resumo": "I e II corretas → alternativa B"
+      }
+    },
+    {
+      "id": "pegadinha",
+      "titulo": "Armadilha IDECAN",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Pegadinha", "Correto"],
+        "linhas": [
+          ["Assinatura sempre obrigatória", "Assinatura sempre que possível (art. 280, VI)"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Lei seca",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 280, VI",
+        "texto": "Assinatura do infrator, sempre que possível, valendo como notificação.",
+        "trechos_grifados": [{ "inicio": 0, "fim": 35, "motivo": "sempre que possível" }]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Auto completo (art. 280) + assinatura quando possível, não em todo caso.",
+        "destaques": ["280"]
+      }
+    },
+    {
+      "id": "recall",
+      "titulo": "Fixação ativa",
+      "tipo": "micro_recall",
+      "conteudo": {
+        "pergunta": "A assinatura do infrator no auto é indispensável ou sempre que possível?",
+        "resposta_esperada": "sempre que possível",
+        "aceitar_variacoes": ["quando possível", "sempre que possivel"]
+      }
+    }
+  ],
+  "links_fonte": [{ "rotulo": "CTB art. 280", "path": "conteúdo/legislação federal/" }]
+}

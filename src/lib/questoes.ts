@@ -4,6 +4,7 @@ import { questions, topics } from "@/lib/db/schema";
 import type { ComentarioQuestao, Disciplina } from "@/types";
 import type { EstudoReversoVisual } from "@/types/estudo-reverso-visual";
 import { DEMO_ESTUDO_REVERSO_VISUAL } from "@/lib/demo-estudo-reverso-visual";
+import { resolveEstudoReversoVisual } from "@/lib/estudo-reverso-visual-fallback";
 
 export interface QuestaoUI {
   id: string;
@@ -76,8 +77,10 @@ function mapRowToQuestao(row: {
     alternativas,
     gabarito: row.gabarito,
     comentario: (row.comentarioJson as ComentarioQuestao) ?? null,
-    estudoReversoVisual:
-      (row.estudoReversoVisualJson as EstudoReversoVisual) ?? null,
+    estudoReversoVisual: resolveEstudoReversoVisual(
+      row.estudoReversoVisualJson,
+      (row.comentarioJson as ComentarioQuestao) ?? null,
+    ),
   };
 }
 

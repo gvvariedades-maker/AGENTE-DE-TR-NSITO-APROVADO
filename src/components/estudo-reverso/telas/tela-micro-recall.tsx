@@ -27,21 +27,30 @@ export function TelaMicroRecall({ conteudo, onResultado }: TelaMicroRecallProps)
     onResultado(ok);
   };
 
+  const inputId = "micro-recall-resposta";
+
   return (
     <div className="space-y-3">
-      <p className="text-sm font-medium">{conteudo.pergunta}</p>
+      <p className="text-base font-medium">{conteudo.pergunta}</p>
       {!enviado ? (
         <>
+          <label htmlFor={inputId} className="sr-only">
+            Sua resposta ao recall
+          </label>
           <input
+            id={inputId}
             type="text"
             value={resposta}
             onChange={(e) => setResposta(e.target.value)}
             placeholder="Digite sua resposta..."
-            className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm"
+            aria-describedby={conteudo.dica ? "micro-recall-dica" : undefined}
+            className="w-full rounded-lg border border-border bg-background px-3 py-2.5 text-base"
             onKeyDown={(e) => e.key === "Enter" && resposta.trim() && confirmar()}
           />
           {conteudo.dica && (
-            <p className="text-xs text-muted-foreground">Dica: {conteudo.dica}</p>
+            <p id="micro-recall-dica" className="text-xs text-muted-foreground">
+              Dica: {conteudo.dica}
+            </p>
           )}
           <Button
             type="button"

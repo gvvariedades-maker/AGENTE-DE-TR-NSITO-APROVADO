@@ -1,0 +1,77 @@
+{
+  "versao": 1,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "duracao_estimada_seg": 85,
+  "fundamento_slug": "CTB_art_219",
+  "macete_visual": "Metade do limite + obstruir trânsito = grave (art. 219)",
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "O que a IDECAN testou",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Velocidade muito abaixo da metade do limite, obstruindo o trânsito — art. 219 (grave).",
+        "destaques": ["metade", "obstruindo", "grave"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Raciocínio em 3 passos",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "n1", "label": "Velocidade < metade do limite?", "tipo": "pergunta" },
+          { "id": "n2", "label": "Retarda ou obstrui o trânsito?", "tipo": "pergunta" },
+          { "id": "n3", "label": "Art. 219 — infração grave", "tipo": "lei", "ref": "CTB art. 219" }
+        ],
+        "arestas": [
+          { "de": "n1", "para": "n2", "rotulo": "sim" },
+          { "de": "n2", "para": "n3", "rotulo": "sim" }
+        ]
+      }
+    },
+    {
+      "id": "pegadinha",
+      "titulo": "Armadilha IDECAN",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Pegadinha", "Correto"],
+        "linhas": [
+          ["Abaixo do limite nunca é infração", "Art. 219 pune velocidade excessivamente baixa"],
+          ["Infração média", "Infração grave (art. 219)"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Lei seca",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 219",
+        "texto": "Transitar em velocidade inferior à metade da máxima da via, retardando ou obstruindo o trânsito — infração grave; penalidade multa.",
+        "trechos_grifados": [{ "inicio": 95, "fim": 110, "motivo": "natureza grave" }]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Menos da metade do limite + obstruir trânsito = grave (art. 219).",
+        "destaques": ["grave", "219"]
+      }
+    },
+    {
+      "id": "recall",
+      "titulo": "Fixação ativa",
+      "tipo": "micro_recall",
+      "conteudo": {
+        "pergunta": "Velocidade inferior à metade do limite obstruindo o trânsito: qual artigo?",
+        "resposta_esperada": "219",
+        "aceitar_variacoes": ["art. 219", "artigo 219"]
+      }
+    }
+  ],
+  "links_fonte": [{ "rotulo": "CTB art. 219", "path": "conteúdo/legislação federal/" }]
+}

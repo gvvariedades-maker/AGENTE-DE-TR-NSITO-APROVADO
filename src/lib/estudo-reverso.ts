@@ -9,7 +9,7 @@ import {
 } from "@/lib/srs";
 import { getQuestaoById, type QuestaoUI } from "@/lib/questoes";
 import { PROVA_DATA, type ComentarioQuestao, type Disciplina } from "@/types";
-import type { EstudoReversoVisual } from "@/types/estudo-reverso-visual";
+import { resolveEstudoReversoVisual } from "@/lib/estudo-reverso-visual-fallback";
 
 export type TipoErro =
   | "decoreba"
@@ -511,8 +511,10 @@ async function buscarQuestoesNovas(
       },
       gabarito: row.gabarito,
       comentario: (row.comentarioJson as ComentarioQuestao) ?? null,
-      estudoReversoVisual:
-        (row.estudoReversoVisualJson as EstudoReversoVisual) ?? null,
+      estudoReversoVisual: resolveEstudoReversoVisual(
+        row.estudoReversoVisualJson,
+        (row.comentarioJson as ComentarioQuestao) ?? null,
+      ),
     }));
   } catch {
     return [];

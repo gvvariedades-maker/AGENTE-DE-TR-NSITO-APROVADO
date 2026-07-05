@@ -54,7 +54,7 @@ async function questionExists(
     .where(and(eq(questions.topicId, topicId), eq(questions.enunciado, enunciado)))
     .limit(1);
 
-  return Boolean(existing);
+  return existing ?? null;
 }
 
 async function main() {
@@ -88,7 +88,15 @@ async function main() {
       for (const q of parsed.data) {
         const topicId = await getOrCreateTopic(db, topics, q.disciplina, q.topico);
 
-        if (await questionExists(db, questions, topicId, q.enunciado)) {
+        const existente = await questionExists(db, questions, topicId, q.enunciado);
+
+        if (existente) {
+          if (q.estudo_reverso_visual) {
+            await db
+              .update(questions)
+              .set({ estudoReversoVisualJson: q.estudo_reverso_visual })
+              .where(eq(questions.id, existente.id));
+          }
           skipped++;
           continue;
         }

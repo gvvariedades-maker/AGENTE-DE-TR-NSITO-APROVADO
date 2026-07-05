@@ -7,7 +7,7 @@ export function TelaTextoDestaque({
   conteudo: ConteudoTextoDestaque;
 }) {
   return (
-    <p className="text-sm leading-relaxed">
+    <p className="rounded-xl border border-transito/20 bg-transito/5 px-4 py-5 text-base leading-relaxed">
       {conteudo.destaques?.length
         ? conteudo.texto.split(/(\s+)/).map((part, i) => {
             const limpo = part.replace(/[^\wÀ-ú]/g, "");

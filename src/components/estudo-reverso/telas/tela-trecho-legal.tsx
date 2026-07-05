@@ -26,7 +26,7 @@ export function TelaTrechoLegal({ conteudo }: { conteudo: ConteudoTrechoLegal })
       <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
         {conteudo.fonte}
       </p>
-      <blockquote className="rounded-lg border border-transito/30 bg-transito/5 px-4 py-3 text-sm leading-relaxed">
+      <blockquote className="rounded-lg border border-transito/30 bg-transito/5 px-4 py-3 text-base leading-relaxed">
         {partes.length > 0
           ? partes.map((p, i) => (
               <span

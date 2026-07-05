@@ -1,0 +1,73 @@
+{
+  "versao": 1,
+  "arquetipo": "comparacao",
+  "arquetipo_secundario": "trecho_legal",
+  "duracao_estimada_seg": 75,
+  "fundamento_slug": "CTB_art_93",
+  "macete_visual": "Pólo atrativo = anuência do órgão da via + estacionamento (art. 93)",
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "O que a IDECAN testou",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Aprovação de empreendimento pólo atrativo exige anuência do órgão de trânsito da via e área de estacionamento.",
+        "destaques": ["anuência", "estacionamento", "art. 93"]
+      }
+    },
+    {
+      "id": "requisitos",
+      "titulo": "Requisitos do art. 93",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Pegadinha", "Correto"],
+        "linhas": [
+          ["Basta aprovação municipal", "Anuência prévia do órgão com circunscrição sobre a via"],
+          ["Anuência do CONTRAN", "Anuência do órgão local de trânsito"],
+          ["Estacionamento é faculdade", "Projeto deve prever área de estacionamento e acessos"]
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Sequência lógica",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Etapa", "Exigência"],
+        "linhas": [
+          ["Pólo atrativo de trânsito", "Anuência do órgão da via + estacionamento + acessos"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Lei seca",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 93",
+        "texto": "Nenhum projeto de edificação que possa transformar-se em pólo atrativo de trânsito poderá ser aprovado sem prévia anuência do órgão com circunscrição sobre a via e sem área para estacionamento e vias de acesso.",
+        "trechos_grifados": [{ "inicio": 95, "fim": 175, "motivo": "anuência e estacionamento" }]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Pólo atrativo = anuência do órgão da via + estacionamento + acessos (art. 93).",
+        "destaques": ["art. 93"]
+      }
+    },
+    {
+      "id": "recall",
+      "titulo": "Fixação ativa",
+      "tipo": "micro_recall",
+      "conteudo": {
+        "pergunta": "Qual artigo exige anuência do órgão de trânsito para pólo atrativo de trânsito?",
+        "resposta_esperada": "93",
+        "aceitar_variacoes": ["art. 93", "artigo 93"]
+      }
+    }
+  ],
+  "links_fonte": [{ "rotulo": "CTB art. 93", "path": "conteúdo/legislação federal/" }]
+}
