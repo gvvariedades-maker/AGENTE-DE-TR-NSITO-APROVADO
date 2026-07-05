@@ -8,6 +8,7 @@ Baseado em pesquisa (testing effect, CLT, SRS, feedback elaborado). Aplicar em t
 |-----------|-------|---------------------|
 | Prática de recuperação | Roediger & Karpicke; Learning & Instruction 2025 | `RecallGate` — alternativas ocultas até o usuário tentar |
 | Feedback imediato adaptativo | Frontiers Psych 2021 | `FeedbackElaborado` — acerto = KR breve; erro = EF em blocos |
+| Estudo reverso visual | Mayer CTML + dual coding | `EstudoReversoPlayer` — botão pós-resposta, 4-6 telas + micro-recall |
 | Carga cognitiva baixa | CLT / IJCSIT 2025 | Uma questão/tela, modo foco, progressive disclosure |
 | Chunking mobile | TechClass microlearning | Enunciado scrollável; feedback em etapas |
 | SRS visual | Anki / FSRS-4.5 (`src/lib/srs.ts`) | `CicloRetencao` — aprendendo / jovem / maduro (por `stability`) |
@@ -18,6 +19,8 @@ Baseado em pesquisa (testing effect, CLT, SRS, feedback elaborado). Aplicar em t
 
 - `recall-gate.tsx` — gate antes das alternativas (só modo estudo)
 - `feedback-elaborado.tsx` — feedback progressivo pós-resposta
+- `estudo-reverso-player.tsx` — micro-aula visual segmentada pós-questão
+- `estudo-reverso-trigger.tsx` — CTA após acerto ou erro
 - `sessao-bar.tsx` — progresso + acertos/erros da sessão
 - `focus-mode-toggle.tsx` — `html[data-foco="true"]` esconde nav
 - `ciclo-retencao.tsx` — mapa SRS + heatmap semanal

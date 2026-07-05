@@ -1,6 +1,6 @@
 import { and, eq, gte, lte, sql } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { attempts, srsCards } from "@/lib/db/schema";
+import { attempts, estudoReversoSessions, srsCards } from "@/lib/db/schema";
 
 export type EstadoRetencao = "aprendendo" | "jovem" | "maduro";
 
@@ -15,6 +15,14 @@ export interface RetencaoResumo {
 export interface AtividadeDia {
   data: string;
   total: number;
+}
+
+export interface EstudoReversoResumo {
+  sessoesTotal: number;
+  sessoesConcluidas: number;
+  recallsAcertados: number;
+  taxaConclusao: number;
+  hasData: boolean;
 }
 
 /** Limiares de maturidade (convenção Anki/FSRS por estabilidade em dias). */
@@ -122,5 +130,43 @@ export async function getAtividadeSemanal(
     }));
   } catch {
     return dias;
+  }
+}
+
+export async function getEstudoReversoResumo(
+  userId?: string | null,
+): Promise<EstudoReversoResumo> {
+  const vazio: EstudoReversoResumo = {
+    sessoesTotal: 0,
+    sessoesConcluidas: 0,
+    recallsAcertados: 0,
+    taxaConclusao: 0,
+    hasData: false,
+  };
+
+  if (!userId) return vazio;
+
+  try {
+    const [stats] = await db
+      .select({
+        total: sql<number>`count(*)::int`,
+        concluidas: sql<number>`count(*) filter (where ${estudoReversoSessions.concluido})::int`,
+        recalls: sql<number>`count(*) filter (where ${estudoReversoSessions.recallAcertou} = true)::int`,
+      })
+      .from(estudoReversoSessions)
+      .where(eq(estudoReversoSessions.userId, userId));
+
+    const total = stats?.total ?? 0;
+    const concluidas = stats?.concluidas ?? 0;
+
+    return {
+      sessoesTotal: total,
+      sessoesConcluidas: concluidas,
+      recallsAcertados: stats?.recalls ?? 0,
+      taxaConclusao: total > 0 ? Math.round((concluidas / total) * 100) : 0,
+      hasData: total > 0,
+    };
+  } catch {
+    return vazio;
   }
 }

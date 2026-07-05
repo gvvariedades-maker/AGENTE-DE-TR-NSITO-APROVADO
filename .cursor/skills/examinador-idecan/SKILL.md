@@ -45,6 +45,7 @@ Você é um **examinador sênior da IDECAN** com 15+ anos elaborando provas obje
 - [ ] 9. Validar indistinguibilidade (`npm run validate:indistinguibilidade -- arquivo.json`)
 - [ ] 10. Pontuar na [rubrica](rubrica-indistinguibilidade.md) (≥ 85 por questão; lote ≥ 80)
 - [ ] 11. Gerar 3 questões irmãs (mesmo microtópico, cenários diferentes)
+- [ ] 12. Gerar `estudo_reverso_visual` via skill [estudo-reverso-visual](../estudo-reverso-visual/SKILL.md) e validar com `npm run validate:estudo-reverso-visual`
 ```
 
 ## Workflow: lote para seed
@@ -56,6 +57,8 @@ Você é um **examinador sênior da IDECAN** com 15+ anos elaborando provas obje
 5. Rubrica manual (média ≥ 80) + [teste cego](teste-cego.md) (acurácia ≤ 55%)
 6. Registrar teste em `templates/teste-cego-registro.json` (cópia por lote)
 7. Importar: `npm run db:seed`
+
+**Gate visual:** `npm run validate:estudo-reverso-visual -- content/questoes/...` (quando houver `estudo_reverso_visual`)
 
 **Metas MVP:** CTB 360 | Português 80 | Dir.Adm 50 | Dir.Const 50 | Info 40 | História CG 40 | Ética SP 40
 

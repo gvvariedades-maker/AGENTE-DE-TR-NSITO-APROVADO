@@ -9,6 +9,7 @@ import {
 } from "@/lib/srs";
 import { getQuestaoById, type QuestaoUI } from "@/lib/questoes";
 import { PROVA_DATA, type ComentarioQuestao, type Disciplina } from "@/types";
+import type { EstudoReversoVisual } from "@/types/estudo-reverso-visual";
 
 export type TipoErro =
   | "decoreba"
@@ -66,20 +67,24 @@ export function classificarErro(
   return "decoreba";
 }
 
-/** Domínio = 2 acertos seguidos no mesmo microtópico (03-estudo-reverso.mdc). */
+/** Domínio = 2 acertos seguidos no mesmo microtópico, espaçados >= 1h (03-estudo-reverso.mdc). */
 export async function verificarDominioTopico(
   userId: string,
   topicId: string,
 ): Promise<boolean> {
   const rows = await db
-    .select({ acertou: attempts.acertou })
+    .select({ acertou: attempts.acertou, createdAt: attempts.createdAt })
     .from(attempts)
     .innerJoin(questions, eq(attempts.questionId, questions.id))
     .where(and(eq(attempts.userId, userId), eq(questions.topicId, topicId)))
     .orderBy(desc(attempts.createdAt))
     .limit(2);
 
-  return rows.length === 2 && rows.every((r) => r.acertou);
+  if (rows.length < 2 || !rows.every((r) => r.acertou)) return false;
+
+  const diffMs =
+    rows[0].createdAt.getTime() - rows[1].createdAt.getTime();
+  return diffMs >= 60 * 60 * 1000;
 }
 
 export interface RegistrarTentativaInput {
@@ -94,6 +99,7 @@ export interface RegistrarTentativaInput {
 export interface RegistrarTentativaResult {
   ok: boolean;
   demo?: boolean;
+  attemptId?: string;
   tipoErro?: TipoErro;
   dominioAlcancado?: boolean;
   irmaIds?: string[];
@@ -121,17 +127,28 @@ export async function registrarTentativa(
     return { ok: false };
   }
 
-  await db.insert(attempts).values({
-    userId: input.userId,
-    questionId: input.questionId,
-    resposta: input.resposta,
-    acertou: input.acertou,
-    tempoSeg: input.tempoSeg ?? null,
-    modo: input.modo,
-  });
+  let tipoErro: TipoErro | undefined;
+  if (!input.acertou && input.modo === "estudo") {
+    tipoErro = classificarErro(
+      questaoRow.estiloIdecan,
+      questaoRow.disciplina,
+    );
+  }
+
+  const [inserted] = await db
+    .insert(attempts)
+    .values({
+      userId: input.userId,
+      questionId: input.questionId,
+      resposta: input.resposta,
+      acertou: input.acertou,
+      tempoSeg: input.tempoSeg ?? null,
+      modo: input.modo,
+      tipoErro: tipoErro ?? null,
+    })
+    .returning({ id: attempts.id });
 
   let dominioAlcancado = false;
-  let tipoErro: TipoErro | undefined;
   let irmaIds: string[] | undefined;
 
   if (input.modo === "estudo") {
@@ -186,16 +203,13 @@ export async function registrarTentativa(
         questaoRow.topicId,
       );
     } else {
-      tipoErro = classificarErro(
-        questaoRow.estiloIdecan,
-        questaoRow.disciplina,
-      );
       irmaIds = await buscarIdsIrmas(questaoRow.topicId, input.questionId, 3);
     }
   }
 
   return {
     ok: true,
+    attemptId: inserted.id,
     tipoErro,
     dominioAlcancado,
     irmaIds,
@@ -474,6 +488,7 @@ async function buscarQuestoesNovas(
         altE: questions.altE,
         gabarito: questions.gabarito,
         comentarioJson: questions.comentarioJson,
+        estudoReversoVisualJson: questions.estudoReversoVisualJson,
         disciplina: topics.disciplina,
       })
       .from(questions)
@@ -496,6 +511,8 @@ async function buscarQuestoesNovas(
       },
       gabarito: row.gabarito,
       comentario: (row.comentarioJson as ComentarioQuestao) ?? null,
+      estudoReversoVisual:
+        (row.estudoReversoVisualJson as EstudoReversoVisual) ?? null,
     }));
   } catch {
     return [];

@@ -1,0 +1,106 @@
+{
+  "disciplina": "legislacao_transito",
+  "topico": "CTB_infracoes",
+  "tipo": "assertivas",
+  "estilo_idecan": "pegadinha_percentual",
+  "dificuldade": 4,
+  "enunciado": "Sobre as infrações por excesso de velocidade previstas no CTB, analise as assertivas e assinale a alternativa CORRETA:\n\nI. Até 20% acima do limite: infração de natureza média.\nII. Entre 20% e 50% acima do limite: infração gravíssima.\nIII. Acima de 50%: infração gravíssima com multa triplicada e suspensão do direito de dirigir.",
+  "alternativas": {
+    "A": "Está correto o que se afirma em I, apenas.",
+    "B": "Está correto o que se afirma em I e III, apenas.",
+    "C": "Está correto o que se afirma em II e III, apenas.",
+    "D": "Está correto o que se afirma em I, II e III."
+  },
+  "gabarito": "B",
+  "comentario": {
+    "o_que_testa": "Gradação de gravidade das infrações de velocidade conforme percentual de excesso (art. 218).",
+    "fundamento_legal": "CTB, art. 218, I: até 20% — infração média. II: mais de 20% até 50% — infração grave. III: mais de 50% — gravíssima com multa tripla e suspensão.",
+    "passo_a_passo": [
+      "I: Correta — inciso I do art. 218.",
+      "II: Errada — entre 20% e 50% é GRAVE, não gravíssima.",
+      "III: Correta — inciso III do art. 218.",
+      "Gabarito: I e III = B."
+    ],
+    "pegadinha": "Trocar infração grave (20% a 50%) por gravíssima.",
+    "macete": "20/50: média → grave → gravíssima. Pegadinha no meio (grave, não gravíssima).",
+    "estudo_reverso": ["CTB art. 218", "CTB art. 219", "CTB art. 220"]
+  },
+  "estudo_reverso_visual": {
+    "versao": 1,
+    "arquetipo": "tabela_gradacao",
+    "arquetipo_secundario": "matriz_assertivas",
+    "duracao_estimada_seg": 85,
+    "fundamento_slug": "CTB_art_218",
+    "macete_visual": "20% média | 20-50% GRAVE | +50% gravíssima tripla",
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "O que a IDECAN testou",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "A banca troca infração GRAVE por GRAVÍSSIMA na faixa de 20% a 50% do art. 218.",
+          "destaques": ["GRAVE", "GRAVÍSSIMA", "20%", "50%"]
+        }
+      },
+      {
+        "id": "gradacao",
+        "titulo": "Gradação do art. 218",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": ["Excesso", "Classificação"],
+          "linhas": [
+            { "faixa": "Até 20%", "classificacao": "Média" },
+            { "faixa": "20% a 50%", "classificacao": "Grave", "destaque": true },
+            { "faixa": "Acima de 50%", "classificacao": "Gravíssima + multa x3 + suspensão" }
+          ]
+        }
+      },
+      {
+        "id": "assertivas",
+        "titulo": "Mapa I–II–III",
+        "tipo": "matriz_assertivas",
+        "conteudo": {
+          "itens": [
+            { "id": "I", "texto": "Até 20% = média", "correto": true },
+            { "id": "II", "texto": "20% a 50% = gravíssima", "correto": false },
+            { "id": "III", "texto": "Acima 50% = gravíssima tripla", "correto": true }
+          ],
+          "gabarito_resumo": "I e III corretas → alternativa B"
+        }
+      },
+      {
+        "id": "pegadinha",
+        "titulo": "Armadilha",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["Pegadinha", "Correto"],
+          "linhas": [
+            ["20% a 50% = gravíssima", "20% a 50% = GRAVE"]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Lei seca",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 218, II",
+          "texto": "Mais de 20% até 50%: infração de natureza grave.",
+          "trechos_grifados": [{ "inicio": 0, "fim": 18, "motivo": "faixa da pegadinha" }]
+        }
+      },
+      {
+        "id": "recall",
+        "titulo": "Fixação ativa",
+        "tipo": "micro_recall",
+        "conteudo": {
+          "pergunta": "Entre 20% e 50% de excesso: a infração é de que natureza?",
+          "resposta_esperada": "grave",
+          "aceitar_variacoes": ["infração grave", "natureza grave"]
+        }
+      }
+    ],
+    "links_fonte": [{ "rotulo": "CTB art. 218", "path": "conteúdo/legislação federal/" }]
+  },
+  "tags": ["velocidade", "art_218", "percentual"]
+}

@@ -2,6 +2,8 @@ import { eq, sql } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { questions, topics } from "@/lib/db/schema";
 import type { ComentarioQuestao, Disciplina } from "@/types";
+import type { EstudoReversoVisual } from "@/types/estudo-reverso-visual";
+import { DEMO_ESTUDO_REVERSO_VISUAL } from "@/lib/demo-estudo-reverso-visual";
 
 export interface QuestaoUI {
   id: string;
@@ -10,6 +12,7 @@ export interface QuestaoUI {
   alternativas: Record<string, string>;
   gabarito: string;
   comentario: ComentarioQuestao | null;
+  estudoReversoVisual: EstudoReversoVisual | null;
 }
 
 const QUESTAO_DEMO: QuestaoUI = {
@@ -42,6 +45,7 @@ const QUESTAO_DEMO: QuestaoUI = {
       "Recusou o bafômetro = infração autônoma (art. 165-A). Não precisa estar bêbado no teste.",
     estudo_reverso: ["CTB art. 165", "CTB art. 165-A", "CTB art. 277"],
   },
+  estudoReversoVisual: DEMO_ESTUDO_REVERSO_VISUAL,
 };
 
 function mapRowToQuestao(row: {
@@ -54,6 +58,7 @@ function mapRowToQuestao(row: {
   altE: string | null;
   gabarito: string;
   comentarioJson: unknown;
+  estudoReversoVisualJson: unknown;
   disciplina: Disciplina;
 }): QuestaoUI {
   const alternativas: Record<string, string> = {
@@ -71,6 +76,8 @@ function mapRowToQuestao(row: {
     alternativas,
     gabarito: row.gabarito,
     comentario: (row.comentarioJson as ComentarioQuestao) ?? null,
+    estudoReversoVisual:
+      (row.estudoReversoVisualJson as EstudoReversoVisual) ?? null,
   };
 }
 
@@ -87,6 +94,7 @@ export async function getQuestaoById(id: string): Promise<QuestaoUI | null> {
         altE: questions.altE,
         gabarito: questions.gabarito,
         comentarioJson: questions.comentarioJson,
+        estudoReversoVisualJson: questions.estudoReversoVisualJson,
         disciplina: topics.disciplina,
       })
       .from(questions)
@@ -120,6 +128,7 @@ export async function getQuestoesLista(
         altE: questions.altE,
         gabarito: questions.gabarito,
         comentarioJson: questions.comentarioJson,
+        estudoReversoVisualJson: questions.estudoReversoVisualJson,
         disciplina: topics.disciplina,
       })
       .from(questions)

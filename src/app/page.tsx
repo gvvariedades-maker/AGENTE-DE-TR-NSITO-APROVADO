@@ -46,7 +46,7 @@ export default function HomePage() {
       </header>
 
       <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-8 px-4 py-8 md:px-8">
-        <Card className="border-transito/30 bg-transito/5">
+        <Card className="border-transito/40 bg-transito-gradient">
           <CardHeader className="pb-2">
             <CardDescription>Prova objetiva — {formatarDataProva()}</CardDescription>
             <CardTitle className="text-lg font-medium text-muted-foreground">
@@ -66,7 +66,7 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        <Card className="border-transito/30 bg-transito/5">
+        <Card className="border-transito/40 bg-transito-gradient">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg">Sua prova hoje</CardTitle>
             <CardDescription>

@@ -32,13 +32,14 @@ alwaysApply: false
 ## Fluxo de import
 
 1. Validar JSON com schema Zod + citações (`npm run validate:questoes -- ...`)
-2. Upsert `topics` conforme Anexo I retificado
-3. Insert `questions` com `comentario_json`
-4. Log: total importado, erros por arquivo
+2. Validar estudo reverso visual (`npm run validate:estudo-reverso-visual -- ...`)
+3. Upsert `topics` conforme Anexo I retificado
+4. Insert `questions` com `comentario_json` e `estudo_reverso_visual_json`
+5. Log: total importado, erros por arquivo
 
 ## Ao criar questões novas
 
-- Usar skill `.cursor/skills/examinador-idecan/` (Examinador IDECAN)
+- Usar skills `examinador-idecan` + `estudo-reverso-visual` (Agent mode)
 - Priorizar CTB e Resoluções CONTRAN da pasta `conteúdo/`
 - Tag `estilo_idecan` em toda questão
 - Gerar 3 "questões irmãs" por microtópico para estudo reverso

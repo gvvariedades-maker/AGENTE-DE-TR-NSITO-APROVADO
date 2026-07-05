@@ -47,6 +47,7 @@ export const questions = pgTable("questions", {
   estiloIdecan: text("estilo_idecan"),
   dificuldade: integer("dificuldade").notNull().default(3),
   comentarioJson: jsonb("comentario_json").notNull().default({}),
+  estudoReversoVisualJson: jsonb("estudo_reverso_visual_json"),
   tags: text("tags").array().default([]),
   createdAt: timestamp("created_at", { withTimezone: true })
     .defaultNow()
@@ -59,10 +60,12 @@ export const attempts = pgTable("attempts", {
   questionId: uuid("question_id")
     .references(() => questions.id, { onDelete: "cascade" })
     .notNull(),
+  sessionId: uuid("session_id"),
   resposta: text("resposta").notNull(),
   acertou: boolean("acertou").notNull(),
   tempoSeg: integer("tempo_seg"),
   modo: text("modo").notNull().default("estudo"),
+  tipoErro: text("tipo_erro"),
   createdAt: timestamp("created_at", { withTimezone: true })
     .defaultNow()
     .notNull(),
@@ -101,4 +104,40 @@ export const srsCards = pgTable("srs_cards", {
   createdAt: timestamp("created_at", { withTimezone: true })
     .defaultNow()
     .notNull(),
+});
+
+export const studySessions = pgTable("study_sessions", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  userId: uuid("user_id").notNull(),
+  modo: text("modo").notNull().default("normal"),
+  disciplina: disciplinaEnum("disciplina"),
+  topicoSlug: text("topico_slug"),
+  plannedCount: integer("planned_count").notNull().default(0),
+  answeredCount: integer("answered_count").notNull().default(0),
+  acertos: integer("acertos").notNull().default(0),
+  erros: integer("erros").notNull().default(0),
+  startedAt: timestamp("started_at", { withTimezone: true })
+    .defaultNow()
+    .notNull(),
+  endedAt: timestamp("ended_at", { withTimezone: true }),
+  completed: boolean("completed").notNull().default(false),
+});
+
+export const estudoReversoSessions = pgTable("estudo_reverso_sessions", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  userId: uuid("user_id").notNull(),
+  questionId: uuid("question_id")
+    .references(() => questions.id, { onDelete: "cascade" })
+    .notNull(),
+  attemptId: uuid("attempt_id").references(() => attempts.id, {
+    onDelete: "set null",
+  }),
+  telasVistas: jsonb("telas_vistas").notNull().default([]),
+  recallAcertou: boolean("recall_acertou"),
+  tempoTotalSeg: integer("tempo_total_seg"),
+  concluido: boolean("concluido").notNull().default(false),
+  iniciadoEm: timestamp("iniciado_em", { withTimezone: true })
+    .defaultNow()
+    .notNull(),
+  concluidoEm: timestamp("concluido_em", { withTimezone: true }),
 });

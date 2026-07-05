@@ -1,6 +1,7 @@
 import { defineConfig } from "drizzle-kit";
 import { config } from "dotenv";
 import { existsSync } from "node:fs";
+import { resolveDatabaseUrl } from "./src/lib/db/resolve-database-url";
 
 if (existsSync(".env.local")) {
   config({ path: ".env.local" });
@@ -11,6 +12,6 @@ export default defineConfig({
   out: "./drizzle",
   dialect: "postgresql",
   dbCredentials: {
-    url: process.env.DATABASE_URL!,
+    url: resolveDatabaseUrl(),
   },
 });

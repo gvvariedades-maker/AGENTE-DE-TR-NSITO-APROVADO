@@ -43,9 +43,12 @@ Referência de estilo: PDFs em `conteúdo/questões reais/` (CTB, Português, In
     "macete": "...",
     "estudo_reverso": ["CTB art. 165", "CTB art. 165-A", "CTB art. 277"]
   },
+  "estudo_reverso_visual": { "versao": 1, "arquetipo": "...", "telas": [] },
   "tags": ["embriaguez", "etilometro"]
 }
 ```
+
+Campo opcional `estudo_reverso_visual` (JSON tipado) — ver skill `estudo-reverso-visual` e `src/types/estudo-reverso-visual.ts`. Validar com `npm run validate:estudo-reverso-visual`.
 
 ## Comentário Professor Elite (sempre nesta ordem)
 
@@ -61,6 +64,7 @@ Referência de estilo: PDFs em `conteúdo/questões reais/` (CTB, Português, In
 
 - `npm run validate:questoes -- content/questoes/.../lote.json` (schema + citações legais)
 - `npm run validate:indistinguibilidade -- content/questoes/.../lote.json` (heurísticas de paridade IDECAN)
+- `npm run validate:estudo-reverso-visual -- content/questoes/.../lote.json` (micro-aula visual)
 - Rubrica manual: `.cursor/skills/examinador-idecan/rubrica-indistinguibilidade.md` (≥ 85/questão)
 - Teste cego: `.cursor/skills/examinador-idecan/teste-cego.md` (acurácia ≤ 55%)
 - Gabarito existe nas alternativas

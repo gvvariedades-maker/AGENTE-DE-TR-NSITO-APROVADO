@@ -53,7 +53,7 @@ export function SuaProvaHoje({
     retencao.aprendendo + retencao.jovem + retencao.maduro;
 
   return (
-    <Card className="border-transito/30 bg-transito/5">
+    <Card className="border-transito/40 bg-transito-gradient">
       <CardHeader className="pb-2">
         <div className="flex flex-wrap items-start justify-between gap-2">
           <div>

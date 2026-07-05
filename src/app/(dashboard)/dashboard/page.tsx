@@ -10,10 +10,11 @@ import { DISCIPLINAS } from "@/types";
 import { MIN_PONTOS_TOTAL } from "@/lib/edital-constants";
 import { getSemaforoData, DISCIPLINA_LABELS } from "@/lib/semaforo";
 import { getQuestoesCount } from "@/lib/questoes";
-import { getRetencaoResumo, getAtividadeSemanal } from "@/lib/retencao";
+import { getRetencaoResumo, getAtividadeSemanal, getEstudoReversoResumo } from "@/lib/retencao";
 import { getPioresTopicos } from "@/lib/piores-topicos";
 import { DashboardHero } from "@/components/dashboard/dashboard-hero";
 import { CicloRetencao } from "@/components/dashboard/ciclo-retencao";
+import { EstudoReversoResumoCard } from "@/components/dashboard/estudo-reverso-resumo";
 import { SemaforoZonaCard } from "@/components/dashboard/semaforo-zona-card";
 import { SemaforoPlaceholder } from "@/components/dashboard/semaforo-placeholder";
 import { SuaProvaHoje } from "@/components/dashboard/sua-prova-hoje";
@@ -65,13 +66,14 @@ export default async function DashboardPage() {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const [semaforo, questoesCount, retencao, atividade, pioresTopicos] =
+  const [semaforo, questoesCount, retencao, atividade, pioresTopicos, reversoResumo] =
     await Promise.all([
       getSemaforoData(user?.id),
       getQuestoesCount(),
       getRetencaoResumo(user?.id),
       getAtividadeSemanal(user?.id),
       getPioresTopicos(user?.id),
+      getEstudoReversoResumo(user?.id),
     ]);
 
   return (
@@ -104,6 +106,8 @@ export default async function DashboardPage() {
       )}
 
       <CicloRetencao resumo={retencao} atividade={atividade} />
+
+      <EstudoReversoResumoCard resumo={reversoResumo} />
 
       <section aria-labelledby="semaforo-titulo" className="flex flex-col gap-4">
         {semaforo.hasData ? (

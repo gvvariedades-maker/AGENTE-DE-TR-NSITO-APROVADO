@@ -91,7 +91,7 @@ Regra geral: visual só entra se reduz carga cognitiva sobre o texto — nunca d
 3. **Tabela comparativa** → o tópico é um par de distratores confirmados (leve↔grave, CONTRAN↔CETRAN, prazo 30↔60 dias). 2 colunas, mesma estrutura de linha, diferença em destaque.
 4. **Timeline** → matéria genuinamente sequencial no tempo (cadeia autuação→notificação→defesa→julgamento).
 
-Geração: usar **diagrama Mermaid** (```mermaid```) para fluxograma/hierarquia/timeline; usar tabela markdown para comparação. Nunca descrever o diagrama em prosa como substituto do diagrama em si.
+Geração: usar **JSON tipado** no campo `estudo_reverso_visual` da questão (skill `estudo-reverso-visual`) — renderizado no app por `EstudoReversoPlayer`. No chat Professor, pode-se usar diagrama Mermaid como rascunho, mas o seed do app exige JSON estruturado (fluxograma, comparação, matriz, etc.).
 
 ## Protocolo de atendimento — modo TUTOR
 

@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { estudoReversoVisualSchema } from "@/lib/validations/estudo-reverso-visual";
 import { DISCIPLINAS } from "@/types";
 
 const comentarioSchema = z.object({
@@ -23,6 +24,7 @@ export const questaoSeedSchema = z.object({
   ),
   gabarito: z.string().min(1),
   comentario: comentarioSchema,
+  estudo_reverso_visual: estudoReversoVisualSchema.optional(),
   tags: z.array(z.string()).optional(),
 }).refine(
   (q) => q.gabarito in q.alternativas,

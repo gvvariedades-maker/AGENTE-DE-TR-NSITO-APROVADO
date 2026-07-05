@@ -1,0 +1,113 @@
+{
+  "disciplina": "legislacao_transito",
+  "topico": "CTB_conducao_embriaguez",
+  "tipo": "caso_pratico",
+  "estilo_idecan": "pegadinha_pode_deve",
+  "dificuldade": 4,
+  "enunciado": "Durante fiscalização de trânsito em Campina Grande, agente da STTP constata que o condutor apresenta sinais evidentes de alteração da capacidade psicomotora. O condutor recusa-se a submeter-se ao teste do etilômetro. Considerando o CTB, assinale a alternativa CORRETA:",
+  "alternativas": {
+    "A": "A recusa impede a autuação, pois o teste depende de consentimento livre do condutor.",
+    "B": "O agente deve aguardar perito criminal antes de lavrar qualquer auto de infração.",
+    "C": "A recusa em se submeter ao teste constitui infração autônoma prevista no CTB.",
+    "D": "A infração somente se configura se o etilômetro confirmar concentração acima do limite legal."
+  },
+  "gabarito": "C",
+  "comentario": {
+    "o_que_testa": "Conhecimento sobre embriaguez ao volante e consequência jurídica da recusa ao etilômetro.",
+    "fundamento_legal": "CTB, art. 165-A: recusar-se a ser submetido a teste, exame clínico, perícia ou outro procedimento que permita certificar influência de álcool ou outra substância psicoativa, na forma do art. 277, configura infração autônoma de trânsito.",
+    "passo_a_passo": [
+      "O enunciado descreve sinais de alteração psicomotora + recusa ao etilômetro.",
+      "A) Erra: a recusa não impede autuação — é infração autônoma (art. 165-A).",
+      "B) Erra: não é necessário aguardar perito para autuação administrativa.",
+      "C) Correta: a recusa configura infração autônoma prevista no art. 165-A do CTB.",
+      "D) Erra: confunde necessidade de confirmação etílica com a recusa em si."
+    ],
+    "pegadinha": "IDECAN troca recusa por necessidade de confirmação etílica — candidato acha que sem teste positivo não há infração.",
+    "macete": "Recusou o bafômetro = infração autônoma (art. 165-A). Não precisa estar bêbado no teste.",
+    "estudo_reverso": ["CTB art. 165", "CTB art. 165-A", "CTB art. 277"]
+  },
+  "estudo_reverso_visual": {
+    "versao": 1,
+    "arquetipo": "fluxograma_decisao",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 90,
+    "fundamento_slug": "CTB_art_165-A",
+    "macete_visual": "RECUSA = 165-A (infração autônoma, não depende do resultado do teste)",
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "O que a IDECAN testou",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "A banca cobra se você sabe que a recusa ao etilômetro é infração autônoma, independente do resultado do teste.",
+          "destaques": ["recusa", "infração autônoma"]
+        }
+      },
+      {
+        "id": "fluxo",
+        "titulo": "Raciocínio em 3 passos",
+        "tipo": "fluxograma",
+        "conteudo": {
+          "nos": [
+            { "id": "n1", "label": "Sinais de alteração psicomotora?", "tipo": "pergunta" },
+            { "id": "n2", "label": "Condutor recusa o etilômetro", "tipo": "acao" },
+            { "id": "n3", "label": "Art. 165-A — infração autônoma", "tipo": "lei", "ref": "CTB art. 165-A" }
+          ],
+          "arestas": [
+            { "de": "n1", "para": "n2", "rotulo": "sim" },
+            { "de": "n2", "para": "n3" }
+          ]
+        }
+      },
+      {
+        "id": "pegadinha",
+        "titulo": "Armadilha IDECAN",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["O que parece", "O que a lei diz"],
+          "linhas": [
+            ["Precisa confirmar no etilômetro", "Recusa já configura infração autônoma"],
+            ["Sem teste positivo, não autua", "Art. 165-A independe do resultado"]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Lei seca",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 165-A",
+          "texto": "Recusar-se a ser submetido a teste, exame clínico, perícia ou outro procedimento que permita certificar influência de álcool configura infração autônoma.",
+          "trechos_grifados": [
+            { "inicio": 0, "fim": 12, "motivo": "conduta autônoma" },
+            { "inicio": 120, "fim": 140, "motivo": "infração autônoma" }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Macete visual",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "RECUSA = 165-A. Não confunda com art. 165 (dirigir sob influência).",
+          "destaques": ["165-A"]
+        }
+      },
+      {
+        "id": "recall",
+        "titulo": "Fixação ativa",
+        "tipo": "micro_recall",
+        "conteudo": {
+          "pergunta": "Sem olhar: qual artigo configura a recusa ao teste do etilômetro?",
+          "resposta_esperada": "165-A",
+          "dica": "Começa com 165...",
+          "aceitar_variacoes": ["165A", "art. 165-A", "artigo 165-A"]
+        }
+      }
+    ],
+    "links_fonte": [
+      { "rotulo": "CTB art. 165-A", "path": "conteúdo/legislação federal/" }
+    ]
+  },
+  "tags": ["embriaguez", "etilometro", "recusa"]
+}

@@ -42,6 +42,8 @@
   --color-transito: var(--transito);
   --color-transito-foreground: var(--transito-foreground);
   --color-transito-muted: var(--transito-muted);
+  --color-transito-gradient-from: var(--transito-gradient-from);
+  --color-transito-gradient-to: var(--transito-gradient-to);
   --color-semaforo-verde: var(--semaforo-verde);
   --color-semaforo-amarelo: var(--semaforo-amarelo);
   --color-semaforo-vermelho: var(--semaforo-vermelho);
@@ -61,96 +63,111 @@
 }
 
 :root {
-  --background: oklch(0.99 0.004 250);
-  --foreground: oklch(0.2 0.02 260);
+  /* Marca TransitOLândia — laranja #F58220 ≈ oklch(0.703 0.191 48) */
+  --background: oklch(0.985 0.008 55);
+  --foreground: oklch(0.2 0.02 50);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.02 260);
+  --card-foreground: oklch(0.2 0.02 50);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.02 260);
-  --primary: oklch(0.48 0.16 250);
+  --popover-foreground: oklch(0.2 0.02 50);
+  --primary: oklch(0.65 0.195 48);
   --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.96 0.008 250);
-  --secondary-foreground: oklch(0.28 0.04 260);
-  --muted: oklch(0.96 0.008 250);
-  --muted-foreground: oklch(0.48 0.02 260);
-  --accent: oklch(0.94 0.02 250);
-  --accent-foreground: oklch(0.28 0.04 260);
+  --secondary: oklch(0.96 0.014 55);
+  --secondary-foreground: oklch(0.28 0.04 50);
+  --muted: oklch(0.96 0.014 55);
+  --muted-foreground: oklch(0.48 0.03 50);
+  --accent: oklch(0.94 0.035 55);
+  --accent-foreground: oklch(0.28 0.06 48);
   --destructive: oklch(0.55 0.22 25);
-  --border: oklch(0.91 0.012 250);
-  --input: oklch(0.91 0.012 250);
-  --ring: oklch(0.48 0.16 250);
-  --chart-1: oklch(0.48 0.16 250);
+  --border: oklch(0.91 0.018 55);
+  --input: oklch(0.91 0.018 55);
+  --ring: oklch(0.65 0.195 48);
+  --chart-1: oklch(0.703 0.191 48);
   --chart-2: oklch(0.55 0.17 145);
   --chart-3: oklch(0.75 0.15 85);
   --chart-4: oklch(0.55 0.22 25);
-  --chart-5: oklch(0.48 0.02 260);
+  --chart-5: oklch(0.48 0.02 50);
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0.005 250);
-  --sidebar-foreground: oklch(0.2 0.02 260);
-  --sidebar-primary: oklch(0.48 0.16 250);
+  --sidebar: oklch(0.985 0.01 55);
+  --sidebar-foreground: oklch(0.2 0.02 50);
+  --sidebar-primary: oklch(0.65 0.195 48);
   --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(0.96 0.008 250);
-  --sidebar-accent-foreground: oklch(0.28 0.04 260);
-  --sidebar-border: oklch(0.91 0.012 250);
-  --sidebar-ring: oklch(0.48 0.16 250);
-  --transito: oklch(0.48 0.16 250);
-  --transito-foreground: oklch(0.38 0.14 250);
-  --transito-muted: oklch(0.94 0.03 250);
+  --sidebar-accent: oklch(0.96 0.014 55);
+  --sidebar-accent-foreground: oklch(0.28 0.04 50);
+  --sidebar-border: oklch(0.91 0.018 55);
+  --sidebar-ring: oklch(0.65 0.195 48);
+  --transito: oklch(0.703 0.191 48);
+  --transito-foreground: oklch(0.38 0.14 48);
+  --transito-muted: oklch(0.965 0.04 55);
+  --transito-gradient-from: oklch(0.703 0.191 48);
+  --transito-gradient-to: oklch(0.98 0.025 55);
   --semaforo-verde: oklch(0.52 0.17 145);
   --semaforo-amarelo: oklch(0.72 0.15 85);
   --semaforo-vermelho: oklch(0.52 0.22 25);
-  --semaforo-housing: oklch(0.28 0.02 260);
+  --semaforo-housing: oklch(0.28 0.02 50);
   --faixa: oklch(0.72 0.14 85);
-  --asfalto: oklch(0.975 0.008 250);
-  --retencao-aprendendo: oklch(0.55 0.14 250);
+  --asfalto: oklch(0.975 0.01 55);
+  --retencao-aprendendo: oklch(0.65 0.18 48);
   --retencao-jovem: oklch(0.58 0.14 145);
   --retencao-maduro: oklch(0.45 0.12 160);
 }
 
 .dark {
-  --background: oklch(0.13 0.01 260);
+  --background: oklch(0.13 0.012 50);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.18 0.012 260);
+  --card: oklch(0.18 0.014 50);
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.18 0.012 260);
+  --popover: oklch(0.18 0.014 50);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.58 0.17 250);
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.24 0.02 260);
+  --primary: oklch(0.75 0.18 50);
+  --primary-foreground: oklch(0.15 0.04 48);
+  --secondary: oklch(0.24 0.02 50);
   --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.24 0.02 260);
-  --muted-foreground: oklch(0.68 0.02 260);
-  --accent: oklch(0.26 0.04 250);
+  --muted: oklch(0.24 0.02 50);
+  --muted-foreground: oklch(0.68 0.02 50);
+  --accent: oklch(0.26 0.05 48);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.58 0.17 250);
-  --chart-1: oklch(0.87 0 0);
+  --ring: oklch(0.75 0.18 50);
+  --chart-1: oklch(0.78 0.17 50);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
+  --sidebar: oklch(0.205 0.01 50);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-primary: oklch(0.75 0.18 50);
+  --sidebar-primary-foreground: oklch(0.15 0.04 48);
+  --sidebar-accent: oklch(0.269 0.01 50);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.58 0.17 250);
-  --transito: oklch(0.62 0.17 250);
-  --transito-foreground: oklch(0.78 0.11 250);
-  --transito-muted: oklch(0.22 0.05 250);
+  --sidebar-ring: oklch(0.75 0.18 50);
+  --transito: oklch(0.78 0.17 50);
+  --transito-foreground: oklch(0.85 0.12 55);
+  --transito-muted: oklch(0.22 0.05 48);
+  --transito-gradient-from: oklch(0.55 0.16 48);
+  --transito-gradient-to: oklch(0.2 0.04 48);
   --semaforo-verde: oklch(0.72 0.19 145);
   --semaforo-amarelo: oklch(0.82 0.16 85);
   --semaforo-vermelho: oklch(0.63 0.22 25);
   --faixa: oklch(0.85 0.14 90);
-  --asfalto: oklch(0.17 0.015 260);
-  --retencao-aprendendo: oklch(0.62 0.17 250);
+  --asfalto: oklch(0.17 0.015 50);
+  --retencao-aprendendo: oklch(0.75 0.17 50);
   --retencao-jovem: oklch(0.72 0.16 145);
   --retencao-maduro: oklch(0.55 0.14 160);
-  --semaforo-housing: oklch(0.22 0.02 260);
+  --semaforo-housing: oklch(0.22 0.02 50);
+}
+
+@layer utilities {
+  .bg-transito-gradient {
+    background: linear-gradient(
+      to bottom,
+      var(--transito-gradient-from),
+      var(--transito-gradient-to)
+    );
+  }
 }
 
 @layer base {

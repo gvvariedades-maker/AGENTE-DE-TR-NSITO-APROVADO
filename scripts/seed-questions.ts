@@ -2,22 +2,30 @@
  * Importa questões de content/questoes/{disciplina}/*.json para o Supabase.
  *
  * Uso: npm run db:seed
- * Requer: DATABASE_URL no .env.local
+ * Requer: DATABASE_PASSWORD + SUPABASE_PROJECT_REF (ou DATABASE_URL válida)
  */
+import { existsSync } from "node:fs";
 import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { config } from "dotenv";
-import { eq } from "drizzle-orm";
-import { db } from "../src/lib/db";
-import { questions, topics } from "../src/lib/db/schema";
+import { and, eq } from "drizzle-orm";
 import { questoesFileSchema } from "../src/lib/validations/questao";
 import type { Disciplina } from "../src/types";
 
-config({ path: ".env.local" });
+if (existsSync(".env.local")) {
+  config({ path: ".env.local" });
+} else {
+  config();
+}
 
 const CONTENT_DIR = join(process.cwd(), "content", "questoes");
 
-async function getOrCreateTopic(disciplina: Disciplina, topico: string) {
+async function getOrCreateTopic(
+  db: Awaited<typeof import("../src/lib/db")>["db"],
+  topics: typeof import("../src/lib/db/schema").topics,
+  disciplina: Disciplina,
+  topico: string,
+) {
   const [existing] = await db
     .select()
     .from(topics)
@@ -34,8 +42,27 @@ async function getOrCreateTopic(disciplina: Disciplina, topico: string) {
   return created.id;
 }
 
+async function questionExists(
+  db: Awaited<typeof import("../src/lib/db")>["db"],
+  questions: typeof import("../src/lib/db/schema").questions,
+  topicId: string,
+  enunciado: string,
+) {
+  const [existing] = await db
+    .select({ id: questions.id })
+    .from(questions)
+    .where(and(eq(questions.topicId, topicId), eq(questions.enunciado, enunciado)))
+    .limit(1);
+
+  return Boolean(existing);
+}
+
 async function main() {
+  const { db } = await import("../src/lib/db");
+  const { questions, topics } = await import("../src/lib/db/schema");
+
   let total = 0;
+  let skipped = 0;
   let errors = 0;
 
   const disciplinas = await readdir(CONTENT_DIR, { withFileTypes: true });
@@ -59,7 +86,13 @@ async function main() {
       }
 
       for (const q of parsed.data) {
-        const topicId = await getOrCreateTopic(q.disciplina, q.topico);
+        const topicId = await getOrCreateTopic(db, topics, q.disciplina, q.topico);
+
+        if (await questionExists(db, questions, topicId, q.enunciado)) {
+          skipped++;
+          continue;
+        }
+
         const alts = q.alternativas;
 
         await db.insert(questions).values({
@@ -75,6 +108,7 @@ async function main() {
           estiloIdecan: q.estilo_idecan ?? null,
           dificuldade: q.dificuldade,
           comentarioJson: q.comentario,
+          estudoReversoVisualJson: q.estudo_reverso_visual ?? null,
           tags: q.tags ?? [],
         });
 
@@ -85,7 +119,7 @@ async function main() {
     }
   }
 
-  console.log(`\nImportadas: ${total} | Erros: ${errors}`);
+  console.log(`\nImportadas: ${total} | Ignoradas (já existem): ${skipped} | Erros: ${errors}`);
 }
 
 main().catch((err) => {

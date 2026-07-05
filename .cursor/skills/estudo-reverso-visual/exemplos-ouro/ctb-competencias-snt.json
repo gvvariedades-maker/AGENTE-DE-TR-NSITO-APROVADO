@@ -1,0 +1,105 @@
+{
+  "disciplina": "legislacao_transito",
+  "topico": "CTB_snt_competencias",
+  "tipo": "caso_pratico",
+  "estilo_idecan": "pegadinha_pode_deve",
+  "dificuldade": 3,
+  "enunciado": "Em operação de fiscalização em via municipal de Campina Grande, agente da STTP lavra auto de infração por estacionamento irregular. O condutor sustenta que apenas a Polícia Militar pode autuar. Com base no CTB, assinale a alternativa CORRETA:",
+  "alternativas": {
+    "A": "A autuação por estacionamento em via municipal é atribuição exclusiva da Polícia Militar.",
+    "B": "O órgão executivo de trânsito do Município pode autuar e aplicar penalidades por infrações de circulação, estacionamento e parada.",
+    "C": "A STTP somente pode autuar se houver delegação expressa do CONTRAN para cada agente.",
+    "D": "Infrações de estacionamento são de competência exclusiva da PRF em vias federais."
+  },
+  "gabarito": "B",
+  "comentario": {
+    "o_que_testa": "Competência do órgão executivo municipal de trânsito para autuar estacionamento irregular.",
+    "fundamento_legal": "CTB, art. 24: compete aos órgãos executivos rodoviários da União, dos Estados, do DF e dos Municípios executar e fazer executar a legislação e normas de trânsito, incluindo autuação.",
+    "passo_a_passo": [
+      "A) Erra: PM não tem exclusividade para estacionamento municipal.",
+      "B) Correta: órgão executivo municipal autua circulação, estacionamento e parada.",
+      "C) Erra: não exige delegação individual por agente.",
+      "D) Erra: confunde via municipal com federal."
+    ],
+    "pegadinha": "Atribuir exclusividade à PM ou ao CONTRAN.",
+    "macete": "Via municipal + estacionamento = órgão executivo do Município (STTP).",
+    "estudo_reverso": ["CTB art. 21", "CTB art. 23", "CTB art. 24"]
+  },
+  "estudo_reverso_visual": {
+    "versao": 1,
+    "arquetipo": "diagrama_competencia",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 80,
+    "fundamento_slug": "CTB_art_24",
+    "macete_visual": "Via municipal = órgão executivo municipal autua estacionamento",
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "O que a IDECAN testou",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Cobrança de quem autua estacionamento em via municipal — não é exclusividade da PM.",
+          "destaques": ["municipal", "STTP", "PM"]
+        }
+      },
+      {
+        "id": "snt",
+        "titulo": "Hierarquia SNT",
+        "tipo": "diagrama_competencia",
+        "conteudo": {
+          "nos": [
+            { "id": "contran", "label": "CONTRAN (normas)", "nivel": 0 },
+            { "id": "detran", "label": "DETRAN/PB", "nivel": 1 },
+            { "id": "sttp", "label": "STTP Campina Grande", "nivel": 2 }
+          ],
+          "arestas": [
+            { "de": "contran", "para": "detran", "rotulo": "diretrizes" },
+            { "de": "detran", "para": "sttp", "rotulo": "fiscalização municipal" }
+          ]
+        }
+      },
+      {
+        "id": "pegadinha",
+        "titulo": "PM vs STTP",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["Pegadinha", "Correto"],
+          "linhas": [
+            ["Só PM autua estacionamento", "Órgão executivo municipal autua (art. 24)"]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Lei seca",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 24",
+          "texto": "Compete aos órgãos executivos de trânsito dos Municípios executar a legislação de trânsito, incluindo autuação de infrações.",
+          "trechos_grifados": [{ "inicio": 0, "fim": 45, "motivo": "competência municipal" }]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Via municipal + estacionamento = STTP/órgão executivo municipal.",
+          "destaques": ["municipal"]
+        }
+      },
+      {
+        "id": "recall",
+        "titulo": "Fixação ativa",
+        "tipo": "micro_recall",
+        "conteudo": {
+          "pergunta": "Qual artigo trata da competência dos órgãos executivos de trânsito?",
+          "resposta_esperada": "24",
+          "aceitar_variacoes": ["art. 24", "artigo 24", "CTB art. 24"]
+        }
+      }
+    ],
+    "links_fonte": [{ "rotulo": "CTB art. 24", "path": "conteúdo/legislação federal/" }]
+  },
+  "tags": ["competencias", "snt", "estacionamento"]
+}

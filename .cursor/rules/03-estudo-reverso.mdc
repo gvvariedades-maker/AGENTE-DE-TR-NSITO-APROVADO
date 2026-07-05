@@ -30,6 +30,14 @@ aluno" (ver `.cursor/skills/frontend-design/retencao-visual.md`).
 - Resultado: nota total + nota por disciplina + flag `zerou_disciplina`
 - Critérios eliminatórios idênticos ao edital (50 pts + mínimos)
 
+## Estudo Reverso Visual (pós-resposta)
+
+- Botão **Estudo reverso visual** visível após confirmar resposta (**acerto ou erro**)
+- Player segmentado: `src/components/estudo-reverso/estudo-reverso-player.tsx`
+- JSON por questão em `questions.estudo_reverso_visual_json`
+- Sessões em `estudo_reverso_sessions`; boost FSRS ao concluir com recall correto
+- Skill de produção: `.cursor/skills/estudo-reverso-visual/`
+
 ## Estudo Reverso (ao errar)
 
 1. Classificar erro: `decoreba` | `interpretacao` | `pegadinha_idecan` |

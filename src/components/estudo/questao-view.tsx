@@ -19,6 +19,9 @@ import { SimuladoBar } from "@/components/estudo/simulado-bar";
 import { SessaoBar } from "@/components/estudo/sessao-bar";
 import { RecallGate } from "@/components/estudo/recall-gate";
 import { FeedbackElaborado } from "@/components/estudo/feedback-elaborado";
+import { EstudoReversoPlayer } from "@/components/estudo-reverso/estudo-reverso-player";
+import { EstudoReversoTrigger } from "@/components/estudo-reverso/estudo-reverso-trigger";
+import { registrarEstudoReverso } from "@/app/actions/estudo-reverso";
 import { FocusModeToggle } from "@/components/estudo/focus-mode-toggle";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -74,6 +77,8 @@ export function QuestaoView({
   const [erros, setErros] = useState(0);
   const [dominioAlcancado, setDominioAlcancado] = useState(false);
   const [tipoErroLabel, setTipoErroLabel] = useState<string | undefined>();
+  const [modoReverso, setModoReverso] = useState(false);
+  const [ultimoAttemptId, setUltimoAttemptId] = useState<string | undefined>();
   const [salvando, startSalvar] = useTransition();
   const [finalizando, startFinalizar] = useTransition();
   const [resultadoSimulado, setResultadoSimulado] =
@@ -110,6 +115,8 @@ export function QuestaoView({
     setAlternativasVisiveis(isSimulado);
     setDominioAlcancado(false);
     setTipoErroLabel(undefined);
+    setModoReverso(false);
+    setUltimoAttemptId(undefined);
     inicioQuestaoRef.current = Date.now();
   }, [isSimulado]);
 
@@ -145,6 +152,7 @@ export function QuestaoView({
 
         if (result.dominioAlcancado) setDominioAlcancado(true);
         if (result.tipoErro) setTipoErroLabel(labelTipoErro(result.tipoErro));
+        if (result.attemptId) setUltimoAttemptId(result.attemptId);
         if (result.irmaAs?.length) {
           setLista((prev) => intercalarIrmas(prev, indice, result.irmaAs!));
         }
@@ -364,6 +372,30 @@ export function QuestaoView({
               tipoErroLabel={tipoErroLabel}
             />
           </div>
+        )}
+
+        {isEstudo && revelada && questao.estudoReversoVisual && (
+          <EstudoReversoTrigger
+            acertou={acertou}
+            onOpen={() => setModoReverso(true)}
+          />
+        )}
+
+        {modoReverso && questao.estudoReversoVisual && (
+          <EstudoReversoPlayer
+            visual={questao.estudoReversoVisual}
+            onFechar={() => setModoReverso(false)}
+            onConcluir={async (dados) => {
+              await registrarEstudoReverso({
+                questionId: questao.id,
+                attemptId: ultimoAttemptId,
+                telasVistas: dados.telasVistas,
+                recallAcertou: dados.recallAcertou,
+                tempoTotalSeg: dados.tempoTotalSeg,
+                concluido: dados.concluido,
+              });
+            }}
+          />
         )}
 
         <footer className="flex flex-col gap-2 border-t border-border p-4">
