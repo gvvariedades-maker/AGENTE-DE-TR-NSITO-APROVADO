@@ -6,8 +6,7 @@ Baseado em pesquisa (testing effect, CLT, SRS, feedback elaborado). Aplicar em t
 
 | Princípio | Fonte | Implementação no app |
 |-----------|-------|---------------------|
-| Prática de recuperação | Roediger & Karpicke; Learning & Instruction 2025 | `RecallGate` — alternativas ocultas até o usuário tentar |
-| Feedback imediato adaptativo | Frontiers Psych 2021 | `FeedbackElaborado` — acerto = KR breve; erro = EF em blocos |
+| Feedback imediato adaptativo | Frontiers Psych 2021 | `FeedbackElaborado` — acerto e erro em blocos progressivos (EF) |
 | Estudo reverso visual | Mayer CTML + dual coding | `EstudoReversoPlayer` — botão pós-resposta, 4-6 telas + micro-recall |
 | Carga cognitiva baixa | CLT / IJCSIT 2025 | Uma questão/tela, modo foco, progressive disclosure |
 | Chunking mobile | TechClass microlearning | Enunciado scrollável; feedback em etapas |
@@ -17,8 +16,7 @@ Baseado em pesquisa (testing effect, CLT, SRS, feedback elaborado). Aplicar em t
 
 ## Componentes
 
-- `recall-gate.tsx` — gate antes das alternativas (só modo estudo)
-- `feedback-elaborado.tsx` — feedback progressivo pós-resposta
+- `feedback-elaborado.tsx` — feedback progressivo pós-resposta (acerto e erro)
 - `estudo-reverso-player.tsx` — micro-aula visual segmentada pós-questão
 - `estudo-reverso-trigger.tsx` — CTA após acerto ou erro
 - `sessao-bar.tsx` — progresso + acertos/erros da sessão

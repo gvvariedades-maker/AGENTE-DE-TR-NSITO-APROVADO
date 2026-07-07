@@ -1,5 +1,6 @@
 "use client";
 
+import { Check, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface AlternativaButtonProps {
@@ -27,20 +28,30 @@ export function AlternativaButton({
   return (
     <button
       type="button"
-      disabled={desabilitada}
       aria-pressed={selecionada}
-      onClick={() => onSelect(letra)}
+      aria-disabled={desabilitada}
+      onClick={() => !desabilitada && onSelect(letra)}
       className={cn(
-        "flex min-h-11 w-full items-start gap-3 rounded-lg border border-border px-4 py-3 text-left text-base leading-relaxed transition-colors",
-        "hover:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none",
-        "disabled:cursor-not-allowed disabled:opacity-60",
-        selecionada && !revelada && "border-primary bg-primary/10",
-        isAcerto && "border-green-500/50 bg-green-500/10",
-        isErro && "border-destructive/50 bg-destructive/10",
+        "flex min-h-11 w-full items-start gap-3 rounded-lg border border-border bg-card px-4 py-3 text-left text-base leading-relaxed transition-colors",
+        "hover:bg-muted/60 focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none",
+        desabilitada && "pointer-events-none",
+        desabilitada && !isAcerto && !isErro && "opacity-40",
+        selecionada && !revelada && "border-primary bg-primary/5 ring-1 ring-primary/30",
+        isAcerto && "border-semaforo-verde/40 bg-semaforo-verde/5",
+        isErro && "border-semaforo-vermelho/40 bg-semaforo-vermelho/5",
       )}
     >
       <span className="shrink-0 font-semibold tabular-nums">{letra}.</span>
-      <span>{texto}</span>
+      <span className="flex-1">{texto}</span>
+      {isAcerto && (
+        <Check
+          className="size-5 shrink-0 text-semaforo-verde"
+          aria-hidden
+        />
+      )}
+      {isErro && (
+        <X className="size-5 shrink-0 text-semaforo-vermelho" aria-hidden />
+      )}
     </button>
   );
 }

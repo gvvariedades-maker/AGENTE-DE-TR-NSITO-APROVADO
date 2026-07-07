@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, useTransition } from "react";
+import Link from "next/link";
+import { useCallback, useEffect, useMemo, useRef, useState, useTransition } from "react";
 import { salvarTentativa } from "@/app/actions/estudo";
 import {
   finalizarSimulado,
@@ -10,22 +11,31 @@ import {
   intercalarIrmas,
   labelTipoErro,
 } from "@/lib/estudo-reverso-utils";
+import {
+  contarRespondidas,
+  contarResultados,
+  getEstadoQuestao,
+  type EstadoQuestao,
+} from "@/lib/estado-questao";
 import { montarRespostasSimulado } from "@/lib/simulado-nota";
 import { SimuladoResultado } from "@/components/estudo/simulado-resultado";
 import { DISCIPLINA_LABELS } from "@/types";
 import type { QuestaoUI } from "@/lib/questoes";
 import { AlternativaButton } from "@/components/estudo/alternativa-button";
+import { EnunciadoFormatado } from "@/components/estudo/enunciado-formatado";
+import { MapaQuestoes } from "@/components/estudo/mapa-questoes";
 import { SimuladoBar } from "@/components/estudo/simulado-bar";
 import { SessaoBar } from "@/components/estudo/sessao-bar";
-import { RecallGate } from "@/components/estudo/recall-gate";
 import { FeedbackElaborado } from "@/components/estudo/feedback-elaborado";
+import { FeedbackResultado } from "@/components/estudo/feedback-resultado";
 import { EstudoReversoPlayer } from "@/components/estudo-reverso/estudo-reverso-player";
 import { EstudoReversoTrigger } from "@/components/estudo-reverso/estudo-reverso-trigger";
 import { registrarEstudoReverso } from "@/app/actions/estudo-reverso";
 import { FocusModeToggle } from "@/components/estudo/focus-mode-toggle";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { cn } from "@/lib/utils";
 
 export type ModoQuestao = "estudo" | "simulado";
 
@@ -34,6 +44,7 @@ interface QuestaoViewProps {
   modo: ModoQuestao;
   indiceInicial?: number;
   duracaoMinutos?: number;
+  isDemo?: boolean;
 }
 
 const TECLA_PARA_LETRA: Record<string, string> = {
@@ -64,21 +75,14 @@ export function QuestaoView({
   modo,
   indiceInicial = 0,
   duracaoMinutos,
+  isDemo = false,
 }: QuestaoViewProps) {
   const [lista, setLista] = useState(questoesIniciais);
   const [indice, setIndice] = useState(indiceInicial);
-  const [selecionada, setSelecionada] = useState<string | null>(null);
-  const [confirmada, setConfirmada] = useState(false);
-  const [revelada, setRevelada] = useState(false);
-  const [alternativasVisiveis, setAlternativasVisiveis] = useState(
-    modo === "simulado",
+  const [estados, setEstados] = useState<Map<string, EstadoQuestao>>(
+    () => new Map(),
   );
-  const [acertos, setAcertos] = useState(0);
-  const [erros, setErros] = useState(0);
-  const [dominioAlcancado, setDominioAlcancado] = useState(false);
-  const [tipoErroLabel, setTipoErroLabel] = useState<string | undefined>();
   const [modoReverso, setModoReverso] = useState(false);
-  const [ultimoAttemptId, setUltimoAttemptId] = useState<string | undefined>();
   const [salvando, startSalvar] = useTransition();
   const [finalizando, startFinalizar] = useTransition();
   const [resultadoSimulado, setResultadoSimulado] =
@@ -102,30 +106,59 @@ export function QuestaoView({
   const minutosRestantes = tempoRestante / (60 * 1000);
   const alertaTempo = isSimulado && minutosRestantes <= ALERTA_MINUTOS;
 
+  const estado = questao ? getEstadoQuestao(estados, questao.id) : null;
+  const selecionada = estado?.selecionada ?? null;
+  const confirmada = estado?.confirmada ?? false;
+  const revelada = estado?.revelada ?? false;
+  const dominioAlcancado = estado?.dominioAlcancado ?? false;
+  const tipoErroLabel = estado?.tipoErroLabel;
+  const ultimoAttemptId = estado?.ultimoAttemptId;
+
+  const { acertos, erros } = useMemo(
+    () => contarResultados(estados),
+    [estados],
+  );
+
+  const respondidas = useMemo(
+    () => contarRespondidas(estados),
+    [estados],
+  );
+
+  const questaoIds = useMemo(() => lista.map((q) => q.id), [lista]);
+
   const alternativas = questao
     ? Object.entries(questao.alternativas).sort(([a], [b]) =>
         a.localeCompare(b),
       )
     : [];
 
-  const resetQuestao = useCallback(() => {
-    setSelecionada(null);
-    setConfirmada(false);
-    setRevelada(false);
-    setAlternativasVisiveis(isSimulado);
-    setDominioAlcancado(false);
-    setTipoErroLabel(undefined);
+  const patchEstado = useCallback(
+    (questionId: string, patch: Partial<EstadoQuestao>) => {
+      setEstados((prev) => {
+        const next = new Map(prev);
+        next.set(questionId, {
+          ...getEstadoQuestao(prev, questionId),
+          ...patch,
+        });
+        return next;
+      });
+    },
+    [],
+  );
+
+  const irPara = useCallback((novoIndice: number) => {
+    if (novoIndice < 0 || novoIndice >= lista.length) return;
     setModoReverso(false);
-    setUltimoAttemptId(undefined);
+    setIndice(novoIndice);
     inicioQuestaoRef.current = Date.now();
-  }, [isSimulado]);
+  }, [lista.length]);
 
   const selecionar = useCallback(
     (letra: string) => {
-      if (confirmada || !alternativasVisiveis) return;
-      setSelecionada(letra);
+      if (!questao || confirmada) return;
+      patchEstado(questao.id, { selecionada: letra });
     },
-    [confirmada, alternativasVisiveis],
+    [questao, confirmada, patchEstado],
   );
 
   const confirmar = useCallback(() => {
@@ -134,12 +167,12 @@ export function QuestaoView({
     const acertou = selecionada === questao.gabarito;
     const tempoSeg = Math.round((Date.now() - inicioQuestaoRef.current) / 1000);
 
-    setConfirmada(true);
-
     if (isEstudo) {
-      setRevelada(true);
-      if (acertou) setAcertos((n) => n + 1);
-      else setErros((n) => n + 1);
+      patchEstado(questao.id, {
+        confirmada: true,
+        revelada: true,
+        acertou,
+      });
 
       startSalvar(async () => {
         const result = await salvarTentativa({
@@ -150,14 +183,20 @@ export function QuestaoView({
           tempoSeg,
         });
 
-        if (result.dominioAlcancado) setDominioAlcancado(true);
-        if (result.tipoErro) setTipoErroLabel(labelTipoErro(result.tipoErro));
-        if (result.attemptId) setUltimoAttemptId(result.attemptId);
+        patchEstado(questao.id, {
+          dominioAlcancado: result.dominioAlcancado ?? false,
+          tipoErroLabel: result.tipoErro
+            ? labelTipoErro(result.tipoErro)
+            : undefined,
+          ultimoAttemptId: result.attemptId,
+        });
+
         if (result.irmaAs?.length) {
           setLista((prev) => intercalarIrmas(prev, indice, result.irmaAs!));
         }
       });
     } else if (isSimulado) {
+      patchEstado(questao.id, { confirmada: true });
       setMarcacoesSimulado((prev) => {
         const next = new Map(prev);
         next.set(questao.id, selecionada);
@@ -174,7 +213,7 @@ export function QuestaoView({
         });
       });
     }
-  }, [selecionada, questao, isEstudo, isSimulado, indice]);
+  }, [selecionada, questao, isEstudo, isSimulado, indice, patchEstado]);
 
   const finalizarSimuladoHandler = useCallback(() => {
     if (!isSimulado) return;
@@ -192,18 +231,12 @@ export function QuestaoView({
   }, [isSimulado, lista, marcacoesSimulado]);
 
   const proxima = useCallback(() => {
-    if (indice < total - 1) {
-      setIndice((i) => i + 1);
-      resetQuestao();
-    }
-  }, [indice, total, resetQuestao]);
+    irPara(indice + 1);
+  }, [indice, irPara]);
 
   const anterior = useCallback(() => {
-    if (indice > 0) {
-      setIndice((i) => i - 1);
-      resetQuestao();
-    }
-  }, [indice, resetQuestao]);
+    irPara(indice - 1);
+  }, [indice, irPara]);
 
   useEffect(() => {
     if (!isSimulado) return;
@@ -223,26 +256,29 @@ export function QuestaoView({
         return;
       }
 
-      if (e.key === "Enter" && selecionada && !confirmada && alternativasVisiveis) {
+      if (e.key === "Enter" && selecionada && !confirmada) {
         e.preventDefault();
         confirmar();
         return;
       }
 
-      if (confirmada && isEstudo) {
+      if (isEstudo || isSimulado) {
         if (e.key === "ArrowRight" && indice < total - 1) {
           e.preventDefault();
           proxima();
+          return;
         }
         if (e.key === "ArrowLeft" && indice > 0) {
           e.preventDefault();
           anterior();
+          return;
         }
-        return;
       }
 
+      if (confirmada && isEstudo) return;
+
       const letra = TECLA_PARA_LETRA[e.key.toUpperCase()];
-      if (!letra || !alternativasVisiveis || confirmada) return;
+      if (!letra || confirmada) return;
 
       const letrasQuestao = Object.keys(questao?.alternativas ?? {});
       if (!letrasQuestao.includes(letra)) return;
@@ -260,7 +296,6 @@ export function QuestaoView({
     anterior,
     selecionada,
     confirmada,
-    alternativasVisiveis,
     isEstudo,
     indice,
     total,
@@ -287,6 +322,13 @@ export function QuestaoView({
 
   const acertou = revelada && selecionada === questao.gabarito;
   const ultimaQuestao = indice === total - 1;
+  const temEstudoReverso = Boolean(questao.estudoReversoVisual);
+  const navegacaoLateral = isEstudo || isSimulado;
+  const mostrarBotaoFinalizar =
+    confirmada && isSimulado && ultimaQuestao;
+  const mostrarProxima =
+    navegacaoLateral && !mostrarBotaoFinalizar && !ultimaQuestao;
+  const mostrarConcluirSessao = isEstudo && ultimaQuestao && confirmada;
 
   return (
     <div className="flex flex-1 flex-col">
@@ -313,72 +355,85 @@ export function QuestaoView({
       )}
 
       {isEstudo && (
-        <SessaoBar
-          atual={indice + 1}
-          total={total}
-          acertos={acertos}
-          erros={erros}
-        />
+        <div className="sticky top-0 z-10 border-b border-border bg-background/95 backdrop-blur-sm">
+          <SessaoBar
+            atual={indice + 1}
+            total={total}
+            respondidas={respondidas}
+            acertos={acertos}
+            erros={erros}
+          />
+          <MapaQuestoes
+            total={total}
+            indiceAtual={indice}
+            questaoIds={questaoIds}
+            estados={estados}
+            onIrPara={irPara}
+          />
+        </div>
       )}
 
       <article className="mx-auto flex w-full max-w-3xl flex-1 flex-col">
-        <header className="flex flex-wrap items-center justify-between gap-2 px-4 pt-4">
-          <div className="flex flex-wrap items-center gap-2">
-            <Badge variant="secondary">
+        <header className="flex items-center justify-between gap-2 px-4 pt-3 pb-1">
+          <div className="flex flex-wrap items-center gap-1.5">
+            <Badge variant="secondary" className="text-xs font-normal">
               {DISCIPLINA_LABELS[questao.disciplina]}
             </Badge>
-            {isEstudo && (
-              <span className="text-sm text-muted-foreground tabular-nums">
-                Questão {indice + 1}/{total}
-              </span>
+            {isDemo && (
+              <Badge variant="outline" className="text-xs font-normal">
+                Demonstração
+              </Badge>
             )}
           </div>
           {isEstudo && <FocusModeToggle />}
         </header>
 
-        <div className="flex-1 overflow-y-auto px-4 py-4">
-          <p className="text-lg leading-relaxed">{questao.enunciado}</p>
+        <div className="flex-1 overflow-y-auto px-4 py-3">
+          <EnunciadoFormatado enunciado={questao.enunciado} />
         </div>
 
-        {isEstudo && !alternativasVisiveis ? (
-          <RecallGate onReveal={() => setAlternativasVisiveis(true)} />
-        ) : (
-          <fieldset className="flex flex-col gap-2 border-t border-border px-4 py-4">
-            <legend className="sr-only">Alternativas</legend>
-            {alternativas.map(([letra, texto]) => (
-              <AlternativaButton
-                key={letra}
-                letra={letra}
-                texto={texto}
-                selecionada={selecionada === letra}
-                revelada={revelada}
-                correta={letra === questao.gabarito}
-                desabilitada={
-                  confirmada && isEstudo && selecionada !== letra
-                }
-                onSelect={selecionar}
-              />
-            ))}
-          </fieldset>
-        )}
-
-        {isEstudo && revelada && questao.comentario && (
-          <div className="border-t border-border px-4 py-4">
-            <FeedbackElaborado
-              acertou={acertou}
-              gabarito={questao.gabarito}
-              comentario={questao.comentario}
-              dominioAlcancado={dominioAlcancado}
-              tipoErroLabel={tipoErroLabel}
+        <fieldset className="flex flex-col gap-2 px-4 py-3">
+          <legend className="sr-only">Alternativas</legend>
+          {alternativas.map(([letra, texto]) => (
+            <AlternativaButton
+              key={letra}
+              letra={letra}
+              texto={texto}
+              selecionada={selecionada === letra}
+              revelada={revelada}
+              correta={letra === questao.gabarito}
+              desabilitada={
+                confirmada &&
+                isEstudo &&
+                letra !== questao.gabarito &&
+                letra !== selecionada
+              }
+              onSelect={selecionar}
             />
-          </div>
-        )}
+          ))}
+        </fieldset>
 
-        {isEstudo && revelada && questao.estudoReversoVisual && (
-          <EstudoReversoTrigger
-            acertou={acertou}
-            onOpen={() => setModoReverso(true)}
-          />
+        {isEstudo && revelada && (
+          <div className="px-4 pb-2">
+            {temEstudoReverso ? (
+              <FeedbackResultado
+                acertou={acertou}
+                gabarito={questao.gabarito}
+                dominioAlcancado={dominioAlcancado}
+                tipoErroLabel={tipoErroLabel}
+              />
+            ) : (
+              questao.comentario && (
+                <FeedbackElaborado
+                  acertou={acertou}
+                  gabarito={questao.gabarito}
+                  comentario={questao.comentario}
+                  dominioAlcancado={dominioAlcancado}
+                  tipoErroLabel={tipoErroLabel}
+                />
+              )
+            )}
+          </div>
         )}
 
         {modoReverso && questao.estudoReversoVisual && (
@@ -398,44 +453,81 @@ export function QuestaoView({
           />
         )}
 
-        <footer className="flex flex-col gap-2 border-t border-border p-4">
-          <div className="flex gap-2">
-          {(isSimulado || indice > 0) && (
-            <Button
-              variant="outline"
-              className="flex-1"
-              onClick={anterior}
-              disabled={indice === 0}
-            >
-              Anterior
-            </Button>
-          )}
+        <footer className="sticky bottom-0 border-t border-border bg-background/95 p-4 backdrop-blur-sm">
+          <div className="grid grid-cols-3 items-center gap-2">
+            <div className="flex justify-start">
+              {navegacaoLateral && indice > 0 && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-muted-foreground"
+                  onClick={anterior}
+                >
+                  Anterior
+                </Button>
+              )}
+            </div>
 
-          {!alternativasVisiveis ? null : !confirmada ? (
-            <Button
-              className="flex-1"
-              onClick={confirmar}
-              disabled={!selecionada || salvando}
-            >
-              {isEstudo ? "Confirmar resposta" : "Marcar"}
-            </Button>
-          ) : isSimulado && ultimaQuestao ? (
-            <Button
-              className="flex-1"
-              onClick={finalizarSimuladoHandler}
-              disabled={finalizando}
-            >
-              Finalizar simulado
-            </Button>
-          ) : (
-            <Button
-              className="flex-1"
-              onClick={proxima}
-              disabled={ultimaQuestao}
-            >
-              Próxima
-            </Button>
-          )}
+            <div className="flex justify-center">
+              {!confirmada ? (
+                <Button
+                  size="lg"
+                  className="min-w-40"
+                  onClick={confirmar}
+                  disabled={!selecionada || salvando}
+                >
+                  {isEstudo ? "Confirmar resposta" : "Marcar"}
+                </Button>
+              ) : mostrarBotaoFinalizar ? (
+                <Button
+                  size="lg"
+                  className="min-w-40"
+                  onClick={finalizarSimuladoHandler}
+                  disabled={finalizando}
+                >
+                  Finalizar simulado
+                </Button>
+              ) : (
+                isEstudo &&
+                revelada &&
+                temEstudoReverso && (
+                  <EstudoReversoTrigger
+                    size="lg"
+                    className="min-w-40"
+                    variant={acertou ? "outline" : "default"}
+                    onOpen={() => setModoReverso(true)}
+                  />
+                )
+              )}
+            </div>
+
+            <div className="flex justify-end">
+              {mostrarProxima && (
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  className="text-muted-foreground"
+                  onClick={proxima}
+                >
+                  Próxima
+                </Button>
+              )}
+
+              {mostrarConcluirSessao && (
+                <Link
+                  href="/dashboard"
+                  className={cn(
+                    buttonVariants({
+                      variant: "ghost",
+                      size: "sm",
+                    }),
+                    "text-muted-foreground",
+                  )}
+                >
+                  Concluir sessão
+                </Link>
+              )}
+            </div>
           </div>
           {isEstudo && (
             <p className="hidden text-center text-xs text-muted-foreground sm:block">

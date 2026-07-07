@@ -109,3 +109,10 @@ mais `interval_days`): `aprendendo` (<7d) → `jovem` (7-21d) → `maduro`
   (agora intercaladas, nunca em sequência); removido teto fixo de 30 dias;
   taxonomia de erro relabelada como heurística de produto, não achado
   científico.
+- **2026-07-06** — decisão de produto: removido o recall gate (`RecallGate`)
+  no modo estudo; alternativas agora aparecem junto com o enunciado. Isso
+  troca recall livre por reconhecimento entre 4-5 opções — ainda assim
+  mais forte que ver o gabarito direto, mas mais fraco que recuperação
+  livre pura (Roediger & Karpicke, 2006). Compensado por `FeedbackElaborado`
+  agora ser em blocos progressivos também no acerto (antes só no erro),
+  mantendo divulgação progressiva (CLT) em ambos os casos.

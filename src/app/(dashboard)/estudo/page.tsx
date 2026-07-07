@@ -107,10 +107,15 @@ export default async function EstudoPage({
   const sessaoErrosVazia =
     modo === "erros" && user && questoesDb.length === 0 && !isDemo;
 
+  const emSessao = questoes.length > 0 && !sessaoErrosVazia;
+
   return (
     <div className="flex flex-1 flex-col">
-      {tituloFiltro && (
-        <div className="flex flex-wrap items-center gap-2 border-b border-border px-4 py-2">
+      {tituloFiltro && !emSessao && (
+        <div
+          className="flex flex-wrap items-center gap-2 border-b border-border px-4 py-2"
+          data-foco-hide
+        >
           <Badge variant="secondary" className="text-xs">
             {topico ? `CTB · ${tituloFiltro}` : tituloFiltro}
           </Badge>
@@ -125,12 +130,16 @@ export default async function EstudoPage({
         </div>
       )}
 
-      {user && preview.total > 0 && !isDemo && (
+      {user && preview.total > 0 && !isDemo && !emSessao && (
         <SessaoPreview preview={preview} tituloFiltro={tituloFiltro} />
       )}
 
-      {user && questoesDb.length > 0 && !isDemo && modo === "normal" && (
-        <Alert className="mx-4 mt-4 max-w-3xl self-center">
+      {user &&
+        questoesDb.length > 0 &&
+        !isDemo &&
+        modo === "normal" &&
+        !emSessao && (
+        <Alert className="mx-4 mt-4 max-w-3xl self-center" data-foco-hide>
           <AlertTitle>Sessão com estudo reverso ativo</AlertTitle>
           <AlertDescription>
             Revisões SRS vencidas entram primeiro. Ao errar, questões irmãs são
@@ -149,14 +158,12 @@ export default async function EstudoPage({
         </Alert>
       )}
 
-      {isDemo && (
-        <Alert className="mx-4 mt-4 max-w-3xl self-center">
-          <AlertTitle>Questão demonstração CTB</AlertTitle>
-          <AlertDescription>
-            {topico
-              ? `Questões reais de "${tituloFiltro}" aparecerão aqui após o carregamento do banco.`
-              : "Questões reais desta disciplina aparecerão aqui após o carregamento do banco."}{" "}
-            Tentativas em demo não são salvas.
+      {isDemo && !emSessao && (
+        <Alert className="mx-4 mt-3 max-w-3xl self-center py-3" data-foco-hide>
+          <AlertTitle className="text-sm">Demonstração CTB</AlertTitle>
+          <AlertDescription className="text-xs">
+            Tentativas não são salvas. Questões reais aparecem após o seed do
+            banco.
           </AlertDescription>
         </Alert>
       )}
@@ -203,23 +210,19 @@ export default async function EstudoPage({
           </Link>
         </div>
       ) : (
-        <QuestaoView questoes={questoes} modo="estudo" />
+        <QuestaoView questoes={questoes} modo="estudo" isDemo={isDemo} />
       )}
 
-      <div className="border-t border-border px-4 py-2 text-center text-xs text-muted-foreground">
-        {user && !isDemo
-          ? "Tentativas salvas · FSRS agenda revisões · irmãs intercaladas ao errar"
-          : "Prática de recuperação ativa · feedback imediato · revisão espaçada"}
-      </div>
-
-      <div className="border-t border-border p-4">
-        <Link
-          href="/dashboard"
-          className={cn(buttonVariants({ variant: "ghost", size: "sm" }))}
-        >
-          ← Voltar ao painel
-        </Link>
-      </div>
+      {!emSessao && (
+        <div className="border-t border-border p-4" data-foco-hide>
+          <Link
+            href="/dashboard"
+            className={cn(buttonVariants({ variant: "ghost", size: "sm" }))}
+          >
+            ← Voltar ao painel
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

@@ -4,28 +4,28 @@ import { BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface EstudoReversoTriggerProps {
-  acertou: boolean;
   onOpen: () => void;
+  className?: string;
+  variant?: "default" | "outline";
+  size?: "default" | "sm" | "lg";
 }
 
 export function EstudoReversoTrigger({
-  acertou,
   onOpen,
+  className,
+  variant = "outline",
+  size = "default",
 }: EstudoReversoTriggerProps) {
   return (
-    <div className="border-t border-border px-4 py-3">
-      <Button
-        type="button"
-        variant={acertou ? "outline" : "default"}
-        className="w-full gap-2"
-        onClick={onOpen}
-      >
-        <BookOpen className="size-4" aria-hidden />
-        Estudo reverso visual
-      </Button>
-      <p className="mt-2 text-center text-xs text-muted-foreground">
-        Micro-aula segmentada para fixar o microtópico
-      </p>
-    </div>
+    <Button
+      type="button"
+      variant={variant}
+      size={size}
+      className={className}
+      onClick={onOpen}
+    >
+      <BookOpen className="size-4" aria-hidden />
+      Estudo reverso
+    </Button>
   );
 }

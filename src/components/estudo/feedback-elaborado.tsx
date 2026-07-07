@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, ChevronRight } from "lucide-react";
+import { Check, ChevronLeft, ChevronRight, X } from "lucide-react";
 import type { ComentarioQuestao } from "@/types";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -21,8 +22,8 @@ interface FeedbackElaboradoProps {
 }
 
 /**
- * Feedback adaptativo (Frontiers 2021): acerto = KR breve; erro = EF progressivo.
- * Divulgação progressiva reduz carga extrínseca (CLT).
+ * Feedback elaborado (Frontiers 2021): divulgação progressiva em blocos.
+ * Sem etapa "Resultado" — gabarito já visível nas alternativas reveladas.
  */
 export function FeedbackElaborado({
   acertou,
@@ -31,165 +32,191 @@ export function FeedbackElaborado({
   dominioAlcancado,
   tipoErroLabel,
 }: FeedbackElaboradoProps) {
-  const [passo, setPasso] = useState(acertou ? 0 : 1);
+  const [passo, setPasso] = useState(0);
 
-  if (acertou) {
-    return (
-      <Card className="border-semaforo-verde/35 bg-semaforo-verde/5">
-        <CardHeader className="pb-2">
-          <div className="flex items-center justify-between gap-2">
-            <CardTitle className="text-base text-semaforo-verde">
-              Correto
-            </CardTitle>
-            <Badge
-              variant="outline"
-              className="border-semaforo-verde/50 text-semaforo-verde"
-            >
-              Gabarito {gabarito}
-            </Badge>
-          </div>
-        </CardHeader>
-        <CardContent>
-          <p className="text-sm text-muted-foreground">
-            {dominioAlcancado ? (
-              <>
-                <span className="font-medium text-semaforo-verde">
-                  Microtópico dominado
-                </span>{" "}
-                — 2 acertos seguidos. Próxima revisão agendada pelo FSRS.
-              </>
-            ) : (
-              <>
-                Boa recuperação ativa. Próxima revisão agendada pelo algoritmo
-                FSRS conforme sua retenção.
-              </>
-            )}
-          </p>
-          <details className="mt-3 text-sm">
-            <summary className="cursor-pointer font-medium text-foreground">
-              Ver fundamento legal
-            </summary>
-            <p className="mt-2 text-muted-foreground">
+  const etapas = acertou
+    ? [
+        {
+          titulo: "Fundamento legal",
+          conteudo: (
+            <p className="text-sm leading-relaxed">
               {comentario.fundamento_legal}
             </p>
-          </details>
-        </CardContent>
-      </Card>
-    );
-  }
-
-  const etapas = [
-    {
-      titulo: "Resultado",
-      conteudo: (
-        <p className="text-sm">
-          Sua resposta não confere. O gabarito é{" "}
-          <span className="font-semibold">{gabarito}</span>.
-        </p>
-      ),
-    },
-    {
-      titulo: "Fundamento legal",
-      conteudo: (
-        <p className="text-sm leading-relaxed">{comentario.fundamento_legal}</p>
-      ),
-    },
-    {
-      titulo: "Passo a passo",
-      conteudo: (
-        <ol className="list-inside list-decimal space-y-1 text-sm text-muted-foreground">
-          {comentario.passo_a_passo.map((p) => (
-            <li key={p}>{p}</li>
-          ))}
-        </ol>
-      ),
-    },
-    {
-      titulo: "Pegadinha IDECAN",
-      conteudo: (
-        <p className="text-sm leading-relaxed">{comentario.pegadinha}</p>
-      ),
-    },
-    {
-      titulo: "Macete + estudo reverso",
-      conteudo: (
-        <div className="space-y-3 text-sm">
-          <p className="font-medium text-foreground">{comentario.macete}</p>
-          <div className="flex flex-wrap gap-1.5">
-            {comentario.estudo_reverso.map((item) => (
-              <Badge key={item} variant="secondary">
-                {item}
-              </Badge>
-            ))}
-          </div>
-        </div>
-      ),
-    },
-  ];
+          ),
+        },
+        {
+          titulo: "Passo a passo",
+          conteudo: (
+            <ol className="list-inside list-decimal space-y-1 text-sm text-muted-foreground">
+              {comentario.passo_a_passo.map((p) => (
+                <li key={p}>{p}</li>
+              ))}
+            </ol>
+          ),
+        },
+        {
+          titulo: "Macete",
+          conteudo: (
+            <div className="space-y-2 text-sm">
+              <p className="font-medium text-foreground">
+                {comentario.macete}
+              </p>
+              {comentario.estudo_reverso.length > 0 && (
+                <div className="flex flex-wrap gap-1.5">
+                  {comentario.estudo_reverso.map((item) => (
+                    <Badge key={item} variant="secondary">
+                      {item}
+                    </Badge>
+                  ))}
+                </div>
+              )}
+            </div>
+          ),
+        },
+      ]
+    : [
+        {
+          titulo: "Fundamento legal",
+          conteudo: (
+            <p className="text-sm leading-relaxed">
+              {comentario.fundamento_legal}
+            </p>
+          ),
+        },
+        {
+          titulo: "Passo a passo",
+          conteudo: (
+            <ol className="list-inside list-decimal space-y-1 text-sm text-muted-foreground">
+              {comentario.passo_a_passo.map((p) => (
+                <li key={p}>{p}</li>
+              ))}
+            </ol>
+          ),
+        },
+        {
+          titulo: "Pegadinha IDECAN",
+          conteudo: (
+            <p className="text-sm leading-relaxed">{comentario.pegadinha}</p>
+          ),
+        },
+        {
+          titulo: "Macete",
+          conteudo: (
+            <div className="space-y-2 text-sm">
+              <p className="font-medium text-foreground">
+                {comentario.macete}
+              </p>
+              {comentario.estudo_reverso.length > 0 && (
+                <div className="flex flex-wrap gap-1.5">
+                  {comentario.estudo_reverso.map((item) => (
+                    <Badge key={item} variant="secondary">
+                      {item}
+                    </Badge>
+                  ))}
+                </div>
+              )}
+            </div>
+          ),
+        },
+      ];
 
   const maxPasso = etapas.length - 1;
 
   return (
-    <Card className="border-semaforo-vermelho/35 bg-semaforo-vermelho/5">
-      <CardHeader className="pb-2">
-        <CardTitle className="text-base text-semaforo-vermelho">
-          Incorreto — feedback elaborado
-        </CardTitle>
-        {tipoErroLabel && (
-          <Badge variant="outline" className="mt-1 w-fit text-xs">
-            {tipoErroLabel}
-          </Badge>
-        )}
-        <p className="text-xs text-muted-foreground">
-          Um bloco por vez para fixar o conteúdo (carga cognitiva controlada)
-        </p>
-      </CardHeader>
-      <CardContent className="flex flex-col gap-3">
-        <div className="flex gap-1">
+    <Card
+      className={cn(
+        "gap-0 py-4 shadow-none",
+        acertou
+          ? "border-semaforo-verde/30 bg-semaforo-verde/5"
+          : "border-semaforo-vermelho/30 bg-semaforo-vermelho/5",
+      )}
+    >
+      <CardHeader className="gap-1 px-4 pb-3">
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+          {acertou ? (
+            <Check className="size-4 shrink-0 text-semaforo-verde" aria-hidden />
+          ) : (
+            <X className="size-4 shrink-0 text-semaforo-vermelho" aria-hidden />
+          )}
+          <CardTitle
+            className={cn(
+              "text-sm font-semibold",
+              acertou ? "text-semaforo-verde" : "text-semaforo-vermelho",
+            )}
+          >
+            {acertou ? "Correto" : "Incorreto"}
+          </CardTitle>
+          {!acertou && (
+            <span className="text-sm text-muted-foreground">
+              · Gabarito{" "}
+              <span className="font-semibold text-foreground">{gabarito}</span>
+            </span>
+          )}
+          {dominioAlcancado && (
+            <Badge
+              variant="outline"
+              className="border-semaforo-verde/50 text-semaforo-verde"
+            >
+              Microtópico dominado
+            </Badge>
+          )}
+          {tipoErroLabel && (
+            <Badge variant="outline" className="ml-auto text-xs">
+              {tipoErroLabel}
+            </Badge>
+          )}
+        </div>
+        <div className="flex gap-1 pt-1">
           {etapas.map((_, i) => (
             <div
               key={i}
               className={cn(
-                "h-1 flex-1 rounded-full",
+                "h-0.5 flex-1 rounded-full",
                 i <= passo ? "bg-transito" : "bg-muted",
               )}
               aria-hidden
             />
           ))}
         </div>
+      </CardHeader>
 
-        <div className="rounded-lg border border-border bg-card/60 p-4">
-          <p className="mb-2 text-xs font-medium tracking-wide text-muted-foreground uppercase">
+      <CardContent className="flex flex-col gap-3 px-4">
+        <div>
+          <p className="mb-1.5 text-xs font-medium tracking-wide text-muted-foreground uppercase">
             {etapas[passo].titulo}
           </p>
           {etapas[passo].conteudo}
         </div>
 
-        {passo < maxPasso ? (
-          <button
+        <div className="flex items-center justify-between gap-2">
+          <Button
             type="button"
-            onClick={() => setPasso((p) => p + 1)}
-            className="flex items-center justify-center gap-1 text-sm font-medium text-transito-foreground"
-          >
-            Próximo bloco
-            <ChevronRight className="size-4" aria-hidden />
-          </button>
-        ) : (
-          <p className="text-center text-xs text-muted-foreground">
-            Questões irmãs serão intercaladas na sessão. Revisão SRS em 1 dia.
-          </p>
-        )}
-
-        {passo > 0 && (
-          <button
-            type="button"
+            variant="ghost"
+            size="sm"
+            className="text-muted-foreground"
             onClick={() => setPasso((p) => p - 1)}
-            className="flex items-center gap-1 text-xs text-muted-foreground"
+            disabled={passo === 0}
           >
-            <ChevronDown className="size-3 rotate-90" aria-hidden />
-            Bloco anterior
-          </button>
-        )}
+            <ChevronLeft className="size-4" aria-hidden />
+            Anterior
+          </Button>
+
+          {passo < maxPasso ? (
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              onClick={() => setPasso((p) => p + 1)}
+            >
+              Próximo
+              <ChevronRight className="size-4" aria-hidden />
+            </Button>
+          ) : (
+            <span className="text-xs text-muted-foreground">
+              {passo + 1}/{etapas.length}
+            </span>
+          )}
+        </div>
       </CardContent>
     </Card>
   );
