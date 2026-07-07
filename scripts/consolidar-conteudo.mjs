@@ -26,6 +26,11 @@ const MOJIBAKE_FIXES = [
   ["conteÃºdo", "conteúdo"],
   ["programÃ¡tico", "programático"],
   ["LegislaÃ§Ã£o", "Legislação"],
+  ["legislaÃ§Ã£o", "legislação"],
+  ["questÃµes", "questões"],
+  ["questÃµes", "questões"],
+  ["resoluÃ§Ãµes", "resoluções"],
+  ["resoluÃ§Ãµes", "resoluções"],
   ["TrÃ¢nsito", "Trânsito"],
   ["prorrogaÃ§Ã£o", "prorrogação"],
   ["inscriÃ§Ãµes", "inscrições"],
@@ -60,9 +65,79 @@ function listarArquivos(dir) {
   return out;
 }
 
+const CANONICAL_DIRS = {
+  edital: "edital",
+  "historia-cg-pb": "historia-cg-pb",
+  "legislacao federal": "legislação federal",
+  municipal: "municipal",
+  "questoes reais": "questões reais",
+  "resolucoes contran": "resoluções CONTRAN",
+  senatran: "senatran",
+};
+
+function canonicalDirName(name) {
+  const fixed = normalizarNome(name);
+  const ascii = fixed
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+  return CANONICAL_DIRS[ascii] ?? fixed;
+}
+
+function mesclarPastasDuplicadas(baseDir) {
+  const entries = fs.readdirSync(baseDir, { withFileTypes: true });
+  const grupos = new Map();
+
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue;
+    const canon = canonicalDirName(entry.name);
+    if (!grupos.has(canon)) grupos.set(canon, []);
+    grupos.get(canon).push(entry.name);
+  }
+
+  for (const [canon, nomes] of grupos) {
+    if (nomes.length <= 1 && nomes[0] === canon) continue;
+
+    const destDir = path.join(baseDir, canon);
+    if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true });
+
+    for (const nome of nomes) {
+      if (nome === canon) continue;
+      const srcDir = path.join(baseDir, nome);
+      for (const entry of fs.readdirSync(srcDir, { withFileTypes: true })) {
+        const src = path.join(srcDir, entry.name);
+        const destName = normalizarNome(entry.name);
+        const dest = path.join(destDir, destName);
+        if (fs.existsSync(dest)) {
+          const srcSize = fs.statSync(src).size;
+          const destSize = fs.statSync(dest).size;
+          if (srcSize > destSize) {
+            fs.unlinkSync(dest);
+            fs.renameSync(src, dest);
+            log.movidos.push({ de: path.join(nome, entry.name), para: path.join(canon, destName), substituiu: true });
+          } else {
+            fs.unlinkSync(src);
+            log.removidos.push({ arquivo: path.join(nome, entry.name), motivo: "duplicata em pasta mojibake" });
+          }
+        } else {
+          fs.renameSync(src, dest);
+          log.movidos.push({ de: path.join(nome, entry.name), para: path.join(canon, destName) });
+        }
+      }
+      fs.rmdirSync(srcDir);
+      log.removidos.push({ arquivo: nome + "/", motivo: "pasta duplicada mojibake" });
+    }
+  }
+}
+
 const base = acharConteudoDir();
 const contranDir = path.join(base, "resoluções CONTRAN");
 const log = { renomeados: [], removidos: [], movidos: [] };
+
+// 0) Mesclar pastas duplicadas por encoding
+mesclarPastasDuplicadas(base);
 
 // 1) Mover PDFs CONTRAN soltos na raiz de conteúdo/
 for (const entry of fs.readdirSync(base, { withFileTypes: true })) {

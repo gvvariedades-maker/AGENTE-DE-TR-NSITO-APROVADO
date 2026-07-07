@@ -151,7 +151,7 @@ foreach ($kv in $laws.GetEnumerator()) {
         $ctbLen = (Get-Item -LiteralPath $outCtb).Length
         if ($ctbLen -lt $minBytes) {
             Remove-Item -LiteralPath $outCtb -Force
-            Write-Host "CTB truncado ($ctbLen bytes) — rebaixando..."
+            Write-Host "CTB truncado ($ctbLen bytes) - rebaixando..."
         }
     }
     $ok = Invoke-Download -Url $kv.Value -OutFile $outCtb -MinBytes $minBytes
@@ -161,16 +161,24 @@ foreach ($kv in $laws.GetEnumerator()) {
     }
     if (-not $ok -and $kv.Key -eq "lei-9503-ctb.html") {
         Write-Host "CTB: tentando fallback Node fetch..."
-        $nodeScript = @"
-const fs=require('fs');
-fetch('$($kv.Value)',{headers:{'User-Agent':'Mozilla/5.0'}})
-  .then(r=>r.text())
-  .then(t=>{fs.writeFileSync(process.argv[1],t); console.log(t.length);})
-  .catch(e=>{console.error(e); process.exit(1);});
-"@
+        $nodeScript = @'
+const fs = require("fs");
+const url = process.env.CTB_URL;
+fetch(url, { headers: { "User-Agent": "Mozilla/5.0" } })
+  .then((r) => r.text())
+  .then((t) => {
+    fs.writeFileSync(process.argv[1], t);
+    console.log(t.length);
+  })
+  .catch((e) => {
+    console.error(e);
+    process.exit(1);
+  });
+'@
         $tmp = [IO.Path]::GetTempFileName() + ".mjs"
         Set-Content -Path $tmp -Value $nodeScript -Encoding UTF8
         try {
+            $env:CTB_URL = $kv.Value
             $len = node $tmp $outCtb 2>&1
             if ($LASTEXITCODE -eq 0 -and (Test-Path -LiteralPath $outCtb) -and (Get-Item -LiteralPath $outCtb).Length -ge $minBytes) {
                 $manifest.ok += [ordered]@{ file = $outCtb; url = $kv.Value; bytes = (Get-Item -LiteralPath $outCtb).Length; via = "node-fetch" }
