@@ -1,0 +1,338 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_crimes_transito",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_304",
+    "enunciado": "Fernanda, ao conduzir automóvel em via urbana de Campina Grande, atinge pedestre que sofre ferimentos leves. Populares prestam os primeiros socorros e acionam o SAMU. Fernanda permanece no local, mas não presta auxílio direto à vítima nem solicita auxílio da autoridade pública, entendendo que sua obrigação foi suprida pelos transeuntes. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Não há tipificação penal, pois terceiros já prestaram socorro à vítima no local do sinistro.",
+      "B": "Configura o crime de evasão do sinistro previsto no art. 305, por não aguardar a chegada da autoridade policial.",
+      "C": "Trata-se exclusivamente de infração administrativa, dada a natureza leve dos ferimentos da vítima.",
+      "D": "Configura o crime do art. 304, pois o parágrafo único não exclui a responsabilidade quando a omissão é suprida por terceiros ou há ferimentos leves."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Crime de omissão de socorro (art. 304) e alcance do parágrafo único — suprimento por terceiros e ferimentos leves não excluem a tipificação.",
+      "fundamento_legal": "CTB, art. 304: \"Deixar o condutor do veículo, na ocasião do sinistro, de prestar imediato socorro à vítima, ou, não podendo fazê-lo diretamente, por justa causa, deixar de solicitar auxílio da autoridade pública\" — penas de detenção de 6 meses a 1 ano, ou multa, se o fato não constituir crime mais grave. Parágrafo único: incide nas penas o condutor, ainda que a omissão seja suprida por terceiros ou que se trate de vítima com morte instantânea ou com ferimentos leves.",
+      "passo_a_passo": [
+        "1. Fernanda omitiu socorro imediato e não solicitou auxílio da autoridade pública — núcleo do art. 304.",
+        "2. A erra por regra_excecao (terceiros no local não eximem o condutor — parágrafo único); B erra por termo_unico (confunde omissão de socorro com evasão do sinistro — art. 305 exige afastar-se para fugir à responsabilidade); C erra por gravidade (ferimentos leves não afastam o crime — parágrafo único).",
+        "3. D correta: art. 304 configurado independentemente do socorro de transeuntes e da gravidade leve da lesão."
+      ],
+      "pegadinha": "A IDECAN induz a crer que socorro de terceiros ou ferimentos leves liberam o condutor — o parágrafo único do art. 304 diz o contrário.",
+      "macete": "304 = NÃO SOCORREU nem chamou a autoridade · §único: terceiros/leves/morte instantânea NÃO eximem.",
+      "estudo_reverso": [
+        "CTB art. 304",
+        "CTB art. 305",
+        "CTB art. 302",
+        "CTB art. 303"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CTB_art_304",
+      "macete_visual": "304 NÃO SOCORREU · §único não exime por terceiros/leves",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Fernanda não socorreu nem chamou a polícia — terceiros ajudaram. A banca troca art. 304 por exceção inexistente (terceiros/leves eximem).",
+            "destaques": ["art. 304", "terceiros", "ferimentos leves"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "304 × 305",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crime", "Núcleo"],
+            "linhas": [
+              ["Art. 304", "Omitir socorro ou não pedir auxílio à autoridade"],
+              ["Art. 305", "Afastar-se do sinistro para fugir à responsabilidade"],
+              ["Caso Fernanda", "Permaneceu no local — não é evasão (305)"]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Sinistro com vítima?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Condutor omitiu socorro ou não pediu auxílio?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Art. 304 — gabarito D", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Parágrafo único",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Confusão ✗", "Regra ✓"],
+            "linhas": [
+              ["Terceiros socorreram → condutor livre", "§ único: omissão suprida por terceiros não exime"],
+              ["Ferimentos leves → só admin", "§ único: ferimentos leves não excluem art. 304"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "304 = NÃO SOCORREU nem chamou autoridade · §único: terceiros/leves/morte instantânea NÃO eximem.",
+            "destaques": ["304", "§ único", "NÃO eximem"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 304",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "CTB_art_304",
+      "macete_visual": "304 NÃO SOCORREU · §único não exime · 305 FUGIU",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Socorro de terceiros ou ferimentos leves não eximem o condutor do art. 304",
+        "eixos_legais": ["CTB_art_304", "CTB_art_305"],
+        "isca_por_alternativa": {
+          "A": "terceiros no local liberam o condutor da obrigação penal",
+          "B": "permanecer no local sem aguardar polícia equivale a evasão (305)",
+          "C": "ferimentos leves reduzem a conduta à esfera administrativa"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: terceiros não eximem o condutor",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D (art. 304 — omissão de socorro).\n\nA — terceiros socorreram: o § único diz que omissão suprida por terceiros não exime.\nB — evasão do sinistro: Fernanda permaneceu no local — art. 305 exige afastar-se para fugir.\nC — só infração admin: ferimentos leves não afastam o crime — § único do art. 304.\n\nFernanda omitiu socorro direto e não solicitou auxílio da autoridade pública.",
+            "destaques": ["Gabarito D", "art. 304", "§ único"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SINISTRO: evento de trânsito com dano — redação vigente nos arts. 304 e 305 do CTB.\n\nSOCORRO IMEDIATO: prestar auxílio à vítima na ocasião do sinistro ou, por justa causa, solicitar auxílio da autoridade pública.\n\nEVASÃO (art. 305): afastar-se do local do sinistro para fugir à responsabilidade — distinto da omissão de socorro.",
+            "destaques": ["SINISTRO", "SOCORRO IMEDIATO", "EVASÃO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: omissão ou evasão?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Condutor omitiu socorro imediato à vítima?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Não solicitou auxílio da autoridade pública?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Crime de omissão de socorro — gabarito D",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Tríade penal do sinistro",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Artigo", "Conduta típica"],
+            "linhas": [
+              {
+                "faixa": "Art. 304",
+                "classificacao": "Omitir socorro ou não solicitar auxílio da autoridade",
+                "destaque": true
+              },
+              { "faixa": "Art. 305", "classificacao": "Afastar-se do sinistro para fugir à responsabilidade" },
+              { "faixa": "Art. 302/303", "classificacao": "Homicídio ou lesão corporal culposos na direção" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: terceiros × ferimentos leves",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Populares socorreram → condutor não responde penalmente",
+                "§ único do art. 304: omissão suprida por terceiros não exime"
+              ],
+              [
+                "Ferimentos leves → só infração administrativa",
+                "§ único: ferimentos leves não afastam o art. 304"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Inventa exceção por socorro de terceiros — parágrafo único do art. 304 nega"
+              ],
+              [
+                "B — termo_unico",
+                "Confunde omissão de socorro (304) com evasão (305) — Fernanda não fugiu do local"
+              ],
+              [
+                "C — gravidade",
+                "Reduz crime a infração administrativa — gravidade leve não exclui tipificação"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado — Fernanda",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência legal"],
+            "linhas": [
+              ["Atropela pedestre — ferimentos leves", "Sinistro com vítima"],
+              ["Populares socorrem e acionam SAMU", "Não exime Fernanda — § único"],
+              ["Fernanda não presta auxílio direto", "Omissão de socorro imediato"],
+              ["Não solicita auxílio da autoridade pública", "Segunda hipótese do caput"],
+              ["Resultado", "Gabarito D — art. 304"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "304 permanece × 305 exige fuga",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Situação", "Artigo aplicável"],
+            "linhas": [
+              ["Fica no local, mas não socorre nem chama autoridade", "Art. 304"],
+              ["Afasta-se do sinistro para fugir à responsabilidade", "Art. 305"],
+              ["Fernanda permaneceu no local", "304 — não 305"],
+              ["Penas art. 304", "Detenção 6m–1a ou multa (se não houver crime mais grave)"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 304 — omissão de socorro",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 304",
+            "texto": "Deixar o condutor do veículo, na ocasião do sinistro, de prestar imediato socorro à vítima, ou, não podendo fazê-lo diretamente, por justa causa, deixar de solicitar auxílio da autoridade pública:",
+            "trechos_grifados": [
+              {
+                "inicio": 65,
+                "fim": 81,
+                "motivo": "caso — Fernanda não prestou socorro imediato"
+              },
+              {
+                "inicio": 156,
+                "fim": 195,
+                "motivo": "caso — também não solicitou auxílio da autoridade"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 304 — parágrafo único",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 304, parágrafo único",
+            "texto": "Incide nas penas previstas neste artigo o condutor do veículo, ainda que a sua omissão seja suprida por terceiros ou que se trate de vítima com morte instantânea ou com ferimentos leves.",
+            "trechos_grifados": [
+              {
+                "inicio": 92,
+                "fim": 113,
+                "motivo": "contraste — terceiros no local não eximem Fernanda"
+              },
+              {
+                "inicio": 169,
+                "fim": 185,
+                "motivo": "contraste — ferimentos leves não afastam o crime"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "304 = NÃO SOCORREU nem chamou autoridade · §único: terceiros/leves/morte instantânea NÃO eximem · 305 = FUGIU do sinistro.\n\nNear-transfer: motorista atropela vítima com morte instantânea e não aciona a polícia, alegando inutilidade do socorro — ainda incide art. 304 (§ único: morte instantânea não exclui).",
+            "destaques": ["304", "morte instantânea", "305"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 304",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "tags": [
+      "crimes_transito",
+      "art_304",
+      "omissao_socorro",
+      "sinistro",
+      "regra_excecao",
+      "caso_pratico"
+    ]
+  }
+]

@@ -17,11 +17,9 @@
       "o_que_testa": "Competência do órgão executivo de trânsito municipal (STTP) para fiscalizar e autuar infrações de circulação, estacionamento e parada.",
       "fundamento_legal": "CTB, art. 24, VI: compete aos órgãos e entidades executivos de trânsito dos Municípios executar a fiscalização de trânsito em vias terrestres, autuar e aplicar as penalidades de advertência por escrito e multa e as medidas administrativas cabíveis pelas infrações previstas neste Código.",
       "passo_a_passo": [
-        "O caso envolve autuação municipal por estacionamento — hipótese típica de competência local.",
-        "A) Erra: a PM tem policiamento ostensivo (art. 23), mas não exclusividade para autuar estacionamento urbano.",
-        "B) Correta: o art. 24, VI confere ao órgão municipal executar fiscalização e autuar infrações de circulação, estacionamento e parada.",
-        "C) Erra: não exige delegação individual por agente; a competência é do órgão municipal.",
-        "D) Erra: inventa exigência de autorização prévia do CONTRAN para cada autuação."
+        "1. O caso envolve autuação municipal por estacionamento — hipótese típica de competência local.",
+        "2. A erra por competencia_snt (PM sem exclusividade de autuação municipal); C erra por regra_excecao (delegação individual por agente); D erra por termo_unico (inventa autorização prévia do CONTRAN).",
+        "3. B está correta conforme o fundamento citado no comentário."
       ],
       "pegadinha": "IDECAN mistura policiamento ostensivo da PM com competência exclusiva de autuação, ignorando o art. 24 do CTB.",
       "macete": "Município autua circulação, estacionamento e parada (art. 24, VI). PM patrulha e atua no ostensivo (art. 23).",
@@ -32,17 +30,9 @@
         "CTB art. 280"
       ]
     },
-    "tags": [
-      "snt",
-      "competencia",
-      "sttp",
-      "municipal"
-    ],
     "estudo_reverso_visual": {
-      "versao": 1,
       "arquetipo": "comparacao",
       "arquetipo_secundario": "trecho_legal",
-      "duracao_estimada_seg": 80,
       "fundamento_slug": "CTB_art_24_VI",
       "macete_visual": "Via municipal = órgão executivo municipal autua estacionamento",
       "telas": [
@@ -124,20 +114,6 @@
               "24, VI"
             ]
           }
-        },
-        {
-          "id": "recall",
-          "titulo": "Fixação ativa",
-          "tipo": "micro_recall",
-          "conteudo": {
-            "pergunta": "Qual inciso do art. 24 trata de autuação por estacionamento em via municipal?",
-            "resposta_esperada": "VI",
-            "aceitar_variacoes": [
-              "inciso VI",
-              "art. 24, VI",
-              "24 VI"
-            ]
-          }
         }
       ],
       "links_fonte": [
@@ -149,8 +125,198 @@
           "rotulo": "CTB art. 24, VI",
           "path": "conteúdo/legislação federal/"
         }
-      ]
-    }
+      ],
+      "versao": 1,
+      "duracao_estimada_seg": 80
+    },
+    "estudo_reverso_visual_completo": {
+      "arquetipo": "comparacao",
+      "fundamento_slug": "CTB_art_24_VI",
+      "macete_visual": "Município autua circulação/estacionamento (art.24,VI)",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "STTP autua estacionamento irregular em via municipal de Campina Grande. A banca testa competência do órgão executivo municipal — não exclusividade da PM.",
+            "destaques": [
+              "STTP",
+              "estacionamento",
+              "art. 24"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de memorizar: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Órgão executivo municipal = STTP. Policiamento ostensivo = PM (art. 23). Autuar = lavrar auto e aplicar multa. Competência = quem pode fiscalizar e punir.",
+            "destaques": [
+              "STTP",
+              "PM",
+              "autuar"
+            ]
+          }
+        },
+        {
+          "id": "historico",
+          "titulo": "Por que a pegadinha existe",
+          "tipo": "linha_tempo",
+          "conteudo": {
+            "eventos": [
+              {
+                "ordem": 1,
+                "rotulo": "Art. 23",
+                "descricao": "PM: policiamento ostensivo e preservação da ordem."
+              },
+              {
+                "ordem": 2,
+                "rotulo": "Art. 24, VI",
+                "descricao": "Município: fiscalizar, autuar circulação, estacionamento e parada."
+              },
+              {
+                "ordem": 3,
+                "rotulo": "IDECAN",
+                "descricao": "Troca ostensivo da PM por exclusividade de autuação."
+              }
+            ]
+          }
+        },
+        {
+          "id": "nucleo",
+          "titulo": "PM vs STTP",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Órgão",
+              "Função"
+            ],
+            "linhas": [
+              [
+                "PM (art. 23)",
+                "Policiamento ostensivo"
+              ],
+              [
+                "STTP (art. 24, VI)",
+                "Fiscalizar e autuar no Município"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pegadinha típica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Confusão",
+              "Regra"
+            ],
+            "linhas": [
+              [
+                "PM autua exclusivamente estacionamento (A)",
+                "Município autua circulação, estacionamento e parada"
+              ],
+              [
+                "STTP precisa delegação do CONTRAN (C/D)",
+                "Competência é do órgão municipal, não por agente"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que não"
+            ],
+            "linhas": [
+              [
+                "A — exclusividade da PM",
+                "PM não tem exclusividade para autuar estacionamento urbano."
+              ],
+              [
+                "C — delegação por agente",
+                "Não exige delegação individual."
+              ],
+              [
+                "D — autorização do CONTRAN",
+                "Inventa exigência não prevista no CTB."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "O caso desta questão",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Confundir patrulha com autuação exclusiva",
+                "Autuação municipal por estacionamento → B"
+              ],
+              [
+                "Achar que STTP só orienta",
+                "Art. 24, VI confere autuar e aplicar multa"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 24, VI",
+            "texto": "Compete aos órgãos executivos de trânsito dos Municípios executar a fiscalização, autuar e aplicar penalidades pelas infrações previstas neste Código.",
+            "trechos_grifados": [
+              {
+                "inicio": 60,
+                "fim": 90,
+                "motivo": "autuar e aplicar"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Município autua circulação, estacionamento e parada. PM patrulha (art. 23).",
+            "destaques": [
+              "Município",
+              "PM"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 24, VI",
+          "path": "conteúdo/legislação federal/"
+        }
+      ],
+      "versao": 2,
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 180
+    },
+    "tags": [
+      "snt",
+      "competencia",
+      "sttp",
+      "municipal"
+    ]
   },
   {
     "disciplina": "legislacao_transito",
@@ -170,11 +336,9 @@
       "o_que_testa": "Efeito da sinalização insuficiente ou incorreta sobre a aplicação de sanções e responsabilidade do órgão de trânsito.",
       "fundamento_legal": "CTB, art. 90: não serão aplicadas as sanções previstas neste Código por inobservância à sinalização quando esta for insuficiente ou incorreta. § 1º: o órgão ou entidade de trânsito com circunscrição sobre a via é responsável pela implantação da sinalização.",
       "passo_a_passo": [
-        "Comando INCORRETA: busca a afirmativa falsa.",
-        "A) Verdadeira — caput do art. 90 (não é gabarito porque pede a incorreta).",
-        "B) Verdadeira — art. 90, § 1º.",
-        "C) Verdadeira — consequência do caput do art. 90.",
-        "D) Falsa — com sinalização insuficiente ou incorreta, as sanções não se aplicam ao condutor."
+        "1. Comando INCORRETA: busca a afirmativa falsa.",
+        "2. A não é INCORRETA por termo_unico (verdadeira — caput art. 90); B não é INCORRETA por numero_vizinho (verdadeira — §1º); C não é INCORRETA por gravidade (verdadeira); D é falsa por regra_excecao (sanções não se aplicam com sinalização insuficiente).",
+        "3. D está correta conforme o fundamento citado no comentário."
       ],
       "pegadinha": "Candidato acha que falha na sinalização só obriga o órgão a consertar a via, mas não afasta a multa.",
       "macete": "Sinalização ruim = sem sanção ao condutor + responsabilidade do órgão da via (art. 90).",
@@ -184,16 +348,9 @@
         "CTB art. 94"
       ]
     },
-    "tags": [
-      "sinalizacao",
-      "art_90",
-      "excecao"
-    ],
     "estudo_reverso_visual": {
-      "versao": 1,
       "arquetipo": "fluxograma_decisao",
       "arquetipo_secundario": "comparacao",
-      "duracao_estimada_seg": 75,
       "fundamento_slug": "CTB_art_90",
       "macete_visual": "Sinalização ruim = sem sanção ao condutor (art. 90)",
       "telas": [
@@ -290,18 +447,219 @@
               "art. 90"
             ]
           }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 90",
+          "path": "conteúdo/legislação federal/"
+        }
+      ],
+      "versao": 1,
+      "duracao_estimada_seg": 75
+    },
+    "estudo_reverso_visual_completo": {
+      "arquetipo": "fluxograma_decisao",
+      "fundamento_slug": "CTB_art_90",
+      "macete_visual": "Sinalização ruim=sem sanção ao condutor (art.90)",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Condutor autuado alega placa apagada. A questão pede a INCORRETA: com sinalização insuficiente, as sanções não se aplicam ao condutor.",
+            "destaques": [
+              "INCORRETA",
+              "sinalização",
+              "art. 90"
+            ]
+          }
         },
         {
-          "id": "recall",
-          "titulo": "Fixação ativa",
-          "tipo": "micro_recall",
+          "id": "glossario",
+          "titulo": "Antes de memorizar: 3 termos",
+          "tipo": "texto_destaque",
           "conteudo": {
-            "pergunta": "Qual artigo veda sanção quando a sinalização é insuficiente ou incorreta?",
-            "resposta_esperada": "90",
-            "aceitar_variacoes": [
-              "art. 90",
-              "artigo 90",
-              "CTB art. 90"
+            "texto": "Sinalização insuficiente = falta ou erro que impede compreensão. Sanção ao condutor = multa por desobedecer sinalização válida. Responsabilidade do órgão = implantar sinalização correta.",
+            "destaques": [
+              "insuficiente",
+              "sanção",
+              "órgão"
+            ]
+          }
+        },
+        {
+          "id": "historico",
+          "titulo": "Por que a pegadinha existe",
+          "tipo": "linha_tempo",
+          "conteudo": {
+            "eventos": [
+              {
+                "ordem": 1,
+                "rotulo": "Caput art. 90",
+                "descricao": "Sinalização ruim = sem sanção ao condutor."
+              },
+              {
+                "ordem": 2,
+                "rotulo": "§ 1º",
+                "descricao": "Órgão da via responde pela implantação."
+              },
+              {
+                "ordem": 3,
+                "rotulo": "IDECAN",
+                "descricao": "Alternativa D inverte: aplica multa mesmo com falha."
+              }
+            ]
+          }
+        },
+        {
+          "id": "nucleo",
+          "titulo": "Sinalização e sanção",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "n1",
+                "label": "Sinalização insuficiente?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "n2",
+                "label": "Sem sanção ao condutor",
+                "tipo": "resultado"
+              },
+              {
+                "id": "n3",
+                "label": "Órgão responsável pela via",
+                "tipo": "lei",
+                "ref": "CTB art. 90, § 1º"
+              },
+              {
+                "id": "n4",
+                "label": "Sanção aplicável",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "n1",
+                "para": "n2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "n1",
+                "para": "n4",
+                "rotulo": "Não"
+              },
+              {
+                "de": "n2",
+                "para": "n3"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pegadinha típica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Confusão",
+              "Regra"
+            ],
+            "linhas": [
+              [
+                "Falha na sinalização só obriga consertar (D)",
+                "Falha afasta sanção ao condutor"
+              ],
+              [
+                "Órgão conserta e multa mesmo assim",
+                "Caput art. 90 protege o condutor"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que não é a incorreta"
+            ],
+            "linhas": [
+              [
+                "A — sem sanção",
+                "Verdadeira — caput do art. 90."
+              ],
+              [
+                "B — órgão responsável",
+                "Verdadeira — § 1º do art. 90."
+              ],
+              [
+                "C — impede sanções",
+                "Verdadeira — consequência do caput."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "O caso desta questão",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Achar que condutor paga e órgão só conserta depois",
+                "Placa apagada = sanções não aplicáveis → D incorreta"
+              ],
+              [
+                "Confundir responsabilidade do órgão com multa ao condutor",
+                "Duas esferas distintas no art. 90"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 90",
+            "texto": "Não serão aplicadas as sanções previstas neste Código por inobservância à sinalização quando esta for insuficiente ou incorreta.",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 40,
+                "motivo": "sem sanção"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Lei — § 1º",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 90, § 1º",
+            "texto": "O órgão ou entidade de trânsito com circunscrição sobre a via é responsável pela implantação da sinalização."
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Sinalização ruim = sem sanção ao condutor + responsabilidade do órgão da via.",
+            "destaques": [
+              "sem sanção",
+              "órgão"
             ]
           }
         }
@@ -311,14 +669,22 @@
           "rotulo": "CTB art. 90",
           "path": "conteúdo/legislação federal/"
         }
-      ]
-    }
+      ],
+      "versao": 2,
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 180
+    },
+    "tags": [
+      "sinalizacao",
+      "art_90",
+      "excecao"
+    ]
   },
   {
     "disciplina": "legislacao_transito",
-    "topico": "CTB_infracoes",
+    "topico": "CTB_sinalizacao",
     "tipo": "caso_pratico",
-    "estilo_idecan": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 4,
     "enunciado": "Na Av. Epitácio Pessoa, em Campina Grande, semáforo exibe luz vermelha para o fluxo que segue em frente. Há placa regulamentar autorizando conversão à direita com o sinal vermelho. Condutor reduz a velocidade, verifica pedestres e ciclistas e efetua a conversão à direita. Agente da STTP pretende autuá-lo por avançar o sinal vermelho. Considerando o CTB, assinale a alternativa CORRETA:",
     "alternativas": {
@@ -332,11 +698,9 @@
       "o_que_testa": "Exceção ao art. 208 mediante conversão à direita com sinalização permissiva (art. 44-A).",
       "fundamento_legal": "CTB, art. 44-A: é livre o movimento de conversão à direita diante de sinal vermelho do semáforo onde houver sinalização indicativa que permita essa conversão, observados os arts. 44, 45 e 70. CTB, art. 208: avançar o sinal vermelho, exceto onde houver sinalização que permita a livre conversão à direita prevista no art. 44-A.",
       "passo_a_passo": [
-        "Há placa autorizando conversão à direita no vermelho — hipótese do art. 44-A.",
-        "A) Correta: reproduz a regra do art. 44-A com observância dos deveres de prudência.",
-        "B) Erra: o art. 208 expressamente excepciona a conversão com sinalização.",
-        "C) Erra: não exige seta verde; basta sinalização indicativa.",
-        "D) Erra: a norma não restringe a veículos de coletivo."
+        "1. Há placa autorizando conversão à direita no vermelho — hipótese do art. 44-A.",
+        "2. B erra por regra_excecao (art. 208 excepciona conversão com placa do art. 44-A); C erra por termo_unico (não exige seta verde); D erra por numero_vizinho (não restringe a coletivo).",
+        "3. A está correta conforme o fundamento citado no comentário."
       ],
       "pegadinha": "Candidato aplica o art. 208 sem a ressalva do art. 44-A ou exige seta verde inexistente na lei.",
       "macete": "Vermelho + placa de conversão à direita = pode converter (art. 44-A), com prudência (arts. 44 e 45).",
@@ -346,17 +710,9 @@
         "CTB art. 208"
       ]
     },
-    "tags": [
-      "semaforo",
-      "conversao",
-      "art_208",
-      "art_44-A"
-    ],
     "estudo_reverso_visual": {
-      "versao": 1,
       "arquetipo": "fluxograma_decisao",
       "arquetipo_secundario": "comparacao",
-      "duracao_estimada_seg": 90,
       "fundamento_slug": "CTB_art_44-A",
       "macete_visual": "Vermelho + placa conversão à direita = art. 44-A (exceção ao 208)",
       "telas": [
@@ -457,20 +813,6 @@
               "44-A"
             ]
           }
-        },
-        {
-          "id": "recall",
-          "titulo": "Fixação ativa",
-          "tipo": "micro_recall",
-          "conteudo": {
-            "pergunta": "Qual artigo autoriza conversão à direita no sinal vermelho com placa indicativa?",
-            "resposta_esperada": "44-A",
-            "aceitar_variacoes": [
-              "art. 44-A",
-              "44A",
-              "artigo 44-A"
-            ]
-          }
         }
       ],
       "links_fonte": [
@@ -482,8 +824,231 @@
           "rotulo": "CTB art. 208",
           "path": "conteúdo/legislação federal/"
         }
-      ]
-    }
+      ],
+      "versao": 1,
+      "duracao_estimada_seg": 90
+    },
+    "estudo_reverso_visual_completo": {
+      "arquetipo": "fluxograma_decisao",
+      "fundamento_slug": "CTB_art_44-A",
+      "macete_visual": "Vermelho+placa conversão=direita livre (44-A)",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Semáforo vermelho na Av. Epitácio Pessoa, mas há placa permitindo conversão à direita. A banca testa a exceção do art. 44-A ao art. 208.",
+            "destaques": [
+              "vermelho",
+              "conversão à direita",
+              "44-A"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de memorizar: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Art. 208 = avançar sinal vermelho (gravíssima). Art. 44-A = exceção: conversão à direita no vermelho com placa indicativa. Prudência = arts. 44 e 45.",
+            "destaques": [
+              "208",
+              "44-A",
+              "placa"
+            ]
+          }
+        },
+        {
+          "id": "historico",
+          "titulo": "Por que a pegadinha existe",
+          "tipo": "linha_tempo",
+          "conteudo": {
+            "eventos": [
+              {
+                "ordem": 1,
+                "rotulo": "Regra",
+                "descricao": "Vermelho = parar — art. 208."
+              },
+              {
+                "ordem": 2,
+                "rotulo": "Exceção",
+                "descricao": "Placa permite conversão à direita — art. 44-A."
+              },
+              {
+                "ordem": 3,
+                "rotulo": "IDECAN",
+                "descricao": "Exige seta verde ou nega exceção com placa."
+              }
+            ]
+          }
+        },
+        {
+          "id": "nucleo",
+          "titulo": "Vermelho + placa",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "n1",
+                "label": "Sinal vermelho",
+                "tipo": "acao"
+              },
+              {
+                "id": "n2",
+                "label": "Placa permite conversão à direita?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "n3",
+                "label": "Conversão permitida (44-A)",
+                "tipo": "resultado"
+              },
+              {
+                "id": "n4",
+                "label": "Avanço proibido (208)",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "n1",
+                "para": "n2"
+              },
+              {
+                "de": "n2",
+                "para": "n3",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "n2",
+                "para": "n4",
+                "rotulo": "Não"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pegadinha típica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Confusão",
+              "Regra"
+            ],
+            "linhas": [
+              [
+                "Vermelho sempre proíbe qualquer movimento (B)",
+                "44-A excepciona conversão à direita com placa"
+              ],
+              [
+                "Exige seta verde exclusiva (C)",
+                "Basta sinalização indicativa"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que não"
+            ],
+            "linhas": [
+              [
+                "B — gravíssima sempre",
+                "Art. 208 excepciona conversão com placa."
+              ],
+              [
+                "C — só com seta verde",
+                "Lei não exige seta verde."
+              ],
+              [
+                "D — só coletivo",
+                "Não restringe a veículos de coletivo."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "O caso desta questão",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Ignorar a placa regulamentadora no enunciado",
+                "Placa + vermelho = conversão à direita permitida → A"
+              ],
+              [
+                "Aplicar 208 sem ler a exceção do 44-A",
+                "Exceção expressa no próprio art. 208"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 44-A",
+            "texto": "É livre o movimento de conversão à direita diante de sinal vermelho onde houver sinalização indicativa que permita essa conversão.",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 35,
+                "motivo": "conversão livre"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Lei complementar",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 208",
+            "texto": "Avançar o sinal vermelho, exceto onde houver sinalização que permita a livre conversão à direita prevista no art. 44-A."
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Vermelho + placa de conversão à direita = pode converter com prudência.",
+            "destaques": [
+              "placa",
+              "direita"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 44-A e 208",
+          "path": "conteúdo/legislação federal/"
+        }
+      ],
+      "versao": 2,
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 180
+    },
+    "tags": [
+      "semaforo",
+      "conversao",
+      "art_208",
+      "art_44-A"
+    ]
   },
   {
     "disciplina": "legislacao_transito",
@@ -493,20 +1058,19 @@
     "dificuldade": 4,
     "enunciado": "Quanto às infrações por excesso de velocidade previstas no CTB, analise as assertivas:\n\nI. Transitar com velocidade superior à máxima em até 20% configura infração de natureza média.\nII. Exceder o limite em mais de 20% até 50% caracteriza infração gravíssima.\nIII. Ultrapassar a velocidade máxima em mais de 50% constitui infração gravíssima, com penalidade de multa e suspensão do direito de dirigir.\n\nEstá CORRETO o que se afirma em:",
     "alternativas": {
-      "A": "Está correto o que se afirma em I, apenas.",
-      "B": "Está correto o que se afirma em I e III, apenas.",
-      "C": "Está correto o que se afirma em II e III, apenas.",
-      "D": "Está correto o que se afirma em I, II e III."
+      "A": "Está correto o que se afirma em I, apenas, quanto à gradação de infrações por excesso de velocidade no CTB.",
+      "B": "Está correto o que se afirma em I, II e III, quanto aos limites percentuais de velocidade previstos no art. 218.",
+      "C": "Está correto o que se afirma em II e III, apenas, sobre as faixas de excesso de velocidade do art. 218.",
+      "D": "Está correto o que se afirma em I e III, apenas, nos termos do art. 218 do CTB."
     },
-    "gabarito": "B",
+    "gabarito": "D",
     "comentario": {
       "o_que_testa": "Gradação de gravidade das infrações de velocidade conforme percentual de excesso (art. 218).",
       "fundamento_legal": "CTB, art. 218, I: até 20% — infração média. II: mais de 20% até 50% — infração grave. III: mais de 50% — infração gravíssima, com penalidade de multa (três vezes) e suspensão do direito de dirigir.",
       "passo_a_passo": [
-        "I: Correta — inciso I do art. 218 (até 20% = média).",
-        "II: Errada — entre 20% e 50% é infração GRAVE, não gravíssima.",
-        "III: Correta — inciso III do art. 218 (acima de 50% = gravíssima com multa tripla e suspensão).",
-        "Gabarito: I e III = alternativa B."
+        "1. Análise do enunciado e do comando da questão.",
+        "2. A erra por gravidade (só I, sem III); B erra por regra_excecao (inclui II falsa); C erra por numero_vizinho (II e III com II errada).",
+        "3. Alternativa D está correta conforme o fundamento citado no comentário."
       ],
       "pegadinha": "Trocar infração grave (20% a 50%) por gravíssima — erro clássico em assertivas de velocidade.",
       "macete": "Até 20% média | 20–50% grave | +50% gravíssima + suspensão.",
@@ -516,17 +1080,9 @@
         "CTB art. 220"
       ]
     },
-    "tags": [
-      "velocidade",
-      "art_218",
-      "gravidade",
-      "percentual"
-    ],
     "estudo_reverso_visual": {
-      "versao": 1,
       "arquetipo": "tabela_gradacao",
       "arquetipo_secundario": "matriz_assertivas",
-      "duracao_estimada_seg": 85,
       "fundamento_slug": "CTB_art_218",
       "macete_visual": "20% média | 20-50% GRAVE | +50% gravíssima tripla",
       "telas": [
@@ -627,17 +1183,190 @@
               }
             ]
           }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 218",
+          "path": "conteúdo/legislação federal/"
+        }
+      ],
+      "versao": 1,
+      "duracao_estimada_seg": 85
+    },
+    "estudo_reverso_visual_completo": {
+      "arquetipo": "tabela_gradacao",
+      "fundamento_slug": "CTB_art_218",
+      "macete_visual": "Até20%=média | 20-50%=grave | +50%=gravíssima",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Assertivas sobre gradação de excesso de velocidade. A banca troca infração grave (20% a 50%) por gravíssima na assertiva II.",
+            "destaques": [
+              "velocidade",
+              "art. 218",
+              "assertivas"
+            ]
+          }
         },
         {
-          "id": "recall",
-          "titulo": "Fixação ativa",
-          "tipo": "micro_recall",
+          "id": "glossario",
+          "titulo": "Antes de memorizar: 3 termos",
+          "tipo": "texto_destaque",
           "conteudo": {
-            "pergunta": "Entre 20% e 50% de excesso: a infração é de que natureza?",
-            "resposta_esperada": "grave",
-            "aceitar_variacoes": [
-              "infração grave",
-              "natureza grave"
+            "texto": "Até 20% acima = média. De 20% a 50% = grave. Acima de 50% = gravíssima com multa tripla e suspensão. Percentual = (velocidade − limite) ÷ limite.",
+            "destaques": [
+              "média",
+              "grave",
+              "gravíssima"
+            ]
+          }
+        },
+        {
+          "id": "historico",
+          "titulo": "Por que a pegadinha existe",
+          "tipo": "linha_tempo",
+          "conteudo": {
+            "eventos": [
+              {
+                "ordem": 1,
+                "rotulo": "Inciso I",
+                "descricao": "Até 20% — infração média."
+              },
+              {
+                "ordem": 2,
+                "rotulo": "Inciso II",
+                "descricao": "20% a 50% — infração GRAVE (pegadinha)."
+              },
+              {
+                "ordem": 3,
+                "rotulo": "Inciso III",
+                "descricao": "Acima de 50% — gravíssima + suspensão."
+              }
+            ]
+          }
+        },
+        {
+          "id": "nucleo",
+          "titulo": "Art. 218 — faixas",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Excesso",
+              "Classificação"
+            ],
+            "linhas": [
+              {
+                "faixa": "Até 20%",
+                "classificacao": "Média (inciso I)"
+              },
+              {
+                "faixa": "20% a 50%",
+                "classificacao": "Grave (inciso II)",
+                "destaque": true
+              },
+              {
+                "faixa": "Acima de 50%",
+                "classificacao": "Gravíssima + suspensão (III)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pegadinha típica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Confusão",
+              "Regra"
+            ],
+            "linhas": [
+              [
+                "20% a 50% = gravíssima (II errada)",
+                "20% a 50% = GRAVE"
+              ],
+              [
+                "Abaixo de 50% sempre é média",
+                "Entre 20% e 50% já é grave"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que não"
+            ],
+            "linhas": [
+              [
+                "A — só I",
+                "III também está correta."
+              ],
+              [
+                "C — II e III",
+                "II está errada."
+              ],
+              [
+                "D — todas",
+                "II está errada."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "O caso desta questão",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Decorar só 'acima de 50% = gravíssima'",
+                "Faixa intermediária é grave — I e III corretas → B"
+              ],
+              [
+                "Confundir grave com gravíssima",
+                "II é a assertiva armadilha"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 218, II",
+            "texto": "Transitar em velocidade superior à máxima permitida em mais de vinte por cento até cinquenta por cento — infração grave.",
+            "trechos_grifados": [
+              {
+                "inicio": 80,
+                "fim": 95,
+                "motivo": "grave"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Até 20% média | 20–50% grave | +50% gravíssima + suspensão.",
+            "destaques": [
+              "20–50%",
+              "grave"
             ]
           }
         }
@@ -647,8 +1376,17 @@
           "rotulo": "CTB art. 218",
           "path": "conteúdo/legislação federal/"
         }
-      ]
-    }
+      ],
+      "versao": 2,
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 180
+    },
+    "tags": [
+      "velocidade",
+      "art_218",
+      "gravidade",
+      "percentual"
+    ]
   },
   {
     "disciplina": "legislacao_transito",
@@ -668,11 +1406,9 @@
       "o_que_testa": "Medida administrativa aplicável à infração de não uso do cinto de segurança (art. 167).",
       "fundamento_legal": "CTB, art. 167: deixar o condutor ou passageiro de usar o cinto de segurança, conforme previsto no art. 65 — infração grave; penalidade multa; medida administrativa: retenção do veículo até colocação do cinto pelo infrator.",
       "passo_a_passo": [
-        "Infração: condutor e passageiro sem cinto — art. 167.",
-        "A) Correta: medida administrativa expressa no art. 167 é retenção até colocação do cinto.",
-        "B) Erra: remoção ao pátio não é a medida do art. 167.",
-        "C) Erra: o art. 167 menciona condutor ou passageiro.",
-        "D) Erra: a retenção é medida administrativa prevista em lei, sem ordem judicial."
+        "1. Infração: condutor e passageiro sem cinto — art. 167.",
+        "2. B erra por numero_vizinho (remoção 24h não é medida do art. 167); C erra por termo_unico (passageiro também é sujeito); D erra por regra_excecao (retenção sem ordem judicial).",
+        "3. A está correta conforme o fundamento citado no comentário."
       ],
       "pegadinha": "Confundir retenção até regularizar (art. 167) com remoção ao pátio de outros tipos de infração.",
       "macete": "Sem cinto = grave + retenção até colocar o cinto (art. 167).",
@@ -682,16 +1418,9 @@
         "CTB art. 168"
       ]
     },
-    "tags": [
-      "cinto",
-      "art_167",
-      "medida_administrativa"
-    ],
     "estudo_reverso_visual": {
-      "versao": 1,
       "arquetipo": "comparacao",
       "arquetipo_secundario": "trecho_legal",
-      "duracao_estimada_seg": 75,
       "fundamento_slug": "CTB_art_167",
       "macete_visual": "Sem cinto = grave + retenção até colocar o cinto (art. 167)",
       "telas": [
@@ -772,17 +1501,185 @@
               "167"
             ]
           }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 167",
+          "path": "conteúdo/legislação federal/"
+        }
+      ],
+      "versao": 1,
+      "duracao_estimada_seg": 75
+    },
+    "estudo_reverso_visual_completo": {
+      "arquetipo": "comparacao",
+      "fundamento_slug": "CTB_art_167",
+      "macete_visual": "Sem cinto=grave+retenção até colocar (167)",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Blitz da STTP: motorista e passageiro sem cinto em veículo em movimento. A banca testa a medida administrativa do art. 167 — retenção, não remoção.",
+            "destaques": [
+              "cinto",
+              "retenção",
+              "art. 167"
+            ]
+          }
         },
         {
-          "id": "recall",
-          "titulo": "Fixação ativa",
-          "tipo": "micro_recall",
+          "id": "glossario",
+          "titulo": "Antes de memorizar: 3 termos",
+          "tipo": "texto_destaque",
           "conteudo": {
-            "pergunta": "Qual a medida administrativa do art. 167 para quem não usa cinto?",
-            "resposta_esperada": "retenção",
-            "aceitar_variacoes": [
-              "retenção do veículo",
-              "reter o veículo"
+            "texto": "Retenção = veículo parado até regularizar a infração. Remoção = levar ao pátio. Infração grave = art. 167. Condutor ou passageiro = ambos podem ser autuados.",
+            "destaques": [
+              "Retenção",
+              "Remoção",
+              "passageiro"
+            ]
+          }
+        },
+        {
+          "id": "historico",
+          "titulo": "Por que a pegadinha existe",
+          "tipo": "linha_tempo",
+          "conteudo": {
+            "eventos": [
+              {
+                "ordem": 1,
+                "rotulo": "Art. 167",
+                "descricao": "Sem cinto = infração grave + multa."
+              },
+              {
+                "ordem": 2,
+                "rotulo": "Medida",
+                "descricao": "Retenção até colocar o cinto."
+              },
+              {
+                "ordem": 3,
+                "rotulo": "IDECAN",
+                "descricao": "Troca retenção por remoção ao pátio."
+              }
+            ]
+          }
+        },
+        {
+          "id": "nucleo",
+          "titulo": "Retenção vs remoção",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Medida",
+              "Quando"
+            ],
+            "linhas": [
+              [
+                "Retenção até colocar cinto",
+                "Art. 167 — sem cinto"
+              ],
+              [
+                "Remoção ao pátio",
+                "Outras infrações (ex.: estacionamento)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pegadinha típica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Confusão",
+              "Regra"
+            ],
+            "linhas": [
+              [
+                "Remoção 24h ao pátio (B)",
+                "Retenção até colocar o cinto"
+              ],
+              [
+                "Só condutor autuado (C)",
+                "Passageiro também configura art. 167"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que não"
+            ],
+            "linhas": [
+              [
+                "B — remoção ao pátio",
+                "Art. 167 prevê retenção, não remoção."
+              ],
+              [
+                "C — só condutor",
+                "Menciona condutor ou passageiro."
+              ],
+              [
+                "D — ordem judicial",
+                "Retenção é medida legal, sem juiz."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "O caso desta questão",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Confundir retenção com guincho ao pátio",
+                "Até colocar o cinto → A"
+              ],
+              [
+                "Achar que passageiro não gera medida",
+                "Ambos sem cinto no caso do enunciado"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 167",
+            "texto": "Deixar o condutor ou passageiro de usar o cinto de segurança — infração grave; medida administrativa: retenção do veículo até colocação do cinto.",
+            "trechos_grifados": [
+              {
+                "inicio": 90,
+                "fim": 130,
+                "motivo": "retenção"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Sem cinto = grave + retenção até colocar o cinto.",
+            "destaques": [
+              "retenção",
+              "cinto"
             ]
           }
         }
@@ -792,8 +1689,16 @@
           "rotulo": "CTB art. 167",
           "path": "conteúdo/legislação federal/"
         }
-      ]
-    }
+      ],
+      "versao": 2,
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 180
+    },
+    "tags": [
+      "cinto",
+      "art_167",
+      "medida_administrativa"
+    ]
   },
   {
     "disciplina": "legislacao_transito",
@@ -813,11 +1718,9 @@
       "o_que_testa": "Classificação da infração de estacionamento nas esquinas a menos de cinco metros (art. 181, I).",
       "fundamento_legal": "CTB, art. 181, I: estacionar o veículo nas esquinas e a menos de cinco metros do bordo do alinhamento da via transversal — infração média; penalidade multa; medida administrativa remoção do veículo.",
       "passo_a_passo": [
-        "Comando INCORRETA: identificar afirmativa falsa sobre estacionamento irregular em esquina.",
-        "A) Verdadeira — infração média com multa.",
-        "B) Verdadeira — remoção é medida administrativa do inciso I.",
-        "C) Falsa — a infração é MÉDIA, não leve.",
-        "D) Verdadeira — hipótese do art. 181, I."
+        "1. Comando INCORRETA: identificar afirmativa falsa sobre estacionamento irregular em esquina.",
+        "2. A não é INCORRETA por termo_unico (verdadeira — média + multa); B não é INCORRETA por numero_vizinho (verdadeira — remoção); D não é INCORRETA por gravidade (verdadeira — art. 181, I); C é falsa por gravidade (infração é média, não leve).",
+        "3. C está correta conforme o fundamento citado no comentário."
       ],
       "pegadinha": "Associar estacionamento a infração leve por não envolver veículo em movimento — o CTB classifica como média.",
       "macete": "Esquina < 5 m = média + remoção (art. 181, I).",
@@ -827,16 +1730,9 @@
         "CTB art. 183"
       ]
     },
-    "tags": [
-      "estacionamento",
-      "art_181",
-      "gravidade"
-    ],
     "estudo_reverso_visual": {
-      "versao": 1,
       "arquetipo": "comparacao",
       "arquetipo_secundario": "trecho_legal",
-      "duracao_estimada_seg": 75,
       "fundamento_slug": "CTB_art_181_I",
       "macete_visual": "Esquina < 5 m = média + remoção (art. 181, I)",
       "telas": [
@@ -918,19 +1814,6 @@
               "181"
             ]
           }
-        },
-        {
-          "id": "recall",
-          "titulo": "Fixação ativa",
-          "tipo": "micro_recall",
-          "conteudo": {
-            "pergunta": "Estacionar a menos de 5 m da esquina: qual a natureza da infração?",
-            "resposta_esperada": "média",
-            "aceitar_variacoes": [
-              "infração média",
-              "natureza média"
-            ]
-          }
         }
       ],
       "links_fonte": [
@@ -938,8 +1821,197 @@
           "rotulo": "CTB art. 181",
           "path": "conteúdo/legislação federal/"
         }
-      ]
-    }
+      ],
+      "versao": 1,
+      "duracao_estimada_seg": 75
+    },
+    "estudo_reverso_visual_completo": {
+      "arquetipo": "comparacao",
+      "fundamento_slug": "CTB_art_181_I",
+      "macete_visual": "Esquina <5m=média+remoção (181,I)",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Veículo estacionado a menos de 5 m da esquina na Av. Epitácio Pessoa. A questão pede a INCORRETA — a banca associa estacionamento a infração leve.",
+            "destaques": [
+              "INCORRETA",
+              "esquina",
+              "5 metros"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de memorizar: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Estacionamento = veículo parado por tempo superior ao embarque. Esquina = cruzamento de vias. Infração média = art. 181, I. Remoção = medida administrativa cabível.",
+            "destaques": [
+              "Estacionamento",
+              "esquina",
+              "média"
+            ]
+          }
+        },
+        {
+          "id": "historico",
+          "titulo": "Por que a pegadinha existe",
+          "tipo": "linha_tempo",
+          "conteudo": {
+            "eventos": [
+              {
+                "ordem": 1,
+                "rotulo": "Art. 181, I",
+                "descricao": "Esquina < 5 m = infração média + remoção."
+              },
+              {
+                "ordem": 2,
+                "rotulo": "Pegadinha",
+                "descricao": "Candidato acha que parado = leve."
+              },
+              {
+                "ordem": 3,
+                "rotulo": "IDECAN",
+                "descricao": "Alternativa C diz infração leve."
+              }
+            ]
+          }
+        },
+        {
+          "id": "nucleo",
+          "titulo": "Gravidade do estacionamento",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Hipótese",
+              "Classificação"
+            ],
+            "linhas": [
+              [
+                "Esquina < 5 m (art. 181, I)",
+                "Média + remoção"
+              ],
+              [
+                "Veículo parado = sempre leve",
+                "Falso — depende da hipótese"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pegadinha típica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Confusão",
+              "Regra"
+            ],
+            "linhas": [
+              [
+                "Parado = infração leve (C)",
+                "Art. 181, I = MÉDIA"
+              ],
+              [
+                "Sem movimento = menor gravidade",
+                "CTB classifica pela hipótese, não pelo movimento"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que não é a incorreta"
+            ],
+            "linhas": [
+              [
+                "A — natureza média",
+                "Verdadeira."
+              ],
+              [
+                "B — remoção admitida",
+                "Verdadeira — medida do inciso I."
+              ],
+              [
+                "D — art. 181, I",
+                "Verdadeira — hipótese correta."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "O caso desta questão",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Subestimar gravidade por veículo estacionado",
+                "Esquina < 5 m = média, não leve → C incorreta"
+              ],
+              [
+                "Confundir com infração de circulação",
+                "Hipótese específica de estacionamento irregular"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 181, I",
+            "texto": "Estacionar nas esquinas e a menos de cinco metros do bordo do alinhamento da via transversal — infração média; medida administrativa remoção.",
+            "trechos_grifados": [
+              {
+                "inicio": 70,
+                "fim": 85,
+                "motivo": "média"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Esquina < 5 m = média + remoção (art. 181, I).",
+            "destaques": [
+              "média",
+              "remoção"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 181, I",
+          "path": "conteúdo/legislação federal/"
+        }
+      ],
+      "versao": 2,
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 180
+    },
+    "tags": [
+      "estacionamento",
+      "art_181",
+      "gravidade"
+    ]
   },
   {
     "disciplina": "legislacao_transito",
@@ -949,20 +2021,19 @@
     "dificuldade": 3,
     "enunciado": "Sobre o auto de infração de trânsito, analise as afirmativas:\n\nI. Deve conter a tipificação da infração e o local, a data e a hora do cometimento.\nII. Deve identificar a placa, a marca e a espécie do veículo, entre outros elementos necessários.\nIII. A assinatura do infrator é indispensável para a validade do auto de infração.\n\nEstá CORRETO o que se afirma em:",
     "alternativas": {
-      "A": "Está correto o que se afirma em I, apenas.",
-      "B": "Está correto o que se afirma em I e II, apenas.",
-      "C": "Está correto o que se afirma em II e III, apenas.",
-      "D": "Está correto o que se afirma em I, II e III."
+      "A": "Está correto o que se afirma em I, apenas, quanto ao conteúdo obrigatório do auto de infração de trânsito.",
+      "B": "Está correto o que se afirma em I e II, apenas, conforme os requisitos do art. 280 do CTB.",
+      "C": "Está correto o que se afirma em II e III, apenas, sobre a identificação do veículo e a assinatura.",
+      "D": "Está correto o que se afirma em I, II e III, quanto aos elementos do auto de infração previstos em lei."
     },
     "gabarito": "B",
     "comentario": {
       "o_que_testa": "Conteúdo obrigatório do auto de infração e natureza da assinatura do infrator (art. 280).",
       "fundamento_legal": "CTB, art. 280: o auto de infração deve conter tipificação (I), local, data e hora (II), caracteres da placa, marca e espécie do veículo (III), entre outros. VI: assinatura do infrator, sempre que possível, valendo como notificação.",
       "passo_a_passo": [
-        "I: Correta — incisos I e II do art. 280.",
-        "II: Correta — inciso III do art. 280.",
-        "III: Errada — assinatura é exigida sempre que possível, não é indispensável em qualquer caso.",
-        "Gabarito: I e II = alternativa B."
+        "1. Análise do enunciado e do comando da questão.",
+        "2. A erra por regra_excecao (incompleto — falta II); C erra por termo_unico (III falsa — assinatura sempre que possível); D erra por numero_vizinho (inclui III falsa).",
+        "3. Alternativa B está correta conforme o fundamento citado no comentário."
       ],
       "pegadinha": "Transformar 'sempre que possível' em 'indispensável' — pegadinha frequente em processo administrativo de trânsito.",
       "macete": "Auto completo (art. 280) + assinatura quando possível, não obrigatória em todo caso.",
@@ -972,16 +2043,9 @@
         "CTB art. 281-A"
       ]
     },
-    "tags": [
-      "autuacao",
-      "art_280",
-      "processo_administrativo"
-    ],
     "estudo_reverso_visual": {
-      "versao": 1,
       "arquetipo": "matriz_assertivas",
       "arquetipo_secundario": "comparacao",
-      "duracao_estimada_seg": 80,
       "fundamento_slug": "CTB_art_280",
       "macete_visual": "Auto completo (art. 280) + assinatura quando possível",
       "telas": [
@@ -1066,17 +2130,188 @@
               "280"
             ]
           }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 280",
+          "path": "conteúdo/legislação federal/"
+        }
+      ],
+      "versao": 1,
+      "duracao_estimada_seg": 80
+    },
+    "estudo_reverso_visual_completo": {
+      "arquetipo": "matriz_assertivas",
+      "fundamento_slug": "CTB_art_280",
+      "macete_visual": "Auto completo (280)+assinatura quando possível",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Assertivas sobre conteúdo do auto de infração. A banca transforma 'sempre que possível' em 'indispensável' na afirmativa III.",
+            "destaques": [
+              "auto de infração",
+              "art. 280",
+              "assinatura"
+            ]
+          }
         },
         {
-          "id": "recall",
-          "titulo": "Fixação ativa",
-          "tipo": "micro_recall",
+          "id": "glossario",
+          "titulo": "Antes de memorizar: 3 termos",
+          "tipo": "texto_destaque",
           "conteudo": {
-            "pergunta": "A assinatura do infrator no auto é indispensável ou sempre que possível?",
-            "resposta_esperada": "sempre que possível",
-            "aceitar_variacoes": [
-              "quando possível",
-              "sempre que possivel"
+            "texto": "Auto de infração = documento que inicia o processo. Tipificação = qual infração. Assinatura do infrator = sempre que possível, não em todo caso.",
+            "destaques": [
+              "tipificação",
+              "assinatura",
+              "sempre que possível"
+            ]
+          }
+        },
+        {
+          "id": "historico",
+          "titulo": "Por que a pegadinha existe",
+          "tipo": "linha_tempo",
+          "conteudo": {
+            "eventos": [
+              {
+                "ordem": 1,
+                "rotulo": "Incisos I–III",
+                "descricao": "Tipificação, local/data/hora, placa/marca/espécie."
+              },
+              {
+                "ordem": 2,
+                "rotulo": "Inciso VI",
+                "descricao": "Assinatura sempre que possível."
+              },
+              {
+                "ordem": 3,
+                "rotulo": "IDECAN",
+                "descricao": "III errada: assinatura não é indispensável sempre."
+              }
+            ]
+          }
+        },
+        {
+          "id": "nucleo",
+          "titulo": "Afirmativas do auto",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              {
+                "id": "I",
+                "texto": "Deve conter tipificação, local, data e hora",
+                "correto": true
+              },
+              {
+                "id": "II",
+                "texto": "Deve conter placa, marca e espécie do veículo",
+                "correto": true
+              },
+              {
+                "id": "III",
+                "texto": "Assinatura do infrator é indispensável em qualquer caso",
+                "correto": false
+              }
+            ],
+            "gabarito_resumo": "I e II corretas → alternativa B"
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pegadinha típica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Confusão",
+              "Regra"
+            ],
+            "linhas": [
+              [
+                "Assinatura obrigatória sempre (III)",
+                "Sempre que possível — art. 280, VI"
+              ],
+              [
+                "Auto incompleto é válido",
+                "Elementos dos incisos I–III são obrigatórios"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que não"
+            ],
+            "linhas": [
+              [
+                "A — só I",
+                "II também correta."
+              ],
+              [
+                "C — II e III",
+                "III errada."
+              ],
+              [
+                "D — todas",
+                "III errada."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "O caso desta questão",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Absolutizar 'sempre que possível'",
+                "III é falsa — gabarito B (I e II)"
+              ],
+              [
+                "Ignorar inciso VI do art. 280",
+                "Assinatura não é requisito absoluto"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 280, VI",
+            "texto": "Assinatura do infrator, sempre que possível, valendo como notificação.",
+            "trechos_grifados": [
+              {
+                "inicio": 20,
+                "fim": 42,
+                "motivo": "sempre que possível"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Auto completo (art. 280) + assinatura quando possível, não obrigatória em todo caso.",
+            "destaques": [
+              "quando possível"
             ]
           }
         }
@@ -1086,8 +2321,16 @@
           "rotulo": "CTB art. 280",
           "path": "conteúdo/legislação federal/"
         }
-      ]
-    }
+      ],
+      "versao": 2,
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 180
+    },
+    "tags": [
+      "autuacao",
+      "art_280",
+      "processo_administrativo"
+    ]
   },
   {
     "disciplina": "legislacao_transito",
@@ -1098,20 +2341,18 @@
     "enunciado": "Agente da STTP flagra condutor que, em via arterial de Campina Grande, utiliza telefone celular encostado ao ouvido enquanto conduz motocicleta em movimento. O condutor argumenta que a infração seria apenas leve por não colocar outros usuários em risco imediato. À luz do CTB, assinale a alternativa CORRETA:",
     "alternativas": {
       "A": "A conduta configura infração leve, pois não há menção expressa a apreensão do veículo.",
-      "B": "A utilização de telefone celular sem dispositivo mãos-livres configura infração média.",
+      "B": "A autuação é inválida, pois motociclistas estão dispensados do uso de cinto e de restrições a celular.",
       "C": "Somente é infração se o condutor estiver em velocidade superior ao limite da via.",
-      "D": "A autuação é inválida, pois motociclistas estão dispensados do uso de cinto e de restrições a celular."
+      "D": "A utilização de telefone celular sem dispositivo mãos-livres configura infração média."
     },
-    "gabarito": "B",
+    "gabarito": "D",
     "comentario": {
       "o_que_testa": "Infração por dirigir utilizando telefone celular (art. 252, VI) e sua classificação.",
       "fundamento_legal": "CTB, art. 252, VI: dirigir o veículo utilizando-se de fones nos ouvidos conectados a aparelhagem sonora ou de telefone celular — infração média; penalidade multa.",
       "passo_a_passo": [
-        "Condutor usa celular ao ouvido em motocicleta em movimento.",
-        "A) Erra: a infração é média, não leve.",
-        "B) Correta: art. 252, VI — celular sem mãos-livres = infração média.",
-        "C) Erra: não condiciona a infração ao excesso de velocidade.",
-        "D) Erra: motociclistas não estão dispensados; o inciso VI não exclui motos."
+        "1. Condutor usa celular ao ouvido em motocicleta em movimento.",
+        "2. A erra por gravidade (celular ao ouvido é média, não leve); B erra por competencia_snt (motociclista não está dispensado); C erra por regra_excecao (não exige excesso de velocidade).",
+        "3. Alternativa D está correta conforme o fundamento citado no comentário."
       ],
       "pegadinha": "Candidato subestima a gravidade (leve) ou acha que moto está fora do alcance do art. 252.",
       "macete": "Celular na orelha ao volante = média (art. 252, VI).",
@@ -1121,16 +2362,9 @@
         "CTB art. 167"
       ]
     },
-    "tags": [
-      "celular",
-      "art_252",
-      "conduta"
-    ],
     "estudo_reverso_visual": {
-      "versao": 1,
       "arquetipo": "comparacao",
       "arquetipo_secundario": "trecho_legal",
-      "duracao_estimada_seg": 70,
       "fundamento_slug": "CTB_art_252_VI",
       "macete_visual": "Celular na orelha ao volante = média (art. 252, VI)",
       "telas": [
@@ -1164,6 +2398,10 @@
               [
                 "Moto está dispensada",
                 "Art. 252, VI não exclui motociclistas"
+              ],
+              [
+                "Manusear/digitar no celular",
+                "Gravíssima — art. 252, § único (outra hipótese)"
               ]
             ]
           }
@@ -1212,19 +2450,6 @@
               "252"
             ]
           }
-        },
-        {
-          "id": "recall",
-          "titulo": "Fixação ativa",
-          "tipo": "micro_recall",
-          "conteudo": {
-            "pergunta": "Celular ao ouvido ao dirigir: qual a natureza da infração (art. 252, VI)?",
-            "resposta_esperada": "média",
-            "aceitar_variacoes": [
-              "infração média",
-              "natureza média"
-            ]
-          }
         }
       ],
       "links_fonte": [
@@ -1232,32 +2457,223 @@
           "rotulo": "CTB art. 252",
           "path": "conteúdo/legislação federal/"
         }
-      ]
-    }
+      ],
+      "versao": 1,
+      "duracao_estimada_seg": 70
+    },
+    "estudo_reverso_visual_completo": {
+      "arquetipo": "comparacao",
+      "fundamento_slug": "CTB_art_252_VI",
+      "macete_visual": "Celular na orelha=média (252,VI)",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Condutor de moto usa celular encostado ao ouvido em via arterial. A banca testa art. 252, VI — infração média, sem exigir excesso de velocidade.",
+            "destaques": [
+              "celular",
+              "ouvido",
+              "média"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de memorizar: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Inciso VI = celular ao ouvido ou fones — média. § único = manusear celular — gravíssima. Infração autônoma = não depende de velocidade.",
+            "destaques": [
+              "VI",
+              "§ único",
+              "média"
+            ]
+          }
+        },
+        {
+          "id": "historico",
+          "titulo": "Por que a pegadinha existe",
+          "tipo": "linha_tempo",
+          "conteudo": {
+            "eventos": [
+              {
+                "ordem": 1,
+                "rotulo": "VI",
+                "descricao": "Celular ao ouvido = infração média."
+              },
+              {
+                "ordem": 2,
+                "rotulo": "Lei 13.281",
+                "descricao": "§ único elevou manuseio a gravíssima — outro caso."
+              },
+              {
+                "ordem": 3,
+                "rotulo": "IDECAN",
+                "descricao": "Subestima gravidade ou exclui motos."
+              }
+            ]
+          }
+        },
+        {
+          "id": "nucleo",
+          "titulo": "Celular ao ouvido",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Conduta",
+              "Classificação"
+            ],
+            "linhas": [
+              [
+                "Celular ao ouvido (VI)",
+                "Infração MÉDIA"
+              ],
+              [
+                "Manusear/digitar (§ único)",
+                "Infração GRAVÍSSIMA"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pegadinha típica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Confusão",
+              "Regra"
+            ],
+            "linhas": [
+              [
+                "Infração leve (A)",
+                "Art. 252, VI = média"
+              ],
+              [
+                "Só infração se acima do limite (C)",
+                "Não condiciona a velocidade"
+              ],
+              [
+                "Moto dispensada (D)",
+                "Inciso VI não exclui motociclistas"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que não"
+            ],
+            "linhas": [
+              [
+                "A — leve",
+                "É média, não leve."
+              ],
+              [
+                "C — depende de velocidade",
+                "Infração autônoma."
+              ],
+              [
+                "D — moto dispensada",
+                "Moto não está excluída."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "O caso desta questão",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Confundir com manuseio (§ único)",
+                "Ao ouvido = VI = média → B"
+              ],
+              [
+                "Achar que precisa de radar de velocidade",
+                "Conduta autônoma no art. 252"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 252, VI",
+            "texto": "Dirigir utilizando-se de telefone celular — infração de natureza média.",
+            "trechos_grifados": [
+              {
+                "inicio": 45,
+                "fim": 60,
+                "motivo": "média"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Celular na orelha ao volante = média (art. 252, VI).",
+            "destaques": [
+              "média",
+              "VI"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 252, VI",
+          "path": "conteúdo/legislação federal/"
+        }
+      ],
+      "versao": 2,
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 180
+    },
+    "tags": [
+      "celular",
+      "art_252",
+      "conduta"
+    ]
   },
   {
     "disciplina": "legislacao_transito",
-    "topico": "CTB_infracoes",
+    "topico": "CTB_circulacao_conduta",
     "tipo": "caso_pratico",
     "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 3,
     "enunciado": "Em rodovia que corta o município de Campina Grande, condutor transita a 40 km/h em via cuja velocidade máxima regulamentada é de 100 km/h, formando longa fila de veículos e obstruindo o fluxo, sem condições climáticas adversas, estando na faixa da esquerda. Considerando o CTB, assinale a alternativa CORRETA:",
     "alternativas": {
-      "A": "A conduta configura infração grave por transitar em velocidade inferior à metade da máxima permitida, retardando o trânsito.",
+      "A": "Configura infração média, pois o excesso de cautela não obstrui o trânsito quando há acostamento.",
       "B": "Não há infração, pois transitar abaixo do limite máximo é sempre permitido ao condutor prudente.",
-      "C": "Configura infração média, pois o excesso de cautela não obstrui o trânsito quando há acostamento.",
+      "C": "A conduta configura infração grave por transitar em velocidade inferior à metade da máxima permitida, retardando o trânsito.",
       "D": "A autuação compete exclusivamente à Polícia Rodoviária Federal, não à STTP municipal."
     },
-    "gabarito": "A",
+    "gabarito": "C",
     "comentario": {
       "o_que_testa": "Infração por velocidade muito abaixo do limite retardando ou obstruindo o trânsito (art. 219).",
       "fundamento_legal": "CTB, art. 219: transitar com o veículo em velocidade inferior à metade da velocidade máxima estabelecida para a via, retardando ou obstruindo o trânsito, salvo se as condições de tráfego e meteorológicas não o permitirem, exceto se estiver na faixa da direita — infração grave; penalidade multa.",
       "passo_a_passo": [
-        "40 km/h em via de 100 km/h = inferior à metade (50 km/h), retardando trânsito, sem clima adverso, na faixa da esquerda.",
-        "A) Correta: preenche os elementos do art. 219 (grave).",
-        "B) Erra: velocidade excessivamente baixa pode ser infração.",
-        "C) Erra: a infração é grave, não média.",
-        "D) Erra: em rodovia federal a PRF autua, mas a questão testa a tipificação, não a competência neste distrator."
+        "1. 40 km/h em via de 100 km/h = inferior à metade (50 km/h), retardando trânsito, sem clima adverso, na faixa da esquerda.",
+        "2. A erra por regra_excecao (velocidade baixa pode ser infração); B erra por termo_unico (abaixo do limite nem sempre é permitido); D erra por competencia_snt (distrator de competência).",
+        "3. Alternativa C está correta conforme o fundamento citado no comentário."
       ],
       "pegadinha": "Achar que 'abaixo do limite' nunca é infração — o art. 219 pune velocidade excessivamente baixa que obstrui o fluxo.",
       "macete": "Menos da metade do limite + obstruir trânsito = grave (art. 219), salvo clima ruim ou faixa da direita.",
@@ -1267,16 +2683,9 @@
         "CTB art. 220"
       ]
     },
-    "tags": [
-      "velocidade",
-      "art_219",
-      "obstrucao"
-    ],
     "estudo_reverso_visual": {
-      "versao": 1,
       "arquetipo": "fluxograma_decisao",
       "arquetipo_secundario": "comparacao",
-      "duracao_estimada_seg": 85,
       "fundamento_slug": "CTB_art_219",
       "macete_visual": "Metade do limite + obstruir trânsito = grave (art. 219)",
       "telas": [
@@ -1378,17 +2787,210 @@
               "219"
             ]
           }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 219",
+          "path": "conteúdo/legislação federal/"
+        }
+      ],
+      "versao": 1,
+      "duracao_estimada_seg": 85
+    },
+    "estudo_reverso_visual_completo": {
+      "arquetipo": "fluxograma_decisao",
+      "fundamento_slug": "CTB_art_219",
+      "macete_visual": "<50% do limite+obstruir=grave (219)",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Condutor a 40 km/h em via de 100 km/h na faixa da esquerda, retardando o trânsito. A banca testa art. 219 — velocidade excessivamente baixa também é infração.",
+            "destaques": [
+              "40 km/h",
+              "100 km/h",
+              "art. 219"
+            ]
+          }
         },
         {
-          "id": "recall",
-          "titulo": "Fixação ativa",
-          "tipo": "micro_recall",
+          "id": "glossario",
+          "titulo": "Antes de memorizar: 3 termos",
+          "tipo": "texto_destaque",
           "conteudo": {
-            "pergunta": "Velocidade inferior à metade do limite obstruindo o trânsito: qual artigo?",
-            "resposta_esperada": "219",
-            "aceitar_variacoes": [
-              "art. 219",
-              "artigo 219"
+            "texto": "Metade do limite = 50 km/h em via de 100. Retardar trânsito = obstruir fluxo. Exceções = clima adverso ou faixa da direita.",
+            "destaques": [
+              "metade",
+              "retardar",
+              "faixa da direita"
+            ]
+          }
+        },
+        {
+          "id": "historico",
+          "titulo": "Por que a pegadinha existe",
+          "tipo": "linha_tempo",
+          "conteudo": {
+            "eventos": [
+              {
+                "ordem": 1,
+                "rotulo": "Regra comum",
+                "descricao": "Abaixo do limite parece sempre permitido."
+              },
+              {
+                "ordem": 2,
+                "rotulo": "Art. 219",
+                "descricao": "Abaixo da metade + obstruir = grave."
+              },
+              {
+                "ordem": 3,
+                "rotulo": "IDECAN",
+                "descricao": "Alternativa B nega infração por estar abaixo do limite."
+              }
+            ]
+          }
+        },
+        {
+          "id": "nucleo",
+          "titulo": "Art. 219",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "n1",
+                "label": "Velocidade < metade do limite?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "n2",
+                "label": "Retarda ou obstrui trânsito?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "n3",
+                "label": "Infração GRAVE (219)",
+                "tipo": "resultado"
+              },
+              {
+                "id": "n4",
+                "label": "Sem infração (exceções)",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "n1",
+                "para": "n2",
+                "rotulo": "Sim (40<50)"
+              },
+              {
+                "de": "n2",
+                "para": "n3",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "n2",
+                "para": "n4",
+                "rotulo": "Não"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pegadinha típica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Confusão",
+              "Regra"
+            ],
+            "linhas": [
+              [
+                "Abaixo do limite nunca é infração (B)",
+                "Art. 219 pune velocidade muito baixa"
+              ],
+              [
+                "Sempre é média (C)",
+                "Art. 219 = GRAVE"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que não"
+            ],
+            "linhas": [
+              [
+                "B — sem infração",
+                "40 km/h < metade de 100 + obstrui."
+              ],
+              [
+                "C — média",
+                "Art. 219 classifica como grave."
+              ],
+              [
+                "D — só PRF autua",
+                "Questão testa tipificação, não esse distrator."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "O caso desta questão",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Achar que prudência abaixo do limite sempre protege",
+                "40 em via de 100 na esquerda = grave → A"
+              ],
+              [
+                "Ignorar faixa da esquerda no enunciado",
+                "Exceção da faixa da direita não se aplica"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 219",
+            "texto": "Transitar em velocidade inferior à metade da máxima, retardando ou obstruindo o trânsito — infração grave.",
+            "trechos_grifados": [
+              {
+                "inicio": 70,
+                "fim": 85,
+                "motivo": "grave"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Menos da metade do limite + obstruir = grave (art. 219).",
+            "destaques": [
+              "metade",
+              "grave"
             ]
           }
         }
@@ -1398,8 +3000,16 @@
           "rotulo": "CTB art. 219",
           "path": "conteúdo/legislação federal/"
         }
-      ]
-    }
+      ],
+      "versao": 2,
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 180
+    },
+    "tags": [
+      "velocidade",
+      "art_219",
+      "obstrucao"
+    ]
   },
   {
     "disciplina": "legislacao_transito",
@@ -1419,11 +3029,9 @@
       "o_que_testa": "Requisitos para aprovação de empreendimento que constitua pólo atrativo de trânsito (art. 93).",
       "fundamento_legal": "CTB, art. 93: nenhum projeto de edificação que possa transformar-se em pólo atrativo de trânsito poderá ser aprovado sem prévia anuência do órgão ou entidade com circunscrição sobre a via e sem que do projeto conste área para estacionamento e indicação das vias de acesso adequadas.",
       "passo_a_passo": [
-        "Shopping com alto fluxo = potencial pólo atrativo de trânsito.",
-        "A) Erra: estacionamento e anuência de trânsito são exigidos pelo art. 93.",
-        "B) Erra: licença ambiental não substitui anuência do órgão de trânsito.",
-        "C) Correta: reproduz o art. 93.",
-        "D) Erra: a anuência é do órgão com circunscrição sobre a via, não do CONTRAN diretamente."
+        "1. Shopping com alto fluxo = potencial pólo atrativo de trânsito.",
+        "2. A erra por regra_excecao (art. 93 exige estacionamento e anuência); B erra por competencia_snt (licença ambiental não substitui trânsito); D erra por termo_unico (anuência é do órgão local).",
+        "3. C está correta conforme o fundamento citado no comentário."
       ],
       "pegadinha": "Trocar anuência do órgão local de trânsito por anuência do CONTRAN ou dispensar estacionamento no projeto.",
       "macete": "Pólo atrativo = anuência do órgão da via + estacionamento + acessos (art. 93).",
@@ -1433,16 +3041,9 @@
         "CTB art. 94"
       ]
     },
-    "tags": [
-      "engenharia",
-      "art_93",
-      "empreendimento"
-    ],
     "estudo_reverso_visual": {
-      "versao": 1,
-      "arquetipo": "comparacao",
-      "arquetipo_secundario": "trecho_legal",
-      "duracao_estimada_seg": 75,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
       "fundamento_slug": "CTB_art_93",
       "macete_visual": "Pólo atrativo = anuência do órgão da via + estacionamento (art. 93)",
       "telas": [
@@ -1456,6 +3057,42 @@
               "anuência",
               "estacionamento",
               "art. 93"
+            ]
+          }
+        },
+        {
+          "id": "competencias",
+          "titulo": "Quem anuencia o quê",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "contran",
+                "label": "CONTRAN",
+                "nivel": 0
+              },
+              {
+                "id": "orgao_via",
+                "label": "Órgão da via (circunscrição)",
+                "nivel": 1
+              },
+              {
+                "id": "municipio",
+                "label": "Município / empreendedor",
+                "nivel": 2
+              }
+            ],
+            "arestas": [
+              {
+                "de": "contran",
+                "para": "orgao_via",
+                "rotulo": "normas gerais"
+              },
+              {
+                "de": "orgao_via",
+                "para": "municipio",
+                "rotulo": "anuência prévia (art. 93)"
+              }
             ]
           }
         },
@@ -1480,23 +3117,6 @@
               [
                 "Estacionamento é faculdade",
                 "Projeto deve prever área de estacionamento e acessos"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "fluxo",
-          "titulo": "Sequência lógica",
-          "tipo": "comparacao",
-          "conteudo": {
-            "colunas": [
-              "Etapa",
-              "Exigência"
-            ],
-            "linhas": [
-              [
-                "Pólo atrativo de trânsito",
-                "Anuência do órgão da via + estacionamento + acessos"
               ]
             ]
           }
@@ -1527,17 +3147,208 @@
               "art. 93"
             ]
           }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 93",
+          "path": "conteúdo/legislação federal/"
+        }
+      ],
+      "versao": 1,
+      "duracao_estimada_seg": 80
+    },
+    "estudo_reverso_visual_completo": {
+      "arquetipo": "diagrama_competencia",
+      "fundamento_slug": "CTB_art_93",
+      "macete_visual": "Pólo atrativo=anuência local+estacionamento (93)",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Shopping em Campina Grande com alto fluxo de veículos. A banca testa art. 93 — anuência do órgão de trânsito da via + estacionamento no projeto.",
+            "destaques": [
+              "shopping",
+              "art. 93",
+              "anuência"
+            ]
+          }
         },
         {
-          "id": "recall",
-          "titulo": "Fixação ativa",
-          "tipo": "micro_recall",
+          "id": "glossario",
+          "titulo": "Antes de memorizar: 3 termos",
+          "tipo": "texto_destaque",
           "conteudo": {
-            "pergunta": "Qual artigo exige anuência do órgão de trânsito para pólo atrativo de trânsito?",
-            "resposta_esperada": "93",
-            "aceitar_variacoes": [
-              "art. 93",
-              "artigo 93"
+            "texto": "Pólo atrativo de trânsito = empreendimento que concentra fluxo. Anuência prévia = aprovação do órgão com circunscrição sobre a via. CONTRAN = normas gerais, não anuência de cada projeto local.",
+            "destaques": [
+              "pólo atrativo",
+              "anuência",
+              "estacionamento"
+            ]
+          }
+        },
+        {
+          "id": "historico",
+          "titulo": "Por que a pegadinha existe",
+          "tipo": "linha_tempo",
+          "conteudo": {
+            "eventos": [
+              {
+                "ordem": 1,
+                "rotulo": "Art. 93",
+                "descricao": "Projeto atrativo exige anuência + estacionamento + acessos."
+              },
+              {
+                "ordem": 2,
+                "rotulo": "Competência",
+                "descricao": "Órgão com circunscrição sobre a via — não CONTRAN direto."
+              },
+              {
+                "ordem": 3,
+                "rotulo": "IDECAN",
+                "descricao": "Dispensa estacionamento ou exige só licença ambiental."
+              }
+            ]
+          }
+        },
+        {
+          "id": "nucleo",
+          "titulo": "Aprovação do empreendimento",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "proj",
+                "label": "Pólo atrativo de trânsito",
+                "nivel": 0
+              },
+              {
+                "id": "org",
+                "label": "Anuência órgão da via",
+                "nivel": 1
+              },
+              {
+                "id": "est",
+                "label": "Área de estacionamento",
+                "nivel": 1
+              },
+              {
+                "id": "contran",
+                "label": "CONTRAN (normas gerais)",
+                "nivel": 2
+              }
+            ],
+            "arestas": [
+              {
+                "de": "proj",
+                "para": "org"
+              },
+              {
+                "de": "proj",
+                "para": "est"
+              },
+              {
+                "de": "contran",
+                "para": "proj",
+                "rotulo": "Não substitui anuência local"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pegadinha típica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Confusão",
+              "Regra"
+            ],
+            "linhas": [
+              [
+                "Só licença ambiental (B)",
+                "Exige anuência do órgão de trânsito"
+              ],
+              [
+                "Anuência do CONTRAN (D)",
+                "Anuência do órgão com circunscrição sobre a via"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que não"
+            ],
+            "linhas": [
+              [
+                "A — só aprovação municipal",
+                "Art. 93 exige anuência de trânsito e estacionamento."
+              ],
+              [
+                "B — só ambiental",
+                "Licença ambiental não substitui art. 93."
+              ],
+              [
+                "D — CONTRAN obrigatório",
+                "Anuência é do órgão local da via."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "O caso desta questão",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Achar que prefeitura aprova sem trânsito",
+                "Shopping com fluxo intenso → art. 93 → C"
+              ],
+              [
+                "Confundir norma geral com anuência de projeto",
+                "Circunscrição sobre a via é local"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 93",
+            "texto": "Nenhum projeto que possa transformar-se em pólo atrativo de trânsito poderá ser aprovado sem prévia anuência do órgão com circunscrição sobre a via e sem área para estacionamento.",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 50,
+                "motivo": "anuência prévia"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Pólo atrativo = anuência do órgão da via + estacionamento + acessos.",
+            "destaques": [
+              "anuência",
+              "estacionamento"
             ]
           }
         }
@@ -1547,7 +3358,15 @@
           "rotulo": "CTB art. 93",
           "path": "conteúdo/legislação federal/"
         }
-      ]
-    }
+      ],
+      "versao": 2,
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 180
+    },
+    "tags": [
+      "engenharia",
+      "art_93",
+      "empreendimento"
+    ]
   }
 ]

@@ -25,8 +25,8 @@ export function HomeCta() {
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Resolva questões para ativar revisões automáticas. Errou → lei seca →
-            questões irmãs → domínio.
+            Resolva questões para ativar revisões automáticas. Errou → estudo
+            reverso visual → FSRS reagenda → domínio.
           </p>
 
           <div className="rounded-lg border border-border bg-card/80 px-4 py-3">

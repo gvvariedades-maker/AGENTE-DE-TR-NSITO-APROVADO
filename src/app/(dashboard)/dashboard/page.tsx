@@ -6,22 +6,27 @@ import {
   ShieldAlert,
 } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
-import { DISCIPLINAS } from "@/types";
-import { MIN_PONTOS_TOTAL } from "@/lib/edital-constants";
-import { getSemaforoData, DISCIPLINA_LABELS } from "@/lib/semaforo";
+import { getDesempenhoResumo, getAtividadeHoje } from "@/lib/desempenho";
+import { getRetencaoResumo } from "@/lib/retencao";
 import { getQuestoesCount } from "@/lib/questoes";
-import { getRetencaoResumo, getAtividadeSemanal, getEstudoReversoResumo } from "@/lib/retencao";
-import { getPioresTopicos } from "@/lib/piores-topicos";
-import { DashboardHero } from "@/components/dashboard/dashboard-hero";
-import { CicloRetencao } from "@/components/dashboard/ciclo-retencao";
-import { EstudoReversoResumoCard } from "@/components/dashboard/estudo-reverso-resumo";
-import { SemaforoZonaCard } from "@/components/dashboard/semaforo-zona-card";
-import { SemaforoPlaceholder } from "@/components/dashboard/semaforo-placeholder";
-import { SuaProvaHoje } from "@/components/dashboard/sua-prova-hoje";
-import { ProvaDistribuicaoBar } from "@/components/dashboard/prova-distribuicao-bar";
+import { getPioresTopicos, getPrioridadeEdital } from "@/lib/piores-topicos";
+import { DISCIPLINA_LABELS } from "@/lib/desempenho";
+import {
+  DISCIPLINAS_CRITICAS_INICIO,
+  labelTopicoEdital,
+} from "@/lib/edital-topicos";
+import { PainelHero } from "@/components/dashboard/painel-hero";
 import { ModoTreinoCard } from "@/components/dashboard/modo-treino-card";
 import { DisciplinaItem } from "@/components/dashboard/disciplina-item";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { DISCIPLINAS } from "@/types";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import {
+  hrefEstudoErros,
+  hrefEstudoTopico,
+  labelPiorTopico,
+} from "@/lib/piores-topicos";
 
 const MODOS = [
   {
@@ -45,14 +50,15 @@ const MODOS = [
     slug: "anti_zerar",
     label: "Anti-zerar",
     desc: "Disciplinas abaixo do mínimo do edital",
+    href: "/estudo?modo=anti_zerar",
     icon: ShieldAlert,
-    ativo: false,
+    ativo: true,
   },
   {
     slug: "pegadinha_idecan",
     label: "Pegadinha IDECAN",
     desc: "Armadilhas típicas da banca",
-    href: "/estudo",
+    href: "/estudo?modo=pegadinha",
     icon: BookOpen,
     ativo: true,
   },
@@ -66,32 +72,41 @@ export default async function DashboardPage() {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const [semaforo, questoesCount, retencao, atividade, pioresTopicos, reversoResumo] =
-    await Promise.all([
-      getSemaforoData(user?.id),
-      getQuestoesCount(),
-      getRetencaoResumo(user?.id),
-      getAtividadeSemanal(user?.id),
-      getPioresTopicos(user?.id),
-      getEstudoReversoResumo(user?.id),
-    ]);
+  const [
+    desempenho,
+    retencao,
+    atividadeHoje,
+    questoesCount,
+    pioresTopicos,
+    prioridadeEdital,
+  ] = await Promise.all([
+    getDesempenhoResumo(user?.id),
+    getRetencaoResumo(user?.id),
+    getAtividadeHoje(user?.id),
+    getQuestoesCount(),
+    getPioresTopicos(user?.id),
+    getPrioridadeEdital(user?.id, 5),
+  ]);
+
+  const { semaforo } = desempenho;
+  const desempenhoPorDisciplina = new Map(
+    desempenho.disciplinas.map((d) => [d.disciplina, d]),
+  );
+  const mostrarAlertaInicio =
+    !desempenho.hasData && semaforo.disciplinasEmRisco.length === 0;
 
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-8 p-4 md:p-8">
-      <DashboardHero
-        diasParaProva={semaforo.diasParaProva}
-        semaforo={semaforo}
-      />
-
-      <SuaProvaHoje
+    <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-6 p-4 md:p-8">
+      <PainelHero
+        desempenho={desempenho}
         retencao={retencao}
-        pioresTopicos={pioresTopicos}
+        atividadeHoje={atividadeHoje}
         questoesDisponiveis={questoesCount > 0}
       />
 
       {semaforo.disciplinasEmRisco.length > 0 && (
         <Alert variant="destructive">
-          <AlertTitle>Risco de eliminação — edital IDECAN</AlertTitle>
+          <AlertTitle>Risco de eliminação</AlertTitle>
           <AlertDescription>
             <ul className="mt-2 list-inside list-disc text-sm">
               {semaforo.disciplinasEmRisco.map((r) => (
@@ -101,61 +116,96 @@ export default async function DashboardPage() {
                 </li>
               ))}
             </ul>
+            <Link
+              href="/estudo?modo=anti_zerar"
+              className={cn(
+                buttonVariants({ variant: "outline", size: "sm" }),
+                "mt-3",
+              )}
+            >
+              Treinar anti-zerar
+            </Link>
           </AlertDescription>
         </Alert>
       )}
 
-      <CicloRetencao resumo={retencao} atividade={atividade} />
+      {mostrarAlertaInicio && (
+        <Alert>
+          <AlertTitle>Comece pelas disciplinas de risco</AlertTitle>
+          <AlertDescription className="text-sm">
+            Na prova, cada disciplina geral exige mínimo de{" "}
+            <strong>1 ponto</strong> para não zerar. Priorize:{" "}
+            {DISCIPLINAS_CRITICAS_INICIO.map((d) => DISCIPLINA_LABELS[d]).join(
+              ", ",
+            )}
+            .
+            <Link
+              href="/estudo?modo=anti_zerar"
+              className={cn(
+                buttonVariants({ variant: "outline", size: "sm" }),
+                "mt-3 block w-fit",
+              )}
+            >
+              Modo anti-zerar
+            </Link>
+          </AlertDescription>
+        </Alert>
+      )}
 
-      <EstudoReversoResumoCard resumo={reversoResumo} />
+      {pioresTopicos.some((p) => p.tentativas > 0) && (
+        <section className="rounded-xl border border-border bg-card/50 p-4">
+          <h2 className="text-sm font-semibold">Pontos fracos</h2>
+          <ul className="mt-2 flex flex-col gap-1">
+            {pioresTopicos.slice(0, 3).map((p) => (
+              <li key={p.slug} className="flex items-baseline gap-2 text-sm">
+                <Link
+                  href={hrefEstudoTopico(p.slug, p.disciplina)}
+                  className="hover:underline"
+                >
+                  {labelPiorTopico(p)}
+                </Link>
+                {p.erros > 0 && (
+                  <Link
+                    href={hrefEstudoErros(p.slug)}
+                    className="text-xs text-semaforo-vermelho hover:underline"
+                  >
+                    erros
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
-      <section aria-labelledby="semaforo-titulo" className="flex flex-col gap-4">
-        {semaforo.hasData ? (
-          <>
-            <div>
-              <h2 id="semaforo-titulo" className="text-lg font-semibold">
-                Semáforo de aprovação
-              </h2>
-              <p className="text-sm text-muted-foreground">
-                Gerais, específicos e nota total — critérios do edital STTP
-              </p>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-3">
-              <SemaforoZonaCard
-                metrica={semaforo.gerais}
-                minimoLabel="Mín. 1 pt/disciplina geral"
-              />
-              <SemaforoZonaCard
-                metrica={semaforo.especificos}
-                minimoLabel="Mín. 2 pts/disciplina específica"
-              />
-              <SemaforoZonaCard
-                metrica={semaforo.total}
-                minimoLabel={`Mín. ${MIN_PONTOS_TOTAL} pts na prova`}
-              />
-            </div>
-            <p className="text-xs text-muted-foreground">
-              Fonte:{" "}
-              {semaforo.fonte === "simulado"
-                ? "último simulado espelho"
-                : "projeção pelas suas tentativas"}
-            </p>
-          </>
-        ) : (
-          <SemaforoPlaceholder />
-        )}
-      </section>
-
-      <ProvaDistribuicaoBar />
-
-      <section className="flex flex-col gap-4">
-        <div>
-          <h2 className="text-lg font-semibold">Modos de treino</h2>
-          <p className="text-sm text-muted-foreground">
-            Estratégias alinhadas ao perfil da prova e da banca
+      {prioridadeEdital.length > 0 && (
+        <section className="rounded-xl border border-border bg-card/50 p-4">
+          <h2 className="text-sm font-semibold">Prioridade do edital</h2>
+          <p className="mt-0.5 text-xs text-muted-foreground">
+            {pioresTopicos.some((p) => p.tentativas > 0)
+              ? "Próximos tópicos estudáveis ainda não vistos"
+              : "Sugestão inicial — CTB, CONTRAN e disciplinas de risco"}
           </p>
-        </div>
-        <div className="grid gap-2">
+          <ul className="mt-2 flex flex-col gap-1 text-sm text-muted-foreground">
+            {prioridadeEdital.map((p) => (
+              <li key={p.slug}>
+                <Link
+                  href={hrefEstudoTopico(p.slug, p.disciplina)}
+                  className="text-foreground hover:underline"
+                >
+                  {labelTopicoEdital(p.slug)}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      <section className="flex flex-col gap-3">
+        <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+          Modos de treino
+        </h2>
+        <div className="grid gap-2 sm:grid-cols-2">
           {MODOS.map((modo) => (
             <ModoTreinoCard
               key={modo.slug}
@@ -170,16 +220,25 @@ export default async function DashboardPage() {
         </div>
       </section>
 
-      <section className="flex flex-col gap-4">
-        <div>
-          <h2 className="text-lg font-semibold">Disciplinas do edital</h2>
-          <p className="text-sm text-muted-foreground">
-            Anexo I retificado — STTP Campina Grande/PB
-          </p>
+      <section className="flex flex-col gap-3">
+        <div className="flex items-center justify-between">
+          <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+            Disciplinas
+          </h2>
+          <Link
+            href="/desempenho"
+            className="text-xs text-primary underline-offset-4 hover:underline"
+          >
+            Ver evolução completa →
+          </Link>
         </div>
         <ul className="grid gap-2 sm:grid-cols-2">
           {DISCIPLINAS.map((d) => (
-            <DisciplinaItem key={d} disciplina={d} />
+            <DisciplinaItem
+              key={d}
+              disciplina={d}
+              desempenho={desempenhoPorDisciplina.get(d)}
+            />
           ))}
         </ul>
       </section>

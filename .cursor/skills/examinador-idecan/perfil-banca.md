@@ -86,25 +86,50 @@ Calibrado para provas objetivas IDECAN (agente de trânsito, polícia, prefeitur
 ### direito_constitucional
 - Direitos fundamentais, administração pública (CF art. 37), organização do Estado
 
-## Calibragem de dificuldade
+## Calibragem de dificuldade (`dificuldade_operacional`)
 
-| Nível | Critério |
-|-------|----------|
-| 1–2 | Lei seca direta; uma informação |
-| 3 | Caso simples; 1 pegadinha |
-| 4 | Caso com duas normas ou exceção |
-| 5 | Assertivas + exceção + pegadinha de prazo/termo |
+| Nível | Estrutura |
+|-------|-----------|
+| 1 | Letra de lei direta, dispositivo único, distratores `numero_vizinho`/`gravidade` simples |
+| 2 | Letra de lei com INCORRETA ou assertivas simples, 1 mecanismo dominante |
+| 3 | Caso prático curto, 1 mecanismo dominante + 1 secundário; pegadinha obrigatória |
+| 4 | Caso com 2 mecanismos combinados (ex.: competência + prazo) |
+| 5 | Regra-exceção multietapa ou assertivas/correspondência com 2+ mecanismos cruzados |
+
+**Mix padrão em lotes e simulados:** ~20% níveis 1–2 | ~50% nível 3 | ~30% níveis 4–5 (embaralhado).
+
+## Mecanismos de distrator — slugs e mapeamento corpus
+
+Slugs obrigatórios na fabricação (detalhes no `SKILL.md`). Mapeamento para tags do `corpus-idecan-stats.json`:
+
+| Slug (fabricação) | Tag no corpus (`pegadinhas_tags`) |
+|-------------------|-----------------------------------|
+| `numero_vizinho` | `prazo`, `percentual` |
+| `competencia_snt` | `competencia_orgao` |
+| `gravidade` | `gravidade` |
+| `regra_excecao` | `excecao` |
+| `termo_unico` | `pode_deve` |
+
+**Análogos fora de trânsito:**
+
+| Disciplina | Mecanismos típicos |
+|------------|-------------------|
+| `direito_constitucional` / `direito_administrativo` | `competencia_snt` → competência entre entes/poderes; `regra_excecao` → exceções constitucionais; `termo_unico` → vinculado↔discricionário |
+| `portugues` | `termo_unico` → sentido/contexto; `regra_excecao` → exceção semântica; `numero_vizinho` → tempo verbal/número ordinal |
+| `informatica` | `numero_vizinho` → versão/atalho/nomenclatura vizinha; `termo_unico` → função similar com nome diferente |
+| `historia_cg_pb` | `numero_vizinho` → data/evento vizinho; `termo_unico` → personagem/local trocado |
+| `legislacao_etica_sp` | `regra_excecao` → exceção LGPD/ética; `competencia_snt` → competência do órgão sancionador |
 
 ## Distribuição de gabaritos em lotes
 
-Em lotes de 20+ questões, evitar sequências (AAAA) e desbalanceamento extremo. Alvo: ~25% por letra (A–D).
+Em lotes ≥ 8 questões: **15–35%** por letra (A–D); máx. **2 gabaritos iguais consecutivos**. Alvo central: ~25% por letra.
 
 ---
 
 ## Análise do corpus real — 04/07/2026
 
 **Fonte:** `conteúdo/questões reais/*.pdf` (export Tec Concursos, provas IDECAN diversas).  
-**Total parseado:** 1.463 questões | **Script:** `.cursor/skills/examinador-idecan/scripts/analisar-pdfs-idecan.py` | **Dados:** `corpus-idecan-stats.json`
+**Total parseado:** 1.463 questões | **Script:** `.cursor/skills/examinador-idecan/scripts/analisar-pdfs-idecan.py` | **Dados:** `.cursor/skills/examinador-idecan/scripts/corpus-idecan-stats.json`
 
 > Corpus mistura concursos com **4 e 5 alternativas**. Para Campina Grande 2026, **forçar sempre 4 (A–D)** — ver edital item 10.4.
 

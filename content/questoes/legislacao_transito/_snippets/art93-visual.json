@@ -1,8 +1,8 @@
 {
   "versao": 1,
-  "arquetipo": "comparacao",
-  "arquetipo_secundario": "trecho_legal",
-  "duracao_estimada_seg": 75,
+  "arquetipo": "diagrama_competencia",
+  "arquetipo_secundario": "comparacao",
+  "duracao_estimada_seg": 80,
   "fundamento_slug": "CTB_art_93",
   "macete_visual": "Pólo atrativo = anuência do órgão da via + estacionamento (art. 93)",
   "telas": [
@@ -12,7 +12,47 @@
       "tipo": "texto_destaque",
       "conteudo": {
         "texto": "Aprovação de empreendimento pólo atrativo exige anuência do órgão de trânsito da via e área de estacionamento.",
-        "destaques": ["anuência", "estacionamento", "art. 93"]
+        "destaques": [
+          "anuência",
+          "estacionamento",
+          "art. 93"
+        ]
+      }
+    },
+    {
+      "id": "competencias",
+      "titulo": "Quem anuencia o quê",
+      "tipo": "diagrama_competencia",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "contran",
+            "label": "CONTRAN",
+            "nivel": 0
+          },
+          {
+            "id": "orgao_via",
+            "label": "Órgão da via (circunscrição)",
+            "nivel": 1
+          },
+          {
+            "id": "municipio",
+            "label": "Município / empreendedor",
+            "nivel": 2
+          }
+        ],
+        "arestas": [
+          {
+            "de": "contran",
+            "para": "orgao_via",
+            "rotulo": "normas gerais"
+          },
+          {
+            "de": "orgao_via",
+            "para": "municipio",
+            "rotulo": "anuência prévia (art. 93)"
+          }
+        ]
       }
     },
     {
@@ -20,22 +60,23 @@
       "titulo": "Requisitos do art. 93",
       "tipo": "comparacao",
       "conteudo": {
-        "colunas": ["Pegadinha", "Correto"],
+        "colunas": [
+          "Pegadinha",
+          "Correto"
+        ],
         "linhas": [
-          ["Basta aprovação municipal", "Anuência prévia do órgão com circunscrição sobre a via"],
-          ["Anuência do CONTRAN", "Anuência do órgão local de trânsito"],
-          ["Estacionamento é faculdade", "Projeto deve prever área de estacionamento e acessos"]
-        ]
-      }
-    },
-    {
-      "id": "fluxo",
-      "titulo": "Sequência lógica",
-      "tipo": "comparacao",
-      "conteudo": {
-        "colunas": ["Etapa", "Exigência"],
-        "linhas": [
-          ["Pólo atrativo de trânsito", "Anuência do órgão da via + estacionamento + acessos"]
+          [
+            "Basta aprovação municipal",
+            "Anuência prévia do órgão com circunscrição sobre a via"
+          ],
+          [
+            "Anuência do CONTRAN",
+            "Anuência do órgão local de trânsito"
+          ],
+          [
+            "Estacionamento é faculdade",
+            "Projeto deve prever área de estacionamento e acessos"
+          ]
         ]
       }
     },
@@ -46,7 +87,13 @@
       "conteudo": {
         "fonte": "CTB art. 93",
         "texto": "Nenhum projeto de edificação que possa transformar-se em pólo atrativo de trânsito poderá ser aprovado sem prévia anuência do órgão com circunscrição sobre a via e sem área para estacionamento e vias de acesso.",
-        "trechos_grifados": [{ "inicio": 95, "fim": 175, "motivo": "anuência e estacionamento" }]
+        "trechos_grifados": [
+          {
+            "inicio": 95,
+            "fim": 175,
+            "motivo": "anuência e estacionamento"
+          }
+        ]
       }
     },
     {
@@ -55,19 +102,16 @@
       "tipo": "texto_destaque",
       "conteudo": {
         "texto": "Pólo atrativo = anuência do órgão da via + estacionamento + acessos (art. 93).",
-        "destaques": ["art. 93"]
-      }
-    },
-    {
-      "id": "recall",
-      "titulo": "Fixação ativa",
-      "tipo": "micro_recall",
-      "conteudo": {
-        "pergunta": "Qual artigo exige anuência do órgão de trânsito para pólo atrativo de trânsito?",
-        "resposta_esperada": "93",
-        "aceitar_variacoes": ["art. 93", "artigo 93"]
+        "destaques": [
+          "art. 93"
+        ]
       }
     }
   ],
-  "links_fonte": [{ "rotulo": "CTB art. 93", "path": "conteúdo/legislação federal/" }]
+  "links_fonte": [
+    {
+      "rotulo": "CTB art. 93",
+      "path": "conteúdo/legislação federal/"
+    }
+  ]
 }

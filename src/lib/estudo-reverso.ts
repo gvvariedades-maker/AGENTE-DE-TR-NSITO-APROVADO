@@ -1,15 +1,32 @@
-import { and, desc, eq, lte, ne, notInArray, sql } from "drizzle-orm";
+import { and, desc, eq, lte, notInArray, sql } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { attempts, questions, srsCards, topics } from "@/lib/db/schema";
 import {
   agendarProximaRevisao,
   criarCardInicial,
+  type FsrsGrade,
   type FsrsState,
   type SrsCardState,
 } from "@/lib/srs";
 import { getQuestaoById, type QuestaoUI } from "@/lib/questoes";
 import { PROVA_DATA, type ComentarioQuestao, type Disciplina } from "@/types";
-import { resolveEstudoReversoVisual } from "@/lib/estudo-reverso-visual-fallback";
+import {
+  resolveEstudoReversoVisual,
+  resolveEstudoReversoVisualCompleto,
+} from "@/lib/estudo-reverso-visual-fallback";
+import {
+  buscarIdsPraticaPontuados,
+  contarPraticaPontuada,
+  resolverFiltrosMotor,
+  type ModoSessaoEstudo,
+} from "@/lib/motor-ata";
+import { registrarRespostaSessao } from "@/lib/study-sessions";
+
+export type { ModoSessaoEstudo };
+export {
+  labelModoSessao,
+  parseModoSessao,
+} from "@/lib/motor-ata";
 
 export type TipoErro =
   | "decoreba"
@@ -18,7 +35,6 @@ export type TipoErro =
   | "confusao_artigos";
 
 export type ModoTentativa = "estudo" | "simulado";
-export type ModoSessaoEstudo = "normal" | "erros";
 
 export interface SessaoEstudoPreview {
   total: number;
@@ -94,6 +110,9 @@ export interface RegistrarTentativaInput {
   acertou: boolean;
   modo: ModoTentativa;
   tempoSeg?: number;
+  sessionId?: string;
+  /** Nota FSRS explícita (1–4). Se omitida, deriva de acertou (3/1). */
+  fsrsGrade?: FsrsGrade;
 }
 
 export interface RegistrarTentativaResult {
@@ -102,7 +121,6 @@ export interface RegistrarTentativaResult {
   attemptId?: string;
   tipoErro?: TipoErro;
   dominioAlcancado?: boolean;
-  irmaIds?: string[];
 }
 
 export async function registrarTentativa(
@@ -140,6 +158,7 @@ export async function registrarTentativa(
     .values({
       userId: input.userId,
       questionId: input.questionId,
+      sessionId: input.sessionId ?? null,
       resposta: input.resposta,
       acertou: input.acertou,
       tempoSeg: input.tempoSeg ?? null,
@@ -148,8 +167,11 @@ export async function registrarTentativa(
     })
     .returning({ id: attempts.id });
 
+  if (input.sessionId && input.modo === "estudo") {
+    await registrarRespostaSessao(input.sessionId, input.acertou);
+  }
+
   let dominioAlcancado = false;
-  let irmaIds: string[] | undefined;
 
   if (input.modo === "estudo") {
     const now = new Date();
@@ -169,9 +191,12 @@ export async function registrarTentativa(
       ? rowToCardState(existing)
       : criarCardInicial();
 
-    const scheduled = agendarProximaRevisao(cardState, input.acertou, now, {
-      examDate: PROVA_DATA,
-    });
+    const scheduled = agendarProximaRevisao(
+      cardState,
+      input.fsrsGrade ?? input.acertou,
+      now,
+      { examDate: PROVA_DATA },
+    );
 
     const valores = {
       nextReview: scheduled.nextReview,
@@ -202,8 +227,6 @@ export async function registrarTentativa(
         input.userId,
         questaoRow.topicId,
       );
-    } else {
-      irmaIds = await buscarIdsIrmas(questaoRow.topicId, input.questionId, 3);
     }
   }
 
@@ -212,26 +235,7 @@ export async function registrarTentativa(
     attemptId: inserted.id,
     tipoErro,
     dominioAlcancado,
-    irmaIds,
   };
-}
-
-/** Questões irmãs do mesmo microtópico (exclui a questão-mãe). */
-export async function buscarIdsIrmas(
-  topicId: string,
-  excluirQuestionId: string,
-  limit = 3,
-): Promise<string[]> {
-  const rows = await db
-    .select({ id: questions.id })
-    .from(questions)
-    .where(
-      and(eq(questions.topicId, topicId), ne(questions.id, excluirQuestionId)),
-    )
-    .orderBy(sql`random()`)
-    .limit(limit);
-
-  return rows.map((r) => r.id);
 }
 
 /** IDs de questões com revisão SRS vencida (prioridade na sessão de estudo). */
@@ -304,23 +308,18 @@ export async function previewSessaoEstudo(
 
   let questoesPratica = 0;
   if (faltam > 0) {
-    if (modo === "erros") {
-      const idsErro = await buscarIdsQuestoesErradas(
-        userId,
-        faltam,
-        disciplina,
-        topicoSlug,
-        idsRevisao,
-      );
-      questoesPratica = idsErro.length;
-    } else {
-      questoesPratica = await contarQuestoesNovas(
-        faltam,
-        disciplina,
-        idsRevisao,
-        topicoSlug,
-      );
-    }
+    const filtros = await resolverFiltrosMotor(
+      modo,
+      userId,
+      disciplina,
+      topicoSlug,
+    );
+    questoesPratica = await contarPraticaPontuada(
+      userId,
+      faltam,
+      filtros,
+      idsRevisao,
+    );
   }
 
   return {
@@ -361,105 +360,40 @@ export async function montarSessaoEstudo(
   const faltam = limit - resultado.length;
   if (faltam <= 0) return resultado;
 
-  if (modo === "erros" && userId) {
-    const idsErro = await buscarIdsQuestoesErradas(
+  if (userId) {
+    const filtros = await resolverFiltrosMotor(
+      modo,
       userId,
-      faltam,
       disciplina,
       topicoSlug,
+    );
+    const idsPratica = await buscarIdsPraticaPontuados(
+      userId,
+      faltam,
+      filtros,
       [...idsUsados],
     );
-    for (const id of idsErro) {
+    for (const id of idsPratica) {
       const q = await getQuestaoById(id);
       if (q) resultado.push(q);
     }
-    return resultado;
+    if (resultado.length >= limit) return resultado;
   }
 
+  const modosEstritos: ModoSessaoEstudo[] = [
+    "erros",
+    "pegadinha",
+    "anti_zerar",
+  ];
+  if (modosEstritos.includes(modo)) return resultado;
+
   const novas = await buscarQuestoesNovas(
-    faltam,
+    limit - resultado.length,
     disciplina,
-    [...idsUsados],
+    [...idsUsados, ...resultado.map((q) => q.id)],
     topicoSlug,
   );
   return [...resultado, ...novas];
-}
-
-/** Questões cuja última tentativa do usuário foi erro (caderno de erros). */
-export async function buscarIdsQuestoesErradas(
-  userId: string,
-  limit: number,
-  disciplina?: Disciplina,
-  topicoSlug?: string,
-  excluirIds: string[] = [],
-): Promise<string[]> {
-  try {
-    const filtroDisciplina = disciplina
-      ? sql`AND t.disciplina = ${disciplina}`
-      : sql``;
-    const filtroTopico = topicoSlug
-      ? sql`AND t.nome = ${topicoSlug}`
-      : sql``;
-    const filtroExcluir =
-      excluirIds.length > 0
-        ? sql`AND latest.question_id NOT IN (${sql.join(
-            excluirIds.map((id) => sql`${id}::uuid`),
-            sql`, `,
-          )})`
-        : sql``;
-
-    const rows = await db.execute<{ question_id: string }>(sql`
-      SELECT latest.question_id
-      FROM (
-        SELECT DISTINCT ON (a.question_id)
-          a.question_id,
-          a.acertou
-        FROM attempts a
-        WHERE a.user_id = ${userId}::uuid
-        ORDER BY a.question_id, a.created_at DESC
-      ) latest
-      INNER JOIN questions q ON q.id = latest.question_id
-      INNER JOIN topics t ON t.id = q.topic_id
-      WHERE latest.acertou = false
-      ${filtroDisciplina}
-      ${filtroTopico}
-      ${filtroExcluir}
-      ORDER BY random()
-      LIMIT ${limit}
-    `);
-
-    return rows.map((r) => r.question_id);
-  } catch {
-    return [];
-  }
-}
-
-async function contarQuestoesNovas(
-  limit: number,
-  disciplina?: Disciplina,
-  excluirIds: string[] = [],
-  topicoSlug?: string,
-): Promise<number> {
-  try {
-    const filters = [
-      disciplina ? eq(topics.disciplina, disciplina) : undefined,
-      topicoSlug ? eq(topics.nome, topicoSlug) : undefined,
-      excluirIds.length > 0 ? notInArray(questions.id, excluirIds) : undefined,
-    ].filter(Boolean);
-
-    const conditions = filters.length > 0 ? and(...filters) : undefined;
-
-    const query = db
-      .select({ count: sql<number>`count(*)::int` })
-      .from(questions)
-      .innerJoin(topics, eq(questions.topicId, topics.id));
-
-    const [row] = await (conditions ? query.where(conditions) : query);
-    const disponiveis = row?.count ?? 0;
-    return Math.min(limit, disponiveis);
-  } catch {
-    return 0;
-  }
 }
 
 async function buscarQuestoesNovas(
@@ -489,6 +423,7 @@ async function buscarQuestoesNovas(
         gabarito: questions.gabarito,
         comentarioJson: questions.comentarioJson,
         estudoReversoVisualJson: questions.estudoReversoVisualJson,
+        estudoReversoVisualCompletoJson: questions.estudoReversoVisualCompletoJson,
         disciplina: topics.disciplina,
       })
       .from(questions)
@@ -515,18 +450,11 @@ async function buscarQuestoesNovas(
         row.estudoReversoVisualJson,
         (row.comentarioJson as ComentarioQuestao) ?? null,
       ),
+      estudoReversoVisualCompleto: resolveEstudoReversoVisualCompleto(
+        row.estudoReversoVisualCompletoJson,
+      ),
     }));
   } catch {
     return [];
   }
-}
-
-/** Carrega questões irmãs completas para injeção intercalada na sessão. */
-export async function carregarIrmas(ids: string[]): Promise<QuestaoUI[]> {
-  const resultado: QuestaoUI[] = [];
-  for (const id of ids) {
-    const q = await getQuestaoById(id);
-    if (q) resultado.push(q);
-  }
-  return resultado;
 }

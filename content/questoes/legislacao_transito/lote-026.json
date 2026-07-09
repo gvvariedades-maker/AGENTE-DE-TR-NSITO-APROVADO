@@ -1,0 +1,321 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_crimes_transito",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_percentual",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_306",
+    "enunciado": "Durante blitz da STTP em Campina Grande, etilômetro homologado registra 0,35 miligrama de álcool por litro de ar alveolar no condutor de automóvel fiscalizado. Não há sinistro nem vítima. O condutor sustenta que, por estar abaixo de 0,5 mg/L, responde apenas na esfera administrativa. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Configura apenas infração administrativa do art. 165, pois a concentração está abaixo de 0,5 mg/L de ar alveolar.",
+      "B": "Não há crime de trânsito sem vítima ou dano efetivo — a tipificação penal do CTB exige resultado lesivo.",
+      "C": "Configura o crime do art. 306, pois 0,35 mg/L é igual ou superior ao limite de 0,3 mg/L do § 1º, I, sem prejuízo das sanções administrativas (art. 256, § 1º).",
+      "D": "Aplica-se tão-somente a penalidade de multa prevista no art. 256, II, até decisão judicial, vedada a imediata repercussão penal."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Limite criminal de alcoolemia no art. 306, § 1º, I (0,3 mg/L de ar alveolar) e cumulação das esferas penal e administrativa (art. 256, § 1º).",
+      "fundamento_legal": "CTB, art. 306, caput: \"Conduzir veículo automotor com capacidade psicomotora alterada em razão da influência de álcool ou de outra substância psicoativa que determine dependência\" — penas de detenção de 6 meses a 3 anos, multa e suspensão ou proibição de habilitar-se. § 1º, I: constatação por concentração igual ou superior a 0,3 miligrama de álcool por litro de ar alveolar. Art. 256, § 1º: a aplicação das penalidades administrativas não elide as punições de crimes de trânsito.",
+      "passo_a_passo": [
+        "1. Etilômetro: 0,35 mg/L de ar alveolar — valor igual ou superior a 0,3 mg/L do art. 306, § 1º, I.",
+        "2. A erra por numero_vizinho (usa limite de 0,5 mg/L inexistente no crime — o patamar penal é 0,3 mg/L); B erra por regra_excecao (exige vítima ou dano — art. 306 é crime formal de perigo); D erra por regra_excecao (nega repercussão penal imediata e reduz a multa administrativa).",
+        "3. C correta: crime do art. 306 configurado, cumulando com sanções administrativas pelo art. 256, § 1º."
+      ],
+      "pegadinha": "A IDECAN troca o limite criminal de 0,3 mg/L pelo patamar de 0,5 mg/L — candidato acha que abaixo de 0,5 só há infração administrativa.",
+      "macete": "Crime = ≥0,3 mg/L ar (ou ≥6 dg/L sangue) · Admin também pode incidir (165/165-A) · Esferas cumulam (256, §1º).",
+      "estudo_reverso": [
+        "CTB art. 165",
+        "CTB art. 256",
+        "CTB art. 306",
+        "CTB art. 277"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CTB_art_306",
+      "macete_visual": "≥0,3 mg/L = CRIME · 0,5 é isca · esferas cumulam",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "0,35 mg/L no etilômetro. A banca induz a crer que abaixo de 0,5 mg/L só há infração — o limite penal é 0,3 mg/L (art. 306, § 1º, I).",
+            "destaques": ["0,35 mg/L", "0,3 mg/L", "crime"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Limites de alcoolemia",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Ar alveolar", "Esfera"],
+            "linhas": [
+              {
+                "faixa": "≥ 0,3 mg/L",
+                "classificacao": "Crime — art. 306, § 1º, I",
+                "destaque": true
+              },
+              {
+                "faixa": "Sinais de alteração psicomotora",
+                "classificacao": "Crime — art. 306, § 1º, II (ou infração art. 165)"
+              },
+              {
+                "faixa": "0,5 mg/L",
+                "classificacao": "Isca IDECAN — não é limite do art. 306"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "0,3 × 0,5",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Confusão ✗", "Regra ✓"],
+            "linhas": [
+              ["Abaixo de 0,5 = só admin", "Crime a partir de 0,3 mg/L — § 1º, I"],
+              ["Sem vítima, não há crime", "Art. 306 é formal — não exige lesão"]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Cálculo do caso",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dado", "Conclusão"],
+            "linhas": [
+              ["0,35 mg/L registrado", "≥ 0,3 mg/L — crime configurado"],
+              ["Sem sinistro", "Irrelevante para art. 306"],
+              ["Resultado", "Gabarito C"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "≥0,3 mg/L = CRIME (306) · 0,5 é isca · Admin + penal cumulam (256, §1º).",
+            "destaques": ["0,3", "CRIME", "cumulam"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 306",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 250,
+      "fundamento_slug": "CTB_art_306",
+      "macete_visual": "≥0,3 mg/L = CRIME · 0,5 é isca · esferas cumulam",
+      "meta": {
+        "padrao_familia": "D_gradacao",
+        "pegadinha_em_uma_frase": "Candidato acha que abaixo de 0,5 mg/L só há infração administrativa",
+        "eixos_legais": ["CTB_art_306", "CTB_art_256_1"],
+        "isca_por_alternativa": {
+          "A": "usa limite de 0,5 mg/L inexistente no crime penal",
+          "B": "exige vítima ou dano para tipificar crime de trânsito",
+          "D": "reduz a multa administrativa e nega repercussão penal imediata"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: 0,35 não está abaixo do limite penal",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (crime art. 306).\n\nA — usa 0,5 mg/L: patamar inexistente no art. 306 — o limite penal é 0,3 mg/L.\nB — exige vítima: art. 306 é crime formal de perigo, sem resultado lesivo.\nD — só multa administrativa: nega crime imediato — 0,35 mg/L já tipifica o art. 306.\n\nBlitz STTP: 0,35 mg/L ≥ 0,3 mg/L do § 1º, I.",
+            "destaques": ["Gabarito C", "0,35 mg/L", "0,3 mg/L"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 patamares do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "AR ALVEOLAR: ar expirado medido pelo etilômetro — referência do art. 306, § 1º, I.\n\n0,3 mg/L: limite legal para caracterizar o crime (não confundir com 0,5).\n\nESFERAS CUMULATIVAS: infração administrativa (arts. 165/165-A) e crime (art. 306) podem coexistir — art. 256, § 1º.",
+            "destaques": ["0,3 mg/L", "etilômetro", "cumulativas"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Gradação penal × administrativa",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Concentração / prova", "Consequência"],
+            "linhas": [
+              {
+                "faixa": "≥ 0,3 mg/L ar alveolar",
+                "classificacao": "Crime — art. 306, § 1º, I",
+                "destaque": true
+              },
+              {
+                "faixa": "≥ 6 dg/L sangue",
+                "classificacao": "Crime — art. 306, § 1º, I (via equivalente)"
+              },
+              {
+                "faixa": "Sinais de alteração psicomotora",
+                "classificacao": "Crime — art. 306, § 1º, II (+ possível art. 165)"
+              },
+              {
+                "faixa": "0,5 mg/L (isca da banca)",
+                "classificacao": "Não é limite do art. 306 — pegadinha IDECAN"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: 0,5 mg/L",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Abaixo de 0,5 mg/L = só infração administrativa",
+                "Crime a partir de 0,3 mg/L — art. 306, § 1º, I"
+              ],
+              [
+                "Sem acidente ou vítima, não há crime penal",
+                "Art. 306 tipifica condução com capacidade alterada — crime formal"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — numero_vizinho",
+                "Inventa limite de 0,5 mg/L — art. 306, § 1º, I fixa 0,3 mg/L"
+              ],
+              [
+                "B — regra_excecao",
+                "Exige resultado lesivo — crime de trânsito não depende de vítima"
+              ],
+              [
+                "D — regra_excecao",
+                "Restringe a multa administrativa e nega tipificação penal imediata"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o etilômetro da blitz",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Conta / fato", "Resultado legal"],
+            "linhas": [
+              ["0,35 mg/L registrado", "Acima do limite de 0,3 mg/L"],
+              ["Enquadramento", "Art. 306, § 1º, I — crime configurado"],
+              ["Sem sinistro no caso", "Irrelevante — art. 306 não exige dano"],
+              ["Esfera administrativa", "Cumula — art. 256, § 1º"],
+              ["Resultado", "Gabarito C"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Penas e esferas",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Instituto", "Conteúdo"],
+            "linhas": [
+              ["Art. 306 — penas", "Detenção 6 meses a 3 anos + multa + suspensão/proibição"],
+              ["Art. 165 / 165-A", "Infração administrativa autônoma (embriaguez / recusa)"],
+              ["Art. 256, § 1º", "Penalidade administrativa não elide crime de trânsito"],
+              ["Caso 0,35 mg/L", "Crime + possível autuação administrativa"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 306, § 1º, I — limite criminal",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 306, § 1º, I",
+            "texto": "I - concentração igual ou superior a 6 decigramas de álcool por litro de sangue ou igual ou superior a 0,3 miligrama de álcool por litro de ar alveolar; ou",
+            "trechos_grifados": [
+              {
+                "inicio": 103,
+                "fim": 151,
+                "motivo": "caso — 0,35 mg/L supera o limite de 0,3 mg/L"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 256, § 1º — esferas cumulam",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 256, § 1º",
+            "texto": "A aplicação das penalidades previstas neste Código não elide as punições originárias de ilícitos penais decorrentes de crimes de trânsito, conforme disposições de lei.",
+            "trechos_grifados": [
+              {
+                "inicio": 51,
+                "fim": 60,
+                "motivo": "contraste — administração não afasta o crime"
+              },
+              {
+                "inicio": 61,
+                "fim": 104,
+                "motivo": "caso — ilícito penal do art. 306 subsiste"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "≥0,3 mg/L ar = CRIME (306, §1º I) · 0,5 é isca IDECAN · Admin + penal cumulam (256, §1º).\n\nNear-transfer: etilômetro marca 0,28 mg/L, mas o agente constata sinais de alteração psicomotora pelo Anexo II — ainda configura crime pelo art. 306, § 1º, II, sem depender do 0,3 numérico.",
+            "destaques": ["0,3", "0,28 mg/L", "§ 1º, II"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 306",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "tags": [
+      "crimes_transito",
+      "art_306",
+      "embriaguez",
+      "etilometro",
+      "gradacao",
+      "numero_vizinho"
+    ]
+  }
+]

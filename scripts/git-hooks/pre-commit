@@ -1,0 +1,18 @@
+#!/bin/sh
+# Pre-commit: validate:lote em lotes JSON staged (content/questoes/)
+set -e
+
+STAGED=$(git diff --cached --name-only --diff-filter=ACM | grep -E '^content/questoes/.*\.json$' || true)
+
+if [ -z "$STAGED" ]; then
+  exit 0
+fi
+
+echo "🔒 pre-commit: validando lotes staged..."
+for FILE in $STAGED; do
+  if [ -f "$FILE" ]; then
+    npm run validate:lote -- "$FILE" --skip-citacoes
+  fi
+done
+
+echo "✓ Lotes staged passaram em validate:lote"

@@ -1,0 +1,337 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_processo_administrativo",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_280_par_3",
+    "enunciado": "Durante fiscalização em via urbana de Campina Grande/PB, agente da STTP constata veículo estacionado em local proibido pela sinalização vertical. O condutor não está no local e não foi possível identificá-lo no momento. O agente lavra o auto de infração com tipificação, local, data e hora, placa, marca e espécie do veículo, identificação do órgão autuador e relato do fato na própria lavratura, sem obter assinatura do infrator. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA quanto à autuação:",
+    "alternativas": {
+      "A": "O procedimento é válido: sem flagrante, o agente relata o fato no próprio auto com dados I a III do art. 280, dispensada a assinatura quando impossível obtê-la.",
+      "B": "A autuação é nula por falta de assinatura do infrator, requisito indispensável em qualquer hipótese, conforme o inciso VI do art. 280 do CTB.",
+      "C": "O agente deveria aguardar a presença do condutor para autuação em flagrante, vedada a lavratura do auto apenas com dados do veículo identificado.",
+      "D": "Compete exclusivamente à Polícia Militar lavrar o auto quando o condutor está ausente, vedada a atuação de servidor civil da STTP municipal."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Autuação sem flagrante (art. 280, §3) e natureza facultativa da assinatura do infrator (inciso VI — sempre que possível).",
+      "fundamento_legal": "CTB, art. 280, §3: Não sendo possível a autuação em flagrante, o agente de trânsito relatará o fato à autoridade no próprio auto de infração, informando os dados a respeito do veículo, além dos constantes nos incisos I, II e III, para o procedimento previsto no artigo seguinte. Inciso VI: assinatura do infrator, sempre que possível, valendo esta como notificação do cometimento da infração. §4: o agente poderá ser servidor civil, estatutário ou celetista ou policial militar designado pela autoridade de trânsito.",
+      "passo_a_passo": [
+        "1. O caso traz estacionamento irregular com condutor ausente — autuação fora de flagrante, com dados do veículo e relato no próprio AIT, sem assinatura.",
+        "2. B erra por termo_unico (transforma 'sempre que possível' em exigência absoluta de assinatura); C erra por regra_excecao (nega o §3, que autoriza relatar no próprio auto sem flagrante); D erra por competencia_snt (inventa exclusividade da PM — §4 admite servidor civil da STTP).",
+        "3. A correta: §3 regulamenta a hipótese sem flagrante; inciso VI não exige assinatura quando impossível obtê-la."
+      ],
+      "pegadinha": "A IDECAN induz a anular o auto pela ausência de assinatura ou pela falta de flagrante — mas o §3 prevê expressamente o relato no próprio AIT, e o VI é 'sempre que possível', não 'indispensável'.",
+      "macete": "Sem flagrante → relata no AIT (§3) · assinatura quando possível (VI) · STTP autua sim (§4).",
+      "estudo_reverso": [
+        "CTB art. 280",
+        "CTB art. 280, §3",
+        "CTB art. 280, §4",
+        "CTB art. 281"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CTB_art_280_par_3",
+      "macete_visual": "Sem flagrante → relata no AIT · assinatura se possível",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Estacionamento irregular sem condutor no local. Agente lavra AIT com dados do veículo e relato, sem assinatura.\n\nGabarito A: §3 autoriza relatar no próprio auto; VI exige assinatura só quando possível.",
+            "destaques": ["sem flagrante", "§3", "sempre que possível"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: autuação sem flagrante",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Autuação em flagrante possível?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Dados I–III e relato no próprio AIT?", "tipo": "pergunta" },
+              { "id": "r1", "label": "§3 — procedimento válido sem assinatura", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha: assinatura × flagrante",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Sem condutor = auto inválido", "§3 — relatar no próprio AIT"],
+              ["Assinatura sempre obrigatória", "VI — sempre que possível"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Sem flagrante → relata no AIT (§3).\nAssinatura quando possível (VI).\nServidor STTP autua (§4).",
+            "destaques": ["§3", "VI", "§4"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 280",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CTB_art_280_par_3",
+      "macete_visual": "Sem flagrante → relata no AIT · assinatura se possível",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Ausência de condutor não anula o auto — §3 prevê relato no AIT; assinatura é quando possível",
+        "eixos_legais": ["CTB_art_280_par_3", "CTB_art_280_VI", "CTB_art_280_par_4"],
+        "isca_por_alternativa": {
+          "B": "transforma 'sempre que possível' em assinatura obrigatória sempre",
+          "C": "nega autuação sem flagrante — ignora o §3",
+          "D": "inventa exclusividade da PM — ignora o §4"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: sem condutor não é auto nulo",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — tratou assinatura como indispensável: o VI diz 'sempre que possível'.\nC — negou autuação fora de flagrante: o §3 autoriza relatar no próprio AIT.\nD — atribuiu autuação só à PM: o §4 admite servidor civil da STTP.\n\nNesta aula você separa flagrante, relato no auto e assinatura facultativa.",
+            "destaques": ["Gabarito A", "§3", "sempre que possível"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos da questão",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "FLAGRANTE: autuação no momento em que a infração é constatada com o infrator identificável no local.\n\nAUTO DE INFRAÇÃO (AIT): documento que inicia o processo administrativo — art. 280.\n\nSEMPRE QUE POSSÍVEL: regra de exceção do inciso VI — assinatura não é obrigatória quando impossível obtê-la.",
+            "destaques": ["FLAGRANTE", "AIT", "SEMPRE QUE POSSÍVEL"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: o que fazer sem flagrante?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Condutor presente para autuação em flagrante?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "AIT traz dados I–III e relato do fato?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "§3 — auto válido; assinatura se possível (VI)",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Conteúdo do AIT (art. 280)",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Elemento", "Obrigatoriedade"],
+            "linhas": [
+              {
+                "faixa": "I — Tipificação",
+                "classificacao": "Sempre no auto"
+              },
+              {
+                "faixa": "II — Local, data e hora",
+                "classificacao": "Sempre no auto"
+              },
+              {
+                "faixa": "III — Placa, marca e espécie",
+                "classificacao": "Sempre no auto",
+                "destaque": true
+              },
+              {
+                "faixa": "§3 — Relato sem flagrante",
+                "classificacao": "No próprio AIT + dados do veículo"
+              },
+              {
+                "faixa": "VI — Assinatura do infrator",
+                "classificacao": "Sempre que possível — notificação"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: flagrante × assinatura",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Sem condutor presente, o auto é inválido",
+                "§3 — agente relata o fato no próprio AIT"
+              ],
+              [
+                "Assinatura do infrator é indispensável",
+                "VI — 'sempre que possível', não em todo caso"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — termo_unico",
+                "Troca 'sempre que possível' por assinatura obrigatória em qualquer hipótese"
+              ],
+              [
+                "C — regra_excecao",
+                "Nega o §3 — a lei autoriza autuação sem flagrante com relato no AIT"
+              ],
+              [
+                "D — competencia_snt",
+                "Inventa exclusividade da PM — §4 admite servidor civil da STTP"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado — Campina Grande",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Conclusão legal"],
+            "linhas": [
+              ["Estacionamento proibido, condutor ausente", "Não há flagrante — aplica §3"],
+              ["AIT com tipificação, local, data, hora, placa", "Incisos I a III preenchidos"],
+              ["Relato do fato na lavratura, sem assinatura", "§3 + VI — assinatura dispensada aqui"],
+              ["Resultado", "Gabarito A — procedimento válido"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "§2, §3 e §4 — papéis distintos",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              ["§2 — Meios de comprovação", "Declaração do agente, equipamento etc."],
+              ["§3 — Sem flagrante", "Relatar no próprio AIT com dados I–III"],
+              ["§4 — Quem autua", "Servidor civil STTP ou PM designado"],
+              ["Inciso VI — Assinatura", "Quando possível — não bloqueia o §3"]
+            ]
+          }
+        },
+        {
+          "id": "lei3",
+          "titulo": "Art. 280, §3 — autuação sem flagrante",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 280, §3",
+            "texto": "Não sendo possível a autuação em flagrante, o agente de trânsito relatará o fato à autoridade no próprio auto de infração, informando os dados a respeito do veículo, além dos constantes nos incisos I, II e III, para o procedimento previsto no artigo seguinte.",
+            "trechos_grifados": [
+              {
+                "inicio": 21,
+                "fim": 42,
+                "motivo": "contraste — ausência de flagrante não impede autuação"
+              },
+              {
+                "inicio": 94,
+                "fim": 121,
+                "motivo": "fluxo — relato no próprio AIT"
+              },
+              {
+                "inicio": 190,
+                "fim": 209,
+                "motivo": "mapa — dados obrigatórios I, II e III"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei6",
+          "titulo": "Art. 280, VI — assinatura do infrator",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 280, VI",
+            "texto": "assinatura do infrator, sempre que possível, valendo esta como notificação do cometimento da infração.",
+            "trechos_grifados": [
+              {
+                "inicio": 24,
+                "fim": 43,
+                "motivo": "contraste — não é indispensável em todo caso"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Sem flagrante → relata no AIT (§3) · assinatura quando possível (VI) · STTP autua sim (§4).\n\nNear-transfer: radar flagra ultrapassagem e o veículo segue sem parar — o agente pode lavrar AIT com dados do veículo e relato no auto, sem assinatura do condutor ausente.",
+            "destaques": ["§3", "sempre que possível", "radar sem parada"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 280",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "tags": [
+      "processo_administrativo",
+      "autuacao",
+      "art_280",
+      "sem_flagrante",
+      "assinatura"
+    ]
+  }
+]

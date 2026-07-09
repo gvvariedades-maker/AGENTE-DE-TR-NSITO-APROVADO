@@ -1,0 +1,326 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_penalidades",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_263_I",
+    "enunciado": "Marcos, condutor habilitado, teve imposta a penalidade de suspensão do direito de dirigir pelo art. 261 do CTB e foi regularmente notificado. Durante o período em que a suspensão produzia efeitos, agentes da STTP em Campina Grande o autuaram conduzindo automóvel em via pública. Além da infração do art. 162, II, do CTB, assinale a alternativa CORRETA quanto à penalidade autônoma aplicável a Marcos:",
+    "alternativas": {
+      "A": "Aplica-se apenas a penalidade de multa prevista no art. 162, II, sem intervenção sobre o documento de habilitação, por se tratar de infração autônoma.",
+      "B": "Incide a penalidade de suspensão do direito de dirigir pelo prazo de 8 meses a 2 anos, nos termos do art. 261, § 1º, I, por reincidência no período de doze meses.",
+      "C": "Impõe-se a cassação do documento de habilitação, nos termos do art. 263, I, do CTB.",
+      "D": "Cabe reincidência no art. 263, II, exigindo segunda autuação pelas infrações dos arts. 163 a 175 no prazo de doze meses."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Cassação do documento de habilitação quando o condutor, com direito de dirigir suspenso, conduz qualquer veículo (art. 263, I).",
+      "fundamento_legal": "CTB, art. 263, I: \"quando, suspenso o direito de dirigir, o infrator conduzir qualquer veículo\" — aplica-se a cassação do documento de habilitação. Art. 261, § 9º: o condutor notificado da suspensão que dirigir em via pública incorre na infração do art. 162, II — multa e medidas administrativas cumulam com a cassação do art. 263, I.",
+      "passo_a_passo": [
+        "1. Marcos está com suspensão em vigor e já notificado — conduziu automóvel em via pública: infração art. 162, II + hipótese do art. 263, I.",
+        "2. A erra por termo_unico (reduz tudo à multa do art. 162, II e ignora a cassação autônoma do art. 263, I); B erra por numero_vizinho (aplica prazo do art. 261, § 1º, I em vez da cassação); D erra por regra_excecao (usa inciso II do art. 263 — reincidência de outras infrações — onde o caso é o inciso I).",
+        "3. C correta: conduzir com suspensão vigente enseja cassação do documento de habilitação, art. 263, I."
+      ],
+      "pegadinha": "A IDECAN induz a parar na multa gravíssima do art. 162, II — mas dirigir durante suspensão notificada aciona cassação autônoma no art. 263, I, não mera prorrogação de suspensão.",
+      "macete": "Suspenso + notificado + dirigiu = cassação (art. 263, I). Multa do 162, II não substitui a cassação.",
+      "estudo_reverso": [
+        "CTB art. 261",
+        "CTB art. 261, § 9º",
+        "CTB art. 263",
+        "CTB art. 263, § 2º",
+        "CTB art. 162, II"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CTB_art_263_I",
+      "macete_visual": "Suspenso + notificado + dirigiu = CASSAÇÃO",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Marcos dirigiu com suspensão notificada. A banca para na multa do art. 162, II — mas a lei impõe cassação autônoma no art. 263, I.",
+            "destaques": ["suspensão", "cassação", "art. 263, I"]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Hipóteses de cassação (art. 263)",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Inciso", "Hipótese"],
+            "linhas": [
+              {
+                "faixa": "I",
+                "classificacao": "Suspenso + conduz qualquer veículo",
+                "destaque": true
+              },
+              { "faixa": "II", "classificacao": "Reincidência arts. 162-III, 163-175 em 12 meses" },
+              { "faixa": "III", "classificacao": "Condenação judicial por delito de trânsito" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Multa × cassação",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Só multa do art. 162, II", "Multa cumula com cassação art. 263, I"],
+              ["Prorroga suspensão 8 meses a 2 anos", "Cassação — não é prazo do § 1º do art. 261"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 263, I",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 263, I",
+            "texto": "I - quando, suspenso o direito de dirigir, o infrator conduzir qualquer veículo;",
+            "trechos_grifados": [
+              {
+                "inicio": 12,
+                "fim": 41,
+                "motivo": "suspenso + conduzir = cassação"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Suspenso + notificado + dirigiu = CASSAÇÃO (art. 263, I). Multa do 162, II não dispensa cassação.",
+            "destaques": ["CASSAÇÃO", "art. 263, I"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 263",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 240,
+      "fundamento_slug": "CTB_art_263_I",
+      "macete_visual": "Suspenso + notificado + dirigiu = CASSAÇÃO",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Multa do art. 162, II não substitui cassação do art. 263, I",
+        "eixos_legais": ["CTB_art_263_I", "CTB_art_162_II", "CTB_art_261_par_9"],
+        "isca_por_alternativa": {
+          "A": "para na multa do 162, II e ignora cassação autônoma",
+          "B": "troca cassação por prazo de suspensão do § 1º do art. 261",
+          "D": "aplica inciso II (reincidência) onde o caso é inciso I"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: multa não encerra o caso",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (cassação — art. 263, I).\n\nA — para na multa do art. 162, II: ignora cassação autônoma.\nB — aplica prazo 8 meses a 2 anos do art. 261, § 1º, I: confunde suspensão com cassação.\nD — exige reincidência do inciso II: o caso é conduzir com suspensão vigente (inciso I).\n\nMarcos: suspensão notificada + dirigiu em via pública.",
+            "destaques": ["Gabarito C", "cassação", "suspensão notificada"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos da questão",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SUSPENSÃO DO DIREITO DE DIRIGIR: penalidade do art. 261 — o condutor não pode conduzir durante o prazo imposto.\n\nNOTIFICAÇÃO: ciência formal da penalidade — requisito do art. 261, § 9º para autuação por dirigir suspenso.\n\nCASSAÇÃO: cancelamento do documento de habilitação (art. 263) — mais grave que a suspensão.",
+            "destaques": ["SUSPENSÃO", "NOTIFICAÇÃO", "CASSAÇÃO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: o que acontece se dirigir suspenso?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Direito de dirigir estava suspenso e notificado?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Conduziu veículo em via pública?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Infração gravíssima + cassação do documento",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Hipóteses de cassação (art. 263)",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Inciso", "Hipótese legal"],
+            "linhas": [
+              {
+                "faixa": "I",
+                "classificacao": "Suspenso o direito de dirigir + conduz qualquer veículo",
+                "destaque": true
+              },
+              {
+                "faixa": "II",
+                "classificacao": "Reincidência em 12 meses (arts. 162-III, 163-175)"
+              },
+              {
+                "faixa": "III",
+                "classificacao": "Condenação judicial por delito de trânsito"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: multa × cassação",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Autuado no art. 162, II — basta a multa gravíssima",
+                "Multa cumula com cassação autônoma no art. 263, I"
+              ],
+              [
+                "Dirigir suspenso só prorroga a suspensão",
+                "Conduzir com suspensão vigente = cassação do documento"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Reduz tudo à multa do art. 162, II — ignora cassação do art. 263, I"
+              ],
+              [
+                "B — numero_vizinho",
+                "Aplica prazo 8 meses a 2 anos do art. 261, § 1º, I — não é hipótese de cassação"
+              ],
+              [
+                "D — regra_excecao",
+                "Inciso II exige reincidência de outras infrações — caso é inciso I (suspenso + conduziu)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado — Marcos",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência legal"],
+            "linhas": [
+              ["Suspensão imposta (art. 261) + notificação regular", "Proibição de conduzir em vigor"],
+              ["Autuado dirigindo automóvel em via pública", "Infração art. 162, II (gravíssima)"],
+              ["Condução durante suspensão notificada", "Cassação art. 263, I — gabarito C"],
+              ["Reincidência arts. 163-175?", "Não — inciso II não se aplica a este fato"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Penalidades cumulativas no caso",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Instituto", "O que ocorre com Marcos"],
+            "linhas": [
+              ["Art. 162, II — infração", "Multa (3x) + recolhimento da CNH + retenção do veículo"],
+              ["Art. 263, I — penalidade autônoma", "Cassação do documento de habilitação"],
+              ["Art. 261, § 9º — vínculo", "Notificado da suspensão que dirige → art. 162, II"],
+              ["Art. 263, § 2º — depois da cassação", "Reabilitação após 2 anos + exames (CONTRAN)"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 263, I — cassação por conduzir suspenso",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 263, I",
+            "texto": "I - quando, suspenso o direito de dirigir, o infrator conduzir qualquer veículo;",
+            "trechos_grifados": [
+              {
+                "inicio": 12,
+                "fim": 41,
+                "motivo": "contraste — suspenso + conduzir dispara cassação, não só multa"
+              },
+              {
+                "inicio": 54,
+                "fim": 75,
+                "motivo": "caso — Marcos conduziu automóvel com suspensão vigente"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Suspenso + notificado + dirigiu = CASSAÇÃO (art. 263, I). Multa do 162, II não dispensa cassação.\n\nNear-transfer: Paula, com CNH cassada (não apenas suspensa), é flagrada dirigindo moto — incide art. 162, II; a cassação já ocorreu, mas a infração permanece autônoma.",
+            "destaques": ["CASSAÇÃO", "art. 263, I", "Paula"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 263",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "tags": [
+      "penalidades",
+      "cassacao",
+      "suspensao",
+      "art_263",
+      "art_162",
+      "caso_pratico"
+    ]
+  }
+]

@@ -1,5 +1,9 @@
 import { z } from "zod";
-import { estudoReversoVisualSchema } from "@/lib/validations/estudo-reverso-visual";
+import {
+  estudoReversoVisualCompletoSchema,
+  estudoReversoVisualSchema,
+} from "@/lib/validations/estudo-reverso-visual";
+import { validarPasso2Mecanismos } from "@/lib/validations/questao-mecanismo";
 import { DISCIPLINAS } from "@/types";
 
 const comentarioSchema = z.object({
@@ -11,7 +15,7 @@ const comentarioSchema = z.object({
   estudo_reverso: z.array(z.string()).min(1),
 });
 
-export const questaoSeedSchema = z.object({
+const questaoSeedBaseSchema = z.object({
   disciplina: z.enum(DISCIPLINAS),
   topico: z.string().min(1),
   tipo: z.string().min(1),
@@ -25,12 +29,50 @@ export const questaoSeedSchema = z.object({
   gabarito: z.string().min(1),
   comentario: comentarioSchema,
   estudo_reverso_visual: estudoReversoVisualSchema.optional(),
+  estudo_reverso_visual_completo: estudoReversoVisualCompletoSchema.optional(),
+  /** Dispositivo principal da pegadinha — espelha visual v2; usado no índice de cobertura. */
+  fundamento_slug: z.string().min(1).optional(),
   tags: z.array(z.string()).optional(),
-}).refine(
-  (q) => q.gabarito in q.alternativas,
-  "Gabarito deve existir nas alternativas",
-);
+});
+
+const questaoSeedBaseRefine = (
+  q: z.infer<typeof questaoSeedBaseSchema>,
+  ctx: z.RefinementCtx,
+) => {
+  if (!(q.gabarito in q.alternativas)) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: "Gabarito deve existir nas alternativas",
+      path: ["gabarito"],
+    });
+  }
+  validarPasso2Mecanismos(
+    q.gabarito,
+    q.alternativas,
+    q.comentario.passo_a_passo,
+    ctx,
+  );
+};
+
+/** Schema base — v2 opcional (rascunhos / exemplos parciais). */
+export const questaoSeedSchema = questaoSeedBaseSchema.superRefine(questaoSeedBaseRefine);
+
+/**
+ * Schema para import/seed — exige aula completa v2 em toda questão.
+ * Usado por validate:questoes, validate:lote e db:seed.
+ */
+export const questaoSeedImportSchema = questaoSeedBaseSchema
+  .extend({
+    estudo_reverso_visual_completo: estudoReversoVisualCompletoSchema,
+  })
+  .superRefine((q, ctx) => {
+    questaoSeedBaseRefine(q, ctx);
+  });
 
 export const questoesFileSchema = z.array(questaoSeedSchema);
 
+/** Lotes para seed — cada questão com v2 obrigatória. */
+export const questoesImportFileSchema = z.array(questaoSeedImportSchema);
+
 export type QuestaoSeedInput = z.infer<typeof questaoSeedSchema>;
+export type QuestaoSeedImportInput = z.infer<typeof questaoSeedImportSchema>;

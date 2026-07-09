@@ -187,3 +187,50 @@
     display: none;
   }
 }
+
+/* Estudo reverso — revelação progressiva (segmentação Mayer) + signaling em grifos */
+@keyframes revelar-item {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes grifo-sweep {
+  0% {
+    background-size: 0% 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+.revelar-item {
+  animation: revelar-item 0.35s ease-out both;
+  animation-delay: calc(var(--i, 0) * 60ms);
+}
+
+.grifo-sweep {
+  background-image: linear-gradient(
+    to right,
+    color-mix(in oklch, var(--transito) 22%, transparent),
+    color-mix(in oklch, var(--transito) 22%, transparent)
+  );
+  background-repeat: no-repeat;
+  background-position: left center;
+  animation: grifo-sweep 0.5s ease-out 1 both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .revelar-item,
+  .grifo-sweep {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    background-size: 100% 100%;
+  }
+}

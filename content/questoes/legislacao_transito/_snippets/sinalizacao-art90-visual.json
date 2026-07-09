@@ -12,7 +12,11 @@
       "tipo": "texto_destaque",
       "conteudo": {
         "texto": "Efeito da sinalização insuficiente ou incorreta sobre sanções ao condutor e responsabilidade do órgão.",
-        "destaques": ["insuficiente", "incorreta", "sanções"]
+        "destaques": [
+          "insuficiente",
+          "incorreta",
+          "sanções"
+        ]
       }
     },
     {
@@ -21,13 +25,34 @@
       "tipo": "fluxograma",
       "conteudo": {
         "nos": [
-          { "id": "n1", "label": "Sinalização insuficiente ou incorreta?", "tipo": "pergunta" },
-          { "id": "n2", "label": "Não aplica sanções ao condutor", "tipo": "resultado", "ref": "CTB art. 90" },
-          { "id": "n3", "label": "Órgão da via responde pela sinalização", "tipo": "lei", "ref": "CTB art. 90 §1º" }
+          {
+            "id": "n1",
+            "label": "Sinalização insuficiente ou incorreta?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "n2",
+            "label": "Não aplica sanções ao condutor",
+            "tipo": "resultado",
+            "ref": "CTB art. 90"
+          },
+          {
+            "id": "n3",
+            "label": "Órgão da via responde pela sinalização",
+            "tipo": "lei",
+            "ref": "CTB art. 90 §1º"
+          }
         ],
         "arestas": [
-          { "de": "n1", "para": "n2", "rotulo": "sim" },
-          { "de": "n2", "para": "n3" }
+          {
+            "de": "n1",
+            "para": "n2",
+            "rotulo": "sim"
+          },
+          {
+            "de": "n2",
+            "para": "n3"
+          }
         ]
       }
     },
@@ -36,7 +61,10 @@
       "titulo": "Armadilha IDECAN",
       "tipo": "comparacao",
       "conteudo": {
-        "colunas": ["Pegadinha", "Correto"],
+        "colunas": [
+          "Pegadinha",
+          "Correto"
+        ],
         "linhas": [
           [
             "Só conserta a via, mas mantém a multa",
@@ -52,7 +80,13 @@
       "conteudo": {
         "fonte": "CTB art. 90",
         "texto": "Não serão aplicadas as sanções previstas neste Código por inobservância à sinalização quando esta for insuficiente ou incorreta.",
-        "trechos_grifados": [{ "inicio": 0, "fim": 28, "motivo": "vedação de sanção" }]
+        "trechos_grifados": [
+          {
+            "inicio": 0,
+            "fim": 28,
+            "motivo": "vedação de sanção"
+          }
+        ]
       }
     },
     {
@@ -61,19 +95,16 @@
       "tipo": "texto_destaque",
       "conteudo": {
         "texto": "Sinalização ruim = sem sanção ao condutor + responsabilidade do órgão da via (art. 90).",
-        "destaques": ["art. 90"]
-      }
-    },
-    {
-      "id": "recall",
-      "titulo": "Fixação ativa",
-      "tipo": "micro_recall",
-      "conteudo": {
-        "pergunta": "Qual artigo veda sanção quando a sinalização é insuficiente ou incorreta?",
-        "resposta_esperada": "90",
-        "aceitar_variacoes": ["art. 90", "artigo 90", "CTB art. 90"]
+        "destaques": [
+          "art. 90"
+        ]
       }
     }
   ],
-  "links_fonte": [{ "rotulo": "CTB art. 90", "path": "conteúdo/legislação federal/" }]
+  "links_fonte": [
+    {
+      "rotulo": "CTB art. 90",
+      "path": "conteúdo/legislação federal/"
+    }
+  ]
 }

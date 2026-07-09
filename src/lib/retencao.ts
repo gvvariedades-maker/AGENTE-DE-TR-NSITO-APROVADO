@@ -20,8 +20,15 @@ export interface AtividadeDia {
 export interface EstudoReversoResumo {
   sessoesTotal: number;
   sessoesConcluidas: number;
-  recallsAcertados: number;
   taxaConclusao: number;
+  /** Taxa de acerto na tentativa imediatamente anterior ao visual concluído. */
+  taxaAcertoPreVisual: number | null;
+  /** Taxa de acerto na próxima tentativa após visual concluído. */
+  taxaAcertoPosVisual: number | null;
+  /** Diferença em pontos percentuais (pós − pré). */
+  deltaAcerto: number | null;
+  /** Amostras usadas no cálculo pós-visual. */
+  amostrasPosVisual: number;
   hasData: boolean;
 }
 
@@ -139,8 +146,11 @@ export async function getEstudoReversoResumo(
   const vazio: EstudoReversoResumo = {
     sessoesTotal: 0,
     sessoesConcluidas: 0,
-    recallsAcertados: 0,
     taxaConclusao: 0,
+    taxaAcertoPreVisual: null,
+    taxaAcertoPosVisual: null,
+    deltaAcerto: null,
+    amostrasPosVisual: 0,
     hasData: false,
   };
 
@@ -151,7 +161,6 @@ export async function getEstudoReversoResumo(
       .select({
         total: sql<number>`count(*)::int`,
         concluidas: sql<number>`count(*) filter (where ${estudoReversoSessions.concluido})::int`,
-        recalls: sql<number>`count(*) filter (where ${estudoReversoSessions.recallAcertou} = true)::int`,
       })
       .from(estudoReversoSessions)
       .where(eq(estudoReversoSessions.userId, userId));
@@ -159,14 +168,118 @@ export async function getEstudoReversoResumo(
     const total = stats?.total ?? 0;
     const concluidas = stats?.concluidas ?? 0;
 
+    const eficacia = await calcularEficaciaEstudoReverso(userId);
+
     return {
       sessoesTotal: total,
       sessoesConcluidas: concluidas,
-      recallsAcertados: stats?.recalls ?? 0,
       taxaConclusao: total > 0 ? Math.round((concluidas / total) * 100) : 0,
+      taxaAcertoPreVisual: eficacia.taxaAcertoPreVisual,
+      taxaAcertoPosVisual: eficacia.taxaAcertoPosVisual,
+      deltaAcerto: eficacia.deltaAcerto,
+      amostrasPosVisual: eficacia.amostrasPosVisual,
       hasData: total > 0,
     };
   } catch {
     return vazio;
   }
+}
+
+interface EficaciaInterna {
+  taxaAcertoPreVisual: number | null;
+  taxaAcertoPosVisual: number | null;
+  deltaAcerto: number | null;
+  amostrasPosVisual: number;
+}
+
+/**
+ * Correlaciona sessões de estudo reverso concluídas com a tentativa
+ * anterior e a próxima no mesmo questionId.
+ */
+async function calcularEficaciaEstudoReverso(
+  userId: string,
+): Promise<EficaciaInterna> {
+  const vazio: EficaciaInterna = {
+    taxaAcertoPreVisual: null,
+    taxaAcertoPosVisual: null,
+    deltaAcerto: null,
+    amostrasPosVisual: 0,
+  };
+
+  const sessoes = await db
+    .select({
+      questionId: estudoReversoSessions.questionId,
+      attemptId: estudoReversoSessions.attemptId,
+      concluidoEm: estudoReversoSessions.concluidoEm,
+    })
+    .from(estudoReversoSessions)
+    .where(
+      and(
+        eq(estudoReversoSessions.userId, userId),
+        eq(estudoReversoSessions.concluido, true),
+      ),
+    );
+
+  if (sessoes.length === 0) return vazio;
+
+  let preAcertos = 0;
+  let preTotal = 0;
+  let posAcertos = 0;
+  let posTotal = 0;
+
+  for (const sessao of sessoes) {
+    if (!sessao.attemptId || !sessao.concluidoEm) continue;
+
+    const [tentativaAtual] = await db
+      .select({ acertou: attempts.acertou, createdAt: attempts.createdAt })
+      .from(attempts)
+      .where(
+        and(
+          eq(attempts.id, sessao.attemptId),
+          eq(attempts.userId, userId),
+        ),
+      )
+      .limit(1);
+
+    if (tentativaAtual) {
+      preTotal += 1;
+      if (tentativaAtual.acertou) preAcertos += 1;
+    }
+
+    const [proxima] = await db
+      .select({ acertou: attempts.acertou })
+      .from(attempts)
+      .where(
+        and(
+          eq(attempts.userId, userId),
+          eq(attempts.questionId, sessao.questionId),
+          gte(attempts.createdAt, sessao.concluidoEm),
+        ),
+      )
+      .orderBy(attempts.createdAt)
+      .limit(1);
+
+    if (proxima) {
+      posTotal += 1;
+      if (proxima.acertou) posAcertos += 1;
+    }
+  }
+
+  if (preTotal === 0 && posTotal === 0) return vazio;
+
+  const taxaAcertoPreVisual =
+    preTotal > 0 ? Math.round((preAcertos / preTotal) * 100) : null;
+  const taxaAcertoPosVisual =
+    posTotal > 0 ? Math.round((posAcertos / posTotal) * 100) : null;
+  const deltaAcerto =
+    taxaAcertoPreVisual !== null && taxaAcertoPosVisual !== null
+      ? taxaAcertoPosVisual - taxaAcertoPreVisual
+      : null;
+
+  return {
+    taxaAcertoPreVisual,
+    taxaAcertoPosVisual,
+    deltaAcerto,
+    amostrasPosVisual: posTotal,
+  };
 }

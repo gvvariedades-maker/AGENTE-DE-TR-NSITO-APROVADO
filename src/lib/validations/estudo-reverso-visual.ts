@@ -1,9 +1,45 @@
 import { z } from "zod";
-import { ARQUETIPOS_VISUAIS } from "@/types/estudo-reverso-visual";
+import { ARQUETIPOS_VISUAIS, SECOES_VISUAIS } from "@/types/estudo-reverso-visual";
+import { isFluxogramaLinear } from "@/lib/estudo-reverso/fluxograma-caminho";
+
+/**
+ * Validação Zod do estudo reverso visual (v1 expressa + v2 completa).
+ * @see .cursor/skills/estudo-reverso-visual/DOCUMENTACAO.md
+ */
+
+export const MECANISMOS_DISTRATOR = [
+  "numero_vizinho",
+  "competencia_snt",
+  "gravidade",
+  "regra_excecao",
+  "termo_unico",
+] as const;
+
+export type MecanismoDistrator = (typeof MECANISMOS_DISTRATOR)[number];
 
 const MAX_PALAVRAS_TELA = 120;
-const MAX_NOS_FLUXO = 8;
+const MAX_PALAVRAS_TELA_COMPLETO = 150;
+const MAX_NOS_FLUXO = 7;
+const MAX_LINHAS_COMPARACAO = 5;
+const MAX_FAIXAS_GRADACAO = 5;
+const MAX_EVENTOS_LINHA_TEMPO = 6;
+const MAX_ASSERTIVAS = 5;
+const MAX_NOS_COMPETENCIA = 8;
+const MAX_PALAVRAS_TRECHO_LEGAL = 80;
+const MAX_GRIFOS_TRECHO_LEGAL = 3;
+const MAX_PERGUNTAS_FLUXO = 2;
+const MAX_NOS_FLUXO_METODO = 4;
+const MAX_RESULTADOS_FLUXO_METODO = 1;
 const MAX_MACETE_CHARS = 80;
+
+const linksFonteSchema = z
+  .array(
+    z.object({
+      rotulo: z.string().min(1),
+      path: z.string().min(1),
+    }),
+  )
+  .min(1);
 
 function contarPalavras(texto: string): number {
   return texto.trim().split(/\s+/).filter(Boolean).length;
@@ -26,6 +62,7 @@ function extrairTextosTela(tela: z.infer<typeof telaVisualSchema>): string[] {
       }
       break;
     case "matriz_assertivas":
+      if (c.intro) textos.push(c.intro as string);
       for (const item of c.itens as { texto: string }[]) textos.push(item.texto);
       textos.push(c.gabarito_resumo as string);
       break;
@@ -45,12 +82,415 @@ function extrairTextosTela(tela: z.infer<typeof telaVisualSchema>): string[] {
     case "diagrama_competencia":
       for (const n of c.nos as { label: string }[]) textos.push(n.label);
       break;
-    case "micro_recall":
-      textos.push(c.pergunta as string, c.resposta_esperada as string);
-      break;
   }
 
   return textos;
+}
+
+function validarPalavrasPorTela(
+  telas: z.infer<typeof telaVisualSchema>[],
+  maxPalavras: number,
+  ctx: z.RefinementCtx,
+) {
+  for (let i = 0; i < telas.length; i++) {
+    const textos = extrairTextosTela(telas[i]);
+    const totalPalavras = textos.reduce((acc, t) => acc + contarPalavras(t), 0);
+    if (totalPalavras > maxPalavras) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: `Tela "${telas[i].id}" excede ${maxPalavras} palavras (${totalPalavras})`,
+        path: ["telas", i],
+      });
+    }
+  }
+}
+
+/** Gate item 2 — nenhuma sequência de 2 telas só texto_destaque (com exceções pedagógicas). */
+export function validarSemTextoConsecutivo(
+  telas: z.infer<typeof telaVisualSchema>[],
+  ctx: z.RefinementCtx,
+) {
+  for (let i = 1; i < telas.length; i++) {
+    if (telas[i].tipo !== "texto_destaque" || telas[i - 1].tipo !== "texto_destaque") {
+      continue;
+    }
+    const atual = telas[i];
+    const idAtual = atual.id.toLowerCase();
+    const tituloAtual = atual.titulo.toLowerCase();
+    const parPermitido =
+      idAtual === "glossario" ||
+      tituloAtual.includes("glossário") ||
+      tituloAtual.includes("pré-treino") ||
+      idAtual === "macete" ||
+      tituloAtual.includes("macete");
+    if (parPermitido) continue;
+
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: `Telas "${telas[i - 1].id}" e "${telas[i].id}" são só texto_destaque consecutivas (dual coding)`,
+      path: ["telas", i],
+    });
+  }
+}
+
+function linhaContemMecanismo(linha: string): boolean {
+  return MECANISMOS_DISTRATOR.some((slug) => linha.includes(slug));
+}
+
+function isTelaDistratores(tela: z.infer<typeof telaVisualSchema>): boolean {
+  if (tela.tipo !== "comparacao") return false;
+  const id = tela.id.toLowerCase();
+  const titulo = tela.titulo.toLowerCase();
+  return id.includes("distrat") || titulo.includes("errada") || titulo.includes("distrator");
+}
+
+/** Gate item 4 — tela de distratores com slug por alternativa errada (v2). */
+export function validarTelaDistratores(
+  telas: z.infer<typeof telaVisualSchema>[],
+  ctx: z.RefinementCtx,
+) {
+  const tela = telas.find(isTelaDistratores);
+  if (!tela || tela.tipo !== "comparacao") {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message:
+        'Aula v2 exige tela comparacao de distratores (id "distratores" ou título com "errada")',
+      path: ["telas"],
+    });
+    return;
+  }
+
+  const linhasSemSlug = tela.conteudo.linhas.filter(
+    ([col1]) => !linhaContemMecanismo(col1),
+  );
+  if (linhasSemSlug.length > 0) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: `Tela "${tela.id}": cada linha deve incluir slug de mecanismo (${MECANISMOS_DISTRATOR.join(", ")}) na 1ª coluna`,
+      path: ["telas", telas.indexOf(tela)],
+    });
+  }
+}
+
+/** Gate item 6 — limites por componente. */
+export function validarLimitesComponente(
+  telas: z.infer<typeof telaVisualSchema>[],
+  ctx: z.RefinementCtx,
+) {
+  for (let i = 0; i < telas.length; i++) {
+    const tela = telas[i];
+    const c = tela.conteudo as Record<string, unknown>;
+
+    switch (tela.tipo) {
+      case "fluxograma": {
+        const nos = c.nos as { id: string; tipo: string; label?: string }[];
+        const arestas = (c.arestas as { de: string; para: string }[]) ?? [];
+        const isMetodo = tela.secao === "metodo";
+
+        if (isMetodo) {
+          if (nos.length > MAX_NOS_FLUXO_METODO) {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              message: `Tela "${tela.id}" (MÉTODO): fluxograma excede ${MAX_NOS_FLUXO_METODO} nós (${nos.length}) — use só o caminho do caso`,
+              path: ["telas", i, "conteudo", "nos"],
+            });
+          }
+          const resultados = nos.filter((n) => n.tipo === "resultado").length;
+          if (resultados > MAX_RESULTADOS_FLUXO_METODO) {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              message: `Tela "${tela.id}" (MÉTODO): fluxograma tem ${resultados} resultados — máximo ${MAX_RESULTADOS_FLUXO_METODO} (caminho do gabarito)`,
+              path: ["telas", i, "conteudo", "nos"],
+            });
+          }
+          if (
+            nos.length > 0 &&
+            !isFluxogramaLinear({ nos, arestas } as {
+              nos: typeof nos;
+              arestas: typeof arestas;
+            })
+          ) {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              message: `Tela "${tela.id}" (MÉTODO): fluxograma deve ser cadeia linear (sem ramos)`,
+              path: ["telas", i, "conteudo", "arestas"],
+            });
+          }
+          for (const no of nos) {
+            if (no.label && /\bart\.?\s*\d/i.test(no.label)) {
+              ctx.addIssue({
+                code: z.ZodIssueCode.custom,
+                message: `Tela "${tela.id}" (MÉTODO): nó "${no.id}" cita artigo no label — mover para mapa/lei`,
+                path: ["telas", i, "conteudo", "nos"],
+              });
+            }
+          }
+        } else if (nos.length > MAX_NOS_FLUXO) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `Tela "${tela.id}": fluxograma excede ${MAX_NOS_FLUXO} nós (${nos.length})`,
+            path: ["telas", i, "conteudo", "nos"],
+          });
+        }
+
+        const perguntas = nos.filter((n) => n.tipo === "pergunta").length;
+        if (perguntas > MAX_PERGUNTAS_FLUXO) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `Tela "${tela.id}": fluxograma excede ${MAX_PERGUNTAS_FLUXO} nós de ramificação`,
+            path: ["telas", i, "conteudo", "nos"],
+          });
+        }
+        break;
+      }
+      case "comparacao": {
+        const linhas = c.linhas as unknown[];
+        if (linhas.length > MAX_LINHAS_COMPARACAO) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `Tela "${tela.id}": comparação excede ${MAX_LINHAS_COMPARACAO} linhas`,
+            path: ["telas", i, "conteudo", "linhas"],
+          });
+        }
+        break;
+      }
+      case "tabela_gradacao": {
+        const linhas = c.linhas as unknown[];
+        if (linhas.length > MAX_FAIXAS_GRADACAO) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `Tela "${tela.id}": tabela excede ${MAX_FAIXAS_GRADACAO} faixas`,
+            path: ["telas", i, "conteudo", "linhas"],
+          });
+        }
+        break;
+      }
+      case "linha_tempo": {
+        const eventos = c.eventos as unknown[];
+        if (eventos.length > MAX_EVENTOS_LINHA_TEMPO) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `Tela "${tela.id}": linha do tempo excede ${MAX_EVENTOS_LINHA_TEMPO} marcos`,
+            path: ["telas", i, "conteudo", "eventos"],
+          });
+        }
+        break;
+      }
+      case "matriz_assertivas": {
+        const itens = c.itens as unknown[];
+        if (itens.length > MAX_ASSERTIVAS) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `Tela "${tela.id}": matriz excede ${MAX_ASSERTIVAS} assertivas`,
+            path: ["telas", i, "conteudo", "itens"],
+          });
+        }
+        break;
+      }
+      case "diagrama_competencia": {
+        const nos = c.nos as unknown[];
+        if (nos.length > MAX_NOS_COMPETENCIA) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `Tela "${tela.id}": diagrama excede ${MAX_NOS_COMPETENCIA} nós`,
+            path: ["telas", i, "conteudo", "nos"],
+          });
+        }
+        break;
+      }
+      case "trecho_legal": {
+        const texto = c.texto as string;
+        const grifos = (c.trechos_grifados as unknown[] | undefined) ?? [];
+        if (contarPalavras(texto) > MAX_PALAVRAS_TRECHO_LEGAL) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `Tela "${tela.id}": trecho legal excede ${MAX_PALAVRAS_TRECHO_LEGAL} palavras`,
+            path: ["telas", i, "conteudo", "texto"],
+          });
+        }
+        if (grifos.length > MAX_GRIFOS_TRECHO_LEGAL) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `Tela "${tela.id}": trecho legal excede ${MAX_GRIFOS_TRECHO_LEGAL} grifos`,
+            path: ["telas", i, "conteudo", "trechos_grifados"],
+          });
+        }
+        break;
+      }
+    }
+  }
+}
+
+function tokensMacete(texto: string): Set<string> {
+  return new Set(
+    texto
+      .toLowerCase()
+      .split(/[^a-z0-9áàâãéêíóôõúç-]+/i)
+      .filter((t) => t.length >= 4),
+  );
+}
+
+function macetesCompativeis(a: string, b: string): boolean {
+  const ta = tokensMacete(a);
+  const tb = tokensMacete(b);
+  for (const t of ta) {
+    if (tb.has(t)) return true;
+  }
+  return false;
+}
+
+function coletarMensagensCoerenciaV1V2(
+  v1: z.infer<typeof estudoReversoVisualSchema>,
+  v2: z.infer<typeof estudoReversoVisualCompletoSchema>,
+): string[] {
+  const mensagens: string[] = [];
+
+  if (v1.fundamento_slug !== v2.fundamento_slug) {
+    mensagens.push(
+      `fundamento_slug diverge entre v1 ("${v1.fundamento_slug}") e v2 ("${v2.fundamento_slug}")`,
+    );
+  }
+
+  if (v1.arquetipo !== v2.arquetipo) {
+    mensagens.push(
+      `arquetipo diverge entre v1 ("${v1.arquetipo}") e v2 ("${v2.arquetipo}")`,
+    );
+  }
+
+  if (!macetesCompativeis(v1.macete_visual, v2.macete_visual)) {
+    mensagens.push("macete_visual v1 e v2 sem tokens em comum — revisar coerência");
+  }
+
+  return mensagens;
+}
+
+/** Gate item 8 — coerência entre v1 e v2 da mesma questão. */
+export function validarCoerenciaV1V2(
+  v1: z.infer<typeof estudoReversoVisualSchema>,
+  v2: z.infer<typeof estudoReversoVisualCompletoSchema>,
+  ctx: z.RefinementCtx,
+  pathPrefix: (string | number)[] = [],
+) {
+  for (const mensagem of coletarMensagensCoerenciaV1V2(v1, v2)) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: mensagem,
+      path: [...pathPrefix, "estudo_reverso_visual_completo"],
+    });
+  }
+}
+
+export function listarErrosCoerenciaV1V2(
+  v1: z.infer<typeof estudoReversoVisualSchema>,
+  v2: z.infer<typeof estudoReversoVisualCompletoSchema>,
+): string[] {
+  return coletarMensagensCoerenciaV1V2(v1, v2);
+}
+
+function isTelaCondicionalPreArquetipo(tela: z.infer<typeof telaVisualSchema>): boolean {
+  const id = tela.id.toLowerCase();
+  const titulo = tela.titulo.toLowerCase();
+  return (
+    id === "glossario" ||
+    titulo.includes("glossário") ||
+    titulo.includes("pré-treino") ||
+    tela.tipo === "linha_tempo"
+  );
+}
+
+/** Núcleo v3 — ordem pedagógica obrigatória na aula completa. */
+export function validarNucleoV2(
+  telas: z.infer<typeof telaVisualSchema>[],
+  ctx: z.RefinementCtx,
+) {
+  if (telas.length < 7) return;
+
+  if (telas[0].tipo !== "texto_destaque") {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: "Núcleo v2: primeira tela deve ser texto_destaque (contexto)",
+      path: ["telas", 0],
+    });
+  }
+
+  const lastIdx = telas.length - 1;
+  if (telas[lastIdx].tipo !== "texto_destaque") {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: "Núcleo v2: última tela deve ser texto_destaque (macete)",
+      path: ["telas", lastIdx],
+    });
+  }
+
+  const idxLei = telas.findLastIndex(
+    (t, i) => t.tipo === "trecho_legal" && i < lastIdx,
+  );
+  if (idxLei === -1) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: "Núcleo v2: deve haver trecho_legal antes do macete",
+      path: ["telas"],
+    });
+    return;
+  }
+
+  const idxDistrat = telas.findIndex(isTelaDistratores);
+  if (idxDistrat === -1) return;
+
+  if (idxDistrat >= idxLei) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: "Núcleo v2: tela de distratores deve vir antes de trecho_legal",
+      path: ["telas", idxDistrat],
+    });
+  }
+
+  if (idxDistrat > 0 && telas[idxDistrat - 1].tipo !== "comparacao") {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: "Núcleo v2: tela antes de distratores deve ser comparacao (contraste)",
+      path: ["telas", idxDistrat - 1],
+    });
+  }
+
+  if (idxDistrat + 1 < idxLei) {
+    const caso = telas[idxDistrat + 1];
+    if (caso.tipo !== "comparacao" && caso.tipo !== "fluxograma") {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message:
+          "Núcleo v2: tela após distratores deve ser comparacao ou fluxograma (caso)",
+        path: ["telas", idxDistrat + 1],
+      });
+    }
+  }
+
+  let i = 1;
+  while (i < idxDistrat && isTelaCondicionalPreArquetipo(telas[i])) {
+    i++;
+  }
+  if (i < idxDistrat && telas[i].tipo === "texto_destaque") {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: "Núcleo v2: arquétipo principal não pode ser texto_destaque",
+      path: ["telas", i],
+    });
+  }
+}
+
+function validarRegrasVisuais(
+  telas: z.infer<typeof telaVisualSchema>[],
+  maxPalavras: number,
+  ctx: z.RefinementCtx,
+  opts: { exigirDistratores: boolean },
+) {
+  validarPalavrasPorTela(telas, maxPalavras, ctx);
+  validarSemTextoConsecutivo(telas, ctx);
+  validarLimitesComponente(telas, ctx);
+  if (opts.exigirDistratores) {
+    validarTelaDistratores(telas, ctx);
+    validarNucleoV2(telas, ctx);
+  }
 }
 
 const conteudoTextoDestaqueSchema = z.object({
@@ -81,7 +521,7 @@ const conteudoFluxogramaSchema = z.object({
 
 const conteudoComparacaoSchema = z.object({
   colunas: z.tuple([z.string().min(1), z.string().min(1)]),
-  linhas: z.array(z.tuple([z.string().min(1), z.string().min(1)])).min(1),
+  linhas: z.array(z.tuple([z.string().min(1), z.string().min(1)])).min(1).max(MAX_LINHAS_COMPARACAO),
 });
 
 const conteudoMatrizAssertivasSchema = z.object({
@@ -91,11 +531,22 @@ const conteudoMatrizAssertivasSchema = z.object({
         id: z.string().min(1),
         texto: z.string().min(1),
         correto: z.boolean(),
+        porque: z.string().min(1).optional(),
       }),
     )
-    .min(1),
+    .min(1)
+    .max(MAX_ASSERTIVAS),
   gabarito_resumo: z.string().min(1),
+  intro: z.string().min(1).optional(),
 });
+
+const secaoSchema = z.enum(SECOES_VISUAIS).optional();
+
+const telaCamposBase = {
+  id: z.string().min(1),
+  titulo: z.string().min(1),
+  secao: secaoSchema,
+};
 
 const conteudoTabelaGradacaoSchema = z.object({
   titulo_colunas: z.tuple([z.string().min(1), z.string().min(1)]),
@@ -107,7 +558,8 @@ const conteudoTabelaGradacaoSchema = z.object({
         destaque: z.boolean().optional(),
       }),
     )
-    .min(1),
+    .min(1)
+    .max(MAX_FAIXAS_GRADACAO),
 });
 
 const conteudoTrechoLegalSchema = z.object({
@@ -121,6 +573,7 @@ const conteudoTrechoLegalSchema = z.object({
         motivo: z.string().min(1),
       }),
     )
+    .max(MAX_GRIFOS_TRECHO_LEGAL)
     .optional(),
 });
 
@@ -133,7 +586,8 @@ const conteudoLinhaTempoSchema = z.object({
         descricao: z.string().min(1),
       }),
     )
-    .min(2),
+    .min(2)
+    .max(MAX_EVENTOS_LINHA_TEMPO),
 });
 
 const conteudoDiagramaCompetenciaSchema = z.object({
@@ -145,7 +599,8 @@ const conteudoDiagramaCompetenciaSchema = z.object({
         nivel: z.number().int().min(0).max(3),
       }),
     )
-    .min(2),
+    .min(2)
+    .max(MAX_NOS_COMPETENCIA),
   arestas: z.array(
     z.object({
       de: z.string().min(1),
@@ -155,110 +610,108 @@ const conteudoDiagramaCompetenciaSchema = z.object({
   ),
 });
 
-const conteudoMicroRecallSchema = z.object({
-  pergunta: z.string().min(1),
-  resposta_esperada: z.string().min(1),
-  dica: z.string().optional(),
-  aceitar_variacoes: z.array(z.string()).optional(),
-});
-
 export const telaVisualSchema = z.discriminatedUnion("tipo", [
   z.object({
-    id: z.string().min(1),
-    titulo: z.string().min(1),
+    ...telaCamposBase,
     tipo: z.literal("texto_destaque"),
     conteudo: conteudoTextoDestaqueSchema,
   }),
   z.object({
-    id: z.string().min(1),
-    titulo: z.string().min(1),
+    ...telaCamposBase,
     tipo: z.literal("fluxograma"),
     conteudo: conteudoFluxogramaSchema,
   }),
   z.object({
-    id: z.string().min(1),
-    titulo: z.string().min(1),
+    ...telaCamposBase,
     tipo: z.literal("comparacao"),
     conteudo: conteudoComparacaoSchema,
   }),
   z.object({
-    id: z.string().min(1),
-    titulo: z.string().min(1),
+    ...telaCamposBase,
     tipo: z.literal("matriz_assertivas"),
     conteudo: conteudoMatrizAssertivasSchema,
   }),
   z.object({
-    id: z.string().min(1),
-    titulo: z.string().min(1),
+    ...telaCamposBase,
     tipo: z.literal("tabela_gradacao"),
     conteudo: conteudoTabelaGradacaoSchema,
   }),
   z.object({
-    id: z.string().min(1),
-    titulo: z.string().min(1),
+    ...telaCamposBase,
     tipo: z.literal("trecho_legal"),
     conteudo: conteudoTrechoLegalSchema,
   }),
   z.object({
-    id: z.string().min(1),
-    titulo: z.string().min(1),
+    ...telaCamposBase,
     tipo: z.literal("linha_tempo"),
     conteudo: conteudoLinhaTempoSchema,
   }),
   z.object({
-    id: z.string().min(1),
-    titulo: z.string().min(1),
+    ...telaCamposBase,
     tipo: z.literal("diagrama_competencia"),
     conteudo: conteudoDiagramaCompetenciaSchema,
   }),
-  z.object({
-    id: z.string().min(1),
-    titulo: z.string().min(1),
-    tipo: z.literal("micro_recall"),
-    conteudo: conteudoMicroRecallSchema,
-  }),
 ]);
 
-export const estudoReversoVisualSchema = z
-  .object({
+const estudoReversoVisualBaseSchema = z.object({
+  arquetipo: z.enum(ARQUETIPOS_VISUAIS),
+  arquetipo_secundario: z.enum(ARQUETIPOS_VISUAIS).optional(),
+  fundamento_slug: z.string().min(1),
+  macete_visual: z.string().min(1).max(MAX_MACETE_CHARS),
+  telas: z.array(telaVisualSchema),
+  links_fonte: linksFonteSchema,
+  ref_visual_id: z.string().optional(),
+});
+
+/** Trilha expressa — 3 a 5 telas. */
+export const estudoReversoVisualSchema = estudoReversoVisualBaseSchema
+  .extend({
     versao: z.literal(1),
-    arquetipo: z.enum(ARQUETIPOS_VISUAIS),
-    arquetipo_secundario: z.enum(ARQUETIPOS_VISUAIS).optional(),
-    duracao_estimada_seg: z.number().int().min(30).max(600),
-    fundamento_slug: z.string().min(1),
-    macete_visual: z.string().min(1).max(MAX_MACETE_CHARS),
-    telas: z.array(telaVisualSchema).min(4).max(6),
-    links_fonte: z
-      .array(
-        z.object({
-          rotulo: z.string().min(1),
-          path: z.string().min(1),
-        }),
-      )
-      .min(1),
-    ref_visual_id: z.string().optional(),
+    duracao_estimada_seg: z.number().int().min(30).max(180),
+    telas: z.array(telaVisualSchema).min(3).max(5),
   })
   .superRefine((data, ctx) => {
-    const ultima = data.telas[data.telas.length - 1];
-    if (ultima.tipo !== "micro_recall") {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        message: "Última tela deve ser micro_recall",
-        path: ["telas"],
-      });
-    }
-
-    for (let i = 0; i < data.telas.length; i++) {
-      const textos = extrairTextosTela(data.telas[i]);
-      const totalPalavras = textos.reduce((acc, t) => acc + contarPalavras(t), 0);
-      if (totalPalavras > MAX_PALAVRAS_TELA) {
-        ctx.addIssue({
-          code: z.ZodIssueCode.custom,
-          message: `Tela "${data.telas[i].id}" excede ${MAX_PALAVRAS_TELA} palavras (${totalPalavras})`,
-          path: ["telas", i],
-        });
-      }
-    }
+    validarRegrasVisuais(data.telas, MAX_PALAVRAS_TELA, ctx, { exigirDistratores: false });
   });
 
+/** Aula completa (Modelo B) — 7 a 11 telas, foco iniciante/dúvida. */
+export const estudoReversoVisualCompletoSchema = estudoReversoVisualBaseSchema
+  .extend({
+    versao: z.literal(2),
+    publico_alvo: z.enum(["iniciante", "todos"]).optional(),
+    duracao_estimada_seg: z.number().int().min(120).max(600),
+    telas: z.array(telaVisualSchema).min(7).max(11),
+  })
+  .superRefine((data, ctx) => {
+    validarRegrasVisuais(data.telas, MAX_PALAVRAS_TELA_COMPLETO, ctx, {
+      exigirDistratores: true,
+    });
+  });
+
+export const estudoReversoVisualAnySchema = z.union([
+  estudoReversoVisualSchema,
+  estudoReversoVisualCompletoSchema,
+]);
+
 export type EstudoReversoVisualInput = z.infer<typeof estudoReversoVisualSchema>;
+export type EstudoReversoVisualCompletoInput = z.infer<
+  typeof estudoReversoVisualCompletoSchema
+>;
+
+/** Padrão ouro v2 — referência lote-007 (PADRAO-AULA-COMPLETA-v2.md). */
+export function isNivelLote007Ouro(input: {
+  tipo: string;
+  dificuldade: number;
+  estudo_reverso_visual_completo?: {
+    versao?: number;
+    telas?: Array<{ id: string }>;
+  } | null;
+}): boolean {
+  const v2 = input.estudo_reverso_visual_completo;
+  if (!v2 || v2.versao !== 2) return false;
+  if (input.tipo !== "caso_pratico" || input.dificuldade < 3) return false;
+
+  const ids = new Set((v2.telas ?? []).map((t) => t.id));
+  const obrigatorios = ["glossario", "fluxo", "hierarquia", "caso"] as const;
+  return obrigatorios.every((id) => ids.has(id));
+}

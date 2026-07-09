@@ -95,7 +95,16 @@
 
 História geral sobre o município de Campina Grande, na Paraíba.
 
-**Fonte:** edital não especifica obra — curar fatos cobráveis (formação, personagens, economia, cultura, PB).
+**Slugs operacionais (subdivisão para cobertura e questões):**
+
+| Slug | Foco |
+|------|------|
+| `historia_cg_pb_formacao` | Formação, datas-chave, geografia |
+| `historia_cg_pb_personagens` | Fundadores e personagens históricos |
+| `historia_cg_pb_economia_cultura` | Economia, cultura e patrimônio |
+| `historia_pb_contexto` | Contexto estadual da Paraíba |
+
+**Fonte:** edital não especifica obra — `conteúdo/historia-cg-pb/base-factual.md`
 
 ---
 
@@ -117,13 +126,36 @@ História geral sobre o município de Campina Grande, na Paraíba.
 
 #### NOÇÕES DE DIREITO ADMINISTRATIVO (`direito_administrativo`)
 
-1. Administração Pública (conceito, organização, direta/indireta, entidades, regime jurídico-administrativo)
-2. Princípios (expressos art. 37 CF + implícitos: supremacia, indisponibilidade, razoabilidade, proporcionalidade, motivação, continuidade, autotutela)
-3. Atos Administrativos (conceito, atributos, espécies, validade, anulação, revogação, convalidação, extinção)
-4. Poderes (vinculado/discricionário, hierárquico, disciplinar, regulamentar, **polícia**)
-5. Serviços Públicos (conceito, princípios, delegação: concessão, permissão, autorização)
-6. Agentes Públicos (classificação, cargo/emprego/função, direitos/deveres, responsabilidades, acumulação)
-7. Responsabilidade Civil do Estado (objetiva, ação e omissão)
+1. Administração Pública
+   - 1.1. Conceito, organização e finalidade
+   - 1.2. Administração direta e indireta
+   - 1.3. Entidades: autarquias, fundações, empresas públicas, sociedades de economia mista
+   - 1.4. Regime jurídico-administrativo
+2. Princípios da Administração Pública
+   - 2.1. Expressos (art. 37 CF)
+   - 2.2. Implícitos (supremacia, indisponibilidade, razoabilidade, proporcionalidade, motivação, continuidade, autotutela)
+3. Atos Administrativos
+   - 3.1. Conceito, atributos e elementos
+   - 3.2. Espécies e classificação
+   - 3.3. Validade, anulação, revogação e convalidação
+   - 3.4. Extinção
+4. Poderes da Administração Pública
+   - 4.1. Vinculado e discricionário
+   - 4.2. Hierárquico | 4.3. Disciplinar | 4.4. Regulamentar | 4.5. **Polícia**
+5. Serviços Públicos
+   - 5.1. Conceito, princípios e classificação
+   - 5.2. Formas de prestação
+   - 5.3. Delegação: concessão, permissão, autorização
+6. Agentes Públicos
+   - 6.1. Conceito e classificação
+   - 6.2. Cargo, emprego e função
+   - 6.3. Direitos e deveres
+   - 6.4. Responsabilidades (civil, penal, administrativa)
+   - 6.5. Acumulação de cargos
+7. Responsabilidade Civil do Estado
+   - 7.1. Responsabilidade civil da AP
+   - 7.2. Responsabilidade objetiva
+   - 7.3. Ação e omissão estatal
 
 **Fontes de apoio:** CF/88 art. 37–41; Lei 9.784/99; Lei 14.133/2021.
 
@@ -131,15 +163,27 @@ História geral sobre o município de Campina Grande, na Paraíba.
 
 #### NOÇÕES DE DIREITO CONSTITUCIONAL (`direito_constitucional`)
 
-1. Teoria da Constituição (Estado, Constituição, supremacia, aplicabilidade)
-2. CF/88 (preâmbulo, princípios, relações internacionais, dignidade, direitos humanos)
-3. Direitos e Garantias Fundamentais (individuais/coletivos, sociais, nacionalidade, políticos, partidos)
-4. Remédios Constitucionais (HC, HD, MS individual/coletivo, MI, ação popular)
-5. Organização do Estado (federação, entes, competências)
-6. Administração Pública na CF (art. 37, servidores)
-7. Defesa do Estado (**segurança pública**, art. 144, órgãos)
-8. Ordem Social
-9. Direitos fundamentais aplicados à segurança pública (vida, locomoção, devido processo, legalidade)
+1. Teoria da Constituição
+   - 1.1. Estado | 1.2. Constituição | 1.3. Supremacia e aplicabilidade
+2. CF/88
+   - 2.1. Preâmbulo | 2.2. Princípios fundamentais | 2.3. Relações internacionais
+   - 2.4. Dignidade da pessoa humana | 2.5. Dimensões dos direitos humanos
+3. Direitos e Garantias Fundamentais
+   - 3.1. Individuais e coletivos | 3.2. Sociais | 3.3. Nacionalidade
+   - 3.4. Políticos | 3.5. Partidos | 3.6. Aplicação dos direitos
+4. Remédios Constitucionais
+   - 4.1. HC | 4.2. HD | 4.3. MS | 4.4. MI | 4.5. Ação popular
+5. Organização do Estado
+   - 5.1. Organização político-administrativa | 5.2. Estado Federal
+   - 5.3. Entes federativos | 5.4. Competências
+6. Administração Pública na CF
+   - 6.1. Disposições gerais | 6.2. Princípios (art. 37) | 6.3. Servidores
+7. Defesa do Estado (**segurança pública**, art. 144)
+   - 7.1. Segurança pública | 7.2. Organização | 7.3. Órgãos (art. 144)
+8. Ordem Social — 8.1. Base e objetivos
+9. Direitos fundamentais aplicados à segurança pública
+   - 9.1. Vida, liberdade, igualdade | 9.2. Locomoção
+   - 9.3. Devido processo | 9.4. Legalidade e abuso de autoridade
 
 **Fonte:** `conteúdo/legislação federal/cf-1988.html`
 

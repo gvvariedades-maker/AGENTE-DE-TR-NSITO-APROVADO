@@ -3,14 +3,23 @@
  *
  * Uso: npm run db:seed
  * Requer: DATABASE_PASSWORD + SUPABASE_PROJECT_REF (ou DATABASE_URL válida)
+ *
+ * Upsert por (topico + enunciado): insere se nova; atualiza todos os campos se já existir.
  */
 import { existsSync } from "node:fs";
 import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { config } from "dotenv";
 import { and, eq } from "drizzle-orm";
-import { questoesFileSchema } from "../src/lib/validations/questao";
+import { isNivelLote007Ouro } from "../src/lib/validations/estudo-reverso-visual";
+import {
+  questoesImportFileSchema,
+  type QuestaoSeedImportInput,
+} from "../src/lib/validations/questao";
 import type { Disciplina } from "../src/types";
+import { getEditalTopic } from "./edital-topics";
+import { seedTopics } from "./seed-topics";
+import { closeScriptDb, scriptDb } from "./script-db";
 
 if (existsSync(".env.local")) {
   config({ path: ".env.local" });
@@ -21,12 +30,11 @@ if (existsSync(".env.local")) {
 const CONTENT_DIR = join(process.cwd(), "content", "questoes");
 
 async function getOrCreateTopic(
-  db: Awaited<typeof import("../src/lib/db")>["db"],
   topics: typeof import("../src/lib/db/schema").topics,
   disciplina: Disciplina,
   topico: string,
 ) {
-  const [existing] = await db
+  const [existing] = await scriptDb
     .select()
     .from(topics)
     .where(eq(topics.nome, topico))
@@ -34,21 +42,26 @@ async function getOrCreateTopic(
 
   if (existing) return existing.id;
 
-  const [created] = await db
+  const editalTopic = getEditalTopic(topico);
+
+  const [created] = await scriptDb
     .insert(topics)
-    .values({ disciplina, nome: topico })
+    .values({
+      disciplina,
+      nome: topico,
+      editalRef: editalTopic?.editalRef ?? null,
+    })
     .returning({ id: topics.id });
 
   return created.id;
 }
 
 async function questionExists(
-  db: Awaited<typeof import("../src/lib/db")>["db"],
   questions: typeof import("../src/lib/db/schema").questions,
   topicId: string,
   enunciado: string,
 ) {
-  const [existing] = await db
+  const [existing] = await scriptDb
     .select({ id: questions.id })
     .from(questions)
     .where(and(eq(questions.topicId, topicId), eq(questions.enunciado, enunciado)))
@@ -57,11 +70,38 @@ async function questionExists(
   return existing ?? null;
 }
 
+function questionValuesFromSeed(topicId: string, q: QuestaoSeedImportInput) {
+  const alts = q.alternativas;
+  return {
+    topicId,
+    enunciado: q.enunciado,
+    altA: alts.A,
+    altB: alts.B,
+    altC: alts.C,
+    altD: alts.D,
+    altE: alts.E ?? null,
+    gabarito: q.gabarito,
+    tipo: q.tipo,
+    estiloIdecan: q.estilo_idecan ?? null,
+    dificuldade: q.dificuldade,
+    comentarioJson: q.comentario,
+    estudoReversoVisualJson: q.estudo_reverso_visual ?? null,
+    estudoReversoVisualCompletoJson: q.estudo_reverso_visual_completo,
+    tags: q.tags ?? [],
+  };
+}
+
 async function main() {
-  const { db } = await import("../src/lib/db");
+  const topicResult = await seedTopics();
+  console.log(
+    `Tópicos Anexo I: ${topicResult.created} criados | ${topicResult.updated} atualizados | ${topicResult.skipped} já ok`,
+  );
+  console.log("");
+
   const { questions, topics } = await import("../src/lib/db/schema");
 
-  let total = 0;
+  let inserted = 0;
+  let updated = 0;
   let skipped = 0;
   let errors = 0;
 
@@ -77,60 +117,56 @@ async function main() {
       if (!file.endsWith(".json")) continue;
 
       const raw = await readFile(join(disciplinaPath, file), "utf-8");
-      const parsed = questoesFileSchema.safeParse(JSON.parse(raw));
+      const json = JSON.parse(raw) as unknown;
+      const questoesInput = Array.isArray(json) ? json : [json];
+      const parsed = questoesImportFileSchema.safeParse(questoesInput);
 
       if (!parsed.success) {
         console.error(`❌ ${dir.name}/${file}:`, parsed.error.flatten());
+        console.error(
+          "  → Rode npm run validate:lote -- content/questoes/.../arquivo.json antes do seed",
+        );
         errors++;
         continue;
       }
 
       for (const q of parsed.data) {
-        const topicId = await getOrCreateTopic(db, topics, q.disciplina, q.topico);
-
-        const existente = await questionExists(db, questions, topicId, q.enunciado);
-
-        if (existente) {
-          if (q.estudo_reverso_visual) {
-            await db
-              .update(questions)
-              .set({ estudoReversoVisualJson: q.estudo_reverso_visual })
-              .where(eq(questions.id, existente.id));
-          }
+        if (!isNivelLote007Ouro(q)) {
           skipped++;
           continue;
         }
 
-        const alts = q.alternativas;
+        const topicId = await getOrCreateTopic(topics, q.disciplina, q.topico);
 
-        await db.insert(questions).values({
-          topicId,
-          enunciado: q.enunciado,
-          altA: alts.A,
-          altB: alts.B,
-          altC: alts.C,
-          altD: alts.D,
-          altE: alts.E ?? null,
-          gabarito: q.gabarito,
-          tipo: q.tipo,
-          estiloIdecan: q.estilo_idecan ?? null,
-          dificuldade: q.dificuldade,
-          comentarioJson: q.comentario,
-          estudoReversoVisualJson: q.estudo_reverso_visual ?? null,
-          tags: q.tags ?? [],
-        });
+        const existente = await questionExists(questions, topicId, q.enunciado);
 
-        total++;
+        const values = questionValuesFromSeed(topicId, q);
+
+        if (existente) {
+          await scriptDb
+            .update(questions)
+            .set(values)
+            .where(eq(questions.id, existente.id));
+          updated++;
+          continue;
+        }
+
+        await scriptDb.insert(questions).values(values);
+        inserted++;
       }
 
       console.log(`✓ ${dir.name}/${file}`);
     }
   }
 
-  console.log(`\nImportadas: ${total} | Ignoradas (já existem): ${skipped} | Erros: ${errors}`);
+  console.log(
+    `\nInseridas: ${inserted} | Atualizadas (upsert): ${updated} | Ignoradas (abaixo lote-007): ${skipped} | Erros: ${errors}`,
+  );
+  await closeScriptDb();
 }
 
-main().catch((err) => {
+main().catch(async (err) => {
   console.error(err);
+  await closeScriptDb().catch(() => undefined);
   process.exit(1);
 });

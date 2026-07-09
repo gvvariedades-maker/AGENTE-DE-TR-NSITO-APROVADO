@@ -22,7 +22,7 @@
 
 ## Pontuação por questão (0–100)
 
-Cada critério vale **0** (falha), **1** (parcial) ou **2** (aprovado). Soma máxima = **20 critérios × 2 = 40 pontos** → normalizar para **0–100** (× 2,5).
+Cada critério vale **0** (falha), **1** (parcial) ou **2** (aprovado). Soma máxima = **21 critérios × 2 = 42 pontos** → normalizar para **0–100** (`(soma / 42) × 100`).
 
 ### A. Superfície (4 critérios)
 
@@ -55,7 +55,7 @@ Cada critério vale **0** (falha), **1** (parcial) ou **2** (aprovado). Soma má
 | B3 | Comando explícito quando a disciplina exige (≥50% no lote para gerais; trânsito pode ser caso direto ~40%) | Comando errado | Comando ok, redação fraca | Comando IDECAN autêntico |
 | B4 | Em INCORRETA: alternativas exigem negação mental item a item | Gabarito trivial | 2 distratoras fracas | 4 itens críveis |
 
-### C. Distrator (4 critérios)
+### C. Distrator (5 critérios)
 
 | ID | Critério | 0 | 1 | 2 |
 |----|----------|---|---|---|
@@ -63,6 +63,7 @@ Cada critério vale **0** (falha), **1** (parcial) ou **2** (aprovado). Soma má
 | C2 | Pegadinha é uma das do corpus (pode/deve, competência, gravidade, exceção, prazo…) | Pegadinha inventada/óbvia | Pegadinha ok, mal aplicada | Pegadinha típica IDECAN |
 | C3 | `comentario.pegadinha` descreve armadilha real do item | Vazio ou genérico | Parcial | Preciso |
 | C4 | `passo_a_passo` refuta cada alternativa errada | Só explica a certa | Refuta 1–2 | Refuta A, B, C e D |
+| C5 | Passo 2 nomeia slug de mecanismo por distrator (`numero_vizinho`, `competencia_snt`, `gravidade`, `regra_excecao`, `termo_unico`) | Ausente ou genérico | 1–2 slugs | Todos os errados com slug |
 
 ### D. Cognição (4 critérios)
 

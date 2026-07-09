@@ -2,8 +2,10 @@ import Link from "next/link";
 import {
   montarSessaoEstudo,
   previewSessaoEstudo,
-  type ModoSessaoEstudo,
+  parseModoSessao,
+  labelModoSessao,
 } from "@/lib/estudo-reverso";
+import { iniciarSessaoEstudo } from "@/lib/study-sessions";
 import { QUESTAO_DEMO } from "@/lib/questoes";
 import { createClient } from "@/lib/supabase/server";
 import { QuestaoView } from "@/components/estudo/questao-view";
@@ -16,7 +18,7 @@ import {
   DISCIPLINA_LABELS,
   type Disciplina,
 } from "@/types";
-import { labelTopicoCTB } from "@/lib/ctb-topicos";
+import { getEditalTopic, labelTopicoEdital } from "@/lib/edital-topicos";
 import { Badge } from "@/components/ui/badge";
 
 export const dynamic = "force-dynamic";
@@ -36,10 +38,6 @@ function parseTopico(raw?: string): string | undefined {
   return decodeURIComponent(raw.trim());
 }
 
-function parseModoSessao(raw?: string): ModoSessaoEstudo {
-  return raw === "erros" ? "erros" : "normal";
-}
-
 export default async function EstudoPage({
   searchParams,
 }: {
@@ -54,7 +52,7 @@ export default async function EstudoPage({
   const modo = parseModoSessao(modoRaw);
   const disciplina =
     parseDisciplina(disciplinaRaw) ??
-    (topico ? "legislacao_transito" : undefined);
+    getEditalTopic(topico ?? "")?.disciplina;
 
   const supabase = await createClient();
   const {
@@ -78,8 +76,19 @@ export default async function EstudoPage({
     ),
   ]);
 
+  const sessionId =
+    user && questoesDb.length > 0
+      ? await iniciarSessaoEstudo({
+          userId: user.id,
+          modo,
+          disciplina,
+          topicoSlug: topico,
+          plannedCount: questoesDb.length,
+        })
+      : undefined;
+
   const podeDemo =
-    modo === "normal" &&
+    (modo === "auto" || modo === "normal") &&
     (!topico ||
       topico === DEMO_TOPICO ||
       !disciplina ||
@@ -99,15 +108,21 @@ export default async function EstudoPage({
     (!disciplina || disciplina === "legislacao_transito");
 
   const tituloFiltro = topico
-    ? labelTopicoCTB(topico)
+    ? labelTopicoEdital(topico)
     : disciplina
       ? DISCIPLINA_LABELS[disciplina]
       : null;
+
+  const badgeEscopo =
+    topico && disciplina
+      ? `${DISCIPLINA_LABELS[disciplina]} · ${tituloFiltro}`
+      : tituloFiltro;
 
   const sessaoErrosVazia =
     modo === "erros" && user && questoesDb.length === 0 && !isDemo;
 
   const emSessao = questoes.length > 0 && !sessaoErrosVazia;
+  const modoLabel = labelModoSessao(modo);
 
   return (
     <div className="flex flex-1 flex-col">
@@ -117,14 +132,11 @@ export default async function EstudoPage({
           data-foco-hide
         >
           <Badge variant="secondary" className="text-xs">
-            {topico ? `CTB · ${tituloFiltro}` : tituloFiltro}
+            {badgeEscopo}
           </Badge>
-          {modo === "erros" && (
-            <Badge
-              variant="outline"
-              className="text-xs border-semaforo-vermelho/40 text-semaforo-vermelho"
-            >
-              Só erros
+          {modo !== "auto" && (
+            <Badge variant="outline" className="text-xs">
+              {modoLabel}
             </Badge>
           )}
         </div>
@@ -137,13 +149,13 @@ export default async function EstudoPage({
       {user &&
         questoesDb.length > 0 &&
         !isDemo &&
-        modo === "normal" &&
+        modo !== "erros" &&
         !emSessao && (
         <Alert className="mx-4 mt-4 max-w-3xl self-center" data-foco-hide>
-          <AlertTitle>Sessão com estudo reverso ativo</AlertTitle>
+          <AlertTitle>Sessão {modoLabel}</AlertTitle>
           <AlertDescription>
-            Revisões SRS vencidas entram primeiro. Ao errar, questões irmãs são
-            intercaladas na sessão e o próximo intervalo é calculado pelo FSRS.
+            Revisões SRS vencidas entram primeiro. O motor ATA prioriza lacunas,
+            risco de eliminação e peso do edital.
             {topico && (
               <>
                 {" "}
@@ -178,9 +190,9 @@ export default async function EstudoPage({
               : ""}
           </p>
           <div className="flex flex-wrap justify-center gap-2">
-            {topico && (
+            {topico && disciplina && (
               <Link
-                href={`/estudo?topico=${encodeURIComponent(topico)}`}
+                href={`/estudo?disciplina=${disciplina}&topico=${encodeURIComponent(topico)}`}
                 className={cn(buttonVariants())}
               >
                 Estudar {tituloFiltro}
@@ -197,20 +209,42 @@ export default async function EstudoPage({
       ) : questoes.length === 0 ? (
         <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8 text-center">
           <p className="text-muted-foreground">
-            Ainda não há questões
             {topico
-              ? ` de "${tituloFiltro}"`
-              : disciplina
-                ? ` de ${DISCIPLINA_LABELS[disciplina]}`
-                : " neste filtro"}{" "}
-            no banco.
+              ? `O microtópico "${tituloFiltro}" está mapeado no edital, mas ainda não há questões no banco.`
+              : `Ainda não há questões de ${disciplina ? DISCIPLINA_LABELS[disciplina] : "este filtro"} no banco.`}
           </p>
-          <Link href="/estudo" className={cn(buttonVariants())}>
-            Estudar CTB (demonstração)
-          </Link>
+          <div className="flex flex-wrap justify-center gap-2">
+            {disciplina && (
+              <Link
+                href={`/estudo/catalogo?disciplina=${disciplina}`}
+                className={cn(buttonVariants())}
+              >
+                Escolher outro microtópico
+              </Link>
+            )}
+            {disciplina && (
+              <Link
+                href={`/estudo?disciplina=${disciplina}&modo=auto`}
+                className={cn(buttonVariants({ variant: "outline" }))}
+              >
+                Estudar disciplina inteira
+              </Link>
+            )}
+            {!disciplina && (
+              <Link href="/estudo" className={cn(buttonVariants())}>
+                Estudar CTB (demonstração)
+              </Link>
+            )}
+          </div>
         </div>
       ) : (
-        <QuestaoView questoes={questoes} modo="estudo" isDemo={isDemo} />
+        <QuestaoView
+          questoes={questoes}
+          modo="estudo"
+          isDemo={isDemo}
+          sessionId={sessionId}
+          catalogoDisciplina={disciplina}
+        />
       )}
 
       {!emSessao && (

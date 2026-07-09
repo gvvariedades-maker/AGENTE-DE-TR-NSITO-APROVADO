@@ -1,0 +1,307 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_infracoes",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 5,
+    "fundamento_slug": "CTB_art_220_VIII",
+    "enunciado": "Durante temporal com chuva forte e baixa visibilidade, agente da STTP em Campina Grande autua condutor que trafega a 52 km/h em via urbana cuja velocidade máxima regulamentada é 60 km/h, sem reduzir a velocidade de forma compatível com a segurança do trânsito, embora não ultrapasse o limite da placa. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA quanto à infração:",
+    "alternativas": {
+      "A": "Não há infração, pois o condutor respeitou o limite máximo de 60 km/h e o art. 220 só se aplica quando há excesso de velocidade previsto no art. 218.",
+      "B": "Configura infração gravíssima, nos termos do art. 220, XIV, por ocorrer em via urbana com intenso movimento de pedestres.",
+      "C": "Configura infração grave por deixar de reduzir a velocidade sob chuva, conforme o art. 220, VIII, do CTB, independentemente de ultrapassar o limite da via.",
+      "D": "Configura infração média, pois a velocidade praticada permanece abaixo do limite regulamentado e a penalidade seria proporcional ao excesso."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Art. 220 — dever de reduzir velocidade em condições adversas (inciso VIII) e gravidade distinta dos incisos I, XIII e XIV.",
+      "fundamento_legal": "CTB, art. 220: deixar de reduzir a velocidade do veículo de forma compatível com a segurança do trânsito. Inciso VIII: sob chuva, neblina, cerração ou ventos fortes — infração grave (incisos II a XII). Incisos I, XIII e XIV: gravíssima. O art. 218 pune excesso acima do limite; o art. 220 exige redução compatível com a segurança mesmo dentro do limite.",
+      "passo_a_passo": [
+        "1. Caso: chuva forte + baixa visibilidade, 52 km/h em limite 60, sem reduzir velocidade compatível — hipótese do art. 220, VIII.",
+        "2. A erra por regra_excecao (confunde art. 220 com art. 218 — dentro do limite não dispensa reduzir em chuva); B erra por gravidade (aplica XIV gravíssima sem fato de escola/hospital); D erra por termo_unico (inventa infração média proporcional ao limite — VIII é grave).",
+        "3. C correta: art. 220, VIII — infração grave; não exige ultrapassar a velocidade máxima."
+      ],
+      "pegadinha": "A IDECAN induz a crer que respeitar o limite da placa afasta o art. 220 — mas a norma exige reduzir a velocidade compatível com a segurança em chuva, independentemente do art. 218.",
+      "macete": "Art. 220 ≠ art. 218 · chuva (VIII) = GRAVE · escola/cortejo/ciclista = GRAVÍSSIMA.",
+      "estudo_reverso": [
+        "CTB art. 220",
+        "CTB art. 220, VIII",
+        "CTB art. 218",
+        "CTB art. 219"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 80,
+      "fundamento_slug": "CTB_art_220_VIII",
+      "macete_visual": "Chuva (VIII) = GRAVE · não confunde com 218",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "52 km/h em limite 60, com chuva forte, sem reduzir. A banca troca art. 220 por art. 218.\n\nGabarito C: art. 220, VIII — grave. Não precisa ultrapassar o limite.",
+            "destaques": ["art. 220", "chuva", "GRAVE"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Gravidade no art. 220",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Incisos", "Natureza"],
+            "linhas": [
+              { "faixa": "I, XIII, XIV", "classificacao": "Gravíssima" },
+              { "faixa": "II a XII (incl. VIII chuva)", "classificacao": "Grave", "destaque": true }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha: limite × segurança",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Confusão ✗", "Regra ✓"],
+            "linhas": [
+              ["Dentro do limite = sem infração", "Art. 220 exige reduzir em chuva"],
+              ["Chuva = gravíssima", "VIII é grave (II a XII)"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Art. 220 ≠ art. 218.\nChuva (VIII) = GRAVE.\nEscola/cortejo/ciclista = GRAVÍSSIMA.",
+            "destaques": ["220", "VIII", "GRAVE"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 220",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CTB_art_220_VIII",
+      "macete_visual": "Chuva (VIII) = GRAVE · 220 ≠ 218",
+      "meta": {
+        "padrao_familia": "D_gradacao",
+        "pegadinha_em_uma_frase": "Dentro do limite não dispensa reduzir em chuva — art. 220, VIII é grave, não gravíssima",
+        "eixos_legais": ["CTB_art_220_VIII", "CTB_art_218"],
+        "isca_por_alternativa": {
+          "A": "só pune se ultrapassar o limite — confunde 220 com 218",
+          "B": "aplica XIV gravíssima sem fato de escola ou hospital",
+          "D": "inventa infração média por estar abaixo do limite"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: limite respeitado ≠ art. 220 cumprido",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — achou que 52 em limite 60 afasta o art. 220: a norma exige reduzir em chuva, sem depender do art. 218.\nB — aplicou XIV (escola/hospital): o fato é chuva — inciso VIII.\nD — inventou infração média: VIII é grave.\n\n52 km/h com temporal e baixa visibilidade, sem reduzir compatível.",
+            "destaques": ["Gabarito C", "art. 220", "chuva"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 distinções",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ART. 218: pune EXCESSO acima da velocidade máxima da via (faixas percentuais).\n\nART. 220: pune FALTA de reduzir velocidade compatível com a segurança em situações do caput.\n\nREDUZIR COMPATÍVEL: pode exigir ir abaixo do limite da placa — ex.: chuva forte (inciso VIII).",
+            "destaques": ["ART. 218", "ART. 220", "REDUZIR"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Gravidade no art. 220",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Incisos do art. 220", "Natureza"],
+            "linhas": [
+              {
+                "faixa": "I — passeatas, aglomerações",
+                "classificacao": "Gravíssima"
+              },
+              {
+                "faixa": "II a XII — chuva, curva, cruzamento…",
+                "classificacao": "Grave",
+                "destaque": true
+              },
+              {
+                "faixa": "XIII — ultrapassar ciclista",
+                "classificacao": "Gravíssima"
+              },
+              {
+                "faixa": "XIV — escolas, hospitais",
+                "classificacao": "Gravíssima"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual artigo e qual gravidade?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Condição adversa exige reduzir velocidade?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Condutor reduziu compatível com segurança?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Infração grave — inciso VIII",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: limite da placa × segurança",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Dentro do limite = sem infração de velocidade",
+                "Art. 220 exige reduzir em chuva — independente do art. 218"
+              ],
+              [
+                "Qualquer hipótese do art. 220 é gravíssima",
+                "VIII (chuva) está no bloco II–XII — infração grave"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Confunde art. 220 com art. 218 — dentro do limite não dispensa reduzir em chuva"
+              ],
+              [
+                "B — gravidade",
+                "Aplica XIV gravíssima sem fato de escola, hospital ou intenso fluxo de pedestres"
+              ],
+              [
+                "D — termo_unico",
+                "Inventa infração média — inciso VIII é grave, não média"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado — Campina Grande",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Conclusão legal"],
+            "linhas": [
+              ["Temporal, chuva forte e baixa visibilidade", "Inciso VIII do art. 220"],
+              ["52 km/h em limite 60, sem reduzir", "Não compatível com segurança"],
+              ["Não ultrapassou o limite da placa", "Art. 218 não é o eixo — art. 220 sim"],
+              ["Resultado", "Gabarito C — infração grave"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 218 × 219 × 220",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Artigo", "O que pune"],
+            "linhas": [
+              ["Art. 218", "Excesso acima da velocidade máxima (faixas %)"],
+              ["Art. 219", "Velocidade muito abaixo da metade, obstruindo trânsito"],
+              ["Art. 220", "Não reduzir velocidade compatível com segurança"],
+              ["Caso (chuva, 52/60)", "Art. 220, VIII — grave"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 220, VIII — chuva",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 220, VIII",
+            "texto": "Deixar de reduzir a velocidade do veículo de forma compatível com a segurança do trânsito: VIII - sob chuva, neblina, cerração ou ventos fortes. Infração - grave.",
+            "trechos_grifados": [
+              {
+                "inicio": 98,
+                "fim": 143,
+                "motivo": "gradacao — inciso VIII (chuva) no bloco grave"
+              },
+              {
+                "inicio": 145,
+                "fim": 161,
+                "motivo": "contraste — não é gravíssima nem média"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Art. 220 ≠ art. 218 · chuva (VIII) = GRAVE · escola/cortejo/ciclista = GRAVÍSSIMA.\n\nNear-transfer: mesmo condutor a 58 km/h em limite 60 passando em frente a escola durante chuva — dois incisos (VIII grave + XIV gravíssima); autuações distintas, não absorve a mais grave.",
+            "destaques": ["VIII", "XIV", "não absorve"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 220",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "tags": [
+      "infracoes",
+      "velocidade",
+      "art_220",
+      "chuva",
+      "gravidade"
+    ]
+  }
+]

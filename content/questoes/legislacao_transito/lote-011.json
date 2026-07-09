@@ -1,0 +1,262 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_900_recursos",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 4,
+    "enunciado": "Carlos, proprietário de veículo licenciado em Campina Grande/PB e residente no município, recebe duas notificações de autuação da STTP referentes a AITs distintos — por estacionamento irregular e por excesso de velocidade — lavrados no mesmo dia. Dentro do prazo legal, encaminha à STTP, por via postal, um único requerimento de defesa prévia impugnando os dois AITs no mesmo documento, com assinatura, procuração e demais dados exigidos pelo art. 3º da Resolução CONTRAN nº 900/2022. Considerando a resolução e o CTB, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A defesa prévia será conhecida, pois é admissível cumular no mesmo requerimento infrações lavradas no mesmo dia e contra o mesmo veículo, desde que cada AIT esteja identificado no documento.",
+      "B": "A defesa prévia não será conhecida, pois o requerimento deve ter somente um AIT como objeto, conforme o parágrafo único do art. 3º da Resolução CONTRAN nº 900/2022, ainda que os demais requisitos formais estejam atendidos.",
+      "C": "A defesa prévia não será conhecida por ausência de cópia da notificação de autuação emitida pela STTP, documento indispensável para admissibilidade em qualquer fase do processo.",
+      "D": "A defesa prévia somente não será conhecida se apresentada fora do prazo legal; a cumulação de AITs no mesmo requerimento é válida quando encaminhada por via postal ao órgão autuador."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Admissibilidade de defesa prévia — limite de um AIT por requerimento (Res. CONTRAN 900/2022, art. 3º, parágrafo único) e causas de não conhecimento (art. 4º), à luz do art. 287 do CTB.",
+      "fundamento_legal": "Res. CONTRAN 900/2022, art. 3º, parágrafo único: o requerimento de defesa prévia ou recurso deverá ter somente um AIT como objeto. Art. 4º: a defesa prévia ou recurso não serão conhecidos quando, entre outras hipóteses, o pedido for incompatível com a situação fática. Art. 5º, parágrafo único: para admissibilidade, não serão exigidos documentos emitidos pelo órgão autuador. CTB, art. 287: infração em localidade diversa do licenciamento permite apresentação junto ao órgão do domicílio do infrator.",
+      "passo_a_passo": [
+        "1. O caso traz um requerimento formalmente completo (art. 3º), mas com dois AITs distintos no mesmo documento, enviado por via postal à STTP dentro do prazo.",
+        "2. A erra por regra_excecao (inventa exceção de cumulação por mesmo dia/veículo — o parágrafo único do art. 3º veda expressamente mais de um AIT); C erra por termo_unico (exige cópia da notificação como indispensável — o art. 5º, parágrafo único dispensa documentos emitidos pelo autuador para admissibilidade); D erra por regra_excecao (reduz o não conhecimento ao prazo, ignorando o art. 3º, parágrafo único).",
+        "3. B correta: dois AITs no mesmo requerimento violam o parágrafo único do art. 3º — a defesa não será conhecida mesmo com assinatura, procuração e envio postal tempestivo ao autuador."
+      ],
+      "pegadinha": "A IDECAN induz a validar o requerimento porque está completo e tempestivo — mas o art. 3º, parágrafo único é regra absoluta: 1 defesa = 1 AIT, sem exceção por mesmo dia ou mesmo veículo.",
+      "macete": "1 DEFESA = 1 AIT · cumulação formal = não conhecida · autuador não precisa fornecer cópias (art. 5º, §único).",
+      "estudo_reverso": [
+        "Res. CONTRAN 900/2022 art. 3",
+        "Res. CONTRAN 900/2022 art. 4",
+        "Res. CONTRAN 900/2022 art. 5",
+        "Res. CONTRAN 900/2022 art. 6",
+        "CTB art. 287"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 90,
+      "fundamento_slug": "CONTRAN_900_art_3",
+      "macete_visual": "1 DEFESA = 1 AIT · completo ≠ conhecido",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Dois AITs no mesmo requerimento — completo e no prazo. A banca troca FORMALIDADE OK por OBJETO ÚNICO.\n\nGabarito B: art. 3º, parágrafo único da Res. 900/2022 — somente um AIT.",
+            "destaques": ["1 AIT", "não conhecida", "parágrafo único"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Admissibilidade da defesa prévia",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Requerimento tem somente 1 AIT?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Segue análise de prazo e legitimidade", "tipo": "resultado" },
+              { "id": "r2", "label": "Não conhecida — art. 3º, parágrafo único", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim" },
+              { "de": "p1", "para": "r2", "rotulo": "Não — 2+ AITs" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Completo × objeto único",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença errada ✗", "Lei ✓"],
+            "linhas": [
+              ["Mesmo dia = pode cumular AITs", "Parágrafo único do art. 3º: somente um AIT"],
+              ["Falta cópia da notificação bloqueia", "Art. 5º, §único: dispensa docs do autuador"],
+              ["Só prazo gera não conhecimento", "Art. 4º lista outras causas"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "1 DEFESA = 1 AIT — sem exceção por mesmo dia ou veículo.\nRequerimento completo com 2 AITs = não conhecida.\nPara admissibilidade, autuador não precisa fornecer cópias.",
+            "destaques": ["1 AIT", "não conhecida", "admissibilidade"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 900/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 900, DE 9 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 260,
+      "fundamento_slug": "CONTRAN_900_art_3",
+      "macete_visual": "1 DEFESA = 1 AIT · completo ≠ conhecido",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: requerimento completo pode ser rejeitado",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B. Se marcou A ou D, validou a cumulação de AITs por estar no prazo.\n\nNa Res. 900/2022, 1 requerimento = 1 AIT — regra do parágrafo único do art. 3º. Assinatura, procuração e envio postal não salvam objeto múltiplo.",
+            "destaques": ["Gabarito B", "1 AIT", "parágrafo único"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos da questão",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DEFESA PRÉVIA: manifestação do interessado antes da aplicação da penalidade — padronizada pela Res. 900/2022.\n\nNÃO CONHECIDA: o órgão não analisa o mérito por vício formal (art. 4º) — distinto de indeferida.\n\nAIT: Auto de Infração de Trânsito — cada um exige requerimento próprio (art. 3º, parágrafo único).",
+            "destaques": ["DEFESA PRÉVIA", "NÃO CONHECIDA", "AIT"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: a defesa será conhecida?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Só 1 AIT no requerimento?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Defesa não conhecida — gabarito B", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Não — 2 AITs" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Causas de não conhecimento (art. 4º)",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Hipótese", "Consequência"],
+            "linhas": [
+              { "faixa": "Mais de 1 AIT no requerimento", "classificacao": "Não conhecida — art. 3º, parágrafo único", "destaque": true },
+              { "faixa": "Fora do prazo legal", "classificacao": "Não conhecida — art. 4º, I" },
+              { "faixa": "Sem assinatura do requerente", "classificacao": "Não conhecida — art. 4º, III" },
+              { "faixa": "Pedido incompatível com os fatos", "classificacao": "Não conhecida — art. 4º, IV" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: completo × um AIT só",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              ["Mesmo dia permite cumular AITs", "Parágrafo único do art. 3º: somente um AIT"],
+              ["Falta cópia da notificação bloqueia", "Art. 5º, §único: dispensa docs do autuador"],
+              ["Via postal ao autuador resolve tudo", "Forma de envio não corrige objeto múltiplo"]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + letra da lei"],
+            "linhas": [
+              ["A — regra_excecao", "Inventa exceção de cumulação — art. 3º, parágrafo único veda"],
+              ["C — termo_unico", "Exige cópia da notificação — art. 5º, §único dispensa docs do autuador"],
+              ["D — regra_excecao", "Reduz não conhecimento ao prazo — ignora art. 3º, parágrafo único"]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento do caso", "Efeito legal"],
+            "linhas": [
+              ["Dois AITs no mesmo requerimento", "Viola art. 3º, parágrafo único — não conhecida"],
+              ["Assinatura + procuração + dados do art. 3º", "Corretos, mas não superam objeto múltiplo"],
+              ["Envio postal tempestivo à STTP", "Forma válida (art. 6º), mas objeto irregular"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Onde protocolar × quantos AITs",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Regra", "O que resolve"],
+            "linhas": [
+              ["Art. 6º — postal ao autuador", "FORMA e tempestividade do envio"],
+              ["CTB art. 287 — domicílio do infrator", "LOCAL alternativo de protocolo"],
+              ["Art. 3º, parágrafo único — 1 AIT", "OBJETO do requerimento — independente da forma"],
+              ["Art. 6º, §3º — remessa ao autuador", "Defesa no domicílio deve ser encaminhada ao autuador"]
+            ]
+          }
+        },
+        {
+          "id": "lei3",
+          "titulo": "Res. 900/2022, art. 3º, parágrafo único",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 900/2022, art. 3º, parágrafo único",
+            "texto": "Parágrafo único. O requerimento de defesa prévia ou recurso deverá ter somente um AIT como objeto.",
+            "trechos_grifados": [
+              { "inicio": 71, "fim": 97, "motivo": "somente um AIT — veda cumulação do caso" }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Res. 900/2022, art. 5º, parágrafo único",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 900/2022, art. 5º, parágrafo único",
+            "texto": "Na apresentação de defesa ou recurso, em qualquer fase do processo, para efeitos de admissibilidade, não serão exigidos documentos ou cópia de documentos emitidos pelo órgão responsável pela autuação.",
+            "trechos_grifados": [
+              { "inicio": 101, "fim": 199, "motivo": "dispensa cópias do autuador — refuta distrator C" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "1 DEFESA = 1 AIT — parágrafo único do art. 3º, sem exceção.\nCompleto e no prazo não salvam objeto múltiplo.\nAutuador não precisa fornecer cópias para admissibilidade (art. 5º, §único).\n\nMesma lógica cai em recurso JARI/CETRAN e no art. 287 do CTB (onde protocolar).",
+            "destaques": ["1 AIT", "admissibilidade", "art. 287"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 900/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 900, DE 9 DE MARÇO DE 2022.pdf"
+        },
+        {
+          "rotulo": "CTB art. 287",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "tags": ["defesa_previa", "resolucao_900", "recursos", "ait", "nao_conhecida"]
+  }
+]

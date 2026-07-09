@@ -1,0 +1,212 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_circulacao_conduta",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 4,
+    "enunciado": "Em uma via urbana de Campina Grande/PB, num cruzamento desprovido de qualquer sinalização de regulamentação, o agente de trânsito da STTP observa a aproximação simultânea de dois veículos em fluxos que se cruzam: um automóvel, que trafega por um trecho de rodovia que corta o perímetro urbano, e uma motocicleta, que se aproxima pela direita do condutor do automóvel, por uma via local. No instante seguinte, no mesmo ponto, um caminhão e um ciclista disputam o espaço da via. Considerando as normas gerais de circulação e conduta previstas no Código de Trânsito Brasileiro, assinale a alternativa correta.",
+    "alternativas": {
+      "A": "A motocicleta tem preferência de passagem sobre o automóvel, por se aproximar pela direita do condutor deste, regra que prevalece sempre que os fluxos se cruzam em local não sinalizado.",
+      "B": "Como o cruzamento não possui sinalização, nenhum dos veículos tem preferência assegurada, devendo todos os condutores parar e negociar a passagem entre si antes de prosseguir.",
+      "C": "O automóvel tem preferência de passagem, por estar circulando pela rodovia; e, na interação entre o caminhão e o ciclista, o condutor do caminhão é o responsável pela segurança do ciclista.",
+      "D": "O ciclista, por ser o usuário mais vulnerável, responde pela sua própria segurança e tem preferência sobre o caminhão, enquanto entre automóvel e motocicleta prevalece quem vier pela direita."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Normas gerais de circulação e conduta — ordem de preferência em cruzamento não sinalizado (art. 29, III) e hierarquia de responsabilidade (art. 29, §2º).",
+      "fundamento_legal": "CTB, art. 29, III: em local não sinalizado, tem preferência quem circula por rodovia (a), depois por rotatória (b) e, nos demais casos, o que vier pela direita (c). Art. 29, §2º: os veículos de maior porte são sempre responsáveis pela segurança dos menores, os motorizados pelos não motorizados e, juntos, pela incolumidade dos pedestres.",
+      "passo_a_passo": [
+        "1. O caso traz dois conflitos: preferência no cruzamento (automóvel x motocicleta) e responsabilidade (caminhão x ciclista).",
+        "2. A erra por regra_excecao (aplica a regra da direita do art. 29, III, c, que só vale nos demais casos, ignorando a preferência da rodovia na alínea a); B erra por regra_excecao (não sinalização não anula a ordem legal de preferência do inciso III); D erra por termo_unico (inverte o art. 29, §2º, atribuindo ao ciclista a responsabilidade que é do veículo motorizado de maior porte).",
+        "3. C correta: aplica corretamente a alínea a do inciso III (rodovia tem preferência) e o §2º (o caminhão, maior porte e motorizado, responde pela segurança do ciclista)."
+      ],
+      "pegadinha": "A IDECAN induz a saltar direto para quem vem pela direita (art. 29, III, c) — mas essa é a última regra, só aplicável quando não há rodovia nem rotatória no cruzamento.",
+      "macete": "Preferência em cruzamento sem placa: RO-RO-DI → ROdovia > ROtatória > DIreita. Responsabilidade: o MAIOR cuida do menor.",
+      "estudo_reverso": [
+        "CTB art. 29, III",
+        "CTB art. 29, §2º",
+        "CTB art. 44"
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 260,
+      "fundamento_slug": "CTB_art_29_III",
+      "macete_visual": "RO-RO-DI · o MAIOR cuida do menor",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: preferência não é sempre a direita",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C. Se marcou A, caiu na isca clássica: você aplicou quem vem pela direita antes da hora.\n\nEm cruzamento sem sinalização o CTB tem uma ORDEM: rodovia, depois rotatória e só então a direita. Nesta aula você fixa essa ordem e a hierarquia de quem cuida de quem.",
+            "destaques": ["Gabarito C", "ORDEM", "rodovia"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos da questão",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "FLUXOS QUE SE CRUZAM: correntes de veículos que se encontram no cruzamento.\n\nLOCAL NÃO SINALIZADO: sem placa ou semáforo de regulamentação da preferência.\n\nMAIOR PORTE: caminhão > automóvel > motocicleta > bicicleta — base da hierarquia do §2º.",
+            "destaques": ["FLUXOS QUE SE CRUZAM", "NÃO SINALIZADO", "MAIOR PORTE"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: quem passa primeiro?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Um fluxo vem de rodovia no cruzamento?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Caminhão responde pela segurança do ciclista?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito C — rodovia tem preferência", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Ordem de preferência (art. 29, III)",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Prioridade", "Quem tem preferência"],
+            "linhas": [
+              {
+                "faixa": "1º — alínea a",
+                "classificacao": "Quem circula pela RODOVIA",
+                "destaque": true
+              },
+              {
+                "faixa": "2º — alínea b",
+                "classificacao": "Quem circula pela ROTATÓRIA"
+              },
+              {
+                "faixa": "3º — alínea c",
+                "classificacao": "Nos demais casos, o que vier pela DIREITA"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: pela direita × rodovia",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              ["Quem vem pela direita sempre passa", "Direita só vale nos demais casos (alínea c)"],
+              ["A ordem das alíneas é indiferente", "a) rodovia vence b) rotatória vence c) direita"],
+              ["Sem placa, ninguém tem preferência", "A preferência é definida pelo inciso III"]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + letra da lei"],
+            "linhas": [
+              ["A — regra_excecao", "Usa direita (III, c), mas há rodovia → vale a alínea a"],
+              ["B — regra_excecao", "Falta de placa não anula a ordem do inciso III"],
+              ["D — termo_unico", "Inverte o §2º: o maior/motorizado cuida do menor"]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Conflito no cruzamento", "Solução legal"],
+            "linhas": [
+              ["Automóvel (rodovia) × motocicleta (direita)", "Automóvel passa — rodovia é a alínea a"],
+              ["Caminhão × ciclista", "Caminhão responde pela segurança do ciclista (§2º)"],
+              ["Resultado", "Gabarito C reúne as duas regras corretas"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 29, §2º — quem cuida de quem",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Par de usuários", "Quem responde pela segurança"],
+            "linhas": [
+              ["Caminhão × automóvel", "Caminhão (maior porte)"],
+              ["Automóvel × motocicleta", "Automóvel (maior porte)"],
+              ["Caminhão × ciclista", "Caminhão (motorizado + maior porte)"],
+              ["Todos × pedestre", "Juntos, pela incolumidade do pedestre"]
+            ]
+          }
+        },
+        {
+          "id": "lei3",
+          "titulo": "Art. 29, III — ordem de preferência",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 29, III",
+            "texto": "Quando veículos, transitando por fluxos que se cruzem, se aproximarem de local não sinalizado, terá preferência de passagem: a) no caso de apenas um fluxo ser proveniente de rodovia, aquele que estiver circulando por ela; b) no caso de rotatória, aquele que estiver circulando por ela; c) nos demais casos, o que vier pela direita do condutor.",
+            "trechos_grifados": [
+              { "inicio": 159, "fim": 181, "motivo": "rodovia — 1ª preferência (alínea a)" },
+              { "inicio": 289, "fim": 342, "motivo": "nos demais casos — direita é a última regra (alínea c)" }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 29, §2º — dispositivo da responsabilidade",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 29, §2º",
+            "texto": "Respeitadas as normas de circulação e conduta estabelecidas neste artigo, em ordem decrescente, os veículos de maior porte serão sempre responsáveis pela segurança dos menores, os motorizados pelos não motorizados e, juntos, pela incolumidade dos pedestres.",
+            "trechos_grifados": [
+              { "inicio": 96, "fim": 175, "motivo": "maior porte responsável pelos menores" },
+              { "inicio": 177, "fim": 213, "motivo": "motorizados pelos não motorizados — caminhão cuida do ciclista" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "RO-RO-DI: ROdovia > ROtatória > DIreita — nessa ordem, sempre.\n\nHierarquia do §2º: o MAIOR cuida do menor; o motorizado cuida do não motorizado; todos cuidam do pedestre.\n\nMesma lógica cai em ultrapassagem (art. 29, IX-XI) e cruzamentos (art. 44).",
+            "destaques": ["RO-RO-DI", "o MAIOR cuida do menor", "pedestre"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 29",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "tags": [
+      "normas_circulacao",
+      "art29",
+      "preferencia_passagem",
+      "cruzamento",
+      "caso_pratico"
+    ]
+  }
+]

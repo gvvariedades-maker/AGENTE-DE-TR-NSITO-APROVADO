@@ -1,0 +1,221 @@
+{
+  "versao": 2,
+  "arquetipo": "tabela_gradacao",
+  "arquetipo_secundario": "fluxograma_decisao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 165,
+  "fundamento_slug": "info_extensoes_arquivo",
+  "macete_visual": "xlsx=eXcel | docx=documento | pptx=apresentação",
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "O que a IDECAN testou",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Relatório de autuações da STTP chegou como .xlsx no e-mail. A banca quer o par extensão → programa — sem confundir Excel, Word e PowerPoint.",
+        "destaques": [
+          ".xlsx",
+          "STTP"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Antes de memorizar: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Extensão = sufixo após o ponto (ex.: .xlsx). Formato nativo = criado pelo programa original (Excel gera .xlsx). Pacote Office = Word, Excel e PowerPoint — um sufixo para cada.",
+        "destaques": [
+          "Extensão",
+          "Formato nativo",
+          "Pacote Office"
+        ]
+      }
+    },
+    {
+      "id": "tabela",
+      "titulo": "Mapa Office — decore os pares",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Extensão",
+          "Programa"
+        ],
+        "linhas": [
+          {
+            "faixa": ".docx",
+            "classificacao": "Editor de texto (Word)"
+          },
+          {
+            "faixa": ".xlsx",
+            "classificacao": "Planilha eletrônica (Excel)",
+            "destaque": true
+          },
+          {
+            "faixa": ".pptx",
+            "classificacao": "Apresentação (PowerPoint)"
+          },
+          {
+            "faixa": ".pdf",
+            "classificacao": "Documento portátil (leitura)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Raciocínio desta questão",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "n1",
+            "label": "Anexo: relatório_de_autuacoes.xlsx",
+            "tipo": "acao"
+          },
+          {
+            "id": "n2",
+            "label": "Sufixo .xlsx = planilha eletrônica",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "n3",
+            "label": "Gabarito B — programa de planilha",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "n1",
+            "para": "n2"
+          },
+          {
+            "de": "n2",
+            "para": "n3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "historico",
+      "titulo": "Por que a pegadinha existe",
+      "tipo": "linha_tempo",
+      "conteudo": {
+        "eventos": [
+          {
+            "ordem": 1,
+            "rotulo": "Office clássico",
+            "descricao": ".doc, .xls e .ppt — um sufixo por programa."
+          },
+          {
+            "ordem": 2,
+            "rotulo": "Office atual",
+            "descricao": ".docx, .xlsx e .pptx — nomes parecidos, programas diferentes."
+          },
+          {
+            "ordem": 3,
+            "rotulo": "IDECAN",
+            "descricao": "Troca .xlsx por .docx ou .pptx no enunciado."
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Pegadinha típica",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Confusão",
+          "Regra"
+        ],
+        "linhas": [
+          [
+            "Todas parecem 'arquivo do Office'",
+            "Cada sufixo aponta para um programa"
+          ],
+          [
+            "Ir pelo assunto do e-mail (relatório)",
+            "Leia a extensão — ela define o programa"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Por que não"
+        ],
+        "linhas": [
+          [
+            "A — editor de texto",
+            ".docx ou .odt — não .xlsx."
+          ],
+          [
+            "C — apresentação de slides",
+            ".pptx — não planilha."
+          ],
+          [
+            "D — editor de imagens",
+            ".jpg ou .png — não .xlsx."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "O caso desta questão",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Pegadinha",
+          "Correto"
+        ],
+        "linhas": [
+          [
+            "Relatório em texto → marcar A",
+            "Tabela de autuações → .xlsx → B"
+          ],
+          [
+            "Confundir .xlsx com .pptx",
+            "xlsx = Excel; pptx = PowerPoint"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "gabarito",
+      "titulo": "Fechamento",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": ".xlsx = planilha eletrônica = alternativa B. Anexo I, item 1.2: reconhecer extensões de programas de escritório.",
+        "destaques": [
+          "B",
+          "item 1.2"
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "X de xlsx = eXcel. Doc = documento. Ppt = apresentação. Na prova: sufixo primeiro, alternativa depois.",
+        "destaques": [
+          "xlsx",
+          "sufixo"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Anexo I — Informática, item 1.2",
+      "path": "conteúdo/edital/"
+    }
+  ]
+}

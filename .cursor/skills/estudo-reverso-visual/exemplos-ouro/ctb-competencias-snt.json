@@ -1,4 +1,11 @@
 {
+  "meta": {
+    "padrao_ouro": true,
+    "padrao_familia": "C_competencia_snt",
+    "pegadinha_em_uma_frase": "Candidato atribui exclusividade à PM ou exige delegação CONTRAN",
+    "gabarito": "B",
+    "guia": ".cursor/skills/estudo-reverso-visual/exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md"
+  },
   "disciplina": "legislacao_transito",
   "topico": "CTB_snt_competencias",
   "tipo": "caso_pratico",
@@ -16,10 +23,9 @@
     "o_que_testa": "Competência do órgão executivo municipal de trânsito para autuar estacionamento irregular.",
     "fundamento_legal": "CTB, art. 24: compete aos órgãos executivos rodoviários da União, dos Estados, do DF e dos Municípios executar e fazer executar a legislação e normas de trânsito, incluindo autuação.",
     "passo_a_passo": [
-      "A) Erra: PM não tem exclusividade para estacionamento municipal.",
-      "B) Correta: órgão executivo municipal autua circulação, estacionamento e parada.",
-      "C) Erra: não exige delegação individual por agente.",
-      "D) Erra: confunde via municipal com federal."
+      "1. Via municipal + estacionamento irregular — competência do órgão executivo municipal.",
+      "2. A erra por competencia_snt (PM exclusiva); C erra por competencia_snt (delegação CONTRAN por agente); D erra por termo_unico (PRF em via municipal).",
+      "3. B correta: art. 24, VI — STTP autua circulação, estacionamento e parada."
     ],
     "pegadinha": "Atribuir exclusividade à PM ou ao CONTRAN.",
     "macete": "Via municipal + estacionamento = órgão executivo do Município (STTP).",
@@ -31,8 +37,8 @@
   },
   "estudo_reverso_visual": {
     "versao": 1,
-    "arquetipo": "comparacao",
-    "arquetipo_secundario": "trecho_legal",
+    "arquetipo": "diagrama_competencia",
+    "arquetipo_secundario": "comparacao",
     "duracao_estimada_seg": 80,
     "fundamento_slug": "CTB_art_24_VI",
     "macete_visual": "Via municipal = órgão executivo municipal autua estacionamento",
@@ -115,20 +121,6 @@
             "24, VI"
           ]
         }
-      },
-      {
-        "id": "recall",
-        "titulo": "Fixação ativa",
-        "tipo": "micro_recall",
-        "conteudo": {
-          "pergunta": "Qual inciso do art. 24 trata de autuação por estacionamento em via municipal?",
-          "resposta_esperada": "VI",
-          "aceitar_variacoes": [
-            "inciso VI",
-            "art. 24, VI",
-            "24 VI"
-          ]
-        }
       }
     ],
     "links_fonte": [
@@ -139,6 +131,150 @@
       {
         "rotulo": "CTB art. 24, VI",
         "path": "conteúdo/legislação federal/"
+      }
+    ]
+  },
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "diagrama_competencia",
+    "arquetipo_secundario": "comparacao",
+    "publico_alvo": "iniciante",
+    "duracao_estimada_seg": 200,
+    "fundamento_slug": "CTB_art_24_VI",
+    "macete_visual": "Via municipal + estacionamento = executivo municipal",
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Diagnóstico: quem autua em via municipal",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito B.\n\nA — PM exclusiva para estacionamento municipal: errado.\nC — STTP só com delegação CONTRAN por agente: errado.\nD — PRF em via municipal de Campina Grande: confunde esfera.\n\nVia municipal + estacionamento = órgão executivo do Município (STTP).",
+          "destaques": ["municipal", "STTP", "PM"]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Pré-treino: 3 órgãos do caso",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "STTP: órgão executivo de trânsito municipal de Campina Grande.\n\nPM: policiamento ostensivo — art. 23 (não exclusividade de autuação).\n\nÓRGÃO EXECUTIVO: quem fiscaliza e autua circulação, estacionamento e parada — art. 24.",
+          "destaques": ["STTP", "PM", "EXECUTIVO"]
+        }
+      },
+      {
+        "id": "diagrama",
+        "titulo": "Quem faz o quê neste caso",
+        "secao": "metodo",
+        "tipo": "diagrama_competencia",
+        "conteudo": {
+          "nos": [
+            { "id": "pm", "label": "PM — policiamento (art. 23)", "nivel": 1 },
+            {
+              "id": "sttp",
+              "label": "STTP — autua estacionamento (art. 24, VI)",
+              "nivel": 2
+            },
+            { "id": "condutor", "label": "Condutor autuado", "nivel": 2 }
+          ],
+          "arestas": [
+            { "de": "sttp", "para": "condutor", "rotulo": "auto de infração" }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Armadilha: exclusividade da PM",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+          "linhas": [
+            [
+              "Só a PM autua estacionamento municipal",
+              "Órgão executivo municipal fiscaliza e autua (art. 24, VI)"
+            ],
+            [
+              "CONTRAN delega agente por agente",
+              "Competência do órgão executivo, não delegação individual"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que cada alternativa erra",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["Alternativa", "Mecanismo + por quê"],
+          "linhas": [
+            [
+              "A — competencia_snt",
+              "Atribui exclusividade à PM — art. 24, VI é do executivo municipal"
+            ],
+            [
+              "C — competencia_snt",
+              "Exige delegação CONTRAN por agente — não é requisito do CTB"
+            ],
+            [
+              "D — termo_unico",
+              "Confunde via municipal com competência da PRF em via federal"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Fatos do enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["Elemento", "Conclusão"],
+          "linhas": [
+            ["Via municipal de Campina Grande", "Esfera municipal"],
+            ["Infração: estacionamento irregular", "Art. 24, VI — circulação/estacionamento/parada"],
+            ["Agente STTP lavra auto", "Órgão executivo municipal competente"],
+            ["Resultado", "Gabarito B"]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Art. 24, VI — competência municipal",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 24, VI",
+          "texto": "Compete aos órgãos ou entidades executivos de trânsito dos Municípios, no âmbito de sua circunscrição: VI - fiscalizar o trânsito e aplicar as penalidades de trânsito, autuando os infratores e aplicando as medidas administrativas cabíveis, excetuadas as previstas nos incisos I e II do art. 269.",
+          "trechos_grifados": [
+            {
+              "inicio": 0,
+              "fim": 80,
+              "motivo": "diagrama — órgão executivo municipal"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Macete + transferência",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Via municipal + estacionamento = STTP (art. 24, VI). PM patrulha (art. 23).\n\nNear-transfer: mesma infração em rodovia federal no perímetro urbano — competência da PRF/órgão da via, não do executivo municipal genérico.",
+          "destaques": ["municipal", "24, VI", "PRF"]
+        }
+      }
+    ],
+    "links_fonte": [
+      {
+        "rotulo": "CTB art. 23",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      },
+      {
+        "rotulo": "CTB art. 24, VI",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
       }
     ]
   },

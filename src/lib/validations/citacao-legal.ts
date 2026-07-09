@@ -126,13 +126,28 @@ function paragrafoExisteNoTexto(
   if (!match) return false;
 
   const [, num, sufixo] = match;
+
+  // Planalto: âncoras como name="art130§2" ou art130ï¿½2 (§ em latin1/mojibake)
+  const anchorRe = new RegExp(
+    `name=["']art${num}${sufixo ? `[-\u2013–]?${sufixo}` : ""}(?:[^a-z\\d"'])+${paragrafo}["']`,
+    "i",
+  );
+  if (anchorRe.test(texto)) return true;
+
   const artPattern = `Art\\.\\s*${num}${sufixo ? `[-\u2013–]?${sufixo}` : ""}`;
   const chunkRe = new RegExp(`${artPattern}[\\s\\S]{0,2500}`, "i");
   const chunk = texto.match(chunkRe)?.[0];
   if (!chunk) return true;
 
   const parRe = new RegExp(`§\\s*${paragrafo}\\s*(?:º|°)?`, "i");
-  return parRe.test(chunk);
+  if (parRe.test(chunk)) return true;
+
+  // Corpo do artigo com § corrompido no HTML do Planalto
+  const parMojibakeRe = new RegExp(
+    `(?:§|\\u00a7|ï¿½)\\s*${paragrafo}\\s*(?:º|°|ï¿½)?`,
+    "i",
+  );
+  return parMojibakeRe.test(chunk);
 }
 
 export function extrairCitacoes(texto: string): CitacaoExtraida[] {

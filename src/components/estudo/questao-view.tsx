@@ -3,12 +3,12 @@
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState, useTransition } from "react";
 import { salvarTentativa } from "@/app/actions/estudo";
+import { concluirSessaoEstudo } from "@/app/actions/study-session";
 import {
   finalizarSimulado,
   type FinalizarSimuladoResult,
 } from "@/app/actions/simulado";
 import {
-  intercalarIrmas,
   labelTipoErro,
 } from "@/lib/estudo-reverso-utils";
 import {
@@ -19,7 +19,8 @@ import {
 } from "@/lib/estado-questao";
 import { montarRespostasSimulado } from "@/lib/simulado-nota";
 import { SimuladoResultado } from "@/components/estudo/simulado-resultado";
-import { DISCIPLINA_LABELS } from "@/types";
+import { hrefEstudoCatalogo } from "@/lib/estudo-links";
+import { DISCIPLINA_LABELS, type Disciplina } from "@/types";
 import type { QuestaoUI } from "@/lib/questoes";
 import { AlternativaButton } from "@/components/estudo/alternativa-button";
 import { EnunciadoFormatado } from "@/components/estudo/enunciado-formatado";
@@ -29,8 +30,11 @@ import { SessaoBar } from "@/components/estudo/sessao-bar";
 import { FeedbackElaborado } from "@/components/estudo/feedback-elaborado";
 import { FeedbackResultado } from "@/components/estudo/feedback-resultado";
 import { EstudoReversoPlayer } from "@/components/estudo-reverso/estudo-reverso-player";
-import { EstudoReversoTrigger } from "@/components/estudo-reverso/estudo-reverso-trigger";
+import { ConfiancaFsrs } from "@/components/estudo/confianca-fsrs";
 import { registrarEstudoReverso } from "@/app/actions/estudo-reverso";
+import { escolherTrilhaEstudoReverso } from "@/lib/estudo-reverso-visual-trilha";
+import type { FsrsGrade } from "@/lib/srs";
+import type { EstudoReversoVisual } from "@/types/estudo-reverso-visual";
 import { FocusModeToggle } from "@/components/estudo/focus-mode-toggle";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -45,6 +49,9 @@ interface QuestaoViewProps {
   indiceInicial?: number;
   duracaoMinutos?: number;
   isDemo?: boolean;
+  sessionId?: string;
+  /** Disciplina para link de volta ao catálogo de microtópicos. */
+  catalogoDisciplina?: Disciplina;
 }
 
 const TECLA_PARA_LETRA: Record<string, string> = {
@@ -76,6 +83,8 @@ export function QuestaoView({
   indiceInicial = 0,
   duracaoMinutos,
   isDemo = false,
+  sessionId,
+  catalogoDisciplina,
 }: QuestaoViewProps) {
   const [lista, setLista] = useState(questoesIniciais);
   const [indice, setIndice] = useState(indiceInicial);
@@ -83,10 +92,14 @@ export function QuestaoView({
     () => new Map(),
   );
   const [modoReverso, setModoReverso] = useState(false);
+  const [trilhaReversoAtiva, setTrilhaReversoAtiva] =
+    useState<EstudoReversoVisual | null>(null);
+  const [aguardandoConfianca, setAguardandoConfianca] = useState(false);
   const [salvando, startSalvar] = useTransition();
   const [finalizando, startFinalizar] = useTransition();
   const [resultadoSimulado, setResultadoSimulado] =
     useState<FinalizarSimuladoResult | null>(null);
+  const [sessaoConcluida, setSessaoConcluida] = useState(false);
   const [marcacoesSimulado, setMarcacoesSimulado] = useState<
     Map<string, string>
   >(() => new Map());
@@ -149,6 +162,8 @@ export function QuestaoView({
   const irPara = useCallback((novoIndice: number) => {
     if (novoIndice < 0 || novoIndice >= lista.length) return;
     setModoReverso(false);
+    setTrilhaReversoAtiva(null);
+    setAguardandoConfianca(false);
     setIndice(novoIndice);
     inicioQuestaoRef.current = Date.now();
   }, [lista.length]);
@@ -159,6 +174,51 @@ export function QuestaoView({
       patchEstado(questao.id, { selecionada: letra });
     },
     [questao, confirmada, patchEstado],
+  );
+
+  const salvarComConfianca = useCallback(
+    (fsrsGrade: FsrsGrade) => {
+      if (!selecionada || !questao || !isEstudo) return;
+
+      const acertou = selecionada === questao.gabarito;
+      const tempoSeg = Math.round(
+        (Date.now() - inicioQuestaoRef.current) / 1000,
+      );
+
+      setAguardandoConfianca(false);
+
+      startSalvar(async () => {
+        const result = await salvarTentativa({
+          questionId: questao.id,
+          resposta: selecionada,
+          acertou,
+          modo: "estudo",
+          tempoSeg,
+          sessionId,
+          fsrsGrade,
+        });
+
+        patchEstado(questao.id, {
+          dominioAlcancado: result.dominioAlcancado ?? false,
+          tipoErroLabel: result.tipoErro
+            ? labelTipoErro(result.tipoErro)
+            : undefined,
+          ultimoAttemptId: result.attemptId,
+        });
+
+        if (questao.estudoReversoVisual || questao.estudoReversoVisualCompleto) {
+          const trilha = escolherTrilhaEstudoReverso(
+            questao.estudoReversoVisual,
+            questao.estudoReversoVisualCompleto,
+          );
+          if (trilha) {
+            setTrilhaReversoAtiva(trilha);
+            setModoReverso(true);
+          }
+        }
+      });
+    },
+    [selecionada, questao, isEstudo, patchEstado, sessionId],
   );
 
   const confirmar = useCallback(() => {
@@ -173,28 +233,7 @@ export function QuestaoView({
         revelada: true,
         acertou,
       });
-
-      startSalvar(async () => {
-        const result = await salvarTentativa({
-          questionId: questao.id,
-          resposta: selecionada,
-          acertou,
-          modo: "estudo",
-          tempoSeg,
-        });
-
-        patchEstado(questao.id, {
-          dominioAlcancado: result.dominioAlcancado ?? false,
-          tipoErroLabel: result.tipoErro
-            ? labelTipoErro(result.tipoErro)
-            : undefined,
-          ultimoAttemptId: result.attemptId,
-        });
-
-        if (result.irmaAs?.length) {
-          setLista((prev) => intercalarIrmas(prev, indice, result.irmaAs!));
-        }
-      });
+      setAguardandoConfianca(true);
     } else if (isSimulado) {
       patchEstado(questao.id, { confirmada: true });
       setMarcacoesSimulado((prev) => {
@@ -213,7 +252,13 @@ export function QuestaoView({
         });
       });
     }
-  }, [selecionada, questao, isEstudo, isSimulado, indice, patchEstado]);
+  }, [selecionada, questao, isEstudo, isSimulado, indice, patchEstado, sessionId]);
+
+  const concluirSessaoHandler = useCallback(() => {
+    if (!sessionId || sessaoConcluida) return;
+    setSessaoConcluida(true);
+    void concluirSessaoEstudo(sessionId);
+  }, [sessionId, sessaoConcluida]);
 
   const finalizarSimuladoHandler = useCallback(() => {
     if (!isSimulado) return;
@@ -275,6 +320,8 @@ export function QuestaoView({
         }
       }
 
+      if (confirmada && isEstudo && aguardandoConfianca) return;
+
       if (confirmada && isEstudo) return;
 
       const letra = TECLA_PARA_LETRA[e.key.toUpperCase()];
@@ -322,13 +369,25 @@ export function QuestaoView({
 
   const acertou = revelada && selecionada === questao.gabarito;
   const ultimaQuestao = indice === total - 1;
-  const temEstudoReverso = Boolean(questao.estudoReversoVisual);
+  const temEstudoReverso = Boolean(
+    questao.estudoReversoVisualCompleto ?? questao.estudoReversoVisual,
+  );
+  const trilhaPadrao =
+    questao.estudoReversoVisualCompleto ?? questao.estudoReversoVisual;
   const navegacaoLateral = isEstudo || isSimulado;
   const mostrarBotaoFinalizar =
     confirmada && isSimulado && ultimaQuestao;
   const mostrarProxima =
-    navegacaoLateral && !mostrarBotaoFinalizar && !ultimaQuestao;
+    navegacaoLateral &&
+    !mostrarBotaoFinalizar &&
+    !ultimaQuestao &&
+    !aguardandoConfianca;
   const mostrarConcluirSessao = isEstudo && ultimaQuestao && confirmada;
+  const disciplinaCatalogo =
+    catalogoDisciplina ?? (isEstudo ? questao.disciplina : undefined);
+  const hrefCatalogo = disciplinaCatalogo
+    ? hrefEstudoCatalogo(disciplinaCatalogo)
+    : null;
 
   return (
     <div className="flex flex-1 flex-col">
@@ -413,7 +472,17 @@ export function QuestaoView({
           ))}
         </fieldset>
 
-        {isEstudo && revelada && (
+        {isEstudo && revelada && aguardandoConfianca && (
+          <div className="px-4 pb-2">
+            <ConfiancaFsrs
+              acertou={acertou}
+              onSelecionar={salvarComConfianca}
+              disabled={salvando}
+            />
+          </div>
+        )}
+
+        {isEstudo && revelada && !aguardandoConfianca && (
           <div className="px-4 pb-2">
             {temEstudoReverso ? (
               <FeedbackResultado
@@ -436,16 +505,19 @@ export function QuestaoView({
           </div>
         )}
 
-        {modoReverso && questao.estudoReversoVisual && (
+
+        {modoReverso && trilhaReversoAtiva && (
           <EstudoReversoPlayer
-            visual={questao.estudoReversoVisual}
-            onFechar={() => setModoReverso(false)}
+            visual={trilhaReversoAtiva}
+            onFechar={() => {
+              setModoReverso(false);
+              setTrilhaReversoAtiva(null);
+            }}
             onConcluir={async (dados) => {
               await registrarEstudoReverso({
                 questionId: questao.id,
                 attemptId: ultimoAttemptId,
                 telasVistas: dados.telasVistas,
-                recallAcertou: dados.recallAcertou,
                 tempoTotalSeg: dados.tempoTotalSeg,
                 concluido: dados.concluido,
               });
@@ -455,7 +527,18 @@ export function QuestaoView({
 
         <footer className="sticky bottom-0 border-t border-border bg-background/95 p-4 backdrop-blur-sm">
           <div className="grid grid-cols-3 items-center gap-2">
-            <div className="flex justify-start">
+            <div className="flex flex-col items-start gap-1">
+              {isEstudo && hrefCatalogo && (
+                <Link
+                  href={hrefCatalogo}
+                  className={cn(
+                    buttonVariants({ variant: "outline", size: "sm" }),
+                    "whitespace-nowrap",
+                  )}
+                >
+                  Microtópicos
+                </Link>
+              )}
               {navegacaoLateral && indice > 0 && (
                 <Button
                   variant="ghost"
@@ -490,13 +573,21 @@ export function QuestaoView({
               ) : (
                 isEstudo &&
                 revelada &&
-                temEstudoReverso && (
-                  <EstudoReversoTrigger
+                !aguardandoConfianca &&
+                temEstudoReverso &&
+                trilhaPadrao && (
+                  <Button
+                    type="button"
                     size="lg"
-                    className="min-w-40"
+                    className="w-full min-w-40"
                     variant={acertou ? "outline" : "default"}
-                    onOpen={() => setModoReverso(true)}
-                  />
+                    onClick={() => {
+                      setTrilhaReversoAtiva(trilhaPadrao);
+                      setModoReverso(true);
+                    }}
+                  >
+                    Aula completa ({trilhaPadrao.telas.length} telas)
+                  </Button>
                 )
               )}
             </div>
@@ -516,6 +607,7 @@ export function QuestaoView({
               {mostrarConcluirSessao && (
                 <Link
                   href="/dashboard"
+                  onClick={concluirSessaoHandler}
                   className={cn(
                     buttonVariants({
                       variant: "ghost",

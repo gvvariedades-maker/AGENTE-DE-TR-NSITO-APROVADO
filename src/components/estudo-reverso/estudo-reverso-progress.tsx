@@ -1,28 +1,59 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import type { Secao } from "@/types/estudo-reverso-visual";
+import { metaSecaoVisual, progressBarClass } from "./secao-visual";
 
 interface EstudoReversoProgressProps {
   atual: number;
   total: number;
+  secoes?: (Secao | undefined)[];
 }
 
 export function EstudoReversoProgress({
   atual,
   total,
+  secoes = [],
 }: EstudoReversoProgressProps) {
+  const secaoAtual = secoes[atual - 1];
+  const rotuloFase = metaSecaoVisual(secaoAtual).rotulo;
+
   return (
-    <div className="flex gap-1 px-4 pt-3" aria-label={`Bloco ${atual} de ${total}`}>
-      {Array.from({ length: total }, (_, i) => (
-        <div
-          key={i}
-          className={cn(
-            "h-1 flex-1 rounded-full transition-colors",
-            i < atual ? "bg-transito" : "bg-muted",
-          )}
-          aria-hidden
-        />
-      ))}
+    <div className="flex items-center gap-3 px-4 py-2">
+      <div
+        className="flex min-w-0 flex-1 gap-1"
+        aria-label={`Bloco ${atual} de ${total}`}
+        role="progressbar"
+        aria-valuenow={atual}
+        aria-valuemin={1}
+        aria-valuemax={total}
+      >
+        {Array.from({ length: total }, (_, i) => (
+          <div
+            key={i}
+            className={cn(
+              "h-1 flex-1 rounded-full transition-colors duration-300",
+              progressBarClass(secoes[i], i < atual),
+            )}
+            aria-hidden
+          />
+        ))}
+      </div>
+      <div className="flex shrink-0 flex-col items-end gap-0.5">
+        <span className="text-xs tabular-nums text-muted-foreground">
+          {atual}/{total}
+        </span>
+        {secaoAtual && (
+          <span
+            className={cn(
+              "text-[10px] font-medium uppercase tracking-wide",
+              metaSecaoVisual(secaoAtual).accentClass,
+            )}
+          >
+            {rotuloFase}
+          </span>
+        )}
+      </div>
     </div>
   );
 }

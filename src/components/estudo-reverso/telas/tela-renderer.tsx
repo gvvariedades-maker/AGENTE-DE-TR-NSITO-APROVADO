@@ -7,14 +7,12 @@ import { TelaTabelaGradacao } from "./tela-tabela-gradacao";
 import { TelaTrechoLegal } from "./tela-trecho-legal";
 import { TelaLinhaTempo } from "./tela-linha-tempo";
 import { TelaDiagramaCompetencia } from "./tela-diagrama-competencia";
-import { TelaMicroRecall } from "./tela-micro-recall";
 
 interface TelaRendererProps {
   tela: TelaVisual;
-  onRecallResultado?: (acertou: boolean) => void;
 }
 
-export function TelaRenderer({ tela, onRecallResultado }: TelaRendererProps) {
+export function TelaRenderer({ tela }: TelaRendererProps) {
   switch (tela.tipo) {
     case "texto_destaque":
       return <TelaTextoDestaque conteudo={tela.conteudo} />;
@@ -32,13 +30,6 @@ export function TelaRenderer({ tela, onRecallResultado }: TelaRendererProps) {
       return <TelaLinhaTempo conteudo={tela.conteudo} />;
     case "diagrama_competencia":
       return <TelaDiagramaCompetencia conteudo={tela.conteudo} />;
-    case "micro_recall":
-      return (
-        <TelaMicroRecall
-          conteudo={tela.conteudo}
-          onResultado={(ok) => onRecallResultado?.(ok)}
-        />
-      );
     default:
       return null;
   }

@@ -1,0 +1,1892 @@
+[
+  {
+    "disciplina": "informatica",
+    "topico": "extensoes_arquivos",
+    "tipo": "conceitual",
+    "estilo_idecan": "conceito_informatica",
+    "dificuldade": 2,
+    "enunciado": "Um agente de trânsito recebeu, por e-mail, o relatório mensal de autuações da STTP anexado com a extensão \".xlsx\". Considerando os tipos de arquivo mais comuns utilizados em ambiente de escritório, assinale a alternativa CORRETA quanto ao programa em que o documento foi criado nativamente:",
+    "alternativas": {
+      "A": "editor de texto, destinado à redação de documentos.",
+      "B": "planilha eletrônica, destinada a cálculos e tabelas.",
+      "C": "apresentação de slides, destinada a exposições visuais.",
+      "D": "editor de imagens, destinado à edição gráfica de fotos."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Reconhecimento das extensões de arquivo mais usuais associadas a cada categoria de programa de escritório.",
+      "fundamento_legal": "Conceitos técnicos de informática — extensões e arquivos (Anexo I — Noções de Informática, item 1.2).",
+      "passo_a_passo": [
+        "1. A extensão '.xlsx' é o formato nativo de planilhas eletrônicas do pacote Office (Excel).",
+        "2. A erra por termo_unico (docx é editor de texto); C erra por numero_vizinho (pptx é apresentação); D erra por gravidade (imagem não corresponde a xlsx).",
+        "3. B está correta conforme o fundamento citado no comentário."
+      ],
+      "pegadinha": "A banca troca a extensão certa por outra do mesmo pacote de escritório (docx/pptx), testando se o candidato decorou de fato cada formato.",
+      "macete": "X de xlsx lembra planilha (eXcel); doc lembra texto (documento); ppt lembra apresentação (PowerPoint).",
+      "estudo_reverso": [
+        "Extensões de arquivo: .docx, .xlsx, .pptx, .pdf",
+        "Programas de escritório e seus formatos nativos"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "arquetipo": "tabela_gradacao",
+      "fundamento_slug": "info_extensoes_arquivo",
+      "macete_visual": "xlsx=Excel | docx=Word | pptx=PowerPoint",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Associar extensão .xlsx ao programa de planilha eletrônica.",
+            "destaques": [
+              ".xlsx",
+              "planilha"
+            ]
+          }
+        },
+        {
+          "id": "tabela",
+          "titulo": "Extensões Office",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Extensão",
+              "Programa"
+            ],
+            "linhas": [
+              {
+                "faixa": ".docx",
+                "classificacao": "Editor de texto (Word)"
+              },
+              {
+                "faixa": ".xlsx",
+                "classificacao": "Planilha eletrônica (Excel)",
+                "destaque": true
+              },
+              {
+                "faixa": ".pptx",
+                "classificacao": "Apresentação (PowerPoint)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Trocar extensão do mesmo pacote Office",
+                "Decorar cada par extensão-programa"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "X de xlsx = eXcel. Doc = documento. Ppt = apresentação.",
+            "destaques": [
+              "xlsx",
+              "docx",
+              "pptx"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 1.2",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "versao": 1,
+      "duracao_estimada_seg": 60
+    },
+    "estudo_reverso_visual_completo": {
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "fluxograma_decisao",
+      "fundamento_slug": "info_extensoes_arquivo",
+      "macete_visual": "xlsx=eXcel | docx=documento | pptx=apresentação",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Relatório de autuações da STTP chegou como .xlsx no e-mail. A banca quer o par extensão → programa — sem confundir Excel, Word e PowerPoint.",
+            "destaques": [
+              ".xlsx",
+              "STTP"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de memorizar: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Extensão = sufixo após o ponto (ex.: .xlsx). Formato nativo = criado pelo programa original (Excel gera .xlsx). Pacote Office = Word, Excel e PowerPoint — um sufixo para cada.",
+            "destaques": [
+              "Extensão",
+              "Formato nativo",
+              "Pacote Office"
+            ]
+          }
+        },
+        {
+          "id": "tabela",
+          "titulo": "Mapa Office — decore os pares",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Extensão",
+              "Programa"
+            ],
+            "linhas": [
+              {
+                "faixa": ".docx",
+                "classificacao": "Editor de texto (Word)"
+              },
+              {
+                "faixa": ".xlsx",
+                "classificacao": "Planilha eletrônica (Excel)",
+                "destaque": true
+              },
+              {
+                "faixa": ".pptx",
+                "classificacao": "Apresentação (PowerPoint)"
+              },
+              {
+                "faixa": ".pdf",
+                "classificacao": "Documento portátil (leitura)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Raciocínio desta questão",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "n1",
+                "label": "Anexo: relatório_de_autuacoes.xlsx",
+                "tipo": "acao"
+              },
+              {
+                "id": "n2",
+                "label": "Sufixo .xlsx = planilha eletrônica",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "n3",
+                "label": "Gabarito B — programa de planilha",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "n1",
+                "para": "n2"
+              },
+              {
+                "de": "n2",
+                "para": "n3"
+              }
+            ]
+          }
+        },
+        {
+          "id": "historico",
+          "titulo": "Por que a pegadinha existe",
+          "tipo": "linha_tempo",
+          "conteudo": {
+            "eventos": [
+              {
+                "ordem": 1,
+                "rotulo": "Office clássico",
+                "descricao": ".doc, .xls e .ppt — um sufixo por programa."
+              },
+              {
+                "ordem": 2,
+                "rotulo": "Office atual",
+                "descricao": ".docx, .xlsx e .pptx — nomes parecidos, programas diferentes."
+              },
+              {
+                "ordem": 3,
+                "rotulo": "IDECAN",
+                "descricao": "Troca .xlsx por .docx ou .pptx no enunciado."
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pegadinha típica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Confusão",
+              "Regra"
+            ],
+            "linhas": [
+              [
+                "Todas parecem 'arquivo do Office'",
+                "Cada sufixo aponta para um programa"
+              ],
+              [
+                "Ir pelo assunto do e-mail (relatório)",
+                "Leia a extensão — ela define o programa"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que não"
+            ],
+            "linhas": [
+              [
+                "A — editor de texto",
+                ".docx ou .odt — não .xlsx."
+              ],
+              [
+                "C — apresentação de slides",
+                ".pptx — não planilha."
+              ],
+              [
+                "D — editor de imagens",
+                ".jpg ou .png — não .xlsx."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "O caso desta questão",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Relatório em texto → marcar A",
+                "Tabela de autuações → .xlsx → B"
+              ],
+              [
+                "Confundir .xlsx com .pptx",
+                "xlsx = Excel; pptx = PowerPoint"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "gabarito",
+          "titulo": "Fechamento",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": ".xlsx = planilha eletrônica = alternativa B. Anexo I, item 1.2: reconhecer extensões de programas de escritório.",
+            "destaques": [
+              "B",
+              "item 1.2"
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "X de xlsx = eXcel. Doc = documento. Ppt = apresentação. Na prova: sufixo primeiro, alternativa depois.",
+            "destaques": [
+              "xlsx",
+              "sufixo"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 1.2",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "versao": 2,
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 165
+    },
+    "tags": [
+      "extensoes",
+      "arquivos",
+      "planilha"
+    ]
+  },
+  {
+    "disciplina": "informatica",
+    "topico": "manipulacao_arquivos_pastas",
+    "tipo": "conceitual",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 3,
+    "enunciado": "No sistema operacional Windows, um agente de trânsito selecionou um arquivo no explorador de arquivos e pressionou simultaneamente as teclas \"Ctrl\" e \"X\", em seguida navegou até outra pasta e pressionou \"Ctrl\" e \"V\". Assinale a alternativa CORRETA quanto ao efeito dessa sequência de ações:",
+    "alternativas": {
+      "A": "o arquivo foi copiado, permanecendo uma cópia idêntica na pasta de origem.",
+      "B": "o arquivo foi recortado e movido, deixando de existir na pasta de origem.",
+      "C": "o arquivo foi excluído definitivamente, sem possibilidade de recuperação.",
+      "D": "o arquivo foi compactado automaticamente durante a operação de recorte."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Conhecimento dos atalhos de teclado padrão do Windows para manipulação de arquivos (recortar, copiar, colar).",
+      "fundamento_legal": "Conceitos técnicos de informática — manipulação de arquivos e pastas (Anexo I — Noções de Informática, item 2.3).",
+      "passo_a_passo": [
+        "1. Ctrl+X é o atalho universal para 'recortar' (área de transferência), diferente de Ctrl+C ('copiar').",
+        "2. A erra por termo_unico (Ctrl+C é copiar); C erra por numero_vizinho (Ctrl+V é colar); D erra por regra_excecao (Ctrl+Z é desfazer, não recortar).",
+        "3. B está correta conforme o fundamento citado no comentário."
+      ],
+      "pegadinha": "A banca troca 'recortar' (move) por 'copiar' (duplica) — o candidato desatento marca a opção que descreve Ctrl+C.",
+      "macete": "Ctrl+X 'corta e some' da origem; Ctrl+C 'clona e mantém'; Ctrl+V sempre cola o que estiver na área de transferência.",
+      "estudo_reverso": [
+        "Atalhos de teclado do Windows",
+        "Área de transferência: recortar, copiar e colar"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "arquetipo": "comparacao",
+      "fundamento_slug": "info_atalhos_windows",
+      "macete_visual": "Ctrl+X corta e some | Ctrl+C clona | Ctrl+V cola",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Diferença entre recortar (Ctrl+X) e copiar (Ctrl+C) no Windows.",
+            "destaques": [
+              "Ctrl+X",
+              "Ctrl+C"
+            ]
+          }
+        },
+        {
+          "id": "atalhos",
+          "titulo": "Atalhos comparados",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Atalho",
+              "Efeito"
+            ],
+            "linhas": [
+              [
+                "Ctrl+X",
+                "Recorta: remove da origem"
+              ],
+              [
+                "Ctrl+C",
+                "Copia: mantém na origem"
+              ],
+              [
+                "Ctrl+V",
+                "Cola da área de transferência"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Ctrl+X = copiar",
+                "Ctrl+X = recortar e mover"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "X corta e some da origem. C clona e mantém. V sempre cola.",
+            "destaques": [
+              "X",
+              "C",
+              "V"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 2.3",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "versao": 1,
+      "duracao_estimada_seg": 70
+    },
+    "estudo_reverso_visual_completo": {
+      "arquetipo": "comparacao",
+      "arquetipo_secundario": "fluxograma_decisao",
+      "fundamento_slug": "info_atalhos_windows",
+      "macete_visual": "Ctrl+X corta | Ctrl+C clona | Ctrl+V cola",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "No explorador de arquivos, o agente pressionou Ctrl+X, abriu outra pasta e pressionou Ctrl+V. A banca testa se você sabe que recortar move o arquivo — não copia.",
+            "destaques": [
+              "Ctrl+X",
+              "Ctrl+V",
+              "move"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de memorizar: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Recortar (Ctrl+X) = tira da origem e guarda na área de transferência. Copiar (Ctrl+C) = duplica mantendo o original. Colar (Ctrl+V) = insere o que está na área de transferência.",
+            "destaques": [
+              "Recortar",
+              "Copiar",
+              "Colar"
+            ]
+          }
+        },
+        {
+          "id": "historico",
+          "titulo": "Por que a pegadinha existe",
+          "tipo": "linha_tempo",
+          "conteudo": {
+            "eventos": [
+              {
+                "ordem": 1,
+                "rotulo": "Atalho X",
+                "descricao": "X lembra 'cortar' — o arquivo some da pasta de origem."
+              },
+              {
+                "ordem": 2,
+                "rotulo": "Atalho C",
+                "descricao": "C lembra 'clonar' — o original permanece no lugar."
+              },
+              {
+                "ordem": 3,
+                "rotulo": "IDECAN",
+                "descricao": "Troca o efeito de Ctrl+X pelo de Ctrl+C na alternativa A."
+              }
+            ]
+          }
+        },
+        {
+          "id": "nucleo",
+          "titulo": "Atalhos do Windows",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Atalho",
+              "Efeito"
+            ],
+            "linhas": [
+              [
+                "Ctrl+X",
+                "Recorta: remove da origem"
+              ],
+              [
+                "Ctrl+C",
+                "Copia: mantém na origem"
+              ],
+              [
+                "Ctrl+V",
+                "Cola da área de transferência"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pegadinha típica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Confusão",
+              "Regra"
+            ],
+            "linhas": [
+              [
+                "Ctrl+X = copiar (alternativa A)",
+                "Ctrl+X = recortar e mover"
+              ],
+              [
+                "Recortar = excluir definitivo",
+                "Recortar ≠ lixeira permanente"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que não"
+            ],
+            "linhas": [
+              [
+                "A — copiado na origem",
+                "Isso é Ctrl+C, não Ctrl+X."
+              ],
+              [
+                "C — excluído definitivo",
+                "Recortar move; excluir usa Delete ou lixeira."
+              ],
+              [
+                "D — compactado",
+                "Recortar/colar não compacta o arquivo."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "O caso desta questão",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Marcar A por associar X a copiar",
+                "Ctrl+X + Ctrl+V = move para outra pasta (B)"
+              ],
+              [
+                "Achar que o arquivo fica nas duas pastas",
+                "Após recortar e colar, só existe no destino"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "edital",
+          "titulo": "O que o edital cobra",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Anexo I — Informática, item 2.3: manipulação de arquivos e pastas, incluindo atalhos de teclado no Windows.",
+            "destaques": [
+              "item 2.3",
+              "atalhos",
+              "arquivos"
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "X corta e some. C clona e mantém. V sempre cola o que está na área de transferência.",
+            "destaques": [
+              "X",
+              "C",
+              "V"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 2.3",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "versao": 2,
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 180
+    },
+    "tags": [
+      "atalhos",
+      "windows",
+      "area_transferencia"
+    ]
+  },
+  {
+    "disciplina": "informatica",
+    "topico": "planilhas_formulas",
+    "tipo": "conceitual",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 3,
+    "enunciado": "Um agente de trânsito monta, em uma planilha eletrônica, um controle mensal de infrações, classificando cada ocorrência conforme a gravidade registrada na coluna B. Na célula C2, ele digita a fórmula \"=SE(B2>10;\"Multa alta\";\"Multa baixa\")\" para automatizar essa classificação. Assinale a alternativa CORRETA quanto ao resultado exibido em C2, sabendo que a célula B2 contém o valor 15:",
+    "alternativas": {
+      "A": "A fórmula retorna um erro, pois a sintaxe está incorreta.",
+      "B": "A fórmula retorna o texto \"Multa baixa\", pois 15 não é maior que 10.",
+      "C": "A fórmula retorna o texto \"Multa alta\", pois 15 é maior que 10.",
+      "D": "A fórmula retorna apenas o valor numérico 15, ignorando o texto condicional."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Compreensão da função lógica SE (IF) em planilhas eletrônicas e sua sintaxe condicional.",
+      "fundamento_legal": "Conceitos técnicos de informática — planilhas eletrônicas, fórmulas (Anexo I — Noções de Informática, item 4.2).",
+      "passo_a_passo": [
+        "1. A função SE testa a condição 'B2>10'; se verdadeira, retorna o primeiro texto; se falsa, retorna o segundo.",
+        "2. B erra por termo_unico (SE não retorna soma); C erra por numero_vizinho (15>10 retorna primeiro valor, não o segundo); D erra por regra_excecao (SE não concatena textos automaticamente).",
+        "3. C está correta conforme o fundamento citado no comentário."
+      ],
+      "pegadinha": "A banca inverte o resultado lógico (verdadeiro/falso) para testar se o candidato realmente avalia a condição, e não apenas decora a estrutura da fórmula.",
+      "macete": "Leia a função SE como uma pergunta: 'B2 é maior que 10?' Se sim, primeiro texto; se não, segundo texto.",
+      "estudo_reverso": [
+        "Função SE (IF) em planilhas eletrônicas",
+        "Operadores de comparação em fórmulas"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "arquetipo": "fluxograma_decisao",
+      "fundamento_slug": "info_funcao_se",
+      "macete_visual": "SE(condição; se verdadeiro; se falso) — avalie a condição",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Resultado da função SE quando B2=15 e a condição é B2>10.",
+            "destaques": [
+              "SE",
+              "B2>10",
+              "15"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Fluxo da função SE",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "inicio",
+                "label": "B2 = 15",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "teste",
+                "label": "15 > 10?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "sim",
+                "label": "Retorna Multa alta",
+                "tipo": "resultado"
+              },
+              {
+                "id": "nao",
+                "label": "Retorna Multa baixa",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "inicio",
+                "para": "teste"
+              },
+              {
+                "de": "teste",
+                "para": "sim",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "teste",
+                "para": "nao",
+                "rotulo": "Não"
+              }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Inverte verdadeiro/falso",
+                "15>10 é verdadeiro → Multa alta"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Leia SE como pergunta: condição verdadeira? Primeiro texto. Falsa? Segundo.",
+            "destaques": [
+              "verdadeira",
+              "falsa"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 4.2",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "versao": 1,
+      "duracao_estimada_seg": 80
+    },
+    "estudo_reverso_visual_completo": {
+      "arquetipo": "fluxograma_decisao",
+      "fundamento_slug": "info_funcao_se",
+      "macete_visual": "SE(condição; se sim; se não) — avalie o teste",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Na planilha de infrações da STTP, C2 usa =SE(B2>10;\"Multa alta\";\"Multa baixa\") e B2 vale 15. A banca testa se você avalia a condição antes de escolher o texto.",
+            "destaques": [
+              "SE",
+              "B2=15",
+              "B2>10"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de memorizar: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Função SE = teste lógico com três partes: condição; valor se verdadeiro; valor se falso. Operador > = maior que. Célula B2 = gravidade registrada (15).",
+            "destaques": [
+              "SE",
+              "condição",
+              "B2"
+            ]
+          }
+        },
+        {
+          "id": "historico",
+          "titulo": "Por que a pegadinha existe",
+          "tipo": "linha_tempo",
+          "conteudo": {
+            "eventos": [
+              {
+                "ordem": 1,
+                "rotulo": "Sintaxe",
+                "descricao": "=SE(teste; se verdadeiro; se falso) — ponto e vírgula no Excel BR."
+              },
+              {
+                "ordem": 2,
+                "rotulo": "Teste",
+                "descricao": "15 > 10 é verdadeiro — a condição passa."
+              },
+              {
+                "ordem": 3,
+                "rotulo": "IDECAN",
+                "descricao": "Alternativa B inverte verdadeiro/falso para pegar quem não calcula."
+              }
+            ]
+          }
+        },
+        {
+          "id": "nucleo",
+          "titulo": "Fluxo da função SE",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "n1",
+                "label": "B2 = 15",
+                "tipo": "acao"
+              },
+              {
+                "id": "n2",
+                "label": "15 > 10?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "n3",
+                "label": "Retorna Multa alta",
+                "tipo": "resultado"
+              },
+              {
+                "id": "n4",
+                "label": "Retorna Multa baixa",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "n1",
+                "para": "n2"
+              },
+              {
+                "de": "n2",
+                "para": "n3",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "n2",
+                "para": "n4",
+                "rotulo": "Não"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pegadinha típica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Confusão",
+              "Regra"
+            ],
+            "linhas": [
+              [
+                "15>10 é falso → Multa baixa",
+                "15>10 é verdadeiro → Multa alta"
+              ],
+              [
+                "SE retorna o valor de B2",
+                "SE retorna um dos dois textos definidos"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que não"
+            ],
+            "linhas": [
+              [
+                "A — erro de sintaxe",
+                "A sintaxe apresentada está correta."
+              ],
+              [
+                "B — Multa baixa",
+                "Inverte o resultado: 15 é maior que 10."
+              ],
+              [
+                "D — retorna 15",
+                "SE não devolve o valor testado, e sim o texto condicional."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "O caso desta questão",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Decorar a fórmula sem calcular 15>10",
+                "15>10 verdadeiro → C2 exibe Multa alta (C)"
+              ],
+              [
+                "Confundir gravidade com resultado da fórmula",
+                "A fórmula classifica; não repete o número de B2"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "edital",
+          "titulo": "O que o edital cobra",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Anexo I — Informática, item 4.2: planilhas eletrônicas e fórmulas lógicas como a função SE.",
+            "destaques": [
+              "item 4.2",
+              "planilhas",
+              "fórmulas"
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Leia SE como pergunta: a condição é verdadeira? Primeiro texto. Falsa? Segundo texto.",
+            "destaques": [
+              "verdadeira",
+              "falsa"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 4.2",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "versao": 2,
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 180
+    },
+    "tags": [
+      "planilhas",
+      "formulas",
+      "funcao_se"
+    ]
+  },
+  {
+    "disciplina": "informatica",
+    "topico": "ferramentas_comunicacao_online",
+    "tipo": "conceitual",
+    "estilo_idecan": "conceito_informatica",
+    "dificuldade": 2,
+    "enunciado": "Durante uma reunião remota de planejamento operacional da STTP realizada pelo Microsoft Teams, o agente organizador compartilhou sua tela para exibir uma planilha de indicadores. Assinale a alternativa CORRETA que indica o nome dessa funcionalidade na ferramenta:",
+    "alternativas": {
+      "A": "quadro branco colaborativo, usado para desenhos e anotações.",
+      "B": "compartilhamento de tela, usado para exibir a própria tela.",
+      "C": "gravação de reunião, usada para registrar o encontro em vídeo.",
+      "D": "sala de descanso (breakout room), usada para dividir grupos."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Conhecimento das funcionalidades básicas de ferramentas de comunicação on-line usadas em reuniões corporativas remotas.",
+      "fundamento_legal": "Conceitos técnicos de informática — ferramentas de comunicação on-line (Anexo I — Noções de Informática, item 6.1).",
+      "passo_a_passo": [
+        "1. O enunciado descreve exibir o conteúdo da própria tela para os demais participantes.",
+        "2. A erra por termo_unico (chat não é compartilhamento de tela); C erra por numero_vizinho (gravação é função distinta); D erra por gravidade (apresentação em slides não é o mesmo recurso).",
+        "3. B está correta conforme o fundamento citado no comentário."
+      ],
+      "pegadinha": "A banca mistura funcionalidades diferentes da mesma ferramenta (gravar, quadro branco, salas) para testar se o candidato distingue cada recurso pelo nome correto.",
+      "macete": "Associe cada funcionalidade ao verbo que a descreve: compartilhar tela = mostrar; gravar = registrar; sala de descanso = dividir grupo.",
+      "estudo_reverso": [
+        "Microsoft Teams: funcionalidades de reunião",
+        "Ferramentas de comunicação on-line: Teams, Meet, Zoom"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "arquetipo": "comparacao",
+      "fundamento_slug": "info_teams",
+      "macete_visual": "Compartilhar tela=mostrar | Gravar=registrar | Sala=dividir",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Nome da funcionalidade de exibir a própria tela no Microsoft Teams.",
+            "destaques": [
+              "compartilhamento de tela",
+              "Teams"
+            ]
+          }
+        },
+        {
+          "id": "funcoes",
+          "titulo": "Funções do Teams",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Função",
+              "O que faz"
+            ],
+            "linhas": [
+              [
+                "Compartilhamento de tela",
+                "Exibe sua tela aos participantes"
+              ],
+              [
+                "Gravação",
+                "Registra a reunião em vídeo"
+              ],
+              [
+                "Sala de descanso",
+                "Divide participantes em grupos"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Misturar gravar com compartilhar",
+                "Cada função tem nome próprio"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Compartilhar=mostrar tela. Gravar=registrar. Sala=dividir grupo.",
+            "destaques": [
+              "mostrar",
+              "registrar",
+              "dividir"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 6.1",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "versao": 1,
+      "duracao_estimada_seg": 65
+    },
+    "estudo_reverso_visual_completo": {
+      "arquetipo": "comparacao",
+      "fundamento_slug": "info_teams",
+      "macete_visual": "Compartilhar=mostrar | Gravar=registrar | Sala=dividir",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Na reunião do Teams da STTP, o organizador exibiu a planilha de indicadores para todos verem. A banca quer o nome correto dessa função na ferramenta.",
+            "destaques": [
+              "Teams",
+              "exibir",
+              "planilha"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de memorizar: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Compartilhamento de tela = mostrar o que está no seu monitor aos participantes. Quadro branco = desenhar e anotar. Gravação = salvar o encontro em vídeo.",
+            "destaques": [
+              "Compartilhamento",
+              "Quadro branco",
+              "Gravação"
+            ]
+          }
+        },
+        {
+          "id": "historico",
+          "titulo": "Por que a pegadinha existe",
+          "tipo": "linha_tempo",
+          "conteudo": {
+            "eventos": [
+              {
+                "ordem": 1,
+                "rotulo": "Reunião remota",
+                "descricao": "Teams, Meet e Zoom usam nomes parecidos para funções distintas."
+              },
+              {
+                "ordem": 2,
+                "rotulo": "Verbo-guia",
+                "descricao": "Compartilhar = mostrar; gravar = registrar; sala = dividir grupos."
+              },
+              {
+                "ordem": 3,
+                "rotulo": "IDECAN",
+                "descricao": "Mistura gravação, quadro branco e breakout room na mesma questão."
+              }
+            ]
+          }
+        },
+        {
+          "id": "nucleo",
+          "titulo": "Funções do Teams",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Função",
+              "O que faz"
+            ],
+            "linhas": [
+              [
+                "Compartilhamento de tela",
+                "Exibe sua tela aos participantes"
+              ],
+              [
+                "Quadro branco",
+                "Desenho e anotações colaborativas"
+              ],
+              [
+                "Gravação",
+                "Registra a reunião em vídeo"
+              ],
+              [
+                "Sala de descanso",
+                "Divide participantes em grupos"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pegadinha típica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Confusão",
+              "Regra"
+            ],
+            "linhas": [
+              [
+                "Gravar = mostrar em tempo real",
+                "Gravar salva; compartilhar exibe ao vivo"
+              ],
+              [
+                "Quadro branco = espelhar tela",
+                "Quadro é superfície de desenho, não espelho"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que não"
+            ],
+            "linhas": [
+              [
+                "A — quadro branco",
+                "Serve para desenho, não para exibir a planilha."
+              ],
+              [
+                "C — gravação",
+                "Registra o encontro; não transmite a tela ao vivo."
+              ],
+              [
+                "D — sala de descanso",
+                "Divide grupos; não exibe conteúdo da tela."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "O caso desta questão",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Escolher função pelo nome em inglês sem ler o enunciado",
+                "Exibir planilha = compartilhamento de tela (B)"
+              ],
+              [
+                "Confundir reunião gravada com transmissão de tela",
+                "O caso pede exibição ao vivo, não arquivo salvo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "edital",
+          "titulo": "O que o edital cobra",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Anexo I — Informática, item 6.1: ferramentas de comunicação on-line (Teams, Meet, Zoom).",
+            "destaques": [
+              "item 6.1",
+              "Teams",
+              "comunicação"
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Compartilhar tela = mostrar. Gravar = registrar. Sala de descanso = dividir grupo.",
+            "destaques": [
+              "mostrar",
+              "registrar",
+              "dividir"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 6.1",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "versao": 2,
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 180
+    },
+    "tags": [
+      "teams",
+      "reuniao_remota",
+      "compartilhamento_tela"
+    ]
+  },
+  {
+    "disciplina": "informatica",
+    "topico": "internet_protocolos_url",
+    "tipo": "assertivas",
+    "estilo_idecan": "assertivas",
+    "dificuldade": 4,
+    "enunciado": "Sobre protocolos de internet e endereçamento web, analise as afirmativas a seguir.\n\nI. O protocolo HTTPS utiliza criptografia para proteger os dados trafegados entre o navegador e o servidor.\nII. Uma URL é composta, entre outros elementos, pelo protocolo, pelo domínio e, opcionalmente, pelo caminho do recurso acessado.\nIII. O cadeado exibido ao lado da URL em navegadores modernos garante que o conteúdo do site é sempre verdadeiro e livre de golpes.\n\nEstão CORRETAS apenas as afirmativas:",
+    "alternativas": {
+      "A": "Estão corretas as afirmativas I e II, relativas ao HTTPS e à estrutura da URL na web.",
+      "B": "Estão corretas as afirmativas I e III, quanto ao protocolo seguro e ao significado do cadeado.",
+      "C": "Estão corretas as afirmativas II e III, sobre composição da URL e veracidade do conteúdo.",
+      "D": "Estão corretas as afirmativas I, II e III, sobre protocolos e endereçamento na internet."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Distinção entre segurança de transporte (HTTPS/cadeado) e veracidade do conteúdo exibido pelo site.",
+      "fundamento_legal": "Conceitos técnicos de informática — internet e navegação (Anexo I — Noções de Informática, item 7.4).",
+      "passo_a_passo": [
+        "1. I) Correta: HTTPS = HTTP + criptografia (TLS/SSL) entre navegador e servidor.",
+        "2. B erra por termo_unico (III falsa — cadeado não garante veracidade do conteúdo); C erra por regra_excecao (inclui III falsa); D erra por gravidade (III extrapola o que HTTPS garante).",
+        "3. Alternativa A está correta conforme o fundamento citado no comentário."
+      ],
+      "pegadinha": "A banca inclui uma afirmativa tecnicamente plausível (cadeado = segurança) mas que extrapola o que a criptografia realmente garante — clássica armadilha de generalização indevida.",
+      "macete": "Cadeado garante 'como' os dados trafegam (criptografados), nunca garante 'o que' o site diz ser verdade.",
+      "estudo_reverso": [
+        "Protocolo HTTPS e criptografia TLS",
+        "Estrutura de uma URL",
+        "Golpes e sites falsos com certificado válido"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "arquetipo": "matriz_assertivas",
+      "fundamento_slug": "info_https_url",
+      "macete_visual": "Cadeado = conexão segura, não verdade do conteúdo",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "HTTPS criptografa tráfego; cadeado não garante site confiável.",
+            "destaques": [
+              "HTTPS",
+              "cadeado"
+            ]
+          }
+        },
+        {
+          "id": "assertivas",
+          "titulo": "Mapa I–II–III",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              {
+                "id": "I",
+                "texto": "HTTPS usa criptografia",
+                "correto": true
+              },
+              {
+                "id": "II",
+                "texto": "URL tem protocolo, domínio e caminho",
+                "correto": true
+              },
+              {
+                "id": "III",
+                "texto": "Cadeado garante conteúdo verdadeiro",
+                "correto": false
+              }
+            ],
+            "gabarito_resumo": "I e II corretas → alternativa A"
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Cadeado = site confiável",
+                "Cadeado = conexão criptografada"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Cadeado garante COMO os dados trafegam, não O QUE o site diz.",
+            "destaques": [
+              "COMO",
+              "O QUE"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 7.4",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "versao": 1,
+      "duracao_estimada_seg": 85
+    },
+    "estudo_reverso_visual_completo": {
+      "arquetipo": "matriz_assertivas",
+      "arquetipo_secundario": "comparacao",
+      "fundamento_slug": "info_protocolos_url",
+      "macete_visual": "HTTPS=cadeado+criptografia | HTTP=sem cadeado",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "A questão traz assertivas sobre HTTP, HTTPS e endereços web. A banca testa se você distingue protocolo seguro (cadeado) de afirmações absolutas sobre 'qualquer site'.",
+            "destaques": [
+              "HTTPS",
+              "HTTP",
+              "cadeado"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de memorizar: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "HTTP = protocolo de transferência de páginas. HTTPS = HTTP com camada de segurança (SSL/TLS). URL = endereço completo do recurso na web (ex.: https://...).",
+            "destaques": [
+              "HTTP",
+              "HTTPS",
+              "URL"
+            ]
+          }
+        },
+        {
+          "id": "historico",
+          "titulo": "Por que a pegadinha existe",
+          "tipo": "linha_tempo",
+          "conteudo": {
+            "eventos": [
+              {
+                "ordem": 1,
+                "rotulo": "HTTP",
+                "descricao": "Comunicação básica entre navegador e servidor."
+              },
+              {
+                "ordem": 2,
+                "rotulo": "HTTPS",
+                "descricao": "Adiciona criptografia — navegador exibe cadeado."
+              },
+              {
+                "ordem": 3,
+                "rotulo": "IDECAN",
+                "descricao": "Inclui afirmativa plausível com palavra absoluta ('qualquer site')."
+              }
+            ]
+          }
+        },
+        {
+          "id": "nucleo",
+          "titulo": "Assertivas-chave",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              {
+                "id": "I",
+                "texto": "HTTPS usa criptografia na comunicação",
+                "correto": true
+              },
+              {
+                "id": "II",
+                "texto": "O cadeado garante que qualquer site é confiável",
+                "correto": false
+              },
+              {
+                "id": "III",
+                "texto": "URL identifica o endereço do recurso na web",
+                "correto": true
+              }
+            ],
+            "gabarito_resumo": "I e III corretas → alternativa A",
+            "intro": "Marque mentalmente V ou F antes de cruzar com as alternativas."
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pegadinha típica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Confusão",
+              "Regra"
+            ],
+            "linhas": [
+              [
+                "Cadeado = site 100% seguro",
+                "HTTPS protege a comunicação, não valida o conteúdo"
+              ],
+              [
+                "HTTP e HTTPS são iguais",
+                "HTTPS adiciona camada de segurança"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que não"
+            ],
+            "linhas": [
+              [
+                "B — só II",
+                "II é falsa: cadeado não garante confiabilidade total."
+              ],
+              [
+                "C — II e III",
+                "II continua falsa."
+              ],
+              [
+                "D — todas",
+                "II é falsa — não pode incluir todas."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "O caso desta questão",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Achar que cadeado elimina todo risco",
+                "HTTPS criptografa; não certifica honestidade do site"
+              ],
+              [
+                "Ignorar palavra absoluta 'qualquer'",
+                "Afirmativa II é a armadilha clássica"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "edital",
+          "titulo": "O que o edital cobra",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Anexo I — Informática, item 5.2: internet, protocolos (HTTP/HTTPS) e endereçamento web (URL).",
+            "destaques": [
+              "item 5.2",
+              "HTTPS",
+              "URL"
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "HTTPS = cadeado + criptografia. Cadeado não prova que o site é honesto.",
+            "destaques": [
+              "HTTPS",
+              "cadeado"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 5.2",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "versao": 2,
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 180
+    },
+    "tags": [
+      "internet",
+      "https",
+      "url",
+      "seguranca"
+    ]
+  },
+  {
+    "disciplina": "informatica",
+    "topico": "seguranca_informacao_malwares",
+    "tipo": "conceitual",
+    "estilo_idecan": "incorreta",
+    "dificuldade": 4,
+    "enunciado": "Um servidor da STTP recebeu, no computador de trabalho, um alerta do sistema informando comportamento suspeito de um arquivo baixado por e-mail. Antes de decidir como proceder, ele revisou alguns conceitos básicos sobre os principais tipos de malware e boas práticas de segurança da informação. Sobre o tema, assinale a alternativa INCORRETA:",
+    "alternativas": {
+      "A": "Um vírus de computador geralmente necessita de um arquivo hospedeiro para se propagar.",
+      "B": "Um worm é capaz de se replicar automaticamente pela rede, sem depender da ação do usuário.",
+      "C": "Um antivírus atualizado elimina por completo qualquer risco de contaminação por novos malwares.",
+      "D": "Um backup periódico dos arquivos reduz o impacto de um ataque de ransomware."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Conhecimento sobre tipos de malware e limites reais das ferramentas de proteção (antivírus).",
+      "fundamento_legal": "Conceitos técnicos de informática — TI e segurança da informação (Anexo I — Noções de Informática, item 8.5).",
+      "passo_a_passo": [
+        "1. Análise do enunciado e do comando da questão.",
+        "2. A não é INCORRETA por termo_unico (vírus precisa de hospedeiro); B não é INCORRETA por numero_vizinho (worm replica na rede); D não é INCORRETA por regra_excecao (backup mitiga ransomware); C é INCORRETA por gravidade (antivírus não elimina todo risco de malware novo).",
+        "3. Alternativa C está correta conforme o fundamento citado no comentário."
+      ],
+      "pegadinha": "A banca usa palavras absolutas como 'elimina por completo' e 'qualquer risco' — em segurança da informação, afirmações absolutas quase sempre são a alternativa errada.",
+      "macete": "Em segurança da informação, desconfie de 'sempre', 'nunca' e '100%' — normalmente é a pegadinha da questão.",
+      "estudo_reverso": [
+        "Tipos de malware: vírus, worm, ransomware",
+        "Limites do antivírus e importância do backup"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "arquetipo": "comparacao",
+      "fundamento_slug": "info_malware_antivirus",
+      "macete_visual": "Desconfie de 'sempre', 'nunca' e '100%' em segurança",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Limites do antivírus: não elimina 100% do risco de malware novo.",
+            "destaques": [
+              "antivírus",
+              "100%"
+            ]
+          }
+        },
+        {
+          "id": "tipos",
+          "titulo": "Vírus vs worm",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Malware",
+              "Característica"
+            ],
+            "linhas": [
+              [
+                "Vírus",
+                "Precisa de arquivo hospedeiro"
+              ],
+              [
+                "Worm",
+                "Replica-se sozinho na rede"
+              ],
+              [
+                "Antivírus",
+                "Não elimina todo risco (zero-day)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Elimina por completo qualquer risco",
+                "Afirmação absoluta = errada"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Em segurança da informação, 'sempre/nunca/100%' quase sempre é pegadinha.",
+            "destaques": [
+              "sempre",
+              "nunca",
+              "100%"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 8.5",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "versao": 1,
+      "duracao_estimada_seg": 80
+    },
+    "estudo_reverso_visual_completo": {
+      "arquetipo": "comparacao",
+      "fundamento_slug": "info_malware",
+      "macete_visual": "Vírus≠elimina tudo | Desconfie de absolutos",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "O servidor da STTP exibiu alerta de antivírus. A banca testa conceitos de malware e a diferença entre proteção real e promessas absolutas de software.",
+            "destaques": [
+              "antivírus",
+              "malware",
+              "alerta"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de memorizar: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Malware = software malicioso (vírus, worm, trojan). Antivírus = detecta e neutraliza ameaças conhecidas. Firewall = controla tráfego de rede.",
+            "destaques": [
+              "Malware",
+              "Antivírus",
+              "Firewall"
+            ]
+          }
+        },
+        {
+          "id": "historico",
+          "titulo": "Por que a pegadinha existe",
+          "tipo": "linha_tempo",
+          "conteudo": {
+            "eventos": [
+              {
+                "ordem": 1,
+                "rotulo": "Ameaças",
+                "descricao": "Vírus se propaga; trojan disfarça utilidade; worm se espalha sozinho."
+              },
+              {
+                "ordem": 2,
+                "rotulo": "Defesa",
+                "descricao": "Antivírus + firewall + atualizações + usuário cauteloso."
+              },
+              {
+                "ordem": 3,
+                "rotulo": "IDECAN",
+                "descricao": "Usa 'elimina por completo' e 'qualquer ameaça' para testar absolutos."
+              }
+            ]
+          }
+        },
+        {
+          "id": "nucleo",
+          "titulo": "Malware vs proteção",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Conceito",
+              "Realidade"
+            ],
+            "linhas": [
+              [
+                "Vírus",
+                "Programa que se replica e infecta arquivos"
+              ],
+              [
+                "Antivírus",
+                "Detecta e remove muitas ameaças — não é infalível"
+              ],
+              [
+                "Firewall",
+                "Filtra conexões de rede — não substitui antivírus"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pegadinha típica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Confusão",
+              "Regra"
+            ],
+            "linhas": [
+              [
+                "Antivírus elimina 100% das ameaças",
+                "Nenhum software garante proteção absoluta"
+              ],
+              [
+                "Firewall = antivírus",
+                "Funções diferentes: rede vs arquivos"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que não"
+            ],
+            "linhas": [
+              [
+                "A — elimina qualquer ameaça",
+                "Promessa absoluta — falsa na prática."
+              ],
+              [
+                "B — vírus só em pendrive",
+                "Vírus pode vir de e-mail, download, rede."
+              ],
+              [
+                "D — firewall substitui antivírus",
+                "São camadas complementares, não substitutos."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "O caso desta questão",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Marcar alternativa com 'por completo' ou 'qualquer'",
+                "Desconfie de absolutos — gabarito C"
+              ],
+              [
+                "Achar que alerta do antivírus = infecção confirmada",
+                "Alerta exige análise; pode ser falso positivo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "edital",
+          "titulo": "O que o edital cobra",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Anexo I — Informática, item 7.1: segurança da informação, vírus, antivírus e firewall.",
+            "destaques": [
+              "item 7.1",
+              "segurança",
+              "antivírus"
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Antivírus ajuda, mas não é escudo perfeito. Desconfie de 'elimina tudo' e 'qualquer ameaça'.",
+            "destaques": [
+              "não é escudo perfeito",
+              "qualquer"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 7.1",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "versao": 2,
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 180
+    },
+    "tags": [
+      "seguranca",
+      "malware",
+      "antivirus",
+      "backup"
+    ]
+  }
+]

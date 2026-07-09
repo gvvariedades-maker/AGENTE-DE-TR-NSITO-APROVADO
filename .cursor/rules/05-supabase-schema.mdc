@@ -9,7 +9,8 @@ alwaysApply: false
 ## Tabelas principais
 
 - `topics` — árvore do Anexo I (`disciplina`, `nome`, `edital_ref`, `parent_id`)
-- `questions` — banco de questões (`topic_id`, `enunciado`, `alt_a`…`alt_e`, `gabarito`, `tipo`, `estilo_idecan`, `dificuldade`, `comentario_json`, `tags`)
+- `questions` — banco de questões (`topic_id`, `enunciado`, `alt_a`…`alt_e`, `gabarito`, `tipo`, `estilo_idecan`, `dificuldade`, `comentario_json`, `tags`, `estudo_reverso_visual_json`, `estudo_reverso_visual_completo_json`)
+- `estudo_reverso_sessions` — progresso do player visual por usuário/questão
 - `attempts` — respostas (`user_id`, `question_id`, `resposta`, `acertou`, `tempo_seg`, `modo`)
 - `simulados` — tentativas completas (`nota_total`, `notas_disciplina_json`, `zerou_disciplina`, `duracao_min`)
 - `srs_cards` — repetição espaçada FSRS-4.5 por usuário/questão
@@ -32,6 +33,12 @@ alwaysApply: false
 
 - Manter JSON compacto em `comentario_json`; evitar blobs
 - Seed via script local (`scripts/seed-questions.ts`), não via UI em produção
+
+## Conexão (pooler)
+
+- App (`src/lib/db/resolve-database-url.ts`) e scripts (`scripts/script-db.ts`) preferem porta **6543** (transaction mode) no host `pooler.supabase.com`
+- Evita `EMAXCONNSESSION` com `npm run dev` + seed simultâneos
+- Documentar em `.env.example`; reiniciar dev server após mudar env
 
 ## MCP Supabase (Cursor)
 

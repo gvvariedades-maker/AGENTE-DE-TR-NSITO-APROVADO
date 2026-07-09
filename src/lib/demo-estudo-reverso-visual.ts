@@ -80,18 +80,6 @@ export const DEMO_ESTUDO_REVERSO_VISUAL: EstudoReversoVisual = {
         destaques: ["165-A"],
       },
     },
-    {
-      id: "recall",
-      titulo: "Fixação ativa",
-      tipo: "micro_recall",
-      conteudo: {
-        pergunta:
-          "Sem olhar: qual artigo configura a recusa ao teste do etilômetro?",
-        resposta_esperada: "165-A",
-        dica: "Começa com 165...",
-        aceitar_variacoes: ["165A", "art. 165-A"],
-      },
-    },
   ],
   links_fonte: [
     { rotulo: "CTB art. 165-A", path: "conteúdo/legislação federal/" },

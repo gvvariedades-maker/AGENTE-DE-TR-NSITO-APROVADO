@@ -152,18 +152,23 @@ export interface AgendarOpcoes {
  * Calcula o próximo estado do card após uma resposta.
  *
  * @param card Estado atual (usar `criarCardInicial()` para card novo).
- * @param acertou Se o aluno acertou a questão nesta tentativa.
+ * @param acertouOuGrade `true`/`false` (Good/Again) ou nota FSRS explícita 1–4.
  * @param now Momento da resposta (injetável para testes).
  */
 export function agendarProximaRevisao(
   card: SrsCardState,
-  acertou: boolean,
+  acertouOuGrade: boolean | FsrsGrade,
   now: Date = new Date(),
   opcoes: AgendarOpcoes = {},
 ): SrsSchedule {
   const w = opcoes.weights ?? FSRS_DEFAULT_WEIGHTS;
   const requestedRetention = opcoes.requestedRetention ?? REQUESTED_RETENTION;
-  const grade: FsrsGrade = acertou ? 3 : 1;
+  const grade: FsrsGrade =
+    typeof acertouOuGrade === "boolean"
+      ? acertouOuGrade
+        ? 3
+        : 1
+      : acertouOuGrade;
 
   let difficulty: number;
   let stability: number;

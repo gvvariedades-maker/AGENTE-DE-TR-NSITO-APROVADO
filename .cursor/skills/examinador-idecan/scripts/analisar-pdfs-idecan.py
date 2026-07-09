@@ -186,9 +186,13 @@ def main() -> None:
     cmd_global = Counter(q.comando for q in todas)
     stats["global"]["comandos"] = {k: {"n": v, "pct": pct(v, len(todas))} for k, v in cmd_global.most_common()}
     stats["global"]["media_chars_enunciado"] = round(statistics.mean(len(q.enunciado) for q in todas))
+    stats["global"]["desvio_chars_enunciado"] = round(statistics.stdev([len(q.enunciado) for q in todas])) if len(todas) > 1 else 0
     stats["global"]["media_chars_alternativa"] = round(
         statistics.mean(len(a) for q in todas for a in q.alternativas.values())
     )
+    stats["global"]["desvio_chars_alternativa"] = round(
+        statistics.stdev([len(a) for q in todas for a in q.alternativas.values()])
+    ) if len(todas) > 1 else 0
     stats["global"]["dist_alternativas"] = dict(Counter(q.num_alternativas for q in todas))
     stats["global"]["gabaritos"] = dict(Counter(q.gabarito for q in todas))
 
@@ -206,11 +210,16 @@ def main() -> None:
         # exemplos representativos (enunciado mais longo = caso prático)
         exemplos_idx = sorted(range(len(qs)), key=lambda i: len(qs[i].enunciado), reverse=True)[:3]
 
+        enunciado_lens = [len(q.enunciado) for q in qs]
+        alt_lens = [len(a) for q in qs for a in q.alternativas.values()]
+
         stats["por_disciplina"][disc] = {
             "total": len(qs),
             "comandos": {k: {"n": v, "pct": pct(v, len(qs))} for k, v in cmd.most_common()},
-            "media_chars_enunciado": round(statistics.mean(len(q.enunciado) for q in qs)),
-            "media_chars_alternativa": round(statistics.mean(len(a) for q in qs for a in q.alternativas.values())),
+            "media_chars_enunciado": round(statistics.mean(enunciado_lens)),
+            "desvio_chars_enunciado": round(statistics.stdev(enunciado_lens)) if len(enunciado_lens) > 1 else 0,
+            "media_chars_alternativa": round(statistics.mean(alt_lens)),
+            "desvio_chars_alternativa": round(statistics.stdev(alt_lens)) if len(alt_lens) > 1 else 0,
             "dist_alternativas": dict(Counter(q.num_alternativas for q in qs)),
             "gabaritos": dict(Counter(q.gabarito for q in qs)),
             "pegadinhas_tags": peg.most_common(8),

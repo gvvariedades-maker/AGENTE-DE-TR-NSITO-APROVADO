@@ -7,7 +7,7 @@ Baseado em pesquisa (testing effect, CLT, SRS, feedback elaborado). Aplicar em t
 | Princípio | Fonte | Implementação no app |
 |-----------|-------|---------------------|
 | Feedback imediato adaptativo | Frontiers Psych 2021 | `FeedbackElaborado` — acerto e erro em blocos progressivos (EF) |
-| Estudo reverso visual | Mayer CTML + dual coding | `EstudoReversoPlayer` — botão pós-resposta, 4-6 telas + micro-recall |
+| Estudo reverso visual | Mayer CTML + dual coding | `EstudoReversoPlayer` — pós-resposta, aula v2 (7–11 telas), termina em macete. Doc: `estudo-reverso-visual/DOCUMENTACAO.md` |
 | Carga cognitiva baixa | CLT / IJCSIT 2025 | Uma questão/tela, modo foco, progressive disclosure |
 | Chunking mobile | TechClass microlearning | Enunciado scrollável; feedback em etapas |
 | SRS visual | Anki / FSRS-4.5 (`src/lib/srs.ts`) | `CicloRetencao` — aprendendo / jovem / maduro (por `stability`) |

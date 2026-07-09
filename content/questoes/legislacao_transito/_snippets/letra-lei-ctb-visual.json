@@ -1,0 +1,281 @@
+{
+  "_template": {
+    "modo": "letra_da_lei",
+    "descricao": "Template reutilizável para questões IDECAN com assertivas quase literais e adulteração de UMA palavra por alternativa errada.",
+    "topicos_aplicaveis": [
+      "CTB_disposicoes_preliminares",
+      "CTB_sistema_nacional_transito",
+      "CTB_anexo_I_conceitos"
+    ],
+    "como_adaptar": [
+      "1. Modo aula completa (v2): 7–11 telas com secao por slide — ver snippet disposicoes-preliminares-art1-visual.json.",
+      "2. Trocar fundamento_slug e linhas do mapa conforme os artigos da questão.",
+      "3. Na tela caca/distratores: 1 linha por errada, slug IDECAN na 1ª coluna.",
+      "4. Ajustar macete e checklist A–E ao gabarito da questão.",
+      "5. Referência ouro: content/questoes/legislacao_transito/lote-006.json",
+      "6. Snippet 4 slides com letra da lei: content/questoes/legislacao_transito/_snippets/disposicoes-preliminares-art1-visual.json"
+    ],
+    "golpes_idecan_recorrentes": [
+      "termo_unico — sinônimo falso ou restrição indevida",
+      "regra_excecao — supressão de expressão limitadora",
+      "competencia_snt — federalizar competência local",
+      "numero_vizinho — troca de inciso, parágrafo ou artigo vizinho"
+    ]
+  },
+  "estudo_reverso_visual": {
+    "versao": 1,
+    "arquetipo": "tabela_gradacao",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 120,
+    "fundamento_slug": "CTB_art_1_III",
+    "macete_visual": "SNT = responsabilidade OBJETIVA (ação, omissão ou erro)",
+    "telas": [
+      {
+        "id": "mapa",
+        "titulo": "Mapa: Disposições Preliminares",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": ["Artigo", "Função + pegadinha IDECAN"],
+          "linhas": [
+            {
+              "faixa": "Art. 1º",
+              "classificacao": "§1º parada · §2º direito seguro · §3º respons. OBJETIVA ← D",
+              "destaque": true
+            },
+            {
+              "faixa": "Art. 2º",
+              "classificacao": "Caput: circunscrição local (não União) · p.ún.: uso COLETIVO"
+            },
+            {
+              "faixa": "Art. 3º",
+              "classificacao": "Qualquer veículo — bicicleta, animal, não automotor"
+            },
+            {
+              "faixa": "Art. 4º",
+              "classificacao": "Conceitos no Anexo I — base para definições"
+            }
+          ]
+        }
+      },
+      {
+        "id": "objetiva",
+        "titulo": "§3º: responsabilidade OBJETIVA do SNT",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["Subjetiva ✗", "Objetiva ✓ (gabarito D)"],
+          "linhas": [
+            [
+              "Vítima prova culpa do órgão",
+              "Basta dano + nexo causal"
+            ],
+            [
+              "Discute dolo ou negligência",
+              "Não discute culpa — responde o SNT"
+            ],
+            [
+              "Civil comum entre particulares",
+              "Falha em programas do trânsito seguro"
+            ],
+            [
+              "Tríade incompleta na alternativa",
+              "Ação, omissão OU erro — tríade inteira"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caca",
+        "titulo": "Caça: banca × lei (palavra a palavra)",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["Banca adulterou ✗", "CTB verdadeiro ✓"],
+          "linhas": [
+            [
+              "A — termo_unico: interrupção de marcha",
+              "§1º exige parada (não sinônimo)"
+            ],
+            [
+              "B — regra_excecao: sem uso coletivo",
+              "p.ún.: só estac. privado coletivo"
+            ],
+            [
+              "C — competencia_snt: Depto da União",
+              "caput: órgão da circunscrição"
+            ],
+            [
+              "E — termo_unico: só automotor",
+              "art. 3º: qualquer veículo"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Macete + recall",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "SNT paga no OBJETIVO: dano + nexo, sem culpa — ação, omissão ou erro.\n\nA=parada · B=coletivo · C=circunscrição · D=OBJETIVA ✓ · E=qualquer veículo\n\nRecall: (1) SNT responde de forma ______? (2) Estac. privado = uso ______? (3) Regulamenta a via: órgão com ______?\n\nRespostas: objetiva · coletivo · circunscrição.",
+          "destaques": [
+            "OBJETIVO",
+            "OBJETIVA",
+            "parada",
+            "coletivo",
+            "circunscrição",
+            "objetiva"
+          ]
+        }
+      }
+    ],
+    "links_fonte": [
+      {
+        "rotulo": "CTB arts. 1º a 4º",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ]
+  },
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "tabela_gradacao",
+    "arquetipo_secundario": "comparacao",
+    "publico_alvo": "iniciante",
+    "duracao_estimada_seg": 200,
+    "fundamento_slug": "CTB_art_1_III",
+    "macete_visual": "SNT = OBJETIVA: ação, omissão ou erro",
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Diagnóstico: letra da lei pura",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito D. Se marcou A, caiu na pegadinha mais cruel: o §1º parece perfeito, mas troca parada por interrupção de marcha. IDECAN cola trechos reais do CTB e adultera UMA palavra por errada — seu treino é comparar palavra a palavra, não a ideia geral.",
+          "destaques": ["Gabarito D", "parada", "UMA palavra"]
+        }
+      },
+      {
+        "id": "mapa",
+        "titulo": "Mapa: Disposições Preliminares",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": ["Artigo", "Função + pegadinha típica"],
+          "linhas": [
+            {
+              "faixa": "Art. 1º §3º",
+              "classificacao": "Respons. OBJETIVA do SNT → gabarito D",
+              "destaque": true
+            },
+            {
+              "faixa": "Art. 1º §1º",
+              "classificacao": "parada (não interrupção de marcha) → pegou A"
+            },
+            {
+              "faixa": "Art. 2º",
+              "classificacao": "circunscrição local + uso coletivo → B e C"
+            },
+            {
+              "faixa": "Art. 3º",
+              "classificacao": "qualquer veículo (não automotor) → pegou E"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Pegadinha central: subjetiva vs objetiva",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["Confusão típica", "Regra correta (§3º)"],
+          "linhas": [
+            [
+              "SNT só responde se houver culpa",
+              "Responsabilidade objetiva — basta dano + nexo"
+            ],
+            [
+              "Marcar A (conceito de trânsito no §1º)",
+              "Gabarito é D (responsabilidade do SNT no §3º)"
+            ],
+            [
+              "Tríade cortada ou cumulativa",
+              "Ação, omissão OU erro — na íntegra"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que cada alternativa erra",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["Alternativa", "Mecanismo + por quê"],
+          "linhas": [
+            [
+              "A — termo_unico",
+              "Sinônimo falso: interrupção de marcha no lugar de parada (§1º)."
+            ],
+            [
+              "B — regra_excecao",
+              "Suprime de uso coletivo — sem isso, qualquer garagem vira via."
+            ],
+            [
+              "C — competencia_snt",
+              "Federaliza: inventa departamento da União — competência é local."
+            ],
+            [
+              "E — termo_unico",
+              "Restringe a automotor — art. 3º diz qualquer veículo."
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "O caso desta questão",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["Situação", "Conclusão"],
+          "linhas": [
+            [
+              "Comando: assertiva correta das preliminares",
+              "Art. 1º, §3º literal → marque D"
+            ],
+            [
+              "Erro típico: marcar A pelo §1º",
+              "A adultera parada — assertiva fluida, mas não literal"
+            ],
+            [
+              "Padrão IDECAN nesta questão",
+              "1 palavra trocada, suprimida ou federalizada por errada"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Dispositivo principal",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 1º, §3º",
+          "texto": "Os órgãos e entidades componentes do Sistema Nacional de Trânsito respondem, no âmbito das respectivas competências, objetivamente, por danos causados aos cidadãos em virtude de ação, omissão ou erro na execução e manutenção de programas, projetos e serviços que garantam o exercício do direito do trânsito seguro.",
+          "trechos_grifados": [
+            { "inicio": 95, "fim": 109, "motivo": "objetivamente" },
+            { "inicio": 155, "fim": 177, "motivo": "ação, omissão ou erro" }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Macete + transferência",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "SNT = OBJETIVA: ação, omissão ou erro. Checklist: A=parada · B=coletivo · C=circunscrição · D=✓ · E=veículo.\n\nMesmo padrão (1 palavra adulterada) aparece nos arts. 5º–25 e no Anexo I — caça palavra a palavra.",
+          "destaques": ["OBJETIVA", "parada", "coletivo", "circunscrição", "palavra adulterada"]
+        }
+      }
+    ],
+    "links_fonte": [
+      {
+        "rotulo": "CTB arts. 1º a 4º",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ]
+  }
+}

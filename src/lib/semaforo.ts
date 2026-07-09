@@ -9,16 +9,15 @@ import {
   MIN_PONTOS_DISCIPLINA_ESPECIFICO,
   MIN_PONTOS_DISCIPLINA_GERAL,
   MIN_PONTOS_TOTAL,
-  PONTOS_POR_QUESTAO,
   type ZonaSemaforo,
   isDisciplinaGeral,
 } from "@/lib/edital-constants";
 import {
   DISCIPLINA_LABELS,
   PROVA_DATA,
-  SIMULADO_ESPELHO_DISTRIBUICAO,
   type Disciplina,
 } from "@/types";
+import { projetarPontosDisciplina } from "@/lib/semaforo-projecao";
 
 export interface ZonaMetrica {
   label: string;
@@ -67,16 +66,6 @@ function statusLabel(zona: ZonaSemaforo): string {
     case "vazio":
       return "Sem dados";
   }
-}
-
-function projetarPontosDisciplina(
-  acertos: number,
-  tentativas: number,
-  disciplina: Disciplina,
-): number {
-  if (tentativas === 0) return 0;
-  const taxa = acertos / tentativas;
-  return taxa * SIMULADO_ESPELHO_DISTRIBUICAO[disciplina] * PONTOS_POR_QUESTAO;
 }
 
 function agregarPorDisciplina(

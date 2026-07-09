@@ -7,7 +7,7 @@
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { CorpusLegal, validarQuestaoLegislacao } from "../../../../src/lib/validations/citacao-legal";
-import { questoesFileSchema } from "../../../../src/lib/validations/questao";
+import { questoesImportFileSchema } from "../../../../src/lib/validations/questao";
 
 async function main() {
   const args = process.argv.slice(2);
@@ -22,7 +22,8 @@ async function main() {
   const absolute = resolve(process.cwd(), filePath);
   const raw = await readFile(absolute, "utf-8");
   const json = JSON.parse(raw) as unknown;
-  const result = questoesFileSchema.safeParse(json);
+  const questoesInput = Array.isArray(json) ? json : [json];
+  const result = questoesImportFileSchema.safeParse(questoesInput);
 
   if (!result.success) {
     console.error(`❌ ${filePath}\n`);
@@ -37,7 +38,7 @@ async function main() {
     gabaritos[q.gabarito] = (gabaritos[q.gabarito] ?? 0) + 1;
   }
 
-  console.log(`✓ ${filePath} — ${questoes.length} questão(ões) válidas (schema)`);
+  console.log(`✓ ${filePath} — ${questoes.length} questão(ões) válidas (schema import + v2 obrigatório)`);
   console.log(`  Gabaritos: ${JSON.stringify(gabaritos)}`);
 
   const semFundamento = questoes.filter(

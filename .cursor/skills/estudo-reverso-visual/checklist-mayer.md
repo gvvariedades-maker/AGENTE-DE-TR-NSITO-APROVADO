@@ -1,17 +1,40 @@
-# Checklist Mayer (gate bloqueante)
+# Checklist Mayer (gate bloqueante — espelho do `<gate_mayer>` v3)
 
-Antes de salvar `estudo_reverso_visual` no JSON:
+Documentação completa: [DOCUMENTACAO.md](./DOCUMENTACAO.md).
 
-- [ ] 4 a 6 telas; ultima sempre `micro_recall`
-- [ ] Max 120 palavras por tela (titulo + conteudo)
-- [ ] 1 ideia principal por tela (segmenting)
-- [ ] Visual ligado ao gabarito (coherence — sem decoracao)
-- [ ] Grifos com motivo explicito em `trecho_legal` (signaling)
-- [ ] Lei com fonte verificavel em `conteúdo/FONTES.md`
-- [ ] `micro_recall` com resposta verificavel e nao ambigua
-- [ ] `macete_visual` <= 80 caracteres
-- [ ] Fluxograma com max 8 nos
-- [ ] Sem emoji, stock image ou ilustracao decorativa
-- [ ] `fundamento_slug` alinhado ao `comentario.fundamento_legal`
+Reprovou **1 item** → corrigir antes de `npm run validate:estudo-reverso-visual`.
 
-Rodar: `npm run validate:estudo-reverso-visual -- arquivo.json`
+**Gate editorial 12/12** (itens 9–16): ver [PADRAO-AULA-COMPLETA-v3.md](./exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md).
+
+## Gate 8/8
+
+- [ ] **1.** Cada tela tem 1 ideia central identificável em ≤ 5s?
+- [ ] **2.** Nenhuma sequência de 2 telas só `texto_destaque`? *(exceção: contexto→glossário; qualquer→macete — validador Zod)*
+- [ ] **3.** Todo dado legal passou pela `<cadeia_anti_alucinacao>` (`conteúdo/FONTES.md`)?
+- [ ] **4.** Tela de distratores (v2) nomeia o slug de mecanismo de cada errada? *(validador Zod)*
+- [ ] **5.** Arquétipo expõe a pegadinha do gabarito (não só ilustra o tema)?
+- [ ] **6.** Limites por componente respeitados? *(validador Zod — ver tabela na SKILL)*
+- [ ] **7.** Zero elemento decorativo (cada item sustenta a pegadinha)?
+- [ ] **8.** Coerência v1↔v2: mesmo `fundamento_slug`, macetes não contraditórios? *(validador Zod quando ambos existem)*
+
+## Limites rápidos
+
+| Componente | Limite |
+|---|---|
+| Palavras/tela v1 | ≤ 120 |
+| Palavras/tela v2 | ≤ 150 |
+| `macete_visual` | ≤ 80 caracteres |
+| `fluxograma` MÉTODO | ≤ 4 nós, linear, 1 resultado |
+| `fluxograma` (demais) | ≤ 7 nós |
+| `comparacao` | ≤ 5 linhas |
+| `tabela_gradacao` | ≤ 5 faixas |
+| `linha_tempo` | ≤ 6 eventos |
+| `matriz_assertivas` | ≤ 5 itens |
+| `diagrama_competencia` | ≤ 8 nós |
+| `trecho_legal` | ≤ 80 palavras, ≤ 3 grifos |
+
+## Comando
+
+```bash
+npm run validate:estudo-reverso-visual -- arquivo.json
+```

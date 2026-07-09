@@ -1,0 +1,295 @@
+[
+  {
+    "disciplina": "direito_administrativo",
+    "topico": "dir_adm_3_2",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 4,
+    "fundamento_slug": "Lei9784_art13",
+    "enunciado": "O diretor-geral da STTP, buscando agilizar a organização interna, delega por portaria a um servidor chefe de setor a competência para editar atos disciplinando prazos de resposta a requerimentos administrativos protocolados no órgão — norma de caráter geral, aplicável a todos os setores. Considerando as espécies e a classificação dos atos administrativos, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O ato delegado é individual e vinculado, pois refere-se apenas à organização interna da STTP, podendo ser delegado nos termos da Lei nº 9.784/1999.",
+      "B": "A delegação é inválida, pois a edição de atos de caráter normativo não pode ser objeto de delegação, conforme a Lei nº 9.784/1999.",
+      "C": "O ato é discricionário e enunciativo, razão pela qual a delegação é válida mediante publicação da portaria delegatória no meio oficial.",
+      "D": "Trata-se de ato normativo perfeito, cuja delegação é admitida quando limitada a servidores de cargo em comissão do mesmo órgão."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Classificação ato normativo (geral) × individual (concreto) e vedação de delegação de atos normativos (Lei 9.784/99, art. 13).",
+      "fundamento_legal": "Lei 9.784/99, art. 13: \"Não podem ser objeto de delegação: I - a edição de atos de caráter normativo; II - a decisão de recursos administrativos; III - as matérias de competência exclusiva do órgão ou autoridade.\"",
+      "passo_a_passo": [
+        "1. Ato que disciplina prazos para todos os setores = normativo (espécie geral), não individual. Lei 9.784/99, art. 13, I veda expressamente delegar a edição de atos normativos.",
+        "2. A erra por termo_unico (confunde organização interna com ato individual delegável); C erra por regra_excecao (trata delegação de normativo como válida por ser enunciativo); D erra por regra_excecao (admite delegação de ato normativo com condição não prevista na lei).",
+        "3. B correta: transcrição literal do art. 13, I — edição de atos normativos não se delega."
+      ],
+      "pegadinha": "A banca induz a crer que norma interna de organização é ato individual; na verdade, regra geral para todos os setores é ato normativo, vedado na delegação.",
+      "macete": "NOR-REC-EXC: Normativo, Recurso e Competência exclusiva não se delegam (art. 13, I–III).",
+      "estudo_reverso": [
+        "Lei 9.784/99 art. 13",
+        "Lei 9.784/99 art. 14",
+        "CF art. 37"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 80,
+      "fundamento_slug": "Lei9784_art13",
+      "macete_visual": "NOR-REC-EXC: normativo · recurso · competência exclusiva",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Regra geral para todos os setores = ato normativo. Art. 13, I veda delegar edição de atos normativos — mesmo em organização interna.",
+            "destaques": ["ato normativo", "art. 13", "delegação"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Normativo × individual",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "Classificação ✓"],
+            "linhas": [
+              [
+                "Norma interna = ato individual",
+                "Regra geral para classe indeterminada = ato NORMATIVO"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Regra geral para todos os setores?", "tipo": "pergunta" },
+              { "id": "p2", "label": "É edição de ato normativo?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Delegação vedada — normativo indelegável", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei 9.784/99, art. 13, I",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 13, I",
+            "texto": "Não podem ser objeto de delegação: I - a edição de atos de caráter normativo;",
+            "trechos_grifados": [
+              {
+                "inicio": 39,
+                "fim": 76,
+                "motivo": "vedação à delegação de atos normativos"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "NOR-REC-EXC: normativo, recurso e competência exclusiva não se delegam (art. 13).",
+            "destaques": ["NOR-REC-EXC", "art. 13"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.784/99 art. 13",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "todos",
+      "duracao_estimada_seg": 240,
+      "fundamento_slug": "Lei9784_art13",
+      "macete_visual": "NOR-REC-EXC: normativo · recurso · competência exclusiva",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Regra geral interna é ato normativo — não se delega (art. 13, I)",
+        "eixos_legais": ["Lei9784_art13"],
+        "isca_por_alternativa": {
+          "A": "trata norma geral interna como ato individual delegável",
+          "C": "valida delegação por classificar o ato como enunciativo",
+          "D": "admite delegação de normativo com condição não prevista em lei"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: normativo não se delega",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B (delegação inválida).\n\nA — confundiu regra geral interna com ato individual.\nC — tratou normativo como enunciativo delegável.\nD — inventou exceção para cargo em comissão.\n\nPegadinha: organização interna ≠ ato individual quando a norma é geral.",
+            "destaques": ["ato normativo", "delegação", "art. 13"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Três classificações do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Ato normativo: regra geral, abstrata, aplicável a situações futuras e indeterminadas.\nAto individual (concreto): decide caso específico, com efeitos diretos sobre destinatário identificado.\nDelegação: transferência de competência, vedada para atos normativos pelo art. 13, I.",
+            "destaques": ["normativo", "individual", "delegação"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "MÉTODO: classificar o ato delegado",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Disciplina prazos para todos os setores?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "É edição de ato de caráter normativo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Delegação inválida — normativo indelegável",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Espécies por alcance e efeito",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Espécie", "Característica"],
+            "linhas": [
+              {
+                "faixa": "Normativo (geral)",
+                "classificacao": "Regra abstrata para situações futuras",
+                "destaque": true
+              },
+              { "faixa": "Individual (concreto)", "classificacao": "Decide caso específico identificado" },
+              { "faixa": "Enunciativo", "classificacao": "Declara direito já existente" },
+              { "faixa": "Constitutivo", "classificacao": "Cria, modifica ou extingue direito" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pegadinha: interno × individual",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença (A/C/D) ✗", "Classificação correta ✓"],
+            "linhas": [
+              [
+                "Norma interna de prazos = ato individual delegável",
+                "Regra geral para todos os setores = ato NORMATIVO — art. 13, I veda delegação"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Confunde organização interna com ato individual — é norma geral"
+              ],
+              [
+                "C — regra_excecao",
+                "Trata delegação de normativo como válida por classificação enunciativa"
+              ],
+              [
+                "D — regra_excecao",
+                "Admite delegação de normativo com condição não prevista no art. 13"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatores do enunciado → dispositivo",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              ["Prazos para todos os setores", "Ato normativo (geral), não individual"],
+              ["Delegação de edição de norma", "Vedada pelo art. 13, I"],
+              ["Portaria delegatória publicada", "Não convalida — matéria indelegável"],
+              ["Resultado", "Alternativa B — delegação inválida"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 13 — o que não se delega",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 13",
+            "texto": "Não podem ser objeto de delegação: I - a edição de atos de caráter normativo; II - a decisão de recursos administrativos; III - as matérias de competência exclusiva do órgão ou autoridade.",
+            "trechos_grifados": [
+              {
+                "inicio": 39,
+                "fim": 76,
+                "motivo": "fluxo — edição de atos normativos é indelegável"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "NOR-REC-EXC: normativo, recurso e competência exclusiva não se delegam (art. 13, I–III).\n\nNear-transfer: se o diretor delegasse a decisão de recurso administrativo de um condutor, seria válido? Não — art. 13, II também veda.",
+            "destaques": ["NOR-REC-EXC", "art. 13, II", "recurso"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.784/99 art. 13",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        }
+      ]
+    },
+    "tags": [
+      "atos_administrativos",
+      "especies_classificacao",
+      "ato_normativo",
+      "delegacao",
+      "lei_9784"
+    ]
+  }
+]

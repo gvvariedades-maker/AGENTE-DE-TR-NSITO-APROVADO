@@ -42,11 +42,17 @@ export interface ComentarioQuestao {
   estudo_reverso: string[];
 }
 
-import type { EstudoReversoVisual } from "@/types/estudo-reverso-visual";
+import type {
+  EstudoReversoVisualV1,
+  EstudoReversoVisualV2,
+} from "@/types/estudo-reverso-visual";
 
 export type {
   ArquetipoVisual,
   EstudoReversoVisual,
+  EstudoReversoVisualV1,
+  EstudoReversoVisualV2,
+  PublicoAlvoVisual,
   TelaVisual,
 } from "@/types/estudo-reverso-visual";
 
@@ -60,6 +66,7 @@ export interface QuestaoSeed {
   alternativas: Record<string, string>;
   gabarito: string;
   comentario: ComentarioQuestao;
-  estudo_reverso_visual?: EstudoReversoVisual;
+  estudo_reverso_visual?: EstudoReversoVisualV1;
+  estudo_reverso_visual_completo?: EstudoReversoVisualV2;
   tags?: string[];
 }

@@ -40,11 +40,14 @@ export const CTB_TOPICOS_LABELS: Record<string, string> = {
   SENATRAN_966_curso_agente: "SENATRAN 966 — curso de agente",
 };
 
-/** Tópicos sugeridos para quem ainda não tem histórico (perfil agente STTP). */
+/** @deprecated Use TOPICOS_PRIORIDADE_EDITAL em edital-topicos.ts */
 export const TOPICOS_CTB_PRIORIDADE: string[] = [
   "CTB_engenharia_fiscalizacao",
   "CTB_infracoes",
   "CTB_processo_administrativo",
+  "CONTRAN_985_mbft",
+  "CONTRAN_432_alcoolemia",
+  "SENATRAN_966_curso_agente",
 ];
 
 export function labelTopicoCTB(slug: string): string {

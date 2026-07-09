@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import type { ConteudoTabelaGradacao } from "@/types/estudo-reverso-visual";
 import { cn } from "@/lib/utils";
 
@@ -22,9 +23,10 @@ export function TelaTabelaGradacao({
             <tr
               key={i}
               className={cn(
-                "border-b border-border last:border-0",
+                "revelar-item border-b border-border last:border-0",
                 linha.destaque && "bg-transito/10",
               )}
+              style={{ "--i": i } as CSSProperties}
             >
               <td className="px-3 py-2">{linha.faixa}</td>
               <td

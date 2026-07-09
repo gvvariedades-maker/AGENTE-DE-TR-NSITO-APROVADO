@@ -1,0 +1,65 @@
+name: Validate questoes
+
+on:
+  pull_request:
+    paths:
+      - "content/questoes/**"
+      - "src/lib/validations/**"
+      - ".cursor/skills/**/scripts/**"
+      - "scripts/validate-lote.ts"
+  push:
+    branches:
+      - main
+    paths:
+      - "content/questoes/**"
+
+jobs:
+  validate-lote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: List changed JSON lotes
+        id: files
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE="${{ github.event.pull_request.base.sha }}"
+            HEAD="${{ github.event.pull_request.head.sha }}"
+            FILES=$(git diff --name-only "$BASE" "$HEAD" -- 'content/questoes/**/*.json' || true)
+          else
+            FILES=$(git diff --name-only HEAD~1 HEAD -- 'content/questoes/**/*.json' 2>/dev/null || true)
+          fi
+          if [ -z "$FILES" ]; then
+            FILES=$(find content/questoes -name '*.json' -type f 2>/dev/null | head -20 || true)
+          fi
+          echo "files<<EOF" >> "$GITHUB_OUTPUT"
+          echo "$FILES" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
+      - name: validate:lote (skip citações no CI)
+        shell: bash
+        run: |
+          FILES="${{ steps.files.outputs.files }}"
+          if [ -z "$FILES" ]; then
+            echo "Nenhum lote JSON para validar."
+            exit 0
+          fi
+          FAILED=0
+          for FILE in $FILES; do
+            if [ -f "$FILE" ]; then
+              echo "── $FILE"
+              npm run validate:lote -- "$FILE" --skip-citacoes || FAILED=1
+            fi
+          done
+          exit $FAILED

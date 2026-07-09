@@ -7,9 +7,9 @@
  */
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import { questoesFileSchema, type QuestaoSeedInput } from "../../../../src/lib/validations/questao";
+import { questoesImportFileSchema, type QuestaoSeedImportInput } from "../../../../src/lib/validations/questao";
 
-type Disciplina = QuestaoSeedInput["disciplina"];
+type Disciplina = QuestaoSeedImportInput["disciplina"];
 
 const FAIXAS_ENUNCIADO: Partial<Record<Disciplina, { min: number; max: number }>> = {
   legislacao_transito: { min: 250, max: 500 },
@@ -70,6 +70,14 @@ const ESTILOS_VALIDOS = new Set([
   "conceito_informatica",
 ]);
 
+const MECANISMO_SLUGS = [
+  "numero_vizinho",
+  "competencia_snt",
+  "gravidade",
+  "regra_excecao",
+  "termo_unico",
+] as const;
+
 type Nivel = "erro" | "aviso" | "ok";
 
 interface Achado {
@@ -91,7 +99,7 @@ function temComandoExplicito(enunciado: string): boolean {
   return COMANDOS_IDECAN.some((re) => re.test(enunciado));
 }
 
-function validarQuestao(q: QuestaoSeedInput, index: number): Achado[] {
+function validarQuestao(q: QuestaoSeedImportInput, index: number): Achado[] {
   const achados: Achado[] = [];
   const n = index + 1;
   const push = (nivel: Nivel, codigo: string, mensagem: string) => {
@@ -99,8 +107,17 @@ function validarQuestao(q: QuestaoSeedInput, index: number): Achado[] {
   };
 
   const keys = Object.keys(q.alternativas).sort();
-  if (keys.length !== 4 || !keys.every((k) => ["A", "B", "C", "D"].includes(k))) {
-    push("erro", "A4", `Esperadas exatamente 4 alternativas A–D; encontrado: ${keys.join(", ")}`);
+  const letrasValidas =
+    keys.length === 5 ? (["A", "B", "C", "D", "E"] as const) : (["A", "B", "C", "D"] as const);
+  if (
+    keys.length !== letrasValidas.length ||
+    !keys.every((k) => (letrasValidas as readonly string[]).includes(k))
+  ) {
+    push(
+      "erro",
+      "A4",
+      `Esperadas exatamente ${letrasValidas.length} alternativas ${letrasValidas[0]}–${letrasValidas[letrasValidas.length - 1]}; encontrado: ${keys.join(", ")}`,
+    );
   }
 
   const altLens = keys.map((k) => q.alternativas[k]?.length ?? 0);
@@ -182,31 +199,73 @@ function validarQuestao(q: QuestaoSeedInput, index: number): Achado[] {
     push("aviso", "B3", "estilo incorreta mas enunciado não menciona INCORRETA");
   }
 
+  const passo2 = q.comentario.passo_a_passo?.[1] ?? "";
+  const erradas = keys.filter((k) => k !== q.gabarito);
+  const slugsNoPasso2 = MECANISMO_SLUGS.filter((s) => passo2.includes(s));
+  if (slugsNoPasso2.length === 0) {
+    push("aviso", "C5", "passo_a_passo[1] sem slug de mecanismo (numero_vizinho, competencia_snt, gravidade, regra_excecao, termo_unico)");
+  } else if (slugsNoPasso2.length < erradas.length) {
+    push("aviso", "C5", `passo_a_passo[1] cita ${slugsNoPasso2.length} mecanismo(s); esperado ≥ ${erradas.length} para as erradas`);
+  }
+
   return achados;
 }
 
-function validarLote(questoes: QuestaoSeedInput[]): Achado[] {
+function validarLote(questoes: QuestaoSeedImportInput[]): Achado[] {
   const achados: Achado[] = [];
   if (questoes.length < 8) return achados;
 
   const gabaritos: Record<string, number> = { A: 0, B: 0, C: 0, D: 0 };
   let comComando = 0;
+  const porTopico: Record<string, number> = {};
 
   for (const q of questoes) {
     gabaritos[q.gabarito] = (gabaritos[q.gabarito] ?? 0) + 1;
     if (temComandoExplicito(q.enunciado)) comComando++;
+    porTopico[q.topico] = (porTopico[q.topico] ?? 0) + 1;
   }
 
   const total = questoes.length;
   for (const [letra, count] of Object.entries(gabaritos)) {
     const pct = (count / total) * 100;
-    if (pct < 10 || pct > 40) {
+    if (pct < 15 || pct > 35) {
       achados.push({
         questao: 0,
         topico: "LOTE",
-        nivel: "aviso",
+        nivel: "erro",
         codigo: "GAB",
-        mensagem: `Gabarito ${letra} com ${pct.toFixed(0)}% (meta ~25% por letra)`,
+        mensagem: `Gabarito ${letra} com ${pct.toFixed(0)}% (meta 15–35% por letra)`,
+      });
+    }
+  }
+
+  let consecutivos = 1;
+  for (let i = 1; i < questoes.length; i++) {
+    if (questoes[i]?.gabarito === questoes[i - 1]?.gabarito) {
+      consecutivos++;
+      if (consecutivos > 2) {
+        achados.push({
+          questao: 0,
+          topico: "LOTE",
+          nivel: "erro",
+          codigo: "GAB",
+          mensagem: `Mais de 2 gabaritos "${questoes[i]?.gabarito}" consecutivos (Q${i}–Q${i + 1})`,
+        });
+        break;
+      }
+    } else {
+      consecutivos = 1;
+    }
+  }
+
+  for (const [topico, count] of Object.entries(porTopico)) {
+    if (count > 3) {
+      achados.push({
+        questao: 0,
+        topico: "LOTE",
+        nivel: "erro",
+        codigo: "COB",
+        mensagem: `Microtópico "${topico}" com ${count} questões (máx. 3 por lote)`,
       });
     }
   }
@@ -237,7 +296,8 @@ async function main() {
   const absolute = resolve(process.cwd(), filePath);
   const raw = await readFile(absolute, "utf-8");
   const json = JSON.parse(raw) as unknown;
-  const result = questoesFileSchema.safeParse(json);
+  const questoesInput = Array.isArray(json) ? json : [json];
+  const result = questoesImportFileSchema.safeParse(questoesInput);
 
   if (!result.success) {
     console.error(`❌ Schema inválido — rode validate:questoes primeiro.\n`);

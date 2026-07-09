@@ -1,0 +1,341 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_penalidades",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_267",
+    "enunciado": "Cláudia foi autuada pela STTP em Campina Grande por estacionar o veículo em desacordo com as posições estabelecidas no CTB (art. 181, IV), infração de natureza média passível de multa. Consta em seu prontuário autuação por transitar em velocidade superior à máxima permitida em até vinte por cento (art. 218, I), também de natureza média, ocorrida há nove meses. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA quanto à penalidade aplicável à infração atual:",
+    "alternativas": {
+      "A": "Deve ser imposta advertência por escrito, pois a infração anterior é de natureza distinta e não configura reincidência na mesma conduta nos últimos doze meses.",
+      "B": "Aplica-se a penalidade de multa, pois Cláudia cometeu outra infração nos últimos doze meses, afastando a advertência obrigatória prevista no art. 267 do CTB.",
+      "C": "A autoridade de trânsito pode optar entre advertência por escrito e multa, conforme critério educativo, por se tratar de infração média passível de multa.",
+      "D": "Incidem cumulativamente advertência por escrito e multa, nos termos dos incisos I e II do art. 256 do CTB, por se tratar de condutas autônomas."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Advertência por escrito obrigatória (art. 267) apenas quando o infrator não cometeu nenhuma outra infração nos últimos 12 meses — redação vigente do CTB.",
+      "fundamento_legal": "CTB, art. 267: \"Deverá ser imposta a penalidade de advertência por escrito à infração de natureza leve ou média, passível de ser punida com multa, caso o infrator não tenha cometido nenhuma outra infração nos últimos 12 (doze) meses.\" Cláudia tem infração média anterior há 9 meses — aplica-se multa, não advertência.",
+      "passo_a_passo": [
+        "1. Infração atual: art. 181, IV — natureza média. Infração anterior (9 meses): art. 218, I — também média. Há outra infração no prontuário dentro de 12 meses.",
+        "2. A erra por regra_excecao (usa regra revogada de reincidência na mesma infração — o art. 267 vigente veda advertência ante qualquer outra infração em 12 meses); C erra por termo_unico (transforma 'deverá' em faculdade 'pode optar', como na redação antiga); D erra por gravidade (inventa cumulação advertência + multa — art. 267 impõe uma ou outra conforme o prontuário).",
+        "3. B correta: com outra infração nos últimos 12 meses, não cabe advertência obrigatória do art. 267 — aplica-se multa."
+      ],
+      "pegadinha": "A IDECAN induz a focar na distinção entre infrações (estacionamento × velocidade) — mas o art. 267 vigente exige ausência de qualquer infração em 12 meses, não apenas reincidência na mesma conduta.",
+      "macete": "Art. 267: leve/média + zero infrações em 12 meses = advertência obrigatória. Qualquer autuação no período → multa.",
+      "estudo_reverso": [
+        "CTB art. 256",
+        "CTB art. 267",
+        "CTB art. 181, IV",
+        "CTB art. 218, I"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CTB_art_267",
+      "macete_visual": "0 infrações em 12m = ADVERTÊNCIA | qualquer uma = MULTA",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Cláudia tem infração média há 9 meses. A banca troca 'qualquer infração em 12 meses' por 'mesma conduta' — pegadinha clássica do art. 267.",
+            "destaques": ["9 meses", "qualquer infração", "art. 267"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Mesma infração × qualquer infração",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Lei vigente"],
+            "linhas": [
+              ["Só bloqueia se repetir a mesma conduta", "Bloqueia se houver qualquer infração em 12 meses"],
+              ["Estacionamento ≠ velocidade → advertência", "Art. 218 há 9 meses → multa na atual"]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Decisão art. 267",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Infração leve ou média?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Outra infração nos últimos 12 meses?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Multa — gabarito B", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 267",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 267",
+            "texto": "Deverá ser imposta a penalidade de advertência por escrito à infração de natureza leve ou média, passível de ser punida com multa, caso o infrator não tenha cometido nenhuma outra infração nos últimos 12 (doze) meses.",
+            "trechos_grifados": [
+              {
+                "inicio": 166,
+                "fim": 203,
+                "motivo": "qualquer infração em 12 meses afasta advertência"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "0 infrações em 12 meses + leve/média = ADVERTÊNCIA obrigatória. Qualquer autuação no período → MULTA.",
+            "destaques": ["ADVERTÊNCIA", "MULTA", "12 meses"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 267",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "CTB_art_267",
+      "macete_visual": "0 infrações em 12m = ADVERTÊNCIA | qualquer uma = MULTA",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Qualquer infração em 12 meses afasta advertência — não só a mesma conduta",
+        "eixos_legais": ["CTB_art_267", "CTB_art_256_I", "CTB_art_256_II"],
+        "isca_por_alternativa": {
+          "A": "exige mesma conduta — regra revogada do art. 267",
+          "C": "transforma deverá em faculdade da autoridade",
+          "D": "inventa cumulação advertência + multa"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: infração distinta não salva",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B (multa — art. 267 afastado).\n\nA — exige mesma conduta: a lei vigente veda advertência ante qualquer infração em 12 meses.\nC — trata advertência como opção: o art. 267 usa 'deverá', não 'poderá'.\nD — cumula advertência e multa: o art. 267 define uma via conforme o prontuário.\n\nCláudia: art. 181, IV atual + art. 218, I há 9 meses.",
+            "destaques": ["Gabarito B", "9 meses", "qualquer infração"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos da questão",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ADVERTÊNCIA POR ESCRITO: penalidade do art. 256, I — substitui a multa quando o art. 267 autoriza.\n\nPRONTUÁRIO: histórico de autuações do condutor — base para verificar infrações nos últimos 12 meses.\n\nDEVERÁ (art. 267): obrigatoriedade da advertência quando cumpridos os requisitos — não é faculdade da autoridade.",
+            "destaques": ["ADVERTÊNCIA", "PRONTUÁRIO", "DEVERÁ"]
+          }
+        },
+        {
+          "id": "linha_tempo",
+          "titulo": "Evolução do art. 267 — advertência",
+          "tipo": "linha_tempo",
+          "conteudo": {
+            "eventos": [
+              {
+                "ordem": 1,
+                "rotulo": "Antes de 2020",
+                "descricao": "Advertência se não reincidisse na mesma infração em 12 meses (redação revogada)"
+              },
+              {
+                "ordem": 2,
+                "rotulo": "Redação vigente",
+                "descricao": "Deverá advertir só se não houver nenhuma outra infração em 12 meses"
+              },
+              {
+                "ordem": 3,
+                "rotulo": "Hoje",
+                "descricao": "Qualquer autuação no período → multa na infração leve/média atual"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: advertência ou multa?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Infração de natureza leve ou média?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Consta outra infração nos últimos 12 meses?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Multa — sem advertência obrigatória",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Penalidades do art. 256 (trecho)",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Inciso", "Penalidade"],
+            "linhas": [
+              {
+                "faixa": "I",
+                "classificacao": "Advertência por escrito",
+                "destaque": true
+              },
+              { "faixa": "II", "classificacao": "Multa" },
+              { "faixa": "III", "classificacao": "Suspensão do direito de dirigir" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: mesma conduta × qualquer infração",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Estacionamento e velocidade são infrações distintas → advertência",
+                "Art. 267: qualquer outra infração em 12 meses afasta advertência"
+              ],
+              [
+                "A autoridade escolhe o que é mais educativo",
+                "'Deverá' — advertência é obrigatória quando o prontuário está limpo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Usa regra revogada (mesma infração) — art. 267 vigente exige ausência de qualquer autuação"
+              ],
+              [
+                "C — termo_unico",
+                "Troca 'deverá' por faculdade 'pode optar' — redação antiga era 'poderá'"
+              ],
+              [
+                "D — gravidade",
+                "Inventa cumulação advertência + multa — art. 267 define uma penalidade conforme prontuário"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado — Cláudia",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência legal"],
+            "linhas": [
+              ["Infração atual: art. 181, IV — média", "Passível de advertência ou multa (art. 267)"],
+              ["Art. 218, I há 9 meses — também média", "Outra infração dentro de 12 meses"],
+              ["Prontuário não está limpo", "Advertência afastada → multa"],
+              ["Resultado", "Gabarito B"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 256 × art. 267",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              ["Art. 256, I — advertência", "Penalidade aplicável se art. 267 autorizar"],
+              ["Art. 256, II — multa", "Penalidade quando há infração prévia em 12 meses"],
+              ["Art. 267 — condição", "Deverá advertir só sem outra infração no período"],
+              ["Cláudia", "Art. 218, I no prontuário → multa na atual"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 267 — advertência obrigatória",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 267",
+            "texto": "Deverá ser imposta a penalidade de advertência por escrito à infração de natureza leve ou média, passível de ser punida com multa, caso o infrator não tenha cometido nenhuma outra infração nos últimos 12 (doze) meses.",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 7,
+                "motivo": "contraste — deverá, não poderá (faculdade)"
+              },
+              {
+                "inicio": 166,
+                "fim": 203,
+                "motivo": "caso — Cláudia tem art. 218, I há 9 meses"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "0 infrações em 12 meses + leve/média = ADVERTÊNCIA obrigatória. Qualquer autuação no período → MULTA.\n\nNear-transfer: Roberto, sem nenhuma infração nos últimos 12 meses, autuado por art. 181, IV (média) — deverá receber advertência por escrito (art. 267), não multa.",
+            "destaques": ["ADVERTÊNCIA", "MULTA", "Roberto"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 267",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "tags": [
+      "penalidades",
+      "advertencia",
+      "art_267",
+      "art_256",
+      "caso_pratico"
+    ]
+  }
+]

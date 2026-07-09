@@ -48,6 +48,7 @@ export const questions = pgTable("questions", {
   dificuldade: integer("dificuldade").notNull().default(3),
   comentarioJson: jsonb("comentario_json").notNull().default({}),
   estudoReversoVisualJson: jsonb("estudo_reverso_visual_json"),
+  estudoReversoVisualCompletoJson: jsonb("estudo_reverso_visual_completo_json"),
   tags: text("tags").array().default([]),
   createdAt: timestamp("created_at", { withTimezone: true })
     .defaultNow()

@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import type { ConteudoComparacao } from "@/types/estudo-reverso-visual";
 
 export function TelaComparacao({ conteudo }: { conteudo: ConteudoComparacao }) {
@@ -14,7 +15,11 @@ export function TelaComparacao({ conteudo }: { conteudo: ConteudoComparacao }) {
         </thead>
         <tbody>
           {conteudo.linhas.map(([a, b], i) => (
-            <tr key={i} className="border-b border-border last:border-0">
+            <tr
+              key={i}
+              className="revelar-item border-b border-border last:border-0"
+              style={{ "--i": i } as CSSProperties}
+            >
               <td className="bg-semaforo-vermelho/5 px-3 py-2 text-muted-foreground">
                 {a}
               </td>

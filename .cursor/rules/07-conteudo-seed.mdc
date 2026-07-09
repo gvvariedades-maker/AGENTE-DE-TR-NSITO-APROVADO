@@ -15,7 +15,8 @@ alwaysApply: false
 ## Destino estruturado
 
 - Questões em `content/questoes/{disciplina}/*.json`
-- Script: `scripts/seed-questions.ts` (Drizzle + validação Zod)
+- Tópicos Anexo I: `scripts/edital-topics.ts` (fonte viva) → `npm run db:seed:topics` ou integrado em `db:seed`
+- Script questões: `scripts/seed-questions.ts` (Drizzle + validação Zod)
 
 ## Volume MVP (~660 questões inéditas)
 
@@ -31,16 +32,18 @@ alwaysApply: false
 
 ## Fluxo de import
 
-1. Validar JSON com schema Zod + citações (`npm run validate:questoes -- ...`)
-2. Validar estudo reverso visual (`npm run validate:estudo-reverso-visual -- ...`)
-3. Upsert `topics` conforme Anexo I retificado
-4. Insert `questions` com `comentario_json` e `estudo_reverso_visual_json`
-5. Log: total importado, erros por arquivo
+1. Validar JSON com `npm run validate:lote -- content/questoes/.../lote.json` (questões + cobertura + visual; ou validadores separados)
+2. `npm run index:questoes` — regenerar mapa de eixos ocupados (`content/questoes/_index/cobertura.json`)
+3. `npm run db:seed:topics` — upsert `topics` (Anexo I retificado) — **obrigatório na 1ª vez ou após mudar edital**
+4. `npm run db:seed` — upsert topics + insert/update `questions` (rejeita lote sem `estudo_reverso_visual_completo`)
+
+Diagnóstico pós-seed: `npm run check:catalogo-db` e `npm run check:visual-completo`.
 
 ## Ao criar questões novas
 
-- Usar skills `examinador-idecan` + `estudo-reverso-visual` (Agent mode)
+- Usar skills `examinador-idecan` + `estudo-reverso-visual` v3 (v2 completa obrigatória; v1 expressa recomendada)
 - Priorizar CTB e Resoluções CONTRAN da pasta `conteúdo/`
-- Tag `estilo_idecan` em toda questão
-- Gerar 3 "questões irmãs" por microtópico para estudo reverso
+- Consultar `content/questoes/_index/cobertura.json` (`npm run index:questoes`) antes de escolher eixo legal
+- **Modelo ouro:** 1 questão premium + `estudo_reverso_visual_completo` (aula v2, 7–11 telas) por microtópico; v1 expressa recomendada
+- Retrofit legado: `.cursor/skills/estudo-reverso-visual/DOCUMENTACAO.md` §11
 - História CG/PB: fatos cobráveis do edital, não curiosidades

@@ -1,8 +1,8 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
+import type { FsrsGrade } from "@/lib/srs";
 import {
-  carregarIrmas,
   registrarTentativa,
   type ModoTentativa,
   type RegistrarTentativaResult,
@@ -14,11 +14,11 @@ export interface TentativaPayload {
   acertou: boolean;
   modo: ModoTentativa;
   tempoSeg?: number;
+  sessionId?: string;
+  fsrsGrade?: FsrsGrade;
 }
 
-export interface TentativaActionResult extends RegistrarTentativaResult {
-  irmaAs?: Awaited<ReturnType<typeof carregarIrmas>>;
-}
+export type TentativaActionResult = RegistrarTentativaResult;
 
 export async function salvarTentativa(
   payload: TentativaPayload,
@@ -32,19 +32,14 @@ export async function salvarTentativa(
     return { ok: false, demo: true };
   }
 
-  const result = await registrarTentativa({
+  return registrarTentativa({
     userId: user.id,
     questionId: payload.questionId,
     resposta: payload.resposta,
     acertou: payload.acertou,
     modo: payload.modo,
     tempoSeg: payload.tempoSeg,
+    sessionId: payload.sessionId,
+    fsrsGrade: payload.fsrsGrade,
   });
-
-  if (!result.ok || !result.irmaIds?.length) {
-    return result;
-  }
-
-  const irmaAs = await carregarIrmas(result.irmaIds);
-  return { ...result, irmaAs };
 }

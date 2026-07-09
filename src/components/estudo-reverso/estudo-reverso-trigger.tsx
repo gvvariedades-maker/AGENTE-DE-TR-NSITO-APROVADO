@@ -8,6 +8,7 @@ interface EstudoReversoTriggerProps {
   className?: string;
   variant?: "default" | "outline";
   size?: "default" | "sm" | "lg";
+  label?: string;
 }
 
 export function EstudoReversoTrigger({
@@ -15,6 +16,7 @@ export function EstudoReversoTrigger({
   className,
   variant = "outline",
   size = "default",
+  label = "Estudo reverso",
 }: EstudoReversoTriggerProps) {
   return (
     <Button
@@ -25,7 +27,7 @@ export function EstudoReversoTrigger({
       onClick={onOpen}
     >
       <BookOpen className="size-4" aria-hidden />
-      Estudo reverso
+      {label}
     </Button>
   );
 }

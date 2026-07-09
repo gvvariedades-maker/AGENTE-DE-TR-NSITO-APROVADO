@@ -80,7 +80,7 @@ Requisitos:
 - Barra sticky: progresso + timer (simulado) + Qn/60
 - Enunciado scrollável (text-lg leading-relaxed)
 - Alternativas com área de toque ampla; atalhos A–D no desktop (edital item 10.4)
-- Modo estudo: recall gate + feedback elaborado pós-resposta
+- Modo estudo: confiança FSRS pós-resposta + aula visual v2 (sem recall livre no player)
 - Modo simulado: sem correção durante; alerta timer ≤30 min
 - Modo foco: esconder nav lateral
 
@@ -121,7 +121,7 @@ Tela: landing pública em src/app/page.tsx
 
 Requisitos:
 - Hierarquia: contagem regressiva → CTA único primário → ações secundárias
-- CTA primário: "Estudar CTB agora" → /estudo (recall gate no destino)
+- CTA primário: "Estudar CTB agora" → /estudo (modo estudo com aula visual pós-resposta)
 - Secundários (outline/ghost, sem competir): Simulado → /simulado, Painel → /dashboard
 - Mapa da prova: reutilizar ProvaDistribuicaoBar (não lista genérica)
 - Sem dois cards com botões de peso igual lado a lado

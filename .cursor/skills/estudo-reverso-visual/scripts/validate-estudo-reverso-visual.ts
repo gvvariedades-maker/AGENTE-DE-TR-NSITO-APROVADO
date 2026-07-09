@@ -1,14 +1,23 @@
 /**
  * Valida estudo_reverso_visual em arquivos JSON de questões.
  *
+ * Documentação: .cursor/skills/estudo-reverso-visual/DOCUMENTACAO.md
+ *
  * Uso:
  *   npm run validate:estudo-reverso-visual -- content/questoes/legislacao_transito/lote-002.json
+ *   npm run validate:estudo-reverso-visual -- .cursor/skills/estudo-reverso-visual/exemplos-ouro/ctb-embriaguez.json
+ *
+ * Aceita array de questões ou objeto único. Flag --skip-citacoes ignora corpus legal.
  */
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { CorpusLegal, validarTextosLegais } from "../../../../src/lib/validations/citacao-legal";
-import { estudoReversoVisualSchema } from "../../../../src/lib/validations/estudo-reverso-visual";
-import { questoesFileSchema } from "../../../../src/lib/validations/questao";
+import {
+  estudoReversoVisualCompletoSchema,
+  estudoReversoVisualSchema,
+  listarErrosCoerenciaV1V2,
+} from "../../../../src/lib/validations/estudo-reverso-visual";
+import { questoesImportFileSchema } from "../../../../src/lib/validations/questao";
 import type { TelaVisual } from "../../../../src/types/estudo-reverso-visual";
 
 function textosLegaisDasTelas(telas: TelaVisual[]): string[] {
@@ -41,7 +50,8 @@ async function main() {
   const absolute = resolve(process.cwd(), filePath);
   const raw = await readFile(absolute, "utf-8");
   const json = JSON.parse(raw) as unknown;
-  const result = questoesFileSchema.safeParse(json);
+  const questoesInput = Array.isArray(json) ? json : [json];
+  const result = questoesImportFileSchema.safeParse(questoesInput);
 
   if (!result.success) {
     console.error(`❌ Schema questão inválido em ${filePath}`);
@@ -60,27 +70,76 @@ async function main() {
 
   for (const [i, q] of questoes.entries()) {
     const label = `Q${i + 1} [${q.topico}]`;
+    const temV1 = Boolean(q.estudo_reverso_visual);
+    const temV2 = Boolean(q.estudo_reverso_visual_completo);
 
-    if (!q.estudo_reverso_visual) {
+    if (!temV1 && !temV2) {
       if (q.dificuldade >= 3) {
         avisos++;
-        console.warn(`  ⚠ ${label} — sem estudo_reverso_visual (dificuldade ${q.dificuldade})`);
+        console.warn(`  ⚠ ${label} — sem trilha visual (dificuldade ${q.dificuldade})`);
       }
       continue;
     }
 
-    comVisual++;
-    const visualResult = estudoReversoVisualSchema.safeParse(q.estudo_reverso_visual);
-    if (!visualResult.success) {
-      erros++;
-      console.error(`  ❌ ${label} — visual inválido:`);
-      console.error(visualResult.error.flatten());
-      continue;
+    let visualResult: ReturnType<typeof estudoReversoVisualSchema.safeParse> | null = null;
+
+    if (temV1) {
+      comVisual++;
+      visualResult = estudoReversoVisualSchema.safeParse(q.estudo_reverso_visual);
+      if (!visualResult.success) {
+        erros++;
+        console.error(`  ❌ ${label} — visual inválido:`);
+        console.error(visualResult.error.flatten());
+      } else {
+        console.log(
+          `  ✓ ${label} — ${visualResult.data.telas.length} telas express (${visualResult.data.arquetipo})`,
+        );
+      }
     }
 
-    console.log(`  ✓ ${label} — ${visualResult.data.telas.length} telas (${visualResult.data.arquetipo})`);
+    if (temV2 && q.estudo_reverso_visual_completo) {
+      if (!temV1) comVisual++;
+      const completoResult = estudoReversoVisualCompletoSchema.safeParse(
+        q.estudo_reverso_visual_completo,
+      );
+      if (!completoResult.success) {
+        erros++;
+        console.error(`  ❌ ${label} — visual completo inválido:`);
+        console.error(completoResult.error.flatten());
+      } else {
+        console.log(
+          `  ✓ ${label} — ${completoResult.data.telas.length} telas completo (v2)`,
+        );
 
-    if (!skipCitacoes && corpus) {
+        if (visualResult?.success) {
+          for (const msg of listarErrosCoerenciaV1V2(
+            visualResult.data,
+            completoResult.data,
+          )) {
+            erros++;
+            console.error(`  ❌ ${label} — coerência v1↔v2: ${msg}`);
+          }
+        }
+
+        if (!skipCitacoes && corpus) {
+          const textosCompleto = [
+            completoResult.data.fundamento_slug,
+            ...textosLegaisDasTelas(completoResult.data.telas),
+          ];
+          const citacoesC = validarTextosLegais(textosCompleto, corpus);
+          for (const r of citacoesC) {
+            if (!r.valido) {
+              erros++;
+              console.error(
+                `  ❌ ${label} completo citação "${r.citacao.raw}" — ${r.motivo}`,
+              );
+            }
+          }
+        }
+      }
+    }
+
+    if (visualResult?.success && !skipCitacoes && corpus) {
       const textos = [
         visualResult.data.fundamento_slug,
         q.comentario.fundamento_legal,

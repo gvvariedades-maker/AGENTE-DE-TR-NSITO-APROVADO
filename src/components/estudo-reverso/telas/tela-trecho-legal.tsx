@@ -23,7 +23,7 @@ export function TelaTrechoLegal({ conteudo }: { conteudo: ConteudoTrechoLegal })
 
   return (
     <div className="space-y-2">
-      <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+      <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
         {conteudo.fonte}
       </p>
       <blockquote className="rounded-lg border border-transito/30 bg-transito/5 px-4 py-3 text-base leading-relaxed">
@@ -33,8 +33,9 @@ export function TelaTrechoLegal({ conteudo }: { conteudo: ConteudoTrechoLegal })
                 key={i}
                 className={cn(
                   p.grifo &&
-                    "rounded bg-transito/20 px-0.5 font-semibold text-transito-foreground",
+                    "grifo-sweep rounded px-0.5 font-semibold text-transito-foreground",
                 )}
+                title={p.grifo ? ordenados.find((g) => texto.slice(g.inicio, g.fim) === p.texto)?.motivo : undefined}
               >
                 {p.texto}
               </span>

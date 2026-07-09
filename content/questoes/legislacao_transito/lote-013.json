@@ -1,0 +1,260 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_911_registro",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 4,
+    "enunciado": "Durante fiscalização em Campina Grande/PB, agente da STTP intercepta caminhão novo inacabado — chassis com cabine, sem implementação de carroceria — ainda sem registro, realizando frete remunerado de carga para terceiro. O condutor portava o DANFe e alegou autorização para circular até o Município de registro do veículo. Considerando a Resolução CONTRAN nº 911/2022, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O trânsito é regular, pois o DANFe autoriza a circulação por até 30 dias consecutivos em todo o território nacional para qualquer finalidade comercial.",
+      "B": "O trânsito é regular para frete remunerado, desde que o percurso seja entre a origem e o Município onde o veículo será registrado, independentemente de o veículo ser inacabado.",
+      "C": "O condutor incorre em irregularidade, pois é vedado o transporte remunerado de cargas em veículos novos inacabados (art. 6º, §2º); para veículo novo acabado, o transporte remunerado exige Autorização para Trânsito de Veículo — ATV (art. 6º, I), além do DANFe.",
+      "D": "A circulação seria lícita com o DANFe, pois a Resolução permite transporte remunerado de qualquer veículo novo antes do registro, desde que respeitado o prazo de 15 dias do art. 4º, §1º."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Trânsito de veículo novo inacabado antes do registro — vedação de transporte remunerado (Res. CONTRAN 911/2022, art. 6º, §2º) e exigência de ATV para acabado (art. 6º, I), à luz do art. 4º e do art. 12.",
+      "fundamento_legal": "Res. CONTRAN 911/2022, art. 6º, §2º: é vedado o transporte remunerado de cargas e passageiros em veículos novos inacabados. Art. 6º, I: transporte remunerado de veículo novo acabado exige ATV emitida pelo órgão executivo de trânsito do Estado de origem, válida por 15 dias. Art. 4º, §1º: trânsito com DANFe por 15 dias (30 na Região Norte). Art. 12: proibido trânsito antes do registro para finalidade diversa das previstas na Resolução.",
+      "passo_a_passo": [
+        "1. O caso traz caminhão novo inacabado, sem registro, em frete remunerado para terceiro, com porte de DANFe.",
+        "2. A erra por numero_vizinho (generaliza 30 dias para todo o país — o §1º do art. 4º fixa 15 dias, exceto Região Norte, e o art. 12 veda finalidades não previstas); B erra por regra_excecao (trata inacabado como se pudesse transportar carga remunerada no percurso ao registro — o §2º do art. 6º veda expressamente); D erra por termo_unico (reduz a autorização ao DANFe + prazo, ignorando a distinção inacabado/acabado e a exigência de ATV para remunerado em acabado).",
+        "3. C correta: inacabado + frete remunerado = vedado pelo §2º do art. 6º; se fosse acabado, ainda assim exigiria ATV (inciso I), não bastando o DANFe isolado."
+      ],
+      "pegadinha": "A IDECAN induz a crer que o DANFe autoriza qualquer circulação comercial antes do registro — mas inacabado não pode fazer transporte remunerado, e acabado exige ATV para essa finalidade.",
+      "macete": "INACABADO = sem frete pago · ACABADO remunerado = DANFe + ATV · 15 dias (30 só Norte).",
+      "estudo_reverso": [
+        "Res. CONTRAN 911/2022 art. 4",
+        "Res. CONTRAN 911/2022 art. 6",
+        "Res. CONTRAN 911/2022 art. 12",
+        "CTB art. 230, V"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "duracao_estimada_seg": 90,
+      "fundamento_slug": "CONTRAN_911_art_6",
+      "macete_visual": "INACABADO = sem frete pago · ACABADO = DANFe + ATV",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Caminhão inacabado em frete remunerado com DANFe. A banca troca DANFe SOZINHO por vedação do §2º do art. 6º.\n\nGabarito C: inacabado não faz transporte pago; acabado exige ATV.",
+            "destaques": ["inacabado", "vedado", "ATV"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Transporte remunerado antes do registro",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Veículo novo inacabado?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Vedado transporte remunerado (art. 6º, §2º)", "tipo": "resultado" },
+              { "id": "p2", "label": "Veículo novo acabado?", "tipo": "pergunta" },
+              { "id": "r2", "label": "Exige ATV + DANFe (art. 6º, I)", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim" },
+              { "de": "p1", "para": "p2", "rotulo": "Não" },
+              { "de": "p2", "para": "r2", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Inacabado × acabado",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Tipo", "Transporte remunerado"],
+            "linhas": [
+              { "faixa": "Inacabado", "classificacao": "Vedado — art. 6º, §2º", "destaque": true },
+              { "faixa": "Acabado", "classificacao": "Permitido com ATV — art. 6º, I" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "INACABADO = sem frete pago.\nACABADO remunerado = DANFe + ATV.\n15 dias de circulação (30 só Região Norte).",
+            "destaques": ["INACABADO", "ATV", "15 dias"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 911/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 911, DE 28 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 260,
+      "fundamento_slug": "CONTRAN_911_art_6",
+      "macete_visual": "INACABADO = sem frete pago · ACABADO = DANFe + ATV",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: DANFe não autoriza frete em inacabado",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C. Se marcou B ou D, validou frete remunerado só pelo DANFe.\n\nCaminhão inacabado não pode transportar carga paga (art. 6º, §2º). Se fosse acabado, ainda exigiria ATV — o documento fiscal isolado não basta.",
+            "destaques": ["Gabarito C", "inacabado", "ATV"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos da questão",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VEÍCULO INACABADO: chassis/plataforma que necessita complementação antes do registro (art. 3º, III).\n\nDANFe: documento fiscal obrigatório para circular antes do licenciamento (art. 4º).\n\nATV: Autorização para Trânsito de Veículo — exigida para transporte remunerado de veículo novo acabado (art. 6º, I).",
+            "destaques": ["INACABADO", "DANFe", "ATV"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: pode fazer frete antes do registro?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Frete remunerado?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Veículo inacabado?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Proibido — gabarito C", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Prazos e documentos (art. 4º e 6º)",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Situação", "Regra"],
+            "linhas": [
+              { "faixa": "Circulação com DANFe", "classificacao": "15 dias (30 na Região Norte) — art. 4º, §1º" },
+              { "faixa": "Inacabado + frete pago", "classificacao": "Vedado — art. 6º, §2º", "destaque": true },
+              { "faixa": "Acabado + frete pago", "classificacao": "ATV 15 dias + DANFe — art. 6º, I" },
+              { "faixa": "Finalidade diversa", "classificacao": "Proibido — art. 12" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: DANFe × ATV × inacabado",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              ["DANFe libera qualquer frete comercial", "§2º do art. 6º veda remunerado em inacabado"],
+              ["Inacabado pode se o percurso for ao registro", "Vedação não depende do itinerário"],
+              ["30 dias em todo o Brasil", "15 dias — 30 só na Região Norte (art. 4º, §1º)"]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + letra da lei"],
+            "linhas": [
+              ["A — numero_vizinho", "30 dias em todo país — art. 4º, §1º: 15 dias (30 só Norte)"],
+              ["B — regra_excecao", "Inacabado em frete pago — art. 6º, §2º veda expressamente"],
+              ["D — termo_unico", "Só DANFe + prazo — ignora vedação do §2º e exigência de ATV"]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato da fiscalização", "Consequência legal"],
+            "linhas": [
+              ["Caminhão inacabado sem registro", "Enquadra art. 3º, III — necessita complementação"],
+              ["Frete remunerado para terceiro", "Vedado — art. 6º, §2º, independente do DANFe"],
+              ["Porte de DANFe apenas", "Insuficiente para transporte remunerado — faltaria ATV se acabado"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 6º × art. 4º × art. 12 × CTB",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              ["Art. 4º, §1º", "Prazo de circulação com DANFe — não autoriza frete em inacabado"],
+              ["Art. 6º, §2º", "Veda transporte remunerado em inacabado — eixo do gabarito"],
+              ["Art. 6º, I", "ATV obrigatória para remunerado em acabado"],
+              ["Art. 11, III / CTB art. 230, V", "Penalidade se transitar fora da finalidade ou prazo"]
+            ]
+          }
+        },
+        {
+          "id": "lei3",
+          "titulo": "Res. 911/2022, art. 6º, §2º — vedação",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 911/2022, art. 6º, §2º",
+            "texto": "É vedado o transporte remunerado de cargas e passageiros em veículos novos inacabados.",
+            "trechos_grifados": [
+              { "inicio": 2, "fim": 85, "motivo": "vedação direta ao frete do caso" }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Res. 911/2022, art. 6º, I — ATV para acabado",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 911/2022, art. 6º, I",
+            "texto": "I - o comprador final obtenha junto aos órgãos e entidades executivos de trânsito dos Estados e do Distrito Federal de origem do veículo, a Autorização para Trânsito de Veículo (ATV), na forma do Anexo I, com base no documento fiscal, válida por 15 (quinze) dias consecutivos a partir da data de emissão, podendo ser prorrogada por igual período, pelo mesmo órgão, por motivo de força maior;",
+            "trechos_grifados": [
+              { "inicio": 140, "fim": 182, "motivo": "ATV — exigência para remunerado em acabado" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "INACABADO = sem frete pago (§2º).\nACABADO remunerado = DANFe + ATV (inciso I).\n15 dias de circulação — 30 só Região Norte.\n\nMesma lógica cai em remonta (art. 8º), exportação (art. 9º) e penalidades do art. 11.",
+            "destaques": ["INACABADO", "ATV", "15 dias"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 911/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 911, DE 28 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    },
+    "tags": ["registro_licenciamento", "resolucao_911", "veiculo_inacabado", "danfe", "atv"]
+  }
+]

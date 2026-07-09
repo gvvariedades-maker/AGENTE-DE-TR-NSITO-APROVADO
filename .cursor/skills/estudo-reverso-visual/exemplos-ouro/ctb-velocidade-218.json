@@ -1,4 +1,11 @@
 {
+  "meta": {
+    "padrao_ouro": true,
+    "padrao_familia": "B_assertivas",
+    "pegadinha_em_uma_frase": "II troca grave por gravíssima na faixa 20–50%",
+    "gabarito": "B",
+    "guia": ".cursor/skills/estudo-reverso-visual/exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md"
+  },
   "disciplina": "legislacao_transito",
   "topico": "CTB_infracoes",
   "tipo": "assertivas",
@@ -16,19 +23,22 @@
     "o_que_testa": "Gradação de gravidade das infrações de velocidade conforme percentual de excesso (art. 218).",
     "fundamento_legal": "CTB, art. 218, I: até 20% — infração média. II: mais de 20% até 50% — infração grave. III: mais de 50% — gravíssima com multa tripla e suspensão.",
     "passo_a_passo": [
-      "I: Correta — inciso I do art. 218.",
-      "II: Errada — entre 20% e 50% é GRAVE, não gravíssima.",
-      "III: Correta — inciso III do art. 218.",
-      "Gabarito: I e III = B."
+      "1. I correta (inciso I); II falsa — troca grave por gravíssima; III correta (inciso III).",
+      "2. A erra por termo_unico (só I); C erra por gravidade (inclui II falsa); D erra por regra_excecao (II errada + todas corretas).",
+      "3. Gabarito B: I e III corretas."
     ],
     "pegadinha": "Trocar infração grave (20% a 50%) por gravíssima.",
     "macete": "20/50: média → grave → gravíssima. Pegadinha no meio (grave, não gravíssima).",
-    "estudo_reverso": ["CTB art. 218", "CTB art. 219", "CTB art. 220"]
+    "estudo_reverso": [
+      "CTB art. 218",
+      "CTB art. 219",
+      "CTB art. 220"
+    ]
   },
   "estudo_reverso_visual": {
     "versao": 1,
-    "arquetipo": "tabela_gradacao",
-    "arquetipo_secundario": "matriz_assertivas",
+    "arquetipo": "matriz_assertivas",
+    "arquetipo_secundario": "tabela_gradacao",
     "duracao_estimada_seg": 85,
     "fundamento_slug": "CTB_art_218",
     "macete_visual": "20% média | 20-50% GRAVE | +50% gravíssima tripla",
@@ -39,7 +49,12 @@
         "tipo": "texto_destaque",
         "conteudo": {
           "texto": "A banca troca infração GRAVE por GRAVÍSSIMA na faixa de 20% a 50% do art. 218.",
-          "destaques": ["GRAVE", "GRAVÍSSIMA", "20%", "50%"]
+          "destaques": [
+            "GRAVE",
+            "GRAVÍSSIMA",
+            "20%",
+            "50%"
+          ]
         }
       },
       {
@@ -47,11 +62,24 @@
         "titulo": "Gradação do art. 218",
         "tipo": "tabela_gradacao",
         "conteudo": {
-          "titulo_colunas": ["Excesso", "Classificação"],
+          "titulo_colunas": [
+            "Excesso",
+            "Classificação"
+          ],
           "linhas": [
-            { "faixa": "Até 20%", "classificacao": "Média" },
-            { "faixa": "20% a 50%", "classificacao": "Grave", "destaque": true },
-            { "faixa": "Acima de 50%", "classificacao": "Gravíssima + multa x3 + suspensão" }
+            {
+              "faixa": "Até 20%",
+              "classificacao": "Média"
+            },
+            {
+              "faixa": "20% a 50%",
+              "classificacao": "Grave",
+              "destaque": true
+            },
+            {
+              "faixa": "Acima de 50%",
+              "classificacao": "Gravíssima + multa x3 + suspensão"
+            }
           ]
         }
       },
@@ -61,9 +89,21 @@
         "tipo": "matriz_assertivas",
         "conteudo": {
           "itens": [
-            { "id": "I", "texto": "Até 20% = média", "correto": true },
-            { "id": "II", "texto": "20% a 50% = gravíssima", "correto": false },
-            { "id": "III", "texto": "Acima 50% = gravíssima tripla", "correto": true }
+            {
+              "id": "I",
+              "texto": "Até 20% = média",
+              "correto": true
+            },
+            {
+              "id": "II",
+              "texto": "20% a 50% = gravíssima",
+              "correto": false
+            },
+            {
+              "id": "III",
+              "texto": "Acima 50% = gravíssima tripla",
+              "correto": true
+            }
           ],
           "gabarito_resumo": "I e III corretas → alternativa B"
         }
@@ -73,9 +113,15 @@
         "titulo": "Armadilha",
         "tipo": "comparacao",
         "conteudo": {
-          "colunas": ["Pegadinha", "Correto"],
+          "colunas": [
+            "Pegadinha",
+            "Correto"
+          ],
           "linhas": [
-            ["20% a 50% = gravíssima", "20% a 50% = GRAVE"]
+            [
+              "20% a 50% = gravíssima",
+              "20% a 50% = GRAVE"
+            ]
           ]
         }
       },
@@ -86,21 +132,176 @@
         "conteudo": {
           "fonte": "CTB art. 218, II",
           "texto": "Mais de 20% até 50%: infração de natureza grave.",
-          "trechos_grifados": [{ "inicio": 0, "fim": 18, "motivo": "faixa da pegadinha" }]
-        }
-      },
-      {
-        "id": "recall",
-        "titulo": "Fixação ativa",
-        "tipo": "micro_recall",
-        "conteudo": {
-          "pergunta": "Entre 20% e 50% de excesso: a infração é de que natureza?",
-          "resposta_esperada": "grave",
-          "aceitar_variacoes": ["infração grave", "natureza grave"]
+          "trechos_grifados": [
+            {
+              "inicio": 0,
+              "fim": 18,
+              "motivo": "faixa da pegadinha"
+            }
+          ]
         }
       }
     ],
-    "links_fonte": [{ "rotulo": "CTB art. 218", "path": "conteúdo/legislação federal/" }]
+    "links_fonte": [
+      {
+        "rotulo": "CTB art. 218",
+        "path": "conteúdo/legislação federal/"
+      }
+    ]
   },
-  "tags": ["velocidade", "art_218", "percentual"]
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "matriz_assertivas",
+    "arquetipo_secundario": "tabela_gradacao",
+    "publico_alvo": "todos",
+    "duracao_estimada_seg": 200,
+    "fundamento_slug": "CTB_art_218",
+    "macete_visual": "20% média | 20-50% GRAVE | +50% gravíssima tripla",
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Diagnóstico: a pegadinha está no meio",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito B (I e III corretas).\n\nA — parou em I; esqueceu III correta.\nC — comprou II errada (grave→gravíssima na faixa 20–50%).\nD — comprou II errada + marcou todas corretas.\n\nA banca troca GRAVE por GRAVÍSSIMA no meio do art. 218.",
+          "destaques": ["GRAVE", "GRAVÍSSIMA", "20–50%"]
+        }
+      },
+      {
+        "id": "matriz",
+        "titulo": "Mapa I–II–III",
+        "secao": "metodo",
+        "tipo": "matriz_assertivas",
+        "conteudo": {
+          "itens": [
+            { "id": "I", "texto": "Até 20% = média — correta", "correto": true },
+            {
+              "id": "II",
+              "texto": "20% a 50% = gravíssima — ERRADA (é grave)",
+              "correto": false
+            },
+            {
+              "id": "III",
+              "texto": "Acima 50% = gravíssima tripla — correta",
+              "correto": true
+            }
+          ],
+          "gabarito_resumo": "I e III corretas → alternativa B"
+        }
+      },
+      {
+        "id": "gradacao",
+        "titulo": "Gradação do art. 218",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": ["Excesso", "Classificação"],
+          "linhas": [
+            { "faixa": "Até 20%", "classificacao": "Média" },
+            {
+              "faixa": "20% a 50%",
+              "classificacao": "Grave",
+              "destaque": true
+            },
+            {
+              "faixa": "Acima de 50%",
+              "classificacao": "Gravíssima + multa x3 + suspensão"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Assertiva-isca: II",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["O que a II afirma ✗", "O que a lei diz ✓"],
+          "linhas": [
+            [
+              "Entre 20% e 50% = gravíssima",
+              "Mais de 20% até 50% = infração GRAVE (inciso II)"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que cada alternativa erra",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["Alternativa", "Mecanismo + por quê"],
+          "linhas": [
+            [
+              "A — termo_unico",
+              "Marca só I correta; ignora III também correta"
+            ],
+            [
+              "C — gravidade",
+              "Inclui II falsa — troca grave por gravíssima no meio"
+            ],
+            [
+              "D — regra_excecao",
+              "Compra II errada e trata todas as assertivas como corretas"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Montando o gabarito",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["Assertiva", "Veredito"],
+          "linhas": [
+            ["I — até 20% média", "Correta (inciso I)"],
+            ["II — 20–50% gravíssima", "Falsa — é GRAVE (inciso II)"],
+            ["III — acima 50% gravíssima tripla", "Correta (inciso III)"],
+            ["Resultado", "I + III = alternativa B"]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Art. 218, II — faixa da pegadinha",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 218, II",
+          "texto": "Transitar em velocidade superior à máxima permitida em mais de vinte por cento até cinquenta por cento: infração de natureza grave.",
+          "trechos_grifados": [
+            {
+              "inicio": 104,
+              "fim": 130,
+              "motivo": "contraste — natureza grave (não gravíssima)"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Macete + transferência",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "20/50: média → GRAVE → gravíssima. Pegadinha no meio.\n\nNear-transfer: se a banca disser “21% acima do limite”, qual natureza? GRAVE — inciso II, não média nem gravíssima.",
+          "destaques": ["GRAVE", "21%", "inciso II"]
+        }
+      }
+    ],
+    "links_fonte": [
+      {
+        "rotulo": "CTB art. 218",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ]
+  },
+  "tags": [
+    "velocidade",
+    "art_218",
+    "percentual"
+  ]
 }

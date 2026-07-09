@@ -1,5 +1,12 @@
 import type { ComentarioQuestao } from "@/types";
-import type { EstudoReversoVisual, TelaVisual } from "@/types/estudo-reverso-visual";
+import type {
+  EstudoReversoVisual,
+  EstudoReversoVisualV2,
+  TelaVisual,
+} from "@/types/estudo-reverso-visual";
+import {
+  passoAPassoParaMatriz,
+} from "@/lib/passo-a-passo-parse";
 
 const MAX_PALAVRAS_TELA = 120;
 const MAX_MACETE_CHARS = 80;
@@ -44,11 +51,10 @@ function maceteVisual(macete: string): string {
 function isEstudoReversoVisual(value: unknown): value is EstudoReversoVisual {
   if (!value || typeof value !== "object") return false;
   const v = value as EstudoReversoVisual;
+  if (v.versao !== 1 && v.versao !== 2) return false;
   return (
-    v.versao === 1 &&
     Array.isArray(v.telas) &&
-    v.telas.length >= 4 &&
-    v.telas[v.telas.length - 1]?.tipo === "micro_recall"
+    v.telas.length >= 3
   );
 }
 
@@ -59,7 +65,7 @@ export function buildEstudoReversoVisualFromComentario(
   const refs = comentario.estudo_reverso;
   const fundamentoSlug = refParaSlug(refs[0] ?? "fundamento");
   const { fonte, texto: textoLei } = extrairFonteLegal(comentario.fundamento_legal);
-  const passos = comentario.passo_a_passo.join("\n");
+  const matrizPassos = passoAPassoParaMatriz(comentario.passo_a_passo);
 
   const telas: TelaVisual[] = [
     {
@@ -71,14 +77,21 @@ export function buildEstudoReversoVisualFromComentario(
         destaques: refs.slice(0, 2).map((r) => r.replace("CTB art. ", "art. ")),
       },
     },
-    {
-      id: "passos",
-      titulo: "Raciocínio passo a passo",
-      tipo: "texto_destaque",
-      conteudo: {
-        texto: truncarPalavras(passos),
-      },
-    },
+    matrizPassos
+      ? {
+          id: "passos",
+          titulo: "Raciocínio passo a passo",
+          tipo: "matriz_assertivas" as const,
+          conteudo: matrizPassos,
+        }
+      : {
+          id: "passos",
+          titulo: "Raciocínio passo a passo",
+          tipo: "texto_destaque" as const,
+          conteudo: {
+            texto: truncarPalavras(comentario.passo_a_passo.join("\n\n")),
+          },
+        },
     {
       id: "lei",
       titulo: "Lei seca",
@@ -98,17 +111,12 @@ export function buildEstudoReversoVisualFromComentario(
       },
     },
     {
-      id: "recall",
-      titulo: "Micro-recall",
-      tipo: "micro_recall",
+      id: "macete",
+      titulo: "Macete",
+      tipo: "texto_destaque",
       conteudo: {
-        pergunta: "Sem olhar: qual é o macete desta questão?",
-        resposta_esperada: maceteVisual(comentario.macete),
-        dica: refs[0] ? `Pense em ${refs[0]}` : undefined,
-        aceitar_variacoes: [
-          ...refs,
-          ...refs.map((r) => r.replace("CTB art. ", "")),
-        ],
+        texto: maceteVisual(comentario.macete),
+        destaques: refs.slice(0, 2).map((r) => r.replace("CTB art. ", "art. ")),
       },
     },
   ];
@@ -134,7 +142,7 @@ export function resolveEstudoReversoVisual(
   json: unknown,
   comentario: ComentarioQuestao | null,
 ): EstudoReversoVisual | null {
-  if (isEstudoReversoVisual(json)) {
+  if (isEstudoReversoVisual(json) && json.versao === 1) {
     return json;
   }
   if (!comentario?.o_que_testa || !comentario.fundamento_legal) {
@@ -148,4 +156,12 @@ export function resolveEstudoReversoVisual(
     }
   }
   return visual;
+}
+
+/** JSON v2 persistido — sem fallback automático. */
+export function resolveEstudoReversoVisualCompleto(
+  json: unknown,
+): EstudoReversoVisualV2 | null {
+  if (!isEstudoReversoVisual(json) || json.versao !== 2) return null;
+  return json;
 }

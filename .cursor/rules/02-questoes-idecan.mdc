@@ -44,11 +44,17 @@ Referência de estilo: PDFs em `conteúdo/questões reais/` (CTB, Português, In
     "estudo_reverso": ["CTB art. 165", "CTB art. 165-A", "CTB art. 277"]
   },
   "estudo_reverso_visual": { "versao": 1, "arquetipo": "...", "telas": [] },
+  "estudo_reverso_visual_completo": { "versao": 2, "arquetipo": "...", "telas": [] },
   "tags": ["embriaguez", "etilometro"]
 }
 ```
 
-Campo opcional `estudo_reverso_visual` (JSON tipado) — ver skill `estudo-reverso-visual` e `src/types/estudo-reverso-visual.ts`. Validar com `npm run validate:estudo-reverso-visual`.
+| Campo visual | Obrigatório no seed | Telas | Doc |
+|--------------|---------------------|-------|-----|
+| `estudo_reverso_visual_completo` | **Sim** | 7–11 (`versao: 2`) | `.cursor/skills/estudo-reverso-visual/DOCUMENTACAO.md` |
+| `estudo_reverso_visual` | Recomendado | 3–5 (`versao: 1`) | idem |
+
+Validar com `npm run validate:estudo-reverso-visual`. Tipos: `src/types/estudo-reverso-visual.ts`. v2 exige tela de distratores com slugs IDECAN (`numero_vizinho`, `competencia_snt`, `gravidade`, `regra_excecao`, `termo_unico`).
 
 ## Comentário Professor Elite (sempre nesta ordem)
 
@@ -58,13 +64,16 @@ Campo opcional `estudo_reverso_visual` (JSON tipado) — ver skill `estudo-rever
 4. Raciocínio passo a passo (por alternativa)
 5. Pegadinha IDECAN
 6. Macete de prova
-7. Estudo reverso (leis + questões irmãs)
+7. Estudo reverso (lei seca + revisão FSRS do microtópico)
 
 ## Validação antes de importar
 
-- `npm run validate:questoes -- content/questoes/.../lote.json` (schema + citações legais)
+- `npm run validate:lote -- content/questoes/.../lote.json` (gate único — questões + **cobertura** + visual)
+- `npm run index:questoes` — índice de eixos legais já cobertos (consultar antes de gerar)
+- `npm run validate:cobertura -- content/questoes/.../lote.json`
+- `npm run validate:questoes -- content/questoes/.../lote.json` (schema import + v2 obrigatório + citações)
 - `npm run validate:indistinguibilidade -- content/questoes/.../lote.json` (heurísticas de paridade IDECAN)
-- `npm run validate:estudo-reverso-visual -- content/questoes/.../lote.json` (micro-aula visual)
+- `npm run validate:estudo-reverso-visual -- content/questoes/.../lote.json` (micro-aula visual + núcleo v2)
 - Rubrica manual: `.cursor/skills/examinador-idecan/rubrica-indistinguibilidade.md` (≥ 85/questão)
 - Teste cego: `.cursor/skills/examinador-idecan/teste-cego.md` (acurácia ≤ 55%)
 - Gabarito existe nas alternativas

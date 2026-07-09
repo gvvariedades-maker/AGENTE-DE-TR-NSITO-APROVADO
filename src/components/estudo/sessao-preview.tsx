@@ -6,8 +6,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { labelTopicoCTB } from "@/lib/ctb-topicos";
+import { labelTopicoEdital } from "@/lib/edital-topicos";
 import type { SessaoEstudoPreview } from "@/lib/estudo-reverso";
+import { labelModoSessao } from "@/lib/motor-ata";
 import { DISCIPLINA_LABELS } from "@/types";
 
 interface SessaoPreviewProps {
@@ -18,6 +19,7 @@ interface SessaoPreviewProps {
 export function SessaoPreview({ preview, tituloFiltro }: SessaoPreviewProps) {
   const { total, revisoesSrs, questoesPratica, modo } = preview;
   const isErros = modo === "erros";
+  const modoLabel = labelModoSessao(modo);
 
   if (total === 0) return null;
 
@@ -26,7 +28,7 @@ export function SessaoPreview({ preview, tituloFiltro }: SessaoPreviewProps) {
     (preview.disciplina
       ? DISCIPLINA_LABELS[preview.disciplina]
       : preview.topicoSlug
-        ? labelTopicoCTB(preview.topicoSlug)
+        ? labelTopicoEdital(preview.topicoSlug)
         : "geral");
 
   return (
@@ -36,6 +38,9 @@ export function SessaoPreview({ preview, tituloFiltro }: SessaoPreviewProps) {
           <CardTitle className="text-base">
             {isErros ? "Sessão de erros" : "Preview da sessão"}
           </CardTitle>
+          <Badge variant="outline" className="text-xs">
+            {modoLabel}
+          </Badge>
           {isErros && (
             <Badge
               variant="outline"
@@ -48,7 +53,7 @@ export function SessaoPreview({ preview, tituloFiltro }: SessaoPreviewProps) {
         <CardDescription>
           {isErros
             ? `Revisão das questões que você ainda não domina em ${escopo}.`
-            : `Composição da sessão focada em ${escopo}.`}
+            : `Composição da sessão focada em ${escopo} — motor ATA ativo.`}
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -76,8 +81,8 @@ export function SessaoPreview({ preview, tituloFiltro }: SessaoPreviewProps) {
                   ? "questão com último erro"
                   : "questões com último erro"
                 : questoesPratica === 1
-                  ? "questão nova"
-                  : "questões novas"}
+                  ? "questão priorizada pelo motor"
+                  : "questões priorizadas pelo motor"}
             </li>
           )}
         </ul>

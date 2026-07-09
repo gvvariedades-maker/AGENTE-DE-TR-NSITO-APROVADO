@@ -1,0 +1,331 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_processo_administrativo",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_prazo",
+    "dificuldade": 5,
+    "fundamento_slug": "CTB_art_281_A",
+    "enunciado": "Fernanda, proprietária de veículo licenciado em Campina Grande/PB, recebe da STTP Notificação de Autuação expedida em 15 de maio de 2026, referente a infração de estacionamento irregular. No documento consta prazo de vinte e cinco dias para apresentação de defesa prévia, contados da data de expedição da notificação. Fernanda questiona a legalidade do prazo concedido. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O prazo é válido, pois o art. 281, II, do CTB fixa o máximo de trinta dias para expedição da notificação de autuação, não o mínimo para defesa prévia.",
+      "B": "O prazo de vinte e cinco dias é regular, pois o órgão municipal pode reduzir o prazo de defesa prévia a quinze dias, desde que conste no auto de infração.",
+      "C": "O prazo é válido se contado da data do cometimento da infração, hipótese em que vinte e cinco dias da expedição superam o mínimo legal.",
+      "D": "O prazo concedido é irregular, pois o art. 281-A do CTB exige prazo mínimo de trinta dias para defesa prévia, contado da expedição da notificação de autuação."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Prazo mínimo de defesa prévia na notificação de autuação (art. 281-A) e distinção do prazo de expedição da NA (art. 281, II).",
+      "fundamento_legal": "CTB, art. 281-A: Na notificação de autuação e no auto de infração, quando valer como notificação de autuação, deverá constar o prazo para apresentação de defesa prévia, que não será inferior a 30 (trinta) dias, contado da data de expedição da notificação. Art. 281, § 1º, II: o auto será arquivado se, no prazo máximo de trinta dias, não for expedida a notificação da autuação — relógio distinto do art. 281-A.",
+      "passo_a_passo": [
+        "1. A NA foi expedida com prazo de 25 dias para defesa prévia, contados da expedição — abaixo do mínimo de 30 dias do art. 281-A.",
+        "2. A erra por termo_unico (confunde prazo máximo de 30 dias para expedir a NA com prazo mínimo de defesa); B erra por numero_vizinho (inventa redução a 15 dias sem amparo legal); C erra por regra_excecao (conta defesa da data da infração em vez da expedição da NA).",
+        "3. D correta: art. 281-A impõe mínimo de 30 dias para defesa prévia, contados da expedição da notificação."
+      ],
+      "pegadinha": "A IDECAN mistura os dois relógios de 30 dias do processo administrativo: um limita a expedição da NA (art. 281, II); outro fixa o mínimo de defesa prévia na NA (art. 281-A) — marcos e naturezas distintas.",
+      "macete": "281, II → 30 dias para EXPEDIR a NA · 281-A → mín. 30 dias de DEFESA da expedição da NA.",
+      "estudo_reverso": [
+        "CTB art. 281",
+        "CTB art. 281-A",
+        "CTB art. 282",
+        "Res. CONTRAN 918/2022 art. 4"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 80,
+      "fundamento_slug": "CTB_art_281_A",
+      "macete_visual": "281,II → expedir NA · 281-A → defesa ≥30d",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "NA com 25 dias para defesa prévia. A banca troca prazo de EXPEDIR a NA (art. 281, II) pelo mínimo de DEFESA (art. 281-A).\n\nGabarito D: mínimo 30 dias da expedição da NA.",
+            "destaques": ["25 dias", "281-A", "dois relógios"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Dois prazos de 30 dias",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Prazo", "Marco / natureza"],
+            "linhas": [
+              { "faixa": "Expedir NA", "classificacao": "Máx. 30 dias da infração — art. 281, II" },
+              {
+                "faixa": "Defesa prévia",
+                "classificacao": "Mín. 30 dias da expedição — art. 281-A",
+                "destaque": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha IDECAN",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Confusão ✗", "Regra ✓"],
+            "linhas": [
+              ["25 dias basta para defesa", "Mínimo 30 dias da expedição (281-A)"],
+              ["30 dias do art. 281, II vale para defesa", "281, II limita expedição da NA"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "281, II → 30 dias para EXPEDIR a NA.\n281-A → mín. 30 dias de DEFESA da expedição.",
+            "destaques": ["EXPEDIR", "DEFESA", "30 dias"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 281-A",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "CTB_art_281_A",
+      "macete_visual": "281,II → expedir NA · 281-A → defesa ≥30d",
+      "meta": {
+        "padrao_familia": "D_gradacao",
+        "pegadinha_em_uma_frase": "25 dias de defesa viola o mínimo de 30 da expedição — não confundir com prazo de expedir a NA",
+        "eixos_legais": ["CTB_art_281_II", "CTB_art_281_A"],
+        "isca_por_alternativa": {
+          "A": "usa prazo de expedir NA (281, II) para validar defesa de 25 dias",
+          "B": "inventa redução municipal a 15 dias sem base legal",
+          "C": "conta defesa da data da infração em vez da expedição da NA"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: 25 dias de defesa é pouco",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — confundiu prazo de EXPEDIR a NA (art. 281, II) com prazo de DEFESA.\nB — inventou redução a 15 dias: o art. 281-A fixa mínimo de 30.\nC — contou defesa da data da infração: o marco é a expedição da NA.\n\nFernanda recebeu 25 dias — abaixo do mínimo legal.",
+            "destaques": ["Gabarito D", "25 dias", "281-A"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos da questão",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "NOTIFICAÇÃO DE AUTUAÇÃO (NA): comunica ao proprietário a lavratura do AIT e abre prazo de defesa prévia.\n\nDEFESA PRÉVIA: impugnação antes da aplicação da penalidade — prazo mínimo no art. 281-A.\n\nEXPEDIÇÃO DA NA: data em que o órgão envia a notificação — marco inicial do prazo de defesa.",
+            "destaques": ["NA", "DEFESA PRÉVIA", "EXPEDIÇÃO"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Dois relógios de 30 dias",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Prazo", "Marco inicial / natureza"],
+            "linhas": [
+              {
+                "faixa": "Expedir NA — art. 281, II",
+                "classificacao": "Máximo 30 dias da data da infração"
+              },
+              {
+                "faixa": "Defesa prévia — art. 281-A",
+                "classificacao": "Mínimo 30 dias da expedição da NA",
+                "destaque": true
+              },
+              {
+                "faixa": "Caso Fernanda",
+                "classificacao": "25 dias da expedição — irregular"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: o prazo de defesa é válido?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Prazo de defesa conta da expedição da NA?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Prazo concedido é de pelo menos 30 dias?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Irregular — prazo abaixo do mínimo legal",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: expedir NA × prazo de defesa",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "30 dias do art. 281, II também regem a defesa",
+                "281, II limita a expedição da NA; 281-A regula a defesa"
+              ],
+              [
+                "25 dias da expedição bastam",
+                "Mínimo 30 dias da expedição — art. 281-A"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Confunde prazo máximo de expedir NA (281, II) com mínimo de defesa"
+              ],
+              [
+                "B — numero_vizinho",
+                "Inventa redução a 15 dias — art. 281-A exige mínimo de 30"
+              ],
+              [
+                "C — regra_excecao",
+                "Conta defesa da data da infração — marco é a expedição da NA"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado — Fernanda",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dado do caso", "Conclusão legal"],
+            "linhas": [
+              ["NA expedida em 15/05/2026", "Marco inicial do prazo de defesa"],
+              ["Prazo concedido: 25 dias da expedição", "Abaixo do mínimo de 30 (281-A)"],
+              ["Infração: estacionamento irregular", "NA regular quanto à tipificação"],
+              ["Resultado", "Gabarito D — prazo de defesa irregular"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Fases do processo — prazos distintos",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fase", "Prazo-chave"],
+            "linhas": [
+              ["Autuação (AIT)", "Lavratura no momento ou relato (art. 280)"],
+              ["Expedição da NA", "Máx. 30 dias da infração — art. 281, II"],
+              ["Defesa prévia", "Mín. 30 dias da expedição — art. 281-A"],
+              ["Penalidade (NP)", "Fase posterior — art. 282"]
+            ]
+          }
+        },
+        {
+          "id": "linha_tempo",
+          "titulo": "Por que existe o art. 281-A",
+          "tipo": "linha_tempo",
+          "conteudo": {
+            "eventos": [
+              {
+                "ordem": 1,
+                "rotulo": "CTB original",
+                "descricao": "Prazos de notificação e defesa sem detalhamento do mínimo na NA."
+              },
+              {
+                "ordem": 2,
+                "rotulo": "Lei 14.071/2020",
+                "descricao": "Inclui art. 281-A — mínimo 30 dias de defesa da expedição."
+              },
+              {
+                "ordem": 3,
+                "rotulo": "IDECAN",
+                "descricao": "Troca marco da expedição pelo da infração ou pelo prazo de expedir NA."
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 281-A — prazo mínimo de defesa",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 281-A",
+            "texto": "Na notificação de autuação e no auto de infração, quando valer como notificação de autuação, deverá constar o prazo para apresentação de defesa prévia, que não será inferior a 30 (trinta) dias, contado da data de expedição da notificação.",
+            "trechos_grifados": [
+              {
+                "inicio": 156,
+                "fim": 192,
+                "motivo": "gradacao — mínimo 30 dias de defesa"
+              },
+              {
+                "inicio": 194,
+                "fim": 237,
+                "motivo": "contraste — marco é a expedição da NA"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "281, II → 30 dias para EXPEDIR a NA · 281-A → mín. 30 dias de DEFESA da expedição.\n\nNear-transfer: NA expedida com 30 dias de defesa contados da data da infração (não da expedição) — ainda irregular: o marco legal é a expedição da notificação.",
+            "destaques": ["EXPEDIR", "expedição", "marco legal"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 281-A",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "tags": [
+      "processo_administrativo",
+      "defesa_previa",
+      "art_281_a",
+      "prazo",
+      "notificacao_autuacao"
+    ]
+  }
+]

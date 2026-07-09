@@ -1,4 +1,6 @@
+import type { CSSProperties } from "react";
 import type { ConteudoFluxograma } from "@/types/estudo-reverso-visual";
+import { ordenarNosFluxogramaLinear } from "@/lib/estudo-reverso/fluxograma-caminho";
 import { cn } from "@/lib/utils";
 
 const TIPO_STYLES = {
@@ -9,15 +11,21 @@ const TIPO_STYLES = {
 };
 
 export function TelaFluxograma({ conteudo }: { conteudo: ConteudoFluxograma }) {
+  const nosOrdenados = ordenarNosFluxogramaLinear(conteudo);
+
   return (
     <div>
       <ol className="flex flex-col gap-2" aria-label="Fluxo de raciocínio">
-        {conteudo.nos.map((no, i) => {
+        {nosOrdenados.map((no, i) => {
           const aresta = conteudo.arestas.find((a) => a.para === no.id);
           return (
-            <li key={no.id} className="flex flex-col gap-1">
+            <li
+              key={no.id}
+              className="revelar-item flex flex-col gap-1"
+              style={{ "--i": i } as CSSProperties}
+            >
               {aresta?.rotulo && (
-                <span className="text-xs text-muted-foreground pl-2">
+                <span className="pl-2 text-xs text-muted-foreground">
                   ↳ {aresta.rotulo}
                 </span>
               )}
@@ -42,7 +50,7 @@ export function TelaFluxograma({ conteudo }: { conteudo: ConteudoFluxograma }) {
       <svg
         className="sr-only"
         role="img"
-        aria-label={conteudo.nos.map((n) => n.label).join(" → ")}
+        aria-label={nosOrdenados.map((n) => n.label).join(" → ")}
       />
     </div>
   );

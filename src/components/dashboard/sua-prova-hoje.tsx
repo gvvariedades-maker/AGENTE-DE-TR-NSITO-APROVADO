@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import type { RetencaoResumo } from "@/lib/retencao";
-import { labelTopicoCTB } from "@/lib/ctb-topicos";
+import { labelTopicoEdital } from "@/lib/edital-topicos";
 import {
   hrefEstudoErros,
   hrefEstudoTopico,
@@ -27,9 +27,9 @@ interface SuaProvaHojeProps {
 function ctaTopico(piores: PiorTopico[]): { href: string; label: string } {
   const alvo = piores[0];
   if (!alvo || alvo.tentativas === 0) {
-    return { href: "/estudo", label: "Estudar CTB agora" };
+    return { href: "/estudo?modo=auto", label: "Estudar agora" };
   }
-  const nome = labelTopicoCTB(alvo.slug);
+  const nome = labelTopicoEdital(alvo.slug);
   const curto = nome.length > 28 ? `${nome.slice(0, 26)}…` : nome;
   if (alvo.erros > 0) {
     return {
@@ -38,7 +38,7 @@ function ctaTopico(piores: PiorTopico[]): { href: string; label: string } {
     };
   }
   return {
-    href: hrefEstudoTopico(alvo.slug),
+    href: hrefEstudoTopico(alvo.slug, alvo.disciplina),
     label: `Estudar ${curto}`,
   };
 }
@@ -102,13 +102,13 @@ export function SuaProvaHoje({
 
         <div>
           <p className="mb-2 text-xs font-medium tracking-wide text-muted-foreground uppercase">
-            Piores tópicos CTB
+            Piores tópicos
           </p>
           <ul className="flex flex-col gap-1.5">
             {pioresTopicos.map((p) => (
               <li key={p.slug} className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
                 <Link
-                  href={hrefEstudoTopico(p.slug)}
+                  href={hrefEstudoTopico(p.slug, p.disciplina)}
                   className="text-sm text-foreground underline-offset-4 hover:underline"
                 >
                   {labelPiorTopico(p)}

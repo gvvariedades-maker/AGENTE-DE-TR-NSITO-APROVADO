@@ -1,0 +1,266 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_infracoes",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 4,
+    "enunciado": "Durante operação de fiscalização da STTP em Campina Grande, agente aborda veículo em movimento e constata que o condutor manuseia telefone celular com uma das mãos e está sem cinto de segurança. O condutor não possui registro de infração nos últimos doze meses. Considerando o CTB, assinale a alternativa CORRETA quanto às penalidades aplicáveis:",
+    "alternativas": {
+      "A": "Aplica-se apenas a penalidade da infração gravíssima do celular, por ser a de maior gravidade, absorvendo a do cinto de segurança.",
+      "B": "Devem ser impostas cumulativamente as penalidades de multa e pontuação de cada infração, totalizando doze pontos na CNH (sete pela gravíssima e cinco pela grave).",
+      "C": "Configura infração única de natureza gravíssima, com sete pontos, pois ambas as condutas ocorreram na mesma abordagem.",
+      "D": "É cabível advertência por escrito em substituição às multas, por se tratar da primeira infração do condutor no período de doze meses."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Cumulação de penalidades em infrações simultâneas (art. 266) e pontuação por gravidade (art. 259), com classificação do celular (art. 252, § único) e do cinto (art. 167).",
+      "fundamento_legal": "CTB, art. 266: quando o infrator cometer, simultaneamente, duas ou mais infrações, ser-lhe-ão aplicadas, cumulativamente, as respectivas penalidades. Art. 252, § único: manusear celular — infração gravíssima (7 pts, art. 259, I). Art. 167: não usar cinto — infração grave (5 pts, art. 259, II). Art. 267: advertência por escrito só para infração leve ou média.",
+      "passo_a_passo": [
+        "1. O caso traz duas infrações no mesmo ato de fiscalização: celular (gravíssima) e cinto (grave), ambas autônomas.",
+        "2. A erra por regra_excecao (inventa absorção pela infração mais grave — o art. 266 impõe cumulação, não absorção); C erra por gravidade (confunde simultaneidade com infração única — são dois tipos distintos); D erra por regra_excecao (advertência do art. 267 exige infração leve ou média; celular é gravíssima).",
+        "3. B correta: art. 266 exige penalidades cumulativas — multas separadas e 7 + 5 = 12 pontos na CNH."
+      ],
+      "pegadinha": "A IDECAN induz o candidato a aplicar lógica de 'absorve a mais grave' — no CTB, infrações simultâneas cumulam penalidades, não se fundem.",
+      "macete": "SIMULTÂNEO = CUMULA · grave + gravíssima = 5 + 7 = 12 pts. Advertência só leve/média.",
+      "estudo_reverso": [
+        "CTB art. 266",
+        "CTB art. 252, § único",
+        "CTB art. 167",
+        "CTB art. 259",
+        "CTB art. 267"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "duracao_estimada_seg": 90,
+      "fundamento_slug": "CTB_art_266",
+      "macete_visual": "SIMULTÂNEO = CUMULA · 7 + 5 = 12 pts",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Celular + cinto na mesma abordagem. A banca troca CUMULA por ABSORVE a mais grave.\n\nGabarito B: art. 266 — penalidades cumulativas. Total: 12 pontos (7 + 5).",
+            "destaques": ["CUMULA", "12 pontos", "art. 266"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Decisão: uma ou duas infrações?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Duas ou mais infrações simultâneas?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Art. 266: penalidades CUMULATIVAS", "tipo": "resultado" },
+              { "id": "r2", "label": "Aplica só a penalidade da infração isolada", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim" },
+              { "de": "p1", "para": "r2", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Pontuação do caso",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Infração", "Pontos"],
+            "linhas": [
+              { "faixa": "Celular (art. 252, § único)", "classificacao": "Gravíssima — 7 pts" },
+              { "faixa": "Cinto (art. 167)", "classificacao": "Grave — 5 pts" },
+              { "faixa": "Total cumulativo", "classificacao": "12 pts", "destaque": true }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Absorve × cumula",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "Lei ✓"],
+            "linhas": [
+              ["Absorve a gravíssima", "Cumula todas (art. 266)"],
+              ["7 pontos no total", "7 + 5 = 12 pontos"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SIMULTÂNEO = CUMULA. Grave + gravíssima = 5 + 7 = 12 pts.\n\nAdvertência (art. 267) só vale para leve ou média — celular é gravíssima.",
+            "destaques": ["SIMULTÂNEO = CUMULA", "12 pts"]
+          }
+        }
+      ],
+      "links_fonte": [
+        { "rotulo": "CTB art. 266", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 260,
+      "fundamento_slug": "CTB_art_266",
+      "macete_visual": "SIMULTÂNEO = CUMULA · 7 + 5 = 12 pts",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: simultâneo não absorve",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B. Se marcou A, caiu na isca: você absorveu a infração grave pelo gravíssima do celular.\n\nNo CTB, infrações simultâneas geram penalidades CUMULATIVAS (art. 266). Nesta aula você fixa cumulação, pontuação e por que advertência não cabe aqui.",
+            "destaques": ["Gabarito B", "CUMULATIVAS", "art. 266"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos da questão",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SIMULTANEAMENTE: duas ou mais infrações cometidas no mesmo ato de fiscalização, sem fusão.\n\nCUMULATIVAMENTE: cada infração recebe sua multa e pontuação — não há absorção pela mais grave.\n\nGRAVÍSSIMA × GRAVE: celular (§ único do art. 252) = 7 pts; cinto (art. 167) = 5 pts.",
+            "destaques": ["SIMULTANEAMENTE", "CUMULATIVAMENTE", "GRAVÍSSIMA × GRAVE"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: quantas penalidades aplicar?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Celular e cinto ao mesmo tempo?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Aplicar todas cumulativamente — 12 pts", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Pontuação por gravidade (art. 259)",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Natureza", "Pontos na CNH"],
+            "linhas": [
+              { "faixa": "Gravíssima (celular)", "classificacao": "7 pontos", "destaque": true },
+              { "faixa": "Grave (cinto)", "classificacao": "5 pontos", "destaque": true },
+              { "faixa": "Média", "classificacao": "4 pontos" },
+              { "faixa": "Leve", "classificacao": "3 pontos" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: absorve × cumula",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              ["A mais grave absorve a menor", "Art. 266: penalidades cumulativas"],
+              ["Mesma abordagem = infração única", "São tipos distintos — autuações separadas"],
+              ["7 pontos bastam", "7 + 5 = 12 pontos na CNH"]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + letra da lei"],
+            "linhas": [
+              ["A — regra_excecao", "Inventa absorção — art. 266 impõe cumulação, não absorção"],
+              ["C — gravidade", "Confunde simultaneidade com infração única gravíssima"],
+              ["D — regra_excecao", "Advertência (art. 267) exige leve/média — celular é gravíssima"]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Conduta flagrada", "Enquadramento"],
+            "linhas": [
+              ["Manusear celular ao volante", "Art. 252, § único — gravíssima (7 pts)"],
+              ["Condutor sem cinto de segurança", "Art. 167 — grave (5 pts) + retenção"],
+              ["Resultado", "Gabarito B: 12 pts cumulativos + multas separadas"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Por que advertência não cabe",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Requisito", "Caso concreto"],
+            "linhas": [
+              ["Art. 267: infração leve ou média", "Celular é gravíssima — não qualifica"],
+              ["Sem infração nos últimos 12 meses", "Condutor cumpre, mas natureza impede"],
+              ["Advertência substitui multa?", "Não — gravíssima e grave exigem multa"]
+            ]
+          }
+        },
+        {
+          "id": "lei3",
+          "titulo": "Art. 266 — cumulação obrigatória",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 266",
+            "texto": "Quando o infrator cometer, simultaneamente, duas ou mais infrações, ser-lhe-ão aplicadas, cumulativamente, as respectivas penalidades.",
+            "trechos_grifados": [
+              { "inicio": 27, "fim": 42, "motivo": "simultaneamente — gatilho da cumulação" },
+              { "inicio": 90, "fim": 105, "motivo": "cumulativamente — não absorve" }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 259 — pontuação cumulada",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 259, I e II",
+            "texto": "A cada infração cometida são computados os seguintes números de pontos: I - gravíssima - sete pontos; II - grave - cinco pontos; III - média - quatro pontos; IV - leve - três pontos.",
+            "trechos_grifados": [
+              { "inicio": 76, "fim": 100, "motivo": "gravíssima — celular = 7 pts" },
+              { "inicio": 107, "fim": 127, "motivo": "grave — cinto = 5 pts" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SIMULTÂNEO = CUMULA: cada infração leva sua multa e seus pontos — nunca absorve a mais grave.\n\nNeste caso: 7 (celular) + 5 (cinto) = 12 pts.\n\nAdvertência (art. 267) só para leve/média. Mesma lógica vale em blitz com farol + cinto ou velocidade + celular.",
+            "destaques": ["SIMULTÂNEO = CUMULA", "12 pts", "art. 267"]
+          }
+        }
+      ],
+      "links_fonte": [
+        { "rotulo": "CTB art. 266", "path": "conteúdo/legislação federal/lei-9503-ctb.html" },
+        { "rotulo": "CTB art. 259", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+      ]
+    },
+    "tags": ["infracoes", "art_266", "cumulacao", "celular", "cinto_seguranca"]
+  }
+]

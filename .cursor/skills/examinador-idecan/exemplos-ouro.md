@@ -2,7 +2,7 @@
 
 ## Padrões reais por disciplina (corpus 04/07/2026)
 
-Fonte: 1.463 questões IDECAN em `conteúdo/questões reais/` — stats em `scripts/corpus-idecan-stats.json`.
+Fonte: 1.463 questões IDECAN em `conteúdo/questões reais/` — stats em `.cursor/skills/examinador-idecan/scripts/corpus-idecan-stats.json`.
 
 | Disciplina | N | Enunciado médio | Alt. média | Comando dominante | Pegadinha #1 |
 |------------|---|-----------------|------------|-------------------|--------------|
@@ -14,6 +14,20 @@ Fonte: 1.463 questões IDECAN em `conteúdo/questões reais/` — stats em `scri
 | `direito_administrativo` | 12 | 325 | 96 | assertivas | atos adm. |
 
 **Campina Grande 2026:** sempre **4 alternativas (A–D)** — corpus Tec tem 63% com 5 alternativas; ignorar E ao gerar.
+
+### Aula completa v2 (visual)
+
+Toda questão seedada exige `estudo_reverso_visual_completo`. Padrão canônico para **caso prático**:
+
+| Recurso | Caminho |
+|---------|---------|
+| Hub padrão ouro v3 | `.cursor/skills/estudo-reverso-visual/exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md` |
+| Família A (caso, 11 telas) | `familias/PADRAO-A-caso-regra-excecao.md` + `ctb-normas-circulacao-art29.json` |
+| **Prompt copiável (nova conversa)** | `.cursor/skills/examinador-idecan/prompt-questao-aula-completa.md` |
+| JSON espelho | `.cursor/skills/estudo-reverso-visual/exemplos-ouro/ctb-normas-circulacao-art29.json` |
+| Seed de referência | `content/questoes/legislacao_transito/lote-007.json` |
+
+Ver **Exemplo 3** abaixo (questão + link para a aula).
 
 ---
 
@@ -39,16 +53,58 @@ Fonte: 1.463 questões IDECAN em `conteúdo/questões reais/` — stats em `scri
     "fundamento_legal": "CTB, art. 165-A: recusar-se a ser submetido a teste, exame clínico, perícia ou outro procedimento que permita certificar influência de álcool ou outra substância psicoativa, na forma do art. 277, configura infração autônoma de trânsito.",
     "passo_a_passo": [
       "O enunciado descreve sinais de alteração psicomotora + recusa ao etilômetro.",
-      "A) Erra: a recusa não impede autuação — é infração autônoma (art. 165-A).",
-      "B) Erra: não é necessário aguardar perito para autuação administrativa.",
-      "C) Correta: a recusa configura infração autônoma prevista no art. 165-A do CTB.",
-      "D) Erra: confunde necessidade de confirmação etílica com a recusa em si."
+      "A erra por regra_excecao (recusa não impede autuação — é infração autônoma, art. 165-A). B erra por competencia_snt (não exige perito criminal para autuação administrativa). D erra por termo_unico (confunde necessidade de confirmação etílica com a recusa em si).",
+      "C está correta: a recusa configura infração autônoma prevista no art. 165-A do CTB."
     ],
     "pegadinha": "IDECAN troca 'recusa' por 'necessidade de confirmação do etilômetro' — candidato acha que sem teste positivo não há infração. Distrator clássico: citar o revogado §3º do art. 165.",
     "macete": "Recusou o bafômetro = infração autônoma (art. 165-A). Não precisa estar bêbado no teste.",
     "estudo_reverso": ["CTB art. 165", "CTB art. 165-A", "CTB art. 277"]
   },
   "tags": ["embriaguez", "etilometro", "recusa"]
+}
+```
+
+## Exemplo 3 — legislacao_transito (normas de circulação + aula completa)
+
+Questão inédita **padrão ouro v2** — caso prático com 2 conflitos (preferência art. 29, III + hierarquia §2º). Gabarito **C**.
+
+**Aula:** 11 telas · arquétipo `fluxograma_decisao` · macete RO-RO-DI.
+
+| Artefato | Caminho |
+|----------|---------|
+| Lote (seed) | `content/questoes/legislacao_transito/lote-007.json` |
+| Guia da aula | `.cursor/skills/estudo-reverso-visual/exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md` (hub) |
+| JSON visual | `.cursor/skills/estudo-reverso-visual/exemplos-ouro/ctb-normas-circulacao-art29.json` |
+
+```json
+{
+  "disciplina": "legislacao_transito",
+  "topico": "CTB_circulacao_conduta",
+  "tipo": "caso_pratico",
+  "estilo_idecan": "caso_pratico",
+  "dificuldade": 4,
+  "enunciado": "Em uma via urbana de Campina Grande/PB, num cruzamento desprovido de qualquer sinalização de regulamentação, o agente de trânsito da STTP observa a aproximação simultânea de dois veículos em fluxos que se cruzam: um automóvel, que trafega por um trecho de rodovia que corta o perímetro urbano, e uma motocicleta, que se aproxima pela direita do condutor do automóvel, por uma via local. No instante seguinte, no mesmo ponto, um caminhão e um ciclista disputam o espaço da via. Considerando as normas gerais de circulação e conduta previstas no Código de Trânsito Brasileiro, assinale a alternativa correta.",
+  "alternativas": {
+    "A": "A motocicleta tem preferência de passagem sobre o automóvel, por se aproximar pela direita do condutor deste, regra que prevalece sempre que os fluxos se cruzam em local não sinalizado.",
+    "B": "Como o cruzamento não possui sinalização, nenhum dos veículos tem preferência assegurada, devendo todos os condutores parar e negociar a passagem entre si antes de prosseguir.",
+    "C": "O automóvel tem preferência de passagem, por estar circulando pela rodovia; e, na interação entre o caminhão e o ciclista, o condutor do caminhão é o responsável pela segurança do ciclista.",
+    "D": "O ciclista, por ser o usuário mais vulnerável, responde pela sua própria segurança e tem preferência sobre o caminhão, enquanto entre automóvel e motocicleta prevalece quem vier pela direita."
+  },
+  "gabarito": "C",
+  "comentario": {
+    "o_que_testa": "Normas gerais de circulação e conduta — ordem de preferência em cruzamento não sinalizado (art. 29, III) e hierarquia de responsabilidade (art. 29, §2º).",
+    "fundamento_legal": "CTB, art. 29, III: em local não sinalizado, tem preferência quem circula por rodovia (a), depois por rotatória (b) e, nos demais casos, o que vier pela direita (c). Art. 29, §2º: os veículos de maior porte são sempre responsáveis pela segurança dos menores, os motorizados pelos não motorizados e, juntos, pela incolumidade dos pedestres.",
+    "passo_a_passo": [
+      "1. O caso traz dois conflitos: preferência no cruzamento (automóvel x motocicleta) e responsabilidade (caminhão x ciclista).",
+      "2. A erra por regra_excecao (aplica a regra da direita do art. 29, III, c, ignorando rodovia na alínea a); B erra por regra_excecao (falta de placa não anula inciso III); D erra por termo_unico (inverte art. 29, §2º).",
+      "3. C correta: alínea a (rodovia) + §2º (caminhão responde pelo ciclista)."
+    ],
+    "pegadinha": "IDECAN induz a saltar direto para quem vem pela direita — mas essa é a última regra (alínea c), só quando não há rodovia nem rotatória.",
+    "macete": "RO-RO-DI: ROdovia > ROtatória > DIreita. Responsabilidade: o MAIOR cuida do menor.",
+    "estudo_reverso": ["CTB art. 29, III", "CTB art. 29, §2º", "CTB art. 44"]
+  },
+  "estudo_reverso_visual_completo": "→ ver lote-007.json ou ctb-normas-circulacao-art29.json (11 telas)",
+  "tags": ["normas_circulacao", "art29", "preferencia_passagem", "cruzamento"]
 }
 ```
 
@@ -74,8 +130,7 @@ Fonte: 1.463 questões IDECAN em `conteúdo/questões reais/` — stats em `scri
     "fundamento_legal": "Súmula 473/STF (revogação); doutrina clássica sobre discricionariedade e desvio de finalidade (art. 37 CF).",
     "passo_a_passo": [
       "I: Correta — discricionariedade = margem de escolha legal.",
-      "II: Errada — revogação é ex nunc (não retroage).",
-      "III: Correta — desvio de finalidade = abuso de poder.",
+      "II erra por termo_unico (revogação é ex nunc, não ex tunc). III: Correta — desvio de finalidade = abuso de poder.",
       "Gabarito: I e III = alternativa B."
     ],
     "pegadinha": "Trocar efeitos da revogação (ex nunc) por anulação (ex tunc).",
@@ -120,14 +175,14 @@ Fonte: 1.463 questões IDECAN em `conteúdo/questões reais/` — stats em `scri
 }
 ```
 
-## Questões irmãs (mesmo tópico)
+## Modelo ouro (descontinuado: questões irmãs)
 
-Para o Exemplo 1, gerar 3 variações:
-- Irmã 1: condutor recusa **exame clínico** (não etilômetro)
-- Irmã 2: condutor **aceita** teste mas resultado negativo — pergunta sobre sinais evidentes
-- Irmã 3: **passageiro** embriagado — competência de autuação
+> **2026-07-07:** o produto não usa mais questões irmãs. Cada microtópico tem
+> 1 questão ouro + `estudo_reverso_visual` completo. Revisão via FSRS.
 
-Manter `topico` base + sufixo opcional: `CTB_conducao_embriaguez_irma_1`
+~~Para o Exemplo 1, gerar 3 variações (irmãs)~~ — substituído por visual + FSRS.
+
+~~Manter `topico` base + sufixo opcional: `CTB_conducao_embriaguez_irma_1`~~
 
 ---
 

@@ -7,10 +7,24 @@ export const ARQUETIPOS_VISUAIS = [
   "linha_tempo",
   "diagrama_competencia",
   "texto_destaque",
-  "micro_recall",
 ] as const;
 
 export type ArquetipoVisual = (typeof ARQUETIPOS_VISUAIS)[number];
+
+/** Fase pedagógica da tela — signaling visual no player (dual coding + pre-training). */
+export const SECOES_VISUAIS = [
+  "diagnostico",
+  "mapa",
+  "contraste",
+  "distratores",
+  "metodo",
+  "lei",
+  "conceito",
+  "recall",
+  "macete",
+] as const;
+
+export type Secao = (typeof SECOES_VISUAIS)[number];
 
 export interface LinkFonte {
   rotulo: string;
@@ -55,11 +69,15 @@ export interface ItemAssertiva {
   id: string;
   texto: string;
   correto: boolean;
+  /** Micro-feedback após tap-to-reveal no recall interativo. */
+  porque?: string;
 }
 
 export interface ConteudoMatrizAssertivas {
   itens: ItemAssertiva[];
   gabarito_resumo: string;
+  /** Contexto antes da lista (ex.: cenário do passo a passo). */
+  intro?: string;
 }
 
 export interface LinhaGradacao {
@@ -106,71 +124,51 @@ export interface ConteudoDiagramaCompetencia {
   arestas: ArestaCompetencia[];
 }
 
-export interface ConteudoMicroRecall {
-  pergunta: string;
-  resposta_esperada: string;
-  dica?: string;
-  aceitar_variacoes?: string[];
+interface TelaVisualBase {
+  id: string;
+  titulo: string;
+  secao?: Secao;
 }
 
-export type TelaVisual =
-  | {
-      id: string;
-      titulo: string;
-      tipo: "texto_destaque";
-      conteudo: ConteudoTextoDestaque;
-    }
-  | {
-      id: string;
-      titulo: string;
-      tipo: "fluxograma";
-      conteudo: ConteudoFluxograma;
-    }
-  | {
-      id: string;
-      titulo: string;
-      tipo: "comparacao";
-      conteudo: ConteudoComparacao;
-    }
-  | {
-      id: string;
-      titulo: string;
-      tipo: "matriz_assertivas";
-      conteudo: ConteudoMatrizAssertivas;
-    }
-  | {
-      id: string;
-      titulo: string;
-      tipo: "tabela_gradacao";
-      conteudo: ConteudoTabelaGradacao;
-    }
-  | {
-      id: string;
-      titulo: string;
-      tipo: "trecho_legal";
-      conteudo: ConteudoTrechoLegal;
-    }
-  | {
-      id: string;
-      titulo: string;
-      tipo: "linha_tempo";
-      conteudo: ConteudoLinhaTempo;
-    }
-  | {
-      id: string;
-      titulo: string;
-      tipo: "diagrama_competencia";
-      conteudo: ConteudoDiagramaCompetencia;
-    }
-  | {
-      id: string;
-      titulo: string;
-      tipo: "micro_recall";
-      conteudo: ConteudoMicroRecall;
-    };
+export type TelaVisual = TelaVisualBase &
+  (
+    | {
+        tipo: "texto_destaque";
+        conteudo: ConteudoTextoDestaque;
+      }
+    | {
+        tipo: "fluxograma";
+        conteudo: ConteudoFluxograma;
+      }
+    | {
+        tipo: "comparacao";
+        conteudo: ConteudoComparacao;
+      }
+    | {
+        tipo: "matriz_assertivas";
+        conteudo: ConteudoMatrizAssertivas;
+      }
+    | {
+        tipo: "tabela_gradacao";
+        conteudo: ConteudoTabelaGradacao;
+      }
+    | {
+        tipo: "trecho_legal";
+        conteudo: ConteudoTrechoLegal;
+      }
+    | {
+        tipo: "linha_tempo";
+        conteudo: ConteudoLinhaTempo;
+      }
+    | {
+        tipo: "diagrama_competencia";
+        conteudo: ConteudoDiagramaCompetencia;
+      }
+  );
 
-export interface EstudoReversoVisual {
-  versao: 1;
+export type PublicoAlvoVisual = "iniciante" | "todos";
+
+export interface EstudoReversoVisualBase {
   arquetipo: ArquetipoVisual;
   arquetipo_secundario?: ArquetipoVisual;
   duracao_estimada_seg: number;
@@ -179,4 +177,23 @@ export interface EstudoReversoVisual {
   telas: TelaVisual[];
   links_fonte: LinkFonte[];
   ref_visual_id?: string;
+}
+
+/** Trilha expressa pós-questão (3–5 telas). */
+export interface EstudoReversoVisualV1 extends EstudoReversoVisualBase {
+  versao: 1;
+}
+
+/** Aula completa para iniciantes / microtópicos com dúvida (7–11 telas). */
+export interface EstudoReversoVisualV2 extends EstudoReversoVisualBase {
+  versao: 2;
+  publico_alvo?: PublicoAlvoVisual;
+}
+
+export type EstudoReversoVisual = EstudoReversoVisualV1 | EstudoReversoVisualV2;
+
+export function isEstudoReversoVisualCompleto(
+  visual: EstudoReversoVisual,
+): visual is EstudoReversoVisualV2 {
+  return visual.versao === 2;
 }

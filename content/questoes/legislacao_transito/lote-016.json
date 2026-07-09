@@ -1,0 +1,263 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_914_semirreboque",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 4,
+    "enunciado": "Durante fiscalização em Campina Grande/PB, agente da STTP aborda condutor de motocicleta de 160 cm³ de cilindrada tracionando semirreboque especialmente projetado para motocicletas e devidamente homologado. O semirreboque possui todos os equipamentos obrigatórios previstos na Resolução CONTRAN nº 914/2022 e dimensões dentro dos limites legais. No CRLV-e da motocicleta, o campo observações registra CMT de 100 kg. Na inspeção, o semirreboque apresenta PBT de 70 kg e carga de 45 kg. Considerando a Resolução CONTRAN nº 914/2022, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A circulação é regular, pois a homologação do semirreboque e o atendimento aos equipamentos obrigatórios dispensam a verificação da capacidade máxima de tração (CMT) indicada no CRLV-e.",
+      "B": "A infração enquadra-se no art. 230, X, do CTB, por equipamento obrigatório do semirreboque em desacordo com as especificações da Resolução CONTRAN nº 914/2022.",
+      "C": "A infração enquadra-se no art. 244, VI, do CTB, por tracionar semirreboque em desacordo com o art. 2º da Resolução CONTRAN nº 914/2022, uma vez que a carga tracionada (115 kg) excede a CMT de 100 kg registrada no CRLV-e.",
+      "D": "A circulação é regular, pois cabe exclusivamente à autoridade de trânsito local, nos termos do art. 4º da Resolução CONTRAN nº 914/2022, autorizar cargas superiores à CMT nas vias sob sua circunscrição."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Requisitos para motocicleta tracionar semirreboque — CMT no CRLV-e (Res. CONTRAN 914/2022, art. 2º, III e parágrafo único) e tipificação da infração pelo art. 5º, III (CTB art. 244, VI), distinto de equipamento ausente (art. 230, IX) ou em desacordo (art. 230, X).",
+      "fundamento_legal": "Res. CONTRAN 914/2022, art. 2º: motocicletas e motonetas com mais de 120 cm³ podem tracionar semirreboques especialmente projetados, homologados e dentro da CMT do fabricante. Parágrafo único: a CMT deve constar no campo observações do CRLV-e. Art. 5º, III: violação do art. 2º tipifica CTB art. 244, VI. CTB art. 244, §3º: a restrição do inciso VI não se aplica a semirreboques homologados — mas o art. 2º da Res. 914/2022 (incluindo CMT) continua exigido. Art. 4º: autoridade local decide sobre circulação na via, não altera CMT do fabricante.",
+      "passo_a_passo": [
+        "1. O caso traz moto 160 cm³ com semirreboque homologado e equipado, mas carga tracionada de 115 kg (70 + 45) acima da CMT de 100 kg do CRLV-e.",
+        "2. A erra por regra_excecao (homologação e equipamentos não dispensam o limite de CMT do art. 2º, III); B erra por termo_unico (equipamentos estão conformes — a falha é capacidade de tração, não art. 230, X); D erra por competencia_snt (art. 4º trata de permitir ou não a circulação na via, não de autorizar excesso de CMT).",
+        "3. C correta: ultrapassada a CMT registrada, há tracionamento em desacordo com o art. 2º — art. 5º, III remete ao CTB art. 244, VI."
+      ],
+      "pegadinha": "A IDECAN induz a validar porque o semirreboque é homologado e equipado — mas homologação não elimina o teto de CMT gravado no CRLV-e; o §3º do art. 244 do CTB só afasta a proibição genérica de rebocar, não os requisitos do art. 2º da Res. 914/2022.",
+      "macete": "914: >120 cm³ + homologado + CMT no CRLV-e · excedeu CMT = art. 244, VI · art. 4º = via, não carga.",
+      "estudo_reverso": [
+        "Res. CONTRAN 914/2022 art. 2",
+        "Res. CONTRAN 914/2022 art. 4",
+        "Res. CONTRAN 914/2022 art. 5",
+        "CTB art. 244",
+        "CTB art. 230"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "duracao_estimada_seg": 90,
+      "fundamento_slug": "CONTRAN_914_art_2",
+      "macete_visual": "Homologado ≠ sem CMT · excedeu = art. 244, VI",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Semirreboque homologado e equipado, mas carga de 115 kg > CMT 100 kg do CRLV-e.\n\nGabarito C: art. 5º, III — art. 244, VI por violar art. 2º (CMT).",
+            "destaques": ["CMT", "homologado", "art. 244, VI"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Carga tracionada cabe na CMT?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Carga tracionada ≤ CMT do CRLV-e?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Regular quanto à CMT — art. 2º, III", "tipo": "resultado" },
+              { "id": "r2", "label": "Art. 244, VI — art. 2º violado", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim" },
+              { "de": "p1", "para": "r2", "rotulo": "Não — 115 > 100 kg" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Art. 5º — três tipificações",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Violação", "CTB"],
+            "linhas": [
+              { "faixa": "Sem equipamento obrigatório", "classificacao": "Art. 230, IX — inciso I" },
+              { "faixa": "Equipamento em desacordo", "classificacao": "Art. 230, X — inciso II" },
+              { "faixa": "Art. 2º (CMT, cilindrada, homologação)", "classificacao": "Art. 244, VI — inciso III", "destaque": true }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Homologado + equipado ≠ sem CMT.\n115 kg > 100 kg = art. 244, VI.\nArt. 4º decide VIA — não aumenta CMT.",
+            "destaques": ["CMT", "art. 244, VI", "art. 4º"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 914/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 914, DE 28 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 260,
+      "fundamento_slug": "CONTRAN_914_art_2",
+      "macete_visual": "Homologado ≠ sem CMT · excedeu = art. 244, VI",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: homologado não dispensa CMT",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C. Se marcou A, confundiu homologação com liberdade de carga.\n\nSemirreboque equipado e homologado, mas 115 kg tracionados ultrapassam CMT de 100 kg no CRLV-e. Viola art. 2º, III — tipificação art. 244, VI (art. 5º, III).",
+            "destaques": ["Gabarito C", "115 kg", "CMT 100 kg"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos da questão",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CMT: Capacidade Máxima de Tração — limite do fabricante para rebocar, registrada no CRLV-e (art. 2º, parágrafo único).\n\nSEMIRREBOQUE: unidade acoplada sem eixo próprio dianteiro — exige requisitos do art. 2º e art. 3º da Res. 914/2022.\n\nHOMOLOGAÇÃO: aprovação pelo órgão máximo executivo de trânsito da União — requisito do art. 2º, II, mas não afasta CMT.",
+            "destaques": ["CMT", "SEMIRREBOQUE", "HOMOLOGAÇÃO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: a moto pode tracionar esta carga?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Moto homologada com semirreboque?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Carga tracionada dentro da CMT?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Excedeu a CMT — gabarito C", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não — 115 > 100 kg" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Art. 2º — três condições cumulativas",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Requisito", "Exigência"],
+            "linhas": [
+              { "faixa": "I — projeto exclusivo", "classificacao": "Semirreboque especialmente para motos" },
+              { "faixa": "II — homologação", "classificacao": "Aprovado pelo órgão máximo executivo" },
+              { "faixa": "III — CMT", "classificacao": "Respeitar limite no CRLV-e", "destaque": true }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: homologado × CMT",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              ["Homologado = pode rebocar qualquer carga", "Art. 2º, III exige respeitar CMT do CRLV-e"],
+              ["Equipado = infração é art. 230, X", "Equipamento conforme — falha é capacidade (art. 244, VI)"],
+              ["Art. 4º local autoriza excesso de carga", "Art. 4º decide circulação na via, não altera CMT"]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + letra da lei"],
+            "linhas": [
+              ["A — regra_excecao", "Homologação não dispensa CMT do art. 2º, III"],
+              ["B — termo_unico", "Equipamentos conformes — não é art. 230, X"],
+              ["D — competencia_snt", "Art. 4º trata de via sob circunscrição, não de carga"]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato da fiscalização", "Avaliação"],
+            "linhas": [
+              ["Moto 160 cm³ + semirreboque homologado", "Atende art. 2º, I e II"],
+              ["Equipamentos e dimensões conformes", "Art. 3º atendido — não é art. 230, IX/X"],
+              ["115 kg tracionados > CMT 100 kg CRLV-e", "Viola art. 2º, III — gabarito C"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 5º — qual infração do CTB?",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Hipótese Res. 914/2022", "Tipificação CTB"],
+            "linhas": [
+              ["Falta equipamento obrigatório (art. 3º, II)", "Art. 230, IX — art. 5º, I"],
+              ["Equipamento em desacordo com especificação", "Art. 230, X — art. 5º, II"],
+              ["Violação do art. 2º (CMT, cilindrada, homologação)", "Art. 244, VI — art. 5º, III"],
+              ["CTB art. 244, §3º", "Afasta proibição genérica — não afasta CMT"]
+            ]
+          }
+        },
+        {
+          "id": "lei3",
+          "titulo": "Res. 914/2022, art. 2º — CMT obrigatória",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 914/2022, art. 2º, III",
+            "texto": "As motocicletas e motonetas dotadas de motor com mais de 120 cm³ de cilindrada podem tracionar semirreboques, desde que: I - especialmente projetados e para uso exclusivo desses veículos; II - devidamente homologados pelo órgão máximo executivo de trânsito da União; e III - observados os limites de capacidade máxima de tração (CMT) indicados pelo fabricante ou importador da motocicleta ou da motoneta.",
+            "trechos_grifados": [
+              { "inicio": 275, "fim": 333, "motivo": "CMT do fabricante — 115 kg excede 100 kg do CRLV-e" }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Res. 914/2022, art. 5º, III — tipificação",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 914/2022, art. 5º, III",
+            "texto": "III - art. 244, VI: motocicleta ou motoneta tracionando semirreboque em desacordo com o disposto no art. 2º.",
+            "trechos_grifados": [
+              { "inicio": 6, "fim": 18, "motivo": "tipificação CTB para violação do art. 2º — gabarito C" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "914: >120 cm³ + homologado + CMT no CRLV-e.\nExcedeu CMT = art. 244, VI (art. 5º, III).\nArt. 4º = pode ou não circular na via — não aumenta carga.\n\nMesma lógica cai em equipamento ausente (art. 230, IX), dimensões do art. 3º e cilindrada ≤120 cm³.",
+            "destaques": ["CMT", "art. 244, VI", "art. 4º"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 914/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 914, DE 28 DE MARÇO DE 2022.pdf"
+        },
+        {
+          "rotulo": "CTB art. 244",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "tags": ["semirreboque", "resolucao_914", "cmt", "motocicleta", "crlv_e"]
+  }
+]

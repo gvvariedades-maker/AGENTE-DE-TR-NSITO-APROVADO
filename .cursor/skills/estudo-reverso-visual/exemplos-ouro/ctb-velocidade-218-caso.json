@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "padrao_ouro": true,
+    "padrao_familia": "D_gradacao",
+    "pegadinha_em_uma_frase": "Candidato acha que abaixo de 50% sempre é média",
+    "gabarito": "D",
+    "guia": ".cursor/skills/estudo-reverso-visual/exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md"
+  },
+  "disciplina": "legislacao_transito",
+  "topico": "CTB_infracoes",
+  "tipo": "caso_pratico",
+  "estilo_idecan": "pegadinha_percentual",
+  "dificuldade": 3,
+  "enunciado": "Radar fixo da STTP registra veículo trafegando a 84 km/h em via arterial de Campina Grande cuja velocidade máxima regulamentada é 60 km/h. O condutor alega que, por não ultrapassar 50% de excesso, a infração seria de natureza média. Considerando o CTB, assinale a alternativa CORRETA:",
+  "alternativas": {
+    "A": "Configura infração gravíssima, com suspensão imediata do direito de dirigir.",
+    "B": "Trata-se de infração leve, por se tratar de via arterial urbana.",
+    "C": "Configura infração média, pois o excesso de velocidade não ultrapassou 50%.",
+    "D": "Configura infração grave, nos termos do art. 218, II, do CTB."
+  },
+  "gabarito": "D",
+  "comentario": {
+    "o_que_testa": "Classificação da infração de velocidade quando o excesso está entre 20% e 50% do limite (art. 218, II).",
+    "fundamento_legal": "CTB, art. 218, II: transitar em velocidade superior à máxima em mais de 20% até 50% — infração de natureza grave; penalidade multa. No caso: excesso de 40% (84 km/h em limite de 60 km/h) enquadra-se no inciso II.",
+    "passo_a_passo": [
+      "1. Cálculo: (84 − 60) ÷ 60 = 40% de excesso acima do limite de 60 km/h.",
+      "2. A erra por gravidade (pula para gravíssima/suspensão); B erra por termo_unico (infração leve inexistente); C erra por gravidade (mantém média além de 20%).",
+      "3. D correta: 40% enquadra-se no art. 218, II — infração grave."
+    ],
+    "pegadinha": "IDECAN confunde a faixa de 20% a 50% (grave) com média ou gravíssima — o candidato acha que abaixo de 50% sempre é média.",
+    "macete": "Até 20% média | 20–50% grave | +50% gravíssima + suspensão.",
+    "estudo_reverso": [
+      "CTB art. 218",
+      "CTB art. 219",
+      "CTB art. 220"
+    ]
+  },
+  "tags": [
+    "velocidade",
+    "art_218",
+    "gravidade",
+    "percentual",
+    "radar"
+  ],
+  "estudo_reverso_visual": {
+    "versao": 1,
+    "arquetipo": "tabela_gradacao",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 85,
+    "fundamento_slug": "CTB_art_218_II",
+    "macete_visual": "20% média | 20-50% GRAVE | +50% gravíssima tripla",
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "O que a IDECAN testou",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "84 km/h em limite de 60 km/h = 40% de excesso. A banca troca GRAVE por média na faixa de 20% a 50%.",
+          "destaques": [
+            "40%",
+            "GRAVE",
+            "60 km/h"
+          ]
+        }
+      },
+      {
+        "id": "gradacao",
+        "titulo": "Gradação do art. 218",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": [
+            "Excesso",
+            "Classificação"
+          ],
+          "linhas": [
+            {
+              "faixa": "Até 20%",
+              "classificacao": "Média"
+            },
+            {
+              "faixa": "20% a 50%",
+              "classificacao": "Grave",
+              "destaque": true
+            },
+            {
+              "faixa": "Acima de 50%",
+              "classificacao": "Gravíssima + multa x3 + suspensão"
+            }
+          ]
+        }
+      },
+      {
+        "id": "calculo",
+        "titulo": "Cálculo do caso",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Pegadinha",
+            "Correto"
+          ],
+          "linhas": [
+            [
+              "40% = infração média",
+              "40% = infração GRAVE (art. 218, II)"
+            ],
+            [
+              "Abaixo de 50% sempre é média",
+              "Só até 20% é média; 20–50% é grave"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Lei seca",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 218, II",
+          "texto": "Quando a velocidade for superior à máxima em mais de 20% até 50%: infração de natureza grave.",
+          "trechos_grifados": [
+            {
+              "inicio": 52,
+              "fim": 68,
+              "motivo": "natureza grave"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Até 20% média | 20–50% grave | +50% gravíssima. 40% = grave!",
+          "destaques": [
+            "grave",
+            "40%"
+          ]
+        }
+      }
+    ],
+    "links_fonte": [
+      {
+        "rotulo": "CTB art. 218",
+        "path": "conteúdo/legislação federal/"
+      }
+    ]
+  },
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "tabela_gradacao",
+    "arquetipo_secundario": "comparacao",
+    "publico_alvo": "todos",
+    "duracao_estimada_seg": 175,
+    "fundamento_slug": "CTB_art_218_II",
+    "macete_visual": "≤20 média | 20-50 GRAVE | >50 gravíssima+suspensão",
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Diagnóstico: 40% não é média",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito D (infração grave — art. 218, II).\n\nA — pula para gravíssima/suspensão: só acima de 50%.\nB — inventa infração leve: não existe no art. 218.\nC — acha que <50% sempre é média: entre 20% e 50% é GRAVE.\n\n84 km/h em limite 60 = 40% de excesso.",
+          "destaques": ["40%", "GRAVE", "60 km/h"]
+        }
+      },
+      {
+        "id": "gradacao",
+        "titulo": "Gradação do art. 218",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": ["Excesso", "Classificação"],
+          "linhas": [
+            { "faixa": "Até 20%", "classificacao": "Média" },
+            {
+              "faixa": "20% a 50%",
+              "classificacao": "Grave",
+              "destaque": true
+            },
+            {
+              "faixa": "Acima de 50%",
+              "classificacao": "Gravíssima + multa x3 + suspensão"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "A armadilha: abaixo de 50%",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+          "linhas": [
+            [
+              "Abaixo de 50% de excesso = sempre média",
+              "Só até 20% é média; 20–50% é GRAVE (inciso II)"
+            ],
+            [
+              "40% não ultrapassa 50%, logo é média",
+              "40% está na faixa grave — art. 218, II"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que cada alternativa erra",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["Alternativa", "Mecanismo + por quê"],
+          "linhas": [
+            [
+              "A — gravidade",
+              "Pula para gravíssima/suspensão — só acima de 50% (inciso III)"
+            ],
+            [
+              "B — termo_unico",
+              "Inventa infração leve — art. 218 não prevê natureza leve"
+            ],
+            [
+              "C — gravidade",
+              "Mantém média além de 20% — faixa 20–50% é grave"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Cálculo do radar STTP",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["Conta", "Resultado legal"],
+          "linhas": [
+            ["(84 − 60) ÷ 60", "24 km/h de excesso = 40% acima do limite"],
+            ["40% enquadra-se em", "Art. 218, II — infração GRAVE"],
+            ["Resultado", "Gabarito D"]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Art. 218, II — faixa grave",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 218, II",
+          "texto": "Transitar em velocidade superior à máxima permitida em mais de vinte por cento até cinquenta por cento: infração de natureza grave.",
+          "trechos_grifados": [
+            {
+              "inicio": 104,
+              "fim": 130,
+              "motivo": "caso — 40% = natureza grave"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Macete + transferência",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "≤20% média | 20–50% GRAVE | >50% gravíssima + suspensão.\n\nNear-transfer: mesmo limite 60 km/h, radar marca 95 km/h — excesso >50% → gravíssima (inciso III), não grave.",
+          "destaques": ["GRAVE", "95 km/h", "gravíssima"]
+        }
+      }
+    ],
+    "links_fonte": [
+      {
+        "rotulo": "CTB art. 218",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ]
+  }
+}
