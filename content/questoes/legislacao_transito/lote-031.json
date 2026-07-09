@@ -1,0 +1,344 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_crimes_transito",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_308",
+    "enunciado": "Três condutores organizam disputa de velocidade (\"racha\") em avenida urbana de Campina Grande, acelerando veículos em via pública sem autorização da autoridade competente e expondo pedestres e demais usuários da via a situação de risco. Não há vítima nem lesão no episódio. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Configura o crime previsto no art. 308, com penas de detenção de seis meses a três anos, multa e suspensão ou proibição de se obter a permissão ou a habilitação para dirigir.",
+      "B": "Trata-se exclusivamente de infração administrativa de excesso de velocidade, nos termos do art. 218, sem tipificação penal autônoma.",
+      "C": "Configura o crime do art. 306, por colocar em risco a incolumidade de terceiros com capacidade psicomotora alterada.",
+      "D": "Incide apenas o crime do art. 311, por trafegar em velocidade incompatível com a segurança em via urbana com movimentação de pessoas."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Crime de participar de corrida ou disputa automobilística não autorizada em via pública (art. 308) e distinção de infração de velocidade (art. 218) e outros crimes (arts. 306 e 311).",
+      "fundamento_legal": "CTB, art. 308: \"Participar, na direção de veículo automotor, em via pública, de corrida, disputa ou competição automobilística ou ainda de exibição ou demonstração de perícia em manobra de veículo automotor, não autorizada pela autoridade competente, gerando situação de risco à incolumidade pública ou privada\" — penas de detenção de 6 meses a 3 anos, multa e suspensão ou proibição de habilitar-se. Art. 218: infração administrativa por excesso de velocidade — instituto distinto. Art. 306: capacidade psicomotora alterada. Art. 311: velocidade incompatível nas proximidades de escolas, hospitais e concentração de pessoas.",
+      "passo_a_passo": [
+        "1. Condutores disputam velocidade em via pública sem autorização, gerando risco — núcleo do art. 308.",
+        "2. B erra por regra_excecao (reduz a conduta à infração do art. 218 — racha é tipificação penal autônoma); C erra por termo_unico (confunde racha com embriaguez — art. 306); D erra por gravidade (aplica art. 311 sem proximidade de escola, hospital ou concentração típica).",
+        "3. A correta: art. 308, com detenção de 6 meses a 3 anos, multa e suspensão ou proibição."
+      ],
+      "pegadinha": "A IDECAN induz a crer que racha é só excesso de velocidade administrativo (art. 218) — corrida ou disputa não autorizada em via pública tipifica crime autônomo no art. 308.",
+      "macete": "308 = RACHA/disputa NÃO autorizada em via pública · 218 = excesso de velocidade (admin) · 311 = velocidade perto de escola/hospital.",
+      "estudo_reverso": [
+        "CTB art. 218",
+        "CTB art. 306",
+        "CTB art. 308",
+        "CTB art. 311"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CTB_art_308",
+      "macete_visual": "308 RACHA não autorizada · 218 excesso admin",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Racha em via pública sem autorização. A banca troca art. 308 por infração de velocidade do art. 218.",
+            "destaques": ["art. 308", "racha", "art. 218"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "308 × 218",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Instituto", "Hipótese"],
+            "linhas": [
+              ["Art. 308", "Corrida/disputa não autorizada em via pública"],
+              ["Art. 218", "Excesso de velocidade — infração administrativa"],
+              ["Caso do racha", "Disputa organizada — não só excesso"]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Disputa ou corrida em via pública?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Sem autorização e com risco à incolumidade?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Crime de racha — gabarito A", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Admin × penal",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Confusão ✗", "Regra ✓"],
+            "linhas": [
+              ["Racha = só multa do art. 218", "Art. 308 tipifica crime autônomo"],
+              ["Risco a terceiros = art. 306", "306 é embriaguez — núcleo distinto"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "308 = RACHA não autorizada · 218 = excesso admin · 311 = perto escola/hospital.",
+            "destaques": ["308", "218", "311"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 308",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "CTB_art_308",
+      "macete_visual": "308 RACHA não autorizada · 218 excesso · §1/§2 se houver vítima",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Racha não é só excesso de velocidade administrativo — art. 308 tipifica crime autônomo",
+        "eixos_legais": ["CTB_art_308", "CTB_art_218"],
+        "isca_por_alternativa": {
+          "B": "reduz a disputa à infração de velocidade do art. 218",
+          "C": "equipara racha a embriaguez ao volante (art. 306)",
+          "D": "aplica art. 311 sem proximidade de escola, hospital ou concentração típica"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: racha não é art. 218",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A (art. 308 — corrida/disputa não autorizada).\n\nB — só art. 218: excesso de velocidade é infração admin — racha tipifica crime autônomo.\nC — art. 306: embriaguez — caso não trata de álcool ou substância psicoativa.\nD — art. 311: exige proximidade de escola, hospital ou concentração específica — não disputa organizada.\n\nTrês condutores disputam velocidade em via pública sem autorização, gerando risco.",
+            "destaques": ["Gabarito A", "art. 308", "racha"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "RACHA: disputa ou corrida de velocidade entre veículos — núcleo do art. 308, não do art. 218.\n\nAUTORIZAÇÃO: competição só deixa de ser crime se autorizada pela autoridade competente.\n\nSITUAÇÃO DE RISCO: exposição da incolumidade pública ou privada — elemento do caput do art. 308.",
+            "destaques": ["RACHA", "AUTORIZAÇÃO", "SITUAÇÃO DE RISCO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: crime ou só infração?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Corrida ou disputa automobilística em via pública?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Sem autorização e gerando risco à incolumidade?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Crime de racha não autorizado — gabarito A",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Racha × velocidade × embriaguez",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Conduta", "Instituto"],
+            "linhas": [
+              {
+                "faixa": "Disputa/corrida não autorizada em via pública",
+                "classificacao": "Crime — art. 308",
+                "destaque": true
+              },
+              { "faixa": "Excesso de velocidade sobre o limite", "classificacao": "Infração — art. 218" },
+              { "faixa": "Capacidade psicomotora alterada", "classificacao": "Crime — art. 306" },
+              { "faixa": "Velocidade incompatível perto de escola/hospital", "classificacao": "Crime — art. 311" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: art. 218 basta?",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Disputar velocidade = só infração do art. 218",
+                "Art. 308 tipifica corrida/disputa não autorizada — crime autônomo"
+              ],
+              [
+                "Sem vítima, não há crime de trânsito",
+                "Art. 308 é formal de perigo — não exige lesão no caput"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — regra_excecao",
+                "Restringe a infração administrativa — art. 308 subsiste para racha não autorizado"
+              ],
+              [
+                "C — termo_unico",
+                "Confunde racha com embriaguez — art. 306 exige alteração psicomotora"
+              ],
+              [
+                "D — gravidade",
+                "Aplica art. 311 sem escola, hospital ou concentração típica do dispositivo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado — racha em CG",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência legal"],
+            "linhas": [
+              ["Três condutores disputam velocidade", "Corrida/disputa em via pública"],
+              ["Sem autorização da autoridade competente", "Elemento do caput do art. 308"],
+              ["Pedestres expostos a risco", "Situação de risco à incolumidade"],
+              ["Sem vítima no episódio", "Caput do art. 308 não exige lesão"],
+              ["Resultado", "Gabarito A — detenção 6m–3a + multa + suspensão"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Caput × §1º × §2º",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Resultado", "Pena privativa"],
+            "linhas": [
+              ["Caput — sem lesão (caso)", "Detenção 6 meses a 3 anos + multa + suspensão"],
+              ["§ 1º — lesão grave culposa sem dolo", "Reclusão 3 a 6 anos + demais penas"],
+              ["§ 2º — morte culposa sem dolo", "Reclusão 5 a 10 anos + demais penas"],
+              ["Episódio sem vítima", "Aplica-se só o caput — gabarito A"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 308 — núcleo do crime",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 308",
+            "texto": "Participar, na direção de veículo automotor, em via pública, de corrida, disputa ou competição automobilística ou ainda de exibição ou demonstração de perícia em manobra de veículo automotor, não autorizada pela autoridade competente, gerando situação de risco à incolumidade pública ou privada:",
+            "trechos_grifados": [
+              {
+                "inicio": 64,
+                "fim": 94,
+                "motivo": "caso — disputa de velocidade entre condutores"
+              },
+              {
+                "inicio": 192,
+                "fim": 233,
+                "motivo": "caso — ausência de autorização da autoridade"
+              },
+              {
+                "inicio": 243,
+                "fim": 260,
+                "motivo": "caso — pedestres expostos a risco"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 308 — penas do caput",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 308 — penas",
+            "texto": "Penas - detenção, de seis meses a três anos, multa e suspensão ou proibição de se obter a permissão ou a habilitação para dirigir veículo automotor.",
+            "trechos_grifados": [
+              {
+                "inicio": 21,
+                "fim": 43,
+                "motivo": "hierarquia — quantum do caput (caso sem vítima)"
+              },
+              {
+                "inicio": 53,
+                "fim": 75,
+                "motivo": "caso — suspensão ou proibição cumulam com multa"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "308 = RACHA/disputa NÃO autorizada em via pública · 218 = excesso admin · 311 = perto escola/hospital.\n\nNear-transfer: no mesmo racha, um condutor atropela espectador com lesão grave culposa, sem dolo — além do caput, incide § 1º do art. 308 (reclusão de 3 a 6 anos).",
+            "destaques": ["308", "§ 1º", "reclusão 3–6 anos"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 308",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "tags": [
+      "crimes_transito",
+      "art_308",
+      "racha",
+      "corrida",
+      "regra_excecao",
+      "caso_pratico"
+    ]
+  }
+]

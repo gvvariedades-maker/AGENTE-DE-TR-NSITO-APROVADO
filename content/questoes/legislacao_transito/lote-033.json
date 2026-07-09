@@ -1,0 +1,307 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_infracoes",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 5,
+    "fundamento_slug": "CTB_art_208",
+    "enunciado": "Em cruzamento semaforizado de Campina Grande, agente da STTP autua condutor que converteu à direita com o semáforo vermelho aceso, sem haver no local sinalização indicativa que permita essa conversão. Não havia fila de veículos nem obstrução do cruzamento. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA quanto à infração:",
+    "alternativas": {
+      "A": "Não há infração, pois a conversão à direita no sinal vermelho é sempre permitida no CTB, independentemente de sinalização específica no cruzamento.",
+      "B": "Configura infração grave por desobedecer a sinalização de regulamentação, nos termos do art. 208 do CTB.",
+      "C": "Configura infração do art. 211 por ultrapassar veículos em fila parados no semáforo vermelho.",
+      "D": "Configura infração gravíssima por avançar o sinal vermelho do semáforo, nos termos do art. 208, pois não há sinalização que autorize a conversão à direita prevista no art. 44-A."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Art. 208 — avançar sinal vermelho (gravíssima) e exceção da conversão à direita somente com sinalização indicativa (art. 44-A); distinção do art. 211.",
+      "fundamento_legal": "CTB, art. 208: avançar o sinal vermelho do semáforo ou o de parada obrigatória, exceto onde houver sinalização que permita a livre conversão à direita prevista no art. 44-A — infração gravíssima. Art. 44-A: é livre o movimento de conversão à direita diante de sinal vermelho do semáforo onde houver sinalização indicativa que permita essa conversão. Sem a sinalização, a conversão no vermelho configura avanço do sinal. Art. 211: ultrapassar veículos em fila parados no semáforo — hipótese distinta.",
+      "passo_a_passo": [
+        "1. Caso: conversão à direita no vermelho sem sinalização que autorize art. 44-A — avanço do sinal vermelho, art. 208.",
+        "2. A erra por regra_excecao (generaliza a exceção do art. 44-A sem exigir sinalização indicativa); B erra por gravidade (art. 208 é gravíssima, não grave); C erra por termo_unico (inventa fila no semáforo — art. 211 sem fato no enunciado).",
+        "3. D correta: art. 208, gravíssima — sem sinalização permissiva, não há exceção para conversão à direita."
+      ],
+      "pegadinha": "A IDECAN induz a crer que conversão à direita no vermelho é sempre livre — o art. 44-A só dispensa o art. 208 onde houver sinalização indicativa específica.",
+      "macete": "208 vermelho = GRAVÍSSIMA · 44-A só com PLACA que autoriza · sem placa = avançou vermelho.",
+      "estudo_reverso": [
+        "CTB art. 208",
+        "CTB art. 44-A",
+        "CTB art. 211",
+        "CTB art. 44"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 80,
+      "fundamento_slug": "CTB_art_208",
+      "macete_visual": "44-A só com placa · sem placa = 208 gravíssima",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Conversão à direita no vermelho sem placa que autorize. A banca generaliza o art. 44-A.\n\nGabarito D: art. 208 — gravíssima. Exceção só com sinalização.",
+            "destaques": ["art. 208", "44-A", "GRAVÍSSIMA"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Regra ou exceção?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Há sinalização que permite conversão à direita no vermelho?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gravíssima — avançou vermelho",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: direita livre × placa obrigatória",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Confusão ✗", "Regra ✓"],
+            "linhas": [
+              ["Direita no vermelho sempre vale", "44-A exige sinalização indicativa"],
+              ["Art. 208 é infração grave", "Avançar vermelho = gravíssima"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "208 vermelho = GRAVÍSSIMA.\n44-A só com PLACA que autoriza.\nSem placa = avançou vermelho.",
+            "destaques": ["GRAVÍSSIMA", "PLACA", "208"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 208",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 285,
+      "fundamento_slug": "CTB_art_208",
+      "macete_visual": "44-A só com placa · sem placa = 208 gravíssima",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Conversão à direita no vermelho só dispensa o art. 208 com sinalização indicativa — sem placa, é gravíssima",
+        "eixos_legais": ["CTB_art_208", "CTB_art_44-A"],
+        "isca_por_alternativa": {
+          "A": "generaliza 44-A sem exigir sinalização indicativa",
+          "B": "troca gravíssima por grave no art. 208",
+          "C": "inventa fila no semáforo — art. 211 sem fato"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: exceção não é regra geral",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — achou que direita no vermelho é sempre livre: art. 44-A exige sinalização indicativa.\nB — classificou como grave: art. 208 é gravíssima.\nC — inventou fila no semáforo: o enunciado não descreve art. 211.\n\nConversão à direita no vermelho, sem placa permissiva no cruzamento.",
+            "destaques": ["Gabarito D", "44-A", "sinalização"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "AVANÇAR O VERMELHO: transpor a linha de parada ou entrar no cruzamento com sinal vermelho aceso — art. 208.\n\nCONVERSÃO À DIREITA: manobra lateral; no vermelho só é livre com sinalização específica (art. 44-A).\n\nSINALIZAÇÃO INDICATIVA: placa ou marcação que autoriza a exceção do art. 44-A — sem ela, vale a regra do art. 208.",
+            "destaques": ["AVANÇAR", "CONVERSÃO", "SINALIZAÇÃO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: regra ou exceção do 44-A?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Há sinalização que permite conversão à direita no vermelho?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Condutor avançou o sinal vermelho?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gravíssima — avançou sinal vermelho",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Regra geral × exceção 44-A",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Situação", "Consequência legal"],
+            "linhas": [
+              ["Avançar vermelho ou parada obrigatória", "Infração gravíssima — art. 208"],
+              ["Conversão à direita no vermelho COM sinalização 44-A", "Exceção — não configura art. 208"],
+              ["Conversão à direita no vermelho SEM sinalização", "Avançou vermelho — art. 208 gravíssima"]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: direita livre × placa obrigatória",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Direita no vermelho sempre é permitida",
+                "44-A só dispensa o 208 com sinalização indicativa"
+              ],
+              [
+                "Desobedecer semáforo é infração grave",
+                "Art. 208 — avançar vermelho é gravíssima"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Generaliza art. 44-A sem exigir sinalização indicativa no cruzamento"
+              ],
+              [
+                "B — gravidade",
+                "Classifica art. 208 como grave — a infração é gravíssima"
+              ],
+              [
+                "C — termo_unico",
+                "Inventa ultrapassagem de fila no semáforo — art. 211 sem fato no enunciado"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado — Campina Grande",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Conclusão legal"],
+            "linhas": [
+              ["Conversão à direita com semáforo vermelho", "Hipótese de avanço do sinal"],
+              ["Sem sinalização indicativa permissiva", "Art. 44-A não se aplica"],
+              ["Sem fila de veículos no semáforo", "Art. 211 afastado"],
+              ["Resultado", "Gabarito D — art. 208, gravíssima"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "208 × 44-A × 211",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função"],
+            "linhas": [
+              ["Art. 208", "Pune avançar vermelho ou parada obrigatória — gravíssima"],
+              ["Art. 44-A", "Exceção: conversão à direita no vermelho com sinalização"],
+              ["Art. 211", "Pune ultrapassar fila parada no semáforo — grave"],
+              ["Caso (sem placa 44-A)", "Art. 208 — gravíssima"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 208 — sinal vermelho",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 208",
+            "texto": "Avançar o sinal vermelho do semáforo ou o de parada obrigatória, exceto onde houver sinalização que permita a livre conversão à direita prevista no art. 44-A deste Código. Infração - gravíssima.",
+            "trechos_grifados": [
+              {
+                "inicio": 65,
+                "fim": 95,
+                "motivo": "contraste — exceção do 44-A exige sinalização indicativa"
+              },
+              {
+                "inicio": 183,
+                "fim": 193,
+                "motivo": "gradacao — avançar vermelho é gravíssima, não grave"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "208 vermelho = GRAVÍSSIMA · 44-A só com PLACA que autoriza · sem placa = avançou vermelho.\n\nNear-transfer: mesmo cruzamento, condutor segue em frente no vermelho sem placa 44-A — art. 208 gravíssima; a exceção da conversão à direita não se aplica.",
+            "destaques": ["GRAVÍSSIMA", "44-A", "em frente"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 208",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        },
+        {
+          "rotulo": "CTB art. 44-A",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "tags": [
+      "infracoes",
+      "art_208",
+      "art_44-A",
+      "semaforo",
+      "sinal_vermelho"
+    ]
+  }
+]

@@ -54,7 +54,12 @@ export async function updateSession(request: NextRequest) {
     return NextResponse.redirect(loginUrl);
   }
 
-  if (user && (pathname === "/login" || pathname === "/cadastro")) {
+  if (
+    user &&
+    (pathname === "/login" ||
+      pathname === "/cadastro" ||
+      pathname === "/esqueci-senha")
+  ) {
     const dashboardUrl = request.nextUrl.clone();
     dashboardUrl.pathname = "/dashboard";
     dashboardUrl.search = "";

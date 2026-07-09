@@ -1,0 +1,290 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_1_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 4,
+    "fundamento_slug": "LOM_art96",
+    "enunciado": "Em formação na STTP, servidores debatem a criação de nova autarquia municipal para trânsito e transporte público — semelhante à própria STTP — por projeto de lei ordinária de vereador, invocando o art. 10, XXVIII, da Lei Orgânica de Campina Grande (organizar, executar e controlar trânsito e tráfego). À luz da Lei Orgânica do Município, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A criação de autarquia dispensa lei específica: basta a competência do art. 10, XXVIII, para organizar serviços municipais de trânsito e transporte coletivo.",
+      "B": "Somente lei específica de iniciativa exclusiva do Poder Executivo pode criar autarquia; a entidade atua vinculada à Secretaria cuja área de competência abranja sua principal atividade.",
+      "C": "Sem lei estadual de normas gerais de trânsito, o Município exerce competência legislativa plena (art. 13), independentemente do CTB e das normas federais de trânsito.",
+      "D": "A organização dos serviços de trânsito é competência privativa do Estado da Paraíba; ao Município cabe apenas fiscalizar o transporte coletivo local."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Criação de autarquia municipal na Lei Orgânica de Campina Grande — art. 96, §§ 1º e 2º, em confronto com a competência genérica de trânsito do art. 10, XXVIII.",
+      "fundamento_legal": "Lei Orgânica de Campina Grande, art. 96, § 1º: \"somente por lei específica de iniciativa exclusiva do Poder Executivo, poderão ser criadas autarquias, sociedade de economia mista, empresas públicas e as fundações municipais e outros entes de cooperação referidos no inciso IV, deste artigo.\" § 2º: \"As entidades compreendidas na administração indireta e fundacional serão criadas por lei e atuarão vinculadas às Secretarias, ou órgãos equiparados, em cuja área de competência estiver enquadrada sua principal atividade.\"",
+      "passo_a_passo": [
+        "1. O caso trata de criação de autarquia (administração indireta). O art. 10, XXVIII, organiza trânsito, mas não substitui o art. 96, § 1º, sobre forma de criação de autarquia.",
+        "2. A erra por regra_excecao (reduz a autarquia à competência genérica do art. 10, XXVIII, ignorando lei específica e iniciativa exclusiva do Executivo no art. 96, § 1º); C erra por regra_excecao (aplica art. 13 sem o parágrafo único — o CTB já fixa normas gerais de trânsito); D erra por competencia_snt (atribui organização do trânsito ao Estado, quando o art. 10, XXVIII, é competência municipal).",
+        "3. B está correta: reproduz o art. 96, §§ 1º e 2º, da Lei Orgânica de Campina Grande."
+      ],
+      "pegadinha": "A banca usa a competência de trânsito (art. 10, XXVIII) para mascarar a regra especial de criação de autarquia (art. 96, § 1º) e a iniciativa legislativa exclusiva do Executivo.",
+      "macete": "Autarquia na LOM = lei específica + Executivo + vínculo à Secretaria da área (art. 96).",
+      "estudo_reverso": [
+        "Lei Orgânica CG art. 96",
+        "Lei Orgânica CG art. 10, XXVIII",
+        "Lei Orgânica CG art. 13"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "LOM_art96",
+      "macete_visual": "Autarquia = lei específica + Executivo + Secretaria da área",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Trânsito (art. 10, XXVIII) não autoriza criar autarquia por projeto de vereador — art. 96 exige lei específica de iniciativa do Executivo.",
+            "destaques": ["art. 96", "art. 10, XXVIII", "Executivo"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Criar autarquia na LOM",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Caso envolve criação de autarquia?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Lei específica de iniciativa exclusiva do Executivo?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito B — art. 96 §§1º e 2º", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Art. 10, XXVIII basta para criar autarquia", "Art. 96, § 1º — lei específica + Executivo"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Autarquia na LOM = lei específica + Executivo + vínculo à Secretaria da área.",
+            "destaques": ["lei específica", "Executivo"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei Orgânica de Campina Grande, art. 96",
+          "path": "conteúdo/municipal/lei-organica-campina-grande.txt"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 245,
+      "fundamento_slug": "LOM_art96",
+      "macete_visual": "Autarquia = lei específica + Executivo · vincula à Secretaria da área",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Trânsito (XXVIII) não dispensa lei específica e iniciativa do Executivo para autarquia",
+        "eixos_legais": ["LOM_art96", "LOM_art10_XXVIII", "LOM_art13"],
+        "isca_por_alternativa": {
+          "A": "acha que art. 10, XXVIII, basta para criar autarquia",
+          "C": "aplica art. 13 pleno ignorando CTB e parágrafo único",
+          "D": "transfere organização do trânsito ao Estado"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: trânsito não cria autarquia sozinho",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — reduz tudo ao art. 10, XXVIII: autarquia exige art. 96, § 1º.\nC — esquece o parágrafo único do art. 13: CTB já traz normas gerais.\nD — inverte competência: trânsito municipal é do Município (XXVIII).\n\nNesta aula você separa competência de trânsito da regra de criação de autarquia.",
+            "destaques": ["Gabarito B", "art. 96", "XXVIII"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "AUTARQUIA: ente da administração indireta com personalidade jurídica própria (art. 96, II).\n\nINICIATIVA EXCLUSIVA DO EXECUTIVO: só o Prefeito pode propor lei que cria autarquia (art. 96, § 1º).\n\nCOMPETÊNCIA DE TRÂNSITO: organizar, executar e controlar trânsito no território municipal (art. 10, XXVIII).",
+            "destaques": ["AUTARQUIA", "INICIATIVA EXCLUSIVA", "TRÂNSITO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: é criação de autarquia?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "O caso pede criação de autarquia municipal?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Há lei específica de iniciativa exclusiva do Executivo?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito B — lei específica + Executivo", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Administração municipal (art. 96)",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Esfera", "Quem integra"],
+            "linhas": [
+              {
+                "faixa": "I — Direta",
+                "classificacao": "Secretarias da Prefeitura e órgãos da Câmara"
+              },
+              {
+                "faixa": "II — Indireta",
+                "classificacao": "Autarquias, sociedades de economia mista e empresas públicas",
+                "destaque": true
+              },
+              {
+                "faixa": "§ 1º — Criação",
+                "classificacao": "Lei específica de iniciativa exclusiva do Poder Executivo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: trânsito × autarquia",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Art. 10, XXVIII autoriza criar autarquia por lei de vereador",
+                "XXVIII organiza trânsito; autarquia exige art. 96, § 1º"
+              ],
+              [
+                "Competência de trânsito dispensa lei específica",
+                "Criação de autarquia é sempre por lei específica do Executivo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Usa art. 10, XXVIII, mas ignora art. 96, § 1º — lei específica + Executivo"
+              ],
+              [
+                "C — regra_excecao",
+                "Aplica art. 13 pleno; CTB federal já fixa normas gerais (parágrafo único)"
+              ],
+              [
+                "D — competencia_snt",
+                "Atribui trânsito ao Estado; XXVIII é competência do Município"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado da STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Conclusão legal"],
+            "linhas": [
+              [
+                "Projeto de vereador para nova autarquia de trânsito",
+                "Vedação — iniciativa exclusiva do Executivo (art. 96, § 1º)"
+              ],
+              [
+                "Invocação do art. 10, XXVIII",
+                "Competência de trânsito não substitui regra de criação de autarquia"
+              ],
+              ["Resultado", "Gabarito B — art. 96, §§ 1º e 2º"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Dois dispositivos, duas funções",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              ["Art. 10, XXVIII", "Organizar, executar e controlar trânsito municipal"],
+              ["Art. 96, § 1º", "Forma de criar autarquia — lei específica + Executivo"],
+              ["Art. 96, § 2º", "Vincular autarquia à Secretaria da área principal"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 96 — criação de autarquia",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei Orgânica de Campina Grande, art. 96, §§ 1º e 2º",
+            "texto": "§ 1º - somente por lei específica de iniciativa exclusiva do Poder Executivo, poderão ser criadas autarquias, sociedade de economia mista, empresas públicas e as fundações municipais e outros entes de cooperação referidos no inciso IV, deste artigo. § 2º - As entidades compreendidas na administração indireta e fundacional serão criadas por lei e atuarão vinculadas às Secretarias, ou órgãos equiparados, em cuja área de competência estiver enquadrada sua principal atividade.",
+            "trechos_grifados": [
+              {
+                "inicio": 37,
+                "fim": 76,
+                "motivo": "fluxo — iniciativa exclusiva do Executivo (§ 1º)"
+              },
+              {
+                "inicio": 356,
+                "fim": 381,
+                "motivo": "mapa — vinculação à Secretaria competente (§ 2º)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Autarquia na LOM = lei específica + Executivo + Secretaria da área (art. 96).\n\nNear-transfer: se vereador propuser fundação pública municipal, também exige lei específica de iniciativa exclusiva do Executivo — mesma regra do § 1º.",
+            "destaques": ["lei específica", "Executivo", "Near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei Orgânica de Campina Grande, art. 96",
+          "path": "conteúdo/municipal/lei-organica-campina-grande.txt"
+        }
+      ]
+    },
+    "tags": ["lei_organica_cg", "autarquia", "sttp", "competencia_municipal", "administracao_indireta"]
+  }
+]

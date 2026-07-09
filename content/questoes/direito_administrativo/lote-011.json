@@ -1,0 +1,333 @@
+[
+  {
+    "disciplina": "direito_administrativo",
+    "topico": "dir_adm_3_4",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 5,
+    "fundamento_slug": "Lei9784_art55",
+    "enunciado": "A Controladoria do Município de Campina Grande verifica que portaria da STTP que homologou resultado de processo seletivo interno foi publicada apenas no mural do órgão, sem republicação no meio oficial competente. O conteúdo do ato está em conformidade com a lei e não há lesão ao interesse público nem prejuízo a candidatos. A equipe jurídica discute a medida adequada para sanar o vício formal. Considerando a extinção dos atos administrativos e a Lei nº 9.784/1999, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Todo vício formal impõe anulação automática do ato, sendo vedada a convalidação pela Administração.",
+      "B": "A convalidação de ato com defeito sanável depende de autorização prévia do Poder Judiciário.",
+      "C": "Defeitos sanáveis podem ser convalidados pela Administração quando não houver lesão ao interesse público nem prejuízo a terceiros.",
+      "D": "A convalidação substitui a anulação mesmo em caso de vício de legalidade material, desde que o ato seja conveniente à gestão."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Extinção dos atos: convalidação de defeitos sanáveis (Lei 9.784/99, art. 55) × anulação por ilegalidade (art. 53) — autotutela administrativa.",
+      "fundamento_legal": "Lei 9.784/99, art. 55: \"Em decisão na qual se evidencie não acarretarem lesão ao interesse público nem prejuízo a terceiros, os atos que apresentarem defeitos sanáveis poderão ser convalidados pela própria Administração.\" Art. 53: a Administração deve anular atos com vício de legalidade.",
+      "passo_a_passo": [
+        "1. Vício formal de publicação, conteúdo legal, sem lesão nem prejuízo → hipótese de convalidação (art. 55). Ilegalidade material exige anulação (art. 53), não convalidação.",
+        "2. A erra por regra_excecao (trata todo vício formal como anulação obrigatória); B erra por competencia_snt (exige Judiciário para convalidar); D erra por termo_unico (estende convalidação a ilegalidade material por conveniência).",
+        "3. C correta: transcrição dos requisitos do art. 55 — defeito sanável, sem lesão ao interesse público nem prejuízo a terceiros."
+      ],
+      "pegadinha": "A banca mistura vício formal sanável (convalidar) com ilegalidade material (anular) — ou exige Judiciário onde a autotutela basta.",
+      "macete": "SANÁVEL + sem lesão/prejuízo = CONVALIDA (art.55) | ILEGAL material = ANULA deve (art.53).",
+      "estudo_reverso": [
+        "Lei 9.784/99 art. 55",
+        "Lei 9.784/99 art. 53",
+        "Lei 9.784/99 art. 52"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "Lei9784_art55",
+      "macete_visual": "SANÁVEL sem lesão = CONVALIDA | ILEGAL = ANULA",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Vício formal sanável, conteúdo legal, sem prejuízo → convalidação (art. 55). A confunde com anulação; D com ilegalidade material.",
+            "destaques": ["convalidação", "defeito sanável", "art. 55"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Convalidar × anular",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "Art. 55 ✓"],
+            "linhas": [
+              [
+                "Todo vício formal exige anulação automática",
+                "Defeitos sanáveis podem ser convalidados sem lesão nem prejuízo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Defeito é sanável e conteúdo é legal?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Sem lesão pública nem prejuízo a terceiros?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito C — convalidação possível", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 55 — convalidação",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 55",
+            "texto": "Em decisão na qual se evidencie não acarretarem lesão ao interesse público nem prejuízo a terceiros, os atos que apresentarem defeitos sanáveis poderão ser convalidados pela própria Administração.",
+            "trechos_grifados": [
+              { "inicio": 126, "fim": 143, "motivo": "defeito sanável" },
+              { "inicio": 156, "fim": 195, "motivo": "convalidação pela Administração" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SANÁVEL + sem lesão/prejuízo = CONVALIDA (art.55) | ILEGAL material = ANULA deve (art.53).",
+            "destaques": ["CONVALIDA", "ANULA", "art.55"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.784/99 art. 55",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "Lei9784_art55",
+      "macete_visual": "SANÁVEL sem lesão = CONVALIDA | ILEGAL = ANULA",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Vício formal sanável não exige anulação quando cabe convalidação sem lesão nem prejuízo",
+        "eixos_legais": ["Lei9784_art55", "Lei9784_art53"],
+        "isca_por_alternativa": {
+          "A": "trata todo vício formal como anulação automática vedando convalidação",
+          "B": "exige Judiciário para convalidar — autotutela afastada",
+          "D": "estende convalidação a ilegalidade material por conveniência"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: convalidação × anulação",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — todo vício formal anula: ignora convalidação do art. 55.\nB — Judiciário para convalidar: autotutela dispensa provocação.\nD — convalida ilegalidade material: art. 53 exige anulação.\n\nPegadinha: defeito sanável sem lesão ≠ ilegalidade material.",
+            "destaques": ["Gabarito C", "convalidação", "defeito sanável"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Convalidação: a Administração sana defeito sanável do ato, confirmando seus efeitos (art. 55).\nAnulação: extinção de ato ilegal — dever da Administração (art. 53).\nDefeito sanável: vício formal ou procedimental corrigível sem alterar o conteúdo legal do ato.",
+            "destaques": ["Convalidação", "Anulação", "Defeito sanável"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "MÉTODO: portaria da STTP",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Defeito é sanável e conteúdo legal?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Sem lesão pública nem prejuízo a terceiros?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito C — convalidação possível",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Formas de extinção do ato",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Espécie", "Quando"],
+            "linhas": [
+              {
+                "faixa": "Convalidação",
+                "classificacao": "Defeito sanável, sem lesão nem prejuízo (art. 55)",
+                "destaque": true
+              },
+              {
+                "faixa": "Anulação",
+                "classificacao": "Vício de legalidade — deve anular (art. 53)"
+              },
+              {
+                "faixa": "Revogação",
+                "classificacao": "Conveniência ou oportunidade em ato legal (art. 53)"
+              },
+              {
+                "faixa": "Extinção do processo",
+                "classificacao": "Finalidade exaurida ou objeto impossível (art. 52)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Formal sanável × ilegalidade material",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a banca insinua ✗", "Regra correta ✓"],
+            "linhas": [
+              [
+                "Todo vício formal exige anulação automática",
+                "Defeito sanável pode ser convalidado sem lesão nem prejuízo"
+              ],
+              [
+                "Convalidação alcança ilegalidade material por conveniência",
+                "Ilegalidade material → anulação (deve), não convalidação"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Trata todo vício formal como anulação obrigatória — veda convalidação"
+              ],
+              [
+                "B — competencia_snt",
+                "Exige Judiciário para convalidar — autotutela da Administração"
+              ],
+              [
+                "D — termo_unico",
+                "Estende convalidação a ilegalidade material por conveniência"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso STTP", "Consequência"],
+            "linhas": [
+              ["Publicação só no mural, sem meio oficial", "Vício formal sanável"],
+              ["Conteúdo conforme a lei, sem prejuízo a candidatos", "Sem lesão nem prejuízo a terceiros"],
+              ["Controladoria discute medida", "Convalidação — não anulação automática"],
+              ["Resultado", "Alternativa C — única defensável"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 55 — convalidação",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 55",
+            "texto": "Em decisão na qual se evidencie não acarretarem lesão ao interesse público nem prejuízo a terceiros, os atos que apresentarem defeitos sanáveis poderão ser convalidados pela própria Administração.",
+            "trechos_grifados": [
+              {
+                "inicio": 32,
+                "fim": 74,
+                "motivo": "fluxo — sem lesão ao interesse público"
+              },
+              {
+                "inicio": 126,
+                "fim": 143,
+                "motivo": "mapa — defeito sanável"
+              },
+              {
+                "inicio": 156,
+                "fim": 195,
+                "motivo": "contraste — convalidação pela Administração"
+              }
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Limite: art. 53 × art. 55",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Hipótese", "Medida"],
+            "linhas": [
+              ["Vício formal sanável, conteúdo legal", "Convalidação (art. 55)"],
+              ["Vício de legalidade material", "Anulação — deve (art. 53)"],
+              ["Ato legal, mas inconveniente", "Revogação — pode (art. 53)"],
+              ["Caso STTP", "Formal sanável → convalidar, não anular"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SANÁVEL + sem lesão/prejuízo = CONVALIDA (art.55) | ILEGAL material = ANULA deve (art.53).\n\nNear-transfer: portaria da STTP sem motivação, mas conteúdo legal e sem prejuízo — pode convalidar? Só se o defeito for sanável e não houver lesão nem prejuízo; vício de legalidade material exige anulação.",
+            "destaques": ["CONVALIDA", "ANULA", "near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.784/99 art. 55",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        },
+        {
+          "rotulo": "Lei 9.784/99 art. 53",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        }
+      ]
+    },
+    "tags": [
+      "convalidacao",
+      "extincao_atos",
+      "autotutela",
+      "lei_9784"
+    ]
+  }
+]

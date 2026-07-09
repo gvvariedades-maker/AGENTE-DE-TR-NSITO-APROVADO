@@ -1,0 +1,309 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_1_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "LOM_art97_par2",
+    "enunciado": "Um condutor autuado pela STTP solicita certidão sobre o histórico de autos de infração vinculados ao seu CPF, para instruir defesa administrativa, e protocola petição em defesa de direito contra cobrança que considera ilegal. O protocolo exige pagamento de taxa de expediente municipal. O setor de ouvidoria questiona a exigência à luz da Lei Orgânica de Campina Grande. Assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A isenção do art. 97 alcança apenas petições contra abuso de poder; certidões em autarquia com autonomia financeira podem ser cobradas mediante taxa de expediente.",
+      "B": "O § 2º do art. 97 dispensa taxas somente para petições formuladas na Câmara Municipal; repartições executivas e autarquias podem fixar emolumentos para certidões.",
+      "C": "O atendimento à petição em defesa de direitos e a obtenção de certidões para esclarecimento de situações de interesse pessoal independem de pagamento de taxas, na forma do art. 97, § 2º, da Lei Orgânica.",
+      "D": "A publicidade trimestral das despesas com publicidade prevista no § 3º do art. 97 autoriza a STTP a cobrar taxas de expediente em certidões de trânsito."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Princípios da administração municipal e gratuidade de petições e certidões — art. 97, § 2º, da Lei Orgânica de Campina Grande, aplicável à STTP como ente da administração indireta (art. 97, caput).",
+      "fundamento_legal": "Lei Orgânica de Campina Grande, art. 97, § 2º: \"O atendimento à petição formulada em defesa de direitos ou contra ilegalidade ou abuso de poder, bem como a obtenção de certidões junto a repartições públicas para defesa de direitos e esclarecimentos de situações de interesse pessoal, independem de pagamento de taxas.\"",
+      "passo_a_passo": [
+        "1. O caso envolve petição em defesa de direito e certidão de interesse pessoal junto à STTP (repartição pública municipal) — hipótese expressa do § 2º do art. 97.",
+        "2. A erra por regra_excecao (restringe isenção a petições e exclui certidões, inventando exceção para autarquia); B erra por termo_unico (limita o § 2º à Câmara e permite emolumentos em autarquias); D erra por termo_unico (confunde publicidade de despesas com publicidade do § 3º com cobrança de taxas no § 2º).",
+        "3. C está correta: reproduz o art. 97, § 2º — petição e certidão para defesa de direitos ou esclarecimento pessoal são gratuitas."
+      ],
+      "pegadinha": "A banca separa autarquia da regra geral ou restringe a isenção a petições, excluindo certidões — mas o § 2º inclui ambas e alcança repartições públicas.",
+      "macete": "Petição em defesa de direito + certidão pessoal = sem taxa (art. 97, § 2º) — vale na STTP.",
+      "estudo_reverso": [
+        "Lei Orgânica CG art. 97",
+        "Lei Orgânica CG art. 97, § 2º",
+        "Lei Orgânica CG art. 96, II"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "LOM_art97_par2",
+      "macete_visual": "Petição + certidão pessoal = sem taxa",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "STTP não cobra taxa de petição em defesa de direito nem de certidão de interesse pessoal — art. 97, § 2º.",
+            "destaques": ["§ 2º", "certidão", "STTP"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Triagem: cobra taxa?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "É petição em defesa de direito ou certidão de interesse pessoal?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito C — independe de taxas (§ 2º)", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              [
+                "Autarquia cobra certidão por autonomia financeira",
+                "§ 2º alcança repartições públicas — STTP inclusa"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Petição em defesa de direito + certidão pessoal = sem taxa (art. 97, § 2º).",
+            "destaques": ["sem taxa", "§ 2º"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei Orgânica de Campina Grande, art. 97",
+          "path": "conteúdo/municipal/lei-organica-campina-grande.txt"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 250,
+      "fundamento_slug": "LOM_art97_par2",
+      "macete_visual": "Petição + certidão pessoal = sem taxa · §2º",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Candidato acha que autarquia cobra certidão ou que isenção vale só para petição",
+        "eixos_legais": ["LOM_art97_par2", "LOM_art97"],
+        "isca_por_alternativa": {
+          "A": "exclui certidões e cria exceção para autarquia",
+          "B": "restringe isenção à Câmara Municipal",
+          "D": "confunde publicidade de gastos (§3º) com cobrança de taxa"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: petição e certidão são gratuitas",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — exclui certidões e inventa taxa na autarquia: § 2º inclui ambas.\nB — limita isenção à Câmara: repartições públicas incluem STTP.\nD — mistura § 3º (publicidade de gastos) com cobrança de taxa.\n\nA isca é achar que autarquia ou só petição escapam da gratuidade.",
+            "destaques": ["Gabarito C", "§ 2º", "certidão"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PETIÇÃO EM DEFESA DE DIREITOS: requerimento contra ilegalidade ou abuso de poder — gratuita (art. 97, § 2º).\n\nCERTIDÃO DE INTERESSE PESSOAL: documento em repartição pública para defesa de direitos ou esclarecimento pessoal — também gratuita.\n\nREPARTIÇÃO PÚBLICA: órgão da administração municipal direta ou indireta — STTP integra a administração indireta (art. 97, caput).",
+            "destaques": ["PETIÇÃO", "CERTIDÃO", "REPARTIÇÃO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: pode cobrar taxa?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Pedido é petição em defesa de direito ou certidão de interesse pessoal?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Órgão é repartição pública municipal (inclui STTP)?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito C — independe de pagamento de taxas", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Art. 97 — panorama dos parágrafos",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Dispositivo", "Conteúdo"],
+            "linhas": [
+              {
+                "faixa": "Caput",
+                "classificacao": "Princípios: legalidade, impessoalidade, moralidade, publicidade"
+              },
+              {
+                "faixa": "§ 2º",
+                "classificacao": "Petição e certidão pessoal — sem pagamento de taxas",
+                "destaque": true
+              },
+              {
+                "faixa": "§ 3º",
+                "classificacao": "Publicidade trimestral de despesas com publicidade"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: autarquia × gratuidade",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "STTP cobra certidão por ser autarquia",
+                "§ 2º alcança repartições públicas — administração indireta inclusa"
+              ],
+              [
+                "Só petição é gratuita, certidão paga",
+                "Petição e certidão de interesse pessoal independem de taxas"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Exclui certidões e inventa taxa em autarquia — § 2º inclui certidões em repartições públicas"
+              ],
+              [
+                "B — termo_unico",
+                "Restringe isenção à Câmara — § 2º fala em repartições públicas, não só Legislativo"
+              ],
+              [
+                "D — termo_unico",
+                "Confunde § 3º (publicidade de gastos) com permissão de cobrar taxa no § 2º"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o protocolo na STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Conclusão legal"],
+            "linhas": [
+              ["Certidão de autos vinculados ao CPF", "Certidão em repartição pública — § 2º"],
+              ["Petição em defesa de direito contra cobrança", "Petição gratuita — § 2º"],
+              ["Exigência de taxa de expediente", "Vedada pelo art. 97, § 2º"],
+              ["Resultado", "Gabarito C"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "STTP e o art. 97",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Tese errada", "Correção"],
+            "linhas": [
+              ["Autarquia não segue princípios do art. 97", "Caput inclui administração indireta e fundacional"],
+              ["Gratuidade só na Prefeitura direta", "§ 2º: repartições públicas — STTP inclusa"],
+              ["§ 3º autoriza emolumentos", "§ 3º trata de publicidade de gastos com publicidade"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 97, § 2º — gratuidade",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei Orgânica de Campina Grande, art. 97, § 2º",
+            "texto": "O atendimento à petição formulada em defesa de direitos ou contra ilegalidade ou abuso de poder, bem como a obtenção de certidões junto a repartições públicas para defesa de direitos e esclarecimentos de situações de interesse pessoal, independem de pagamento de taxas.",
+            "trechos_grifados": [
+              {
+                "inicio": 120,
+                "fim": 158,
+                "motivo": "caso — certidão em repartição pública (STTP)"
+              },
+              {
+                "inicio": 236,
+                "fim": 268,
+                "motivo": "contraste — independem de pagamento de taxas"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 97 — caput (âmbito)",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei Orgânica de Campina Grande, art. 97",
+            "texto": "A administração pública municipal direta, indireta, fundacional e outros órgãos e entidades municipais adotarão e obedecerão aos princípios da legalidade, impessoalidade, moralidade e publicidade.",
+            "trechos_grifados": [
+              {
+                "inicio": 2,
+                "fim": 50,
+                "motivo": "hierarquia — STTP integra administração indireta"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Petição em defesa de direito + certidão pessoal = sem taxa (art. 97, § 2º) — vale na STTP e em qualquer repartição municipal.\n\nNear-transfer: morador protocola petição na Secretaria de Obras contra obra irregular em via pública — mesma regra: atendimento independe de pagamento de taxas.",
+            "destaques": ["sem taxa", "Near-transfer", "§ 2º"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei Orgânica de Campina Grande, art. 97",
+          "path": "conteúdo/municipal/lei-organica-campina-grande.txt"
+        }
+      ]
+    },
+    "tags": [
+      "lei_organica_cg",
+      "principios_administracao",
+      "sttp",
+      "certidao",
+      "peticao"
+    ]
+  }
+]

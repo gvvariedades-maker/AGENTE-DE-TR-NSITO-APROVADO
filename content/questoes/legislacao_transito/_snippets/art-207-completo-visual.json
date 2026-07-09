@@ -1,0 +1,273 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 285,
+  "fundamento_slug": "CTB_art_207",
+  "macete_visual": "207 conversão R-4a = GRAVE",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Conversão à esquerda com R-4a é art. 207 grave — não é retorno (206, IV) nem avanço de sinal (208)",
+    "eixos_legais": [
+      "CTB_art_207",
+      "CTB_art_206_IV"
+    ],
+    "isca_por_alternativa": {
+      "A": "classifica como retorno com contramão — art. 206, IV gravíssima",
+      "C": "aplica art. 208 gravíssima sem sinal vermelho no caso",
+      "D": "inventa que R-4a não vincula conversão em baixa velocidade"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: conversão ≠ retorno",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — classificou como retorno com contramão: art. 206, IV é gravíssima e exige inversão de marcha na interseção.\nC — aplicou art. 208 (vermelho): não há avanço de sinal no enunciado.\nD — inventou exceção de velocidade: R-4a proíbe conversão à esquerda.\n\nCondutor converteu à esquerda com placa R-4a.",
+        "destaques": [
+          "Gabarito B",
+          "R-4a",
+          "grave"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 distinções",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CONVERSÃO: mudar de direção à direita ou à esquerda — art. 207 quando proibida por placa.\n\nRETORNO: inverter o sentido de marcha — art. 206, hipótese distinta.\n\nPLACA R-4a: proíbe virar à esquerda — infração grave se desrespeitada.",
+        "destaques": [
+          "CONVERSÃO",
+          "RETORNO",
+          "R-4a"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: qual artigo?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Há placa proibindo conversão à esquerda?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Condutor converteu à esquerda mesmo assim?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Grave — conversão proibida",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — R-4a"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Conversão, retorno e sinal",
+      "secao": "mapa",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Conduta",
+          "Artigo"
+        ],
+        "linhas": [
+          [
+            "Conversão proibida por sinalização",
+            "207 — grave"
+          ],
+          [
+            "Retorno com contramão na interseção",
+            "206, IV — gravíssima"
+          ],
+          [
+            "Avançar sinal vermelho",
+            "208 — gravíssima"
+          ],
+          [
+            "Caso (R-4a desrespeitada)",
+            "207 — grave"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: retorno alegado × R-4a",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a lei diz ✓"
+        ],
+        "linhas": [
+          [
+            "Alegar retorno afasta a placa R-4a",
+            "Conversão proibida é art. 207 — grave"
+          ],
+          [
+            "Sem semáforo vermelho = sem infração",
+            "R-4a é sinalização autônoma de proibição"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — termo_unico",
+            "Classifica como retorno com contramão — art. 206, IV, gravíssima"
+          ],
+          [
+            "C — gravidade",
+            "Aplica art. 208 gravíssima sem avanço de sinal vermelho no caso"
+          ],
+          [
+            "D — regra_excecao",
+            "Inventa que baixa velocidade dispensa obediência à placa R-4a"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado — Campina Grande",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do caso",
+          "Conclusão legal"
+        ],
+        "linhas": [
+          [
+            "Placa R-4a no cruzamento",
+            "Conversão à esquerda proibida"
+          ],
+          [
+            "Condutor converteu à esquerda",
+            "Núcleo do art. 207"
+          ],
+          [
+            "Alegação de retorno",
+            "Não descaracteriza conversão"
+          ],
+          [
+            "Resultado",
+            "Gabarito B — infração grave"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "207 × 206 × 208",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Artigo",
+          "Conduta"
+        ],
+        "linhas": [
+          [
+            "Art. 207",
+            "Conversão proibida por sinalização — grave"
+          ],
+          [
+            "Art. 206, IV",
+            "Retorno com contramão — gravíssima"
+          ],
+          [
+            "Art. 208",
+            "Avançar sinal vermelho — gravíssima"
+          ],
+          [
+            "Caso (R-4a)",
+            "Art. 207 — grave"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 207 — conversão proibida",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 207",
+        "texto": "Executar operação de conversão à direita ou à esquerda em locais proibidos pela sinalização: Infração - grave.",
+        "trechos_grifados": [
+          {
+            "inicio": 21,
+            "fim": 30,
+            "motivo": "mapa — conversão é hipótese do art. 207"
+          },
+          {
+            "inicio": 65,
+            "fim": 91,
+            "motivo": "contraste — proibidos pela sinalização inclui R-4a"
+          },
+          {
+            "inicio": 104,
+            "fim": 109,
+            "motivo": "gradacao — grave, não gravíssima"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "207 = CONVERSÃO proibida por placa · GRAVE · ≠ 206, IV (retorno) · ≠ 208 (vermelho).\n\nNear-transfer: mesmo condutor faz retorno entrando na contramão na interseção — art. 206, IV (gravíssima); manobra distinta da conversão com R-4a.",
+        "destaques": [
+          "207",
+          "206",
+          "GRAVE"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "CTB art. 207",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

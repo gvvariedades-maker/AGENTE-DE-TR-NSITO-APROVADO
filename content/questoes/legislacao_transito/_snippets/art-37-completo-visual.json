@@ -1,0 +1,156 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 255,
+  "fundamento_slug": "CTB_art_37",
+  "macete_visual": "Sem local? ACOSTAMENTO à DIREITA",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Conversão à esquerda não autoriza esperar no acostamento esquerdo — art. 37 manda aguardar à direita",
+    "eixos_legais": ["CTB_art_37", "CTB_art_39"],
+    "isca_por_alternativa": {
+      "A": "pisca-alerta dispensa uso do acostamento — regra_excecao",
+      "B": "espera no acostamento esquerdo por ir converter à esquerda — termo_unico",
+      "C": "aplica art. 39 e nega espera no acostamento — regra_excecao"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-041.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: conversão ≠ lado da espera",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito D.\n\nA — achou que pisca-alerta libera parar na pista: sem local apropriado, deve usar o acostamento.\nB — mandou esperar à esquerda: o art. 37 exige acostamento à direita, mesmo convertendo à esquerda.\nC — citou art. 39 e vedou espera no acostamento: o art. 37 prevê exatamente essa espera à direita.\n\nNesta aula você fixa a regra geral (local apropriado) e a subsidiária (acostamento à direita).",
+        "destaques": ["Gabarito D", "à direita", "local apropriado"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "LOCAL APROPRIADO: ponto sinalizado ou projetado para conversão à esquerda ou retorno — regra preferencial do art. 37.\n\nACOSTAMENTO: faixa lateral da via, fora da faixa de rolamento — onde se aguarda quando não há local apropriado.\n\nCONVERSÃO À ESQUERDA: manobra para ingressar em via ou retornar pelo lado esquerdo — não define o lado da espera no acostamento.",
+        "destaques": ["LOCAL APROPRIADO", "ACOSTAMENTO", "CONVERSÃO À ESQUERDA"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: onde aguardar a conversão?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "A via possui acostamento?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Há local apropriado para conversão ou retorno?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Aguardar no acostamento à direita", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Não" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Ordem das regras (art. 37)",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Prioridade", "Conduta"],
+        "linhas": [
+          { "faixa": "1ª — regra geral", "classificacao": "Conversão/retorno nos locais apropriados", "destaque": true },
+          { "faixa": "2ª — subsidiária", "classificacao": "Sem local: aguardar no acostamento à direita" },
+          { "faixa": "Vedado no caso", "classificacao": "Parar na faixa de rolamento aguardando brecha" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: esquerda da manobra × direita da espera",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Quem vira à esquerda espera à esquerda", "Art. 37: acostamento à direita para cruzar com segurança"],
+          ["Pisca-alerta dispensa sair da pista", "Deve aguardar fora da faixa de rolamento"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — regra_excecao", "Inventa que pisca-alerta dispensa o acostamento — art. 37 exige espera à direita fora da pista"],
+          ["B — termo_unico", "Troca acostamento à direita por à esquerda, confundindo lado da manobra com lado da espera"],
+          ["C — regra_excecao", "Aplica art. 39 e nega espera no acostamento — art. 37 prevê essa espera subsidiária à direita"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Via com acostamento, sem local apropriado sinalizado", "Incide regra subsidiária do art. 37"],
+          ["Condutor aguarda na faixa com pisca-alerta", "Conduta incorreta — deve ir ao acostamento"],
+          ["Resultado", "Gabarito D — acostamento à direita"]
+        ]
+      }
+    },
+    {
+      "id": "art39",
+      "titulo": "Art. 39 × art. 37 — retorno urbano",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Dispositivo", "Escopo"],
+        "linhas": [
+          ["Art. 37", "Via com acostamento: conversão à esquerda e retorno — espera à direita se não houver local"],
+          ["Art. 39", "Vias urbanas: retorno em locais determinados ou com condições de segurança"],
+          ["Pegadinha C", "Art. 39 não revoga a espera no acostamento do art. 37"]
+        ]
+      }
+    },
+    {
+      "id": "lei37",
+      "titulo": "Art. 37 — literal da regra",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 37",
+        "texto": "Nas vias providas de acostamento, a conversão à esquerda e a operação de retorno deverão ser feitas nos locais apropriados e, onde estes não existirem, o condutor deverá aguardar no acostamento, à direita, para cruzar a pista com segurança.",
+        "trechos_grifados": [
+          { "inicio": 36, "fim": 56, "motivo": "glossario — conversão à esquerda do enunciado" },
+          { "inicio": 104, "fim": 122, "motivo": "mapa — regra preferencial (local apropriado)" },
+          { "inicio": 182, "fim": 204, "motivo": "contraste — acostamento à direita (gabarito D)" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Sem local apropriado? ACOSTAMENTO à DIREITA.\nConversão à esquerda ≠ espera à esquerda.\nPisca-alerta não dispensa sair da pista.\n\nNear-transfer: há local apropriado sinalizado para retorno — o condutor ainda precisa aguardar na pista bloqueando o fluxo? Não: com local apropriado, executa a manobra no ponto previsto.",
+        "destaques": ["à DIREITA", "local apropriado", "Near-transfer"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 37", "path": "conteúdo/legislação federal/lei-9503-ctb.html" },
+    { "rotulo": "CTB art. 39", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

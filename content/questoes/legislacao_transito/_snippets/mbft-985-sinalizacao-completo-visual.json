@@ -1,0 +1,239 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CONTRAN_985_mbft_sinalizacao",
+  "macete_visual": "SEM placa legível = SEM AIT · comunica circunscrição",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Placa apagada não autoriza AIT em infração que depende de sinalização",
+    "eixos_legais": [
+      "CONTRAN_985_mbft_sinalizacao"
+    ],
+    "isca_por_alternativa": {
+      "A": "autua porque o carro está na faixa e a placa existe",
+      "C": "usa observações para autuar com penalidade mínima",
+      "D": "remete ao CONTRAN em vez da autoridade da via"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: placa no poste não basta",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — autua só porque o carro está na faixa: MBFT exige sinalização legível e visível.\nC — observações com grau mínimo: não supre placa inválida.\nD — CONTRAN: comunicação é à autoridade com circunscrição sobre a via.\n\nR-6 apagada e coberta por galhos em Campina Grande.",
+        "destaques": [
+          "Gabarito B",
+          "legível",
+          "circunscrição"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "SINALIZAÇÃO ESPECÍFICA: placa ou marca que configura a infração (ex.: R-6).\n\nLEGÍVEL E VISÍVEL: suficiente para o motorista compreender a proibição à distância.\n\nCIRCUNSCRIÇÃO SOBRE A VIA: autoridade de trânsito responsável por aquela via — não o CONTRAN.",
+        "destaques": [
+          "ESPECÍFICA",
+          "LEGÍVEL",
+          "CIRCUNSCRIÇÃO"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: lavrar ou comunicar?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "A infração depende de sinalização específica?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "A sinalização está legível e visível?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Não lavra + comunica irregularidade — gabarito B",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — estacionamento R-6"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Não — apagada/coberta"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Mapa: sinalização e AIT",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Situação",
+          "Conduta do agente"
+        ],
+        "linhas": [
+          {
+            "faixa": "Placa legível e visível",
+            "classificacao": "Pode lavrar AIT se houver infração"
+          },
+          {
+            "faixa": "Placa insuficiente ou ilegível",
+            "classificacao": "Não lavra AIT — comunica irregularidade",
+            "destaque": true
+          },
+          {
+            "faixa": "Infração sem depender de placa",
+            "classificacao": "Segue constatação própria do MBFT/CTB"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Existe no poste × vale para autuar",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que parece ✗",
+          "O que a lei diz ✓"
+        ],
+        "linhas": [
+          [
+            "Placa física no local = requisito cumprido",
+            "Deve ser suficiente, legível e visível"
+          ],
+          [
+            "Carro na faixa = autuação certa",
+            "Sem sinal válida: veda lavratura do AIT"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Autua apesar de sinalização ilegível — MBFT veda"
+          ],
+          [
+            "C — termo_unico",
+            "Inventa grau mínimo; observações não substituem placa válida"
+          ],
+          [
+            "D — competencia_snt",
+            "CONTRAN não é autoridade com circunscrição sobre a via"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do caso",
+          "Efeito MBFT"
+        ],
+        "linhas": [
+          [
+            "Estacionamento depende de R-6",
+            "Sinalização específica obrigatória"
+          ],
+          [
+            "Placa apagada e coberta por galhos",
+            "Não legível nem visível"
+          ],
+          [
+            "Veículo sobre a faixa demarcada",
+            "Não supre defeito da placa"
+          ],
+          [
+            "Conduta correta do agente",
+            "Não lavra + comunica circunscrição — B"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "MBFT — sinalização e lavratura",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7",
+        "texto": "Quando a configuração de uma infração depender da existência de sinalização específica, esta deverá revelar-se suficiente e corretamente implantada de forma legível e visível. Caso contrário, o agente não deverá lavrar o AIT, comunicando à autoridade de trânsito com circunscrição sobre a via a irregularidade observada.",
+        "trechos_grifados": [
+          {
+            "inicio": 157,
+            "fim": 174,
+            "motivo": "contraste — requisito que a placa apagada não cumpre"
+          },
+          {
+            "inicio": 201,
+            "fim": 224,
+            "motivo": "mapa — consequência da sinalização inválida"
+          },
+          {
+            "inicio": 240,
+            "fim": 292,
+            "motivo": "caso — destino da comunicação (não CONTRAN)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "DEPENDE de placa = LEGÍVEL + VISÍVEL · sem isso: NÃO autua + COMUNICA circunscrição.\n\nNear-transfer: proibição de conversão à esquerda com seta no pavimento apagada pela chuva — mesma regra: sem sinalização válida, não lavra AIT pela infração que dela depende.",
+        "destaques": [
+          "LEGÍVEL",
+          "NÃO autua",
+          "Near-transfer"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "MBFT — Seção 7",
+      "path": "conteúdo/resoluções CONTRAN/MBFT-anexo-resolucao-985-2022-secao-07-autuacao.txt"
+    }
+  ]
+}

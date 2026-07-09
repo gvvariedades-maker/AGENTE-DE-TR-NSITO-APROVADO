@@ -1,0 +1,363 @@
+[
+  {
+    "disciplina": "direito_administrativo",
+    "topico": "dir_adm_4_5",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 5,
+    "fundamento_slug": "Lei9784_art12",
+    "enunciado": "O secretário de Mobilidade Urbana de Campina Grande publica portaria delegando aos agentes da STTP, em operações de fiscalização de trânsito, a competência para lavrar autos de infração e aplicar as penalidades e medidas administrativas previstas no CTB, nos termos da Lei nº 9.784/1999. Um servidor recém-contratado questiona a validade da delegação e os atributos do poder de polícia administrativa exercido na autuação. Considerando o poder de polícia e a legislação aplicável, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A autuação por infração de trânsito não configura exercício de poder de polícia, por ser atividade vinculada sem limitação de direitos do administrado.",
+      "B": "A autoexecutoriedade é atributo obrigatório de todo ato de poder de polícia, permitindo sanções imediatas sem previsão legal específica.",
+      "C": "A delegação da competência para autuar é vedada em qualquer hipótese, pois o poder de polícia é indelegável e exclusivo do titular do órgão.",
+      "D": "A delegação para autuar é admissível nos termos legais; a autuação limita direitos com fundamento legal, e a autoexecutoriedade exige previsão legal."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Atributos do poder de polícia administrativa (limitação de direitos, autoexecutoriedade facultativa) e delegabilidade da competência para autuar (Lei 9.784/99, arts. 12 e 50).",
+      "fundamento_legal": "Lei 9.784/99, art. 12: \"Um órgão administrativo e seu titular poderão, se não houver impedimento legal, delegar parte da sua competência a outros órgãos ou titulares, ainda que estes não lhe sejam hierarquicamente subordinados, quando for conveniente, em razão de circunstâncias de índole técnica, social, econômica, jurídica ou territorial.\" Art. 50, I e II: motivação obrigatória quando o ato negue, limite ou afete direitos ou interesses, ou imponha ou agrave deveres, encargos ou sanções. Doutrina: autoexecutoriedade do poder de polícia é faculdade, não atributo absoluto — depende de previsão legal.",
+      "passo_a_passo": [
+        "1. Autuação com multa e medidas administrativas limita direitos e impõe sanções — exercício de poder de polícia, com motivação nos termos do art. 50. Delegação de autuação não está no art. 13 (não é normativo, recurso nem competência exclusiva) — admissível pelo art. 12.",
+        "2. A erra por termo_unico (nega limitação de direitos na autuação); B erra por regra_excecao (trata autoexecutoriedade como obrigatória sem lei); C erra por competencia_snt (confunde competência delegável com indelegabilidade absoluta do titular).",
+        "3. D correta: delegação válida nos termos do art. 12; autuação limita direitos com fundamento legal; autoexecutoriedade só com previsão legal."
+      ],
+      "pegadinha": "A banca troca autoexecutoriedade facultativa por atributo obrigatório (B) ou veda delegação sem citar o art. 13 (C), e nega que autuação limita direitos (A).",
+      "macete": "LIM-DELEGA-AUTO: Limita direitos (interesse público) | Delega competência (art. 12, ressalvado art. 13) | Autoexec só com lei.",
+      "estudo_reverso": [
+        "Lei 9.784/99 art. 12",
+        "Lei 9.784/99 art. 13",
+        "Lei 9.784/99 art. 50",
+        "CF art. 37"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "Lei9784_art12",
+      "macete_visual": "LIM-DELEGA-AUTO: limita · delega (art.12) · autoexec com lei",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Poder de polícia na autuação: limita direitos, delega pelo art. 12 e autoexecutoriedade só com lei. B trata autoexec como obrigatória; C veda delegação sem art. 13.",
+            "destaques": ["poder de polícia", "art. 12", "autoexecutoriedade"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Autoexec facultativa × obrigatória",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha (B) ✗", "Regra correta ✓"],
+            "linhas": [
+              [
+                "Todo ato de poder de polícia é autoexecutório por natureza",
+                "Autoexecutoriedade é faculdade — exige previsão legal específica"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Autuação limita direitos do administrado?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Delegação é de normativo ou recurso administrativo?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito D — delega (art. 12) + autoexec com lei", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 12 — delegação de competência",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 12",
+            "texto": "Um órgão administrativo e seu titular poderão, se não houver impedimento legal, delegar parte da sua competência a outros órgãos ou titulares, ainda que estes não lhe sejam hierarquicamente subordinados, quando for conveniente, em razão de circunstâncias de índole técnica, social, econômica, jurídica ou territorial.",
+            "trechos_grifados": [
+              {
+                "inicio": 80,
+                "fim": 112,
+                "motivo": "delegação de competência para autuar"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "LIM-DELEGA-AUTO: limita direitos | delega (art. 12, ressalvado art. 13) | autoexec só com lei.",
+            "destaques": ["LIM-DELEGA-AUTO", "art. 12", "art. 13"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.784/99 art. 12",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "Lei9784_art12",
+      "macete_visual": "LIM-DELEGA-AUTO: limita · delega (art.12) · autoexec com lei",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Autoexec obrigatória (B) ou delegação vedada sem art. 13 (C)",
+        "eixos_legais": ["Lei9784_art12", "Lei9784_art50"],
+        "isca_por_alternativa": {
+          "A": "nega que autuação limita direitos — não é poder de polícia",
+          "B": "trata autoexecutoriedade como atributo obrigatório de todo ato",
+          "C": "veda delegação em qualquer hipótese — ignora competência delegável do art. 12"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: poder de polícia na autuação",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — nega limitação de direitos: autuação com sanção é poder de polícia.\nB — autoexec obrigatória: é faculdade, depende de lei.\nC — delegação vedada: confunde exclusividade do titular com vedação absoluta.\n\nNesta aula você fixa LIM-DELEGA-AUTO e a diferença entre delegar competência e indelegar normativo.",
+            "destaques": ["Gabarito D", "poder de polícia", "art. 12"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PODER DE POLÍCIA: prerrogativa da Administração para limitar direitos individuais em favor do interesse público, com fundamento legal.\n\nDELEGAÇÃO: transferência parcial de competência (art. 12), vedada para normativo, recurso e competência exclusiva (art. 13).\n\nAUTOEXECUTORIEDADE: faculdade de executar o ato sem ordem judicial prévia — só quando a lei autorizar.",
+            "destaques": ["PODER DE POLÍCIA", "DELEGAÇÃO", "AUTOEXECUTORIEDADE"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "MÉTODO: classificar a portaria da STTP",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Autuação limita direitos ou impõe sanção?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Delegação é de normativo ou decisão de recurso?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito D — poder de polícia + delegação válida",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Atributos do poder de polícia",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Atributo", "Conteúdo"],
+            "linhas": [
+              {
+                "faixa": "Limitação de direitos",
+                "classificacao": "Restringe liberdade/propriedade por interesse público",
+                "destaque": true
+              },
+              {
+                "faixa": "Discricionariedade",
+                "classificacao": "Margem de escolha na aplicação concreta"
+              },
+              {
+                "faixa": "Autoexecutoriedade",
+                "classificacao": "Faculdade — somente com previsão legal"
+              },
+              {
+                "faixa": "Delegabilidade",
+                "classificacao": "Competência delegável (art. 12), ressalvado art. 13"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: autoexec obrigatória × facultativa",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a banca insinua ✗", "O que a lei exige ✓"],
+            "linhas": [
+              [
+                "Todo poder de polícia é autoexecutório por natureza",
+                "Autoexecutoriedade é faculdade — depende de previsão legal"
+              ],
+              [
+                "Delegação de autuação é sempre vedada",
+                "Art. 12 admite delegar competência, salvo art. 13"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Nega limitação de direitos — autuação com sanção limita direitos do administrado"
+              ],
+              [
+                "B — regra_excecao",
+                "Trata autoexecutoriedade como obrigatória, sem exigir previsão legal"
+              ],
+              [
+                "C — competencia_snt",
+                "Confunde competência delegável (art. 12) com exclusividade absoluta do titular"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso STTP", "Consequência jurídica"],
+            "linhas": [
+              [
+                "Portaria delega autuação a agentes",
+                "Delegação válida — art. 12, fora do art. 13"
+              ],
+              [
+                "Autuação com multa e medidas administrativas",
+                "Exercício de poder de polícia — limita direitos (art. 50)"
+              ],
+              [
+                "Servidor invoca autoexec imediata sem lei",
+                "Inválido — autoexecutoriedade exige previsão legal"
+              ],
+              ["Resultado", "Alternativa D — única defensável"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 50 — motivação na limitação de direitos",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Situação na autuação", "Exigência legal"],
+            "linhas": [
+              ["Multa limita direito patrimonial", "Motivação obrigatória — art. 50, I"],
+              ["Medida administrativa impõe sanção", "Motivação obrigatória — art. 50, II"],
+              ["Delegação de competência para autuar", "Publicação e especificação — art. 14"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 12 — delegação de competência",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 12",
+            "texto": "Um órgão administrativo e seu titular poderão, se não houver impedimento legal, delegar parte da sua competência a outros órgãos ou titulares, ainda que estes não lhe sejam hierarquicamente subordinados, quando for conveniente, em razão de circunstâncias de índole técnica, social, econômica, jurídica ou territorial.",
+            "trechos_grifados": [
+              {
+                "inicio": 47,
+                "fim": 78,
+                "motivo": "contraste — sem impedimento legal (art. 13) a delegação é admissível"
+              },
+              {
+                "inicio": 80,
+                "fim": 112,
+                "motivo": "fluxo — delegação da competência para autuar"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 50 — motivação ao limitar direitos",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 50, I e II",
+            "texto": "Os atos administrativos deverão ser motivados, com indicação dos fatos e dos fundamentos jurídicos, quando: I - neguem, limitem ou afetem direitos ou interesses; II - imponham ou agravem deveres, encargos ou sanções;",
+            "trechos_grifados": [
+              {
+                "inicio": 112,
+                "fim": 160,
+                "motivo": "mapa — autuação limita direitos do administrado"
+              },
+              {
+                "inicio": 167,
+                "fim": 215,
+                "motivo": "hierarquia — sanção exige motivação"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "LIM-DELEGA-AUTO: Limita direitos (interesse público) | Delega competência (art. 12, ressalvado art. 13) | Autoexec só com lei.\n\nNear-transfer: se o secretário delegasse a edição de portaria geral de prazos internos, seria válido? Não — art. 13, I veda delegar ato normativo (caso do lote-002).",
+            "destaques": ["LIM-DELEGA-AUTO", "art. 13, I", "near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.784/99 art. 12",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        },
+        {
+          "rotulo": "Lei 9.784/99 art. 50",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        }
+      ]
+    },
+    "tags": [
+      "poder_policia",
+      "delegacao",
+      "autoexecutoriedade",
+      "lei_9784",
+      "sttp"
+    ]
+  }
+]

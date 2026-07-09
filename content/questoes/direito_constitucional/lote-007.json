@@ -1,0 +1,283 @@
+[
+  {
+    "disciplina": "direito_constitucional",
+    "topico": "cf_art144_prf_rodovias_federais",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "enunciado": "Durante operação de fiscalização na BR-230, rodovia federal que corta o município de Campina Grande, agentes da STTP e da Polícia Militar da Paraíba discutem quem possui competência constitucional para o patrulhamento ostensivo daquele trecho. Considerando o art. 144 da Constituição Federal de 1988, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A polícia militar estadual exerce patrulhamento ostensivo exclusivo em todas as vias públicas, inclusive nas rodovias federais.",
+      "B": "A guarda municipal de Campina Grande pode substituir a polícia rodoviária federal no patrulhamento ostensivo da BR-230.",
+      "C": "A polícia federal destina-se, na forma da lei, ao patrulhamento ostensivo das rodovias federais, nos termos do § 2º do art. 144.",
+      "D": "A polícia rodoviária federal destina-se, na forma da lei, ao patrulhamento ostensivo das rodovias federais."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Competência constitucional da polícia rodoviária federal para patrulhamento ostensivo de rodovias federais (art. 144, § 2º), distinguindo-a da PM (§ 5º), da PF (§ 1º) e da segurança viária municipal (§ 10).",
+      "fundamento_legal": "CF/88, art. 144, § 2º: a polícia rodoviária federal, órgão permanente, organizado e mantido pela União e estruturado em carreira, destina-se, na forma da lei, ao patrulhamento ostensivo das rodovias federais.",
+      "passo_a_passo": [
+        "1. A BR-230 é rodovia federal — hipótese do § 2º (patrulhamento ostensivo pela PRF).",
+        "2. A erra por competencia_snt (atribui exclusividade à PM em todas as vias); B erra por competencia_snt (guarda municipal/STTP não substitui PRF em rodovia federal); C erra por termo_unico (troca polícia rodoviária federal por polícia federal).",
+        "3. D está correta: reproduz o § 2º literal."
+      ],
+      "pegadinha": "A banca troca PRF por PF (órgãos distintos no caput) ou empresta patrulhamento de rodovia federal à PM ou ao órgão municipal de trânsito.",
+      "macete": "§2 PRF = rodovia FEDERAL ostensiva | §5 PM = ordem pública | §10 = viária municipal | Caput I = PF (não PRF).",
+      "estudo_reverso": [
+        "CF art. 144, caput, I e II",
+        "CF art. 144, § 2º",
+        "CF art. 144, § 5º",
+        "CF art. 144, § 10"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CF_art144_par2",
+      "macete_visual": "§2 PRF = rodovia federal | PF ≠ PRF",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "BR-230 (rodovia federal): a banca troca PRF por PF, PM ou STTP no patrulhamento ostensivo.",
+            "destaques": ["BR-230", "PRF", "rodovia federal"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem patrulha onde",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "prf", "label": "PRF — rodovias federais (§2)", "nivel": 2 },
+              { "id": "pm", "label": "PM — ostensiva geral (§5)", "nivel": 1 },
+              { "id": "sttp", "label": "STTP — viária municipal (§10)", "nivel": 1 }
+            ],
+            "arestas": [
+              { "de": "prf", "para": "pm", "rotulo": "BR-230 = PRF" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Polícia federal na rodovia federal", "Polícia RODOVIÁRIA federal (§2)"],
+              ["PM exclusiva na BR-230", "PRF — patrulhamento ostensivo federal"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 144, § 2º",
+            "texto": "§ 2º A polícia rodoviária federal, órgão permanente, organizado e mantido pela União e estruturado em carreira, destina-se, na forma da lei, ao patrulhamento ostensivo das rodovias federais.",
+            "trechos_grifados": [
+              { "inicio": 144, "fim": 189, "motivo": "competência PRF na BR-230" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "§2 PRF = rodovia FEDERAL. PF (caput I) ≠ PRF (caput II).",
+            "destaques": ["PRF", "PF", "§2"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 144",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "todos",
+      "duracao_estimada_seg": 235,
+      "fundamento_slug": "CF_art144_par2",
+      "macete_visual": "§2 PRF = rodovia federal | PF ≠ PRF",
+      "meta": {
+        "padrao_familia": "C_competencia_snt",
+        "pegadinha_em_uma_frase": "Troca PRF por PF ou atribui rodovia federal à PM/STTP",
+        "eixos_legais": ["CF_art144_par2", "CF_art144_I_II"],
+        "isca_por_alternativa": {
+          "A": "PM exclusiva em todas as vias, inclusive federais",
+          "B": "guarda/STTP substitui PRF na BR-230",
+          "C": "polícia federal no lugar da rodoviária federal"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: BR-230 e a PRF",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D (PRF — §2).\n\nA — PM exclusiva em rodovia federal: confunde §5 com §2.\nB — STTP/guarda na BR-230: viária municipal não substitui PRF.\nC — polícia federal: troca PF (caput I) por PRF (caput II).\n\nRodovia federal = patrulhamento ostensivo da PRF.",
+            "destaques": ["BR-230", "PRF", "PF", "§2"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 4 órgãos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PF (caput I): polícia federal — funções do §1º, não patrulha rodovia. PRF (caput II / §2): patrulhamento ostensivo de rodovias FEDERAIS. PM (§5): ostensiva e ordem pública. STTP (§10): segurança viária municipal — não substitui PRF em via federal.",
+            "destaques": ["PF", "PRF", "PM", "STTP"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem faz o quê na BR-230",
+          "secao": "metodo",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "caput", "label": "Art. 144 — órgãos distintos", "nivel": 0 },
+              { "id": "pf", "label": "PF (inciso I) — §1º", "nivel": 1 },
+              { "id": "prf", "label": "PRF (inciso II) — §2 rodovias federais", "nivel": 2 },
+              { "id": "pm", "label": "PM (§5) — ostensiva geral", "nivel": 1 },
+              { "id": "sttp", "label": "STTP (§10) — viária municipal", "nivel": 1 }
+            ],
+            "arestas": [
+              { "de": "prf", "para": "caput", "rotulo": "BR-230 = competência PRF" },
+              { "de": "pf", "para": "prf", "rotulo": "PF ≠ PRF" },
+              { "de": "sttp", "para": "prf", "rotulo": "Municipal ≠ federal" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: PF × PRF",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Polícia federal patrulha rodovia federal (§2)",
+                "Polícia RODOVIÁRIA federal — inciso II e §2"
+              ],
+              [
+                "PM ou STTP substituem PRF na BR-230",
+                "Patrulhamento ostensivo de rodovia federal é da PRF"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — competencia_snt",
+                "Atribui exclusividade à PM em rodovia federal — §2 é da PRF"
+              ],
+              [
+                "B — competencia_snt",
+                "Guarda/STTP municipal não substitui PRF em via federal"
+              ],
+              [
+                "C — termo_unico",
+                "Troca polícia rodoviária federal por polícia federal (caput I)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos da operação na BR-230",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              ["BR-230 — rodovia federal em Campina Grande", "Esfera federal — §2"],
+              ["Discussão: patrulhamento ostensivo", "Competência da PRF, não da PM/STTP"],
+              ["Confusão PF × PRF", "Órgãos distintos no caput (I e II)"],
+              ["Resultado", "Alternativa D — §2 literal"]
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa: via × órgão constitucional",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Tipo de via", "Patrulhamento / fiscalização"],
+            "linhas": [
+              ["Rodovia federal (BR-230)", "PRF — patrulhamento ostensivo (§2)"],
+              ["Via municipal", "STTP — segurança viária (§10)"],
+              ["Ordem pública geral", "PM — ostensiva (§5)"],
+              ["Crimes federais / fronteira", "PF — §1º (não rodovia ostensiva)"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 144, §2 — competência da PRF",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 144, § 2º",
+            "texto": "§ 2º A polícia rodoviária federal, órgão permanente, organizado e mantido pela União e estruturado em carreira, destina-se, na forma da lei, ao patrulhamento ostensivo das rodovias federais.",
+            "trechos_grifados": [
+              {
+                "inicio": 7,
+                "fim": 33,
+                "motivo": "contraste — polícia rodoviária (não federal genérica)"
+              },
+              {
+                "inicio": 144,
+                "fim": 189,
+                "motivo": "diagrama — patrulhamento ostensivo rodovias federais"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "§2 PRF = rodovia FEDERAL ostensiva. PF (I) ≠ PRF (II). PM = §5. Viária municipal = §10.\n\nNear-transfer: fiscalização de estacionamento em rua municipal de Campina Grande — STTP (§10), não PRF; patrulhamento ostensivo na BR-230 — PRF (§2).",
+            "destaques": ["PRF", "STTP", "BR-230"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 144",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "art144",
+      "prf",
+      "rodovias_federais",
+      "competencia_constitucional"
+    ]
+  }
+]

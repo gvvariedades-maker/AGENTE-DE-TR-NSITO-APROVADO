@@ -1,0 +1,199 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 285,
+  "fundamento_slug": "CTB_art_215_II",
+  "macete_visual": "R-1 = CEDER · 215, II = GRAVE",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Com placa R-1 aplica-se o art. 215, II — a regra da direita do inciso I, b, só vale em interseção não sinalizada",
+    "eixos_legais": ["CTB_art_215_II", "CTB_art_215_I_b"],
+    "isca_por_alternativa": {
+      "A": "inventa que placa R-1 não vincula condutores",
+      "B": "aplica gravíssima do art. 214, I, sem pedestre na faixa",
+      "C": "aplica inciso I, b, de interseção não sinalizada ignorando a placa R-1"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: R-1 vence a direita",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito D.\n\nA — inventou que R-1 não vincula condutores: a placa impõe dever de ceder passagem.\nB — aplicou art. 214, I (gravíssima): o fato é preferência veicular com sinalização R-1.\nC — aplicou inciso I, b (direita sem sinal): há placa R-1 — inciso II.\n\nCondutor não cedeu passagem na via com Dê a Preferência.",
+        "destaques": ["Gabarito D", "R-1", "inciso II"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 distinções",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "PLACA R-1 (DÊ A PREFERÊNCIA): sinalização de regulamentação — quem vê a placa deve ceder passagem (art. 215, II).\n\nINTERSEÇÃO NÃO SINALIZADA: sem semáforo nem R-1 — regra do inciso I (rodovia/rotatória ou direita).\n\nPREFERÊNCIA VEICULAR: ceder passagem a outro veículo — art. 215; distinto do art. 214 (pedestre).",
+        "destaques": ["R-1", "NÃO SINALIZADA", "VEICULAR"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: qual inciso do art. 215?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Há placa Dê a Preferência no cruzamento?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Condutor cedeu passagem na via preferencial?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Grave — não cedeu com R-1",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Não" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Incisos do art. 215",
+      "secao": "mapa",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Hipótese", "Dispositivo"],
+        "linhas": [
+          ["Sem sinal — veículo pela direita", "I, b — grave"],
+          ["Com placa R-1 — não cedeu", "II — grave"],
+          ["Sem sinal — rodovia ou rotatória", "I, a — grave"],
+          ["Caso (placa R-1 presente)", "II — grave"]
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: sem semáforo × placa R-1",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          [
+            "Sem semáforo = regra da direita",
+            "Com R-1 aplica-se art. 215, II — não o inciso I, b"
+          ],
+          [
+            "R-1 é orientação para pedestres",
+            "Placa de regulamentação vincula condutores"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Inventa que placa R-1 não impõe dever de preferência a condutores"
+          ],
+          [
+            "B — gravidade",
+            "Classifica como gravíssima pelo art. 214, I — fato é preferência veicular com R-1"
+          ],
+          [
+            "C — termo_unico",
+            "Aplica inciso I, b, de interseção não sinalizada ignorando a sinalização R-1"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado — Campina Grande",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Cruzamento com placa R-1", "Hipótese do art. 215, II"],
+          ["Condutor não cedeu à via preferencial", "Infração configurada"],
+          ["Alegação de regra da direita", "Inciso I, b, não se aplica com R-1"],
+          ["Resultado", "Gabarito D — infração grave"]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "215, II × 215, I × 214",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Dispositivo", "Quando usar"],
+        "linhas": [
+          ["Art. 215, II", "Placa R-1 — ceder passagem — grave"],
+          ["Art. 215, I, b", "Sem sinalização — direita — grave"],
+          ["Art. 214, I", "Pedestre na faixa — gravíssima"],
+          ["Caso (R-1 no cruzamento)", "Art. 215, II"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 215, II — Dê a Preferência",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 215, II",
+        "texto": "Deixar de dar preferência de passagem: II - nas interseções com sinalização de regulamentação de Dê a Preferência: Infração - grave.",
+        "trechos_grifados": [
+          {
+            "inicio": 48,
+            "fim": 113,
+            "motivo": "mapa — inciso II com sinalização R-1"
+          },
+          {
+            "inicio": 97,
+            "fim": 113,
+            "motivo": "contraste — Dê a Preferência define a obrigação"
+          },
+          {
+            "inicio": 126,
+            "fim": 131,
+            "motivo": "gradacao — art. 215 é grave, não gravíssima"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "215, II: placa R-1 = CEDER · GRAVE · ≠ I,b (sem sinal) · ≠ 214 (pedestre).\n\nNear-transfer: mesmo cruzamento sem placa R-1 nem semáforo — veículo pela direita tem preferência; inciso I, b, distinto do II com sinalização.",
+        "destaques": ["R-1", "I, b", "GRAVE"]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "CTB art. 215",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

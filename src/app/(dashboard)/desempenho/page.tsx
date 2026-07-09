@@ -20,6 +20,8 @@ import {
 } from "@/components/dashboard/disciplina-desempenho-card";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { ResetDesempenhoForm } from "@/components/dashboard/reset-desempenho-form";
 
 export const dynamic = "force-dynamic";
 
@@ -33,9 +35,9 @@ function parseDisciplina(raw?: string): Disciplina | undefined {
 export default async function DesempenhoPage({
   searchParams,
 }: {
-  searchParams: Promise<{ disciplina?: string }>;
+  searchParams: Promise<{ disciplina?: string; reset?: string }>;
 }) {
-  const { disciplina: disciplinaRaw } = await searchParams;
+  const { disciplina: disciplinaRaw, reset } = await searchParams;
   const disciplinaFoco = parseDisciplina(disciplinaRaw);
 
   const supabase = await createClient();
@@ -67,8 +69,19 @@ export default async function DesempenhoPage({
     return b.pontos - a.pontos;
   });
 
+  const temHistorico =
+    desempenho.hasData || retencao.hasData || reversoResumo.hasData;
+
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-8 p-4 md:p-8">
+      {reset === "ok" && (
+        <Alert>
+          <AlertDescription>
+            Histórico zerado com sucesso. Seu painel foi reiniciado.
+          </AlertDescription>
+        </Alert>
+      )}
+
       <header className="flex flex-col gap-1">
         <h1 className="text-2xl font-bold tracking-tight">Desempenho</h1>
         <p className="text-sm text-muted-foreground">
@@ -153,6 +166,8 @@ export default async function DesempenhoPage({
       <CicloRetencao resumo={retencao} atividade={desempenho.atividade} />
 
       <EstudoReversoResumoCard resumo={reversoResumo} />
+
+      <ResetDesempenhoForm temHistorico={temHistorico} />
     </div>
   );
 }

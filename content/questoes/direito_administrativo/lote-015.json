@@ -1,0 +1,331 @@
+[
+  {
+    "disciplina": "direito_administrativo",
+    "topico": "dir_adm_6_4",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 5,
+    "fundamento_slug": "Lei8112_art125",
+    "enunciado": "Agente da STTP responde a ação de ressarcimento ao erário por desvio de multas de trânsito e, simultaneamente, a processo disciplinar com vistas à demissão pelo mesmo fato. Sua defesa sustenta que as esferas não podem coexistir e que eventual absolvição criminal — ainda que por insuficiência de provas — impedirá a sanção administrativa. Considerando a responsabilidade civil, penal e administrativa do servidor público e a Lei nº 8.112/1990, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A absolvição criminal impede sempre a aplicação de penalidade administrativa sobre o mesmo fato, em razão do princípio do non bis in idem.",
+      "B": "O processo disciplinar somente pode ser concluído após o trânsito em julgado da ação penal, sob pena de violação ao devido processo legal.",
+      "C": "A condenação civil do servidor à reparação de danos ao erário extingue o poder disciplinar da Administração sobre a mesma conduta.",
+      "D": "As sanções civis, penais e administrativas são independentes e podem cumular-se; a responsabilidade administrativa só se afasta se a absolvição criminal negar a existência do fato ou a autoria."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Independência e cumulação das esferas de responsabilidade (Lei 8.112/90, art. 125) e hipótese de afastamento da responsabilidade administrativa (art. 126).",
+      "fundamento_legal": "Lei 8.112/90, art. 125: \"As sanções civis, penais e administrativas poderão cumular-se, sendo independentes entre si.\" Art. 126: \"A responsabilidade administrativa do servidor será afastada no caso de absolvição criminal que negue a existência do fato ou sua autoria.\"",
+      "passo_a_passo": [
+        "1. Mesmo fato pode gerar ressarcimento civil, ação penal e processo disciplinar — esferas independentes e cumuláveis (art. 125). Afastamento administrativo só se absolvição criminal negar fato ou autoria (art. 126) — não basta insuficiência de provas.",
+        "2. A erra por regra_excecao (trata qualquer absolvição criminal como barreira administrativa); B erra por competencia_snt (exige trânsito em julgado penal para disciplinar); C erra por termo_unico (confunde reparação civil com extinção do poder disciplinar).",
+        "3. D correta: síntese dos arts. 125 e 126 — cumulação + exceção restrita na absolvição criminal."
+      ],
+      "pegadinha": "A banca usa absolvição criminal genérica (ou non bis in idem) para barrar demissão — o art. 126 só afasta a responsabilidade administrativa se a absolvição negar o fato ou a autoria.",
+      "macete": "125 = CUMULA e INDEPENDE | 126 = afasta só se negar FATO ou AUTORIA.",
+      "estudo_reverso": [
+        "Lei 8.112/90 art. 125",
+        "Lei 8.112/90 art. 126",
+        "Lei 8.112/90 art. 132"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "Lei8112_art125",
+      "macete_visual": "125 CUMULA | 126 negar fato/autoria",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Três esferas independentes (art. 125). Absolvição só afasta disciplina se negar fato ou autoria (art. 126) — não qualquer absolvição.",
+            "destaques": ["independentes", "cumular-se", "art. 126"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Absolvição × disciplina",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "Art. 126 ✓"],
+            "linhas": [
+              [
+                "Qualquer absolvição criminal impede demissão",
+                "Só afasta se negar existência do fato ou autoria"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Mesmo fato em civil, penal e disciplinar?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Absolvição negou fato ou autoria?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito D — esferas cumulam", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Arts. 125 e 126",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 8.112/90, arts. 125 e 126",
+            "texto": "Art. 125. As sanções civis, penais e administrativas poderão cumular-se, sendo independentes entre si. Art. 126. A responsabilidade administrativa do servidor será afastada no caso de absolvição criminal que negue a existência do fato ou sua autoria.",
+            "trechos_grifados": [
+              { "inicio": 79, "fim": 101, "motivo": "esferas independentes" },
+              { "inicio": 208, "fim": 249, "motivo": "exceção — negar fato ou autoria" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "125 = CUMULA e INDEPENDE | 126 = afasta só se negar FATO ou AUTORIA.",
+            "destaques": ["CUMULA", "FATO", "AUTORIA"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 8.112/90 arts. 125-126",
+          "path": "conteúdo/legislação federal/lei-8112-servidores.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "Lei8112_art125",
+      "macete_visual": "125 CUMULA | 126 negar fato/autoria",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Absolvição criminal genérica não barra disciplina — só se negar fato ou autoria",
+        "eixos_legais": ["Lei8112_art125", "Lei8112_art126"],
+        "isca_por_alternativa": {
+          "A": "qualquer absolvição criminal impede penalidade administrativa",
+          "B": "disciplinar depende de trânsito em julgado da ação penal",
+          "C": "condenação civil extingue poder disciplinar sobre a conduta"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: três esferas",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — absolvição sempre impede disciplina: art. 126 é mais restrito.\nB — disciplinar após penal: esferas são independentes (art. 125).\nC — civil extingue disciplina: cumulam-se (art. 125).\n\nPegadinha: insuficiência de provas ≠ negar fato ou autoria.",
+            "destaques": ["Gabarito D", "independentes", "art. 126"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Responsabilidade civil: reparar dano ao erário ou a terceiros — ação de ressarcimento.\nResponsabilidade penal: sanção criminal pelo mesmo fato ilícito.\nResponsabilidade administrativa: penalidade disciplinar (advertência a demissão) — arts. 125 e 126.",
+            "destaques": ["civil", "penal", "administrativa"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "MÉTODO: agente da STTP",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Mesmo fato em civil, penal e disciplinar?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Absolvição negou fato ou autoria?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito D — esferas cumulam",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Três esferas sobre o mesmo fato",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Esfera", "Exemplo no caso"],
+            "linhas": [
+              {
+                "faixa": "Civil",
+                "classificacao": "Ressarcimento ao erário por desvio de multas"
+              },
+              {
+                "faixa": "Penal",
+                "classificacao": "Crime contra a administração — ação penal"
+              },
+              {
+                "faixa": "Administrativa",
+                "classificacao": "Processo disciplinar — demissão (art. 132)",
+                "destaque": true
+              },
+              {
+                "faixa": "Regra",
+                "classificacao": "Cumulam-se — independentes (art. 125)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Non bis in idem × art. 126",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a banca insinua ✗", "Lei 8.112/90 ✓"],
+            "linhas": [
+              [
+                "Absolvição criminal impede sempre demissão",
+                "Só afasta disciplina se negar fato ou autoria (art. 126)"
+              ],
+              [
+                "Ressarcimento civil extingue poder disciplinar",
+                "Esferas independentes — podem cumular (art. 125)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Trata qualquer absolvição criminal como barreira à disciplina"
+              ],
+              [
+                "B — competencia_snt",
+                "Exige trânsito em julgado penal — esferas são paralelas"
+              ],
+              [
+                "C — termo_unico",
+                "Confunde reparação civil com extinção do poder disciplinar"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso STTP", "Consequência"],
+            "linhas": [
+              ["Desvio de multas — ação de ressarcimento", "Esfera civil em curso"],
+              ["Mesmo fato — processo disciplinar", "Esfera administrativa independente"],
+              ["Defesa invoca absolvição por insuficiência de provas", "Não negou fato nem autoria — art. 126 não afasta"],
+              ["Resultado", "Alternativa D — única defensável"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 125 — cumulação",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 8.112/90, art. 125",
+            "texto": "As sanções civis, penais e administrativas poderão cumular-se, sendo independentes entre si.",
+            "trechos_grifados": [
+              {
+                "inicio": 51,
+                "fim": 61,
+                "motivo": "mapa — esferas cumulam"
+              },
+              {
+                "inicio": 69,
+                "fim": 91,
+                "motivo": "contraste — independentes entre si"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 126 — exceção",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 8.112/90, art. 126",
+            "texto": "A responsabilidade administrativa do servidor será afastada no caso de absolvição criminal que negue a existência do fato ou sua autoria.",
+            "trechos_grifados": [
+              {
+                "inicio": 95,
+                "fim": 121,
+                "motivo": "fluxo — negar existência do fato"
+              },
+              {
+                "inicio": 125,
+                "fim": 136,
+                "motivo": "fluxo — negar autoria"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "125 = CUMULA e INDEPENDE | 126 = afasta só se negar FATO ou AUTORIA.\n\nNear-transfer: agente absolvido penalmente por atipicidade da conduta — afasta demissão? Sim, se a sentença negar o fato ou a autoria; absolvição só por falta de prova não basta.",
+            "destaques": ["CUMULA", "FATO ou AUTORIA", "near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 8.112/90 arts. 125-126",
+          "path": "conteúdo/legislação federal/lei-8112-servidores.html"
+        }
+      ]
+    },
+    "tags": [
+      "responsabilidade_servidor",
+      "esferas_independentes",
+      "processo_disciplinar",
+      "lei_8112"
+    ]
+  }
+]

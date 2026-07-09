@@ -1,0 +1,295 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_1_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 4,
+    "fundamento_slug": "LOM_art109_par1",
+    "enunciado": "Um agente de trânsito efetivo da STTP recebe convite para integrar o conselho consultivo de empresa privada vencedora de licitação municipal para manutenção de radares. Colegas sustentam que, por não ser cargo de direção e por o contrato ter sido firmado com a Prefeitura — não com a autarquia —, não haveria impedimento. Considerando a Lei Orgânica de Campina Grande, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A vedação alcança apenas o exercício do cargo de diretor; integrar conselho consultivo de empresa contratada pelo Município é compatível com o serviço público.",
+      "B": "Como a STTP é autarquia com personalidade jurídica própria, o servidor pode integrar conselho de empresa contratada pela autarquia, desde que não haja contrato com a Prefeitura.",
+      "C": "A Lei Orgânica veda ao servidor integrar conselho de empresa que realize qualquer modalidade de contrato com o Município, com pena de demissão.",
+      "D": "A incompatibilidade gera, em regra, advertência funcional; a demissão só se aplica se houver prova de favorecimento na fiscalização de trânsito."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Incompatibilidade do servidor municipal — art. 109, § 1º, da Lei Orgânica de Campina Grande: vedação de integrar conselho de empresa contratante do Município.",
+      "fundamento_legal": "Lei Orgânica de Campina Grande, art. 109, § 1º: \"Nenhum servidor poderá ser diretor ou integrar conselho de empresa fornecedora, ou que realize qualquer modalidade de contrato com o Município, sob pena de demissão.\"",
+      "passo_a_passo": [
+        "1. O caso envolve servidor da administração indireta (STTP) convidado a conselho de empresa com contrato municipal de radares — hipótese expressamente vedada no § 1º.",
+        "2. A erra por termo_unico (restringe a vedação ao cargo de diretor, excluindo conselho consultivo); B erra por regra_excecao (cria exceção para contrato com autarquia, quando o § 1º fala em contrato com o Município); D erra por termo_unico (substitui demissão por advertência e exige prova de favorecimento não prevista na LOM).",
+        "3. C está correta: transcreve a vedação do art. 109, § 1º, inclusive a pena de demissão."
+      ],
+      "pegadinha": "A banca separa STTP da Prefeitura e restringe a vedação a \"diretor\", mas o § 1º inclui conselho e qualquer contrato com o Município.",
+      "macete": "Servidor + conselho/diretoria + empresa contratada pelo Município = demissão (art. 109, § 1º).",
+      "estudo_reverso": [
+        "Lei Orgânica CG art. 109, § 1º",
+        "Lei Orgânica CG art. 96, II",
+        "Lei Orgânica CG art. 97"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 50,
+      "fundamento_slug": "LOM_art109_par1",
+      "macete_visual": "Conselho + empresa contratada = demissão",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Conselho consultivo também é vedado — art. 109, § 1º proíbe conselho em empresa com contrato municipal, com pena de demissão.",
+            "destaques": ["conselho", "demissão", "§ 1º"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Triagem rápida",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Empresa tem contrato com o Município?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Servidor integraria conselho dessa empresa?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito C — vedação + demissão", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Só diretor é vedado", "Conselho também — § 1º"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Servidor + conselho/diretoria + empresa contratada = demissão.",
+            "destaques": ["conselho", "demissão"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei Orgânica de Campina Grande, art. 109, § 1º",
+          "path": "conteúdo/municipal/lei-organica-campina-grande.txt"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 235,
+      "fundamento_slug": "LOM_art109_par1",
+      "macete_visual": "Conselho + contrato municipal = demissão · §1º",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Conselho consultivo conta — não só diretor — e STTP não escapa do Município",
+        "eixos_legais": ["LOM_art109_par1", "LOM_art96_II", "LOM_art97"],
+        "isca_por_alternativa": {
+          "A": "restringe vedação a diretor, ignora conselho",
+          "B": "separa autarquia da Prefeitura para liberar conselho",
+          "D": "troca demissão por advertência e exige favorecimento"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: conselho também é vedado",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — acha que só diretor é vedado: conselho está no § 1º.\nB — separa STTP da Prefeitura: contrato é com o Município.\nD — inventa advertência: a pena na LOM é demissão.\n\nNesta aula você fixa a tríade servidor + conselho + empresa contratada.",
+            "destaques": ["Gabarito C", "conselho", "demissão"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SERVIDOR MUNICIPAL: abrange administração direta, autarquias e fundações (art. 109, caput).\n\nCONSELHO: órgão colegiado consultivo — equiparado a diretor na vedação do § 1º.\n\nMUNICÍPIO: ente contratante amplo — contrato da Prefeitura ou de autarquia municipal.",
+            "destaques": ["SERVIDOR", "CONSELHO", "MUNICÍPIO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: há incompatibilidade?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "A empresa mantém contrato com o Município?", "tipo": "pergunta" },
+              { "id": "p2", "label": "O servidor integraria conselho dessa empresa?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito C — vedação + demissão", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Quem o § 1º alcança",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Vínculo vedado", "Exemplo no caso"],
+            "linhas": [
+              {
+                "faixa": "Diretor",
+                "classificacao": "Cargo de direção na empresa contratante"
+              },
+              {
+                "faixa": "Conselho",
+                "classificacao": "Conselho consultivo — hipótese do enunciado",
+                "destaque": true
+              },
+              {
+                "faixa": "Empresa alvo",
+                "classificacao": "Fornecedora ou contratada por qualquer modalidade com o Município"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: diretor × conselho",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Só cargo de diretor gera incompatibilidade",
+                "§ 1º veda diretor ou integrar conselho"
+              ],
+              [
+                "Conselho consultivo é função honorífica sem risco",
+                "Conselho está expressamente na vedação"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Restringe a diretor; o § 1º inclui integrar conselho"
+              ],
+              [
+                "B — regra_excecao",
+                "Inventa exceção STTP/Prefeitura; contrato é com o Município"
+              ],
+              [
+                "D — termo_unico",
+                "Troca demissão por advertência e exige favorecimento não previsto"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o convite do agente STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Conclusão legal"],
+            "linhas": [
+              [
+                "Empresa vencedora de licitação municipal de radares",
+                "Contrato com o Município — vedação disparada"
+              ],
+              [
+                "Convite a conselho consultivo (não diretor)",
+                "Conselho está no § 1º — não escapa"
+              ],
+              ["Resultado", "Gabarito C — demissão se descumprir"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "STTP dentro do Município",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Tese errada", "Correção"],
+            "linhas": [
+              ["STTP autárquica ≠ Município contratante", "Autarquia integra administração municipal"],
+              ["Contrato da Prefeitura não alcança servidor da STTP", "Servidor de autarquia é servidor municipal (art. 109)"],
+              ["Pena seria advertência", "§ 1º fixa demissão"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 109, § 1º — vedação ao servidor",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei Orgânica de Campina Grande, art. 109, § 1º",
+            "texto": "§ 1º - Nenhum servidor poderá ser diretor ou integrar conselho de empresa fornecedora, ou que realize qualquer modalidade de contrato com o Município, sob pena de demissão.",
+            "trechos_grifados": [
+              {
+                "inicio": 45,
+                "fim": 62,
+                "motivo": "contraste — conselho está na vedação, não só diretor"
+              },
+              {
+                "inicio": 102,
+                "fim": 149,
+                "motivo": "caso — contrato municipal de radares enquadra o Município"
+              },
+              {
+                "inicio": 151,
+                "fim": 171,
+                "motivo": "distratores — pena é demissão, não advertência"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Servidor + conselho/diretoria + empresa contratada pelo Município = demissão (§ 1º).\n\nNear-transfer: convite para conselho de empresa fornecedora da Câmara Municipal — a vedação permanece, pois o contrato é com o Município.",
+            "destaques": ["demissão", "Near-transfer", "Município"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei Orgânica de Campina Grande, art. 109, § 1º",
+          "path": "conteúdo/municipal/lei-organica-campina-grande.txt"
+        }
+      ]
+    },
+    "tags": ["lei_organica_cg", "servidor_publico", "incompatibilidade", "sttp", "etica"]
+  }
+]

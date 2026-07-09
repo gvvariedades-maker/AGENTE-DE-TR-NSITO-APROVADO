@@ -1,0 +1,289 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CONTRAN_985_mbft",
+  "macete_visual": "1 AIT·202 · concorrente · agente OK·terceiro NÃO",
+  "meta": {
+    "padrao_familia": "A",
+    "pegadinha_em_uma_frase": "Pedido do pedestre não autoriza AIT; concorrentes 202/193 exigem um só auto na principal.",
+    "eixos_legais": [
+      "MBFT_secao_7_concorrentes",
+      "MBFT_secao_7_terceiros"
+    ],
+    "isca_por_alternativa": {
+      "A": "dois AITs (202 e 193) ignorando concorrência",
+      "B": "trata comunicação entre agentes como pedido de terceiro",
+      "D": "só o agente que viu pode lavrar o AIT"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: pedestre pediu, agente B lavrou",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — dois AITs 202+193: MBFT trata como concorrentes (um AIT no 202).\nB — pedestre solicitou: vedação é autuação por terceiro, não agente A informando agente B na operação.\nD — só agente A lavra: a exceção permite outro agente na operação com informação nas observações.\n\nUltrapassagem pelo acostamento na operação STTP.",
+        "destaques": [
+          "Gabarito C",
+          "concorrentes",
+          "observações"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do MBFT",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CONCORRENTES: uma infração implica necessariamente outra — um único AIT (ex.: 202 absorve 193).\n\nCONCOMITANTES: condutas independentes — tantos AITs quantas infrações.\n\nOPERAÇÃO DE FISCALIZAÇÃO: exceção à vedação de autuar por terceiro quando um agente informa outro agente na mesma operação (campo observações).",
+        "destaques": [
+          "CONCORRENTES",
+          "CONCOMITANTES",
+          "OPERAÇÃO"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: quantos AITs e quem pode lavrar?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Ultrapassagem pelo acostamento implica trânsito no acostamento?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "1 AIT pela conduta principal + obs. agente A — gabarito C",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "r1",
+            "rotulo": "Sim"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Mapa: concorrência e terceiros",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Tipo",
+          "Regra de AIT"
+        ],
+        "linhas": [
+          {
+            "faixa": "Infrações concorrentes (202/193)",
+            "classificacao": "Um único AIT — autuar na conduta principal (202)",
+            "destaque": true
+          },
+          {
+            "faixa": "Infrações concomitantes",
+            "classificacao": "Um AIT por conduta independente"
+          },
+          {
+            "faixa": "Solicitação de terceiro (pedestre)",
+            "classificacao": "Vedada a lavratura por solicitação"
+          },
+          {
+            "faixa": "Agente constata e informa agente na operação",
+            "classificacao": "Lavratura permitida — registrar nas observações"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: pedestre ≠ agente na operação",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ?",
+          "O que o MBFT diz ✓"
+        ],
+        "linhas": [
+          [
+            "Pedestre pediu → agente B pode autuar",
+            "Vedada autuação por solicitação de terceiros"
+          ],
+          [
+            "202 e 193 → dois AITs",
+            "Concorrentes → um AIT só no art. 202"
+          ],
+          [
+            "Agente B não viu → não pode lavrar",
+            "Exceção: agente A informa agente B na operação (obs.)"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Dois AITs ignorando concorrência 202/193 do MBFT"
+          ],
+          [
+            "B — regra_excecao",
+            "Confunde pedido do pedestre com comunicação entre agentes"
+          ],
+          [
+            "D — termo_unico",
+            "Inventa que só o agente que presenciou pode lavrar"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado — operação STTP",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato da operação",
+          "Consequência no MBFT"
+        ],
+        "linhas": [
+          [
+            "Agente A constata ultrapassagem pelo acostamento (202)",
+            "Conduta principal para o único AIT"
+          ],
+          [
+            "Implica transitar pelo acostamento (193)",
+            "Concorrente — não gera segundo AIT"
+          ],
+          [
+            "Pedestre solicita lavratura ao agente B",
+            "Terceiro — não autoriza autuação"
+          ],
+          [
+            "Agente A informa agente B na mesma operação",
+            "Exceção válida — registrar em observações"
+          ],
+          [
+            "Resultado",
+            "Gabarito C"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Ordem: concorrência antes de terceiros",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Eixo",
+          "Regra aplicada ao caso"
+        ],
+        "linhas": [
+          [
+            "Quantidade de AITs",
+            "Concorrentes → um AIT (202)"
+          ],
+          [
+            "Quem pode solicitar lavratura",
+            "Terceiro vedado; agente→agente na operação permitido"
+          ],
+          [
+            "Papel do agente B",
+            "Lavratura com fundamento na informação do agente A (obs.)"
+          ],
+          [
+            "Papel do pedestre",
+            "Irrelevante para legitimar a autuação"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei3",
+      "titulo": "MBFT seção 7 — concorrentes e exemplo 202/193",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7 — Autuação",
+        "texto": "São concorrentes aquelas em que o cometimento de uma infração implica necessariamente o cometimento de outra. Nesses casos, o agente deverá fazer um único AIT. Ultrapassar pelo acostamento (art. 202), implica necessariamente a prática da infração de transitar com o veículo pelo acostamento (art. 193). Neste caso, autuar apenas no art. 202.",
+        "trechos_grifados": [
+          {
+            "inicio": 146,
+            "fim": 158,
+            "motivo": "mapa — concorrente exige um único AIT"
+          },
+          {
+            "inicio": 315,
+            "fim": 340,
+            "motivo": "hierarquia — exemplo 202 absorve 193"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "MBFT seção 7 — vedação e exceção na operação",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7 — Autuação",
+        "texto": "É vedada a lavratura do AIT por solicitação de terceiros, excetuando-se o caso em que o órgão ou entidade de trânsito realiza operação de fiscalização de trânsito, em que um agente de trânsito constate a infração e a informe a outro agente que esteja na operação, devendo tal informação constar do campo observações do AIT.",
+        "trechos_grifados": [
+          {
+            "inicio": 32,
+            "fim": 56,
+            "motivo": "contraste — pedido de terceiro (pedestre) é vedado"
+          },
+          {
+            "inicio": 126,
+            "fim": 150,
+            "motivo": "caso — exceção quando agentes atuam na operação"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "1 AIT na principal (202) · concorrente ≠ concomitante · agente→agente na operação (obs.) · terceiro NÃO.\n\nNear-transfer: mesmo motorista também excedeu velocidade em faixa exclusiva de ônibus — condutas concomitantes → dois AITs distintos.",
+        "destaques": [
+          "1 AIT",
+          "concorrente",
+          "terceiro NÃO"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "MBFT — Seção 7 Autuação (Res. CONTRAN 985/2022)",
+      "path": "conteúdo/resoluções CONTRAN/MBFT-anexo-resolucao-985-2022-secao-07-autuacao.txt"
+    }
+  ]
+}

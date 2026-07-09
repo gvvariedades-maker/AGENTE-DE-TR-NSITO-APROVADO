@@ -1,0 +1,307 @@
+[
+  {
+    "disciplina": "direito_constitucional",
+    "topico": "cf_art16_vigencia_processo_eleitoral",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "enunciado": "Em abril de 2026, é publicada lei federal que altera regras do processo eleitoral. O pleito municipal de Campina Grande está previsto para outubro de 2026. Servidores da STTP, em estudo de direito constitucional, debatem quando a nova norma passa a vigorar e se pode reger esse pleito. Considerando o art. 16 da Constituição Federal de 1988, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A lei entra em vigor na data de sua publicação, porém não se aplica à eleição de outubro de 2026, pois o pleito ocorrerá em menos de um ano da vigência da norma.",
+      "B": "A lei somente entrará em vigor um ano após a promulgação, independentemente da data da publicação oficial, para garantir estabilidade do processo eleitoral.",
+      "C": "A lei entra em vigor na publicação e passa a reger imediatamente o pleito de outubro de 2026, por se tratar de eleição municipal no mesmo ano da vigência.",
+      "D": "A alteração do processo eleitoral só produz efeitos após o transcurso de dois anos da publicação, vedada a aplicação em eleições municipais do mesmo ciclo."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Vigência imediata na publicação (art. 16) versus cláusula de não aplicação à eleição que ocorra até um ano da data de vigência — pegadinha da redação anterior à EC 4/1993.",
+      "fundamento_legal": "CF/88, art. 16: A lei que alterar o processo eleitoral entrará em vigor na data de sua publicação, não se aplicando à eleição que ocorra até um ano da data de sua vigência.",
+      "passo_a_passo": [
+        "1. O art. 16 combina duas regras: vigência na publicação e proibição de aplicação à eleição que ocorra até um ano da vigência.",
+        "2. B erra por regra_excecao (revive a redação antiga — vigência só um ano após a promulgação); C erra por termo_unico (trata eleição municipal como se dispensasse a cláusula de não aplicação em um ano); D erra por numero_vizinho (troca um ano por dois anos e inventa vedação inexistente).",
+        "3. A está correta: publicação em abril/2026 → vigência imediata; pleito em outubro/2026 (~6 meses) → norma não se aplica a essa eleição."
+      ],
+      "pegadinha": "A banca confunde vigência (publicação imediata) com aplicabilidade (vedada à eleição dentro de um ano), ou memoriza a redação pré-EC 4/1993 de vacatio de um ano após a promulgação.",
+      "macete": "PUBLICA = vigora | ELEIÇÃO ≤ 1 ano = não aplica. Não confunda com a regra antiga (1 ano para vigorar). Abril → outubro no mesmo ano = menos de 12 meses → fora do pleito.",
+      "estudo_reverso": [
+        "CF art. 16",
+        "CF art. 14 (direitos políticos)",
+        "EC 4/1993"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CF_art16",
+      "macete_visual": "Publica = vigora | Eleição ≤ 1 ano = não aplica",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Lei publicada em abril/2026, pleito em outubro/2026. A banca confunde vigência imediata com a regra antiga de vacatio de um ano.",
+            "destaques": ["publicação", "um ano", "pleito"]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Vigor × aplicação",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Cenário", "Efeito"],
+            "linhas": [
+              { "faixa": "Publicação da lei", "classificacao": "Vigência imediata (regra)" },
+              {
+                "faixa": "Eleição até 1 ano da vigência",
+                "classificacao": "Norma não se aplica ao pleito (exceção)",
+                "destaque": true
+              },
+              { "faixa": "Eleição após 1 ano da vigência", "classificacao": "Norma aplica-se ao pleito" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Vigora só 1 ano após promulgação", "Vigora na publicação (EC 4/1993)"],
+              ["Aplica-se ao pleito do mesmo ano", "Não aplica se eleição ≤ 1 ano da vigência"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 16",
+            "texto": "A lei que alterar o processo eleitoral entrará em vigor na data de sua publicação, não se aplicando à eleição que ocorra até um ano da data de sua vigência.",
+            "trechos_grifados": [
+              { "inicio": 59, "fim": 81, "motivo": "vigência na publicação" },
+              { "inicio": 121, "fim": 155, "motivo": "não aplica até 1 ano" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Publica = vigora. Eleição ≤ 1 ano = não aplica. Abril → outubro = mesmo ciclo, fora do pleito.",
+            "destaques": ["publicação", "um ano", "não aplica"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 16",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "todos",
+      "duracao_estimada_seg": 240,
+      "fundamento_slug": "CF_art16",
+      "macete_visual": "Publica = vigora | Eleição ≤ 1 ano = não aplica",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Confunde vigência na publicação com a redação antiga de vacatio de um ano após promulgação",
+        "eixos_legais": ["CF_art16_vigencia", "CF_art16_nao_aplicacao"],
+        "isca_por_alternativa": {
+          "B": "revive vigência só um ano após promulgação — redação pré-EC 4/1993",
+          "C": "trata pleito municipal como exceção à cláusula de não aplicação em um ano",
+          "D": "troca um ano por dois e inventa vedação ao ciclo municipal"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: abril × outubro de 2026",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A (vigência na publicação + não aplica ao pleito ≤ 1 ano).\n\nB — vacatio de 1 ano após promulgação: regra_excecao da redação antiga.\nC — aplica imediata por ser municipal: termo_unico — ignora a exceção temporal.\nD — dois anos de espera: numero_vizinho.\n\nAbril → outubro/2026 ≈ 6 meses: norma vigora, mas não rege essa eleição.",
+            "destaques": ["publicação", "outubro/2026", "um ano"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de decidir: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VIGÊNCIA: momento em que a lei passa a existir no ordenamento — no art. 16, é a data da publicação. APLICABILIDADE: se a norma pode reger um pleito específico — vedada à eleição até um ano da vigência. PROCESSO ELEITORAL: regras de alistamento, propaganda, votação e apuração sujeitas ao art. 16.",
+            "destaques": ["vigência", "aplicabilidade", "processo eleitoral"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: vigor imediato e exceção temporal",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Norma altera o processo eleitoral?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Pleito ocorre até um ano da vigência?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Vigora na publicação, mas não se aplica a esse pleito",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa do art. 16",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Hipótese", "Efeito legal"],
+            "linhas": [
+              {
+                "faixa": "Regra — publicação da lei",
+                "classificacao": "Entra em vigor na data da publicação"
+              },
+              {
+                "faixa": "Exceção — eleição até 1 ano da vigência",
+                "classificacao": "Norma não se aplica a esse pleito",
+                "destaque": true
+              },
+              {
+                "faixa": "Eleição após 1 ano da vigência",
+                "classificacao": "Norma aplica-se normalmente ao pleito"
+              },
+              {
+                "faixa": "Pegadinha — vacatio de 1 ano pós-promulgação",
+                "classificacao": "Redação antiga (EC 4/1993) — não é mais a regra"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença × lei: vigor × aplicação",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Lei eleitoral só vigora um ano depois de promulgada",
+                "Vigência na data da publicação (art. 16 atual)"
+              ],
+              [
+                "Se já vigora, vale para qualquer eleição seguinte",
+                "Não se aplica à eleição que ocorra até um ano da vigência"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — regra_excecao",
+                "Revive vacatio de um ano após promulgação — a EC 4/1993 fixou vigência na publicação"
+              ],
+              [
+                "C — termo_unico",
+                "Inventa exceção para eleição municipal — o art. 16 não distingue esfera do pleito"
+              ],
+              [
+                "D — numero_vizinho",
+                "Troca um ano por dois e cria vedação inexistente ao ciclo municipal"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o debate na STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Consequência legal"],
+            "linhas": [
+              ["Lei altera processo eleitoral", "Hipótese do art. 16"],
+              ["Publicação em abril de 2026", "Vigência imediata na data da publicação"],
+              ["Pleito municipal em outubro de 2026", "Intervalo inferior a um ano da vigência"],
+              ["Resultado", "Norma vigora, mas não rege outubro/2026 → Gabarito A"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 16 — vigência e não aplicação",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 16",
+            "texto": "A lei que alterar o processo eleitoral entrará em vigor na data de sua publicação, não se aplicando à eleição que ocorra até um ano da data de sua vigência.",
+            "trechos_grifados": [
+              {
+                "inicio": 59,
+                "fim": 81,
+                "motivo": "mapa — vigência na publicação"
+              },
+              {
+                "inicio": 121,
+                "fim": 155,
+                "motivo": "contraste — não aplica até 1 ano"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PUBLICA = vigora | ELEIÇÃO ≤ 1 ano = não aplica. Não confunda com a regra antiga (1 ano para vigorar).\n\nNear-transfer: mesma lei publicada em janeiro de 2024 e pleito em outubro de 2025 — passou mais de um ano da vigência; a norma aplica-se a esse pleito.",
+            "destaques": ["publicação", "um ano", "janeiro/2024"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 16",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "art16",
+      "processo_eleitoral",
+      "vigencia_lei",
+      "direitos_politicos"
+    ]
+  }
+]

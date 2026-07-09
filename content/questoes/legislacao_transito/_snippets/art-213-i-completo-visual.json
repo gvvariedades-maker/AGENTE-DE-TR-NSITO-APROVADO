@@ -1,0 +1,199 @@
+{
+  "versao": 2,
+  "arquetipo": "tabela_gradacao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CTB_art_213_I",
+  "macete_visual": "I pessoas = GRAVÍSSIMA · PARAR ≠ reduzir",
+  "meta": {
+    "padrao_familia": "D_gradacao",
+    "pegadinha_em_uma_frase": "Reduzir e desviar não dispensa parar — agrupamento de pessoas no art. 213, I é gravíssima, não grave",
+    "eixos_legais": ["CTB_art_213_I", "CTB_art_213_II", "CTB_art_220"],
+    "isca_por_alternativa": {
+      "B": "aplica inciso II (veículos) a desfile de pessoas",
+      "C": "acha que reduzir velocidade substitui parar — confunde 220 com 213",
+      "D": "troca parar ante agrupamento por preferência a pedestre — art. 214"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: reduzir não é parar",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito A.\n\nB — aplicou inciso II (veículos) a desfile escolar de pessoas: o fato é agrupamento de pessoas — inciso I.\nC — achou que reduzir velocidade basta: art. 213 exige parar quando a marcha é interceptada.\nD — confundiu com preferência a pedestre isolado: aqui há agrupamento interceptando a marcha.\n\nDesfile escolar interceptou a via; condutor não parou.",
+        "destaques": ["Gabarito A", "parar", "desfile escolar"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 distinções",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "PARAR: imobilizar o veículo — dever do art. 213 quando a marcha é interceptada.\n\nMARCHA INTERCEPTADA: o fluxo do condutor é bloqueado por agrupamento na via (pessoas ou veículos).\n\nREDUZIR VELOCIDADE: art. 220 — compatibilizar com segurança em condições adversas; não substitui parar no art. 213.",
+        "destaques": ["PARAR", "INTERCEPTADA", "REDUZIR"]
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Gravidade no art. 213",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Inciso do art. 213", "Natureza"],
+        "linhas": [
+          {
+            "faixa": "I — agrupamento de pessoas (desfiles, passeatas)",
+            "classificacao": "Gravíssima",
+            "destaque": true
+          },
+          {
+            "faixa": "II — agrupamento de veículos (cortejos, formações)",
+            "classificacao": "Grave"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: parar ou só reduzir?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Marcha do condutor foi interceptada na via?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Condutor parou o veículo?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Gravíssima — inciso I (pessoas)",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Não" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: reduzir × parar",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          [
+            "Reduzir e desviar = cumpriu o dever",
+            "Art. 213 exige parar quando a marcha é interceptada"
+          ],
+          [
+            "Interceptação em via urbana = sempre inciso II",
+            "Desfile de pessoas = inciso I — gravíssima"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          [
+            "B — gravidade",
+            "Aplica inciso II (veículos) a agrupamento de pessoas — desfile escolar é inciso I"
+          ],
+          [
+            "C — regra_excecao",
+            "Inventa que reduzir velocidade dispensa parar — art. 220 não substitui art. 213"
+          ],
+          [
+            "D — termo_unico",
+            "Confunde parar ante agrupamento interceptando marcha com preferência a pedestre — art. 214"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado — Campina Grande",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Desfile escolar com agrupamento de pessoas", "Inciso I do art. 213"],
+          ["Marcha do condutor interceptada na via", "Dever de parar o veículo"],
+          ["Condutor só reduziu e contornou pelo acostamento", "Não parou — infração configurada"],
+          ["Resultado", "Gabarito A — infração gravíssima"]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "213 × 214 × 220",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Artigo", "O que exige"],
+        "linhas": [
+          ["Art. 213", "Parar quando a marcha é interceptada por agrupamento"],
+          ["Art. 214", "Dar preferência de passagem a pedestre ou ciclista"],
+          ["Art. 220", "Reduzir velocidade compatível com segurança"],
+          ["Caso (desfile escolar)", "Art. 213, I — parar; gravíssima"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 213, I — agrupamento de pessoas",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 213, I",
+        "texto": "Deixar de parar o veículo sempre que a respectiva marcha for interceptada: I - por agrupamento de pessoas, como préstitos, passeatas, desfiles e outros. Infração - gravíssima.",
+        "trechos_grifados": [
+          {
+            "inicio": 83,
+            "fim": 105,
+            "motivo": "gradacao — inciso I: agrupamento de pessoas"
+          },
+          {
+            "inicio": 164,
+            "fim": 174,
+            "motivo": "contraste — gravíssima, não grave nem média"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "213: PARAR se interceptado · I pessoas = GRAVÍSSIMA · II veículos = GRAVE · 220 = reduzir, não parar.\n\nNear-transfer: mesmo condutor não para ante formação militar de veículos bloqueando a via — inciso II, infração grave (não gravíssima).",
+        "destaques": ["I", "II", "PARAR"]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "CTB art. 213",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

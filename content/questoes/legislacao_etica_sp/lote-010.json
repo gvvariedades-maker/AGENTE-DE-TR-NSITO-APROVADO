@@ -1,0 +1,290 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_1_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_percentual",
+    "dificuldade": 4,
+    "fundamento_slug": "LOM_art44",
+    "enunciado": "Em formação sobre ética e legislação municipal, servidores da STTP acompanham debate na Câmara de Campina Grande sobre projeto que fixa a remuneração dos vereadores para a legislatura subsequente em 90% da remuneração estabelecida em espécie para os Deputados Estaduais. Consultada a Lei Orgânica do Município, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A Câmara pode fixar livremente o subsídio dos vereadores, sem parâmetro percentual em relação aos Deputados Estaduais, bastando voto da maioria dos membros na legislatura vigente.",
+      "B": "A remuneração do vereador será fixada pela Câmara, por maioria de seus membros, para vigorar na legislatura subsequente, correspondendo no máximo a setenta e cinco por cento da estabelecida em espécie para os Deputados Estaduais, nos termos do art. 44 da Lei Orgânica.",
+      "C": "O teto da remuneração dos vereadores é de cinquenta por cento da remuneração dos Deputados Estaduais, podendo a Câmara reduzi-la, mas não ultrapassá-la.",
+      "D": "A remuneração do vereador pode corresponder integralmente à dos Deputados Estaduais, limitando-se apenas aos tetos dos incisos V e VI do art. 29 da Constituição Federal."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Remuneração de vereador na Lei Orgânica de Campina Grande — art. 44: fixação pela Câmara por maioria, vigência na legislatura subsequente e teto de 75% da remuneração em espécie dos Deputados Estaduais.",
+      "fundamento_legal": "Lei Orgânica de Campina Grande, art. 44: \"A remuneração do Vereador será fixada, em cada Legislatura para ter vigência na subsequente, pela Câmara, por voto da maioria de seus Membros, e corresponderá, no máximo, a setenta e cinco porcento daquela estabelecida em espécie, para os Deputados Estaduais, vedado a percepção, a qualquer título que excedem os limites fixados nos incisos V e VI do Artigo 29 da Constituição Federal 2.\"",
+      "passo_a_passo": [
+        "1. O caso propõe 90% da remuneração estadual — o art. 44 fixa teto de 75%; o projeto ultrapassa o máximo legal.",
+        "2. A erra por regra_excecao (dispensa parâmetro percentual e fixa livremente); C erra por numero_vizinho (troca 75% por 50%); D erra por termo_unico (admite 100% dos deputados estaduais, ignorando o teto de 75% do art. 44).",
+        "3. B está correta: reproduz o art. 44 da Lei Orgânica."
+      ],
+      "pegadinha": "A banca usa 90% no enunciado para induzir aceitar 100% ou 50% — mas o teto literal é setenta e cinco por cento dos Deputados Estaduais.",
+      "macete": "Vereador = Câmara fixa (maioria) · vigência na legislatura seguinte · máx. 75% do deputado estadual (art. 44).",
+      "estudo_reverso": [
+        "Lei Orgânica CG art. 44",
+        "Lei Orgânica CG art. 44, parágrafo único",
+        "CF/88 art. 29, V e VI"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "LOM_art44",
+      "macete_visual": "Vereador máx. 75% deputado estadual",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Projeto em 90% ultrapassa o teto — art. 44: no máximo 75% da remuneração em espécie dos Deputados Estaduais.",
+            "destaques": ["75%", "90%", "art. 44"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Teto do art. 44",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Percentual × deputado estadual", "Situação"],
+            "linhas": [
+              { "faixa": "Até 75%", "classificacao": "Dentro do teto legal (art. 44)" },
+              {
+                "faixa": "90% (projeto do caso)",
+                "classificacao": "Acima do máximo — inválido",
+                "destaque": true
+              },
+              { "faixa": "100%", "classificacao": "Vedado pelo art. 44" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              [
+                "Pode igualar 100% dos deputados estaduais",
+                "Máximo 75% em espécie — art. 44"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Vereador = Câmara fixa (maioria) · vigência na legislatura seguinte · máx. 75% do deputado estadual.",
+            "destaques": ["75%", "art. 44"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei Orgânica de Campina Grande, art. 44",
+          "path": "conteúdo/municipal/lei-organica-campina-grande.txt"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 245,
+      "fundamento_slug": "LOM_art44",
+      "macete_visual": "Vereador máx. 75% · deputado estadual · art. 44",
+      "meta": {
+        "padrao_familia": "D_gradacao",
+        "pegadinha_em_uma_frase": "Projeto em 90% induz a aceitar 100% ou 50% — teto literal é 75%",
+        "eixos_legais": ["LOM_art44", "LOM_art44_paragrafo_unico"],
+        "isca_por_alternativa": {
+          "A": "fixação livre sem parâmetro percentual",
+          "C": "teto de 50% em vez de 75%",
+          "D": "igualar 100% dos deputados estaduais"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: teto é 75%, não 90%",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — fixação livre sem teto percentual: art. 44 fixa 75%.\nC — teto de 50%: número vizinho do 75% legal.\nD — 100% dos deputados estaduais: ignora o máximo de 75%.\n\nA isca é o 90% do enunciado empurrar para 100% ou outro percentual errado.",
+            "destaques": ["Gabarito B", "75%", "90%"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "LEGISLATURA SUBSEQUENTE: remuneração fixada hoje vige na legislatura seguinte — art. 44.\n\nEM ESPÉCIE: parâmetro da remuneração dos Deputados Estaduais para calcular o teto municipal.\n\nSETENTA E CINCO POR CENTO: teto máximo da remuneração do vereador em relação ao deputado estadual — art. 44.",
+            "destaques": ["SUBSEQUENTE", "EM ESPÉCIE", "75%"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Mapa percentual do art. 44",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Percentual proposto", "Enquadramento"],
+            "linhas": [
+              {
+                "faixa": "Até 75%",
+                "classificacao": "Dentro do teto do art. 44"
+              },
+              {
+                "faixa": "90% (projeto do enunciado)",
+                "classificacao": "Acima do máximo legal",
+                "destaque": true
+              },
+              {
+                "faixa": "100% dos deputados estaduais",
+                "classificacao": "Vedado — ultrapassa 75%"
+              },
+              {
+                "faixa": "50%",
+                "classificacao": "Abaixo do teto — isca da alternativa C"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: 90% × 75%",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "90% é aceitável por estar abaixo de 100%",
+                "Teto é 75% — projeto em 90% excede o art. 44"
+              ],
+              [
+                "Câmara fixa sem limite percentual",
+                "Corresponderá, no máximo, a 75% dos deputados estaduais"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Inventa fixação livre — art. 44 impõe teto de 75% em espécie"
+              ],
+              [
+                "C — numero_vizinho",
+                "Troca 75% por 50% — percentual vizinho sem fundamento na LOM"
+              ],
+              [
+                "D — termo_unico",
+                "Admite 100% dos deputados estaduais — corta o máximo de 75% do art. 44"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o projeto em 90%",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Conta / fato", "Resultado legal"],
+            "linhas": [
+              ["Projeto fixa 90% da remuneração estadual em espécie", "Acima do teto legal"],
+              ["Art. 44 — máximo permitido", "75% dos Deputados Estaduais"],
+              ["Quem fixa e quando vige", "Câmara, por maioria — legislatura subsequente"],
+              ["Resultado", "Gabarito B — art. 44"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 44 — remuneração do vereador",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei Orgânica de Campina Grande, art. 44",
+            "texto": "A remuneração do Vereador será fixada, em cada Legislatura para ter vigência na subsequente, pela Câmara, por voto da maioria de seus Membros, e corresponderá, no máximo, a setenta e cinco porcento daquela estabelecida em espécie, para os Deputados Estaduais, vedado a percepção, a qualquer título que excedem os limites fixados nos incisos V e VI do Artigo 29 da Constituição Federal 2.",
+            "trechos_grifados": [
+              {
+                "inicio": 118,
+                "fim": 141,
+                "motivo": "caso — fixação por maioria da Câmara"
+              },
+              {
+                "inicio": 173,
+                "fim": 197,
+                "motivo": "gradacao — teto de 75% (pegadinha do 90%)"
+              },
+              {
+                "inicio": 239,
+                "fim": 258,
+                "motivo": "glossario — parâmetro dos Deputados Estaduais em espécie"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 44 — parágrafo único",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei Orgânica de Campina Grande, art. 44, parágrafo único",
+            "texto": "Deixando de a Câmara de exercer a competência de que trata este artigo, ficarão mantidos, na Legislatura subsequente, os valores de remuneração vigentes em dezembro do último exercício da Legislatura anterior, mantida apenas a atualização dos mesmos.",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 52,
+                "motivo": "contraste — omissão da Câmara mantém valores anteriores"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Vereador = Câmara fixa (maioria) · vigência na legislatura seguinte · máx. 75% do deputado estadual (art. 44).\n\nNear-transfer: projeto fixa exatamente 75% da remuneração estadual em espécie — está no teto permitido; 76% já violaria o art. 44.",
+            "destaques": ["75%", "Near-transfer", "art. 44"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei Orgânica de Campina Grande, art. 44",
+          "path": "conteúdo/municipal/lei-organica-campina-grande.txt"
+        }
+      ]
+    },
+    "tags": [
+      "lei_organica_cg",
+      "vereador",
+      "remuneracao",
+      "percentual",
+      "etica"
+    ]
+  }
+]

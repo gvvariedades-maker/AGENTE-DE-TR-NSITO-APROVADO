@@ -4,6 +4,7 @@ import { join } from "node:path";
 export type CitacaoTipo =
   | "ctb"
   | "cf"
+  | "lom"
   | "lei"
   | "contran"
   | "senatran"
@@ -71,6 +72,7 @@ const LEIS: LeiFonte[] = [
 ];
 
 const CF_ARQUIVO = "legislação federal/cf-1988.html";
+const LOM_ARQUIVO = "municipal/lei-organica-campina-grande.txt";
 
 const ARTIGO_RE =
   /art(?:igo)?\.?\s*(\d+(?:[-–][A-Za-z0-9]+)?)(?:\s*,\s*§\s*(\d+)(?:º|°)?)?/gi;
@@ -169,7 +171,24 @@ export function extrairCitacoes(texto: string): CitacaoExtraida[] {
     const artigo = match[1];
     const paragrafo = match[2];
 
-    if (/\b(?:cf|constitui[cç][aã]o)\b/i.test(texto.slice(Math.max(0, match.index! - 40), match.index! + raw.length + 20))) {
+    const contextSlice = texto.slice(
+      Math.max(0, match.index! - 80),
+      match.index! + raw.length + 40,
+    );
+
+    if (
+      /\b(?:lei\s+org[aâ]nica|lom)\b/i.test(contextSlice) &&
+      !/\b(?:cf\/|cf\/88|constitui[cç][aã]o\s+federal)\b/i.test(contextSlice)
+    ) {
+      registrar({
+        raw,
+        tipo: "lom",
+        artigo: paragrafo ? `${artigo}§${paragrafo}` : artigo,
+      });
+      continue;
+    }
+
+    if (/\b(?:cf|constitui[cç][aã]o)\b/i.test(contextSlice)) {
       registrar({ raw, tipo: "cf", artigo });
       continue;
     }
@@ -241,6 +260,13 @@ export class CorpusLegal {
       corpus.leiTextos.set("cf", cf);
     } catch {
       // CF ausente
+    }
+
+    try {
+      const lom = await readFile(join(conteudoDir, LOM_ARQUIVO), "utf-8");
+      corpus.leiTextos.set("lom", lom);
+    } catch {
+      // Lei Orgânica CG ausente
     }
 
     try {
@@ -347,6 +373,45 @@ export class CorpusLegal {
         };
       }
 
+      case "lom": {
+        const texto = this.leiTextos.get("lom");
+        if (!texto) {
+          return {
+            citacao,
+            valido: false,
+            nivel: "erro",
+            motivo:
+              "Lei Orgânica CG não encontrada em conteúdo/municipal/lei-organica-campina-grande.txt",
+          };
+        }
+        const artigo = citacao.artigo?.split("§")[0] ?? "";
+        const paragrafo = citacao.artigo?.includes("§")
+          ? citacao.artigo.split("§")[1]
+          : undefined;
+        if (!artigoExisteNoTexto(texto, artigo)) {
+          return {
+            citacao,
+            valido: false,
+            nivel: "erro",
+            motivo: `Art. ${artigo} não encontrado na Lei Orgânica CG local`,
+          };
+        }
+        if (paragrafo && !paragrafoExisteNoTexto(texto, artigo, paragrafo)) {
+          return {
+            citacao,
+            valido: true,
+            nivel: "aviso",
+            motivo: `§ ${paragrafo} do art. ${artigo} da LOM — revisar manualmente`,
+          };
+        }
+        return {
+          citacao,
+          valido: true,
+          nivel: "erro",
+          motivo: "Lei Orgânica CG verificada",
+        };
+      }
+
       case "lei": {
         if (citacao.leiNumero && !citacao.artigo) {
           const texto = this.textoLei(citacao.leiNumero);
@@ -367,6 +432,15 @@ export class CorpusLegal {
         }
 
         if (citacao.artigo) {
+          const lom = this.leiTextos.get("lom");
+          if (lom && artigoExisteNoTexto(lom, citacao.artigo)) {
+            return {
+              citacao,
+              valido: true,
+              nivel: "aviso",
+              motivo: `Art. ${citacao.artigo} também existe na LOM — confirme o diploma citado`,
+            };
+          }
           for (const lei of LEIS) {
             const texto = this.textoLei(lei.numeros[0]);
             if (texto && artigoExisteNoTexto(texto, citacao.artigo)) {

@@ -1,0 +1,158 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 265,
+  "fundamento_slug": "CTB_art_32",
+  "macete_visual": "6 vedados · SINAL permite · não acelera",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Curva com visibilidade ruim não veda sempre — sinalização permissiva autoriza ultrapassar pelo art. 32",
+    "eixos_legais": ["CTB_art_32", "CTB_art_30"],
+    "isca_por_alternativa": {
+      "A": "trata vedação em curva como absoluta — ignora exceção final do art. 32",
+      "C": "inverte art. 30 — ultrapassado deve acelerar",
+      "D": "nega exceção para pontes/viadutos/travessias — mesmo mecanismo de A"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-038.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: curva não veda sempre",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — tratou curva como vedação absoluta: o art. 32 termina com exceção por sinalização.\nC — mandou o caminhão acelerar: o art. 30 exige não acelerar ao ser ultrapassado.\nD — negou a exceção em ponte/viaduto/travessia: a mesma cláusula do art. 32 vale para todos os locais da lista.\n\nNesta aula você fixa os 6 trechos vedados e a única saída legal: sinalização permissiva.",
+        "destaques": ["Gabarito B", "exceção", "sinalização"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "PISTA ÚNICA COM DUPLO SENTIDO: uma faixa por sentido ou faixa compartilhada — exige o art. 32 antes de ultrapassar.\n\nVISIBILIDADE INSUFICIENTE: não enxerga com antecedência o retorno de veículos — um dos trechos vedados.\n\nSINALIZAÇÃO PERMISSIVA: marcação ou placa que autoriza ultrapassagem onde o caput veda — exceção expressa do art. 32.",
+        "destaques": ["PISTA ÚNICA", "VISIBILIDADE", "SINALIZAÇÃO PERMISSIVA"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: pode ultrapassar neste trecho?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Via é pista única com duplo sentido?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Há sinalização permitindo ultrapassagem?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Gabarito B — sinalização permissiva autoriza", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Sim" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Os 6 trechos vedados (art. 32)",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Trecho", "Regra"],
+        "linhas": [
+          { "faixa": "Curvas", "classificacao": "Vedado — salvo sinalização", "destaque": true },
+          { "faixa": "Aclives sem visibilidade", "classificacao": "Vedado — salvo sinalização" },
+          { "faixa": "Passagens de nível", "classificacao": "Vedado — salvo sinalização" },
+          { "faixa": "Pontes e viadutos", "classificacao": "Vedado — salvo sinalização" },
+          { "faixa": "Travessias de pedestres", "classificacao": "Vedado — salvo sinalização" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: curva × sinalização",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Curva com visibilidade ruim sempre veda", "Veda, exceto quando houver sinalização permitindo"],
+          ["Quem é ultrapassado deve acelerar", "Art. 30: deslocar-se sem acelerar a marcha"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — regra_excecao", "Ignora a cláusula final do art. 32 — sinalização permissiva autoriza mesmo em curva"],
+          ["C — termo_unico", "Inverte o art. 30 — o ultrapassado não deve acelerar a marcha"],
+          ["D — regra_excecao", "Nega a mesma exceção para pontes/viadutos/travessias — art. 32 é lista única com uma saída"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Pista única, duplo sentido, curva, visibilidade insuficiente", "Trecho tipicamente vedado pelo art. 32"],
+          ["Sinalização horizontal permite ultrapassagem", "Exceção expressa — manobra autorizada"],
+          ["Resultado", "Gabarito B — ultrapassagem permitida"]
+        ]
+      }
+    },
+    {
+      "id": "art30",
+      "titulo": "Art. 30 — quem é ultrapassado",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Conduta", "Regra"],
+        "linhas": [
+          ["Circula pela faixa da esquerda", "Desloca-se à direita, sem acelerar"],
+          ["Circula pelas demais faixas", "Mantém-se na faixa, sem acelerar"],
+          ["Pegadinha da alternativa C", "Acelerar para fluidez — vedado pelo art. 30"]
+        ]
+      }
+    },
+    {
+      "id": "lei32",
+      "titulo": "Art. 32 — vedação e exceção",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 32",
+        "texto": "O condutor não poderá ultrapassar veículos em vias com duplo sentido de direção e pista única, nos trechos em curvas e em aclives sem visibilidade suficiente, nas passagens de nível, nas pontes e viadutos e nas travessias de pedestres, exceto quando houver sinalização permitindo a ultrapassagem.",
+        "trechos_grifados": [
+          { "inicio": 82, "fim": 93, "motivo": "glossario — pista única com duplo sentido (pré-requisito do art. 32)" },
+          { "inicio": 95, "fim": 116, "motivo": "caso — curva do enunciado está na lista vedada" },
+          { "inicio": 236, "fim": 295, "motivo": "contraste — exceção que autoriza o gabarito B" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CUR-ACL-PAS-PTE-PON-PED: 6 trechos vedados em pista única duplo sentido.\nSINALIZAÇÃO permissiva = única saída do art. 32.\nUltrapassado: NÃO acelera (art. 30).\n\nNear-transfer: ponte sem nenhuma sinalização permissiva — pode ultrapassar? Não: sem a exceção, qualquer item da lista veda.",
+        "destaques": ["6 trechos", "SINALIZAÇÃO", "NÃO acelera"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 32", "path": "conteúdo/legislação federal/lei-9503-ctb.html" },
+    { "rotulo": "CTB art. 30", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

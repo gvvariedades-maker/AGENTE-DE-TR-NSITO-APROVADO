@@ -14,6 +14,16 @@ export type SignUpState = {
   email?: string;
 };
 
+export type ForgotPasswordState = {
+  error?: string;
+  success?: boolean;
+  email?: string;
+};
+
+export type ResetPasswordState = {
+  error?: string;
+};
+
 const MIN_SENHA = 6;
 
 function sanitizeNextPath(raw: string | null | undefined): string {
@@ -31,7 +41,10 @@ async function getOrigin(): Promise<string> {
   return process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 }
 
-function mensagemErroAuth(message: string, contexto: "login" | "cadastro"): string {
+function mensagemErroAuth(
+  message: string,
+  contexto: "login" | "cadastro" | "recuperar" | "redefinir",
+): string {
   const lower = message.toLowerCase();
   if (lower.includes("invalid login credentials")) {
     return "E-mail ou senha incorretos.";
@@ -45,8 +58,17 @@ function mensagemErroAuth(message: string, contexto: "login" | "cadastro"): stri
   if (lower.includes("password") && lower.includes("weak")) {
     return "Senha fraca. Use pelo menos 6 caracteres.";
   }
+  if (lower.includes("same") && lower.includes("password")) {
+    return "A nova senha deve ser diferente da atual.";
+  }
   if (lower.includes("too many requests")) {
     return "Muitas tentativas. Aguarde alguns minutos e tente novamente.";
+  }
+  if (contexto === "recuperar") {
+    return "Não foi possível enviar o e-mail. Tente novamente.";
+  }
+  if (contexto === "redefinir") {
+    return "Não foi possível redefinir a senha. Solicite um novo link.";
   }
   return contexto === "login"
     ? "Não foi possível entrar. Verifique e-mail e senha."
@@ -119,6 +141,72 @@ export async function signUpWithPassword(
     success: true,
     email,
   };
+}
+
+export async function requestPasswordReset(
+  _prevState: ForgotPasswordState,
+  formData: FormData,
+): Promise<ForgotPasswordState> {
+  const email = String(formData.get("email") ?? "").trim();
+
+  if (!email) {
+    return { error: "Informe seu e-mail." };
+  }
+
+  const supabase = await createClient();
+  const origin = await getOrigin();
+  const emailRedirectTo = new URL("/auth/callback", origin);
+  emailRedirectTo.searchParams.set("next", "/nova-senha");
+
+  const { error } = await supabase.auth.resetPasswordForEmail(email, {
+    redirectTo: emailRedirectTo.toString(),
+  });
+
+  if (error) {
+    return { error: mensagemErroAuth(error.message, "recuperar") };
+  }
+
+  return { success: true, email };
+}
+
+export async function updatePassword(
+  _prevState: ResetPasswordState,
+  formData: FormData,
+): Promise<ResetPasswordState> {
+  const password = String(formData.get("password") ?? "");
+  const passwordConfirm = String(formData.get("password_confirm") ?? "");
+
+  if (!password || !passwordConfirm) {
+    return { error: "Preencha todos os campos." };
+  }
+
+  if (password.length < MIN_SENHA) {
+    return { error: `A senha deve ter pelo menos ${MIN_SENHA} caracteres.` };
+  }
+
+  if (password !== passwordConfirm) {
+    return { error: "As senhas não coincidem." };
+  }
+
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user) {
+    return {
+      error: "Link expirado ou inválido. Solicite um novo e-mail de recuperação.",
+    };
+  }
+
+  const { error } = await supabase.auth.updateUser({ password });
+
+  if (error) {
+    return { error: mensagemErroAuth(error.message, "redefinir") };
+  }
+
+  await supabase.auth.signOut();
+  redirect("/login?reset=ok");
 }
 
 export async function signOut() {

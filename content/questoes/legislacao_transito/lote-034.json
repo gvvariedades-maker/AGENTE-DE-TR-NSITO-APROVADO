@@ -1,0 +1,310 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_infracoes",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 5,
+    "fundamento_slug": "CTB_art_211",
+    "enunciado": "Em cruzamento semaforizado de Campina Grande, agente da STTP autua condutor de automóvel que, com o semáforo vermelho aceso, ultrapassou pela direita uma fila de veículos parados aguardando a liberação do sinal, retornando à faixa antes da linha de parada. Não houve avanço do sinal vermelho nem interceptação de agrupamento de pessoas. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA quanto à infração:",
+    "alternativas": {
+      "A": "Não há infração, pois a exceção do art. 211 abrange qualquer ultrapassagem lenta em fila parada no semáforo, inclusive por automóveis.",
+      "B": "Configura infração grave por ultrapassar veículos em fila parados em razão de sinal luminoso, nos termos do art. 211 do CTB.",
+      "C": "Configura infração gravíssima por avançar o sinal vermelho do semáforo, nos termos do art. 208 do CTB.",
+      "D": "Configura infração gravíssima por deixar de parar ante agrupamento de pedestres, conforme o art. 213, I, do CTB."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Art. 211 — ultrapassar fila parada no semáforo (grave) e exceção restrita a veículos não motorizados; distinção dos arts. 208 e 213.",
+      "fundamento_legal": "CTB, art. 211: ultrapassar veículos em fila, parados em razão de sinal luminoso, cancela, bloqueio viário parcial ou qualquer outro obstáculo, com exceção dos veículos não motorizados — infração grave. A exceção não alcança automóveis. Art. 208: avançar o sinal vermelho — hipótese distinta (não houve transposição do sinal no caso). Art. 213: deixar de parar quando a marcha é interceptada por agrupamento — também distinto.",
+      "passo_a_passo": [
+        "1. Caso: automóvel ultrapassa fila parada no semáforo vermelho — núcleo do art. 211; exceção de veículos não motorizados não beneficia o condutor.",
+        "2. A erra por regra_excecao (estende a exceção dos não motorizados a automóveis ou a qualquer ultrapassagem lenta); C erra por termo_unico (confunde ultrapassar fila com avançar o sinal vermelho — art. 208); D erra por gravidade (aplica art. 213, I, sem agrupamento interceptando a marcha).",
+        "3. B correta: art. 211 — infração grave por ultrapassar fila parada no sinal luminoso."
+      ],
+      "pegadinha": "A IDECAN induz a crer que ultrapassar fila no vermelho é avançar o sinal (art. 208) ou que a exceção do art. 211 vale para qualquer veículo — a norma pune a ultrapassagem da fila com gravidade grave.",
+      "macete": "211 = fila no sinal · GRAVE · exceção só NÃO motorizado · ≠ 208 (avançar vermelho).",
+      "estudo_reverso": [
+        "CTB art. 211",
+        "CTB art. 208",
+        "CTB art. 213",
+        "CTB art. 44-A"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 80,
+      "fundamento_slug": "CTB_art_211",
+      "macete_visual": "211 fila no sinal = GRAVE · exceção só bike",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Automóvel ultrapassa fila no vermelho sem avançar o sinal. A banca troca art. 211 por 208 ou generaliza a exceção.\n\nGabarito B: art. 211 — grave.",
+            "destaques": ["art. 211", "fila", "GRAVE"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Gravidade: fila × vermelho",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Conduta", "Natureza"],
+            "linhas": [
+              {
+                "faixa": "Ultrapassar fila no semáforo — art. 211",
+                "classificacao": "Grave",
+                "destaque": true
+              },
+              {
+                "faixa": "Avançar sinal vermelho — art. 208",
+                "classificacao": "Gravíssima"
+              }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha: fila × avançar vermelho",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Confusão ✗", "Regra ✓"],
+            "linhas": [
+              ["Ultrapassar fila = avançar vermelho", "Art. 211 — fila parada no sinal, grave"],
+              ["Exceção vale para automóvel", "Só veículos não motorizados"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "211 = fila no sinal · GRAVE.\nExceção só NÃO motorizado.\n≠ 208 (avançar vermelho).",
+            "destaques": ["211", "GRAVE", "208"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 211",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CTB_art_211",
+      "macete_visual": "211 fila no sinal = GRAVE · exceção só não motorizado",
+      "meta": {
+        "padrao_familia": "D_gradacao",
+        "pegadinha_em_uma_frase": "Ultrapassar fila no vermelho é art. 211 grave — não é avançar o sinal (208) e a exceção não vale para automóvel",
+        "eixos_legais": ["CTB_art_211", "CTB_art_208"],
+        "isca_por_alternativa": {
+          "A": "estende exceção dos não motorizados a automóveis",
+          "C": "confunde ultrapassar fila com avançar sinal vermelho — art. 208",
+          "D": "aplica art. 213, I, sem agrupamento interceptando marcha"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: fila parada ≠ avançar vermelho",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — estendeu a exceção a automóveis: art. 211 só exclui veículos não motorizados.\nC — confundiu ultrapassar fila com avançar o vermelho: o condutor não transpos o sinal.\nD — aplicou art. 213, I, sem desfile ou agrupamento interceptando a marcha.\n\nAutomóvel ultrapassou fila parada no semáforo vermelho.",
+            "destaques": ["Gabarito B", "fila", "art. 211"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 distinções",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "FILA PARADA NO SINAL: veículos imobilizados aguardando liberação do semáforo, cancela ou obstáculo — hipótese do art. 211.\n\nULTRAPASSAR A FILA: deslocar-se à frente dos veículos parados na fila — conduta punida pelo art. 211.\n\nAVANÇAR O VERMELHO: transpor a linha de parada ou o sinal vermelho — art. 208, hipótese distinta.",
+            "destaques": ["FILA", "ULTRAPASSAR", "AVANÇAR"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Gravidade: 211 × 208 × 213",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Conduta", "Natureza"],
+            "linhas": [
+              {
+                "faixa": "Ultrapassar fila no semáforo — art. 211",
+                "classificacao": "Grave",
+                "destaque": true
+              },
+              {
+                "faixa": "Avançar sinal vermelho — art. 208",
+                "classificacao": "Gravíssima"
+              },
+              {
+                "faixa": "Não parar ante agrupamento — art. 213, I",
+                "classificacao": "Gravíssima"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: fila, vermelho ou agrupamento?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Condutor ultrapassou veículos em fila parada no sinal?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "É veículo motorizado (não se enquadra na exceção)?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Infração grave — ultrapassagem de fila",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: fila × vermelho × exceção",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Ultrapassar fila no vermelho = avançar o sinal",
+                "Art. 211 pune a fila parada — grave, sem transpor o sinal"
+              ],
+              [
+                "Exceção do art. 211 vale para automóvel",
+                "Exceção restrita a veículos não motorizados"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Estende a exceção dos não motorizados a automóveis ou a qualquer ultrapassagem lenta"
+              ],
+              [
+                "C — termo_unico",
+                "Confunde ultrapassar fila parada com avançar o sinal vermelho — art. 208"
+              ],
+              [
+                "D — gravidade",
+                "Aplica art. 213, I, sem agrupamento de pessoas interceptando a marcha"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado — Campina Grande",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Conclusão legal"],
+            "linhas": [
+              ["Fila de veículos parada no semáforo vermelho", "Hipótese do art. 211"],
+              ["Automóvel ultrapassou pela direita e retornou à faixa", "Ultrapassagem de fila configurada"],
+              ["Sem transposição do sinal vermelho", "Art. 208 afastado"],
+              ["Resultado", "Gabarito B — infração grave"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "211 × 208 × 213",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Artigo", "O que pune"],
+            "linhas": [
+              ["Art. 211", "Ultrapassar fila parada no sinal — grave"],
+              ["Art. 208", "Avançar sinal vermelho ou parada obrigatória — gravíssima"],
+              ["Art. 213", "Não parar quando marcha interceptada por agrupamento"],
+              ["Caso (fila no vermelho)", "Art. 211 — grave"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 211 — fila no semáforo",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 211",
+            "texto": "Ultrapassar veículos em fila, parados em razão de sinal luminoso, cancela, bloqueio viário parcial ou qualquer outro obstáculo, com exceção dos veículos não motorizados. Infração - grave.",
+            "trechos_grifados": [
+              {
+                "inicio": 50,
+                "fim": 64,
+                "motivo": "contraste — fila parada por sinal luminoso, não avanço do vermelho"
+              },
+              {
+                "inicio": 181,
+                "fim": 186,
+                "motivo": "gradacao — art. 211 é grave, não gravíssima"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "211 = fila no sinal · GRAVE · exceção só NÃO motorizado · ≠ 208 (avançar vermelho).\n\nNear-transfer: ciclista ultrapassa fila parada no mesmo semáforo — exceção dos veículos não motorizados afasta o art. 211; automóvel na mesma manobra seria infração grave.",
+            "destaques": ["GRAVE", "não motorizado", "ciclista"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 211",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "tags": [
+      "infracoes",
+      "art_211",
+      "fila",
+      "semaforo",
+      "gravidade"
+    ]
+  }
+]

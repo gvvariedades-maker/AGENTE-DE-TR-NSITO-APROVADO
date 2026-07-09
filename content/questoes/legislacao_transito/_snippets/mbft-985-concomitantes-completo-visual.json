@@ -1,0 +1,283 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 280,
+  "fundamento_slug": "CONTRAN_985_mbft_concomitantes",
+  "macete_visual": "CONCOMITANTE=N AITs · INDEPENDENTES · ≠ concorrente",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "167+252 são concomitantes — dois AITs, não um com observações",
+    "eixos_legais": [
+      "CONTRAN_985_mbft_concomitantes",
+      "CTB_art_167",
+      "CTB_art_252"
+    ],
+    "isca_por_alternativa": {
+      "A": "unifica em 1 AIT com observações",
+      "B": "autua só o celular por gravidade",
+      "C": "autua só o cinto por ordem da abordagem"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: duas condutas, dois autos",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito D.\n\nA — um AIT com observações: regra de concorrentes/mesma raiz, não de concomitantes.\nB — só celular por gravidade: MBFT não autoriza escolher a mais grave.\nC — só cinto por ordem da abordagem: condutas são independentes.\n\nCinto + celular na mesma abordagem em Campina Grande.",
+        "destaques": [
+          "Gabarito D",
+          "concomitantes",
+          "2 AITs"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 tipos simultâneos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CONCORRENTE: uma infração implica a outra — 1 AIT (ex.: ultrapassagem pelo acostamento).\n\nCONCOMITANTE: condutas independentes — tantos AITs quantas infrações.\n\nNÃO SIMULTÂNEAS: estacionamento × movimento sem condução — apenas uma autuação.",
+        "destaques": [
+          "CONCORRENTE",
+          "CONCOMITANTE",
+          "NÃO SIMULTÂNEAS"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: quantos AITs lavrar?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "As condutas são independentes?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Uma conduta implica necessariamente a outra?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Tantos AITs quantas condutas — gabarito D",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — cinto e celular"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Não — concomitante"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Mapa: simultaneidade no MBFT",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Tipo",
+          "Regra de AIT"
+        ],
+        "linhas": [
+          {
+            "faixa": "Concorrente",
+            "classificacao": "Uma implica a outra — 1 AIT na conduta principal"
+          },
+          {
+            "faixa": "Concomitante",
+            "classificacao": "Condutas independentes — tantos AITs quantas condutas",
+            "destaque": true
+          },
+          {
+            "faixa": "Não simultâneas",
+            "classificacao": "Estacionamento × movimento sem condução — só uma"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Observações × autos separados",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Crença ✗",
+          "MBFT ✓"
+        ],
+        "linhas": [
+          [
+            "Duas infrações = 1 AIT + observações",
+            "Concomitante = AIT distinto para cada conduta"
+          ],
+          [
+            "Autuar só a mais grave",
+            "Não há seleção — lavrar todos os AITs cabíveis"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Unifica com observações — vale a concorrentes/mesma raiz, não a 167+252"
+          ],
+          [
+            "B — gravidade",
+            "Inventa hierarquia para autuar só o celular"
+          ],
+          [
+            "C — termo_unico",
+            "Prioriza ordem da abordagem em vez da independência das condutas"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do caso",
+          "Efeito MBFT"
+        ],
+        "linhas": [
+          [
+            "Sem cinto de segurança",
+            "Infração autônoma — AIT próprio"
+          ],
+          [
+            "Segurando celular ao volante",
+            "Infração autônoma — AIT próprio"
+          ],
+          [
+            "Mesma abordagem, veículo em movimento",
+            "Concomitante, não estacionamento"
+          ],
+          [
+            "Lavratura correta",
+            "Dois AITs — gabarito D"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Espelho: concorrente × concomitante",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Par de condutas",
+          "Classificação MBFT"
+        ],
+        "linhas": [
+          [
+            "Ultrapassagem + trânsito no acostamento",
+            "Concorrente — 1 AIT"
+          ],
+          [
+            "Cinto + celular (caso)",
+            "Concomitante — 2 AITs"
+          ],
+          [
+            "Sinal vermelho + excesso de velocidade",
+            "Concomitante — 2 AITs (exemplo MBFT)"
+          ],
+          [
+            "Estacionado + cinto sem condução",
+            "Não simultâneas — 1 AIT"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "MBFT — infrações concomitantes",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7",
+        "texto": "São concomitantes aquelas infrações que ocorrem de maneira independente umas da outras. Nesses casos, o agente deverá fazer tantos AITs quanto forem as condutas realizadas, na forma dos arts. 266 e 280 do CTB.",
+        "trechos_grifados": [
+          {
+            "inicio": 59,
+            "fim": 71,
+            "motivo": "contraste — cinto e celular não se implicam"
+          },
+          {
+            "inicio": 124,
+            "fim": 171,
+            "motivo": "mapa — regra dos concomitantes"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "MBFT — exemplo cinto + celular",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7",
+        "texto": "Condutor que não usa o cinto de segurança (art.167) e que está segurando telefone celular (art. 252, parágrafo único).",
+        "trechos_grifados": [
+          {
+            "inicio": 0,
+            "fim": 118,
+            "motivo": "caso — par canônico do MBFT para 2 AITs"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CONCOMITANTE=N AITs · INDEPENDENTES · 167+252=2 autos · ≠ concorrente.\n\nNear-transfer: mesmo condutor avança o sinal vermelho e excede o limite em 15% — MBFT exemplifica como concomitante: dois AITs distintos.",
+        "destaques": [
+          "N AITs",
+          "Near-transfer",
+          "≠ concorrente"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "MBFT — Seção 7",
+      "path": "conteúdo/resoluções CONTRAN/MBFT-anexo-resolucao-985-2022-secao-07-autuacao.txt"
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_900_recursos",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_900_art_8",
+    "enunciado": "Veículo com registro e licenciamento no Detran de São Paulo/SP é autuado pela STTP em Campina Grande/PB por infração de estacionamento. O proprietário apresenta recurso em primeira instância tempestivo e formalmente regular nos termos do art. 3º da Resolução CONTRAN nº 900/2022. Considerando a resolução, assinale a alternativa CORRETA quanto ao arquivamento do processo:",
+    "alternativas": {
+      "A": "O processo deverá permanecer arquivado junto à STTP de Campina Grande ou à sua JARI, conforme o art. 8º da Resolução CONTRAN nº 900/2022.",
+      "B": "O processo deverá ser remetido ao Detran de São Paulo, órgão de licenciamento do veículo, para julgamento e arquivamento definitivo.",
+      "C": "O processo poderá permanecer no Detran da Paraíba, por ser o Estado da autuação, independentemente do local de registro do veículo.",
+      "D": "O processo deverá ser encaminhado ao CETRAN da Paraíba, por envolver veículo registrado em Unidade Federativa diversa da autuação."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Arquivamento de defesa/recurso de veículo registrado em outro órgão executivo de trânsito (Res. CONTRAN 900/2022, art. 8º) e distinção do órgão de licenciamento.",
+      "fundamento_legal": "Res. CONTRAN 900/2022, art. 8º: \"A defesa prévia ou o recurso referente a veículo registrado em outro órgão executivo de trânsito deverá permanecer arquivado junto ao órgão ou entidade de trânsito autuador ou à sua JARI.\" Art. 7º: os processos julgados permanecem com o órgão autuador ou sua JARI. O Detran-SP é órgão de licenciamento — não substitui o autuador para arquivamento do recurso.",
+      "passo_a_passo": [
+        "1. Autuação pela STTP em Campina Grande; veículo registrado em SP — hipótese do art. 8º da Res. 900/2022.",
+        "2. B erra por competencia_snt (remete ao Detran de licenciamento — art. 8º fixa autuador/JARI); C erra por regra_excecao (Detran-PB não arquiva por ser UF da infração — critério é autuador); D erra por termo_unico (confunde CETRAN com JARI do autuador na 1ª instância).",
+        "3. A correta: processo permanece arquivado na STTP/JARI de Campina Grande — art. 8º."
+      ],
+      "pegadinha": "A IDECAN induz a remeter o processo ao Detran do licenciamento (SP) — o art. 8º manda arquivar junto ao órgão autuador ou à sua JARI, ainda que o veículo seja de outra UF.",
+      "macete": "Arquivo = AUTUADOR ou JARI · licenciamento ≠ julgamento · art. 8º = veículo de outra UF.",
+      "estudo_reverso": [
+        "Res. CONTRAN 900/2022 art. 7",
+        "Res. CONTRAN 900/2022 art. 8",
+        "Res. CONTRAN 900/2022 art. 3",
+        "CTB art. 287"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CONTRAN_900_art_8",
+      "macete_visual": "Arquivo = AUTUADOR/JARI · não Detran licenciador",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Veículo de SP autuado em Campina Grande. A banca troca art. 8º por remessa ao Detran de licenciamento.",
+            "destaques": ["art. 8º", "autuador", "JARI"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Licenciamento × autuação",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Órgão", "Papel no caso"],
+            "linhas": [
+              ["Detran-SP", "Licenciamento — não arquiva o recurso"],
+              ["STTP Campina Grande", "Autuador — arquiva com JARI (art. 8º)"],
+              ["CETRAN-PB", "Não substitui JARI na 1ª instância"]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Onde arquivar?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Veículo registrado em outro órgão executivo?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Defesa ou recurso já apresentado?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Arquiva no autuador ou JARI — gabarito A", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — SP × CG" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha: Detran do licenciamento",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Confusão ✗", "Regra ✓"],
+            "linhas": [
+              ["Placa SP → processo vai ao Detran-SP", "Art. 8º: arquiva no autuador ou JARI"],
+              ["UF da infração manda no Detran estadual", "Critério é quem autuou — STTP CG"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Arquivo = AUTUADOR ou JARI · licenciamento ≠ recurso · art. 8º = outra UF.",
+            "destaques": ["AUTUADOR", "JARI", "art. 8º"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 900/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 900, DE 9 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "diagrama_competencia",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "CONTRAN_900_art_8",
+      "macete_visual": "Arquivo = AUTUADOR/JARI · art. 7º + art. 8º",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Veículo de outra UF não leva o processo ao Detran licenciador — arquiva no autuador/JARI",
+        "eixos_legais": ["CONTRAN_900_art_8", "CONTRAN_900_art_7"],
+        "isca_por_alternativa": {
+          "B": "remete ao Detran de licenciamento em vez do autuador",
+          "C": "fixa arquivamento no Detran estadual da infração",
+          "D": "sobe ao CETRAN na primeira instância recursal"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: placa de SP não muda o arquivo",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A (art. 8º — arquivamento no autuador/JARI).\n\nB — Detran-SP: licenciamento não substitui autuador para arquivo do recurso.\nC — Detran-PB: não arquiva só por ser UF da autuação — critério é quem autuou.\nD — CETRAN-PB: não recebe processo de 1ª instância no lugar da JARI local.\n\nSTTP Campina Grande autuou veículo registrado em São Paulo.",
+            "destaques": ["Gabarito A", "art. 8º", "STTP"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 órgãos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ÓRGÃO AUTUADOR: quem lavrou o AIT — STTP Campina Grande no caso.\n\nJARI: Junta Administrativa de Recursos de Infrações do autuador — julga 1ª instância.\n\nÓRGÃO DE LICENCIAMENTO: Detran onde o veículo está registrado (SP) — distinto do arquivo do recurso.",
+            "destaques": ["AUTUADOR", "JARI", "LICENCIAMENTO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: onde fica o processo?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Veículo registrado em outro órgão executivo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Há defesa prévia ou recurso apresentado?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Arquiva no autuador ou JARI — gabarito A",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Quem guarda o processo",
+          "secao": "mapa",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "sttp", "label": "STTP Campina Grande — autuador", "nivel": 0 },
+              { "id": "jari", "label": "JARI local — 1ª instância", "nivel": 1 },
+              { "id": "detransp", "label": "Detran-SP — licenciamento", "nivel": 2 },
+              { "id": "detranpb", "label": "Detran-PB — executivo estadual", "nivel": 2 }
+            ],
+            "arestas": [
+              { "de": "sttp", "para": "jari", "rotulo": "arquiva art. 8º" },
+              { "de": "detransp", "para": "sttp", "rotulo": "não arquiva recurso" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: licenciamento × autuação",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Placa de outra UF → processo vai ao Detran licenciador",
+                "Art. 8º: permanece arquivado no autuador ou JARI"
+              ],
+              [
+                "Detran do Estado da infração arquiva o recurso",
+                "Critério é o órgão que autuou — STTP municipal"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — competencia_snt",
+                "Remete ao Detran de licenciamento — art. 8º fixa autuador/JARI"
+              ],
+              [
+                "C — regra_excecao",
+                "Inventa arquivamento no Detran-PB pela UF da infração"
+              ],
+              [
+                "D — termo_unico",
+                "Confunde CETRAN com JARI do autuador na 1ª instância"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento do caso", "Efeito legal"],
+            "linhas": [
+              ["Veículo registrado no Detran-SP", "Outro órgão executivo — art. 8º"],
+              ["Autuação pela STTP em Campina Grande", "Autuador = STTP municipal"],
+              ["Recurso tempestivo e regular (art. 3º)", "Processo em curso válido"],
+              ["Arquivamento", "STTP ou JARI local — gabarito A"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 7º × art. 8º",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Regra"],
+            "linhas": [
+              ["Art. 7º", "Processos julgados permanecem com autuador ou JARI"],
+              ["Art. 8º", "Veículo de outra UF — mesmo critério de arquivo"],
+              ["Detran licenciador", "Não substitui autuador no arquivamento"],
+              ["Caso SP × CG", "Arquivo na STTP/JARI de Campina Grande"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Res. 900/2022, art. 8º",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 900/2022, art. 8º",
+            "texto": "A defesa prévia ou o recurso referente a veículo registrado em outro órgão executivo de trânsito deverá permanecer arquivado junto ao órgão ou entidade de trânsito autuador ou à sua JARI.",
+            "trechos_grifados": [
+              {
+                "inicio": 63,
+                "fim": 96,
+                "motivo": "caso — veículo registrado no Detran-SP"
+              },
+              {
+                "inicio": 104,
+                "fim": 172,
+                "motivo": "contraste — arquivo no autuador/JARI, não no licenciador"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Res. 900/2022, art. 7º",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 900/2022, art. 7º",
+            "texto": "Os processos de defesa prévia e de recurso, depois de julgados e juntamente com o resultado de sua apreciação deverão permanecer com o órgão autuador ou com sua Junta Administrativa de Recursos de Infrações (JARI).",
+            "trechos_grifados": [
+              {
+                "inicio": 118,
+                "fim": 149,
+                "motivo": "hierarquia — regra geral de permanência no autuador"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Arquivo = AUTUADOR ou JARI · licenciamento ≠ recurso · art. 7º + art. 8º.\n\nNear-transfer: mesmo veículo de SP, mas infração lavrada pela PRF na BR-230 — art. 8º ainda manda arquivar no órgão autuador (PRF) ou sua JARI, não no Detran-SP.",
+            "destaques": ["AUTUADOR", "PRF", "art. 8º"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 900/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 900, DE 9 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    },
+    "tags": [
+      "defesa_previa",
+      "resolucao_900",
+      "recursos",
+      "arquivamento",
+      "jari",
+      "competencia_snt"
+    ]
+  }
+]

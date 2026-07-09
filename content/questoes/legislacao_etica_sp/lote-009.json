@@ -1,0 +1,294 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_1_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 4,
+    "fundamento_slug": "LOM_art16",
+    "enunciado": "A Comissão de Patrimônio da Câmara Municipal de Campina Grande sustenta que, por se tratar de bens móveis do Município, cabe ao Legislativo administrar e autorizar a alienação das motocicletas desativadas do parque da STTP, sem intervenção do Poder Executivo. O jurídico da autarquia consulta a Lei Orgânica sobre a administração do patrimônio municipal. Assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Cabe ao Poder Executivo a administração, guarda e conservação dos bens municipais, respeitada a competência do Poder Legislativo quanto àqueles utilizados em seus serviços, aplicando-se as regras do domínio público às autarquias, na forma dos arts. 16 e 22 da Lei Orgânica.",
+      "B": "A Câmara Municipal detém competência exclusiva para administrar todo o patrimônio móvel e imóvel do Município, inclusive bens vinculados à STTP, por ser ente de fiscalização do Executivo.",
+      "C": "Por possuir personalidade jurídica própria, a STTP administra seu patrimônio de forma autônoma, sem aplicação das normas de domínio público da Seção IV da Lei Orgânica.",
+      "D": "A alienação de bens móveis da STTP depende apenas de autorização legislativa prévia, dispensada a administração e guarda pelo Poder Executivo previstas no art. 16."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Administração do patrimônio municipal — art. 16 da Lei Orgânica de Campina Grande (Executivo administra; Legislativo só sobre bens de seus serviços) e extensão às autarquias pelo art. 22.",
+      "fundamento_legal": "Lei Orgânica de Campina Grande, art. 16: \"Cabe ao Poder Executivo a administração, guarda e conservação dos bens municipais, respeitada a competência do Poder Legislativo quanto àqueles utilizados em seus serviços.\" Art. 22: \"O disposto nesta seção se aplica às autarquias e às fundações públicas.\"",
+      "passo_a_passo": [
+        "1. O caso envolve motocicletas da STTP (bens municipais móveis) — art. 15; administração é do Executivo, com ressalva para bens do Legislativo em seus serviços (art. 16); a Seção IV alcança autarquias (art. 22).",
+        "2. B erra por competencia_snt (atribui à Câmara administração exclusiva de todo patrimônio, inclusive da STTP); C erra por regra_excecao (exclui autarquia das regras de domínio público — art. 22 estende a seção); D erra por termo_unico (reduz o art. 16 à autorização legislativa de alienação, suprimindo administração e guarda pelo Executivo).",
+        "3. A está correta: reproduz arts. 16 e 22 da Lei Orgânica."
+      ],
+      "pegadinha": "A banca confunde fiscalização/controle político da Câmara com administração patrimonial ou exclui a STTP do domínio público municipal.",
+      "macete": "Bens municipais = Executivo administra | Câmara só os de seus serviços | autarquia → art. 22.",
+      "estudo_reverso": [
+        "Lei Orgânica CG art. 16",
+        "Lei Orgânica CG art. 22",
+        "Lei Orgânica CG art. 15"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "diagrama_competencia",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "LOM_art16",
+      "macete_visual": "Executivo administra bens | Câmara só os seus",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Câmara não administra frota da STTP — art. 16: Executivo administra bens municipais; art. 22 inclui autarquias.",
+            "destaques": ["art. 16", "Executivo", "art. 22"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem administra o patrimônio",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "executivo", "label": "Executivo — administra bens municipais (art. 16)", "nivel": 1 },
+              { "id": "camara", "label": "Câmara — bens de seus serviços", "nivel": 2 },
+              { "id": "sttp", "label": "STTP — autarquia (art. 22)", "nivel": 2 }
+            ],
+            "arestas": [
+              { "de": "executivo", "para": "sttp", "rotulo": "administra patrimônio" },
+              { "de": "camara", "para": "camara", "rotulo": "bens do Legislativo" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              [
+                "Câmara administra toda frota municipal",
+                "Executivo administra — Câmara só bens de seus serviços"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Bens municipais = Executivo administra | Câmara só os de seus serviços | autarquia → art. 22.",
+            "destaques": ["Executivo", "art. 22"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei Orgânica de Campina Grande, art. 16",
+          "path": "conteúdo/municipal/lei-organica-campina-grande.txt"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 245,
+      "fundamento_slug": "LOM_art16",
+      "macete_visual": "Executivo administra · Câmara só seus bens · art. 22",
+      "meta": {
+        "padrao_familia": "C_competencia_snt",
+        "pegadinha_em_uma_frase": "Câmara não administra frota da STTP — art. 16 é do Executivo; art. 22 alcança autarquia",
+        "eixos_legais": ["LOM_art16", "LOM_art22", "LOM_art15"],
+        "isca_por_alternativa": {
+          "B": "Câmara com administração exclusiva de todo patrimônio",
+          "C": "STTP fora das regras de domínio público municipal",
+          "D": "alienação só com Câmara, sem Executivo no art. 16"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: Executivo administra, não a Câmara",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — Câmara exclusiva em todo patrimônio: art. 16 é do Executivo.\nC — STTP fora da Seção IV: art. 22 estende às autarquias.\nD — só autorização legislativa: art. 16 exige administração do Executivo.\n\nA isca é confundir fiscalização da Câmara com administração patrimonial.",
+            "destaques": ["Gabarito A", "art. 16", "STTP"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "BENS MUNICIPAIS: móveis e imóveis do Município — art. 15.\n\nADMINISTRAÇÃO PATRIMONIAL: guarda e conservação pelo Poder Executivo — art. 16, caput.\n\nAUTARQUIA: ente da administração indireta — regras da Seção IV aplicam-se por força do art. 22.",
+            "destaques": ["BENS MUNICIPAIS", "ADMINISTRAÇÃO", "AUTARQUIA"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem faz o quê no patrimônio",
+          "secao": "metodo",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "norma", "label": "Art. 16 — domínio público municipal", "nivel": 0 },
+              { "id": "executivo", "label": "Poder Executivo — administra, guarda e conserva", "nivel": 1 },
+              { "id": "camara", "label": "Câmara — bens utilizados em seus serviços", "nivel": 2 },
+              { "id": "sttp", "label": "STTP — patrimônio sujeito ao art. 22", "nivel": 2 }
+            ],
+            "arestas": [
+              { "de": "norma", "para": "executivo", "rotulo": "competência geral" },
+              { "de": "executivo", "para": "sttp", "rotulo": "frota desativada" },
+              { "de": "norma", "para": "camara", "rotulo": "exceção — bens do Legislativo" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: Câmara × Executivo",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Câmara administra motos da STTP por ser patrimônio municipal",
+                "Executivo administra bens municipais — art. 16"
+              ],
+              [
+                "Autarquia escapa do domínio público da LOM",
+                "Art. 22 aplica a Seção IV às autarquias"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — competencia_snt",
+                "Atribui à Câmara administração exclusiva — art. 16 é do Executivo"
+              ],
+              [
+                "C — regra_excecao",
+                "Exclui STTP da Seção IV — art. 22 estende regras às autarquias"
+              ],
+              [
+                "D — termo_unico",
+                "Corta administração do Executivo — art. 16 não se reduz à autorização de alienação"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos do enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              ["Motocicletas desativadas da STTP", "Bens municipais móveis — art. 15"],
+              ["Comissão da Câmara quer administrar e alienar", "Competência é do Executivo — art. 16"],
+              ["STTP é autarquia municipal", "Seção IV aplica-se — art. 22"],
+              ["Resultado", "Gabarito A"]
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Órgão × função patrimonial",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Órgão", "Papel na LOM"],
+            "linhas": [
+              ["Poder Executivo", "Administra, guarda e conserva bens municipais (art. 16)"],
+              ["Câmara Municipal", "Competência sobre bens utilizados em seus serviços"],
+              ["STTP (autarquia)", "Sujeita à Seção IV — art. 22"],
+              ["Comissão de Patrimônio da Câmara", "Não substitui Executivo na frota da STTP"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 16 — administração patrimonial",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei Orgânica de Campina Grande, art. 16",
+            "texto": "Cabe ao Poder Executivo a administração, guarda e conservação dos bens municipais, respeitada a competência do Poder Legislativo quanto àqueles utilizados em seus serviços.",
+            "trechos_grifados": [
+              {
+                "inicio": 8,
+                "fim": 61,
+                "motivo": "diagrama — Executivo administra, guarda e conserva"
+              },
+              {
+                "inicio": 96,
+                "fim": 171,
+                "motivo": "contraste — Câmara só sobre bens de seus serviços"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 22 — autarquias na Seção IV",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei Orgânica de Campina Grande, art. 22",
+            "texto": "O disposto nesta seção se aplica às autarquias e às fundações públicas.",
+            "trechos_grifados": [
+              {
+                "inicio": 36,
+                "fim": 46,
+                "motivo": "caso — STTP como autarquia alcançada pela Seção IV"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Bens municipais = Executivo administra | Câmara só os de seus serviços | autarquia → art. 22.\n\nNear-transfer: mobiliário do plenário e do arquivo da Câmara — hipótese em que o Legislativo exerce competência sobre bens utilizados em seus serviços, nos termos do art. 16.",
+            "destaques": ["art. 16", "Near-transfer", "art. 22"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei Orgânica de Campina Grande, art. 16",
+          "path": "conteúdo/municipal/lei-organica-campina-grande.txt"
+        },
+        {
+          "rotulo": "Lei Orgânica de Campina Grande, art. 22",
+          "path": "conteúdo/municipal/lei-organica-campina-grande.txt"
+        }
+      ]
+    },
+    "tags": [
+      "lei_organica_cg",
+      "dominio_publico",
+      "sttp",
+      "patrimonio",
+      "competencia"
+    ]
+  }
+]

@@ -1,0 +1,332 @@
+[
+  {
+    "disciplina": "direito_administrativo",
+    "topico": "dir_adm_6_2",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 5,
+    "fundamento_slug": "CF_art_41",
+    "enunciado": "Na STTP, servidor ocupa cargo em comissão de direção há quatro anos e alega estabilidade pelo tempo de exercício. Outro servidor, em cargo efetivo aprovado em concurso, com dois anos e oito meses de exercício, recebe notificação de exoneração imediata sem processo administrativo. A assessoria jurídica analisa cargo efetivo, cargo em comissão e estabilidade. Considerando a Constituição Federal e a Lei nº 8.112/1990, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Apenas o servidor em cargo de provimento efetivo, mediante concurso público, adquire estabilidade após três anos de efetivo exercício; cargo em comissão não confere estabilidade e é de livre exoneração.",
+      "B": "O ocupante de cargo em comissão de direção adquire estabilidade após três anos de efetivo exercício, nos termos do art. 41 da Constituição Federal.",
+      "C": "A estabilidade do servidor efetivo ocorre após dois anos de exercício, conforme a Lei nº 8.112/1990, aplicável às autarquias federais.",
+      "D": "Funções de confiança e cargos em comissão podem ser exercidos indistintamente por servidores efetivos ou por particulares, em qualquer hipótese."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Cargo efetivo × cargo em comissão e estabilidade (CF art. 41; art. 37, V) — distinção de provimento e prazo constitucional de três anos.",
+      "fundamento_legal": "CF/88, art. 41, caput: \"São estáveis após três anos de efetivo exercício os servidores nomeados para cargo de provimento efetivo em virtude de concurso público.\" CF/88, art. 37, V: funções de confiança exercidas exclusivamente por servidores em cargo efetivo; cargos em comissão para direção, chefia e assessoramento. Lei 8.112/90, art. 3, § único: provimento em caráter efetivo ou em comissão. Art. 9, II: nomeação em comissão para cargos de confiança vagos.",
+      "passo_a_passo": [
+        "1. Estabilidade exige cargo de provimento efetivo via concurso + 3 anos de efetivo exercício (CF art. 41). Cargo em comissão é de confiança/livre exoneração — não estabiliza. Servidor efetivo com 2 anos ainda não é estável.",
+        "2. B erra por regra_excecao (estende estabilidade ao cargo em comissão); C erra por numero_vizinho (2 anos da redação antiga da Lei 8.112/90 × 3 anos da CF); D erra por termo_unico (admite particulares em função de confiança — art. 37, V exige cargo efetivo).",
+        "3. A correta: síntese do art. 41 + distinção efetivo/comissão."
+      ],
+      "pegadinha": "A banca troca cargo em comissão (livre exoneração) com efetivo estável, ou usa o prazo de 2 anos da lei em descompasso com os 3 anos da CF.",
+      "macete": "EFETIVO+concurso+3a = ESTÁVEL | COMISSÃO = livre exoneração | FUNÇÃO = só efetivo (art.37,V).",
+      "estudo_reverso": [
+        "CF art. 41",
+        "CF art. 37, V",
+        "Lei 8.112/90 art. 3"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CF_art_41",
+      "macete_visual": "EFETIVO+3a estável | COMISSÃO livre",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Estabilidade só em cargo efetivo via concurso — 3 anos (CF art. 41). Comissão não estabiliza; 2 anos da lei é pegadinha.",
+            "destaques": ["estabilidade", "cargo efetivo", "comissão"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Efetivo × comissão",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "CF art. 41 ✓"],
+            "linhas": [
+              [
+                "Comissão de direção estabiliza em 3 anos",
+                "Estável só provimento efetivo via concurso — 3 anos"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Cargo é de provimento efetivo?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Três anos de efetivo exercício?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito A — só efetivo estabiliza", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p1", "para": "r1", "rotulo": "Não" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 41 — estabilidade",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 41, caput",
+            "texto": "São estáveis após três anos de efetivo exercício os servidores nomeados para cargo de provimento efetivo em virtude de concurso público.",
+            "trechos_grifados": [
+              { "inicio": 18, "fim": 48, "motivo": "três anos de efetivo exercício" },
+              { "inicio": 77, "fim": 104, "motivo": "provimento efetivo via concurso" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "EFETIVO+concurso+3a = ESTÁVEL | COMISSÃO = livre exoneração | FUNÇÃO = só efetivo (art.37,V).",
+            "destaques": ["EFETIVO", "COMISSÃO", "3a"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88 art. 41",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CF_art_41",
+      "macete_visual": "EFETIVO+3a estável | COMISSÃO livre",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Cargo em comissão não estabiliza — só efetivo via concurso após 3 anos",
+        "eixos_legais": ["CF_art_41", "CF_art_37_V", "Lei8112_art3"],
+        "isca_por_alternativa": {
+          "B": "estende estabilidade do art. 41 ao cargo em comissão",
+          "C": "usa prazo de 2 anos da Lei 8.112/90 em vez dos 3 da CF",
+          "D": "admite particulares em função de confiança — art. 37, V exige efetivo"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: efetivo × comissão",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — comissão estabiliza: art. 41 só alcança provimento efetivo.\nC — 2 anos na lei: CF exige 3 anos após EC 19/1998.\nD — particulares em função de confiança: art. 37, V exige cargo efetivo.\n\nPegadinha: tempo em comissão não gera estabilidade.",
+            "destaques": ["Gabarito A", "três anos", "comissão"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Cargo efetivo: provimento via concurso público — pode gerar estabilidade após 3 anos (CF art. 41).\nCargo em comissão: provimento de confiança — livre exoneração, sem estabilidade (Lei 8.112/90, art. 9, II).\nFunção de confiança: atribuições de direção/chefia/assessoramento — exercida por servidor em cargo efetivo (CF art. 37, V).",
+            "destaques": ["efetivo", "comissão", "função de confiança"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "MÉTODO: dois servidores da STTP",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Cargo é de provimento efetivo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Completou três anos de exercício?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito A — só efetivo estabiliza",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p1", "para": "r1", "rotulo": "Não" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Provimento e estabilidade",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Tipo", "Regra"],
+            "linhas": [
+              {
+                "faixa": "Cargo efetivo",
+                "classificacao": "Concurso — estável após 3 anos (CF art. 41)",
+                "destaque": true
+              },
+              {
+                "faixa": "Cargo em comissão",
+                "classificacao": "Confiança — livre exoneração (art. 9, II)"
+              },
+              {
+                "faixa": "Função de confiança",
+                "classificacao": "Só servidor em cargo efetivo (art. 37, V)"
+              },
+              {
+                "faixa": "Caso comissão 4 anos",
+                "classificacao": "Não gera estabilidade"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Comissão × estabilidade",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a banca insinua ✗", "Regra correta ✓"],
+            "linhas": [
+              [
+                "Diretor em comissão há 4 anos é estável",
+                "Estabilidade só para provimento efetivo via concurso"
+              ],
+              [
+                "Estabilidade em 2 anos pela Lei 8.112/90",
+                "CF art. 41: três anos de efetivo exercício"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — regra_excecao",
+                "Estende estabilidade do art. 41 ao cargo em comissão de direção"
+              ],
+              [
+                "C — numero_vizinho",
+                "Usa 2 anos da lei — prazo constitucional é 3 anos"
+              ],
+              [
+                "D — termo_unico",
+                "Admite particulares em função de confiança — art. 37, V exige efetivo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso STTP", "Consequência"],
+            "linhas": [
+              ["Servidor em comissão há 4 anos", "Sem estabilidade — livre exoneração"],
+              ["Servidor efetivo com 2 anos e 8 meses", "Ainda não estável — faltam 4 meses"],
+              ["Exoneração imediata do efetivo sem PAD", "Ilegal se estável; possível se não estável"],
+              ["Resultado", "Alternativa A — única defensável"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 41 — estabilidade",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 41, caput",
+            "texto": "São estáveis após três anos de efetivo exercício os servidores nomeados para cargo de provimento efetivo em virtude de concurso público.",
+            "trechos_grifados": [
+              {
+                "inicio": 18,
+                "fim": 48,
+                "motivo": "contraste — três anos, não dois"
+              },
+              {
+                "inicio": 77,
+                "fim": 104,
+                "motivo": "mapa — provimento efetivo via concurso"
+              }
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Art. 37, V — função e comissão",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Instituto", "Quem exerce"],
+            "linhas": [
+              ["Função de confiança", "Exclusivamente servidor em cargo efetivo"],
+              ["Cargo em comissão", "Direção, chefia, assessoramento — regras em lei"],
+              ["Alternativa D", "Errada — não admite particulares na função"],
+              ["Caso STTP", "Comissão ≠ estabilidade do art. 41"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "EFETIVO+concurso+3a = ESTÁVEL | COMISSÃO = livre exoneração | FUNÇÃO = só efetivo (art.37,V).\n\nNear-transfer: agente efetivo da STTP com 3 anos pede exoneração sumária do diretor em comissão — pode? Sim, comissão é de livre exoneração; o efetivo só perde cargo com PAD se já estável.",
+            "destaques": ["EFETIVO+3a", "COMISSÃO", "near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88 art. 41",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        },
+        {
+          "rotulo": "Lei 8.112/90 art. 3",
+          "path": "conteúdo/legislação federal/lei-8112-servidores.html"
+        }
+      ]
+    },
+    "tags": [
+      "cargo_efetivo",
+      "cargo_comissao",
+      "estabilidade",
+      "cf_88"
+    ]
+  }
+]

@@ -1,0 +1,295 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_1_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 5,
+    "fundamento_slug": "LOM_art104_par2",
+    "enunciado": "A gerência de sinalização da STTP pretende contratar, sem licitação, empresa para manutenção emergencial de semáforos, invocando valor reduzido e urgência não previstos em lei como hipótese de dispensa. O setor jurídico consulta a Lei Orgânica de Campina Grande sobre as consequências de contratar obra ou serviço sem o processo licitatório exigido. Assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O descumprimento do art. 104 da Lei Orgânica acarreta nulidade do ato e responsabilidade pessoal e funcional de quem o houver autorizado ou executado.",
+      "B": "Valores reduzidos de contratação dispensam licitação municipal por analogia, bastando publicidade posterior no órgão oficial de imprensa do Município.",
+      "C": "A contratação irregular gera nulidade do ato, mas a responsabilização pessoal do agente depende de sentença judicial transitada em julgado.",
+      "D": "Por se tratar de autarquia, a STTP observa apenas normas federais de licitação, não se aplicando o art. 104 da Lei Orgânica municipal."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Licitação municipal e sanções do art. 104 da Lei Orgânica de Campina Grande — regra geral do caput, exceções apenas na legislação e efeitos do § 2º (nulidade + responsabilidade pessoal e funcional).",
+      "fundamento_legal": "Lei Orgânica de Campina Grande, art. 104: \"Ressalvados os casos especificados na legislação, as obras, serviços, compras e alienações, serão sempre contratados mediante processo de licitação pública...\" § 2º: \"O descumprimento do disposto neste artigo acarretará nulidade do ato e a responsabilidade pessoal e funcional de quem o houver autorizado ou executado.\"",
+      "passo_a_passo": [
+        "1. O caso é contratação de serviço pela STTP sem licitação, sem hipótese legal de dispensa — viola o caput do art. 104; consequências estão no § 2º.",
+        "2. B erra por regra_excecao (inventa dispensa por valor reduzido e urgência não previstos em lei); C erra por termo_unico (reconhece nulidade, mas exige sentença judicial para responsabilização — o § 2º fala em responsabilidade pessoal e funcional direta); D erra por competencia_snt (exclui a LOM da autarquia, quando o art. 104 integra a organização municipal e o § 1º remete às normas gerais da União).",
+        "3. A está correta: reproduz o § 2º do art. 104 da Lei Orgânica."
+      ],
+      "pegadinha": "A banca aceita urgência/valor baixo como dispensa automática ou separa autarquia da regra — mas o caput só ressalva casos na legislação e o § 2º combina nulidade com responsabilidade pessoal.",
+      "macete": "Sem licitação legal na LOM = nulidade + responsabilidade de quem autorizou (art. 104, § 2º).",
+      "estudo_reverso": [
+        "Lei Orgânica CG art. 104",
+        "Lei Orgânica CG art. 104, § 1º",
+        "Lei Orgânica CG art. 22"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "LOM_art104_par2",
+      "macete_visual": "Sem licitação legal = nulidade + responsabilidade",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Urgência ou valor baixo não dispensam licitação por analogia — art. 104, § 2º: nulidade + responsabilidade de quem autorizou.",
+            "destaques": ["§ 2º", "nulidade", "licitação"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Triagem licitação",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Há hipótese legal de dispensa na legislação?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Contratou sem licitação exigida?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito A — nulidade + responsabilidade", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Valor baixo dispensa licitação", "Só casos especificados na legislação"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Sem licitação legal = nulidade + responsabilidade de quem autorizou.",
+            "destaques": ["nulidade", "responsabilidade"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei Orgânica de Campina Grande, art. 104",
+          "path": "conteúdo/municipal/lei-organica-campina-grande.txt"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 250,
+      "fundamento_slug": "LOM_art104_par2",
+      "macete_visual": "Sem licitação legal = nulidade + responsabilidade · §2º",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Urgência/valor baixo não criam dispensa — §2º soma nulidade e responsabilidade pessoal",
+        "eixos_legais": ["LOM_art104", "LOM_art104_par1", "LOM_art22"],
+        "isca_por_alternativa": {
+          "B": "dispensa por valor/urgência não previstos em lei",
+          "C": "exige sentença para responsabilizar o agente",
+          "D": "STTP escapa da LOM por ser autarquia"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: dispensa inventada não vale",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — cria dispensa por valor/urgência fora da lei.\nC — exige sentença: o § 2º já prevê responsabilidade pessoal.\nD — exclui autarquia: art. 104 vale para administração municipal.\n\nNesta aula você fixa regra, exceção legal e sanção do § 2º.",
+            "destaques": ["Gabarito A", "§ 2º", "licitação"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "LICITAÇÃO PÚBLICA: processo para contratar obras, serviços, compras e alienações (art. 104, caput).\n\nDISPENSA/INEXIGIBILIDADE: exceções apenas se especificadas na legislação — não por analogia.\n\nRESPONSABILIDADE PESSOAL E FUNCIONAL: sanção direta a quem autorizou ou executou ato sem licitação (§ 2º).",
+            "destaques": ["LICITAÇÃO", "DISPENSA", "RESPONSABILIDADE"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: faltou licitação?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "A legislação prevê dispensa para este caso?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Contratou serviço sem licitação exigida?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito A — nulidade + responsabilidade", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Art. 104 — regra e exceção",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Hipótese", "Consequência"],
+            "linhas": [
+              {
+                "faixa": "Regra (caput)",
+                "classificacao": "Obras, serviços, compras e alienações → licitação pública",
+                "destaque": true
+              },
+              {
+                "faixa": "Exceção legal",
+                "classificacao": "Somente casos especificados na legislação"
+              },
+              {
+                "faixa": "Descumprimento (§ 2º)",
+                "classificacao": "Nulidade do ato + responsabilidade pessoal e funcional"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: urgência × lei",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Valor baixo ou urgência dispensam licitação",
+                "Só exceções previstas na legislação (caput)"
+              ],
+              [
+                "Nulidade basta; punição exige processo judicial",
+                "§ 2º inclui responsabilidade pessoal e funcional"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — regra_excecao",
+                "Inventa dispensa por valor/urgência não previstos em lei"
+              ],
+              [
+                "C — termo_unico",
+                "Corta responsabilidade pessoal — exige sentença não prevista no § 2º"
+              ],
+              [
+                "D — competencia_snt",
+                "Exclui autarquia da LOM; art. 104 integra administração municipal"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo a contratação da STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Conclusão legal"],
+            "linhas": [
+              [
+                "Manutenção de semáforos sem licitação",
+                "Serviço sujeito ao caput — licitação obrigatória"
+              ],
+              [
+                "Urgência e valor reduzido não previstos em lei",
+                "Sem exceção legal — dispensa por analogia vedada"
+              ],
+              ["Resultado", "Gabarito A — nulidade + responsabilidade (§ 2º)"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "LOM, União e autarquia",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Tese errada", "Correção"],
+            "linhas": [
+              ["STTP não segue art. 104", "Autarquia integra administração municipal (art. 22)"],
+              ["Só lei federal de licitação importa", "§ 1º observa normas gerais da União + regra da LOM"],
+              ["Publicidade posterior salva o ato", "Descumprimento gera nulidade (§ 2º)"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 104 — licitação e sanção",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei Orgânica de Campina Grande, art. 104",
+            "texto": "Ressalvados os casos especificados na legislação, as obras, serviços, compras e alienações, serão sempre contratados mediante processo de licitação pública, que assegure igualdade de condições de competição a todos os interessados e a escolha da melhor proposta, nos termos previstos pelo art. 37, inciso XXI, da Constituição Federal. § 2º - O descumprimento do disposto neste artigo acarretará nulidade do ato e a responsabilidade pessoal e funcional de quem o houver autorizado ou executado.",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 48,
+                "motivo": "contraste — exceção só se especificada na legislação"
+              },
+              {
+                "inicio": 98,
+                "fim": 155,
+                "motivo": "mapa — licitação pública é a regra geral"
+              },
+              {
+                "inicio": 395,
+                "fim": 451,
+                "motivo": "distratores — nulidade + responsabilidade pessoal (§ 2º)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Sem licitação legal na LOM = nulidade + responsabilidade de quem autorizou (§ 2º).\n\nNear-transfer: compra de lâmpadas para sinalização por dispensa não prevista em lei — mesmo efeito: nulidade e responsabilidade pessoal.",
+            "destaques": ["nulidade", "Near-transfer", "§ 2º"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei Orgânica de Campina Grande, art. 104",
+          "path": "conteúdo/municipal/lei-organica-campina-grande.txt"
+        }
+      ]
+    },
+    "tags": ["lei_organica_cg", "licitacao", "sttp", "nulidade", "responsabilidade"]
+  }
+]

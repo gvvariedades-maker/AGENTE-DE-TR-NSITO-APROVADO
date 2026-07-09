@@ -1,0 +1,155 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 250,
+  "fundamento_slug": "CTB_art_31",
+  "macete_visual": "REDUZ + ATENÇÃO · parar se precisar",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Coletivo parado não veda ultrapassar nem exige parada obrigatória — art. 31 manda reduzir com atenção redobrada ou parar se necessário",
+    "eixos_legais": ["CTB_art_31"],
+    "isca_por_alternativa": {
+      "A": "inventa vedação absoluta de ultrapassar coletivo parado — regra_excecao",
+      "B": "velocidade habitual com buzina no lugar de reduzir e atenção redobrada — termo_unico",
+      "C": "transforma parar facultativo em obrigação absoluta — regra_excecao"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-042.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: não é vedação nem parada fixa",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito D.\n\nA — vedou qualquer ultrapassagem: o art. 31 regula a manobra, não a proíbe.\nB — manteve velocidade com buzina: a lei exige reduzir e atenção redobrada.\nC — exigiu parada obrigatória: parar é opção conforme a segurança dos pedestres.\n\nNesta aula você fixa o trio REDUZ + ATENÇÃO + PARAR (se precisar).",
+        "destaques": ["Gabarito D", "REDUZ", "PARAR se precisar"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "TRANSPORTE COLETIVO: ônibus, micro-ônibus e similares de passageiros — hipótese do art. 31.\n\nEMBARQUE/DESEMBARQUE: passageiros entrando ou saindo do coletivo parado — momento de risco aos pedestres.\n\nATENÇÃO REDOBRADA: cuidado intensificado na condução — dever expresso além da redução de velocidade.",
+        "destaques": ["TRANSPORTE COLETIVO", "EMBARQUE", "ATENÇÃO REDOBRADA"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: pode ultrapassar o coletivo parado?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Coletivo parado embarcando ou desembarcando?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Há risco aos pedestres na manobra?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Reduzir com atenção redobrada — parar se necessário", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Sim" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Três condutas possíveis (art. 31)",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Conduta", "Situação legal"],
+        "linhas": [
+          { "faixa": "Reduzir + atenção redobrada", "classificacao": "Dever mínimo do art. 31", "destaque": true },
+          { "faixa": "Parar o veículo", "classificacao": "Facultativo — se a segurança dos pedestres exigir" },
+          { "faixa": "Aguardar atrás sem ultrapassar", "classificacao": "Conduta prudente — não é vedação legal expressa" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: vedação × parada obrigatória",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Coletivo parado = não pode ultrapassar", "Pode ultrapassar — com redução e atenção redobrada"],
+          ["Deve sempre parar antes de ultrapassar", "Parar é opção — ou parar, conforme segurança"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — regra_excecao", "Inventa vedação absoluta — art. 31 regula a ultrapassagem, não a proíbe"],
+          ["B — termo_unico", "Substitui redução e atenção redobrada por velocidade habitual com buzina"],
+          ["C — regra_excecao", "Transforma o parar facultativo em obrigação — o dispositivo diz ou parar"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Ônibus parado em ponto sem refúgio, embarque/desembarque", "Incide art. 31 — transporte coletivo parado"],
+          ["Automóvel ultrapassa com redução leve, sem parar totalmente", "Manobra possível se atenção redobrada; parar se pedestres em risco"],
+          ["Resultado", "Gabarito D — dever de reduzir com atenção, parar se necessário"]
+        ]
+      }
+    },
+    {
+      "id": "tresvias",
+      "titulo": "Três confusões da banca",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa errada", "Erro típico"],
+        "linhas": [
+          ["A — aguardar atrás", "Confunde prudência com vedação legal expressa"],
+          ["B — buzinar e seguir", "Confunde sinal sonoro com dever de reduzir velocidade"],
+          ["C — parada obrigatória", "Confunde ou parar com dever absoluto de parar"]
+        ]
+      }
+    },
+    {
+      "id": "lei31",
+      "titulo": "Art. 31 — literal da regra",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 31",
+        "texto": "O condutor que tenha o propósito de ultrapassar um veículo de transporte coletivo que esteja parado, efetuando embarque ou desembarque de passageiros, deverá reduzir a velocidade, dirigindo com atenção redobrada ou parar o veículo com vistas à segurança dos pedestres.",
+        "trechos_grifados": [
+          { "inicio": 62, "fim": 81, "motivo": "glossario — transporte coletivo do enunciado" },
+          { "inicio": 158, "fim": 211, "motivo": "contraste — dever de reduzir com atenção redobrada" },
+          { "inicio": 212, "fim": 230, "motivo": "mapa — parar facultativo conforme segurança" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Coletivo parado embarcando?\nREDUZ + ATENÇÃO redobrada.\nPARAR se os pedestres exigirem.\n≠ vedação (A) · ≠ parada fixa (C).\n\nNear-transfer: criança atravessa correndo na frente do coletivo — o condutor que só reduziu levemente sem parar violou o art. 31; a parada era necessária à segurança.",
+        "destaques": ["REDUZ", "PARAR", "Near-transfer"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 31", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

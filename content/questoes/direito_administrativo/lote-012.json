@@ -1,0 +1,329 @@
+[
+  {
+    "disciplina": "direito_administrativo",
+    "topico": "dir_adm_7_2",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 5,
+    "fundamento_slug": "CF_art_37_6",
+    "enunciado": "Pedestre sofre queda e fratura ao tropeçar em buraco não sinalizado em via sob manutenção da STTP — autarquia municipal prestadora de serviço público de mobilidade urbana. A vítima ajuíza ação de indenização contra o Município e a STTP. A defesa sustenta que, sem prova de dolo ou culpa do agente que deveria fiscalizar a via, não haveria dever de indenizar. Considerando a responsabilidade civil da Administração Pública e a Constituição Federal, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O Município e a STTP somente respondem civilmente se a vítima comprovar dolo ou culpa do agente público que fiscalizava a via.",
+      "B": "A STTP, por ser autarquia com personalidade jurídica própria, não responde pelos danos — a ação deve ser proposta apenas contra o agente causador.",
+      "C": "A indenização à vítima depende de sentença transitada em julgado que assegure o regresso contra o agente público responsável.",
+      "D": "As pessoas jurídicas de direito público e as prestadoras de serviço público respondem objetivamente pelos danos que seus agentes, nessa qualidade, causarem a terceiros, assegurado o direito de regresso contra o responsável nos casos de dolo ou culpa."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Responsabilidade objetiva do Estado e das prestadoras de serviço público (CF art. 37, § 6º) — distinção entre responsabilidade da pessoa jurídica (objetiva) e regresso contra o agente (dolo ou culpa).",
+      "fundamento_legal": "CF/88, art. 37, § 6º: \"As pessoas jurídicas de direito público e as de direito privado prestadoras de serviços públicos responderão pelos danos que seus agentes, nessa qualidade, causarem a terceiros, assegurado o direito de regresso contra o responsável nos casos de dolo ou culpa.\"",
+      "passo_a_passo": [
+        "1. Dano a terceiro causado por agente no exercício de serviço público (fiscalização de via pela STTP) → responsabilidade objetiva da pessoa jurídica (responderão). Dolo ou culpa do agente é requisito do regresso, não da ação da vítima.",
+        "2. A erra por termo_unico (exige culpa do agente para indenizar a vítima); B erra por competencia_snt (afasta responsabilidade da autarquia/prestadora); C erra por regra_excecao (condiciona indenização ao regresso prévio).",
+        "3. D correta: transcrição do art. 37, § 6º — responsabilidade objetiva da entidade + regresso subjetivo contra o agente."
+      ],
+      "pegadinha": "A banca troca o requisito do regresso (dolo/culpa do agente) pelo requisito da indenização à vítima (responsabilidade objetiva da pessoa jurídica).",
+      "macete": "VÍTIMA = objetiva (§6º) | REGRESSO = dolo/culpa do agente | Autarquia/prestadora também responde.",
+      "estudo_reverso": [
+        "CF art. 37, § 6º",
+        "CF art. 37, caput",
+        "CF art. 5º, X"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CF_art_37_6",
+      "macete_visual": "VÍTIMA objetiva | REGRESSO dolo/culpa",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Responsabilidade objetiva da STTP/prestadora (§6º). A exige culpa do agente para indenizar — confunde com regresso.",
+            "destaques": ["objetiva", "regresso", "§ 6º"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Vítima × regresso",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "§ 6º ✓"],
+            "linhas": [
+              [
+                "Vítima precisa provar culpa do agente para indenizar",
+                "Entidade responde objetivamente; culpa do agente é para regresso"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Dano causado por agente no serviço público?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Defesa exige culpa do agente à vítima?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito D — responsabilidade objetiva", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 37, § 6º",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 37, § 6º",
+            "texto": "As pessoas jurídicas de direito público e as de direito privado prestadoras de serviços públicos responderão pelos danos que seus agentes, nessa qualidade, causarem a terceiros, assegurado o direito de regresso contra o responsável nos casos de dolo ou culpa.",
+            "trechos_grifados": [
+              { "inicio": 97, "fim": 120, "motivo": "responsabilidade objetiva" },
+              { "inicio": 191, "fim": 210, "motivo": "regresso exige dolo ou culpa" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VÍTIMA = objetiva (§6º) | REGRESSO = dolo/culpa do agente | Autarquia/prestadora também responde.",
+            "destaques": ["VÍTIMA", "REGRESSO", "objetiva"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88 art. 37",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CF_art_37_6",
+      "macete_visual": "VÍTIMA objetiva | REGRESSO dolo/culpa",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Culpa do agente é requisito do regresso, não da indenização à vítima",
+        "eixos_legais": ["CF_art_37_6"],
+        "isca_por_alternativa": {
+          "A": "exige dolo ou culpa do agente para a vítima ser indenizada",
+          "B": "afasta responsabilidade da autarquia/prestadora de serviço público",
+          "C": "condiciona indenização ao regresso prévio contra o agente"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: objetiva × subjetiva",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — culpa do agente para indenizar: confunde com regresso.\nB — só o agente responde: autarquia/prestadora também responde (§6º).\nC — regresso prévio à vítima: vítima não espera regresso.\n\nPegadinha: objetiva para a entidade; subjetiva só no regresso.",
+            "destaques": ["Gabarito D", "objetiva", "regresso"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Responsabilidade objetiva: basta o nexo dano–conduta do serviço público; não exige prova de culpa da entidade.\nAgente público: quem atua em nome da pessoa jurídica no serviço público (nessa qualidade).\nRegresso: direito da entidade que pagou a indenização de cobrar do agente, se houver dolo ou culpa.",
+            "destaques": ["objetiva", "Agente público", "Regresso"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "MÉTODO: queda na via da STTP",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Dano a terceiro por agente no serviço?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Defesa exige culpa do agente à vítima?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito D — entidade responde objetivamente",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Quem responde e como",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Polo", "Regra"],
+            "linhas": [
+              {
+                "faixa": "Vítima × entidade",
+                "classificacao": "Responsabilidade objetiva — responderão (§6º)",
+                "destaque": true
+              },
+              {
+                "faixa": "Entidade × agente",
+                "classificacao": "Regresso — dolo ou culpa do responsável"
+              },
+              {
+                "faixa": "Pessoa jurídica",
+                "classificacao": "Direito público + prestadora de serviço público"
+              },
+              {
+                "faixa": "Agente",
+                "classificacao": "Atua nessa qualidade — nexo com o serviço"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Indenização × regresso",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a banca insinua ✗", "§ 6º ✓"],
+            "linhas": [
+              [
+                "Vítima deve provar culpa do agente para indenizar",
+                "Entidade responde objetivamente pelos danos aos terceiros"
+              ],
+              [
+                "Regresso prévio é condição para a vítima receber",
+                "Regresso é direito da entidade, se dolo ou culpa do agente"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Exige dolo ou culpa do agente à vítima — requisito é do regresso"
+              ],
+              [
+                "B — competencia_snt",
+                "Afasta autarquia/prestadora — §6º inclui ambas as pessoas jurídicas"
+              ],
+              [
+                "C — regra_excecao",
+                "Condiciona indenização ao regresso prévio — vítima não aguarda regresso"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso STTP", "Consequência"],
+            "linhas": [
+              ["Buraco não sinalizado em via fiscalizada", "Falha no serviço público de mobilidade"],
+              ["STTP é prestadora de serviço público", "Hipótese do §6º — responde objetivamente"],
+              ["Defesa exige culpa do agente à vítima", "Confunde regresso com ação indenizatória"],
+              ["Resultado", "Alternativa D — única defensável"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 37, § 6º — responsabilidade objetiva",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 37, § 6º",
+            "texto": "As pessoas jurídicas de direito público e as de direito privado prestadoras de serviços públicos responderão pelos danos que seus agentes, nessa qualidade, causarem a terceiros, assegurado o direito de regresso contra o responsável nos casos de dolo ou culpa.",
+            "trechos_grifados": [
+              {
+                "inicio": 97,
+                "fim": 120,
+                "motivo": "mapa — responsabilidade objetiva da entidade"
+              },
+              {
+                "inicio": 139,
+                "fim": 154,
+                "motivo": "fluxo — agente nessa qualidade no serviço"
+              },
+              {
+                "inicio": 191,
+                "fim": 210,
+                "motivo": "contraste — regresso exige dolo ou culpa"
+              }
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Prestadora de serviço público",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Entidade", "Responde?"],
+            "linhas": [
+              ["Município (direito público)", "Sim — §6º"],
+              ["STTP autarquia (prestadora)", "Sim — §6º inclui prestadoras"],
+              ["Agente fiscal da via", "Regresso, se dolo ou culpa"],
+              ["Caso buraco na via", "Ação contra entidade — não só agente"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VÍTIMA = objetiva (§6º) | REGRESSO = dolo/culpa do agente | Autarquia/prestadora também responde.\n\nNear-transfer: concessionária de transporte causa acidente a passageiro — responde objetivamente? Sim, se prestadora de serviço público; culpa do motorista é tema de regresso, não da vítima.",
+            "destaques": ["VÍTIMA", "REGRESSO", "near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88 art. 37",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "responsabilidade_objetiva",
+      "regresso",
+      "sttp",
+      "cf_88"
+    ]
+  }
+]

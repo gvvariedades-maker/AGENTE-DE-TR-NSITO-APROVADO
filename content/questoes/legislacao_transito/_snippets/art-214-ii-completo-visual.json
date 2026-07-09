@@ -1,0 +1,194 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 285,
+  "fundamento_slug": "CTB_art_214_II",
+  "macete_visual": "Verde NÃO dispensa · 214, II = GRAVÍSSIMA",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Sinal verde para o veículo não dispensa preferência ao pedestre que não concluiu a travessia — art. 214, II é gravíssima",
+    "eixos_legais": ["CTB_art_214_II", "CTB_art_214_I"],
+    "isca_por_alternativa": {
+      "A": "acha que verde veicular dispensa preferência na travessia incompleta",
+      "B": "troca gravíssima por grave e aplica inciso I sem o foco do verde",
+      "D": "confunde preferência com parar ante agrupamento — art. 213"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: verde não é carta branca",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — achou que verde para o veículo dispensa preferência: art. 214, II mantém o dever.\nB — classificou como grave e fixou inciso I: a hipótese é travessia incompleta com verde — inciso II, gravíssima.\nD — inventou art. 213, I, sem desfile ou agrupamento interceptando marcha.\n\nPedestre ainda atravessando quando o semáforo liberou o automóvel.",
+        "destaques": ["Gabarito C", "verde", "travessia incompleta"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "PREFERÊNCIA DE PASSAGEM: ceder a vez ao pedestre ou ciclista antes de avançar — dever do art. 214.\n\nTRAVERSIA NÃO CONCLUÍDA: pedestre ainda na faixa ou na via, sem atingir o outro lado — inciso II.\n\nSINAL VERDE VEICULAR: autoriza o fluxo do automóvel, mas não revoga a preferência do inciso II.",
+        "destaques": ["PREFERÊNCIA", "TRAVERSIA", "VERDE"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: verde dispensa preferência?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Pedestre ainda não concluiu a travessia?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Condutor deu preferência de passagem?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Gravíssima — inciso II",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Não" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Incisos do art. 214",
+      "secao": "mapa",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Hipótese", "Inciso"],
+        "linhas": [
+          ["Pedestre na faixa destinada", "I — gravíssima"],
+          ["Travessia incompleta com verde veicular", "II — gravíssima"],
+          ["Idoso, criança, gestante", "III — gravíssima"],
+          ["Caso (verde + pedestre na faixa)", "II — travessia não concluída"]
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: verde × preferência",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          [
+            "Verde para o carro autoriza avançar",
+            "Art. 214, II — preferência mesmo com verde veicular"
+          ],
+          [
+            "Deixar de dar preferência é infração grave",
+            "Art. 214 — natureza gravíssima"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Inventa que sinal verde dispensa preferência ao pedestre em travessia incompleta"
+          ],
+          [
+            "B — gravidade",
+            "Classifica como grave e aplica inciso I — o fato é II com verde veicular, gravíssima"
+          ],
+          [
+            "D — termo_unico",
+            "Confunde preferência com parar ante agrupamento — art. 213 sem desfile no enunciado"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado — Campina Grande",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Pedestre iniciou travessia e não concluiu", "Inciso II do art. 214"],
+          ["Sinal verde para o automóvel", "Não dispensa preferência — II"],
+          ["Condutor avançou sem ceder passagem", "Infração configurada"],
+          ["Resultado", "Gabarito C — infração gravíssima"]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "214 × 213 × 208",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Artigo", "O que exige"],
+        "linhas": [
+          ["Art. 214", "Dar preferência ao pedestre — gravíssima"],
+          ["Art. 213", "Parar quando marcha interceptada por agrupamento"],
+          ["Art. 208", "Não avançar sinal vermelho — gravíssima"],
+          ["Caso (verde + travessia incompleta)", "Art. 214, II"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 214, II — verde não dispensa",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 214, II",
+        "texto": "Deixar de dar preferência de passagem a pedestre e a veículo não motorizado: II - que não haja concluído a travessia mesmo que ocorra sinal verde para o veículo. Infração - gravíssima.",
+        "trechos_grifados": [
+          {
+            "inicio": 134,
+            "fim": 160,
+            "motivo": "contraste — verde veicular não afasta preferência"
+          },
+          {
+            "inicio": 173,
+            "fim": 183,
+            "motivo": "gradacao — art. 214 é gravíssima, não grave"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "214, II: verde NÃO dispensa · travessia incompleta = GRAVÍSSIMA · ≠ 213 (parar ante agrupamento).\n\nNear-transfer: mesmo cruzamento, idoso ainda atravessando com verde veicular — inciso III também configura gravíssima; o dever de preferência persiste independentemente do semáforo.",
+        "destaques": ["verde", "III", "GRAVÍSSIMA"]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "CTB art. 214",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

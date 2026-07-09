@@ -17,11 +17,12 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 interface LoginFormProps {
   next?: string;
   authError?: boolean;
+  resetOk?: boolean;
 }
 
 const initialState: SignInState = {};
 
-export function LoginForm({ next, authError }: LoginFormProps) {
+export function LoginForm({ next, authError, resetOk }: LoginFormProps) {
   const [state, formAction, pending] = useActionState(
     signInWithPassword,
     initialState,
@@ -38,6 +39,14 @@ export function LoginForm({ next, authError }: LoginFormProps) {
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
+        {resetOk && (
+          <Alert>
+            <AlertDescription>
+              Senha redefinida com sucesso. Entre com a nova senha.
+            </AlertDescription>
+          </Alert>
+        )}
+
         {authError && (
           <Alert variant="destructive">
             <AlertDescription>
@@ -65,7 +74,15 @@ export function LoginForm({ next, authError }: LoginFormProps) {
           </label>
 
           <label className="flex flex-col gap-1.5 text-sm">
-            <span className="font-medium">Senha</span>
+            <div className="flex items-center justify-between">
+              <span className="font-medium">Senha</span>
+              <Link
+                href="/esqueci-senha"
+                className="text-xs font-medium text-primary underline-offset-4 hover:underline"
+              >
+                Esqueci minha senha
+              </Link>
+            </div>
             <input
               type="password"
               name="password"

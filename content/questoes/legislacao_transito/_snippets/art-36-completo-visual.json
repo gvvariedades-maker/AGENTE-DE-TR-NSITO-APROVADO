@@ -1,0 +1,156 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 255,
+  "fundamento_slug": "CTB_art_36",
+  "macete_visual": "LOTE → VIA · prefere veículo + pedestre",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Ingresso de lote lindeiro exige preferência a veículos e pedestres — art. 36, não art. 38",
+    "eixos_legais": ["CTB_art_36", "CTB_art_38_par_unico"],
+    "isca_por_alternativa": {
+      "B": "exclui pedestre por estar na calçada — termo_unico",
+      "C": "aplica art. 38, § único, em ingresso de lote — regra_excecao",
+      "D": "velocidade e seta dispensam preferência — regra_excecao"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-045.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: lote lindeiro tem regra própria",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito A.\n\nB — preferiu só veículos: o art. 36 inclui pedestres que transitam pela via.\nC — citou art. 38, § único: esse dispositivo rege mudança de direção ao sair da via, não ingresso de lote.\nD — achou que seta e velocidade bastam: preferência do art. 36 é anterior à entrada.\n\nNesta aula você separa INGRESSO (art. 36) de SAÍDA com mudança de direção (art. 38).",
+        "destaques": ["Gabarito A", "art. 36", "lote lindeiro"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "LOTE LINDEIRO: terreno contíguo à via — estacionamento, garagem, posto de combustível que dá acesso direto à pista.\n\nINGRESSAR NA VIA: entrar na corrente de tráfego a partir do lote — hipótese do art. 36.\n\nTRANSITANDO: em movimento pela via — inclui veículos na pista e pedestres em travessia ou faixa.",
+        "destaques": ["LOTE LINDEIRO", "INGRESSAR", "TRANSITANDO"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: de onde vem o condutor?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Ingresso procedente de lote lindeiro à via?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Há veículos ou pedestres transitando pela via?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Dar preferência — veículos e pedestres", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Sim" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Dois dispositivos — dois momentos",
+      "secao": "mapa",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Situação", "Dispositivo"],
+        "linhas": [
+          ["Ingresso de lote lindeiro à via", "Art. 36 — preferência a veículos e pedestres"],
+          ["Mudança de direção ao sair da via", "Art. 38, § único — ceder a pedestres, ciclistas e sentido contrário"],
+          ["Caso do enunciado", "Estacionamento → via arterial = art. 36"]
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: art. 38 × art. 36",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Manobra de saída = art. 38, § único", "Ingresso de lote lindeiro = art. 36 autônomo"],
+          ["Pedestre na calçada não tem preferência", "Preferência a pedestres que transitam pela via"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["B — termo_unico", "Exclui pedestres da preferência — art. 36 menciona veículos e pedestres expressamente"],
+          ["C — regra_excecao", "Aplica art. 38, § único fora da hipótese — ingresso de lote é art. 36"],
+          ["D — regra_excecao", "Inventa que velocidade compatível e seta dispensam a preferência legal"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Saída de estacionamento de supermercado (lote lindeiro)", "Hipótese do art. 36 — ingresso na via"],
+          ["Motocicleta e pedestre na travessia prejudicados", "Dever de preferência a ambos — veículos e pedestres"],
+          ["Resultado", "Gabarito A — art. 36 violado pelo condutor"]
+        ]
+      }
+    },
+    {
+      "id": "art38",
+      "titulo": "Art. 38, § único — quando usar",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Elemento", "Art. 38, § único"],
+        "linhas": [
+          ["Momento", "Mudança de direção ao sair da via onde já circulava"],
+          ["Dever", "Ceder a pedestres, ciclistas e veículos em sentido contrário"],
+          ["Por que não é o caso", "Condutor vinha do lote — não saía da via arterial"]
+        ]
+      }
+    },
+    {
+      "id": "lei36",
+      "titulo": "Art. 36 — literal da regra",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 36",
+        "texto": "O condutor que for ingressar numa via, procedente de um lote lindeiro a essa via, deverá dar preferência aos veículos e pedestres que por ela estejam transitando.",
+        "trechos_grifados": [
+          { "inicio": 56, "fim": 69, "motivo": "glossario — lote lindeiro do estacionamento" },
+          { "inicio": 109, "fim": 129, "motivo": "contraste — veículos e pedestres (não só veículos)" },
+          { "inicio": 134, "fim": 161, "motivo": "caso — quem já transitava pela via" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "LOTE → VIA = PREFERE veículo + pedestre (art. 36).\nSai da via com conversão = art. 38, § único.\nSeta e velocidade não dispensam preferência.\n\nNear-transfer: condutor sai de garagem residencial (lote lindeiro) direto na contramão — ainda deve preferir quem já transita pela via; o art. 36 não exige sinalização no lote.",
+        "destaques": ["LOTE → VIA", "art. 36", "Near-transfer"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 36", "path": "conteúdo/legislação federal/lei-9503-ctb.html" },
+    { "rotulo": "CTB art. 38, § único", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

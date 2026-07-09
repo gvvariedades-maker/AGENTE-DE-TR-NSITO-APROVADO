@@ -1,0 +1,324 @@
+[
+  {
+    "disciplina": "direito_administrativo",
+    "topico": "dir_adm_4_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 5,
+    "fundamento_slug": "Lei9784_art53",
+    "enunciado": "A Controladoria do Município de Campina Grande conclui que portaria da STTP que concedeu gratificação a servidor carece de fundamento legal, configurando vício de legalidade. O diretor-geral prefere revogar o ato por conveniência administrativa, evitando o termo \"anulação\" e preservando a aparência de regularidade. Considerando o poder vinculado, o poder discricionário e a Lei nº 9.784/1999, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A revogação por conveniência substitui a anulação sempre que o ato produzir efeitos favoráveis ao servidor, respeitados os direitos adquiridos.",
+      "B": "Diante de vício de legalidade, a Administração pode optar entre anular ou revogar o ato, pois anulação e revogação são igualmente discricionárias.",
+      "C": "A anulação de ato ilegal depende de provocação judicial prévia, cabendo à Administração apenas revogar o ato por conveniência.",
+      "D": "Constatado vício de legalidade, a Administração deve anular o ato; a revogação por conveniência ou oportunidade alcança atos legais e não substitui a anulação."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Distinção entre poder vinculado (deve anular ato ilegal) e poder discricionário (pode revogar por conveniência) — Lei 9.784/99, art. 53.",
+      "fundamento_legal": "Lei 9.784/99, art. 53: \"A Administração deve anular seus próprios atos, quando eivados de vício de legalidade, e pode revogá-los por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos.\"",
+      "passo_a_passo": [
+        "1. Vício de legalidade na portaria → dever de anular (poder vinculado — verbo deve). Revogação por conveniência (verbo pode) não corrige ilegalidade nem substitui anulação.",
+        "2. A erra por regra_excecao (trata revogação como substituta da anulação); B erra por termo_unico (confunde deve anular com pode revogar); C erra por competencia_snt (exige provocação judicial para anular).",
+        "3. D correta: ilegalidade impõe anulação; revogação é via discricionária para atos legais por conveniência ou oportunidade."
+      ],
+      "pegadinha": "A banca oferece revogação por conveniência como atalho para não anular ato ilegal — o art. 53 separa deve (anular) de pode (revogar).",
+      "macete": "DEVE-ANULA (ilegal) | PODE-REVOGA (conveniência) | Revogação não conserta ilegalidade.",
+      "estudo_reverso": [
+        "Lei 9.784/99 art. 53",
+        "Lei 9.784/99 art. 54",
+        "Lei 9.784/99 art. 2"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "Lei9784_art53",
+      "macete_visual": "DEVE-ANULA | PODE-REVOGA | ilegal ≠ conveniência",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Vício de legalidade → deve anular (vinculado). Revogação por conveniência não substitui anulação — é poder discricionário sobre ato legal.",
+            "destaques": ["deve anular", "pode revogar", "vício de legalidade"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Anular × revogar",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "Art. 53 ✓"],
+            "linhas": [
+              [
+                "Revogar por conveniência substitui anular ato ilegal",
+                "Deve anular (ilegal) | Pode revogar (conveniência em ato legal)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Portaria com vício de legalidade?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Revogação por conveniência resolve?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito D — deve anular", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 53 — deve × pode",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 53",
+            "texto": "A Administração deve anular seus próprios atos, quando eivados de vício de legalidade, e pode revogá-los por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos.",
+            "trechos_grifados": [
+              { "inicio": 16, "fim": 27, "motivo": "poder vinculado — deve anular" },
+              { "inicio": 89, "fim": 104, "motivo": "poder discricionário — pode revogar" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DEVE-ANULA (ilegal) | PODE-REVOGA (conveniência) | Revogação não conserta ilegalidade.",
+            "destaques": ["DEVE-ANULA", "PODE-REVOGA"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.784/99 art. 53",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 260,
+      "fundamento_slug": "Lei9784_art53",
+      "macete_visual": "DEVE-ANULA | PODE-REVOGA | ilegal ≠ conveniência",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Revogação por conveniência não substitui anulação de ato ilegal",
+        "eixos_legais": ["Lei9784_art53"],
+        "isca_por_alternativa": {
+          "A": "revogação substitui anulação quando há efeito favorável",
+          "B": "trata anulação e revogação como igualmente discricionárias",
+          "C": "exige Judiciário para anular — autotutela afastada"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: vinculado × discricionário",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — revogação substitui anulação: ilegalidade exige anular.\nB — anular ou revogar à escolha: anular é dever (deve).\nC — Judiciário para anular: autotutela dispensa provocação.\n\nPegadinha: conveniência não mascara vício de legalidade.",
+            "destaques": ["Gabarito D", "deve anular", "pode revogar"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Poder vinculado: a lei define requisitos e efeito — a Administração não tem margem (deve).\nPoder discricionário: margem de conveniência, oportunidade ou mérito (pode).\nAutotutela: a própria Administração anula ilegais e revoga por conveniência (art. 53).",
+            "destaques": ["vinculado", "discricionário", "autotutela"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "MÉTODO: portaria ilegal da STTP",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Portaria com vício de legalidade?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Revogação por conveniência basta?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito D — deve anular o ato ilegal",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Anulação × revogação",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Espécie", "Poder e fundamento"],
+            "linhas": [
+              {
+                "faixa": "Anulação",
+                "classificacao": "Vinculado — deve, quando ilegal (art. 53)",
+                "destaque": true
+              },
+              {
+                "faixa": "Revogação",
+                "classificacao": "Discricionário — pode, por conveniência (art. 53)"
+              },
+              {
+                "faixa": "Efeito",
+                "classificacao": "Anulação ex tunc | Revogação ex nunc (regra geral)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: conveniência × ilegalidade",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a banca insinua ✗", "Art. 53 ✓"],
+            "linhas": [
+              [
+                "Revogar por conveniência dispensa anular ato ilegal",
+                "Ilegalidade → deve anular; revogação não substitui"
+              ],
+              [
+                "Anulação e revogação são opções discricionárias equivalentes",
+                "Deve anular (vinculado) × pode revogar (discricionário)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Trata revogação como substituta da anulação em ato ilegal"
+              ],
+              [
+                "B — termo_unico",
+                "Confunde deve anular com pode revogar — ambos discricionários"
+              ],
+              [
+                "C — competencia_snt",
+                "Exige Judiciário para anular — autotutela é da Administração"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso STTP", "Consequência"],
+            "linhas": [
+              ["Gratificação sem fundamento legal", "Vício de legalidade — deve anular"],
+              ["Diretor prefere revogar por conveniência", "Revogação não corrige ilegalidade"],
+              ["Controladoria aponta ilegalidade", "Poder vinculado — não há escolha"],
+              ["Resultado", "Alternativa D — única defensável"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 53 — deve anular × pode revogar",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 53",
+            "texto": "A Administração deve anular seus próprios atos, quando eivados de vício de legalidade, e pode revogá-los por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos.",
+            "trechos_grifados": [
+              {
+                "inicio": 16,
+                "fim": 27,
+                "motivo": "mapa — poder vinculado (deve anular)"
+              },
+              {
+                "inicio": 66,
+                "fim": 85,
+                "motivo": "fluxo — vício de legalidade no caso"
+              },
+              {
+                "inicio": 89,
+                "fim": 104,
+                "motivo": "contraste — revogação discricionária (pode)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Efeitos temporais (regra geral)",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Espécie", "Efeito típico"],
+            "linhas": [
+              ["Anulação por ilegalidade", "Ex tunc — invalida desde a origem"],
+              ["Revogação por conveniência", "Ex nunc — respeita direitos adquiridos"],
+              ["Caso STTP", "Ilegalidade → anulação, não revogação"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DEVE-ANULA (ilegal) | PODE-REVOGA (conveniência) | Revogação não conserta ilegalidade.\n\nNear-transfer: portaria legal, mas inconveniente após eleição — pode só revogar? Sim, se ato válido e respeitados direitos adquiridos; não precisa anular.",
+            "destaques": ["DEVE-ANULA", "PODE-REVOGA", "near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.784/99 art. 53",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        }
+      ]
+    },
+    "tags": [
+      "poder_vinculado",
+      "poder_discricionario",
+      "autotutela",
+      "lei_9784"
+    ]
+  }
+]

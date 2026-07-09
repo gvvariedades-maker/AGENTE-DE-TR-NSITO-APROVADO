@@ -1,0 +1,294 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_1_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 4,
+    "fundamento_slug": "LOM_art14",
+    "enunciado": "A Superintendência de Trânsito e Transporte Público (STTP) e o órgão estadual de trânsito pretendem firmar convênio para integrar campanhas de educação no trânsito em escolas municipais, cumprindo competências comuns previstas na Lei Orgânica de Campina Grande. O setor jurídico da Prefeitura questiona se o Executivo pode assinar o instrumento apenas com autorização do Prefeito, dispensando medida legislativa da Câmara Municipal. À luz da Lei Orgânica do Município, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Para cumprir competências comuns com a União ou o Estado, o Município somente firmará convênios, contratos ou outros instrumentos equivalentes mediante prévia autorização legislativa, na forma do art. 14 da Lei Orgânica.",
+      "B": "Convênios de cooperação técnica com valor reduzido e prazo inferior a um ano dispensam autorização legislativa municipal, bastando autorização do Prefeito e publicação no órgão oficial de imprensa.",
+      "C": "O art. 14 da Lei Orgânica exige autorização legislativa apenas para convênios com a União; ajustes com o Estado da Paraíba dependem somente de decreto municipal.",
+      "D": "Por se tratar de trânsito, a STTP, na qualidade de autarquia municipal, firma convênios operacionais diretamente com o Estado, sem intervenção do Poder Legislativo local."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Convênios municipais para competências comuns com União e Estado — art. 14 da Lei Orgânica de Campina Grande exige autorização legislativa prévia, independentemente do órgão executivo (Prefeitura ou autarquia) que execute a política.",
+      "fundamento_legal": "Lei Orgânica de Campina Grande, art. 14: \"O Município firmará convênios, contratos, acordos, ajustes ou outros quaisquer instrumentos legais, mediante autorização legislativa, para cumprir as competências comuns com a União e o Estado.\"",
+      "passo_a_passo": [
+        "1. O caso é convênio municipal com o Estado para cumprir competência comum (educação no trânsito em escolas) — o art. 14 condiciona qualquer instrumento equivalente à autorização legislativa.",
+        "2. B erra por regra_excecao (inventa dispensa por valor reduzido e prazo de um ano não previstos na LOM); C erra por termo_unico (restringe autorização legislativa só a convênios com a União, quando o art. 14 menciona União e Estado); D erra por competencia_snt (atribui à autarquia poder de firmar convênio intergovernamental sem Câmara — o art. 14 fala no Município e o art. 22 estende regras de domínio público às autarquias, não dispensa o Legislativo).",
+        "3. A está correta: reproduz o art. 14 — autorização legislativa para convênios em competências comuns com União ou Estado."
+      ],
+      "pegadinha": "A banca mistura urgência operacional da STTP com dispensa de Câmara ou limita a exigência a convênios federais — mas o art. 14 é taxativo para União e Estado.",
+      "macete": "Convênio municipal com União ou Estado (competência comum) = autorização legislativa antes (art. 14).",
+      "estudo_reverso": [
+        "Lei Orgânica CG art. 14",
+        "Lei Orgânica CG art. 11",
+        "Lei Orgânica CG art. 22"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "diagrama_competencia",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "LOM_art14",
+      "macete_visual": "Convênio União/Estado = Câmara autoriza antes",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "STTP não dispensa a Câmara: art. 14 exige autorização legislativa para convênios com União ou Estado em competências comuns.",
+            "destaques": ["art. 14", "autorização legislativa", "STTP"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem autoriza o convênio",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "camara", "label": "Câmara — autorização legislativa (art. 14)", "nivel": 1 },
+              { "id": "executivo", "label": "Executivo municipal — firma convênio", "nivel": 2 },
+              { "id": "estado", "label": "Estado — parceiro no convênio", "nivel": 2 }
+            ],
+            "arestas": [
+              { "de": "camara", "para": "executivo", "rotulo": "autoriza" },
+              { "de": "executivo", "para": "estado", "rotulo": "convênio" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              [
+                "Autarquia/STTP assina sem Câmara",
+                "Art. 14 — Município firma mediante autorização legislativa"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Convênio com União ou Estado (competência comum) = autorização legislativa prévia (art. 14).",
+            "destaques": ["autorização legislativa", "art. 14"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei Orgânica de Campina Grande, art. 14",
+          "path": "conteúdo/municipal/lei-organica-campina-grande.txt"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 245,
+      "fundamento_slug": "LOM_art14",
+      "macete_visual": "Competência comum + União/Estado = Câmara autoriza · art. 14",
+      "meta": {
+        "padrao_familia": "C_competencia_snt",
+        "pegadinha_em_uma_frase": "STTP não substitui a Câmara — art. 14 vale para convênio com Estado",
+        "eixos_legais": ["LOM_art14", "LOM_art11", "LOM_art22"],
+        "isca_por_alternativa": {
+          "B": "dispensa legislativa por valor reduzido e prazo curto",
+          "C": "restringe autorização só a convênios com a União",
+          "D": "autarquia firma convênio estadual sem Legislativo"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: Câmara antes do convênio",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — inventa dispensa por valor/prazo não previstos na LOM.\nC — corta o Estado do art. 14: União e Estado exigem autorização.\nD — STTP não firma convênio intergovernamental sem Câmara.\n\nA isca é achar que autarquia ou urgência operacional dispensam o Legislativo.",
+            "destaques": ["Gabarito A", "art. 14", "Câmara"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "COMPETÊNCIA COMUM: atribuição compartilhada entre Município, União e Estado (art. 11 e art. 14).\n\nAUTORIZAÇÃO LEGISLATIVA: aprovação prévia da Câmara Municipal antes do Executivo firmar o instrumento — art. 14.\n\nINSTRUMENTO EQUIVALENTE: convênio, contrato, acordo, ajuste ou outro instrumento legal — caput do art. 14.",
+            "destaques": ["COMPETÊNCIA COMUM", "AUTORIZAÇÃO LEGISLATIVA", "INSTRUMENTO"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem faz o quê no convênio",
+          "secao": "metodo",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "norma",
+                "label": "Art. 14 — competências comuns União/Estado",
+                "nivel": 0
+              },
+              {
+                "id": "camara",
+                "label": "Câmara Municipal — autorização legislativa",
+                "nivel": 1
+              },
+              {
+                "id": "executivo",
+                "label": "Executivo municipal — firma convênio",
+                "nivel": 2
+              },
+              { "id": "estado", "label": "Estado da Paraíba — parceiro", "nivel": 2 }
+            ],
+            "arestas": [
+              { "de": "norma", "para": "camara", "rotulo": "exige autorização" },
+              { "de": "camara", "para": "executivo", "rotulo": "autoriza" },
+              { "de": "executivo", "para": "estado", "rotulo": "convênio educação trânsito" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: autarquia × Legislativo",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "STTP assina convênio estadual direto",
+                "O Município firma mediante autorização legislativa (art. 14)"
+              ],
+              [
+                "Só convênio federal exige Câmara",
+                "Art. 14 cita União e o Estado — ambos exigem autorização"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — regra_excecao",
+                "Inventa dispensa por valor reduzido e prazo — art. 14 não prevê exceção"
+              ],
+              [
+                "C — termo_unico",
+                "Corta \"e o Estado\" do art. 14 — autorização vale para União e Estado"
+              ],
+              [
+                "D — competencia_snt",
+                "Atribui à autarquia firma direta com Estado — competência intergovernamental é do Município com Câmara"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos do enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              ["Convênio STTP × órgão estadual de trânsito", "Competência comum — art. 14"],
+              ["Campanhas em escolas municipais", "Instrumento legal entre Município e Estado"],
+              ["Prefeito quer assinar sem Câmara", "Vedado — exige autorização legislativa"],
+              ["Resultado", "Gabarito A"]
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Instrumento × exigência legislativa",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Situação", "Autorização legislativa?"],
+            "linhas": [
+              ["Convênio com União (competência comum)", "Sim — art. 14"],
+              ["Convênio com Estado (competência comum)", "Sim — art. 14"],
+              ["Dispensa por valor reduzido/prazo curto", "Não prevista na LOM — isca B"],
+              ["Autarquia firma direto com Estado", "Não — Município + Câmara — isca D"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 14 — convênios e autorização",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei Orgânica de Campina Grande, art. 14",
+            "texto": "O Município firmará convênios, contratos, acordos, ajustes ou outros quaisquer instrumentos legais, mediante autorização legislativa, para cumprir as competências comuns com a União e o Estado.",
+            "trechos_grifados": [
+              {
+                "inicio": 100,
+                "fim": 132,
+                "motivo": "diagrama — autorização legislativa prévia"
+              },
+              {
+                "inicio": 150,
+                "fim": 192,
+                "motivo": "contraste — União e Estado (não só União)"
+              },
+              {
+                "inicio": 20,
+                "fim": 49,
+                "motivo": "caso — convênio é um dos instrumentos cobertos"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Competência comum + convênio com União ou Estado = autorização legislativa antes (art. 14).\n\nNear-transfer: Prefeitura pretende acordo de cooperação técnica com o Ministério dos Transportes para capacitação de agentes — mesma regra: Câmara autoriza antes do Executivo firmar.",
+            "destaques": ["art. 14", "Near-transfer", "Câmara"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei Orgânica de Campina Grande, art. 14",
+          "path": "conteúdo/municipal/lei-organica-campina-grande.txt"
+        },
+        {
+          "rotulo": "Lei Orgânica de Campina Grande, art. 11",
+          "path": "conteúdo/municipal/lei-organica-campina-grande.txt"
+        }
+      ]
+    },
+    "tags": [
+      "lei_organica_cg",
+      "convenio",
+      "competencia_comum",
+      "sttp",
+      "autorizacao_legislativa"
+    ]
+  }
+]

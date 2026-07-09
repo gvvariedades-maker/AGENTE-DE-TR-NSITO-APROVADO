@@ -1,0 +1,310 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_991_multas",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_991_art_25",
+    "enunciado": "A Coordenação Financeira da Polícia Rodoviária Federal (PRF), órgão autuador da União, elabora norma interna determinando que as multas de trânsito de competência federal serão arrecadadas exclusivamente pelo documento próprio de arrecadação de multas previsto no art. 24 da Resolução CONTRAN nº 918/2022 — o mesmo utilizado pelos órgãos executivos de trânsito dos Estados, do Distrito Federal e dos Municípios. Considerando a Resolução CONTRAN nº 991/2023, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A norma interna está correta, pois todos os integrantes do SNT devem utilizar o documento de arrecadação previsto no art. 24 da Resolução CONTRAN nº 918/2022.",
+      "B": "A PRF deve arrecadar na rede bancária à vista e de forma integral, com parcelamento facultativo por cartão de crédito nos termos do art. 24, § 3º, da Resolução CONTRAN nº 918/2022.",
+      "C": "Os órgãos autuadores da União devem utilizar a GRU do tipo Cobrança ou a plataforma digital PagTesouro, nos termos do art. 25 da Resolução CONTRAN nº 918/2022 com a redação dada pela Resolução CONTRAN nº 991/2023.",
+      "D": "A Resolução CONTRAN nº 991/2023 substituiu a GRU pelo PagTesouro, vedando o recolhimento por guia de recolhimento da União nas multas federais de trânsito."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Canal de arrecadação das multas federais após a Res. CONTRAN 991/2023 — art. 25 (GRU Cobrança ou PagTesouro), distinto do documento do art. 24 aplicável a Estados, DF e Municípios.",
+      "fundamento_legal": "Res. CONTRAN 991/2023, art. 2º (redação do art. 25 da Res. 918/2022): \"Os órgãos autuadores da União, para arrecadarem multas de trânsito de sua competência, devem utilizar a Guia de Recolhimento da União (GRU) do tipo Cobrança ou a plataforma digital PagTesouro\". Contraste: art. 24 da Res. 918/2022 — Estados, DF e Municípios usam documento próprio estabelecido pelo órgão máximo executivo de trânsito da União.",
+      "passo_a_passo": [
+        "1. PRF é órgão autuador da União — regra própria de arrecadação (art. 25), não o documento do art. 24 dos entes subnacionais.",
+        "2. A erra por competencia_snt (aplica art. 24 a órgão federal); B erra por competencia_snt (confunde forma de pagamento na rede bancária do § 3º do art. 24 com meio de recolhimento federal); D erra por termo_unico (991 acrescenta PagTesouro como alternativa — não veda a GRU).",
+        "3. C correta: art. 25 com redação da Res. 991/2023 — GRU Cobrança ou PagTesouro para órgãos autuadores da União."
+      ],
+      "pegadinha": "A IDECAN iguala federal e subnacional no SNT — o art. 24 vale para Estados/DF/Municípios; a União tem art. 25 próprio, alterado pela Res. 991/2023 para admitir PagTesouro além da GRU.",
+      "macete": "FEDERAL autua = art. 25 → GRU ou PagTesouro · ESTADO/MUNICÍPIO = art. 24 → documento SENATRAN.",
+      "estudo_reverso": [
+        "Res. CONTRAN 991/2023 art. 2",
+        "Res. CONTRAN 918/2022 art. 24",
+        "Res. CONTRAN 918/2022 art. 25",
+        "Res. CONTRAN 918/2022 art. 27"
+      ]
+    },
+    "tags": [
+      "multas",
+      "resolucao_991",
+      "resolucao_918",
+      "arrecadacao",
+      "competencia_snt",
+      "pagtesouro"
+    ],
+    "meta": {
+      "padrao_familia": "C_competencia_snt",
+      "pegadinha_em_uma_frase": "Candidato aplica o documento do art. 24 (subnacional) à PRF (União)",
+      "eixos_legais": ["CONTRAN_991_art_25", "CONTRAN_918_art_24"],
+      "isca_por_alternativa": {
+        "A": "SNT inteiro usa art. 24",
+        "B": "rede bancária do § 3º vale para federal",
+        "D": "991 substituiu GRU por PagTesouro"
+      }
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CONTRAN_991_art_25",
+      "macete_visual": "FEDERAL art.25 GRU|PagTesouro · SUBNACIONAL art.24 doc SENATRAN",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PRF (União) não arrecada pelo documento do art. 24. Res. 991/2023: art. 25 = GRU Cobrança ou PagTesouro.\n\nGabarito C.",
+            "destaques": ["PRF", "art. 25", "PagTesouro"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Federal × subnacional",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Art. 24 (Estados/DF/Municípios)", "Art. 25 (União — Res. 991)"],
+            "linhas": [
+              ["Documento próprio do órgão máximo executivo", "GRU Cobrança ou PagTesouro"],
+              ["STTP, DETRAN estadual", "PRF, DNIT e demais autuadores federais"]
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha: um documento para o SNT",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Todo integrante do SNT usa art. 24", "União tem art. 25 próprio — GRU ou PagTesouro"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Res. 991/2023 — art. 25",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 991/2023, art. 2º (art. 25 da Res. 918/2022)",
+            "texto": "Os órgãos autuadores da União, para arrecadarem multas de trânsito de sua competência, devem utilizar a Guia de Recolhimento da União (GRU) do tipo Cobrança ou a plataforma digital PagTesouro.",
+            "trechos_grifados": [
+              {
+                "inicio": 157,
+                "fim": 191,
+                "motivo": "PagTesouro — inovação da Res. 991/2023"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "FEDERAL = art. 25 → GRU ou PagTesouro. ESTADO/MUNICÍPIO = art. 24 → documento SENATRAN.",
+            "destaques": ["art. 25", "art. 24"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 991/2023",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 991, DE 19 DE ABRIL DE 2023.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 240,
+      "fundamento_slug": "CONTRAN_991_art_25",
+      "macete_visual": "FEDERAL art.25 GRU|PagTesouro · SUBNACIONAL art.24 doc SENATRAN",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: PRF não usa art. 24",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (GRU Cobrança ou PagTesouro — art. 25 com redação da Res. 991/2023).\n\nA — aplica documento do art. 24 à PRF: confunde esfera federal com subnacional.\nB — usa rede bancária do § 3º do art. 24 como meio federal: artigo e esfera errados.\nD — afirma que 991 vedou a GRU: a resolução acrescentou PagTesouro, não substituiu a guia.\n\nPRF = órgão autuador da União → art. 25, não art. 24.",
+            "destaques": ["Gabarito C", "art. 25", "PRF"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PRF: órgão autuador da União em rodovias federais — esfera federal.\n\nGRU: Guia de Recolhimento da União — meio de recolhimento federal (tipo Cobrança).\n\nPagTesouro: plataforma digital de pagamentos ao Tesouro — alternativa à GRU desde a Res. 991/2023.",
+            "destaques": ["PRF", "GRU", "PagTesouro"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem arrecada como",
+          "secao": "mapa",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "senatran",
+                "label": "SENATRAN — normas de arrecadação (art. 24 e 25)",
+                "nivel": 0
+              },
+              {
+                "id": "prf",
+                "label": "PRF — órgão autuador da União",
+                "nivel": 1
+              },
+              {
+                "id": "sttp",
+                "label": "STTP/DETRAN — Estados, DF e Municípios",
+                "nivel": 1
+              },
+              {
+                "id": "gru",
+                "label": "GRU Cobrança ou PagTesouro (art. 25)",
+                "nivel": 2
+              },
+              {
+                "id": "doc24",
+                "label": "Documento próprio art. 24",
+                "nivel": 2
+              }
+            ],
+            "arestas": [
+              { "de": "senatran", "para": "prf", "rotulo": "art. 25" },
+              { "de": "senatran", "para": "sttp", "rotulo": "art. 24" },
+              { "de": "prf", "para": "gru", "rotulo": "arrecada multas federais" },
+              { "de": "sttp", "para": "doc24", "rotulo": "arrecada multas locais" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: um documento para todo o SNT",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Integrante do SNT = todos usam art. 24",
+                "Art. 24: Estados, DF e Municípios — art. 25: órgãos autuadores da União"
+              ],
+              [
+                "Res. 991/2023 acabou com a GRU federal",
+                "991 incluiu PagTesouro como opção — GRU Cobrança permanece"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — competencia_snt",
+                "Aplica documento do art. 24 (subnacional) à PRF — órgão autuador da União segue art. 25"
+              ],
+              [
+                "B — competencia_snt",
+                "Confunde pagamento na rede bancária do art. 24, § 3º com meio de recolhimento federal do art. 25"
+              ],
+              [
+                "D — termo_unico",
+                "Trata PagTesouro como substituto exclusivo da GRU — 991 acrescentou \"ou\", não vedou a guia"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos da norma interna da PRF",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              ["Órgão: PRF (autuador da União)", "Esfera federal — art. 25 da Res. 918/2022"],
+              ["Norma propõe documento do art. 24", "Art. 24 não se aplica a autuadores da União"],
+              ["Res. 991/2023 alterou art. 25", "GRU Cobrança ou PagTesouro — duas vias válidas"],
+              ["Resultado", "Gabarito C"]
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Matriz esfera × meio de arrecadação",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Esfera / órgão", "Meio legal"],
+            "linhas": [
+              ["Estados, DF e Municípios (art. 24)", "Documento próprio do órgão máximo executivo"],
+              ["Órgãos autuadores da União (art. 25)", "GRU Cobrança ou PagTesouro — Res. 991/2023"],
+              ["Pagamento na rede bancária (art. 24, § 2º)", "Forma de quitação — não substitui art. 25"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Res. 991/2023 — art. 25 (redação vigente)",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 991/2023, art. 2º (art. 25 da Res. 918/2022)",
+            "texto": "Os órgãos autuadores da União, para arrecadarem multas de trânsito de sua competência, devem utilizar a Guia de Recolhimento da União (GRU) do tipo Cobrança ou a plataforma digital PagTesouro, observado o Decreto nº 4.950, de 9 de janeiro de 2004, a Instrução Normativa da Secretaria do Tesouro Nacional (STN) nº 2, de 22 de maio de 2009, o Decreto nº 10.494, de 23 de setembro de 2020, e suas alterações posteriores.",
+            "trechos_grifados": [
+              {
+                "inicio": 3,
+                "fim": 29,
+                "motivo": "diagrama — órgãos autuadores da União (PRF)"
+              },
+              {
+                "inicio": 157,
+                "fim": 191,
+                "motivo": "contraste — PagTesouro acrescentado pela Res. 991/2023"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "FEDERAL autua = art. 25 → GRU ou PagTesouro. ESTADO/MUNICÍPIO = art. 24 → documento SENATRAN.\n\nNear-transfer: DNIT (autuador federal em rodovia) quer usar só o documento do DETRAN estadual — qual artigo veda? Art. 25: deve usar GRU ou PagTesouro, não o art. 24.",
+            "destaques": ["art. 25", "art. 24", "DNIT"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 991/2023",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 991, DE 19 DE ABRIL DE 2023.pdf"
+        },
+        {
+          "rotulo": "Res. CONTRAN 918/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 918, DE 28 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    }
+  }
+]

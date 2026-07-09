@@ -1,0 +1,282 @@
+{
+  "versao": 2,
+  "arquetipo": "comparacao",
+  "arquetipo_secundario": "fluxograma_decisao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 275,
+  "fundamento_slug": "CONTRAN_985_mbft_observacoes",
+  "macete_visual": "PODERÁ≠DEVERÁ · art.169=OBS obrigatória",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Poderá da alínea a) não revoga o deverá da alínea b) no art. 169",
+    "eixos_legais": [
+      "CONTRAN_985_mbft_observacoes",
+      "CTB_art_169"
+    ],
+    "isca_por_alternativa": {
+      "B": "generaliza poderá para todas as infrações",
+      "C": "liga obrigatoriedade a concomitantes",
+      "D": "inventa laudo pericial dispensando observações"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: poderá não é sempre facultativo",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito A.\n\nB — facultativo em tudo: ignora alínea b) deverá quando a ficha exige.\nC — só com concomitantes: confunde com regra de múltiplos AITs.\nD — laudo pericial: inventa exigência e dispensa observações.\n\nArt. 169 — manobra brusca — campo observações deixado em branco.",
+        "destaques": [
+          "Gabarito A",
+          "deverá",
+          "art. 169"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "PODERÁ (alínea a): preenchimento facultativo para especificar a conduta.\n\nDEVERÁ (alínea b): obrigatório quando a ficha de fiscalização exige informação.\n\nFICHA DE FISCALIZAÇÃO: procedimento do MBFT por código de infração.",
+        "destaques": [
+          "PODERÁ",
+          "DEVERÁ",
+          "FICHA"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: o campo é obrigatório?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "A ficha exige info para caracterizar?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Observações descrevem a conduta?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Preencher obrigatoriamente — gabarito A",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — art. 169"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Não — deve preencher"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Mapa: campo observações",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Hipótese",
+          "Preenchimento"
+        ],
+        "linhas": [
+          {
+            "faixa": "Alínea a) — poderá",
+            "classificacao": "Facultativo — especificar ou complementar"
+          },
+          {
+            "faixa": "Alínea b) — deverá",
+            "classificacao": "Obrigatório — ficha exige caracterizar",
+            "destaque": true
+          },
+          {
+            "faixa": "Exemplo MBFT",
+            "classificacao": "Art. 169 — dirigir sem atenção"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: poderá × deverá",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que parece ✗",
+          "O que o MBFT diz ✓"
+        ],
+        "linhas": [
+          [
+            "Observações é sempre facultativo",
+            "Deverá quando ficha exige — art. 169"
+          ],
+          [
+            "AIT válido com campo em branco",
+            "Deve descrever a manobra que caracteriza a infração"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "B — termo_unico",
+            "Generaliza poderá da alínea a) — ignora deverá da alínea b)"
+          ],
+          [
+            "C — regra_excecao",
+            "Confunde obrigatoriedade com infrações concomitantes"
+          ],
+          [
+            "D — regra_excecao",
+            "Inventa laudo pericial e dispensa observações no art. 169"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do caso",
+          "Efeito MBFT"
+        ],
+        "linhas": [
+          [
+            "Infração art. 169 — sem atenção",
+            "Ficha exige caracterizar conduta"
+          ],
+          [
+            "Manobra brusca com risco a pedestres",
+            "Deve constar em observações"
+          ],
+          [
+            "Campo observações em branco",
+            "Preenchimento obrigatório — defeito"
+          ],
+          [
+            "Conduta correta",
+            "Preencher observações — gabarito A"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Quando poderá basta",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Infração",
+          "Observações"
+        ],
+        "linhas": [
+          [
+            "Art. 169 — sem atenção (caso)",
+            "Deverá — obrigatório"
+          ],
+          [
+            "Excesso velocidade com radar",
+            "Poderá — se ficha não exige"
+          ],
+          [
+            "Concorrentes no mesmo AIT",
+            "Poderá/deverá conforme ficha"
+          ],
+          [
+            "Agente A informa agente B",
+            "Deverá registrar comunicação"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "MBFT — alínea b) deverá",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7",
+        "texto": "b) deverá ser preenchido, de forma obrigatória, nas infrações cuja ficha de fiscalização preveja de forma expressa, que é necessária alguma informação para caracterizar a infração, a exemplo do art. 169 do CTB (dirigir sem atenção e sem os cuidados indispensáveis à segurança).",
+        "trechos_grifados": [
+          {
+            "inicio": 0,
+            "fim": 6,
+            "motivo": "contraste — verbo obrigatório da pegadinha"
+          },
+          {
+            "inicio": 191,
+            "fim": 199,
+            "motivo": "caso — exemplo expresso do enunciado"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "MBFT — alínea a) poderá",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7",
+        "texto": "a) poderá ser preenchido, consignando informações com o objetivo de especificar a conduta constatada e/ou adicionar outras informações relevantes, conforme exemplos constantes nas fichas de fiscalização.",
+        "trechos_grifados": [
+          {
+            "inicio": 0,
+            "fim": 6,
+            "motivo": "contraste — regra geral facultativa que a banca amplia"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "PODERÁ = facultativo · DEVERÁ = ficha exige · art.169 = OBS obrigatória.\n\nNear-transfer: autuação por transporte irregular de criança sem dispositivo — se a ficha exige descrever a condição, observações passa de poderá a deverá.",
+        "destaques": [
+          "PODERÁ",
+          "DEVERÁ",
+          "Near-transfer"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "MBFT — Seção 7",
+      "path": "conteúdo/resoluções CONTRAN/MBFT-anexo-resolucao-985-2022-secao-07-autuacao.txt"
+    }
+  ]
+}

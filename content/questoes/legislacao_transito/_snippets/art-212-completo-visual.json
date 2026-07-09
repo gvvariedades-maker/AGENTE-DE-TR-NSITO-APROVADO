@@ -1,0 +1,207 @@
+{
+  "versao": 2,
+  "arquetipo": "tabela_gradacao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CTB_art_212",
+  "macete_visual": "212 = PARAR na linha férrea · GRAVÍSSIMA",
+  "meta": {
+    "padrao_familia": "D_gradacao",
+    "pegadinha_em_uma_frase": "Parar antes da linha férrea é obrigatório sem depender de trem visível — art. 212 é gravíssima",
+    "eixos_legais": ["CTB_art_212", "CTB_art_213"],
+    "isca_por_alternativa": {
+      "A": "inventa que ausência de trem dispensa parar — regra_excecao",
+      "B": "confunde linha férrea com agrupamento de veículos — art. 213, II",
+      "C": "aplica art. 216 média em passagem em nível"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: parar sem ver trem",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito D.\n\nA — inventou exceção: ausência de trem não dispensa parar — art. 212 é autônomo.\nB — confundiu linha férrea com agrupamento de veículos: hipótese do art. 213, não 212.\nC — aplicou art. 216 (área lindeira, média): o fato é transposição de linha férrea.\n\nCondutor atravessou trilho sem parar previamente.",
+        "destaques": ["Gabarito D", "linha férrea", "parar"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 distinções",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "TRANSPOR LINHA FÉRREA: cruzar trilhos em passagem em nível — exige parada prévia (art. 212).\n\nPARAR ANTES: imobilizar o veículo antes dos trilhos — dever independente de trem visível.\n\nAGRUPAMENTO INTERCEPTANDO: bloqueio por pessoas ou veículos na via — art. 213, hipótese distinta.",
+        "destaques": ["TRANSPOR", "PARAR", "AGRUPAMENTO"]
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Quando parar e qual gravidade?",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Situação", "Natureza"],
+        "linhas": [
+          {
+            "faixa": "Não parar antes de linha férrea — art. 212",
+            "classificacao": "Gravíssima",
+            "destaque": true
+          },
+          {
+            "faixa": "Não parar ante agrupamento de pessoas — art. 213, I",
+            "classificacao": "Gravíssima"
+          },
+          {
+            "faixa": "Não parar ante agrupamento de veículos — art. 213, II",
+            "classificacao": "Grave"
+          },
+          {
+            "faixa": "Área lindeira sem precaução — art. 216",
+            "classificacao": "Média"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: linha férrea ou agrupamento?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Condutor vai transpor linha férrea?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Parou o veículo antes dos trilhos?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Gravíssima — não parou antes",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Não" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: trem visível × parada obrigatória",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          [
+            "Sem trem visível = pode atravessar direto",
+            "Art. 212 exige parar antes de transpor — independente do trem"
+          ],
+          [
+            "Linha férrea = mesma regra do art. 213",
+            "212 é hipótese autônoma — gravíssima"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Inventa que ausência de composição ferroviária visível dispensa parar antes dos trilhos"
+          ],
+          [
+            "B — termo_unico",
+            "Confunde transposição de linha férrea com agrupamento de veículos — art. 213, II"
+          ],
+          [
+            "C — gravidade",
+            "Aplica art. 216 (média) em passagem em nível — o fato é art. 212 gravíssima"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado — Campina Grande",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Passagem em nível sem cancela fechada", "Hipótese de linha férrea"],
+          ["Condutor transpôs sem parar previamente", "Núcleo do art. 212"],
+          ["Ausência de trem visível no momento", "Não afasta o dever de parar"],
+          ["Resultado", "Gabarito D — infração gravíssima"]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "212 × 213 × 216",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Artigo", "O que exige"],
+        "linhas": [
+          ["Art. 212", "Parar antes de transpor linha férrea — gravíssima"],
+          ["Art. 213", "Parar quando marcha interceptada por agrupamento"],
+          ["Art. 216", "Entrar/sair de área lindeira com precaução — média"],
+          ["Caso (trilho sem parar)", "Art. 212 — gravíssima"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 212 — linha férrea",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 212",
+        "texto": "Deixar de parar o veículo antes de transpor linha férrea. Infração - gravíssima.",
+        "trechos_grifados": [
+          {
+            "inicio": 26,
+            "fim": 56,
+            "motivo": "contraste — parar antes de transpor, não após ver trem"
+          },
+          {
+            "inicio": 69,
+            "fim": 79,
+            "motivo": "gradacao — art. 212 é gravíssima, não grave nem média"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "212 = PARAR antes da linha férrea · GRAVÍSSIMA · ≠ 213 (agrupamento) · trem visível não é condição.\n\nNear-transfer: mesmo condutor para ante desfile escolar bloqueando a via — art. 213, I (gravíssima); dever de parar distinto do 212, mas ambos exigem imobilizar antes de seguir.",
+        "destaques": ["212", "213", "PARAR"]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "CTB art. 212",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

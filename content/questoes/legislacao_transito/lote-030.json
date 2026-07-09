@@ -1,0 +1,339 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_crimes_transito",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_307",
+    "enunciado": "Ricardo teve imposta penalidade de suspensão do direito de dirigir com fundamento no CTB e foi regularmente notificado. Durante a vigência da suspensão, agentes da STTP em Campina Grande o abordam conduzindo automóvel em via pública. Ricardo apresenta Carteira Nacional de Habilitação válida, mas com o direito de dirigir suspenso. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Configura apenas infração administrativa do art. 162, II, do CTB, com multa isolada, sem repercussão penal autônoma.",
+      "B": "Configura crime previsto no art. 307, com penas de detenção de seis meses a um ano, multa e nova imposição de idêntico prazo de suspensão.",
+      "C": "Configura crime do art. 309, por dirigir sem habilitação válida, gerando perigo de dano.",
+      "D": "Impõe-se somente a penalidade de cassação da CNH prevista no art. 263, sem tipificação penal autônoma."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Crime de violar suspensão ou proibição de habilitar-se (art. 307) e distinção das esferas administrativa (art. 162) e penal correlata (arts. 309 e 263).",
+      "fundamento_legal": "CTB, art. 307: \"Violar a suspensão ou a proibição de se obter a permissão ou a habilitação para dirigir veículo automotor imposta com fundamento neste Código\" — penas de detenção de 6 meses a 1 ano e multa, com nova imposição adicional de idêntico prazo de suspensão ou de proibição. Art. 162, II: infração administrativa por dirigir veículo com CNH suspensa — não elide o crime do art. 307 (art. 256, § 1º). Art. 309: dirigir sem habilitação ou se cassado o direito de dirigir — instituto distinto da suspensão temporária.",
+      "passo_a_passo": [
+        "1. Ricardo dirige durante vigência de suspensão imposta com fundamento no CTB — núcleo do art. 307.",
+        "2. A erra por regra_excecao (reduz a conduta à infração do art. 162, II — a esfera penal do art. 307 subsiste); C erra por termo_unico (confunde suspensão temporária com ausência de habilitação ou cassação — art. 309); D erra por gravidade (troca crime penal pela cassação administrativa do art. 263 — institutos distintos).",
+        "3. B correta: art. 307, com detenção 6m–1a, multa e nova suspensão de idêntico prazo."
+      ],
+      "pegadinha": "A IDECAN induz a crer que CNH suspensa gera só infração administrativa (art. 162) — violar suspensão imposta pelo CTB tipifica crime autônomo no art. 307.",
+      "macete": "307 = DIRIGIU com suspensão vigente · 309 = sem CNH ou CASSADO · 162 = infração admin (cumula).",
+      "estudo_reverso": [
+        "CTB art. 162",
+        "CTB art. 256",
+        "CTB art. 263",
+        "CTB art. 307",
+        "CTB art. 309"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CTB_art_307",
+      "macete_visual": "307 suspensão vigente · 309 sem CNH/cassado",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Ricardo dirige com CNH suspensa em vigência. A banca troca crime do art. 307 por infração isolada do art. 162.",
+            "destaques": ["art. 307", "suspensão", "art. 162"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "307 × 309 × 162",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Instituto", "Hipótese"],
+            "linhas": [
+              ["Art. 307", "Violar suspensão ou proibição de habilitar-se"],
+              ["Art. 309", "Dirigir sem CNH ou com direito cassado"],
+              ["Art. 162, II", "Infração admin — CNH suspensa (cumula)"]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Suspensão imposta com fundamento no CTB?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Condutor dirigiu durante a vigência?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Crime de violar suspensão — gabarito B", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Admin × penal",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Confusão ✗", "Regra ✓"],
+            "linhas": [
+              ["CNH suspensa = só multa do art. 162", "Art. 307 tipifica crime autônomo"],
+              ["Suspensão = art. 309 sem habilitação", "309 é sem CNH ou cassação — não suspensão"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "307 = DIRIGIU com suspensão vigente · 309 = sem CNH ou CASSADO · 162 admin cumula.",
+            "destaques": ["307", "309", "162"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 307",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 250,
+      "fundamento_slug": "CTB_art_307",
+      "macete_visual": "307 suspensão vigente · 309 sem CNH/cassado · 162 cumula",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "CNH suspensa não se resolve só com infração do art. 162 — violar suspensão é crime (art. 307)",
+        "eixos_legais": ["CTB_art_307", "CTB_art_162_II", "CTB_art_309"],
+        "isca_por_alternativa": {
+          "A": "reduz a conduta à multa administrativa do art. 162, II",
+          "C": "equipara suspensão temporária a dirigir sem habilitação (art. 309)",
+          "D": "substitui o crime pela cassação administrativa do art. 263"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: suspensão vigente é crime",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B (art. 307 — violar suspensão).\n\nA — só art. 162, II: infração admin não elide crime de trânsito (art. 256, § 1º).\nC — art. 309: exige ausência de habilitação ou cassação — Ricardo tem CNH suspensa, não cassada.\nD — art. 263: cassação é penalidade administrativa distinta — não substitui art. 307.\n\nRicardo dirigiu durante suspensão notificada com fundamento no CTB.",
+            "destaques": ["Gabarito B", "art. 307", "suspensão vigente"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 institutos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SUSPENSÃO (art. 261): penalidade administrativa que retira temporariamente o direito de dirigir — violá-la no período tipifica art. 307.\n\nCASSAÇÃO (art. 263): retira definitivamente a CNH — hipótese do art. 309, não do art. 307.\n\nINFRAÇÃO ADMIN (art. 162, II): autuação por dirigir com CNH suspensa — cumula com crime do art. 307.",
+            "destaques": ["SUSPENSÃO", "CASSAÇÃO", "art. 162, II"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: crime ou só infração?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Suspensão ou proibição imposta com fundamento no CTB?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Condutor dirigiu durante a vigência da suspensão?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Crime de violar suspensão — gabarito B",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Suspensão × cassação × infração",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Situação", "Consequência principal"],
+            "linhas": [
+              {
+                "faixa": "Dirigir com suspensão vigente (CTB)",
+                "classificacao": "Crime — art. 307",
+                "destaque": true
+              },
+              { "faixa": "Dirigir sem CNH ou cassado", "classificacao": "Crime — art. 309" },
+              { "faixa": "Autuação administrativa CNH suspensa", "classificacao": "Infração — art. 162, II (cumula)" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: art. 162 basta?",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "CNH suspensa = só multa do art. 162, II",
+                "Art. 307 tipifica crime autônomo — esferas cumulam"
+              ],
+              [
+                "Ter CNH no bolso afasta art. 309",
+                "Art. 309 exige ausência de habilitação ou cassação — suspensão é art. 307"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Restringe a infração administrativa — art. 307 subsiste com fundamento no CTB"
+              ],
+              [
+                "C — termo_unico",
+                "Confunde suspensão temporária com ausência de habilitação — art. 309"
+              ],
+              [
+                "D — gravidade",
+                "Substitui crime penal pela cassação administrativa do art. 263"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado — Ricardo",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência legal"],
+            "linhas": [
+              ["Suspensão imposta com fundamento no CTB", "Hipótese do art. 307"],
+              ["Notificação regular + vigência da suspensão", "Conduta típica configurada"],
+              ["Apresenta CNH válida, mas suspensa", "Não é art. 309 — não houve cassação"],
+              ["Autuação possível em paralelo", "Art. 162, II — cumula com art. 307"],
+              ["Resultado", "Gabarito B — detenção 6m–1a + multa + nova suspensão"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Penas e esferas",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Artigo", "Conteúdo"],
+            "linhas": [
+              ["Art. 307 — penas", "Detenção 6m–1a + multa + nova suspensão de idêntico prazo"],
+              ["Art. 309 — penas", "Detenção 6m–1a ou multa — sem CNH ou cassado"],
+              ["Art. 256, § 1º", "Penalidade administrativa não elide crime de trânsito"],
+              ["Caso Ricardo", "Art. 307 — não só art. 162"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 307 — núcleo do crime",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 307",
+            "texto": "Violar a suspensão ou a proibição de se obter a permissão ou a habilitação para dirigir veículo automotor imposta com fundamento neste Código:",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 18,
+                "motivo": "caso — Ricardo violou suspensão vigente"
+              },
+              {
+                "inicio": 106,
+                "fim": 141,
+                "motivo": "contraste — fundamento no CTB distingue de outras sanções"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 307 — penas",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 307 — penas",
+            "texto": "Penas - detenção, de seis meses a um ano e multa, com nova imposição adicional de idêntico prazo de suspensão ou de proibição.",
+            "trechos_grifados": [
+              {
+                "inicio": 8,
+                "fim": 38,
+                "motivo": "hierarquia — quantum distinto do art. 309 (ou multa)"
+              },
+              {
+                "inicio": 54,
+                "fim": 78,
+                "motivo": "caso — nova suspensão de idêntico prazo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "307 = DIRIGIU com suspensão vigente · 309 = sem CNH ou CASSADO · 162 admin cumula.\n\nNear-transfer: Paula teve a CNH cassada pelo art. 263 e é flagrada dirigindo — não é art. 307 (suspensão), e sim art. 309 (dirigir com direito cassado).",
+            "destaques": ["307", "309", "Paula"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 307",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "tags": [
+      "crimes_transito",
+      "art_307",
+      "suspensao",
+      "cnh",
+      "regra_excecao",
+      "caso_pratico"
+    ]
+  }
+]

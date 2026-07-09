@@ -1,0 +1,289 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_900_recursos",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_prazo",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_900_art_6",
+    "enunciado": "Paulo, proprietário residente em Campina Grande/PB, foi autuado pela STTP por estacionamento irregular. A notificação de autuação concedeu prazo para defesa prévia até o dia 20 de junho de 2026. No dia 20, Paulo entregou o requerimento de defesa prévia na agência dos Correios, com carimbo comprobatório da Empresa Brasileira de Correios e Telégrafos (ECT) em 20/06/2026, endereçado ao endereço da STTP. O órgão autuador somente recebeu o envelope em 25/06/2026. Considerando a Resolução CONTRAN nº 900/2022 e o CTB, assinale a alternativa CORRETA quanto à tempestividade da defesa:",
+    "alternativas": {
+      "A": "A defesa não é tempestiva, pois o órgão autuador só a considera no prazo quando recebe fisicamente o documento em seu protocolo.",
+      "B": "A defesa só seria tempestiva se protocolada no Detran-PB, órgão do domicílio do infrator, nos termos do art. 287 do CTB.",
+      "C": "A defesa é tempestiva, pois, na via postal, conta a data da entrega na ECT, conforme o art. 6º, § 1º, I, da Resolução CONTRAN nº 900/2022.",
+      "D": "A defesa não é tempestiva, pois o art. 6º, § 4º, da Resolução CONTRAN nº 900/2022 exige protocolização eletrônica pelo órgão autuador."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Marco de tempestividade da defesa prévia enviada por via postal (Res. CONTRAN 900/2022, art. 6º, § 1º, I) e distinção do recebimento físico no autuador, do art. 287 do CTB e do protocolo eletrônico facultativo (§ 4º).",
+      "fundamento_legal": "Res. CONTRAN 900/2022, art. 6º, § 1º, I: para verificação da tempestividade, considera-se a data da entrega na ECT, no caso de defesa prévia ou recurso apresentado por via postal. Art. 6º, § 4º: a protocolização poderá ser feita por meio eletrônico, desde que disponibilizado pelo órgão autuador — faculdade, não obrigatoriedade. CTB, art. 287: recurso em localidade diversa do licenciamento pode ser apresentado no órgão do domicílio — hipótese distinta do envio postal direto ao autuador.",
+      "passo_a_passo": [
+        "1. Paulo postou a defesa no último dia do prazo (20/06); a STTP só recebeu em 25/06 — conflito de datas.",
+        "2. A erra por regra_excecao (inventa que tempestividade depende do recebimento físico no autuador); B erra por competencia_snt (remete ao Detran-PB pelo art. 287 sem hipótese de infração em localidade diversa); D erra por termo_unico (transforma protocolo eletrônico facultativo em exigência obrigatória).",
+        "3. C correta: via postal tempestiva pela data da entrega na ECT — art. 6º, § 1º, I."
+      ],
+      "pegadinha": "A IDECAN induz a contar o prazo pela data em que a STTP abriu o envelope — o art. 6º, § 1º, I fixa a entrega na ECT como marco da tempestividade.",
+      "macete": "POSTAL → data da ECT · domicílio (287) → data do protocolo local · eletrônico = facultativo (§ 4º).",
+      "estudo_reverso": [
+        "Res. CONTRAN 900/2022 art. 6",
+        "Res. CONTRAN 900/2022 art. 4",
+        "CTB art. 287",
+        "CTB art. 281-A"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 80,
+      "fundamento_slug": "CONTRAN_900_art_6",
+      "macete_visual": "POSTAL = data ECT · não recebimento STTP",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Postagem no dia 20; STTP recebeu dia 25. A banca troca data da ECT pelo recebimento no autuador.\n\nGabarito C: art. 6º, § 1º, I — tempestividade pela entrega nos Correios.",
+            "destaques": ["dia 20", "ECT", "art. 6º"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Marcos de tempestividade",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Forma de apresentação", "Marco legal"],
+            "linhas": [
+              {
+                "faixa": "Via postal ao autuador",
+                "classificacao": "Data da entrega na ECT — art. 6º, § 1º, I",
+                "destaque": true
+              },
+              {
+                "faixa": "Protocolo no domicílio (art. 287 CTB)",
+                "classificacao": "Data do protocolo local — art. 6º, § 1º, II"
+              },
+              {
+                "faixa": "Recebimento físico no autuador",
+                "classificacao": "Não é marco da tempestividade postal"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha IDECAN",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Confusão ✗", "Regra ✓"],
+            "linhas": [
+              ["STTP abriu dia 25 = fora do prazo", "ECT dia 20 = tempestiva (§ 1º, I)"],
+              ["Art. 287 obriga protocolo no Detran-PB", "287 só se infração em localidade diversa do licenciamento"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "POSTAL → data da ECT · não confundir com recebimento no autuador.\nEletrônico (§ 4º) = facultativo quando disponível.",
+            "destaques": ["ECT", "POSTAL", "facultativo"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 900/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 900, DE 9 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 250,
+      "fundamento_slug": "CONTRAN_900_art_6",
+      "macete_visual": "POSTAL = data ECT · 287 = protocolo domicílio",
+      "meta": {
+        "padrao_familia": "D_gradacao",
+        "pegadinha_em_uma_frase": "Recebimento da STTP no dia 25 não conta — tempestividade postal é a data da ECT",
+        "eixos_legais": ["CONTRAN_900_art_6", "CTB_art_287"],
+        "isca_por_alternativa": {
+          "A": "conta prazo pelo recebimento físico no autuador",
+          "B": "exige protocolo no Detran-PB sem hipótese do art. 287",
+          "D": "transforma protocolo eletrônico em obrigação do § 4º"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: postou no dia 20, STTP abriu no dia 25",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (art. 6º, § 1º, I — data da ECT).\n\nA — recebimento físico na STTP: não é marco da via postal.\nB — Detran-PB pelo art. 287: hipótese de infração em localidade diversa do licenciamento — não o caso.\nD — protocolo eletrônico obrigatório: § 4º é facultativo quando disponível.\n\nPaulo postou no último dia do prazo com carimbo ECT em 20/06.",
+            "destaques": ["Gabarito C", "ECT", "20/06"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 marcos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "TEMPESTIVIDADE: defesa apresentada dentro do prazo legal — verificação pelo art. 6º, § 1º.\n\nECT: Empresa Brasileira de Correios e Telégrafos — data da entrega na agência conta para via postal.\n\nVIA POSTAL: envio endereçado ao autuador — distinta do protocolo no domicílio (art. 287 CTB).",
+            "destaques": ["TEMPESTIVIDADE", "ECT", "VIA POSTAL"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Marcos de tempestividade — art. 6º, § 1º",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Forma de apresentação", "Marco que conta"],
+            "linhas": [
+              {
+                "faixa": "Via postal ao autuador",
+                "classificacao": "Data da entrega na ECT — inciso I",
+                "destaque": true
+              },
+              {
+                "faixa": "Protocolo no domicílio (art. 287 CTB)",
+                "classificacao": "Data do protocolo no órgão local — inciso II"
+              },
+              {
+                "faixa": "Protocolo direto no autuador",
+                "classificacao": "Data do protocolo no órgão autuador"
+              },
+              {
+                "faixa": "Recebimento físico (isca)",
+                "classificacao": "Não é marco da via postal — pegadinha IDECAN"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: abrir o envelope × postar nos Correios",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "STTP recebeu dia 25 = defesa intempestiva",
+                "Via postal: conta entrega na ECT dia 20 — art. 6º, § 1º, I"
+              ],
+              [
+                "Art. 287 obriga protocolar no Detran do domicílio",
+                "287 só se infração em localidade diversa do licenciamento"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Inventa que tempestividade depende do recebimento físico no autuador"
+              ],
+              [
+                "B — competencia_snt",
+                "Remete ao Detran-PB pelo art. 287 sem hipótese de localidade diversa"
+              ],
+              [
+                "D — termo_unico",
+                "Transforma protocolo eletrônico facultativo (§ 4º) em obrigação"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado — Paulo",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dado do caso", "Conclusão legal"],
+            "linhas": [
+              ["Prazo de defesa até 20/06/2026", "Último dia legal para apresentação"],
+              ["Carimbo ECT em 20/06/2026", "Marco de tempestividade — § 1º, I"],
+              ["STTP recebeu em 25/06/2026", "Irrelevante para contagem postal"],
+              ["Resultado", "Gabarito C — defesa tempestiva"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Formas de apresentação — art. 6º",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Regra"],
+            "linhas": [
+              ["Art. 6º caput", "Protocolo no autuador ou envio postal ao seu endereço"],
+              ["§ 1º, I", "Postal → data da entrega na ECT"],
+              ["§ 1º, II + CTB art. 287", "Domicílio → data do protocolo local"],
+              ["§ 4º", "Eletrônico facultativo se disponibilizado pelo autuador"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Res. 900/2022, art. 6º, § 1º",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 900/2022, art. 6º, § 1º",
+            "texto": "§ 1º Para verificação da tempestividade, deverá ser considerada:\nI - a data da entrega na Empresa Brasileira de Correios e Telégrafos (ECT), no caso de defesa prévia ou de recurso apresentado por via postal; ou\nII - a data de protocolo no órgão ou entidade de trânsito da residência ou domicílio do proprietário ou infrator, quando utilizada a forma prevista no art. 287 do CTB.",
+            "trechos_grifados": [
+              {
+                "inicio": 69,
+                "fim": 139,
+                "motivo": "gradacao — marco da via postal é a ECT"
+              },
+              {
+                "inicio": 152,
+                "fim": 206,
+                "motivo": "caso — defesa prévia enviada por Correios"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "POSTAL → data da ECT · domicílio (287) → data do protocolo local · eletrônico = facultativo (§ 4º).\n\nNear-transfer: recurso protocolado no Detran-PB em 20/06 por infração lavrada em Recife/PE — tempestividade conta a data do protocolo local (§ 1º, II), não a chegada na STTP de Recife.",
+            "destaques": ["ECT", "protocolo local", "§ 1º, II"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 900/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 900, DE 9 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    },
+    "tags": [
+      "contran_900",
+      "defesa_previa",
+      "tempestividade",
+      "via_postal",
+      "art_6"
+    ]
+  }
+]
