@@ -111,7 +111,15 @@ async function main() {
     const seed = rowToSeedInput(row);
 
     if (nivelLote007) {
-      if (isNivelLote007Ouro(seed)) {
+      const ouroCheck = {
+        tipo: seed.tipo,
+        dificuldade: seed.dificuldade,
+        estudo_reverso_visual_completo: seed.estudo_reverso_visual_completo as
+          | { versao?: number; telas?: Array<{ id: string }> }
+          | null
+          | undefined,
+      };
+      if (isNivelLote007Ouro(ouroCheck)) {
         validas.push(row.id);
       } else {
         invalidas.push({

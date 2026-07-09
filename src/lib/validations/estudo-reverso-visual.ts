@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { ARQUETIPOS_VISUAIS, SECOES_VISUAIS } from "@/types/estudo-reverso-visual";
+import { ARQUETIPOS_VISUAIS, SECOES_VISUAIS, type ConteudoFluxograma } from "@/types/estudo-reverso-visual";
 import { isFluxogramaLinear } from "@/lib/estudo-reverso/fluxograma-caminho";
 
 /**
@@ -205,10 +205,7 @@ export function validarLimitesComponente(
           }
           if (
             nos.length > 0 &&
-            !isFluxogramaLinear({ nos, arestas } as {
-              nos: typeof nos;
-              arestas: typeof arestas;
-            })
+            !isFluxogramaLinear({ nos, arestas } as ConteudoFluxograma)
           ) {
             ctx.addIssue({
               code: z.ZodIssueCode.custom,
