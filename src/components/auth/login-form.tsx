@@ -34,7 +34,7 @@ export function LoginForm({ next, authError }: LoginFormProps) {
       <CardHeader>
         <CardTitle>Entrar</CardTitle>
         <CardDescription>
-          Use o e-mail e a senha cadastrados no Supabase Auth.
+          Entre com o e-mail e a senha da sua conta.
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
@@ -88,9 +88,14 @@ export function LoginForm({ next, authError }: LoginFormProps) {
           </Button>
         </form>
 
-        <p className="text-xs text-muted-foreground">
-          Primeiro acesso? Crie o usuário em Supabase → Authentication → Users
-          (e-mail + senha).
+        <p className="text-center text-sm text-muted-foreground">
+          Não tem conta?{" "}
+          <Link
+            href={next ? `/cadastro?next=${encodeURIComponent(next)}` : "/cadastro"}
+            className="font-medium text-primary underline-offset-4 hover:underline"
+          >
+            Cadastre-se
+          </Link>
         </p>
 
         <Link href="/" className={cn(buttonVariants({ variant: "ghost" }))}>
