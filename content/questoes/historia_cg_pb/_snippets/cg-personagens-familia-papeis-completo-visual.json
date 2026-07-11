@@ -1,0 +1,253 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 210,
+  "fundamento_slug": "CG_personagens_familia_oliveira_papeis",
+  "macete_visual": "Custódio desbrava | Antônio Infantaria | Teodósio 1694",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Candidato troca Custódio por Constantino, atribui Infantaria a Teodósio ou confunde nomeação de 1694 com fundação de 1697",
+    "eixos_mecanismo": [
+      "numero_vizinho",
+      "termo_unico",
+      "regra_excecao"
+    ],
+    "isca_por_alternativa": {
+      "A": "troca Custódio por Constantino no desbravamento e antecipa 1694 para 1697",
+      "C": "credit a Antônio a fundação e Custódio a vereador de 1790",
+      "D": "credit a Custódio a fundação e Constantino a governador"
+    },
+    "referencia_lote": "content/questoes/historia_cg_pb/lote-007.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: três papéis, três trocas",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — troca Custódio por Constantino e antecipa 1694 para 1697.\nC — credita Antônio a fundação e Custódio a vereador.\nD — credita Custódio a fundação e Constantino a governador.\n\nMural STTP: separar desbravamento, Infantaria e nomeação às Fronteiras.",
+        "destaques": [
+          "Custódio",
+          "Antônio",
+          "1694"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 funções distintas",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "DESBRAVAMENTO: Custódio de Oliveira Lêdo — irmão de Antônio.\n\nINFANTARIA: Antônio de Oliveira Lêdo — 1º capitão-mor da Infantaria de Ordenanças a Pé do Sertão da PB.\n\nFRONTEIRAS (1694): Teodósio de Oliveira Lêdo — capitão-mor das Piranhas, Cariri e Piancó.",
+        "destaques": [
+          "DESBRAVAMENTO",
+          "INFANTARIA",
+          "1694"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: qual Oliveira Lêdo?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Pergunta: desbravamento (irmão de Antônio)?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Pergunta: 1º capitão-mor da Infantaria do Sertão?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Custódio + Antônio + Teodósio Fronteiras 1694 → B",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Custódio"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Antônio + Teodósio 1694"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Mapa de papéis na família",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Personagem",
+          "Papel"
+        ],
+        "linhas": [
+          {
+            "faixa": "Custódio de Oliveira Lêdo",
+            "classificacao": "Desbravamento — irmão de Antônio",
+            "destaque": true
+          },
+          {
+            "faixa": "Antônio de Oliveira Lêdo",
+            "classificacao": "1º capitão-mor da Infantaria do Sertão"
+          },
+          {
+            "faixa": "Teodósio de Oliveira Lêdo",
+            "classificacao": "Capitão-mor das Fronteiras — nomeado 1694"
+          },
+          {
+            "faixa": "Constantino de Oliveira Lêdo",
+            "classificacao": "Capitão-mor após morte de Antônio — não desbravador"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Desbravamento × Infantaria × Fronteiras",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a base factual diz ✓"
+        ],
+        "linhas": [
+          [
+            "Constantino fez o desbravamento",
+            "Custódio — desbravamento; irmão de Antônio"
+          ],
+          [
+            "Teodósio foi 1º capitão-mor da Infantaria",
+            "Antônio — Infantaria de Ordenanças a Pé do Sertão"
+          ],
+          [
+            "Nomeação às Fronteiras em 1697 (fundação)",
+            "Teodósio nomeado capitão-mor das Fronteiras em 1694"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — termo_unico",
+            "Troca Custódio por Constantino no desbravamento"
+          ],
+          [
+            "A — numero_vizinho",
+            "Antecipa nomeação de 1694 para 1697 (fundação)"
+          ],
+          [
+            "C — regra_excecao",
+            "Atribui vereadoria a Custódio — Joaquim e Luiz em 1790"
+          ],
+          [
+            "D — termo_unico",
+            "Troca Teodósio por Custódio na fundação e Constantino por governador"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o mural da STTP",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Erro do estagiário",
+          "Correção"
+        ],
+        "linhas": [
+          [
+            "Constantino no desbravamento",
+            "Custódio de Oliveira Lêdo — irmão de Antônio"
+          ],
+          [
+            "Teodósio capitão-mor da Infantaria",
+            "Antônio — 1º capitão-mor da Infantaria do Sertão"
+          ],
+          [
+            "Nomeação às Fronteiras em 1697",
+            "Teodósio nomeado em 1694 → Gabarito B"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Base factual — personagens",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "conteúdo/historia-cg-pb/base-factual.md — Personagens-chave",
+        "texto": "Custódio de Oliveira Lêdo participou do desbravamento — irmão de Antônio. Antônio de Oliveira Lêdo foi o primeiro capitão-mor da Infantaria de Ordenanças a Pé do Sertão da Paraíba. Teodósio de Oliveira Lêdo foi nomeado capitão-mor das Fronteiras das Piranhas, Cariri e Piancó em 1694.",
+        "trechos_grifados": [
+          {
+            "inicio": 0,
+            "fim": 8,
+            "motivo": "mapa — desbravamento (irmão de Antônio)",
+            "texto_grifado": "Custódio"
+          },
+          {
+            "inicio": 105,
+            "fim": 125,
+            "motivo": "contraste — 1º capitão-mor da Infantaria",
+            "texto_grifado": "primeiro capitão-mor"
+          },
+          {
+            "inicio": 279,
+            "fim": 283,
+            "motivo": "fluxo — nomeação às Fronteiras (≠ 1697)",
+            "texto_grifado": "1694"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Custódio = desbravamento | Antônio = Infantaria | Teodósio = Fronteiras 1694 | Constantino = após Antônio.\n\nNear-transfer: 1694 (nomeação Teodósio) ≠ 1697 (fundação) — não inverta na prova.",
+        "destaques": [
+          "Custódio",
+          "1694",
+          "1697"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Base factual — Personagens-chave",
+      "path": "conteúdo/historia-cg-pb/base-factual.md"
+    }
+  ]
+}

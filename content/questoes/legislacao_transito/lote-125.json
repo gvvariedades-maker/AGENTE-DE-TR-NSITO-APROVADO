@@ -1,0 +1,354 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_conducao_embriaguez",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_432_art_6_1",
+    "enunciado": "Durante blitz da STTP em Campina Grande/PB, Ricardo apresenta sinais de alteração da capacidade psicomotora e é encaminhado a exame de sangue, nos termos da Resolução CONTRAN nº 432/2013. O laboratório devolve resultado de 3 (três) decigramas de álcool por litro de sangue (3 dg/L). O supervisor sustenta que não cabe Auto de Infração por embriaguez, pois o valor está abaixo do limite criminal de 6 dg/L previsto para o art. 306 do CTB. Considerando o CTB e a Resolução CONTRAN nº 432/2013, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Não há infração administrativa nem crime: abaixo de 6 dg/L no sangue o condutor recebe apenas orientação — o limite criminal define o piso de autuação.",
+      "B": "Há crime do art. 306 do CTB: o caput do art. 276 sujeita o condutor a penalidades por qualquer concentração no sangue — a esfera criminal dispensa patamar mínimo.",
+      "C": "Há infração do art. 165 do CTB pelo art. 6º, I, da Resolução (qualquer concentração no sangue); o crime do art. 306 não se configura, pois o art. 7º, I, exige 6 dg/L.",
+      "D": "A autuação administrativa depende de etilômetro com MR ≥ 0,34 mg/L — exame de sangue com 3 dg/L só produz efeito se confirmar o patamar criminal do etilômetro."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Limites distintos do exame de sangue para infração administrativa (Res. 432/2013, art. 6º, I — qualquer concentração) × crime (art. 7º, I — ≥ 6 dg/L), à luz do art. 276 do CTB.",
+      "fundamento_legal": "CTB, art. 276: qualquer concentração de álcool por litro de sangue ou por litro de ar alveolar sujeita o condutor às penalidades previstas no art. 165. Res. CONTRAN 432/2013, art. 6º, I: a infração do art. 165 será caracterizada por exame de sangue que apresente qualquer concentração de álcool por litro de sangue. Art. 7º, I: o crime do art. 306 será caracterizado por exame de sangue com resultado igual ou superior a 6 decigramas de álcool por litro de sangue (6 dg/L).",
+      "passo_a_passo": [
+        "1. Caso: sangue com 3 dg/L após blitz — supervisor invoca limite criminal de 6 dg/L para negar autuação administrativa.",
+        "2. A erra por numero_vizinho (aplica o piso criminal de 6 dg/L à infração administrativa — art. 6º, I, fixa qualquer concentração no sangue); B erra por regra_excecao (estende o caput do art. 276 à esfera criminal sem o patamar do art. 7º, I); D erra por termo_unico (subordina o exame de sangue à confirmação por etilômetro em 0,34 mg/L — vias autônomas no art. 6º e art. 7º).",
+        "3. C correta: art. 6º, I (3 dg/L → art. 165) + art. 7º, I (3 < 6 dg/L → sem art. 306)."
+      ],
+      "pegadinha": "A IDECAN induz a usar o 6 dg/L do crime como único referencial — mas a infração administrativa no sangue dispara com qualquer concentração (art. 6º, I), patamar distinto do art. 7º, I.",
+      "macete": "SANGUE: admin = qualquer (art. 6, I) · crime = 6 dg/L (art. 7, I) · etilômetro = patamares próprios.",
+      "estudo_reverso": [
+        "CTB art. 276",
+        "Res. CONTRAN 432/2013 art. 6",
+        "Res. CONTRAN 432/2013 art. 7",
+        "CTB art. 165"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "6 dg/L é piso do crime — no sangue, qualquer concentração já gera art. 165",
+      "eixos_legais": [
+        "CONTRAN_432_art_6_1",
+        "CONTRAN_432_art_7_1"
+      ],
+      "isca_por_alternativa": {
+        "A": "abaixo de 6 dg/L no sangue condutor recebe apenas orientação — limite criminal define piso de autuação",
+        "B": "caput do art. 276 sujeita a penalidades criminais por qualquer concentração no sangue",
+        "D": "autuação administrativa depende de etilômetro com MR 0,34 mg/L para confirmar sangue com 3 dg/L"
+      },
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
+      ]
+    },
+    "tags": [
+      "embriaguez",
+      "exame_sangue",
+      "art_276",
+      "resolucao_432",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CONTRAN_432_art_6_1",
+      "macete_visual": "Sangue: qualquer = 165 · 6 dg/L = crime",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Sangue com 3 dg/L — supervisor nega AIT por estar abaixo de 6 dg/L. A banca troca limite criminal por piso administrativo.\n\nGabarito C: qualquer concentração no sangue gera art. 165; crime exige 6 dg/L.",
+            "destaques": ["3 dg/L", "6 dg/L", "qualquer concentração"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Admin × crime no sangue",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Abaixo de 6 dg/L = só orientação",
+                "Art. 6º, I: qualquer concentração → art. 165"
+              ],
+              [
+                "Qualquer sangue = crime",
+                "Art. 7º, I: crime só com ≥ 6 dg/L"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SANGUE: admin = qualquer.\nCrime = 6 dg/L.\nEtilômetro = patamares próprios.",
+            "destaques": ["qualquer", "6 dg/L", "etilômetro"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 432/2013",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 432, DE 23 DE JANEIRO DE 2013.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "fluxograma_decisao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CONTRAN_432_art_6_1",
+      "macete_visual": "Sangue: qualquer = 165 · 6 dg/L = crime",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "6 dg/L é piso do crime — no sangue, qualquer concentração já gera art. 165",
+        "eixos_legais": [
+          "CONTRAN_432_art_6_1",
+          "CONTRAN_432_art_7_1"
+        ],
+        "isca_por_alternativa": {
+          "A": "abaixo de 6 dg/L no sangue condutor recebe apenas orientação — limite criminal define piso de autuação",
+          "B": "caput do art. 276 sujeita a penalidades criminais por qualquer concentração no sangue",
+          "D": "autuação administrativa depende de etilômetro com MR 0,34 mg/L para confirmar sangue com 3 dg/L"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: sangue 3 dg/L na blitz",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — abaixo de 6 dg/L no sangue só orientação — limite criminal define piso de autuação.\nB — qualquer concentração no sangue tipifica crime sem patamar mínimo.\nD — autuação depende de etilômetro com MR 0,34 mg/L para confirmar o sangue.\n\nPegadinha: 6 dg/L é patamar do crime — infração administrativa no sangue dispara com qualquer concentração.",
+            "destaques": ["Gabarito C", "3 dg/L", "qualquer concentração"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DECIGRAMA POR LITRO (dg/L): unidade do exame de sangue — 3 dg/L equivale a 0,03 g/L de álcool no sangue.\n\nINFRAÇÃO ADMINISTRATIVA: art. 165 do CTB — multa, pontos e medidas administrativas no âmbito do SNT.\n\nCRIME DE TRÂNSITO: art. 306 do CTB — esfera penal com patamar próprio no exame de sangue.",
+            "destaques": ["dg/L", "art. 165", "art. 306"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Sangue — dois patamares distintos",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Resultado no sangue", "Consequência"],
+            "linhas": [
+              {
+                "faixa": "Qualquer concentração detectável",
+                "classificacao": "Infração art. 165 — art. 6º, I, da Res. 432/2013",
+                "destaque": true
+              },
+              {
+                "faixa": "≥ 6 dg/L",
+                "classificacao": "Crime art. 306 — art. 7º, I, da Res. 432/2013"
+              },
+              {
+                "faixa": "3 dg/L (caso Ricardo)",
+                "classificacao": "Art. 165 sim · art. 306 não"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: sangue com 3 dg/L",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Exame de sangue detectou qualquer concentração de álcool?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Infração administrativa configurada — verificar se atinge patamar criminal de 6 dg/L",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim — 3 dg/L no caso" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: 6 dg/L como único limite",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Abaixo de 6 dg/L = sem autuação",
+                "Art. 6º, I: qualquer concentração no sangue → art. 165"
+              ],
+              [
+                "Art. 276 caput criminaliza qualquer resíduo",
+                "Crime exige 6 dg/L — art. 7º, I"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — numero_vizinho",
+                "Aplica o piso criminal de 6 dg/L à infração administrativa — ignora art. 6º, I"
+              ],
+              [
+                "B — regra_excecao",
+                "Estende o caput do art. 276 à esfera criminal sem o patamar do art. 7º, I"
+              ],
+              [
+                "D — termo_unico",
+                "Subordina o exame de sangue à confirmação por etilômetro em 0,34 mg/L"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato da blitz", "Consequência"],
+            "linhas": [
+              [
+                "Ricardo com sinais de alteração psicomotora",
+                "Encaminhamento a exame de sangue pela STTP"
+              ],
+              [
+                "Resultado laboratorial: 3 dg/L",
+                "Qualquer concentração — art. 6º, I"
+              ],
+              [
+                "Supervisor nega AIT por estar abaixo de 6 dg/L",
+                "Erro — 6 dg/L é patamar do crime, não da infração"
+              ],
+              [
+                "3 dg/L < 6 dg/L",
+                "Crime do art. 306 não configurado — art. 7º, I"
+              ],
+              [
+                "Resultado",
+                "Alternativa C — art. 165 sim, art. 306 não"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Sangue × etilômetro — vias paralelas",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Procedimento", "Patamar administrativo"],
+            "linhas": [
+              [
+                "Exame de sangue",
+                "Qualquer concentração — art. 6º, I"
+              ],
+              [
+                "Etilômetro",
+                "MR ≥ 0,05 mg/L — art. 6º, II (via distinta)"
+              ],
+              [
+                "Crime no sangue",
+                "≥ 6 dg/L — art. 7º, I (independe do etilômetro)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 6º, I — infração no sangue",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 432/2013, art. 6º, I",
+            "texto": "I – exame de sangue que apresente qualquer concentração de álcool por litro de sangue;",
+            "trechos_grifados": [
+              {
+                "inicio": 34,
+                "fim": 85,
+                "motivo": "gradacao — 3 dg/L de Ricardo enquadra infração administrativa",
+                "texto_grifado": "qualquer concentração de álcool por litro de sangue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 7º, I — crime no sangue",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 432/2013, art. 7º, I",
+            "texto": "I – exame de sangue que apresente resultado igual ou superior a 6 (seis) decigramas de álcool por litro de sangue (6 dg/L);",
+            "trechos_grifados": [
+              {
+                "inicio": 44,
+                "fim": 113,
+                "motivo": "contraste — 3 dg/L não atinge patamar criminal de 6 dg/L",
+                "texto_grifado": "igual ou superior a 6 (seis) decigramas de álcool por litro de sangue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SANGUE: admin = qualquer.\nCrime = 6 dg/L.\nEtilômetro = patamares próprios.\n\nNear-transfer: se o sangue de Ricardo fosse 7 dg/L, haveria art. 165 e crime do art. 306 — as esferas cumulam, com patamares distintos.",
+            "destaques": ["qualquer", "6 dg/L", "7 dg/L"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 432/2013",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 432, DE 23 DE JANEIRO DE 2013.pdf"
+        },
+        {
+          "rotulo": "CTB art. 276",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

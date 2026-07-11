@@ -1,0 +1,216 @@
+{
+  "versao": 2,
+  "arquetipo": "tabela_gradacao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 195,
+  "fundamento_slug": "CG_formacao_marcos",
+  "macete_visual": "1697 funda | 1790 vila | 1864 cidade — freguesia 1769 ≠ vila",
+  "meta": {
+    "padrao_familia": "D_gradacao",
+    "pegadinha_em_uma_frase": "Candidato confunde fundação, freguesia e elevações oficiais trocando 1698, 1769 ou invertendo 1790↔1864",
+    "eixos_mecanismo": [
+      "numero_vizinho",
+      "termo_unico",
+      "regra_excecao"
+    ],
+    "isca_por_alternativa": {
+      "B": "aceita 1698 (mapa italiano) no lugar da fundação oficial de 1697",
+      "C": "troca Teodósio por Antônio e trata freguesia 1769 como elevação a vila",
+      "D": "inverte 1790 (vila) e 1864 (cidade) entre os marcos"
+    },
+    "referencia_lote": "content/questoes/historia_cg_pb/lote-001.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: três marcos, três confusões",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito A.\n\nB — troca 1697 por 1698 (debate do mapa italiano).\nC — credita Antônio e confunde freguesia 1769 com elevação a vila.\nD — inverte 1790 e 1864 entre vila e cidade.\n\nVisita ao Museu Histórico: três marcos administrativos da formação municipal.",
+        "destaques": [
+          "1697",
+          "1790",
+          "1864"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 marcos distintos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "FUNDAÇÃO (1697): povoado com aldeamento dos Ariús por Teodósio de Oliveira Lêdo.\n\nVILA (1790): elevação a Vila Nova da Rainha — nome oficial antes de Campina Grande.\n\nCIDADE (1864): Lei Provincial nº 127 — categoria municipal superior à vila.",
+        "destaques": [
+          "FUNDAÇÃO",
+          "VILA",
+          "CIDADE"
+        ]
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Gradação dos marcos oficiais",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Ano",
+          "Status administrativo"
+        ],
+        "linhas": [
+          {
+            "faixa": "1697 (1/12)",
+            "classificacao": "Fundação — Teodósio aldeia Ariús na Serra da Borborema",
+            "destaque": true
+          },
+          {
+            "faixa": "1769",
+            "classificacao": "Freguesia (N. Sra. da Conceição) — não é vila"
+          },
+          {
+            "faixa": "1790 (20/04)",
+            "classificacao": "Vila Nova da Rainha + pelourinho"
+          },
+          {
+            "faixa": "1864 (11/10)",
+            "classificacao": "Cidade — Lei Provincial nº 127"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Fundação × freguesia × vila × cidade",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a base factual diz ✓"
+        ],
+        "linhas": [
+          [
+            "1698 é a data oficial da fundação",
+            "Fundação cobrável: 1/12/1697 — Teodósio + Ariús"
+          ],
+          [
+            "Freguesia de 1769 já era elevação a vila",
+            "Vila só em 1790 — Vila Nova da Rainha"
+          ],
+          [
+            "Vila e cidade podem ser invertidas nas datas",
+            "1790 = vila | 1864 = cidade (Lei 127)"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "B — numero_vizinho",
+            "Usa 1698 (debate historiográfico) no lugar de 1697 — data oficial da fundação"
+          ],
+          [
+            "C — termo_unico",
+            "Credita Antônio de Oliveira Lêdo em vez de Teodósio como fundador"
+          ],
+          [
+            "C — regra_excecao",
+            "Trata freguesia de 1769 como se fosse elevação a vila — vila é 1790"
+          ],
+          [
+            "D — numero_vizinho",
+            "Inverte 1790 (vila) e 1864 (cidade) entre os marcos oficiais"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo a visita ao Museu",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Marco do cartaz",
+          "Data e nome corretos"
+        ],
+        "linhas": [
+          [
+            "Aldeamento dos Ariús na Serra da Borborema",
+            "1/12/1697 — Teodósio de Oliveira Lêdo"
+          ],
+          [
+            "Elevação a vila com pelourinho",
+            "20/04/1790 — Vila Nova da Rainha"
+          ],
+          [
+            "Elevação à categoria de cidade",
+            "11/10/1864 — Lei Provincial nº 127 → Gabarito A"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Base factual — formação municipal",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "conteúdo/historia-cg-pb/base-factual.md — Formação",
+        "texto": "Em 1/12/1697, Teodósio de Oliveira Lêdo aldeia índios Ariús em chapada na Serra da Borborema — origem do povoado. Em 20/04/1790, elevada a Vila Nova da Rainha com criação do pelourinho. Em 11/10/1864, elevação à categoria de cidade pela Lei Provincial nº 127.",
+        "trechos_grifados": [
+          {
+            "inicio": 3,
+            "fim": 12,
+            "motivo": "gradacao — marco da fundação (1697)",
+            "texto_grifado": "1/12/1697"
+          },
+          {
+            "inicio": 139,
+            "fim": 158,
+            "motivo": "contraste — nome oficial da vila (1790)",
+            "texto_grifado": "Vila Nova da Rainha"
+          },
+          {
+            "inicio": 237,
+            "fim": 258,
+            "motivo": "gradacao — elevação a cidade (1864)",
+            "texto_grifado": "Lei Provincial nº 127"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "1697 funda (Teodósio + Ariús) | 1790 vila (Vila Nova da Rainha) | 1864 cidade (Lei 127).\n\nNear-transfer: se a banca cobrar só o nome histórico antes de 1864, responda Vila Nova da Rainha — não Campina Grande.",
+        "destaques": [
+          "1697",
+          "Vila Nova da Rainha",
+          "1864"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Base factual — Formação de Campina Grande",
+      "path": "conteúdo/historia-cg-pb/base-factual.md"
+    }
+  ]
+}

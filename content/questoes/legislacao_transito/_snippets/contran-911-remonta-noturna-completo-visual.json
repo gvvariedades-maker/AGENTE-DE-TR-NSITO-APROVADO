@@ -1,0 +1,289 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CONTRAN_911_art_8_5",
+  "macete_visual": "Remonta noturna = vedada",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Capacete e dimensões regulares não autorizam remonta noturna — art. 8, §5 veda expressamente",
+    "eixos_legais": [
+      "CONTRAN_911_art_8_5",
+      "CONTRAN_911_art_11_II"
+    ],
+    "isca_por_alternativa": {
+      "A": "dimensões do conjunto dentro dos limites do art. 8 autorizam circulação noturna da remonta",
+      "B": "capacete motociclístico dispensa a vedação ao trânsito noturno de inacabado sem cabine completa",
+      "D": "fiscalização de remonta noturna na BR-230 seria exclusiva da PRF, não da STTP"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: remonta noturna na BR-230",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — dimensões do conjunto dentro dos limites autorizam circulação noturna da remonta.\nB — capacete motociclístico dispensa a vedação ao trânsito noturno de inacabado sem cabine completa.\nD — fiscalização de remonta noturna na BR-230 seria exclusiva da PRF, não da STTP.\n\nPegadinha: capacete e dimensões regulares não autorizam trânsito noturno — vedação expressa para remonta sem cabine.",
+        "destaques": [
+          "Gabarito C",
+          "noturno",
+          "capacete"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "REMONTA: transporte de veículo automotor novo inacabado por outro veículo novo inacabado — art. 8º da Res. 911/2022.\n\nINACABADO SEM CABINE: chassis com cabine incompleta ou ausente — exige capacete e veda noturno.\n\nCONJUNTO REMONTA: veículo transportador + transportado — limites dimensionais nos §§ 1º e 2º do art. 8º.",
+        "destaques": [
+          "REMONTA",
+          "INACABADO",
+          "CONJUNTO"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: cabe autuação pela remonta noturna?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Remonta com inacabado sem cabine completa em período noturno?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Condutor usa capacete e dimensões estão regulares?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Subsiste autuação — § 5º veda noturno",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — caso da BR-230"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Capacete não dispensa vedação"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Requisitos da remonta — o que cada regra exige",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Requisito",
+          "Regra"
+        ],
+        "linhas": [
+          {
+            "faixa": "Dimensões do conjunto",
+            "classificacao": "2,60 m × 4,40 m × 14,00 m — §§ 1º e 2º"
+          },
+          {
+            "faixa": "Capacete sem cabine",
+            "classificacao": "Obrigatório — § 5º"
+          },
+          {
+            "faixa": "Trânsito noturno",
+            "classificacao": "Vedado — § 5º",
+            "destaque": true
+          },
+          {
+            "faixa": "Penalidade",
+            "classificacao": "Art. 187, I, CTB — art. 11, II"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: capacete autoriza à noite",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Crença ✗",
+          "Lei ✓"
+        ],
+        "linhas": [
+          [
+            "Capacete regulariza a remonta noturna",
+            "Capacete é exigência adicional — noturno permanece vedado"
+          ],
+          [
+            "Dimensões dentro do limite liberam à noite",
+            "§§ 1º e 2º não revogam vedação noturna do § 5º"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Trata dimensões regulares como autorização noturna — ignora vedação do § 5º"
+          ],
+          [
+            "B — termo_unico",
+            "Confunde exigência de capacete com dispensa da vedação noturna"
+          ],
+          [
+            "D — competencia_snt",
+            "Subordina autuação à PRF na BR-230 — ignora tipificação do art. 11, II"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do caso",
+          "Consequência"
+        ],
+        "linhas": [
+          [
+            "Remonta noturna na BR-230 com inacabado sem cabine completa",
+            "Incide vedação do art. 8º, § 5º"
+          ],
+          [
+            "Condutor com capacete e dimensões regulares",
+            "Não afasta vedação noturna"
+          ],
+          [
+            "Supervisor alega competência exclusiva da PRF",
+            "Não impede tipificação pelo art. 11, II"
+          ],
+          [
+            "Resultado",
+            "Alternativa C"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Dimensões × vedação noturna",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Art. 8º, §§ 1º e 2º — dimensões",
+            "Limites do conjunto — satisfeitos no caso, mas insuficientes sozinhos"
+          ],
+          [
+            "Art. 8º, § 5º — noturno",
+            "Veda trânsito noturno — eixo do gabarito"
+          ],
+          [
+            "Art. 11, II — penalidade",
+            "Art. 187, I do CTB para remonta noturna"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei1",
+      "titulo": "Art. 8º, § 5º — vedação noturna",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 911/2022, art. 8º, § 5º",
+        "texto": "§ 5º Em veículos novos inacabados, quando não possuírem cabine ou esta for incompleta, o condutor deverá usar capacete motociclístico, com viseira ou com o uso de óculos de proteção, conforme estabelecido na Resolução do CONTRAN referente a capacetes motociclísticos, sendo vedado o trânsito em dias chuvosos, com neblina ou cerração, bem como o trânsito noturno.",
+        "trechos_grifados": [
+          {
+            "inicio": 268,
+            "fim": 362,
+            "motivo": "contraste — vedação noturna independe do capacete do caso",
+            "texto_grifado": "sendo vedado o trânsito em dias chuvosos, com neblina ou cerração, bem como o trânsito noturno"
+          },
+          {
+            "inicio": 110,
+            "fim": 133,
+            "motivo": "caso — condutor usava capacete, mas não dispensa noturno",
+            "texto_grifado": "capacete motociclístico"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 11, II — penalidade",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 911/2022, art. 11, II",
+        "texto": "II - art. 187, I: quando transitar com o veículo inacabado ou remonta em período noturno;",
+        "trechos_grifados": [
+          {
+            "inicio": 18,
+            "fim": 88,
+            "motivo": "fluxo — remonta noturna da BR-230 tipifica art. 187, I do CTB",
+            "texto_grifado": "quando transitar com o veículo inacabado ou remonta em período noturno"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Remonta diurna + dimensões + capacete.\nNoturno = vedado.\n\nNear-transfer: se a remonta ocorresse de dia, com capacete e dimensões regulares, a vedação noturna do § 5º não se aplicaria — mas chuva, neblina ou cerração continuariam vedadas.",
+        "destaques": [
+          "Noturno",
+          "vedado",
+          "chuva"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 911/2022",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 911, DE 28 DE MARÇO DE 2022.pdf"
+    },
+    {
+      "rotulo": "CTB art. 187, I",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

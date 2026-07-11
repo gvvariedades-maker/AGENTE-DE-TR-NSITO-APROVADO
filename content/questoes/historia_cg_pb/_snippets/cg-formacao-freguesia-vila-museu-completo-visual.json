@@ -1,0 +1,224 @@
+{
+  "versao": 2,
+  "arquetipo": "tabela_gradacao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 200,
+  "fundamento_slug": "CG_formacao_freguesia_vila_museu",
+  "macete_visual": "1769 freguesia | 1790 vila+pelourinho | 1814 Museu",
+  "meta": {
+    "padrao_familia": "D_gradacao",
+    "pegadinha_em_uma_frase": "Candidato inverte freguesia (1769) e vila (1790), antecipa cidade para 1790 ou confunde fundação (1697) com freguesia",
+    "eixos_mecanismo": [
+      "numero_vizinho",
+      "termo_unico",
+      "regra_excecao"
+    ],
+    "isca_por_alternativa": {
+      "A": "inverte freguesia e vila e atribui pelourinho a 1769",
+      "B": "antecipa Lei Provincial nº 127 (1864) para 1790",
+      "D": "confunde fundação dos Ariús (1697) com freguesia e cadeia com 1864"
+    },
+    "referencia_lote": "content/questoes/historia_cg_pb/lote-008.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: freguesia ≠ vila ≠ cidade",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — inverte freguesia (1769) e vila (1790) e coloca pelourinho em 1769.\nB — antecipa cidade (Lei 127) para 1790.\nD — confunde fundação (1697) com freguesia e cadeia com 1864.\n\nRoteiro Museu Histórico: três etapas entre freguesia, vila e cadeia.",
+        "destaques": [
+          "1769",
+          "1790",
+          "1814"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 status distintos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "FREGUESIA (1769): elevação sob Nossa Senhora da Conceição — ainda não é vila.\n\nVILA (1790): Vila Nova da Rainha — Ouvidor Brederodes cria o pelourinho.\n\nCADEIA/MUSEU (1814): prédio no largo da Matriz — hoje Av. Floriano Peixoto.",
+        "destaques": [
+          "FREGUESIA",
+          "VILA",
+          "1814"
+        ]
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Gradação freguesia → vila → cadeia",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Ano",
+          "Status / evento"
+        ],
+        "linhas": [
+          {
+            "faixa": "1697",
+            "classificacao": "Fundação — Teodósio + Ariús (≠ freguesia)"
+          },
+          {
+            "faixa": "1769",
+            "classificacao": "Freguesia — N. Sra. da Conceição"
+          },
+          {
+            "faixa": "1790 (20/04)",
+            "classificacao": "Vila Nova da Rainha + pelourinho (Brederodes)",
+            "destaque": true
+          },
+          {
+            "faixa": "1814",
+            "classificacao": "Cadeia no largo da Matriz — Museu Histórico"
+          },
+          {
+            "faixa": "1864",
+            "classificacao": "Cidade — Lei Provincial nº 127 (≠ 1790)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Freguesia × vila × cidade",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a base factual diz ✓"
+        ],
+        "linhas": [
+          [
+            "1769 já era Vila Nova da Rainha com pelourinho",
+            "1769 = freguesia; vila e pelourinho só em 1790"
+          ],
+          [
+            "1790 = elevação a cidade (Lei 127)",
+            "1790 = vila; cidade em 11/10/1864"
+          ],
+          [
+            "1769 = fundação dos Ariús por Teodósio",
+            "Fundação = 1/12/1697; freguesia = 1769"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — termo_unico",
+            "Inverte papéis: trata 1769 como vila e 1790 como freguesia"
+          ],
+          [
+            "A — regra_excecao",
+            "Atribui pelourinho a 1769 — criado em 1790 com a vila"
+          ],
+          [
+            "B — regra_excecao",
+            "Antecipa cidade (Lei Provincial nº 127) para 1790 — cidade é 1864"
+          ],
+          [
+            "D — numero_vizinho",
+            "Confunde freguesia de 1769 com fundação de 1697 dos Ariús"
+          ],
+          [
+            "D — termo_unico",
+            "Trata 1790 como freguesia — já elevada em 1769"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o roteiro do Museu",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Marco",
+          "Dado correto"
+        ],
+        "linhas": [
+          [
+            "1769",
+            "Freguesia — Nossa Senhora da Conceição"
+          ],
+          [
+            "1790",
+            "Vila Nova da Rainha + pelourinho (Brederodes)"
+          ],
+          [
+            "1814",
+            "Cadeia no largo da Matriz → Gabarito C"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Base factual — formação",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "conteúdo/historia-cg-pb/base-factual.md — Formação de Campina Grande",
+        "texto": "Em 1769 Campina Grande foi elevada a freguesia sob invocação de Nossa Senhora da Conceição. Em 20/04/1790 foi elevada a Vila Nova da Rainha pelo Ouvidor Brederodes, com criação do pelourinho. Em 1814 foi edificado o prédio da cadeia no largo da Matriz — hoje Av. Floriano Peixoto, sede do Museu Histórico e Geográfico.",
+        "trechos_grifados": [
+          {
+            "inicio": 3,
+            "fim": 7,
+            "motivo": "gradacao — freguesia (≠ vila 1790)",
+            "texto_grifado": "1769"
+          },
+          {
+            "inicio": 101,
+            "fim": 105,
+            "motivo": "gradacao — elevação a vila com pelourinho",
+            "texto_grifado": "1790"
+          },
+          {
+            "inicio": 195,
+            "fim": 199,
+            "motivo": "caso — cadeia / Museu Histórico",
+            "texto_grifado": "1814"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "1769 freguesia | 1790 vila (Rainha + pelourinho) | 1814 cadeia/Museu | 1864 cidade.\n\nNear-transfer: se a banca citar só \"Vila Nova da Rainha\", responda 1790 — não 1769 nem 1864.",
+        "destaques": [
+          "1769",
+          "1790",
+          "1864"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Base factual — Formação de Campina Grande",
+      "path": "conteúdo/historia-cg-pb/base-factual.md"
+    }
+  ]
+}

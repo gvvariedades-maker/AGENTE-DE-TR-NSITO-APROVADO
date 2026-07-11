@@ -1,0 +1,256 @@
+{
+  "versao": 2,
+  "arquetipo": "tabela_gradacao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CTB_art_261_5",
+  "macete_visual": "EAR: 30 curso · 40 suspensão",
+  "meta": {
+    "padrao_familia": "D_gradacao",
+    "pegadinha_em_uma_frase": "EAR suspende aos 40 — 30 pontos só faculta curso preventivo, não suspensão",
+    "eixos_legais": [
+      "CTB_art_261_5",
+      "CTB_art_261_I_c"
+    ],
+    "isca_por_alternativa": {
+      "A": "motorista com EAR ultrapassou 30 pontos e deve ser suspenso por esse limite",
+      "B": "alínea b com uma gravíssima aplica-se ao profissional independentemente do prontuário",
+      "C": "não cabe curso preventivo ao EAR — só após 40 pontos com suspensão instaurada"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: EAR com 33 pontos",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito D.\n\nA — motorista com EAR ultrapassou 30 pontos e deve ser suspenso por esse limite.\nB — alínea b com uma gravíssima aplica-se ao profissional sem gravíssima no prontuário.\nC — não cabe curso preventivo ao EAR — só após 40 pontos com suspensão instaurada.\n\nPegadinha: 30 pontos faculta curso preventivo — suspensão do EAR só aos 40.",
+        "destaques": [
+          "Gabarito D",
+          "33 pontos",
+          "40"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "EAR: Exerce Atividade Remunerada — anotação na CNH de motorista profissional (categorias C, D ou E).\n\nSUSPENSÃO POR PONTUAÇÃO: penalidade do art. 261 — retira temporariamente o direito de dirigir.\n\nCURSO PREVENTIVO: medida facultativa do § 5º — elimina pontos após conclusão (§ 6º).",
+        "destaques": [
+          "EAR",
+          "SUSPENSÃO",
+          "CURSO PREVENTIVO"
+        ]
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Condutor comum × motorista EAR",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Perfil",
+          "Limite de suspensão"
+        ],
+        "linhas": [
+          {
+            "faixa": "Comum — 2+ gravíssimas",
+            "classificacao": "20 pontos em 12 meses"
+          },
+          {
+            "faixa": "Comum — 1 gravíssima",
+            "classificacao": "30 pontos em 12 meses"
+          },
+          {
+            "faixa": "Comum — sem gravíssima",
+            "classificacao": "40 pontos em 12 meses"
+          },
+          {
+            "faixa": "EAR — qualquer natureza",
+            "classificacao": "40 pontos — suspensão (alínea c + § 5º)",
+            "destaque": true
+          },
+          {
+            "faixa": "EAR — curso preventivo",
+            "classificacao": "30 pontos — facultativo (§ 5º)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: 30 pontos = suspensão",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Crença ✗",
+          "Lei ✓"
+        ],
+        "linhas": [
+          [
+            "EAR com 33 pontos deve ser suspenso",
+            "Suspensão só aos 40 — 33 está entre curso e suspensão"
+          ],
+          [
+            "30 pontos disparam suspensão automática",
+            "30 faculta curso preventivo — não suspende"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — numero_vizinho",
+            "Confunde limite do curso preventivo (30) com patamar de suspensão (40)"
+          ],
+          [
+            "B — gravidade",
+            "Aplica alínea b de uma gravíssima sem gravíssima no prontuário de Roberto"
+          ],
+          [
+            "C — termo_unico",
+            "Nega curso preventivo facultativo aos 30 e condiciona a medida à suspensão"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do caso",
+          "Consequência"
+        ],
+        "linhas": [
+          [
+            "Roberto — categoria D com EAR",
+            "Regime diferenciado do § 5º"
+          ],
+          [
+            "33 pontos em 12 meses, zero gravíssimas",
+            "Acima de 30 (curso) e abaixo de 40 (suspensão)"
+          ],
+          [
+            "DETRAN instaura suspensão por >30",
+            "Erro — suspensão do EAR só aos 40 pontos"
+          ],
+          [
+            "Poderia optar por curso preventivo aos 30",
+            "Faculdade do § 5º — elimina pontos após conclusão"
+          ],
+          [
+            "Resultado",
+            "Alternativa D — sem suspensão automática"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Curso preventivo × suspensão",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Marco",
+          "Efeito no EAR"
+        ],
+        "linhas": [
+          [
+            "30 pontos em 12 meses",
+            "Faculta curso preventivo — § 5º"
+          ],
+          [
+            "Conclusão do curso",
+            "Elimina pontos atribuídos — § 6º"
+          ],
+          [
+            "40 pontos em 12 meses",
+            "Impõe suspensão — alínea c + § 5º"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei1",
+      "titulo": "Art. 261, § 5º — regime EAR",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB, art. 261, § 5º",
+        "texto": "§ 5º No caso do condutor que exerce atividade remunerada ao veículo, a penalidade de suspensão do direito de dirigir de que trata o caput deste artigo será imposta quando o infrator atingir o limite de pontos previsto na alínea c do inciso I do caput deste artigo, independentemente da natureza das infrações cometidas, facultado a ele participar de curso preventivo de reciclagem sempre que, no período de 12 (doze) meses, atingir 30 (trinta) pontos, conforme regulamentação do Contran.",
+        "trechos_grifados": [
+          {
+            "inicio": 192,
+            "fim": 241,
+            "motivo": "gradacao — suspensão do EAR vinculada aos 40 pontos da alínea c",
+            "texto_grifado": "limite de pontos previsto na alínea c do inciso I"
+          },
+          {
+            "inicio": 424,
+            "fim": 450,
+            "motivo": "contraste — 30 pontos faculta curso, não suspensão",
+            "texto_grifado": "atingir 30 (trinta) pontos"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 261, I, c — 40 pontos",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB, art. 261, I, c",
+        "texto": "c) 40 (quarenta) pontos, caso não conste nenhuma infração gravíssima na pontuação;",
+        "trechos_grifados": [
+          {
+            "inicio": 3,
+            "fim": 23,
+            "motivo": "caso — Roberto com 33 pontos ainda não atingiu o patamar de suspensão",
+            "texto_grifado": "40 (quarenta) pontos"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "EAR: 30 = curso facultativo.\n40 = suspensão.\nComum: 20/30/40 por gravíssimas.\n\nNear-transfer: se Roberto acumulasse 41 pontos sem gravíssima, aí sim caberia suspensão automática pelo § 5º — independentemente de ter feito curso preventivo aos 30.",
+        "destaques": [
+          "30",
+          "40",
+          "41 pontos"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "CTB art. 261",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

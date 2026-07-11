@@ -1,0 +1,216 @@
+{
+  "versao": 2,
+  "arquetipo": "tabela_gradacao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 185,
+  "fundamento_slug": "CG_formacao_geografia",
+  "macete_visual": "Ariús+Borborema | litoral↔sertão tropeiros | Piranhas→Bom Sucesso",
+  "meta": {
+    "padrao_familia": "D_gradacao",
+    "pegadinha_em_uma_frase": "Candidato troca Ariús por Cariris e Piranhas por São Francisco, ou nega a posição entre litoral e sertão",
+    "eixos_mecanismo": [
+      "numero_vizinho",
+      "termo_unico",
+      "regra_excecao"
+    ],
+    "isca_por_alternativa": {
+      "A": "usa 1698, troca Ariús por Cariris e Piranhas por São Francisco",
+      "C": "coloca fundação na planície litorânea em vez da chapada",
+      "D": "reduz a função a sertão profundo isolado, sem eixo litoral"
+    },
+    "referencia_lote": "content/questoes/historia_cg_pb/lote-002.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: geografia da formação",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — usa 1698, troca Ariús por Cariris e Piranhas por São Francisco.\nC — coloca o povoado na planície litorânea, não na Borborema.\nD — ignora a posição entre litoral e sertão, reduzindo a sertão profundo.\n\nPalestra STTP: três eixos geográficos do nascimento do povoado.",
+        "destaques": [
+          "Ariús",
+          "Borborema",
+          "Piranhas"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "ARIÚS: povo indígena aldeado por Teodósio em 1697 — fundação do povoado.\n\nCARIRIS: outro povo citado na tradição local — não confundir com os Ariús da fundação.\n\nBORBOREMA: chapada onde nasceu o povoado — entre litoral e sertão paraibanos.",
+        "destaques": [
+          "ARIÚS",
+          "CARIRIS",
+          "BORBOREMA"
+        ]
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Mapa geográfico da formação",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Elemento",
+          "Função histórica"
+        ],
+        "linhas": [
+          {
+            "faixa": "Ariús (1697)",
+            "classificacao": "Povo aldeado por Teodósio — origem do povoado",
+            "destaque": true
+          },
+          {
+            "faixa": "Serra da Borborema",
+            "classificacao": "Chapada da fundação — não planície litorânea"
+          },
+          {
+            "faixa": "Litoral ↔ sertão",
+            "classificacao": "Rota de tropeiros e comércio regional"
+          },
+          {
+            "faixa": "Rio Piranhas",
+            "classificacao": "Desbravamento → povoado de Bom Sucesso-PB"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Povos e rios confundíveis",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a base factual diz ✓"
+        ],
+        "linhas": [
+          [
+            "Cariris foram aldeados na fundação de 1697",
+            "Teodósio aldeou os Ariús — Cariris é povo distinto"
+          ],
+          [
+            "São Francisco marcou o desbravamento local",
+            "Rio Piranhas — povoado que virou Bom Sucesso-PB"
+          ],
+          [
+            "Campina Grande ficava no litoral paraibano",
+            "Fundação na chapada da Serra da Borborema"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — numero_vizinho",
+            "Usa 1698 no lugar de 1697 — data oficial da fundação na base factual"
+          ],
+          [
+            "A — termo_unico",
+            "Troca Ariús por Cariris e Piranhas por São Francisco"
+          ],
+          [
+            "C — regra_excecao",
+            "Inventa planície litorânea — povoado nasceu na chapada da Borborema"
+          ],
+          [
+            "D — regra_excecao",
+            "Reduz a função a sertão profundo isolado — base cita entre litoral e sertão"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo a palestra STTP",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Afirmação do ouvinte",
+          "Correção factual"
+        ],
+        "linhas": [
+          [
+            "\"Cariris aldeados no litoral\"",
+            "Ariús na Borborema — Teodósio, 1697"
+          ],
+          [
+            "\"São Francisco no desbravamento\"",
+            "Rio Piranhas → Bom Sucesso-PB"
+          ],
+          [
+            "Função geográfica do povoado",
+            "Entre litoral e sertão — tropeiros → Gabarito B"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Base factual — geografia da formação",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "conteúdo/historia-cg-pb/base-factual.md — Geografia",
+        "texto": "Teodósio aldeia índios Ariús em chapada na Serra da Borborema — origem do povoado. Localização entre litoral e sertão — passagem de tropeiros. Rio Piranhas no desbravamento — povoado que virou Bom Sucesso-PB.",
+        "trechos_grifados": [
+          {
+            "inicio": 23,
+            "fim": 28,
+            "motivo": "gradacao — povo aldeado na fundação",
+            "texto_grifado": "Ariús"
+          },
+          {
+            "inicio": 43,
+            "fim": 61,
+            "motivo": "contraste — chapada, não litoral",
+            "texto_grifado": "Serra da Borborema"
+          },
+          {
+            "inicio": 147,
+            "fim": 155,
+            "motivo": "gradacao — rio do desbravamento local",
+            "texto_grifado": "Piranhas"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Ariús (não Cariris) + Borborema (não litoral) + Piranhas→Bom Sucesso | entre litoral E sertão.\n\nNear-transfer: se a banca perguntar só o povo da fundação, responda Ariús — Cariris é citação distinta na tradição local.",
+        "destaques": [
+          "Ariús",
+          "Cariris",
+          "Piranhas"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Base factual — Geografia e formação",
+      "path": "conteúdo/historia-cg-pb/base-factual.md"
+    }
+  ]
+}

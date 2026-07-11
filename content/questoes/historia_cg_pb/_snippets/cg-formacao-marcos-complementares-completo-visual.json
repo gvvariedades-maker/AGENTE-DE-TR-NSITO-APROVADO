@@ -1,0 +1,220 @@
+{
+  "versao": 2,
+  "arquetipo": "tabela_gradacao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 200,
+  "fundamento_slug": "CG_formacao_marcos_complementares",
+  "macete_visual": "1699 carta Manuel | 1874 Quebra-quilos | 1994 Boa Vista",
+  "meta": {
+    "padrao_familia": "D_gradacao",
+    "pegadinha_em_uma_frase": "Candidato confunde carta de 1699 com fundação de 1697, restringe Quebra-quilos a CG ou troca 1994 por 1894",
+    "eixos_mecanismo": [
+      "numero_vizinho",
+      "termo_unico",
+      "regra_excecao"
+    ],
+    "isca_por_alternativa": {
+      "B": "troca carta de 1699 pela fundação de 1697 e restringe Quebra-quilos só a Campina Grande",
+      "C": "credita carta a Teodósio e troca 1874 por 1774",
+      "D": "troca emancipação de Boa Vista de 1994 para 1894"
+    },
+    "referencia_lote": "content/questoes/historia_cg_pb/lote-006.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: três marcos, três trocas",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito A.\n\nB — troca carta de 1699 pela fundação de 1697 e restringe Quebra-quilos a CG.\nC — credita carta a Teodósio e troca 1874 por 1774.\nD — troca emancipação de Boa Vista de 1994 para 1894.\n\nPasta STTP: marcos complementares além da tríade 1697/1790/1864.",
+        "destaques": [
+          "1699",
+          "1874",
+          "1994"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 marcos distintos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CARTA (1699): governador Manuel Soares de Albergaria notifica Portugal sobre a povoação (14/05/1699) — distinta da fundação de 1697.\n\nQUEBRA-QUILOS (1874): movimento contra pesos e medidas — regional, não só Campina Grande.\n\nBOA VISTA (1994): distrito desmembra de Campina Grande e vira município.",
+        "destaques": [
+          "CARTA",
+          "QUEBRA-QUILOS",
+          "BOA VISTA"
+        ]
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Gradação dos marcos complementares",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Ano",
+          "Evento"
+        ],
+        "linhas": [
+          {
+            "faixa": "1697 (1/12)",
+            "classificacao": "Fundação — Teodósio + Ariús (≠ carta ao rei)"
+          },
+          {
+            "faixa": "1699 (14/05)",
+            "classificacao": "Carta de Manuel Soares de Albergaria ao rei",
+            "destaque": true
+          },
+          {
+            "faixa": "1874",
+            "classificacao": "Quebra-quilos — movimento regional"
+          },
+          {
+            "faixa": "1994",
+            "classificacao": "Emancipação de Boa Vista"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Fundação × carta × movimento × emancipação",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a base factual diz ✓"
+        ],
+        "linhas": [
+          [
+            "Carta ao rei em 1697 (data da fundação)",
+            "Carta em 1699 — Manuel Soares de Albergaria (14/05)"
+          ],
+          [
+            "Quebra-quilos exclusivo de Campina Grande",
+            "Movimento regional — não restrito só a CG"
+          ],
+          [
+            "Boa Vista emancipada em 1894",
+            "Emancipação do distrito em 1994"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "B — numero_vizinho",
+            "Troca carta de 1699 pela fundação de 1697 (1/12)"
+          ],
+          [
+            "B — regra_excecao",
+            "Restringe Quebra-quilos só a Campina Grande — movimento foi regional"
+          ],
+          [
+            "C — termo_unico",
+            "Credita carta a Teodósio em vez de Manuel Soares de Albergaria"
+          ],
+          [
+            "C — numero_vizinho",
+            "Troca 1874 por 1774 no movimento Quebra-quilos"
+          ],
+          [
+            "D — numero_vizinho",
+            "Troca emancipação de Boa Vista de 1994 para 1894"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo a pasta da STTP",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Marco",
+          "Dado correto"
+        ],
+        "linhas": [
+          [
+            "Carta ao rei",
+            "1699 (14/05) — Manuel Soares de Albergaria"
+          ],
+          [
+            "Quebra-quilos",
+            "1874 — movimento regional (não só CG)"
+          ],
+          [
+            "Boa Vista",
+            "1994 — emancipação → Gabarito A"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Base factual — marcos complementares",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "conteúdo/historia-cg-pb/base-factual.md — Formação de Campina Grande",
+        "texto": "Em 1699, o governador Manuel Soares de Albergaria notifica Portugal sobre a fundação (carta de 14/05/1699). Em 1874 ocorre o movimento Quebra-quilos contra o novo sistema de pesos e medidas — não ficou restrito só a Campina Grande. Em 1994 o distrito de Boa Vista desmembra de Campina Grande e vira município.",
+        "trechos_grifados": [
+          {
+            "inicio": 3,
+            "fim": 7,
+            "motivo": "gradacao — carta ao rei (≠ fundação 1697)",
+            "texto_grifado": "1699"
+          },
+          {
+            "inicio": 111,
+            "fim": 115,
+            "motivo": "gradacao — movimento Quebra-quilos",
+            "texto_grifado": "1874"
+          },
+          {
+            "inicio": 235,
+            "fim": 239,
+            "motivo": "contraste — emancipação de Boa Vista (≠ 1894)",
+            "texto_grifado": "1994"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "1697 funda | 1699 carta (Manuel Soares) | 1874 Quebra-quilos | 1994 Boa Vista.\n\nNear-transfer: se a banca cobrar só o par fundação × carta, responda 1697 (fundação) e 1699 (notificação ao rei) — não inverta.",
+        "destaques": [
+          "1697",
+          "1699",
+          "1994"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Base factual — Formação de Campina Grande",
+      "path": "conteúdo/historia-cg-pb/base-factual.md"
+    }
+  ]
+}

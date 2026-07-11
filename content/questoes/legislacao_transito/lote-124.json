@@ -1,0 +1,353 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_900_recursos",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_prazo",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_900_art_6_2",
+    "enunciado": "Mariana, proprietária residente em João Pessoa/PB e com veículo licenciado no DETRAN/PB, foi autuada pela STTP em Campina Grande/PB por infração cometida em localidade diversa do seu domicílio. Na fase de autuação, protocolou defesa prévia no DETRAN/PB em João Pessoa no último dia do prazo concedido na notificação, nos termos do art. 287 do CTB. O protocolo contém identificação e assinatura do recebedor, identificação do órgão e data do recebimento. A STTP alega intempestividade por a defesa não ter sido apresentada em seu protocolo. Considerando a Resolução CONTRAN nº 900/2022 e o CTB, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A defesa não é tempestiva, pois a tempestividade somente se verifica pela data do protocolo no órgão autuador — a STTP de Campina Grande.",
+      "B": "A defesa é tempestiva pela data do protocolo no DETRAN/PB do domicílio, e o órgão do domicílio deve remeter imediatamente a defesa à STTP autuadora — art. 6º, § 1º, II, e § 3º, da Resolução.",
+      "C": "A defesa é tempestiva no DETRAN/PB, que pode julgar e arquivar o processo sem remessa à STTP, por ser o órgão executivo de trânsito do domicílio da infratora.",
+      "D": "A defesa não é tempestiva, pois, fora da via postal com carimbo da ECT, o protocolo eletrônico junto ao autuador seria o único meio válido de contagem do prazo."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Tempestividade da defesa prévia protocolada no órgão do domicílio (Res. CONTRAN 900/2022, art. 6º, § 1º, II) e dever de remessa imediata ao autuador (art. 6º, § 3º), à luz do art. 287 do CTB.",
+      "fundamento_legal": "Res. CONTRAN 900/2022, art. 6º, § 1º, II: para verificação da tempestividade, considera-se a data de protocolo no órgão ou entidade de trânsito da residência ou domicílio do proprietário ou infrator, quando utilizada a forma prevista no art. 287 do CTB. Art. 6º, § 3º: a defesa prévia ou o recurso recebidos na forma do inciso II do § 1º deverão ser imediatamente remetidos ao órgão ou entidade que efetuou a autuação. CTB, art. 287: infração em localidade diversa do licenciamento permite apresentação junto ao órgão do domicílio do infrator.",
+      "passo_a_passo": [
+        "1. Mariana reside em João Pessoa, autuada em Campina Grande — hipótese do art. 287 do CTB; protocolou defesa no DETRAN/PB no último dia do prazo.",
+        "2. A erra por regra_excecao (reduz tempestividade ao protocolo exclusivo na STTP — ignora marco do domicílio no § 1º, II); C erra por competencia_snt (atribui julgamento e arquivamento ao DETRAN do domicílio — § 3º impõe remessa imediata ao autuador); D erra por numero_vizinho (aplica requisito da via postal com carimbo ECT ou protocolo eletrônico ao caso do protocolo local do art. 287).",
+        "3. B correta: tempestiva pela data do protocolo no domicílio (art. 6º, § 1º, II) e remessa imediata à STTP (art. 6º, § 3º)."
+      ],
+      "pegadinha": "A IDECAN induz a invalidar defesa fora do protocolo da STTP — com art. 287 do CTB, o marco é a data do protocolo no órgão do domicílio, não o recebimento no autuador.",
+      "macete": "DOMICÍLIO (287) → data protocolo local · remessa imediata ao autuador · postal = ECT.",
+      "estudo_reverso": [
+        "Res. CONTRAN 900/2022 art. 6",
+        "CTB art. 287",
+        "Res. CONTRAN 900/2022 art. 4"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Protocolo no domicílio conta o prazo — mas o DETRAN deve remeter imediatamente à STTP",
+      "eixos_legais": [
+        "CONTRAN_900_art_6_1_II",
+        "CONTRAN_900_art_6_3"
+      ],
+      "isca_por_alternativa": {
+        "A": "tempestividade somente se verifica pela data do protocolo no órgão autuador STTP de Campina Grande",
+        "C": "DETRAN/PB pode julgar e arquivar o processo sem remessa à STTP por ser órgão do domicílio",
+        "D": "fora da via postal com carimbo da ECT o protocolo eletrônico junto ao autuador seria o único meio válido"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "competencia_snt",
+        "numero_vizinho"
+      ]
+    },
+    "tags": [
+      "resolucao_900",
+      "defesa_previa",
+      "tempestividade",
+      "art_287",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CONTRAN_900_art_6_2",
+      "macete_visual": "Domicílio = data local · remeter à STTP",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Defesa protocolada no DETRAN de João Pessoa — STTP exige seu próprio protocolo. A banca troca domicílio (art. 287) por autuador exclusivo.\n\nGabarito B: data do protocolo no domicílio + remessa imediata à STTP.",
+            "destaques": ["domicílio", "STTP", "tempestiva"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Autuador × domicílio",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Só conta protocolo na STTP",
+                "No domicílio conta data do protocolo local"
+              ],
+              [
+                "DETRAN do domicílio julga e arquiva",
+                "Remete imediatamente ao autuador"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DOMICÍLIO (287) → data protocolo local.\nRemessa imediata ao autuador.\nPostal = data ECT.",
+            "destaques": ["DOMICÍLIO", "remessa", "ECT"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 900/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 900, DE 9 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CONTRAN_900_art_6_2",
+      "macete_visual": "Domicílio = data local · remeter à STTP",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Protocolo no domicílio conta o prazo — mas o DETRAN deve remeter imediatamente à STTP",
+        "eixos_legais": [
+          "CONTRAN_900_art_6_1_II",
+          "CONTRAN_900_art_6_3"
+        ],
+        "isca_por_alternativa": {
+          "A": "tempestividade somente se verifica pela data do protocolo no órgão autuador STTP de Campina Grande",
+          "C": "DETRAN/PB pode julgar e arquivar o processo sem remessa à STTP por ser órgão do domicílio",
+          "D": "fora da via postal com carimbo da ECT o protocolo eletrônico junto ao autuador seria o único meio válido"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: defesa no DETRAN de João Pessoa",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — tempestividade somente se verifica pela data do protocolo na STTP de Campina Grande.\nC — DETRAN/PB pode julgar e arquivar sem remessa à STTP por ser órgão do domicílio.\nD — fora da via postal com carimbo da ECT, só protocolo eletrônico no autuador contaria o prazo.\n\nPegadinha: protocolo no domicílio é válido — mas o DETRAN deve encaminhar imediatamente à STTP.",
+            "destaques": ["Gabarito B", "domicílio", "remessa"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DOMICÍLIO DO INFRATOR: residência de Mariana em João Pessoa — base para protocolo alternativo quando a infração ocorre em localidade diversa.\n\nÓRGÃO AUTUADOR: STTP de Campina Grande — destinatário da remessa após protocolo no domicílio.\n\nTEMPESTIVIDADE: marco temporal que preserva o prazo — distinto conforme via postal, domicílio ou protocolo direto no autuador.",
+            "destaques": ["DOMICÍLIO", "AUTUADOR", "TEMPESTIVIDADE"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual marco de prazo?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Defesa protocolada no órgão do domicílio (infração em localidade diversa)?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Tempestiva pela data do protocolo local — remeter imediatamente ao autuador",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim — caso Mariana" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Três vias de protocolo — marcos distintos",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Via de apresentação", "Marco de tempestividade"],
+            "linhas": [
+              {
+                "faixa": "Protocolo direto no autuador (STTP)",
+                "classificacao": "Data do recebimento no órgão autuador"
+              },
+              {
+                "faixa": "Envio postal ao autuador",
+                "classificacao": "Data da entrega na ECT"
+              },
+              {
+                "faixa": "Protocolo no domicílio (localidade diversa)",
+                "classificacao": "Data do protocolo no órgão do domicílio + remessa imediata",
+                "destaque": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: só vale protocolo na STTP",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Defesa fora da STTP é sempre intempestiva",
+                "No domicílio conta a data do protocolo local"
+              ],
+              [
+                "DETRAN do domicílio julga e arquiva",
+                "DETRAN remete imediatamente ao autuador"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Reduz tempestividade ao protocolo exclusivo na STTP — ignora marco do domicílio"
+              ],
+              [
+                "C — competencia_snt",
+                "Atribui julgamento e arquivamento ao DETRAN-PB — o domicílio só protocola e remete"
+              ],
+              [
+                "D — numero_vizinho",
+                "Aplica requisito postal (ECT) ou eletrônico ao caso do protocolo local do domicílio"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "Mariana reside em João Pessoa; autuada em Campina Grande",
+                "Hipótese de infração em localidade diversa do domicílio"
+              ],
+              [
+                "Protocolo no DETRAN/PB no último dia do prazo",
+                "Tempestiva pela data do protocolo local"
+              ],
+              [
+                "STTP alega intempestividade por ausência em seu protocolo",
+                "Erro — marco é o domicílio, não o recebimento na STTP"
+              ],
+              [
+                "Protocolo formalmente completo (recebedor, órgão, data)",
+                "Atende requisitos do recebimento no domicílio"
+              ],
+              [
+                "Resultado",
+                "Alternativa B — tempestiva + remessa imediata à STTP"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Tempestividade × remessa — dois efeitos",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              [
+                "Marco no domicílio",
+                "Preserva prazo de Mariana — protocolo no último dia vale"
+              ],
+              [
+                "Remessa imediata",
+                "DETRAN-PB encaminha defesa à STTP sem julgar localmente"
+              ],
+              [
+                "Julgamento",
+                "Compete ao autuador após recebimento — não ao DETRAN do domicílio"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 6º, § 1º — marco no domicílio",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 900/2022, art. 6º, § 1º",
+            "texto": "§ 1º Para verificação da tempestividade, deverá ser considerada:\nI - a data da entrega na Empresa Brasileira de Correios e Telégrafos (ECT), no caso de defesa prévia ou de recurso apresentado por via postal; ou\nII - a data de protocolo no órgão ou entidade de trânsito da residência ou domicílio do proprietário ou infrator, quando utilizada a forma prevista no art. 287 do CTB.",
+            "trechos_grifados": [
+              {
+                "inicio": 216,
+                "fim": 323,
+                "motivo": "mapa — protocolo no DETRAN de João Pessoa conta o prazo de Mariana",
+                "texto_grifado": "a data de protocolo no órgão ou entidade de trânsito da residência ou domicílio do proprietário ou infrator"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 6º, § 3º — remessa ao autuador",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 900/2022, art. 6º, § 3º",
+            "texto": "§ 3º A defesa prévia ou o recurso recebidos na forma do inciso II do § 1º deverão ser imediatamente remetidos ao órgão ou entidade que efetuou a autuação.",
+            "trechos_grifados": [
+              {
+                "inicio": 74,
+                "fim": 153,
+                "motivo": "fluxo — DETRAN-PB deve encaminhar defesa à STTP sem reter o processo",
+                "texto_grifado": "deverão ser imediatamente remetidos ao órgão ou entidade que efetuou a autuação"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DOMICÍLIO (287) → data protocolo local.\nRemessa imediata ao autuador.\nPostal = data ECT.\n\nNear-transfer: se Mariana tivesse postado a defesa nos Correios com carimbo ECT no último dia, o marco seria a data da entrega na ECT — não a do protocolo no domicílio.",
+            "destaques": ["DOMICÍLIO", "remessa", "ECT"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 900/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 900, DE 9 DE MARÇO DE 2022.pdf"
+        },
+        {
+          "rotulo": "CTB art. 287",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

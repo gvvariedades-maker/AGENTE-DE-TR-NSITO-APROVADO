@@ -1,0 +1,310 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_918_multas",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_prazo",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_918_art_8_par",
+    "enunciado": "Durante auditoria da STTP em Campina Grande/PB, verifica-se que a Notificação de Autuação de infração cometida com veículo de frota foi expedida à locadora, registrada como possuidora no DETRAN/PB, em contrato de aluguel com vigência de 120 dias. O banco arrendador mercantil, proprietário do veículo, alega que a notificação deveria ter sido dirigida a ele, pois o contrato não atinge o limiar legal. O supervisor questiona a regularidade do procedimento. Considerando a Resolução CONTRAN nº 918/2022, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O procedimento é regular, pois o possuidor registrado no DETRAN equipara-se sempre ao proprietário para recebimento de notificações, independentemente da vigência do contrato.",
+      "B": "O procedimento é regular, pois contratos de aluguel superiores a 90 dias permitem notificação ao possuidor registrado no DETRAN, dispensando o proprietário.",
+      "C": "O procedimento é irregular: o parágrafo único do art. 8º só autoriza notificações ao possuidor com contrato de vigência igual ou superior a 180 dias — no caso, com 120 dias, a NA deveria ir ao proprietário.",
+      "D": "O procedimento é irregular somente se a locadora não apresentar defesa em 30 dias — o prazo da notificação regulariza o envio ao possuidor com contrato inferior a 180 dias."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Destinatário da NA em contrato de aluguel — art. 8º, caput (equiparação do possuidor) × art. 8º, parágrafo único (limiar de 180 dias para notificações ao possuidor).",
+      "fundamento_legal": "Res. CONTRAN 918/2022, art. 8º, caput: em contrato de arrendamento mercantil, comodato, aluguel ou arrendamento não vinculado ao financiamento, o possuidor regularmente registrado no órgão executivo de trânsito equipara-se ao proprietário. Parágrafo único: as notificações somente deverão ser enviadas ao possuidor no caso de contrato com vigência igual ou superior a 180 dias. Abaixo desse limiar, as notificações seguem ao proprietário. Art. 4º, § 2º: prazo de defesa conta da expedição da NA — dispositivo distinto do destinatário.",
+      "passo_a_passo": [
+        "1. Caso: NA expedida à locadora possuidora com contrato de 120 dias; proprietário é banco arrendador.",
+        "2. A erra por regra_excecao (generaliza equiparação do caput e ignora limiar de 180 dias do parágrafo único); B erra por numero_vizinho (usa 90 dias em vez de 180); D erra por termo_unico (confunde prazo de defesa de 30 dias com regularização do destinatário errado).",
+        "3. C correta: parágrafo único do art. 8º exige contrato ≥ 180 dias para NA ao possuidor — 120 dias impõe notificação ao proprietário."
+      ],
+      "pegadinha": "A IDECAN induz a crer que possuidor registrado no DETRAN sempre recebe a NA — o parágrafo único do art. 8º exige contrato de pelo menos 180 dias.",
+      "macete": "Possuidor na NA: só com contrato ≥ 180 dias · Abaixo = proprietário.",
+      "estudo_reverso": [
+        "Res. CONTRAN 918/2022 art. 8",
+        "Res. CONTRAN 918/2022 art. 4",
+        "CTB art. 257"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "D_gradacao",
+      "pegadinha_em_uma_frase": "Possuidor registrado só recebe NA com contrato ≥ 180 dias — abaixo disso, notifica o proprietário",
+      "eixos_legais": [
+        "CONTRAN_918_art_8_caput",
+        "CONTRAN_918_art_8_par"
+      ],
+      "isca_por_alternativa": {
+        "A": "possuidor registrado no DETRAN equipara-se sempre ao proprietário para recebimento de notificações, independentemente da vigência do contrato",
+        "B": "contratos de aluguel superiores a 90 dias permitem notificação ao possuidor registrado no DETRAN",
+        "D": "prazo de 30 dias da notificação regulariza o envio ao possuidor com contrato inferior a 180 dias"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "numero_vizinho",
+        "termo_unico"
+      ]
+    },
+    "tags": [
+      "resolucao_918",
+      "notificacao_autuacao",
+      "possuidor",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_918_art_8_par",
+      "macete_visual": "NA ao possuidor: ≥ 180 dias",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C: NA à locadora com contrato de 120 dias é irregular — limiar legal é 180 dias.",
+            "destaques": ["Gabarito C", "180 dias", "120 dias"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Limiar do parágrafo único",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Vigência do contrato", "Destinatário da NA"],
+            "linhas": [
+              { "faixa": "Menor que 180 dias", "classificacao": "Proprietário", "destaque": true },
+              { "faixa": "Igual ou superior a 180 dias", "classificacao": "Possuidor registrado" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Possuidor na NA: só com contrato ≥ 180 dias.\nAbaixo disso = proprietário.",
+            "destaques": ["180 dias", "proprietário"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 918/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 918, DE 28 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CONTRAN_918_art_8_par",
+      "macete_visual": "NA ao possuidor: ≥ 180 dias",
+      "meta": {
+        "padrao_familia": "D_gradacao",
+        "pegadinha_em_uma_frase": "Possuidor registrado só recebe NA com contrato ≥ 180 dias — abaixo disso, notifica o proprietário",
+        "eixos_legais": [
+          "CONTRAN_918_art_8_caput",
+          "CONTRAN_918_art_8_par"
+        ],
+        "isca_por_alternativa": {
+          "A": "possuidor registrado no DETRAN equipara-se sempre ao proprietário para recebimento de notificações, independentemente da vigência do contrato",
+          "B": "contratos de aluguel superiores a 90 dias permitem notificação ao possuidor registrado no DETRAN",
+          "D": "prazo de 30 dias da notificação regulariza o envio ao possuidor com contrato inferior a 180 dias"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: NA à locadora com 120 dias",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — possuidor registrado no DETRAN equipara-se sempre ao proprietário para recebimento de notificações, independentemente da vigência do contrato.\nB — contratos de aluguel superiores a 90 dias permitem notificação ao possuidor registrado no DETRAN.\nD — prazo de 30 dias da notificação regulariza o envio ao possuidor com contrato inferior a 180 dias.\n\nPegadinha: equiparação do caput não dispensa o limiar de 180 dias do parágrafo único.",
+            "destaques": ["Gabarito C", "180 dias", "120 dias"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "POSSUIDOR: locatária, arrendatária ou comodatária registrada no DETRAN — equipara-se ao proprietário no caput do art. 8º.\n\nPROPRIETÁRIO: titular do domínio — banco arrendador mercantil no caso.\n\nNOTIFICAÇÃO DE AUTUAÇÃO: ciência da infração ao destinatário correto — regra do parágrafo único para contratos curtos.",
+            "destaques": ["POSSUIDOR", "PROPRIETÁRIO", "NA"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Limiar de 180 dias — destinatário da NA",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Vigência do contrato", "Destinatário da NA"],
+            "linhas": [
+              {
+                "faixa": "Menor que 180 dias — caso: 120 dias",
+                "classificacao": "Proprietário — banco arrendador",
+                "destaque": true
+              },
+              {
+                "faixa": "Igual ou superior a 180 dias",
+                "classificacao": "Possuidor registrado no DETRAN"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: possuidor registrado = sempre notificado",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Registro no DETRAN basta para NA ao possuidor",
+                "Parágrafo único exige contrato ≥ 180 dias"
+              ],
+              [
+                "90 dias de aluguel autorizam NA à locadora",
+                "Limiar legal é 180 dias, não 90"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Generaliza equiparação do caput — ignora limiar de 180 dias do parágrafo único"
+              ],
+              [
+                "B — numero_vizinho",
+                "Substitui 180 dias por 90 dias no limiar do parágrafo único"
+              ],
+              [
+                "D — termo_unico",
+                "Confunde prazo de defesa de 30 dias com regularização do destinatário errado"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato da auditoria", "Consequência"],
+            "linhas": [
+              [
+                "Locadora registrada como possuidora no DETRAN/PB",
+                "Caput do art. 8º equipara ao proprietário em tese"
+              ],
+              [
+                "Contrato de aluguel com vigência de 120 dias",
+                "Abaixo de 180 dias — parágrafo único veda NA ao possuidor"
+              ],
+              [
+                "NA expedida à locadora, não ao banco arrendador",
+                "Procedimento irregular"
+              ],
+              [
+                "Resultado",
+                "Alternativa C"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Caput × parágrafo único",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              [
+                "Art. 8º, caput — equiparação",
+                "Possuidor registrado equipara-se ao proprietário no processo"
+              ],
+              [
+                "Art. 8º, parágrafo único — 180 dias",
+                "Só com contrato ≥ 180 dias a NA vai ao possuidor"
+              ],
+              [
+                "Art. 4º, § 2º — defesa",
+                "Prazo de 30 dias da expedição — não corrige destinatário"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 8º, caput — equiparação do possuidor",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 918/2022, art. 8º, caput",
+            "texto": "Art. 8º Para fins de cumprimento desta Resolução, no caso de veículo objeto de penhor ou de contrato de arrendamento mercantil, comodato, aluguel ou arrendamento não vinculado ao financiamento do veículo, o possuidor, regularmente constituído e devidamente registrado no órgão ou entidade executivo de trânsito do Estado ou do Distrito Federal, nos termos de regulamentação específica, equipara-se ao proprietário do veículo.",
+            "trechos_grifados": [
+              {
+                "inicio": 386,
+                "fim": 424,
+                "motivo": "contraste — equiparação isolada não autorizou NA à locadora no caso",
+                "texto_grifado": "equipara-se ao proprietário do veículo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 8º, parágrafo único — limiar de 180 dias",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 918/2022, art. 8º, parágrafo único",
+            "texto": "Parágrafo único. As notificações de que trata esta Resolução somente deverão ser enviadas ao possuidor previsto no caput no caso de contrato com vigência igual ou superior a 180 (cento e oitenta) dias.",
+            "trechos_grifados": [
+              {
+                "inicio": 61,
+                "fim": 177,
+                "motivo": "caso — contrato de 120 dias impõe NA ao proprietário, não à locadora",
+                "texto_grifado": "somente deverão ser enviadas ao possuidor previsto no caput no caso de contrato com vigência igual ou superior a 180"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Possuidor na NA: só com contrato ≥ 180 dias.\nAbaixo disso = proprietário.\n\nNear-transfer: se o contrato de aluguel tivesse 200 dias, a NA à locadora registrada seria regular — mesmo veículo, limiar distinto.",
+            "destaques": ["180 dias", "proprietário", "200 dias"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 918/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 918, DE 28 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,287 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 220,
+  "fundamento_slug": "CG_personagens_oliveira_ledo",
+  "macete_visual": "Teodósio funda 1697 | Antônio capitão-mor | Joaquim+Luiz vereadores 1790",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Candidato troca Teodósio por outro Oliveira Lêdo ou confunde governador Manuel Soares com vereador de 1790",
+    "eixos_mecanismo": [
+      "numero_vizinho",
+      "termo_unico",
+      "regra_excecao"
+    ],
+    "isca_por_alternativa": {
+      "A": "credit a Antônio a fundação e Manuel Soares como vereador",
+      "C": "usa 1694, troca Constantino/Teodósio nos papéis de fundador e vereador",
+      "D": "credit a Custódio a fundação e Antônio/Constantino como vereadores"
+    },
+    "referencia_lote": "content/questoes/historia_cg_pb/lote-003.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: quem fez o quê?",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — troca Teodósio por Antônio na fundação e Manuel Soares por vereador.\nC — usa 1694 e inverte papéis de Constantino e Teodósio.\nD — credita Custódio a fundação e vereadores a Antônio/Constantino.\n\nCartaz STTP sobre Vila Nova da Rainha (1790): separar fundador, família e vereadores.",
+        "destaques": [
+          "Teodósio",
+          "1790",
+          "vereadores"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 papéis distintos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "FUNDADOR (1697): Teodósio de Oliveira Lêdo — aldeamento dos Ariús.\n\nCAPITÃO-MOR: Antônio de Oliveira Lêdo — Infantaria de Ordenanças do Sertão da PB.\n\nVEREADORES (1790): Joaquim Gomes Correia e Luiz Pereira Pinto — primeiros da Vila Nova da Rainha.",
+        "destaques": [
+          "FUNDADOR",
+          "CAPITÃO-MOR",
+          "VEREADORES"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: fundador ou vereador?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Marco de 1697 — fundação do povoado?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Marco de 1790 — primeiros vereadores da vila?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Teodósio (1697) + Joaquim e Luiz (1790)",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Mapa de personagens-chave",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Personagem",
+          "Papel"
+        ],
+        "linhas": [
+          {
+            "faixa": "Teodósio de Oliveira Lêdo",
+            "classificacao": "Fundador creditado — 1697",
+            "destaque": true
+          },
+          {
+            "faixa": "Antônio de Oliveira Lêdo",
+            "classificacao": "Capitão-mor da Infantaria do Sertão"
+          },
+          {
+            "faixa": "Joaquim Gomes Correia",
+            "classificacao": "1º vereador — Vila Nova da Rainha (1790)"
+          },
+          {
+            "faixa": "Luiz Pereira Pinto",
+            "classificacao": "1º vereador — Vila Nova da Rainha (1790)"
+          },
+          {
+            "faixa": "Manuel Soares de Albergaria",
+            "classificacao": "Governador da Paraíba — não vereador"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Fundador × vereador × governador",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a base factual diz ✓"
+        ],
+        "linhas": [
+          [
+            "Antônio fundou o povoado em 1697",
+            "Teodósio — fundador creditado dos Ariús"
+          ],
+          [
+            "Manuel Soares foi 1º vereador em 1790",
+            "Governador — vereadores foram Joaquim e Luiz"
+          ],
+          [
+            "Qualquer Oliveira Lêdo pode ser fundador",
+            "Teodósio fundou; Antônio/Constantino/Custódio têm papéis distintos"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — termo_unico",
+            "Troca Teodósio por Antônio como fundador de 1697"
+          ],
+          [
+            "A — regra_excecao",
+            "Atribui vereadoria a Manuel Soares — foi governador da Paraíba"
+          ],
+          [
+            "C — numero_vizinho",
+            "Usa 1694 no lugar de 1697 na fundação"
+          ],
+          [
+            "C — termo_unico",
+            "Credita Constantino como fundador e Teodósio como vereador"
+          ],
+          [
+            "D — termo_unico",
+            "Troca Teodósio por Custódio na fundação"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o cartaz da STTP",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Erro do estagiário",
+          "Correção"
+        ],
+        "linhas": [
+          [
+            "Antônio fundou em 1697",
+            "Teodósio de Oliveira Lêdo — fundador creditado"
+          ],
+          [
+            "Manuel Soares, 1º vereador",
+            "Joaquim Gomes Correia e Luiz Pereira Pinto — 1790"
+          ],
+          [
+            "Constantino como fundador",
+            "Constantino foi capitão-mor após Antônio → Gabarito B"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Dois marcos, dois conjuntos de nomes",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Marco",
+          "Personagens corretos"
+        ],
+        "linhas": [
+          [
+            "Fundação (1697)",
+            "Teodósio de Oliveira Lêdo — capitão-mor das Fronteiras"
+          ],
+          [
+            "Vila Nova da Rainha (1790)",
+            "Joaquim Gomes Correia + Luiz Pereira Pinto — vereadores"
+          ],
+          [
+            "Não confundir",
+            "Manuel Soares de Albergaria = governador (cartas 1699)"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Base factual — personagens",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "conteúdo/historia-cg-pb/base-factual.md — Personagens-chave",
+        "texto": "Teodósio de Oliveira Lêdo: Fundador creditado; capitão-mor; consolidou aldeamento dos Ariús. Antônio de Oliveira Lêdo: Primeiro capitão-mor da Infantaria de Ordenanças a Pé do Sertão da PB. Joaquim Gomes Correia e Luiz Pereira Pinto: Primeiros vereadores da Vila Nova da Rainha (1790).",
+        "trechos_grifados": [
+          {
+            "inicio": 0,
+            "fim": 25,
+            "motivo": "fluxo — fundador creditado (1697)",
+            "texto_grifado": "Teodósio de Oliveira Lêdo"
+          },
+          {
+            "inicio": 93,
+            "fim": 117,
+            "motivo": "mapa — capitão-mor da Infantaria (não fundador)",
+            "texto_grifado": "Antônio de Oliveira Lêdo"
+          },
+          {
+            "inicio": 190,
+            "fim": 211,
+            "motivo": "hierarquia — 1º vereador de 1790",
+            "texto_grifado": "Joaquim Gomes Correia"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Teodósio funda (1697) | Antônio capitão-mor Infantaria | Joaquim+Luiz vereadores (1790) | Manuel governador.\n\nNear-transfer: se a banca citar só \"Oliveira Lêdo\" sem nome, pergunte o marco — 1697 = Teodósio; 1790 vereador = Joaquim ou Luiz.",
+        "destaques": [
+          "Teodósio",
+          "Joaquim",
+          "Manuel"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Base factual — Personagens-chave",
+      "path": "conteúdo/historia-cg-pb/base-factual.md"
+    }
+  ]
+}

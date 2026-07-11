@@ -20,6 +20,8 @@ PDF_DIR = ROOT / "conteúdo" / "questões reais"
 OUT_JSON = Path(__file__).resolve().parent / "corpus-idecan-stats.json"
 
 DISCIPLINA_MAP = {
+    "HISTORIA CAMPINA GRANDE": "historia_cg_pb",
+    "CAMPINA GRANDE": "historia_cg_pb",
     "CTB": "legislacao_transito",
     "CONTRAN": "legislacao_transito",
     "CONSTITUCIONAL": "direito_constitucional",
@@ -61,6 +63,8 @@ def extrair_texto_pdf(path: Path) -> str:
 
 def classificar_comando(texto: str) -> str:
     t = texto.lower()
+    if re.search(r"assinale\s+se\s+(apenas|somente|todas|nenhuma)", t):
+        return "assertivas"
     if re.search(r"incorreta|errad[ao]|fals[ao]|não se aplica|nao se aplica", t):
         return "incorreta"
     if re.search(r"assertiva|afirmativa|itens?\s+[ivx]+|está correto|esta correto|estão corret", t):

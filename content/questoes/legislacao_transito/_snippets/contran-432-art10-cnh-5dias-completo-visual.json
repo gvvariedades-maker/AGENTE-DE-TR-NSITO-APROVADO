@@ -1,0 +1,275 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CONTRAN_432_art_10_1",
+  "macete_visual": "5 dias STTP · depois DETRAN registro",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Art. 9 libera veículo — art. 10 §1 encaminha CNH ao órgão de registro após 5 dias",
+    "eixos_legais": [
+      "CONTRAN_432_art_10_caput",
+      "CONTRAN_432_art_10_1"
+    ],
+    "isca_por_alternativa": {
+      "A": "CNH deve ser devolvida imediatamente se condutor apresentar amigo habilitado para retirar o veículo nos termos do art. 9",
+      "B": "CNH permanece sob custódia da STTP indefinidamente até resultado do exame de sangue da blitz",
+      "D": "CNH deve ser enviada à Senatran por competência federal da infração do art. 165 do CTB"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: CNH recolhida há 6 dias",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — CNH deve ser devolvida imediatamente se condutor apresentar amigo habilitado para retirar o veículo.\nB — CNH permanece na STTP indefinidamente até resultado do exame de sangue.\nD — CNH deve ser enviada à Senatran por competência federal da infração de embriaguez.\n\nPegadinha: liberação do veículo não devolve CNH — após 5 dias vai ao órgão de registro.",
+        "destaques": [
+          "Gabarito C",
+          "CNH",
+          "5 dias"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "RECOLHIMENTO DA CNH: medida do art. 10 — documento fica sob custódia do órgão autuador.\n\nPRAZO DE 5 DIAS: marco para comparecimento e comprovação de capacidade psicomotora regular.\n\nÓRGÃO DE REGISTRO: DETRAN/PB — destino da CNH após decurso do prazo sem comparecimento.",
+        "destaques": [
+          "RECOLHIMENTO",
+          "5 DIAS",
+          "REGISTRO"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: para onde vai a CNH?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Condutor compareceu em até 5 dias para comprovar capacidade regular?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Encaminhar CNH ao órgão de registro",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "r1",
+            "rotulo": "Não — caso da blitz"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Art. 9 × art. 10 — medidas distintas",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Medida",
+          "Dispositivo / efeito"
+        ],
+        "linhas": [
+          {
+            "faixa": "Veículo retido — condutor habilitado fiscalizado",
+            "classificacao": "Art. 9º — liberação do automóvel"
+          },
+          {
+            "faixa": "CNH recolhida — custódia STTP até 5 dias",
+            "classificacao": "Art. 10, caput — comparecer e comprovar",
+            "destaque": true
+          },
+          {
+            "faixa": "Sem comparecimento em 5 dias",
+            "classificacao": "Art. 10, §1 — encaminhar ao órgão de registro"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: amigo habilitado libera CNH",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Crença ✗",
+          "Lei ✓"
+        ],
+        "linhas": [
+          [
+            "Apresentar condutor habilitado devolve CNH no local",
+            "Art. 9 trata do veículo — CNH segue regime do art. 10"
+          ],
+          [
+            "Exame de sangue define custódia da CNH",
+            "Prazo de 5 dias do §1 encaminha ao órgão de registro"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Aplica art. 9 do veículo à devolução imediata da CNH — dispositivos distintos"
+          ],
+          [
+            "B — termo_unico",
+            "Vincula custódia da CNH ao exame de sangue — ignora prazo de 5 dias do §1"
+          ],
+          [
+            "D — competencia_snt",
+            "Atribui guarda da CNH à Senatran — §1 remete ao órgão executivo de registro"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato da blitz",
+          "Consequência"
+        ],
+        "linhas": [
+          [
+            "CNH recolhida na autuação por art. 165 do CTB",
+            "Custódia inicial da STTP — art. 10, caput"
+          ],
+          [
+            "Condutor não compareceu em 5 dias",
+            "Decurso do prazo do §1"
+          ],
+          [
+            "Supervisor consulta destino da CNH",
+            "Encaminhar ao DETRAN/PB — órgão de registro"
+          ],
+          [
+            "Resultado",
+            "Alternativa C"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Caput × §1 — duas fases da CNH",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Art. 10, caput — custódia",
+            "CNH fica na STTP até comprovação de capacidade regular"
+          ],
+          [
+            "Art. 10, §1 — 5 dias",
+            "Sem comparecimento → encaminhar ao órgão de registro"
+          ],
+          [
+            "Art. 9º — veículo",
+            "Regime paralelo — não altera destino da CNH"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei1",
+      "titulo": "Art. 10, caput — custódia inicial",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 432/2013, art. 10, caput",
+        "texto": "Art. 10. O documento de habilitação será recolhido pelo agente, mediante recibo, e ficará sob custódia do órgão ou entidade de trânsito responsável pela autuação até que o condutor comprove que não está com a capacidade psicomotora alterada, nos termos desta Resolução.",
+        "trechos_grifados": [
+          {
+            "inicio": 83,
+            "fim": 161,
+            "motivo": "contraste — CNH ficou na STTP autuadora antes do decurso dos 5 dias",
+            "texto_grifado": "ficará sob custódia do órgão ou entidade de trânsito responsável pela autuação"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 10, § 1º — encaminhamento",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 432/2013, art. 10, § 1º",
+        "texto": "§ 1º Caso o condutor não compareça ao órgão ou entidade de trânsito responsável pela autuação no prazo de 5 (cinco) dias da data do cometimento da infração, o documento será encaminhado ao órgão executivo de trânsito responsável pelo seu registro, onde o condutor deverá buscar seu documento.",
+        "trechos_grifados": [
+          {
+            "inicio": 97,
+            "fim": 120,
+            "motivo": "fluxo — condutor não compareceu no prazo da blitz",
+            "texto_grifado": "prazo de 5 (cinco) dias"
+          },
+          {
+            "inicio": 169,
+            "fim": 246,
+            "motivo": "caso — destino da CNH após decurso do prazo",
+            "texto_grifado": "será encaminhado ao órgão executivo de trânsito responsável pelo seu registro"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CNH recolhida: 5 dias na STTP.\nNão veio = DETRAN registro.\n\nNear-transfer: se o condutor tivesse comparecido no 4º dia e comprovado capacidade regular, a CNH seria devolvida pela STTP — sem encaminhamento ao órgão de registro.",
+        "destaques": [
+          "5 dias",
+          "DETRAN",
+          "4º dia"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 432/2013",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 432, DE 23 DE JANEIRO DE 2013.pdf"
+    },
+    {
+      "rotulo": "CTB art. 165",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

@@ -130,6 +130,7 @@ Fonte: [Prefeitura de Campina Grande](https://campinagrande.pb.gov.br/wp-content
 | Informática | `INFORMÁTICA - IDECAN - SUPERIOR -TEC.pdf`, `... 01 - TEC.pdf`, `... 02 - TEC.pdf` | OK |
 | Português | `PORTUGUES - IDECAN - SUPERIOR - TEC.pdf` | OK |
 | Ética / LGPD | `Ética no serviço público...`, `Lei Geral de Proteção de Dados Pessoais (LGPD)...` | OK |
+| **História CG/PB** | `HISTORIA CAMPINA GRANDE - IDECAN - CG 2021 GCM AAd ASE - TEC.pdf` (caderno Tec Concursos `s/Q6dym3`, 11Q CG) | OK (local 11/07/2026) |
 
 ---
 

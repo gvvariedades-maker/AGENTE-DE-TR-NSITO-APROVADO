@@ -4,8 +4,8 @@ peso_prova: 4/60 questões · 4/100 pontos · 1 pt/questão
 grupo: gerais
 minimo_eliminacao: 1 ponto (1 acerto evita zero) — RISCO DE ZERAR
 consumido_por: [examinador-idecan, professor-cadeia, estudo-reverso-visual]
-corpus_base: 0 questões IDECAN — SEM corpus real
-cobertura_banco: 0 questões (2026-07-10) — LACUNA TOTAL
+corpus_base: 11 questões IDECAN Campina Grande 2021 (GCM/AAd/ASE) — `questões reais/HISTORIA CAMPINA GRANDE - IDECAN - CG 2021 GCM AAd ASE - TEC.pdf`
+cobertura_banco: 3 questões (2026-07-11) — formação (2) + personagens (1)
 fonte_legal: conteúdo/historia-cg-pb/base-factual.md (única fonte curada)
 versao: 1.0
 ---
@@ -32,14 +32,17 @@ versao: 1.0
 
 ## 2. Perfil estatístico
 
-**Sem corpus IDECAN** (`por_disciplina.historia_cg_pb` inexistente). Usar o **envelope global** do `perfil-banca.md`:
+**Corpus IDECAN local** (`HISTORIA CAMPINA GRANDE - IDECAN - CG 2021 GCM AAd ASE - TEC.pdf`, 11 questões CG) + envelope global:
 
-| Dimensão | Regra de fabricação |
-|----------|---------------------|
-| Enunciado | **150–400 chars** (fato + comando objetivo) |
-| Alternativa | **40–90 chars** (data, nome ou evento) |
-| Comando | Explícito em ≥50% ("assinale a alternativa CORRETA") |
-| Gabaritos | Em lote A–D: **~25% por letra**, máx. 2 consecutivos |
+| Dimensão | Corpus CG 2021 | Regra de fabricação |
+|----------|----------------|---------------------|
+| Comando | **~73% assertivas** (I–III + *assinale se apenas…*) | Priorizar `assertivas` e `estilo_idecan: assertivas` além de `caso_pratico` |
+| Enunciado | Média alta (texto-base + notícia/hino) | **200–450 chars** |
+| Alternativa | Curtas (datas, nomes, municípios) | **40–120 chars** |
+| Pegadinha | Pares de datas, personagens homônimos, distritos vizinhos | `numero_vizinho` + `termo_unico` |
+| Gabaritos | A–D equilibrados no corpus | Em lote: **~25% por letra**, máx. 2 consecutivos |
+
+Demais disciplinas: `corpus-idecan-stats.json` (`npm run analyze:idecan`).
 
 ---
 
