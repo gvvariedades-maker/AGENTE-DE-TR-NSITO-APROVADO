@@ -1,0 +1,363 @@
+[
+  {
+    "disciplina": "direito_administrativo",
+    "topico": "dir_adm_3_3",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "Lei9784_art53",
+    "enunciado": "O superintendente da STTP revoga, por conveniência operacional, portaria legal que fixava pontos de blitz na Av. Epitácio Pessoa, adotando rodízio dinâmico de equipes. Um condutor autuado na semana anterior sustenta que a revogação deveria ser anulação com efeitos retroativos, invalidando a multa lavrada quando a portaria ainda vigia. A Procuradoria municipal analisa a extinção do ato administrativo. Assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A revogação da portaria legal produz efeitos ex tunc, invalidando as autuações lavradas sob sua vigência na Av. Epitácio Pessoa.",
+      "B": "A revogação por conveniência de ato legal produz efeitos ex nunc, sem atingir autuações válidas praticadas enquanto a portaria estava em vigor.",
+      "C": "Diante da mudança operacional, a STTP deve anular a portaria legal por vício de legalidade, pois revogação só alcança atos ilegais.",
+      "D": "A revogação de norma interna de fiscalização depende de autorização judicial prévia, sendo vedada a autotutela administrativa da STTP."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Revogação por conveniência de ato legal (Lei 9.784/99, art. 53) — efeitos ex nunc, distinta da anulação por ilegalidade (ex tunc); convalidação de defeitos sanáveis (art. 55) não se confunde com revogação.",
+      "fundamento_legal": "Lei 9.784/99, art. 53: \"A Administração deve anular seus próprios atos, quando eivados de vício de legalidade, e pode revogá-los por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos.\" Art. 55: \"Em decisão na qual se evidencie não acarretarem lesão ao interesse público nem prejuízo a terceiros, os atos que apresentarem defeitos sanáveis poderão ser convalidados pela própria Administração.\"",
+      "passo_a_passo": [
+        "1. Portaria legal revogada por conveniência — hipótese do pode revogar (art. 53), não de deve anular. Revogação de ato legal gera efeitos ex nunc; autuação válida à época permanece.",
+        "2. A erra por termo_unico (confunde revogação com anulação e aplica efeitos ex tunc à multa lavrada sob portaria vigente); C erra por termo_unico (exige anulação de ato legal sem vício, invertendo revogação e anulação); D erra por regra_excecao (exige autorização judicial para revogar norma interna, afastando autotutela do art. 53).",
+        "3. Gabarito B: revogação por conveniência de ato legal — ex nunc, sem invalidar autuações pretéritas válidas."
+      ],
+      "pegadinha": "A banca trata revogação de ato legal como anulação ex tunc ou exige Judiciário para revogar — ignorando o pode revogar e os efeitos prospectivos.",
+      "macete": "DEVE ANULA (ilegal, ex tunc) | PODE REVOGA (legal, ex nunc) | CONVALIDA defeito sanável.",
+      "estudo_reverso": [
+        "Lei 9.784/99 art. 53",
+        "Lei 9.784/99 art. 55",
+        "Lei 9.784/99 art. 54",
+        "Lei 9.784/99 art. 2"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "Lei9784_art53",
+      "macete_visual": "REVOGA ex nunc | ANULA ex tunc",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B. A confunde revogação com anulação ex tunc; C exige anular ato legal; D veda autotutela. Portaria legal revogada não invalida multa pretérita.",
+            "destaques": ["ex nunc", "ex tunc", "revogação"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Revogação × anulação",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "Regra ✓"],
+            "linhas": [
+              [
+                "Revogação invalida multas lavradas sob portaria vigente",
+                "Revogação ex nunc — autuação válida à época subsiste"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Portaria revogada era legal?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Revogação invalida multa da semana anterior?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito B — ex nunc", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — legal" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei 9.784/99, art. 53",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 53",
+            "texto": "A Administração deve anular seus próprios atos, quando eivados de vício de legalidade, e pode revogá-los por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos.",
+            "trechos_grifados": [
+              {
+                "inicio": 89,
+                "fim": 104,
+                "motivo": "fluxo — revogação da portaria legal da STTP",
+                "texto_grifado": "pode revogá-los"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DEVE ANULA (ilegal, ex tunc) | PODE REVOGA (legal, ex nunc) | CONVALIDA defeito sanável.",
+            "destaques": ["ANULA", "REVOGA", "CONVALIDA"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.784/99 art. 53",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "Lei9784_art53",
+      "macete_visual": "REVOGA ex nunc | ANULA ex tunc",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Revogação de portaria legal tratada como anulação ex tunc da multa",
+        "eixos_legais": ["Lei9784_art53", "Lei9784_art55"],
+        "isca_por_alternativa": {
+          "A": "aplica efeitos ex tunc à revogação e invalida autuação sob portaria vigente",
+          "C": "exige anulação de ato legal sem vício por conveniência operacional",
+          "D": "exige autorização judicial para revogar norma interna da STTP"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: revogação ex nunc",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — revogação ex tunc: invalida multa lavrada sob portaria vigente.\nC — anular ato legal: confunde revogação com anulação por ilegalidade.\nD — Judiciário para revogar: afasta autotutela administrativa.\n\nPegadinha: portaria legal revogada por conveniência não apaga autuações pretéritas válidas.",
+            "destaques": ["Gabarito B", "ex nunc", "autotutela"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ANULAÇÃO: extinção de ato ilegal — dever da Administração, efeitos em regra ex tunc.\n\nREVOGAÇÃO: extinção de ato legal por conveniência ou oportunidade — poder discricionário, efeitos em regra ex nunc.\n\nCONVALIDAÇÃO: correção de defeito sanável sem lesão ao interesse público nem prejuízo a terceiros.",
+            "destaques": ["ANULAÇÃO", "REVOGAÇÃO", "CONVALIDAÇÃO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "MÉTODO: classificar a revogação",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Portaria da blitz era legal?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Revogação invalida multa da semana anterior?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito B — efeitos ex nunc", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — Av. Epitácio" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Anulação × revogação × convalidação",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Espécie", "Hipótese e efeito"],
+            "linhas": [
+              {
+                "faixa": "Anulação",
+                "classificacao": "Deve — vício de legalidade, ex tunc"
+              },
+              {
+                "faixa": "Revogação",
+                "classificacao": "Pode — conveniência, ex nunc",
+                "destaque": true
+              },
+              {
+                "faixa": "Convalidação",
+                "classificacao": "Defeito sanável sem lesão nem prejuízo"
+              },
+              {
+                "faixa": "Caso STTP",
+                "classificacao": "Revogação de portaria legal — multa pretérita subsiste"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Ex tunc × ex nunc no caso",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o condutor insinua ✗", "Extinção correta ✓"],
+            "linhas": [
+              [
+                "Revogação invalida multa da semana anterior",
+                "Revogação ex nunc — autuação válida à época permanece"
+              ],
+              [
+                "Mudança operacional exige anular portaria legal",
+                "Ato legal se revoga por conveniência, não se anula"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Confunde revogação com anulação e aplica efeitos ex tunc à multa sob portaria vigente"
+              ],
+              [
+                "C — termo_unico",
+                "Exige anulação de ato legal sem vício, invertendo revogação e anulação"
+              ],
+              [
+                "D — regra_excecao",
+                "Exige autorização judicial para revogar norma interna, afastando autotutela"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso STTP", "Classificação"],
+            "linhas": [
+              [
+                "Portaria legal fixava blitz na Av. Epitácio Pessoa",
+                "Ato válido — hipótese de revogação, não anulação"
+              ],
+              [
+                "Superintendente revoga por rodízio dinâmico",
+                "Conveniência operacional — pode revogar"
+              ],
+              [
+                "Condutor autuado na semana anterior",
+                "Multa lavrada sob vigência da portaria — mantida"
+              ],
+              ["Resultado", "Alternativa B — única correta"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Deve × pode na autotutela",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Verbo", "Situação no caso"],
+            "linhas": [
+              ["Deve anular", "Ato ilegal — não é o caso da portaria legal"],
+              ["Pode revogar", "Ato legal por conveniência — caso da blitz"],
+              ["Pode convalidar", "Defeito sanável sem prejuízo — não é o caso"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei 9.784/99, art. 53 — autotutela",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 53",
+            "texto": "A Administração deve anular seus próprios atos, quando eivados de vício de legalidade, e pode revogá-los por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos.",
+            "trechos_grifados": [
+              {
+                "inicio": 16,
+                "fim": 27,
+                "motivo": "contraste — não é hipótese de anulação no caso",
+                "texto_grifado": "deve anular"
+              },
+              {
+                "inicio": 89,
+                "fim": 104,
+                "motivo": "fluxo — revogação da portaria legal da STTP",
+                "texto_grifado": "pode revogá-los"
+              },
+              {
+                "inicio": 149,
+                "fim": 183,
+                "motivo": "mapa — respeito a situações consolidadas",
+                "texto_grifado": "respeitados os direitos adquiridos"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Lei 9.784/99, art. 55 — convalidação",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 55",
+            "texto": "Em decisão na qual se evidencie não acarretarem lesão ao interesse público nem prejuízo a terceiros, os atos que apresentarem defeitos sanáveis poderão ser convalidados pela própria Administração.",
+            "trechos_grifados": [
+              {
+                "inicio": 126,
+                "fim": 143,
+                "motivo": "hierarquia — terceira via distinta de anulação e revogação",
+                "texto_grifado": "defeitos sanáveis"
+              },
+              {
+                "inicio": 156,
+                "fim": 168,
+                "motivo": "mapa — não confundir com revogação da portaria",
+                "texto_grifado": "convalidados"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DEVE ANULA (ilegal, ex tunc) | PODE REVOGA (legal, ex nunc) | CONVALIDA defeito sanável.\n\nNear-transfer: se a portaria da blitz fosse ilegal por ausência de competência, caberia anulação ex tunc — não revogação por conveniência; se o auto de infração tivesse só vício formal sanável sem prejuízo, caberia convalidação.",
+            "destaques": ["ANULA", "REVOGA", "near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.784/99 art. 53",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        },
+        {
+          "rotulo": "Lei 9.784/99 art. 55",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        }
+      ]
+    },
+    "tags": [
+      "anulacao",
+      "revogacao",
+      "convalidacao",
+      "ex_tunc_ex_nunc",
+      "lei_9784",
+      "sttp"
+    ]
+  }
+]

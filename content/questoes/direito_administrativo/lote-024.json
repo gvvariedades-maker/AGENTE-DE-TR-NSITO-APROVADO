@@ -1,0 +1,363 @@
+[
+  {
+    "disciplina": "direito_administrativo",
+    "topico": "dir_adm_4_5",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CF_art_144_10",
+    "enunciado": "Em blitz da STTP em Campina Grande, agente autua condutor por estacionar sobre faixa amarela de retenção e determina remoção do veículo. A defesa alega que agentes municipais não exercem poder de polícia (competência exclusiva da PM) e que autos padronizados do CTB dispensariam motivação, por serem atos vinculados. O jurídico municipal cita a CF/88 e a Lei nº 9.784/1999. Sobre poder de polícia e segurança viária, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A fiscalização de trânsito pelos agentes da STTP não configura poder de polícia administrativa, por se tratar de mera orientação ao público sem limitação de direitos.",
+      "B": "A segurança viária em via pública municipal é competência exclusiva da Polícia Militar, excluindo os agentes de trânsito previstos na Constituição Federal.",
+      "C": "A imposição de multa e remoção veicular por auto de infração dispensa motivação, pois o CTB já define de forma vinculada a sanção aplicável.",
+      "D": "A autuação com sanção e remoção limita direitos com fundamento legal, configurando poder de polícia; compete aos agentes municipais nos termos do art. 144, § 10, da CF/88, com observância da motivação quando impõe sanção (Lei nº 9.784/1999, arts. 2 e 50)."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Poder de polícia na autuação de trânsito, competência constitucional dos agentes municipais (CF art. 144, § 10) e exigência de motivação ao impor sanção (Lei 9.784/99, arts. 2 e 50).",
+      "fundamento_legal": "CF/88, art. 144, § 10, II: \"compete, no âmbito dos Estados, do Distrito Federal e dos Municípios, aos respectivos órgãos ou entidades executivos e seus agentes de trânsito, estruturados em Carreira, na forma da lei.\" Lei 9.784/99, art. 50, II: \"imponham ou agravem deveres, encargos ou sanções;\" — atos que impõem sanção devem ser motivados. Art. 2: princípios da legalidade, finalidade e motivação na atuação administrativa.",
+      "passo_a_passo": [
+        "1. Autuação com multa e remoção limita o uso da via e impõe sanção patrimonial — exercício de poder de polícia administrativa. A CF/88, art. 144, § 10, atribui a segurança viária (fiscalização de trânsito) aos agentes municipais, não exclusivamente à PM.",
+        "2. A erra por termo_unico (nega limitação de direitos — trata fiscalização como mera orientação); B erra por competencia_snt (atribui competência exclusiva à PM, ignorando art. 144, § 10); C erra por regra_excecao (dispensa motivação apesar do art. 50, II, ao impor sanção).",
+        "3. D correta: poder de polícia com fundamento legal + competência constitucional dos agentes municipais + motivação na imposição de sanção (arts. 2 e 50 da Lei 9.784/99)."
+      ],
+      "pegadinha": "A banca nega o poder de polícia na autuação, transfere a competência exclusivamente à PM ou trata ato vinculado do CTB como dispensado de motivação — ignorando CF art. 144, § 10 e Lei 9.784/99 art. 50.",
+      "macete": "VIÁRIA ≠ PM exclusiva | AUTUA = POLÍCIA (limita direitos) | SANÇÃO = MOTIVA (art. 50, II).",
+      "estudo_reverso": [
+        "CF art. 144, § 10",
+        "CF art. 144, caput",
+        "Lei 9.784/99 art. 2",
+        "Lei 9.784/99 art. 50"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CF_art_144_10",
+      "macete_visual": "VIÁRIA ≠ PM | AUTUA = POLÍCIA | SANÇÃO = MOTIVA",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Autuação STTP com remoção: poder de polícia municipal + motivação na sanção. B transfere tudo à PM; C dispensa motivação por ato vinculado.",
+            "destaques": ["poder de polícia", "segurança viária", "motivação"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "PM exclusiva × agentes municipais",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "CF §10 ✓"],
+            "linhas": [
+              [
+                "Segurança viária é competência exclusiva da PM",
+                "Compete aos agentes de trânsito municipais estruturados em carreira"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Autuação limita direitos ou impõe sanção?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Competência é só da PM, sem § 10?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito D — poder de polícia + §10 + motivação", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "CF art. 144, § 10, II",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 144, § 10, II",
+            "texto": "II - compete, no âmbito dos Estados, do Distrito Federal e dos Municípios, aos respectivos órgãos ou entidades executivos e seus agentes de trânsito, estruturados em Carreira, na forma da lei.",
+            "trechos_grifados": [
+              {
+                "inicio": 63,
+                "fim": 73,
+                "motivo": "competência municipal dos agentes de trânsito",
+                "texto_grifado": "Municípios"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VIÁRIA ≠ PM exclusiva | AUTUA = POLÍCIA (limita direitos) | SANÇÃO = MOTIVA (art. 50, II).",
+            "destaques": ["VIÁRIA", "POLÍCIA", "MOTIVA"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88 art. 144, § 10",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 265,
+      "fundamento_slug": "CF_art_144_10",
+      "macete_visual": "VIÁRIA ≠ PM | AUTUA = POLÍCIA | SANÇÃO = MOTIVA",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "PM exclusiva (B) ou ato vinculado dispensa motivação (C)",
+        "eixos_legais": ["CF_art_144_10", "Lei9784_art50"],
+        "isca_por_alternativa": {
+          "A": "nega poder de polícia — trata autuação como mera orientação sem limitar direitos",
+          "B": "transfere segurança viária exclusivamente à PM — ignora art. 144, § 10",
+          "C": "dispensa motivação por ato vinculado do CTB — ignora art. 50, II"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: autuação é poder de polícia municipal",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — nega poder de polícia: multa e remoção limitam direitos.\nB — PM exclusiva: a Constituição atribui competência aos agentes municipais.\nC — dispensa motivação: impor sanção exige fundamentação explícita.\n\nNesta aula você fixa VIÁRIA ≠ PM exclusiva e o vínculo autuação → poder de polícia → motivação.",
+            "destaques": ["Gabarito D", "poder de polícia", "segurança viária"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PODER DE POLÍCIA: prerrogativa da Administração para restringir direitos individuais em favor do interesse público, com fundamento legal.\n\nSEGURANÇA VIÁRIA: atividade constitucional (CF art. 144, § 10) que compreende fiscalização de trânsito — distinta da segurança pública do caput.\n\nMOTIVAÇÃO: indicação de fatos e fundamentos jurídicos quando o ato impõe sanção (Lei 9.784/99, art. 50, II).",
+            "destaques": ["PODER DE POLÍCIA", "SEGURANÇA VIÁRIA", "MOTIVAÇÃO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "MÉTODO: classificar a blitz da STTP",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Autuação com multa limita direito de uso da via?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Competência é exclusiva da PM, sem § 10?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito D — poder de polícia + §10 + motivação",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Atributos do poder de polícia na autuação",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Elemento", "Na autuação STTP"],
+            "linhas": [
+              {
+                "faixa": "Limitação de direitos",
+                "classificacao": "Multa e remoção restringem uso da via e patrimônio",
+                "destaque": true
+              },
+              {
+                "faixa": "Fundamento legal",
+                "classificacao": "CTB + competência constitucional (§ 10)"
+              },
+              {
+                "faixa": "Competência",
+                "classificacao": "Agentes municipais de trânsito em carreira"
+              },
+              {
+                "faixa": "Motivação",
+                "classificacao": "Obrigatória ao impor sanção — art. 50, II"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: PM exclusiva × agentes municipais",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a banca insinua ✗", "O que a CF exige ✓"],
+            "linhas": [
+              [
+                "Segurança viária é competência exclusiva da Polícia Militar",
+                "Art. 144, § 10 atribui fiscalização aos agentes municipais"
+              ],
+              [
+                "Ato vinculado do CTB dispensa motivação na sanção",
+                "Art. 50, II exige motivação ao impor sanção"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Nega limitação de direitos — autuação com sanção é poder de polícia, não mera orientação"
+              ],
+              [
+                "B — competencia_snt",
+                "Atribui competência exclusiva à PM — ignora art. 144, § 10, II"
+              ],
+              [
+                "C — regra_excecao",
+                "Dispensa motivação por ato vinculado — art. 50, II exige motivação ao impor sanção"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso STTP", "Consequência jurídica"],
+            "linhas": [
+              [
+                "Estacionamento em faixa amarela de retenção",
+                "Infração autuada com fundamento legal — limita direito de uso da via"
+              ],
+              [
+                "Remoção do veículo determinada pelo agente",
+                "Sanção imposta — exige motivação (art. 50, II)"
+              ],
+              [
+                "Defesa invoca competência exclusiva da PM",
+                "Refutada pelo art. 144, § 10 — agentes municipais competentes"
+              ],
+              ["Resultado", "Alternativa D — única defensável"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Segurança pública × segurança viária",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Instituto", "Conteúdo constitucional"],
+            "linhas": [
+              ["Segurança pública (art. 144, caput)", "PM, PC, PRF — dever do Estado"],
+              ["Segurança viária (art. 144, § 10)", "Fiscalização de trânsito — agentes municipais"],
+              ["Poder de polícia na autuação", "Limita direitos com base legal — não é orientação"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "CF art. 144, § 10, II — competência municipal",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 144, § 10, II",
+            "texto": "II - compete, no âmbito dos Estados, do Distrito Federal e dos Municípios, aos respectivos órgãos ou entidades executivos e seus agentes de trânsito, estruturados em Carreira, na forma da lei.",
+            "trechos_grifados": [
+              {
+                "inicio": 63,
+                "fim": 73,
+                "motivo": "contraste — competência municipal, não exclusiva da PM",
+                "texto_grifado": "Municípios"
+              },
+              {
+                "inicio": 129,
+                "fim": 148,
+                "motivo": "fluxo — agentes de trânsito estruturados em carreira",
+                "texto_grifado": "agentes de trânsito"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Lei 9.784/99, art. 50, II — motivação na sanção",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 50, II",
+            "texto": "Os atos administrativos deverão ser motivados, com indicação dos fatos e dos fundamentos jurídicos, quando: II - imponham ou agravem deveres, encargos ou sanções;",
+            "trechos_grifados": [
+              {
+                "inicio": 113,
+                "fim": 161,
+                "motivo": "mapa — sanção imposta na autuação exige motivação",
+                "texto_grifado": "imponham ou agravem deveres, encargos ou sanções"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VIÁRIA ≠ PM exclusiva | AUTUA = POLÍCIA (limita direitos) | SANÇÃO = MOTIVA (art. 50, II).\n\nNear-transfer: se o agente apenas orientasse o motorista a sair da faixa sem lavrar auto, ainda seria poder de polícia? Orientação sem sanção pode ser fiscalização educativa — mas autuação com multa sempre limita direitos e exige motivação.",
+            "destaques": ["VIÁRIA", "POLÍCIA", "near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88 art. 144, § 10",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        },
+        {
+          "rotulo": "Lei 9.784/99 art. 50",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        }
+      ]
+    },
+    "tags": [
+      "poder_policia",
+      "seguranca_viaria",
+      "cf_144",
+      "lei_9784",
+      "motivacao",
+      "sttp"
+    ]
+  }
+]

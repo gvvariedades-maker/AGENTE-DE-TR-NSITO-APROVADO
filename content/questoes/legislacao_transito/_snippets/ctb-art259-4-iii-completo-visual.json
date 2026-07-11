@@ -1,0 +1,150 @@
+{
+  "versao": 2,
+  "arquetipo": "tabela_gradacao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 265,
+  "fundamento_slug": "CTB_art_259_4_III",
+  "macete_visual": "7-5-4-3 · §4 III = zero pontos",
+  "meta": {
+    "padrao_familia": "D_gradacao",
+    "pegadinha_em_uma_frase": "Gravíssima não pontua se a infração traz suspensão específica — art. 259, §4, III",
+    "eixos_legais": ["CTB_art_259", "CTB_art_259_4_III", "CTB_art_165-A"],
+    "isca_por_alternativa": {
+      "A": "gravíssima sempre computa sete pontos no prontuário",
+      "B": "equipara recusa sem etilômetro positivo a cinco pontos de grave",
+      "D": "recusa sem confirmação etílica reduz para quatro pontos de média"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: gravíssima pontua sete?",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — gravíssima sempre computa sete pontos no prontuário.\nB — equipara recusa sem etilômetro positivo a cinco pontos de grave.\nD — recusa sem confirmação etílica reduz para quatro pontos de média.\n\nPegadinha: suspensão específica da recusa dispensa pontuação cumulativa.",
+        "destaques": ["Gabarito C", "recusa", "etilômetro"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "PONTUAÇÃO NA CNH: registro de pontos por infração no prontuário — art. 259.\n\nSUSPENSÃO ESPECÍFICA: penalidade própria da infração (ex.: 12 meses no art. 165-A) — exceção do §4, III.\n\nINFRAÇÃO GRAVÍSSIMA: natureza da conduta — não garante pontos se houver suspensão específica.",
+        "destaques": ["PONTUAÇÃO", "SUSPENSÃO ESPECÍFICA", "GRAVÍSSIMA"]
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Tabela do art. 259",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Natureza", "Pontos"],
+        "linhas": [
+          { "faixa": "Gravíssima", "classificacao": "7 pontos", "destaque": true },
+          { "faixa": "Grave", "classificacao": "5 pontos" },
+          { "faixa": "Média", "classificacao": "4 pontos" },
+          { "faixa": "Leve", "classificacao": "3 pontos" },
+          { "faixa": "Suspensão específica (§4, III)", "classificacao": "Sem pontuação" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: caput isolado",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Crença ✗", "Lei ✓"],
+        "linhas": [
+          ["Gravíssima do 165-A = 7 pontos automáticos", "§4, III: suspensão específica dispensa pontuação"],
+          ["Sem etilômetro positivo reduz pontos", "Natureza gravíssima permanece — exceção é a suspensão específica"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — gravidade", "Aplica 7 pontos do caput — ignora exceção do §4, III"],
+          ["B — numero_vizinho", "Equipara a 5 pontos de grave sem fundamento legal"],
+          ["D — gravidade", "Reduz gravíssima a 4 pontos de média por ausência de resultado etílico"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Consequência"],
+        "linhas": [
+          ["Recusa ao etilômetro homologado na blitz da STTP", "Infração gravíssima do art. 165-A"],
+          ["Penalidade inclui suspensão por doze meses", "Hipótese do §4, III — sem pontuação"],
+          ["Advogado invoca sete pontos de gravíssima", "Caput isolado — ignora exceção"],
+          ["Resultado", "Alternativa C"]
+        ]
+      }
+    },
+    {
+      "id": "lei1",
+      "titulo": "Art. 259 — pontos por natureza",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 259",
+        "texto": "Art. 259. A cada infração cometida são computados os seguintes números de pontos: I - gravíssima - sete pontos; II - grave - cinco pontos; III - média - quatro pontos; IV - leve - três pontos.",
+        "trechos_grifados": [
+          {
+            "inicio": 99,
+            "fim": 110,
+            "motivo": "gradacao — isca dos sete pontos de gravíssima",
+            "texto_grifado": "sete pontos"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 259, §4, III — exceção",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 259, §4, III",
+        "texto": "III - puníveis de forma específica com suspensão do direito de dirigir.",
+        "trechos_grifados": [
+          {
+            "inicio": 39,
+            "fim": 70,
+            "motivo": "contraste — suspensão específica do 165-A dispensa pontos",
+            "texto_grifado": "suspensão do direito de dirigir"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "7-5-4-3 no caput.\nSuspensão específica = ZERO pontos (§4, III).\n165-A não pontua.\n\nNear-transfer: embriaguez com suspensão específica no art. 165 também se enquadra na exceção — não basta ser gravíssima para pontuar.",
+        "destaques": ["ZERO pontos", "§4, III", "165-A"]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "CTB art. 259",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

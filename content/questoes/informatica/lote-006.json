@@ -1,0 +1,321 @@
+[
+  {
+    "disciplina": "informatica",
+    "topico": "informatica_8_4",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "info_firewall_antivirus",
+    "enunciado": "Na STTP, o computador da fiscalização acessa sites externos normalmente, mas não abre o portal interno da prefeitura (intranet). O supervisor orienta reinstalar o antivírus, pois \"antivírus bloqueia conexões de rede\". O manual de TI informa que o firewall da rede filtra tráfego por porta e protocolo e que o antivírus analisa arquivos e processos em busca de malware — funções distintas. Considerando antivírus e firewalls, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O antivírus define quais portas e protocolos podem acessar o portal interno da prefeitura.",
+      "B": "O bloqueio ao portal interno deve ser verificado nas regras do firewall que filtra o tráfego de rede.",
+      "C": "Firewall e antivírus impedem malware na estação com a mesma função de proteção.",
+      "D": "Desinstalar o antivírus libera o acesso a sites internos bloqueados pelo roteador da STTP."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Distinção entre firewall (controle de tráfego de rede por porta/protocolo) e antivírus (detecção de malware em arquivos e processos).",
+      "fundamento_legal": "Conceitos técnicos — TI e segurança da informação (Anexo I, item 8.4): firewall controla tráfego de rede entre redes, aplicando regras de porta e protocolo; antivírus analisa arquivos e processos na estação em busca de malware — camadas distintas.",
+      "passo_a_passo": [
+        "1. Caso: intranet inacessível com internet OK — sintoma de filtro de rede (firewall/regra), não de antivírus em arquivos.",
+        "2. A erra por termo_unico (atribui ao antivírus função de firewall/portas); C erra por termo_unico (iguala funções distintas); D erra por regra_excecao (desinstalar antivírus não corrige bloqueio de firewall no portal interno).",
+        "3. B correta: verificar regras do firewall que filtra tráfego de rede ao portal interno."
+      ],
+      "pegadinha": "Supervisor troca firewall por antivírus — bloqueio de intranet é regra de rede, não varredura de malware.",
+      "macete": "Firewall = portas e tráfego de rede | Antivírus = arquivos e processos | Intranet bloqueada → olhe o firewall.",
+      "estudo_reverso": [
+        "Firewall — filtro de tráfego por porta e protocolo",
+        "Antivírus — detecção de malware na estação"
+      ]
+    },
+    "tags": [
+      "firewall",
+      "antivirus",
+      "intranet",
+      "seguranca",
+      "rede"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "fundamento_slug": "info_firewall_antivirus",
+      "macete_visual": "Firewall=rede+portas | Antivírus=arquivos+processos",
+      "duracao_estimada_seg": 55,
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Intranet bloqueada com internet OK = firewall/regra de rede, não antivírus. Supervisor confundiu as camadas.",
+            "destaques": [
+              "firewall",
+              "antivírus",
+              "intranet"
+            ]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Firewall × Antivírus",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Ferramenta",
+              "Função"
+            ],
+            "linhas": [
+              {
+                "faixa": "Firewall",
+                "classificacao": "Filtra tráfego de rede (porta/protocolo)",
+                "destaque": true
+              },
+              {
+                "faixa": "Antivírus",
+                "classificacao": "Analisa arquivos e processos (malware)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Reinstalar antivírus libera intranet",
+                "Verificar regras do firewall de rede"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Firewall = rede e portas. Antivírus = arquivos. Portal interno bloqueado → firewall.",
+            "destaques": [
+              "Firewall",
+              "Antivírus",
+              "portal"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 8.4",
+          "path": "conteúdo/edital/"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 185,
+      "fundamento_slug": "info_firewall_antivirus",
+      "macete_visual": "Firewall=rede+portas | Antivírus=arquivos+processos",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: intranet ≠ antivírus",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B (verificar firewall).\n\nA — atribui portas ao antivírus: função é do firewall.\nC — iguala firewall e antivírus: camadas distintas no manual.\nD — desinstalar antivírus libera intranet: bloqueio é regra de rede.\n\nInternet OK, portal interno da prefeitura bloqueado na STTP.",
+            "destaques": [
+              "firewall",
+              "antivírus",
+              "intranet"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de decidir: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Firewall = filtra tráfego de rede (porta e protocolo). Antivírus = varre arquivos e processos em busca de malware. Intranet = rede interna (portal da prefeitura) — acesso pode depender de regras de firewall.",
+            "destaques": [
+              "Firewall",
+              "Antivírus",
+              "Intranet"
+            ]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Mapa — duas camadas de proteção",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Ferramenta",
+              "O que protege"
+            ],
+            "linhas": [
+              {
+                "faixa": "Firewall",
+                "classificacao": "Tráfego de rede — portas e protocolos",
+                "destaque": true
+              },
+              {
+                "faixa": "Antivírus",
+                "classificacao": "Arquivos e processos — malware"
+              },
+              {
+                "faixa": "Supervisor (erro)",
+                "classificacao": "Trocar firewall por antivírus"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: reinstalar antivírus",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "O que o supervisor diz ✗",
+              "O que o caso indica ✓"
+            ],
+            "linhas": [
+              [
+                "Antivírus bloqueia conexões ao portal interno",
+                "Firewall filtra tráfego por porta e protocolo"
+              ],
+              [
+                "Reinstalar antivírus resolve intranet",
+                "Revisar regras do firewall da rede STTP"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Atribui ao antivírus função de firewall — portas do portal interno"
+              ],
+              [
+                "C — termo_unico",
+                "Iguala firewall e antivírus — manual cita funções distintas"
+              ],
+              [
+                "D — regra_excecao",
+                "Desinstalar antivírus libera intranet — bloqueio é regra de firewall"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Caso STTP — portal interno bloqueado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Fato do enunciado",
+              "Resultado"
+            ],
+            "linhas": [
+              [
+                "Sites externos OK, intranet não abre",
+                "Sintoma de filtro de rede — firewall"
+              ],
+              [
+                "Supervisor manda reinstalar antivírus",
+                "Pegadinha — camada errada"
+              ],
+              [
+                "Manual: firewall filtra porta/protocolo",
+                "Gabarito B — revisar regras do firewall"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Referência — firewall e antivírus",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Anexo I — Informática, item 8.4",
+            "texto": "O firewall controla o tráfego de rede entre redes ou entre a estação e a internet, aplicando regras de porta e protocolo. O antivírus analisa arquivos e processos na estação em busca de malware conhecido.",
+            "trechos_grifados": [
+              {
+                "inicio": 11,
+                "fim": 49,
+                "motivo": "gradacao — firewall filtra tráfego de rede",
+                "texto_grifado": "controla o tráfego de rede entre redes"
+              },
+              {
+                "inicio": 124,
+                "fim": 162,
+                "motivo": "gradacao — antivírus analisa arquivos (não portas)",
+                "texto_grifado": "antivírus analisa arquivos e processos"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Firewall = rede e portas | Antivírus = arquivos e processos.\n\nNear-transfer: estação lenta e pop-up de vírus — antivírus; só intranet da prefeitura falha com internet OK — firewall.",
+            "destaques": [
+              "Firewall",
+              "Antivírus",
+              "intranet"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 8.4",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "meta": {
+        "padrao_familia": "D_gradacao",
+        "pegadinha_em_uma_frase": "Supervisor troca firewall por antivírus — intranet bloqueada é regra de rede",
+        "eixos_legais": [
+          "info_firewall_trafego_rede",
+          "info_antivirus_malware"
+        ],
+        "eixos_mecanismo": [
+          "termo_unico",
+          "regra_excecao"
+        ],
+        "isca_por_alternativa": {
+          "A": "atribui portas do portal ao antivírus",
+          "C": "iguala firewall e antivírus na mesma função",
+          "D": "desinstalar antivírus libera intranet bloqueada"
+        }
+      }
+    }
+  }
+]

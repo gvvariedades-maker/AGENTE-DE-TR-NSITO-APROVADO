@@ -1,0 +1,311 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_snt_competencias",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_22_par_2",
+    "enunciado": "Durante blitz documental da STTP em Campina Grande/PB, agente municipal constatou que o proprietário de automóvel licenciado no DETRAN-PB não atualizou o cadastro de registro do veículo após mudança de endereço, lavrando auto de infração pelo art. 241 do CTB. O infrator sustenta que a STTP poderia autuar, pois exerce o poder de polícia de trânsito em vias municipais. A autoridade consulta as competências do Sistema Nacional de Trânsito. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A STTP pode autuar pelo art. 241, pois o art. 24, VI, do CTB confere ao órgão executivo municipal competência ampla para fiscalizar e autuar infrações de circulação em vias terrestres.",
+      "B": "O CONTRAN deve normatizar o procedimento e lavrar o auto, pois infrações ligadas a cadastro de registro exigem atuação do colegiado federal do SNT.",
+      "C": "A STTP e o DETRAN-PB autuam concomitantemente, sem exclusividade estadual, pois ambos integram o SNT e podem fiscalizar documentação veicular em blitz conjunta.",
+      "D": "A autuação pelo art. 241 compete privativamente ao DETRAN-PB, nos termos do art. 22, §2, do CTB — a STTP municipal não possui competência para essa infração."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Competência privativa do órgão executivo estadual para autuar art. 241 (cadastro de registro) — art. 22, §2 × competência geral municipal do art. 24, VI.",
+      "fundamento_legal": "CTB, art. 22, §2: compete privativamente aos órgãos ou entidades executivos de trânsito dos Estados e do Distrito Federal executar a fiscalização de trânsito, autuar e aplicar as medidas administrativas e penalidades previstas nos arts. 165-D, 233, 240, 241, 242 e 243 e no §5º do art. 330. Art. 241: deixar de atualizar o cadastro de registro do veículo ou de habilitação do condutor. Art. 24, VI: executivo municipal autua circulação, estacionamento e parada — sem alcançar as infrações de competência privativa do §2 do art. 22.",
+      "passo_a_passo": [
+        "1. Caso: STTP autua art. 241 (cadastro de registro desatualizado) em blitz documental — condutor invoca art. 24, VI (competência municipal ampla).",
+        "2. A erra por competencia_snt (generaliza art. 24, VI e ignora rol taxativo do art. 22, §2, que reserva art. 241 ao DETRAN estadual); B erra por competencia_snt (atribui autuação ao CONTRAN — art. 12 normatiza, não lavra auto de cadastro); C erra por regra_excecao (inventa autuação concomitante sem exclusividade quando o §2 é privativo).",
+        "3. D correta: art. 22, §2, c/c art. 241 — competência privativa do DETRAN-PB; STTP municipal não autua essa infração."
+      ],
+      "pegadinha": "A IDECAN induz a estender a competência municipal do art. 24, VI para qualquer infração em via municipal — mas o art. 22, §2, reserva privativamente o art. 241 ao executivo estadual.",
+      "macete": "Cadastro/registro (241) = DETRAN privativo (22, §2) · circulação municipal = STTP (24, VI).",
+      "estudo_reverso": [
+        "CTB art. 22",
+        "CTB art. 24",
+        "CTB art. 241"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "C_competencia_snt",
+      "pegadinha_em_uma_frase": "Art. 24, VI não alcança art. 241 — competência privativa do DETRAN no art. 22, §2",
+      "eixos_legais": [
+        "CTB_art_22_par_2",
+        "CTB_art_241",
+        "CTB_art_24_VI"
+      ],
+      "isca_por_alternativa": {
+        "A": "art. 24, VI confere competência ampla da STTP para autuar cadastro de registro",
+        "B": "CONTRAN lavra auto de infração ligada a cadastro de registro",
+        "C": "STTP e DETRAN autuam concomitantemente art. 241 sem exclusividade"
+      },
+      "eixos_mecanismo": [
+        "competencia_snt",
+        "regra_excecao"
+      ]
+    },
+    "tags": [
+      "competencia_snt",
+      "detran",
+      "sttp",
+      "art_241",
+      "art_22"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "diagrama_competencia",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CTB_art_22_par_2",
+      "macete_visual": "241 = DETRAN privativo · STTP = circulação",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D: cadastro de registro é competência privativa do DETRAN — STTP não autua cadastro.",
+            "destaques": ["Gabarito D", "cadastro", "DETRAN"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "STTP × DETRAN no art. 241",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "detran", "label": "DETRAN-PB — autua art. 241", "nivel": 1 },
+              { "id": "sttp", "label": "STTP — circulação municipal", "nivel": 2 }
+            ],
+            "arestas": [
+              { "de": "detran", "para": "sttp", "rotulo": "exclusivo no cadastro" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Cadastro/registro = DETRAN privativo.\nCirculação municipal = STTP.",
+            "destaques": ["DETRAN", "STTP"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 22",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 265,
+      "fundamento_slug": "CTB_art_22_par_2",
+      "macete_visual": "241 = DETRAN privativo · STTP = circulação",
+      "meta": {
+        "padrao_familia": "C_competencia_snt",
+        "pegadinha_em_uma_frase": "Art. 24, VI não alcança art. 241 — competência privativa do DETRAN no art. 22, §2",
+        "eixos_legais": [
+          "CTB_art_22_par_2",
+          "CTB_art_241",
+          "CTB_art_24_VI"
+        ],
+        "isca_por_alternativa": {
+          "A": "art. 24, VI confere competência ampla da STTP para autuar cadastro de registro",
+          "B": "CONTRAN lavra auto de infração ligada a cadastro de registro",
+          "C": "STTP e DETRAN autuam concomitantemente art. 241 sem exclusividade"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: STTP autua cadastro?",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — competência ampla da STTP pelo poder de polícia em vias municipais alcança cadastro de registro.\nB — CONTRAN lavra auto de infração ligada a cadastro de registro.\nC — STTP e DETRAN autuam concomitantemente cadastro sem exclusividade estadual.\n\nPegadinha: cadastro de registro é competência privativa do DETRAN — não se estende pela competência municipal de circulação.",
+            "destaques": ["Gabarito D", "cadastro de registro", "blitz documental"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 órgãos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "STTP: órgão executivo municipal de Campina Grande — fiscaliza circulação, estacionamento e parada.\n\nDETRAN-PB: órgão executivo estadual — registro, habilitação e infrações de competência privativa.\n\nCONTRAN: normatiza o SNT — não substitui executivo na autuação de cadastro.",
+            "destaques": ["STTP", "DETRAN-PB", "CONTRAN"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem autua o art. 241",
+          "secao": "metodo",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "detran", "label": "DETRAN-PB — privativo art. 241", "nivel": 1 },
+              { "id": "sttp", "label": "STTP — circulação municipal", "nivel": 2 },
+              { "id": "contran", "label": "CONTRAN — normatiza SNT", "nivel": 0 }
+            ],
+            "arestas": [
+              { "de": "detran", "para": "sttp", "rotulo": "exclusivo no cadastro" },
+              { "de": "contran", "para": "detran", "rotulo": "normas gerais" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: competência ampla municipal",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "STTP autua qualquer infração em via municipal",
+                "Art. 22, §2, reserva art. 241 ao DETRAN estadual"
+              ],
+              [
+                "CONTRAN lavra auto de cadastro",
+                "CONTRAN normatiza — executivo estadual autua"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — competencia_snt",
+                "Generaliza art. 24, VI — ignora rol privativo do art. 22, §2"
+              ],
+              [
+                "B — competencia_snt",
+                "Atribui autuação ao CONTRAN — colegiado normatiza, não autua cadastro"
+              ],
+              [
+                "C — regra_excecao",
+                "Inventa autuação concomitante — §2 é competência privativa"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "Blitz documental da STTP em Campina Grande",
+                "Fiscalização municipal em via terrestre"
+              ],
+              [
+                "Cadastro de registro desatualizado — art. 241",
+                "Competência privativa do DETRAN-PB"
+              ],
+              [
+                "Auto lavrado pela STTP municipal",
+                "Incompetência — art. 22, §2"
+              ],
+              [
+                "Resultado",
+                "Alternativa D"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Matriz: infração × órgão",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Infração / tema", "Órgão competente"],
+            "linhas": [
+              [
+                "Circulação, estacionamento, parada",
+                "STTP municipal — art. 24, VI"
+              ],
+              [
+                "Cadastro de registro — art. 241",
+                "DETRAN estadual — art. 22, §2"
+              ],
+              [
+                "Normas do SNT",
+                "CONTRAN — art. 12"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 22, §2 — competência privativa",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 22, §2",
+            "texto": "§ 2º Compete privativamente aos órgãos ou entidades executivos de trânsito dos Estados e do Distrito Federal executar a fiscalização de trânsito, autuar e aplicar as medidas administrativas e penalidades previstas nos arts. 165-D, 233, 240, 241, 242 e 243 e no § 5º do art. 330 deste Código.",
+            "trechos_grifados": [
+              {
+                "inicio": 13,
+                "fim": 27,
+                "motivo": "diagrama — DETRAN autua art. 241 sem concorrência da STTP",
+                "texto_grifado": "privativamente"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 241 — cadastro de registro",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 241, caput",
+            "texto": "Art. 241. Deixar de atualizar o cadastro de registro do veículo ou de habilitação do condutor:",
+            "trechos_grifados": [
+              {
+                "inicio": 32,
+                "fim": 52,
+                "motivo": "caso — cadastro desatualizado na blitz documental",
+                "texto_grifado": "cadastro de registro"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Cadastro/registro (241) = DETRAN privativo (22, §2).\nCirculação municipal = STTP (24, VI).\n\nNear-transfer: baixa de registro de veículo irrecuperável (art. 240) também está no rol privativo do §2 — não é da STTP municipal.",
+            "destaques": ["DETRAN privativo", "STTP", "art. 240"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 22",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

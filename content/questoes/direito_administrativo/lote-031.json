@@ -1,0 +1,356 @@
+[
+  {
+    "disciplina": "direito_administrativo",
+    "topico": "dir_adm_7_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CF_art_37_6",
+    "enunciado": "Um agente da STTP, ao final do expediente, conduz viatura oficial para resolver desentendimento pessoal e colide com veículo de terceiro estacionado na Av. Epitácio Pessoa, causando danos materiais. A vítima ajuíza ação contra o Município de Campina Grande e a STTP. O ente sustenta que o art. 37, § 6º, da Constituição impõe responsabilidade civil apenas por danos que agentes, nessa qualidade, causem a terceiros, não abrangendo atos estranhos ao serviço. A defesa da vítima argumenta que qualquer conduta do servidor da STTP gera dever de indenizar objetivamente o ente. Assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Qualquer dano causado por servidor da STTP impõe responsabilidade objetiva ao Município e à autarquia, ainda que o ato seja estranho ao serviço público de trânsito.",
+      "B": "O art. 37, § 6º, alcança somente pessoas jurídicas de direito público, não se aplicando à STTP por ser prestadora de serviço público com personalidade própria.",
+      "C": "A interpretação do Município é correta: a responsabilidade objetiva da pessoa jurídica abrange danos que agentes, nessa qualidade, causem a terceiros; ato pessoal fora do serviço não aciona o § 6º contra a STTP.",
+      "D": "A vítima deve propor ação apenas contra o agente causador, pois a responsabilidade constitucional do § 6º exclui a indenização direta pela pessoa jurídica quando há dano a terceiros."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Visão geral da responsabilidade civil do Estado: pressuposto do art. 37, § 6º — dano causado por agente, nessa qualidade, a terceiros (teoria objetiva na hipótese de serviço), afastando extensão a atos pessoais e garantindo indenização constitucional (CF art. 5º, X).",
+      "fundamento_legal": "CF/88, art. 37, § 6º: \"As pessoas jurídicas de direito público e as de direito privado prestadoras de serviços públicos responderão pelos danos que seus agentes, nessa qualidade, causarem a terceiros, assegurado o direito de regresso contra o responsável nos casos de dolo ou culpa.\" Art. 5º, X: \"são invioláveis a intimidade, a vida privada, a honra e a imagem das pessoas, assegurado o direito a indenização pelo dano material ou moral decorrente de sua violação\"",
+      "passo_a_passo": [
+        "1. Agente usa viatura após expediente para desentendimento pessoal — ato estranho ao serviço, não é agente nessa qualidade no § 6º. Responsabilidade objetiva da STTP/Município exige vínculo com a função pública; ato pessoal não aciona a pessoa jurídica.",
+        "2. A erra por termo_unico (estende responsabilidade objetiva a qualquer ato do servidor, mesmo fora do serviço); B erra por termo_unico (exclui prestadoras de serviço público do § 6º, contrariando o texto); D erra por regra_excecao (restringe ação da vítima ao agente, negando hipótese de responsabilidade da entidade quando o ato for nessa qualidade).",
+        "3. Gabarito C: visão geral do § 6º — danos por agentes, nessa qualidade, a terceiros; ato pessoal fora do expediente não vincula a STTP."
+      ],
+      "pegadinha": "A banca estende o § 6º a qualquer conduta do servidor ou exclui prestadoras — ignorando o requisito nessa qualidade e o alcance do dispositivo.",
+      "macete": "NESSA QUALIDADE = no serviço | fora = ato pessoal | §6 na entidade + indenização art. 5º, X.",
+      "estudo_reverso": [
+        "CF art. 37, § 6º",
+        "CF art. 5º, X",
+        "CF art. 37, caput",
+        "CF art. 37, XIX"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CF_art_37_6",
+      "macete_visual": "NESSA QUALIDADE | fora = pessoal",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C. A estende responsabilidade estatal a ato pessoal; B exclui STTP; D restringe ação ao agente. Viatura após expediente = fora de nessa qualidade.",
+            "destaques": ["nessa qualidade", "ato pessoal", "§ 6º"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Serviço × ato pessoal",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a vítima insinua ✗", "Visão geral ✓"],
+            "linhas": [
+              [
+                "Qualquer ato do servidor gera dever do ente",
+                "§ 6º exige agente nessa qualidade no serviço"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Colisão após expediente por desentendimento pessoal?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Agente atuava nessa qualidade no § 6º?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito C — ato pessoal não aciona STTP", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — viatura" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "CF art. 37, § 6º",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 37, § 6º",
+            "texto": "As pessoas jurídicas de direito público e as de direito privado prestadoras de serviços públicos responderão pelos danos que seus agentes, nessa qualidade, causarem a terceiros, assegurado o direito de regresso contra o responsável nos casos de dolo ou culpa.",
+            "trechos_grifados": [
+              {
+                "inicio": 139,
+                "fim": 154,
+                "motivo": "contraste — requisito nessa qualidade no serviço",
+                "texto_grifado": "nessa qualidade"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "NESSA QUALIDADE = no serviço | fora = ato pessoal | §6 na entidade quando no serviço.",
+            "destaques": ["NESSA QUALIDADE", "ato pessoal", "§6"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88 art. 37",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "CF_art_37_6",
+      "macete_visual": "NESSA QUALIDADE | fora = pessoal",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Extensão do § 6º a ato pessoal fora do serviço",
+        "eixos_legais": ["CF_art_37_6", "CF_art_5_X"],
+        "isca_por_alternativa": {
+          "A": "estende responsabilidade objetiva a qualquer ato do servidor fora do serviço público",
+          "B": "exclui STTP prestadora do alcance do art. 37, § 6º",
+          "D": "restringe ação da vítima ao agente, negando hipótese de responsabilidade da entidade"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: visão geral do § 6º",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — compra tese de que qualquer ato do servidor gera dever do ente.\nB — exclui STTP prestadora da responsabilidade estatal.\nD — vítima só pode acionar o agente, negando a entidade.\n\nPegadinha: viatura após expediente por desentendimento pessoal ≠ agente nessa qualidade.",
+            "destaques": ["Gabarito C", "nessa qualidade", "ato pessoal"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "NESSA QUALIDADE: agente atuando no exercício da função pública — requisito do art. 37, § 6º para responsabilizar a pessoa jurídica.\n\nRESPONSABILIDADE OBJETIVA: ente responde independentemente de culpa quando preenchidos os pressupostos do § 6º.\n\nATO PESSOAL: conduta estranha ao serviço — desentendimento privado após expediente na Av. Epitácio Pessoa.",
+            "destaques": ["NESSA QUALIDADE", "OBJETIVA", "ATO PESSOAL"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "MÉTODO: o § 6º alcança o caso?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Colisão por desentendimento pessoal após expediente?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Agente atuava nessa qualidade no serviço?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito C — STTP não responde pelo § 6º", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — viatura STTP" },
+              { "de": "p2", "para": "r1", "rotulo": "Não — ato pessoal" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Pressupostos do § 6º",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Elemento", "No caso STTP"],
+            "linhas": [
+              {
+                "faixa": "Pessoa jurídica de direito público ou prestadora",
+                "classificacao": "Município e STTP — hipótese do dispositivo"
+              },
+              {
+                "faixa": "Agente nessa qualidade",
+                "classificacao": "Ausente — ato pessoal após expediente",
+                "destaque": true
+              },
+              {
+                "faixa": "Dano a terceiros",
+                "classificacao": "Presente — veículo estacionado danificado"
+              },
+              {
+                "faixa": "Responsabilidade objetiva da entidade",
+                "classificacao": "Não acionada sem nessa qualidade"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Serviço público × ato privado",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a vítima insinua ✗", "Visão geral do § 6º ✓"],
+            "linhas": [
+              [
+                "Qualquer conduta do servidor gera dever do ente",
+                "Só danos por agentes, nessa qualidade, a terceiros"
+              ],
+              [
+                "Viatura oficial basta para responsabilizar a STTP",
+                "Uso pessoal após expediente afasta o vínculo funcional"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Estende responsabilidade objetiva a ato estranho ao serviço na Av. Epitácio Pessoa"
+              ],
+              [
+                "B — termo_unico",
+                "Exclui STTP prestadora do § 6º, contrariando prestadoras de serviços públicos"
+              ],
+              [
+                "D — regra_excecao",
+                "Restringe ação da vítima ao agente, negando responsabilidade da entidade quando no serviço"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso STTP", "Consequência"],
+            "linhas": [
+              [
+                "Agente usa viatura após expediente",
+                "Desentendimento pessoal — não é fiscalização de trânsito"
+              ],
+              [
+                "Colisão com veículo de terceiro na Av. Epitácio",
+                "Dano a terceiros presente, mas sem nessa qualidade"
+              ],
+              [
+                "Ação contra Município e STTP",
+                "§ 6º não alcança ato pessoal — tese municipal correta"
+              ],
+              ["Resultado", "Alternativa C — única correta"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Nessa qualidade × ato pessoal",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Situação", "§ 6º na entidade?"],
+            "linhas": [
+              ["Blitz oficial na via — agente no serviço", "Sim — nessa qualidade"],
+              ["Viatura após expediente por briga pessoal", "Não — ato estranho ao serviço"],
+              ["Indenização ao terceiro lesado", "Garantida no ordenamento — art. 5º, X"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "CF art. 37, § 6º — visão geral",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 37, § 6º",
+            "texto": "As pessoas jurídicas de direito público e as de direito privado prestadoras de serviços públicos responderão pelos danos que seus agentes, nessa qualidade, causarem a terceiros, assegurado o direito de regresso contra o responsável nos casos de dolo ou culpa.",
+            "trechos_grifados": [
+              {
+                "inicio": 64,
+                "fim": 96,
+                "motivo": "mapa — STTP como prestadora incluída no dispositivo",
+                "texto_grifado": "prestadoras de serviços públicos"
+              },
+              {
+                "inicio": 139,
+                "fim": 154,
+                "motivo": "fluxo — ausente no caso do desentendimento pessoal",
+                "texto_grifado": "nessa qualidade"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "CF art. 5º, X — direito à indenização",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, X",
+            "texto": "são invioláveis a intimidade, a vida privada, a honra e a imagem das pessoas, assegurado o direito a indenização pelo dano material ou moral decorrente de sua violação",
+            "trechos_grifados": [
+              {
+                "inicio": 91,
+                "fim": 112,
+                "motivo": "hierarquia — visão geral da reparação civil no ordenamento",
+                "texto_grifado": "direito a indenização"
+              },
+              {
+                "inicio": 118,
+                "fim": 140,
+                "motivo": "caso — dano material ao veículo estacionado",
+                "texto_grifado": "dano material ou moral"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "NESSA QUALIDADE = no serviço | fora = ato pessoal | §6 na entidade + indenização art. 5º, X.\n\nNear-transfer: se o agente colidisse durante blitz oficial na Av. Epitácio Pessoa, estaria nessa qualidade — aí sim a STTP responderia objetivamente pelo § 6º.",
+            "destaques": ["NESSA QUALIDADE", "ato pessoal", "near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88 art. 37",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        },
+        {
+          "rotulo": "CF/88 art. 5º",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "responsabilidade_civil_estado",
+      "cf_37_6",
+      "nessa_qualidade",
+      "sttp",
+      "visao_geral"
+    ]
+  }
+]

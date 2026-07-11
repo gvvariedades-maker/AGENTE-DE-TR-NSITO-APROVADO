@@ -1,0 +1,327 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_1003_mbft",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_1003_mbft_694_682",
+    "enunciado": "Agente da STTP em Campina Grande/PB lavra Auto de Infração de Trânsito com código 682-31 (art. 231, IV, do CTB) contra caminhonete que transporta tubos de PVC projetando 80 cm além da caçamba. A largura total do conjunto é 2,10 m e a altura 2,80 m — dimensões dentro dos limites legais de pesos e dimensões fixados em resolução do CONTRAN. O supervisor questiona o enquadramento, pois a carga apenas ultrapassa o compartimento de carga, sem exceder os limites dimensionais legais. Considerando o MBFT (Res. CONTRAN 985/2022, alterada pela Res. 1.003/2023), assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O código 682-31 é adequado, pois qualquer projeção além da caçamba configura dimensões ou carga superiores aos limites estabelecidos em regulamentação do CONTRAN.",
+      "B": "O enquadramento correto é o 694-73 (art. 235 do CTB): a carga projeta além da caçamba, mas as dimensões totais estão dentro dos limites legais de pesos e dimensões fixados em resolução do CONTRAN.",
+      "C": "Não cabe autuação, pois a Res. CONTRAN 955/2022 autoriza, em caminhonetes, o transporte de carga indivisível além dos limites do compartimento de carga.",
+      "D": "O supervisor deve ratificar o 682-31, tratando a projeção de 80 cm dos tubos de PVC como excedente aos limites legais de pesos e dimensões do CONTRAN, apesar da largura de 2,10 m registrada no auto."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "MBFT ficha 694-73 (Res. 1.003/2023) — graduação de enquadramento: projeção além da caçamba dentro dos limites legais de dimensão do CONTRAN (694-73, art. 235) × exceder esses limites (682-31, art. 231, IV).",
+      "fundamento_legal": "MBFT (Res. CONTRAN 985/2022, alterada pela Res. 1.003/2023), ficha 694-73, \"Quando Autuar\", item 3: veículo transportando carga ultrapassando os limites dianteiro, laterais e/ou traseiro do compartimento de carga, quando a carga não exceder os limites previstos na resolução do CONTRAN que estabelece pesos e dimensões, ou sua(s) sucedânea(s). \"Quando NÃO Autuar\", item 1: veículo cujas dimensões ou carga exceder esses limites legais utilizar enquadramento específico 682-31, art. 231, IV. CTB, art. 235: conduzir carga nas partes externas — infração grave, medida de retenção para transbordo. CTB, art. 231, IV: dimensões ou carga superiores aos limites legais — infração grave, medida de retenção para regularização.",
+      "passo_a_passo": [
+        "1. Caso: PVC projetando 80 cm além da caçamba; largura 2,10 m e altura 2,80 m dentro dos limites legais de dimensão — agente usou 682-31.",
+        "2. A erra por regra_excecao (trata qualquer projeção além da caçamba como superdimensionamento — ignora limiar legal de dimensões); C erra por termo_unico (generaliza permissão da Res. 955 e dispensa autuação mesmo com desconformidade); D erra por regra_excecao (ratifica 682-31 apesar da largura de 2,10 m dentro dos limites legais — confunde projeção da caçamba com excedente).",
+        "3. B correta: MBFT item 3 do \"Quando Autuar\" (694-73, art. 235) + item 1 do \"Quando NÃO Autuar\" (682-31 só se exceder limites legais de dimensão)."
+      ],
+      "pegadinha": "A IDECAN induz a usar 682-31 sempre que a carga passar da caçamba — o MBFT separa projeção dentro dos limites legais de dimensão (694-73) de exceder esses limites (682-31).",
+      "macete": "Dentro limite legal + passou caçamba = 694-73 · Excedeu = 682-31.",
+      "estudo_reverso": [
+        "MBFT ficha 694-73 Res. 1003",
+        "CTB art. 235",
+        "CTB art. 231, IV"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "D_gradacao",
+      "pegadinha_em_uma_frase": "Projeção além da caçamba dentro dos limites legais de dimensão é 694-73, não 682-31",
+      "eixos_legais": [
+        "CONTRAN_1003_mbft_694_73",
+        "CONTRAN_1003_mbft_682_31"
+      ],
+      "isca_por_alternativa": {
+        "A": "qualquer projeção além da caçamba configura dimensões superiores aos limites do CONTRAN",
+        "C": "Res. 955 autoriza carga indivisível além da caçamba e dispensa autuação",
+        "D": "supervisor ratifica 682-31 tratando projeção de 80 cm como excedente legal apesar da largura de 2,10 m"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico"
+      ]
+    },
+    "tags": [
+      "mbft",
+      "resolucao_1003",
+      "resolucao_985",
+      "enquadramento",
+      "694-73",
+      "682-31",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_1003_mbft_694_682",
+      "macete_visual": "Dentro limite legal = 694-73 · Excedeu = 682-31",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: projeção além da caçamba dentro dos limites legais de dimensão → enquadramento 694-73, não 682-31.",
+            "destaques": ["Gabarito B", "694-73", "682-31"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Graduação de enquadramento MBFT",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Critério dimensional", "Código MBFT"],
+            "linhas": [
+              {
+                "faixa": "Projeta caçamba, dentro limites legais",
+                "classificacao": "694-73 — art. 235",
+                "destaque": true
+              },
+              {
+                "faixa": "Excede limites legais de dimensão",
+                "classificacao": "682-31 — art. 231, IV"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Dentro limite legal + passou caçamba = 694-73.\nExcedeu limite = 682-31.",
+            "destaques": ["694-73", "682-31", "limite legal"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.003/2023",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.003, DE 21 DE DEZEMBRO DE 2023.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CONTRAN_1003_mbft_694_682",
+      "macete_visual": "Dentro limite legal = 694-73 · Excedeu = 682-31",
+      "meta": {
+        "padrao_familia": "D_gradacao",
+        "pegadinha_em_uma_frase": "Projeção além da caçamba dentro dos limites legais de dimensão é 694-73, não 682-31",
+        "eixos_legais": [
+          "CONTRAN_1003_mbft_694_73",
+          "CONTRAN_1003_mbft_682_31"
+        ],
+        "isca_por_alternativa": {
+          "A": "qualquer projeção além da caçamba configura dimensões superiores aos limites do CONTRAN",
+          "C": "Res. 955 autoriza carga indivisível além da caçamba e dispensa autuação",
+          "D": "supervisor ratifica 682-31 tratando projeção de 80 cm como excedente legal apesar da largura de 2,10 m"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: código 682-31 na blitz",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — qualquer projeção além da caçamba configura dimensões superiores aos limites do CONTRAN.\nC — Res. 955 autoriza carga indivisível além da caçamba e dispensa autuação.\nD — supervisor ratifica 682-31 apesar da largura de 2,10 m estar dentro dos limites legais.\n\nPegadinha: passou da caçamba, mas dentro dos limites legais de dimensão — enquadramento 694-73, não 682-31.",
+            "destaques": ["Gabarito B", "694-73", "682-31"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ENQUADRAMENTO MBFT: código da ficha de fiscalização que define qual artigo do CTB será aplicado no AIT.\n\nLIMITES LEGAIS DE DIMENSÃO: resolução do CONTRAN sobre pesos e dimensões — limiar entre 694-73 e 682-31.\n\nPROJEÇÃO ALÉM DA CAÇAMBA: carga que ultrapassa o compartimento de carga sem necessariamente exceder os limites legais totais.",
+            "destaques": ["ENQUADRAMENTO", "LIMITES LEGAIS", "PROJEÇÃO"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Graduação: qual código MBFT?",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Critério dimensional", "Código / amparo"],
+            "linhas": [
+              {
+                "faixa": "Projeta caçamba, dentro limites legais",
+                "classificacao": "694-73 — art. 235 (Grave)",
+                "destaque": true
+              },
+              {
+                "faixa": "Dimensões ou carga excedem limites legais",
+                "classificacao": "682-31 — art. 231, IV (Grave)"
+              },
+              {
+                "faixa": "Equipamento proibido pelo fabricante",
+                "classificacao": "666-10 — art. 230, XII"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: passou da caçamba = 682-31",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Qualquer projeção além da caçamba é superdimensionamento",
+                "Só 682-31 se exceder limites legais de dimensão"
+              ],
+              [
+                "694-73 e 682-31 são intercambiáveis",
+                "MBFT separa os critérios nos itens 3 e 1 da ficha"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Generaliza superdimensionamento — ignora limiar legal de dimensões"
+              ],
+              [
+                "C — termo_unico",
+                "Dispensa autuação por permissão da Res. 955 — não afasta desconformidade"
+              ],
+              [
+                "D — regra_excecao",
+                "Ratifica 682-31 apesar de 2,10 m dentro dos limites legais — confunde projeção com excedente"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dado do caso", "Conclusão"],
+            "linhas": [
+              [
+                "PVC projetando 80 cm além da caçamba",
+                "Projeta compartimento de carga"
+              ],
+              [
+                "Largura 2,10 m · altura 2,80 m",
+                "Dentro dos limites legais de dimensão"
+              ],
+              [
+                "Agente usou código 682-31",
+                "Enquadramento incorreto"
+              ],
+              [
+                "Resultado",
+                "Alternativa B — 694-73"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Medidas administrativas distintas",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Enquadramento", "Medida no CTB"],
+            "linhas": [
+              [
+                "694-73 — art. 235",
+                "Retenção para transbordo"
+              ],
+              [
+                "682-31 — art. 231, IV",
+                "Retenção para regularização"
+              ],
+              [
+                "Caso STTP (dentro dos limites legais)",
+                "Caminho correto: 694-73"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "MBFT 694-73 — Quando Autuar, item 3",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "MBFT (Res. 985/2022, alterada pela Res. 1.003/2023), ficha 694-73, Quando Autuar, item 3",
+            "texto": "Veículo transportando carga ultrapassando os limites dianteiro, laterais e/ou traseiro do compartimento de carga, quando a carga não exceder os limites previstos na resolução do CONTRAN que estabelece pesos e dimensões, ou sua(s) sucedânea(s).",
+            "trechos_grifados": [
+              {
+                "inicio": 114,
+                "fim": 185,
+                "motivo": "gradacao — critério que mantém o enquadramento 694-73 no caso da STTP",
+                "texto_grifado": "quando a carga não exceder os limites previstos na resolução do CONTRAN"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "MBFT 694-73 — Quando NÃO Autuar, item 1",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "MBFT (Res. 985/2022, alterada pela Res. 1.003/2023), ficha 694-73, Quando NÃO Autuar, item 1",
+            "texto": "Veículo cujas suas dimensões, ou de sua carga exceder os limites previstos na resolução do CONTRAN que estabelece pesos e dimensões, ou sua sucedânea, utilizar enquadramento específico:682-31, art. 231, IV.",
+            "trechos_grifados": [
+              {
+                "inicio": 151,
+                "fim": 205,
+                "motivo": "contraste — código 682-31 só quando excede limites legais de dimensão",
+                "texto_grifado": "utilizar enquadramento específico:682-31, art. 231, IV"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Dentro limite legal + passou caçamba = 694-73.\nExcedeu limite = 682-31.\n\nNear-transfer: se a largura total fosse 2,80 m (acima do limite legal para caminhonete), aí sim caberia 682-31 — o limiar dimensional é o divisor.",
+            "destaques": ["694-73", "682-31", "limite legal"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.003/2023",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.003, DE 21 DE DEZEMBRO DE 2023.pdf"
+        },
+        {
+          "rotulo": "CTB art. 235",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

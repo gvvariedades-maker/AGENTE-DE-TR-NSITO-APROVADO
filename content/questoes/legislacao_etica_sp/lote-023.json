@@ -1,0 +1,289 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_1_3",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "LAI_art12_gratuidade",
+    "enunciado": "Estudante de direito solicita à STTP de Campina Grande cópia digital de estatísticas agregadas de autuações por bairro, já disponíveis no sistema interno. A autarquia exige taxa de R$ 50,00 por qualquer pedido de informação; o jurídico sustenta que dados digitais exportados sempre geram custo de reprodução; o protocolo afirma que a gratuidade vale só para consulta presencial, não para envio eletrônico. À luz da Lei nº 12.527/2011 (LAI), assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A exportação eletrônica de dados autoriza cobrança automática — a gratuidade restringe-se à consulta presencial no arquivo da autarquia.",
+      "B": "O serviço de busca e fornecimento é gratuito (art. 12); a cobrança só é admitida se houver reprodução de documentos pelo órgão, limitada aos custos (§1); hipossuficiente com declaração legal de insuficiência econômica está isento desses custos (§2).",
+      "C": "Qualquer pedido via sistema eletrônico equivale a reprodução — a STTP pode cobrar valor fixo de expediente previsto em tabela interna.",
+      "D": "A taxa de R$ 50,00 é lícita porque o art. 12 autoriza cobrar taxa administrativa simbólica em todos os pedidos para filtrar demandas protelatórias."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Gratuidade do serviço de busca e fornecimento de informação (LAI, art. 12), exceção da cobrança por reprodução de documentos (§1) e isenção do hipossuficiente (§2).",
+      "fundamento_legal": "LAI, art. 12: \"O serviço de busca e de fornecimento de informação é gratuito\". § 1º: cobrança \"exclusivamente o valor necessário ao ressarcimento dos custos\" quando \"exigir reprodução de documentos pelo órgão\". § 2º: isenção para quem não puder pagar sem prejuízo do sustento próprio ou da família, mediante declaração de hipossuficiência econômica.",
+      "passo_a_passo": [
+        "1. Estatísticas digitais já no sistema — busca e fornecimento, não reprodução física obrigatória; taxa fixa por pedido não tem previsão legal.",
+        "2. A erra por regra_excecao (restringe gratuidade à consulta presencial e cobra exportação eletrônica); C erra por termo_unico (equipara pedido eletrônico a reprodução e autoriza tabela interna fixa); D erra por numero_vizinho (inventa taxa administrativa simbólica não prevista no art. 12).",
+        "3. B está correta: caput = gratuito; §1 = só custos de reprodução pelo órgão; §2 = isenção do hipossuficiente."
+      ],
+      "pegadinha": "A banca usa envio eletrônico, taxa fixa ou tabela interna para cobrar qualquer pedido — mas art. 12 é gratuito e cobrança só na reprodução de documentos pelo órgão.",
+      "macete": "LAI art. 12: busca = grátis · cobra só reprodução (§1) · pobre isento (§2). Eletrônico ≠ taxa automática.",
+      "estudo_reverso": [
+        "LAI art. 12",
+        "LAI art. 12, §1",
+        "LAI art. 12, §2"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "LAI_art12_gratuidade",
+      "macete_visual": "Busca grátis · reprodução = custos · hipossuficiente isento",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Busca e fornecimento são gratuitos — taxa fixa por pedido ou exportação eletrônica não se justifica. Cobrança só na reprodução de documentos pelo órgão.",
+            "destaques": ["gratuito", "reprodução", "eletrônico"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Gradação de cobrança — art. 12",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Situação", "Regra"],
+            "linhas": [
+              { "faixa": "Busca e fornecimento (caso)", "classificacao": "Gratuito", "destaque": true },
+              { "faixa": "Reprodução pelo órgão", "classificacao": "Cobrança limitada aos custos" },
+              { "faixa": "Hipossuficiente (declaração legal)", "classificacao": "Isento dos custos do §1" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Eletrônico × gratuito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              [
+                "Exportação digital gera taxa automática",
+                "Busca e fornecimento permanecem gratuitos"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Busca = grátis. Cobra só reprodução (§1). Pobre isento (§2). Eletrônico ≠ taxa fixa.",
+            "destaques": ["grátis", "reprodução", "isento"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 12.527/2011 (LAI)",
+          "path": "conteúdo/legislação federal/lei-12527-lai.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 240,
+      "fundamento_slug": "LAI_art12_gratuidade",
+      "macete_visual": "Busca grátis · reprodução = custos · hipossuficiente isento",
+      "meta": {
+        "padrao_familia": "D_gradacao",
+        "pegadinha_em_uma_frase": "Taxa fixa, exportação eletrônica ou tabela interna induzem cobrar qualquer pedido de informação",
+        "eixos_legais": ["LAI_art12", "LAI_art12_par1", "LAI_art12_par2"],
+        "isca_por_alternativa": {
+          "A": "gratuidade só na consulta presencial — exportação eletrônica paga",
+          "C": "pedido eletrônico equivale a reprodução com taxa fixa interna",
+          "D": "taxa administrativa simbólica em todos os pedidos"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: busca é gratuita",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — gratuidade só presencial: restringe o caput ao arquivo físico e cobra exportação digital.\nC — pedido eletrônico = reprodução: autoriza tabela fixa não prevista na lei.\nD — taxa simbólica geral: inventa cobrança para filtrar pedidos.\n\nA isca é a STTP cobrar R$ 50 em estatísticas digitais já disponíveis no sistema.",
+            "destaques": ["Gabarito B", "gratuito", "reprodução"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 situações de cobrança",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "BUSCA E FORNECIMENTO: localizar e entregar a informação — regra geral gratuita.\n\nREPRODUÇÃO PELO ÓRGÃO: cópia física ou processamento que exija material do órgão — pode cobrar custos.\n\nHIPOSSUFICIENTE: declaração de insuficiência econômica — isento dos custos do parágrafo primeiro.",
+            "destaques": ["BUSCA", "REPRODUÇÃO", "HIPOSSUFICIENTE"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Mapa de cobrança — art. 12",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Situação", "Regra legal"],
+            "linhas": [
+              { "faixa": "Busca e fornecimento (caso STTP)", "classificacao": "Gratuito — caput", "destaque": true },
+              { "faixa": "Reprodução de documentos pelo órgão", "classificacao": "Cobrança limitada aos custos — §1" },
+              { "faixa": "Requerente hipossuficiente", "classificacao": "Isento — §2" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: eletrônico × taxa fixa",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Exportação digital autoriza taxa automática",
+                "Caput — busca e fornecimento são gratuitos"
+              ],
+              [
+                "Taxa de R$ 50 em qualquer pedido",
+                "§1 — cobrança só na reprodução pelo órgão, limitada aos custos"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Restringe gratuidade à consulta presencial — cobra envio eletrônico sem previsão legal"
+              ],
+              [
+                "C — termo_unico",
+                "Equipara pedido eletrônico a reprodução e autoriza tabela fixa interna"
+              ],
+              [
+                "D — numero_vizinho",
+                "Inventa taxa administrativa simbólica não prevista no art. 12"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o pedido do estudante",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato / argumento", "Enquadramento"],
+            "linhas": [
+              ["Estatísticas digitais já no sistema", "Busca e fornecimento — gratuito"],
+              ["Taxa de R$ 50 por qualquer pedido", "Sem previsão no caput"],
+              ["Jurídico alega custo de exportação", "Não equivale automaticamente a reprodução física"],
+              ["Resultado", "Gabarito B — gratuito; cobrança só no §1"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 12 — gratuidade",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LAI, art. 12, caput",
+            "texto": "Art. 12. O serviço de busca e de fornecimento de informação é gratuito.",
+            "trechos_grifados": [
+              {
+                "inicio": 11,
+                "fim": 70,
+                "motivo": "gradacao — regra geral no caso das estatísticas digitais",
+                "texto_grifado": "serviço de busca e de fornecimento de informação é gratuito"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 12, §1 — reprodução",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LAI, art. 12, §1",
+            "texto": "§ 1º O órgão ou a entidade poderá cobrar exclusivamente o valor necessário ao ressarcimento dos custos dos serviços e dos materiais utilizados, quando o serviço de busca e de fornecimento da informação exigir reprodução de documentos pelo órgão ou pela entidade pública consultada.",
+            "trechos_grifados": [
+              {
+                "inicio": 41,
+                "fim": 55,
+                "motivo": "contraste — cobrança não é taxa fixa automática (isca D)",
+                "texto_grifado": "exclusivamente"
+              },
+              {
+                "inicio": 209,
+                "fim": 244,
+                "motivo": "distratores — exige reprodução pelo órgão, não exportação digital simples",
+                "texto_grifado": "reprodução de documentos pelo órgão"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei3",
+          "titulo": "Art. 12, §2 — hipossuficiente",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LAI, art. 12, §2",
+            "texto": "§ 2º Estará isento de ressarcir os custos previstos no § 1º deste artigo aquele cuja situação econômica não lhe permita fazê-lo sem prejuízo do sustento próprio ou da família.",
+            "trechos_grifados": [
+              {
+                "inicio": 12,
+                "fim": 41,
+                "motivo": "gradacao — isenção do hipossuficiente (gabarito B)",
+                "texto_grifado": "isento de ressarcir os custos"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "LAI art. 12: busca = grátis · cobra só reprodução (§1) · pobre isento (§2). Eletrônico ≠ taxa automática.\n\nNear-transfer: cidadão pede cópia impressa de 500 páginas de autuações — aí sim pode haver cobrança de custos de reprodução, com isenção do hipossuficiente.",
+            "destaques": ["grátis", "Near-transfer", "reprodução"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 12.527/2011 (LAI)",
+          "path": "conteúdo/legislação federal/lei-12527-lai.html"
+        }
+      ]
+    },
+    "tags": [
+      "lai",
+      "gratuidade",
+      "cobranca",
+      "acesso_passivo",
+      "reproducao",
+      "sttp"
+    ]
+  }
+]

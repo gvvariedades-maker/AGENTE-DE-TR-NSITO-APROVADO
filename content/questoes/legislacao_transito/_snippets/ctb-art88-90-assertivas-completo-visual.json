@@ -1,0 +1,239 @@
+{
+  "versao": 2,
+  "arquetipo": "matriz_assertivas",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 240,
+  "fundamento_slug": "CTB_art_90",
+  "macete_visual": "88 sinaliza · agente manda · 90 sem sanção",
+  "meta": {
+    "padrao_familia": "B_assertivas",
+    "pegadinha_em_uma_frase": "II inverte o art. 90 — sinalização incorreta afasta sanção, não autoriza autuação na blitz",
+    "eixos_legais": [
+      "CTB_art_88",
+      "CTB_art_89_I",
+      "CTB_art_90"
+    ],
+    "isca_por_alternativa": {
+      "A": "marca só II falsa que mantém sanções apesar da sinalização incorreta na blitz",
+      "B": "compra II falsa junto com I — aplica sanções com sinalização insuficiente",
+      "D": "trata I, II e III como corretas incluindo autuação na blitz com sinalização incorreta"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: a isca é a assertiva II",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C (I e III corretas).\n\nA — marcou só II falsa: mantém sanções na blitz da STTP com sinalização incorreta.\nB — comprou II falsa junto com I sobre reabertura da Av. Epitácio Pessoa.\nD — tratou todas corretas, inclusive autuação na blitz com sinalização insuficiente.\n\nPegadinha: sinalização incorreta afasta sanção ao condutor — não autoriza autuação normal.",
+        "destaques": [
+          "Gabarito C",
+          "II",
+          "blitz"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "SINALIZAÇÃO VERTICAL E HORIZONTAL: placas, marcas no pavimento e dispositivos que orientam a circulação — exigência do art. 88 na entrega ou reabertura de via.\n\nPREVALÊNCIA: ordem de quem manda na via — agente acima de semáforo e demais sinais.\n\nDISPENSA DE SANÇÃO: sinalização insuficiente ou incorreta impede punir o condutor por desobediência à sinalização.",
+        "destaques": [
+          "VERTICAL",
+          "PREVALÊNCIA",
+          "DISPENSA"
+        ]
+      }
+    },
+    {
+      "id": "matriz",
+      "titulo": "Classificar I–III",
+      "secao": "metodo",
+      "tipo": "matriz_assertivas",
+      "conteudo": {
+        "itens": [
+          {
+            "id": "I",
+            "texto": "Reabertura só com sinalização — correta (via pavimentada)",
+            "correto": true
+          },
+          {
+            "id": "II",
+            "texto": "Sanções normais com sinal ruim — ERRADA (dispensa)",
+            "correto": false
+          },
+          {
+            "id": "III",
+            "texto": "Agente prevalece sobre semáforo — correta (hierarquia)",
+            "correto": true
+          }
+        ],
+        "gabarito_resumo": "I e III corretas → alternativa C"
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Hierarquia da sinalização",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Nível",
+          "Prevalência"
+        ],
+        "linhas": [
+          {
+            "faixa": "1º — Agente de trânsito",
+            "classificacao": "Prevalece sobre semáforo e sinais",
+            "destaque": true
+          },
+          {
+            "faixa": "2º — Semáforo",
+            "classificacao": "Prevalece sobre demais sinais"
+          },
+          {
+            "faixa": "3º — Sinais de regulamentação",
+            "classificacao": "Prevalecem sobre normas gerais"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Assertiva-isca: II",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que a II afirma ✗",
+          "O que a lei diz ✓"
+        ],
+        "linhas": [
+          [
+            "Sanções aplicam normalmente com sinalização incorreta",
+            "Não se aplicam sanções por inobservância à sinalização defeituosa"
+          ],
+          [
+            "Condutor deve provar defeito na JARI",
+            "Dispensa decorre da insuficiência ou incorreção da sinalização"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — termo_unico",
+            "Marca só II falsa — ignora I e III corretas"
+          ],
+          [
+            "B — regra_excecao",
+            "Inclui II que contraria dispensa de sanção no caso da blitz"
+          ],
+          [
+            "D — gravidade",
+            "Compra II falsa e generaliza todas as assertivas"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Montando o gabarito",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Assertiva / fato",
+          "V/F"
+        ],
+        "linhas": [
+          [
+            "I — reabertura da Av. Epitácio Pessoa sem sinalização horizontal",
+            "Verdadeira"
+          ],
+          [
+            "II — autuação na blitz da STTP com sinalização incorreta",
+            "Falsa"
+          ],
+          [
+            "III — prevalência do agente sobre semáforo",
+            "Verdadeira"
+          ],
+          [
+            "Resultado",
+            "Alternativa C"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei1",
+      "titulo": "Art. 90 — dispensa de sanção",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 90, caput",
+        "texto": "Art. 90. Não serão aplicadas as sanções previstas neste Código por inobservância à sinalização quando esta for insuficiente ou incorreta.",
+        "trechos_grifados": [
+          {
+            "inicio": 9,
+            "fim": 39,
+            "motivo": "contraste — afasta autuação na blitz com sinalização incorreta",
+            "texto_grifado": "Não serão aplicadas as sanções"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 89, I — prevalência do agente",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 89, I",
+        "texto": "I - as ordens do agente de trânsito sobre as normas de circulação e outros sinais;",
+        "trechos_grifados": [
+          {
+            "inicio": 7,
+            "fim": 35,
+            "motivo": "gradacao — agente acima de semáforo e demais sinais",
+            "texto_grifado": "ordens do agente de trânsito"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "88 = via só com sinalização.\nAgente manda.\n90 = sinal ruim = sem sanção.\n\nNear-transfer: se o semáforo e a placa conflitarem sem agente presente, prevalece o semáforo sobre a placa — mas o agente sempre manda por cima.",
+        "destaques": [
+          "88",
+          "agente",
+          "sem sanção"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "CTB arts. 88–90",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

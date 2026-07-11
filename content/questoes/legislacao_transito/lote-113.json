@@ -1,0 +1,304 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_968_identificacao",
+    "tipo": "assertivas",
+    "estilo_idecan": "assertivas",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_968_art_6_4",
+    "enunciado": "Em vistoria no DETRAN-PB em Campina Grande, analista verifica motocicleta importada e questiona se a ausência da segunda gravação do VIN configura irregularidade, bem como se tratores da frota municipal estariam sujeitos à identificação da Resolução CONTRAN nº 968/2022. Sobre os critérios de identificação veicular previstos na Resolução CONTRAN nº 968/2022 e no CTB, analise as assertivas e assinale a alternativa CORRETA:\n\nI. O VIN é combinação de 17 caracteres estruturados em WMI, VDS e VIS, designada pelo fabricante para fins de identificação.\n\nII. Os tratores estão dispensados da identificação na forma da Resolução CONTRAN nº 968/2022.\n\nIII. A segunda gravação do VIN é obrigatória para motocicletas, sendo dispensada apenas para reboques e semirreboques.",
+    "alternativas": {
+      "A": "Está correto o que se afirma em II, apenas — acerta a dispensa dos tratores, mas ignora a I sobre os 17 caracteres do VIN na vistoria da motocicleta.",
+      "B": "Está correto o que se afirma em I e II, apenas — define o VIN e confirma exceção dos tratores, sem exigir segunda gravação obrigatória em motocicletas.",
+      "C": "Está correto o que se afirma em I e III, apenas — define o VIN e impõe segunda gravação obrigatória na motocicleta vistoriada em Campina Grande.",
+      "D": "Está correto o que se afirma em I, II e III — inclusive segunda gravação obrigatória para motocicletas e dispensa restrita a reboques."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "VIN (art. 3º, I), exceções do art. 2º, parágrafo único (tratores) e isenção da segunda gravação para motocicletas (art. 6º, §4) — Res. CONTRAN 968/2022, c/c CTB art. 114.",
+      "fundamento_legal": "Res. CONTRAN 968/2022, art. 3º, I: VIN — combinação de 17 caracteres (WMI/VDS/VIS). Art. 2º, parágrafo único, I: excetuam-se os tratores. Art. 6º, §4: ciclomotores, motonetas, motocicletas, triciclos, quadriciclos, chassis plataforma e ônibus M3 encarroçados estão isentos da segunda gravação do VIN. CTB, art. 114: identificação por caracteres no chassi/monobloco conforme dispuser o CONTRAN.",
+      "passo_a_passo": [
+        "1. I correta (art. 3º, I — VIN com 17 caracteres); II correta (art. 2º, parágrafo único, I — tratores dispensados); III falsa (art. 6º, §4 — motocicletas estão isentas da segunda gravação, não obrigadas).",
+        "2. A erra por termo_unico (marca só II e ignora I correta sobre VIN); C erra por regra_excecao (inclui III falsa que exige segunda gravação em motocicleta); D erra por gravidade (compra III falsa e generaliza obrigatoriedade em motocicletas).",
+        "3. Gabarito B: I e II corretas — VIN de 17 caracteres e exceção dos tratores, sem segunda gravação obrigatória na motocicleta vistoriada."
+      ],
+      "pegadinha": "A banca induz a exigir segunda gravação do VIN em motocicletas — mas o §4 do art. 6º as isenta, junto com ciclomotores e motonetas.",
+      "macete": "VIN = 17 chars · TRATOR = fora · MOTO = sem 2ª gravação.",
+      "estudo_reverso": [
+        "Res. CONTRAN 968/2022 art. 3",
+        "Res. CONTRAN 968/2022 art. 6",
+        "CTB art. 114"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "B_assertivas",
+      "pegadinha_em_uma_frase": "Motocicleta é isenta da segunda gravação do VIN — a III inverte o art. 6º, §4",
+      "eixos_legais": [
+        "CONTRAN_968_art_3_I",
+        "CONTRAN_968_art_2_I",
+        "CONTRAN_968_art_6_4"
+      ],
+      "isca_por_alternativa": {
+        "A": "marca só II sobre tratores e ignora I correta do VIN na motocicleta",
+        "C": "compra III falsa que exige segunda gravação obrigatória em motocicletas",
+        "D": "trata I, II e III como corretas incluindo segunda gravação em motocicletas"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico"
+      ]
+    },
+    "tags": [
+      "resolucao_968",
+      "vin",
+      "motocicleta",
+      "trator",
+      "segunda_gravacao"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "matriz_assertivas",
+      "arquetipo_secundario": "tabela_gradacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CONTRAN_968_art_6_4",
+      "macete_visual": "VIN 17 · trator fora · moto sem 2ª gravação",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B (I e II). A isca é a III: motocicleta é isenta da segunda gravação do VIN.",
+            "destaques": ["Gabarito B", "motocicleta", "segunda gravação"]
+          }
+        },
+        {
+          "id": "matriz",
+          "titulo": "Mapa I–III",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              { "id": "I", "texto": "VIN 17 caracteres — correta", "correto": true },
+              { "id": "II", "texto": "Tratores dispensados — correta", "correto": true },
+              { "id": "III", "texto": "2ª gravação obrigatória em moto — ERRADA", "correto": false }
+            ],
+            "gabarito_resumo": "I e II corretas → alternativa B"
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VIN = 17 caracteres.\nTrator = fora.\nMoto = sem 2ª gravação.",
+            "destaques": ["17", "trator", "moto"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 968/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 968, DE 20 DE JUNHO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "matriz_assertivas",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 240,
+      "fundamento_slug": "CONTRAN_968_art_6_4",
+      "macete_visual": "VIN 17 · trator fora · moto sem 2ª gravação",
+      "meta": {
+        "padrao_familia": "B_assertivas",
+        "pegadinha_em_uma_frase": "Motocicleta é isenta da segunda gravação do VIN — a III inverte o art. 6º, §4",
+        "eixos_legais": [
+          "CONTRAN_968_art_3_I",
+          "CONTRAN_968_art_2_I",
+          "CONTRAN_968_art_6_4"
+        ],
+        "isca_por_alternativa": {
+          "A": "marca só II sobre tratores e ignora I correta do VIN na motocicleta",
+          "C": "compra III falsa que exige segunda gravação obrigatória em motocicletas",
+          "D": "trata I, II e III como corretas incluindo segunda gravação em motocicletas"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: a isca é a assertiva III",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B (I e II corretas).\n\nA — marcou só II sobre tratores; esqueceu I do VIN na motocicleta vistoriada.\nC — comprou III falsa: segunda gravação obrigatória em motocicletas.\nD — tratou todas corretas, inclusive obrigatoriedade da segunda gravação na moto.\n\nPegadinha: motocicletas estão isentas da segunda gravação do VIN — não obrigadas.",
+            "destaques": ["Gabarito B", "III", "motocicleta"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VIN: Número de Identificação do Veículo — 17 caracteres em WMI, VDS e VIS.\n\nSEGUNDA GRAVAÇÃO: réplica do VIN em outro ponto do chassi ou monobloco — nem todo veículo exige.\n\nEXCEÇÃO DO ART. 2º: tratores e outros veículos listados ficam fora da identificação desta Resolução.",
+            "destaques": ["VIN", "SEGUNDA GRAVAÇÃO", "TRATOR"]
+          }
+        },
+        {
+          "id": "matriz",
+          "titulo": "Classificar I–III",
+          "secao": "metodo",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              { "id": "I", "texto": "VIN 17 caracteres WMI/VDS/VIS — correta", "correto": true },
+              { "id": "II", "texto": "Tratores dispensados — correta", "correto": true },
+              { "id": "III", "texto": "2ª gravação obrigatória em moto — ERRADA (§4 isenta)", "correto": false }
+            ],
+            "gabarito_resumo": "I e II corretas → alternativa B"
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Quem exige segunda gravação do VIN",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Veículo", "Segunda gravação"],
+            "linhas": [
+              { "faixa": "Automóvel comum", "classificacao": "Obrigatória (regra geral)", "destaque": false },
+              { "faixa": "Motocicleta / motoneta", "classificacao": "Isenta — caso da vistoria", "destaque": true },
+              { "faixa": "Trator", "classificacao": "Fora do regime da Res. 968" },
+              { "faixa": "Reboque / semirreboque", "classificacao": "Regra específica na longarina esquerda" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Assertiva-isca: III",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a III afirma ✗", "O que o §4 diz ✓"],
+            "linhas": [
+              [
+                "Segunda gravação obrigatória em motocicletas",
+                "Motocicletas estão isentas da segunda gravação"
+              ],
+              [
+                "Dispensa só para reboques e semirreboques",
+                "Lista inclui motos, ciclomotores e ônibus M3 encarroçados"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Marca só II — ignora I correta do VIN de 17 caracteres"
+              ],
+              [
+                "C — regra_excecao",
+                "Inclui III falsa — motocicleta isenta da segunda gravação"
+              ],
+              [
+                "D — gravidade",
+                "Compra III falsa e trata todas as assertivas como corretas"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Montando o gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Assertiva / fato", "V/F"],
+            "linhas": [
+              [
+                "I — VIN com 17 caracteres na motocicleta importada",
+                "Verdadeira"
+              ],
+              [
+                "II — tratores da frota municipal dispensados",
+                "Verdadeira"
+              ],
+              [
+                "III — ausência de 2ª gravação irregular na moto",
+                "Falsa — isenção do §4"
+              ],
+              [
+                "Resultado",
+                "Alternativa B"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 3º, I — definição de VIN",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 968/2022, art. 3º, I",
+            "texto": "I - VIN - Número de Identificação do Veículo: combinação de 17 caracteres, estruturada em três seções (WMI/VDS/VIS), designada a um veículo por seu fabricante para fins de identificação;",
+            "trechos_grifados": [
+              {
+                "inicio": 46,
+                "fim": 73,
+                "motivo": "matriz — assertiva I correta na vistoria",
+                "texto_grifado": "combinação de 17 caracteres"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 6º, §4 — isenção em motocicletas",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 968/2022, art. 6º, §4",
+            "texto": "§ 4º Os ciclomotores, motonetas, motocicletas, triciclos, quadriciclos, os chassis plataforma e os ônibus M3 encarroçados destinados ao transporte coletivo de passageiros estão isentos da segunda gravação do VIN.",
+            "trechos_grifados": [
+              {
+                "inicio": 171,
+                "fim": 211,
+                "motivo": "contraste — afasta obrigatoriedade da III na motocicleta",
+                "texto_grifado": "estão isentos da segunda gravação do VIN"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VIN = 17 caracteres.\nTrator = fora.\nMoto = sem 2ª gravação.\n\nNear-transfer: se a banca trocar motocicleta por automóvel de passeio, volta a exigência da segunda gravação — a isenção do §4 não alcança carros.",
+            "destaques": ["17", "moto", "automóvel"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 968/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 968, DE 20 DE JUNHO DE 2022.pdf"
+        },
+        {
+          "rotulo": "CTB art. 114",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

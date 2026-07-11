@@ -1,0 +1,274 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 265,
+  "fundamento_slug": "CTB_art_91",
+  "macete_visual": "91 normatiza · 93 anuencia + estacionamento",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Normas do CONTRAN não dispensam anuência da STTP nem estacionamento no art. 93",
+    "eixos_legais": [
+      "CTB_art_91",
+      "CTB_art_93"
+    ],
+    "isca_por_alternativa": {
+      "A": "normas do CONTRAN substituem anuência da STTP em via de circunscrição local",
+      "C": "anuência prévia de pólo atrativo compete exclusivamente ao CONTRAN",
+      "D": "normas do CONTRAN dispensam área de estacionamento no projeto da arena"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: CONTRAN normatiza, STTP anuencia",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — normas do CONTRAN substituem anuência da STTP na arena de Campina Grande.\nC — anuência prévia de pólo atrativo compete exclusivamente ao CONTRAN.\nD — normas do CONTRAN dispensam área de estacionamento no projeto.\n\nPegadinha: normatização federal não elimina anuência local nem estacionamento no pólo atrativo.",
+        "destaques": [
+          "Gabarito B",
+          "arena",
+          "estacionamento"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "ENGENHARIA DE TRÁFEGO: planejamento e soluções viárias — normas nacionais editadas pelo CONTRAN.\n\nPÓLO ATRATIVO: empreendimento que concentra fluxo de veículos — shopping, arena, hospital grande.\n\nCIRCUNSCRIÇÃO SOBRE A VIA: órgão responsável pela via — em Campina Grande, a STTP nas vias municipais.",
+        "destaques": [
+          "ENGENHARIA",
+          "PÓLO ATRATIVO",
+          "STTP"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: aprovar a arena?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Empreendimento é potencial pólo atrativo de trânsito?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Projeto tem anuência do órgão da via e estacionamento?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Exige anuência STTP + estacionamento — gabarito B",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — arena poliesportiva"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Requisitos do pólo atrativo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Papéis no caso da arena",
+      "secao": "mapa",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Órgão / ato",
+          "Função"
+        ],
+        "linhas": [
+          [
+            "CONTRAN — normas nacionais",
+            "Padrões de engenharia de tráfego em todo o país"
+          ],
+          [
+            "STTP — anuência prévia",
+            "Órgão com circunscrição sobre a via municipal"
+          ],
+          [
+            "Projeto — estacionamento e acessos",
+            "Requisito obrigatório do pólo atrativo"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: CONTRAN já normatizou",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Crença ✗",
+          "Lei ✓"
+        ],
+        "linhas": [
+          [
+            "Normas do CONTRAN dispensam anuência da STTP",
+            "Pólo atrativo exige anuência do órgão da via"
+          ],
+          [
+            "Licença urbanística municipal basta",
+            "Projeto deve prever estacionamento e vias de acesso"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — competencia_snt",
+            "Confunde normatizar com anuir — STTP tem circunscrição local"
+          ],
+          [
+            "C — competencia_snt",
+            "Atribui anuência exclusiva ao CONTRAN — art. 93 reserva órgão da via"
+          ],
+          [
+            "D — regra_excecao",
+            "Inventa dispensa de estacionamento — normas do CONTRAN não substituem art. 93"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do caso",
+          "Consequência"
+        ],
+        "linhas": [
+          [
+            "Arena poliesportiva em via de grande fluxo — Campina Grande",
+            "Potencial pólo atrativo de trânsito"
+          ],
+          [
+            "Secretário dispensa anuência da STTP e estacionamento",
+            "Viola requisitos do pólo atrativo"
+          ],
+          [
+            "CONTRAN já editou normas de engenharia de tráfego",
+            "Normatiza, mas não dispensa anuência local"
+          ],
+          [
+            "Resultado",
+            "Alternativa B"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Dois dispositivos no gabarito",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Art. 91 — CONTRAN",
+            "Estabelece padrões nacionais de engenharia de tráfego"
+          ],
+          [
+            "Art. 93 — pólo atrativo",
+            "Exige anuência do órgão da via + estacionamento e acessos"
+          ],
+          [
+            "Art. 92",
+            "Vetado — sem aplicabilidade"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei1",
+      "titulo": "Art. 91 — normas do CONTRAN",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 91",
+        "texto": "Art. 91. O CONTRAN estabelecerá as normas e regulamentos a serem adotados em todo o território nacional quando da implementação das soluções adotadas pela Engenharia de Tráfego, assim como padrões a serem praticados por todos os órgãos e entidades do Sistema Nacional de Trânsito.",
+        "trechos_grifados": [
+          {
+            "inicio": 77,
+            "fim": 103,
+            "motivo": "mapa — padrões nacionais de engenharia de tráfego",
+            "texto_grifado": "todo o território nacional"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 93 — anuência e estacionamento",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 93",
+        "texto": "Art. 93. Nenhum projeto de edificação que possa transformar-se em pólo atrativo de trânsito poderá ser aprovado sem prévia anuência do órgão ou entidade com circunscrição sobre a via e sem que do projeto conste área para estacionamento e indicação das vias de acesso adequadas.",
+        "trechos_grifados": [
+          {
+            "inicio": 116,
+            "fim": 182,
+            "motivo": "caso — anuência da STTP na arena de Campina Grande",
+            "texto_grifado": "prévia anuência do órgão ou entidade com circunscrição sobre a via"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "91 = CONTRAN normatiza.\n93 = órgão da via anuencia + estacionamento.\n\nNear-transfer: se a banca trocar arena por hospital regional com fluxo intenso, permanecem anuência do órgão da via e estacionamento — o pólo atrativo não muda o regime.",
+        "destaques": [
+          "CONTRAN",
+          "anuencia",
+          "pólo atrativo"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "CTB arts. 91–93",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

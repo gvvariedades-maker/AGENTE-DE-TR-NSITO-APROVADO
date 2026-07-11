@@ -1,0 +1,362 @@
+[
+  {
+    "disciplina": "direito_administrativo",
+    "topico": "dir_adm_4_5",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "Lei8112_art127",
+    "enunciado": "O superintendente da STTP suspende por três dias agente flagrado conduzindo viatura sem identificação visível, invocando poder de polícia administrativa. No mesmo turno, o agente autua motorista por conversão proibida na Av. Epitácio Pessoa. O sindicato alega que suspensão e autuação são o mesmo poder, pois ambas restringem condutas em prol do interesse público. Com base no poder de polícia e nos poderes administrativos, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Poder de polícia e poder disciplinar são a mesma prerrogativa, pois ambos restringem condutas por interesse público, aplicando-se indistintamente a servidores e particulares.",
+      "B": "O poder de polícia alcança somente relações internas entre a Administração e seus servidores, não sendo aplicável a particulares autuados em via pública.",
+      "C": "A suspensão de três dias ao agente, por ter sido aplicada pelo superintendente, dispensa contraditório por configurar poder de polícia e não sanção disciplinar.",
+      "D": "A autuação ao motorista na Av. Epitácio Pessoa configura poder de polícia sobre terceiro; a suspensão ao agente é poder disciplinar interno — poderes distintos (Lei 8.112/90 e Lei 9.784/99)."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Distinção entre poder de polícia (limita direitos de particulares na via) e poder disciplinar (sanção funcional ao servidor — Lei 8.112/90, art. 127), com contraditório na apuração disciplinar (Lei 9.784/99, art. 2).",
+      "fundamento_legal": "Lei 8.112/90, art. 127: \"São penalidades disciplinares: I - advertência; II - suspensão; III - demissão; IV - cassação de aposentadoria ou disponibilidade.\" Lei 9.784/99, art. 50, I: \"neguem, limitem ou afetem direitos ou interesses\" — autuação com sanção limita direitos de terceiro (poder de polícia). Art. 2: princípios do contraditório e da ampla defesa.",
+      "passo_a_passo": [
+        "1. Suspensão de três dias ao agente da STTP pelo superintendente: sanção disciplinar interna (art. 127, II). Autuação ao motorista na Av. Epitácio Pessoa: limita direitos de terceiro — poder de polícia. O sindicato confunde os institutos.",
+        "2. A erra por termo_unico (iguala poder disciplinar e poder de polícia); B erra por regra_excecao (restringe o poder de polícia à esfera interna, negando autuação a particulares); C erra por termo_unico (trata suspensão disciplinar como poder de polícia e dispensa contraditório).",
+        "3. D correta: autuação = poder de polícia sobre terceiro; suspensão = poder disciplinar interno — poderes distintos, com Lei 8.112/90 e Lei 9.784/99."
+      ],
+      "pegadinha": "A banca iguala os poderes pelo critério genérico de interesse público ou inverte o alcance do poder de polícia para a esfera interna, ignorando que disciplinar sanciona servidor e polícia limita direitos de terceiros na via.",
+      "macete": "DISCIPLINAR = servidor | POLÍCIA = terceiro na via | interesse público não funde os dois.",
+      "estudo_reverso": [
+        "Lei 8.112/90 art. 127",
+        "Lei 8.112/90 art. 142",
+        "Lei 9.784/99 art. 2",
+        "Lei 9.784/99 art. 50"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "Lei8112_art127",
+      "macete_visual": "DISCIPLINAR = servidor | POLÍCIA = terceiro",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Suspensão interna ao agente ≠ autuação ao motorista na Av. Epitácio Pessoa. A iguala os poderes; B internaliza a polícia; C dispensa contraditório na suspensão.",
+            "destaques": ["poder disciplinar", "poder de polícia", "Av. Epitácio Pessoa"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Disciplinar × polícia",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "Regra ✓"],
+            "linhas": [
+              [
+                "Mesmo poder porque ambos limitam condutas",
+                "Disciplinar = servidor | Polícia = terceiro na via"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "A medida atinge servidor no vínculo?", "tipo": "pergunta" },
+              { "id": "p2", "label": "A medida limita direitos de terceiro na via?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito D — poderes distintos", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Suspensão sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Autuação sim" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei 8.112/90, art. 127",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 8.112/90, art. 127",
+            "texto": "São penalidades disciplinares: I - advertência; II - suspensão; III - demissão; IV - cassação de aposentadoria ou disponibilidade;",
+            "trechos_grifados": [
+              {
+                "inicio": 53,
+                "fim": 62,
+                "motivo": "suspensão disciplinar do agente STTP",
+                "texto_grifado": "suspensão"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DISCIPLINAR = servidor | POLÍCIA = terceiro na via | interesse público não funde os dois.",
+            "destaques": ["DISCIPLINAR", "POLÍCIA", "terceiro"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 8.112/90 art. 127",
+          "path": "conteúdo/legislação federal/lei-8112-servidores.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "Lei8112_art127",
+      "macete_visual": "DISCIPLINAR = servidor | POLÍCIA = terceiro",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Igualar poder disciplinar e poder de polícia por interesse público genérico",
+        "eixos_legais": ["Lei8112_art127", "Lei9784_art50"],
+        "isca_por_alternativa": {
+          "A": "iguala disciplinar e polícia por interesse público — são poderes distintos",
+          "B": "internaliza poder de polícia só na esfera servidor — autuação na via é polícia",
+          "C": "trata suspensão como polícia e dispensa contraditório — é sanção disciplinar"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: disciplinar ≠ polícia",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — iguala os poderes por interesse público: disciplinar e polícia são distintos.\nB — polícia só interna: autuação na Av. Epitácio Pessoa é poder de polícia sobre terceiro.\nC — suspensão como polícia sem contraditório: é sanção disciplinar ao agente.\n\nNesta aula você separa servidor (disciplinar) de terceiro na via (polícia).",
+            "destaques": ["Gabarito D", "poderes distintos", "Av. Epitácio Pessoa"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PODER DISCIPLINAR: prerrogativa da Administração para sancionar servidores por infração funcional no vínculo (advertência, suspensão, demissão).\n\nPODER DE POLÍCIA: limita direitos de particulares com fundamento legal em favor do interesse público — autuação em via pública.\n\nCONTRADITÓRIO: direito de defesa no processo administrativo disciplinar, nos termos da Lei nº 9.784/1999.",
+            "destaques": ["PODER DISCIPLINAR", "PODER DE POLÍCIA", "CONTRADITÓRIO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "MÉTODO: classificar cada medida da STTP",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "A medida sanciona servidor no vínculo funcional?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "A medida limita direitos de terceiro na via pública?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito D — poderes distintos",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Suspensão: sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Autuação: sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Penalidades disciplinares",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Sanção", "Esfera"],
+            "linhas": [
+              {
+                "faixa": "Advertência",
+                "classificacao": "Poder disciplinar — vínculo funcional"
+              },
+              {
+                "faixa": "Suspensão",
+                "classificacao": "Poder disciplinar — caso do agente STTP",
+                "destaque": true
+              },
+              {
+                "faixa": "Demissão",
+                "classificacao": "Poder disciplinar — gravidade máxima"
+              },
+              {
+                "faixa": "Autuação com multa",
+                "classificacao": "Poder de polícia — terceiro na via"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: mesmo interesse público?",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o sindicato insinua ✗", "O que a lei distingue ✓"],
+            "linhas": [
+              [
+                "Disciplinar e polícia são o mesmo poder",
+                "Disciplinar = servidor | Polícia = terceiro com fundamento legal"
+              ],
+              [
+                "Interesse público funde as duas esferas",
+                "Cada poder tem sujeito e fundamento próprios"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Iguala poder disciplinar e poder de polícia por critério genérico de interesse público"
+              ],
+              [
+                "B — regra_excecao",
+                "Restringe poder de polícia à esfera interna, negando autuação a particulares na via"
+              ],
+              [
+                "C — termo_unico",
+                "Trata suspensão disciplinar como poder de polícia e dispensa contraditório na esfera funcional"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso STTP", "Poder exercido"],
+            "linhas": [
+              [
+                "Suspensão de 3 dias ao agente sem identificação",
+                "Poder disciplinar — sanção funcional interna"
+              ],
+              [
+                "Autuação por conversão na Av. Epitácio Pessoa",
+                "Poder de polícia — limita direitos de terceiro na via"
+              ],
+              [
+                "Sindicato alega identidade dos poderes",
+                "Refutado — sujeitos e fundamentos distintos"
+              ],
+              ["Resultado", "Alternativa D — única correta"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Esfera funcional × esfera externa",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Medida", "Regime jurídico"],
+            "linhas": [
+              ["Suspensão ao agente pelo superintendente", "Lei 8.112/90 — penalidades disciplinares"],
+              ["Autuação ao motorista na via pública", "Poder de polícia — limitação de direitos de terceiro"],
+              ["Contraditório na apuração disciplinar", "Lei 9.784/99 — processo administrativo"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei 8.112/90, art. 127 — sanções disciplinares",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 8.112/90, art. 127",
+            "texto": "São penalidades disciplinares: I - advertência; II - suspensão; III - demissão; IV - cassação de aposentadoria ou disponibilidade;",
+            "trechos_grifados": [
+              {
+                "inicio": 53,
+                "fim": 62,
+                "motivo": "mapa — suspensão aplicada ao agente da STTP",
+                "texto_grifado": "suspensão"
+              },
+              {
+                "inicio": 0,
+                "fim": 29,
+                "motivo": "contraste — esfera disciplinar, não poder de polícia",
+                "texto_grifado": "São penalidades disciplinares"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Lei 9.784/99, art. 50, I — limitação de direitos",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 50, I",
+            "texto": "Os atos administrativos deverão ser motivados, com indicação dos fatos e dos fundamentos jurídicos, quando: I - neguem, limitem ou afetem direitos ou interesses;",
+            "trechos_grifados": [
+              {
+                "inicio": 112,
+                "fim": 160,
+                "motivo": "fluxo — autuação ao motorista limita direitos de terceiro",
+                "texto_grifado": "neguem, limitem ou afetem direitos ou interesses"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DISCIPLINAR = servidor | POLÍCIA = terceiro na via | interesse público não funde os dois.\n\nNear-transfer: se o superintendente apenas orientasse o agente a colocar o distintivo, sem suspensão, seria poder hierárquico — não confundir com autuação do motorista na Av. Epitácio Pessoa.",
+            "destaques": ["DISCIPLINAR", "POLÍCIA", "near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 8.112/90 art. 127",
+          "path": "conteúdo/legislação federal/lei-8112-servidores.html"
+        },
+        {
+          "rotulo": "Lei 9.784/99 art. 50",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        }
+      ]
+    },
+    "tags": [
+      "poder_policia",
+      "poder_disciplinar",
+      "lei_8112",
+      "lei_9784",
+      "sttp"
+    ]
+  }
+]

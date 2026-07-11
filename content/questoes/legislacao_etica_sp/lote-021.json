@@ -1,0 +1,315 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_2_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "L8112_art117_XVI_art116_VII",
+    "enunciado": "Agente de trânsito da STTP de Campina Grande utiliza viatura oficial em dia de folga para transportar familiares a evento social, abastecendo com cartão corporativo de combustível. Em sindicância, sustenta que a presteza no atendimento exige disponibilidade permanente e que a urbanidade recomenda flexibilidade; o supervisor afirma que basta registrar a saída no livro de ocorrências da garagem. À luz da ética no serviço público, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A presteza no atendimento autoriza uso eventual da viatura para deslocamento familiar — disponibilidade permanente dispensa distinção entre serviço e atividade particular.",
+      "B": "É vedado utilizar recursos materiais da repartição em atividades particulares (art. 117, XVI, Lei 8.112/90); o servidor deve zelar pela economia e conservação do patrimônio público (art. 116, VII); registro em livro de ocorrências não legitima uso privado.",
+      "C": "O registro da saída no livro de ocorrências regulariza o deslocamento — a formalidade administrativa supre a vedação quando não há dano financeiro relevante ao erário.",
+      "D": "A urbanidade no trato com as pessoas autoriza flexibilizar o uso da viatura para deslocamento familiar eventual — conduta compatível com a disponibilidade recomendada ao público."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Proibição de usar recursos materiais da repartição em atividades particulares (Lei 8.112/90, art. 117, XVI) e dever de zelar pelo patrimônio público (art. 116, VII).",
+      "fundamento_legal": "Lei 8.112/90, art. 117, XVI: \"utilizar pessoal ou recursos materiais da repartição em serviços ou atividades particulares\". Art. 116, VII: \"zelar pela economia do material e a conservação do patrimônio público\".",
+      "passo_a_passo": [
+        "1. Viatura e cartão de combustível são recursos materiais da STTP — transporte familiar em folga é atividade particular, não função pública.",
+        "2. A erra por termo_unico (confunde presteza/disponibilidade com permissão de uso privado); C erra por regra_excecao (trata registro em livro de ocorrências como exceção à proibição); D erra por termo_unico (usa urbanidade para flexibilizar vedação de recurso público em atividade particular).",
+        "3. B está correta: art. 117, XVI veda uso particular de recursos públicos; art. 116, VII impõe zelo pelo patrimônio — formalidade interna não autoriza desvio."
+      ],
+      "pegadinha": "A banca usa presteza, urbanidade ou livro de ocorrências para legitimar viatura e combustível em favor familiar — mas art. 117, XVI proíbe uso particular de recursos da repartição.",
+      "macete": "Recurso público em favor particular = vedado (art. 117, XVI). Livro de ocorrências não autoriza — zelo pelo patrimônio (art. 116, VII).",
+      "estudo_reverso": [
+        "Lei 8.112/90 art. 117, XVI",
+        "Lei 8.112/90 art. 116, VII",
+        "Lei 8.112/90 art. 116, V",
+        "Lei 8.112/90 art. 116, XI"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 50,
+      "fundamento_slug": "L8112_art117_XVI_art116_VII",
+      "macete_visual": "Recurso público ≠ uso familiar · livro não autoriza",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Viatura e combustível da STTP em evento familiar é uso particular vedado — presteza e livro de ocorrências não legitimam desvio de patrimônio público.",
+            "destaques": ["particular", "vedado", "patrimônio"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Uso da viatura é lícito?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Viatura e cartão usados em atividade familiar?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Uso vedado — recurso público em favor particular", "tipo": "resultado" }
+            ],
+            "arestas": [{ "de": "p1", "para": "r1", "rotulo": "Sim" }]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Presteza × uso particular",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              [
+                "Disponibilidade autoriza transporte familiar",
+                "Recursos da repartição vedados em atividade particular"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Recurso público em favor particular = vedado. Livro de ocorrências não autoriza — zelo pelo patrimônio.",
+            "destaques": ["vedado", "particular", "patrimônio"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 8.112/90",
+          "path": "conteúdo/legislação federal/lei-8112-servidores.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "L8112_art117_XVI_art116_VII",
+      "macete_visual": "Recurso público ≠ uso familiar · livro não autoriza",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Presteza ou livro de ocorrências induzem viatura e combustível em evento familiar",
+        "eixos_legais": ["L8112_art117_XVI", "L8112_art116_VII", "L8112_art116_V"],
+        "isca_por_alternativa": {
+          "A": "presteza e disponibilidade permanente autorizam uso familiar",
+          "C": "registro no livro de ocorrências regulariza deslocamento particular",
+          "D": "urbanidade e flexibilidade autorizam deslocamento familiar na viatura"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: viatura familiar é vedada",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — presteza e disponibilidade: confunde atendimento ao público com transporte familiar.\nC — livro de ocorrências: trata registro interno como exceção à proibição.\nD — urbanidade e flexibilidade: usa cortesia no trato para autorizar uso privado da viatura.\n\nA isca é presteza, urbanidade ou livro da garagem legitimarem viatura e cartão em folga.",
+            "destaques": ["Gabarito B", "particular", "vedado"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 deveres éticos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "RECURSO MATERIAL: viatura, combustível, equipamentos da repartição — patrimônio público.\n\nATIVIDADE PARTICULAR: finalidade alheia ao serviço — no caso, evento social familiar.\n\nZELO PATRIMONIAL: economia e conservação do material público — dever positivo do servidor.",
+            "destaques": ["RECURSO", "PARTICULAR", "ZELO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: o uso da viatura é lícito?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Agente usou viatura e cartão em dia de folga para família?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "O deslocamento serviu a atividade particular?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito B — uso vedado pelo estatuto",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Deveres e proibições no caso",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Norma", "Aplicação na STTP"],
+            "linhas": [
+              ["Art. 117, XVI — proibição", "Viatura e cartão em evento familiar"],
+              ["Art. 116, VII — zelo", "Economia e conservação do patrimônio"],
+              ["Art. 116, V — presteza", "Atendimento ao público — não transporte familiar"],
+              ["Livro de ocorrências", "Controle interno — não autoriza uso privado"]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: presteza × uso particular",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Presteza autoriza disponibilidade total da viatura",
+                "Art. 117, XVI veda recursos da repartição em atividade particular"
+              ],
+              [
+                "Registro no livro regulariza a saída familiar",
+                "Formalidade interna não supre proibição estatutária"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Confunde presteza no atendimento público com permissão de uso familiar da viatura"
+              ],
+              [
+                "C — regra_excecao",
+                "Trata livro de ocorrências como exceção à vedação do art. 117, XVI"
+              ],
+              [
+                "D — termo_unico",
+                "Usa urbanidade para flexibilizar vedação de recurso público em atividade particular"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo a sindicância da STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Enquadramento"],
+            "linhas": [
+              ["Viatura oficial em dia de folga", "Recurso material da repartição"],
+              ["Transporte de familiares a evento social", "Atividade particular vedada"],
+              ["Abastecimento com cartão corporativo", "Desvio de patrimônio público"],
+              ["Resultado", "Gabarito B — art. 117, XVI e art. 116, VII"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Proibição e dever patrimonial",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Mensagem"],
+            "linhas": [
+              ["Art. 117, XVI", "Veda uso de recursos da repartição em atividade particular"],
+              ["Art. 116, VII", "Dever de zelar pela economia e conservação do patrimônio"],
+              ["Art. 116, V", "Presteza no atendimento — não abrange favor familiar"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 117, XVI — uso vedado",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 8.112/90, art. 117, XVI",
+            "texto": "XVI - utilizar pessoal ou recursos materiais da repartição em serviços ou atividades particulares;",
+            "trechos_grifados": [
+              {
+                "inicio": 26,
+                "fim": 44,
+                "motivo": "caso — viatura e cartão corporativo da STTP",
+                "texto_grifado": "recursos materiais"
+              },
+              {
+                "inicio": 74,
+                "fim": 97,
+                "motivo": "contraste — evento social familiar (isca A)",
+                "texto_grifado": "atividades particulares"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 116, VII — zelo patrimonial",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 8.112/90, art. 116, VII",
+            "texto": "VII - zelar pela economia do material e a conservação do patrimônio público;",
+            "trechos_grifados": [
+              {
+                "inicio": 6,
+                "fim": 75,
+                "motivo": "mapa — dever positivo violado no abastecimento particular",
+                "texto_grifado": "zelar pela economia do material e a conservação do patrimônio público"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Recurso público em favor particular = vedado (art. 117, XVI). Livro de ocorrências não autoriza — zelo pelo patrimônio (art. 116, VII).\n\nNear-transfer: agente usa impressora da STTP para imprimir convite de festa — também é recurso material em atividade particular, vedado pelo mesmo inciso.",
+            "destaques": ["vedado", "Near-transfer", "patrimônio"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 8.112/90",
+          "path": "conteúdo/legislação federal/lei-8112-servidores.html"
+        }
+      ]
+    },
+    "tags": [
+      "etica",
+      "patrimonio",
+      "recursos_publicos",
+      "lei_8112",
+      "conduta",
+      "sttp"
+    ]
+  }
+]

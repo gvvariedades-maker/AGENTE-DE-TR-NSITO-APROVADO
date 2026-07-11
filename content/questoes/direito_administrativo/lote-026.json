@@ -1,0 +1,367 @@
+[
+  {
+    "disciplina": "direito_administrativo",
+    "topico": "dir_adm_3_3",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_prazo",
+    "dificuldade": 4,
+    "fundamento_slug": "Lei9784_art54",
+    "enunciado": "A Controladoria da STTP constata que portaria de 2017 reservou vaga exclusiva no pátio municipal a parente de ex-gestor, sem base legal, gerando vantagem patrimonial contínua. Em 2025, sete anos depois, a Administração municipal aprova anulação do ato, comprovada má-fé do favorecido. O destinatário sustenta decadência do direito de anular e pede revogação por conveniência. À luz da Lei nº 9.784/1999, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Transcorrido o prazo de cinco anos, a Administração não pode mais anular ato ilegal, devendo revogá-lo por conveniência ou oportunidade, ainda que comprovada má-fé.",
+      "B": "A anulação por ilegalidade produz efeitos ex nunc, preservando a vantagem patrimonial já consolidada pelo favorecido no pátio municipal.",
+      "C": "A revogação por ilegalidade material é obrigatória nos termos do art. 53, independentemente de conveniência, sendo vedada a anulação após cinco anos.",
+      "D": "A Administração deve anular o ato eivado de ilegalidade; o direito de anular decai em cinco anos, salvo má-fé comprovada, com efeitos ex tunc da anulação."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Anulação por ilegalidade (art. 53), decadência quinquenal do direito de anular (art. 54) e exceção por má-fé comprovada — distinção de revogação por conveniência.",
+      "fundamento_legal": "Lei 9.784/99, art. 53: \"A Administração deve anular seus próprios atos, quando eivados de vício de legalidade, e pode revogá-los por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos.\" Art. 54: \"O direito da Administração de anular os atos administrativos de que decorram efeitos favoráveis para os destinatários decai em cinco anos, contados da data em que foram praticados, salvo comprovada má-fé.\"",
+      "passo_a_passo": [
+        "1. Portaria de 2017 sem base legal, vantagem patrimonial contínua no pátio da STTP — ilegalidade material (deve anular, art. 53). Sete anos depois: decadência quinquenal (art. 54), mas má-fé comprovada afasta a decadência.",
+        "2. A erra por regra_excecao (trata decadência como absoluta, ignorando exceção de má-fé e substituindo anulação por revogação); B erra por termo_unico (inverte efeitos temporais — anulação é ex tunc, não ex nunc); C erra por termo_unico (confunde revogação com anulação e nega anulação após cinco anos sem ressalva de má-fé).",
+        "3. D correta: anulação obrigatória por ilegalidade (art. 53) + decadência de cinco anos com exceção de má-fé (art. 54) + efeitos ex tunc."
+      ],
+      "pegadinha": "A banca trata decadência como barreira absoluta, inverte ex tunc/ex nunc da anulação ou troca revogação (conveniência) por anulação (ilegalidade) — ignorando a ressalva de má-fé do art. 54.",
+      "macete": "Deve ANULA (ilegal, ex tunc) | 5 anos DECAI | MÁ-FÉ salva | Pode REVOGA (conveniência, ex nunc).",
+      "estudo_reverso": [
+        "Lei 9.784/99 art. 53",
+        "Lei 9.784/99 art. 54",
+        "Lei 9.784/99 art. 55"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "Lei9784_art54",
+      "macete_visual": "ANULA ex tunc | 5 anos | MÁ-FÉ salva",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Portaria ilegal de 2017, anulação em 2025 com má-fé comprovada. A ignora exceção de má-fé; B inverte ex tunc/ex nunc; C confunde revogação com anulação.",
+            "destaques": ["decadência", "má-fé", "ex tunc"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Decadência absoluta × má-fé",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "Art. 54 ✓"],
+            "linhas": [
+              [
+                "Cinco anos vedam anulação mesmo com má-fé",
+                "Decadência quinquenal salvo má-fé comprovada"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Ato eivado de ilegalidade material?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Há má-fé comprovada após 5 anos?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito D — anula ex tunc", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — portaria 2017" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei 9.784/99, art. 54",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 54",
+            "texto": "O direito da Administração de anular os atos administrativos de que decorram efeitos favoráveis para os destinatários decai em cinco anos, contados da data em que foram praticados, salvo comprovada má-fé.",
+            "trechos_grifados": [
+              {
+                "inicio": 127,
+                "fim": 137,
+                "motivo": "exceção que afasta decadência no caso",
+                "texto_grifado": "cinco anos"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Deve ANULA (ilegal, ex tunc) | 5 anos DECAI | MÁ-FÉ salva | Pode REVOGA (conveniência, ex nunc).",
+            "destaques": ["ex tunc", "5 anos", "MÁ-FÉ"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.784/99 art. 54",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 260,
+      "fundamento_slug": "Lei9784_art54",
+      "macete_visual": "ANULA ex tunc | 5 anos | MÁ-FÉ salva",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Decadência absoluta ignora má-fé ou inverte ex tunc/ex nunc",
+        "eixos_legais": ["Lei9784_art53", "Lei9784_art54"],
+        "isca_por_alternativa": {
+          "A": "decadência absoluta — ignora exceção de má-fé do art. 54",
+          "B": "anulação ex nunc — inverte efeito temporal (é ex tunc)",
+          "C": "revogação obrigatória por ilegalidade — confunde com anulação"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: ilegalidade + decadência + má-fé",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — decadência absoluta: má-fé comprovada afasta a decadência quinquenal.\nB — anulação ex nunc: ilegalidade anula ex tunc, não preserva vantagem consolidada.\nC — revogação por ilegalidade: deve anular, não revogar por conveniência.\n\nNesta aula você fixa ANULA ex tunc + 5 anos + exceção de má-fé.",
+            "destaques": ["Gabarito D", "má-fé", "ex tunc"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ANULAÇÃO: extinção de ato ilegal pela Administração — efeitos ex tunc (art. 53 — deve anular).\n\nDECADÊNCIA: perda do direito de anular após cinco anos, salvo má-fé comprovada (art. 54).\n\nREVOGAÇÃO: extinção por conveniência ou oportunidade — efeitos ex nunc (art. 53 — pode revogar).",
+            "destaques": ["ANULAÇÃO", "DECADÊNCIA", "REVOGAÇÃO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "MÉTODO: classificar a portaria da STTP",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Portaria de 2017 tem vício de legalidade?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Má-fé comprovada após 5 anos da prática?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito D — anula ex tunc",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — sem base legal" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Extinção dos atos — mapa legal",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Medida", "Fundamento"],
+            "linhas": [
+              {
+                "faixa": "Anulação",
+                "classificacao": "Ilegalidade — deve anular (art. 53) — ex tunc",
+                "destaque": true
+              },
+              {
+                "faixa": "Revogação",
+                "classificacao": "Conveniência — pode revogar (art. 53) — ex nunc"
+              },
+              {
+                "faixa": "Decadência",
+                "classificacao": "5 anos para anular — art. 54"
+              },
+              {
+                "faixa": "Exceção",
+                "classificacao": "Má-fé comprovada — salvo art. 54"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: decadência × má-fé",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o favorecido insinua ✗", "O que a lei exige ✓"],
+            "linhas": [
+              [
+                "Cinco anos impedem anulação mesmo com má-fé",
+                "Decadência quinquenal salvo má-fé comprovada"
+              ],
+              [
+                "Anulação preserva vantagem consolidada (ex nunc)",
+                "Anulação por ilegalidade retroage (ex tunc)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Trata decadência como absoluta — ignora exceção de má-fé e substitui anulação por revogação"
+              ],
+              [
+                "B — termo_unico",
+                "Inverte efeitos temporais — anulação por ilegalidade é ex tunc, não ex nunc"
+              ],
+              [
+                "C — termo_unico",
+                "Confunde revogação (conveniência) com anulação obrigatória por ilegalidade"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso STTP", "Consequência jurídica"],
+            "linhas": [
+              [
+                "Portaria de 2017 sem base legal — vaga exclusiva no pátio",
+                "Ilegalidade material — deve anular (art. 53)"
+              ],
+              [
+                "Sete anos entre prática e anulação em 2025",
+                "Decadência quinquenal — art. 54"
+              ],
+              [
+                "Má-fé do favorecido comprovada pela Controladoria",
+                "Exceção à decadência — anulação cabível"
+              ],
+              ["Resultado", "Alternativa D — única correta"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Anular × revogar × convalidar",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Instituto", "Quando usar"],
+            "linhas": [
+              ["Anulação (art. 53)", "Vício de legalidade — efeitos ex tunc"],
+              ["Revogação (art. 53)", "Conveniência ou oportunidade — efeitos ex nunc"],
+              ["Convalidação (art. 55)", "Defeito sanável sem lesão nem prejuízo — outro caso"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei 9.784/99, art. 53 — deve anular × pode revogar",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 53",
+            "texto": "A Administração deve anular seus próprios atos, quando eivados de vício de legalidade, e pode revogá-los por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos.",
+            "trechos_grifados": [
+              {
+                "inicio": 16,
+                "fim": 27,
+                "motivo": "fluxo — ilegalidade impõe anulação no caso da portaria",
+                "texto_grifado": "deve anular"
+              },
+              {
+                "inicio": 89,
+                "fim": 104,
+                "motivo": "contraste — revogação é por conveniência, não ilegalidade",
+                "texto_grifado": "pode revogá-los"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Lei 9.784/99, art. 54 — decadência",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 54",
+            "texto": "O direito da Administração de anular os atos administrativos de que decorram efeitos favoráveis para os destinatários decai em cinco anos, contados da data em que foram praticados, salvo comprovada má-fé.",
+            "trechos_grifados": [
+              {
+                "inicio": 127,
+                "fim": 137,
+                "motivo": "mapa — prazo de decadência no caso (7 anos)",
+                "texto_grifado": "cinco anos"
+              },
+              {
+                "inicio": 198,
+                "fim": 203,
+                "motivo": "caso — má-fé comprovada afasta decadência",
+                "texto_grifado": "má-fé"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Deve ANULA (ilegal, ex tunc) | 5 anos DECAI | MÁ-FÉ salva | Pode REVOGA (conveniência, ex nunc).\n\nNear-transfer: se a portaria de 2017 fosse legal mas inconveniente ao novo gestor, caberia revogação ex nunc — não anulação.",
+            "destaques": ["ex tunc", "MÁ-FÉ", "near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.784/99 art. 53",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        },
+        {
+          "rotulo": "Lei 9.784/99 art. 54",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        }
+      ]
+    },
+    "tags": [
+      "anulacao",
+      "revogacao",
+      "decadencia",
+      "lei_9784",
+      "sttp"
+    ]
+  }
+]

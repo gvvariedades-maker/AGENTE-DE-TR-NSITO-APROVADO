@@ -1,0 +1,361 @@
+[
+  {
+    "disciplina": "direito_administrativo",
+    "topico": "dir_adm_4_5",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "Lei9784_art2",
+    "enunciado": "O superintendente da STTP publica memorando interno determinando que, por quinze dias, a fiscalização se concentre na Av. Epitácio Pessoa, com redistribuição de equipes. Um agente autua motorista por excesso de velocidade nessa via. A associação dos autuados sustenta que o memorando seria ato de poder de polícia por restringir circulação, carecendo de lei específica, e que a autuação seria mera ordem hierárquica interna. A Procuradoria municipal analisa os poderes envolvidos. Assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O memorando organiza a atuação dos agentes (poder hierárquico); a autuação limita direitos do condutor com fundamento legal (poder de polícia), observando legalidade e motivação (Lei nº 9.784/1999, arts. 2 e 50).",
+      "B": "Poder hierárquico e poder de polícia são a mesma prerrogativa quando ordenam conduta de agentes em operação de trânsito, aplicando-se indistintamente a servidores e condutores.",
+      "C": "O memorando de concentração da fiscalização configura exercício de poder de polícia sobre usuários da via, exigindo lei autorizadora específica para limitar a circulação.",
+      "D": "A autuação por excesso de velocidade é ato de poder hierárquico interno da STTP, sem natureza de poder de polícia administrativa sobre o condutor autuado."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Distinção entre poder hierárquico (organização interna da atividade) e poder de polícia (limitação de direitos de terceiros na via), com princípios da legalidade e motivação (Lei 9.784/99, arts. 2 e 50).",
+      "fundamento_legal": "Lei 9.784/99, art. 2: \"A Administração Pública obedecerá, dentre outros, aos princípios da legalidade, finalidade, motivação, razoabilidade, proporcionalidade, moralidade, ampla defesa, contraditório, segurança jurídica, interesse público e eficiência.\" Art. 50, I: \"neguem, limitem ou afetem direitos ou interesses\" — autuação com sanção limita direitos do condutor (poder de polícia).",
+      "passo_a_passo": [
+        "1. Memorando interno redistribui equipes na Av. Epitácio Pessoa — organização da atividade administrativa (poder hierárquico), sem limitar direitos de terceiros na via. Autuação por velocidade limita direitos do condutor com fundamento legal — poder de polícia.",
+        "2. B erra por termo_unico (iguala poder hierárquico e poder de polícia por operarem em trânsito); C erra por regra_excecao (exige lei específica para memorando interno de logística, como se limitasse circulação de terceiros); D erra por termo_unico (nega natureza de poder de polícia na autuação ao condutor).",
+        "3. A correta: memorando = hierárquico; autuação = polícia com legalidade e motivação (arts. 2 e 50 da Lei 9.784/99)."
+      ],
+      "pegadinha": "A banca iguala memorando de organização interna com poder de polícia sobre terceiros, ou nega que autuação limita direitos do condutor — confundindo hierárquico com polícia.",
+      "macete": "HIERÁRQUICO = organiza agente | POLÍCIA = limita terceiro na via | memorando ≠ autuação.",
+      "estudo_reverso": [
+        "Lei 9.784/99 art. 2",
+        "Lei 9.784/99 art. 50",
+        "CF art. 37",
+        "CF art. 144, § 10"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "Lei9784_art2",
+      "macete_visual": "HIERÁRQUICO = agente | POLÍCIA = terceiro",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Memorando interno na Av. Epitácio Pessoa ≠ autuação ao condutor. B iguala os poderes; C trata memorando como polícia; D nega polícia na autuação.",
+            "destaques": ["hierárquico", "poder de polícia", "memorando"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Hierárquico × polícia",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "Regra ✓"],
+            "linhas": [
+              [
+                "Memorando e autuação são o mesmo poder",
+                "Hierárquico organiza agentes | Polícia limita terceiro"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Ato organiza subordinados internamente?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Ato limita direitos de condutor na via?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito A — poderes distintos", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Memorando sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Autuação sim" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei 9.784/99, art. 2",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 2",
+            "texto": "A Administração Pública obedecerá, dentre outros, aos princípios da legalidade, finalidade, motivação, razoabilidade, proporcionalidade, moralidade, ampla defesa, contraditório, segurança jurídica, interesse público e eficiência.",
+            "trechos_grifados": [
+              {
+                "inicio": 68,
+                "fim": 78,
+                "motivo": "princípios que vinculam autuação e organização interna",
+                "texto_grifado": "legalidade"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "HIERÁRQUICO = organiza agente | POLÍCIA = limita terceiro na via | memorando ≠ autuação.",
+            "destaques": ["HIERÁRQUICO", "POLÍCIA", "memorando"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.784/99 art. 2",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "Lei9784_art2",
+      "macete_visual": "HIERÁRQUICO = agente | POLÍCIA = terceiro",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Memorando interno confundido com poder de polícia sobre condutores",
+        "eixos_legais": ["Lei9784_art2", "Lei9784_art50"],
+        "isca_por_alternativa": {
+          "B": "iguala hierárquico e polícia por operarem em trânsito",
+          "C": "trata memorando de logística como restrição a usuários da via",
+          "D": "nega poder de polícia na autuação por velocidade ao condutor"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: memorando ≠ autuação",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — iguala hierárquico e polícia: institutos distintos com sujeitos diferentes.\nC — memorando como polícia: organiza agentes, não limita circulação de terceiros.\nD — autuação só hierárquica: multa limita direitos do condutor na via.\n\nNesta aula você separa organização interna de limitação a terceiros.",
+            "destaques": ["Gabarito A", "memorando", "autuação"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PODER HIERÁRQUICO: prerrogativa de organizar, dirigir e fiscalizar a atuação dos subordinados na estrutura administrativa.\n\nPODER DE POLÍCIA: limita direitos de particulares com fundamento legal em favor do interesse público — autuação em via pública.\n\nLEGALIDADE: princípio basilar da atuação administrativa — vincula memorando e autuação à lei.",
+            "destaques": ["PODER HIERÁRQUICO", "PODER DE POLÍCIA", "LEGALIDADE"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "MÉTODO: classificar memorando e autuação",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Memorando redistribui equipes internamente?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Autuação limita direitos do condutor na via?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito A — hierárquico + polícia",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — Av. Epitácio" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim — velocidade" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Poderes no caso STTP",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Ato", "Poder"],
+            "linhas": [
+              {
+                "faixa": "Memorando interno",
+                "classificacao": "Hierárquico — organiza agentes",
+                "destaque": true
+              },
+              {
+                "faixa": "Redistribuição de equipes",
+                "classificacao": "Direção interna — sem limitar terceiros"
+              },
+              {
+                "faixa": "Autuação por velocidade",
+                "classificacao": "Polícia — limita direitos do condutor"
+              },
+              {
+                "faixa": "Motivação da sanção",
+                "classificacao": "Exigência ao impor sanção — art. 50"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: memorando = polícia?",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a associação insinua ✗", "O que a lei distingue ✓"],
+            "linhas": [
+              [
+                "Memorando restringe circulação de usuários",
+                "Memorando organiza fiscalização interna dos agentes"
+              ],
+              [
+                "Autuação é ordem hierárquica ao condutor",
+                "Autuação limita direitos de terceiro com fundamento legal"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — termo_unico",
+                "Iguala poder hierárquico e poder de polícia por atuarem na mesma operação de trânsito"
+              ],
+              [
+                "C — regra_excecao",
+                "Exige lei autorizadora específica para memorando interno — trata organização logística como restrição a usuários"
+              ],
+              [
+                "D — termo_unico",
+                "Nega natureza de poder de polícia na autuação que limita direitos do condutor"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso STTP", "Classificação"],
+            "linhas": [
+              [
+                "Memorando concentra fiscalização na Av. Epitácio Pessoa",
+                "Poder hierárquico — organização interna"
+              ],
+              [
+                "Agente autua motorista por excesso de velocidade",
+                "Poder de polícia — limita direitos do condutor"
+              ],
+              [
+                "Associação confunde os dois atos",
+                "Refutado — sujeitos e efeitos distintos"
+              ],
+              ["Resultado", "Alternativa A — única correta"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Hierárquico × polícia × disciplinar",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Poder", "Alvo típico"],
+            "linhas": [
+              ["Hierárquico", "Subordinados — organização da atividade"],
+              ["Polícia", "Terceiros — limitação de direitos com lei"],
+              ["Disciplinar", "Servidores — sanção funcional interna"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei 9.784/99, art. 2 — princípios",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 2",
+            "texto": "A Administração Pública obedecerá, dentre outros, aos princípios da legalidade, finalidade, motivação, razoabilidade, proporcionalidade, moralidade, ampla defesa, contraditório, segurança jurídica, interesse público e eficiência.",
+            "trechos_grifados": [
+              {
+                "inicio": 68,
+                "fim": 78,
+                "motivo": "contraste — vincula memorando e autuação à lei",
+                "texto_grifado": "legalidade"
+              },
+              {
+                "inicio": 80,
+                "fim": 90,
+                "motivo": "fluxo — memorando deve perseguir fim público legítimo",
+                "texto_grifado": "finalidade"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Lei 9.784/99, art. 50, I — limitação de direitos",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 50, I",
+            "texto": "Os atos administrativos deverão ser motivados, com indicação dos fatos e dos fundamentos jurídicos, quando: I - neguem, limitem ou afetem direitos ou interesses;",
+            "trechos_grifados": [
+              {
+                "inicio": 112,
+                "fim": 160,
+                "motivo": "mapa — autuação ao condutor limita direitos",
+                "texto_grifado": "neguem, limitem ou afetem direitos ou interesses"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "HIERÁRQUICO = organiza agente | POLÍCIA = limita terceiro na via | memorando ≠ autuação.\n\nNear-transfer: se o superintendente suspendesse agente por desobedecer o memorando, seria poder disciplinar — não hierárquico sobre o condutor.",
+            "destaques": ["HIERÁRQUICO", "POLÍCIA", "near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.784/99 art. 2",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        },
+        {
+          "rotulo": "Lei 9.784/99 art. 50",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        }
+      ]
+    },
+    "tags": [
+      "poder_policia",
+      "poder_hierarquico",
+      "lei_9784",
+      "sttp"
+    ]
+  }
+]

@@ -1,0 +1,282 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CONTRAN_955_art_5",
+  "macete_visual": "Extensor = sem régua · placa = 2ª placa",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Extensor dispensa régua, mas não dispensa segunda placa nem autoriza exigir AET",
+    "eixos_legais": [
+      "CONTRAN_955_art_5",
+      "CONTRAN_955_art_4"
+    ],
+    "isca_por_alternativa": {
+      "A": "encobrimento das lanternas impõe régua e segunda placa em qualquer hipótese, sem exceção para extensor de caçamba",
+      "B": "carga indivisível além da caçamba exige Autorização Especial de Trânsito do DETRAN estadual",
+      "D": "fita refletiva vermelha à noite dispensa régua e segunda placa com extensor de caçamba"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: drywall sem régua na blitz",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — encobrimento das lanternas impõe régua e segunda placa em qualquer hipótese, sem exceção para extensor de caçamba.\nB — carga indivisível além da caçamba exige Autorização Especial de Trânsito do DETRAN-PB.\nD — fita refletiva vermelha à noite dispensa régua e segunda placa com extensor de caçamba.\n\nPegadinha: extensor dispensa régua, mas segunda placa permanece obrigatória quando a placa original estiver encoberta.",
+        "destaques": [
+          "Gabarito C",
+          "extensor",
+          "segunda placa"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "EXTENSOR DE CAÇAMBA: acessório que permite circulação com tampa aberta sem comprometer a sinalização traseira.\n\nRÉGUA DE SINALIZAÇÃO: acessório tipo para-choque traseiro com sinalização paralela à do veículo.\n\nAET: Autorização Especial de Trânsito — vedada para cargas externas em caminhonetes pela Res. 955/2022.",
+        "destaques": [
+          "EXTENSOR",
+          "RÉGUA",
+          "AET"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: cabe autuação?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Veículo possui extensor de caçamba?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Placa traseira está encoberta pela carga?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Sem régua — mas exige 2ª placa",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — caso da blitz"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — drywall cobre placa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Obrigações quando há encobrimento",
+      "secao": "mapa",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Encobrimento",
+          "Obrigação"
+        ],
+        "linhas": [
+          [
+            "Sinalização traseira encoberta — regra geral",
+            "Régua de sinalização"
+          ],
+          [
+            "Sinalização traseira + extensor de caçamba",
+            "Régua dispensada"
+          ],
+          [
+            "Placa traseira encoberta",
+            "Segunda placa de identificação"
+          ],
+          [
+            "Transporte disciplinado pela Res. 955",
+            "AET não exigida — concessão vedada"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: lanternas encobertas = sempre régua",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Crença ✗",
+          "Lei ✓"
+        ],
+        "linhas": [
+          [
+            "Qualquer encobrimento de lanternas exige régua",
+            "Extensor de caçamba dispensa a régua"
+          ],
+          [
+            "Carga além da caçamba precisa de AET",
+            "Res. 955 dispensa e veda AET para caminhonete"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Generaliza obrigatoriedade da régua — ignora dispensa do extensor"
+          ],
+          [
+            "B — termo_unico",
+            "Transforma faculdade em obrigação — AET é dispensada e vedada"
+          ],
+          [
+            "D — regra_excecao",
+            "Substitui requisitos legais por fita refletiva provisória"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do caso",
+          "Consequência"
+        ],
+        "linhas": [
+          [
+            "Caminhonete com extensor na blitz da STTP",
+            "Dispensa régua de sinalização"
+          ],
+          [
+            "Drywall encobre lanternas e placa traseira",
+            "Segunda placa ainda obrigatória"
+          ],
+          [
+            "Condutor pede AET ao DETRAN-PB",
+            "Transporte não exige e não admite AET"
+          ],
+          [
+            "Resultado",
+            "Alternativa C"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "AET × transporte externo",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Res. 955/2022, art. 4º, § 2º",
+            "Dispensa AET para cargas disciplinadas pela Resolução"
+          ],
+          [
+            "Res. 955/2022, art. 4º, § 3º",
+            "Veda concessão de AET a caminhonetes com carga externa"
+          ],
+          [
+            "Res. 955/2022, art. 11, II + CTB art. 230, IV",
+            "Autuação se faltar segunda placa obrigatória"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei1",
+      "titulo": "Art. 5º, § 5º — dispensa da régua",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 955/2022, art. 5º, § 5º",
+        "texto": "§ 5º Fica dispensado da utilização de régua de sinalização o veículo que possuir extensor de caçamba.",
+        "trechos_grifados": [
+          {
+            "inicio": 10,
+            "fim": 58,
+            "motivo": "contraste — exceção que dispensa régua no caso do extensor",
+            "texto_grifado": "dispensado da utilização de régua de sinalização"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 5º — segunda placa quando placa encoberta",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 955/2022, art. 5º",
+        "texto": "Art. 5º Nos casos em que o transporte de carga indivisível ou de bicicleta nas partes externas do veículo resultar no encobrimento, total ou parcial, quer seja da sinalização traseira do veículo, quer seja de sua placa traseira, será obrigatório o uso de régua de sinalização e, respectivamente, de segunda placa traseira de identificação fixada àquela régua ou à estrutura do veículo (Figura 2 do Anexo).",
+        "trechos_grifados": [
+          {
+            "inicio": 299,
+            "fim": 358,
+            "motivo": "caso — drywall encobre placa traseira na blitz da STTP",
+            "texto_grifado": "segunda placa traseira de identificação fixada àquela régua"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Extensor = sem régua.\nPlaca encoberta = 2ª placa.\nAET = vedada.\n\nNear-transfer: se a caminhonete não tiver extensor e só encobrir as lanternas, volta a obrigatoriedade da régua — o § 5º não se aplica.",
+        "destaques": [
+          "extensor",
+          "2ª placa",
+          "AET"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 955/2022",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 955, DE 28 DE MARÇO DE 2022.pdf"
+    },
+    {
+      "rotulo": "CTB art. 230",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

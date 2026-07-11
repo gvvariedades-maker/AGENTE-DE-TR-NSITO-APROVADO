@@ -1,0 +1,321 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_1_2",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "LGPD_art33_transferencia",
+    "enunciado": "A STTP de Campina Grande passou a replicar cópia do banco de autuações eletrônicas em servidor localizado nos Estados Unidos, contratado por economia e velocidade. O setor de TI sustenta que a contratação de operador privado dispensa análise das hipóteses de transferência internacional; o jurídico afirma que o consentimento genérico do cadastro de condutores autoriza a operação; o encarregado entende que política pública de trânsito torna automática qualquer transferência para cooperação tecnológica. À luz da Lei nº 13.709/2018 (LGPD), assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A contratação de nuvem no exterior dispensa as hipóteses do art. 33 quando o operador é privado — a STTP apenas fiscaliza o contrato de hospedagem.",
+      "B": "O consentimento genérico do cadastro de autuações equivale ao consentimento específico e em destaque para transferência internacional previsto no art. 33, VIII.",
+      "C": "Política pública de trânsito autoriza transferir dados para qualquer país sem publicidade quando houver acordo de cooperação tecnológica com o fornecedor.",
+      "D": "A transferência internacional só é permitida nas hipóteses do art. 33; consentimento genérico do cadastro não substitui o inciso VIII — política pública pode enquadrar-se no inciso VII, com publicidade nos termos do art. 23."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Hipóteses de transferência internacional de dados (LGPD, art. 33), consentimento específico para transferência (inciso VIII) e execução de política pública com publicidade (inciso VII e art. 23).",
+      "fundamento_legal": "LGPD, art. 33, caput: \"A transferência internacional de dados pessoais somente é permitida nos seguintes casos\". Inciso VIII: consentimento \"específico e em destaque para a transferência, com informação prévia sobre o caráter internacional\". Inciso VII: transferência \"necessária para a execução de política pública\", com publicidade nos termos do art. 23.",
+      "passo_a_passo": [
+        "1. Backup nos EUA é transferência internacional — exige hipótese do art. 33; operador privado e política pública não dispensam análise automática.",
+        "2. A erra por regra_excecao (trata operador privado como exceção às hipóteses do art. 33); B erra por termo_unico (equipara consentimento genérico do cadastro ao específico do inciso VIII); C erra por regra_excecao (usa política pública para transferir sem publicidade a qualquer país).",
+        "3. D está correta: art. 33 é taxativo; inciso VIII exige consentimento específico; inciso VII admite política pública com publicidade (art. 23)."
+      ],
+      "pegadinha": "A banca usa nuvem privada, cadastro genérico ou política pública para dispensar hipóteses do art. 33 — mas transferência internacional tem regime próprio e consentimento genérico não basta.",
+      "macete": "Transferência internacional = art. 33 taxativo. Genérico ≠ específico (VIII). Política pública = VII + publicidade (art. 23).",
+      "estudo_reverso": [
+        "LGPD art. 33, caput",
+        "LGPD art. 33, VIII",
+        "LGPD art. 33, VII",
+        "LGPD art. 23"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 50,
+      "fundamento_slug": "LGPD_art33_transferencia",
+      "macete_visual": "Art. 33 taxativo · genérico ≠ VIII · VII + publicidade",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Backup nos EUA exige hipótese do art. 33 — operador privado e cadastro genérico não dispensam. Política pública pode usar inciso VII, mas com publicidade.",
+            "destaques": ["internacional", "específico", "publicidade"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Transferência é lícita?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Dados replicados em servidor nos EUA?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Exige hipótese legal — não basta nuvem privada", "tipo": "resultado" }
+            ],
+            "arestas": [{ "de": "p1", "para": "r1", "rotulo": "Sim" }]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Genérico × específico",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              [
+                "Cadastro genérico autoriza transferência",
+                "Inciso VIII — consentimento específico e em destaque"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Art. 33 taxativo. Genérico ≠ VIII. Política pública = VII + publicidade.",
+            "destaques": ["taxativo", "específico", "publicidade"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 13.709/2018 (LGPD)",
+          "path": "conteúdo/legislação federal/lei-13709-lgpd.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "LGPD_art33_transferencia",
+      "macete_visual": "Art. 33 taxativo · genérico ≠ VIII · VII + publicidade",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Nuvem privada, cadastro genérico ou política pública induzem dispensar hipóteses do art. 33",
+        "eixos_legais": ["LGPD_art33", "LGPD_art33_VIII", "LGPD_art33_VII"],
+        "isca_por_alternativa": {
+          "A": "operador privado dispensa hipóteses de transferência internacional",
+          "B": "consentimento genérico do cadastro substitui o específico do inciso VIII",
+          "C": "política pública transfere para qualquer país sem publicidade"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: art. 33 é taxativo",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — operador privado dispensa análise legal: trata contratação como exceção às hipóteses de transferência.\nB — cadastro genérico: confunde com consentimento específico e em destaque.\nC — política pública sem publicidade: ignora dever de dar publicidade na hipótese administrativa.\n\nA isca é backup nos EUA empurrar nuvem, cadastro ou política pública para pular a taxatividade da transferência internacional.",
+            "destaques": ["Gabarito D", "taxativo", "específico"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos LGPD",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "TRANSFERÊNCIA INTERNACIONAL: envio ou cópia de dados pessoais para país estrangeiro — regime do art. 33.\n\nCONSENTIMENTO ESPECÍFICO: autorização destacada para finalidade concreta — inciso VIII do art. 33.\n\nPOLÍTICA PÚBLICA: hipótese do inciso VII — exige publicidade nos termos do art. 23.",
+            "destaques": ["INTERNACIONAL", "ESPECÍFICO", "POLÍTICA PÚBLICA"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: backup nos EUA é lícito?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "STTP replica autuações em servidor nos Estados Unidos?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Cabe em hipótese legal de transferência internacional?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito D — VII com publicidade ou VIII específico",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Hipóteses relevantes do art. 33",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Hipótese", "No caso da STTP"],
+            "linhas": [
+              ["Inciso VII — política pública", "Possível para trânsito, com publicidade"],
+              ["Inciso VIII — consentimento específico", "Cadastro genérico não substitui"],
+              ["Operador privado no exterior", "Não dispensa análise do art. 33"],
+              ["País com proteção adequada (I)", "EUA exigem avaliação — não automático"]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: genérico × específico",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Cadastro genérico autoriza backup nos EUA",
+                "Inciso VIII — consentimento específico e em destaque"
+              ],
+              [
+                "Política pública dispensa publicidade",
+                "Inciso VII — publicidade nos termos do art. 23"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Trata operador privado como exceção às hipóteses taxativas do art. 33"
+              ],
+              [
+                "B — termo_unico",
+                "Equipara consentimento genérico do cadastro ao específico do inciso VIII"
+              ],
+              [
+                "C — regra_excecao",
+                "Usa política pública para transferir sem publicidade a qualquer país"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o backup da STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Enquadramento"],
+            "linhas": [
+              ["Réplica do banco em servidor nos EUA", "Transferência internacional — art. 33"],
+              ["TI alega dispensa por operador privado", "Contratação não substitui hipótese legal"],
+              ["Jurídico invoca cadastro genérico", "Não equivale ao inciso VIII"],
+              ["Resultado", "Gabarito D — VII com publicidade ou VIII específico"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Taxatividade e publicidade",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Mensagem"],
+            "linhas": [
+              ["Art. 33, caput", "Transferência internacional só nas hipóteses listadas"],
+              ["Art. 33, VIII", "Consentimento específico, em destaque, com aviso internacional"],
+              ["Art. 33, VII + art. 23", "Política pública com publicidade — não transferência automática"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 33 — hipóteses de transferência",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LGPD, art. 33, caput e inciso VIII",
+            "texto": "Art. 33. A transferência internacional de dados pessoais somente é permitida nos seguintes casos: VIII - quando o titular tiver fornecido o seu consentimento específico e em destaque para a transferência, com informação prévia sobre o caráter internacional da operação, distinguindo claramente esta de outras finalidades;",
+            "trechos_grifados": [
+              {
+                "inicio": 57,
+                "fim": 66,
+                "motivo": "mapa — regime taxativo da transferência",
+                "texto_grifado": "somente é"
+              },
+              {
+                "inicio": 144,
+                "fim": 182,
+                "motivo": "contraste — cadastro genérico não basta (isca B)",
+                "texto_grifado": "consentimento específico e em destaque"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 33, VII — política pública",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LGPD, art. 33, VII",
+            "texto": "VII - quando a transferência for necessária para a execução de política pública ou atribuição legal do serviço público, sendo dada publicidade nos termos do inciso I do caput do art. 23 desta Lei;",
+            "trechos_grifados": [
+              {
+                "inicio": 51,
+                "fim": 79,
+                "motivo": "caso — autuações vinculadas a política de trânsito",
+                "texto_grifado": "execução de política pública"
+              },
+              {
+                "inicio": 131,
+                "fim": 142,
+                "motivo": "distratores — publicidade obrigatória (isca C)",
+                "texto_grifado": "publicidade"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Transferência internacional = art. 33 taxativo. Genérico ≠ VIII. Política pública = VII + publicidade (art. 23).\n\nNear-transfer: backup em datacenter em São Paulo, mas empresa controladora sediada no exterior — ainda pode configurar transferência internacional se o acesso ocorrer fora do Brasil.",
+            "destaques": ["taxativo", "Near-transfer", "publicidade"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 13.709/2018 (LGPD)",
+          "path": "conteúdo/legislação federal/lei-13709-lgpd.html"
+        }
+      ]
+    },
+    "tags": [
+      "lgpd",
+      "transferencia_internacional",
+      "art33",
+      "consentimento",
+      "politicas_publicas",
+      "sttp"
+    ]
+  }
+]

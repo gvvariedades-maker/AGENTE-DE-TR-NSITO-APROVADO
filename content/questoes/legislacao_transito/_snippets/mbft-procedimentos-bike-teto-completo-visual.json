@@ -1,0 +1,278 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CONTRAN_procedimentos_bike_teto",
+  "macete_visual": "Bike teto = sem 50 cm · MBFT NÃO autuar",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Bicicleta no teto acima de 50 cm não autoriza AIT pelo art. 235 com base no limite do bagageiro",
+    "eixos_legais": [
+      "CONTRAN_955_art_8_2",
+      "CONTRAN_1003_mbft_694_73"
+    ],
+    "isca_por_alternativa": {
+      "A": "65 cm ultrapassam limite de 50 cm do MBFT para carga no teto, independentemente de bicicleta",
+      "B": "deve autuar pelo art. 231, IV, alínea a, por dimensões superiores aos limites do CONTRAN",
+      "D": "deve exigir autorização prévia do DETRAN-PB para suporte no teto antes de autuar"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: 65 cm no teto da blitz",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — 65 cm ultrapassam limite de 50 cm do MBFT para carga no teto, independentemente de bicicleta.\nB — deve autuar por dimensões superiores aos limites do CONTRAN em vez de carga externa.\nD — deve exigir autorização prévia do DETRAN-PB para suporte no teto antes de autuar.\n\nPegadinha: bicicleta no teto não se submete ao teto de 50 cm do bagageiro — MBFT manda não autuar nessa hipótese.",
+        "destaques": [
+          "Gabarito C",
+          "bicicleta",
+          "50 cm"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "QUANDO NÃO AUTUAR: coluna da ficha MBFT que lista hipóteses em que o agente não deve lavrar o AIT naquele enquadramento.\n\nENQUADRAMENTO 694-73: código da ficha MBFT para conduzir carga nas partes externas do veículo — art. 235 do CTB.\n\nBICICLETA NO TETO: transporte em suporte apropriado sobre o teto — regra especial na Res. 955/2022.",
+        "destaques": [
+          "QUANDO NÃO AUTUAR",
+          "694-73",
+          "BICICLETA NO TETO"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: cabe autuação pelo art. 235?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Carga no teto é bicicleta em suporte apropriado?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Motivo da autuação é só ultrapassar 50 cm de altura?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Não autuar — MBFT + Res. 955",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — caso da STTP"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — 65 cm no guidom"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Teto: carga geral × bicicleta",
+      "secao": "mapa",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Tipo no teto",
+          "Limite 50 cm"
+        ],
+        "linhas": [
+          [
+            "Carga ou bagageiro — regra geral Res. 955",
+            "Aplica — altura máxima 50 cm"
+          ],
+          [
+            "Bicicleta em suporte apropriado — art. 8 §2",
+            "Não aplica — dispensa limite do art. 6 §2"
+          ],
+          [
+            "Ficha MBFT 694-73 — Quando NÃO Autuar item 3",
+            "Não autuar se só passou de 50 cm no teto"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: passou de 50 cm = art. 235",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Crença ✗",
+          "Lei ✓"
+        ],
+        "linhas": [
+          [
+            "Qualquer coisa acima de 50 cm no teto é infração",
+            "Bicicleta no teto: exceção expressa na Res. 955"
+          ],
+          [
+            "MBFT manda autuar pelo enquadramento 694-73",
+            "MBFT prevê não autuar bicicleta no teto por altura"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Generaliza limite de 50 cm — ignora exceção da bicicleta no teto"
+          ],
+          [
+            "B — gravidade",
+            "Troca art. 235 por art. 231, IV — carga superdimensionada indevida"
+          ],
+          [
+            "D — competencia_snt",
+            "Inventa autorização do DETRAN — Res. 955 não exige anuência estadual"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do caso",
+          "Consequência"
+        ],
+        "linhas": [
+          [
+            "Utilitário com bicicleta no suporte do teto — 65 cm",
+            "Altura acima de 50 cm, mas é bicicleta"
+          ],
+          [
+            "Supervisor manda autuar pelo art. 235",
+            "Fundamento errado — MBFT manda não autuar"
+          ],
+          [
+            "Res. 955/2022 art. 8 §2",
+            "Dispensa limite de 50 cm para bike no teto"
+          ],
+          [
+            "Resultado",
+            "Alternativa C"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "MBFT × Res. 955 no procedimento",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "MBFT ficha 694-73 — Quando NÃO Autuar, item 3",
+            "Veda autuação por altura quando é bike no teto"
+          ],
+          [
+            "Res. 955/2022, art. 8º, § 2º",
+            "Dispensa altura do art. 6º, § 2º, para bicicleta no teto"
+          ],
+          [
+            "Res. 955/2022, art. 6º, § 2º",
+            "Regra geral: 50 cm para carga no bagageiro — não alcança bike no teto"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei1",
+      "titulo": "Res. 955 — art. 8º, § 2º (exceção da bicicleta)",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 955/2022, art. 8º, § 2º",
+        "texto": "§ 2º Na hipótese da bicicleta ser transportada sobre o teto, não se aplica a altura especificada no § 2º do art. 6º.",
+        "trechos_grifados": [
+          {
+            "inicio": 61,
+            "fim": 115,
+            "motivo": "contraste — exceção que afasta o limite de 50 cm no caso do teto",
+            "texto_grifado": "não se aplica a altura especificada no § 2º do art. 6º"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "MBFT — Quando NÃO Autuar (ficha 694-73)",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "MBFT (Res. 985/2022, alterada pela Res. 1.003/2023), ficha 694-73, Quando NÃO Autuar, item 3",
+        "texto": "Veículo transportando bicicletas acondicionadas em transporte apropriado fixado ao veículo sobre o teto, em que a altura ultrapassa 50cm.",
+        "trechos_grifados": [
+          {
+            "inicio": 22,
+            "fim": 103,
+            "motivo": "caso — utilitário com bicicleta no suporte do teto na blitz da STTP",
+            "texto_grifado": "bicicletas acondicionadas em transporte apropriado fixado ao veículo sobre o teto"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Bike no teto = sem teto de 50 cm.\nMBFT: NÃO autuar por altura.\nRes. 955 art. 8 §2.\n\nNear-transfer: se fosse caixa de ferramentas de 65 cm no bagageiro do teto, volta o limite de 50 cm e cabe autuação — a exceção é só para bicicleta no teto.",
+        "destaques": [
+          "bike",
+          "50 cm",
+          "bagageiro"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 955/2022",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 955, DE 28 DE MARÇO DE 2022.pdf"
+    },
+    {
+      "rotulo": "Res. CONTRAN 1.003/2023",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.003, DE 21 DE DEZEMBRO DE 2023.pdf"
+    }
+  ]
+}

@@ -1,0 +1,357 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_1012_rsv",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_1012_art_12A_4",
+    "enunciado": "Agente da STTP em Campina Grande/PB pretende autuar condutor estacionado em vaga reservada a pessoa com deficiência, por ausência de credencial visível no painel do veículo. O condutor apresenta credencial digital no aplicativo oficial do Governo Federal e comprova, por consulta on-line da Senatran, que a credencial está vinculada à placa do automóvel — sem cartão físico ou impressão no para-brisa. O supervisor questiona se subsiste a autuação pelo art. 181, XX, do CTB. Considerando a Resolução CONTRAN nº 1.012/2024 (que altera a Res. 965/2022), assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Subsiste a autuação, pois a credencial deve estar sempre exposta no painel com a frente voltada para cima, nos termos do art. 14, III, da Res. 965/2022, independentemente do formato digital.",
+      "B": "Subsiste a autuação, pois a credencial digital válida em Campina Grande/PB deve ser expedida pelo órgão executivo de trânsito municipal — a Senatran não autoriza o estacionamento na vaga reservada.",
+      "C": "Não subsiste a autuação: com credencial digital vinculada ao veículo, dispensa-se a exibição no painel, desde que a fiscalização confirme a vinculação pela consulta on-line da Senatran.",
+      "D": "Não subsiste a autuação apenas se o condutor apresentar captura de tela do celular, dispensando consulta on-line e vinculação da credencial ao veículo."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Credencial digital em vaga reservada — art. 12-A §4 (dispensa painel se vinculada) × art. 12-A §3 (consulta on-line Senatran) — Res. 965/2022 alterada pela Res. 1.012/2024.",
+      "fundamento_legal": "Res. CONTRAN 1.012/2024, art. 2º (altera Res. 965/2022): art. 12-A, § 2º: para uso da versão digital, o beneficiário deve vincular a credencial a um único veículo. § 3º: para fins de fiscalização, o órgão máximo executivo de trânsito da União disponibilizará consulta on-line ao veículo vinculado à credencial. § 4º: no caso do § 2º, fica dispensada a impressão e a utilização da credencial no painel do veículo. § 5º: sem vinculação, deve usar versão impressa no painel. Art. 14, III (NR): credencial no painel com frente para cima — credencial física ou versão impressa da digital. CTB, art. 181, XX: estacionar em vaga reservada sem credencial que comprove a condição — gravíssima.",
+      "passo_a_passo": [
+        "1. Caso: vaga PcD, sem credencial no painel — condutor mostra app oficial e consulta Senatran confirma vinculação à placa.",
+        "2. A erra por regra_excecao (generaliza art. 14, III, e ignora dispensa do § 4º do art. 12-A quando há vinculação); B erra por competencia_snt (atribui expedição digital ao município — art. 12-A, caput, reserva à Senatran); D erra por termo_unico (aceita captura de tela sem consulta on-line nem vinculação — contraria §§ 2º e 3º).",
+        "3. C correta: art. 12-A, § 4º (dispensa painel com vinculação) + art. 12-A, § 3º (fiscalização por consulta on-line da Senatran)."
+      ],
+      "pegadinha": "A IDECAN induz a autuar sempre que não houver cartão no para-brisa — mas o § 4º do art. 12-A dispensa o painel quando a credencial digital está vinculada ao veículo e a fiscalização usa a consulta on-line.",
+      "macete": "Digital + vinculada + consulta Senatran = sem painel · Sem vínculo = impressão no painel.",
+      "estudo_reverso": [
+        "Res. CONTRAN 1.012/2024 art. 2",
+        "Res. CONTRAN 965/2022 art. 12-A",
+        "CTB art. 181, XX"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Credencial digital vinculada dispensa exibição no painel — fiscalização pela consulta Senatran",
+      "eixos_legais": [
+        "CONTRAN_1012_art_12A_4",
+        "CONTRAN_1012_art_12A_3"
+      ],
+      "isca_por_alternativa": {
+        "A": "credencial deve estar sempre exposta no painel com frente para cima, independentemente do formato digital",
+        "B": "credencial digital válida deve ser expedida pelo órgão executivo de trânsito municipal de Campina Grande",
+        "D": "captura de tela do celular dispensa consulta on-line e vinculação da credencial ao veículo"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "competencia_snt",
+        "termo_unico"
+      ]
+    },
+    "tags": [
+      "resolucao_1012",
+      "resolucao_965",
+      "credencial_digital",
+      "vaga_pcd",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_1012_art_12A_4",
+      "macete_visual": "Vinculada + consulta = sem painel",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C: credencial digital vinculada dispensa painel — fiscalização pela consulta on-line da Senatran.",
+            "destaques": ["Gabarito C", "vinculada", "consulta on-line"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Painel obrigatório × dispensa digital",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Sem cartão no para-brisa = sempre autuação",
+                "Digital vinculada dispensa exibição no painel"
+              ],
+              [
+                "App no celular basta sem consulta",
+                "Fiscalização confirma vinculação on-line"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Digital + vinculada + consulta = sem painel.\nSem vínculo = impressão no painel.",
+            "destaques": ["vinculada", "consulta", "painel"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.012/2024",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.012, DE 14 DE OUTUBRO DE 2024.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CONTRAN_1012_art_12A_4",
+      "macete_visual": "Vinculada + consulta = sem painel",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Credencial digital vinculada dispensa exibição no painel — fiscalização pela consulta Senatran",
+        "eixos_legais": [
+          "CONTRAN_1012_art_12A_4",
+          "CONTRAN_1012_art_12A_3"
+        ],
+        "isca_por_alternativa": {
+          "A": "credencial deve estar sempre exposta no painel com frente para cima, independentemente do formato digital",
+          "B": "credencial digital válida deve ser expedida pelo órgão executivo de trânsito municipal de Campina Grande",
+          "D": "captura de tela do celular dispensa consulta on-line e vinculação da credencial ao veículo"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: vaga PcD sem cartão no painel",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — credencial deve estar sempre exposta no painel com frente para cima, independentemente do formato digital.\nB — credencial digital válida deve ser expedida pelo órgão executivo de trânsito municipal de Campina Grande.\nD — captura de tela do celular dispensa consulta on-line e vinculação da credencial ao veículo.\n\nPegadinha: digital vinculada dispensa painel — fiscalização pela consulta on-line da Senatran.",
+            "destaques": ["Gabarito C", "vinculada", "consulta on-line"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CREDENCIAL DIGITAL: documento expedido pela Senatran em app ou portal oficial — art. 12-A da Res. 965/2022 (alterada pela Res. 1.012/2024).\n\nVINCULAÇÃO AO VEÍCULO: credencial digital atrelada a uma única placa — requisito do § 2º do art. 12-A.\n\nCONSULTA ON-LINE: ferramenta da Senatran para o agente confirmar a vinculação na fiscalização — § 3º do art. 12-A.",
+            "destaques": ["DIGITAL", "VINCULAÇÃO", "CONSULTA ON-LINE"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: cabe autuação na vaga PcD?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Credencial digital vinculada à placa do veículo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Agente confirmou vinculação por consulta on-line da Senatran?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Sem autuação — dispensa painel",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — caso do app oficial" },
+              { "de": "p2", "para": "r1", "rotulo": "Consulta confirmou placa" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Quando exige credencial no painel",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Formato / situação", "Painel do veículo"],
+            "linhas": [
+              [
+                "Credencial física — art. 12",
+                "Obrigatório no painel — frente para cima"
+              ],
+              [
+                "Digital vinculada — art. 12-A §4",
+                "Dispensado"
+              ],
+              [
+                "Digital sem vinculação — art. 12-A §5",
+                "Versão impressa obrigatória no painel"
+              ],
+              [
+                "Fiscalização — art. 12-A §3",
+                "Consulta on-line Senatran"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: sem cartão no para-brisa = autuação",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Ausência no painel sempre configura art. 181, XX",
+                "Digital vinculada dispensa exibição no painel"
+              ],
+              [
+                "App no celular substitui consulta oficial",
+                "Agente deve confirmar vinculação on-line"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Generaliza obrigatoriedade do painel — ignora dispensa do § 4º do art. 12-A"
+              ],
+              [
+                "B — competencia_snt",
+                "Atribui expedição digital ao município — art. 12-A reserva à Senatran"
+              ],
+              [
+                "D — termo_unico",
+                "Aceita captura de tela sem consulta on-line nem vinculação ao veículo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "Vaga reservada PcD em Campina Grande — sem cartão no painel",
+                "Agente pretende autuar pelo art. 181, XX"
+              ],
+              [
+                "Condutor apresenta credencial digital no app oficial",
+                "Formato previsto no art. 12-A"
+              ],
+              [
+                "Consulta Senatran confirma vinculação à placa",
+                "§ 3º e § 4º do art. 12-A autorizam dispensa do painel"
+              ],
+              [
+                "Resultado",
+                "Alternativa C"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Competência: física × digital",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              [
+                "Res. 965/2022, art. 12 (física)",
+                "Expedição pelo órgão executivo municipal"
+              ],
+              [
+                "Res. 965/2022, art. 12-A (digital)",
+                "Expedição pela Senatran — órgão máximo executivo federal"
+              ],
+              [
+                "Res. 1.012/2024",
+                "Institui credencial digital e altera fiscalização"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 12-A, § 4º — dispensa do painel",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 965/2022, art. 12-A, § 4º (alterado pela Res. 1.012/2024)",
+            "texto": "§ 4º No caso do § 2º, fica dispensada a impressão e a utilização da credencial no painel do veículo.",
+            "trechos_grifados": [
+              {
+                "inicio": 27,
+                "fim": 99,
+                "motivo": "contraste — exceção que dispensa cartão no para-brisa do caso",
+                "texto_grifado": "dispensada a impressão e a utilização da credencial no painel do veículo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 12-A, § 3º — consulta on-line",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 965/2022, art. 12-A, § 3º (alterado pela Res. 1.012/2024)",
+            "texto": "§ 3º Para fins de fiscalização, o órgão máximo executivo de trânsito da União disponibilizará consulta on-line ao veículo vinculado à credencial.",
+            "trechos_grifados": [
+              {
+                "inicio": 94,
+                "fim": 144,
+                "motivo": "caso — agente da STTP confirmou vinculação pela consulta Senatran",
+                "texto_grifado": "consulta on-line ao veículo vinculado à credencial"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Digital + vinculada + consulta = sem painel.\nSem vínculo = impressão no painel.\n\nNear-transfer: se o condutor tiver credencial digital sem vincular ao veículo, volta a obrigatoriedade da versão impressa no painel — regra do § 5º do art. 12-A.",
+            "destaques": ["vinculada", "consulta", "§ 5º"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.012/2024",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.012, DE 14 DE OUTUBRO DE 2024.pdf"
+        },
+        {
+          "rotulo": "CTB art. 181, XX",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,282 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CONTRAN_970_art_7",
+  "macete_visual": "Deslocamento = âmbar OFF · guincho = exceção",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Guincho pode acionar âmbar no deslocamento — exceção do art. 7º, parágrafo único, ao inciso III do art. 6º",
+    "eixos_legais": [
+      "CONTRAN_970_art_7",
+      "CONTRAN_970_art_6_III"
+    ],
+    "isca_por_alternativa": {
+      "A": "veda acionamento da lanterna amarelo-âmbar durante qualquer deslocamento do prestador de serviço",
+      "B": "lanterna só pode ser acionada parado em efetiva operação no local da remoção",
+      "D": "autorização da lanterna amarelo-âmbar compete ao CONTRAN e não ao DETRAN-PB"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: âmbar ligado em movimento",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — veda acionamento da lanterna amarelo-âmbar durante qualquer deslocamento do prestador de serviço.\nB — lanterna só pode ser acionada parada em efetiva operação no local da remoção na Av. Epitácio Pessoa.\nD — autorização da lanterna amarelo-âmbar compete ao CONTRAN, não ao DETRAN-PB.\n\nPegadinha: guincho municipal está na exceção do parágrafo único — pode acionar âmbar no deslocamento para a remoção.",
+        "destaques": [
+          "Gabarito C",
+          "guincho",
+          "deslocamento"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "LANTERNA AMARELO-ÂMBAR: luz rotativa ou intermitente de prestador de serviço de utilidade pública — art. 6º da Res. 970/2022.\n\nDESLOCAMENTO: trânsito até o local do serviço — regra geral proíbe acionar a luz.\n\nGUINCHO: veículo do inciso III do §1º do art. 6º — exceção expressa no parágrafo único do art. 7º.",
+        "destaques": [
+          "AMARELO-ÂMBAR",
+          "DESLOCAMENTO",
+          "GUINCHO"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: cabe autuação?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Veículo é guincho da lista de exceções do parágrafo único?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Lanterna amarelo-âmbar acionada no deslocamento para remoção?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Uso lícito — sem autuação",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — guincho municipal"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Exceção do parágrafo único"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Quem aciona âmbar no deslocamento",
+      "secao": "mapa",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Veículo / serviço",
+          "Âmbar em deslocamento"
+        ],
+        "linhas": [
+          [
+            "Regra geral — art. 7º, parágrafo único",
+            "Proibido"
+          ],
+          [
+            "Guincho — art. 6º, §1º, III",
+            "Permitido — caso da STTP"
+          ],
+          [
+            "Escolta de carga superdimensionada — V",
+            "Permitido"
+          ],
+          [
+            "Recolhimento de lixo — VI",
+            "Permitido"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: sempre autuar em movimento",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Crença ✗",
+          "Lei ✓"
+        ],
+        "linhas": [
+          [
+            "Âmbar ligado em movimento = art. 169",
+            "Guincho exceptuado pelo parágrafo único do art. 7º"
+          ],
+          [
+            "Só vale parado no local da pane",
+            "Deslocamento para remoção integra a exceção do inciso III"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Generaliza vedação do parágrafo único — ignora exceção do guincho"
+          ],
+          [
+            "B — termo_unico",
+            "Restringe uso à parada no local — deslocamento do guincho é exceptuado"
+          ],
+          [
+            "D — competencia_snt",
+            "Atribui autorização ao CONTRAN — §2º do art. 6º reserva ao DETRAN estadual"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do caso",
+          "Consequência"
+        ],
+        "linhas": [
+          [
+            "Guincho municipal da STTP em Campina Grande",
+            "Prestador de serviço de utilidade pública"
+          ],
+          [
+            "Lanterna amarelo-âmbar ligada na Av. Epitácio Pessoa",
+            "Deslocamento para remoção de veículo com pane"
+          ],
+          [
+            "Enquadramento no inciso III do §1º do art. 6º",
+            "Exceção do parágrafo único do art. 7º"
+          ],
+          [
+            "Resultado",
+            "Alternativa C"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Resolução × consequência no CTB",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Res. 970/2022, art. 6º, §1º, III",
+            "Define guincho como prestador exceptuado"
+          ],
+          [
+            "Res. 970/2022, art. 7º, parágrafo único",
+            "Proíbe âmbar no deslocamento, salvo III, V e VI"
+          ],
+          [
+            "Res. 970/2022, art. 15, I, b + CTB art. 169",
+            "Só se acionamento fora das hipóteses legais"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei1",
+      "titulo": "Art. 7º, parágrafo único — vedação e exceção",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 970/2022, art. 7º, parágrafo único",
+        "texto": "Parágrafo único. Fica proibido o acionamento ou energização do dispositivo luminoso durante o deslocamento do veículo, exceto nos casos previstos nos incisos III, V e VI do § 1º do art. 6º.",
+        "trechos_grifados": [
+          {
+            "inicio": 119,
+            "fim": 169,
+            "motivo": "contraste — exceção que legitima o guincho em movimento",
+            "texto_grifado": "exceto nos casos previstos nos incisos III, V e VI"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 6º, §1º, III — guinchos",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 970/2022, art. 6º, §1º, III",
+        "texto": "III - os guindastes, guinchos ou plataformas de socorro veicular, destinados a remoção de veículos com pane mecânica, elétrica, acidentados ou recolhidos por órgãos de trânsito;",
+        "trechos_grifados": [
+          {
+            "inicio": 21,
+            "fim": 64,
+            "motivo": "caso — guincho municipal da STTP em deslocamento para remoção",
+            "texto_grifado": "guinchos ou plataformas de socorro veicular"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Deslocamento = luz âmbar desligada.\nExceto: guincho, escolta, lixo.\n\nNear-transfer: se a banca trocar o guincho por caminhão de manutenção de redes elétricas em deslocamento, volta a vedação do parágrafo único — só III, V e VI escapam.",
+        "destaques": [
+          "guincho",
+          "escolta",
+          "lixo"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 970/2022",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 970, DE 24 DE JUNHO DE 2022.pdf"
+    },
+    {
+      "rotulo": "CTB art. 169",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

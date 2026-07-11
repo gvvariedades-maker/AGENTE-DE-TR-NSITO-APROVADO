@@ -1,0 +1,201 @@
+{
+  "versao": 2,
+  "arquetipo": "tabela_gradacao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 180,
+  "fundamento_slug": "info_atalhos_Win_E_D_L",
+  "macete_visual": "Win+E=Explorador | Win+D=desktop | Win+L=Lock",
+  "meta": {
+    "padrao_familia": "D_gradacao",
+    "pegadinha_em_uma_frase": "Colega troca Win+E (Explorador) por Win+D (mostrar área de trabalho)",
+    "eixos_legais": [
+      "info_atalho_Win_E_explorer",
+      "info_atalho_Win_D_desktop"
+    ],
+    "eixos_mecanismo": [
+      "numero_vizinho",
+      "termo_unico"
+    ],
+    "isca_por_alternativa": {
+      "A": "troca Win+D por Win+E — vizinho na tecla Windows",
+      "B": "iguala Win+E e Win+D no Explorador — manual lista funções distintas",
+      "D": "atribui Explorador protegido ao Win+L"
+    },
+    "referencia_lote": "content/questoes/informatica/lote-007.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: Win+D não abre pastas",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C (Win+E abre Explorador).\n\nA — troca Win+D por Explorador: Win+D só mostra a área de trabalho.\nB — iguala Win+E e Win+D no Explorador: manual lista funções distintas.\nD — atribui Explorador ao Win+L: Win+L bloqueia a estação.\n\nColega orientou Win+D para achar Autuacoes_2026 sem mouse.",
+        "destaques": [
+          "Win+E",
+          "Win+D",
+          "Autuacoes_2026"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Antes de memorizar: 3 atalhos Win",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Explorador de Arquivos = janela de pastas e arquivos. Área de trabalho = tela com ícones (desktop). Bloquear estação = exige senha para voltar — Win+L.",
+        "destaques": [
+          "Explorador",
+          "Área de trabalho",
+          "Win+L"
+        ]
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Mapa Win — decore os pares",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Atalho",
+          "Função"
+        ],
+        "linhas": [
+          {
+            "faixa": "Win+E",
+            "classificacao": "Abre Explorador de Arquivos",
+            "destaque": true
+          },
+          {
+            "faixa": "Win+D",
+            "classificacao": "Mostra/oculta área de trabalho"
+          },
+          {
+            "faixa": "Win+L",
+            "classificacao": "Bloqueia a estação (Lock)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: Win+D abre pastas",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o colega diz ✗",
+          "O que o Windows faz ✓"
+        ],
+        "linhas": [
+          [
+            "Win+D abre as pastas do computador",
+            "Win+E abre Explorador; Win+D mostra/oculta desktop"
+          ],
+          [
+            "Win+D e Win+E são o mesmo programa",
+            "Funções distintas — manual STTP lista separado"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — numero_vizinho",
+            "Troca Win+D por Win+E — vizinhos na tecla Windows"
+          ],
+          [
+            "B — termo_unico",
+            "Iguala Win+E e Win+D no Explorador — manual lista funções distintas"
+          ],
+          [
+            "D — termo_unico",
+            "Atribui Explorador ao Win+L — Win+L bloqueia, não abre pastas"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Caso STTP — Autuacoes_2026",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do enunciado",
+          "Resultado"
+        ],
+        "linhas": [
+          [
+            "Localizar pasta sem mouse",
+            "Atalho correto: Win+E (Explorador)"
+          ],
+          [
+            "Colega indica Win+D",
+            "Pegadinha — Win+D = desktop, não Explorador"
+          ],
+          [
+            "Manual cita Win+E, Win+D e Win+L",
+            "Gabarito C — Win+E abre Explorador"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Referência — atalhos Win",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Anexo I — Informática, itens 2.1 e 2.3",
+        "texto": "No Windows, Win+E abre o Explorador de Arquivos; Win+D mostra ou oculta a área de trabalho; Win+L bloqueia a estação de trabalho.",
+        "trechos_grifados": [
+          {
+            "inicio": 12,
+            "fim": 47,
+            "motivo": "gradacao — Win+E abre Explorador (gabarito C)",
+            "texto_grifado": "Win+E abre o Explorador de Arquivos"
+          },
+          {
+            "inicio": 49,
+            "fim": 90,
+            "motivo": "contraste — colega confundiu Win+D com Explorador",
+            "texto_grifado": "Win+D mostra ou oculta a área de trabalho"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Win+E = Explorador | Win+D = Desktop | Win+L = Lock.\n\nNear-transfer: precisa esconder janelas e ver ícones do desktop — Win+D, não Win+E.",
+        "destaques": [
+          "Win+E",
+          "Win+D",
+          "desktop"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Anexo I — Informática, itens 2.1 e 2.3",
+      "path": "conteúdo/edital/"
+    }
+  ]
+}

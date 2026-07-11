@@ -1,0 +1,356 @@
+[
+  {
+    "disciplina": "direito_administrativo",
+    "topico": "dir_adm_1_4",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CF_art_37",
+    "enunciado": "Um condutor autuado pela STTP em Campina Grande alega, em defesa administrativa, que a fiscalização de trânsito constitui relação de consumo e que a penalidade deveria obedecer exclusivamente ao Código de Defesa do Consumidor, com autonomia negocial privada, dispensando motivação formal e contraditório administrativo. A Procuradoria municipal examina o regime jurídico aplicável à autuação. Assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O condutor tem razão: a multa integra relação consumerista com o município, prevalecendo o CDC sobre a motivação exigida aos atos que limitam direitos na Lei nº 9.784/1999.",
+      "B": "A STTP pratica ato unilateral no regime jurídico-administrativo, vinculada aos princípios constitucionais da Administração Pública e ao processo da Lei nº 9.784/1999, sem se confundir com contrato civil ou relação de consumo.",
+      "C": "O agente pode transacionar a penalidade com o condutor como cláusula penal contratual privada, dispensando motivação formal por se tratar de convenção entre particulares.",
+      "D": "A autuação prescinde de fundamentação quando o município presta serviço de trânsito, valendo analogia ao inadimplemento contratual entre particulares sem contraditório administrativo."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Regime jurídico-administrativo da autuação de trânsito: ato unilateral vinculado aos princípios do art. 37 da CF/88 (legalidade, impessoalidade, eficiência) e ao processo administrativo (Lei 9.784/99, arts. 2 e 50, I) — afastando redução a relação de consumo ou contrato civil.",
+      "fundamento_legal": "CF/88, art. 37, caput: \"A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência e, também, ao seguinte:\" Lei 9.784/99, art. 2: \"A Administração Pública obedecerá, dentre outros, aos princípios da legalidade, finalidade, motivação, razoabilidade, proporcionalidade, moralidade, ampla defesa, contraditório, segurança jurídica, interesse público e eficiência.\" Art. 50, I: \"Os atos administrativos deverão ser motivados, com indicação dos fatos e dos fundamentos jurídicos, quando: I - neguem, limitem ou afetem direitos ou interesses;\"",
+      "passo_a_passo": [
+        "1. Autuação limita direitos do condutor por poder público — regime jurídico-administrativo, não relação consumerista ou contratual privada. Vincula-se aos princípios constitucionais (CF art. 37) e exige motivação e contraditório (Lei 9.784/99, arts. 2 e 50, I).",
+        "2. A erra por termo_unico (reduz autuação a relação de consumo com prevalência do CDC sobre motivação administrativa); C erra por regra_excecao (trata multa como penalidade contratual negociável dispensando motivação); D erra por termo_unico (analogia a inadimplemento contratual privado afasta fundamentação e contraditório do ato sancionador).",
+        "3. Gabarito B: regime jurídico-administrativo com princípios constitucionais e processo da Lei 9.784/99 — autuação ≠ CDC ≠ contrato civil."
+      ],
+      "pegadinha": "A banca trata autuação como relação de consumo ou contrato privado, dispensando motivação e contraditório administrativo.",
+      "macete": "REGIME ADMIN = princípios CF + processo 9.784 | autuação ≠ CDC | motivação quando limita direito.",
+      "estudo_reverso": [
+        "CF art. 37, caput",
+        "Lei 9.784/99 art. 2",
+        "Lei 9.784/99 art. 50, I",
+        "CF art. 5º, LV"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CF_art_37",
+      "macete_visual": "ADMIN ≠ CDC | motivação obrigatória",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B. A compra CDC sobre motivação; C negocia multa como contrato; D dispensa fundamentação. Autuação = regime administrativo.",
+            "destaques": ["regime administrativo", "CDC", "motivação"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pegadinha: consumo × administração",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a defesa insinua ✗", "Regime correto ✓"],
+            "linhas": [
+              [
+                "Multa = relação de consumo com CDC",
+                "Autuação = ato unilateral no regime jurídico-administrativo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Autuação limita direitos por poder público?", "tipo": "pergunta" },
+              { "id": "p2", "label": "CDC dispensa motivação administrativa?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito B — regime administrativo", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — multa" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "CF art. 37, caput",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 37, caput",
+            "texto": "A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência e, também, ao seguinte:",
+            "trechos_grifados": [
+              {
+                "inicio": 154,
+                "fim": 164,
+                "motivo": "contraste — vincula autuação à legalidade administrativa",
+                "texto_grifado": "legalidade"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "REGIME ADMIN = princípios CF + processo 9.784 | autuação ≠ CDC | motivação quando limita direito.",
+            "destaques": ["REGIME ADMIN", "CDC", "motivação"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88 art. 37",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "CF_art_37",
+      "macete_visual": "ADMIN ≠ CDC | motivação obrigatória",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Autuação tratada como relação de consumo ou contrato privado",
+        "eixos_legais": ["CF_art_37_caput", "Lei9784_art2"],
+        "isca_por_alternativa": {
+          "A": "prevalece CDC sobre motivação administrativa da autuação que limita direitos",
+          "C": "permite transacionar multa como cláusula penal contratual sem motivação formal",
+          "D": "dispensa fundamentação por analogia a inadimplemento contratual privado"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: regime jurídico da autuação",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — compra CDC sobre motivação da Lei 9.784/1999.\nC — negocia multa como contrato privado sem motivação.\nD — dispensa fundamentação por analogia a inadimplemento contratual.\n\nPegadinha: autuação não é relação de consumo — é ato no regime administrativo.",
+            "destaques": ["Gabarito B", "CDC", "motivação"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "REGIME JURÍDICO-ADMINISTRATIVO: conjunto de princípios e regras que vinculam a Administração Pública — prerrogativas e sujeições distintas do direito privado comum.\n\nATO UNILATERAL: manifestação de vontade da Administração que impõe obrigação ao administrado — autuação de trânsito.\n\nRELAÇÃO DE CONSUMO: vínculo entre fornecedor e consumidor no mercado — não substitui o regime da fiscalização pública.",
+            "destaques": ["REGIME ADMINISTRATIVO", "ATO UNILATERAL", "CONSUMO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "MÉTODO: classificar a autuação",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Autuação limita direitos por poder público?", "tipo": "pergunta" },
+              { "id": "p2", "label": "CDC dispensa motivação e contraditório?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito B — regime administrativo", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — multa STTP" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Regimes aplicáveis ao caso",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Regime", "Aplica-se à autuação?"],
+            "linhas": [
+              {
+                "faixa": "Jurídico-administrativo",
+                "classificacao": "Sim — princípios CF + processo 9.784",
+                "destaque": true
+              },
+              {
+                "faixa": "Código de Defesa do Consumidor",
+                "classificacao": "Não exclusivamente — não afasta motivação"
+              },
+              {
+                "faixa": "Contrato civil privado",
+                "classificacao": "Não — multa não é cláusula negociável"
+              },
+              {
+                "faixa": "Inadimplemento contratual",
+                "classificacao": "Não — analogia dispensada pela defesa"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Consumo × administração pública",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a defesa insinua ✗", "Regime correto ✓"],
+            "linhas": [
+              [
+                "Fiscalização = relação de consumo com CDC",
+                "Autuação = ato unilateral sujeito a princípios constitucionais"
+              ],
+              [
+                "Autonomia negocial dispensa contraditório",
+                "Motivação e contraditório vinculam atos que limitam direitos"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Reduz autuação a relação de consumo com prevalência do CDC sobre motivação administrativa"
+              ],
+              [
+                "C — regra_excecao",
+                "Trata multa como penalidade contratual negociável dispensando motivação formal"
+              ],
+              [
+                "D — termo_unico",
+                "Analogia a inadimplemento contratual privado afasta fundamentação e contraditório da autuação"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso STTP", "Regime"],
+            "linhas": [
+              [
+                "Condutor invoca CDC e autonomia negocial",
+                "Tentativa de afastar regime administrativo — incorreta"
+              ],
+              [
+                "Defesa dispensa motivação e contraditório",
+                "Viola processo administrativo — Lei 9.784/1999"
+              ],
+              [
+                "Autuação limita direitos do condutor",
+                "Regime jurídico-administrativo com princípios CF"
+              ],
+              ["Resultado", "Alternativa B — única correta"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Público × privado × consumo",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Esfera", "Traço no caso"],
+            "linhas": [
+              ["Regime administrativo", "Autuação STTP — princípios e processo"],
+              ["Direito privado comum", "Não rege ato de poder público sancionador"],
+              ["Relação de consumo", "Não substitui motivação do ato limitador"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "CF art. 37, caput — princípios",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 37, caput",
+            "texto": "A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência e, também, ao seguinte:",
+            "trechos_grifados": [
+              {
+                "inicio": 154,
+                "fim": 164,
+                "motivo": "contraste — autuação vinculada à legalidade administrativa",
+                "texto_grifado": "legalidade"
+              },
+              {
+                "inicio": 166,
+                "fim": 180,
+                "motivo": "mapa — afasta favorecimento privado na multa",
+                "texto_grifado": "impessoalidade"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Lei 9.784/99, art. 2 — processo administrativo",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 9.784/99, art. 2",
+            "texto": "A Administração Pública obedecerá, dentre outros, aos princípios da legalidade, finalidade, motivação, razoabilidade, proporcionalidade, moralidade, ampla defesa, contraditório, segurança jurídica, interesse público e eficiência.",
+            "trechos_grifados": [
+              {
+                "inicio": 149,
+                "fim": 161,
+                "motivo": "caso — defesa não pode dispensar contraditório administrativo",
+                "texto_grifado": "ampla defesa"
+              },
+              {
+                "inicio": 163,
+                "fim": 176,
+                "motivo": "fluxo — refuta exclusividade do CDC na autuação",
+                "texto_grifado": "contraditório"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "REGIME ADMIN = princípios CF + processo 9.784 | autuação ≠ CDC | motivação quando limita direito.\n\nNear-transfer: se a banca citar empresa pública municipal explorando estacionamento com tarifa negociada, há regime de direito privado na atividade econômica — mas a autuação por infração permanece no regime administrativo.",
+            "destaques": ["REGIME ADMIN", "CDC", "near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88 art. 37",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        },
+        {
+          "rotulo": "Lei 9.784/99 art. 2",
+          "path": "conteúdo/legislação federal/lei-9784-processo-administrativo.html"
+        }
+      ]
+    },
+    "tags": [
+      "regime_juridico_administrativo",
+      "cf_37",
+      "lei_9784",
+      "sttp",
+      "autuacao"
+    ]
+  }
+]

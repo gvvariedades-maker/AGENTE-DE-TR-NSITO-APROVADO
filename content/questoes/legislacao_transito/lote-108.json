@@ -1,0 +1,350 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_processo_administrativo",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_prazo",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_281_II",
+    "enunciado": "Durante auditoria interna da STTP em Campina Grande/PB, constata-se que o Auto de Infração lavrado em 1º de março de 2026 por estacionamento irregular só teve a Notificação de Autuação expedida em 5 de abril de 2026. O condutor sustenta que o auto permanece válido, pois ainda não transcorreu o prazo de sessenta dias previsto na redação antiga do CTB para expedição da notificação. A autoridade de trânsito consulta a legislação vigente. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O auto deve ser arquivado e seu registro julgado insubsistente, pois a NA foi expedida após o prazo máximo de trinta dias previsto no art. 281, §1, II, do CTB.",
+      "B": "O auto permanece válido, pois o prazo para expedição da notificação de autuação ainda é de sessenta dias, contados da data da lavratura do AIT.",
+      "C": "O prazo de trinta dias conta apenas a partir da apresentação de defesa prévia pelo condutor, hipótese em que a NA de 5 de abril seria tempestiva.",
+      "D": "O arquivamento do auto somente cabe quando considerado inconsistente ou irregular, nos termos do inciso I do art. 281, §1, não pela demora na expedição da NA."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Arquivamento do auto por expedição tardia da NA — prazo máximo de trinta dias (art. 281, §1, II) × redação revogada de sessenta dias × hipótese do inciso I (inconsistência).",
+      "fundamento_legal": "CTB, art. 281, §1: O auto de infração será arquivado e seu registro julgado insubsistente: I — se considerado inconsistente ou irregular; II — se, no prazo máximo de trinta dias, não for expedida a notificação da autuação (redação vigente). Art. 281-A disciplina prazo mínimo de defesa prévia na NA — relógio distinto do prazo máximo de expedição do §1, II.",
+      "passo_a_passo": [
+        "1. Caso: AIT de 1º/03/2026, NA expedida em 5/04/2026 (35 dias) — condutor invoca prazo antigo de sessenta dias.",
+        "2. B erra por numero_vizinho (mantém sessenta dias revogados — vigente é trinta dias no §1, II); C erra por regra_excecao (subordina expedição da NA à defesa prévia — marco do §1, II é anterior e independente do art. 281-A); D erra por termo_unico (restringe arquivamento ao inciso I — o inciso II também arquiva por NA tardia).",
+        "3. A correta: ultrapassados trinta dias sem expedição tempestiva da NA, aplica-se arquivamento do §1, II."
+      ],
+      "pegadinha": "A IDECAN troca o prazo revogado de sessenta dias pelo vigente de trinta — ou confunde o relógio de expedição da NA com o prazo mínimo de defesa prévia do art. 281-A.",
+      "macete": "EXPEDIR NA ≤ 30 dias · senão ARQUIVA (§1, II) · defesa ≥ 30 dias da expedição (281-A).",
+      "estudo_reverso": [
+        "CTB art. 281",
+        "CTB art. 281-A",
+        "CTB art. 282"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Prazo vigente para expedir NA é 30 dias — não 60 da redação antiga",
+      "eixos_legais": [
+        "CTB_art_281_II",
+        "CTB_art_281_I",
+        "CTB_art_281_A"
+      ],
+      "isca_por_alternativa": {
+        "B": "prazo de sessenta dias da redação antiga ainda vigente para expedição da NA",
+        "C": "trinta dias só contam após defesa prévia do condutor",
+        "D": "arquivamento só por inconsistência — ignora inciso II"
+      },
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
+      ]
+    },
+    "tags": [
+      "processo_administrativo",
+      "notificacao_autuacao",
+      "prazo",
+      "arquivamento",
+      "art_281"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CTB_art_281_II",
+      "macete_visual": "NA ≤ 30d · senão arquiva",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A: NA expedida com 35 dias — ultrapassou o máximo de trinta; auto arquivado.",
+            "destaques": ["Gabarito A", "35 dias", "arquivado"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "60 dias × 30 dias",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Sessenta dias ainda vigem", "Máximo de trinta dias para expedir NA"],
+              ["Demora não arquiva", "Inciso II arquiva por NA tardia"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "EXPEDIR NA ≤ 30 dias.\nSenão ARQUIVA (§1, II).\nDefesa ≥ 30 dias da expedição (281-A).",
+            "destaques": ["30 dias", "ARQUIVA", "281-A"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 281",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CTB_art_281_II",
+      "macete_visual": "NA ≤ 30d · senão arquiva",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Prazo vigente para expedir NA é 30 dias — não 60 da redação antiga",
+        "eixos_legais": [
+          "CTB_art_281_II",
+          "CTB_art_281_I",
+          "CTB_art_281_A"
+        ],
+        "isca_por_alternativa": {
+          "B": "prazo de sessenta dias da redação antiga ainda vigente para expedição da NA",
+          "C": "trinta dias só contam após defesa prévia do condutor",
+          "D": "arquivamento só por inconsistência — ignora inciso II"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: NA com 35 dias vale?",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — prazo de sessenta dias da redação antiga ainda vigente para expedição da NA.\nC — trinta dias só contam após defesa prévia do condutor.\nD — arquivamento só por inconsistência — ignora demora na expedição.\n\nPegadinha: vigente é trinta dias para expedir a NA — ultrapassado, arquiva.",
+            "destaques": ["Gabarito A", "Notificação de Autuação", "35 dias"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "AUTO DE INFRAÇÃO (AIT): documento lavrado pelo agente — início do processo administrativo.\n\nNOTIFICAÇÃO DE AUTUAÇÃO (NA): comunica a lavratura e abre prazo de defesa — deve ser expedida em até trinta dias.\n\nARQUIVAMENTO: extinção do auto — hipótese do §1, II quando a NA atrasa.",
+            "destaques": ["AIT", "NA", "ARQUIVAMENTO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: cabe arquivar o auto?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "NA expedida dentro de trinta dias da infração?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Arquivar auto — gabarito A",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Não — 35 dias no caso"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Hipóteses de arquivamento",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Hipótese", "Efeito"],
+            "linhas": [
+              {
+                "faixa": "Inciso I — inconsistente/irregular",
+                "classificacao": "Arquivamento do auto"
+              },
+              {
+                "faixa": "Inciso II — NA após 30 dias",
+                "classificacao": "Arquivamento do auto",
+                "destaque": true
+              },
+              {
+                "faixa": "NA tempestiva + defesa",
+                "classificacao": "Segue processo — art. 281-A"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: sessenta dias",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Prazo antigo de 60 dias ainda vale",
+                "Vigente: máximo de 30 dias para expedir NA"
+              ],
+              [
+                "Só inconsistência arquiva",
+                "Inciso II arquiva por NA tardia"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — numero_vizinho",
+                "Mantém 60 dias revogados — vigente é 30 dias no §1, II"
+              ],
+              [
+                "C — regra_excecao",
+                "Subordina expedição à defesa prévia — relógios distintos"
+              ],
+              [
+                "D — termo_unico",
+                "Restringe arquivamento ao inciso I — ignora inciso II"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "AIT lavrado em 1º de março de 2026",
+                "Início da contagem do prazo"
+              ],
+              [
+                "NA expedida em 5 de abril de 2026",
+                "35 dias — ultrapassa o máximo legal"
+              ],
+              [
+                "Condutor invoca sessenta dias antigos",
+                "Pegadinha — redação revogada"
+              ],
+              [
+                "Resultado",
+                "Alternativa A"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Expedir NA × defesa prévia",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Relógio", "Regra"],
+            "linhas": [
+              [
+                "Expedição da NA — §1, II",
+                "Máximo 30 dias — senão arquiva"
+              ],
+              [
+                "Defesa prévia — art. 281-A",
+                "Mínimo 30 dias da expedição da NA"
+              ],
+              [
+                "Caso STTP",
+                "Falha no primeiro relógio — arquivamento"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 281, §1, II — prazo da NA",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 281, §1, II",
+            "texto": "II - se, no prazo máximo de trinta dias, não for expedida a notificação da autuação.",
+            "trechos_grifados": [
+              {
+                "inicio": 28,
+                "fim": 39,
+                "motivo": "fluxo — ultrapassados trinta dias arquiva o auto",
+                "texto_grifado": "trinta dias"
+              },
+              {
+                "inicio": 60,
+                "fim": 83,
+                "motivo": "mapa — objeto do prazo máximo de expedição",
+                "texto_grifado": "notificação da autuação"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 281, §1, I — inconsistência",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 281, §1, I",
+            "texto": "I - se considerado inconsistente ou irregular;",
+            "trechos_grifados": [
+              {
+                "inicio": 19,
+                "fim": 32,
+                "motivo": "distratores — isca de arquivar só por inconsistência",
+                "texto_grifado": "inconsistente"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "EXPEDIR NA ≤ 30 dias.\nSenão ARQUIVA (§1, II).\nDefesa ≥ 30 dias da expedição (281-A).\n\nNear-transfer: NA expedida no 29º dia é válida — o problema do caso é o 35º dia, não confundir com o mínimo de defesa.",
+            "destaques": ["30 dias", "ARQUIVA", "defesa"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 281",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

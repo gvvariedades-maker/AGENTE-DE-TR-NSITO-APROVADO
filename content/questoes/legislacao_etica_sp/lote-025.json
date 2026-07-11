@@ -1,0 +1,293 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_2_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "L8112_art116_VI_XII",
+    "enunciado": "Agente de trânsito da STTP de Campina Grande presencia supervisor orientar a equipe a dispensar autuações contra parentes de vereadores, sob promessa de \"ajuste interno\". O supervisor exige sigilo para não politizar a autarquia; o jurídico afirma que comunicar irregularidade só é obrigatório após sentença criminal transitada em julgado; a ouvidoria sustenta que representar é faculdade do servidor diretamente lesado. À luz da ética no serviço público, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O sigilo institucional prevalece — comunicar a orientação antes de conclusão administrativa interna viola lealdade à chefia e expõe indevidamente a autarquia.",
+      "B": "A comunicação de irregularidade exige prévia condenação criminal — enquanto não houver sentença transitada, o agente deve aguardar apuração policial para não antecipar juízo.",
+      "C": "O servidor deve levar ao conhecimento da autoridade superior as irregularidades de que tiver ciência em razão do cargo (art. 116, VI) e representar contra ilegalidade ou abuso (art. 116, XII), pela via hierárquica com ampla defesa ao representado.",
+      "D": "A representação é faculdade discricionária — o agente só deve agir se for diretamente prejudicado, podendo manter silêncio para preservar a harmonia da equipe."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Dever de comunicar irregularidades à autoridade superior (Lei 8.112/90, art. 116, VI) e de representar contra ilegalidade ou abuso de poder (art. 116, XII), com encaminhamento hierárquico (parágrafo único).",
+      "fundamento_legal": "Lei 8.112/90, art. 116, VI: \"levar as irregularidades de que tiver ciência em razão do cargo ao conhecimento da autoridade superior ou, quando houver suspeita de envolvimento desta, ao conhecimento de outra autoridade competente para apuração\". XII: \"representar contra ilegalidade, omissão ou abuso de poder\". Parágrafo único: representação pela via hierárquica, com ampla defesa ao representado.",
+      "passo_a_passo": [
+        "1. Orientar dispensa seletiva de autuações por vínculo político é irregularidade e abuso de poder de que o agente teve ciência no exercício do cargo.",
+        "2. A erra por regra_excecao (usa sigilo institucional e lealdade para calar irregularidade); B erra por numero_vizinho (exige sentença criminal como condição inexistente na lei); D erra por termo_unico (trata representação como faculdade e condiciona ao prejuízo pessoal).",
+        "3. C está correta: art. 116, VI impõe comunicar à superior (ou outra autoridade se houver suspeita de envolvimento); art. 116, XII impõe representar, com tramitação hierárquica e defesa."
+      ],
+      "pegadinha": "A banca usa sigilo, condenação criminal ou faculdade de representar para induzir omissão — mas o art. 116, VI e XII impõem comunicar e representar irregularidades de que o servidor tiver ciência em razão do cargo.",
+      "macete": "Ciência no cargo = comunica (VI) + representa (XII). Via hierárquica. Silêncio ≠ lealdade. Crime condenado não é pré-requisito.",
+      "estudo_reverso": [
+        "Lei 8.112/90 art. 116, VI",
+        "Lei 8.112/90 art. 116, XII",
+        "Lei 8.112/90 art. 116, parágrafo único",
+        "Lei 8.112/90 art. 116, IV"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "L8112_art116_VI_XII",
+      "macete_visual": "Ciência no cargo = comunica + representa",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Dispensa seletiva de autuações por vínculo político exige comunicar à autoridade superior e representar — sigilo, sentença criminal ou faculdade não autorizam omissão.",
+            "destaques": ["comunicar", "representar", "omissão"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Deve comunicar a irregularidade?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Ciência de irregularidade em razão do cargo?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Comunicar à superior e representar — via hierárquica", "tipo": "resultado" }
+            ],
+            "arestas": [{ "de": "p1", "para": "r1", "rotulo": "Sim" }]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Silêncio × dever funcional",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              [
+                "Representar é faculdade do lesado",
+                "Dever de comunicar e representar irregularidades conhecidas no cargo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Ciência no cargo = comunica (VI) + representa (XII). Via hierárquica. Silêncio ≠ lealdade.",
+            "destaques": ["comunica", "representa", "hierárquica"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 8.112/90, art. 116",
+          "path": "conteúdo/legislação federal/lei-8112-servidores.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 250,
+      "fundamento_slug": "L8112_art116_VI_XII",
+      "macete_visual": "Ciência no cargo = comunica + representa",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Sigilo institucional, sentença criminal ou faculdade de representar induzem o agente a omitir dispensa seletiva de autuações",
+        "eixos_legais": ["L8112_art116_VI", "L8112_art116_XII", "L8112_art116_par_unico"],
+        "eixos_mecanismo": ["regra_excecao", "numero_vizinho", "termo_unico"],
+        "isca_por_alternativa": {
+          "A": "sigilo institucional e lealdade à chefia vedam comunicar antes de apuração interna",
+          "B": "comunicação só após sentença criminal transitada em julgado",
+          "D": "representação é faculdade reservada ao diretamente lesado"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: omissão não é lealdade",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — sigilo institucional: usa lealdade à chefia para calar irregularidade conhecida no cargo.\nB — sentença criminal prévia: inventa condição inexistente na lei de regência.\nD — faculdade do lesado: reduz dever funcional a prejuízo pessoal e harmonia da equipe.\n\nA isca é o supervisor, o jurídico e a ouvidoria empurrarem silêncio sobre dispensa de autuações a parentes de vereadores.",
+            "destaques": ["Gabarito C", "comunicar", "representar"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 deveres éticos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CIÊNCIA EM RAZÃO DO CARGO: informação obtida no exercício da função — gera deveres específicos de comunicação.\n\nCOMUNICAR IRREGULARIDADE: levar ao conhecimento da autoridade superior — ou de outra competente se a superior estiver envolvida.\n\nREPRESENTAR: denunciar ilegalidade, omissão ou abuso pela via hierárquica, com defesa ao representado.",
+            "destaques": ["CIÊNCIA", "COMUNICAR", "REPRESENTAR"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: o agente deve agir?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Teve ciência de orientação para dispensar autuações por vínculo político?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Configura irregularidade ou abuso em razão do cargo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito C — comunicar à superior e representar",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: silêncio × dever de comunicar",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Sigilo institucional autoriza omitir a orientação",
+                "Dever de levar irregularidades ao conhecimento da autoridade superior"
+              ],
+              [
+                "Representar só após condenação criminal",
+                "Comunicar e representar quando houver ciência em razão do cargo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Usa sigilo e lealdade à chefia como exceção para omitir irregularidade conhecida"
+              ],
+              [
+                "B — numero_vizinho",
+                "Exige sentença criminal transitada — condição não prevista no art. 116"
+              ],
+              [
+                "D — termo_unico",
+                "Trata representação como faculdade e condiciona ao prejuízo pessoal do agente"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o episódio da STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Enquadramento"],
+            "linhas": [
+              ["Supervisor orienta dispensar autuações a parentes de vereadores", "Irregularidade e abuso de poder"],
+              ["Exigência de sigilo para não politizar", "Silêncio não substitui dever funcional"],
+              ["Jurídico exige sentença criminal", "Sem previsão legal para aguardar condenação"],
+              ["Resultado", "Gabarito C — comunicar e representar pela via hierárquica"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 116, VI e XII — comunicar e representar",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 8.112/90, art. 116, VI e XII",
+            "texto": "VI - levar as irregularidades de que tiver ciência em razão do cargo ao conhecimento da autoridade superior ou, quando houver suspeita de envolvimento desta, ao conhecimento de outra autoridade competente para apuração; XII - representar contra ilegalidade, omissão ou abuso de poder.",
+            "trechos_grifados": [
+              {
+                "inicio": 5,
+                "fim": 218,
+                "motivo": "caso — dispensa seletiva de autuações presenciada pelo agente",
+                "texto_grifado": "levar as irregularidades de que tiver ciência em razão do cargo ao conhecimento da autoridade superior ou, quando houver suspeita de envolvimento desta, ao conhecimento de outra autoridade competente para apuração"
+              },
+              {
+                "inicio": 226,
+                "fim": 283,
+                "motivo": "contraste — dever de representar, não faculdade (isca D)",
+                "texto_grifado": "representar contra ilegalidade, omissão ou abuso de poder"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 116, parágrafo único — via hierárquica",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 8.112/90, art. 116, parágrafo único",
+            "texto": "Parágrafo único. A representação de que trata o inciso XII será encaminhada pela via hierárquica e apreciada pela autoridade superior àquela contra a qual é formulada, assegurando-se ao representado ampla defesa.",
+            "trechos_grifados": [
+              {
+                "inicio": 76,
+                "fim": 96,
+                "motivo": "mapa — forma correta de acionar a representação",
+                "texto_grifado": "pela via hierárquica"
+              },
+              {
+                "inicio": 199,
+                "fim": 211,
+                "motivo": "distratores — garantia processual ao representado",
+                "texto_grifado": "ampla defesa"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Ciência no cargo = comunica (VI) + representa (XII). Via hierárquica. Silêncio ≠ lealdade. Crime condenado não é pré-requisito.\n\nNear-transfer: agente descobre colega desviando numerário de multas — mesma lógica: comunicar à superior ou a outra autoridade se a chefia estiver envolvida.",
+            "destaques": ["comunica", "Near-transfer", "representa"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 8.112/90, art. 116",
+          "path": "conteúdo/legislação federal/lei-8112-servidores.html"
+        }
+      ]
+    },
+    "tags": [
+      "etica",
+      "representacao",
+      "irregularidade",
+      "abuso_poder",
+      "lei_8112",
+      "sttp"
+    ]
+  }
+]
