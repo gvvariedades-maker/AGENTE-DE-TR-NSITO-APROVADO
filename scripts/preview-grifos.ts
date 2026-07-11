@@ -12,23 +12,38 @@ import {
   type GrifoInput,
 } from "../src/lib/grifo-offsets";
 import { questoesImportFileSchema } from "../src/lib/validations/questao";
-import type { TelaVisual } from "../src/types/estudo-reverso-visual";
+
+type TelaTrechoLegal = {
+  id: string;
+  tipo: "trecho_legal";
+  conteudo: {
+    fonte: string;
+    texto: string;
+    trechos_grifados?: GrifoInput[];
+  };
+};
+
+function isTrechoLegal(
+  tela: { id: string; tipo: string; conteudo: unknown },
+): tela is TelaTrechoLegal {
+  return tela.tipo === "trecho_legal";
+}
 
 function coletarTelasLegais(questao: {
-  estudo_reverso_visual?: { telas: TelaVisual[] } | null;
-  estudo_reverso_visual_completo?: { telas: TelaVisual[] } | null;
-}): Array<{ label: string; tela: TelaVisual }> {
-  const out: Array<{ label: string; tela: TelaVisual }> = [];
+  estudo_reverso_visual?: { telas: Array<{ id: string; tipo: string; conteudo: unknown }> } | null;
+  estudo_reverso_visual_completo?: { telas: Array<{ id: string; tipo: string; conteudo: unknown }> } | null;
+}): Array<{ label: string; tela: TelaTrechoLegal }> {
+  const out: Array<{ label: string; tela: TelaTrechoLegal }> = [];
   const v1 = questao.estudo_reverso_visual?.telas ?? [];
   const v2 = questao.estudo_reverso_visual_completo?.telas ?? [];
 
   for (const tela of v1) {
-    if (tela.tipo === "trecho_legal") {
+    if (isTrechoLegal(tela)) {
       out.push({ label: "v1", tela });
     }
   }
   for (const tela of v2) {
-    if (tela.tipo === "trecho_legal") {
+    if (isTrechoLegal(tela)) {
       out.push({ label: "v2", tela });
     }
   }
@@ -64,9 +79,8 @@ async function main() {
     console.log(`── Q${i + 1} [${q.topico}] ──`);
 
     for (const { label, tela } of telas) {
-      if (tela.tipo !== "trecho_legal") continue;
       const texto = tela.conteudo.texto;
-      const grifos = (tela.conteudo.trechos_grifados ?? []) as GrifoInput[];
+      const grifos = tela.conteudo.trechos_grifados ?? [];
 
       console.log(`[${label}/${tela.id}] ${tela.conteudo.fonte}`);
 

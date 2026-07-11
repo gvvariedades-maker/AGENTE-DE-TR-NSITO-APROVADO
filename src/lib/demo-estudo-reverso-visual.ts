@@ -67,7 +67,7 @@ export const DEMO_ESTUDO_REVERSO_VISUAL: EstudoReversoVisual = {
         texto:
           "Recusar-se a ser submetido a teste configura infração autônoma.",
         trechos_grifados: [
-          { inicio: 0, fim: 12, motivo: "conduta autônoma" },
+          { inicio: 0, fim: 12, motivo: "conduta autônoma", texto_grifado: "Recusar-se a" },
         ],
       },
     },
