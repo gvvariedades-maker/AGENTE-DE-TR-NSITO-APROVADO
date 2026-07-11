@@ -1,0 +1,316 @@
+[
+  {
+    "disciplina": "direito_constitucional",
+    "topico": "dir_const_5_4",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "enunciado": "O Estado da Paraíba aprova lei atribuindo à Polícia Militar competência exclusiva para fiscalizar e autuar infrações de trânsito na BR-230 em trecho urbano de Campina Grande, afastando a atuação da Polícia Rodoviária Federal. Agentes da STTP e servidores da PRF debatem a competência legislativa da União e do Estado para definir quais órgãos atuam em rodovia federal. Com base na Constituição Federal de 1988, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O trecho urbano da rodovia federal autoriza o Estado a conferir exclusividade à Polícia Militar, pois a fiscalização passa a ser de interesse local e municipal.",
+      "B": "A STTP de Campina Grande substitui a PRF no trecho urbano da BR-230, por ser o órgão executivo municipal de trânsito com competência plena em vias dentro do perímetro urbano.",
+      "C": "Legislar sobre trânsito e transporte e sobre a competência da Polícia Rodoviária Federal é privativo da União (art. 22, XI e XXII) — o Estado não pode conferir exclusividade à PM em rodovia federal, afastando a PRF.",
+      "D": "A legislação concorrente do art. 24 permite ao Estado definir a repartição de competências entre PM, PRF e órgãos municipais de trânsito em rodovias federais."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Competência legislativa privativa da União sobre trânsito e transporte (art. 22, XI) e sobre a competência da PRF (art. 22, XXII), em contraste com tentativa estadual de afastar a PRF em rodovia federal.",
+      "fundamento_legal": "CF/88, art. 22, XI: compete privativamente à União legislar sobre \"trânsito e transporte\". CF/88, art. 22, XXII: compete privativamente à União legislar sobre \"competência da polícia federal e das polícias rodoviária e ferroviária federais\".",
+      "passo_a_passo": [
+        "1. O caso envolve lei estadual que atribui exclusividade à PM em rodovia federal (BR-230), afastando a PRF — exige separar quem legisla sobre trânsito e quem define competência da polícia rodoviária federal.",
+        "2. A erra por regra_excecao (cria exceção de trecho urbano para conferir exclusividade estadual à PM em rodovia federal); B erra por competencia_snt (atribui à STTP substituir a PRF no trecho urbano da BR-230); D erra por termo_unico (confunde competência legislativa concorrente do art. 24 com definição de competência de órgãos federais de trânsito, matéria do art. 22, XXII).",
+        "3. C está correta: legislar trânsito (22, XI) e competência da PRF (22, XXII) é privativo da União — o Estado não pode afastar a PRF por lei própria."
+      ],
+      "pegadinha": "A banca trata trecho urbano de rodovia federal como salvo-conduto para o Estado redistribuir competências ou atribui à STTP/PM poder que a CF reserva à legislação federal.",
+      "macete": "Legislar TRÂNSITO (22, XI) e competência da PRF (22, XXII) = União privativa. Estado não afasta PRF em rodovia federal.",
+      "estudo_reverso": [
+        "CF art. 22, XI",
+        "CF art. 22, XXII",
+        "CF art. 24, § 1º"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CF_art22_XI_XXII",
+      "macete_visual": "22,XI + 22,XXII = União",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Lei estadual afasta PRF em trecho urbano da BR-230. A banca troca competência legislativa federal com exclusividade da PM ou da STTP no perímetro urbano.",
+            "destaques": ["PRF", "rodovia federal", "PM"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem legisla × quem patrulha",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "uniao", "label": "União — legisla trânsito e PRF (22, XI/XXII)", "nivel": 0 },
+              { "id": "pb", "label": "Paraíba — lei afastando PRF ✗", "nivel": 1 },
+              { "id": "prf", "label": "PRF — rodovia federal", "nivel": 2 },
+              { "id": "pm", "label": "PM — não exclusiva por lei estadual", "nivel": 2 }
+            ],
+            "arestas": [
+              { "de": "uniao", "para": "prf", "rotulo": "Define competência da PRF" },
+              { "de": "pb", "para": "pm", "rotulo": "Exclusividade ilegal (A falsa)" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Trecho urbano = PM exclusiva", "Legislar competência da PRF é da União"],
+              ["STTP substitui PRF na BR-230", "Rodovia federal ≠ via municipal"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 22, XXII",
+            "texto": "competência da polícia federal e das polícias rodoviária e ferroviária federais",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 11,
+                "motivo": "pegadinha — matéria de legislação federal",
+                "texto_grifado": "competência"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "22,XI = legislar trânsito. 22,XXII = competência da PRF. Estado não afasta PRF em rodovia federal.",
+            "destaques": ["22, XI", "22, XXII", "PRF"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 22",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 250,
+      "fundamento_slug": "CF_art22_XI_XXII",
+      "macete_visual": "22,XI trânsito | 22,XXII PRF",
+      "meta": {
+        "padrao_familia": "C_competencia_snt",
+        "pegadinha_em_uma_frase": "Estado não legisla exclusividade da PM em rodovia federal — competência da PRF é matéria privativa da União",
+        "eixos_legais": ["CF_art22_XI", "CF_art22_XXII"],
+        "isca_por_alternativa": {
+          "A": "trecho urbano da BR-230 autoriza PM exclusiva por interesse local",
+          "B": "STTP substitui PRF no perímetro urbano da rodovia federal",
+          "D": "legislação concorrente do art. 24 permite ao Estado redistribuir PRF e PM"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: legislar × patrulhar",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (União legisla trânsito e competência da PRF).\n\nA — trecho urbano da BR-230 vira exclusividade da PM estadual.\nB — STTP substitui a PRF no perímetro urbano.\nD — legislação concorrente permite ao Estado redistribuir PRF, PM e STTP.\n\nPromessa: separar quem LEGISLA competências de quem PATRULHA rodovia federal.",
+            "destaques": ["PRF", "rodovia federal", "legislar"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 competências",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PRIVATIVA DA UNIÃO (art. 22): só a União legisla sobre os temas do rol — inclusive trânsito (XI) e competência da PRF (XXII). RODOVIA FEDERAL: via sob jurisdição federal — trecho urbano não transfere legislação ao Estado. ÓRGÃO EXECUTIVO MUNICIPAL (STTP): atua em vias municipais — não substitui PRF em BR federal.",
+            "destaques": ["privativa", "rodovia federal", "STTP"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Mapa de entes na BR-230",
+          "secao": "metodo",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "uniao", "label": "União — legisla 22, XI e XXII", "nivel": 0 },
+              { "id": "pb", "label": "Paraíba — lei afastando PRF ✗", "nivel": 1 },
+              { "id": "prf", "label": "PRF — patrulhamento em rodovia federal", "nivel": 2 },
+              { "id": "sttp", "label": "STTP — vias municipais (não BR)", "nivel": 2 },
+              { "id": "pm", "label": "PM — apoio, sem exclusividade por lei estadual", "nivel": 2 }
+            ],
+            "arestas": [
+              { "de": "uniao", "para": "prf", "rotulo": "Define competência da PRF" },
+              { "de": "pb", "para": "pm", "rotulo": "Exclusividade ilegal (A falsa)" },
+              { "de": "sttp", "para": "prf", "rotulo": "Não substitui em BR (B falsa)" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença × lei: urbano × federal",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Trecho urbano transfere competência ao Estado",
+                "Legislar trânsito e PRF é privativo da União (22, XI/XXII)"
+              ],
+              [
+                "STTP patrulha BR-230 no centro da cidade",
+                "Rodovia federal — PRF, não órgão municipal"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Cria exceção de trecho urbano para PM exclusiva em rodovia federal"
+              ],
+              [
+                "B — competencia_snt",
+                "Atribui à STTP substituir a PRF no trecho urbano da BR-230"
+              ],
+              [
+                "D — termo_unico",
+                "Confunde legislação concorrente do art. 24 com competência de órgãos federais do art. 22, XXII"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o debate na BR-230",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Conclusão"],
+            "linhas": [
+              ["Lei estadual afasta PRF e dá exclusividade à PM", "Estado não legisla competência da PRF — 22, XXII"],
+              ["BR-230 em trecho urbano de Campina Grande", "Continua rodovia federal — 22, XI"],
+              ["STTP e PRF debatem competência legislativa", "Privativa da União — não STTP nem Estado"],
+              ["Resultado", "Alternativa C"]
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Matriz: tema × ente legislator",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Tema", "Quem legisla"],
+            "linhas": [
+              ["Trânsito e transporte", "União — art. 22, XI (privativa)"],
+              ["Competência da PRF", "União — art. 22, XXII (privativa)"],
+              ["Normas gerais concorrentes", "União, Estados, DF — art. 24 (não redistribui PRF)"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 22, XI — legislar trânsito",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 22, XI",
+            "texto": "Compete privativamente à União legislar sobre: XI - trânsito e transporte",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 30,
+                "motivo": "diagrama — privativa da União",
+                "texto_grifado": "Compete privativamente à União"
+              },
+              {
+                "inicio": 52,
+                "fim": 73,
+                "motivo": "caso — objeto do trânsito na BR-230",
+                "texto_grifado": "trânsito e transporte"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 22, XXII — competência da PRF",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 22, XXII",
+            "texto": "competência da polícia federal e das polícias rodoviária e ferroviária federais",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 11,
+                "motivo": "contraste — matéria de legislação federal",
+                "texto_grifado": "competência"
+              },
+              {
+                "inicio": 37,
+                "fim": 56,
+                "motivo": "mapa — PRF no caso da BR-230",
+                "texto_grifado": "polícias rodoviária"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "22,XI = União LEGISLA trânsito.\n22,XXII = União define competência da PRF.\nTrecho urbano ≠ transferir rodovia federal ao Estado.\n\nNear-transfer: se a STTP autuasse estacionamento em rua municipal, seria competência executiva municipal — mas afastar a PRF da BR-230 exige lei federal, não estadual.",
+            "destaques": ["22, XI", "22, XXII", "PRF"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 22",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "competencias",
+      "art22_xi",
+      "art22_xxii",
+      "prf",
+      "rodovia_federal",
+      "pm"
+    ]
+  }
+]

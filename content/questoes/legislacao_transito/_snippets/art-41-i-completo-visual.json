@@ -1,0 +1,154 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 255,
+  "fundamento_slug": "CTB_art_41_I",
+  "macete_visual": "BUZINA BREVE · I=sinistro (cidade OK) · II=fora urbano",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Na cidade a buzina não é vedada — inciso I permite toque breve para evitar sinistro",
+    "eixos_legais": ["CTB_art_41_I", "CTB_art_41_II"],
+    "isca_por_alternativa": {
+      "A": "veda buzina em área urbana — regra_excecao",
+      "B": "reduz art. 41 ao inciso II fora do urbano — numero_vizinho",
+      "D": "dispensa toque breve em emergência — termo_unico"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-081.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: buzina na cidade para evitar choque",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — vedou buzina na cidade: inciso I autoriza toque breve para evitar sinistro em qualquer local.\nB — citou só ultrapassagem fora do urbano: inciso II não revoga o inciso I.\nD — liberou toque longo: caput exige buzina sempre breve.\n\nNesta aula você separa sinistro urbano (I) de ultrapassagem rural (II).",
+        "destaques": ["Gabarito C", "evitar sinistros", "toque breve"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "TOQUE BREVE: única forma lícita de buzina — regra do caput do art. 41.\n\nADVERTÊNCIAS NECESSÁRIAS: alertas para prevenir colisão — hipótese do inciso I.\n\nEVITAR SINISTROS: finalidade do toque no caso — ciclista que invade a faixa.",
+        "destaques": ["TOQUE BREVE", "ADVERTÊNCIAS", "SINISTROS"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: buzina para evitar sinistro?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Há risco de sinistro a advertir?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Toque é breve e necessário?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Permitido pelo inciso I", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Sim" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Art. 41 — caput e incisos I e II",
+      "secao": "mapa",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Dispositivo", "Hipótese"],
+        "linhas": [
+          ["Caput", "Buzina só em toque breve"],
+          ["Inciso I", "Advertir para evitar sinistros — urbano ou rural"],
+          ["Inciso II", "Advertir ultrapassagem — só fora do urbano"]
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: buzina proibida na cidade",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Na cidade não pode buzinar", "Inciso I vale em área urbana para evitar sinistro"],
+          ["Buzina longa em emergência", "Caput exige toque breve sempre"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — regra_excecao", "Veda buzina no urbano — inciso I não restringe por tipo de via"],
+          ["B — numero_vizinho", "Reduz art. 41 ao inciso II — sinistro urbano está no inciso I"],
+          ["D — termo_unico", "Dispensa toque breve em emergência — caput não admite exceção"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Ciclista invade faixa em via urbana de Campina Grande", "Risco de sinistro a advertir"],
+          ["Toque breve na buzina para alertar", "Advertência necessária — inciso I"],
+          ["Resultado", "Gabarito C — buzina breve permitida"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Inciso I × inciso II",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Inciso", "Escopo"],
+        "linhas": [
+          ["I", "Evitar sinistros — qualquer área, inclusive urbana"],
+          ["II", "Ultrapassagem — apenas fora das áreas urbanas"],
+          ["Pegadinha B", "II não é a única hipótese de buzina lícita"]
+        ]
+      }
+    },
+    {
+      "id": "lei41i",
+      "titulo": "Art. 41, I — literal da regra",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 41, I",
+        "texto": "I - para fazer as advertências necessárias a fim de evitar sinistros;",
+        "trechos_grifados": [
+          { "inicio": 18, "fim": 42, "motivo": "caso — toque breve para alertar o ciclista" },
+          { "inicio": 52, "fim": 68, "motivo": "glossario — finalidade do inciso I" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "BUZINA = SEMPRE BREVE.\nI = evitar SINISTRO (cidade incluída).\nII = ultrapassar FORA do urbano.\nNão confundir os incisos.\n\nNear-transfer: pedestre pisa na faixa sem olhar — toque breve para alertar pode ser lícito no inciso I; buzinar longo para apressar, não.",
+        "destaques": ["SINISTRO", "toque breve", "Near-transfer"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 41", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

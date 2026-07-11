@@ -1,0 +1,344 @@
+[
+  {
+    "disciplina": "direito_administrativo",
+    "topico": "dir_adm_6_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 5,
+    "fundamento_slug": "Lei8112_art2",
+    "enunciado": "A STTP de Campina Grande mantém agentes de trânsito em cargo efetivo, dirigentes em cargo em comissão e contrata empresa para apoio logístico nas barreiras de fiscalização, cujo coordenador designado orienta a escala dos agentes efetivos. Em sindicância, surge dúvida sobre quem se submete ao regime da Lei nº 8.112/1990 como servidor público civil. Considerando o conceito legal de servidor, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Todo aquele que exerce atividade na STTP, inclusive empregados da empresa contratada, é servidor público para os efeitos da Lei nº 8.112/1990.",
+      "B": "Servidor público civil abrange apenas ocupantes de cargo efetivo, excluídos cargo em comissão e função de confiança.",
+      "C": "O coordenador terceirizado que dirige a fiscalização equipara-se a servidor por exercer função pública relevante.",
+      "D": "Para os efeitos da Lei nº 8.112/1990, servidor é a pessoa legalmente investida em cargo público."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Conceito de servidor público civil na Lei 8.112/90 (art. 2) — investidura em cargo público, distinto de agente público amplo e de terceirizado.",
+      "fundamento_legal": "Lei 8.112/90, art. 2: \"Para os efeitos desta Lei, servidor é a pessoa legalmente investida em cargo público.\" Art. 3, parágrafo único: cargo público provido em caráter efetivo ou em comissão.",
+      "passo_a_passo": [
+        "1. Art. 2: servidor = investidura formal em cargo público. Agente efetivo e ocupante de comissão na STTP enquadram-se; coordenador terceirizado não — relação trabalhista com empresa privada.",
+        "2. A erra por regra_excecao (estende servidor a todo quem atua na STTP, inclusive contratada); B erra por termo_unico (restringe a efetivo e exclui comissão — art. 3, parágrafo único admite ambos); C erra por termo_unico (equipara terceirizado a servidor sem investidura em cargo público).",
+        "3. D correta: transcrição literal do art. 2."
+      ],
+      "pegadinha": "A banca confunde quem trabalha no órgão com quem tem investidura em cargo público — terceirizado e agente público amplo não são servidor nos termos da Lei 8.112/90.",
+      "macete": "SERVIDOR 8112 = investido em CARGO PÚBLICO | efetivo OU comissão | terceirizado ≠ servidor.",
+      "estudo_reverso": [
+        "Lei 8.112/90 art. 2",
+        "Lei 8.112/90 art. 3",
+        "CF art. 37, § 6º"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "Lei8112_art2",
+      "macete_visual": "INVESTIDURA em cargo | efetivo|comissão",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Servidor 8.112 = investidura em cargo público — terceirizado não entra; comissão também é cargo.",
+            "destaques": ["investidura", "cargo público", "terceirizado"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Atividade × investidura",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "Art. 2 ✓"],
+            "linhas": [
+              [
+                "Quem atua na STTP é servidor, inclusive terceirizado",
+                "Servidor é quem está legalmente investido em cargo público"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Há investidura em cargo público?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Mera atividade na STTP basta?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito D — conceito de servidor", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 2",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 8.112/90, art. 2",
+            "texto": "Para os efeitos desta Lei, servidor é a pessoa legalmente investida em cargo público.",
+            "trechos_grifados": [
+              { "inicio": 27, "fim": 82, "motivo": "núcleo do conceito" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SERVIDOR 8112 = investido em CARGO PÚBLICO | efetivo OU comissão | terceirizado ≠ servidor.",
+            "destaques": ["CARGO PÚBLICO", "efetivo", "terceirizado"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 8.112/90 art. 2",
+          "path": "conteúdo/legislação federal/lei-8112-servidores.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 265,
+      "fundamento_slug": "Lei8112_art2",
+      "macete_visual": "INVESTIDURA | efetivo|comissão | ≠ terceirizado",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Trabalhar na STTP não é servidor — exige investidura em cargo público; comissão também conta",
+        "eixos_legais": ["Lei8112_art2", "Lei8112_art3"],
+        "isca_por_alternativa": {
+          "A": "estende servidor a todo quem atua no órgão, inclusive terceirizado",
+          "B": "restringe servidor só ao cargo efetivo, excluindo comissão",
+          "C": "equipara coordenador terceirizado a servidor pela relevância da função"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: quem é servidor?",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — todo na STTP: terceirizado não tem investidura em cargo público.\nB — só efetivo: art. 3, parágrafo único admite comissão.\nC — terceirizado relevante: função pública não substitui investidura.\n\nPegadinha: atividade no órgão ≠ servidor nos termos da Lei 8.112/90.",
+            "destaques": ["Gabarito D", "investidura", "cargo público"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Servidor (Lei 8.112/90): pessoa legalmente investida em cargo público — conceito estrito do regime estatutário federal.\nCargo público: conjunto de atribuições previsto na estrutura organizacional, provido em caráter efetivo ou em comissão (art. 3).\nAgente público (CF): categoria mais ampla — inclui quem atua em nome da entidade; nem todo agente é servidor da Lei 8.112/90.",
+            "destaques": ["Servidor", "Cargo público", "Agente público"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "MÉTODO: sindicância na STTP",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Pessoa está investida em cargo público?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Mera atividade ou contrato privado bastam?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito D — investidura em cargo público",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Quem entra no art. 2",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Situação na STTP", "Servidor 8.112?"],
+            "linhas": [
+              {
+                "faixa": "Agente de trânsito — cargo efetivo",
+                "classificacao": "Sim — investidura em cargo público",
+                "destaque": true
+              },
+              {
+                "faixa": "Dirigente — cargo em comissão",
+                "classificacao": "Sim — art. 3, parágrafo único"
+              },
+              {
+                "faixa": "Coordenador terceirizado",
+                "classificacao": "Não — vínculo com empresa contratada"
+              },
+              {
+                "faixa": "Empregado da contratada",
+                "classificacao": "Não — sem investidura em cargo público"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Investidura × mera atividade",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a banca insinua ✗", "Art. 2 ✓"],
+            "linhas": [
+              [
+                "Quem trabalha na STTP é servidor, inclusive terceirizado",
+                "Servidor é quem está legalmente investido em cargo público"
+              ],
+              [
+                "Só cargo efetivo é servidor — comissão fica de fora",
+                "Cargo público pode ser efetivo ou em comissão (art. 3)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Estende servidor a toda atividade na STTP — art. 2 exige investidura"
+              ],
+              [
+                "B — termo_unico",
+                "Restringe a efetivo e exclui comissão — parágrafo único do art. 3 admite ambos"
+              ],
+              [
+                "C — termo_unico",
+                "Equipara terceirizado relevante — função pública não dispensa cargo público"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso STTP", "Consequência"],
+            "linhas": [
+              ["Agentes de trânsito em cargo efetivo", "Servidores — investidura formal"],
+              ["Dirigentes em cargo em comissão", "Também servidor — art. 3, parágrafo único"],
+              ["Coordenador terceirizado orienta escala", "Não é servidor 8.112 — vínculo privado"],
+              ["Resultado", "Alternativa D — única defensável"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 2 — conceito de servidor",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 8.112/90, art. 2",
+            "texto": "Para os efeitos desta Lei, servidor é a pessoa legalmente investida em cargo público.",
+            "trechos_grifados": [
+              {
+                "inicio": 27,
+                "fim": 82,
+                "motivo": "fluxo — núcleo investidura em cargo público"
+              },
+              {
+                "inicio": 47,
+                "fim": 66,
+                "motivo": "contraste — legalmente investida"
+              }
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Art. 3 — cargo efetivo ou comissão",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Lição"],
+            "linhas": [
+              ["Art. 3 — cargo público", "Atribuições cometidas a servidor"],
+              ["Parágrafo único", "Provimento efetivo ou em comissão"],
+              ["Alternativa B", "Erra ao excluir comissão do conceito"],
+              ["Terceirizado", "Fora do art. 2 — sem cargo público"]
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 3, parágrafo único",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 8.112/90, art. 3, parágrafo único",
+            "texto": "Os cargos públicos, acessíveis a todos os brasileiros, são criados por lei, com denominação própria e vencimento pago pelos cofres públicos, para provimento em caráter efetivo ou em comissão.",
+            "trechos_grifados": [
+              {
+                "inicio": 141,
+                "fim": 190,
+                "motivo": "mapa — efetivo ou em comissão"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SERVIDOR 8112 = investido em CARGO PÚBLICO | efetivo OU comissão | terceirizado ≠ servidor.\n\nNear-transfer: estagiário remunerado da STTP com atribuições de gabinete — é servidor 8.112? Não, sem investidura em cargo público; estagiário é agente público amplo, mas não servidor estatutário federal.",
+            "destaques": ["CARGO PÚBLICO", "efetivo", "near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 8.112/90 art. 2",
+          "path": "conteúdo/legislação federal/lei-8112-servidores.html"
+        },
+        {
+          "rotulo": "Lei 8.112/90 art. 3",
+          "path": "conteúdo/legislação federal/lei-8112-servidores.html"
+        }
+      ]
+    },
+    "tags": [
+      "servidor_publico",
+      "conceito_agente",
+      "lei_8112",
+      "art_2"
+    ]
+  }
+]

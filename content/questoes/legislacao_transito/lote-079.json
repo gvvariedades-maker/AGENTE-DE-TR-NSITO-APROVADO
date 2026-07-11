@@ -1,0 +1,361 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_circulacao_conduta",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_40_VII",
+    "enunciado": "À noite, em via urbana de Campina Grande/PB, um caminhão de entregas permanece parado à beira da pista para descarga de mercadorias, com faróis acesos e luzes de posição desligadas. A via conta com iluminação pública. Considerando as normas de circulação e conduta do Código de Trânsito Brasileiro sobre o uso de luzes, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "À noite, com o veículo parado para descarga de mercadorias, o condutor deve manter acesas as luzes de posição, conforme o art. 40, VII, do CTB.",
+      "B": "Em circulação noturna, basta a luz de placa acesa, dispensadas as luzes de posição quando parado para carga ou descarga.",
+      "C": "Na descarga noturna, deve acionar o pisca-alerta em lugar das luzes de posição previstas no art. 40 do CTB.",
+      "D": "Com iluminação pública suficiente na via urbana, as luzes de posição são facultativas ao parar para embarque ou descarga."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Art. 40, VII — luzes de posição à noite com veículo parado para embarque, carga ou descarga; distinção dos incisos V (pisca-alerta) e VI (luz de placa em circulação).",
+      "fundamento_legal": "CTB, art. 40, VII: o condutor manterá acesas, à noite, as luzes de posição quando o veículo estiver parado para fins de embarque ou desembarque de passageiros e carga ou descarga de mercadorias. CTB, art. 40, VI: durante a noite, em circulação, o condutor manterá acesa a luz de placa. CTB, art. 40, V: o condutor utilizará o pisca-alerta em imobilizações ou situações de emergência, ou quando a regulamentação da via assim o determinar.",
+      "passo_a_passo": [
+        "1. Caso: caminhão parado à noite para descarga sem luzes de posição — núcleo do art. 40, VII.",
+        "2. B erra por numero_vizinho (transpõe inciso VI — luz de placa em circulação — para veículo parado em carga); C erra por termo_unico (substitui luzes de posição por pisca-alerta do inciso V); D erra por regra_excecao (inventa dispensa por iluminação pública não prevista no inciso VII).",
+        "3. A correta: à noite, parado para descarga, devem permanecer acesas as luzes de posição."
+      ],
+      "pegadinha": "A IDECAN induz a crer que farol aceso ou via iluminada dispensam posição — o inciso VII é regra autônoma para parada noturna com embarque/carga.",
+      "macete": "PARADO À NOITE = POSIÇÃO · embarque/carga/descarga · ≠ placa (VI).",
+      "estudo_reverso": [
+        "CTB art. 40, VII",
+        "CTB art. 40, VI"
+      ]
+    },
+    "tags": [
+      "luzes",
+      "posicao",
+      "descarga",
+      "art_40",
+      "circulacao"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CTB_art_40_VII",
+      "macete_visual": "PARADO À NOITE = POSIÇÃO",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Descarga noturna sem luzes de posição.\n\nGabarito A: art. 40, VII.",
+            "destaques": ["posição", "Gabarito A", "descarga"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Placa × posição parado",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Placa substitui posição parado", "VI é em circulação — VII exige posição"],
+              ["Via iluminada dispensa", "Inciso VII não prevê exceção"]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Decisão rápida",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Parado à noite para descarga?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Luzes de posição acesas", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PARADO À NOITE = POSIÇÃO.\nEmbarque/carga/descarga.\n≠ placa (VI).",
+            "destaques": ["POSIÇÃO", "à noite"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 40",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "CTB_art_40_VII",
+      "macete_visual": "PARADO À NOITE = POSIÇÃO · carga/embarque · ≠ placa (VI)",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Parado à noite para carga exige luzes de posição — não basta placa ou pisca-alerta",
+        "eixos_legais": [
+          "CTB_art_40_VII",
+          "CTB_art_40_VI"
+        ],
+        "isca_por_alternativa": {
+          "B": "confunde luz de placa em circulação (VI) com posição parado — numero_vizinho",
+          "C": "substitui posição por pisca-alerta do inc. V — termo_unico",
+          "D": "dispensa posição com via iluminada — regra_excecao"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: parado à noite sem posição",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — citou luz de placa: inciso VI vale em circulação, não substitui posição parado.\nC — exigiu pisca-alerta: inciso V é outra hipótese — aqui é luz de posição no inciso VII.\nD — dispensou por via iluminada: lei não cria essa exceção para embarque/carga.\n\nNesta aula você fixa quando acender posição parado à noite.",
+            "destaques": [
+              "Gabarito A",
+              "luzes de posição",
+              "descarga"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "LUZES DE POSIÇÃO: sinalização lateral/traseira com veículo parado — inciso VII do art. 40.\n\nPARADO PARA CARGA: descarga de mercadorias na via urbana — hipótese expressa do inciso VII.\n\nÀ NOITE: gatilho temporal do inciso VII — regra não se aplica de dia da mesma forma.",
+            "destaques": [
+              "POSIÇÃO",
+              "CARGA",
+              "À NOITE"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: acender posição?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "É à noite e o veículo está parado?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Parada é para embarque, carga ou descarga?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Manter luzes de posição acesas",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Art. 40 — VI e VII",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Inciso",
+              "Quando"
+            ],
+            "linhas": [
+              [
+                "VI",
+                "À noite, em circulação — luz de placa acesa"
+              ],
+              [
+                "VII",
+                "À noite, parado — posição em embarque/carga/descarga"
+              ],
+              [
+                "V",
+                "Pisca-alerta — imobilização ou emergência"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: placa basta",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
+            "linhas": [
+              [
+                "Luz de placa substitui posição parado",
+                "VI é em circulação — VII exige posição parado"
+              ],
+              [
+                "Via iluminada dispensa posição",
+                "Inciso VII não prevê essa exceção"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "B — numero_vizinho",
+                "Transpõe inciso VI (placa em circulação) — parado exige posição no VII"
+              ],
+              [
+                "C — termo_unico",
+                "Troca luzes de posição por pisca-alerta do inciso V"
+              ],
+              [
+                "D — regra_excecao",
+                "Inventa dispensa por iluminação pública — inciso VII não admite"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Fato do caso",
+              "Conclusão legal"
+            ],
+            "linhas": [
+              [
+                "Caminhão parado à noite em via urbana de Campina Grande",
+                "Gatilho noturno do inciso VII"
+              ],
+              [
+                "Descarga de mercadorias sem luzes de posição",
+                "Hipótese expressa — devem ficar acesas"
+              ],
+              [
+                "Resultado",
+                "Gabarito A — posição obrigatória"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Inciso VI × inciso VII",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Inciso",
+              "Estado do veículo"
+            ],
+            "linhas": [
+              [
+                "VI",
+                "Em circulação à noite — luz de placa"
+              ],
+              [
+                "VII",
+                "Parado à noite — luzes de posição para embarque/carga"
+              ],
+              [
+                "Pegadinha B",
+                "Circulando ≠ parado para descarga"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei40vii",
+          "titulo": "Art. 40, VII — literal da regra",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 40, VII",
+            "texto": "VII - o condutor manterá acesas, à noite, as luzes de posição quando o veículo estiver parado para fins de embarque ou desembarque de passageiros e carga ou descarga de mercadorias.",
+            "trechos_grifados": [
+              {
+                "inicio": 33,
+                "fim": 40,
+                "motivo": "glossario — parada noturna do caso"
+              },
+              {
+                "inicio": 45,
+                "fim": 61,
+                "motivo": "contraste — dispositivo omitido pelo condutor"
+              },
+              {
+                "inicio": 157,
+                "fim": 180,
+                "motivo": "caso — descarga de mercadorias na via urbana"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PARADO À NOITE = POSIÇÃO (inc. VII).\nEmbarque · carga · descarga.\nCirculando à noite = placa (inc. VI).\nPane = pisca-alerta (inc. V).\n\nNear-transfer: ônibus parado à noite em ponto para embarque deve manter posição acesa — farol alto não substitui.",
+            "destaques": [
+              "PARADO À NOITE",
+              "POSIÇÃO",
+              "Near-transfer"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 40",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,333 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_1020_habilitacao",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_1020_art_51",
+    "enunciado": "Um candidato obteve Permissão para Dirigir (PD) na categoria B em janeiro de 2025. Em agosto de 2025, ainda no período de validade da PD, cometeu infração de natureza grave, com auto de infração e recurso administrativo pendente. Em janeiro de 2026, ao completar um ano da expedição da PD, o DETRAN-PB negou a expedição automática da CNH definitiva, sob o argumento de que qualquer infração durante o período de permissão bloqueia a conversão automática. O candidato recorre administrativamente. Considerando a Resolução CONTRAN nº 1.020/2025, assinale a alternativa CORRETA.",
+    "alternativas": {
+      "A": "A infração grave na validade da Permissão para Dirigir impede de imediato a expedição automática da CNH, ainda que pendente recurso administrativo sobre a penalidade.",
+      "B": "A infração grave na PD não bloqueia a expedição automática da CNH sem decisão administrativa definitiva; confirmada a infração impeditiva, cancela-se de ofício (art. 7º).",
+      "C": "Somente infração gravíssima durante a Permissão para Dirigir é impeditiva; infração grave na PD não afeta a conversão automática em CNH ao fim do primeiro ano.",
+      "D": "Com infração grave pendente na PD, o DETRAN-PB deve reiniciar integralmente o processo de habilitação antes da decisão administrativa definitiva sobre o auto."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Efeito de infração grave durante a PD sobre a expedição automática da CNH (art. 51, caput) × cancelamento de ofício após decisão definitiva (art. 51, § 1º c/c art. 7º).",
+      "fundamento_legal": "Res. CONTRAN 1.020/2025, art. 51, caput: 'O cometimento de infração de natureza grave ou gravíssima, ou a reincidência em infração de natureza média, durante o período de validade da Permissão para Dirigir, não impede a expedição automática da CNH ou da Autorização para Conduzir Ciclomotor, enquanto não houver decisão administrativa definitiva quanto à penalidade aplicada.' Art. 51, § 1º: 'Sobrevindo decisão administrativa definitiva que confirme a infração impeditiva, a CNH ou a Autorização para Conduzir Ciclomotor será cancelada de ofício pelo órgão ou entidade executivo de trânsito competente, nos termos do art. 7º.'",
+      "passo_a_passo": [
+        "1. Caso: candidato com PD categoria B, infração grave em agosto/2025 com recurso pendente; DETRAN-PB nega CNH automática em janeiro/2026 alegando bloqueio imediato por qualquer infração no período de permissão.",
+        "2. A erra por regra_excecao (trata a infração grave como bloqueio imediato da expedição automática, ignorando que o art. 51, caput, condiciona o impedimento à decisão administrativa definitiva); C erra por gravidade (restringe o efeito impeditivo à gravíssima, desconsiderando que grave, gravíssima e reincidência em média estão no caput); D erra por termo_unico (antecipa o reinício integral do processo de habilitação antes da decisão definitiva — o art. 51, § 2º, só aplica após confirmação da infração impeditiva).",
+        "3. B correta: reúne os dois marcos — enquanto não houver decisão administrativa definitiva, a expedição automática não é impedida pelo caput; confirmada a infração impeditiva, o cancelamento de ofício opera nos termos do art. 7º (§ 1º)."
+      ],
+      "pegadinha": "A banca explora a crença de que infração na PD bloqueia a CNH na hora — o art. 51, caput, suspende o impedimento até decisão definitiva; o cancelamento só vem depois (§ 1º).",
+      "macete": "PD + INFRAÇÃO GRAVE = CNH automática segue SEM decisão definitiva (caput) · COM decisão definitiva = cancelamento de ofício (§ 1º + art. 7º) · reinício integral só depois (§ 2º).",
+      "estudo_reverso": [
+        "Res. CONTRAN 1.020/2025 art. 51",
+        "Res. CONTRAN 1.020/2025 art. 7"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Infração na PD não bloqueia CNH automática até decisão administrativa definitiva",
+      "eixos_legais": [
+        "CONTRAN_1020_art_51",
+        "CONTRAN_1020_art_7"
+      ],
+      "isca_por_alternativa": {
+        "A": "bloqueio imediato da CNH com recurso pendente",
+        "C": "só gravíssima impede — grave liberaria conversão",
+        "D": "reinício integral do processo antes da decisão definitiva"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "gravidade",
+        "termo_unico"
+      ]
+    },
+    "tags": [
+      "contran_1020",
+      "habilitacao",
+      "permissao_para_dirigir",
+      "infracao_impeditiva",
+      "expedicao_automatica"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_1020_art_51",
+      "macete_visual": "Sem decisão definitiva = CNH segue · Com decisão = cancelamento",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: infração grave na PD não bloqueia expedição automática da CNH enquanto não houver decisão administrativa definitiva.",
+            "destaques": ["Gabarito B", "decisão administrativa definitiva", "expedição automática"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Bloqueio imediato × decisão definitiva",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Qualquer infração na PD trava a CNH na hora", "Caput: não impede expedição automática sem decisão definitiva"],
+              ["Cancelamento é automático com o auto", "§ 1º: cancelamento de ofício só após decisão definitiva"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SEM decisão definitiva → CNH automática segue.\nCOM decisão definitiva → cancelamento de ofício.\nReinício integral só depois da confirmação.",
+            "destaques": ["SEM decisão", "COM decisão", "Reinício integral"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.020/2025",
+          "path": "conteúdo/resoluções CONTRAN/Resolução - 1020 - 2025.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 275,
+      "fundamento_slug": "CONTRAN_1020_art_51",
+      "macete_visual": "Sem decisão definitiva = CNH segue · Com decisão = cancelamento de ofício",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Infração na PD não bloqueia CNH automática até decisão administrativa definitiva",
+        "eixos_legais": [
+          "CONTRAN_1020_art_51",
+          "CONTRAN_1020_art_7"
+        ],
+        "isca_por_alternativa": {
+          "A": "bloqueio imediato da CNH com recurso pendente",
+          "C": "só gravíssima impede — grave liberaria conversão",
+          "D": "reinício integral do processo antes da decisão definitiva"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: PD com infração grave pendente",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — bloqueio imediato da expedição automática da CNH com recurso administrativo pendente.\nC — só gravíssima impediria; infração grave liberaria a conversão automática.\nD — reinício integral do processo de habilitação antes da decisão administrativa definitiva.\n\nPegadinha: confundir pendência do auto com bloqueio automático da CNH.",
+            "destaques": ["Gabarito B", "recurso pendente", "decisão administrativa definitiva"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PERMISSÃO PARA DIRIGIR (PD): documento provisório com validade de um ano — candidato aprovado nos exames teórico e de direção.\n\nEXPEDIÇÃO AUTOMÁTICA DA CNH: conversão da PD em CNH definitiva ao fim do primeiro ano, se cumpridos os requisitos.\n\nDECISÃO ADMINISTRATIVA DEFINITIVA: julgamento final do recurso sobre a penalidade — marco para efeitos impeditivos do art. 51.",
+            "destaques": ["PERMISSÃO PARA DIRIGIR", "EXPEDIÇÃO AUTOMÁTICA", "DECISÃO ADMINISTRATIVA DEFINITIVA"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: infração grave na PD bloqueia CNH?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Recurso administrativo sobre a infração grave ainda pendente?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Expedição automática não impedida — gabarito B",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim — caso do enunciado" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Três marcos do art. 51 na PD",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Marco", "Efeito"],
+            "linhas": [
+              {
+                "faixa": "Caput — sem decisão definitiva",
+                "classificacao": "Não impede expedição automática da CNH",
+                "destaque": true
+              },
+              {
+                "faixa": "§ 1º — decisão confirma infração",
+                "classificacao": "Cancelamento de ofício (art. 7º)"
+              },
+              {
+                "faixa": "§ 2º — após confirmação",
+                "classificacao": "Reinício integral do processo de habilitação"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: bloqueio na hora do auto",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Infração grave na PD trava CNH imediatamente",
+                "Caput: não impede expedição automática sem decisão definitiva"
+              ],
+              [
+                "DETRAN pode reiniciar processo com recurso pendente",
+                "Reinício integral só após confirmação da infração impeditiva"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Inverte o caput — bloqueio imediato exige decisão administrativa definitiva"
+              ],
+              [
+                "C — gravidade",
+                "Restringe a gravíssima — caput inclui grave, gravíssima e reincidência em média"
+              ],
+              [
+                "D — termo_unico",
+                "Antecipa reinício integral antes da decisão definitiva sobre o auto"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "PD categoria B expedida em janeiro/2025",
+                "Período de permissão vigente em agosto/2025"
+              ],
+              [
+                "Infração grave com recurso administrativo pendente",
+                "Sem decisão administrativa definitiva — caput aplica"
+              ],
+              [
+                "DETRAN-PB nega CNH automática em janeiro/2026",
+                "Erro: bloqueio imediato não previsto no art. 51"
+              ],
+              [
+                "Resultado",
+                "Alternativa B"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Expedição automática × cancelamento de ofício",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fase", "Dispositivo"],
+            "linhas": [
+              [
+                "Recurso pendente sobre infração na PD",
+                "Art. 51, caput — expedição automática não impedida"
+              ],
+              [
+                "Decisão definitiva confirma infração impeditiva",
+                "Art. 51, § 1º c/c art. 7º — cancelamento de ofício"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 51, caput — efeito durante a PD",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 1.020/2025, art. 51, caput",
+            "texto": "O cometimento de infração de natureza grave ou gravíssima, ou a reincidência em infração de natureza média, durante o período de validade da Permissão para Dirigir, não impede a expedição automática da CNH ou da Autorização para Conduzir Ciclomotor, enquanto não houver decisão administrativa definitiva quanto à penalidade aplicada.",
+            "trechos_grifados": [
+              {
+                "inicio": 165,
+                "fim": 175,
+                "motivo": "contraste — pendência do auto não bloqueia expedição automática",
+                "texto_grifado": "não impede"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 51, § 1º — cancelamento após decisão",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 1.020/2025, art. 51, § 1º",
+            "texto": "Sobrevindo decisão administrativa definitiva que confirme a infração impeditiva, a CNH ou a Autorização para Conduzir Ciclomotor será cancelada de ofício pelo órgão ou entidade executivo de trânsito competente, nos termos do art. 7º.",
+            "trechos_grifados": [
+              {
+                "inicio": 134,
+                "fim": 153,
+                "motivo": "eixo2 — consequência após decisão definitiva confirmar infração",
+                "texto_grifado": "cancelada de ofício"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SEM decisão definitiva → CNH automática segue (caput).\nCOM decisão definitiva → cancelamento de ofício (§ 1º + art. 7º).\nReinício integral só depois da confirmação (§ 2º).\n\nNear-transfer: se a banca trocar infração grave por reincidência em média na PD, o marco continua sendo a decisão administrativa definitiva — não o registro do auto.",
+            "destaques": ["SEM decisão", "COM decisão", "reincidência em média"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.020/2025",
+          "path": "conteúdo/resoluções CONTRAN/Resolução - 1020 - 2025.pdf"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,320 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_991_multas",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 5,
+    "fundamento_slug": "CONTRAN_991_art_27_caput",
+    "enunciado": "O proprietário de veículo licenciado em Campina Grande/PB, com multa de trânsito em aberto vinculada ao licenciamento, adere ao parcelamento em 12 prestações mensais por meio de cartão de crédito junto ao órgão arrecadador autorizado, nos termos do art. 27 da Resolução CONTRAN nº 918/2022. A operadora de cartão de crédito aprovou a operação e efetivou o parcelamento na mesma data. O DETRAN da Paraíba recusa a emissão do Certificado de Registro e Licenciamento do Veículo em meio digital (CRLV-e) enquanto não houver confirmação da quitação integral da última parcela. Considerando a Resolução CONTRAN nº 918/2022 e as alterações da Resolução CONTRAN nº 991/2023 no que couber, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A recusa do DETRAN é legítima, pois a regularização da situação do veículo prevista no caput do art. 27 somente se completa com o pagamento integral de todas as parcelas do parcelamento no cartão.",
+      "B": "O DETRAN deve liberar o licenciamento e emitir o CRLV-e, pois a aprovação e a efetivação do parcelamento por meio do cartão de crédito pela operadora libera o licenciamento e a emissão do certificado digital, conforme o § 9º do art. 27 da Resolução CONTRAN nº 918/2022.",
+      "C": "O DETRAN somente poderia emitir o CRLV-e se o proprietário quitasse a multa à vista na rede bancária arrecadadora, pois o parcelamento por cartão não produz a regularização imediata prevista no caput do art. 27.",
+      "D": "Basta a aprovação do parcelamento pela operadora de cartão para liberar o CRLV-e; a efetivação da operação é requisito dispensável para fins de licenciamento."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Efeito do parcelamento no cartão sobre licenciamento e CRLV-e — § 9º do art. 27 da Res. 918/2022 (aprovação + efetivação liberam), distinto do caput (regularização imediata) e da exigência de quitação integral das parcelas.",
+      "fundamento_legal": "Res. CONTRAN 918/2022, art. 27, § 9º: \"A aprovação e efetivação do parcelamento por meio do cartão de crédito pela operadora de cartão de crédito libera o licenciamento do veículo e a respectiva emissão do Certificado de Registro e Licenciamento do Veículo em meio digital (CRLV-e).\" Caput do art. 27 (redação da Res. CONTRAN 991/2023): \"...com a imediata regularização da situação do veículo.\"",
+      "passo_a_passo": [
+        "1. Caso: parcelamento 12× aprovado e efetivado pela operadora — DETRAN exige última parcela quitada para CRLV-e.",
+        "2. A erra por regra_excecao (exige quitação integral das parcelas, ignorando § 9º); C erra por termo_unico (restringe regularização do caput ao pagamento à vista); D erra por regra_excecao (dispensa efetivação — § 9º exige aprovação e efetivação).",
+        "3. B correta: § 9º libera licenciamento e CRLV-e na aprovação + efetivação do parcelamento no cartão."
+      ],
+      "pegadinha": "A IDECAN induz a esperar a última parcela por causa da \"regularização imediata\" do caput — o § 9º fixa marco próprio: aprovação + efetivação pela operadora já liberam o CRLV-e.",
+      "macete": "CAPUT = regularização · §9 = aprovação + EFETIVAÇÃO → libera CRLV-e · ≠ última parcela · ≠ só aprovação.",
+      "estudo_reverso": [
+        "Res. CONTRAN 918/2022 art. 27, § 9º",
+        "Res. CONTRAN 991/2023 art. 2 (art. 27 caput)",
+        "Res. CONTRAN 918/2022 art. 24, § 3º"
+      ]
+    },
+    "tags": [
+      "multas",
+      "resolucao_991",
+      "resolucao_918",
+      "cartao_credito",
+      "parcelamento",
+      "crlv-e",
+      "licenciamento"
+    ],
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Candidato confunde regularização do caput com exigência de quitar todas as parcelas — § 9º libera na aprovação + efetivação",
+      "eixos_legais": ["CONTRAN_991_art_27_caput", "CONTRAN_918_art_27_9"],
+      "isca_por_alternativa": {
+        "A": "última parcela quitada para regularizar",
+        "C": "regularização imediata só à vista",
+        "D": "aprovação sem efetivação basta"
+      }
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CONTRAN_991_art_27_caput",
+      "macete_visual": "§9 aprovação+EFETIVAÇÃO → CRLV-e",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Parcelamento 12× aprovado e efetivado — DETRAN exige última parcela para CRLV-e.\n\n§ 9º libera licenciamento e CRLV-e na aprovação + efetivação.\n\nGabarito B.",
+            "destaques": ["§ 9º", "efetivado", "Gabarito B"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Aprovação + efetivação?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Parcelamento aprovado e efetivado pela operadora?", "tipo": "pergunta" },
+              { "id": "r1", "label": "§ 9º libera CRLV-e — Gabarito B", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim — caso do enunciado" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Caput × § 9º",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Regularização = quitar todas as parcelas",
+                "§ 9º: aprovação + efetivação liberam CRLV-e"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 27, § 9º",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 918/2022, art. 27, § 9º",
+            "texto": "A aprovação e efetivação do parcelamento por meio do cartão de crédito pela operadora de cartão de crédito libera o licenciamento do veículo e a respectiva emissão do Certificado de Registro e Licenciamento do Veículo em meio digital (CRLV-e).",
+            "trechos_grifados": [
+              { "inicio": 2, "fim": 24, "motivo": "aprovação e efetivação — marco legal" },
+              { "inicio": 107, "fim": 129, "motivo": "libera licenciamento e CRLV-e" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "§9 aprovação + EFETIVAÇÃO → libera CRLV-e · caput regulariza · ≠ última parcela · ≠ só aprovação.",
+            "destaques": ["EFETIVAÇÃO", "CRLV-e"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 918/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 918, DE 28 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "todos",
+      "duracao_estimada_seg": 250,
+      "fundamento_slug": "CONTRAN_991_art_27_caput",
+      "macete_visual": "§9 aprovação+EFETIVAÇÃO → CRLV-e · caput regulariza",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Regularização do caput não exige última parcela — § 9º libera na aprovação + efetivação",
+        "eixos_legais": ["CONTRAN_991_art_27_caput", "CONTRAN_918_art_27_9"],
+        "isca_por_alternativa": {
+          "A": "última parcela quitada para regularizar",
+          "C": "regularização imediata só à vista",
+          "D": "aprovação sem efetivação basta"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: caput não exige última parcela",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B (§ 9º — aprovação + efetivação liberam licenciamento e CRLV-e).\n\nA — regularização do caput exige quitar todas as parcelas: regra_excecao — § 9º fixa marco próprio.\nC — parcelamento no cartão não regulariza: termo_unico — caput prevê parcelas mensais com regularização imediata.\nD — basta aprovação sem efetivação: regra_excecao — § 9º exige os dois verbos.\n\nDETRAN exige última parcela após parcelamento já aprovado e efetivado.",
+            "destaques": ["Gabarito B", "§ 9º", "efetivado"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do art. 27",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "APROVAÇÃO: operadora de cartão aceita a operação de parcelamento — primeiro marco do § 9º.\n\nEFETIVAÇÃO: operadora concretiza o parcelamento no cartão — segundo marco cumulativo do § 9º.\n\nREGULARIZAÇÃO IMEDIATA: efeito do caput ao quitar débito à vista ou parcelar — não substitui o § 9º para CRLV-e.",
+            "destaques": ["APROVAÇÃO", "EFETIVAÇÃO", "REGULARIZAÇÃO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: marco do § 9º atingido?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Parcelamento aprovado pela operadora?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Parcelamento efetivado pela operadora?", "tipo": "pergunta" },
+              { "id": "r1", "label": "§ 9º libera CRLV-e — Gabarito B", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — aprovado no caso" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim — efetivado na mesma data" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Art. 27 — caput × § 9º",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Dispositivo", "Efeito sobre o veículo"],
+            "linhas": [
+              {
+                "faixa": "Caput — à vista ou parcelas",
+                "classificacao": "Regularização imediata da situação do veículo"
+              },
+              {
+                "faixa": "§ 9º — aprovação + efetivação",
+                "classificacao": "Libera licenciamento e emissão do CRLV-e",
+                "destaque": true
+              },
+              {
+                "faixa": "Última parcela quitada",
+                "classificacao": "Marco financeiro do cartão — não é requisito do § 9º para CRLV-e"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: regularização = última parcela?",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Caput \"regularização imediata\" exige quitar o 12º boleto do cartão",
+                "§ 9º libera CRLV-e na aprovação + efetivação — marco distinto do caput"
+              ],
+              [
+                "Sem última parcela paga o veículo continua irregular para licenciamento",
+                "Operadora efetivou — licenciamento e CRLV-e liberados pelo § 9º"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Trata quitação integral das parcelas como condição da regularização — § 9º dispensa última parcela para CRLV-e"
+              ],
+              [
+                "C — termo_unico",
+                "Restringe regularização do caput ao pagamento à vista — caput autoriza parcelas mensais no cartão"
+              ],
+              [
+                "D — regra_excecao",
+                "Dispensa efetivação — § 9º exige aprovação e efetivação cumulativamente"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos do parcelamento em Campina Grande",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              ["Multa em aberto + parcelamento 12× no cartão", "Art. 27 — caput permite parcelas mensais"],
+              ["Operadora aprovou e efetivou na mesma data", "§ 9º — marco legal atingido"],
+              ["DETRAN exige última parcela para CRLV-e", "Conduta ilegítima — § 9º libera certificado"],
+              ["Resultado", "Gabarito B"]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Res. 991/2023 — escopo do art. 27",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Redação 991/2023", "Relevância no caso"],
+            "linhas": [
+              [
+                "Cartão restrito a multas de trânsito (sem IPVA/licenciamento no débito)",
+                "Parcelamento abrange só a multa — coerente com o caso"
+              ],
+              [
+                "Caput mantém regularização imediata",
+                "Não revoga § 9º — regras cumulativas no mesmo art. 27"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Res. 918/2022 — art. 27, § 9º",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 918/2022, art. 27, § 9º",
+            "texto": "A aprovação e efetivação do parcelamento por meio do cartão de crédito pela operadora de cartão de crédito libera o licenciamento do veículo e a respectiva emissão do Certificado de Registro e Licenciamento do Veículo em meio digital (CRLV-e).",
+            "trechos_grifados": [
+              { "inicio": 2, "fim": 24, "motivo": "fluxo — aprovação + efetivação (dois marcos)" },
+              { "inicio": 107, "fim": 129, "motivo": "contraste — libera licenciamento e CRLV-e" },
+              { "inicio": 235, "fim": 241, "motivo": "caso — certificado digital do enunciado" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CAPUT = regularização imediata · §9 = APROVAÇÃO + EFETIVAÇÃO → libera CRLV-e · ≠ última parcela · ≠ só aprovação.\n\nNear-transfer: proprietário parcela multa em 6× — operadora aprova mas não efetiva por falha técnica; DETRAN nega CRLV-e. Correto? Sim — sem efetivação o § 9º não opera; com ambos, libera mesmo faltando a 6ª parcela.",
+            "destaques": ["EFETIVAÇÃO", "CRLV-e", "6ª parcela"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 918/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 918, DE 28 DE MARÇO DE 2022.pdf"
+        },
+        {
+          "rotulo": "Res. CONTRAN 991/2023",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 991, DE 19 DE ABRIL DE 2023.pdf"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,354 @@
+[
+  {
+    "disciplina": "direito_constitucional",
+    "topico": "dir_const_4_5",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "enunciado": "Um cidadão de Campina Grande ajuíza ação contra projeto da STTP que suprime área verde municipal e parte de calçada para ampliar pátio e estacionamento rotativo, sem estudo de impacto ambiental, alegando lesão ao meio ambiente e ao patrimônio público. O Município sustenta que só associação ambiental com um ano de funcionamento pode propor mandado de segurança coletivo e que a competência da STTP para obras viárias afasta a tutela judicial. Com base na Constituição Federal de 1988, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Cabe mandado de segurança individual do morador vizinho, porque a supressão da área verde lesiona direito líquido e certo à tranquilidade e ao sossego no imóvel (art. 5º, LXIX).",
+      "B": "Cabe ação popular: qualquer cidadão é parte legítima (art. 5º, LXXIII) para anular ato lesivo ao meio ambiente e ao patrimônio público; a lesão é difusa — o mandado de segurança coletivo (art. 5º, LXX) exige legitimados do rol, não substituindo a ação popular.",
+      "C": "Obras de mobilidade urbana e ampliação de pátio da STTP dispensam tutela por ação popular, por se tratar de competência administrativa de trânsito municipal.",
+      "D": "A competência para fiscalizar impacto ambiental de obras viárias é exclusiva do órgão máximo executivo de trânsito da União, vedada ação popular municipal contra projeto da STTP."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Legitimação universal na ação popular para tutela do meio ambiente e patrimônio público (art. 5º, LXXIII), em contraste com mandado de segurança coletivo de rol restrito (art. 5º, LXX) e MS individual (art. 5º, LXIX).",
+      "fundamento_legal": "CF/88, art. 5º, LXXIII: \"qualquer cidadão é parte legítima para propor ação popular que vise a anular ato lesivo ao patrimônio público ou de entidade de que o Estado participe, à moralidade administrativa, ao meio ambiente e ao patrimônio histórico e cultural\". CF/88, art. 5º, LXX: \"o mandado de segurança coletivo pode ser impetrado por\" partido político, organização sindical, entidade de classe ou associação legalmente constituída e em funcionamento há pelo menos um ano — rol que não inclui qualquer cidadão.",
+      "passo_a_passo": [
+        "1. O caso envolve supressão de área verde municipal e calçada para ampliar pátio da STTP sem estudo ambiental — lesão ao meio ambiente e ao patrimônio público, interesse difuso, não direito individual líquido e certo do vizinho.",
+        "2. A erra por termo_unico (indica mandado de segurança individual do morador para lesão difusa ao meio ambiente e ao erário municipal); C erra por regra_excecao (inventa dispensa de ação popular para obras de mobilidade urbana da STTP); D erra por competencia_snt (atribui fiscalização ambiental exclusivamente ao órgão máximo de trânsito da União, negando ação popular contra ato municipal).",
+        "3. B está correta: cabe ação popular (LXXIII) — qualquer cidadão é parte legítima para tutelar meio ambiente e patrimônio público; MS coletivo (LXX) não substitui por exigir legitimados do rol."
+      ],
+      "pegadinha": "A banca troca ação popular (qualquer cidadão, meio ambiente/patrimônio público) por mandado de segurança individual ou coletivo de rol restrito, ou inventa competência exclusiva do SNT para afastar a tutela.",
+      "macete": "Meio ambiente + patrimônio público + QUALQUER cidadão = AÇÃO POPULAR (LXXIII). MS coletivo = rol fechado (LXX). MS individual = líquido e certo (LXIX).",
+      "estudo_reverso": [
+        "CF art. 5º, LXXIII",
+        "CF art. 5º, LXX",
+        "CF art. 5º, LXIX"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CF_art5_LXXIII_LXX",
+      "macete_visual": "Ambiente = popular",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Obra da STTP suprime área verde sem estudo ambiental. A banca oferece MS individual ou restringe ao MS coletivo — lesão ao meio ambiente pede ação popular de qualquer cidadão.",
+            "destaques": ["ação popular", "meio ambiente", "MS coletivo"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método rápido",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Lesão ao meio ambiente ou patrimônio público?", "tipo": "pergunta" },
+              { "id": "p2", "label": "É direito líquido e certo individual do vizinho?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Ação popular — LXXIII", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não — interesse difuso" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["MS individual do vizinho", "Lesão difusa → ação popular"],
+              ["Só associação com 1 ano (MS coletivo)", "Qualquer cidadão no LXXIII"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXXIII",
+            "texto": "qualquer cidadão é parte legítima para propor ação popular que vise a anular ato lesivo ao patrimônio público ou de entidade de que o Estado participe, à moralidade administrativa, ao meio ambiente e ao patrimônio histórico e cultural, ficando o autor, salvo comprovada má-fé, isento de custas judiciais e do ônus da sucumbência",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 33,
+                "motivo": "pegadinha — legitimidade universal",
+                "texto_grifado": "qualquer cidadão é parte legítima"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Meio ambiente + patrimônio público + qualquer cidadão = ação popular (LXXIII). MS coletivo = rol fechado (LXX).",
+            "destaques": ["ação popular", "meio ambiente", "LXX"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, LXXIII",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 245,
+      "fundamento_slug": "CF_art5_LXXIII_LXX",
+      "macete_visual": "Ambiente = popular | LXX rol",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Obra da STTP sem estudo ambiental lesa meio ambiente — qualquer cidadão propõe ação popular, não MS coletivo de rol restrito",
+        "eixos_legais": ["CF_art5_LXXIII", "CF_art5_LXX"],
+        "isca_por_alternativa": {
+          "A": "mandado de segurança individual do vizinho pela perda da área verde",
+          "C": "obras de mobilidade urbana dispensam ação popular ambiental",
+          "D": "competência exclusiva do órgão máximo de trânsito da União afasta ação popular"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: popular × MS coletivo",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B (ação popular por qualquer cidadão).\n\nA — MS individual do vizinho pela supressão da área verde.\nC — obra viária da STTP dispensa tutela por ação popular.\nD — só o órgão máximo de trânsito da União fiscaliza impacto ambiental.\n\nPromessa: separar ação popular universal de MS coletivo de rol restrito.",
+            "destaques": ["ação popular", "meio ambiente", "MS coletivo"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de decidir: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "AÇÃO POPULAR (art. 5º, LXXIII): qualquer cidadão pode propor para tutelar patrimônio público, moralidade, meio ambiente e patrimônio cultural. MS COLETIVO (art. 5º, LXX): só partido, sindicato, entidade de classe ou associação com 1 ano — rol fechado. MS INDIVIDUAL (art. 5º, LXIX): direito líquido e certo individual — não lesão difusa.",
+            "destaques": ["ação popular", "MS coletivo", "líquido e certo"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual remédio cabe?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Há lesão ao meio ambiente ou patrimônio público?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "O autor é qualquer cidadão (não só associação do LXX)?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Ação popular — LXXIII",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — área verde suprimida" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim — cidadão autor" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa: tutelas coletivas no art. 5º",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Remédio", "Legitimado"],
+            "linhas": [
+              { "faixa": "Ação popular — LXXIII", "classificacao": "Qualquer cidadão" },
+              { "faixa": "MS coletivo — LXX", "classificacao": "Partido, sindicato, associação 1 ano" },
+              { "faixa": "MS individual — LXIX", "classificacao": "Titular do direito líquido e certo" },
+              {
+                "faixa": "Obra STTP sem estudo ambiental",
+                "classificacao": "Ação popular — meio ambiente + erário",
+                "destaque": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença × lei: vizinho × cidadão",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Vizinho prejudicado usa MS individual",
+                "Lesão difusa ao meio ambiente → ação popular (LXXIII)"
+              ],
+              [
+                "Só associação ambiental com 1 ano pode agir",
+                "MS coletivo (LXX) ≠ ação popular — qualquer cidadão"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Indica MS individual do vizinho para lesão difusa ao meio ambiente e ao patrimônio público"
+              ],
+              [
+                "C — regra_excecao",
+                "Inventa dispensa de ação popular para obras de mobilidade urbana da STTP"
+              ],
+              [
+                "D — competencia_snt",
+                "Atribui fiscalização ambiental exclusivamente ao órgão máximo de trânsito da União"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o projeto da STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Conclusão"],
+            "linhas": [
+              ["Supressão de área verde e calçada para ampliar pátio", "Lesão ao meio ambiente e patrimônio público"],
+              ["Sem estudo de impacto ambiental", "Ato lesivo passível de anulação — LXXIII"],
+              ["Cidadão autor, não associação do rol do LXX", "Legitimidade universal — LXXIII"],
+              ["Resultado", "Alternativa B"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "LXXIII × LXX × LXIX — três tutelas",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Papel no caso"],
+            "linhas": [
+              ["Art. 5º, LXXIII", "Ação popular — qualquer cidadão, meio ambiente"],
+              ["Art. 5º, LXX", "MS coletivo — rol restrito, não substitui popular"],
+              ["Art. 5º, LXIX", "MS individual — excluído, lesão não é líquida e certa"],
+              ["Caso concreto", "Obra ambientalmente ilegal → ação popular"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 5º, LXXIII — ação popular",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXXIII",
+            "texto": "qualquer cidadão é parte legítima para propor ação popular que vise a anular ato lesivo ao patrimônio público ou de entidade de que o Estado participe, à moralidade administrativa, ao meio ambiente e ao patrimônio histórico e cultural, ficando o autor, salvo comprovada má-fé, isento de custas judiciais e do ônus da sucumbência",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 33,
+                "motivo": "fluxo — legitimidade do cidadão autor",
+                "texto_grifado": "qualquer cidadão é parte legítima"
+              },
+              {
+                "inicio": 91,
+                "fim": 109,
+                "motivo": "caso — erário municipal lesado",
+                "texto_grifado": "patrimônio público"
+              },
+              {
+                "inicio": 184,
+                "fim": 197,
+                "motivo": "contraste — objeto ambiental do caso",
+                "texto_grifado": "meio ambiente"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 5º, LXX — MS coletivo",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXX, b",
+            "texto": "organização sindical, entidade de classe ou associação legalmente constituída e em funcionamento há pelo menos um ano, em defesa dos interesses de seus membros ou associados",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 20,
+                "motivo": "mapa — rol restrito de legitimados",
+                "texto_grifado": "organização sindical"
+              },
+              {
+                "inicio": 100,
+                "fim": 117,
+                "motivo": "hierarquia — exige 1 ano, não qualquer cidadão",
+                "texto_grifado": "pelo menos um ano"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Meio ambiente + patrimônio + QUALQUER cidadão = AÇÃO POPULAR (LXXIII).\nMS coletivo = rol fechado (LXX).\nMS individual = líquido e certo (LXIX).\n\nNear-transfer: se o contrato da STTP terceirizasse multas sem licitação, também seria ação popular — mas por moralidade e erário, não meio ambiente.",
+            "destaques": ["ação popular", "LXX", "meio ambiente"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, LXXIII",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        },
+        {
+          "rotulo": "CF/88, art. 5º, LXX",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "acao_popular",
+      "art5_lxxiii",
+      "art5_lxx",
+      "meio_ambiente",
+      "patrimonio_publico",
+      "sttp"
+    ]
+  }
+]

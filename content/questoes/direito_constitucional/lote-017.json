@@ -1,0 +1,317 @@
+[
+  {
+    "disciplina": "direito_constitucional",
+    "topico": "dir_const_5_4",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "enunciado": "O Estado da Paraíba estuda projeto de lei estadual que cria infrações e penalidades de trânsito diversas do CTB em rodovias estaduais. Em Campina Grande, agentes da STTP e servidores da autarquia debatem a competência legislativa da União, do Estado e do Município sobre trânsito e sobre campanhas de educação para segurança viária nas escolas municipais. Com base na Constituição Federal de 1988, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O Município de Campina Grande pode editar lei local fixando infrações e penalidades de trânsito em vias municipais, independentemente do Código de Trânsito Brasileiro.",
+      "B": "A legislação sobre trânsito e transporte é competência privativa da União (art. 22, XI); a educação para segurança do trânsito é competência comum de todos os entes (art. 23, XII), sem contrariar o CTB.",
+      "C": "A competência para legislar sobre trânsito nas rodovias estaduais da Paraíba é exclusiva do Estado, cabendo à União apenas normas gerais facultativas.",
+      "D": "A política de educação para segurança do trânsito é competência privativa da União, vedada a atuação municipal em campanhas nas escolas públicas locais."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Competência legislativa privativa da União sobre trânsito e transporte (art. 22, XI) e competência comum para educação em segurança do trânsito (art. 23, XII), em contraste com tentativas estaduais/municipais de legislar infrações diversas do CTB.",
+      "fundamento_legal": "CF/88, art. 22, XI: compete privativamente à União legislar sobre \"trânsito e transporte\". CF/88, art. 23, XII: é competência comum da União, dos Estados, do Distrito Federal e dos Municípios \"estabelecer e implantar política de educação para a segurança do trânsito\".",
+      "passo_a_passo": [
+        "1. O caso contrapõe lei estadual com infrações diversas do CTB e campanhas municipais de educação — exige separar competência legislativa exclusiva (trânsito) da competência comum (educação para segurança viária).",
+        "2. A erra por regra_excecao (autoriza o Município a legislar infrações e penalidades de trânsito à margem do CTB); C erra por competencia_snt (atribui ao Estado competência exclusiva para legislar trânsito em rodovias estaduais, ignorando a privativa da União no art. 22, XI); D erra por regra_excecao (trata a educação para segurança do trânsito como competência privativa da União, negando a competência comum do art. 23, XII).",
+        "3. B está correta: União legisla privativamente trânsito e transporte (art. 22, XI); todos os entes podem implantar política de educação para segurança do trânsito (art. 23, XII), sem contrariar o CTB."
+      ],
+      "pegadinha": "A banca confunde competência comum (educação para segurança do trânsito — art. 23, XII) com competência privativa da União para legislar trânsito (art. 22, XI), ou atribui ao Estado/Município poder de criar infrações fora do CTB.",
+      "macete": "Legislar TRÂNSITO = União privativa (22, XI). EDUCAR no trânsito = comum a todos (23, XII). Estado/Município não inventam infração fora do CTB.",
+      "estudo_reverso": [
+        "CF art. 22, XI",
+        "CF art. 23, XII",
+        "CF art. 22, XXII"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CF_art22_XI",
+      "macete_visual": "22,XI = legislar | 23,XII = educar",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Lei estadual fora do CTB vs campanhas municipais. A banca troca competência privativa da União (legislar trânsito) com competência comum (educar).",
+            "destaques": ["privativa", "competência comum", "CTB"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem faz o quê",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "uniao", "label": "União — legisla trânsito (22, XI)", "nivel": 0 },
+              { "id": "pb", "label": "Estado — não cria infração fora do CTB", "nivel": 1 },
+              { "id": "cg", "label": "Município — educação viária comum (23, XII)", "nivel": 1 }
+            ],
+            "arestas": [
+              { "de": "uniao", "para": "pb", "rotulo": "CTB — norma federal" },
+              { "de": "cg", "para": "uniao", "rotulo": "Campanhas escolares — competência comum" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Estado legisla trânsito à parte", "Privativa da União — art. 22, XI"],
+              ["Só União educa no trânsito", "Competência comum — art. 23, XII"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 22, XI",
+            "texto": "Compete privativamente à União legislar sobre: XI - trânsito e transporte",
+            "trechos_grifados": [
+              {
+                "inicio": 52,
+                "fim": 73,
+                "motivo": "privativa — legislar trânsito",
+                "texto_grifado": "trânsito e transporte"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "22,XI = União LEGISLA trânsito. 23,XII = TODOS EDUCAM. Sem infração fora do CTB.",
+            "destaques": ["22, XI", "23, XII", "CTB"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, arts. 22 e 23",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 245,
+      "fundamento_slug": "CF_art22_XI",
+      "macete_visual": "22,XI legislar | 23,XII educar",
+      "meta": {
+        "padrao_familia": "C_competencia_snt",
+        "pegadinha_em_uma_frase": "Estado não legisla trânsito fora do CTB — educação viária é competência comum",
+        "eixos_legais": ["CF_art22_XI", "CF_art23_XII"],
+        "isca_por_alternativa": {
+          "A": "município cria infrações locais independentes do CTB",
+          "C": "estado tem competência exclusiva de legislar trânsito em rodovias estaduais",
+          "D": "educação para segurança do trânsito é só da União"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: legislar × educar",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B (privativa União legisla trânsito + comum todos educam).\n\nA — lei municipal com infrações fora do CTB: inventa competência local.\nC — Estado exclusivo em rodovia estadual: ignora privativa da União legislar trânsito.\nD — só União educa no trânsito: nega competência comum para educação viária.\n\nPromessa: separar quem LEGISLA trânsito de quem EDUCA para segurança viária.",
+            "destaques": ["legislar", "educar", "CTB"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 competências",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PRIVATIVA DA UNIÃO (art. 22): só a União legisla sobre os temas do rol — inclusive trânsito e transporte (XI). COMPETÊNCIA COMUM (art. 23): União, Estados, DF e Municípios atuam juntos — educação para segurança do trânsito (XII). CTB: lei federal que os entes executam, não contradizem.",
+            "destaques": ["privativa", "comum", "CTB"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Mapa de entes no caso",
+          "secao": "metodo",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "uniao", "label": "União — legisla trânsito (22, XI)", "nivel": 0 },
+              { "id": "pb", "label": "Paraíba — projeto fora do CTB ✗", "nivel": 1 },
+              { "id": "sttp", "label": "Campina Grande — educação viária (23, XII)", "nivel": 2 },
+              { "id": "ctb", "label": "CTB — norma federal de trânsito", "nivel": 1 }
+            ],
+            "arestas": [
+              { "de": "uniao", "para": "ctb", "rotulo": "Legisla privativamente" },
+              { "de": "sttp", "para": "uniao", "rotulo": "Campanhas escolares — comum" },
+              { "de": "pb", "para": "ctb", "rotulo": "Não pode divergir (C falsa)" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença × lei: legislar × educar",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Estado ou Município cria infração própria",
+                "Legislar trânsito é privativa da União (22, XI)"
+              ],
+              [
+                "Só União faz campanha de educação viária",
+                "Educação para segurança do trânsito é comum (23, XII)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Autoriza Município a legislar infrações de trânsito independentes do CTB"
+              ],
+              [
+                "C — competencia_snt",
+                "Atribui ao Estado competência exclusiva de legislar trânsito em rodovias estaduais"
+              ],
+              [
+                "D — regra_excecao",
+                "Trata educação para segurança do trânsito como privativa da União, negando art. 23, XII"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o debate na STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Conclusão"],
+            "linhas": [
+              ["Projeto estadual com infrações diversas do CTB", "Viola competência privativa da União (22, XI)"],
+              ["Campanhas de educação viária nas escolas municipais", "Competência comum — art. 23, XII"],
+              ["Agentes da STTP executam o CTB municipalmente", "Executar ≠ legislar infrações novas"],
+              ["Resultado", "Alternativa B"]
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Matriz: tema × ente",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Tema", "Quem pode"],
+            "linhas": [
+              ["Legislar trânsito e transporte", "União — art. 22, XI (privativa)"],
+              ["Educar para segurança do trânsito", "União, Estados, DF e Municípios — art. 23, XII"],
+              ["PRF em rodovia federal", "União — art. 22, XXII (execução federal)"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 22, XI — legislar trânsito",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 22, XI",
+            "texto": "Compete privativamente à União legislar sobre: XI - trânsito e transporte",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 30,
+                "motivo": "diagrama — privativa da União",
+                "texto_grifado": "Compete privativamente à União"
+              },
+              {
+                "inicio": 52,
+                "fim": 73,
+                "motivo": "contraste — objeto do caso",
+                "texto_grifado": "trânsito e transporte"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 23, XII — educação viária",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 23, XII",
+            "texto": "É competência comum da União, dos Estados, do Distrito Federal e dos Municípios: XII - estabelecer e implantar política de educação para a segurança do trânsito",
+            "trechos_grifados": [
+              {
+                "inicio": 2,
+                "fim": 19,
+                "motivo": "mapa — todos os entes",
+                "texto_grifado": "competência comum"
+              },
+              {
+                "inicio": 87,
+                "fim": 160,
+                "motivo": "caso — campanhas nas escolas municipais",
+                "texto_grifado": "estabelecer e implantar política de educação para a segurança do trânsito"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "22,XI = União LEGISLA trânsito (privativa).\n23,XII = TODOS EDUCAM (comum).\nEstado/Município executam CTB — não inventam infração.\n\nNear-transfer: se a PRF autuar em rodovia federal no perímetro urbano, a base é competência federal de execução (22, XXII) — mas a lei continua sendo da União (22, XI).",
+            "destaques": ["22, XI", "23, XII", "PRF"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 22",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        },
+        {
+          "rotulo": "CF/88, art. 23",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "competencias",
+      "art22_xi",
+      "art23_xii",
+      "transito",
+      "educacao_viaria"
+    ]
+  }
+]

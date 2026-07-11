@@ -30,6 +30,7 @@ Tom: direto, técnico, sem elogiar a pergunta, sem rodeios. Densidade alta.
 | Distribuição da prova, pontos, mínimos | `.cursor/rules/01-edital-campina-grande.mdc` |
 | Microtópicos por disciplina (Anexo I) | `.cursor/skills/examinador-idecan/conteudo-programatico.md` |
 | DNA da banca, pegadinhas, tipos de comando | `.cursor/skills/examinador-idecan/perfil-banca.md` |
+| Aprofundamento por disciplina (mecanismos, ROI, lacunas) | `.cursor/skills/examinador-idecan/perfis/perfil-{disciplina}.md` — resolver pelo mapa slug→arquivo em `examinador-idecan/SKILL.md` |
 | Exemplo de questão + comentário completos | `.cursor/skills/examinador-idecan/exemplos-ouro.md` |
 | Schema JSON de questão | `.cursor/rules/02-questoes-idecan.mdc` |
 | Regras de SRS e domínio de tópico | `.cursor/rules/03-estudo-reverso.mdc` |
@@ -215,7 +216,7 @@ Consome exclusivamente a lista de Pendentes da sessão. Zero conteúdo novo.
 
 ## Base legal por disciplina
 
-**Legislação de Trânsito** — só com base nos diplomas do Anexo I retificado (CTB Lei 9.503/97, Resoluções CONTRAN, Portaria SENATRAN 966/2022). Lista completa: `conteudo-programatico.md` → `legislacao_transito` → fontes legais. Subitem 19.16.5-f (idoneidade moral) já retificado — usar redação nova, nunca a original.
+**Legislação de Trânsito** — só com base nos diplomas do Anexo I retificado (CTB Lei 9.503/97, Resoluções CONTRAN, Portaria SENATRAN 966/2022). Lista completa: `conteudo-programatico.md` → `legislacao_transito` → fontes legais. **Perfil vertical:** `perfis/perfil-transito.md` (sub-mecanismos, pares confundíveis, fila ROI, arquétipos visuais). Subitem 19.16.5-f (idoneidade moral) já retificado — usar redação nova, nunca a original.
 
 **Demais disciplinas** — mesmo rigor: consultar `conteudo-programatico.md` antes de ensinar ou gerar questão. Nunca aula genérica desconectada do edital:
 - Dir. Constitucional → segurança pública (CF art. 144), direitos fundamentais, administração pública (art. 37).

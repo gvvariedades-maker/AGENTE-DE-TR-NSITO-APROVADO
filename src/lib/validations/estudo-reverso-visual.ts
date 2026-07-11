@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { ARQUETIPOS_VISUAIS, SECOES_VISUAIS, type ConteudoFluxograma } from "@/types/estudo-reverso-visual";
 import { isFluxogramaLinear } from "@/lib/estudo-reverso/fluxograma-caminho";
+import { validarGrifosTrechoLegal, type GrifoInput } from "@/lib/grifo-offsets";
 
 /**
  * Validação Zod do estudo reverso visual (v1 expressa + v2 completa).
@@ -475,18 +476,103 @@ export function validarNucleoV2(
   }
 }
 
+function isLegacyGrifosMode(): boolean {
+  return process.env.GRIFO_LEGACY === "1";
+}
+
+function validarGrifosNasTelas(
+  telas: z.infer<typeof telaVisualSchema>[],
+  ctx: z.RefinementCtx,
+) {
+  const legacy = isLegacyGrifosMode();
+  for (let i = 0; i < telas.length; i++) {
+    const tela = telas[i]!;
+    if (tela.tipo !== "trecho_legal") continue;
+    const texto = tela.conteudo.texto;
+    const grifos = (tela.conteudo.trechos_grifados ?? []) as GrifoInput[];
+    for (const erro of validarGrifosTrechoLegal(texto, grifos, {
+      legacyGrifos: legacy,
+      telaId: tela.id,
+    })) {
+      const isMissingOnly =
+        erro.codigo === "G3_missing" && legacy;
+      if (isMissingOnly) continue;
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: erro.mensagem,
+        path: ["telas", i, "conteudo", "trechos_grifados"],
+      });
+    }
+  }
+}
+
+function validarContextoLeve(
+  telas: z.infer<typeof telaVisualSchema>[],
+  meta: z.infer<typeof metaAulaCompletaSchema> | undefined,
+  ctx: z.RefinementCtx,
+) {
+  const contextoIdx = telas.findIndex((t) => t.id === "contexto");
+  if (contextoIdx < 0) return;
+  const contexto = telas[contextoIdx]!;
+  if (contexto.tipo !== "texto_destaque") return;
+
+  const texto = contexto.conteudo.texto;
+  const textoLower = texto.toLowerCase();
+
+  for (const slug of MECANISMOS_DISTRATOR) {
+    if (textoLower.includes(slug)) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: `Tela "contexto": não deve citar slug de mecanismo "${slug}" (reservado à tela distratores)`,
+        path: ["telas", contextoIdx, "conteudo", "texto"],
+      });
+    }
+  }
+
+  if (/\berra\s+por\b/i.test(texto)) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: 'Tela "contexto": análise por mecanismo ("erra por") pertence à tela distratores',
+      path: ["telas", contextoIdx, "conteudo", "texto"],
+    });
+  }
+
+  if (/\bart\.\s*\d/i.test(texto) || /§/.test(texto)) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: 'Tela "contexto": citação normativa (art./§) pertence a distratores ou trecho_legal',
+      path: ["telas", contextoIdx, "conteudo", "texto"],
+    });
+  }
+
+  const iscas = meta?.isca_por_alternativa;
+  if (iscas) {
+    for (const letra of ["A", "B", "D"] as const) {
+      if (iscas[letra] && !new RegExp(`\\b${letra}\\b`).test(texto)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: `Tela "contexto": deve mencionar alternativa ${letra} (meta.isca_por_alternativa)`,
+          path: ["telas", contextoIdx, "conteudo", "texto"],
+        });
+      }
+    }
+  }
+}
+
 function validarRegrasVisuais(
   telas: z.infer<typeof telaVisualSchema>[],
   maxPalavras: number,
   ctx: z.RefinementCtx,
-  opts: { exigirDistratores: boolean },
+  opts: { exigirDistratores: boolean; meta?: z.infer<typeof metaAulaCompletaSchema> },
 ) {
   validarPalavrasPorTela(telas, maxPalavras, ctx);
   validarSemTextoConsecutivo(telas, ctx);
   validarLimitesComponente(telas, ctx);
+  validarGrifosNasTelas(telas, ctx);
   if (opts.exigirDistratores) {
     validarTelaDistratores(telas, ctx);
     validarNucleoV2(telas, ctx);
+    validarContextoLeve(telas, opts.meta, ctx);
   }
 }
 
@@ -559,20 +645,31 @@ const conteudoTabelaGradacaoSchema = z.object({
     .max(MAX_FAIXAS_GRADACAO),
 });
 
+const destaqueTextoSchema = z.object({
+  inicio: z.number().int().min(0),
+  fim: z.number().int().min(1),
+  motivo: z.string().min(1),
+  texto_grifado: z.string().min(1).optional(),
+});
+
 const conteudoTrechoLegalSchema = z.object({
   fonte: z.string().min(1),
   texto: z.string().min(1),
   trechos_grifados: z
-    .array(
-      z.object({
-        inicio: z.number().int().min(0),
-        fim: z.number().int().min(1),
-        motivo: z.string().min(1),
-      }),
-    )
+    .array(destaqueTextoSchema)
     .max(MAX_GRIFOS_TRECHO_LEGAL)
     .optional(),
 });
+
+const metaAulaCompletaSchema = z
+  .object({
+    padrao_familia: z.string().optional(),
+    pegadinha_em_uma_frase: z.string().optional(),
+    eixos_legais: z.array(z.string()).optional(),
+    eixos_mecanismo: z.array(z.string()).optional(),
+    isca_por_alternativa: z.record(z.string(), z.string()).optional(),
+  })
+  .optional();
 
 const conteudoLinhaTempoSchema = z.object({
   eventos: z
@@ -668,7 +765,9 @@ export const estudoReversoVisualSchema = estudoReversoVisualBaseSchema
     telas: z.array(telaVisualSchema).min(3).max(5),
   })
   .superRefine((data, ctx) => {
-    validarRegrasVisuais(data.telas, MAX_PALAVRAS_TELA, ctx, { exigirDistratores: false });
+    validarRegrasVisuais(data.telas, MAX_PALAVRAS_TELA, ctx, {
+      exigirDistratores: false,
+    });
   });
 
 /** Aula completa (Modelo B) — 7 a 11 telas, foco iniciante/dúvida. */
@@ -678,10 +777,12 @@ export const estudoReversoVisualCompletoSchema = estudoReversoVisualBaseSchema
     publico_alvo: z.enum(["iniciante", "todos"]).optional(),
     duracao_estimada_seg: z.number().int().min(120).max(600),
     telas: z.array(telaVisualSchema).min(7).max(11),
+    meta: metaAulaCompletaSchema,
   })
   .superRefine((data, ctx) => {
     validarRegrasVisuais(data.telas, MAX_PALAVRAS_TELA_COMPLETO, ctx, {
       exigirDistratores: true,
+      meta: data.meta,
     });
   });
 
@@ -695,13 +796,35 @@ export type EstudoReversoVisualCompletoInput = z.infer<
   typeof estudoReversoVisualCompletoSchema
 >;
 
-/** Padrão ouro v2 — referência lote-007 (PADRAO-AULA-COMPLETA-v2.md). */
+function passo2TemCompetenciaSnt(passo_a_passo?: string[]): boolean {
+  const passo2 = passo_a_passo?.find((p) => /^2\./.test(p.trim())) ?? passo_a_passo?.[1] ?? "";
+  return passo2.includes("competencia_snt");
+}
+
+function gabaritoCruzaDoisDispositivos(input: {
+  estudo_reverso_visual_completo?: {
+    telas?: Array<{ id: string; tipo?: string }>;
+    meta?: { eixos_legais?: string[] };
+  } | null;
+}): boolean {
+  const v2 = input.estudo_reverso_visual_completo;
+  if (!v2?.telas) return false;
+  const telasLei = v2.telas.filter(
+    (t) => t.id.startsWith("lei") || t.tipo === "trecho_legal",
+  );
+  if (telasLei.length >= 2) return true;
+  return (v2.meta?.eixos_legais?.length ?? 0) >= 2;
+}
+
+/** Padrão ouro v2 — referência lote-007 (PADRAO-AULA-COMPLETA-v3 Família A). */
 export function isNivelLote007Ouro(input: {
   tipo: string;
   dificuldade: number;
+  comentario?: { passo_a_passo?: string[] };
   estudo_reverso_visual_completo?: {
     versao?: number;
-    telas?: Array<{ id: string }>;
+    telas?: Array<{ id: string; tipo?: string }>;
+    meta?: { eixos_legais?: string[] };
   } | null;
 }): boolean {
   const v2 = input.estudo_reverso_visual_completo;
@@ -709,6 +832,17 @@ export function isNivelLote007Ouro(input: {
   if (input.tipo !== "caso_pratico" || input.dificuldade < 3) return false;
 
   const ids = new Set((v2.telas ?? []).map((t) => t.id));
-  const obrigatorios = ["glossario", "fluxo", "hierarquia", "caso"] as const;
-  return obrigatorios.every((id) => ids.has(id));
+  const base = ["glossario", "fluxo", "caso"] as const;
+  if (!base.every((id) => ids.has(id))) return false;
+
+  const doisDispositivos = gabaritoCruzaDoisDispositivos(input);
+  if (doisDispositivos) {
+    if (!ids.has("eixo2") && !ids.has("hierarquia")) return false;
+  }
+
+  if (passo2TemCompetenciaSnt(input.comentario?.passo_a_passo)) {
+    if (!ids.has("hierarquia") && !ids.has("diagrama")) return false;
+  }
+
+  return true;
 }

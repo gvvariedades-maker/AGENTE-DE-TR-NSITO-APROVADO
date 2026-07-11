@@ -3,7 +3,7 @@ import {
   estudoReversoVisualCompletoSchema,
   estudoReversoVisualSchema,
 } from "@/lib/validations/estudo-reverso-visual";
-import { validarPasso2Mecanismos } from "@/lib/validations/questao-mecanismo";
+import { validarPasso2Mecanismos, validarDistratorOnCase } from "@/lib/validations/questao-mecanismo";
 import { DISCIPLINAS } from "@/types";
 
 const comentarioSchema = z.object({
@@ -50,6 +50,14 @@ const questaoSeedBaseRefine = (
     q.gabarito,
     q.alternativas,
     q.comentario.passo_a_passo,
+    ctx,
+  );
+  validarDistratorOnCase(
+    q.gabarito,
+    q.enunciado,
+    q.alternativas,
+    q.comentario.passo_a_passo,
+    q.dificuldade,
     ctx,
   );
 };

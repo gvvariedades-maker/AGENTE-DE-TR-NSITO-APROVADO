@@ -1,0 +1,169 @@
+{
+  "versao": 2,
+  "arquetipo": "matriz_assertivas",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "todos",
+  "duracao_estimada_seg": 220,
+  "fundamento_slug": "CONTRAN_993_art_3",
+  "macete_visual": "Fiscalização constata · exportação fora · triângulo = triciclo",
+  "meta": {
+    "padrao_familia": "B_assertivas",
+    "pegadinha_em_uma_frase": "II generaliza triângulo a moto/motoneta — na Tabela 4 só triciclo tem X(46)",
+    "eixos_legais": [
+      "CONTRAN_993_art_3",
+      "CONTRAN_993_art_7",
+      "CONTRAN_993_anexo_I_t4"
+    ],
+    "isca_por_alternativa": {
+      "A": "marca só I e ignora III correta (art. 7)",
+      "C": "compra II que estende triângulo a moto/motoneta",
+      "D": "trata todas corretas incluindo II falsa"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: a isca é a assertiva II",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B (I e III corretas).\n\nA — marcou só I; esqueceu III sobre exportação fora da Resolução.\nC — comprou II errada (triângulo em moto/motoneta).\nD — tratou todas corretas, incluindo II falsa.\n\nA pegadinha: triângulo na Tabela 4 só consta para triciclo.",
+        "destaques": ["Gabarito B", "II", "Tabela 4"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos da Res. 993",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "ANEXO I TABELA 4: lista equipamentos para ciclomotores, motonetas, motocicletas, triciclos e quadriciclos — cada coluna tem regras distintas.\n\nFISCALIZAÇÃO DE TRÂNSITO: agente/órgão que constata funcionamento dos equipamentos (art. 3º, § 2º), não fabrica nem homologa.\n\nEXPORTAÇÃO: veículos destinados ao exterior ficam fora do regime da Resolução (art. 7º).",
+        "destaques": ["TABELA 4", "FISCALIZAÇÃO", "EXPORTAÇÃO"]
+      }
+    },
+    {
+      "id": "matriz",
+      "titulo": "Classificar I–III",
+      "secao": "metodo",
+      "tipo": "matriz_assertivas",
+      "conteudo": {
+        "itens": [
+          { "id": "I", "texto": "Fiscalização constata equipamentos do Anexo I — correta (§ 2º)", "correto": true },
+          { "id": "II", "texto": "Triângulo obrigatório em moto/motoneta — ERRADA (só triciclo)", "correto": false },
+          { "id": "III", "texto": "Não se aplica a veículos de exportação — correta (art. 7º)", "correto": true }
+        ],
+        "gabarito_resumo": "I e III corretas → alternativa B"
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Triângulo na Tabela 4",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Tipo de veículo", "Triângulo de segurança"],
+        "linhas": [
+          { "faixa": "Ciclomotor", "classificacao": "Não obrigatório" },
+          { "faixa": "Motoneta / Motocicleta", "classificacao": "Não obrigatório — isca da II", "destaque": true },
+          { "faixa": "Triciclo", "classificacao": "Obrigatório — X(46)" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Assertiva-isca: II",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que a II afirma ✗", "O que a Tabela 4 diz ✓"],
+        "linhas": [
+          ["Triângulo obrigatório para motocicletas e motonetas", "Triângulo só na coluna Triciclo — moto e motoneta sem X"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — termo_unico", "Marca só I correta; ignora III também correta (art. 7º)"],
+          ["C — regra_excecao", "Inclui II falsa — generaliza triângulo a moto/motoneta"],
+          ["D — gravidade", "Compra II falsa e ainda imputa infração grave por ausência de triângulo em moto"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Montando o gabarito",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Assertiva", "Veredito"],
+        "linhas": [
+          ["I — fiscalização constata equipamentos", "Correta (art. 3º, § 2º)"],
+          ["II — triângulo em moto/motoneta", "Falsa — Tabela 4: só triciclo"],
+          ["III — exportação fora da Resolução", "Correta (art. 7º)"],
+          ["Resultado", "I + III = alternativa B"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 3º, § 2º — competência da fiscalização",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 993/2023, art. 3º, § 2º",
+        "texto": "Compete à fiscalização de trânsito constatar as condições de funcionamento dos equipamentos obrigatórios previstos no Anexo I.",
+        "trechos_grifados": [
+          {
+            "inicio": 10,
+            "fim": 44,
+            "motivo": "matriz — fiscalização constata equipamentos (I correta)",
+            "texto_grifado": "fiscalização de trânsito constatar"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 7º — exceção de exportação",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 993/2023, art. 7º",
+        "texto": "Esta Resolução não se aplica aos veículos destinados à exportação.",
+        "trechos_grifados": [
+          {
+            "inicio": 33,
+            "fim": 65,
+            "motivo": "caso — III correta: exportação fora do regime",
+            "texto_grifado": "veículos destinados à exportação"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "993 em 3 blocos: § 2º = fiscalização constata ANEXO I · art. 7 = exportação fora · Tabela 4 triângulo = triciclo.\n\nNear-transfer: se a banca trocar motoneta por triciclo na II, o triângulo passa a ser obrigatório — leia a coluna do tipo de veículo.",
+        "destaques": ["fiscalização", "exportação", "triciclo"]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 993/2023",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 993, DE 15 DE JUNHO DE 2023.pdf"
+    },
+    {
+      "rotulo": "Res. CONTRAN 993/2023 — Anexo I",
+      "path": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9932023Anexo.pdf"
+    }
+  ]
+}

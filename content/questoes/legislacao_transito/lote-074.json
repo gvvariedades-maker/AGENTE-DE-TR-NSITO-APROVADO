@@ -1,0 +1,366 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_circulacao_conduta",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_39",
+    "enunciado": "Em via urbana de Campina Grande/PB, sem placa de retorno, um condutor pretende inverter o sentido de marcha em trecho com separação central larga, boa visibilidade e fluxo reduzido de veículos, pedestres e ciclistas. Não há sinalização específica para retorno naquele ponto. Considerando as normas de circulação e conduta do Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O art. 39 do CTB autoriza retorno apenas onde houver sinalização específica; sem placa, a manobra é vedada em qualquer ponto da via urbana.",
+      "B": "O art. 39 aplica-se também em rodovias e vias de trânsito rápido, bastando a avaliação subjetiva de segurança do condutor para o retorno.",
+      "C": "Na ausência de local sinalizado, o condutor deve aguardar no acostamento à direita para cruzar a pista, conforme o art. 37 do CTB.",
+      "D": "Em via urbana, o retorno pode ocorrer em local não sinalizado com segurança e fluidez, observados via, veículo, clima e fluxo de pedestres e ciclistas (art. 39, CTB)."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Art. 39 — retorno em via urbana: sinalização, locais apropriados ou outros com segurança e fluidez; distinção do art. 37 (acostamento).",
+      "fundamento_legal": "CTB, art. 39: nas vias urbanas, a operação de retorno deverá ser feita nos locais para isto determinados, quer por meio de sinalização, quer pela existência de locais apropriados, ou, ainda, em outros locais que ofereçam condições de segurança e fluidez, observadas as características da via, do veículo, das condições meteorológicas e da movimentação de pedestres e ciclistas. CTB, art. 37: nas vias providas de acostamento, a conversão à esquerda e a operação de retorno deverão ser feitas nos locais apropriados e, onde estes não existirem, o condutor deverá aguardar no acostamento, à direita, para cruzar a pista com segurança.",
+      "passo_a_passo": [
+        "1. Caso: retorno em via urbana sem placa, mas com separação central larga e condições favoráveis — núcleo do art. 39 (terceira hipótese de local).",
+        "2. A erra por regra_excecao (reduz retorno urbano só a pontos sinalizados, ignorando locais apropriados e outros seguros); B erra por termo_unico (substitui o recorte vias urbanas por rodovias e vias de trânsito rápido); C erra por regra_excecao (aplica art. 37 e espera no acostamento fora da hipótese de via com acostamento).",
+        "3. D correta: art. 39 admite retorno em local não sinalizado com segurança e fluidez, observados via, veículo, clima e pedestres/ciclistas."
+      ],
+      "pegadinha": "A IDECAN induz a crer que retorno urbano exige placa — o art. 39 abre três portas de local, sendo a terceira a do caso (segurança e fluidez).",
+      "macete": "URBANO: SINAL · APROPRIADO · SEGURO+FLUIDO · ≠ art. 37 acostamento.",
+      "estudo_reverso": [
+        "CTB art. 39",
+        "CTB art. 37"
+      ]
+    },
+    "tags": [
+      "retorno",
+      "via_urbana",
+      "art_39",
+      "circulacao",
+      "sinalizacao"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CTB_art_39",
+      "macete_visual": "URBANO: SINAL · APROPRIADO · SEGURO+FLUIDO",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Retorno urbano sem placa — separação central larga e fluxo reduzido.\n\nGabarito D: art. 39 — segurança e fluidez.",
+            "destaques": ["sem placa", "Gabarito D", "art. 39"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Placa × local seguro",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Sem placa = retorno vedado", "Pode haver local apropriado ou seguro e fluido"],
+              ["Art. 39 vale em rodovia", "Apenas vias urbanas"]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Decisão rápida",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Retorno em via urbana?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Local seguro e fluido permitido", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "URBANO: SINAL · APROPRIADO · SEGURO+FLUIDO.\nPlaca não é a única porta.\n≠ art. 37.",
+            "destaques": ["SEGURANÇA E FLUIDE", "art. 39"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 39",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "CTB_art_39",
+      "macete_visual": "URBANO: SINAL · APROPRIADO · SEGURO+FLUIDO · ≠ art. 37",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Retorno urbano não exige placa — basta local apropriado ou ponto com segurança e fluidez",
+        "eixos_legais": [
+          "CTB_art_39",
+          "CTB_art_37"
+        ],
+        "isca_por_alternativa": {
+          "A": "restringe retorno só a pontos sinalizados — regra_excecao",
+          "B": "substitui vias urbanas por rodovias — termo_unico",
+          "C": "aplica espera no acostamento do art. 37 — regra_excecao"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: retorno urbano sem placa",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — exigiu placa específica: o art. 39 admite também locais apropriados e outros com segurança e fluidez.\nB — estendeu a rodovias: o art. 39 restringe-se a vias urbanas.\nC — citou acostamento do art. 37: hipótese de via com acostamento — aqui incide retorno urbano.\n\nNesta aula você fixa as três portas de local e separa art. 39 de art. 37.",
+            "destaques": [
+              "Gabarito D",
+              "vias urbanas",
+              "segurança e fluidez"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "OPERAÇÃO DE RETORNO: inverter o sentido de marcha na mesma via — manobra regulada pelo art. 39 nas vias urbanas.\n\nLOCAL APROPRIADO: ponto naturalmente adequado ao retorno, mesmo sem placa dedicada.\n\nSEGURANÇA E FLUIDE: critério para retorno em local não sinalizado — via, veículo, clima e fluxo de pedestres e ciclistas.",
+            "destaques": [
+              "RETORNO",
+              "LOCAL APROPRIADO",
+              "SEGURANÇA E FLUIDE"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: onde fazer o retorno?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Manobra é retorno em via urbana?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Há sinalização ou local apropriado?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Outro local com segurança e fluidez",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Art. 39 — três portas de local",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Local",
+              "Base legal"
+            ],
+            "linhas": [
+              {
+                "faixa": "Sinalização",
+                "classificacao": "Locais determinados por placas ou marcas"
+              },
+              {
+                "faixa": "Locais apropriados",
+                "classificacao": "Pontos naturalmente adequados ao retorno"
+              },
+              {
+                "faixa": "Outros locais",
+                "classificacao": "Segurança e fluidez observadas",
+                "destaque": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: só onde tem placa",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
+            "linhas": [
+              [
+                "Sem placa de retorno a manobra é vedada",
+                "Pode haver local apropriado ou ponto seguro e fluido"
+              ],
+              [
+                "Art. 39 vale em qualquer tipo de via",
+                "Incide apenas em vias urbanas"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Ignora locais apropriados e outros com segurança — exige só sinalização"
+              ],
+              [
+                "B — termo_unico",
+                "Substitui recorte vias urbanas por rodovias — dispositivo limita-se ao urbano"
+              ],
+              [
+                "C — regra_excecao",
+                "Transpõe art. 37 (acostamento) para via urbana sem essa hipótese"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Fato do caso",
+              "Conclusão legal"
+            ],
+            "linhas": [
+              [
+                "Via urbana em Campina Grande, sem placa de retorno",
+                "Incide art. 39 — não basta invocar art. 37"
+              ],
+              [
+                "Separação central larga, boa visibilidade e fluxo reduzido",
+                "Local pode oferecer segurança e fluidez"
+              ],
+              [
+                "Resultado",
+                "Gabarito D — retorno permitido nas condições do art. 39"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Art. 37 × art. 39",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Dispositivo",
+              "Hipótese"
+            ],
+            "linhas": [
+              [
+                "Art. 37",
+                "Via com acostamento — espera à direita se não houver local apropriado"
+              ],
+              [
+                "Art. 39",
+                "Via urbana — sinalização, local apropriado ou outro seguro e fluido"
+              ],
+              [
+                "Pegadinha C",
+                "Acostamento do art. 37 não substitui regra do retorno urbano"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei39",
+          "titulo": "Art. 39 — literal da regra",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 39",
+            "texto": "Art. 39. Nas vias urbanas, a operação de retorno deverá ser feita nos locais para isto determinados, quer por meio de sinalização, quer pela existência de locais apropriados, ou, ainda, em outros locais que ofereçam condições de segurança e fluidez, observadas as características da via, do veículo, das condições meteorológicas e da movimentação de pedestres e ciclistas.",
+            "trechos_grifados": [
+              {
+                "inicio": 13,
+                "fim": 25,
+                "motivo": "contraste — art. 39 não vale em rodovia"
+              },
+              {
+                "inicio": 118,
+                "fim": 128,
+                "motivo": "mapa — primeira porta: sinalização"
+              },
+              {
+                "inicio": 216,
+                "fim": 251,
+                "motivo": "caso — retorno sem placa com segurança e fluidez"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "URBANO: SINAL · APROPRIADO · SEGURO+FLUIDO (art. 39).\n≠ art. 37 (acostamento em via com shoulder).\nTrês portas — placa não é a única.\n\nNear-transfer: em via urbana sem placa, retorno em alça larga com visibilidade e pouco fluxo de pedestres pode ser lícito se seguro e fluido.",
+            "destaques": [
+              "SINAL · APROPRIADO · SEGURO+FLUIDO",
+              "art. 39",
+              "Near-transfer"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 39",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        },
+        {
+          "rotulo": "CTB art. 37",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

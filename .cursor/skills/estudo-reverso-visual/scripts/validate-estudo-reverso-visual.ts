@@ -19,6 +19,7 @@ import {
 } from "../../../../src/lib/validations/estudo-reverso-visual";
 import { questoesImportFileSchema } from "../../../../src/lib/validations/questao";
 import type { TelaVisual } from "../../../../src/types/estudo-reverso-visual";
+import type { GrifoInput } from "../../../../src/lib/grifo-offsets";
 
 function textosLegaisDasTelas(telas: TelaVisual[]): string[] {
   const textos: string[] = [];
@@ -38,6 +39,9 @@ function textosLegaisDasTelas(telas: TelaVisual[]): string[] {
 async function main() {
   const args = process.argv.slice(2);
   const skipCitacoes = args.includes("--skip-citacoes");
+  if (args.includes("--legacy-grifos")) {
+    process.env.GRIFO_LEGACY = "1";
+  }
   const filePath = args.find((a) => !a.startsWith("--"));
 
   if (!filePath) {
@@ -110,6 +114,20 @@ async function main() {
         console.log(
           `  ✓ ${label} — ${completoResult.data.telas.length} telas completo (v2)`,
         );
+
+        if (process.env.GRIFO_LEGACY === "1") {
+          for (const tela of completoResult.data.telas) {
+            if (tela.tipo !== "trecho_legal") continue;
+            for (const g of (tela.conteudo.trechos_grifados ?? []) as GrifoInput[]) {
+              if (!g.texto_grifado?.trim()) {
+                avisos++;
+                console.warn(
+                  `  ⚠ ${label} tela "${tela.id}": texto_grifado ausente (modo --legacy-grifos)`,
+                );
+              }
+            }
+          }
+        }
 
         if (visualResult?.success) {
           for (const msg of listarErrosCoerenciaV1V2(

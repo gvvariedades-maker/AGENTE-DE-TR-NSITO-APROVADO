@@ -1,0 +1,293 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CONTRAN_1013_art_5_par7",
+  "macete_visual": "90 dias normal · 5 anos se 209-A",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "90 dias de guarda de imagens não alcança evasão art. 209-A — mínimo de 5 anos",
+    "eixos_legais": [
+      "CONTRAN_1013_art_5_par7",
+      "CTB_art_209-A"
+    ],
+    "isca_por_alternativa": {
+      "A": "noventa dias vale para toda passagem, inclusive após evasão configurada",
+      "B": "só PRF guarda 5 anos — concessionária livre após 90 dias",
+      "C": "guarda de imagens termina com os 30 dias do pagamento da tarifa"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: descarte no 95º dia foi lícito?",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito D.\n\nA — noventa dias vale para toda passagem, inclusive após evasão configurada.\nB — só PRF guarda 5 anos; concessionária livre após 90 dias.\nC — guarda de imagens termina com os 30 dias do pagamento da tarifa.\n\nPegadinha: evasão exige guarda mínima de 5 anos — 90 dias só sem infração.",
+        "destaques": [
+          "Gabarito D",
+          "95º dia",
+          "5 anos"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "FREE FLOW: pedágio eletrônico sem cancela — tarifa paga em até 30 dias da passagem.\n\nEVASÃO (209-A): infração por não quitar tarifa no prazo — altera prazo de guarda de imagens.\n\nGUARDA DE IMAGENS: registro da passagem — prazo mínimo distinto do prazo de pagamento.",
+        "destaques": [
+          "FREE FLOW",
+          "209-A",
+          "GUARDA"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: qual prazo mínimo de guarda?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Passagem sem tarifa no prazo — evasão configurada?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Imagens descartadas antes de 5 anos?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Descarte ilícito — guarda mínima de 5 anos (gabarito D)",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — caso do enunciado"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — 95º dia com evasão"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Gradação dos prazos no free flow",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Hipótese",
+          "Prazo mínimo"
+        ],
+        "linhas": [
+          {
+            "faixa": "Passagem sem evasão configurada",
+            "classificacao": "90 dias de guarda de imagens"
+          },
+          {
+            "faixa": "Infração de evasão (209-A)",
+            "classificacao": "5 anos de guarda de imagens",
+            "destaque": true
+          },
+          {
+            "faixa": "Pagamento da tarifa",
+            "classificacao": "30 dias da passagem — prazo distinto"
+          },
+          {
+            "faixa": "Descarte no 95º dia com evasão",
+            "classificacao": "Ilícito — ainda dentro dos 5 anos"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: 90 dias bastam sempre",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Crença ✗",
+          "Lei ✓"
+        ],
+        "linhas": [
+          [
+            "Cumpriu 90 dias — pode apagar",
+            "Com evasão, mínimo é 5 anos — inciso II do §7º"
+          ],
+          [
+            "Prazo da tarifa = prazo da imagem",
+            "30 dias para pagar ≠ 90 dias ou 5 anos para guardar"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Trata 90 dias como regra única — ignora 5 anos na hipótese 209-A"
+          ],
+          [
+            "B — competencia_snt",
+            "Atribui guarda exclusiva à PRF — §7º obriga órgão ou concessionária"
+          ],
+          [
+            "C — numero_vizinho",
+            "Confunde 30 dias da tarifa com prazo de guarda de imagens"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do caso",
+          "Consequência"
+        ],
+        "linhas": [
+          [
+            "Passagem free flow sem quitar tarifa",
+            "Hipótese de evasão — art. 209-A"
+          ],
+          [
+            "Imagens descartadas no 95º dia",
+            "Ainda dentro dos 5 anos exigidos — descarte ilícito"
+          ],
+          [
+            "Autuação pretendida no 120º dia",
+            "Prova deveria estar disponível — gabarito D"
+          ],
+          [
+            "Resultado",
+            "Alternativa D"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Resolução × infração do CTB",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função"
+        ],
+        "linhas": [
+          [
+            "Res. 1.013/2024, art. 5º, §7º, I",
+            "90 dias — passagem sem infração 209-A"
+          ],
+          [
+            "Res. 1.013/2024, art. 5º, §7º, II",
+            "5 anos — quando há evasão (209-A)"
+          ],
+          [
+            "Res. 1.013/2024, art. 9º caput",
+            "Não pagar tarifa no prazo configura 209-A"
+          ],
+          [
+            "CTB, art. 209-A",
+            "Infração de evasão de pedágio"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei1",
+      "titulo": "Art. 5º, §7º — prazos de guarda",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 1.013/2024, art. 5º, §7º",
+        "texto": "§ 7º Os órgãos ou entidades executivos com circunscrição sobre a via ou as concessionárias, conforme o caso, deverão armazenar as imagens de que tratam o § 6º por, no mínimo: I - noventa dias, contados da data da passagem pelo pedágio eletrônico; ou II - cinco anos, nos casos de ocorrência da infração de trânsito prevista no art. 209-A da Lei nº 9.503, de 1997.",
+        "trechos_grifados": [
+          {
+            "inicio": 179,
+            "fim": 191,
+            "motivo": "mapa — regra geral de 90 dias para passagem sem evasão",
+            "texto_grifado": "noventa dias"
+          },
+          {
+            "inicio": 255,
+            "fim": 265,
+            "motivo": "contraste — exceção de 5 anos na hipótese 209-A",
+            "texto_grifado": "cinco anos"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 9º caput — vínculo com 209-A",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 1.013/2024, art. 9º",
+        "texto": "A inobservância ao disposto no art. 7º desta Resolução configura infração de trânsito prevista no art. 209-A da Lei nº 9.503, de 1997, a ser verificada pelo órgão ou entidade executivo de trânsito ou rodoviário competente.",
+        "trechos_grifados": [
+          {
+            "inicio": 98,
+            "fim": 108,
+            "motivo": "fluxo — evasão altera prazo de guarda para 5 anos",
+            "texto_grifado": "art. 209-A"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "IMAGENS FREE FLOW: 90 DIAS (normal) · 5 ANOS (209-A) · 30 DIAS = tarifa.\n\nNear-transfer: se a banca disser que a passagem foi quitada no 25º dia (sem evasão), o mínimo cai para 90 dias — mas 95º dia ainda seria ilícito se houvesse evasão.",
+        "destaques": [
+          "90 DIAS",
+          "5 ANOS",
+          "25º dia"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 1.013/2024",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.013, DE 16 DE OUTUBRO DE 2024.pdf"
+    },
+    {
+      "rotulo": "CTB art. 209-A",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

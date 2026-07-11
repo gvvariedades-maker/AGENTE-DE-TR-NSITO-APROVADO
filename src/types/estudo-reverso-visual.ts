@@ -35,6 +35,8 @@ export interface DestaqueTexto {
   inicio: number;
   fim: number;
   motivo: string;
+  /** Trecho exato grifado — validado contra texto.slice(inicio, fim). */
+  texto_grifado: string;
 }
 
 export interface ConteudoTextoDestaque {

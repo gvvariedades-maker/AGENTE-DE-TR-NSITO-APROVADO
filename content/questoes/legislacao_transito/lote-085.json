@@ -1,0 +1,361 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_circulacao_conduta",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_43_III",
+    "enunciado": "Em via urbana de Campina Grande/PB, um condutor que trafega dentro do limite máximo da via avista tráfego mais lento à frente e, de forma repentina, reduz a velocidade do veículo sem acionar a sinalização devida e sem antecedência suficiente, obrigando o veículo que segue atrás a desviar bruscamente. Não há perigo iminente que justifique omitir as cautelas. Considerando as normas de circulação e conduta do Código de Trânsito Brasileiro sobre velocidade, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Enquanto respeitar o limite máximo da via, o condutor pode reduzir a velocidade sem sinalizar a manobra, desde que não freie bruscamente.",
+      "B": "Basta certificar-se de que pode diminuir a velocidade sem inconvenientes aos demais, conforme o art. 43, II, do CTB — a sinalização é facultativa.",
+      "C": "Ao reduzir a velocidade, o condutor deve indicar de forma clara, com a antecedência necessária e a sinalização devida, a manobra de redução (art. 43, III, CTB).",
+      "D": "O inciso III do art. 43 aplica-se apenas quando o condutor for parar ou estacionar o veículo, não para simples redução de velocidade."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Art. 43, III — dever de indicar claramente, com antecedência e sinalização devida, a manobra de redução de velocidade; distinção do caput (limite máximo), inciso II (certificar-se antes de reduzir) e confusão com parada/estacionamento.",
+      "fundamento_legal": "CTB, art. 43, III: indicar, de forma clara, com a antecedência necessária e a sinalização devida, a manobra de redução de velocidade. CTB, art. 43, II: sempre que quiser diminuir a velocidade de seu veículo deverá antes certificar-se de que pode fazê-lo sem risco nem inconvenientes para os outros condutores, a não ser que haja perigo iminente.",
+      "passo_a_passo": [
+        "1. Caso: redução repentina de velocidade sem sinalização nem antecedência, com veículo atrás obrigado a desviar — núcleo do art. 43, III.",
+        "2. A erra por regra_excecao (confunde respeito ao limite máximo com dispensa de sinalizar a redução); B erra por numero_vizinho (transpõe inciso II e trata sinalização como facultativa); D erra por termo_unico (restringe inciso III a parada ou estacionamento, ignorando redução de velocidade).",
+        "3. C correta: inciso III impõe indicar de forma clara, com antecedência necessária e sinalização devida, a manobra de redução."
+      ],
+      "pegadinha": "A IDECAN induz a crer que abaixo do máximo ou com cuidado na redução basta — o inciso III exige sinalizar a manobra de redução com antecedência.",
+      "macete": "REDUZIR = SINALIZAR · claro · antecedência · devida · ≠ só limite máx.",
+      "estudo_reverso": [
+        "CTB art. 43, III",
+        "CTB art. 43, II"
+      ]
+    },
+    "tags": [
+      "velocidade",
+      "sinalizacao",
+      "reducao",
+      "art_43",
+      "circulacao"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CTB_art_43_III",
+      "macete_visual": "REDUZIR = SINALIZAR · claro · antecedência · devida",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Redução sem sinalizar — veículo atrás desvia.\n\nGabarito C: art. 43, III — indicar a manobra de redução.",
+            "destaques": ["sem sinalizar", "Gabarito C", "redução"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Limite máximo × sinalizar redução",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Abaixo do máximo dispensa sinalizar", "Inciso III exige indicar a redução"],
+              ["Inciso II basta sozinho", "Certificar-se + sinalizar são deveres distintos"]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Decisão rápida",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Vai reduzir a velocidade?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Sinalizar com clareza e antecedência", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "REDUZIR = SINALIZAR.\nClaro · antecedência · sinalização devida.",
+            "destaques": ["SINALIZAR", "antecedência"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 43",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "CTB_art_43_III",
+      "macete_visual": "REDUZIR = SINALIZAR · claro · antecedência · devida",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Respeitar o limite máximo ou reduzir com cuidado não dispensa sinalizar a manobra de redução",
+        "eixos_legais": [
+          "CTB_art_43_III",
+          "CTB_art_43_II"
+        ],
+        "isca_por_alternativa": {
+          "A": "limite máximo dispensa sinalizar redução — regra_excecao",
+          "B": "inciso II substitui obrigação de sinalizar — numero_vizinho",
+          "D": "inciso III só vale para parar ou estacionar — termo_unico"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: redução sem sinalizar",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — abaixo do máximo liberou tudo: inciso III exige indicar a manobra de redução com antecedência.\nB — citou só certificar-se: inciso II não substitui sinalização devida do inciso III.\nD — restringiu a parada/estacionamento: a lei fala em redução de velocidade, não só imobilizar.\n\nNesta aula você fixa reduzir ≠ só respeitar o limite.",
+            "destaques": [
+              "Gabarito C",
+              "sinalização devida",
+              "manobra de redução"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "MANOBRA DE REDUÇÃO: diminuir a velocidade do veículo em movimento — exige indicação clara.\n\nANTECEDÊNCIA NECESSÁRIA: avisar com tempo suficiente para os demais reagirem com segurança.\n\nSINALIZAÇÃO DEVIDA: uso correto dos dispositivos do veículo para comunicar a intenção.",
+            "destaques": [
+              "MANOBRA DE REDUÇÃO",
+              "ANTECEDÊNCIA",
+              "SINALIZAÇÃO DEVIDA"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: vai reduzir a velocidade?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Condutor vai diminuir a velocidade?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Pode indicar com antecedência e sinalização?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Indicar manobra de redução claramente",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Art. 43 — deveres ao regular velocidade",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Inciso",
+              "Dever"
+            ],
+            "linhas": [
+              [
+                "Caput",
+                "Observar condições e limites máximos"
+              ],
+              [
+                "II",
+                "Certificar-se antes de diminuir a velocidade"
+              ],
+              [
+                "III",
+                "Indicar claramente a manobra de redução"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: limite máximo basta",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
+            "linhas": [
+              [
+                "Abaixo do máximo dispensa sinalizar",
+                "Inciso III exige indicar a redução com antecedência"
+              ],
+              [
+                "Certificar-se antes de reduzir é suficiente",
+                "Inciso II e III são deveres cumulativos"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Trata limite máximo como dispensa de sinalizar — inciso III é autônomo"
+              ],
+              [
+                "B — numero_vizinho",
+                "Transpõe inciso II — certificar-se não substitui sinalização devida"
+              ],
+              [
+                "D — termo_unico",
+                "Inventa alcance só para parada — lei fala em redução de velocidade"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Fato do caso",
+              "Conclusão legal"
+            ],
+            "linhas": [
+              [
+                "Redução repentina sem sinalização em Campina Grande",
+                "Viola dever de indicar a manobra"
+              ],
+              [
+                "Veículo atrás obrigado a desviar bruscamente",
+                "Falta de antecedência e sinalização devida"
+              ],
+              [
+                "Resultado",
+                "Gabarito C — art. 43, III"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Inciso II × inciso III",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Inciso",
+              "Foco"
+            ],
+            "linhas": [
+              [
+                "II",
+                "Certificar-se de que pode reduzir sem inconvenientes"
+              ],
+              [
+                "III",
+                "Indicar claramente a manobra de redução"
+              ],
+              [
+                "Pegadinha B",
+                "Cuidado na redução ≠ dispensar sinalização"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei43iii",
+          "titulo": "Art. 43, III — literal da regra",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 43, III",
+            "texto": "III - indicar, de forma clara, com a antecedência necessária e a sinalização devida, a manobra de redução de velocidade.",
+            "trechos_grifados": [
+              {
+                "inicio": 15,
+                "fim": 29,
+                "motivo": "contraste — indicação clara, não basta reduzir em silêncio"
+              },
+              {
+                "inicio": 37,
+                "fim": 60,
+                "motivo": "glossario — avisar com tempo para o veículo de trás reagir"
+              },
+              {
+                "inicio": 87,
+                "fim": 105,
+                "motivo": "caso — redução repentina sem acionar sinalização"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "REDUZIR = SINALIZAR (inc. III).\nClaro · antecedência · sinalização devida.\nLimite máximo não dispensa indicar a manobra.\nInciso II é certificar-se; III é comunicar.\n\nNear-transfer: ao avistar congestionamento à frente, acione a seta e reduza gradualmente — não freie de surpresa sem avisar quem vem atrás.",
+            "destaques": [
+              "REDUZIR = SINALIZAR",
+              "antecedência",
+              "Near-transfer"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 43",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

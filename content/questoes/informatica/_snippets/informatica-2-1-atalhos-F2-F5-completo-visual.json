@@ -1,0 +1,206 @@
+{
+  "versao": 2,
+  "arquetipo": "tabela_gradacao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 185,
+  "fundamento_slug": "info_atalhos_F2_F5_windows",
+  "macete_visual": "F2=renomear | F5=atualizar | Win+E=Explorador",
+  "meta": {
+    "padrao_familia": "D_gradacao",
+    "pegadinha_em_uma_frase": "Supervisor troca F5 (atualizar) pelo atalho de renomear — o correto é F2",
+    "eixos_legais": [
+      "info_atalho_F2_renomear",
+      "info_atalho_F5_atualizar"
+    ],
+    "eixos_mecanismo": [
+      "numero_vizinho",
+      "termo_unico",
+      "regra_excecao"
+    ],
+    "isca_por_alternativa": {
+      "A": "marca F2 como incorreta — confunde renomear com busca",
+      "B": "confunde Win+E com Win+D para abrir Explorador",
+      "D": "crê que Enter sempre renomeia após selecionar pasta"
+    },
+    "referencia_lote": "content/questoes/informatica/lote-002.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: F5 não renomeia",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C (afirmação falsa sobre F5).\n\nA — marca F2 como incorreta, mas F2 renomeia no Explorador.\nB — confunde Win+E com Win+D para abrir pastas.\nD — crê que Enter sempre renomeia após selecionar a pasta.\n\nSupervisor orientou F5 para renomear \"Boletins_Janeiro\".",
+        "destaques": [
+          "F5",
+          "F2",
+          "Boletins_Janeiro"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Antes de memorizar: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Renomear = trocar o nome do arquivo ou pasta selecionado. Atualizar visualização = recarregar a lista de arquivos da pasta (F5). Explorador de Arquivos = janela de pastas e arquivos do Windows.",
+        "destaques": [
+          "Renomear",
+          "Atualizar",
+          "Explorador"
+        ]
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Mapa de atalhos — decore os pares",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Tecla",
+          "Função no Explorador"
+        ],
+        "linhas": [
+          {
+            "faixa": "F2",
+            "classificacao": "Renomeia item selecionado",
+            "destaque": true
+          },
+          {
+            "faixa": "F5",
+            "classificacao": "Atualiza visualização da pasta"
+          },
+          {
+            "faixa": "Win+E",
+            "classificacao": "Abre Explorador de Arquivos"
+          },
+          {
+            "faixa": "Enter",
+            "classificacao": "Abre pasta ou executa item (não renomeia)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: F5 parece renomear",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o supervisor diz ✗",
+          "O que o Windows faz ✓"
+        ],
+        "linhas": [
+          [
+            "F5 ativa o modo de renomear",
+            "F5 só atualiza a visualização da pasta"
+          ],
+          [
+            "Basta F5 para renomear pelo teclado",
+            "F2 é o atalho de renomeação no Explorador"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — termo_unico",
+            "Marca F2 como incorreta — confunde renomear com busca/localizar"
+          ],
+          [
+            "B — numero_vizinho",
+            "Troca Win+E por Win+D — Win+D mostra área de trabalho, não abre Explorador"
+          ],
+          [
+            "D — regra_excecao",
+            "Crê que Enter sempre renomeia — Enter abre pasta ou executa, não renomeia"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Caso STTP — Boletins_Janeiro",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do enunciado",
+          "Resultado"
+        ],
+        "linhas": [
+          [
+            "Pasta selecionada + renomear só pelo teclado",
+            "Atalho correto: F2 (não F5)"
+          ],
+          [
+            "Supervisor indica F5 para renomear",
+            "Afirmação falsa → Gabarito C (INCORRETA)"
+          ],
+          [
+            "Manual cita Win+E e F2",
+            "Alternativas A e B são verdadeiras — não marque como incorretas"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Referência — atalhos Windows",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Anexo I — Informática, itens 2.1 e 2.3",
+        "texto": "No Explorador de Arquivos do Windows, a tecla F2 inicia a renomeação do item selecionado; a tecla F5 atualiza a visualização da pasta atual, sem renomear arquivos.",
+        "trechos_grifados": [
+          {
+            "inicio": 46,
+            "fim": 88,
+            "motivo": "gradacao — F2 é o atalho de renomear",
+            "texto_grifado": "F2 inicia a renomeação do item selecionado"
+          },
+          {
+            "inicio": 98,
+            "fim": 124,
+            "motivo": "contraste — supervisor confundiu F5 com renomear",
+            "texto_grifado": "F5 atualiza a visualização"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "F2 = renomear | F5 = atualizar (refresh) | Win+E = Explorador.\n\nNear-transfer: colega pede para atualizar a lista após copiar arquivos para \"Boletins_Fevereiro\" — use F5, não F2.",
+        "destaques": [
+          "F2",
+          "F5",
+          "F5"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Anexo I — Informática, itens 2.1 e 2.3",
+      "path": "conteúdo/edital/"
+    }
+  ]
+}

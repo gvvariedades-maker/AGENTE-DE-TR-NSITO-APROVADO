@@ -1,12 +1,64 @@
 # Prompt — Questão inédita IDECAN + aula completa (padrão v3)
 
-Copie e cole em uma **nova conversa no modo Agent**. Substitua os campos entre `[colchetes]`.
+Copie e cole em uma **nova conversa no modo Agent**.
+
+> **Política do banco:** dificuldade mínima **4** (`src/lib/validations/dificuldade-banco.ts`). O `npm run proxima` já retorna o escopo com nível 4+.
+
+---
+
+## Prompt nova conversa (copiar inteiro)
+
+```text
+Modo Agent. Skills: examinador-idecan + estudo-reverso-visual.
+
+Disciplina: legislacao_transito
+
+Passo 0 — escolher tópico automaticamente:
+→ npm run proxima -- legislacao_transito
+→ Usar o bloco "Escopo pronto" retornado (tópico, recorte, família, lote, dificuldade 4+).
+
+Gerar 1 questão inédita IDECAN + aula completa v3 nesse tópico.
+Consultar perfil vertical da disciplina (mapa slug→arquivo na SKILL.md) para forma e mecanismos.
+
+## Dificuldade mínima 4 (banco de treino)
+- "dificuldade": 4 ou 5 — nunca 1–3
+- Estrutura: caso_pratico + ≥2 mecanismos cruzados + ≥2 dispositivos no gabarito
+- passo_a_passo[1]: ≥2 slugs distintos (numero_vizinho | competencia_snt | gravidade | regra_excecao | termo_unico)
+- estilo_idecan: pegadinha_* | assertivas | incorreta
+- Pegadinha obrigatória; gate primeira passagem item 4: número bate com dificuldade_operacional
+
+## Questão
+- 4 alt A–D; mecanismo declarado em cada errada
+- <cadeia_anti_alucinacao> em toda citação legal
+- Gate 9: cada errada on-case (deriva do enunciado); competencia_snt só se o stem citar órgão/competência
+- meta.isca_por_alternativa (A/B/D) + meta.eixos_mecanismo quando cruzar ≥2 slugs
+
+## Aula v3
+- Hub: exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md + família do proxima
+- estudo_reverso_visual_completo versao 2, 7–11 telas
+- contexto: só iscas — análise por mecanismo fica em distratores
+- Grifos: npm run grifo:offsets → texto_grifado obrigatório; motivo ecoa id da tela
+- Família A com 2 dispositivos: tela eixo2 ou hierarquia (2º fundamento do gabarito, não eixo órfão)
+- Gate Mayer 8/8 + editorial 12/12 + item #17 (preview:grifos)
+
+## Entrega
+1. Gravar lote + snippet em _snippets/
+2. npm run grifo:offsets + preview:grifos no lote (ou validate:lote — 5 gates)
+3. npm run index:questoes → npm run db:seed
+4. Não commitar
+
+Reportar: família, gabarito, pegadinha em 1 frase, nº de telas, resultado dos 5 gates, caminho do arquivo.
+```
+
+**Variante disciplina:** troque `legislacao_transito` no `proxima` e no bloco Escopo.
+
+---
 
 ## Nomenclatura (não confundir)
 
 | Nome | O que é |
 |------|---------|
-| **Padrão pedagógico v3** | Hub + famílias A–D, contratos de tela, gate editorial 12/12 → [PADRAO-AULA-COMPLETA-v3.md](../estudo-reverso-visual/exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md) |
+| **Padrão pedagógico v3** | Hub + famílias A–D, contratos de tela, gate editorial 12/12 + #17 grifo → [PADRAO-AULA-COMPLETA-v3.md](../estudo-reverso-visual/exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md) |
 | **Campo JSON v2** | `estudo_reverso_visual_completo` com `"versao": 2`, 7–11 telas — formato gravado no banco e validado pelo Zod |
 
 **Não existe `versao: 3` no schema.** Sempre produzir com o **guia v3** e gravar no **campo v2**.
@@ -16,6 +68,7 @@ Documentação de referência:
 | Recurso | Caminho |
 |---------|---------|
 | Examinador IDECAN | [SKILL.md](./SKILL.md) |
+| Perfil vertical da disciplina | `perfis/perfil-{disciplina}.md` (mapa slug→arquivo na [SKILL.md](./SKILL.md)) |
 | Estudo reverso visual | [../estudo-reverso-visual/SKILL.md](../estudo-reverso-visual/SKILL.md) |
 | **Hub padrão pedagógico v3** | [../estudo-reverso-visual/exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md](../estudo-reverso-visual/exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md) |
 | Famílias A–D | [../estudo-reverso-visual/exemplos-ouro/familias/](../estudo-reverso-visual/exemplos-ouro/familias/) |
@@ -44,10 +97,11 @@ Criar 1 questão inédita IDECAN + aula completa no padrão pedagógico v3, grav
 - Disciplina: [legislacao_transito]
 - Microtópico / topico (Anexo I retificado): [CTB_circulacao_conduta]
 - Recorte legal: [ex.: art. 32 ultrapassagem em via de duplo sentido]
-- Dificuldade: [3 ou 4]
+- Dificuldade: 4 ou 5 (mínimo banco — nunca 1–3)
 - Gabarito desejado: [A/B/C/D ou "distribuir conforme lote"]
 
 ## Padrão pedagógico v3 (como montar a aula)
+0. Consultar perfis/perfil-{disciplina}.md (mapa slug→arquivo na SKILL.md): envelope de forma, mecanismos, pares confundíveis e fila ROI da disciplina
 1. Classificar família A|B|C|D — PADRAO-AULA-COMPLETA-v3.md
 2. Abrir familias/PADRAO-{X}-….md + JSON ouro da família (não copiar art.29 cego)
 3. Copiar estrutura (ids, ordem, tipos, seções) da família — NUNCA reusar texto literal
@@ -60,6 +114,8 @@ Criar 1 questão inédita IDECAN + aula completa no padrão pedagógico v3, grav
 - Enunciado no estilo IDECAN (caso prático Campina Grande quando couber; paridade de ofício)
 - Cada errada com 1 mecanismo: numero_vizinho | competencia_snt | gravidade | regra_excecao | termo_unico
 - passo_a_passo[1] nomeia o slug de cada alternativa errada
+- Gate 9: cada errada on-case; competencia_snt só com órgão/competência no stem
+- meta.isca_por_alternativa + meta.eixos_mecanismo quando aplicável
 - Pegadinha obrigatória se dificuldade ≥ 3
 - Comentário Professor Elite completo (objeto comentario no JSON)
 
@@ -68,8 +124,10 @@ Criar 1 questão inédita IDECAN + aula completa no padrão pedagógico v3, grav
 - Condicionais só com gatilho real (mapa da família, não decorar telas)
 - secao válidas: diagnostico|mapa|contraste|distratores|metodo|lei|conceito|macete (glossário: omitir secao)
 - Família A: fluxograma MÉTODO linear ≤4 nós, 1 resultado, sem art. no label
-- trecho_legal: texto literal de conteúdo/, grifos por indexOf, motivo ecoa id da tela
-- Gate Mayer 8/8 + editorial 12/12 (hub v3) antes do npm
+- trecho_legal: texto literal de conteúdo/, grifos por indexOf com `texto_grifado` (npm run grifo:offsets), motivo ecoa id da tela
+- contexto: só iscas (meta.isca_por_alternativa) — análise por mecanismo fica em distratores
+- Família A + 2 dispositivos: tela eixo2 ou hierarquia (2º fundamento, não competência órfã)
+- Gate Mayer 8/8 + editorial 12/12 + #17 → npm run preview:grifos antes do validate:lote
 
 ## Entrega
 1. Gravar em content/questoes/[disciplina]/lote-[NNN].json (criar lote ou acrescentar)
@@ -83,9 +141,45 @@ Criar 1 questão inédita IDECAN + aula completa no padrão pedagógico v3, grav
 - Família A|B|C|D usada
 - Gabarito e pegadinha em 1 frase
 - Número de telas da aula
-- Resultado dos 3 gates de validate:lote
+- Resultado dos 5 gates de validate:lote (inclui preview:grifos)
 - Caminho do arquivo gravado
 ```
+
+---
+
+## Prompt automático (só disciplina — recomendado)
+
+O agente escolhe o tópico por **déficit de demanda** (peso IDECAN × lacuna no banco). Prioridades em `scripts/edital-topics-prioridades.ts` (espelha perfis §9–§10).
+
+```text
+Modo Agent. Skills: examinador-idecan + estudo-reverso-visual.
+
+Disciplina: legislacao_transito
+
+Passo 0 — escolher tópico automaticamente:
+→ npm run proxima -- legislacao_transito
+→ Usar o bloco "Escopo pronto" retornado (tópico, recorte, família, lote, dificuldade 4+).
+
+Gerar 1 questão inédita IDECAN + aula completa v3 nesse tópico.
+Consultar perfil vertical da disciplina (mapa slug→arquivo na SKILL.md) para forma e mecanismos.
+
+Dificuldade mínima 4: caso_pratico + 2 mecanismos cruzados + 2 dispositivos no gabarito.
+Questão: 4 alt A–D; mecanismos nos distratores; pegadinha obrigatória; erradas on-case (gate 9).
+meta.isca_por_alternativa + grifos com texto_grifado (grifo:offsets).
+Aula: contexto só iscas; Mayer 8/8 + editorial 12/12 + #17.
+→ validate:lote (5 gates, inclui preview:grifos) → index:questoes → db:seed. Não commitar.
+```
+
+**Variantes:**
+
+| Comando | Uso |
+|---------|-----|
+| `npm run proxima -- legislacao_transito` | 1 tópico + Escopo pronto |
+| `npm run proxima -- portugues --n 5` | top 5 deficitários da disciplina |
+| `npm run proxima -- all` | próximo tópico de **toda a prova** (peso × déficit × slot edital) |
+| `npm run proxima -- legislacao_transito --json` | saída JSON para o agente |
+
+Slugs de disciplina: `legislacao_transito` | `portugues` | `informatica` | `historia_cg_pb` | `legislacao_etica_sp` | `direito_administrativo` | `direito_constitucional` | `all`
 
 ---
 
@@ -99,18 +193,61 @@ Questão inédita IDECAN + aula completa:
 - Gravar em estudo_reverso_visual_completo, versao 2, 7–11 telas
 
 Escopo:
-- Disciplina/topico: [legislacao_transito] / [TOPICO]
-- Recorte legal: [ARTIGO ou RESOLUÇÃO]
-- Dificuldade [N], gabarito [LETRA ou distribuir]
+- Disciplina: [SLUG — ver tabela por disciplina abaixo]
+- topico: [SLUG_TOPICO do Anexo I / cobertura.json]
+- Recorte legal: [DISPOSITIVO — ver §7 do perfil da disciplina]
+- Dificuldade: 4 ou 5 (mínimo banco)
+- Gabarito: [A/B/C/D ou distribuir conforme lote]
+
+Consultar antes de gerar:
+- perfil vertical: perfis/perfil-{disciplina}.md (mapa slug→arquivo na SKILL.md) — §2 forma, §3 mecanismos, §8 família, §9 lacunas, §10 fila ROI
+- perfil-banca.md + conteudo-programatico.md
+- npm run index:questoes → content/questoes/_index/cobertura.json (eixo livre)
 
 Siga:
 - .cursor/skills/estudo-reverso-visual/exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md
 - familias/PADRAO-{A|B|C|D}-….md + JSON ouro da família
+- .cursor/skills/examinador-idecan/SKILL.md (<cadeia_anti_alucinacao>, <gate_primeira_passagem>, mecanismos por distrator)
 
-Diagnóstico com isca por errada; macete com near-transfer.
+Questão:
+- 4 alternativas A–D; cada errada com 1 slug: numero_vizinho | competencia_snt | gravidade | regra_excecao | termo_unico
+- passo_a_passo[1] nomeia o mecanismo de cada alternativa errada
+- Gate 9: erradas on-case; competencia_snt só com órgão/competência no stem
+- meta.isca_por_alternativa (A/B/D)
+- Pegadinha obrigatória se dificuldade ≥ 3
+
+Diagnóstico: contexto só iscas; distratores com análise por mecanismo.
+Grifos: npm run grifo:offsets → texto_grifado; motivo ecoa id da tela.
+Macete com near-transfer.
 <cadeia_anti_alucinacao> em toda citação legal.
-Gate Mayer 8/8 + editorial 12/12 → validate:lote → db:seed. Não commitar.
+Gate primeira passagem 9/9 → Mayer 8/8 + editorial 12/12 + #17 → validate:lote (5 gates) → index:questoes → db:seed. Não commitar.
+
+Gravar em: content/questoes/[SLUG]/lote-[NNN].json
 ```
+
+### O que trocar por disciplina
+
+Só muda o bloco **Escopo + Consultar**. Resolver o arquivo pelo mapa slug→arquivo em [SKILL.md](./SKILL.md).
+
+| `disciplina` | Perfil | `topico` (exemplos) | Recorte legal | Família / forma |
+|--------------|--------|---------------------|---------------|-----------------|
+| `legislacao_transito` | perfil-transito.md | `CTB_infracoes`, `CTB_snt_competencias`, `CONTRAN_432_alcoolemia` | CTB + resolução CONTRAN (só retificação 01/2026) | Caso STTP 250–500 chars · A/C/D |
+| `portugues` | perfil-portugues.md | `leitura_interpretacao_textual`, `concordancia_nominal_verbal` | Norma culta (sem lei — validar gramática) | **Texto-base 800–1500 + 3–4 Q no mesmo texto** · A/B |
+| `informatica` | perfil-informatica.md | `seguranca_informacao_malwares`, `planilhas_formulas` | Conceitos atuais Windows/Office (sem lei) | Enunciado 250–500 / alt 40–80 · B/D · **≥1 correspondência no lote** |
+| `direito_constitucional` | perfil-constitucional.md | `cf_art5_*`, `cf_remedios_*` (evitar art. 144 saturado) | CF/88 (`cf-1988.html`) | Caso 300–550 · C (competência) / A (remédios) |
+| `direito_administrativo` | perfil-administrativo.md | `dir_adm_4_5` (poder polícia), `dir_adm_1_1` (lacuna) | CF 37–41 + Lei 9.784 + Lei 14.133 (nunca CONTRAN) | Caso STTP 250–450 · A / B |
+| `legislacao_etica_sp` | perfil-etica-sp.md | **priorizar LGPD/LAI** (banco saturado em `etica_sp_1_1`) | LOM CG + LGPD + LAI + CF art. 37 | Caso 300–500 · A (LGPD) / C (LOM) / D (LAI) |
+| `historia_cg_pb` | perfil-historia-cg-pb.md | `historia_cg_pb_formacao`, `_personagens` | **Só** `conteúdo/historia-cg-pb/base-factual.md` | Enunciado 150–400 · D (datas) / A (personagens) |
+
+**Ajustes que mudam o corpo do prompt:**
+
+- **portugues:** trocar "1 questão" por "1 texto-base + 3–4 questões"; comando CORRETA como padrão; `<cadeia_anti_alucinacao>` valida a **regra gramatical**, não artigo.
+- **informatica:** sem lei — validar comportamento canônico do software; pedir ≥1 questão de correspondência no lote.
+- **historia_cg_pb:** todo fato deve constar na `base-factual.md`; ausente → `[verificar]`. Sem lei/jurisprudência.
+- **legislacao_etica_sp:** não gerar só Lei Orgânica; pedir explicitamente LGPD ou LAI (lacuna real).
+- **direito_constitucional:** evitar novo art. 144 se `cobertura.json` já saturou; priorizar art. 5º / remédios.
+- **direito_administrativo:** caso STTP + poder de polícia quando couber.
+- **legislacao_transito:** resolução só da retificação; conferir eixo não saturado no `cobertura.json`.
 
 ---
 
@@ -120,13 +257,15 @@ Gate Mayer 8/8 + editorial 12/12 → validate:lote → db:seed. Não commitar.
 Modo Agent. Skills: examinador-idecan + estudo-reverso-visual.
 
 Gerar content/questoes/[disciplina]/lote-[NNN].json:
-- [N] questões ouro (1 por microtópico prioritário; máx. 3 por microtópico no lote)
-- Mix dificuldade: ~20% 1–2, ~50% 3, ~30% 4–5
+- npm run proxima -- [disciplina] --n [N] → usar os N tópicos do ranking (1 Q por tópico; máx. 3 por microtópico no lote)
+- Ou: perfis/perfil-{disciplina}.md (§9 lacunas, §10 fila ROI) se escolher tópicos manualmente
+- Mix dificuldade banco: 100% níveis 4–5 (mínimo 4; validador D1)
 - Gabarito: nenhuma letra >35% nem <15%; máx. 2 iguais consecutivos
 - Padrão pedagógico v3 por questão (classificar família A|B|C|D)
 - Campo JSON: estudo_reverso_visual_completo, versao 2, 7–11 telas
 - Hub: PADRAO-AULA-COMPLETA-v3.md + família + JSON ouro correspondente
-- Gate Mayer 8/8 + editorial 12/12 por questão → validate:lote → db:seed
+- contexto só iscas; grifos com texto_grifado; erradas on-case
+- Gate primeira passagem 9/9 + Mayer 8/8 + editorial 12/12 + #17 por questão → validate:lote (5 gates) → db:seed
 - Não commitar
 ```
 
@@ -139,5 +278,5 @@ Gerar content/questoes/[disciplina]/lote-[NNN].json:
 - [ ] Gabarito único e defensável com dispositivo citável
 - [ ] Aula amarrada ao enunciado desta questão (não genérica)
 - [ ] `estudo_reverso_visual_completo.versao === 2`
-- [ ] `npm run validate:lote` passou nos 3 gates
+- [ ] `npm run validate:lote` passou nos 5 gates (inclui preview:grifos)
 - [ ] Seed aplicado (`db:seed`)

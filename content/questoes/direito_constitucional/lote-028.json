@@ -1,0 +1,348 @@
+[
+  {
+    "disciplina": "direito_constitucional",
+    "topico": "dir_const_3_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "enunciado": "Após blitz de fiscalização de trânsito em Campina Grande, a STTP publica em portal municipal lista de condutores autuados por embriaguez com nome completo e fotografia, antes do trânsito em julgado de eventual processo penal e sem concessão de defesa prévia no procedimento administrativo. Um motorista listado contesta a medida. Servidores da autarquia e assessores jurídicos debatem a competência da publicação e os limites da presunção de inocência. Com base na Constituição Federal de 1988, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O interesse público na segurança viária autoriza a STTP a divulgar antecipadamente a lista de condutores autuados por embriaguez, dispensando defesa prévia e presunção de inocência em procedimento administrativo de trânsito.",
+      "B": "A competência para publicar nomes e fotos de autuados por embriaguez é exclusiva do Ministério Público estadual, vedada qualquer divulgação pela STTP em portal municipal.",
+      "C": "A publicação antecipada viola a presunção de inocência (art. 5º, LVII) até trânsito em julgado de sentença penal condenatória; a omissão de defesa prévia ofende contraditório e ampla defesa (art. 5º, LV) no processo administrativo — ambas ilegítimas.",
+      "D": "O art. 5º, LVII só protege réus em processo penal em curso — em autuação administrativa de trânsito, a STTP pode publicar a lista identificável antes da defesa prévia."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Presunção de inocência (art. 5º, LVII) e contraditório e ampla defesa no processo administrativo (art. 5º, LV), em contraste com tentativas de publicação antecipada de autuados por embriaguez sem defesa prévia.",
+      "fundamento_legal": "CF/88, art. 5º, LVII: \"ninguém será considerado culpado até o trânsito em julgado de sentença penal condenatória\". CF/88, art. 5º, LV: \"aos litigantes, em processo judicial ou administrativo, e aos acusados em geral são assegurados o contraditório e ampla defesa, com os meios e recursos a ela inerentes\".",
+      "passo_a_passo": [
+        "1. O caso reúne publicação de nomes e fotos de autuados por embriaguez antes de processo penal transitado em julgado e omissão de defesa prévia no administrativo — exige separar presunção de inocência de poder de fiscalização da STTP.",
+        "2. A erra por regra_excecao (estende o interesse público na segurança viária para dispensar defesa prévia e presunção de inocência na divulgação identificável); B erra por competencia_snt (atribui publicação exclusivamente ao Ministério Público estadual, negando qualquer atuação municipal sem base constitucional); D erra por termo_unico (restringe o art. 5º, LVII ao processo penal em curso, autorizando publicação identificável em autuação administrativa sem defesa prévia).",
+        "3. C está correta: a lista antecipada ofende a presunção de inocência (LVII); a omissão de defesa prévia viola contraditório e ampla defesa no processo administrativo (LV)."
+      ],
+      "pegadinha": "A banca trata fiscalização de trânsito como salvo-conduto para expor condutores como culpados antes do trânsito em julgado ou restringe a presunção de inocência ao processo penal em curso, negando o LV no administrativo.",
+      "macete": "CULPADO só após trânsito em julgado penal (LVII). DEFESA vale no administrativo (LV). Fiscalizar ≠ expor nem pular defesa prévia.",
+      "estudo_reverso": [
+        "CF art. 5º, LVII",
+        "CF art. 5º, LV",
+        "CF art. 5º, LVI"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CF_art5_LV_LVII",
+      "macete_visual": "LVII + LV",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Lista pública de autuados por embriaguez antes do julgamento penal e sem defesa prévia. A banca troca presunção de inocência com interesse público na blitz.",
+            "destaques": ["presunção de inocência", "defesa prévia", "embriaguez"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método rápido",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Houve defesa prévia no administrativo?", "tipo": "pergunta" },
+              { "id": "p2", "label": "A publicação antecipa culpa antes do trânsito em julgado?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Viola LV e LVII — ilegítimo", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não — lista sem defesa" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim — nomes e fotos" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Segurança viária dispensa defesa e inocência", "LV no administrativo + LVII até trânsito em julgado"],
+              ["LVII só vale com processo penal aberto", "Presunção de inocência não autoriza lista pública antecipada"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LVII",
+            "texto": "ninguém será considerado culpado até o trânsito em julgado de sentença penal condenatória",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 32,
+                "motivo": "pegadinha — presunção de inocência",
+                "texto_grifado": "ninguém será considerado culpado"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Culpado só após trânsito em julgado penal (LVII). Defesa no administrativo (LV). Fiscalizar ≠ expor lista identificável.",
+            "destaques": ["LVII", "LV", "defesa"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, LVII",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 245,
+      "fundamento_slug": "CF_art5_LV_LVII",
+      "macete_visual": "LVII + LV",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Lista pública de embriaguez antes do julgamento viola LVII — e pular defesa prévia viola LV no administrativo",
+        "eixos_legais": ["CF_art5_LVII", "CF_art5_LV"],
+        "isca_por_alternativa": {
+          "A": "interesse público dispensa defesa prévia e presunção de inocência na lista de autuados",
+          "B": "só o Ministério Público estadual pode publicar nomes e fotos de autuados",
+          "D": "presunção de inocência só vale com processo penal em curso, não na autuação administrativa"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: lista × inocência",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (presunção de inocência + defesa no administrativo).\n\nA — segurança viária dispensa defesa prévia e inocência na lista pública.\nB — só o Ministério Público pode publicar nomes e fotos de autuados.\nD — presunção de inocência só vale com processo penal aberto, não na autuação.\n\nPromessa: fixar quando publicar autuados por embriaguez viola LVII e omitir defesa fere LV.",
+            "destaques": ["presunção de inocência", "defesa prévia", "lista"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de decidir: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PRESUNÇÃO DE INOCÊNCIA (art. 5º, LVII): ninguém é culpado até trânsito em julgado de sentença penal condenatória — lista pública antecipada trata o autuado como culpado. CONTRADITÓRIO E AMPLA DEFESA (art. 5º, LV): valem no processo administrativo de trânsito — defesa prévia não pode ser suprimida. INTERESSE PÚBLICO: não autoriza exceção inexistente à CF na divulgação identificável.",
+            "destaques": ["inocência", "contraditório", "administrativo"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: a publicação é legítima?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Houve defesa prévia no administrativo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "A lista antecipa culpa antes do trânsito em julgado?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Ilegítimo — viola LV e LVII",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não — sem defesa prévia" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim — nomes e fotos" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa: proteções no procedimento",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Garantia", "Aplicação no caso"],
+            "linhas": [
+              { "faixa": "Presunção de inocência — LVII", "classificacao": "Até trânsito em julgado penal" },
+              { "faixa": "Contraditório e ampla defesa — LV", "classificacao": "Processo administrativo de trânsito" },
+              { "faixa": "Interesse público na blitz", "classificacao": "Não dispensa LV nem LVII" },
+              {
+                "faixa": "Lista pública antecipada",
+                "classificacao": "Ilegítima — C correta",
+                "destaque": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença × lei: blitz × inocência",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Segurança viária autoriza expor embriaguez na lista",
+                "Ninguém é culpado até trânsito em julgado penal (LVII)"
+              ],
+              [
+                "Defesa prévia é só no processo judicial",
+                "LV assegura contraditório no processo administrativo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Estende interesse público na segurança viária para dispensar defesa prévia e presunção de inocência"
+              ],
+              [
+                "B — competencia_snt",
+                "Atribui publicação exclusivamente ao Ministério Público estadual, sem base no caso"
+              ],
+              [
+                "D — termo_unico",
+                "Restringe presunção de inocência ao processo penal em curso, autorizando lista sem defesa prévia"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo a lista da STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Conclusão"],
+            "linhas": [
+              ["Nomes e fotos publicados antes do trânsito em julgado penal", "Viola presunção de inocência — LVII"],
+              ["Sem defesa prévia no procedimento administrativo", "Viola contraditório e ampla defesa — LV"],
+              ["Motorista listado contesta a medida", "Ambas as violações são ilegítimas"],
+              ["Resultado", "Alternativa C"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "LVII × LV — dupla proteção",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Papel no caso"],
+            "linhas": [
+              ["Art. 5º, LVII", "Presunção de inocência — lista antecipada trata como culpado"],
+              ["Art. 5º, LV", "Contraditório e ampla defesa — defesa prévia omitida"],
+              ["Interesse público", "Não cria exceção à CF"],
+              ["Caso concreto", "Publicação + omissão de defesa → alternativa C"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 5º, LVII — presunção de inocência",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LVII",
+            "texto": "ninguém será considerado culpado até o trânsito em julgado de sentença penal condenatória",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 32,
+                "motivo": "fluxo — núcleo da presunção",
+                "texto_grifado": "ninguém será considerado culpado"
+              },
+              {
+                "inicio": 39,
+                "fim": 89,
+                "motivo": "caso — lista antes do julgamento penal",
+                "texto_grifado": "trânsito em julgado de sentença penal condenatória"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 5º, LV — defesa administrativa",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LV",
+            "texto": "aos litigantes, em processo judicial ou administrativo, e aos acusados em geral são assegurados o contraditório e ampla defesa, com os meios e recursos a ela inerentes",
+            "trechos_grifados": [
+              {
+                "inicio": 19,
+                "fim": 54,
+                "motivo": "mapa — administrativo de trânsito incluído",
+                "texto_grifado": "processo judicial ou administrativo"
+              },
+              {
+                "inicio": 98,
+                "fim": 126,
+                "motivo": "contraste — defesa prévia omitida",
+                "texto_grifado": "contraditório e ampla defesa"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CULPADO só após trânsito em julgado penal (LVII).\nDEFESA vale no administrativo (LV).\nFiscalizar ≠ expor lista identificável.\n\nNear-transfer: se a STTP apenas autuasse sem publicar nomes e abrisse defesa prévia, a autuação administrativa poderia seguir — mas a lista antecipada com fotos viola LVII e a omissão de defesa fere LV.",
+            "destaques": ["LVII", "LV", "defesa"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, LVII",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        },
+        {
+          "rotulo": "CF/88, art. 5º, LV",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "art5_lvii",
+      "art5_lv",
+      "presuncao_inocencia",
+      "contraditorio",
+      "embriaguez",
+      "sttp"
+    ]
+  }
+]

@@ -1,0 +1,314 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_1_2",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "LGPD_art18_art19",
+    "enunciado": "Condutor protocola na STTP de Campina Grande pedido de confirmação da existência de tratamento de seus dados pessoais nas autuações eletrônicas, em formato simplificado. A ouvidoria orienta encaminhá-lo exclusivamente à empresa operadora do sistema; o setor jurídico sustenta que qualquer resposta ao titular pode levar até quinze dias, inclusive a confirmação simplificada; o encarregado entende que a portabilidade dos registros deve ser imediata em qualquer requerimento verbal. À luz da Lei nº 13.709/2018 (LGPD), assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A confirmação em formato simplificado deve ser atendida imediatamente pelo controlador (art. 19, I); a declaração clara e completa pode levar até 15 dias (art. 19, II); os direitos do art. 18 são exercidos perante o controlador, que responde ao titular.",
+      "B": "Como a empresa privada opera o banco de dados, o titular deve formular todos os pedidos do art. 18 exclusivamente perante o operador — a STTP apenas fiscaliza o contrato.",
+      "C": "O prazo de até 15 dias do art. 19, II aplica-se a qualquer requerimento do titular, inclusive confirmação simplificada, por ser regra geral de acesso.",
+      "D": "A portabilidade prevista no art. 18, V é direito automático em protocolo verbal, independentemente de requisição expressa ou regulamentação da ANPD."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Direitos do titular perante o controlador (art. 18) e prazos diferenciados de confirmação/acesso (art. 19, I e II).",
+      "fundamento_legal": "LGPD, art. 18, caput: \"O titular dos dados pessoais tem direito a obter do controlador, em relação aos dados do titular por ele tratados, a qualquer momento e mediante requisição\". Art. 19, I: \"em formato simplificado, imediatamente\". Art. 19, II: declaração clara e completa \"fornecida no prazo de até 15 (quinze) dias, contado da data do requerimento do titular\".",
+      "passo_a_passo": [
+        "1. O pedido é confirmação simplificada — art. 19, I exige resposta imediata; declaração completa admite até 15 dias (art. 19, II). Os direitos do art. 18 são obtidos do controlador (STTP), não redirecionados só ao operador.",
+        "2. B erra por termo_unico (confunde operador com destinatário exclusivo dos pedidos do titular — art. 18 aponta o controlador); C erra por regra_excecao (estende o prazo do inciso II à confirmação simplificada do inciso I); D erra por numero_vizinho (dispensa requisição expressa e regulamentação da ANPD exigidas pelo art. 18, V).",
+        "3. A está correta: art. 18 vincula o controlador; art. 19, I = imediato na confirmação simplificada; art. 19, II = até 15 dias na declaração completa."
+      ],
+      "pegadinha": "A banca usa a presença do operador privado ou o prazo de 15 dias do art. 19, II para negar resposta imediata na confirmação simplificada — mas inciso I é imediato e o titular se dirige ao controlador.",
+      "macete": "Simplificado = imediato (art. 19, I); completo = 15 dias (art. 19, II). Titular fala com controlador (art. 18) — operador não substitui.",
+      "estudo_reverso": [
+        "LGPD art. 18, caput",
+        "LGPD art. 19, I",
+        "LGPD art. 19, II",
+        "LGPD art. 18, V"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 50,
+      "fundamento_slug": "LGPD_art18_art19",
+      "macete_visual": "Simplificado = imediato · completo = 15 dias · titular → controlador",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Operador privado não substitui o controlador nos pedidos do titular — confirmação simplificada é imediata, não cabe o prazo de 15 dias do acesso completo.",
+            "destaques": ["controlador", "imediato", "simplificado"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Qual prazo de resposta?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Pedido em formato simplificado?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Resposta imediata — controlador responde", "tipo": "resultado" }
+            ],
+            "arestas": [{ "de": "p1", "para": "r1", "rotulo": "Sim" }]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Operador × controlador",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              [
+                "Pedidos do art. 18 só ao operador privado",
+                "Titular obtém direitos do controlador (art. 18)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Simplificado = imediato (art. 19, I); completo = 15 dias (art. 19, II). Titular → controlador.",
+            "destaques": ["imediato", "15 dias", "controlador"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 13.709/2018 (LGPD)",
+          "path": "conteúdo/legislação federal/lei-13709-lgpd.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "LGPD_art18_art19",
+      "macete_visual": "Simplificado = imediato · completo = 15 dias · titular → controlador",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Operador privado ou prazo de 15 dias induzem negar resposta imediata na confirmação simplificada",
+        "eixos_legais": ["LGPD_art18", "LGPD_art19_I", "LGPD_art19_II"],
+        "isca_por_alternativa": {
+          "B": "pedidos do art. 18 exclusivamente ao operador privado",
+          "C": "prazo de 15 dias vale também para confirmação simplificada",
+          "D": "portabilidade automática em requerimento verbal"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: simplificado é imediato",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — pedidos só ao operador: inverte controlador e operador nos direitos do titular.\nC — 15 dias para tudo: estende o prazo do acesso completo à confirmação simplificada.\nD — portabilidade verbal automática: ignora requisição expressa e regulamentação da ANPD.\n\nA isca é o operador privado ou o prazo de quinze dias empurrarem resposta tardia na confirmação simples.",
+            "destaques": ["Gabarito A", "imediato", "controlador"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos LGPD",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "TITULAR: pessoa natural a quem se referem os dados pessoais — art. 5º, V.\n\nCONTROLADOR: quem decide e responde aos direitos do titular — art. 5º, VI e art. 18.\n\nCONFIRMAÇÃO SIMPLIFICADA: resposta imediata sobre existência de tratamento — art. 19, I.",
+            "destaques": ["TITULAR", "CONTROLADOR", "SIMPLIFICADA"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual prazo cabe?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Condutor pediu confirmação em formato simplificado?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "STTP é controladora dos dados das autuações?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito A — imediato pelo controlador",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa dos prazos do art. 19",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Tipo de resposta", "Prazo legal"],
+            "linhas": [
+              ["Confirmação em formato simplificado (inciso I)", "Imediatamente"],
+              ["Declaração clara e completa (inciso II)", "Até 15 dias do requerimento"],
+              ["Portabilidade (art. 18, V)", "Requisição expressa + regulamentação ANPD"]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: operador × prazo único",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Operador privado recebe todos os pedidos do titular",
+                "Art. 18 — titular obtém direitos do controlador"
+              ],
+              [
+                "Qualquer pedido pode levar 15 dias",
+                "Art. 19, I — simplificado é imediato; 15 dias só no inciso II"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — termo_unico",
+                "Confunde operador com destinatário exclusivo — art. 18 aponta o controlador"
+              ],
+              [
+                "C — regra_excecao",
+                "Estende prazo do inciso II à confirmação simplificada do inciso I"
+              ],
+              [
+                "D — numero_vizinho",
+                "Dispensa requisição expressa e regulamentação ANPD do art. 18, V"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o protocolo na STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Enquadramento legal"],
+            "linhas": [
+              ["Pedido de confirmação simplificada nas autuações", "Art. 19, I — resposta imediata"],
+              ["Ouvidoria encaminha só à empresa operadora", "Errado — titular exerce direitos perante controlador"],
+              ["Jurídico aplica 15 dias à confirmação simples", "Confunde inciso II com inciso I"],
+              ["Resultado", "Gabarito A — STTP responde imediatamente"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Controlador responde ao titular",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Mensagem"],
+            "linhas": [
+              ["Art. 18, caput", "Titular obtém direitos do controlador"],
+              ["Art. 19, I", "Confirmação simplificada — imediatamente"],
+              ["Art. 19, II", "Declaração completa — até 15 dias"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 18 — direitos do titular",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LGPD, art. 18, caput",
+            "texto": "Art. 18. O titular dos dados pessoais tem direito a obter do controlador, em relação aos dados do titular por ele tratados, a qualquer momento e mediante requisição:",
+            "trechos_grifados": [
+              {
+                "inicio": 61,
+                "fim": 72,
+                "motivo": "contraste — titular não se limita ao operador privado",
+                "texto_grifado": "controlador"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 19 — prazos de confirmação e acesso",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LGPD, art. 19, I e II",
+            "texto": "I - em formato simplificado, imediatamente; ou II - por meio de declaração clara e completa, que indique a origem dos dados, a inexistência de registro, os critérios utilizados e a finalidade do tratamento, observados os segredos comercial e industrial, fornecida no prazo de até 15 (quinze) dias, contado da data do requerimento do titular.",
+            "trechos_grifados": [
+              {
+                "inicio": 29,
+                "fim": 42,
+                "motivo": "mapa — confirmação simplificada no caso do condutor",
+                "texto_grifado": "imediatamente"
+              },
+              {
+                "inicio": 280,
+                "fim": 291,
+                "motivo": "contraste — prazo só na declaração completa, não na simplificada",
+                "texto_grifado": "15 (quinze)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Simplificado = imediato (art. 19, I); completo = 15 dias (art. 19, II). Titular fala com controlador (art. 18) — operador não substitui.\n\nNear-transfer: se o condutor pedir declaração completa com origem e finalidade do tratamento, a STTP pode levar até 15 dias — mas confirmação simples continua imediata.",
+            "destaques": ["imediato", "Near-transfer", "controlador"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 13.709/2018 (LGPD)",
+          "path": "conteúdo/legislação federal/lei-13709-lgpd.html"
+        }
+      ]
+    },
+    "tags": [
+      "lgpd",
+      "titular",
+      "controlador",
+      "direitos_titular",
+      "prazos",
+      "sttp"
+    ]
+  }
+]

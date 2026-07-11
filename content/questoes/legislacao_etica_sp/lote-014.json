@@ -1,0 +1,311 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_1_3",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "LAI_art7_par2",
+    "enunciado": "Jornalista solicita à STTP de Campina Grande relatório mensal de operações de fiscalização de trânsito, com dados estatísticos agregados e anexo que identifica agentes em ação sigilosa. A autarquia nega integralmente o acesso, alegando que o documento é parcialmente sigiloso e que a LAI autoriza recusar pedidos quando qualquer trecho for classificado. O requerente questiona se não haveria direito à parte não sigilosa e qual prazo de recurso em caso de indeferimento. À luz da Lei nº 12.527/2011, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A negativa integral é legítima: havendo trecho sigiloso, o órgão pode recusar o pedido por completo, sem obrigação de fornecer certidão ou extrato da parte pública.",
+      "B": "A STTP deve divulgar espontaneamente todo o relatório no site, nos termos da transparência ativa, independentemente de pedido e sem possibilidade de ocultar trechos.",
+      "C": "Indeferido o acesso, o recurso do interessado deve ser apresentado em 5 dias, prazo da autoridade superior para se manifestar sobre a negativa.",
+      "D": "É assegurado acesso à parte não sigilosa por certidão ou extrato (art. 7º, §2); publicidade é regra e sigilo exceção (art. 3º, I); indeferimento permite recurso em 10 dias (art. 15)."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Acesso parcial quando a informação é parcialmente sigilosa (art. 7º, §2), diretriz da publicidade como regra (art. 3º, I) e prazo de recurso do interessado (art. 15).",
+      "fundamento_legal": "LAI, art. 7º, §2: \"é assegurado o acesso à parte não sigilosa por meio de certidão, extrato ou cópia com ocultação da parte sob sigilo\". Art. 3º, I: \"observância da publicidade como preceito geral e do sigilo como exceção\". Art. 15: \"poderá o interessado interpor recurso contra a decisão no prazo de 10 (dez) dias a contar da sua ciência\".",
+      "passo_a_passo": [
+        "1. O relatório tem parte pública (estatísticas) e anexo sigiloso — sigilo parcial não autoriza negativa integral sem oferecer a parte não sigilosa.",
+        "2. A erra por regra_excecao (trata qualquer trecho sigiloso como veto ao acesso integral, ignorando o §2 do art. 7º); B erra por termo_unico (confunde transparência ativa com divulgação integral sem ocultação); C erra por numero_vizinho (aplica prazo de 5 dias da autoridade superior em vez dos 10 dias do interessado).",
+        "3. D está correta: art. 7º, §2 garante acesso redigido; art. 3º, I reforça publicidade como regra; art. 15 fixa recurso em 10 dias."
+      ],
+      "pegadinha": "A banca usa trecho sigiloso para induzir negativa total ou troca o prazo de 10 dias do interessado pelos 5 dias da autoridade hierárquica.",
+      "macete": "Sigilo parcial ≠ negativa total — extrato da parte pública. Recurso do cidadão = 10 dias (art. 15).",
+      "estudo_reverso": [
+        "LAI art. 3, I",
+        "LAI art. 7, §2",
+        "LAI art. 15",
+        "LAI art. 8"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 50,
+      "fundamento_slug": "LAI_art7_par2",
+      "macete_visual": "Parcial ≠ negar tudo · recurso 10 dias",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Documento parcialmente sigiloso exige acesso à parte pública — negativa integral é indevida. Recurso do interessado: 10 dias.",
+            "destaques": ["parcial", "parte pública", "10 dias"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Sigilo parcial?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Há trecho sigiloso e trecho público?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Fornecer parte não sigilosa — não negar tudo", "tipo": "resultado" }
+            ],
+            "arestas": [{ "de": "p1", "para": "r1", "rotulo": "Sim" }]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Negativa total × extrato",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Qualquer sigilo veta o pedido inteiro", "Certidão ou extrato da parte não sigilosa"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Sigilo parcial ≠ negativa total. Recurso do cidadão = 10 dias.",
+            "destaques": ["parcial", "10 dias", "extrato"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 12.527/2011 (LAI)",
+          "path": "conteúdo/legislação federal/lei-12527-lai.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 250,
+      "fundamento_slug": "LAI_art7_par2",
+      "macete_visual": "Parcial ≠ negar tudo · recurso 10 dias",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Trecho sigiloso induz negativa integral — §2 garante extrato da parte pública",
+        "eixos_legais": ["LAI_art3_I", "LAI_art7_par2", "LAI_art15"],
+        "isca_por_alternativa": {
+          "A": "trecho sigiloso autoriza negar o pedido por completo",
+          "B": "transparência ativa exige divulgar tudo sem ocultar",
+          "C": "recurso do interessado em 5 dias (prazo da autoridade)"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: parcial ≠ negativa total",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — negativa integral por trecho sigiloso: ignora acesso à parte não sigilosa.\nB — divulgar tudo no site sem ocultar: confunde transparência ativa com sigilo parcial.\nC — recurso em 5 dias: troca prazo do interessado pelo da autoridade superior.\n\nA isca é o anexo sigiloso empurrar para recusa total do relatório.",
+            "destaques": ["Gabarito D", "parcial", "10 dias"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ACESSO PASSIVO: pedido do cidadão por informação — capítulo II da LAI.\n\nSIGILO PARCIAL: documento com trecho público e trecho classificado — não autoriza negativa integral.\n\nRECURSO DO INTERESSADO: manifestação contra indeferimento — prazo de 10 dias da ciência.",
+            "destaques": ["PASSIVO", "PARCIAL", "10 dias"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: pode negar tudo?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Relatório tem parte pública e anexo sigiloso?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "STTP negou acesso integralmente?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito D — extrato da parte não sigilosa",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Cenários de acesso na LAI",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Situação", "Dever do órgão"],
+            "linhas": [
+              ["Informação totalmente pública", "Fornecer acesso integral"],
+              ["Parcialmente sigilosa (caso)", "Certidão, extrato ou cópia redigida"],
+              ["Integralmente sigilosa e classificada", "Negar com fundamentação — exceção"]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: negar tudo × extrato",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Trecho sigiloso contamina o documento inteiro",
+                "Assegurado acesso à parte não sigilosa"
+              ],
+              [
+                "Recurso do jornalista em 5 dias",
+                "Interessado recorre em 10 dias da ciência"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Trata sigilo parcial como veto integral — ignora §2 do art. 7º"
+              ],
+              [
+                "B — termo_unico",
+                "Confunde transparência ativa com divulgação integral sem redação"
+              ],
+              [
+                "C — numero_vizinho",
+                "Troca 10 dias do interessado pelos 5 dias da autoridade superior"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o pedido do jornalista",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Enquadramento"],
+            "linhas": [
+              ["Estatísticas agregadas no relatório", "Parte não sigilosa — deve ser acessível"],
+              ["Anexo com identificação de agentes sigilosa", "Trecho a ocultar — não veta o restante"],
+              ["Negativa integral da STTP", "Indevida — art. 7º, §2"],
+              ["Resultado", "Gabarito D — recurso em 10 dias se mantido indeferimento"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Publicidade, acesso parcial e recurso",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              ["Art. 3º, I", "Publicidade é regra — sigilo é exceção"],
+              ["Art. 7º, §2", "Parte não sigilosa via certidão ou extrato"],
+              ["Art. 15", "Recurso do interessado em 10 dias"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 7º, §2 — acesso parcial",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LAI, art. 7º, §2",
+            "texto": "§ 2º Quando não for autorizado acesso integral à informação por ser ela parcialmente sigilosa, é assegurado o acesso à parte não sigilosa por meio de certidão, extrato ou cópia com ocultação da parte sob sigilo.",
+            "trechos_grifados": [
+              {
+                "inicio": 110,
+                "fim": 137,
+                "motivo": "caso — estatísticas agregadas devem ser fornecidas",
+                "texto_grifado": "acesso à parte não sigilosa"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Publicidade e recurso em 10 dias",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LAI, art. 3º, I e art. 15",
+            "texto": "I - observância da publicidade como preceito geral e do sigilo como exceção; Art. 15. No caso de indeferimento de acesso a informações ou às razões da negativa do acesso, poderá o interessado interpor recurso contra a decisão no prazo de 10 (dez) dias a contar da sua ciência.",
+            "trechos_grifados": [
+              {
+                "inicio": 19,
+                "fim": 75,
+                "motivo": "contraste — sigilo é exceção, não regra (isca A)",
+                "texto_grifado": "publicidade como preceito geral e do sigilo como exceção"
+              },
+              {
+                "inicio": 229,
+                "fim": 251,
+                "motivo": "distratores — prazo do interessado, não 5 dias",
+                "texto_grifado": "prazo de 10 (dez) dias"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Sigilo parcial ≠ negativa total — extrato da parte pública. Recurso do cidadão = 10 dias.\n\nNear-transfer: relatório 100% sigiloso e formalmente classificado — aí sim pode haver negativa integral fundamentada.",
+            "destaques": ["parcial", "10 dias", "Near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 12.527/2011 (LAI)",
+          "path": "conteúdo/legislação federal/lei-12527-lai.html"
+        }
+      ]
+    },
+    "tags": [
+      "lai",
+      "acesso_parcial",
+      "publicidade",
+      "recurso",
+      "sigilo",
+      "sttp"
+    ]
+  }
+]

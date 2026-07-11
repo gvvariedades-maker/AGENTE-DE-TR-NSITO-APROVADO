@@ -1,0 +1,156 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 255,
+  "fundamento_slug": "CTB_art_38_II",
+  "macete_visual": "1 SENTIDO→BORDO ESQ · 2 SENTIDOS→EIXO",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Via de um só sentido exige bordo esquerdo na conversão — não a regra de eixo/linha divisória do duplo sentido",
+    "eixos_legais": ["CTB_art_38_I", "CTB_art_38_II"],
+    "isca_por_alternativa": {
+      "B": "aplica regra de duplo sentido em via de um só sentido — termo_unico",
+      "C": "seta com antecedência dispensa posicionamento — regra_excecao",
+      "D": "confunde art. 37 (acostamento) com posicionamento do art. 38 — regra_excecao"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-067.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: um sentido ≠ duplo sentido",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito A.\n\nB — mandou ir ao eixo/linha divisória: essa regra do inciso II vale em via de duplo sentido, não na do caso.\nC — achou que seta basta: art. 35 exige sinalizar, mas art. 38 impõe posicionamento antes da conversão.\nD — citou acostamento à direita: art. 37 rege espera para cruzar, não posicionamento em via de um só sentido.\n\nNesta aula você separa inciso I (direita) de inciso II (esquerda) e o critério do sentido da via.",
+        "destaques": ["Gabarito A", "bordo esquerdo", "um só sentido"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CONVERSÃO À ESQUERDA: sair da via pelo lado esquerdo para ingressar em outra — hipótese do art. 38, II.\n\nVIA DE UM SÓ SENTIDO: tráfego em única direção — inciso II manda aproximar-se do bordo esquerdo.\n\nPOSICIONAMENTO LATERAL: aproximar-se do bordo ou eixo antes da manobra — distinto da mera sinalização do art. 35.",
+        "destaques": ["CONVERSÃO À ESQUERDA", "UM SÓ SENTIDO", "POSICIONAMENTO"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: como posicionar antes de converter?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Manobra é conversão à esquerda para sair da via?", "tipo": "pergunta" },
+          { "id": "p2", "label": "A via é de um só sentido?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Aproximar-se do bordo esquerdo da pista", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Sim" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Art. 38 — posicionamento por manobra",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Manobra", "Posicionamento"],
+        "linhas": [
+          { "faixa": "Conversão à direita — inciso I", "classificacao": "Bordo direito da pista, menor espaço possível" },
+          { "faixa": "Conversão à esquerda, duplo sentido — II", "classificacao": "Eixo ou linha divisória da pista" },
+          { "faixa": "Conversão à esquerda, um sentido — II", "classificacao": "Bordo esquerdo da pista", "destaque": true }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: seta × posicionamento",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Seta acionada dispensa aproximar do bordo", "Art. 35 sinaliza — art. 38 posiciona antes de converter"],
+          ["Conversão à esquerda sempre no eixo da pista", "Um só sentido: bordo esquerdo — duplo sentido: eixo/divisória"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["B — termo_unico", "Transfere regra de duplo sentido (eixo/divisória) para via de um só sentido"],
+          ["C — regra_excecao", "Inventa que sinalização do art. 35 dispensa posicionamento do art. 38"],
+          ["D — regra_excecao", "Confunde art. 37 (espera no acostamento) com posicionamento para conversão"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Via urbana de um só sentido, conversão à esquerda", "Inciso II — bordo esquerdo"],
+          ["Condutor permanece na faixa central com seta acionada", "Posicionamento incorreto — deve aproximar-se à esquerda"],
+          ["Resultado", "Gabarito A — art. 38, II"]
+        ]
+      }
+    },
+    {
+      "id": "inciso1",
+      "titulo": "Inciso I × inciso II — lados opostos",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Manobra", "Regra"],
+        "linhas": [
+          ["Sair à direita — inciso I", "Bordo direito da pista, menor espaço possível"],
+          ["Sair à esquerda, um sentido — inciso II", "Bordo esquerdo da pista"],
+          ["Pegadinha B", "Eixo/divisória só em via de duplo sentido"]
+        ]
+      }
+    },
+    {
+      "id": "lei38",
+      "titulo": "Art. 38 — caput e inciso II",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 38, II",
+        "texto": "Antes de entrar à direita ou à esquerda, em outra via ou em lotes lindeiros, o condutor deverá: II - ao sair da via pelo lado esquerdo, aproximar-se o máximo possível de seu eixo ou da linha divisória da pista, quando houver, caso se trate de uma pista com circulação nos dois sentidos, ou do bordo esquerdo, tratando-se de uma pista de um só sentido.",
+        "trechos_grifados": [
+          { "inicio": 185, "fim": 200, "motivo": "contraste — eixo/linha divisória (duplo sentido)" },
+          { "inicio": 272, "fim": 285, "motivo": "mapa — critério duplo sentido no inciso II" },
+          { "inicio": 293, "fim": 307, "motivo": "caso — bordo esquerdo em via de um só sentido" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "DIREITA → BORDO DIR (I).\nESQUERDA + 1 SENTIDO → BORDO ESQ (II).\nESQUERDA + 2 SENTIDOS → EIXO/DIVISÓRIA.\nSeta não dispensa posicionar.\n\nNear-transfer: em via de duplo sentido, conversão à esquerda exige aproximar-se do eixo ou da linha divisória — não do bordo esquerdo.",
+        "destaques": ["BORDO ESQ", "EIXO/DIVISÓRIA", "Near-transfer"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 38", "path": "conteúdo/legislação federal/lei-9503-ctb.html" },
+    { "rotulo": "CTB art. 35", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

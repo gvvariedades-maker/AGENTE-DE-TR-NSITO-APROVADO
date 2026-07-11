@@ -1,0 +1,345 @@
+[
+  {
+    "disciplina": "direito_administrativo",
+    "topico": "dir_adm_1_3",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 5,
+    "fundamento_slug": "CF_art_37_XIX",
+    "enunciado": "O Prefeito de Campina Grande pretende reorganizar a fiscalização de trânsito mediante decreto que cria nova autarquia municipal, com personalidade jurídica e patrimônio próprios, sem projeto de lei específica, alegando urgência na mobilidade urbana. A Câmara Municipal e a Procuradoria questionam a forma de criação da entidade. Considerando as entidades da Administração Pública e a Constituição Federal, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A autarquia municipal pode ser criada por decreto do Prefeito, desde que publicada a estrutura administrativa no Diário Oficial.",
+      "B": "Basta lei ordinária anual de diretrizes orçamentárias para instituir autarquia, dispensada lei específica de criação.",
+      "C": "Somente por lei específica poderá ser criada autarquia e autorizada a instituição de empresa pública, de sociedade de economia mista e de fundação.",
+      "D": "Autarquia e fundação pública são criadas pelo mesmo ato administrativo do chefe do Executivo, independentemente de lei específica."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Criação de autarquias e autorização de outras entidades da Administração Indireta — exigência de lei específica (CF art. 37, XIX).",
+      "fundamento_legal": "CF/88, art. 37, XIX: \"Somente por lei específica poderá ser criada autarquia e autorizada a instituição de empresa pública, de sociedade de economia mista e de fundação, cabendo à lei complementar, neste último caso, definir as áreas de sua atuação.\"",
+      "passo_a_passo": [
+        "1. Criar autarquia exige lei específica — decreto do Prefeito, ainda que urgente, não substitui o inciso XIX. Autorização para empresa pública, sociedade de economia mista e fundação também depende de lei específica.",
+        "2. A erra por regra_excecao (decreto cria autarquia); B erra por termo_unico (lei orçamentária genérica substitui lei específica); D erra por competencia_snt (ato administrativo do Executivo cria entidade sem lei).",
+        "3. C correta: transcrição do núcleo do art. 37, XIX."
+      ],
+      "pegadinha": "A banca trata decreto ou lei orçamentária como suficientes — o inciso XIX exige lei específica para criar autarquia.",
+      "macete": "AUTARQUIA nasce de LEI ESPECÍFICA (XIX) | decreto NÃO cria | fundação ainda pode exigir LC.",
+      "estudo_reverso": [
+        "CF art. 37, XIX",
+        "CF art. 37, XX",
+        "CF art. 37, caput"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CF_art_37_XIX",
+      "macete_visual": "AUTARQUIA = lei específica | decreto ≠",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Autarquia só por lei específica — decreto do Prefeito não cria entidade (art. 37, XIX).",
+            "destaques": ["lei específica", "autarquia", "art. 37, XIX"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Decreto × lei específica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "Art. 37, XIX ✓"],
+            "linhas": [
+              [
+                "Decreto do Prefeito cria autarquia",
+                "Somente por lei específica poderá ser criada autarquia"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Há lei específica de criação?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Decreto substitui lei específica?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito C — exige lei específica", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 37, XIX",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 37, XIX",
+            "texto": "Somente por lei específica poderá ser criada autarquia e autorizada a instituição de empresa pública, de sociedade de economia mista e de fundação, cabendo à lei complementar, neste último caso, definir as áreas de sua atuação;",
+            "trechos_grifados": [
+              { "inicio": 12, "fim": 54, "motivo": "lei específica cria autarquia" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "AUTARQUIA nasce de LEI ESPECÍFICA (XIX) | decreto NÃO cria | fundação pode exigir LC.",
+            "destaques": ["LEI ESPECÍFICA", "decreto", "AUTARQUIA"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88 art. 37",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CF_art_37_XIX",
+      "macete_visual": "AUTARQUIA = lei específica | decreto ≠",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Decreto ou lei orçamentária não substitui lei específica para criar autarquia",
+        "eixos_legais": ["CF_art_37_XIX", "CF_art_37_XX"],
+        "isca_por_alternativa": {
+          "A": "decreto do Prefeito basta para criar autarquia",
+          "B": "lei orçamentária genérica substitui lei específica",
+          "D": "ato administrativo do Executivo cria autarquia e fundação sem lei"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: como nasce a autarquia",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — decreto cria autarquia: XIX exige lei específica.\nB — LDO basta: lei orçamentária não substitui lei de criação.\nD — ato do Executivo: entidade nasce de lei, não de decreto.\n\nPegadinha: urgência não dispensa lei específica para autarquia.",
+            "destaques": ["Gabarito C", "lei específica", "autarquia"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Autarquia: entidade da Administração Indireta com personalidade jurídica de direito público — criação vinculada a lei específica (art. 37, XIX).\nLei específica: norma própria que institui a entidade — não se confunde com decreto ou lei orçamentária genérica.\nEmpresa pública / sociedade de economia mista / fundação: instituição depende de autorização em lei específica (XIX); fundação pode exigir lei complementar quanto à área de atuação.",
+            "destaques": ["Autarquia", "Lei específica", "Administração Indireta"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "MÉTODO: decreto cria STTP?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Existe lei específica de criação?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Decreto substitui lei específica?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito C — só lei específica cria",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Entidades do inciso XIX",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Entidade", "Regra constitucional"],
+            "linhas": [
+              {
+                "faixa": "Autarquia",
+                "classificacao": "Criada por lei específica",
+                "destaque": true
+              },
+              {
+                "faixa": "Empresa pública",
+                "classificacao": "Autorizada por lei específica"
+              },
+              {
+                "faixa": "Sociedade de economia mista",
+                "classificacao": "Autorizada por lei específica"
+              },
+              {
+                "faixa": "Fundação",
+                "classificacao": "Autorizada por lei específica — LC define área"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Decreto × lei específica",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a banca insinua ✗", "Art. 37, XIX ✓"],
+            "linhas": [
+              [
+                "Decreto do Prefeito institui autarquia",
+                "Somente por lei específica poderá ser criada autarquia"
+              ],
+              [
+                "Lei orçamentária anual basta para criar entidade",
+                "Lei específica — não confundir com LDO ou LOA genérica"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Decreto cria autarquia — XIX exige lei específica"
+              ],
+              [
+                "B — termo_unico",
+                "LDO substitui lei de criação — vício de competência legislativa"
+              ],
+              [
+                "D — competencia_snt",
+                "Ato administrativo cria entidade — nasce de lei específica"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso Campina Grande", "Consequência"],
+            "linhas": [
+              ["Decreto cria nova autarquia de trânsito", "Sem lei específica — vício"],
+              ["Alegação de urgência na mobilidade", "Não dispensa inciso XIX"],
+              ["Câmara e Procuradoria questionam", "Competência legislativa para criar"],
+              ["Resultado", "Alternativa C — única defensável"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 37, XIX — criação de autarquia",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 37, XIX",
+            "texto": "Somente por lei específica poderá ser criada autarquia e autorizada a instituição de empresa pública, de sociedade de economia mista e de fundação, cabendo à lei complementar, neste último caso, definir as áreas de sua atuação;",
+            "trechos_grifados": [
+              {
+                "inicio": 12,
+                "fim": 54,
+                "motivo": "mapa — lei específica cria autarquia"
+              },
+              {
+                "inicio": 57,
+                "fim": 146,
+                "motivo": "contraste — autorização das demais entidades"
+              },
+              {
+                "inicio": 148,
+                "fim": 226,
+                "motivo": "eixo2 — lei complementar para fundação"
+              }
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Art. 37, XX — subsidiárias",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Hipótese", "Regra"],
+            "linhas": [
+              ["Criar autarquia", "Lei específica — inciso XIX"],
+              ["Criar subsidiária de entidade", "Autorização legislativa em cada caso — inciso XX"],
+              ["Decreto do Prefeito", "Não substitui lei de criação"],
+              ["Caso STTP nova", "Exige projeto de lei específica"]
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 37, XX",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 37, XX",
+            "texto": "Depende de autorização legislativa, em cada caso, a criação de subsidiárias das entidades mencionadas no inciso anterior, assim como a participação de qualquer delas em empresa privada;",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 41,
+                "motivo": "eixo2 — autorização legislativa em cada caso"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "AUTARQUIA nasce de LEI ESPECÍFICA (XIX) | decreto NÃO cria | fundação pode exigir LC.\n\nNear-transfer: Prefeito autoriza por decreto a criação de fundação pública municipal sem lei específica — válido? Não: inciso XIX exige lei específica; fundação ainda pode demandar lei complementar sobre área de atuação.",
+            "destaques": ["LEI ESPECÍFICA", "decreto", "near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88 art. 37",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "autarquia",
+      "administracao_indireta",
+      "cf_37",
+      "lei_especifica"
+    ]
+  }
+]

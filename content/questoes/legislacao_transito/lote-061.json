@@ -1,0 +1,310 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_infracoes",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 5,
+    "fundamento_slug": "CTB_art_202_I",
+    "enunciado": "Em trecho de rodovia de pista dupla nas proximidades de Campina Grande/PB, agente da STTP autua condutor que, para ultrapassar caminhão mais lento, desvia o veículo para o acostamento, retorna à faixa de rolamento após a manobra e segue viagem. O fato ocorreu em trecho reto, fora de interseção e de passagem de nível. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA quanto à infração:",
+    "alternativas": {
+      "A": "Configura infração gravíssima por ultrapassar outro veículo pelo acostamento, nos termos do art. 202, I, do CTB.",
+      "B": "Configura infração gravíssima por ultrapassar pela contramão de direção, conforme o art. 203 do CTB.",
+      "C": "Configura infração grave por ultrapassar em interseção ou passagem de nível, nos termos do art. 202, II, do CTB.",
+      "D": "Configura infração gravíssima por transitar com o veículo pelo acostamento, conforme o art. 193 do CTB."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Art. 202, I — ultrapassar pelo acostamento (gravíssima; penalidade — multa cinco vezes); distinção do art. 203 (contramão), art. 202, II (interseção) e art. 193 (transitar pelo acostamento).",
+      "fundamento_legal": "CTB, art. 202, I: ultrapassar outro veículo pelo acostamento — infração gravíssima; penalidade — multa (cinco vezes). CTB, art. 202, II: em interseções e passagens de nível — gravíssima. CTB, art. 203: ultrapassar pela contramão — gravíssima. CTB, art. 193: transitar pelo acostamento — gravíssima (conduta distinta de ultrapassar).",
+      "passo_a_passo": [
+        "1. Caso: ultrapassagem pelo acostamento em trecho reto, fora de interseção — núcleo do art. 202, I.",
+        "2. B erra por numero_vizinho (art. 203 é contramão, não acostamento); C erra por gravidade (art. 202 é gravíssima com multa cinco vezes e o inciso II exige interseção, ausente no caso); D erra por termo_unico (art. 193 pune transitar pelo acostamento, não ultrapassar outro veículo).",
+        "3. A correta: art. 202, I — infração gravíssima."
+      ],
+      "pegadinha": "A IDECAN troca acostamento por contramão (203), empurra inciso II com gravidade antiga (grave) ou confunde ultrapassar com transitar (193).",
+      "macete": "202, I = ULTRAPASSAR · ACOSTAMENTO · GRAVÍSSIMA · ≠ 203 contramão · ≠ 193 transitar.",
+      "estudo_reverso": [
+        "CTB art. 202, I",
+        "CTB art. 202, II",
+        "CTB art. 203",
+        "CTB art. 193"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 80,
+      "fundamento_slug": "CTB_art_202_I",
+      "macete_visual": "202, I acostamento = GRAVÍSSIMA",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Ultrapassagem pelo acostamento em trecho reto.\n\nGabarito A: art. 202, I — gravíssima.",
+            "destaques": ["acostamento", "202, I", "GRAVÍSSIMA"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Acostamento ou contramão?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Ultrapassou pelo acostamento?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gravíssima — ultrapassagem pelo acostamento",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim — fora de interseção" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Ultrapassar × transitar",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Confusão ✗", "Regra ✓"],
+            "linhas": [
+              ["Acostamento = art. 193 transitar", "Ultrapassar = art. 202, I"],
+              ["Art. 202 ainda é grave", "Gravíssima com multa cinco vezes no CTB"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "202, I = ULTRAPASSAR · ACOSTAMENTO · GRAVÍSSIMA.",
+            "destaques": ["202, I", "ULTRAPASSAR", "GRAVÍSSIMA"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 202",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 285,
+      "fundamento_slug": "CTB_art_202_I",
+      "macete_visual": "202, I acostamento = GRAVÍSSIMA",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Ultrapassar pelo acostamento é art. 202, I gravíssima — não é contramão (203), interseção (202, II) nem transitar (193)",
+        "eixos_legais": ["CTB_art_202_I", "CTB_art_203"],
+        "isca_por_alternativa": {
+          "B": "confunde acostamento com ultrapassagem pela contramão — art. 203",
+          "C": "aplica inciso II de interseção com gravidade antiga (grave) fora de cruzamento",
+          "D": "confunde ultrapassar com transitar pelo acostamento — art. 193"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: ultrapassar ≠ transitar",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — confundiu acostamento com contramão: art. 203 exige invasão da faixa oposta, não o acostamento.\nC — aplicou inciso II (interseção) com gravidade grave: o fato é trecho reto e o art. 202 é gravíssima com multa cinco vezes.\nD — confundiu ultrapassar com transitar: art. 193 pune circular pelo acostamento, não ultrapassar outro veículo.\n\nCondutor usou o acostamento para ultrapassar caminhão.",
+            "destaques": ["Gabarito A", "acostamento", "gravíssima"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 distinções",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ULTRAPASSAR: passar à frente de outro veículo em movimento — art. 202.\n\nACOSTAMENTO: faixa lateral da via, fora da pista de rolamento — inciso I.\n\nCONTRAMÃO: invadir faixa de fluxo oposto — art. 203, hipótese distinta.",
+            "destaques": ["ULTRAPASSAR", "ACOSTAMENTO", "CONTRAMÃO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual conduta e inciso?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Ultrapassou outro veículo pelo acostamento?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Foi em interseção ou passagem de nível?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gravíssima — ultrapassagem pelo acostamento",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — desviou para o acostamento" },
+              { "de": "p2", "para": "r1", "rotulo": "Não — trecho reto" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Incisos do art. 202",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Hipótese", "Inciso"],
+            "linhas": [
+              ["Pelo acostamento", "I — gravíssima"],
+              ["Em interseção ou passagem de nível", "II — gravíssima"],
+              ["Pela contramão (art. 203)", "Dispositivo distinto — gravíssima"],
+              ["Transitar pelo acostamento (art. 193)", "Conduta distinta — gravíssima"]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: acostamento × contramão × transitar",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Usar acostamento = art. 193 transitar",
+                "Ultrapassar pelo acostamento é art. 202, I — gravíssima"
+              ],
+              [
+                "Art. 202 ainda é infração grave",
+                "CTB em vigor: gravíssima com multa cinco vezes"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — numero_vizinho",
+                "Confunde acostamento com ultrapassagem pela contramão — art. 203, sem invasão de faixa oposta"
+              ],
+              [
+                "C — gravidade",
+                "Aplica inciso II com natureza grave antiga — fato é trecho reto e art. 202 é gravíssima"
+              ],
+              [
+                "D — termo_unico",
+                "Confunde ultrapassar com transitar pelo acostamento — art. 193, conduta distinta"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado — Campina Grande",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Conclusão legal"],
+            "linhas": [
+              ["Desvio para acostamento para passar caminhão", "Ultrapassagem — art. 202"],
+              ["Trecho reto, fora de interseção", "Inciso I, não inciso II"],
+              ["Retorno à faixa após a manobra", "Confirma ultrapassagem, não mera circulação"],
+              ["Resultado", "Gabarito A — infração gravíssima"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "202, I × 202, II × 193 × 203",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Conduta"],
+            "linhas": [
+              ["Art. 202, I", "Ultrapassar pelo acostamento — gravíssima"],
+              ["Art. 202, II", "Ultrapassar em interseção — gravíssima"],
+              ["Art. 193", "Transitar pelo acostamento — gravíssima"],
+              ["Art. 203", "Ultrapassar pela contramão — gravíssima"],
+              ["Caso", "Art. 202, I — gravíssima"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 202, I — pelo acostamento",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 202, I",
+            "texto": "I - pelo acostamento; Infração - gravíssima.",
+            "trechos_grifados": [
+              {
+                "inicio": 4,
+                "fim": 20,
+                "motivo": "mapa — pelo acostamento é hipótese do inciso I"
+              },
+              {
+                "inicio": 0,
+                "fim": 2,
+                "motivo": "contraste — inciso I distinto do II (interseção)"
+              },
+              {
+                "inicio": 33,
+                "fim": 43,
+                "motivo": "gradacao — gravíssima com multa cinco vezes"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "202, I = ULTRAPASSAR · ACOSTAMENTO · GRAVÍSSIMA · ≠ 203 contramão · ≠ 193 transitar.\n\nNear-transfer: mesmo condutor ultrapassa em cruzamento semaforizado — art. 202, II (gravíssima); hipótese distinta do acostamento em trecho reto.",
+            "destaques": ["202, I", "202, II", "GRAVÍSSIMA"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 202",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "tags": [
+      "infracoes",
+      "art_202",
+      "ultrapassagem",
+      "acostamento",
+      "gravissima"
+    ]
+  }
+]

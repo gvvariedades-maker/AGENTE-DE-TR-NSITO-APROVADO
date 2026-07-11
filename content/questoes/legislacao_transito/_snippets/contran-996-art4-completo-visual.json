@@ -1,0 +1,175 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CONTRAN_996_art_4",
+  "macete_visual": "Bike elétrica = art. 4º (espelho ESQ) · EMI = art. 3º",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Bicicleta elétrica exige art. 4º (espelho esquerdo) — não a lista menor do art. 3º do EMI",
+    "eixos_legais": ["CONTRAN_996_art_4", "CONTRAN_996_art_2_III"],
+    "isca_por_alternativa": {
+      "A": "art. 3º do EMI dispensa espelho e refletores nos pedais",
+      "C": "espelho retrovisor facultativo na bicicleta elétrica",
+      "D": "STTP autoriza circulação provisória sem espelho"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: art. 3º não vale para toda bike elétrica",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — lista do EMI dispensa espelho e refletores nos pedais.\nC — espelho retrovisor facultativo na bicicleta elétrica.\nD — STTP autoriza circulação provisória sem espelho até DETRAN-PB.\n\nPegadinha: potência dentro do limite não define categoria — acelerador sim.",
+        "destaques": ["Gabarito B", "espelho", "acelerador"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "BICICLETA ELÉTRICA: pedal assistido, sem acelerador — art. 2º, III.\n\nEMI: equipamento autopropelido com até 1.000 W e 32 km/h — pode ter acelerador.\n\nEQUIPAMENTOS OBRIGATÓRIOS: lista distinta por categoria — arts. 3º e 4º.",
+        "destaques": ["BICICLETA ELÉTRICA", "EMI", "EQUIPAMENTOS"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: qual lista de equipamentos?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "O veículo tem acelerador ou variação manual de potência?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Bicicleta elétrica — espelho esquerdo obrigatório — gabarito B", "tipo": "resultado" }
+        ],
+        "arestas": [{ "de": "p1", "para": "r1", "rotulo": "Não — caso do enunciado" }]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Equipamentos: art. 3º × art. 4º",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Equipamento", "Bicicleta elétrica (art. 4º)"],
+        "linhas": [
+          { "faixa": "Campainha", "classificacao": "Obrigatório — inciso II" },
+          { "faixa": "Sinalização noturna", "classificacao": "Dianteira, traseira, lateral e nos pedais — III" },
+          { "faixa": "Espelho retrovisor esquerdo", "classificacao": "Obrigatório — IV (EMI não exige)", "destaque": true },
+          { "faixa": "Pneus em condições mínimas", "classificacao": "Obrigatório — V" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: invocar o art. 3º",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Crença ✗", "Lei ✓"],
+        "linhas": [
+          ["750 W e 30 km/h bastam para usar art. 3º", "Sem acelerador = bicicleta elétrica — art. 2º, III, c"],
+          ["Campainha e faróis dispensam espelho", "Art. 4º, IV — espelho retrovisor esquerdo obrigatório"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — regra_excecao", "Aplica art. 3º do EMI — ignora classificação como bicicleta elétrica no art. 2º, III"],
+          ["C — termo_unico", "Trata espelho como facultativo — art. 4º, IV, torna-o obrigatório"],
+          ["D — competencia_snt", "Dispensa de registro do art. 12 não flexibiliza equipamentos do art. 4º"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Consequência"],
+        "linhas": [
+          ["Bicicleta elétrica pedal-assist 750 W, sem acelerador", "Enquadra art. 2º, III — não é EMI"],
+          ["Sem espelho esquerdo nem refletores nos pedais", "Descumpre art. 4º, III e IV"],
+          ["Condutor invoca art. 3º do EMI", "Lista errada — circulação irregular"],
+          ["Resultado", "Alternativa B"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Classificação × equipamento",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Etapa", "Dispositivo"],
+        "linhas": [
+          ["Definir categoria (acelerador?)", "Art. 2º, III, c — sem acelerador = bicicleta elétrica"],
+          ["Checar equipamentos da categoria", "Art. 4º — espelho esquerdo + sinalização nos pedais"]
+        ]
+      }
+    },
+    {
+      "id": "lei1",
+      "titulo": "Art. 4º, IV — espelho esquerdo",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 996/2023, art. 4º, IV",
+        "texto": "IV - espelho retrovisor do lado esquerdo;",
+        "trechos_grifados": [
+          {
+            "inicio": 5,
+            "fim": 40,
+            "motivo": "contraste — obrigatório na bicicleta elétrica, ausente no art. 3º do EMI",
+            "texto_grifado": "espelho retrovisor do lado esquerdo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 2º, III, c — sem acelerador",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 996/2023, art. 2º, III, c",
+        "texto": "c) não dispor de acelerador ou de qualquer outro dispositivo de variação manual de potência;",
+        "trechos_grifados": [
+          {
+            "inicio": 3,
+            "fim": 27,
+            "motivo": "fluxo — marco que separa bicicleta elétrica do EMI",
+            "texto_grifado": "não dispor de acelerador"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "SEM acelerador = BICICLETA ELÉTRICA → art. 4º.\nEspelho ESQUERDO + refletores nos PEDAIS.\nCOM acelerador = EMI → art. 3º (sem espelho).\n\nNear-transfer: se a banca trocar 750 W por 900 W mas manter pedal-assist sem acelerador, a categoria continua bicicleta elétrica — e o espelho esquerdo segue obrigatório.",
+        "destaques": ["SEM acelerador", "Espelho ESQUERDO", "900 W"]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 996/2023",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 996, DE 15 DE JUNHO DE 2023.pdf"
+    }
+  ]
+}

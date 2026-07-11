@@ -1,0 +1,361 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_circulacao_conduta",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_42",
+    "enunciado": "Em via urbana de Campina Grande/PB, um condutor trafega em velocidade compatível com a via quando um pedestre invade inesperadamente a faixa de rolamento à sua frente. Para evitar o atropelamento, o condutor freia bruscamente e detém o veículo sem colisão. Considerando as normas de circulação e conduta do Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A freada brusca é sempre vedada, ainda que para evitar atropelamento, devendo o condutor apenas reduzir a velocidade gradualmente.",
+      "B": "A freada brusca é admitida quando motivada por razões de segurança, conforme a exceção do art. 42 do CTB.",
+      "C": "Mesmo diante de perigo iminente, a freada brusca é infração, cabendo apenas certificar-se de que pode reduzir a velocidade, nos termos do art. 43 do CTB.",
+      "D": "O art. 42 autoriza freada brusca somente para evitar autuação por excesso de velocidade, não para prevenir atropelamento de pedestre."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Art. 42 — vedação de freada brusca e exceção por razões de segurança; distinção do art. 43, II (reduzir velocidade com cuidado).",
+      "fundamento_legal": "CTB, art. 42: nenhum condutor deverá frear bruscamente seu veículo, salvo por razões de segurança. CTB, art. 43, II: sempre que quiser diminuir a velocidade de seu veículo deverá antes certificar-se de que pode fazê-lo sem risco nem inconvenientes para os outros condutores, a não ser que haja perigo iminente.",
+      "passo_a_passo": [
+        "1. Caso: pedestre invade faixa e condutor freia bruscamente para evitar atropelamento — núcleo da exceção por razões de segurança do art. 42.",
+        "2. A erra por regra_excecao (elimina o salvo por razões de segurança e veda freada brusca em qualquer hipótese); C erra por numero_vizinho (transpõe art. 43 e nega a exceção autônoma do art. 42); D erra por termo_unico (substitui razões de segurança por evitar autuação por velocidade).",
+        "3. B correta: art. 42 admite freada brusca quando motivada por razões de segurança."
+      ],
+      "pegadinha": "A IDECAN induz a crer que freada brusca é sempre infração — o art. 42 abre exceção expressa para razões de segurança, como evitar atropelamento.",
+      "macete": "FREAR BRUSCO = VEDADO · salvo SEGURANÇA · ≠ conveniência ou multa.",
+      "estudo_reverso": [
+        "CTB art. 42",
+        "CTB art. 43, II"
+      ]
+    },
+    "tags": [
+      "freada",
+      "pedestre",
+      "art_42",
+      "circulacao",
+      "seguranca"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CTB_art_42",
+      "macete_visual": "FREAR BRUSCO · salvo SEGURANÇA",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Pedestre invade faixa — freada brusca evita atropelamento.\n\nGabarito B: exceção do art. 42.",
+            "destaques": ["freada brusca", "Gabarito B", "segurança"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Vedado × salvo segurança",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Freada brusca é sempre infração", "Salvo por razões de segurança"],
+              ["Só vale evitar multa", "Evitar atropelamento é segurança"]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Decisão rápida",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Freada por razão de segurança?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Exceção por segurança — lícita", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "FREAR BRUSCO = VEDADO.\nSalvo SEGURANÇA.\nNão vale pressa ou multa.",
+            "destaques": ["SALVO", "SEGURANÇA"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 42",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "CTB_art_42",
+      "macete_visual": "FREAR BRUSCO = VEDADO · salvo SEGURANÇA · ≠ art. 43 devagar",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Freada brusca é proibida — salvo razões de segurança, não salvo conveniência",
+        "eixos_legais": [
+          "CTB_art_42",
+          "CTB_art_43_II"
+        ],
+        "isca_por_alternativa": {
+          "A": "elimina exceção de segurança do art. 42 — regra_excecao",
+          "C": "aplica art. 43 no lugar da exceção do art. 42 — numero_vizinho",
+          "D": "substitui segurança por evitar infração — termo_unico"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: freada para salvar pedestre",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — vedou toda freada brusca: art. 42 admite exceção por razões de segurança.\nC — citou só art. 43: perigo iminente no art. 42 autoriza freada brusca diretamente.\nD — trocou segurança por multa: conveniência não integra a exceção legal.\n\nNesta aula você fixa a regra e a única exceção do art. 42.",
+            "destaques": [
+              "Gabarito B",
+              "razões de segurança",
+              "freada brusca"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "FREAR BRUSCAMENTE: redução abrupta de velocidade — conduta vedada como regra geral no art. 42.\n\nRAZÕES DE SEGURANÇA: exceção legal — evitar sinistro com pedestre, animal ou obstáculo.\n\nPERIGO IMINENTE: contexto do caso — freada para não atropelar quem invadiu a faixa.",
+            "destaques": [
+              "BRUSCAMENTE",
+              "SEGURANÇA",
+              "PERIGO"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: freada brusca é lícita?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Condutor freou bruscamente?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Motivo foi razão de segurança?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Exceção por segurança — permitido",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Art. 42 — regra e exceção",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Situação",
+              "Conduta"
+            ],
+            "linhas": [
+              [
+                "Regra geral",
+                "Vedada a freada brusca"
+              ],
+              [
+                "Exceção",
+                "Permitida por razões de segurança"
+              ],
+              [
+                "Fora da exceção",
+                "Conveniência, pressa ou evitar multa — vedada"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: nunca pode freada brusca",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
+            "linhas": [
+              [
+                "Freada brusca é sempre infração",
+                "Salvo por razões de segurança"
+              ],
+              [
+                "Deve sempre reduzir devagar antes (art. 43)",
+                "Perigo iminente autoriza freada no art. 42"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Elimina salvo por razões de segurança — exceção expressa no art. 42"
+              ],
+              [
+                "C — numero_vizinho",
+                "Transpõe art. 43 — redução gradual não revoga exceção de segurança do art. 42"
+              ],
+              [
+                "D — termo_unico",
+                "Substitui razões de segurança por evitar autuação — finalidade ilícita"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Fato do caso",
+              "Conclusão legal"
+            ],
+            "linhas": [
+              [
+                "Pedestre invade faixa em via urbana de Campina Grande",
+                "Perigo iminente de sinistro"
+              ],
+              [
+                "Condutor freia bruscamente e evita atropelamento",
+                "Razão de segurança — exceção do art. 42"
+              ],
+              [
+                "Resultado",
+                "Gabarito B — freada brusca admitida"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Art. 42 × art. 43, II",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Dispositivo",
+              "Foco"
+            ],
+            "linhas": [
+              [
+                "Art. 42",
+                "Veda freada brusca — salvo segurança"
+              ],
+              [
+                "Art. 43, II",
+                "Reduzir velocidade com cuidado — salvo perigo iminente"
+              ],
+              [
+                "Pegadinha C",
+                "Perigo iminente pode justificar ambos — não negar art. 42"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei42",
+          "titulo": "Art. 42 — literal da regra",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 42",
+            "texto": "Art. 42. Nenhum condutor deverá frear bruscamente seu veículo, salvo por razões de segurança.",
+            "trechos_grifados": [
+              {
+                "inicio": 32,
+                "fim": 49,
+                "motivo": "glossario — conduta do caso"
+              },
+              {
+                "inicio": 63,
+                "fim": 68,
+                "motivo": "mapa — palavra da exceção"
+              },
+              {
+                "inicio": 73,
+                "fim": 92,
+                "motivo": "caso — evitar atropelamento do pedestre"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "FREAR BRUSCO = VEDADO (art. 42).\nSALVO razões de SEGURANÇA.\nNão vale pressa, multa ou manobra errada.\nArt. 43 cuida de reduzir — não apaga a exceção.\n\nNear-transfer: cachorro atravessa a pista de surpresa — freada brusca pode ser lícita se evitar sinistro.",
+            "destaques": [
+              "SALVO SEGURANÇA",
+              "art. 42",
+              "Near-transfer"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 42",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

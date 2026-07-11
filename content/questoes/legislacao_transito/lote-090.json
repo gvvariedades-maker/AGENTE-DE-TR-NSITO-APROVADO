@@ -1,0 +1,295 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_1020_habilitacao",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_prazo",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_1020_art_5_par1",
+    "enunciado": "Durante fiscalização de rotina na Avenida Floriano Peixoto, em Campina Grande/PB, agente da STTP aborda um condutor de ciclomotor. O condutor apresenta Permissão para Dirigir na categoria B, expedida há 8 (oito) meses após aprovação nos exames teórico e de direção veicular, e alega que o documento o autoriza a conduzir qualquer veículo de duas rodas até a expedição da CNH definitiva. Considerando a Resolução CONTRAN nº 1.020/2025, assinale a alternativa CORRETA.",
+    "alternativas": {
+      "A": "O condutor está correto: por ser documento provisório, a Permissão para Dirigir autoriza a condução de qualquer veículo de duas rodas, inclusive ciclomotor, enquanto vigente.",
+      "B": "A condução do ciclomotor é irregular — só habilita quem tem categoria A ou Autorização para Conduzir Ciclomotor; mas a Permissão vale 2 (dois) anos, e o documento de 8 meses ainda está válido.",
+      "C": "A condução do ciclomotor é irregular — só habilita quem tem categoria A ou Autorização para Conduzir Ciclomotor; a Permissão vale 1 (um) ano da expedição, permanecendo válida para a categoria B.",
+      "D": "A conduta é regular: a categoria B abrange motocicleta e, por ser veículo de duas rodas de menor porte, o ciclomotor está incluído na mesma classe."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Cruzamento entre a exceção de categoria para condução de ciclomotor (art. 5º, §1º) e o prazo de validade da Permissão para Dirigir (art. 4º, §5º) da Res. CONTRAN 1.020/2025.",
+      "fundamento_legal": "Res. CONTRAN 1.020/2025, art. 5º, §1º: 'Além dos condutores com Autorização para Conduzir Ciclomotor, apenas os habilitados na categoria A estão aptos a conduzirem ciclomotores.' Art. 4º, §5º: 'A validade da Permissão para Dirigir é de um ano, contado da data de sua expedição.'",
+      "passo_a_passo": [
+        "1. Caso: condutor com Permissão categoria B (8 meses de expedição) conduzindo ciclomotor e alegando cobertura ampla do documento provisório.",
+        "2. A erra por regra_excecao (ignora que o art. 5º, §1º restringe o ciclomotor à categoria A ou à Autorização para Conduzir Ciclomotor, tratando a Permissão provisória como se cobrisse qualquer veículo de duas rodas); B erra por numero_vizinho (acerta a restrição do ciclomotor, mas troca o prazo de validade da Permissão — 1 ano pelo art. 4º, §5º — por 2 anos); D erra por termo_unico (generaliza a categoria B como se motocicleta e ciclomotor fossem a mesma classe, ignorando a restrição do art. 5º, §1º).",
+        "3. C correta: reúne os dois dispositivos — a restrição de categoria do art. 5º, §1º (ciclomotor exige categoria A ou ACC) e o prazo correto de validade do art. 4º, §5º (1 ano da expedição), concluindo que a condução do ciclomotor é irregular mesmo com a Permissão B ainda válida para a categoria B."
+      ],
+      "pegadinha": "A banca mistura uma alternativa parcialmente certa (B acerta a exceção do ciclomotor, mas erra o prazo) com uma que generaliza a categoria B (D) — o candidato apressado marca B por reconhecer a restrição, sem perceber a troca do prazo de 1 para 2 anos.",
+      "macete": "PERMISSÃO = 1 ANO (art. 4º §5º) · só CATEGORIA A ou ACC pega ciclomotor (art. 5º §1º) · categoria B não “inclui” ciclomotor por analogia.",
+      "estudo_reverso": [
+        "Res. CONTRAN 1.020/2025, art. 4º",
+        "Res. CONTRAN 1.020/2025, art. 5º"
+      ]
+    },
+    "tags": [
+      "contran_1020",
+      "habilitacao",
+      "permissao_para_dirigir",
+      "ciclomotor",
+      "categoria_a"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_1020_art_5_par1",
+      "macete_visual": "Permissão = 1 ano · ciclomotor só com categoria A ou ACC",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C: Permissão categoria B não cobre ciclomotor (art. 5º, §1º) e sua validade é de 1 ano, não 2 (art. 4º, §5º).",
+            "destaques": ["categoria A", "1 ano", "ciclomotor"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Permissão B × ciclomotor",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O condutor pensa ✗", "A resolução diz ✓"],
+            "linhas": [
+              ["Permissão cobre qualquer duas rodas", "Só categoria A ou ACC pega ciclomotor — art. 5º §1º"],
+              ["Documento vale 2 anos", "Validade é 1 ano da expedição — art. 4º §5º"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PERMISSÃO = 1 ANO (art. 4º §5º).\nCICLOMOTOR só com categoria A ou ACC (art. 5º §1º).\nCATEGORIA B não inclui ciclomotor por analogia.",
+            "destaques": ["1 ANO", "categoria A"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.020/2025",
+          "path": "conteúdo/resoluções CONTRAN/Resolução - 1020 - 2025.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 265,
+      "fundamento_slug": "CONTRAN_1020_art_5_par1",
+      "macete_visual": "Permissão = 1 ano (art. 4º §5º) · ciclomotor só com categoria A/ACC",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: documento provisório não é passe-livre",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — isca: Permissão cobre qualquer duas rodas.\nB — isca: acerta exceção do ciclomotor, troca prazo (2 anos).\nD — isca: categoria B “inclui” ciclomotor por analogia.\n\nPromessa: categoria certa + prazo certo no mesmo gabarito.",
+            "destaques": ["Gabarito C", "1 ano", "categoria A"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PERMISSÃO PARA DIRIGIR: documento provisório do candidato aprovado nos exames teórico e de direção — validade de 1 ano.\n\nACC (Autorização para Conduzir Ciclomotor): documento definitivo específico para ciclomotor.\n\nCICLOMOTOR: veículo de duas rodas que exige categoria A ou ACC — categoria B não basta.",
+            "destaques": ["PERMISSÃO", "ACC", "CICLOMOTOR"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: a Permissão B autoriza o ciclomotor?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "O condutor tem categoria A ou ACC?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "A Permissão B ainda está dentro do prazo de 1 ano?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Ciclomotor irregular, mas Permissão B válida — gabarito C",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim — 8 meses < 1 ano" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Documentos de habilitação e ciclomotor (art. 4º e 5º)",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Documento", "Ciclomotor?"],
+            "linhas": [
+              {
+                "faixa": "Categoria A",
+                "classificacao": "Autoriza ciclomotor — art. 5º, §1º",
+                "destaque": true
+              },
+              {
+                "faixa": "Autorização para Conduzir Ciclomotor (ACC)",
+                "classificacao": "Autoriza ciclomotor — art. 5º, §1º"
+              },
+              {
+                "faixa": "Categoria B (CNH ou Permissão)",
+                "classificacao": "NÃO autoriza ciclomotor"
+              },
+              {
+                "faixa": "Permissão para Dirigir (qualquer categoria)",
+                "classificacao": "Válida por 1 ano da expedição — art. 4º, §5º"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: categoria certa × prazo trocado",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Documento provisório cobre qualquer duas rodas", "Só categoria A ou ACC pega ciclomotor — art. 5º §1º"],
+              ["Permissão vale 2 anos", "Validade é 1 ano da expedição — art. 4º §5º"]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              ["A — regra_excecao", "Ignora a exceção do art. 5º, §1º — Permissão B não cobre ciclomotor"],
+              ["B — numero_vizinho", "Acerta a restrição do ciclomotor, mas troca 1 ano por 2 anos (art. 4º, §5º)"],
+              ["D — termo_unico", "Generaliza categoria B: motocicleta ≠ ciclomotor — art. 5º, §1º"]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              ["Permissão categoria B, expedida há 8 meses", "Dentro do prazo de 1 ano — art. 4º, §5º"],
+              ["Condução de ciclomotor com categoria B", "Irregular — falta categoria A ou ACC (art. 5º §1º)"],
+              ["Resultado", "Gabarito C reúne as duas regras corretas"]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Art. 4º, §5º — 1 ano da expedição, não 2",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Permissão vale 2 anos", "Validade é 1 ano da expedição — art. 4º, §5º"],
+              ["8 meses = documento vencido", "8 meses < 1 ano — Permissão B ainda válida"]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 5º, §1º — quem pode conduzir ciclomotor",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 1.020/2025, art. 5º, §1º",
+            "texto": "Além dos condutores com Autorização para Conduzir Ciclomotor, apenas os habilitados na categoria A estão aptos a conduzirem ciclomotores.",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 60,
+                "texto_grifado": "Além dos condutores com Autorização para Conduzir Ciclomotor",
+                "motivo": "contraste — ACC é a primeira via de acesso ao ciclomotor"
+              },
+              {
+                "inicio": 62,
+                "fim": 110,
+                "texto_grifado": "apenas os habilitados na categoria A estão aptos",
+                "motivo": "distratores — apenas categoria A, nunca a B"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 4º, §5º — prazo da Permissão para Dirigir",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 1.020/2025, art. 4º, §5º",
+            "texto": "A validade da Permissão para Dirigir é de um ano, contado da data de sua expedição.",
+            "trechos_grifados": [
+              {
+                "inicio": 42,
+                "fim": 48,
+                "texto_grifado": "um ano",
+                "motivo": "eixo2 — um ano, não dois"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PERMISSÃO = 1 ANO da expedição (art. 4º §5º).\nCICLOMOTOR só com categoria A ou ACC (art. 5º §1º).\nCATEGORIA B não inclui ciclomotor por analogia com motocicleta.\n\nNear-transfer: se o mesmo condutor apresentasse Autorização para Conduzir Ciclomotor em vez da Permissão B, a condução do ciclomotor estaria regular — a exceção do art. 5º §1º se aplicaria.",
+            "destaques": ["1 ANO", "categoria A", "ACC"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.020/2025",
+          "path": "conteúdo/resoluções CONTRAN/Resolução - 1020 - 2025.pdf"
+        }
+      ],
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Permissão categoria B não cobre ciclomotor, e vale 1 ano — não 2",
+        "eixos_legais": ["CONTRAN_1020_art_5_par1", "CONTRAN_1020_art_4_par5"],
+        "eixos_mecanismo": ["regra_excecao", "numero_vizinho", "termo_unico"],
+        "isca_por_alternativa": {
+          "A": "trata Permissão como passe-livre para duas rodas — regra_excecao",
+          "B": "acerta a exceção do ciclomotor, mas troca o prazo — numero_vizinho",
+          "D": "categoria B inclui ciclomotor por analogia — termo_unico"
+        }
+      }
+    }
+  }
+]

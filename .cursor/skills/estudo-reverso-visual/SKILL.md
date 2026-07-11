@@ -27,6 +27,7 @@ Designer instrucional + examinador IDECAN. Cada micro-aula consolida **uma quest
 | Fonte | Caminho |
 |---|---|
 | Questão base (enunciado, comentario, mecanismos) | JSON gerado por `examinador-idecan` |
+| Perfil vertical da disciplina | `../examinador-idecan/perfis/perfil-{disciplina}.md` — mapa slug→arquivo em [SKILL.md](../examinador-idecan/SKILL.md) § Mapa slug → perfil vertical; §8 mapa arquétipo por disciplina |
 | Lei seca | `conteúdo/` — índice em `conteúdo/FONTES.md` (nunca só internet) |
 | Tipos TS | `src/types/estudo-reverso-visual.ts` |
 | Validação Zod | `src/lib/validations/estudo-reverso-visual.ts` |
@@ -100,6 +101,8 @@ Ordem de resolução quando múltiplos sinais disparam — parar no primeiro que
 3. `tipo` da questão: `caso_pratico` → `fluxograma_decisao`; sequência temporal genuína → `linha_tempo` ([linha-tempo.md](arquetipos/linha-tempo.md)).
 
 Empate residual → escolher o arquétipo que expõe a **pegadinha do gabarito** (a confusão que faria o aluno marcar errado), não o que "ilustra o tema".
+
+**Trânsito (`legislacao_transito`):** consultar §8 de [perfil-transito.md](../examinador-idecan/perfis/perfil-transito.md) antes de classificar família A|B|C|D.
 
 ## Formato canônico — tela de distratores (v2, obrigatória)
 
@@ -204,7 +207,7 @@ Reprovou 1 item → corrigir antes de rodar qualquer npm:
 
 Itens 2, 4, 6 e 8 são parcialmente enforceados pelo validador Zod. Itens 1, 3, 5 e 7 permanecem revisão humana.
 
-Depois: `npm run validate:estudo-reverso-visual -- arquivo.json` até zero erros. Checklist detalhado: [checklist-mayer.md](checklist-mayer.md).
+Depois: `npm run validate:lote -- arquivo.json` até zero erros (inclui `preview:grifos`). Lotes legados sem `texto_grifado`: `validate:lote -- --legacy-grifos` até `npm run retrofit:grifos -- --write`. Checklist detalhado: [checklist-mayer.md](checklist-mayer.md).
 
 ## Workflow por questão
 
@@ -212,7 +215,8 @@ Depois: `npm run validate:estudo-reverso-visual -- arquivo.json` até zero erros
 2. Classificar família A|B|C|D — [PADRAO-AULA-COMPLETA-v3.md](exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md)
 3. Montar EXPRESSA (3–5) e COMPLETA (7–11) — estrutura da família, condicionais só com gatilho
 4. `<gate_mayer>` 8/8 + gate editorial 12/12 (hub v3)
-5. `npm run validate:estudo-reverso-visual -- arquivo.json`
+5. Grifos: `npm run grifo:offsets` → preencher `texto_grifado` → `npm run preview:grifos`
+6. `npm run validate:lote -- arquivo.json` (5 gates, inclui preview de grifos)
 
 ## Prompt de lote (Agent mode)
 
@@ -227,7 +231,7 @@ Gere content/questoes/legislacao_transito/lote-00X.json:
 - estudo_reverso_visual (3-5 telas) recomendado quando possivel
 - Tela de distratores mapeada pelos slugs de mecanismo do comentario
 - Consultar conteudo/FONTES.md antes de citar lei
-- Gate Mayer 8/8 por aula, depois validate:lote ate zero erros
+- Gate Mayer 8/8 por aula, depois validate:lote (5 gates, inclui preview:grifos) ate zero erros
 - Nao commitar
 ```
 
@@ -254,6 +258,8 @@ Gere content/questoes/legislacao_transito/lote-00X.json:
 
 ## Recursos
 
+- Perfis verticais (arquétipos por disciplina) — mapa em [../examinador-idecan/SKILL.md](../examinador-idecan/SKILL.md) § Mapa slug → perfil vertical:
+  - [perfil-transito.md](../examinador-idecan/perfis/perfil-transito.md) · [perfil-portugues.md](../examinador-idecan/perfis/perfil-portugues.md) · [perfil-informatica.md](../examinador-idecan/perfis/perfil-informatica.md) · [perfil-constitucional.md](../examinador-idecan/perfis/perfil-constitucional.md) · [perfil-administrativo.md](../examinador-idecan/perfis/perfil-administrativo.md) · [perfil-etica-sp.md](../examinador-idecan/perfis/perfil-etica-sp.md) · [perfil-historia-cg-pb.md](../examinador-idecan/perfis/perfil-historia-cg-pb.md)
 - [checklist-mayer.md](checklist-mayer.md)
 - [exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md](exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md) — **hub padrão ouro v3 (famílias A–D)**
 - [exemplos-ouro/familias/](exemplos-ouro/familias/) — guias por família

@@ -1,0 +1,295 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_996_mobilidade",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_prazo",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_996_art_14",
+    "enunciado": "Em março de 2026, agente da STTP, em Campina Grande/PB, aborda condutor que circula com ciclomotor elétrico fabricado em 2021, sem registro no DETRAN-PB. O proprietário apresenta nota fiscal e alega estar regularizando o cadastro, sustentando que basta apresentar o Certificado de Adequação à Legislação de Trânsito (CAT) previsto no art. 13 da Resolução CONTRAN nº 996/2023. Considerando a Resolução, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Pode circular enquanto aguarda o CAT, pois o art. 13, I, é o documento exigido para registro de qualquer ciclomotor junto ao DETRAN, independentemente da data de fabricação.",
+      "B": "A circulação é irregular: o veículo enquadra-se no art. 14 — exige CSV e Laudo de Vistoria, não CAT — e o §1º, I, vedou trânsito após 31/12/2025 sem inclusão no RENAVAM.",
+      "C": "Pode circular porque o prazo do art. 14, §1º, I, prorrogou-se automaticamente até 31/12/2027 para ciclomotores fabricados antes da vigência da Resolução.",
+      "D": "Compete à STTP expedir CAT provisório e autorizar o trânsito municipal até o DETRAN-PB concluir o licenciamento estadual."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Registro de ciclomotor legado sem CAT (art. 14) × documentação de ciclomotor novo (art. 13) e prazo fatal de circulação — §1º, I, da Res. CONTRAN 996/2023.",
+      "fundamento_legal": "Res. CONTRAN 996/2023, art. 14, caput: 'Para o registro e o licenciamento [...] dos ciclomotores que não possuam CAT e código específico de marca/modelo/versão, fabricados ou importados até a data de entrada em vigor desta Resolução, deve ser exigido: I - Certificado de Segurança Veicular (CSV) [...]; II - Laudo de Vistoria [...]'. § 1º, I: 'devem providenciar a inclusão desses veículos junto ao RENAVAM a partir de 1º de novembro de 2023 até 31 de dezembro de 2025, findo o qual ficam impedidos de circular em via pública'. Art. 13, I (contraste): exige CAT para ciclomotores com pré-cadastro RENAVAM a partir da vigência.",
+      "passo_a_passo": [
+        "1. Caso: ciclomotor elétrico de 2021, sem registro, em março/2026 — proprietário invoca art. 13 (CAT) para continuar circulando.",
+        "2. A erra por regra_excecao (aplica art. 13 a todo ciclomotor, ignorando que o art. 14 disciplina os fabricados até a vigência sem CAT/CSV); C erra por numero_vizinho (inventa prorrogação até 2027 — o §1º, I, fixa término em 31/12/2025); D erra por competencia_snt (STTP municipal não expede CAT nem substitui DETRAN no registro).",
+        "3. B correta: art. 14 impõe CSV + Laudo de Vistoria no lugar do CAT; §1º, I, encerrou o prazo em 31/12/2025 — em março/2026 a circulação é vedada."
+      ],
+      "pegadinha": "A IDECAN induz a usar o art. 13 (CAT) porque o caso fala em ciclomotor — mas veículo de 2021 sem CAT cai no art. 14; o candidato apressado também perde o prazo fatal de 31/12/2025.",
+      "macete": "NOVO = CAT (art. 13) · LEGADO sem CAT = CSV + Laudo (art. 14) · Prazo RENAVAM até 31/12/2025.",
+      "estudo_reverso": [
+        "Res. CONTRAN 996/2023 art. 13",
+        "Res. CONTRAN 996/2023 art. 14",
+        "Res. CONTRAN 996/2023 art. 19",
+        "CTB art. 230"
+      ]
+    },
+    "tags": [
+      "resolucao_996",
+      "ciclomotor",
+      "cat",
+      "csv",
+      "prazo_renavam"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_996_art_14",
+      "macete_visual": "Novo = CAT · legado = CSV · prazo 31/12/2025",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: ciclomotor de 2021 sem CAT → art. 14 (CSV + Laudo), não art. 13. Prazo RENAVAM encerrou em 31/12/2025.",
+            "destaques": ["art. 14", "31/12/2025", "CAT"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Art. 13 × art. 14",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Ciclomotor novo", "Ciclomotor legado"],
+            "linhas": [
+              ["CAT — art. 13, I", "CSV + Laudo — art. 14"],
+              ["Pré-cadastro RENAVAM do fabricante", "Fabricado até vigência da Res. 996"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "NOVO = CAT (art. 13).\nLEGADO sem CAT = CSV + Laudo (art. 14).\nPrazo RENAVAM: até 31/12/2025 — depois, veda circulação.",
+            "destaques": ["CAT", "CSV", "31/12/2025"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 996/2023",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 996, DE 15 DE JUNHO DE 2023.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CONTRAN_996_art_14",
+      "macete_visual": "Novo = CAT (art. 13) · legado = CSV (art. 14) · prazo 31/12/2025",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: CAT não serve para todo ciclomotor",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — aplicou art. 13 (CAT) a ciclomotor de 2021: veículo legado sem CAT cai no art. 14.\nC — prorrogou o prazo até 2027: o §1º, I, fixa término em 31/12/2025.\nD — atribuiu à STTP expedição de CAT: registro é do DETRAN; CAT é do órgão máximo executivo da União.\n\nFixe: novo × legado × prazo fatal.",
+            "destaques": ["Gabarito B", "art. 14", "31/12/2025"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CAT: Certificado de Adequação à Legislação de Trânsito — art. 13, I, para ciclomotores com pré-cadastro RENAVAM a partir da vigência.\n\nCSV: Certificado de Segurança Veicular — art. 14, I, para ciclomotores legados sem CAT.\n\nRENAVAM: cadastro nacional; o §1º, I, do art. 14 impôs inclusão até 31/12/2025.",
+            "destaques": ["CAT", "CSV", "RENAVAM"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: ciclomotor de 2021 — qual regra?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Fabricado até a vigência da Res. 996 sem CAT?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Inclusão no RENAVAM feita até 31/12/2025?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Irregular em março/2026 — gabarito B",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — caso do enunciado" },
+              { "de": "p2", "para": "r1", "rotulo": "Não — §1º, I, veda" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Dois caminhos de registro",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Situação", "Documentação"],
+            "linhas": [
+              {
+                "faixa": "Ciclomotor novo (pós-vigência)",
+                "classificacao": "CAT — art. 13, I",
+                "destaque": false
+              },
+              {
+                "faixa": "Ciclomotor legado sem CAT",
+                "classificacao": "CSV + Laudo de Vistoria — art. 14",
+                "destaque": true
+              },
+              {
+                "faixa": "Prazo inclusão RENAVAM",
+                "classificacao": "1º/11/2023 a 31/12/2025 — art. 14, §1º, I"
+              },
+              {
+                "faixa": "Após 31/12/2025 sem cadastro",
+                "classificacao": "Impedido de circular em via pública"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: CAT para todo ciclomotor",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Basta CAT do art. 13 para qualquer ciclomotor", "Legado sem CAT → CSV + Laudo — art. 14"],
+              ["Ainda dá tempo de regularizar em 2026", "Prazo encerrou em 31/12/2025 — §1º, I"]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              ["A — regra_excecao", "Aplica art. 13 a todo ciclomotor — ignora exceção do art. 14 para legados"],
+              ["C — numero_vizinho", "Troca 31/12/2025 por 31/12/2027 — prazo não prorrogou"],
+              ["D — competencia_snt", "STTP não expede CAT nem registra ciclomotor — DETRAN estadual"]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              ["Ciclomotor elétrico fabricado em 2021", "Enquadra art. 14 — legado sem CAT"],
+              ["Sem registro no DETRAN-PB em março/2026", "Prazo do §1º, I, já expirou (31/12/2025)"],
+              ["Proprietário invoca CAT do art. 13", "Documento errado — gabarito B"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 19, IV — sanção no CTB",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Hipótese", "Infração CTB"],
+            "linhas": [
+              ["Circular sem registro/licenciamento", "Art. 230, V — art. 19, IV da Res. 996"],
+              ["Ciclomotor sem capacete", "Art. 244 — art. 19, V"],
+              ["Bicicleta elétrica em rodovia", "Art. 244, §1º — art. 19, VI"]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 14, caput e §1º, I — legado e prazo",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 996/2023, art. 14, §1º, I",
+            "texto": "devem providenciar a inclusão desses veículos junto ao RENAVAM a partir de 1º de novembro de 2023 até 31 de dezembro de 2025, findo o qual ficam impedidos de circular em via pública",
+            "trechos_grifados": [
+              {
+                "inicio": 102,
+                "fim": 124,
+                "motivo": "mapa — prazo fatal 31/12/2025"
+              },
+              {
+                "inicio": 126,
+                "fim": 181,
+                "motivo": "contraste — após o prazo, veda circulação"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 14, I — CSV no lugar do CAT",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 996/2023, art. 14, I",
+            "texto": "Certificado de Segurança Veicular (CSV), constando número de identificação veicular (VIN) ou, em sua ausência, o número de série do produto",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 42,
+                "motivo": "distratores — legado exige CSV, não CAT do art. 13"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "NOVO = CAT (art. 13, I).\nLEGADO sem CAT = CSV + Laudo (art. 14).\nPrazo RENAVAM: 1º/11/2023 a 31/12/2025 — depois, veda circulação.\n\nNear-transfer: ciclomotor importado em 2024 com pré-cadastro do fabricante no RENAVAM — aí sim vale o CAT do art. 13, não o art. 14.",
+            "destaques": ["CAT", "CSV", "31/12/2025"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 996/2023",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 996, DE 15 DE JUNHO DE 2023.pdf"
+        }
+      ],
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Ciclomotor de 2021 sem CAT → art. 14, não art. 13; prazo encerrou em 31/12/2025",
+        "eixos_legais": ["CONTRAN_996_art_13", "CONTRAN_996_art_14", "CONTRAN_996_art_19"],
+        "isca_por_alternativa": {
+          "A": "CAT serve para todo ciclomotor — regra_excecao",
+          "C": "prazo prorrogou até 2027 — numero_vizinho",
+          "D": "STTP expede CAT — competencia_snt"
+        }
+      }
+    }
+  }
+]

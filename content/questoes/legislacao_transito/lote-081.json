@@ -1,0 +1,356 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_circulacao_conduta",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_41_I",
+    "enunciado": "Em via urbana de Campina Grande/PB, um condutor avista ciclista que deixa a calçada e invade a faixa de rolamento à sua frente. Para alertá-lo e evitar colisão, aciona a buzina em toque breve. Considerando as normas de circulação e conduta do Código de Trânsito Brasileiro sobre o uso da buzina, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Em área urbana, a buzina é vedada em qualquer hipótese, devendo o condutor apenas reduzir a velocidade sem emitir som.",
+      "B": "A buzina em toque breve só é permitida fora das áreas urbanas para advertir ultrapassagem, conforme o art. 41, II, do CTB.",
+      "C": "Em área urbana, o condutor pode usar buzina em toque breve para advertências necessárias a fim de evitar sinistros, conforme o art. 41, I, do CTB.",
+      "D": "Diante de risco iminente na via urbana, é permitido toque prolongado na buzina, dispensado o requisito de brevidade do caput do art. 41."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Art. 41, I — buzina breve para advertências necessárias a fim de evitar sinistros (inclusive em área urbana); distinção do inciso II (ultrapassagem fora do urbano).",
+      "fundamento_legal": "CTB, art. 41: o condutor de veículo só poderá fazer uso de buzina, desde que em toque breve, nas seguintes situações: I - para fazer as advertências necessárias a fim de evitar sinistros; II - fora das áreas urbanas, quando for conveniente advertir a um condutor que se tem o propósito de ultrapassá-lo.",
+      "passo_a_passo": [
+        "1. Caso: toque breve na buzina em via urbana para alertar ciclista e evitar colisão — núcleo do art. 41, I.",
+        "2. A erra por regra_excecao (veda buzina em área urbana, ignorando inciso I); B erra por numero_vizinho (reduz art. 41 ao inciso II e exclui sinistro urbano); D erra por termo_unico (dispensa toque breve em emergência, contrariando o caput).",
+        "3. C correta: inciso I autoriza buzina breve para advertências necessárias a fim de evitar sinistros, sem restringir a área urbana."
+      ],
+      "pegadinha": "A IDECAN induz a crer que buzina é proibida na cidade — o inciso I permite toque breve para evitar sinistro em qualquer local.",
+      "macete": "BUZINA BREVE · I=sinistro (cidade OK) · II=ultrapassar FORA urbano.",
+      "estudo_reverso": [
+        "CTB art. 41, I",
+        "CTB art. 41, II"
+      ]
+    },
+    "tags": [
+      "buzina",
+      "sinistro",
+      "ciclista",
+      "art_41",
+      "circulacao"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CTB_art_41_I",
+      "macete_visual": "BUZINA BREVE · I=sinistro urbano",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Toque breve para alertar ciclista na cidade.\n\nGabarito C: art. 41, I — evitar sinistro.",
+            "destaques": ["toque breve", "Gabarito C", "sinistros"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Cidade × sinistro",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Buzina vedada no urbano", "Inciso I vale na cidade"],
+              ["Emergência dispensa brevidade", "Caput exige toque breve"]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Decisão rápida",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Advertir para evitar sinistro?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Toque breve permitido", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "BUZINA = BREVE.\nI = sinistro (cidade OK).\nII = fora do urbano.",
+            "destaques": ["BREVE", "sinistro"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 41",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "CTB_art_41_I",
+      "macete_visual": "BUZINA BREVE · I=sinistro (cidade OK) · II=fora urbano",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Na cidade a buzina não é vedada — inciso I permite toque breve para evitar sinistro",
+        "eixos_legais": [
+          "CTB_art_41_I",
+          "CTB_art_41_II"
+        ],
+        "isca_por_alternativa": {
+          "A": "veda buzina em área urbana — regra_excecao",
+          "B": "reduz art. 41 ao inciso II fora do urbano — numero_vizinho",
+          "D": "dispensa toque breve em emergência — termo_unico"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: buzina na cidade para evitar choque",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — vedou buzina na cidade: inciso I autoriza toque breve para evitar sinistro em qualquer local.\nB — citou só ultrapassagem fora do urbano: inciso II não revoga o inciso I.\nD — liberou toque longo: caput exige buzina sempre breve.\n\nNesta aula você separa sinistro urbano (I) de ultrapassagem rural (II).",
+            "destaques": [
+              "Gabarito C",
+              "evitar sinistros",
+              "toque breve"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "TOQUE BREVE: única forma lícita de buzina — regra do caput do art. 41.\n\nADVERTÊNCIAS NECESSÁRIAS: alertas para prevenir colisão — hipótese do inciso I.\n\nEVITAR SINISTROS: finalidade do toque no caso — ciclista que invade a faixa.",
+            "destaques": [
+              "TOQUE BREVE",
+              "ADVERTÊNCIAS",
+              "SINISTROS"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: buzina para evitar sinistro?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Há risco de sinistro a advertir?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Toque é breve e necessário?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Permitido pelo inciso I",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Art. 41 — caput e incisos I e II",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Dispositivo",
+              "Hipótese"
+            ],
+            "linhas": [
+              [
+                "Caput",
+                "Buzina só em toque breve"
+              ],
+              [
+                "Inciso I",
+                "Advertir para evitar sinistros — urbano ou rural"
+              ],
+              [
+                "Inciso II",
+                "Advertir ultrapassagem — só fora do urbano"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: buzina proibida na cidade",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
+            "linhas": [
+              [
+                "Na cidade não pode buzinar",
+                "Inciso I vale em área urbana para evitar sinistro"
+              ],
+              [
+                "Buzina longa em emergência",
+                "Caput exige toque breve sempre"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Veda buzina no urbano — inciso I não restringe por tipo de via"
+              ],
+              [
+                "B — numero_vizinho",
+                "Reduz art. 41 ao inciso II — sinistro urbano está no inciso I"
+              ],
+              [
+                "D — termo_unico",
+                "Dispensa toque breve em emergência — caput não admite exceção"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Fato do caso",
+              "Conclusão legal"
+            ],
+            "linhas": [
+              [
+                "Ciclista invade faixa em via urbana de Campina Grande",
+                "Risco de sinistro a advertir"
+              ],
+              [
+                "Toque breve na buzina para alertar",
+                "Advertência necessária — inciso I"
+              ],
+              [
+                "Resultado",
+                "Gabarito C — buzina breve permitida"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Inciso I × inciso II",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Inciso",
+              "Escopo"
+            ],
+            "linhas": [
+              [
+                "I",
+                "Evitar sinistros — qualquer área, inclusive urbana"
+              ],
+              [
+                "II",
+                "Ultrapassagem — apenas fora das áreas urbanas"
+              ],
+              [
+                "Pegadinha B",
+                "II não é a única hipótese de buzina lícita"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei41i",
+          "titulo": "Art. 41, I — literal da regra",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 41, I",
+            "texto": "I - para fazer as advertências necessárias a fim de evitar sinistros;",
+            "trechos_grifados": [
+              {
+                "inicio": 18,
+                "fim": 42,
+                "motivo": "caso — toque breve para alertar o ciclista"
+              },
+              {
+                "inicio": 52,
+                "fim": 68,
+                "motivo": "glossario — finalidade do inciso I"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "BUZINA = SEMPRE BREVE.\nI = evitar SINISTRO (cidade incluída).\nII = ultrapassar FORA do urbano.\nNão confundir os incisos.\n\nNear-transfer: pedestre pisa na faixa sem olhar — toque breve para alertar pode ser lícito no inciso I; buzinar longo para apressar, não.",
+            "destaques": [
+              "SINISTRO",
+              "toque breve",
+              "Near-transfer"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 41",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

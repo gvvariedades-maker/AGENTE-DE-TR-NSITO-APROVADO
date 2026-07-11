@@ -75,16 +75,37 @@ Calibrado para provas objetivas IDECAN (agente de trânsito, polícia, prefeitur
 - Cap. VI a VIII do CTB
 - Resoluções CONTRAN em `conteúdo/resoluções CONTRAN/` (lista retificada em `conteudo-programatico.md`)
 - Caso prático de fiscalização STTP
+- **Aprofundamento:** [perfis/perfil-transito.md](perfis/perfil-transito.md) — sub-mecanismos, cobertura, fila ROI
 
 ### portugues
 - Interpretação de texto + morfologia/sintaxe
 - Texto-base obrigatório em ~60% das questões do bloco
+- **Aprofundamento:** [perfis/perfil-portugues.md](perfis/perfil-portugues.md) — texto-base, mecanismos semânticos, cobertura, fila ROI
+
+### informatica
+- Windows/Office/Internet/segurança; assertivas e correspondência frequentes
+- Alternativas curtas (média ~55 chars no corpus)
+- **Aprofundamento:** [perfis/perfil-informatica.md](perfis/perfil-informatica.md) — atalhos, malware, protocolos, cobertura, fila ROI
 
 ### direito_administrativo
 - Atos administrativos, licitação (Lei 14.133), poderes, responsabilidade
+- Poder de polícia (base da autuação) — caso prático STTP
+- **Aprofundamento:** [perfis/perfil-administrativo.md](perfis/perfil-administrativo.md) — poder de polícia, atos, cobertura, fila ROI
 
 ### direito_constitucional
 - Direitos fundamentais, administração pública (CF art. 37), organização do Estado
+- Segurança pública e segurança viária (CF art. 144) — eixo do cargo
+- **Aprofundamento:** [perfis/perfil-constitucional.md](perfis/perfil-constitucional.md) — art. 144, remédios, competências, lacunas
+
+### historia_cg_pb
+- Fatos verificáveis de Campina Grande e Paraíba — só `conteúdo/historia-cg-pb/base-factual.md`
+- Datas-chave: 1697 (fundação), 1790 (vila), 1864 (cidade)
+- **Aprofundamento:** [perfis/perfil-historia-cg-pb.md](perfis/perfil-historia-cg-pb.md) — anti-alucinação, marcos, lacuna total
+
+### legislacao_etica_sp
+- Lei Orgânica CG, LGPD, LAI, princípios éticos (art. 37)
+- Banco saturado em Lei Orgânica — lacuna em LGPD/LAI
+- **Aprofundamento:** [perfis/perfil-etica-sp.md](perfis/perfil-etica-sp.md) — LGPD, LAI, Lei Orgânica, fila ROI
 
 ## Calibragem de dificuldade (`dificuldade_operacional`)
 
@@ -96,7 +117,9 @@ Calibrado para provas objetivas IDECAN (agente de trânsito, polícia, prefeitur
 | 4 | Caso com 2 mecanismos combinados (ex.: competência + prazo) |
 | 5 | Regra-exceção multietapa ou assertivas/correspondência com 2+ mecanismos cruzados |
 
-**Mix padrão em lotes e simulados:** ~20% níveis 1–2 | ~50% nível 3 | ~30% níveis 4–5 (embaralhado).
+**Mix padrão no simulado espelho:** ~20% níveis 1–2 | ~50% nível 3 | ~30% níveis 4–5 (embaralhado).
+
+**Banco de treino (`content/questoes/`):** mínimo **nível 4** em toda questão nova — `DIFICULDADE_MINIMA_BANCO` em `src/lib/validations/dificuldade-banco.ts`; `npm run proxima` já sugere escopo 4+.
 
 ## Mecanismos de distrator — slugs e mapeamento corpus
 

@@ -9,11 +9,13 @@ const VALIDADORES = [
   "validate:cobertura",
   "validate:indistinguibilidade",
   "validate:estudo-reverso-visual",
+  "preview:grifos",
 ] as const;
 
 function main() {
   const args = process.argv.slice(2);
   const skipCitacoes = args.includes("--skip-citacoes");
+  const legacyGrifos = args.includes("--legacy-grifos");
   const filePath = args.find((a) => !a.startsWith("--"));
 
   if (!filePath) {
@@ -32,6 +34,7 @@ function main() {
     console.log(`── ${script} ──`);
     const npmArgs = ["run", script, "--", relativePath];
     if (skipCitacoes) npmArgs.push("--skip-citacoes");
+    if (legacyGrifos) npmArgs.push("--legacy-grifos");
 
     const result = spawnSync("npm", npmArgs, {
       cwd: process.cwd(),

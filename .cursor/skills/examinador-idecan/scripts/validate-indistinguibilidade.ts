@@ -7,6 +7,8 @@
  */
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import { DIFICULDADE_MINIMA_BANCO } from "../../../../src/lib/validations/dificuldade-banco";
+import { listarAchadosDistratorOnCase } from "../../../../src/lib/validations/questao-mecanismo";
 import { questoesImportFileSchema, type QuestaoSeedImportInput } from "../../../../src/lib/validations/questao";
 
 type Disciplina = QuestaoSeedImportInput["disciplina"];
@@ -175,19 +177,47 @@ function validarQuestao(q: QuestaoSeedImportInput, index: number): Achado[] {
     push("aviso", "B2", `estilo_idecan não catalogado: ${q.estilo_idecan}`);
   }
 
+  if (q.dificuldade < DIFICULDADE_MINIMA_BANCO) {
+    push(
+      "erro",
+      "D1",
+      `dificuldade ${q.dificuldade} abaixo do mínimo do banco (${DIFICULDADE_MINIMA_BANCO}) — use dificuldade_operacional nível 4+`,
+    );
+  }
+
   if (q.dificuldade >= 3) {
     if (!q.comentario.pegadinha?.trim() || q.comentario.pegadinha.length < 15) {
       push("erro", "D2", "dificuldade ≥ 3 exige comentario.pegadinha substantivo");
     }
-    if (!q.estilo_idecan?.startsWith("pegadinha_") && q.estilo_idecan !== "assertivas" && q.estilo_idecan !== "incorreta") {
+    if (
+      q.dificuldade < DIFICULDADE_MINIMA_BANCO &&
+      !q.estilo_idecan?.startsWith("pegadinha_") &&
+      q.estilo_idecan !== "assertivas" &&
+      q.estilo_idecan !== "incorreta"
+    ) {
       push("aviso", "B2", "dificuldade ≥ 3: preferir estilo_idecan de pegadinha ou assertivas");
     }
   }
 
-  if (q.dificuldade >= 4) {
+  if (q.dificuldade >= DIFICULDADE_MINIMA_BANCO) {
     const passos = q.comentario.passo_a_passo?.length ?? 0;
     if (passos < 3) {
-      push("aviso", "D3", "dificuldade 4–5: passo_a_passo deveria ter ≥ 3 etapas");
+      push(
+        "erro",
+        "D3",
+        `dificuldade ${q.dificuldade}: passo_a_passo exige ≥ 3 etapas`,
+      );
+    }
+    if (
+      !q.estilo_idecan?.startsWith("pegadinha_") &&
+      q.estilo_idecan !== "assertivas" &&
+      q.estilo_idecan !== "incorreta"
+    ) {
+      push(
+        "erro",
+        "B2",
+        `dificuldade ≥ ${DIFICULDADE_MINIMA_BANCO}: estilo_idecan deve ser pegadinha_*, assertivas ou incorreta`,
+      );
     }
   }
 
@@ -206,6 +236,48 @@ function validarQuestao(q: QuestaoSeedImportInput, index: number): Achado[] {
     push("aviso", "C5", "passo_a_passo[1] sem slug de mecanismo (numero_vizinho, competencia_snt, gravidade, regra_excecao, termo_unico)");
   } else if (slugsNoPasso2.length < erradas.length) {
     push("aviso", "C5", `passo_a_passo[1] cita ${slugsNoPasso2.length} mecanismo(s); esperado ≥ ${erradas.length} para as erradas`);
+  }
+  if (q.dificuldade >= DIFICULDADE_MINIMA_BANCO && slugsNoPasso2.length < 2) {
+    push(
+      "erro",
+      "D4",
+      `dificuldade ${q.dificuldade}: passo_a_passo[1] deve citar ≥ 2 mecanismos distintos (nível 4+ cruzado)`,
+    );
+  }
+
+  for (const achado of listarAchadosDistratorOnCase({
+    gabarito: q.gabarito,
+    enunciado: q.enunciado,
+    alternativas: q.alternativas,
+    passo_a_passo: q.comentario.passo_a_passo,
+    dificuldade: q.dificuldade,
+  })) {
+    if (achado.onCase) continue;
+    push(
+      q.dificuldade >= DIFICULDADE_MINIMA_BANCO ? "erro" : "aviso",
+      "C6",
+      `alternativa ${achado.letra} off-case (${achado.mecanismo ?? "sem mecanismo"} não deriva do enunciado)`,
+    );
+  }
+
+  if (q.estilo_idecan === "pegadinha_prazo" && !passo2.includes("numero_vizinho")) {
+    push(
+      "aviso",
+      "B4",
+      "estilo_idecan pegadinha_prazo mas passo 2 não cita numero_vizinho",
+    );
+  }
+  const mecanismosCruzados = MECANISMO_SLUGS.filter((s) => passo2.includes(s));
+  if (
+    mecanismosCruzados.length >= 2 &&
+    q.estilo_idecan?.startsWith("pegadinha_") &&
+    !mecanismosCruzados.some((s) => q.estilo_idecan?.includes(s.replace("pegadinha_", "")))
+  ) {
+    push(
+      "aviso",
+      "B4",
+      `estilo_idecan "${q.estilo_idecan}" não reflete todos os eixos do passo 2 — use meta.eixos_mecanismo: [${mecanismosCruzados.map((s) => `"${s}"`).join(", ")}]`,
+    );
   }
 
   return achados;

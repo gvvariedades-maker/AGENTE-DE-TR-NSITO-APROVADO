@@ -1,0 +1,270 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_1_3",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_prazo",
+    "dificuldade": 4,
+    "fundamento_slug": "LAI_art24",
+    "enunciado": "A STTP de Campina Grande classificou como secreta um relatório de inteligência sobre organização criminosa que atua em transporte clandestino, fixando restrição de acesso pelo prazo máximo previsto na Lei nº 12.527/2011 (LAI), contado da data de produção. Em pedido de informação, um servidor argumenta que o documento deveria ser reservado (5 anos); outro, que o grau correto seria ultrassecreto (25 anos). Um terceiro sustenta que, por envolver segurança pública, o sigilo seria a regra e dispensaria classificação formal. À luz da LAI, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Por envolver segurança pública, o sigilo é a regra e dispensa classificação formal — o acesso só seria franqueado se o interesse superasse o risco operacional.",
+      "B": "Classificada como secreta, a restrição máxima é de 15 anos; a publicidade é preceito geral e o sigilo exceção; expirado o prazo, o acesso torna-se público automaticamente.",
+      "C": "O grau secreto admite restrição de até 5 anos — prazo do grau reservado, por ser o critério menos gravoso aplicável ao caso.",
+      "D": "Secreto e ultrassecreto compartilham o prazo máximo de 25 anos de restrição previsto na LAI para informações de alta sensibilidade."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Prazos de sigilo na LAI (art. 24, §1), diretriz da publicidade como regra e sigilo como exceção (art. 3, I) e desclassificação automática ao fim do prazo (art. 24, §4).",
+      "fundamento_legal": "LAI, art. 24, §1, II: \"secreta: 15 (quinze) anos\". Art. 3, I: \"observância da publicidade como preceito geral e do sigilo como exceção\". Art. 24, §4: \"Transcorrido o prazo de classificação ou consumado o evento que defina o seu termo final, a informação tornar-se-á, automaticamente, de acesso público\".",
+      "passo_a_passo": [
+        "1. O caso classifica o relatório como secreto e pede o prazo máximo legal — 15 anos (art. 24, §1, II), não 5 (reservada) nem 25 (ultrassecreta).",
+        "2. A erra por regra_excecao (inverte publicidade/sigilo e dispensa classificação formal); C erra por numero_vizinho (aplica prazo de 5 anos do grau reservado ao secreto); D erra por termo_unico (iguala prazo de secreto ao de ultrassecreta — 25 anos).",
+        "3. B está correta: 15 anos para secreto; publicidade é regra (art. 3, I); após o prazo, acesso público automático (art. 24, §4)."
+      ],
+      "pegadinha": "A banca mistura os prazos 5-15-25 entre os graus e inverte sigilo como regra — o candidato troca reservada/secreta/ultrassecreta ou acha que segurança pública dispensa classificação.",
+      "macete": "LAI sigilo: Reservada 5 · Secreta 15 · Ultrassecreta 25 — publicidade é a regra, sigilo a exceção.",
+      "estudo_reverso": [
+        "LAI art. 3, I",
+        "LAI art. 24, §1",
+        "LAI art. 24, §4",
+        "LAI art. 24, §5"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "LAI_art24",
+      "macete_visual": "5 · 15 · 25 — Reservada · Secreta · Ultrassecreta",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Relatório classificado como secreto — prazo máximo é 15 anos, não 5 nem 25. Publicidade é regra; sigilo é exceção com classificação formal.",
+            "destaques": ["secreta", "15 anos", "publicidade"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Prazos de sigilo na LAI",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Grau", "Prazo máximo"],
+            "linhas": [
+              { "faixa": "Reservada", "classificacao": "5 anos" },
+              { "faixa": "Secreta (caso)", "classificacao": "15 anos", "destaque": true },
+              { "faixa": "Ultrassecreta", "classificacao": "25 anos" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha dos vizinhos",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Secreto = 5 anos (reservada)", "Secreto = 15 anos"],
+              ["Secreto = 25 anos (ultrassecreta)", "Ultrassecreta = 25; secreta = 15"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "5 · 15 · 25 — Reservada · Secreta · Ultrassecreta. Publicidade é regra; sigilo é exceção.",
+            "destaques": ["5", "15", "25", "publicidade"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 12.527/2011 (LAI)",
+          "path": "conteúdo/legislação federal/lei-12527-lai.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 240,
+      "fundamento_slug": "LAI_art24",
+      "macete_visual": "5 · 15 · 25 — Reservada · Secreta · Ultrassecreta",
+      "meta": {
+        "padrao_familia": "D_gradacao",
+        "pegadinha_em_uma_frase": "Servidores empurram 5 ou 25 anos no grau secreto — o máximo é 15",
+        "eixos_legais": ["LAI_art3_I", "LAI_art24_par1", "LAI_art24_par4"],
+        "isca_por_alternativa": {
+          "A": "sigilo como regra dispensando classificação formal",
+          "C": "prazo de 5 anos do grau reservado no secreto",
+          "D": "secreto com mesmo prazo de 25 anos da ultrassecreta"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: secreto = 15 anos, não 5 nem 25",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — sigilo como regra dispensando classificação: inverte publicidade e sigilo.\nC — prazo de 5 anos: aplica faixa do grau reservado ao secreto.\nD — 25 anos no secreto: iguala ao prazo da ultrassecreta.\n\nA isca são os servidores empurrando 5 ou 25 anos no grau já classificado como secreto.",
+            "destaques": ["Gabarito B", "15 anos", "secreto"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 graus de sigilo",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "RESERVADA: menor grau de restrição — prazo máximo de 5 anos na LAI.\n\nSECRETA: grau intermediário — prazo máximo de 15 anos (grau do relatório no caso).\n\nULTRASSECRETA: maior grau — prazo máximo de 25 anos.",
+            "destaques": ["RESERVADA", "SECRETA", "ULTRASSECRETA"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Mapa de prazos — art. 24, §1",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Grau de sigilo", "Prazo máximo"],
+            "linhas": [
+              { "faixa": "Reservada", "classificacao": "5 anos" },
+              { "faixa": "Secreta (relatório STTP)", "classificacao": "15 anos", "destaque": true },
+              { "faixa": "Ultrassecreta", "classificacao": "25 anos" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: vizinhos 5 e 25 no grau secreto",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Secreto pode ter 5 anos (menos gravoso)",
+                "Reservada = 5 anos; secreta = 15 anos"
+              ],
+              [
+                "Secreto admite até 25 anos (mais sensível)",
+                "Ultrassecreta = 25; secreta = 15 anos"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Trata sigilo como regra geral e dispensa classificação formal — inverte art. 3, I"
+              ],
+              [
+                "C — numero_vizinho",
+                "Aplica prazo de 5 anos do grau reservado ao classificado como secreto"
+              ],
+              [
+                "D — termo_unico",
+                "Iguala prazo de secreto ao de ultrassecreta — ambos com 25 anos"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o relatório secreto da STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato / argumento", "Enquadramento"],
+            "linhas": [
+              ["Classificação adotada: secreta", "Prazo máximo = 15 anos"],
+              ["Servidor propõe reservada (5 anos)", "Grau e prazo distintos — isca C"],
+              ["Servidor propõe ultrassecreta (25 anos)", "Prazo da ultrassecreta — isca D"],
+              ["Resultado", "Gabarito B"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 24, §1 — prazos de sigilo",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LAI, art. 24, §1",
+            "texto": "§ 1º Os prazos máximos de restrição de acesso à informação, conforme a classificação prevista no caput, vigoram a partir da data de sua produção e são os seguintes: I - ultrassecreta: 25 (vinte e cinco) anos; II - secreta: 15 (quinze) anos; e III - reservada: 5 (cinco) anos.",
+            "trechos_grifados": [
+              {
+                "inicio": 214,
+                "fim": 239,
+                "motivo": "gradacao — prazo do grau secreto (pegadinha 5 e 25)",
+                "texto_grifado": "secreta: 15 (quinze) anos"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Publicidade × desclassificação automática",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LAI, art. 3, I e art. 24, §4",
+            "texto": "I - observância da publicidade como preceito geral e do sigilo como exceção; § 4º Transcorrido o prazo de classificação ou consumado o evento que defina o seu termo final, a informação tornar-se-á, automaticamente, de acesso público.",
+            "trechos_grifados": [
+              {
+                "inicio": 19,
+                "fim": 75,
+                "motivo": "contraste — sigilo é exceção, não regra (isca A)",
+                "texto_grifado": "publicidade como preceito geral e do sigilo como exceção"
+              },
+              {
+                "inicio": 198,
+                "fim": 232,
+                "motivo": "caso — após 15 anos, acesso público automático",
+                "texto_grifado": "automaticamente, de acesso público"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "5 · 15 · 25 — Reservada · Secreta · Ultrassecreta. Publicidade é regra; sigilo é exceção com classificação formal.\n\nNear-transfer: documento classificado como reservado na STTP — prazo máximo de restrição é 5 anos, não 15.",
+            "destaques": ["5 · 15 · 25", "Near-transfer", "publicidade"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 12.527/2011 (LAI)",
+          "path": "conteúdo/legislação federal/lei-12527-lai.html"
+        }
+      ]
+    },
+    "tags": [
+      "lai",
+      "sigilo",
+      "classificacao",
+      "prazo",
+      "publicidade",
+      "sttp"
+    ]
+  }
+]

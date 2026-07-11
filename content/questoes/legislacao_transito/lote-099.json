@@ -1,0 +1,340 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_snt_competencias",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_14_IX",
+    "enunciado": "Na divisa urbana entre Campina Grande/PB e Queimadas/PB, trecho de avenida limítrofe passível de fiscalização pelas duas STTP municipais gerou conflito de circunscrição: agentes de ambos os Municípios lavraram autos de infração no mesmo segmento, cada órgão sustentando competência exclusiva local. O supervisor busca saber qual órgão do Sistema Nacional de Trânsito deve dirimir o conflito de circunscrição e competência de trânsito. Com base no CTB, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Compete ao CONTRAN dirimir o conflito, pois envolve órgãos do Estado da Paraíba e a uniformização nacional do SNT exige decisão do colegiado federal.",
+      "B": "Compete ao CETRAN da Paraíba dirimir o conflito de circunscrição entre os Municípios, nos termos do art. 14, IX, do CTB.",
+      "C": "Compete à JARI conjunta das duas STTP reapreciar os autos e fixar qual Município detém a circunscrição da via limítrofe.",
+      "D": "Compete ao DETRAN-PB autuar diretamente no trecho e, com isso, encerrar a disputa entre Campina Grande e Queimadas sem participação do CETRAN."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Dirimência de conflito de circunscrição entre municípios — CETRAN (art. 14, IX) × CONTRAN (art. 12, XIV, esfera União/UF/DF) × JARI (recursos de infração, art. 16).",
+      "fundamento_legal": "CTB, art. 14, IX: compete aos CETRAN dirimir conflitos sobre circunscrição e competência de trânsito no âmbito dos Municípios. CTB, art. 12, XIV: compete ao CONTRAN dirimir conflitos sobre circunscrição e competência de trânsito no âmbito da União, dos Estados e do Distrito Federal. CTB, art. 16: as JARI julgam recursos interpostos contra penalidades — não fixam circunscrição entre órgãos executivos.",
+      "passo_a_passo": [
+        "1. Caso: Campina Grande × Queimadas — disputa intermunicipal de circunscrição na avenida limítrofe, com autos lavrados por ambas as STTP.",
+        "2. A erra por competencia_snt (sobe ao CONTRAN por envolver a Paraíba — art. 12, XIV alcança União/UF/DF, não conflito entre municípios); C erra por termo_unico (confunde JARI, que julga recursos de infração — art. 16, com dirimência de circunscrição); D erra por regra_excecao (DETRAN estadual não substitui o CETRAN nem autua no lugar dos executivos municipais para encerrar o conflito).",
+        "3. B correta: art. 14, IX — CETRAN-PB dirime circunscrição no âmbito municipal."
+      ],
+      "pegadinha": "A IDECAN induz a subir o caso ao CONTRAN porque há dois municípios no Estado — mas disputa intermunicipal é do CETRAN (art. 14, IX), não do colegiado federal (art. 12, XIV).",
+      "macete": "Município × Município = CETRAN (14, IX) · União/UF/DF = CONTRAN (12, XIV) · JARI = recurso de multa.",
+      "estudo_reverso": [
+        "CTB art. 14",
+        "CTB art. 12",
+        "CTB art. 16"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "C_competencia_snt",
+      "pegadinha_em_uma_frase": "Conflito entre municípios não sobe ao CONTRAN — CETRAN dirime no âmbito municipal",
+      "eixos_legais": [
+        "CTB_art_14_IX",
+        "CTB_art_12_XIV"
+      ],
+      "isca_por_alternativa": {
+        "A": "sobe ao CONTRAN porque o caso está no Estado da PB",
+        "C": "confunde JARI (recursos de multa) com dirimência de circunscrição",
+        "D": "Detran estadual autua no lugar dos municípios e encerra o conflito"
+      },
+      "eixos_mecanismo": [
+        "competencia_snt",
+        "termo_unico",
+        "regra_excecao"
+      ]
+    },
+    "tags": [
+      "snt",
+      "cetran",
+      "contran",
+      "circunscricao",
+      "campina_grande"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "diagrama_competencia",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CTB_art_14_IX",
+      "macete_visual": "Município × Município = CETRAN",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: CETRAN-PB dirime conflito Campina Grande × Queimadas. A isca é subir ao CONTRAN por envolver o Estado.",
+            "destaques": ["Gabarito B", "CETRAN", "municípios"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem dirime o quê",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "cetran", "label": "CETRAN-PB — dirime", "nivel": 1 },
+              { "id": "cg", "label": "STTP Campina Grande", "nivel": 2 },
+              { "id": "qm", "label": "STTP Queimadas", "nivel": 2 }
+            ],
+            "arestas": [
+              { "de": "cetran", "para": "cg", "rotulo": "circunscrição" },
+              { "de": "cetran", "para": "qm", "rotulo": "circunscrição" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Município × Município = CETRAN.\nUnião/UF/DF = CONTRAN.\nJARI = recurso de multa.",
+            "destaques": ["CETRAN", "CONTRAN"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 14",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 265,
+      "fundamento_slug": "CTB_art_14_IX",
+      "macete_visual": "Município × Município = CETRAN · UF/União = CONTRAN",
+      "meta": {
+        "padrao_familia": "C_competencia_snt",
+        "pegadinha_em_uma_frase": "Conflito entre municípios não sobe ao CONTRAN — CETRAN dirime no âmbito municipal",
+        "eixos_legais": [
+          "CTB_art_14_IX",
+          "CTB_art_12_XIV"
+        ],
+        "isca_por_alternativa": {
+          "A": "sobe ao CONTRAN porque o caso está no Estado da PB",
+          "C": "confunde JARI (recursos de multa) com dirimência de circunscrição",
+          "D": "Detran estadual autua no lugar dos municípios e encerra o conflito"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: município × município não é CONTRAN",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — sobe ao CONTRAN por envolver a Paraíba: esfera União/UF/DF, não disputa intermunicipal.\nC — manda à JARI: julga recursos de infração, não circunscrição entre órgãos.\nD — Detran autua no local: não substitui o CETRAN nem os executivos municipais.\n\nPegadinha: Campina Grande × Queimadas = CETRAN estadual.",
+            "destaques": ["Gabarito B", "CETRAN", "municípios"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 órgãos do SNT no caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CETRAN: Conselho Estadual de Trânsito — coordena o SNT no Estado e dirime conflitos municipais.\n\nCONTRAN: colegiado normativo federal — dirime conflitos na esfera União/UF/DF.\n\nJARI: Junta Administrativa de Recursos de Infrações — julga recursos contra penalidades, não circunscrição.",
+            "destaques": ["CETRAN", "CONTRAN", "JARI"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Mapa de competência no caso",
+          "secao": "metodo",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "contran", "label": "CONTRAN — esfera federal", "nivel": 0 },
+              { "id": "cetran", "label": "CETRAN-PB — dirime municipal", "nivel": 1 },
+              { "id": "cg", "label": "STTP Campina Grande", "nivel": 2 },
+              { "id": "qm", "label": "STTP Queimadas", "nivel": 2 }
+            ],
+            "arestas": [
+              { "de": "cetran", "para": "cg", "rotulo": "dirime circunscrição" },
+              { "de": "cetran", "para": "qm", "rotulo": "dirime circunscrição" }
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: quem dirime o conflito?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Conflito entre municípios sobre circunscrição?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "CETRAN estadual — gabarito B",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim — CG × Queimadas" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: subir ao CONTRAN",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Estado da PB envolvido → CONTRAN decide",
+                "Conflito entre municípios → CETRAN estadual"
+              ],
+              [
+                "JARI uniformiza quem autua no local",
+                "JARI julga recursos de infração — não circunscrição"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — competencia_snt",
+                "Atribui ao CONTRAN — esfera União/UF/DF, não intermunicipal"
+              ],
+              [
+                "C — termo_unico",
+                "Confunde JARI (recursos) com dirimência de circunscrição"
+              ],
+              [
+                "D — regra_excecao",
+                "Detran estadual não substitui CETRAN nem autua no lugar dos municípios"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos do enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              [
+                "Avenida limítrofe CG × Queimadas",
+                "Disputa intermunicipal"
+              ],
+              [
+                "Ambos lavram autos no mesmo trecho",
+                "Conflito de circunscrição"
+              ],
+              [
+                "Solução no SNT",
+                "CETRAN-PB"
+              ],
+              [
+                "Resultado",
+                "Alternativa B"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Dois incisos, dois âmbitos",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no SNT"],
+            "linhas": [
+              [
+                "Art. 14, IX — CETRAN",
+                "Dirime circunscrição entre municípios"
+              ],
+              [
+                "Art. 12, XIV — CONTRAN",
+                "Dirime circunscrição União/UF/DF"
+              ],
+              [
+                "Art. 16 — JARI",
+                "Julga recursos contra penalidades"
+              ],
+              [
+                "Caso Campina × Queimadas",
+                "Aplica inciso IX — não inciso XIV"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 14, IX — conflitos municipais",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 14, IX",
+            "texto": "IX - dirimir conflitos sobre circunscrição e competência de trânsito no âmbito dos Municípios;",
+            "trechos_grifados": [
+              {
+                "inicio": 69,
+                "fim": 93,
+                "motivo": "diagrama — âmbito municipal = CETRAN",
+                "texto_grifado": "no âmbito dos Municípios"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 12, XIV — esfera distinta",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 12, XIV",
+            "texto": "XIV - dirimir conflitos sobre circunscrição e competência de trânsito no âmbito da União, dos Estados e do Distrito Federal.",
+            "trechos_grifados": [
+              {
+                "inicio": 70,
+                "fim": 123,
+                "motivo": "contraste — não alcança disputa entre municípios",
+                "texto_grifado": "no âmbito da União, dos Estados e do Distrito Federal"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Município × Município → CETRAN · União/UF/DF → CONTRAN.\n\nNear-transfer: conflito de circunscrição entre DETRAN-PB e PRF na BR-230 — não é disputa municipal; sobe ao CONTRAN.",
+            "destaques": ["CETRAN", "CONTRAN", "BR-230"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 14",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,156 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 250,
+  "fundamento_slug": "CTB_art_35",
+  "macete_visual": "SETA ANTES · FAIXA+CONV+RETORNO = LATERAL",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Transposição de faixas é deslocamento lateral — art. 35 exige sinalizar antes, sem exceção por manobra rápida",
+    "eixos_legais": ["CTB_art_35", "CTB_art_34"],
+    "isca_por_alternativa": {
+      "A": "art. 34 (sem perigo) dispensa sinalização — regra_excecao",
+      "B": "transposição de faixa não é deslocamento lateral — termo_unico",
+      "D": "restringe gesto de braço a falha da luz ou à noite — regra_excecao"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-068.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: sem perigo ≠ sem seta",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — invocou art. 34: certificar-se sem perigo não dispensa sinalizar com antecedência.\nB — negou que transposição de faixa é deslocamento lateral: o § único do art. 35 inclui expressamente.\nD — inventou que gesto de braço só vale à noite ou com luz quebrada — é alternativa à seta, não exceção à obrigação.\n\nNesta aula você fixa o que é deslocamento lateral e quando sinalizar.",
+        "destaques": ["Gabarito C", "transposição de faixas", "antecedência"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "DESLOCAMENTO LATERAL: transposição de faixas, conversões e retornos — definição do § único do art. 35.\n\nANTECEDÊNCIA: sinalizar antes de iniciar a manobra — não no meio da transposição.\n\nLUZ INDICADORA: seta do veículo; gesto convencional de braço é meio alternativo previsto no caput.",
+        "destaques": ["DESLOCAMENTO LATERAL", "ANTECEDÊNCIA", "LUZ INDICADORA"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: precisa sinalizar?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "A manobra implica deslocamento lateral?", "tipo": "pergunta" },
+          { "id": "p2", "label": "O propósito foi indicado com antecedência?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Obrigatório sinalizar antes de iniciar", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Não" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "§ único — o que é deslocamento lateral",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Manobra", "É deslocamento lateral?"],
+        "linhas": [
+          { "faixa": "Transposição de faixas", "classificacao": "Sim — § único do art. 35", "destaque": true },
+          { "faixa": "Conversão à direita ou à esquerda", "classificacao": "Sim — § único" },
+          { "faixa": "Retorno", "classificacao": "Sim — § único" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: art. 34 × art. 35",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Manobra rápida e sem perigo dispensa seta", "Art. 34 exige segurança — art. 35 exige sinalizar antes"],
+          ["Só conversão e retorno precisam de seta", "§ único inclui transposição de faixas"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — regra_excecao", "Confunde art. 34 (certificar-se sem perigo) com dispensa de sinalização do art. 35"],
+          ["B — termo_unico", "Exclui transposição de faixa da definição legal de deslocamento lateral"],
+          ["D — regra_excecao", "Inventa restrição temporal ou por falha da luz para o gesto de braço"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Transposição da faixa central para a direita", "Deslocamento lateral — § único do art. 35"],
+          ["Sem luz indicadora, manobra considerada rápida", "Dever de sinalizar com antecedência permanece"],
+          ["Resultado", "Gabarito C — art. 35 violado"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Art. 34 × art. 35 — duas etapas",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Dispositivo", "Obrigação"],
+        "linhas": [
+          ["Art. 34", "Certificar-se de que a manobra pode ser feita sem perigo"],
+          ["Art. 35", "Indicar o propósito com antecedência antes do deslocamento lateral"],
+          ["Pegadinha A", "Cumprir o art. 34 não dispensa o art. 35"]
+        ]
+      }
+    },
+    {
+      "id": "lei35",
+      "titulo": "Art. 35 — caput e § único",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 35",
+        "texto": "Antes de iniciar qualquer manobra que implique um deslocamento lateral, o condutor deverá indicar seu propósito de forma clara e com a devida antecedência, por meio da luz indicadora de direção de seu veículo, ou fazendo gesto convencional de braço. Entende-se por deslocamento lateral a transposição de faixas, movimentos de conversão à direita, à esquerda e retornos.",
+        "trechos_grifados": [
+          { "inicio": 50, "fim": 70, "motivo": "glossario — núcleo do deslocamento lateral" },
+          { "inicio": 135, "fim": 154, "motivo": "caso — sinalizar com antecedência, não ao iniciar" },
+          { "inicio": 288, "fim": 310, "motivo": "mapa — transposição de faixas do enunciado" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "SETA ANTES (art. 35).\nFAIXA + CONV + RETORNO = LATERAL (§ único).\nSem perigo (art. 34) não dispensa sinalizar.\n\nNear-transfer: retorno em via urbana sem acionar seta antes — também é deslocamento lateral; gesto de braço só substitui a luz, não a antecedência.",
+        "destaques": ["SETA ANTES", "LATERAL", "Near-transfer"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 35", "path": "conteúdo/legislação federal/lei-9503-ctb.html" },
+    { "rotulo": "CTB art. 34", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

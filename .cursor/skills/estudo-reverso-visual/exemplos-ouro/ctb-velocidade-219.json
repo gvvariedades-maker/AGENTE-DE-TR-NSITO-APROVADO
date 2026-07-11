@@ -1,153 +1,156 @@
-{
-  "disciplina": "legislacao_transito",
-  "topico": "CTB_infracoes",
-  "tipo": "caso_pratico",
-  "estilo_idecan": "pegadinha_pode_deve",
-  "dificuldade": 3,
-  "enunciado": "Em rodovia que corta o município de Campina Grande, condutor transita a 40 km/h em via cuja velocidade máxima regulamentada é de 100 km/h, formando longa fila de veículos e obstruindo o fluxo, sem condições climáticas adversas, estando na faixa da esquerda. Considerando o CTB, assinale a alternativa CORRETA:",
-  "alternativas": {
-    "A": "A conduta configura infração grave por transitar em velocidade inferior à metade da máxima permitida, retardando o trânsito.",
-    "B": "Não há infração, pois transitar abaixo do limite máximo é sempre permitido ao condutor prudente.",
-    "C": "Configura infração média, pois o excesso de cautela não obstrui o trânsito quando há acostamento.",
-    "D": "A autuação compete exclusivamente à Polícia Rodoviária Federal, não à STTP municipal."
-  },
-  "gabarito": "A",
-  "comentario": {
-    "o_que_testa": "Infração por velocidade muito abaixo do limite retardando ou obstruindo o trânsito (art. 219).",
-    "fundamento_legal": "CTB, art. 219: transitar com o veículo em velocidade inferior à metade da velocidade máxima estabelecida para a via, retardando ou obstruindo o trânsito, salvo se as condições de tráfego e meteorológicas não o permitirem, exceto se estiver na faixa da direita — infração grave; penalidade multa.",
-    "passo_a_passo": [
-      "40 km/h em via de 100 km/h = inferior à metade (50 km/h), retardando trânsito, sem clima adverso, na faixa da esquerda.",
-      "A) Correta: preenche os elementos do art. 219 (grave).",
-      "B) Erra: velocidade excessivamente baixa pode ser infração.",
-      "C) Erra: a infração é grave, não média.",
-      "D) Erra: em rodovia federal a PRF autua, mas a questão testa a tipificação, não a competência neste distrator."
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_infracoes",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 3,
+    "enunciado": "Em rodovia que corta o município de Campina Grande, condutor transita a 40 km/h em via cuja velocidade máxima regulamentada é de 100 km/h, formando longa fila de veículos e obstruindo o fluxo, sem condições climáticas adversas, estando na faixa da esquerda. Considerando o CTB, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A conduta configura infração grave por transitar em velocidade inferior à metade da máxima permitida, retardando o trânsito.",
+      "B": "Não há infração, pois transitar abaixo do limite máximo é sempre permitido ao condutor prudente.",
+      "C": "Configura infração média, pois o excesso de cautela não obstrui o trânsito quando há acostamento.",
+      "D": "A autuação compete exclusivamente à Polícia Rodoviária Federal, não à STTP municipal."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Infração por velocidade muito abaixo do limite retardando ou obstruindo o trânsito (art. 219).",
+      "fundamento_legal": "CTB, art. 219: transitar com o veículo em velocidade inferior à metade da velocidade máxima estabelecida para a via, retardando ou obstruindo o trânsito, salvo se as condições de tráfego e meteorológicas não o permitirem, exceto se estiver na faixa da direita — infração grave; penalidade multa.",
+      "passo_a_passo": [
+        "40 km/h em via de 100 km/h = inferior à metade (50 km/h), retardando trânsito, sem clima adverso, na faixa da esquerda.",
+        "A) Correta: preenche os elementos do art. 219 (grave).",
+        "B) Erra: velocidade excessivamente baixa pode ser infração.",
+        "C) Erra: a infração é grave, não média.",
+        "D) Erra: em rodovia federal a PRF autua, mas a questão testa a tipificação, não a competência neste distrator."
+      ],
+      "pegadinha": "Achar que 'abaixo do limite' nunca é infração — o art. 219 pune velocidade excessivamente baixa que obstrui o fluxo.",
+      "macete": "Menos da metade do limite + obstruir trânsito = grave (art. 219), salvo clima ruim ou faixa da direita.",
+      "estudo_reverso": [
+        "CTB art. 219",
+        "CTB art. 218",
+        "CTB art. 220"
+      ]
+    },
+    "tags": [
+      "velocidade",
+      "art_219",
+      "obstrucao"
     ],
-    "pegadinha": "Achar que 'abaixo do limite' nunca é infração — o art. 219 pune velocidade excessivamente baixa que obstrui o fluxo.",
-    "macete": "Menos da metade do limite + obstruir trânsito = grave (art. 219), salvo clima ruim ou faixa da direita.",
-    "estudo_reverso": [
-      "CTB art. 219",
-      "CTB art. 218",
-      "CTB art. 220"
-    ]
-  },
-  "tags": [
-    "velocidade",
-    "art_219",
-    "obstrucao"
-  ],
-  "estudo_reverso_visual": {
-    "versao": 1,
-    "arquetipo": "fluxograma_decisao",
-    "arquetipo_secundario": "comparacao",
-    "duracao_estimada_seg": 85,
-    "fundamento_slug": "CTB_art_219",
-    "macete_visual": "Metade do limite + obstruir trânsito = grave (art. 219)",
-    "telas": [
-      {
-        "id": "contexto",
-        "titulo": "O que a IDECAN testou",
-        "tipo": "texto_destaque",
-        "conteudo": {
-          "texto": "Velocidade muito abaixo da metade do limite, obstruindo o trânsito — art. 219 (grave).",
-          "destaques": [
-            "metade",
-            "obstruindo",
-            "grave"
-          ]
-        }
-      },
-      {
-        "id": "fluxo",
-        "titulo": "Raciocínio em 3 passos",
-        "tipo": "fluxograma",
-        "conteudo": {
-          "nos": [
-            {
-              "id": "n1",
-              "label": "Velocidade < metade do limite?",
-              "tipo": "pergunta"
-            },
-            {
-              "id": "n2",
-              "label": "Retarda ou obstrui o trânsito?",
-              "tipo": "pergunta"
-            },
-            {
-              "id": "n3",
-              "label": "Art. 219 — infração grave",
-              "tipo": "lei",
-              "ref": "CTB art. 219"
-            }
-          ],
-          "arestas": [
-            {
-              "de": "n1",
-              "para": "n2",
-              "rotulo": "sim"
-            },
-            {
-              "de": "n2",
-              "para": "n3",
-              "rotulo": "sim"
-            }
-          ]
-        }
-      },
-      {
-        "id": "pegadinha",
-        "titulo": "Armadilha IDECAN",
-        "tipo": "comparacao",
-        "conteudo": {
-          "colunas": [
-            "Pegadinha",
-            "Correto"
-          ],
-          "linhas": [
-            [
-              "Abaixo do limite nunca é infração",
-              "Art. 219 pune velocidade excessivamente baixa"
-            ],
-            [
-              "Infração média",
-              "Infração grave (art. 219)"
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 85,
+      "fundamento_slug": "CTB_art_219",
+      "macete_visual": "Metade do limite + obstruir trânsito = grave (art. 219)",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Velocidade muito abaixo da metade do limite, obstruindo o trânsito — art. 219 (grave).",
+            "destaques": [
+              "metade",
+              "obstruindo",
+              "grave"
             ]
-          ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Raciocínio em 3 passos",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "n1",
+                "label": "Velocidade < metade do limite?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "n2",
+                "label": "Retarda ou obstrui o trânsito?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "n3",
+                "label": "Art. 219 — infração grave",
+                "tipo": "lei",
+                "ref": "CTB art. 219"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "n1",
+                "para": "n2",
+                "rotulo": "sim"
+              },
+              {
+                "de": "n2",
+                "para": "n3",
+                "rotulo": "sim"
+              }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha IDECAN",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "Abaixo do limite nunca é infração",
+                "Art. 219 pune velocidade excessivamente baixa"
+              ],
+              [
+                "Infração média",
+                "Infração grave (art. 219)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 219",
+            "texto": "Transitar em velocidade inferior à metade da máxima da via, retardando ou obstruindo o trânsito — infração grave; penalidade multa.",
+            "trechos_grifados": [
+              {
+                "inicio": 95,
+                "fim": 112,
+                "motivo": "natureza grave",
+                "texto_grifado": " — infração grave"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Menos da metade do limite + obstruir trânsito = grave (art. 219).",
+            "destaques": [
+              "grave",
+              "219"
+            ]
+          }
         }
-      },
-      {
-        "id": "lei",
-        "titulo": "Lei seca",
-        "tipo": "trecho_legal",
-        "conteudo": {
-          "fonte": "CTB art. 219",
-          "texto": "Transitar em velocidade inferior à metade da máxima da via, retardando ou obstruindo o trânsito — infração grave; penalidade multa.",
-          "trechos_grifados": [
-            {
-              "inicio": 95,
-              "fim": 110,
-              "motivo": "natureza grave"
-            }
-          ]
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 219",
+          "path": "conteúdo/legislação federal/"
         }
-      },
-      {
-        "id": "macete",
-        "titulo": "Macete",
-        "tipo": "texto_destaque",
-        "conteudo": {
-          "texto": "Menos da metade do limite + obstruir trânsito = grave (art. 219).",
-          "destaques": [
-            "grave",
-            "219"
-          ]
-        }
-      }
-    ],
-    "links_fonte": [
-      {
-        "rotulo": "CTB art. 219",
-        "path": "conteúdo/legislação federal/"
-      }
-    ]
+      ]
+    }
   }
-}
+]

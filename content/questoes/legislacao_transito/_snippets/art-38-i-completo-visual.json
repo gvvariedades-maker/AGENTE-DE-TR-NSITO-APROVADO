@@ -1,0 +1,156 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 250,
+  "fundamento_slug": "CTB_art_38_I",
+  "macete_visual": "DIR→BORDO DIR · MENOR ESPAÇO",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Conversão à direita exige bordo direito e menor espaço — não vale converter da faixa central",
+    "eixos_legais": ["CTB_art_38_I", "CTB_art_38_II"],
+    "isca_por_alternativa": {
+      "B": "via de um sentido permite converter de qualquer faixa — regra_excecao",
+      "C": "aplica inciso II (bordo esquerdo) na conversão à direita — termo_unico",
+      "D": "seta do art. 35 dispensa posicionamento do art. 38 — regra_excecao"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-071.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: direita = bordo direito",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito A.\n\nB — permitiu converter da faixa central: inciso I exige aproximar-se do bordo direito.\nC — mandou bordo esquerdo: inciso II rege conversão à esquerda, não à direita.\nD — achou que seta basta: art. 35 sinaliza — art. 38 posiciona antes da curva.\n\nNesta aula você separa inciso I (direita) de inciso II (esquerda).",
+        "destaques": ["Gabarito A", "bordo direito", "menor espaço"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "SAIR PELO LADO DIREITO: conversão à direita para lote lindeiro ou outra via — hipótese do inciso I.\n\nBORDO DIREITO: margem direita da pista — onde o condutor deve se aproximar antes da curva.\n\nMENOR ESPAÇO POSSÍVEL: executar a manobra de forma compacta — segundo comando do inciso I.",
+        "destaques": ["LADO DIREITO", "BORDO DIREITO", "MENOR ESPAÇO"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: conversão à direita — onde posicionar?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Manobra é sair da via pelo lado direito?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Condutor aproximou-se do bordo direito?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Executar no menor espaço possível", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Sim" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Art. 38 — incisos I e II",
+      "secao": "mapa",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Manobra", "Posicionamento"],
+        "linhas": [
+          ["Conversão à direita — inciso I", "Bordo direito, menor espaço possível"],
+          ["Conversão à esquerda, duplo sentido — II", "Eixo ou linha divisória"],
+          ["Conversão à esquerda, um sentido — II", "Bordo esquerdo"]
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: faixa central × bordo direito",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Em via de um sentido, converte de qualquer faixa", "Inciso I exige bordo direito mesmo em múltiplas faixas"],
+          ["Seta acionada dispensa aproximar do bordo", "Art. 38 posiciona — art. 35 apenas sinaliza"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["B — regra_excecao", "Inventa que via de um sentido dispensa bordo direito — inciso I não prevê exceção"],
+          ["C — termo_unico", "Aplica inciso II (esquerda/eixo) em conversão à direita"],
+          ["D — regra_excecao", "Confunde sinalização do art. 35 com posicionamento obrigatório do art. 38"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Conversão à direita para lote lindeiro a partir da faixa central", "Deve aproximar-se do bordo direito — inciso I"],
+          ["Seta acionada sem deslocamento lateral prévio", "Sinalização não substitui posicionamento"],
+          ["Resultado", "Gabarito A — art. 38, I"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Inciso I × inciso II — lados opostos",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Inciso", "Regra"],
+        "linhas": [
+          ["I — sair à direita", "Bordo direito da pista, menor espaço possível"],
+          ["II — sair à esquerda, um sentido", "Bordo esquerdo da pista"],
+          ["Pegadinha C", "Inciso II não rege conversão à direita"]
+        ]
+      }
+    },
+    {
+      "id": "lei38i",
+      "titulo": "Art. 38 — caput e inciso I",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 38, I",
+        "texto": "Antes de entrar à direita ou à esquerda, em outra via ou em lotes lindeiros, o condutor deverá: I - ao sair da via pelo lado direito, aproximar-se o máximo possível do bordo direito da pista e executar sua manobra no menor espaço possível;",
+        "trechos_grifados": [
+          { "inicio": 120, "fim": 132, "motivo": "glossario — sair pelo lado direito do caso" },
+          { "inicio": 168, "fim": 181, "motivo": "contraste — bordo direito obrigatório" },
+          { "inicio": 217, "fim": 238, "motivo": "caso — executar no menor espaço possível" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "DIREITA → BORDO DIR (I).\nMENOR ESPAÇO na curva.\nESQUERDA = inciso II (outra regra).\nSeta não dispensa posicionar.\n\nNear-transfer: via de duplo sentido, conversão à direita para entrada de posto — ainda deve colar no bordo direito antes de entrar, não cortar a curva da faixa central.",
+        "destaques": ["BORDO DIR", "MENOR ESPAÇO", "Near-transfer"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 38, I", "path": "conteúdo/legislação federal/lei-9503-ctb.html" },
+    { "rotulo": "CTB art. 35", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

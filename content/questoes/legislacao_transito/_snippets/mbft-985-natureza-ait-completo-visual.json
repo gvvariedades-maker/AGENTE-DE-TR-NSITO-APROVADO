@@ -1,0 +1,282 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 275,
+  "fundamento_slug": "CONTRAN_985_mbft_natureza_ait",
+  "macete_visual": "AIT=INÍCIO · ≠ penalidade · registra fato",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Lavrar o AIT não é aplicar a multa — é peça informativa que abre o processo",
+    "eixos_legais": [
+      "CONTRAN_985_mbft_natureza_ait",
+      "CTB_art_280"
+    ],
+    "isca_por_alternativa": {
+      "A": "AIT aplica penalidade e encerra processo",
+      "C": "qualquer cidadão pode autuar",
+      "D": "MBFT dispensa preenchimento pelo CTB"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: lavrar ≠ multar",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — aplica penalidade: MBFT define AIT como peça informativa.\nC — qualquer cidadão: MBFT veda autuação por solicitação de terceiros.\nD — dispensa CTB: MBFT remete expressamente ao art. 280.\n\nAgente trata AIT como penalidade e dispensa registro do fato.",
+        "destaques": [
+          "Gabarito B",
+          "peça informativa",
+          "início"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "AUTUAÇÃO: ato administrativo vinculado quando constatada infração.\n\nAIT: peça informativa — não é a penalidade em si.\n\nPROCESSO ADMINISTRATIVO: tramita após a lavratura do AIT.",
+        "destaques": [
+          "AUTUAÇÃO",
+          "AIT",
+          "PROCESSO"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: qual o papel do AIT?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "O documento aplica penalidade diretamente?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Deve registrar o fato da constatação?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Peça informativa — início — gabarito B",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Não — subsidia autoridade"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — fato obrigatório"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Mapa: etapas do procedimento",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Etapa",
+          "Natureza jurídica"
+        ],
+        "linhas": [
+          {
+            "faixa": "Constatação da infração",
+            "classificacao": "Fato que fundamenta a autuação"
+          },
+          {
+            "faixa": "Lavratura do AIT",
+            "classificacao": "Peça informativa — início do processo",
+            "destaque": true
+          },
+          {
+            "faixa": "Aplicação da penalidade",
+            "classificacao": "Decisão da autoridade após processo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "AIT × penalidade",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Crença ✗",
+          "MBFT ✓"
+        ],
+        "linhas": [
+          [
+            "Lavrar AIT = aplicar multa",
+            "AIT dá início ao processo administrativo"
+          ],
+          [
+            "Dispensar registro do fato",
+            "Deve registrar o fato que fundamentou a lavratura"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Confunde peça informativa com aplicação de penalidade"
+          ],
+          [
+            "C — competencia_snt",
+            "Inventa autuação por qualquer cidadão — MBFT veda terceiros"
+          ],
+          [
+            "D — termo_unico",
+            "Dispensa CTB — MBFT remete ao art. 280 expressamente"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do caso",
+          "Efeito MBFT"
+        ],
+        "linhas": [
+          [
+            "Infração constatada em fiscalização",
+            "Hipótese de autuação válida"
+          ],
+          [
+            "Agente trata AIT como penalidade",
+            "Erro — AIT é informativo"
+          ],
+          [
+            "Dispensa registro do fato",
+            "Viola exigência do MBFT"
+          ],
+          [
+            "Conduta correta",
+            "AIT inicia processo + registra fato — gabarito B"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Autuação e AIT no MBFT",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Instituto",
+          "Função"
+        ],
+        "linhas": [
+          [
+            "Autuação",
+            "Ato administrativo vinculado na constatação"
+          ],
+          [
+            "AIT",
+            "Formalização da autuação — peça informativa"
+          ],
+          [
+            "Art. 280 CTB",
+            "Regras de preenchimento do AIT"
+          ],
+          [
+            "Penalidade",
+            "Aplicação posterior pela autoridade"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "MBFT — natureza do AIT",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7",
+        "texto": "O AIT é peça informativa que dá início ao processo administrativo e subsidia a autoridade de trânsito para aplicação das penalidades, devendo ser preenchido de acordo com as disposições contidas no artigo 280 do CTB e demais normas regulamentares, com o registro do fato que fundamentou sua lavratura.",
+        "trechos_grifados": [
+          {
+            "inicio": 8,
+            "fim": 65,
+            "motivo": "contraste — AIT não é penalidade"
+          },
+          {
+            "inicio": 254,
+            "fim": 300,
+            "motivo": "caso — fato obrigatório no AIT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "MBFT — autuação",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7",
+        "texto": "A autuação é ato administrativo, vinculado na forma da lei, da autoridade de trânsito ou seus agentes quando da constatação do cometimento de infração de trânsito, devendo ser formalizado por meio da lavratura do Auto de Infração de Trânsito (AIT).",
+        "trechos_grifados": [
+          {
+            "inicio": 13,
+            "fim": 58,
+            "motivo": "mapa — natureza da autuação"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "AIT = INÍCIO · peça informativa · ≠ penalidade · registra fato · art. 280.\n\nNear-transfer: após o AIT, a autoridade de trânsito aplica a penalidade no processo — quem multa não é o documento, é a decisão administrativa.",
+        "destaques": [
+          "INÍCIO",
+          "Near-transfer",
+          "≠ penalidade"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "MBFT — Seção 7",
+      "path": "conteúdo/resoluções CONTRAN/MBFT-anexo-resolucao-985-2022-secao-07-autuacao.txt"
+    }
+  ]
+}

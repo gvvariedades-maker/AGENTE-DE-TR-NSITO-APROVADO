@@ -1,0 +1,260 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 280,
+  "fundamento_slug": "CONTRAN_985_mbft_mesma_raiz",
+  "macete_visual": "MESMA RAIZ=1 INFRAÇÃO · OBS detalha",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Duas pessoas sem cinto não geram dois AITs se os códigos têm a mesma raiz",
+    "eixos_legais": [
+      "CONTRAN_985_mbft_mesma_raiz"
+    ],
+    "isca_por_alternativa": {
+      "B": "dois AITs como concomitantes independentes",
+      "C": "autua só o condutor por hierarquia",
+      "D": "veda autuar passageiro sem conduzir"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: duas pessoas ≠ dois autos",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito A.\n\nB — dois AITs: confunde concomitantes com mesma raiz de código.\nC — só condutor: inventa hierarquia sem base no MBFT.\nD — veda passageiro: regra inexistente na seção 7.\n\nCondutor e passageiro sem cinto, códigos com mesma raiz.",
+        "destaques": [
+          "Gabarito A",
+          "mesma raiz",
+          "observações"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "MESMA RAIZ: os três primeiros dígitos do código infracional são idênticos.\n\nUMA INFRAÇÃO POR AUTO: cada AIT registra no máximo uma infração.\n\nOBSERVAÇÕES: campo para especificar a conduta constatada quando necessário.",
+        "destaques": [
+          "MESMA RAIZ",
+          "UMA INFRAÇÃO",
+          "OBSERVAÇÕES"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: quantos AITs lavrar?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Os códigos infracionais têm mesma raiz?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Há mais de uma conduta no mesmo formulário?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Um AIT, uma infração — gabarito A",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — 3 dígitos iguais"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — unificar com observações"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Mapa: regras de unificação",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Hipótese MBFT",
+          "Quantidade de AITs"
+        ],
+        "linhas": [
+          {
+            "faixa": "Mesma raiz de código",
+            "classificacao": "1 AIT — uma infração",
+            "destaque": true
+          },
+          {
+            "faixa": "Infrações concorrentes",
+            "classificacao": "1 AIT — conduta principal"
+          },
+          {
+            "faixa": "Infrações concomitantes (raízes distintas)",
+            "classificacao": "Tantos AITs quantas condutas"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Duas pessoas × dois autos",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Crença ✗",
+          "MBFT ✓"
+        ],
+        "linhas": [
+          [
+            "Cada ocupante sem cinto = 1 AIT",
+            "Mesma raiz = apenas uma infração por auto"
+          ],
+          [
+            "Concomitante sempre unifica em 1 AIT",
+            "Concomitante exige raízes distintas e condutas independentes"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "B — regra_excecao",
+            "Aplica concomitantes ignorando a regra da mesma raiz"
+          ],
+          [
+            "C — termo_unico",
+            "Prioriza só o condutor sem previsão no MBFT"
+          ],
+          [
+            "D — competencia_snt",
+            "Inventa vedação de autuar passageiro"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do caso",
+          "Efeito MBFT"
+        ],
+        "linhas": [
+          [
+            "Veículo em movimento abordado",
+            "Fiscalização válida"
+          ],
+          [
+            "Condutor e passageiro sem cinto",
+            "Duas condutas constatadas"
+          ],
+          [
+            "Códigos com mesma raiz",
+            "Considerar apenas uma infração"
+          ],
+          [
+            "Conduta correta",
+            "1 AIT + observações — gabarito A"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Três regras de contagem",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Regra MBFT",
+          "Critério"
+        ],
+        "linhas": [
+          [
+            "Mesma raiz",
+            "3 primeiros dígitos iguais → 1 infração"
+          ],
+          [
+            "Concorrentes",
+            "Uma conduta implica a outra → 1 AIT"
+          ],
+          [
+            "Concomitantes",
+            "Condutas independentes → N AITs"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "MBFT — uma infração por auto",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7",
+        "texto": "O agente da autoridade só poderá registrar uma infração por auto e, no caso da constatação de infrações em que os códigos infracionais possuam a mesma raiz (os três primeiros dígitos), considerar-se-á apenas uma infração.",
+        "trechos_grifados": [
+          {
+            "inicio": 23,
+            "fim": 64,
+            "motivo": "mapa — limite de uma infração por AIT"
+          },
+          {
+            "inicio": 145,
+            "fim": 183,
+            "motivo": "contraste — critério de unificação"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "MESMA RAIZ = 1 INFRAÇÃO · 3 dígitos iguais · OBS detalha quem errou.\n\nNear-transfer: mesmo veículo, mas condutor sem cinto e segurando celular — raízes distintas → dois AITs concomitantes.",
+        "destaques": [
+          "MESMA RAIZ",
+          "Near-transfer",
+          "OBS"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "MBFT — Seção 7",
+      "path": "conteúdo/resoluções CONTRAN/MBFT-anexo-resolucao-985-2022-secao-07-autuacao.txt"
+    }
+  ]
+}

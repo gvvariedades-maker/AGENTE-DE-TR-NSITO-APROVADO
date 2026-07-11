@@ -1,9 +1,30 @@
 import type { Disciplina } from "@/types";
 
+export type PesoPrioridade = 1 | 2 | 3;
+export type FamiliaAula = "A" | "B" | "C" | "D";
+
 export interface EditalTopic {
   disciplina: Disciplina;
   slug: string;
   editalRef: string;
+  /** P3=1, P2=2, P1=3 — demanda IDECAN (perfil vertical §10). */
+  peso?: PesoPrioridade;
+  /** Questões-alvo no banco para este microtópico. */
+  meta?: number;
+  /** Família padrão do estudo reverso visual v3. */
+  familia?: FamiliaAula;
+  /** Norma 2024/2025 — prioridade extra no score. */
+  recente?: boolean;
+  /** Dispositivo sugerido no bloco de Escopo do `npm run proxima`. */
+  fonteLegal?: string;
+}
+
+export interface EditalTopicEnriquecido extends EditalTopic {
+  peso: PesoPrioridade;
+  meta: number;
+  familia: FamiliaAula;
+  recente: boolean;
+  fonteLegal: string;
 }
 
 /** Anexo I retificado — Edital 04/2026 STTP Campina Grande. Fonte viva: conteudo-programatico.md */

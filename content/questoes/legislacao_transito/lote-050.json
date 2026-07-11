@@ -1,0 +1,323 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_infracoes",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 5,
+    "fundamento_slug": "CTB_art_209",
+    "enunciado": "Em operação de fiscalização em rodovia que corta Campina Grande/PB, agente autua condutor de caminhão que, ao se aproximar de posto de pesagem, desvia pelo acostamento e retorna à pista sem adentrar a área destinada à pesagem de veículos, sem autorização. Não havia bloqueio viário policial nem praça de pedágio no local. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA quanto à infração:",
+    "alternativas": {
+      "A": "Configura infração gravíssima por transpor bloqueio viário policial sem autorização, nos termos do art. 210 do CTB.",
+      "B": "Configura infração grave por evadir-se da cobrança pelo uso da rodovia para não efetuar o pagamento, conforme o art. 209-A do CTB.",
+      "C": "Configura infração grave por deixar de adentrar área destinada à pesagem de veículos, nos termos do art. 209 do CTB.",
+      "D": "Configura infração grave por ultrapassar veículos em fila parados em razão de bloqueio viário parcial, conforme o art. 211 do CTB."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Art. 209 — deixar de adentrar área de pesagem (grave); distinção do art. 210 (bloqueio policial, gravíssima), art. 209-A (evasão de pedágio, hipótese autônoma) e art. 211 (ultrapassar fila em bloqueio parcial).",
+      "fundamento_legal": "CTB, art. 209: transpor, sem autorização, bloqueio viário com ou sem sinalização ou dispositivos auxiliares, ou deixar de adentrar as áreas destinadas à pesagem de veículos — infração grave. CTB, art. 210: transpor bloqueio viário policial — gravíssima. CTB, art. 209-A: evadir-se da cobrança pelo uso de rodovias e vias urbanas — grave. CTB, art. 211: ultrapassar veículos em fila por bloqueio parcial — grave.",
+      "passo_a_passo": [
+        "1. Caso: caminhão desvia e não adentra posto de pesagem, sem bloqueio policial nem pedágio — núcleo do art. 209 (pesagem).",
+        "2. A erra por gravidade (aplica art. 210 gravíssima sem bloqueio policial); B erra por termo_unico (209-A exige evasão de cobrança/pedágio, ausente no caso); D erra por numero_vizinho (art. 211 vizinho de bloqueio exige ultrapassar fila parcial, não omissão de pesagem).",
+        "3. C correta: art. 209 — infração grave por deixar de adentrar área de pesagem."
+      ],
+      "pegadinha": "A IDECAN troca pesagem (209) por bloqueio policial (210), pedágio (209-A) ou fila parcial (211) — o fato é omissão de adentrar a pesagem.",
+      "macete": "209 = PESAGEM ou bloqueio geral · GRAVE · ≠ 210 policial · ≠ 209-A pedágio · ≠ 211 fila.",
+      "estudo_reverso": [
+        "CTB art. 209",
+        "CTB art. 210",
+        "CTB art. 209-A",
+        "CTB art. 211"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 80,
+      "fundamento_slug": "CTB_art_209",
+      "macete_visual": "209 pesagem = GRAVE",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Caminhão não adentrou posto de pesagem.\n\nGabarito C: art. 209 — grave.",
+            "destaques": ["pesagem", "209", "GRAVE"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Bloqueio × pesagem × pedágio",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Situação", "Natureza"],
+            "linhas": [
+              {
+                "faixa": "Não adentrar pesagem — art. 209",
+                "classificacao": "Grave",
+                "destaque": true
+              },
+              {
+                "faixa": "Bloqueio policial — art. 210",
+                "classificacao": "Gravíssima + suspensão"
+              },
+              {
+                "faixa": "Evasão pedágio — art. 209-A",
+                "classificacao": "Grave"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pesagem ≠ policial",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Confusão ✗", "Regra ✓"],
+            "linhas": [
+              ["Pesagem = bloqueio policial", "Sem policial = art. 209 grave"],
+              ["Desvio = evasão pedágio", "209-A exige cobrança de uso"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "209 = PESAGEM · GRAVE · ≠ 210 policial.",
+            "destaques": ["209", "PESAGEM", "GRAVE"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 209",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 285,
+      "fundamento_slug": "CTB_art_209",
+      "macete_visual": "209 pesagem = GRAVE",
+      "meta": {
+        "padrao_familia": "D_gradacao",
+        "pegadinha_em_uma_frase": "Deixar de adentrar posto de pesagem é art. 209 grave — não é bloqueio policial (210), pedágio (209-A) nem fila parcial (211)",
+        "eixos_legais": ["CTB_art_209", "CTB_art_210"],
+        "isca_por_alternativa": {
+          "A": "aplica art. 210 gravíssima sem bloqueio viário policial no enunciado",
+          "B": "confunde omissão de pesagem com evasão de cobrança — art. 209-A",
+          "D": "aplica art. 211 vizinho de bloqueio sem fila parada por obstáculo parcial no caso"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: pesagem ≠ policial",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — aplicou art. 210 (bloqueio policial gravíssima): o enunciado afasta bloqueio viário policial.\nB — confundiu com art. 209-A (evasão de pedágio): não há praça de pedágio nem cobrança no caso.\nD — aplicou art. 211 (ultrapassar fila): não há fila parada por bloqueio parcial — o fato é não adentrar a pesagem.\n\nCaminhão desviou e não entrou no posto de pesagem.",
+            "destaques": ["Gabarito C", "pesagem", "grave"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 distinções",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PESAGEM: área obrigatória para veículos de carga — deixar de adentrar é art. 209.\n\nBLOQUEIO POLICIAL: interdição por agentes em operação — transpor sem autorização é art. 210.\n\nEVASÃO DE PEDÁGIO: art. 209-A — hipótese autônoma de não pagar cobrança pelo uso da via.",
+            "destaques": ["PESAGEM", "POLICIAL", "209-A"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Bloqueio, pesagem e pedágio",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Situação", "Natureza"],
+            "linhas": [
+              {
+                "faixa": "Não adentrar área de pesagem — art. 209",
+                "classificacao": "Grave",
+                "destaque": true
+              },
+              {
+                "faixa": "Transpor bloqueio viário policial — art. 210",
+                "classificacao": "Gravíssima + suspensão"
+              },
+              {
+                "faixa": "Evasão de cobrança/pedágio — art. 209-A",
+                "classificacao": "Grave"
+              },
+              {
+                "faixa": "Ultrapassar fila em bloqueio parcial — art. 211",
+                "classificacao": "Grave"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual hipótese do art. 209?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Condutor deixou de adentrar área de pesagem?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Havia bloqueio viário policial transposto?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Grave — omissão de pesagem",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — desviou" },
+              { "de": "p2", "para": "r1", "rotulo": "Não — só pesagem" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: pesagem × policial × pedágio",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Posto de pesagem = bloqueio policial",
+                "Sem bloqueio policial = art. 209 grave pela omissão de pesagem"
+              ],
+              [
+                "Desviar da pesagem = evasão de pedágio",
+                "209-A exige cobrança pelo uso — não há pedágio no caso"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — gravidade",
+                "Aplica art. 210 gravíssima sem bloqueio viário policial no enunciado"
+              ],
+              [
+                "B — termo_unico",
+                "Confunde omissão de pesagem com evasão de cobrança — art. 209-A"
+              ],
+              [
+                "D — numero_vizinho",
+                "Aplica art. 211 vizinho de bloqueio sem fila parada por obstáculo parcial no caso"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado — Campina Grande",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Conclusão legal"],
+            "linhas": [
+              ["Posto de pesagem na rodovia", "Área destinada à pesagem"],
+              ["Desvio pelo acostamento sem adentrar", "Omissão de pesagem — art. 209"],
+              ["Sem bloqueio policial nem pedágio", "Afasta arts. 210 e 209-A"],
+              ["Resultado", "Gabarito C — infração grave"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "209 × 209-A × 210",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Conduta"],
+            "linhas": [
+              ["Art. 209", "Transpor bloqueio geral ou omitir pesagem — grave"],
+              ["Art. 209-A", "Evadir cobrança pelo uso da via — grave"],
+              ["Art. 210", "Transpor bloqueio viário policial — gravíssima"],
+              ["Caso (pesagem)", "Art. 209 — grave"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 209 — pesagem e bloqueio",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 209",
+            "texto": "Transpor, sem autorização, bloqueio viário com ou sem sinalização ou dispositivos auxiliares, ou deixar de adentrar as áreas destinadas à pesagem de veículos: Infração - grave.",
+            "trechos_grifados": [
+              {
+                "inicio": 138,
+                "fim": 157,
+                "motivo": "mapa — pesagem de veículos é hipótese do art. 209"
+              },
+              {
+                "inicio": 27,
+                "fim": 42,
+                "motivo": "contraste — bloqueio viário é hipótese distinta no mesmo artigo"
+              },
+              {
+                "inicio": 170,
+                "fim": 175,
+                "motivo": "gradacao — grave, não gravíssima"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "209 = PESAGEM ou bloqueio geral · GRAVE · ≠ 210 policial · ≠ 209-A pedágio · ≠ 211 fila.\n\nNear-transfer: mesmo condutor transpõe bloqueio de cones em operação policial sem autorização — art. 210 (gravíssima + suspensão); hipótese distinta da omissão de pesagem.",
+            "destaques": ["209", "210", "GRAVE"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 209",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "tags": [
+      "infracoes",
+      "art_209",
+      "pesagem",
+      "bloqueio_viario",
+      "caminhao"
+    ]
+  }
+]

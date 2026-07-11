@@ -1,0 +1,354 @@
+[
+  {
+    "disciplina": "direito_constitucional",
+    "topico": "dir_const_4_3",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "enunciado": "Em Campina Grande, a STTP homologa penalidade de suspensão do direito de dirigir e encaminha ofício ao DETRAN sem abrir prazo para defesa prévia do condutor autuado em blitz, apesar de recurso administrativo protocolado. O motorista impetra remédio constitucional contra o diretor da autarquia, alegando violação ao contraditório e ampla defesa, e debate com a defesa a competência da STTP e se cabe mandado de segurança ou habeas corpus. Com base na Constituição Federal de 1988, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Cabe mandado de segurança: o ato da STTP lesa direito líquido e certo ao contraditório e ampla defesa (art. 5º, LV), não amparado por habeas corpus ou habeas data (art. 5º, LXIX), contra autoridade pública.",
+      "B": "Cabe habeas corpus, porque a suspensão do direito de dirigir impede a locomoção do condutor, configurando coação ilegal à liberdade prevista no art. 5º, LXVIII.",
+      "C": "A competência para homologar suspensão de CNH é exclusiva do órgão máximo executivo de trânsito da União, não cabendo mandado de segurança contra ato municipal da STTP.",
+      "D": "Em infrações graves de trânsito, a STTP pode homologar a penalidade e encaminhar ao DETRAN sem defesa prévia, dispensando contraditório no processo administrativo."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Cabimento do mandado de segurança para proteger direito líquido e certo ao contraditório e ampla defesa (art. 5º, LV + LXIX), em contraste com habeas corpus (locomoção pessoal, LXVIII) e exceção inexistente à defesa administrativa.",
+      "fundamento_legal": "CF/88, art. 5º, LXIX: \"conceder-se-á mandado de segurança para proteger direito líquido e certo, não amparado por habeas corpus ou habeas data, quando o responsável pela ilegalidade ou abuso de poder for autoridade pública ou agente de pessoa jurídica no exercício de atribuições do Poder Público\". CF/88, art. 5º, LV: \"aos litigantes, em processo judicial ou administrativo, e aos acusados em geral são assegurados o contraditório e ampla defesa, com os meios e recursos a ela inerentes\".",
+      "passo_a_passo": [
+        "1. O caso reúne homologação de suspensão de CNH sem prazo de defesa prévia, recurso administrativo ignorado e ato do diretor da STTP (autoridade pública) — lesão a direito líquido e certo ao contraditório, sem coação pessoal à locomoção.",
+        "2. B erra por termo_unico (trata suspensão de CNH como coação pessoal à locomoção, indicando habeas corpus em vez de MS); C erra por competencia_snt (atribui homologação exclusivamente ao órgão máximo de trânsito da União, negando cabimento de MS contra ato municipal); D erra por regra_excecao (inventa dispensa de contraditório e defesa prévia em infração grave de trânsito).",
+        "3. A está correta: cabe mandado de segurança (LXIX) — direito líquido e certo ao contraditório e ampla defesa (LV) contra autoridade pública, não amparado por HC ou habeas data."
+      ],
+      "pegadinha": "A banca troca MS (direito líquido e certo à defesa administrativa) por habeas corpus (locomoção) ou inventa dispensa de contraditório na fiscalização de trânsito.",
+      "macete": "Defesa administrativa violada + autoridade = MS (LXIX + LV). Pessoa coacta = HC (LXVIII). Infração grave ≠ sem defesa.",
+      "estudo_reverso": [
+        "CF art. 5º, LXIX",
+        "CF art. 5º, LV",
+        "CF art. 5º, LXVIII"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CF_art5_LXIX_LV",
+      "macete_visual": "Defesa violada = MS",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Suspensão de CNH homologada sem defesa prévia na STTP. A banca oferece HC ou dispensa de contraditório — lesão a direito líquido e certo pede mandado de segurança.",
+            "destaques": ["mandado de segurança", "contraditório", "defesa prévia"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método rápido",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Há coação à locomoção da pessoa?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Lesão a direito líquido e certo de autoridade pública?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Mandado de segurança — LXIX + LV", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não — só suspensão de CNH" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim — sem defesa prévia" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Suspensão de CNH = habeas corpus", "HC é coação pessoal à locomoção"],
+              ["Infração grave dispensa defesa", "Contraditório vale no administrativo"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXIX",
+            "texto": "conceder-se-á mandado de segurança para proteger direito líquido e certo, não amparado por habeas corpus ou habeas data, quando o responsável pela ilegalidade ou abuso de poder for autoridade pública ou agente de pessoa jurídica no exercício de atribuições do Poder Público",
+            "trechos_grifados": [
+              {
+                "inicio": 49,
+                "fim": 72,
+                "motivo": "pegadinha — direito líquido e certo",
+                "texto_grifado": "direito líquido e certo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Defesa violada + autoridade = MS (LXIX + LV). Pessoa coacta = HC. Infração grave ≠ sem contraditório.",
+            "destaques": ["MS", "LV", "HC"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, LXIX",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 245,
+      "fundamento_slug": "CF_art5_LXIX_LV",
+      "macete_visual": "Defesa = MS | LV",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Suspensão de CNH sem defesa prévia pede MS — não HC nem dispensa de contraditório",
+        "eixos_legais": ["CF_art5_LXIX", "CF_art5_LV"],
+        "isca_por_alternativa": {
+          "B": "suspensão de CNH vira coação pessoal à locomoção (habeas corpus)",
+          "C": "homologação é exclusiva do órgão máximo de trânsito da União, sem MS municipal",
+          "D": "infração grave dispensa defesa prévia e contraditório no administrativo"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: MS × defesa administrativa",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A (mandado de segurança por violação ao contraditório).\n\nB — suspensão de CNH vira coação pessoal pedindo habeas corpus.\nC — só o órgão máximo de trânsito da União homologa, sem MS contra a STTP.\nD — infração grave dispensa defesa prévia no processo administrativo.\n\nPromessa: fixar quando a omissão de defesa pede MS e não HC.",
+            "destaques": ["mandado de segurança", "contraditório", "defesa prévia"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de decidir: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DIREITO LÍQUIDO E CERTO: demonstrável de plano — omissão de defesa prévia com recurso ignorado. CONTRADITÓRIO E AMPLA DEFESA (art. 5º, LV): valem no processo administrativo. MS (art. 5º, LXIX): tutela direito não amparado por HC ou habeas data contra autoridade pública.",
+            "destaques": ["líquido e certo", "contraditório", "MS"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual remédio cabe?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Há coação à locomoção da pessoa?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Autoridade pública violou direito líquido e certo à defesa?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Mandado de segurança — LXIX + LV",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não — só suspensão de CNH" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim — sem defesa prévia" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa: remédios na defesa administrativa",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Lesão", "Remédio"],
+            "linhas": [
+              { "faixa": "Coação pessoal à locomoção", "classificacao": "Habeas corpus — LXVIII" },
+              { "faixa": "Direito líquido e certo à defesa", "classificacao": "Mandado de segurança — LXIX" },
+              { "faixa": "Acesso a dados próprios", "classificacao": "Habeas data — excluído no LXIX" },
+              {
+                "faixa": "Omissão de defesa prévia na STTP",
+                "classificacao": "MS — viola LV",
+                "destaque": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença × lei: suspensão × locomoção",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Suspender CNH = prender o condutor (HC)",
+                "HC exige coação pessoal à locomoção — não efeito indireto da penalidade"
+              ],
+              [
+                "Infração grave dispensa contraditório",
+                "LV assegura defesa no processo administrativo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — termo_unico",
+                "Trata suspensão de CNH como coação pessoal à locomoção, indicando HC em vez de MS"
+              ],
+              [
+                "C — competencia_snt",
+                "Atribui homologação exclusivamente ao órgão máximo de trânsito da União, negando MS contra STTP"
+              ],
+              [
+                "D — regra_excecao",
+                "Inventa dispensa de defesa prévia e contraditório por infração grave de trânsito"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo a homologação na STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Conclusão"],
+            "linhas": [
+              ["Homologação de suspensão sem prazo de defesa prévia", "Viola contraditório e ampla defesa — LV"],
+              ["Recurso administrativo protocolado e ignorado", "Direito líquido e certo — LXIX"],
+              ["Ato do diretor da STTP contra o condutor", "Autoridade pública — cabe MS"],
+              ["Resultado", "Alternativa A"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 5º, LXIX × art. 5º, LV — dupla base",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Papel no caso"],
+            "linhas": [
+              ["Art. 5º, LV", "Contraditório e ampla defesa no administrativo"],
+              ["Art. 5º, LXIX", "MS quando direito líquido e certo não couber HC/HD"],
+              ["Art. 5º, LXVIII", "Excluído — sem custódia ou coação pessoal"],
+              ["Caso concreto", "Omissão de defesa → MS, não HC"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 5º, LXIX — mandado de segurança",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXIX",
+            "texto": "conceder-se-á mandado de segurança para proteger direito líquido e certo, não amparado por habeas corpus ou habeas data, quando o responsável pela ilegalidade ou abuso de poder for autoridade pública ou agente de pessoa jurídica no exercício de atribuições do Poder Público",
+            "trechos_grifados": [
+              {
+                "inicio": 49,
+                "fim": 72,
+                "motivo": "fluxo — núcleo do caso",
+                "texto_grifado": "direito líquido e certo"
+              },
+              {
+                "inicio": 74,
+                "fim": 119,
+                "motivo": "contraste — exclui HC",
+                "texto_grifado": "não amparado por habeas corpus ou habeas data"
+              },
+              {
+                "inicio": 181,
+                "fim": 199,
+                "motivo": "caso — diretor da STTP",
+                "texto_grifado": "autoridade pública"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 5º, LV — contraditório",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LV",
+            "texto": "aos litigantes, em processo judicial ou administrativo, e aos acusados em geral são assegurados o contraditório e ampla defesa, com os meios e recursos a ela inerentes",
+            "trechos_grifados": [
+              {
+                "inicio": 19,
+                "fim": 54,
+                "motivo": "mapa — processo administrativo incluído",
+                "texto_grifado": "processo judicial ou administrativo"
+              },
+              {
+                "inicio": 98,
+                "fim": 126,
+                "motivo": "hierarquia — direito violado no caso",
+                "texto_grifado": "contraditório e ampla defesa"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Defesa violada + autoridade = MS (LXIX + LV).\nPessoa coacta = HC (LXVIII).\nInfração grave ≠ sem contraditório.\n\nNear-transfer: se o condutor estivesse preso na base da PM, seria HC — mas omissão de defesa prévia na homologação pede mandado de segurança.",
+            "destaques": ["MS", "LV", "HC"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, LXIX",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        },
+        {
+          "rotulo": "CF/88, art. 5º, LV",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "mandado_seguranca",
+      "art5_lxix",
+      "art5_lv",
+      "contraditorio",
+      "ampla_defesa",
+      "sttp"
+    ]
+  }
+]

@@ -1,0 +1,321 @@
+[
+  {
+    "disciplina": "direito_constitucional",
+    "topico": "dir_const_5_4",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "enunciado": "A Câmara de Campina Grande aprova lei local que autoriza a Secretaria Municipal de Meio Ambiente a fiscalizar e autuar emissão de poluentes por veículos em vias municipais, excluindo a STTP de blitzes combinadas de trânsito e poluição. Servidores da autarquia e da secretaria debatem com assessores legislativos se o Município pode legislar sobre fiscalização veicular e se a proteção ambiental é competência exclusiva municipal ou comum. Com base na Constituição Federal de 1988, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A proteção ambiental em vias municipais é competência exclusiva do Município, autorizando a Secretaria de Meio Ambiente a autuar veículos e afastar a STTP de blitzes de poluição no perímetro urbano.",
+      "B": "Somente o órgão máximo executivo de trânsito da União pode fiscalizar veículos em qualquer via, vedada atuação municipal em blitzes de emissão de poluentes, ainda que em vias locais.",
+      "C": "A legislação concorrente sobre meio ambiente (art. 24, VI) permite ao Município redistribuir a fiscalização veicular da STTP para a secretaria ambiental, sem afrontar o CTB.",
+      "D": "Proteger o meio ambiente é competência comum de todos os entes (art. 23, VI), mas legislar trânsito e transporte é privativa da União (art. 22, XI); o Município não pode, por lei local, transferir fiscalização veicular da STTP à secretaria ambiental em prejuízo do regime federal de trânsito."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Competência comum para proteção ao meio ambiente (art. 23, VI) em contraste com competência legislativa privativa da União sobre trânsito e transporte (art. 22, XI), vedando lei municipal que desloca fiscalização veicular da STTP.",
+      "fundamento_legal": "CF/88, art. 23, VI: é competência comum da União, dos Estados, do Distrito Federal e dos Municípios \"proteger o meio ambiente e combater a poluição em qualquer de suas formas\". CF/88, art. 22, XI: compete privativamente à União legislar sobre \"trânsito e transporte\".",
+      "passo_a_passo": [
+        "1. O caso envolve lei municipal que transfere fiscalização e autuação veicular da STTP para a Secretaria de Meio Ambiente em blitzes de poluição — exige separar competência comum ambiental da competência privativa federal para legislar trânsito.",
+        "2. A erra por regra_excecao (trata a proteção ambiental em vias municipais como competência exclusiva do Município, autorizando afastar a STTP); B erra por competencia_snt (atribui fiscalização veicular exclusivamente ao órgão máximo de trânsito da União, negando atuação municipal prevista no CTB); C erra por termo_unico (confunde legislação concorrente ambiental do art. 24, VI com redistribuição de fiscalização de trânsito, matéria do art. 22, XI).",
+        "3. D está correta: todos os entes protegem o meio ambiente (23, VI), mas só a União legisla trânsito (22, XI) — o Município não pode, por lei local, deslocar fiscalização veicular da STTP à secretaria ambiental."
+      ],
+      "pegadinha": "A banca trata competência comum ambiental como salvo-conduto para o Município legislar fiscalização veicular à margem do CTB, ou confunde legislação concorrente do art. 24 com competência privativa do art. 22, XI.",
+      "macete": "23,VI = TODOS protegem ambiente (comum). 22,XI = União LEGISLA trânsito (privativa). Ambiente comum ≠ inventar autuação veicular fora do CTB.",
+      "estudo_reverso": [
+        "CF art. 22, XI",
+        "CF art. 23, VI",
+        "CF art. 24, VI"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CF_art22_XI_art23_VI",
+      "macete_visual": "23,VI ambiente | 22,XI trânsito",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Lei municipal transfere blitz de poluição da STTP para secretaria ambiental. A banca troca competência comum ambiental com privativa de legislar trânsito.",
+            "destaques": ["meio ambiente", "STTP", "trânsito"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem faz o quê",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "uniao", "label": "União — legisla trânsito (22, XI)", "nivel": 0 },
+              { "id": "cg", "label": "Campina Grande — lei deslocando STTP ✗", "nivel": 1 },
+              { "id": "sttp", "label": "STTP — fiscalização veicular no CTB", "nivel": 2 },
+              { "id": "amb", "label": "Secretaria Ambiental — apoio, não substitui STTP", "nivel": 2 }
+            ],
+            "arestas": [
+              { "de": "uniao", "para": "sttp", "rotulo": "Base federal de trânsito" },
+              { "de": "cg", "para": "amb", "rotulo": "Autuação exclusiva ilegal (A/C)" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Ambiente exclusivo do Município afasta STTP", "Ambiente é comum (23, VI); trânsito é privativo da União (22, XI)"],
+              ["Art. 24, VI redistribui fiscalização veicular", "Legislar trânsito é art. 22, XI — não concorrente"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 22, XI",
+            "texto": "Compete privativamente à União legislar sobre: XI - trânsito e transporte",
+            "trechos_grifados": [
+              {
+                "inicio": 52,
+                "fim": 73,
+                "motivo": "pegadinha — fiscalização veicular",
+                "texto_grifado": "trânsito e transporte"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "23,VI = todos protegem ambiente. 22,XI = União legisla trânsito. Ambiente comum ≠ autuação veicular fora do CTB.",
+            "destaques": ["23, VI", "22, XI", "STTP"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 22",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 250,
+      "fundamento_slug": "CF_art22_XI_art23_VI",
+      "macete_visual": "23,VI ambiente | 22,XI trânsito",
+      "meta": {
+        "padrao_familia": "C_competencia_snt",
+        "pegadinha_em_uma_frase": "Ambiente é competência comum — mas legislar fiscalização veicular é privativa da União no art. 22, XI",
+        "eixos_legais": ["CF_art22_XI", "CF_art23_VI"],
+        "isca_por_alternativa": {
+          "A": "proteção ambiental em vias municipais é exclusiva do Município, afastando a STTP",
+          "B": "só o órgão máximo de trânsito da União fiscaliza veículos em qualquer via",
+          "C": "legislação concorrente do art. 24, VI permite redistribuir fiscalização da STTP"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: ambiente × trânsito",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D (ambiente comum + trânsito privativo da União).\n\nA — secretaria ambiental exclusiva afasta STTP em blitz de poluição.\nB — só o órgão máximo de trânsito da União fiscaliza veículos em vias locais.\nC — legislação concorrente ambiental permite redistribuir autuação veicular para secretaria ambiental.\n\nPromessa: separar quem PROTEGE o ambiente de quem LEGISLA fiscalização veicular.",
+            "destaques": ["meio ambiente", "STTP", "privativa"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 competências",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "COMPETÊNCIA COMUM (art. 23, VI): União, Estados, DF e Municípios protegem o meio ambiente — nenhum ente monopoliza. PRIVATIVA DA UNIÃO (art. 22, XI): só a União legisla trânsito e transporte — base do CTB e do órgão executivo municipal. LEGISLAÇÃO CONCORRENTE (art. 24, VI): normas ambientais suplementares — não autorizam deslocar fiscalização veicular da STTP.",
+            "destaques": ["comum", "privativa", "concorrente"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Mapa de entes na blitz",
+          "secao": "metodo",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "uniao", "label": "União — legisla 22, XI (trânsito)", "nivel": 0 },
+              { "id": "cg", "label": "CG — lei excluindo STTP ✗", "nivel": 1 },
+              { "id": "sttp", "label": "STTP — fiscalização veicular (CTB)", "nivel": 2 },
+              { "id": "amb", "label": "Sec. Ambiente — políticas ambientais comuns", "nivel": 2 },
+              { "id": "todos", "label": "Todos — protegem ambiente (23, VI)", "nivel": 1 }
+            ],
+            "arestas": [
+              { "de": "uniao", "para": "sttp", "rotulo": "Regime federal de trânsito" },
+              { "de": "cg", "para": "amb", "rotulo": "Autuação exclusiva (A falsa)" },
+              { "de": "todos", "para": "amb", "rotulo": "Ambiente comum, não exclusivo" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença × lei: ambiente × autuação",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Blitz de poluição é só da secretaria ambiental",
+                "Legislar trânsito é privativo da União — STTP no CTB"
+              ],
+              [
+                "Art. 24, VI permite redistribuir autuação veicular",
+                "Fiscalização de trânsito não é legislação concorrente ambiental"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Trata proteção ambiental municipal como exclusiva, autorizando afastar a STTP"
+              ],
+              [
+                "B — competencia_snt",
+                "Atribui fiscalização veicular exclusivamente ao órgão máximo de trânsito da União"
+              ],
+              [
+                "C — termo_unico",
+                "Confunde legislação concorrente ambiental do art. 24, VI com redistribuição de trânsito"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o debate na Câmara",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Conclusão"],
+            "linhas": [
+              ["Lei local autoriza secretaria ambiental a autuar veículos", "Legislar trânsito é privativa — 22, XI"],
+              ["STTP excluída de blitzes combinadas", "Município não redistribui fiscalização veicular por lei própria"],
+              ["Debate sobre competência exclusiva ou comum ambiental", "Ambiente é comum — 23, VI"],
+              ["Resultado", "Alternativa D"]
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Matriz: tema × ente",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Tema", "Quem atua / legisla"],
+            "linhas": [
+              ["Proteger o meio ambiente", "Todos — art. 23, VI (comum)"],
+              ["Legislar trânsito e transporte", "União — art. 22, XI (privativa)"],
+              ["Normas ambientais suplementares", "Concorrente — art. 24, VI (não redistribui STTP)"],
+              ["Blitz de poluição veicular no caso", "STTP no regime federal — D correta"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 22, XI — legislar trânsito",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 22, XI",
+            "texto": "Compete privativamente à União legislar sobre: XI - trânsito e transporte",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 30,
+                "motivo": "diagrama — privativa da União",
+                "texto_grifado": "Compete privativamente à União"
+              },
+              {
+                "inicio": 52,
+                "fim": 73,
+                "motivo": "contraste — fiscalização veicular no caso",
+                "texto_grifado": "trânsito e transporte"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 23, VI — meio ambiente comum",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 23, VI",
+            "texto": "É competência comum da União, dos Estados, do Distrito Federal e dos Municípios: VI - proteger o meio ambiente e combater a poluição em qualquer de suas formas",
+            "trechos_grifados": [
+              {
+                "inicio": 2,
+                "fim": 19,
+                "motivo": "mapa — todos os entes, não exclusivo municipal",
+                "texto_grifado": "competência comum"
+              },
+              {
+                "inicio": 86,
+                "fim": 110,
+                "motivo": "caso — blitz de emissão de poluentes",
+                "texto_grifado": "proteger o meio ambiente"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "23,VI = TODOS protegem ambiente (comum).\n22,XI = União LEGISLA trânsito (privativa).\nAmbiente comum ≠ autuação veicular fora do CTB.\n\nNear-transfer: se a secretaria ambiental fizesse campanha educativa contra poluição nas escolas, seria competência comum — mas autuar veículo em blitz continua no regime federal de trânsito.",
+            "destaques": ["23, VI", "22, XI", "STTP"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 22",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        },
+        {
+          "rotulo": "CF/88, art. 23",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "competencias",
+      "art22_xi",
+      "art23_vi",
+      "meio_ambiente",
+      "sttp",
+      "fiscalizacao"
+    ]
+  }
+]

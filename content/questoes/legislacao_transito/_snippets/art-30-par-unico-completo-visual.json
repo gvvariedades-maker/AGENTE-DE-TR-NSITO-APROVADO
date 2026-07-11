@@ -1,0 +1,155 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 250,
+  "fundamento_slug": "CTB_art_30_par_unico",
+  "macete_visual": "LENTO EM FILA = DISTÂNCIA p/ INTERCALAR",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Fila de lentos deve abrir espaço para intercalação — § único do art. 30, além dos incisos I e II",
+    "eixos_legais": ["CTB_art_30_par_unico", "CTB_art_30_I"],
+    "isca_por_alternativa": {
+      "A": "restringe § único a vias urbanas — regra_excecao",
+      "B": "confunde dever do ultrapassado (incisos I/II) com distância na fila — termo_unico",
+      "D": "obriga só o último veículo da fila — termo_unico"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-073.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: fila lenta ≠ colar no outro",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — limitou a vias urbanas: § único é norma geral para filas de veículos lentos.\nB — citou incisos I/II: esses regem o ultrapassado isolado — § único regula distância entre lentos em fila.\nD — obrigou só o último: todos os veículos lentos em fila devem manter distância.\n\nNesta aula você separa conduta do ultrapassado (I/II) de distância na fila (§ único).",
+        "destaques": ["Gabarito C", "em fila", "intercalar"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "VEÍCULOS MAIS LENTOS: caminhões em velocidade reduzida formando comboio — hipótese do § único.\n\nEM FILA: dois ou mais veículos seguindo um ao outro no mesmo sentido — exige distância entre si.\n\nINTERCALAR: ultrapassador entra no espaço entre veículos da fila — só é seguro com distância suficiente.",
+        "destaques": ["MAIS LENTOS", "EM FILA", "INTERCALAR"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: há fila de lentos?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Veículos mais lentos trafegam em fila?", "tipo": "pergunta" },
+          { "id": "p2", "label": "A distância entre eles permite intercalação segura?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Manter distância suficiente entre si", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Não" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Art. 30 — caput, incisos e § único",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Dispositivo", "Quem / quando"],
+        "linhas": [
+          { "faixa": "Inciso I", "classificacao": "Ultrapassado na esquerda → vai à direita" },
+          { "faixa": "Inciso II", "classificacao": "Ultrapassado nas demais faixas → fica na faixa" },
+          { "faixa": "§ único", "classificacao": "Lentos em fila → distância para intercalar", "destaque": true }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: ultrapassado × fila lenta",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Art. 30 só regula quem está sendo ultrapassado", "§ único regula distância entre lentos em fila"],
+          ["Colar no caminhão da frente economiza faixa", "Distância suficiente para intercalação segura"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — regra_excecao", "Inventa limitação a vias urbanas — § único não restringe o tipo de via"],
+          ["B — termo_unico", "Confunde incisos I/II (ultrapassado) com § único (fila de lentos)"],
+          ["D — termo_unico", "Restringe obrigação ao último da fila — todos os lentos em fila devem distanciar-se"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Comboio de caminhões lentos em fila na BR-230", "Hipótese do § único do art. 30"],
+          ["Distância mínima entre os veículos", "Impede intercalação segura do ultrapassador"],
+          ["Resultado", "Gabarito C — distância suficiente entre si"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Incisos I/II × § único",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Regra", "Escopo"],
+        "linhas": [
+          ["Incisos I e II", "Conduta do veículo que está sendo ultrapassado"],
+          ["§ único", "Distância entre veículos lentos que formam fila"],
+          ["Pegadinha B", "São dispositivos cumulativos do mesmo art. 30"]
+        ]
+      }
+    },
+    {
+      "id": "lei30p",
+      "titulo": "Art. 30, § único — literal da regra",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 30, § único",
+        "texto": "Os veículos mais lentos, quando em fila, deverão manter distância suficiente entre si para permitir que veículos que os ultrapassem possam se intercalar na fila com segurança.",
+        "trechos_grifados": [
+          { "inicio": 12, "fim": 23, "motivo": "glossario — caminhões lentos do comboio" },
+          { "inicio": 56, "fim": 76, "motivo": "contraste — distância suficiente (não colar)" },
+          { "inicio": 142, "fim": 160, "motivo": "caso — intercalar na fila com segurança" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "LENTO EM FILA = DISTÂNCIA p/ INTERCALAR (§ único).\nI/II = conduta do ultrapassado.\nNão confundir os planos.\n\nNear-transfer: dois caminhões lentos em fila na rodovia — o da frente também deve abrir distância, não só o último do comboio.",
+        "destaques": ["DISTÂNCIA p/ INTERCALAR", "§ único", "Near-transfer"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 30, § único", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

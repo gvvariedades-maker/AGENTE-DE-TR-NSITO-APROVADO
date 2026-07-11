@@ -1,0 +1,155 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 255,
+  "fundamento_slug": "CTB_art_41_II",
+  "macete_visual": "BUZINA BREVE · I=sinistro · II=ultrapassar FORA urbano",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Buzina para avisar ultrapassagem só vale fora das áreas urbanas — e em toque breve",
+    "eixos_legais": ["CTB_art_41_II", "CTB_art_41_I"],
+    "isca_por_alternativa": {
+      "A": "estende inciso II às áreas urbanas — regra_excecao",
+      "B": "elimina inciso II e restringe buzina só ao inciso I — regra_excecao",
+      "C": "dispensa toque breve na rodovia — termo_unico"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-078.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: buzina antes de ultrapassar",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito D.\n\nA — liberou na cidade: inciso II restringe-se a fora das áreas urbanas.\nB — vedou ultrapassagem: inciso II autoriza advertir propósito de ultrapassar fora do urbano.\nC — dispensou toque breve: caput do art. 41 exige buzina sempre breve.\n\nNesta aula você separa inciso I (sinistro) de inciso II (ultrapassar fora do urbano).",
+        "destaques": ["Gabarito D", "áreas urbanas", "toque breve"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "TOQUE BREVE: única forma lícita de buzina — regra do caput do art. 41.\n\nÁREAS URBANAS: limite do inciso II — fora delas a buzina pode advertir ultrapassagem.\n\nPROPÓSITO DE ULTRAPASSAR: finalidade do toque na BR-230 do caso — hipótese do inciso II.",
+        "destaques": ["TOQUE BREVE", "ÁREAS URBANAS", "ULTRAPASSAR"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: buzina para ultrapassar?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Local é fora das áreas urbanas?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Toque breve para advertir ultrapassagem?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Permitido pelo inciso II", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Sim" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Art. 41 — caput e incisos I e II",
+      "secao": "mapa",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Dispositivo", "Hipótese"],
+        "linhas": [
+          ["Caput", "Buzina só em toque breve"],
+          ["Inciso I", "Advertir para evitar sinistros — em qualquer local"],
+          ["Inciso II", "Advertir ultrapassagem — fora das áreas urbanas"]
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: buzina na cidade",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Pode buzinar para ultrapassar em qualquer via", "Inciso II limita a fora das áreas urbanas"],
+          ["Na rodovia vale buzina longa", "Caput exige toque breve sempre"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — regra_excecao", "Estende inciso II ao urbano — lei restringe a fora das áreas urbanas"],
+          ["B — regra_excecao", "Elimina inciso II — ultrapassagem fora do urbano é hipótese autônoma"],
+          ["C — termo_unico", "Dispensa toque breve na rodovia — caput não admite exceção"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["BR-230 fora do perímetro urbano de Campina Grande", "Incide inciso II — não é via urbana"],
+          ["Toque breve antes de ultrapassar caminhão", "Advertir propósito de ultrapassar"],
+          ["Resultado", "Gabarito D — buzina breve permitida"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Inciso I × inciso II",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Inciso", "Escopo"],
+        "linhas": [
+          ["I", "Evitar sinistros — vale em área urbana e rural"],
+          ["II", "Ultrapassagem — só fora das áreas urbanas"],
+          ["Pegadinha B", "Sinistro (I) não substitui nem revoga ultrapassagem (II)"]
+        ]
+      }
+    },
+    {
+      "id": "lei41ii",
+      "titulo": "Art. 41, II — literal da regra",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 41, II",
+        "texto": "II - fora das áreas urbanas, quando for conveniente advertir a um condutor que se tem o propósito de ultrapassá-lo.",
+        "trechos_grifados": [
+          { "inicio": 14, "fim": 28, "motivo": "contraste — fora do urbano da BR-230 do caso" },
+          { "inicio": 40, "fim": 51, "motivo": "caso — advertir antes de ultrapassar" },
+          { "inicio": 101, "fim": 114, "motivo": "glossario — propósito de ultrapassar o caminhão" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "BUZINA = SEMPRE BREVE (caput).\nI = evitar sinistro (qualquer lugar).\nII = ultrapassar FORA do urbano.\nNa cidade, buzina de ultrapassagem não cabe no II.\n\nNear-transfer: na BR-230 entre cidades, um toque breve antes de passar o caminhão pode ser lícito; na Av. Epitácio Pessoa, não.",
+        "destaques": ["TOQUE BREVE", "FORA do urbano", "Near-transfer"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 41", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

@@ -88,6 +88,7 @@ O schema Zod ainda não exige estes campos — use em `meta` para o Agent audita
 | 14 | Grifo `motivo` ecoa id da tela (`mapa`, `contraste`, `gradacao`…) |
 | 15 | Zero proposição repetida em telas adjacentes |
 | 16 | Teste de colagem: aula não serve em outra Q do lote |
+| 17 | Grifo com `texto_grifado` validado (`npm run grifo:offsets` + `preview:grifos` no `validate:lote`) |
 
 Reprovou 1 → corrigir antes de `npm run validate:lote`.
 
@@ -124,8 +125,8 @@ Reprovou 1 → corrigir antes de `npm run validate:lote`.
 3. Abrir familias/PADRAO-{X}-….md — copiar ids/ordem/tipos DESSA família
 4. Preencher contratos tela a tela (aceita/reprova)
 5. Gate Mayer 8/8 + editorial 12/12
-6. indexOf nos grifos; motivo → id da tela
-7. npm run validate:lote -- content/questoes/.../lote-XXX.json
+6. indexOf nos grifos; `texto_grifado` obrigatório; motivo → id da tela
+7. `npm run preview:grifos` + `npm run validate:lote -- content/questoes/.../lote-XXX.json`
 8. Teste de colagem
 9. db:seed + snippet em _snippets/
 ```

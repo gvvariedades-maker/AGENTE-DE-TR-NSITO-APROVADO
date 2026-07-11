@@ -1,0 +1,289 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CONTRAN_1020_art_18_par2",
+  "macete_visual": "Troca até psico + médico · depois só desistência AB",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Após psicológico e exames de aptidão, não cabe troca integral de categoria — só desistência em conjunto",
+    "eixos_legais": [
+      "CONTRAN_1020_art_18_par2",
+      "CONTRAN_1020_art_18_par1"
+    ],
+    "isca_por_alternativa": {
+      "A": "alteração livre até a expedição da Permissão para Dirigir",
+      "C": "restrição só vale em categorias conjuntas — troca A/B isolada liberada",
+      "D": "STTP homologa troca de categoria no processo de formação"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: pode trocar B por A agora?",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — alteração livre até a expedição da Permissão para Dirigir.\nC — restrição só vale em categorias conjuntas; troca A/B isolada liberada.\nD — STTP homologa troca de categoria no processo de formação.\n\nPegadinha: sem PD e sem exame prático ainda não basta — o marco é psicológico + aptidão física e mental.",
+        "destaques": [
+          "Gabarito B",
+          "categoria B",
+          "categoria A"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CATEGORIA PRETENDIDA: opção A ou B (ou conjunta) declarada no requerimento de primeira habilitação.\n\nEXAMES DE APTIDÃO: avaliação psicológica + exames físico e mental — marco do §2º.\n\nDESISTÊNCIA EM CONJUNTO: única alteração admitida após os exames, quando a habilitação é em categorias conjuntas.",
+        "destaques": [
+          "CATEGORIA",
+          "APTIDÃO",
+          "DESISTÊNCIA"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: cabe alterar a categoria?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Já realizou avaliação psicológica e exames de aptidão física e mental?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Pretende troca integral de categoria (não desistência em conjunto)?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Alteração vedada — gabarito B",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — caso do enunciado"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — B para A isolada"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Janelas de alteração no processo",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Momento",
+          "O que pode"
+        ],
+        "linhas": [
+          {
+            "faixa": "Até psicológico e exames de aptidão",
+            "classificacao": "Alterar categoria pretendida e observação EAR",
+            "destaque": true
+          },
+          {
+            "faixa": "Após psicológico e aptidão",
+            "classificacao": "Só desistência de uma categoria em habilitação conjunta"
+          },
+          {
+            "faixa": "Caso: B isolada após exames",
+            "classificacao": "Troca integral para A vedada"
+          },
+          {
+            "faixa": "Antes do exame de direção",
+            "classificacao": "Isca — etapa prática não reabre a troca"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: ainda não tem PD",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Crença ✗",
+          "Lei ✓"
+        ],
+        "linhas": [
+          [
+            "Sem Permissão para Dirigir → pode trocar",
+            "Marco é psicológico + aptidão, não a PD"
+          ],
+          [
+            "Desistência em conjunto libera qualquer troca",
+            "Exceção pós-exame só em categorias conjuntas"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Estende alteração até a PD — §2º fixa marco nos exames de aptidão"
+          ],
+          [
+            "C — termo_unico",
+            "Confunde desistência em conjunto com troca integral A/B isolada"
+          ],
+          [
+            "D — competencia_snt",
+            "STTP não homologa categoria — processo é do DETRAN estadual"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do caso",
+          "Consequência"
+        ],
+        "linhas": [
+          [
+            "Inscrição categoria B sem EAR",
+            "Escolha inicial no requerimento"
+          ],
+          [
+            "Psicológico e aptidão já realizados",
+            "Marco do §2º ultrapassado"
+          ],
+          [
+            "Pedido de troca B → A antes do exame prático",
+            "Alteração integral vedada"
+          ],
+          [
+            "Resultado",
+            "Alternativa B"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Escolha × marco de alteração",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função"
+        ],
+        "linhas": [
+          [
+            "Art. 18, §1º",
+            "Observação EAR manifestada na escolha da categoria"
+          ],
+          [
+            "Art. 18, §2º (1ª parte)",
+            "Alteração até psicológico e exames de aptidão"
+          ],
+          [
+            "Art. 18, §2º (2ª parte)",
+            "Após exames: só desistência em conjunto"
+          ],
+          [
+            "Art. 19",
+            "Confirma inscrição e aptidão ao curso teórico"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei1",
+      "titulo": "Art. 18, §2º — marco da alteração",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 1.020/2025, art. 18, §2º",
+        "texto": "A categoria pretendida, incluída a observação de que trata o § 1º, poderá ser alterada pelo candidato até a realização da avaliação psicológica e dos exames de aptidão física e mental, sendo admitida, após a realização desses exames, apenas a desistência de uma das categorias, quando se tratar de habilitação em categorias conjuntas.",
+        "trechos_grifados": [
+          {
+            "inicio": 102,
+            "fim": 183,
+            "motivo": "mapa — prazo de alteração integral encerra nos exames de aptidão",
+            "texto_grifado": "até a realização da avaliação psicológica e dos exames de aptidão física e mental"
+          },
+          {
+            "inicio": 234,
+            "fim": 276,
+            "motivo": "contraste — única alteração pós-exame em habilitação conjunta",
+            "texto_grifado": "apenas a desistência de uma das categorias"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 18, §1º — observação EAR",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 1.020/2025, art. 18, §1º",
+        "texto": "Quando da escolha da categoria, o candidato manifestará se deseja a inclusão da observação de exercício de atividade remunerada em sua Autorização para Conduzir Ciclomotor ou CNH, que constará em sua Permissão para Dirigir.",
+        "trechos_grifados": [
+          {
+            "inicio": 80,
+            "fim": 127,
+            "motivo": "eixo2 — observação incluída no pacote alterável até os exames",
+            "texto_grifado": "observação de exercício de atividade remunerada"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "TROCA DE CATEGORIA = até PSICÓLOGO + MÉDICO (§2º).\nDepois = só desistência em AB conjunto.\nEAR na escolha (§1º).\n\nNear-transfer: se a banca disser que o candidato escolheu AB conjunto e, após os exames, desiste só da B, a alteração é admitida — mas troca integral B isolada para A continua vedada.",
+        "destaques": [
+          "PSICÓLOGO",
+          "AB conjunto",
+          "EAR"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 1.020/2025",
+      "path": "conteúdo/resoluções CONTRAN/Resolução - 1020 - 2025.pdf"
+    }
+  ]
+}

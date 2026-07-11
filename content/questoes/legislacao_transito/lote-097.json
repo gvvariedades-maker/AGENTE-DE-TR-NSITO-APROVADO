@@ -1,0 +1,333 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_432_alcoolemia",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_432_art_6_7",
+    "enunciado": "Durante fiscalização da STTP em Campina Grande/PB, agente aplica teste de etilômetro em condutor que apresenta medição realizada (MR) de 0,32 mg/L de ar alveolar. Na Tabela de Valores Referenciais do Anexo I da Resolução CONTRAN nº 432/2013, o valor considerado (VC) após desconto do erro máximo admissível é de 0,29 mg/L. O condutor alega não haver infração administrativa nem crime, pois ambos os valores ficam abaixo de 0,34 mg/L, limite do art. 306 do CTB. Considerando a Resolução CONTRAN nº 432/2013 e o CTB, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Não há autuação: com etilômetro de 0,32 mg/L abaixo de 0,34 mg/L, o condutor fica liberado pela STTP sem infração administrativa nem crime.",
+      "B": "Há infração do art. 165: o art. 6º, II, exige MR ≥ 0,05 mg/L — 0,32 atende; o crime do art. 306 só com MR ≥ 0,34 (art. 7º, II) — não configurado.",
+      "C": "Há crime do art. 306: exame de sangue com qualquer concentração já bastaria — o etilômetro de 0,32 mg/L dispensa a margem do Anexo I.",
+      "D": "Só há infração se o valor considerado (VC) de 0,29 mg/L atingir 0,05 — a medição realizada de 0,32 mg/L não vale para autuação pela STTP."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Limites distintos de etilômetro para infração administrativa (art. 6º, II — MR ≥ 0,05 mg/L) × crime (art. 7º, II — MR ≥ 0,34 mg/L), com VC do Anexo I — não confundir 0,34 com limite do art. 165.",
+      "fundamento_legal": "Res. CONTRAN 432/2013, art. 6º, II: 'teste de etilômetro com medição realizada igual ou superior a 0,05 miligrama de álcool por litro de ar alveolar expirado (0,05 mg/L), descontado o erro máximo admissível'. Art. 7º, II: 'teste de etilômetro com medição realizada igual ou superior a 0,34 miligrama de álcool por litro de ar alveolar expirado (0,34 mg/L), descontado o erro máximo admissível'. Art. 7º, §1º: a ocorrência do crime não elide o art. 165 do CTB.",
+      "passo_a_passo": [
+        "1. Caso: MR 0,32 mg/L, VC 0,29 mg/L — condutor invoca 0,34 mg/L como único limite (art. 306), negando qualquer consequência.",
+        "2. A erra por regra_excecao (trata 0,34 como piso único — ignora que art. 6º, II, fixa 0,05 mg/L para infração administrativa); C erra por termo_unico (mistura exame de sangue do art. 6º, I, com etilômetro e dispensa margem do Anexo I); D erra por numero_vizinho (aplica o limite de 0,05 ao VC em vez da MR — art. 6º, II, referencia medição realizada).",
+        "3. B correta: MR 0,32 ≥ 0,05 → art. 165 (art. 6º, II); MR 0,32 < 0,34 → crime do art. 306 não configurado (art. 7º, II)."
+      ],
+      "pegadinha": "A banca induz a usar só o 0,34 do crime como referência — mas a infração administrativa dispara em 0,05 mg/L de MR; entre 0,05 e 0,33 há art. 165 sem art. 306.",
+      "macete": "ADMIN = MR ≥ 0,05 (art. 6 II) · CRIME = MR ≥ 0,34 (art. 7 II) · VC = MR − EM (Anexo I).",
+      "estudo_reverso": [
+        "Res. CONTRAN 432/2013 art. 6",
+        "Res. CONTRAN 432/2013 art. 7"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "0,34 é limite do crime — infração administrativa começa em MR 0,05",
+      "eixos_legais": [
+        "CONTRAN_432_art_6",
+        "CONTRAN_432_art_7"
+      ],
+      "isca_por_alternativa": {
+        "A": "0,34 como único limite libera condutor com MR 0,32",
+        "C": "sangue com qualquer concentração dispensa margem do etilômetro",
+        "D": "limite 0,05 vale para VC, não para MR"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico",
+        "numero_vizinho"
+      ]
+    },
+    "tags": [
+      "alcoolemia",
+      "etilometro",
+      "resolucao_432",
+      "limite_005",
+      "limite_034"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_432_art_6_7",
+      "macete_visual": "Admin 0,05 · crime 0,34 · MR não VC",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: MR 0,32 gera art. 165 (limite 0,05) mas não crime (limite 0,34). A isca é tratar 0,34 como único patamar.",
+            "destaques": ["Gabarito B", "0,05", "0,34"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Admin × crime no etilômetro",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Infração admin (art. 165)", "Crime (art. 306)"],
+            "linhas": [
+              ["MR ≥ 0,05 mg/L — art. 6º, II", "MR ≥ 0,34 mg/L — art. 7º, II"],
+              ["MR 0,32 → configura", "MR 0,32 → não configura"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ADMIN = MR ≥ 0,05.\nCRIME = MR ≥ 0,34.\nVC = MR − margem (Anexo I) — limite compara MR.",
+            "destaques": ["0,05", "0,34", "MR"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 432/2013",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 432, DE 23 DE JANEIRO DE 2013.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 275,
+      "fundamento_slug": "CONTRAN_432_art_6_7",
+      "macete_visual": "Admin 0,05 · crime 0,34 · MR não VC",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "0,34 é limite do crime — infração administrativa começa em MR 0,05",
+        "eixos_legais": [
+          "CONTRAN_432_art_6",
+          "CONTRAN_432_art_7"
+        ],
+        "isca_por_alternativa": {
+          "A": "0,34 como único limite libera condutor com MR 0,32",
+          "C": "sangue com qualquer concentração dispensa margem do etilômetro",
+          "D": "limite 0,05 vale para VC, não para MR"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: 0,34 não é o único limite",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — 0,34 como único limite libera condutor com etilômetro de 0,32 mg/L.\nC — exame de sangue com qualquer concentração dispensa margem do Anexo I.\nD — limite de 0,05 vale para VC de 0,29, não para MR de 0,32.\n\nPegadinha: infração administrativa começa em MR 0,05 — não em 0,34.",
+            "destaques": ["Gabarito B", "0,32 mg/L", "0,05"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "MR (MEDIÇÃO REALIZADA): leitura bruta do etilômetro — patamar de comparação nos arts. 6º e 7º.\n\nVC (VALOR CONSIDERADO): MR menos erro máximo admissível — preenchimento do auto conforme Anexo I.\n\nFAIXA INTERMEDIÁRIA: entre 0,05 e 0,33 mg/L de MR há art. 165 sem crime do art. 306.",
+            "destaques": ["MR", "VC", "FAIXA INTERMEDIÁRIA"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: MR 0,32 configura o quê?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "MR do etilômetro é igual ou superior a 0,05 mg/L?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Infração administrativa — verificar crime — gabarito B",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim — 0,32 mg/L no caso" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Dois patamares do etilômetro",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Patamar MR", "Consequência"],
+            "linhas": [
+              {
+                "faixa": "MR < 0,05 mg/L",
+                "classificacao": "Sem art. 165 por etilômetro"
+              },
+              {
+                "faixa": "MR 0,05 a 0,33 mg/L",
+                "classificacao": "Art. 165 — sem crime 306",
+                "destaque": true
+              },
+              {
+                "faixa": "MR ≥ 0,34 mg/L",
+                "classificacao": "Art. 165 + crime art. 306"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: só o 0,34 importa",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Abaixo de 0,34 mg/L não autua",
+                "Art. 6º, II: infração desde MR 0,05 mg/L"
+              ],
+              [
+                "VC 0,29 define se há infração",
+                "Limite compara medição realizada (MR), não só VC"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Usa 0,34 como piso único — ignora art. 6º, II (0,05 mg/L)"
+              ],
+              [
+                "C — termo_unico",
+                "Mistura exame de sangue com etilômetro e dispensa margem do Anexo I"
+              ],
+              [
+                "D — numero_vizinho",
+                "Aplica limite 0,05 ao VC — art. 6º, II, referencia MR"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "MR 0,32 mg/L na blitz da STTP",
+                "≥ 0,05 → infração art. 165 (art. 6º, II)"
+              ],
+              [
+                "VC 0,29 mg/L após margem do Anexo I",
+                "Não substitui MR para o patamar de 0,05"
+              ],
+              [
+                "MR abaixo de 0,34 mg/L",
+                "Crime art. 306 não configurado (art. 7º, II)"
+              ],
+              [
+                "Resultado",
+                "Alternativa B"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Infração administrativa × crime",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Regime", "Dispositivo"],
+            "linhas": [
+              [
+                "Infração art. 165 do CTB",
+                "Art. 6º, II — MR ≥ 0,05 mg/L"
+              ],
+              [
+                "Crime art. 306 do CTB",
+                "Art. 7º, II — MR ≥ 0,34 mg/L (crime não elide 165 — §1º)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 6º, II — limite administrativo",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 432/2013, art. 6º, II",
+            "texto": "II – teste de etilômetro com medição realizada igual ou superior a 0,05 miligrama de álcool por litro de ar alveolar expirado (0,05 mg/L), descontado o erro máximo admissível nos termos da Tabela de Valores Referenciais para Etilômetro constante no Anexo I.",
+            "trechos_grifados": [
+              {
+                "inicio": 47,
+                "fim": 81,
+                "motivo": "contraste — patamar administrativo é 0,05 mg/L de MR",
+                "texto_grifado": "igual ou superior a 0,05 miligrama"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 7º, II — limite do crime",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 432/2013, art. 7º, II",
+            "texto": "II - teste de etilômetro com medição realizada igual ou superior a 0,34 miligrama de álcool por litro de ar alveolar expirado (0,34 mg/L), descontado o erro máximo admissível nos termos da Tabela de Valores Referenciais para Etilômetro constante no Anexo I.",
+            "trechos_grifados": [
+              {
+                "inicio": 47,
+                "fim": 81,
+                "motivo": "eixo2 — crime só a partir de MR 0,34 mg/L",
+                "texto_grifado": "igual ou superior a 0,34 miligrama"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ADMIN = MR ≥ 0,05 (art. 6 II).\nCRIME = MR ≥ 0,34 (art. 7 II).\nVC = MR − margem — limite compara MR.\n\nNear-transfer: se a banca trocar MR 0,32 por 0,38 mg/L, entra crime do art. 306 sem mudar o piso de 0,05 para infração.",
+            "destaques": ["0,05", "0,34", "0,38"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 432/2013",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 432, DE 23 DE JANEIRO DE 2013.pdf"
+        }
+      ]
+    }
+  }
+]

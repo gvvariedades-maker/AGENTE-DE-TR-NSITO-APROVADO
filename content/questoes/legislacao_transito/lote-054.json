@@ -1,0 +1,322 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_infracoes",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 5,
+    "fundamento_slug": "CTB_art_210",
+    "enunciado": "Durante operação da STTP em Campina Grande/PB, agentes interditam totalmente um trecho de via com bloqueio viário policial para atendimento a ocorrência. Condutor de automóvel desvia pelos cones, transpõe a interdição e retoma a marcha na pista, sem autorização dos agentes. Não havia fila de veículos parados nem posto de pesagem no local. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA quanto à infração:",
+    "alternativas": {
+      "A": "Configura infração gravíssima por transpor, sem autorização, bloqueio viário policial, com penalidade de multa, apreensão do veículo e suspensão do direito de dirigir, nos termos do art. 210 do CTB.",
+      "B": "Configura infração grave por ultrapassar veículos em fila parados em razão de bloqueio viário parcial, conforme o art. 211 do CTB.",
+      "C": "Configura infração grave por transpor bloqueio viário sem autorização, nos termos do art. 209 do CTB.",
+      "D": "Não há infração, pois a interdição policial faculta ao condutor contornar o bloqueio pela faixa adjacente quando não há sinalização de proibição expressa."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Art. 210 — transpor bloqueio viário policial sem autorização (gravíssima, com apreensão e suspensão); distinção do art. 211 (fila em bloqueio parcial, grave) e art. 209 (bloqueio geral ou pesagem, grave).",
+      "fundamento_legal": "CTB, art. 210: transpor, sem autorização, bloqueio viário policial — infração gravíssima; penalidade — multa, apreensão do veículo e suspensão do direito de dirigir; medida administrativa — remoção do veículo e recolhimento do documento de habilitação. CTB, art. 211: ultrapassar veículos em fila parados em razão de bloqueio viário parcial — grave. CTB, art. 209: transpor bloqueio viário com ou sem sinalização ou deixar de adentrar pesagem — grave.",
+      "passo_a_passo": [
+        "1. Caso: interdição policial total transposta sem autorização — núcleo do art. 210.",
+        "2. B erra por termo_unico (art. 211 exige ultrapassar fila em bloqueio parcial, não interdição policial total); C erra por gravidade (art. 209 é grave e não alcança bloqueio policial com suspensão); D erra por regra_excecao (inventa contorno facultativo sem autorização).",
+        "3. A correta: art. 210 — infração gravíssima com apreensão e suspensão."
+      ],
+      "pegadinha": "A IDECAN troca bloqueio policial (210 gravíssima) por fila parcial (211), bloqueio geral (209) ou contorno permitido sem autorização.",
+      "macete": "210 = BLOQUEIO POLICIAL total · GRAVÍSSIMA + suspensão · ≠ 211 fila · ≠ 209 geral.",
+      "estudo_reverso": [
+        "CTB art. 210",
+        "CTB art. 211",
+        "CTB art. 209"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 80,
+      "fundamento_slug": "CTB_art_210",
+      "macete_visual": "210 policial = GRAVÍSSIMA",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Transposição de bloqueio policial total.\n\nGabarito A: art. 210 — gravíssima.",
+            "destaques": ["bloqueio policial", "210", "GRAVÍSSIMA"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Bloqueio: qual gravidade?",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Situação", "Natureza"],
+            "linhas": [
+              {
+                "faixa": "Bloqueio policial — art. 210",
+                "classificacao": "Gravíssima + suspensão",
+                "destaque": true
+              },
+              {
+                "faixa": "Fila em bloqueio parcial — art. 211",
+                "classificacao": "Grave"
+              },
+              {
+                "faixa": "Bloqueio geral — art. 209",
+                "classificacao": "Grave"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Policial × parcial",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Confusão ✗", "Regra ✓"],
+            "linhas": [
+              ["Bloqueio parcial = art. 210", "Policial total sem autorização = art. 210"],
+              ["Transpor bloqueio = grave", "Art. 210 é gravíssima com suspensão"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "210 = BLOQUEIO POLICIAL · GRAVÍSSIMA + suspensão.",
+            "destaques": ["210", "POLICIAL", "GRAVÍSSIMA"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 210",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 285,
+      "fundamento_slug": "CTB_art_210",
+      "macete_visual": "210 bloqueio policial = GRAVÍSSIMA + suspensão",
+      "meta": {
+        "padrao_familia": "D_gradacao",
+        "pegadinha_em_uma_frase": "Transpor bloqueio viário policial sem autorização é art. 210 gravíssima — não é fila parcial (211), bloqueio geral (209) nem contorno facultativo",
+        "eixos_legais": ["CTB_art_210", "CTB_art_211"],
+        "isca_por_alternativa": {
+          "B": "confunde transposição de bloqueio policial com ultrapassar fila em bloqueio parcial — art. 211",
+          "C": "aplica art. 209 grave em bloqueio policial com suspensão prevista no art. 210",
+          "D": "inventa que contorno pela faixa adjacente dispensa autorização para transpor bloqueio policial"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: policial total ≠ fila",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — confundiu com art. 211 (fila em bloqueio parcial): não há fila parada — houve interdição policial total transposta.\nC — aplicou art. 209 (bloqueio geral grave): bloqueio policial tem tipificação autônoma gravíssima no art. 210.\nD — inventou contorno facultativo: transpor bloqueio policial sem autorização é sempre art. 210.\n\nCondutor transpôs interdição policial sem autorização.",
+            "destaques": ["Gabarito A", "bloqueio policial", "gravíssima"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 distinções",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "BLOQUEIO VIÁRIO POLICIAL: interdição imposta por agentes em operação — transpor sem autorização é art. 210.\n\nBLOQUEIO PARCIAL: obstáculo que imobiliza fila de veículos — ultrapassar a fila é art. 211.\n\nSEM AUTORIZAÇÃO: não há dispensa legal para transpor o bloqueio policial — gravíssima com suspensão.",
+            "destaques": ["POLICIAL", "PARCIAL", "AUTORIZAÇÃO"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Bloqueio: qual gravidade?",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Situação", "Natureza"],
+            "linhas": [
+              {
+                "faixa": "Transpor bloqueio viário policial — art. 210",
+                "classificacao": "Gravíssima + suspensão",
+                "destaque": true
+              },
+              {
+                "faixa": "Ultrapassar fila em bloqueio parcial — art. 211",
+                "classificacao": "Grave"
+              },
+              {
+                "faixa": "Transpor bloqueio geral — art. 209",
+                "classificacao": "Grave"
+              },
+              {
+                "faixa": "Caso (interdição policial total)",
+                "classificacao": "Art. 210 — gravíssima"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: bloqueio policial ou fila?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Condutor transpôs bloqueio viário policial?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Havia autorização para transpor?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gravíssima — bloqueio policial transposto",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — interdição total" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: parcial × policial × grave",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Bloqueio parcial = mesma regra do 210",
+                "210 é bloqueio policial sem autorização — gravíssima"
+              ],
+              [
+                "Transpor qualquer bloqueio = art. 209 grave",
+                "Bloqueio policial tem art. 210 autônomo — gravíssima"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — termo_unico",
+                "Confunde transposição de bloqueio policial com ultrapassar fila em bloqueio parcial — art. 211"
+              ],
+              [
+                "C — gravidade",
+                "Aplica art. 209 grave em bloqueio policial — art. 210 é gravíssima com suspensão"
+              ],
+              [
+                "D — regra_excecao",
+                "Inventa que contorno pela faixa adjacente dispensa autorização para transpor bloqueio policial"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado — Campina Grande",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Conclusão legal"],
+            "linhas": [
+              ["Operação STTP com interdição total", "Bloqueio viário policial"],
+              ["Condutor transpôs cones sem autorização", "Núcleo do art. 210"],
+              ["Sem fila parada nem pesagem", "Afasta arts. 211 e 209"],
+              ["Resultado", "Gabarito A — infração gravíssima"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "210 × 211 × 209",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Artigo", "Conduta"],
+            "linhas": [
+              ["Art. 210", "Transpor bloqueio policial sem autorização — gravíssima"],
+              ["Art. 211", "Ultrapassar fila em bloqueio parcial — grave"],
+              ["Art. 209", "Transpor bloqueio geral ou omitir pesagem — grave"],
+              ["Caso (interdição policial)", "Art. 210 — gravíssima"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 210 — bloqueio policial",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 210",
+            "texto": "Transpor, sem autorização, bloqueio viário policial: Infração - gravíssima; Penalidade - multa, apreensão do veículo e suspensão do direito de dirigir;",
+            "trechos_grifados": [
+              {
+                "inicio": 27,
+                "fim": 51,
+                "motivo": "mapa — bloqueio viário policial é hipótese do art. 210"
+              },
+              {
+                "inicio": 10,
+                "fim": 25,
+                "motivo": "contraste — sem autorização é requisito da infração"
+              },
+              {
+                "inicio": 64,
+                "fim": 74,
+                "motivo": "gradacao — gravíssima, não grave; com suspensão"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "210 = BLOQUEIO POLICIAL total · GRAVÍSSIMA + suspensão · ≠ 211 (fila/parcial = GRAVE) · ≠ 209 geral.\n\nNear-transfer: mesmo condutor ultrapassa fila parada ante cancela em obra — art. 211 (grave); conduta distinta de transpor bloqueio policial total.",
+            "destaques": ["210", "211", "GRAVÍSSIMA"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 210",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "tags": [
+      "infracoes",
+      "art_210",
+      "bloqueio_policial",
+      "gravissima",
+      "suspensao"
+    ]
+  }
+]

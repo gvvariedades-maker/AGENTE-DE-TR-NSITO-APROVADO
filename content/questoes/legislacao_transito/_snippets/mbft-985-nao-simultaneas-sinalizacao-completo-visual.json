@@ -1,0 +1,283 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 285,
+  "fundamento_slug": "CONTRAN_985_mbft_nao_simultaneas_sinalizacao",
+  "macete_visual": "PARADO+CINTO≠2 AITs · só 181,XVIII",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Condutor no banco sem cinto não gera segundo AIT se o carro está parado",
+    "eixos_legais": [
+      "CONTRAN_985_mbft_nao_simultaneas_sinalizacao",
+      "CTB_art_181_XVIII",
+      "CTB_art_167"
+    ],
+    "isca_por_alternativa": {
+      "A": "dois AITs por condutas independentes no local",
+      "B": "autua só cinto por maior risco",
+      "C": "presença do condutor = infração de movimento"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: condutor no banco ≠ condução",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito D.\n\nA — dois AITs: MBFT veda estacionamento + cinto sem condução constatada.\nB — só cinto: prioriza risco ignorando o 2º exemplo MBFT.\nC — condutor presente: presença não supre condução constatada.\n\nEstacionado por placa, condutor sem cinto, veículo parado.",
+        "destaques": [
+          "Gabarito D",
+          "181,XVIII",
+          "sem condução"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "NÃO SIMULTÂNEAS: estacionamento e movimento não coexistem no mesmo auto.\n\nCONDUÇÃO CONSTATADA: prova de que o veículo foi efetivamente dirigido.\n\nPRESENÇA DO CONDUTOR: ocupar o banco não equivale a conduzir em movimento.",
+        "destaques": [
+          "NÃO SIMULTÂNEAS",
+          "CONDUÇÃO",
+          "PRESENÇA"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: cinto no banco parado?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Foi constatada a condução do veículo?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Há estacionamento e infração de movimento?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Autuar só estacionamento — gabarito D",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Não — veículo parado"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — não simultâneas"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Mapa: dois exemplos MBFT",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Exemplo MBFT",
+          "AIT correto"
+        ],
+        "linhas": [
+          {
+            "faixa": "181,I + 230,V estacionado",
+            "classificacao": "Só estacionamento na esquina"
+          },
+          {
+            "faixa": "181,XVIII + 167 estacionado",
+            "classificacao": "Só estacionamento por sinalização",
+            "destaque": true
+          },
+          {
+            "faixa": "167 + 252 em movimento",
+            "classificacao": "Concomitante — 2 AITs"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Presença × condução",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Crença ✗",
+          "MBFT ✓"
+        ],
+        "linhas": [
+          [
+            "Condutor no banco = autua cinto",
+            "Sem condução constatada: só estacionamento"
+          ],
+          [
+            "Duas irregularidades visíveis = 2 AITs",
+            "Exemplo MBFT: autuar apenas 181,XVIII"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Dois AITs como concomitantes — MBFT proíbe nesta hipótese"
+          ],
+          [
+            "B — gravidade",
+            "Prioriza cinto por risco ignorando exemplo 181,XVIII + 167"
+          ],
+          [
+            "C — termo_unico",
+            "Confunde presença do condutor com condução constatada"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do caso",
+          "Efeito MBFT"
+        ],
+        "linhas": [
+          [
+            "Estacionado em local proibido por placa",
+            "Infração autônoma"
+          ],
+          [
+            "Condutor sem cinto no banco",
+            "167 sem condução não se soma"
+          ],
+          [
+            "Veículo parado, sem condução constatada",
+            "Gatilho do 2º exemplo"
+          ],
+          [
+            "Lavratura correta",
+            "1 AIT estacionamento — gabarito D"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Estacionamento × movimento",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Combinação",
+          "Resultado"
+        ],
+        "linhas": [
+          [
+            "Estacionar + cinto sem condução",
+            "Só estacionamento"
+          ],
+          [
+            "Estacionar + licenciamento sem condução",
+            "Só estacionamento"
+          ],
+          [
+            "Cinto + celular em movimento",
+            "2 AITs concomitantes"
+          ],
+          [
+            "Verbos conduzir/dirigir/transitar",
+            "Exigem veículo em movimento"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "MBFT — exemplo 181,XVIII e 167",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7",
+        "texto": "Veículo estacionado em local proibido pela sinalização (art. 181, XVIII) e com o condutor sem utilizar o cinto de segurança (art.167), sem que tenha sido constatada a condução do veículo. Neste caso, autuar apenas pela infração no art. 181, XVIII.",
+        "trechos_grifados": [
+          {
+            "inicio": 135,
+            "fim": 186,
+            "motivo": "contraste — veículo parado sem condução"
+          },
+          {
+            "inicio": 200,
+            "fim": 246,
+            "motivo": "caso — gabarito D no exemplo canônico"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "MBFT — regra geral estacionamento × movimento",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7",
+        "texto": "Não é possível autuar um veículo, no mesmo local, dia e horário, por uma infração de estacionamento e outra de movimento (deixar de usar o cinto de segurança). Nesse caso, caberá apenas uma delas.",
+        "trechos_grifados": [
+          {
+            "inicio": 85,
+            "fim": 120,
+            "motivo": "mapa — veda combinar estacionamento e cinto"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "PARADO+CINTO≠2 AITs · sem condução = só estacionamento · 181,XVIII no 2º exemplo.\n\nNear-transfer: mesmo local, mas agente vê o veículo saindo da vaga com condutor sem cinto — aí há condução constatada e o cinto pode ser autuado.",
+        "destaques": [
+          "PARADO+CINTO",
+          "Near-transfer",
+          "condução"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "MBFT — Seção 7",
+      "path": "conteúdo/resoluções CONTRAN/MBFT-anexo-resolucao-985-2022-secao-07-autuacao.txt"
+    }
+  ]
+}

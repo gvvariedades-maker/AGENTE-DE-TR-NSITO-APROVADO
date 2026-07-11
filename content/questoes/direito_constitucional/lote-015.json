@@ -1,0 +1,347 @@
+[
+  {
+    "disciplina": "direito_constitucional",
+    "topico": "dir_const_4_3",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "enunciado": "Um condutor quitou todas as multas e taxas de remoção e apresentou à STTP de Campina Grande a documentação exigida para liberação do veículo apreendido em pátio municipal. Mesmo assim, o chefe da autarquia mantém a retenção por trinta dias, invocando \"auditoria interna\" sem previsão legal. O proprietário impetra remédio constitucional contra ato de autoridade pública e questiona qual órgão teria competência para a retenção. Considerando a Constituição Federal de 1988, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Cabe habeas corpus, porque a retenção do veículo no pátio impede a locomoção do condutor, configurando coação ilegal à liberdade prevista no art. 5º, LXVIII.",
+      "B": "Cabe mandado de segurança: a retenção do veículo após quitação lesiona direito líquido e certo não amparado por habeas corpus ou habeas data (art. 5º, LXIX), sem coação pessoal à locomoção (LXVIII).",
+      "C": "A STTP, como órgão executivo municipal de trânsito, tem competência para manter o veículo no pátio pelo prazo da auditoria interna, sem ordem judicial.",
+      "D": "Cabe ação popular, pois a retenção ilegal do veículo no pátio municipal lesiona o patrimônio público e a moralidade administrativa do Município."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Cabimento do mandado de segurança para proteger direito líquido e certo contra ato de autoridade pública (art. 5º, LXIX), em contraste com habeas corpus (locomoção pessoal, LXVIII) e ação popular (interesse difuso, LXXIII).",
+      "fundamento_legal": "CF/88, art. 5º, LXIX: \"conceder-se-á mandado de segurança para proteger direito líquido e certo, não amparado por habeas corpus ou habeas data, quando o responsável pela ilegalidade ou abuso de poder for autoridade pública ou agente de pessoa jurídica no exercício de atribuições do Poder Público\". CF/88, art. 5º, LXVIII: habeas corpus exige violência ou coação à liberdade de locomoção da pessoa — a retenção de veículo quitado, sem custódia pessoal, não preenche o HC.",
+      "passo_a_passo": [
+        "1. O caso envolve retenção de veículo após quitação e documentação completa, por ato do chefe da STTP (autoridade pública) — direito líquido e certo à liberação, sem coação à locomoção pessoal.",
+        "2. A erra por regra_excecao (estende habeas corpus à retenção de veículo no pátio, tratando impedimento indireto de uso como coação pessoal à locomoção); C erra por competencia_snt (atribui à STTP competência para reter o veículo por prazo indefinido de auditoria interna, sem base legal); D erra por termo_unico (indica ação popular para tutela individual de liberação de bem — hipótese do art. 5º, LXXIII é lesão a patrimônio público/moralidade em sentido coletivo, não substituto do MS).",
+        "3. B está correta: cabe mandado de segurança (LXIX) — direito líquido e certo não amparado por HC/HD; não há lesão à locomoção pessoal (LXVIII)."
+      ],
+      "pegadinha": "A banca troca mandado de segurança (direito líquido e certo contra ato de autoridade) por habeas corpus (locomoção pessoal) ou ação popular (interesse coletivo), ou inventa competência da STTP para retenção administrativa sem lei.",
+      "macete": "Líquido e certo + autoridade pública = MS (LXIX). Locomoção da PESSOA = HC (LXVIII). Patrimônio público coletivo = ação popular (LXXIII).",
+      "estudo_reverso": [
+        "CF art. 5º, LXIX",
+        "CF art. 5º, LXVIII",
+        "CF art. 5º, LXXIII"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CF_art5_LXIX",
+      "macete_visual": "Líquido+certo = MS",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Veículo quitado retido 30 dias por \"auditoria\" sem lei. A banca oferece HC ou ação popular — direito líquido e certo contra autoridade pede mandado de segurança.",
+            "destaques": ["mandado de segurança", "direito líquido", "HC"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método rápido",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Há coação à locomoção da pessoa?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Lesão a direito líquido e certo de autoridade pública?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Mandado de segurança — LXIX", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Sem carro = habeas corpus", "HC é locomoção da pessoa (LXVIII)"],
+              ["Retenção ilegal = ação popular", "MS tutela direito individual líquido e certo"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXIX",
+            "texto": "conceder-se-á mandado de segurança para proteger direito líquido e certo, não amparado por habeas corpus ou habeas data, quando o responsável pela ilegalidade ou abuso de poder for autoridade pública ou agente de pessoa jurídica no exercício de atribuições do Poder Público",
+            "trechos_grifados": [
+              {
+                "inicio": 49,
+                "fim": 72,
+                "motivo": "regra — direito líquido e certo",
+                "texto_grifado": "direito líquido e certo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Líquido e certo + autoridade = MS (LXIX). Pessoa presa/coacta = HC. Interesse coletivo = ação popular.",
+            "destaques": ["MS", "HC", "ação popular"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, LXIX",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 235,
+      "fundamento_slug": "CF_art5_LXIX",
+      "macete_visual": "Líquido+certo = MS",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Veículo quitado retido sem lei pede MS — não HC nem ação popular",
+        "eixos_legais": ["CF_art5_LXIX", "CF_art5_LXVIII", "CF_art5_LXXIII"],
+        "isca_por_alternativa": {
+          "A": "retenção do veículo no pátio vira coação pessoal à locomoção (HC)",
+          "C": "STTP retém no pátio por auditoria interna sem ordem judicial",
+          "D": "ação popular para liberar veículo individual no pátio municipal"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: qual remédio na retenção?",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B (mandado de segurança por direito líquido e certo).\n\nA — habeas corpus pelo veículo retido: confunde bem com locomoção pessoal.\nC — STTP retém por auditoria interna: inventa competência sem base legal.\nD — ação popular para liberar o carro: troca tutela individual por remédio coletivo.\n\nPromessa: separar MS, HC e ação popular no mesmo caso.",
+            "destaques": ["mandado de segurança", "habeas corpus", "ação popular"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de decidir: 3 remédios",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DIREITO LÍQUIDO E CERTO: direito evidente, pronto para exame imediato pelo juiz — base do mandado de segurança. HABEAS CORPUS: coação à liberdade de locomoção da pessoa — não se confunde com retenção de veículo. AÇÃO POPULAR: tutela de interesses coletivos (patrimônio público, moralidade, meio ambiente) — não substitui o MS individual.",
+            "destaques": ["líquido e certo", "locomoção", "ação popular"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual remédio cabe?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Há coação à locomoção da pessoa (não só do veículo)?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Ato de autoridade pública lesiona direito líquido e certo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Mandado de segurança — gabarito B",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não — só veículo no pátio" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim — chefe da STTP" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa dos remédios no art. 5º",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Remédio", "Quando cabe"],
+            "linhas": [
+              {
+                "faixa": "Mandado de segurança (LXIX)",
+                "classificacao": "Direito líquido e certo — autoridade pública",
+                "destaque": true
+              },
+              { "faixa": "Habeas corpus (LXVIII)", "classificacao": "Coação à locomoção da pessoa" },
+              { "faixa": "Habeas data (LXXII)", "classificacao": "Dados pessoais em registros públicos" },
+              { "faixa": "Ação popular (LXXIII)", "classificacao": "Lesão a patrimônio público / moralidade coletiva" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença × lei: MS × HC × popular",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Sem o carro = habeas corpus",
+                "HC protege locomoção da pessoa — não retenção de bem (LXVIII)"
+              ],
+              [
+                "Qualquer ilegalidade da STTP = ação popular",
+                "Liberação de veículo quitado = direito líquido e certo → MS (LXIX)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Estende habeas corpus à retenção de veículo no pátio como coação pessoal à locomoção"
+              ],
+              [
+                "C — competencia_snt",
+                "Atribui à STTP competência para reter o veículo por auditoria interna sem lei"
+              ],
+              [
+                "D — termo_unico",
+                "Substitui mandado de segurança individual por ação popular de interesse coletivo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o veículo no pátio",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Conclusão"],
+            "linhas": [
+              ["Multas e taxas quitadas + documentação apresentada", "Direito líquido e certo à liberação"],
+              ["Chefe da STTP mantém retenção por 30 dias sem lei", "Ato de autoridade pública ilegal"],
+              ["Condutor não está sob custódia pessoal", "Afasta habeas corpus (A falsa)"],
+              ["Resultado", "Alternativa B — mandado de segurança"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "LXIX × LXVIII × LXXIII",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Papel no caso"],
+            "linhas": [
+              ["Art. 5º, LXIX", "MS — direito líquido e certo contra chefe da STTP"],
+              ["Art. 5º, LXVIII", "HC excluído — sem coação à locomoção pessoal"],
+              ["Art. 5º, LXXIII", "Ação popular — não tutela liberação individual do veículo"],
+              ["Caso concreto", "Retenção após quitação → MS, não HC nem popular"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 5º, LXIX — mandado de segurança",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXIX",
+            "texto": "conceder-se-á mandado de segurança para proteger direito líquido e certo, não amparado por habeas corpus ou habeas data, quando o responsável pela ilegalidade ou abuso de poder for autoridade pública ou agente de pessoa jurídica no exercício de atribuições do Poder Público",
+            "trechos_grifados": [
+              {
+                "inicio": 49,
+                "fim": 72,
+                "motivo": "fluxo — núcleo do caso (liberação após quitação)",
+                "texto_grifado": "direito líquido e certo"
+              },
+              {
+                "inicio": 74,
+                "fim": 119,
+                "motivo": "contraste — exclui HC e habeas data",
+                "texto_grifado": "não amparado por habeas corpus ou habeas data"
+              },
+              {
+                "inicio": 181,
+                "fim": 199,
+                "motivo": "caso — chefe da STTP como autoridade pública",
+                "texto_grifado": "autoridade pública"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 5º, LXVIII — limite do HC",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXVIII",
+            "texto": "conceder-se-á habeas corpus sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder",
+            "trechos_grifados": [
+              {
+                "inicio": 111,
+                "fim": 133,
+                "motivo": "hierarquia — lesão pessoal, não retenção de veículo",
+                "texto_grifado": "liberdade de locomoção"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Líquido e certo + autoridade = MS (LXIX).\nPessoa coacta = HC (LXVIII).\nPatrimônio público coletivo = ação popular (LXXIII).\n\nNear-transfer: se o condutor estivesse preso na base da PM por recusar o teste, o remédio seria habeas corpus — mas veículo quitado retido no pátio pede mandado de segurança.",
+            "destaques": ["MS", "HC", "ação popular"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, LXIX",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        },
+        {
+          "rotulo": "CF/88, art. 5º, LXVIII",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "mandado_seguranca",
+      "art5_lxix",
+      "remedios_constitucionais",
+      "direito_liquido_certo",
+      "sttp"
+    ]
+  }
+]

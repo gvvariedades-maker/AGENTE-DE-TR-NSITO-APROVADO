@@ -1,0 +1,155 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 255,
+  "fundamento_slug": "CTB_art_40_II",
+  "macete_visual": "NÃO ILUMINADA = ALTA · cruzar/seguir = baixa · chuva dia = baixa",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Seguir outro veículo em via não iluminada exige farol baixo — a exceção do inciso II",
+    "eixos_legais": ["CTB_art_40_II", "CTB_art_40_I"],
+    "isca_por_alternativa": {
+      "B": "troca farol baixo por luzes de posição na chuva diurna — termo_unico",
+      "C": "invoca inciso IV revogado — numero_vizinho",
+      "D": "amplia piscar de farol além das duas hipóteses do inc. III — regra_excecao"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-075.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: alta ao seguir em via escura",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito A.\n\nB — bastaram luzes de posição na chuva: inciso I exige farol baixo de dia sob chuva.\nC — citou inciso IV: revogado pela Lei 14.071/2020 — regra migrou ao inciso I, alínea b.\nD — liberou piscar a qualquer tempo: inciso III só admite duas finalidades.\n\nNesta aula você fixa a regra da via não iluminada e suas duas exceções.",
+        "destaques": ["Gabarito A", "ao segui-lo", "via não iluminada"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "VIA NÃO ILUMINADA: trecho sem iluminação pública suficiente — gatilho do inciso II do art. 40 para luz alta.\n\nLUZ ALTA: farol alto — obrigatório nessa hipótese, salvo exceções legais.\n\nAO SEGUI-LO: perseguir outro veículo no mesmo sentido — exceção que impõe baixar o farol.",
+        "destaques": ["NÃO ILUMINADA", "LUZ ALTA", "AO SEGUI-LO"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: qual farol na via escura?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Via é não iluminada?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Cruza ou segue outro veículo?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Usar luz alta", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Não" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Art. 40 — incisos I e II",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Inciso", "Farol"],
+        "linhas": [
+          { "faixa": "I — noite", "classificacao": "Luz baixa obrigatória" },
+          { "faixa": "I-b — chuva de dia", "classificacao": "Luz baixa em túneis e sob chuva, neblina ou cerração" },
+          { "faixa": "II — via não iluminada", "classificacao": "Luz alta, exceto cruzar ou seguir", "destaque": true }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: alta sempre na escuridão",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Via escura = farol alto mesmo colado no outro", "Ao seguir outro veículo, não se usa luz alta"],
+          ["Chuva de dia dispensa farol baixo", "Inciso I-b exige luz baixa sob chuva, mesmo de dia"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["B — termo_unico", "Substitui farol baixo obrigatório por luzes de posição facultativas na chuva diurna"],
+          ["C — numero_vizinho", "Invoca inciso IV revogado — regra atual está no inciso I, alínea b"],
+          ["D — regra_excecao", "Amplia piscar de farol além de ultrapassar ou alertar risco contrário"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Trecho sem iluminação pública à noite", "Incide inciso II — regra da luz alta"],
+          ["SUV segue pickup com farol alto acionado", "Exceção ao segui-lo — deve baixar o farol"],
+          ["Resultado", "Gabarito A — alta salvo cruzar ou seguir"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Inciso I × inciso II",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Inciso", "Hipótese"],
+        "linhas": [
+          ["I e I-b", "Luz baixa à noite ou de dia em túneis/chuva/neblina/cerração"],
+          ["II", "Luz alta em via não iluminada — exceto cruzar ou seguir"],
+          ["Pegadinha B", "Chuva diurna pede baixa (I-b), não posição facultativa"]
+        ]
+      }
+    },
+    {
+      "id": "lei40ii",
+      "titulo": "Art. 40, II — literal da regra",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 40, II",
+        "texto": "II - nas vias não iluminadas o condutor deve usar luz alta, exceto ao cruzar com outro veículo ou ao segui-lo;",
+        "trechos_grifados": [
+          { "inicio": 14, "fim": 28, "motivo": "glossario — trecho sem iluminação pública do caso" },
+          { "inicio": 50, "fim": 58, "motivo": "mapa — regra geral do inciso II" },
+          { "inicio": 98, "fim": 109, "motivo": "caso — exceção ao seguir o pickup à frente" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "NÃO ILUMINADA = ALTA (inc. II).\nCruzar ou seguir = baixa.\nChuva de dia = baixa (inc. I-b).\nIV revogado — não cair na pegadinha.\n\nNear-transfer: à noite em estrada sem postes, ao encostar atrás de caminhão, baixe o farol — seguir é exceção à luz alta.",
+        "destaques": ["NÃO ILUMINADA = ALTA", "ao segui-lo", "Near-transfer"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 40", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

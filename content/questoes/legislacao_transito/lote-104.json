@@ -1,0 +1,306 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_993_equipamentos",
+    "tipo": "assertivas",
+    "estilo_idecan": "assertivas",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_993_anexo_I_t1_macaco",
+    "enunciado": "Sobre os equipamentos obrigatórios previstos na Resolução CONTRAN nº 993/2023, analise as assertivas e assinale a alternativa CORRETA:\n\nI. A responsabilidade por veículos circularem sem os requisitos da Resolução recai apenas sobre fabricantes e importadores, não sobre proprietários ou condutores abordados em fiscalização (art. 8º).\n\nII. Segundo o Anexo I (Tabela 1), o macaco compatível com o peso e a carga do veículo é equipamento obrigatório para automóveis em circulação.\n\nIII. Segundo o Anexo I (Tabela 1), o sistema de retenção da cadeira de rodas e seu usuário é obrigatório apenas para micro-ônibus, não para automóveis, camionetas ou caminhonetes.",
+    "alternativas": {
+      "A": "Está correto o que se afirma em II, apenas — acerta o macaco na Tabela 1, mas ignora a III sobre retenção de cadeira de rodas no micro-ônibus.",
+      "B": "Está correto o que se afirma em I e II, apenas — inclui responsabilidade exclusiva de fabricantes e macaco obrigatório em automóveis.",
+      "C": "Está correto o que se afirma em II e III, apenas — macaco obrigatório em automóveis e retenção de cadeira de rodas restrita ao micro-ônibus na Tabela 1.",
+      "D": "Está correto o que se afirma em I, II e III — inclusive responsabilidade só de fabricantes e retenção de cadeira de rodas em toda a frota leve."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Leitura do Anexo I, Tabela 1 (macaco × retenção de cadeira de rodas) cruzada com art. 3º (equipamentos do Anexo I) e art. 8º (penalidades do art. 230 do CTB a proprietários/condutores).",
+      "fundamento_legal": "Res. CONTRAN 993/2023, art. 3º, caput: veículos devem estar dotados dos equipamentos obrigatórios do Anexo I. Art. 8º: proprietários ou condutores com veículos desprovidos dos requisitos ficam sujeitos às penalidades do art. 230 do CTB. Anexo I, Tabela 1: macaco com X para automóvel, camioneta, utilitário, caminhonete e micro-ônibus; sistema de retenção da cadeira de rodas com X apenas na coluna Micro-ônibus.",
+      "passo_a_passo": [
+        "1. I falsa — art. 8º responsabiliza proprietários ou condutores, não só fabricantes; II correta — macaco obrigatório para automóvel na Tabela 1; III correta — retenção de cadeira de rodas só no micro-ônibus.",
+        "2. A erra por termo_unico (marca só II e ignora III correta); B erra por regra_excecao (inclui I falsa que exclui condutor/proprietário do art. 8º); D erra por gravidade (compra I falsa e generaliza retenção de cadeira de rodas a toda frota leve).",
+        "3. Gabarito C: II e III corretas — leitura fiel da Tabela 1 para macaco e retenção de cadeira de rodas, sem aderir à I."
+      ],
+      "pegadinha": "A banca induz a marcar B porque I cita o art. 8º — mas o art. 8º responsabiliza proprietário/condutor; a isca paralela é achar que retenção de cadeira de rodas vale para automóvel.",
+      "macete": "993 TABELA 1: MACACO = leves com X · CADEIRA DE RODAS = só micro-ônibus · art. 8 = condutor/proprietário → art. 230.",
+      "estudo_reverso": [
+        "Res. CONTRAN 993/2023 art. 3",
+        "Res. CONTRAN 993/2023 art. 8",
+        "Res. CONTRAN 993/2023 Anexo I Tabela 1"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "B_assertivas",
+      "pegadinha_em_uma_frase": "I distorce art. 8º (só fabricante) — macaco e cadeira de rodas exigem leitura colunar da Tabela 1",
+      "eixos_legais": [
+        "CONTRAN_993_art_3",
+        "CONTRAN_993_art_8",
+        "CONTRAN_993_anexo_I_t1"
+      ],
+      "isca_por_alternativa": {
+        "A": "marca só II e ignora III correta sobre cadeira de rodas no micro-ônibus",
+        "B": "compra I falsa que exclui proprietário/condutor do art. 8º",
+        "D": "compra I falsa e generaliza retenção de cadeira de rodas a toda frota leve"
+      },
+      "eixos_mecanismo": [
+        "termo_unico",
+        "regra_excecao",
+        "gravidade"
+      ]
+    },
+    "tags": [
+      "contran_993",
+      "equipamentos",
+      "macaco",
+      "cadeira_rodas",
+      "tabela_1",
+      "art_230"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "matriz_assertivas",
+      "arquetipo_secundario": "tabela_gradacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CONTRAN_993_anexo_I_t1_macaco",
+      "macete_visual": "Macaco = leves · cadeira rodas = micro-ônibus",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (II e III). A isca é a I: responsabilidade atinge proprietário e condutor — não só fabricante.",
+            "destaques": ["Gabarito C", "Tabela 1", "micro-ônibus"]
+          }
+        },
+        {
+          "id": "assertivas",
+          "titulo": "Mapa I–III",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              { "id": "I", "texto": "Só fabricante responde — ERRADA (art. 8º)", "correto": false },
+              { "id": "II", "texto": "Macaco obrigatório em automóvel — correta", "correto": true },
+              { "id": "III", "texto": "Cadeira de rodas só no micro-ônibus — correta", "correto": true }
+            ],
+            "gabarito_resumo": "II e III corretas → alternativa C"
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Tabela 1: macaco × cadeira de rodas",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Equipamento", "Tabela 1"],
+            "linhas": [
+              { "faixa": "Macaco — automóvel", "classificacao": "Obrigatório (X)", "destaque": true },
+              { "faixa": "Cadeira de rodas — micro-ônibus", "classificacao": "Obrigatório (X)" },
+              { "faixa": "Cadeira de rodas — automóvel", "classificacao": "Sem X — isca da III" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "MACACO = leves com X na Tabela 1.\nCADEIRA DE RODAS = só micro-ônibus.\nArt. 8: condutor/proprietário → art. 230.",
+            "destaques": ["MACACO", "micro-ônibus", "art. 230"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 993/2023",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 993, DE 15 DE JUNHO DE 2023.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "matriz_assertivas",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "todos",
+      "duracao_estimada_seg": 225,
+      "fundamento_slug": "CONTRAN_993_anexo_I_t1_macaco",
+      "macete_visual": "Macaco = leves · cadeira rodas = micro-ônibus · art. 8 = art. 230",
+      "meta": {
+        "padrao_familia": "B_assertivas",
+        "pegadinha_em_uma_frase": "I distorce art. 8º (só fabricante) — macaco e cadeira de rodas exigem leitura colunar da Tabela 1",
+        "eixos_legais": [
+          "CONTRAN_993_art_3",
+          "CONTRAN_993_art_8",
+          "CONTRAN_993_anexo_I_t1"
+        ],
+        "isca_por_alternativa": {
+          "A": "marca só II e ignora III correta sobre cadeira de rodas no micro-ônibus",
+          "B": "compra I falsa que exclui proprietário/condutor do art. 8º",
+          "D": "compra I falsa e generaliza retenção de cadeira de rodas a toda frota leve"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: a isca é a assertiva I",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (II e III corretas).\n\nA — marcou só II; esqueceu III sobre cadeira de rodas só no micro-ônibus.\nB — comprou I falsa (responsabilidade só de fabricantes).\nD — tratou todas corretas, incluindo I falsa.\n\nPegadinha: proprietário ou condutor respondem pela falta de equipamento — não exclui fiscalização.",
+            "destaques": ["Gabarito C", "I", "Tabela 1"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "TABELA 1: equipamentos para veículos leves até 3.500 kg — cada coluna (automóvel, camioneta, utilitário, caminhonete, micro-ônibus) tem marcações distintas.\n\nMACACO: equipamento de pneus/rodas — linha com X nas colunas de veículos leves.\n\nRETENÇÃO DE CADEIRA DE RODAS: equipamento de segurança passiva — X apenas na coluna micro-ônibus.",
+            "destaques": ["TABELA 1", "MACACO", "CADEIRA DE RODAS"]
+          }
+        },
+        {
+          "id": "matriz",
+          "titulo": "Classificar I–III",
+          "secao": "metodo",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              { "id": "I", "texto": "Só fabricante responde — ERRADA (proprietário/condutor no art. 8º)", "correto": false },
+              { "id": "II", "texto": "Macaco obrigatório em automóvel — correta (Tabela 1)", "correto": true },
+              { "id": "III", "texto": "Cadeira de rodas só no micro-ônibus — correta (Tabela 1)", "correto": true }
+            ],
+            "gabarito_resumo": "II e III corretas → alternativa C"
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Macaco × cadeira de rodas na Tabela 1",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Hipótese", "Marcação na Tabela 1"],
+            "linhas": [
+              { "faixa": "Macaco em automóvel", "classificacao": "Obrigatório — X", "destaque": true },
+              { "faixa": "Cadeira de rodas em automóvel/caminhonete", "classificacao": "Não obrigatório — sem X" },
+              { "faixa": "Cadeira de rodas em micro-ônibus", "classificacao": "Obrigatório — X" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Assertiva-isca: I",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a I afirma ✗", "O que o art. 8º diz ✓"],
+            "linhas": [
+              [
+                "Responsabilidade só de fabricantes/importadores",
+                "Proprietários ou condutores sujeitos ao art. 230 do CTB"
+              ],
+              [
+                "Condutor abordado estaria isento",
+                "Fiscalização pode autuar quem circula sem requisitos"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Marca só II correta; ignora III sobre cadeira de rodas no micro-ônibus"
+              ],
+              [
+                "B — regra_excecao",
+                "Inclui I falsa — exclui proprietário/condutor do art. 8º"
+              ],
+              [
+                "D — gravidade",
+                "Compra I falsa e generaliza retenção de cadeira de rodas à frota leve"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Montando o gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Assertiva", "Veredito"],
+            "linhas": [
+              ["I — só fabricante responde", "Falsa — art. 8º inclui proprietário/condutor"],
+              ["II — macaco em automóvel", "Correta — Tabela 1 com X"],
+              ["III — cadeira de rodas só micro-ônibus", "Correta — demais leves sem X"],
+              ["Resultado", "II + III = alternativa C"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 8º — penalidades ao condutor",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 993/2023, art. 8º",
+            "texto": "Art. 8º Os proprietários ou condutores cujos veículos circularem em vias públicas desprovidos dos requisitos estabelecidos nesta Resolução ficam sujeitos às penalidades constantes no art. 230 do CTB, no que couber, respeitadas as exceções e situações particulares previstas nesta Resolução.",
+            "trechos_grifados": [
+              {
+                "inicio": 183,
+                "fim": 198,
+                "motivo": "contraste — I falsa: condutor/proprietário respondem",
+                "texto_grifado": "art. 230 do CTB"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 3º — equipamentos do Anexo I",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 993/2023, art. 3º, caput",
+            "texto": "Art. 3º Para circular em vias públicas, os veículos de que trata do art. 2º devem estar dotados dos equipamentos obrigatórios relacionados no Anexo I, conforme o caso.",
+            "trechos_grifados": [
+              {
+                "inicio": 100,
+                "fim": 149,
+                "motivo": "matriz — II e III leem o Anexo I (Tabela 1)",
+                "texto_grifado": "equipamentos obrigatórios relacionados no Anexo I"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "993 TABELA 1: MACACO = X nos leves · CADEIRA DE RODAS = só micro-ônibus · art. 8 = condutor/proprietário → art. 230.\n\nNear-transfer: se a banca trocar automóvel por caminhonete na II, o macaco continua obrigatório — leia a coluna do tipo de veículo na Tabela 1.",
+            "destaques": ["MACACO", "micro-ônibus", "caminhonete"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 993/2023",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 993, DE 15 DE JUNHO DE 2023.pdf"
+        },
+        {
+          "rotulo": "Res. CONTRAN 993/2023 — Anexo I",
+          "path": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9932023Anexo.pdf"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,260 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 210,
+  "fundamento_slug": "info_backup_incremental_completo",
+  "macete_visual": "Completo+todos | Incremental=anterior | Diferencial=último completo",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Incremental de terça não substitui a cadeia desde domingo — confunde com diferencial",
+    "eixos_legais": [
+      "info_backup_completo",
+      "info_backup_incremental_cadeia"
+    ],
+    "eixos_mecanismo": [
+      "regra_excecao",
+      "termo_unico"
+    ],
+    "isca_por_alternativa": {
+      "A": "dispensa incrementais — só completo de domingo basta",
+      "C": "trata incremental como diferencial desde domingo",
+      "D": "inventa backup diferencial na política incremental"
+    },
+    "referencia_lote": "content/questoes/informatica/lote-005.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: restaurar exige a cadeia",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B (completo + incrementais até terça).\n\nA — dispensa incrementais: só o domingo não chega ao estado de terça.\nC — trata incremental como diferencial: terça não acumula tudo desde domingo.\nD — inventa diferencial: política STTP usa incremental de segunda a sábado.\n\nRansomware na quarta — recuperar pasta de autuações até terça-feira.",
+        "destaques": [
+          "incremental",
+          "completo",
+          "terça"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 tipos de backup",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "COMPLETO = copia todos os arquivos selecionados. INCREMENTAL = só o que mudou desde o backup imediatamente anterior. DIFERENCIAL = só o que mudou desde o último backup completo.",
+        "destaques": [
+          "COMPLETO",
+          "INCREMENTAL",
+          "DIFERENCIAL"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: como restaurar até terça?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Política STTP: completo domingo + incremental diário?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Precisa do estado de terça (antes do ransomware)?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Restaurar completo + incrementais até terça (B)",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Mapa dos três backups",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Tipo",
+          "O que copia"
+        ],
+        "linhas": [
+          {
+            "faixa": "Completo",
+            "classificacao": "Todos os arquivos (domingo STTP)"
+          },
+          {
+            "faixa": "Incremental",
+            "classificacao": "Alterações desde o backup anterior",
+            "destaque": true
+          },
+          {
+            "faixa": "Diferencial",
+            "classificacao": "Alterações desde o último completo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: incremental ≠ diferencial",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o colega diz ✗",
+          "O que a política faz ✓"
+        ],
+        "linhas": [
+          [
+            "Incremental de terça = tudo desde domingo (como diferencial)",
+            "Incremental de terça = só mudanças desde segunda"
+          ],
+          [
+            "Basta o completo de domingo",
+            "Restaurar exige completo + incrementais em sequência"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Dispensa incrementais — são necessários para chegar ao estado de terça"
+          ],
+          [
+            "C — termo_unico",
+            "Confunde incremental com diferencial — terça não acumula desde domingo"
+          ],
+          [
+            "D — termo_unico",
+            "Inventa backup diferencial — STTP usa incremental de segunda a sábado"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Caso STTP — ransomware na quarta",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do enunciado",
+          "Resultado"
+        ],
+        "linhas": [
+          [
+            "Completo domingo + incremental seg–sáb",
+            "Cadeia: restaurar domingo, depois seg, ter"
+          ],
+          [
+            "Ransomware quarta — alvo terça-feira",
+            "Gabarito B — completo + incrementais até terça"
+          ],
+          [
+            "Colega dispensa incrementais ou cita diferencial",
+            "Pegadinha incremental×diferencial"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "2º eixo: incremental × diferencial",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Incremental (STTP)",
+          "Diferencial (não usado)"
+        ],
+        "linhas": [
+          [
+            "Referência: backup imediatamente anterior",
+            "Referência: último backup completo"
+          ],
+          [
+            "Terça: só arquivos alterados desde segunda",
+            "Terça: tudo alterado desde domingo em um só arquivo"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Referência — tipos de backup",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Anexo I — Informática, item 8.3",
+        "texto": "O backup completo copia todos os arquivos selecionados. O backup incremental copia apenas alterações desde o backup imediatamente anterior. O backup diferencial copia alterações desde o último backup completo.",
+        "trechos_grifados": [
+          {
+            "inicio": 58,
+            "fim": 138,
+            "motivo": "mapa — incremental desde o anterior (política STTP)",
+            "texto_grifado": "backup incremental copia apenas alterações desde o backup imediatamente anterior"
+          },
+          {
+            "inicio": 142,
+            "fim": 208,
+            "motivo": "eixo2 — diferencial desde o último completo (isca da assertiva C)",
+            "texto_grifado": "backup diferencial copia alterações desde o último backup completo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Completo = tudo | Incremental = desde o anterior | Diferencial = desde o último completo.\n\nNear-transfer: backup completo no sábado e incremental no domingo — restaurar domingo exige sábado + incremental, não só o completo isolado se a política for em cadeia.",
+        "destaques": [
+          "Incremental",
+          "Diferencial",
+          "completo"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Anexo I — Informática, item 8.3",
+      "path": "conteúdo/edital/"
+    }
+  ]
+}

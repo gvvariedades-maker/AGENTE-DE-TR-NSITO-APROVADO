@@ -1,0 +1,342 @@
+[
+  {
+    "disciplina": "direito_constitucional",
+    "topico": "dir_const_4_3",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "enunciado": "Em Campina Grande, empresa contratada para operar estacionamento rotativo municipal aplica talão de remoção e mantém o veículo no pátio da concessionária mesmo após o condutor apresentar comprovante de pagamento pelo aplicativo municipal. O preposto da empresa invoca \"divergência de sistema\" e nega a liberação por setenta e duas horas. O proprietário impetra remédio constitucional contra o agente da pessoa jurídica e questiona se a STTP deveria intervir diretamente na liberação. Com base na Constituição Federal de 1988, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Cabe habeas corpus, porque a retenção do veículo no pátio da concessionária impede o condutor de se locomover, configurando coação ilegal à liberdade prevista no art. 5º, LXVIII.",
+      "B": "Cabe habeas data para retificar o registro de pagamento no sistema municipal, pois o art. 5º, LXXII alcança informações relativas ao impetrante em bancos de dados de entidades de caráter público.",
+      "C": "Cabe mandado de segurança: o preposto da concessionária atua como agente de pessoa jurídica no exercício de atribuições do Poder Público (art. 5º, LXIX); a retenção após pagamento lesiona direito líquido e certo não amparado por habeas corpus ou habeas data, sem coação pessoal à locomoção (art. 5º, LXVIII).",
+      "D": "A concessionária pode manter o veículo por setenta e duas horas para reconciliação de sistema, dispensando remédio constitucional quando há divergência entre o aplicativo e o talão de remoção."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Cabimento do mandado de segurança contra agente de pessoa jurídica no exercício de atribuições do Poder Público (art. 5º, LXIX), em contraste com habeas corpus (locomoção pessoal, LXVIII), habeas data (acesso/retificação de dados, LXXII) e exceção inexistente à liberação após pagamento.",
+      "fundamento_legal": "CF/88, art. 5º, LXIX: \"conceder-se-á mandado de segurança para proteger direito líquido e certo, não amparado por habeas corpus ou habeas data, quando o responsável pela ilegalidade ou abuso de poder for autoridade pública ou agente de pessoa jurídica no exercício de atribuições do Poder Público\". CF/88, art. 5º, LXVIII: habeas corpus exige violência ou coação à liberdade de locomoção da pessoa — retenção de veículo quitado, sem custódia pessoal, não preenche o HC.",
+      "passo_a_passo": [
+        "1. O caso reúne retenção de veículo após comprovante de pagamento, ato do preposto da concessionária municipal (agente de pessoa jurídica no exercício de atribuições do Poder Público) e debate sobre competência da STTP — direito líquido e certo à liberação, sem coação à locomoção pessoal.",
+        "2. A erra por termo_unico (estende habeas corpus à retenção do veículo no pátio, confundindo impedimento de uso do bem com coação pessoal à locomoção); B erra por termo_unico (indica habeas data para retificar registro quando a lesão imediata é direito líquido e certo à liberação após pagamento — hipótese do mandado de segurança, não habeas data); D erra por regra_excecao (inventa prazo de setenta e duas horas de retenção por divergência de sistema, dispensando remédio constitucional).",
+        "3. C está correta: cabe mandado de segurança (LXIX) — agente de pessoa jurídica no exercício de atribuições do Poder Público, direito líquido e certo não amparado por HC ou habeas data; não há lesão à locomoção pessoal (LXVIII)."
+      ],
+      "pegadinha": "A banca troca mandado de segurança (direito líquido e certo contra agente de concessionária) por habeas corpus (locomoção pessoal), habeas data (dados no sistema) ou inventa prazo de retenção por \"divergência de sistema\".",
+      "macete": "Agente de concessionária + líquido e certo = MS (LXIX). Pessoa coacta = HC (LXVIII). Só corrigir dado = habeas data (LXXII). Pagou ≠ ficar 72h no pátio.",
+      "estudo_reverso": [
+        "CF art. 5º, LXIX",
+        "CF art. 5º, LXVIII",
+        "CF art. 5º, LXXII"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CF_art5_LXIX_LXVIII",
+      "macete_visual": "Agente PJ = MS",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Veículo retido no pátio da concessionária de rotativo após pagamento comprovado. A banca oferece HC, habeas data ou prazo de 72h — agente de empresa pública lesando direito líquido e certo pede mandado de segurança.",
+            "destaques": ["mandado de segurança", "concessionária", "direito líquido"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método rápido",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Há coação à locomoção da pessoa?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Agente de PJ violou direito líquido e certo?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Mandado de segurança — LXIX", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não — só veículo retido" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim — pagamento ignorado" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["HC pelo veículo no pátio", "MS — lesão é líquida e certa, não locomoção pessoal"],
+              ["Habeas data para corrigir sistema", "MS — liberação após pagamento, não só retificar dado"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXIX",
+            "texto": "conceder-se-á mandado de segurança para proteger direito líquido e certo, não amparado por habeas corpus ou habeas data, quando o responsável pela ilegalidade ou abuso de poder for autoridade pública ou agente de pessoa jurídica no exercício de atribuições do Poder Público",
+            "trechos_grifados": [
+              {
+                "inicio": 203,
+                "fim": 273,
+                "motivo": "pegadinha — agente da concessionária rotativa",
+                "texto_grifado": "agente de pessoa jurídica no exercício de atribuições do Poder Público"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Agente de concessionária + líquido e certo = MS (LXIX). Pessoa coacta = HC. Só corrigir dado = habeas data. Pagou ≠ 72h no pátio.",
+            "destaques": ["MS", "agente", "líquido e certo"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, LXIX",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 245,
+      "fundamento_slug": "CF_art5_LXIX_LXVIII",
+      "macete_visual": "Agente PJ = MS",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Retenção após pagamento no rotativo pede MS contra agente da concessionária — não HC, habeas data nem prazo de 72h",
+        "eixos_legais": ["CF_art5_LXIX", "CF_art5_LXVIII"],
+        "isca_por_alternativa": {
+          "A": "habeas corpus pela retenção do veículo no pátio da concessionária",
+          "B": "habeas data para retificar registro de pagamento no sistema municipal",
+          "D": "concessionária pode manter o veículo 72h por divergência de sistema sem remédio"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: MS × concessionária",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (mandado de segurança contra agente da concessionária).\n\nA — habeas corpus pelo veículo retido no pátio rotativo.\nB — habeas data para corrigir o registro de pagamento no sistema.\nD — concessionária mantém o carro 72h por divergência de sistema sem remédio.\n\nPromessa: fixar quando o preposto da empresa contratada responde por MS e não por HC ou habeas data.",
+            "destaques": ["mandado de segurança", "concessionária", "rotativo"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de decidir: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DIREITO LÍQUIDO E CERTO: demonstrável de plano — pagamento comprovado e retenção indevida. AGENTE DE PESSOA JURÍDICA (art. 5º, LXIX): preposto de concessionária que exerce atribuições do Poder Público responde como autoridade para fins de MS. HABEAS DATA (art. 5º, LXXII): acesso ou retificação de dados próprios — não substitui MS quando a lesão é liberação de bem após pagamento.",
+            "destaques": ["líquido e certo", "agente", "habeas data"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual remédio cabe?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Há coação à locomoção da pessoa?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Agente de PJ violou direito líquido e certo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Mandado de segurança — LXIX",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não — só veículo no pátio" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim — pagamento ignorado" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa: remédios na retenção do veículo",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Lesão", "Remédio"],
+            "linhas": [
+              { "faixa": "Coação pessoal à locomoção", "classificacao": "Habeas corpus — LXVIII" },
+              { "faixa": "Direito líquido e certo contra agente de PJ", "classificacao": "Mandado de segurança — LXIX" },
+              { "faixa": "Acesso ou retificação de dados próprios", "classificacao": "Habeas data — LXXII" },
+              {
+                "faixa": "Retenção após pagamento no rotativo",
+                "classificacao": "MS — C correta",
+                "destaque": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença × lei: veículo × pessoa",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Veículo no pátio = habeas corpus",
+                "HC exige coação à locomoção da pessoa (LXVIII)"
+              ],
+              [
+                "Divergência de sistema autoriza 72h de retenção",
+                "Pagamento comprovado gera direito líquido e certo à liberação"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Estende habeas corpus à retenção do veículo, confundindo bem com locomoção pessoal"
+              ],
+              [
+                "B — termo_unico",
+                "Indica habeas data para retificar registro quando a lesão imediata é liberação após pagamento"
+              ],
+              [
+                "D — regra_excecao",
+                "Inventa prazo de setenta e duas horas de retenção por divergência de sistema sem base legal"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o pátio do rotativo",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Conclusão"],
+            "linhas": [
+              ["Comprovante de pagamento pelo aplicativo municipal", "Direito líquido e certo à liberação"],
+              ["Preposto da concessionária nega liberação por 72h", "Agente de PJ no exercício de atribuições públicas"],
+              ["Proprietário impetra contra agente da pessoa jurídica", "Mandado de segurança — LXIX"],
+              ["Resultado", "Alternativa C"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "LXIX × LXVIII × LXXII — três remédios",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Papel no caso"],
+            "linhas": [
+              ["Art. 5º, LXIX", "MS — agente de concessionária + direito líquido e certo"],
+              ["Art. 5º, LXVIII", "HC excluído — sem coação à locomoção pessoal"],
+              ["Art. 5º, LXXII", "Habeas data excluído — lesão não é só retificar dado"],
+              ["Caso concreto", "Retenção após pagamento → mandado de segurança"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 5º, LXIX — mandado de segurança",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXIX",
+            "texto": "conceder-se-á mandado de segurança para proteger direito líquido e certo, não amparado por habeas corpus ou habeas data, quando o responsável pela ilegalidade ou abuso de poder for autoridade pública ou agente de pessoa jurídica no exercício de atribuições do Poder Público",
+            "trechos_grifados": [
+              {
+                "inicio": 49,
+                "fim": 72,
+                "motivo": "fluxo — base do remédio no caso",
+                "texto_grifado": "direito líquido e certo"
+              },
+              {
+                "inicio": 203,
+                "fim": 273,
+                "motivo": "caso — preposto da concessionária rotativa",
+                "texto_grifado": "agente de pessoa jurídica no exercício de atribuições do Poder Público"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 5º, LXVIII — exclusão do HC",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXVIII",
+            "texto": "conceder-se-á habeas corpus sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder",
+            "trechos_grifados": [
+              {
+                "inicio": 111,
+                "fim": 133,
+                "motivo": "contraste — veículo no pátio não é locomoção pessoal",
+                "texto_grifado": "liberdade de locomoção"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Agente de concessionária + líquido e certo = MS (LXIX).\nPessoa coacta = HC (LXVIII).\nSó corrigir dado = habeas data (LXXII).\nPagou ≠ ficar 72h no pátio.\n\nNear-transfer: se o preposto negasse apenas acesso ao extrato de débitos no sistema, caberia habeas data — mas reter o veículo após pagamento comprovado pede mandado de segurança.",
+            "destaques": ["MS", "agente", "habeas data"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, LXIX",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        },
+        {
+          "rotulo": "CF/88, art. 5º, LXVIII",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "art5_lxix",
+      "art5_lxviii",
+      "mandado_seguranca",
+      "agente_pessoa_juridica",
+      "estacionamento_rotativo",
+      "sttp"
+    ]
+  }
+]

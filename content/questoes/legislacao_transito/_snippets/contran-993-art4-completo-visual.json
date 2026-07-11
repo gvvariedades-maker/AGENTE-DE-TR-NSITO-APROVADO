@@ -1,0 +1,165 @@
+{
+  "versao": 2,
+  "arquetipo": "matriz_assertivas",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "todos",
+  "duracao_estimada_seg": 220,
+  "fundamento_slug": "CONTRAN_993_art_4",
+  "macete_visual": "EMI/bike = norma própria · estrangeiro = ressalva · extintor = micro-ônibus",
+  "meta": {
+    "padrao_familia": "B_assertivas",
+    "pegadinha_em_uma_frase": "II generaliza extintor a automóveis — na Tabela 1 só micro-ônibus tem X(46)",
+    "eixos_legais": ["CONTRAN_993_art_4", "CONTRAN_993_art_6", "CONTRAN_993_anexo_I_t1"],
+    "isca_por_alternativa": {
+      "A": "marca só I e ignora III correta (veículos estrangeiros)",
+      "C": "compra II que estende extintor a automóveis/caminhonetes",
+      "D": "compra II falsa e generaliza extintor em toda Tabela 1 leve"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: a isca é a assertiva II",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B (I e III corretas).\n\nA — marcou só I; esqueceu III sobre veículos estrangeiros com ressalva convencional.\nC — comprou II errada (extintor em automóveis/caminhonetes).\nD — tratou todas corretas, incluindo II falsa.\n\nPegadinha: extintor na Tabela 1 só consta para micro-ônibus.",
+        "destaques": ["Gabarito B", "II", "extintor"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos da Res. 993",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "ANEXO I TABELA 1: equipamentos para veículos leves até 3.500 kg — automóvel, camioneta, utilitário, caminhonete e micro-ônibus com colunas distintas.\n\nEMI E BICICLETA ELÉTRICA: ficam fora do Anexo I desta Resolução — norma própria em regulamentação específica.\n\nVEÍCULO ESTRANGEIRO: registrado no exterior em circulação no Brasil — aplica a Resolução com exceção de equipamentos cobertos por convenção internacional.",
+        "destaques": ["TABELA 1", "EMI", "ESTRANGEIRO"]
+      }
+    },
+    {
+      "id": "matriz",
+      "titulo": "Classificar I–III",
+      "secao": "metodo",
+      "tipo": "matriz_assertivas",
+      "conteudo": {
+        "itens": [
+          { "id": "I", "texto": "EMI/bike elétrica têm norma própria — correta (art. 4º, II)", "correto": true },
+          { "id": "II", "texto": "Extintor obrigatório em automóvel/caminhonete — ERRADA (só micro-ônibus)", "correto": false },
+          { "id": "III", "texto": "Veículo estrangeiro com ressalva convencional — correta (art. 6º)", "correto": true }
+        ],
+        "gabarito_resumo": "I e III corretas → alternativa B"
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Extintor na Tabela 1",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Tipo de veículo", "Extintor de incêndio"],
+        "linhas": [
+          { "faixa": "Automóvel / Camioneta / Utilitário", "classificacao": "Não obrigatório — sem X" },
+          { "faixa": "Caminhonete", "classificacao": "Não obrigatório — isca da II", "destaque": true },
+          { "faixa": "Micro-ônibus", "classificacao": "Obrigatório — X(46)" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Assertiva-isca: II",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que a II afirma ✗", "O que a Tabela 1 diz ✓"],
+        "linhas": [
+          ["Extintor obrigatório para automóveis e caminhonetes", "Extintor só na coluna Micro-ônibus — demais leves sem X"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — termo_unico", "Marca só I correta; ignora III também correta sobre veículos estrangeiros"],
+          ["C — regra_excecao", "Inclui II falsa — generaliza extintor a automóveis e caminhonetes"],
+          ["D — gravidade", "Compra II falsa e ainda trata toda a frota leve como obrigada a extintor"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Montando o gabarito",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Assertiva", "Veredito"],
+        "linhas": [
+          ["I — EMI/bike fora do Anexo I", "Correta (art. 4º, II)"],
+          ["II — extintor em automóveis/caminhonetes", "Falsa — Tabela 1: só micro-ônibus"],
+          ["III — veículo estrangeiro com ressalva", "Correta (art. 6º)"],
+          ["Resultado", "I + III = alternativa B"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 4º, II — EMI e bicicleta elétrica",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 993/2023, art. 4º, II",
+        "texto": "II - equipamento de mobilidade individual autopropelidos e bicicletas com motor elétrico auxiliar.",
+        "trechos_grifados": [
+          {
+            "inicio": 5,
+            "fim": 56,
+            "motivo": "matriz — I correta: norma própria fora do Anexo I",
+            "texto_grifado": "equipamento de mobilidade individual autopropelidos"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 6º — veículos estrangeiros",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 993/2023, art. 6º",
+        "texto": "Os veículos registrados em outros países e em circulação no território nacional devem atender ao disposto nesta Resolução, excetuando-se os equipamentos obrigatórios dispensados por convenções e acordos internacionais ratificados pelo Brasil.",
+        "trechos_grifados": [
+          {
+            "inicio": 182,
+            "fim": 217,
+            "motivo": "caso — III correta: ressalva convencional",
+            "texto_grifado": "convenções e acordos internacionais"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "993 em 3 blocos: art. 4 II = EMI/bike fora do Anexo I · art. 6 = estrangeiro com ressalva · Tabela 1 extintor = micro-ônibus.\n\nNear-transfer: se a banca trocar caminhonete por micro-ônibus na II, o extintor passa a ser obrigatório — leia a coluna do tipo de veículo.",
+        "destaques": ["EMI", "estrangeiro", "micro-ônibus"]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 993/2023",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 993, DE 15 DE JUNHO DE 2023.pdf"
+    },
+    {
+      "rotulo": "Res. CONTRAN 993/2023 — Anexo I",
+      "path": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9932023Anexo.pdf"
+    }
+  ]
+}

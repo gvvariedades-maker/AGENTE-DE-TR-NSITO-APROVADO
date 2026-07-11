@@ -1,0 +1,342 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_1013_free_flow",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_1013_art_5",
+    "enunciado": "Em maio de 2026, caminhão-trator com semirreboque passa por pedágio eletrônico em sistema free flow na BR-230, em Campina Grande/PB. A concessionária registrou a passagem e cobrou a tarifa com base na placa do semirreboque, classificando o conjunto como veículo de carga isolado. O transportador contesta, sustentando que a identificação deveria seguir a placa do reboque acoplado, pois é ele que define a categoria tarifária do eixo cobrado. Considerando a Resolução CONTRAN nº 1.013/2024, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Em combinação veicular, a identificação e a tarifa devem seguir a placa do semirreboque no pedágio eletrônico da BR-230.",
+      "B": "A cobrança errou a identificação: combinação veicular usa placa da unidade tratora; a tarifa segue a classificação do veículo.",
+      "C": "O prazo de noventa dias de guarda das imagens do pedágio eletrônico autoriza identificar o conjunto pela placa traseira.",
+      "D": "Compete ao DETRAN-PB definir a placa de cobrança no free flow, com homologação da STTP de Campina Grande."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Identificação em combinação veicular pela placa da tratora (art. 5º, § 3º) × classificação tarifária pelo tipo de veículo (inciso II e § 4º) — distinto da placa do semirreboque isolada.",
+      "fundamento_legal": "Res. CONTRAN 1.013/2024, art. 5º, caput: identificação concomitante por placa, classificação veicular e imagens. § 3º: 'Nos casos de combinação veicular, a identificação se dará pela placa de identificação veicular da unidade tratora.' § 4º: a classificação veicular indica o tipo de veículo para fins de cobrança, conforme regras do órgão com circunscrição sobre a via. § 1º: obrigação do proprietário de manter a placa em condições de visibilidade e legibilidade.",
+      "passo_a_passo": [
+        "1. Caso: caminhão-trator + semirreboque no free flow — concessionária usou placa do reboque e tarifa de carga isolada; transportador defende placa do semirreboque como marco identificador.",
+        "2. A erra por regra_excecao (inverte a regra do § 3º — a identificação é pela tratora, não pelo semirreboque); C erra por numero_vizinho (confunde prazo de 90 dias de armazenamento de imagens do § 7º, I, com critério de identificação); D erra por competencia_snt (atribui identificação/homologação ao DETRAN-PB ou STTP — art. 5º e art. 6º designam órgão com circunscrição sobre a via ou concessionária).",
+        "3. B correta: § 3º fixa placa da unidade tratora para identificar combinação; classificação tarifária é apartada (inciso II e § 4º), sem autorizar trocar o marco identificador pela placa do reboque."
+      ],
+      "pegadinha": "A banca mistura identificação (sempre tratora no § 3º) com classificação tarifária (tipo de veículo no § 4º) — o candidato compra a tese de que a placa do reboque manda na cobrança.",
+      "macete": "COMBINAÇÃO = placa da TRATORA (§ 3º) · tarifa = classificação do veículo (§ 4º) · 90 dias = imagem, não identificação.",
+      "estudo_reverso": [
+        "Res. CONTRAN 1.013/2024 art. 5",
+        "Res. CONTRAN 1.013/2024 art. 6",
+        "CTB art. 209-A"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Identificação em combinação é pela tratora (§ 3º) — não pela placa do semirreboque",
+      "eixos_legais": [
+        "CONTRAN_1013_art_5",
+        "CONTRAN_1013_art_5_par3",
+        "CONTRAN_1013_art_5_par4"
+      ],
+      "isca_por_alternativa": {
+        "A": "placa do semirreboque identifica e define tarifa",
+        "C": "90 dias de imagem autorizam placa traseira",
+        "D": "DETRAN/STTP definem placa de cobrança"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "numero_vizinho",
+        "competencia_snt"
+      ]
+    },
+    "tags": [
+      "contran_1013",
+      "free_flow",
+      "combinacao_veicular",
+      "placa_tratora",
+      "pedagio_eletronico"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_1013_art_5",
+      "macete_visual": "Combinação = placa tratora · tarifa = classificação",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: combinação veicular identifica pela placa da TRATORA — não do semirreboque.",
+            "destaques": ["Gabarito B", "tratora", "semirreboque"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Identificação × tarifa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Placa do reboque identifica o conjunto", "Placa da unidade tratora — § 3º"],
+              ["Foto traseira define identificação", "Classificação tarifária segue tipo de veículo — § 4º"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "COMBINAÇÃO = placa da TRATORA.\nTarifa = classificação do veículo.\n90 dias = guarda de imagem, não regra de placa.",
+            "destaques": ["TRATORA", "classificação", "90 dias"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.013/2024",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.013, DE 16 DE OUTUBRO DE 2024.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CONTRAN_1013_art_5",
+      "macete_visual": "Combinação = placa tratora · tarifa = classificação · 90d = imagem",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Identificação em combinação é pela tratora (§ 3º) — não pela placa do semirreboque",
+        "eixos_legais": [
+          "CONTRAN_1013_art_5",
+          "CONTRAN_1013_art_5_par3",
+          "CONTRAN_1013_art_5_par4"
+        ],
+        "isca_por_alternativa": {
+          "A": "placa do semirreboque identifica e define tarifa",
+          "C": "90 dias de imagem autorizam placa traseira",
+          "D": "DETRAN/STTP definem placa de cobrança"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: placa errada no conjunto",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — placa do semirreboque identifica e tarifa o conjunto.\nC — noventa dias de guarda de imagem autorizam usar a placa traseira.\nD — DETRAN-PB ou STTP definem a placa de cobrança no free flow.\n\nPegadinha: confundir identificação (tratora) com classificação tarifária.",
+            "destaques": ["Gabarito B", "semirreboque", "tratora"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos da Res. 1.013",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "COMBINAÇÃO VEICULAR: conjunto tratora + reboque/semirreboque — identificação pela placa da tratora.\n\nCLASSIFICAÇÃO VEICULAR: tipo de veículo para tarifa no pedágio eletrônico — inciso II do art. 5º.\n\nPEDÁGIO ELETRÔNICO: ponto de identificação e cobrança sem cancela no free flow.",
+            "destaques": ["COMBINAÇÃO", "CLASSIFICAÇÃO", "PEDÁGIO ELETRÔNICO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: caminhão-trator + semirreboque",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "É combinação veicular no pedágio eletrônico?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "A identificação usou placa da unidade tratora?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Cobrança equivocada — gabarito B",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — caso do enunciado" },
+              { "de": "p2", "para": "r1", "rotulo": "Não — usou placa do semirreboque" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Três eixos do art. 5º no free flow",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Eixo", "Regra"],
+            "linhas": [
+              {
+                "faixa": "Identificação — inciso I",
+                "classificacao": "Placa de identificação veicular"
+              },
+              {
+                "faixa": "Combinação — § 3º",
+                "classificacao": "Placa da unidade tratora",
+                "destaque": true
+              },
+              {
+                "faixa": "Tarifa — inciso II + § 4º",
+                "classificacao": "Classificação do tipo de veículo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: placa do reboque",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Semirreboque identifica e tarifa o conjunto",
+                "Identificação pela placa da unidade tratora — § 3º"
+              ],
+              [
+                "Placa traseira da foto define a cobrança",
+                "Classificação tarifária segue tipo de veículo — § 4º"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Inverte § 3º — identificação não é pela placa do semirreboque"
+              ],
+              [
+                "C — numero_vizinho",
+                "Confunde 90 dias de guarda de imagens com critério de identificação"
+              ],
+              [
+                "D — competencia_snt",
+                "Atribui identificação ao DETRAN-PB/STTP — cabe à concessionária/órgão da via"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "Caminhão-trator com semirreboque na BR-230",
+                "Combinação veicular — § 3º aplica"
+              ],
+              [
+                "Cobrança pela placa do semirreboque",
+                "Identificação equivocada — deveria ser tratora"
+              ],
+              [
+                "Transportador invoca placa do reboque",
+                "Confunde identificação com classificação tarifária"
+              ],
+              [
+                "Resultado",
+                "Alternativa B"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Identificação × classificação tarifária",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Função", "Fonte no art. 5º"],
+            "linhas": [
+              [
+                "Quem é o veículo no OCR/placa",
+                "Inciso I + § 3º — placa da tratora na combinação"
+              ],
+              [
+                "Quanto cobrar",
+                "Inciso II + § 4º — classificação veicular para tarifa"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 5º, § 3º — placa da tratora",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 1.013/2024, art. 5º, § 3º",
+            "texto": "Nos casos de combinação veicular, a identificação se dará pela placa de identificação veicular da unidade tratora.",
+            "trechos_grifados": [
+              {
+                "inicio": 98,
+                "fim": 113,
+                "motivo": "contraste — marco identificador é a unidade tratora",
+                "texto_grifado": "unidade tratora"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 5º, § 4º — classificação para tarifa",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 1.013/2024, art. 5º, § 4º",
+            "texto": "A classificação veicular de que trata o inciso II do caput deverá indicar o tipo de veículo para fins de cobrança de tarifas de pedágio, conforme regras estabelecidas pelo órgão ou entidade executivo com circunscrição sobre a via.",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 24,
+                "motivo": "eixo2 — tarifa segue classificação, não placa do reboque",
+                "texto_grifado": "A classificação veicular"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "COMBINAÇÃO = placa da TRATORA (§ 3º).\nTarifa = CLASSIFICAÇÃO do veículo (§ 4º).\n90 dias = guarda de imagem — não escolhe placa.\n\nNear-transfer: se a banca trocar semirreboque por bitrem com dois reboques, o marco de identificação continua sendo a placa da unidade tratora.",
+            "destaques": ["TRATORA", "CLASSIFICAÇÃO", "bitrem"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.013/2024",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.013, DE 16 DE OUTUBRO DE 2024.pdf"
+        }
+      ]
+    }
+  }
+]

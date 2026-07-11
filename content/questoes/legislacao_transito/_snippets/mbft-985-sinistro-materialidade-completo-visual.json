@@ -1,0 +1,264 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 285,
+  "fundamento_slug": "CONTRAN_985_mbft_sinistro_materialidade",
+  "macete_visual": "SINISTRO=convicção+MATERIAL · odor≠AIT",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Sinistro autoriza AIT com convicção, mas odor isolado é presunção subjetiva",
+    "eixos_legais": [
+      "CONTRAN_985_mbft_sinistro_materialidade"
+    ],
+    "isca_por_alternativa": {
+      "A": "autua só pela impressão no sinistro",
+      "B": "recolhe CNH sem prova por gravidade",
+      "D": "veda qualquer AIT em sinistro"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: sinistro não é cheque em branco",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — autua por impressão: MBFT veda presunção subjetiva isolada.\nB — recolhe CNH sem prova: gravidade não supre materialidade.\nD — veda AIT em sinistro: MBFT prevê autuação com convicção suficiente.\n\nOdor etílico, sem etilômetro nem outros elementos objetivos.",
+        "destaques": [
+          "Gabarito C",
+          "materialidade",
+          "sinistro"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "ELEMENTOS DE CONVICÇÃO: fatos objetivos que caracterizam a infração.\n\nMATERIALIDADE: prova concreta da conduta infracional efetivamente cometida.\n\nPRESUNÇÃO SUBJETIVA: impressão pessoal do agente sem lastro objetivo.",
+        "destaques": [
+          "CONVICÇÃO",
+          "MATERIALIDADE",
+          "PRESUNÇÃO"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: pode autuar no sinistro?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Há elementos objetivos de convicção?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "A prova é só impressão do agente?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Não lavrar embriaguez — gabarito C",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Não — só odor/fala"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — presunção subjetiva"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Mapa: sinistro e autuação",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Situação",
+          "Conduta do agente"
+        ],
+        "linhas": [
+          {
+            "faixa": "Convicção + materialidade",
+            "classificacao": "Pode lavrar AIT — ex.: não habilitado, veículo sem licenciamento"
+          },
+          {
+            "faixa": "Só presunção subjetiva",
+            "classificacao": "Não lavrar — falta materialidade",
+            "destaque": true
+          },
+          {
+            "faixa": "Sinistro sem infração constatada",
+            "classificacao": "Não lavrar AIT por dúvida genérica"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Sinistro × cheque em branco",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Crença ✗",
+          "MBFT ✓"
+        ],
+        "linhas": [
+          [
+            "Sinistro = pode autuar por intuição",
+            "Exige convicção suficiente com materialidade"
+          ],
+          [
+            "Odor etílico basta para AIT",
+            "Presunção subjetiva isolada é vedada"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Amplia sinistro para aceitar só impressão subjetiva"
+          ],
+          [
+            "B — gravidade",
+            "Recolhe CNH e autua sem materialidade da embriaguez"
+          ],
+          [
+            "D — competencia_snt",
+            "Inventa vedação total de AIT — MBFT prevê autuação no sinistro"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do caso",
+          "Efeito MBFT"
+        ],
+        "linhas": [
+          [
+            "Atendimento a sinistro",
+            "Hipótese do MBFT — pode autuar"
+          ],
+          [
+            "Odor etílico e fala arrastada",
+            "Indícios, mas sem prova objetiva"
+          ],
+          [
+            "Sem etilômetro, testes ou outros elementos",
+            "Falta materialidade"
+          ],
+          [
+            "Conduta correta",
+            "Não lavrar embriaguez — gabarito C"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Exemplos MBFT no sinistro",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Infração no sinistro",
+          "Materialidade?"
+        ],
+        "linhas": [
+          [
+            "Condutor não habilitado — CNH ausente",
+            "Sim — pode autuar"
+          ],
+          [
+            "Veículo sem licenciamento visível",
+            "Sim — exemplo MBFT"
+          ],
+          [
+            "Embriaguez só por odor (caso)",
+            "Não — presunção subjetiva"
+          ],
+          [
+            "Mau estado de conservação constatado",
+            "Sim — dano objetivo"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "MBFT — sinistro e materialidade",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7",
+        "texto": "No atendimento de sinistros de trânsito, lavrar-se-á o AIT quando houver constatação de infração de trânsito, em que o agente da autoridade de trânsito tiver elementos de convicção suficientes, que caracterizam a conduta infracional. Todavia, o fato circunstancial terá que se revestir de toda a materialidade relativa à infração efetivamente cometida e não de mera presunção subjetiva do agente.",
+        "trechos_grifados": [
+          {
+            "inicio": 158,
+            "fim": 192,
+            "motivo": "mapa — requisito positivo para autuar"
+          },
+          {
+            "inicio": 354,
+            "fim": 395,
+            "motivo": "contraste — veda odor/impressão isolados"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "SINISTRO = convicção + MATERIALIDADE · odor sozinho ≠ AIT.\n\nNear-transfer: mesmo sinistro, mas condutor não apresenta CNH e confessa não ser habilitado — aí há materialidade para autuar não habilitado.",
+        "destaques": [
+          "MATERIALIDADE",
+          "Near-transfer",
+          "odor"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "MBFT — Seção 7",
+      "path": "conteúdo/resoluções CONTRAN/MBFT-anexo-resolucao-985-2022-secao-07-autuacao.txt"
+    }
+  ]
+}

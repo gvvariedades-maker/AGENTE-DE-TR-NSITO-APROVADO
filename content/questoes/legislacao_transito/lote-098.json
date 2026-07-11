@@ -1,0 +1,348 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_conducao_embriaguez",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_276_277",
+    "enunciado": "Durante fiscalização da STTP em Campina Grande/PB, agente aplica etilômetro homologado em condutor que apresenta medição realizada (MR) de 0,04 mg/L de ar alveolar. Na Tabela de Valores Referenciais do Anexo I da Resolução CONTRAN nº 432/2013, o valor considerado (VC) após desconto do erro máximo admissível é nulo. O condutor sustenta que o agente é obrigado a lavrar Auto de Infração por embriaguez, pois o art. 276 do CTB dispõe que qualquer concentração de álcool sujeita o condutor às penalidades do art. 165. A equipe consulta o supervisor sobre a correção da conduta. Considerando o CTB e a Resolução CONTRAN nº 432/2013, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Não há infração do art. 165 pelo etilômetro: o art. 276, parágrafo único, remete ao Contran as margens de tolerância — a Res. 432/2013 fixa MR ≥ 0,05 mg/L; 0,04 mg/L fica abaixo.",
+      "B": "Há infração do art. 165: o caput do art. 276 dispensa limite numérico — qualquer resíduo detectável gera autuação, prevalecendo sobre a regulamentação do Contran.",
+      "C": "Há infração: o exame de sangue com qualquer concentração já configura embriaguez — o etilômetro de 0,04 mg/L obriga encaminhamento imediato e autuação sem aguardar margem metrológica.",
+      "D": "Só há infração se o valor considerado (VC) nulo atingir 0,05 mg/L — a medição realizada de 0,04 mg/L dispensa autuação pela STTP independentemente do caput do art. 276."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Art. 276 caput × parágrafo único — margens de tolerância do Contran (Res. 432/2013, art. 6º, II) temperam a regra de qualquer concentração; MR 0,04 mg/L fica abaixo do limite operacional de 0,05 mg/L.",
+      "fundamento_legal": "CTB, art. 276: 'Qualquer concentração de álcool por litro de sangue ou por litro de ar alveolar sujeita o condutor às penalidades previstas no art. 165.' Parágrafo único: 'O Contran disciplinará as margens de tolerância quando a infração for apurada por meio de aparelho de medição, observada a legislação metrológica.' Res. CONTRAN 432/2013, art. 6º, II: teste de etilômetro com medição realizada igual ou superior a 0,05 miligrama de álcool por litro de ar alveolar expirado (0,05 mg/L), descontado o erro máximo admissível.",
+      "passo_a_passo": [
+        "1. Caso: MR 0,04 mg/L, VC nulo após margem do Anexo I — condutor invoca art. 276 caput (qualquer concentração → art. 165) para exigir autuação.",
+        "2. B erra por regra_excecao (aplica o caput isolado — ignora que o § único do art. 276 remete margens ao Contran e a Res. 432/2013 fixa 0,05 mg/L); C erra por termo_unico (mistura exame de sangue com etilômetro e dispensa a disciplina metrológica do Anexo I); D erra por numero_vizinho (aplica o limite de 0,05 ao VC nulo em vez da MR — art. 6º, II, referencia medição realizada).",
+        "3. A correta: art. 276, § único, + Res. 432/2013, art. 6º, II — MR 0,04 < 0,05 → sem art. 165 pelo etilômetro."
+      ],
+      "pegadinha": "A IDECAN induz a ler só o caput do art. 276 ('qualquer concentração') — mas o parágrafo único remete ao Contran as margens, e a Res. 432/2013 opera com piso de 0,05 mg/L de MR.",
+      "macete": "276 caput = tese · § único = margem Contran · MR ≥ 0,05 (Res. 432) · VC ≠ piso.",
+      "estudo_reverso": [
+        "CTB art. 276",
+        "CTB art. 277",
+        "Res. CONTRAN 432/2013 art. 6"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Qualquer concentração não dispensa margem do Contran — piso operacional é MR 0,05",
+      "eixos_legais": [
+        "CTB_art_276",
+        "CONTRAN_432_art_6"
+      ],
+      "isca_por_alternativa": {
+        "B": "caput do art. 276 dispensa limite numérico e prevalece sobre o Contran",
+        "C": "exame de sangue com qualquer concentração dispensa margem do etilômetro",
+        "D": "limite de 0,05 vale para VC nulo, não para MR de 0,04"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico",
+        "numero_vizinho"
+      ]
+    },
+    "tags": [
+      "embriaguez",
+      "art_276",
+      "margem_tolerancia",
+      "etilometro",
+      "resolucao_432"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CTB_art_276_277",
+      "macete_visual": "276 caput · § único margem · MR 0,05",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A: MR 0,04 mg/L não gera infração administrativa — margem do Contran fixa piso em 0,05. A isca é o caput isolado ('qualquer concentração').",
+            "destaques": ["Gabarito A", "0,04 mg/L", "0,05"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Caput × margem metrológica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Qualquer resíduo autua", "§ único remete margens ao Contran"],
+              ["VC nulo define o piso", "Limite compara medição realizada (MR)"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "276 CAPUT = tese ampla.\n§ ÚNICO = margem Contran.\nMR ≥ 0,05 (Res. 432) — VC não é o piso.",
+            "destaques": ["CAPUT", "§ ÚNICO", "0,05"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 276",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CTB_art_276_277",
+      "macete_visual": "276 caput · § único margem · MR 0,05",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Qualquer concentração não dispensa margem do Contran — piso operacional é MR 0,05",
+        "eixos_legais": [
+          "CTB_art_276",
+          "CONTRAN_432_art_6"
+        ],
+        "isca_por_alternativa": {
+          "B": "caput do art. 276 dispensa limite numérico e prevalece sobre o Contran",
+          "C": "exame de sangue com qualquer concentração dispensa margem do etilômetro",
+          "D": "limite de 0,05 vale para VC nulo, não para MR de 0,04"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: caput isolado não autua",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — caput isolado dispensa limite numérico e prevalece sobre o Contran.\nC — exame de sangue com qualquer concentração dispensa margem do etilômetro de 0,04 mg/L.\nD — limite de 0,05 vale para VC nulo, não para MR de 0,04 mg/L.\n\nPegadinha: parágrafo único remete margens ao Contran — piso operacional é MR 0,05.",
+            "destaques": ["Gabarito A", "0,04 mg/L", "0,05"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "MR (MEDIÇÃO REALIZADA): leitura bruta do etilômetro — patamar de comparação na Res. 432/2013.\n\nVC (VALOR CONSIDERADO): MR menos erro máximo admissível — preenchimento do auto conforme Anexo I.\n\nMARGEM DE TOLERÂNCIA: disciplinada pelo Contran quando a apuração é por aparelho — art. 276, parágrafo único.",
+            "destaques": ["MR", "VC", "MARGEM"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: MR 0,04 configura infração?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "MR do etilômetro é igual ou superior a 0,05 mg/L?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Sem infração pelo etilômetro — gabarito A",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Não — 0,04 mg/L no caso" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Caput do art. 276 × margem Contran",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Leitura MR", "Consequência"],
+            "linhas": [
+              {
+                "faixa": "MR < 0,05 mg/L",
+                "classificacao": "Sem art. 165 por etilômetro — caso 0,04",
+                "destaque": true
+              },
+              {
+                "faixa": "MR ≥ 0,05 mg/L",
+                "classificacao": "Infração administrativa configurada"
+              },
+              {
+                "faixa": "Caput isolado",
+                "classificacao": "Isca — § único remete margens ao Contran"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: qualquer concentração",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Qualquer resíduo no etilômetro autua",
+                "Parágrafo único: Contran disciplina margens metrológicas"
+              ],
+              [
+                "VC nulo impede qualquer análise",
+                "Piso compara medição realizada — não só valor considerado"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — regra_excecao",
+                "Aplica caput isolado — ignora § único e Res. 432/2013 (0,05 mg/L)"
+              ],
+              [
+                "C — termo_unico",
+                "Mistura exame de sangue com etilômetro e dispensa margem do Anexo I"
+              ],
+              [
+                "D — numero_vizinho",
+                "Aplica limite 0,05 ao VC nulo — art. 6º, II, referencia MR"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "MR 0,04 mg/L na fiscalização da STTP",
+                "Abaixo de 0,05 — sem art. 165 pelo etilômetro"
+              ],
+              [
+                "VC nulo após margem do Anexo I",
+                "Não substitui MR para o patamar operacional"
+              ],
+              [
+                "Condutor invoca caput do art. 276",
+                "§ único remete margens — Res. 432 fixa o piso"
+              ],
+              [
+                "Resultado",
+                "Alternativa A"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Caput × regulamentação Contran",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função"],
+            "linhas": [
+              [
+                "Art. 276 caput",
+                "Regra ampla — qualquer concentração sujeita ao art. 165"
+              ],
+              [
+                "Art. 276, parágrafo único",
+                "Contran disciplina margens em aparelho de medição"
+              ],
+              [
+                "Res. 432/2013, art. 6º, II",
+                "Piso operacional: MR ≥ 0,05 mg/L de ar alveolar"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 276 — caput e parágrafo único",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 276",
+            "texto": "Qualquer concentração de álcool por litro de sangue ou por litro de ar alveolar sujeita o condutor às penalidades previstas no art. 165. O Contran disciplinará as margens de tolerância quando a infração for apurada por meio de aparelho de medição, observada a legislação metrológica.",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 21,
+                "motivo": "contraste — isca do caput isolado",
+                "texto_grifado": "Qualquer concentração"
+              },
+              {
+                "inicio": 163,
+                "fim": 184,
+                "motivo": "mapa — exceção metrológica via Contran",
+                "texto_grifado": "margens de tolerância"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Res. 432 — limite operacional",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 432/2013, art. 6º, II",
+            "texto": "II – teste de etilômetro com medição realizada igual ou superior a 0,05 miligrama de álcool por litro de ar alveolar expirado (0,05 mg/L), descontado o erro máximo admissível nos termos da Tabela de Valores Referenciais para Etilômetro constante no Anexo I.",
+            "trechos_grifados": [
+              {
+                "inicio": 47,
+                "fim": 81,
+                "motivo": "eixo2 — piso operacional é MR 0,05 mg/L",
+                "texto_grifado": "igual ou superior a 0,05 miligrama"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "276 CAPUT = tese ampla.\n§ ÚNICO = margem Contran.\nMR ≥ 0,05 (Res. 432) — VC não é o piso.\n\nNear-transfer: se a banca trocar MR 0,04 por 0,06 mg/L, entra art. 165 sem mudar a lógica do § único.",
+            "destaques": ["CAPUT", "0,05", "0,06"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 276",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        },
+        {
+          "rotulo": "Res. CONTRAN 432/2013",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 432, DE 23 DE JANEIRO DE 2013.pdf"
+        }
+      ]
+    }
+  }
+]

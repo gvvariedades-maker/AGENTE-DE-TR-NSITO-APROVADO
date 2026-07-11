@@ -28,11 +28,26 @@ Você é um **examinador sênior da IDECAN** com 15+ anos elaborando provas obje
 | Estatísticas do corpus real | `.cursor/skills/examinador-idecan/scripts/corpus-idecan-stats.json` (gerar via `npm run analyze:idecan` se ausente) |
 | Conteúdo programático | [conteudo-programatico.md](conteudo-programatico.md) |
 | DNA da banca | [perfil-banca.md](perfil-banca.md) |
+| Perfil vertical da disciplina-alvo | `perfis/perfil-{disciplina}.md` — usar a tabela de mapeamento abaixo (nome do arquivo ≠ slug) |
 | Exemplos ouro | [exemplos-ouro.md](exemplos-ouro.md) |
 | Rubrica indistinguibilidade | [rubrica-indistinguibilidade.md](rubrica-indistinguibilidade.md) |
 | Teste cego | [teste-cego.md](teste-cego.md) |
 
 **Prioridade:** retificação do edital > edital original > inferência.
+
+### Mapa slug → perfil vertical
+
+O nome do arquivo **não** é o slug literal — sempre resolver por esta tabela:
+
+| Slug (`disciplina`) | Arquivo |
+|---------------------|---------|
+| `legislacao_transito` | [perfis/perfil-transito.md](perfis/perfil-transito.md) |
+| `portugues` | [perfis/perfil-portugues.md](perfis/perfil-portugues.md) |
+| `informatica` | [perfis/perfil-informatica.md](perfis/perfil-informatica.md) |
+| `direito_constitucional` | [perfis/perfil-constitucional.md](perfis/perfil-constitucional.md) |
+| `direito_administrativo` | [perfis/perfil-administrativo.md](perfis/perfil-administrativo.md) |
+| `legislacao_etica_sp` | [perfis/perfil-etica-sp.md](perfis/perfil-etica-sp.md) |
+| `historia_cg_pb` | [perfis/perfil-historia-cg-pb.md](perfis/perfil-historia-cg-pb.md) |
 
 ## `estilo_idecan` × mecanismo de distrator
 
@@ -89,10 +104,10 @@ Regras:
 ## Workflow: criar questão inédita
 
 ```
-- [ ] 1. Identificar disciplina + microtópico (Anexo I retificado)
-- [ ] 2. Consultar perfil-banca.md (estilo/comando) + corpus-idecan-stats.json (métricas de forma)
+- [ ] 1. Identificar disciplina — ou rodar `npm run proxima -- <disciplina>` para tópico automático por déficit
+- [ ] 2. Consultar perfil-banca.md + **perfis/perfil-{disciplina}.md** (resolver pelo Mapa slug → perfil; existe para as 7 disciplinas) + corpus-idecan-stats.json (métricas de forma)
 - [ ] 3. Localizar e transcrever a fonte legal via <cadeia_anti_alucinacao>
-- [ ] 4. Escolher dificuldade (1–5) pela <dificuldade_operacional> e o comando pelo estilo
+- [ ] 4. Escolher dificuldade (**4–5** no banco de treino; mínimo 4) pela <dificuldade_operacional> e o comando pelo estilo
 - [ ] 5. Construir o gabarito primeiro (redação fiel à fonte), depois cada distrator com mecanismo declarado
 - [ ] 6. Calibrar forma: enunciado e alternativas dentro do envelope do stats (média ± 1 desvio-padrão por disciplina, ou faixas da rubrica A2 se σ ausente)
 - [ ] 7. Escrever comentário Professor Elite (mecanismos nomeados no passo 2)
@@ -116,18 +131,19 @@ Reprovou 1 item → reescrever. Nunca "entregar com ressalva" nem deixar para o 
 1. Todo dado legal passou pela `<cadeia_anti_alucinacao>` (localizado + literal + retificado)?
 2. Cada distrator tem mecanismo declarável dos 5 slugs (máx. 2 repetidos)?
 3. Uma única resposta defensável, com dispositivo citável?
-4. `dificuldade` bate com a estrutura da `<dificuldade_operacional>`? Pegadinha presente se ≥ 3?
+4. `dificuldade` bate com a `<dificuldade_operacional>`? **Banco: ≥ 4** (2 mecanismos cruzados + ≥ 2 dispositivos). Pegadinha presente se ≥ 3?
 5. Comando é um dos tipos catalogados em `perfil-banca.md` (não genérico)?
 6. Forma dentro do envelope do `corpus-idecan-stats.json` (tamanho de enunciado/alternativas)?
 7. Enunciado/eixo/pegadinha não repete questão do índice (`content/questoes/_index/cobertura.json`) nem exemplo de `exemplos-ouro.md`?
 8. Microtópico consta no Anexo I retificado?
+9. Cada alternativa errada é **on-case**: deriva de fato, alegação ou documento citado no enunciado. `competencia_snt` só se o stem mencionar órgão/competência/CONTRAN/SENATRAN. Proibido eixo normativo órfão.
 
 ## Workflow: lote para seed
 
 1. Agrupar por disciplina em `content/questoes/{disciplina}/lote-NNN.json` (10–50 questões, máx. ~500 KB)
 2. **Matriz de cobertura:** máx. 3 questões por microtópico por lote; dentro do lote, listar microtópicos cobertos antes de gerar — cobertura ampla vence profundidade repetida (profundidade é papel do FSRS, não do lote)
 3. **Distribuição de gabarito (mensurável):** em cada lote, nenhuma letra com mais de 35% nem menos de 15% das questões; máx. 2 gabaritos iguais consecutivos
-4. **Mix de dificuldade padrão do lote:** ~20% níveis 1–2, ~50% nível 3, ~30% níveis 4–5 (ajustar se `perfil-banca.md` indicar outra proporção para a disciplina)
+4. **Mix de dificuldade — banco de treino (`content/questoes/`):** **100% níveis 4–5** (mínimo `DIFICULDADE_MINIMA_BANCO` = 4 em `src/lib/validations/dificuldade-banco.ts`; validador D1/D3/D4). **Simulado espelho 60Q:** manter mix realista ~20% 1–2 | ~50% 3 | ~30% 4–5 (paridade com prova IDECAN).
 5. `npm run index:questoes` → `npm run validate:lote -- content/questoes/...`
 6. Rubrica manual (média ≥ 80) + [teste cego](teste-cego.md): **amostra mínima 20 itens, mistura ~50/50 reais/geradas, acurácia do avaliador ≤ 55%** — abaixo de 20 itens o percentual é ruído, não medida
 7. Registrar em `templates/teste-cego-registro.json` (cópia por lote)
@@ -228,7 +244,7 @@ Respeitar `.cursor/rules/01-edital-campina-grande.mdc`:
 | historia_cg_pb | 4 |
 | legislacao_etica_sp | 4 |
 
-Mix de dificuldade (bandas fechadas, sem sobreposição): **~20% níveis 1–2, ~50% nível 3, ~30% níveis 4–5**, embaralhado — a prova real não escala dificuldade em ordem. Misturar `estilo_idecan` conforme frequência do stats.
+Mix de dificuldade no **simulado espelho** (bandas fechadas, sem sobreposição): **~20% níveis 1–2, ~50% nível 3, ~30% níveis 4–5**, embaralhado — a prova real não escala dificuldade em ordem. **Banco de treino (`content/questoes/`):** mínimo nível **4** em toda questão nova (ver `dificuldade-banco.ts` + validador D1).
 
 ## Modelo ouro (1 questão por microtópico)
 
@@ -257,7 +273,7 @@ Ordem completa dos gates (nesta sequência, sem pular):
 
 | Etapa | Ferramenta | Critério |
 |-------|------------|----------|
-| 1ª passagem | `<gate_primeira_passagem>` (self-check) | 8/8 por questão |
+| 1ª passagem | `<gate_primeira_passagem>` (self-check) | 9/9 por questão |
 | Schema + lei | `validate:questoes` | Zero erros |
 | Cobertura | `validate:cobertura` / `index:questoes` | Zero erros de eixo/enunciado |
 | Heurísticas | `validate:indistinguibilidade` | Zero erros (avisos revisados) |
@@ -281,9 +297,17 @@ O `validate-questao.ts` já verifica citações contra `conteúdo/` (`--skip-cit
 ## Recursos
 
 - [perfil-banca.md](perfil-banca.md) — DNA IDECAN detalhado
+- [perfis/perfil-transito.md](perfis/perfil-transito.md) — aprofundamento Legislação de Trânsito (mecanismos, ROI, lacunas)
+- [perfis/perfil-portugues.md](perfis/perfil-portugues.md) — aprofundamento Língua Portuguesa (texto-base, mecanismos semânticos, lacunas)
+- [perfis/perfil-informatica.md](perfis/perfil-informatica.md) — aprofundamento Noções de Informática (atalhos, segurança, correspondência, lacunas)
+- [perfis/perfil-constitucional.md](perfis/perfil-constitucional.md) — aprofundamento Direito Constitucional (art. 144, remédios, lacunas)
+- [perfis/perfil-administrativo.md](perfis/perfil-administrativo.md) — aprofundamento Direito Administrativo (poder de polícia, atos, lacunas)
+- [perfis/perfil-etica-sp.md](perfis/perfil-etica-sp.md) — aprofundamento Legislação e Ética SP (LGPD, LAI, Lei Orgânica, lacunas)
+- [perfis/perfil-historia-cg-pb.md](perfis/perfil-historia-cg-pb.md) — aprofundamento História CG/PB (base factual, anti-alucinação, lacuna total)
 - [conteudo-programatico.md](conteudo-programatico.md) — Anexo I e microtópicos
 - [exemplos-ouro.md](exemplos-ouro.md) — questões modelo comentadas
 - [prompt-questao-aula-completa.md](prompt-questao-aula-completa.md) — **prompt copiável (nova conversa Agent)**
+- `npm run proxima -- <disciplina|all>` — escolhe tópico por déficit (prioridades em `scripts/edital-topics-prioridades.ts`)
 - [rubrica-indistinguibilidade.md](rubrica-indistinguibilidade.md) — paridade com questões reais
 - [teste-cego.md](teste-cego.md) — protocolo de comparação cega
 - [templates/teste-cego-registro.json](templates/teste-cego-registro.json) — registro de resultados

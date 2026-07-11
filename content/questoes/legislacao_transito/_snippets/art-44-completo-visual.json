@@ -1,0 +1,155 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 255,
+  "fundamento_slug": "CTB_art_44",
+  "macete_visual": "CRUZAMENTO = MODERADA · parar p/ PED + preferência · qualquer tipo",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Aproximar cruzamento exige velocidade moderada para parar — vale a qualquer tipo, semáforo não dispensa",
+    "eixos_legais": ["CTB_art_44", "CTB_art_44-A"],
+    "isca_por_alternativa": {
+      "B": "restringe art. 44 a cruzamentos sem sinalização — regra_excecao",
+      "C": "semáforo verde dispensa velocidade moderada — termo_unico",
+      "D": "confunde art. 44 com conversão no vermelho do art. 44-A — numero_vizinho"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-083.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: rápido demais no cruzamento",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito A.\n\nB — limitou a semáforo ausente: lei diz qualquer tipo de cruzamento.\nC — invocou farol verde: semáforo não dispensa velocidade moderada ao aproximar.\nD — citou conversão no vermelho: art. 44-A é hipótese distinta da prudência do art. 44.\n\nNesta aula você fixa velocidade moderada e passagem a pedestre e preferenciais.",
+        "destaques": ["Gabarito A", "velocidade moderada", "qualquer tipo"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "APROXIMAR-SE: fase anterior ao cruzamento — gatilho do art. 44 para prudência especial.\n\nVELOCIDADE MODERADA: ritmo que permite deter com segurança — não é o máximo da via.\n\nDIREITO DE PREFERÊNCIA: pedestre e veículos que devem passar antes — passagem obrigatória se necessário.",
+        "destaques": ["APROXIMAR", "MODERADA", "PREFERÊNCIA"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: como entrar no cruzamento?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Veículo aproxima-se de cruzamento?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Velocidade permite deter para pedestre ou preferencial?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Exigência de velocidade moderada", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Não" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Art. 44 — núcleo da conduta",
+      "secao": "mapa",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Elemento", "Dever"],
+        "linhas": [
+          ["Escopo", "Qualquer tipo de cruzamento"],
+          ["Velocidade", "Moderada — prudência especial"],
+          ["Finalidade", "Deter com segurança para dar passagem"]
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: verde dispensa moderar",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Com semáforo verde pode manter ritmo alto", "Aproximação exige velocidade moderada"],
+          ["Só vale em cruzamento sem placa", "Qualquer tipo de cruzamento"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["B — regra_excecao", "Restringe a cruzamentos sem sinalização — lei não exclui semaforizados"],
+          ["C — termo_unico", "Troca prudência na aproximação por liberdade com farol verde"],
+          ["D — numero_vizinho", "Invoca art. 44-A (conversão no vermelho) — não substitui dever do art. 44"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Aproximação de cruzamento semafórico em Campina Grande", "Incide art. 44 — qualquer tipo"],
+          ["Velocidade alta impedindo parada segura para pedestre", "Viola velocidade moderada"],
+          ["Resultado", "Gabarito A — moderar para dar passagem"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Art. 44 × art. 44-A",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Dispositivo", "Hipótese"],
+        "linhas": [
+          ["Art. 44", "Aproximar qualquer cruzamento com prudência e velocidade moderada"],
+          ["Art. 44-A", "Conversão à direita no vermelho onde houver sinalização específica"],
+          ["Pegadinha D", "Conversão no vermelho ≠ dispensa moderar na aproximação"]
+        ]
+      }
+    },
+    {
+      "id": "lei44",
+      "titulo": "Art. 44 — literal da regra",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 44",
+        "texto": "Art. 44. Ao aproximar-se de qualquer tipo de cruzamento, o condutor do veículo deve demonstrar prudência especial, transitando em velocidade moderada, de forma que possa deter seu veículo com segurança para dar passagem a pedestre e a veículos que tenham o direito de preferência.",
+        "trechos_grifados": [
+          { "inicio": 28, "fim": 55, "motivo": "contraste — semáforo não exclui a regra" },
+          { "inicio": 130, "fim": 149, "motivo": "caso — ritmo alto do condutor" },
+          { "inicio": 222, "fim": 230, "motivo": "glossario — pedestre com passagem a garantir" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CRUZAMENTO = MODERADA + PRUDÊNCIA.\nQualquer tipo — com ou sem semáforo.\nParar se preciso: pedestre + preferencial.\n44-A (virar no vermelho) é outra história.\n\nNear-transfer: ao ver cruzamento semafórico à frente, reduza antes da faixa — verde não autoriza chegar sem poder parar para pedestre.",
+        "destaques": ["MODERADA", "qualquer tipo", "Near-transfer"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 44", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

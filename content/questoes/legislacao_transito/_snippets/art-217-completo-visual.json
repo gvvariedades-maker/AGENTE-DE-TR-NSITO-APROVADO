@@ -3,28 +3,35 @@
   "arquetipo": "tabela_gradacao",
   "arquetipo_secundario": "comparacao",
   "publico_alvo": "iniciante",
-  "duracao_estimada_seg": 270,
+  "duracao_estimada_seg": 285,
   "fundamento_slug": "CTB_art_217",
   "macete_visual": "217 fila estacionada = MÉDIA",
   "meta": {
     "padrao_familia": "D_gradacao",
-    "pegadinha_em_uma_frase": "Sair de fila estacionada sem preferência é art. 217 média — não confundir com faixa de pedestres (214) nem cruzamento (215)",
-    "eixos_legais": ["CTB_art_217", "CTB_art_214_I"],
+    "pegadinha_em_uma_frase": "Sair de fila estacionada sem preferência é art. 217 média — não é faixa (214), interseção (215) nem área lindeira (216)",
+    "eixos_legais": [
+      "CTB_art_217",
+      "CTB_art_214_I"
+    ],
     "isca_por_alternativa": {
-      "A": "classifica como gravíssima pelo art. 214, I, quando o fato é saída de fila — art. 217, média",
-      "B": "confunde com preferência em interseção — art. 215",
-      "D": "inventa que manobra lenta dispensa preferência ao sair da fila"
+      "A": "aplica art. 214, I gravíssima sem faixa de pedestres pintada no enunciado",
+      "B": "confunde saída de fila com preferência em interseção — art. 215",
+      "C": "classifica como art. 216 vizinho de fila quando o fato é fila estacionada na via"
     }
   },
   "telas": [
     {
       "id": "contexto",
-      "titulo": "Diagnóstico: fila estacionada ≠ faixa",
+      "titulo": "Diagnóstico: fila ≠ faixa",
       "secao": "diagnostico",
       "tipo": "texto_destaque",
       "conteudo": {
-        "texto": "Gabarito C.\n\nA — aplicou art. 214, I (faixa de pedestres): o fato é saída de fila de veículos estacionados.\nB — confundiu com interseção: art. 215 exige cruzamento, não manobra a partir de fila parada.\nD — inventou exceção de baixa velocidade: art. 217 exige preferência independentemente do ritmo.\n\nCondutor saiu da fila estacionada sem ceder passagem.",
-        "destaques": ["Gabarito C", "fila estacionada", "média"]
+        "texto": "Gabarito D.\n\nA — aplicou art. 214, I (faixa de pedestres gravíssima): o enunciado afasta faixa pintada no trecho.\nB — confundiu com interseção: art. 215 exige cruzamento, não saída de fila paralela à guia.\nC — classificou como art. 216 (área lindeira): o fato é fila de veículos estacionados na via, não acesso de estabelecimento.\n\nCondutor saiu da fila sem ceder passagem.",
+        "destaques": [
+          "Gabarito D",
+          "fila estacionada",
+          "média"
+        ]
       }
     },
     {
@@ -32,8 +39,12 @@
       "titulo": "Pré-treino: 3 distinções",
       "tipo": "texto_destaque",
       "conteudo": {
-        "texto": "FILA DE VEÍCULOS ESTACIONADOS: veículos parados em fila à margem da via — entrar ou sair dessa fila é hipótese do art. 217.\n\nPREFERÊNCIA NA SAÍDA: ceder passagem a pedestres e a veículos no fluxo antes de ingressar na pista.\n\nFAIXA DE PEDESTRES: hipótese do art. 214 — gravíssima, distinta da saída de fila estacionada.",
-        "destaques": ["FILA", "SAÍDA", "FAIXA"]
+        "texto": "FILA ESTACIONADA: veículos parados em fila à margem da via — entrar ou sair dessa fila é art. 217.\n\nFAIXA DE PEDESTRES: faixa pintada na via — art. 214, I, gravíssima.\n\nINTERSEÇÃO: cruzamento de vias — art. 215, hipótese distinta da manobra a partir de fila.",
+        "destaques": [
+          "FILA",
+          "FAIXA",
+          "INTERSEÇÃO"
+        ]
       }
     },
     {
@@ -42,7 +53,10 @@
       "secao": "mapa",
       "tipo": "tabela_gradacao",
       "conteudo": {
-        "titulo_colunas": ["Situação", "Natureza"],
+        "titulo_colunas": [
+          "Situação",
+          "Natureza"
+        ],
         "linhas": [
           {
             "faixa": "Sair de fila estacionada sem preferência — art. 217",
@@ -88,8 +102,16 @@
           }
         ],
         "arestas": [
-          { "de": "p1", "para": "p2", "rotulo": "Sim" },
-          { "de": "p2", "para": "r1", "rotulo": "Não" }
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — saída da fila"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Não"
+          }
         ]
       }
     },
@@ -99,15 +121,18 @@
       "secao": "contraste",
       "tipo": "comparacao",
       "conteudo": {
-        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a lei diz ✓"
+        ],
         "linhas": [
           [
             "Pedestre envolvido = sempre art. 214",
-            "217 é saída de fila estacionada — média"
+            "Sem faixa pintada, saída de fila = art. 217 média"
           ],
           [
-            "Manobra lenta dispensa preferência",
-            "Art. 217 exige ceder passagem a pedestre e veículo"
+            "Estacionamento na via = área lindeira",
+            "Fila paralela à guia ≠ acesso de estabelecimento — art. 216"
           ]
         ]
       }
@@ -118,19 +143,22 @@
       "secao": "distratores",
       "tipo": "comparacao",
       "conteudo": {
-        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
         "linhas": [
           [
             "A — gravidade",
-            "Classifica como gravíssima pelo art. 214, I — o fato é saída de fila estacionada, art. 217 média"
+            "Aplica art. 214, I gravíssima sem faixa de pedestres pintada no enunciado"
           ],
           [
             "B — termo_unico",
-            "Confunde com preferência em interseção não sinalizada — art. 215"
+            "Confunde saída de fila com preferência em interseção — art. 215"
           ],
           [
-            "D — regra_excecao",
-            "Inventa que baixa velocidade ao sair da fila dispensa dar preferência de passagem"
+            "C — numero_vizinho",
+            "Classifica como art. 216 vizinho de fila quando o fato é fila estacionada na via"
           ]
         ]
       }
@@ -141,27 +169,61 @@
       "secao": "metodo",
       "tipo": "comparacao",
       "conteudo": {
-        "colunas": ["Fato do caso", "Conclusão legal"],
+        "colunas": [
+          "Fato do caso",
+          "Conclusão legal"
+        ],
         "linhas": [
-          ["Saída de fila de veículos estacionados", "Hipótese do art. 217"],
-          ["Sem preferência a pedestre e automóvel no fluxo", "Infração configurada"],
-          ["Alegação de manobra lenta", "Não afasta o dever de ceder"],
-          ["Resultado", "Gabarito C — infração média"]
+          [
+            "Saída de fila estacionada paralela à guia",
+            "Hipótese do art. 217"
+          ],
+          [
+            "Sem preferência a pedestre e automóvel",
+            "Infração configurada"
+          ],
+          [
+            "Sem faixa pintada nem cruzamento",
+            "Afasta arts. 214 e 215"
+          ],
+          [
+            "Resultado",
+            "Gabarito D — infração média"
+          ]
         ]
       }
     },
     {
       "id": "hierarquia",
-      "titulo": "217 × 214 × 215",
+      "titulo": "217 × 214 × 216",
       "secao": "conceito",
       "tipo": "comparacao",
       "conteudo": {
-        "colunas": ["Artigo", "Contexto"],
+        "colunas": [
+          "Artigo",
+          "Contexto"
+        ],
         "linhas": [
-          ["Art. 217", "Entrar/sair de fila estacionada — média"],
-          ["Art. 214", "Preferência a pedestre na faixa — gravíssima"],
-          ["Art. 215", "Preferência em interseção — grave"],
-          ["Caso (fila estacionada)", "Art. 217 — média"]
+          [
+            "Art. 217",
+            "Entrar/sair de fila estacionada — média"
+          ],
+          [
+            "Art. 214, I",
+            "Pedestre na faixa pintada — gravíssima"
+          ],
+          [
+            "Art. 215",
+            "Preferência em interseção — grave"
+          ],
+          [
+            "Art. 216",
+            "Área lindeira sem precaução — média"
+          ],
+          [
+            "Caso (fila na via)",
+            "Art. 217 — média"
+          ]
         ]
       }
     },
@@ -182,12 +244,12 @@
           {
             "inicio": 56,
             "fim": 79,
-            "motivo": "contraste — preferência a pedestres e veículos na saída"
+            "motivo": "contraste — preferência de passagem a pedestres e veículos"
           },
           {
             "inicio": 124,
             "fim": 129,
-            "motivo": "gradacao — média, não grave nem gravíssima"
+            "motivo": "gradacao — média, não gravíssima"
           }
         ]
       }
@@ -198,8 +260,12 @@
       "secao": "macete",
       "tipo": "texto_destaque",
       "conteudo": {
-        "texto": "217 = SAIR da FILA estacionada · MÉDIA · ≠ 214 (faixa, gravíssima) · ≠ 215 (cruzamento, grave).\n\nNear-transfer: mesmo condutor não cede passagem a pedestre na faixa ao atravessar cruzamento — art. 214, I (gravíssima); contexto distinto da saída de fila parada.",
-        "destaques": ["217", "214", "MÉDIA"]
+        "texto": "217 = FILA estacionada · prefere pedestre + veículo · MÉDIA · ≠ 214 faixa · ≠ 215 cruzamento.\n\nNear-transfer: mesmo condutor sai de estacionamento de shopping em diagonal sem precauções — art. 216 (área lindeira, média); contexto distinto da fila paralela à guia.",
+        "destaques": [
+          "217",
+          "216",
+          "MÉDIA"
+        ]
       }
     }
   ],

@@ -1,0 +1,269 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_1_3",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_prazo",
+    "dificuldade": 4,
+    "fundamento_slug": "LAI_art15_recurso",
+    "enunciado": "Jornalista teve negado pedido de informação sobre gastos com combustível da frota da STTP de Campina Grande. A decisão foi publicada no mural interno e o interessado tomou ciência na data da publicação. O setor de protocolo informa prazo de 5 dias para recurso; o jurídico sustenta 20 dias por analogia à resposta do pedido; a comunicação afirma que autarquia municipal dispensa recurso hierárquico previsto na LAI. À luz da Lei nº 12.527/2011, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O interessado pode recorrer em 10 dias da ciência (art. 15); a autoridade superior deve manifestar-se em 5 dias (parágrafo único); o indeferimento não afasta o direito de recurso assegurado pela LAI.",
+      "B": "O prazo de recurso do interessado é de 5 dias — mesmo prazo da autoridade superior, contado da publicação interna da decisão.",
+      "C": "Aplica-se ao recurso o prazo de 20 dias do art. 11, por ser procedimento vinculado ao acesso passivo à informação.",
+      "D": "Autarquia municipal está dispensada de recurso hierárquico, pois o art. 16 da LAI restringe a via recursal à Controladoria-Geral da União."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Prazos de recurso do interessado (art. 15 — 10 dias da ciência) e de manifestação da autoridade superior (parágrafo único — 5 dias).",
+      "fundamento_legal": "LAI, art. 15: \"poderá o interessado interpor recurso contra a decisão no prazo de 10 (dez) dias a contar da sua ciência\". Parágrafo único: \"a autoridade hierarquicamente superior à que exarou a decisão impugnada, que deverá se manifestar no prazo de 5 (cinco) dias\".",
+      "passo_a_passo": [
+        "1. O jornalista tomou ciência na publicação — o recurso deve ser interposto em 10 dias (art. 15), não em 5 nem em 20.",
+        "2. B erra por numero_vizinho (aplica prazo de 5 dias da autoridade superior ao interessado); C erra por numero_vizinho (transfere 20 dias do art. 11 ao recurso); D erra por regra_excecao (usa art. 16 federal/CGU para dispensar recurso municipal).",
+        "3. A está correta: 10 dias para o interessado; 5 dias para a autoridade superior; autarquia municipal não está dispensada do recurso hierárquico."
+      ],
+      "pegadinha": "A banca troca 10 dias do interessado pelos 5 dias da autoridade superior ou pelos 20 dias do art. 11 — e usa art. 16 (CGU federal) para negar recurso na STTP.",
+      "macete": "Recurso LAI: interessado 10 dias · superior 5 dias — não confundir com 20 dias do art. 11.",
+      "estudo_reverso": [
+        "LAI art. 15",
+        "LAI art. 15, parágrafo único",
+        "LAI art. 11, §1",
+        "LAI art. 16"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "LAI_art15_recurso",
+      "macete_visual": "Interessado 10 · superior 5 — não é 20 do art. 11",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Recurso do interessado = 10 dias da ciência. Autoridade superior = 5 dias. Não confundir com 20 dias da resposta ao pedido nem com via da CGU federal.",
+            "destaques": ["10 dias", "5 dias", "recurso"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Prazos do recurso — art. 15",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Sujeito", "Prazo"],
+            "linhas": [
+              { "faixa": "Interessado (caso)", "classificacao": "10 dias da ciência", "destaque": true },
+              { "faixa": "Autoridade superior", "classificacao": "5 dias para manifestar-se" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha dos vizinhos",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Recurso em 5 dias (protocolo)", "Interessado = 10 dias da ciência"],
+              ["Recurso em 20 dias (art. 11)", "Resposta ao pedido ≠ prazo recursal"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Interessado 10 · superior 5. Vinte dias é resposta ao pedido — não recurso.",
+            "destaques": ["10 dias", "5 dias", "recurso"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 12.527/2011 (LAI)",
+          "path": "conteúdo/legislação federal/lei-12527-lai.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 240,
+      "fundamento_slug": "LAI_art15_recurso",
+      "macete_visual": "Interessado 10 · superior 5 — não é 20 do art. 11",
+      "meta": {
+        "padrao_familia": "D_gradacao",
+        "pegadinha_em_uma_frase": "Protocolo empurra 5 dias da autoridade ou 20 dias do art. 11 no prazo do interessado",
+        "eixos_legais": ["LAI_art15", "LAI_art15_par_unico", "LAI_art11_par1"],
+        "isca_por_alternativa": {
+          "B": "5 dias da autoridade superior aplicados ao interessado",
+          "C": "20 dias do art. 11 transferidos ao recurso",
+          "D": "art. 16 CGU federal dispensa recurso na autarquia municipal"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: recurso = 10 dias, não 5 nem 20",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — 5 dias no interessado: confunde prazo da autoridade superior com o do jornalista.\nC — 20 dias no recurso: aplica prazo de resposta ao pedido ao recurso.\nD — CGU dispensa recurso: usa via federal para negar recurso municipal.\n\nA isca é o protocolo e o jurídico empurrarem 5 ou 20 dias no indeferimento da STTP.",
+            "destaques": ["Gabarito A", "10 dias", "recurso"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 prazos distintos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "RESPOSTA AO PEDIDO: até 20 dias se não houver acesso imediato — art. 11.\n\nRECURSO DO INTERESSADO: 10 dias da ciência do indeferimento — art. 15.\n\nMANIFESTAÇÃO DA AUTORIDADE SUPERIOR: 5 dias — parágrafo único do art. 15.",
+            "destaques": ["20 dias", "10 dias", "5 dias"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Mapa de prazos — recurso na LAI",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Etapa / sujeito", "Prazo legal"],
+            "linhas": [
+              { "faixa": "Resposta ao pedido (art. 11)", "classificacao": "20 dias (+10 justificado)" },
+              { "faixa": "Recurso do interessado (caso)", "classificacao": "10 dias da ciência", "destaque": true },
+              { "faixa": "Autoridade superior", "classificacao": "5 dias para manifestar-se" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: 5 e 20 no lugar de 10",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Recurso em 5 dias (protocolo STTP)",
+                "Interessado = 10 dias — 5 dias é da autoridade superior"
+              ],
+              [
+                "Recurso em 20 dias (analogia art. 11)",
+                "20 dias é resposta ao pedido, não prazo recursal"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — numero_vizinho",
+                "Aplica 5 dias da autoridade superior ao prazo do interessado"
+              ],
+              [
+                "C — numero_vizinho",
+                "Transfere 20 dias do art. 11 ao recurso contra indeferimento"
+              ],
+              [
+                "D — regra_excecao",
+                "Usa art. 16 (CGU federal) para dispensar recurso hierárquico municipal"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o indeferimento do jornalista",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato / argumento", "Enquadramento"],
+            "linhas": [
+              ["Ciência na publicação do mural interno", "Marco inicial dos 10 dias do interessado"],
+              ["Protocolo informa 5 dias", "Confunde prazo da autoridade superior"],
+              ["Jurídico propõe 20 dias", "Mistura resposta ao pedido com recurso"],
+              ["Resultado", "Gabarito A — 10 dias + superior em 5"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 15 — recurso do interessado",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LAI, art. 15",
+            "texto": "Art. 15. No caso de indeferimento de acesso a informações ou às razões da negativa do acesso, poderá o interessado interpor recurso contra a decisão no prazo de 10 (dez) dias a contar da sua ciência.",
+            "trechos_grifados": [
+              {
+                "inicio": 161,
+                "fim": 174,
+                "motivo": "gradacao — prazo do jornalista (pegadinha 5 e 20)",
+                "texto_grifado": "10 (dez) dias"
+              },
+              {
+                "inicio": 184,
+                "fim": 198,
+                "motivo": "caso — ciência na publicação do mural",
+                "texto_grifado": "da sua ciência"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Parágrafo único — manifestação da autoridade",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LAI, art. 15, parágrafo único",
+            "texto": "Parágrafo único. O recurso será dirigido à autoridade hierarquicamente superior à que exarou a decisão impugnada, que deverá se manifestar no prazo de 5 (cinco) dias.",
+            "trechos_grifados": [
+              {
+                "inicio": 151,
+                "fim": 160,
+                "motivo": "contraste — 5 dias é da superior, não do interessado (isca B)",
+                "texto_grifado": "5 (cinco)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Recurso LAI: interessado 10 dias · superior 5 dias. Não confundir com 20 dias do art. 11.\n\nNear-transfer: indeferimento parcial com ciência por e-mail — o marco continua sendo a ciência, com 10 dias para recorrer.",
+            "destaques": ["10 dias", "Near-transfer", "5 dias"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 12.527/2011 (LAI)",
+          "path": "conteúdo/legislação federal/lei-12527-lai.html"
+        }
+      ]
+    },
+    "tags": [
+      "lai",
+      "recurso",
+      "prazo",
+      "indeferimento",
+      "acesso_passivo",
+      "sttp"
+    ]
+  }
+]

@@ -1,0 +1,422 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_985_mbft",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 5,
+    "fundamento_slug": "CONTRAN_985_mbft_concomitantes_semaforo",
+    "enunciado": "Em cruzamento semaforizado de Campina Grande/PB, agente da STTP constata veículo que avança o sinal vermelho do semáforo (CTB, art. 208) e, na mesma passagem pelo cruzamento, excede o limite de velocidade em 15% (CTB, art. 218, I). Ambas as condutas são verificadas no mesmo local, dia e horário. O agente pretende lavrar um único AIT, registrando as duas infrações no campo observações. Considerando o MBFT (Resolução CONTRAN nº 985/2022), seção 7 — Autuação, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Deve lavrar um único AIT, registrando no campo observações o avanço do sinal vermelho e o excesso de velocidade, por se tratarem de condutas verificadas na mesma abordagem.",
+      "B": "Deve lavrar um único AIT apenas pelo avanço do sinal vermelho, por ser a infração de maior gravidade entre as constatadas.",
+      "C": "Deve lavrar dois AITs distintos — um pelo avanço do sinal vermelho e outro pelo excesso de velocidade — por se tratarem de infrações concomitantes.",
+      "D": "Deve lavrar um único AIT apenas pelo excesso de velocidade, por ser a conduta objetivamente mensurada pelo equipamento de fiscalização."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "MBFT seção 7 — infrações concomitantes independentes = tantos AITs quantas condutas; exemplo expresso semáforo vermelho + velocidade até 20%.",
+      "fundamento_legal": "MBFT (Res. CONTRAN 985/2022), seção 7: \"São concomitantes aquelas infrações que ocorrem de maneira independente umas da outras. Nesses casos, o agente deverá fazer tantos AITs quanto forem as condutas realizadas, na forma dos arts. 266 e 280 do CTB.\" Exemplo: \"Veículo que avança o sinal vermelho do semáforo (art. 208) e que excede o limite de velocidade em menos de 20% (art. 218, I).\"",
+      "passo_a_passo": [
+        "1. Avanço de sinal vermelho (208) + excesso de velocidade em 15% (218,I) no mesmo cruzamento.",
+        "2. A erra por regra_excecao (unifica em 1 AIT com observações — regra de concorrentes/mesma raiz); B erra por gravidade (escolhe só o semáforo); D erra por termo_unico (prioriza só velocidade mensurada).",
+        "3. C correta: MBFT classifica como concomitantes — dois AITs distintos."
+      ],
+      "pegadinha": "A IDECAN induz a unificar em um AIT com observações — isso vale para concorrentes ou mesma raiz, não para 208 + 218,I, que o MBFT exemplifica como concomitantes.",
+      "macete": "CONCOMITANTE = N AITs · INDEPENDENTES · 208+218,I = 2 · ≠ unificar.",
+      "estudo_reverso": [
+        "MBFT seção 7 concomitantes",
+        "CTB art. 208",
+        "CTB art. 218, I",
+        "CTB art. 266"
+      ]
+    },
+    "tags": [
+      "mbft",
+      "resolucao_985",
+      "concomitantes",
+      "semaforo",
+      "velocidade"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 65,
+      "fundamento_slug": "CONTRAN_985_mbft_concomitantes_semaforo",
+      "macete_visual": "CONCOMITANTE=2 AITs · 208+218,I",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Sinal vermelho + velocidade 15% no mesmo cruzamento. MBFT: concomitantes = 2 AITs — gabarito C.",
+            "destaques": [
+              "concomitantes",
+              "2 AITs",
+              "208+218,I"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Decisão rápida",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "As condutas são independentes entre si?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Dois AITs — gabarito C",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim — semáforo + velocidade"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Concomitante × unificar",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Situação",
+              "AITs"
+            ],
+            "linhas": [
+              [
+                "208 + 218,I no cruzamento",
+                "2 AITs concomitantes"
+              ],
+              [
+                "167 + 252 em movimento",
+                "2 AITs concomitantes"
+              ],
+              [
+                "202 + 193 no acostamento",
+                "1 AIT concorrente"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CONCOMITANTE = N AITs · 208+218,I = 2 · ≠ unificar.",
+            "destaques": [
+              "CONCOMITANTE",
+              "2 AITs"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "MBFT — Seção 7",
+          "path": "conteúdo/resoluções CONTRAN/MBFT-anexo-resolucao-985-2022-secao-07-autuacao.txt"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 285,
+      "fundamento_slug": "CONTRAN_985_mbft_concomitantes_semaforo",
+      "macete_visual": "CONCOMITANTE=2 AITs · 208+218,I",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Sinal vermelho + velocidade no mesmo cruzamento exige 2 AITs, não 1 com observações",
+        "eixos_legais": [
+          "CONTRAN_985_mbft_concomitantes_semaforo",
+          "CTB_art_208",
+          "CTB_art_218_I"
+        ],
+        "isca_por_alternativa": {
+          "A": "unifica em 1 AIT com observações",
+          "B": "autua só semáforo por gravidade",
+          "D": "autua só velocidade por medição objetiva"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: mesma passagem ≠ mesmo AIT",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — um AIT com observações: regra de concorrentes/mesma raiz, não de concomitantes.\nB — só semáforo: MBFT não autoriza escolher a mais grave.\nD — só velocidade: ignora conduta independente do semáforo.\n\nSinal vermelho + velocidade 15% no mesmo cruzamento.",
+            "destaques": [
+              "Gabarito C",
+              "concomitantes",
+              "2 AITs"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CONCOMITANTES: infrações independentes ocorridas no mesmo fato — N AITs.\n\nCONCORRENTES: uma conduta implica necessariamente a outra — 1 AIT.\n\nOBSERVAÇÕES: detalha conduta; não substitui segundo AIT em concomitantes.",
+            "destaques": [
+              "CONCOMITANTES",
+              "CONCORRENTES",
+              "OBSERVAÇÕES"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: quantos AITs lavrar?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "As condutas são independentes entre si?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Uma conduta implica necessariamente a outra?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Dois AITs — gabarito C",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — semáforo + velocidade"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — concomitantes"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa: exemplos MBFT de contagem",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Exemplo MBFT",
+              "AITs"
+            ],
+            "linhas": [
+              {
+                "faixa": "208 + 218,I no cruzamento",
+                "classificacao": "Concomitante — 2 AITs",
+                "destaque": true
+              },
+              {
+                "faixa": "167 + 252 em movimento",
+                "classificacao": "Concomitante — 2 AITs"
+              },
+              {
+                "faixa": "202 + 193 no acostamento",
+                "classificacao": "Concorrente — 1 AIT"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Unificar × separar",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Crença ✗",
+              "MBFT ✓"
+            ],
+            "linhas": [
+              [
+                "Mesma passagem = 1 AIT com observações",
+                "Concomitantes exigem tantos AITs quantas condutas"
+              ],
+              [
+                "Escolher a infração mais grave",
+                "208 e 218,I são independentes — 2 AITs"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Unifica com observações — vale a concorrentes/mesma raiz"
+              ],
+              [
+                "B — gravidade",
+                "Prioriza semáforo ignorando independência da velocidade"
+              ],
+              [
+                "D — termo_unico",
+                "Prioriza velocidade mensurada ignorando o semáforo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Fato do caso",
+              "Efeito MBFT"
+            ],
+            "linhas": [
+              [
+                "Avanço do sinal vermelho",
+                "Conduta independente — 208"
+              ],
+              [
+                "Velocidade 15% acima do limite",
+                "Conduta independente — 218,I"
+              ],
+              [
+                "Mesmo local, dia e horário",
+                "Não unifica — concomitantes"
+              ],
+              [
+                "Lavratura correta",
+                "2 AITs distintos — gabarito C"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Três regras de contagem",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Regra MBFT",
+              "Critério"
+            ],
+            "linhas": [
+              [
+                "Concomitantes",
+                "Condutas independentes → N AITs"
+              ],
+              [
+                "Concorrentes",
+                "Uma implica a outra → 1 AIT"
+              ],
+              [
+                "Mesma raiz",
+                "3 dígitos iguais → 1 infração"
+              ],
+              [
+                "Não simultâneas",
+                "Estacionamento × movimento → 1 AIT"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "MBFT — regra das concomitantes",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7",
+            "texto": "São concomitantes aquelas infrações que ocorrem de maneira independente umas da outras. Nesses casos, o agente deverá fazer tantos AITs quanto forem as condutas realizadas, na forma dos arts. 266 e 280 do CTB.",
+            "trechos_grifados": [
+              {
+                "inicio": 48,
+                "fim": 86,
+                "motivo": "contraste — critério de independência"
+              },
+              {
+                "inicio": 124,
+                "fim": 171,
+                "motivo": "mapa — N AITs para concomitantes"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "MBFT — exemplo semáforo e velocidade",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7",
+            "texto": "Veículo que avança o sinal vermelho do semáforo (art. 208) e que excede o limite de velocidade em menos de 20% (art. 218, I).",
+            "trechos_grifados": [
+              {
+                "inicio": 12,
+                "fim": 47,
+                "motivo": "caso — primeira conduta independente"
+              },
+              {
+                "inicio": 65,
+                "fim": 110,
+                "motivo": "caso — segunda conduta independente"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CONCOMITANTE = N AITs · INDEPENDENTES · 208+218,I = 2 · ≠ unificar.\n\nNear-transfer: ultrapassar pelo acostamento implica transitar no acostamento — aí é concorrente e cabe 1 AIT pela conduta principal.",
+            "destaques": [
+              "CONCOMITANTE",
+              "Near-transfer",
+              "2 AITs"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "MBFT — Seção 7",
+          "path": "conteúdo/resoluções CONTRAN/MBFT-anexo-resolucao-985-2022-secao-07-autuacao.txt"
+        }
+      ]
+    }
+  }
+]

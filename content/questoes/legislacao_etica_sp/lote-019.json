@@ -1,0 +1,321 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_1_2",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "LGPD_art48_art46",
+    "enunciado": "A STTP de Campina Grande identifica acesso não autorizado ao banco de dados de autuações eletrônicas, com exposição de nome, CPF e endereço de centenas de condutores. O encarregado entende que basta comunicar a ANPD; o operador do sistema afirma que o aviso aos titulares é facultativo quando há prestador privado; o jurídico sustenta que medidas de segurança são obrigação exclusiva do operador contratado. À luz da Lei nº 13.709/2018 (LGPD), assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A comunicação do incidente à ANPD dispensa aviso aos titulares — o encarregado substitui o controlador nas obrigações de notificação previstas na LGPD.",
+      "B": "O controlador (STTP) deve comunicar à ANPD e aos titulares incidente de segurança com risco ou dano relevante (art. 48); agentes de tratamento devem adotar medidas de segurança técnicas e administrativas (art. 46).",
+      "C": "Com operador privado, a comunicação aos titulares cabe apenas ao contratado — a STTP limita-se a fiscalizar o contrato de hospedagem.",
+      "D": "Medidas de segurança incumbem somente ao operador que detém o servidor — o controlador público não responde por falhas do prestador de tecnologia."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Comunicação de incidente de segurança pelo controlador à ANPD e aos titulares (art. 48) e dever de medidas de segurança dos agentes de tratamento (art. 46).",
+      "fundamento_legal": "LGPD, art. 48: \"O controlador deverá comunicar à autoridade nacional e ao titular a ocorrência de incidente de segurança que possa acarretar risco ou dano relevante aos titulares\". Art. 46: \"Os agentes de tratamento devem adotar medidas de segurança, técnicas e administrativas aptas a proteger os dados pessoais de acessos não autorizados\".",
+      "passo_a_passo": [
+        "1. Vazamento de nome, CPF e endereço de centenas de condutores configura incidente com risco ou dano relevante — o controlador (STTP) deve comunicar ANPD e titulares, não só a autoridade.",
+        "2. A erra por termo_unico (confunde encarregado com controlador e dispensa aviso ao titular); C erra por regra_excecao (trata operador privado como exceção que transfere comunicação aos titulares); D erra por termo_unico (exclui controlador das medidas de segurança por haver prestador).",
+        "3. B está correta: art. 48 impõe comunicação dupla pelo controlador; art. 46 vincula todos os agentes de tratamento, inclusive STTP e operador."
+      ],
+      "pegadinha": "A banca usa encarregado, operador privado ou posse do servidor para afastar comunicação aos titulares ou medidas de segurança do controlador — mas art. 48 é do controlador e art. 46 alcança todos os agentes.",
+      "macete": "Incidente relevante = ANPD + titular (art. 48). Segurança = todos os agentes (art. 46). Encarregado é canal — não substitui controlador.",
+      "estudo_reverso": [
+        "LGPD art. 48",
+        "LGPD art. 46",
+        "LGPD art. 41",
+        "LGPD art. 5º, VI"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 50,
+      "fundamento_slug": "LGPD_art48_art46",
+      "macete_visual": "Incidente = ANPD + titular · segurança = todos os agentes",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Vazamento com risco relevante exige comunicação à ANPD e aos titulares pelo controlador — encarregado não substitui. Segurança é dever de todos os agentes, não só do operador.",
+            "destaques": ["ANPD", "titulares", "controlador"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Quem comunica o incidente?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Incidente com risco ou dano relevante?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Controlador comunica ANPD e titulares", "tipo": "resultado" }
+            ],
+            "arestas": [{ "de": "p1", "para": "r1", "rotulo": "Sim" }]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Encarregado × controlador",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              [
+                "Basta comunicar só à ANPD pelo encarregado",
+                "Controlador comunica ANPD e titulares"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Incidente relevante = ANPD + titular. Segurança = todos os agentes. Encarregado é canal, não controlador.",
+            "destaques": ["ANPD", "titulares", "agentes"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 13.709/2018 (LGPD)",
+          "path": "conteúdo/legislação federal/lei-13709-lgpd.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "LGPD_art48_art46",
+      "macete_visual": "Incidente = ANPD + titular · segurança = todos os agentes",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Encarregado ou operador privado induzem comunicar só à ANPD e excluir controlador da segurança",
+        "eixos_legais": ["LGPD_art48", "LGPD_art46", "LGPD_art41"],
+        "isca_por_alternativa": {
+          "A": "encarregado substitui controlador e dispensa aviso ao titular",
+          "C": "operador privado comunica sozinho aos titulares",
+          "D": "segurança é obrigação exclusiva de quem detém o servidor"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: ANPD + titular, não só ANPD",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — encarregado substitui controlador: dispensa aviso aos titulares e confunde papéis.\nC — operador comunica sozinho: transfere dever do controlador ao contratado.\nD — segurança só no operador: exclui STTP das medidas de segurança.\n\nA isca é o vazamento empurrar comunicação exclusiva à ANPD ou ao prestador privado.",
+            "destaques": ["Gabarito B", "titulares", "controlador"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 papéis no incidente",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CONTROLADOR: quem decide e responde pelo tratamento — no caso, a STTP.\n\nENCARREGADO: canal entre titulares, controlador e ANPD — não substitui o controlador na comunicação do art. 48.\n\nAGENTE DE TRATAMENTO: controlador ou operador — ambos devem adotar medidas de segurança.",
+            "destaques": ["CONTROLADOR", "ENCARREGADO", "AGENTE"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: comunicar o vazamento?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Acesso não autorizado expôs dados de centenas de condutores?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Há risco ou dano relevante aos titulares?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito B — STTP comunica ANPD e titulares",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa de obrigações no incidente",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Agente", "Obrigação no caso"],
+            "linhas": [
+              ["Controlador (STTP)", "Comunicar ANPD e titulares — incidente relevante"],
+              ["Encarregado", "Canal de reclamações — não substitui comunicação legal"],
+              ["Operador contratado", "Medidas de segurança + seguir instruções do controlador"],
+              ["Todos os agentes", "Adotar medidas técnicas e administrativas — art. 46"]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: só ANPD × ANPD + titular",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Encarregado comunica só à ANPD",
+                "Controlador comunica à autoridade nacional e ao titular"
+              ],
+              [
+                "Operador privado detém servidor — segurança só dele",
+                "Art. 46 — todos os agentes de tratamento"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Confunde encarregado com controlador e dispensa aviso ao titular"
+              ],
+              [
+                "C — regra_excecao",
+                "Usa operador privado como exceção que transfere comunicação aos titulares"
+              ],
+              [
+                "D — termo_unico",
+                "Exclui controlador das medidas de segurança por haver prestador"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o vazamento na STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Enquadramento"],
+            "linhas": [
+              ["Exposição de nome, CPF e endereço de centenas", "Incidente com risco ou dano relevante"],
+              ["Encarregado comunica só à ANPD", "Insuficiente — titulares também devem ser avisados"],
+              ["Operador alega aviso facultativo ao titular", "Dever do controlador — art. 48"],
+              ["Resultado", "Gabarito B — art. 48 + art. 46"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Comunicação e segurança encadeadas",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Mensagem"],
+            "linhas": [
+              ["Art. 46", "Medidas de segurança — todos os agentes de tratamento"],
+              ["Art. 48", "Incidente relevante — controlador comunica ANPD e titular"],
+              ["Art. 41", "Encarregado é canal — não substitui controlador"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 48 — comunicação do incidente",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LGPD, art. 48",
+            "texto": "Art. 48. O controlador deverá comunicar à autoridade nacional e ao titular a ocorrência de incidente de segurança que possa acarretar risco ou dano relevante aos titulares.",
+            "trechos_grifados": [
+              {
+                "inicio": 42,
+                "fim": 74,
+                "motivo": "contraste — comunicação dupla, não só ANPD (isca A)",
+                "texto_grifado": "autoridade nacional e ao titular"
+              },
+              {
+                "inicio": 134,
+                "fim": 157,
+                "motivo": "caso — vazamento de centenas de condutores",
+                "texto_grifado": "risco ou dano relevante"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 46 — medidas de segurança",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LGPD, art. 46, caput",
+            "texto": "Art. 46. Os agentes de tratamento devem adotar medidas de segurança, técnicas e administrativas aptas a proteger os dados pessoais de acessos não autorizados e de situações acidentais ou ilícitas de destruição, perda, alteração, comunicação ou qualquer forma de tratamento inadequado ou ilícito.",
+            "trechos_grifados": [
+              {
+                "inicio": 12,
+                "fim": 33,
+                "motivo": "mapa — STTP e operador são agentes de tratamento",
+                "texto_grifado": "agentes de tratamento"
+              },
+              {
+                "inicio": 47,
+                "fim": 67,
+                "motivo": "distratores — segurança não é só do operador (isca D)",
+                "texto_grifado": "medidas de segurança"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Incidente relevante = ANPD + titular (art. 48). Segurança = todos os agentes (art. 46). Encarregado é canal — não substitui controlador.\n\nNear-transfer: vazamento de apenas 3 titulares sem risco relevante — ainda assim medidas de segurança do art. 46 se aplicam; comunicação do art. 48 depende do critério de relevância.",
+            "destaques": ["ANPD", "Near-transfer", "agentes"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 13.709/2018 (LGPD)",
+          "path": "conteúdo/legislação federal/lei-13709-lgpd.html"
+        }
+      ]
+    },
+    "tags": [
+      "lgpd",
+      "incidente",
+      "seguranca",
+      "controlador",
+      "vazamento",
+      "sttp"
+    ]
+  }
+]

@@ -67,15 +67,13 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Cargo é de provimento efetivo?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Três anos de efetivo exercício?", "tipo": "pergunta" },
+              { "id": "p1", "label": "Comissão gera estabilidade pelo tempo?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Três anos em efetivo via concurso?", "tipo": "pergunta" },
               { "id": "r1", "label": "Gabarito A — só efetivo estabiliza", "tipo": "resultado" }
             ],
             "arestas": [
               { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p1", "para": "r1", "rotulo": "Não" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
             ]
           }
         },
@@ -156,12 +154,12 @@
             "nos": [
               {
                 "id": "p1",
-                "label": "Cargo é de provimento efetivo?",
+                "label": "Comissão gera estabilidade pelo tempo?",
                 "tipo": "pergunta"
               },
               {
                 "id": "p2",
-                "label": "Completou três anos de exercício?",
+                "label": "Três anos em efetivo via concurso?",
                 "tipo": "pergunta"
               },
               {
@@ -172,9 +170,7 @@
             ],
             "arestas": [
               { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p1", "para": "r1", "rotulo": "Não" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
             ]
           }
         },

@@ -1,0 +1,347 @@
+[
+  {
+    "disciplina": "direito_constitucional",
+    "topico": "dir_const_3_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "enunciado": "Em operação de fiscalização de trânsito em avenida municipal de Campina Grande, agentes da STTP e policiais militares montam bloqueio e impedem um condutor de retirar o veículo do local após recusar o teste do etilômetro, mantendo-o sob guarda por cerca de 40 minutos até ordem de superior hierárquico — sem crime em flagrante nem ordem judicial. O condutor alega violação constitucional. Os envolvidos debatem qual órgão ou hipótese legal legitimaria a retenção prolongada. Com base na Constituição Federal de 1988, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A blitz de fiscalização de trânsito autoriza reter o condutor pelo tempo necessário à realização do etilômetro, ainda que recuse, independentemente de flagrante delito.",
+      "B": "A retenção por 40 minutos sem crime em curso viola a liberdade de locomoção do art. 5º, XV; a recusa ao teste acarreta sanção administrativa, não prisão sem ordem judicial (LXI).",
+      "C": "O agente da STTP, com apoio da polícia militar na operação, pode impedir a saída do condutor do local até ordem superior, por competência da segurança viária.",
+      "D": "A recusa ao etilômetro configura flagrante delito, legitimando a retenção do condutor na operação por tempo indeterminado até despacho judicial."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Liberdade de locomoção (art. 5º, XV) e limites da prisão (art. 5º, LXI) em fiscalização de trânsito — retenção prolongada após recusa ao etilômetro sem flagrante delito nem ordem judicial.",
+      "fundamento_legal": "CF/88, art. 5º, XV: \"é livre a locomoção no território nacional em tempo de paz, podendo qualquer pessoa, nos termos da lei, nele entrar, permanecer ou dele sair com seus bens\". CF/88, art. 5º, LXI: \"ninguém será preso senão em flagrante delito ou por ordem escrita e fundamentada de autoridade judiciária competente\". CF/88, art. 5º, LXVIII: conceder-se-á habeas corpus quando houver coação ilegal à liberdade de locomoção.",
+      "passo_a_passo": [
+        "1. O caso reúne recusa ao etilômetro, bloqueio de saída por 40 minutos, ausência de flagrante delito e inexistência de ordem judicial — configura coação à locomoção sem base constitucional.",
+        "2. A erra por regra_excecao (estende a fiscalização de trânsito para reter o condutor indefinidamente após recusa, sem flagrante); C erra por competencia_snt (atribui à STTP com PM poder de impedir a saída do condutor por competência de segurança viária — não autoriza privação prolongada de locomoção); D erra por termo_unico (trata recusa administrativa ao etilômetro como flagrante delito legitimando retenção por tempo indeterminado).",
+        "3. B está correta: a retenção viola o art. 5º, XV; a recusa sujeita o condutor a responsabilização administrativa de trânsito, não a prisão sem ordem judicial (LXI)."
+      ],
+      "pegadinha": "A banca confunde fiscalização administrativa (pode exigir teste e autuar recusa) com privação prolongada de locomoção ou prisão — só flagrante delito ou ordem judicial (LXI) autorizam retenção coercitiva.",
+      "macete": "LOCO = livre sair/entrar/permanecer (XV). Fiscalização ≠ prisão. Recusa etilômetro = infração admin — não flagrante automático.",
+      "estudo_reverso": [
+        "CF art. 5º, XV",
+        "CF art. 5º, LXI",
+        "CF art. 5º, LXVIII"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CF_art5_XV",
+      "macete_visual": "Fiscaliza ≠ prende",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Bloqueio por 40 min após recusa ao etilômetro. A banca trata fiscalização como prisão ou flagrante automático — locomoção é livre (XV).",
+            "destaques": ["40 min", "recusa", "locomoção"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método rápido",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Há flagrante delito ou ordem judicial?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Apenas recusa ao etilômetro na blitz?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Retenção prolongada viola locomoção (XV)", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Recusa = flagrante → pode reter", "Recusa = sanção administrativa — não prisão (LXI)"],
+              ["Blitz autoriza reter até testar", "Fiscalizar ≠ privar locomoção por 40 min (XV)"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, XV",
+            "texto": "é livre a locomoção no território nacional em tempo de paz, podendo qualquer pessoa, nos termos da lei, nele entrar, permanecer ou dele sair com seus bens",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 58,
+                "motivo": "regra — locomoção livre",
+                "texto_grifado": "é livre a locomoção no território nacional em tempo de paz"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Fiscaliza ≠ prende. Recusa etilômetro = infração admin — não flagrante automático.",
+            "destaques": ["Fiscaliza", "recusa", "flagrante"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, XV",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 235,
+      "fundamento_slug": "CF_art5_XV",
+      "macete_visual": "Fiscaliza ≠ prende",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Fiscalização de trânsito não autoriza reter condutor 40 min — recusa não é flagrante",
+        "eixos_legais": ["CF_art5_XV", "CF_art5_LXI", "CF_art5_LXVIII"],
+        "isca_por_alternativa": {
+          "A": "blitz autoriza reter condutor indefinidamente para etilômetro após recusa",
+          "C": "STTP com PM bloqueia saída por competência de segurança viária",
+          "D": "recusa ao etilômetro vira flagrante legitimando retenção por tempo indeterminado"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: fiscalizar × prender",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B (locomoção livre + limite da prisão).\n\nA — blitz retém até testar após recusa: estende fiscalização a prisão sem flagrante.\nC — STTP com PM bloqueia saída por segurança viária: órgão não autoriza retenção prolongada.\nD — recusa vira flagrante: troca sanção administrativa por crime em curso.\n\nPromessa: separar fiscalização de trânsito da privação de locomoção.",
+            "destaques": ["locomoção", "recusa", "flagrante"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de decidir: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "LIBERDADE DE LOCOMOÇÃO: direito de entrar, permanecer e sair com bens no território nacional (tempo de paz). FISCALIZAÇÃO DE TRÂNSITO: poder de polícia administrativa — autua, exige testes, não confunde com prisão. FLAGRANTE DELITO: crime em curso — recusa ao etilômetro, isoladamente, não preenche.",
+            "destaques": ["locomoção", "fiscalização", "flagrante delito"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: pode reter o condutor?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Há flagrante delito ou ordem judicial escrita?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "A retenção passa de 40 min só por recusa ao etilômetro?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Viola locomoção (XV) — gabarito B",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa: o que a CF autoriza reter",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Hipótese", "Autoriza retenção coercitiva?"],
+            "linhas": [
+              { "faixa": "Flagrante delito", "classificacao": "Sim — art. 5º, LXI" },
+              { "faixa": "Ordem judicial escrita", "classificacao": "Sim — art. 5º, LXI" },
+              {
+                "faixa": "Recusa ao etilômetro na blitz",
+                "classificacao": "Não — sanção administrativa",
+                "destaque": true
+              },
+              { "faixa": "Fiscalização de trânsito", "classificacao": "Autua e exige teste — não prende por 40 min" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença × lei: pode reter × deve liberar",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Recusa ao etilômetro = flagrante → pode prender",
+                "Recusa gera infração administrativa — não prisão sem LXI"
+              ],
+              [
+                "Blitz pode reter até o condutor aceitar o teste",
+                "Locomoção é livre — fiscalizar ≠ privar por 40 min (XV)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Estende fiscalização de trânsito para reter após recusa sem flagrante delito"
+              ],
+              [
+                "C — competencia_snt",
+                "Atribui à STTP com PM poder de bloquear saída por competência de segurança viária"
+              ],
+              [
+                "D — termo_unico",
+                "Troca sanção administrativa por flagrante delito legitimando retenção indeterminada"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo a blitz de Campina Grande",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Conclusão"],
+            "linhas": [
+              ["Condutor recusa etilômetro na operação", "Cabível autuação administrativa — não prisão automática"],
+              ["Bloqueio por 40 min sem flagrante nem ordem judicial", "Coação à locomoção — viola art. 5º, XV"],
+              ["STTP e PM impedem retirada do veículo", "Nenhum órgão do caso autoriza retenção prolongada"],
+              ["Resultado", "Alternativa B"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 5º, XV × LXI × LXVIII",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              ["Art. 5º, XV", "Garante locomoção livre — entrar, permanecer, sair"],
+              ["Art. 5º, LXI", "Prisão só em flagrante ou ordem judicial"],
+              ["Art. 5º, LXVIII", "Habeas corpus se coação ilegal à locomoção"],
+              ["Caso concreto", "40 min de bloqueio sem LXI → violação de XV"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 5º, XV — liberdade de locomoção",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, XV",
+            "texto": "é livre a locomoção no território nacional em tempo de paz, podendo qualquer pessoa, nos termos da lei, nele entrar, permanecer ou dele sair com seus bens",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 58,
+                "motivo": "fluxo — locomoção livre em tempo de paz",
+                "texto_grifado": "é livre a locomoção no território nacional em tempo de paz"
+              },
+              {
+                "inicio": 117,
+                "fim": 140,
+                "motivo": "caso — condutor impedido de sair com o veículo",
+                "texto_grifado": "permanecer ou dele sair"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 5º, LXI — limites da prisão",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXI",
+            "texto": "ninguém será preso senão em flagrante delito ou por ordem escrita e fundamentada de autoridade judiciária competente",
+            "trechos_grifados": [
+              {
+                "inicio": 28,
+                "fim": 44,
+                "motivo": "contraste — recusa isolada não é flagrante",
+                "texto_grifado": "flagrante delito"
+              },
+              {
+                "inicio": 52,
+                "fim": 116,
+                "motivo": "mapa — segunda hipótese de retenção lícita",
+                "texto_grifado": "ordem escrita e fundamentada de autoridade judiciária competente"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "FISCALIZA ≠ PRENDE.\nLocomoção livre (XV) · prisão = flagrante ou ordem judicial (LXI).\nRecusa etilômetro = infração admin.\n\nNear-transfer: se o condutor apresentasse sinais de embriaguez em flagrante e fosse conduzido à delegacia por crime do art. 306, aí sim cabe retenção — mas recusa isolada na blitz não basta.",
+            "destaques": ["FISCALIZA", "LXI", "recusa"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, XV",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        },
+        {
+          "rotulo": "CF/88, art. 5º, LXI",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "art5_xv",
+      "locomocao",
+      "direitos_individuais",
+      "fiscalizacao_transito",
+      "etilometro"
+    ]
+  }
+]

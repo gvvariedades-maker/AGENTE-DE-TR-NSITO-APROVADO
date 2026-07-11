@@ -1,0 +1,323 @@
+[
+  {
+    "disciplina": "direito_administrativo",
+    "topico": "dir_adm_6_3",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 5,
+    "fundamento_slug": "Lei8112_art116_IV",
+    "enunciado": "O chefe de fiscalização da STTP determina a um agente de trânsito que lavre auto de infração com dados inverídicos para cumprir meta de arrecadação, sob ameaça de punição por insubordinação. O agente consulta a assessoria jurídica sobre o dever de obediência hierárquica. Considerando os direitos e deveres dos servidores públicos e a Lei nº 8.112/1990, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O servidor deve cumprir toda ordem superior, salvo ordem expressamente inconstitucional, ainda que legalmente questionável.",
+      "B": "A ordem manifestamente ilegal só pode ser desobedecida após manifestação prévia da Corregedoria ou do Poder Judiciário.",
+      "C": "É dever do servidor cumprir as ordens superiores, exceto quando manifestamente ilegais.",
+      "D": "O dever de obediência hierárquica prevalece sobre a legalidade do ato quando a ordem é proferida por autoridade competente do órgão."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Deveres do servidor: obediência hierárquica com limite na ordem manifestamente ilegal (Lei 8.112/90, art. 116, IV).",
+      "fundamento_legal": "Lei 8.112/90, art. 116, IV: \"cumprir as ordens superiores, exceto quando manifestamente ilegais\". Art. 116, VI: levar irregularidades ao conhecimento da autoridade superior.",
+      "passo_a_passo": [
+        "1. Ordem para lavrar auto com dados inverídicos é manifestamente ilegal — o dever de obediência (art. 116, IV) não obriga o servidor a cumpri-la.",
+        "2. A erra por termo_unico (restringe desobediência só a ordem inconstitucional, não a ilegalidade manifesta); B erra por competencia_snt (exige Corregedoria ou Judiciário antes de recusar); D erra por regra_excecao (hierarquia prevalece sobre legalidade).",
+        "3. C correta: transcrição literal do art. 116, IV."
+      ],
+      "pegadinha": "A banca estreita a exceção à inconstitucionalidade ou exige chancela prévia — o art. 116, IV basta a ilegalidade manifesta.",
+      "macete": "OBEDECE ordem | EXCETO manifestamente ilegal (art.116,IV) | DENUNCIA irregularidade (VI).",
+      "estudo_reverso": [
+        "Lei 8.112/90 art. 116, IV",
+        "Lei 8.112/90 art. 116, VI",
+        "Lei 8.112/90 art. 117, IX"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "Lei8112_art116_IV",
+      "macete_visual": "OBEDECE | EXCETO ilegal manifesta",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Ordem para auto com dados falsos é manifestamente ilegal — art. 116, IV dispensa obediência.",
+            "destaques": ["manifestamente ilegais", "art. 116", "obediência"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Obedecer × recusar",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "Art. 116, IV ✓"],
+            "linhas": [
+              [
+                "Só recusa ordem inconstitucional ou com aval do Judiciário",
+                "Cumprir ordens — exceto quando manifestamente ilegais"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Ordem é manifestamente ilegal?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Insubordinação dispensa obediência?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito C — pode recusar a ordem", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 116, IV",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 8.112/90, art. 116, IV",
+            "texto": "IV - cumprir as ordens superiores, exceto quando manifestamente ilegais;",
+            "trechos_grifados": [
+              { "inicio": 35, "fim": 71, "motivo": "exceção — ordem ilegal" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "OBEDECE ordem | EXCETO manifestamente ilegal (art.116,IV) | DENUNCIA irregularidade (VI).",
+            "destaques": ["EXCETO", "manifestamente ilegal", "art.116"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 8.112/90 art. 116",
+          "path": "conteúdo/legislação federal/lei-8112-servidores.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 260,
+      "fundamento_slug": "Lei8112_art116_IV",
+      "macete_visual": "OBEDECE | EXCETO ilegal manifesta",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "A exceção é ordem manifestamente ilegal — não só inconstitucional nem com aval prévio",
+        "eixos_legais": ["Lei8112_art116_IV", "Lei8112_art116_VI"],
+        "isca_por_alternativa": {
+          "A": "restringe exceção à inconstitucionalidade expressa",
+          "B": "exige Corregedoria ou Judiciário antes de desobedecer",
+          "D": "hierarquia prevalece sobre legalidade do ato"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: obediência × legalidade",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — só inconstitucional: art. 116, IV fala em ilegalidade manifesta.\nB — aval prévia: não exige chancela para recusar ordem ilegal.\nD — hierarquia prevalece: legalidade limita a obediência.\n\nPegadinha: auto com dados falsos é ordem manifestamente ilegal.",
+            "destaques": ["Gabarito C", "manifestamente ilegais", "art. 116, IV"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Poder hierárquico: ordens dos superiores vinculam subordinados no serviço público.\nOrdem manifestamente ilegal: comando cujo vício de legalidade é evidente — dispensa obediência (art. 116, IV).\nInsubordinação: desobediência injustificada — não configura quando a ordem é ilegal.",
+            "destaques": ["hierárquico", "manifestamente ilegal", "Insubordinação"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "MÉTODO: ordem do chefe da STTP",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Ordem é manifestamente ilegal?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Ameaça de insubordinação obriga cumprir?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito C — pode recusar a ordem",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Deveres correlatos (art. 116)",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Inciso", "Dever"],
+            "linhas": [
+              {
+                "faixa": "IV",
+                "classificacao": "Cumprir ordens — exceto manifestamente ilegais",
+                "destaque": true
+              },
+              {
+                "faixa": "III",
+                "classificacao": "Observar normas legais e regulamentares"
+              },
+              {
+                "faixa": "VI",
+                "classificacao": "Levar irregularidades ao conhecimento do superior"
+              },
+              {
+                "faixa": "I",
+                "classificacao": "Exercer com zelo as atribuições do cargo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Ilegal manifesta × inconstitucional",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a banca insinua ✗", "Art. 116, IV ✓"],
+            "linhas": [
+              [
+                "Só recusa ordem expressamente inconstitucional",
+                "Exceto quando manifestamente ilegais — ilegalidade evidente"
+              ],
+              [
+                "Precisa de aval da Corregedoria para desobedecer",
+                "Limite está na lei — não exige autorização prévia"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Restringe exceção à inconstitucionalidade — lei fala em ilegalidade manifesta"
+              ],
+              [
+                "B — competencia_snt",
+                "Exige Corregedoria ou Judiciário — art. 116, IV não condiciona assim"
+              ],
+              [
+                "D — regra_excecao",
+                "Hierarquia prevalece sobre legalidade — inverte o limite do inciso IV"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso STTP", "Consequência"],
+            "linhas": [
+              ["Ordem para auto com dados inverídicos", "Manifestamente ilegal"],
+              ["Ameaça de punição por insubordinação", "Não obriga cumprir ordem ilegal"],
+              ["Agente consulta assessoria", "Pode recusar com fundamento no art. 116, IV"],
+              ["Resultado", "Alternativa C — única defensável"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 116, IV — obediência",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 8.112/90, art. 116, IV",
+            "texto": "IV - cumprir as ordens superiores, exceto quando manifestamente ilegais;",
+            "trechos_grifados": [
+              {
+                "inicio": 5,
+                "fim": 33,
+                "motivo": "mapa — dever de cumprir ordens"
+              },
+              {
+                "inicio": 35,
+                "fim": 71,
+                "motivo": "contraste — exceção da ilegalidade manifesta"
+              }
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Art. 116, VI — denunciar",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dever", "No caso"],
+            "linhas": [
+              ["IV — recusar ordem ilegal", "Auto com dados falsos — não cumprir"],
+              ["VI — levar irregularidade ao superior", "Comunicar a ordem ilícita"],
+              ["Ameaça de insubordinação", "Não legitima ordem manifestamente ilegal"],
+              ["Alternativa C", "Síntese do inciso IV"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "OBEDECE ordem | EXCETO manifestamente ilegal (art.116,IV) | DENUNCIA irregularidade (VI).\n\nNear-transfer: chefe manda omitir notificação formal ao autuado — pode obedecer? Não, se a omissão for manifestamente ilegal; obediência não cobre ato que viole a lei de forma evidente.",
+            "destaques": ["EXCETO", "manifestamente ilegal", "near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 8.112/90 art. 116",
+          "path": "conteúdo/legislação federal/lei-8112-servidores.html"
+        }
+      ]
+    },
+    "tags": [
+      "deveres_servidor",
+      "obediencia_hierarquica",
+      "art_116",
+      "lei_8112"
+    ]
+  }
+]

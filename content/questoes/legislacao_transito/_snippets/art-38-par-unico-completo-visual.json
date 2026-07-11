@@ -1,0 +1,156 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 255,
+  "fundamento_slug": "CTB_art_38_par_unico",
+  "macete_visual": "MUDANÇA DIR→CEDE PED+CIC+CONTRA",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Mudança de direção exige ceder a pedestres, ciclistas e sentido contrário — não basta olhar só o veículo oposto",
+    "eixos_legais": ["CTB_art_38_par_unico", "CTB_art_36"],
+    "isca_por_alternativa": {
+      "A": "ceder só a veículos em sentido contrário — termo_unico",
+      "B": "aplica art. 36 de ingresso de lote — regra_excecao",
+      "C": "seta ou semáforo dispensam ceder a pedestres — regra_excecao"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-070.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: três grupos na mudança de direção",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito D.\n\nA — cedeu só ao veículo contrário: o § único inclui pedestres e ciclistas.\nB — citou art. 36: ingresso de lote lindeiro é outra hipótese — aqui é mudança de direção ao sair da via.\nC — invocou seta/semáforo: sinalização não dispensa ceder passagem na manobra.\n\nNesta aula você fixa os três destinatários da preferência no § único do art. 38.",
+        "destaques": ["Gabarito D", "pedestres e ciclistas", "mudança de direção"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "MUDANÇA DE DIREÇÃO: manobra de conversão à direita ou à esquerda ao sair da via — gatilho do § único do art. 38.\n\nCEDER PASSAGEM: aguardar que pedestres, ciclistas e veículos contrários transitem com segurança antes de concluir a curva.\n\nSAIR DA VIA: deixar a pista em que circulava — distinto de ingressar de lote lindeiro (art. 36).",
+        "destaques": ["MUDANÇA DE DIREÇÃO", "CEDER PASSAGEM", "SAIR DA VIA"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: quem tem preferência na curva?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Manobra é mudança de direção ao sair da via?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Há pedestre, ciclista ou veículo em sentido contrário?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Ceder passagem antes de concluir a manobra", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Sim" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "§ único — três destinatários da preferência",
+      "secao": "mapa",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Destinatário", "Dever"],
+        "linhas": [
+          ["Pedestres", "Ceder passagem durante a mudança de direção"],
+          ["Ciclistas", "Ceder passagem — inclui ciclista do caso"],
+          ["Veículos em sentido contrário", "Ceder na pista da qual o condutor sai"]
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: só o carro contrário",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Basta aguardar veículo em sentido contrário", "§ único inclui pedestres e ciclistas expressamente"],
+          ["Semáforo verde dispensa ceder a pedestre", "Ceder passagem na manobra — respeitadas normas de preferência"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — termo_unico", "Exclui pedestres e ciclistas — o § único os nomeia antes dos veículos contrários"],
+          ["B — regra_excecao", "Aplica art. 36 fora da hipótese — ingresso de lote ≠ mudança de direção ao sair"],
+          ["C — regra_excecao", "Inventa que seta ou semáforo dispensam ceder passagem na manobra"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Conversão à esquerda em cruzamento — mudança de direção", "Incide § único do art. 38"],
+          ["Cedeu ao automóvel contrário, mas não ao pedestre e ciclista", "Dever violado — três grupos no § único"],
+          ["Resultado", "Gabarito D — ceder a pedestres, ciclistas e sentido contrário"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Art. 36 × art. 38, § único",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Dispositivo", "Hipótese"],
+        "linhas": [
+          ["Art. 36", "Ingresso na via procedente de lote lindeiro — preferência a veículos e pedestres"],
+          ["Art. 38, § único", "Mudança de direção ao sair da via — pedestres, ciclistas e sentido contrário"],
+          ["Pegadinha B", "Sair da via com conversão não é ingresso de lote lindeiro"]
+        ]
+      }
+    },
+    {
+      "id": "lei38p",
+      "titulo": "Art. 38, § único — literal da regra",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 38, § único",
+        "texto": "Durante a manobra de mudança de direção, o condutor deverá ceder passagem aos pedestres e ciclistas, aos veículos que transitem em sentido contrário pela pista da via da qual vai sair, respeitadas as normas de preferência de passagem.",
+        "trechos_grifados": [
+          { "inicio": 21, "fim": 39, "motivo": "glossario — mudança de direção do enunciado" },
+          { "inicio": 78, "fim": 99, "motivo": "contraste — pedestre e ciclista do caso" },
+          { "inicio": 131, "fim": 148, "motivo": "caso — veículo em sentido contrário já considerado pelo condutor" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "MUDANÇA DE DIREÇÃO = CEDE (§ único art. 38).\nPED + CIC + CONTRA.\nSemáforo/seta não dispensam.\n≠ art. 36 (lote lindeiro).\n\nNear-transfer: conversão à direita em via de duplo sentido — ainda deve ceder a pedestre na faixa e a ciclista, além do veículo contrário.",
+        "destaques": ["PED + CIC + CONTRA", "§ único", "Near-transfer"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 38, § único", "path": "conteúdo/legislação federal/lei-9503-ctb.html" },
+    { "rotulo": "CTB art. 36", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

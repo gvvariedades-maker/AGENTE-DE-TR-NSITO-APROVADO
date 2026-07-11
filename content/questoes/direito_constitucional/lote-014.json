@@ -1,0 +1,353 @@
+[
+  {
+    "disciplina": "direito_constitucional",
+    "topico": "dir_const_4_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "enunciado": "Após blitz de fiscalização de trânsito em Campina Grande, policiais militares conduzem um condutor à base da PM e o mantêm sob custódia por seis horas, impedindo contato com familiares, sem flagrante delito e sem ordem judicial escrita — apenas porque ele contestou a autuação lavrada por agente da STTP. A defesa busca remédio constitucional imediato contra a coação à liberdade de locomoção e discute a competência do órgão perante o qual cabe a impetração. Com base na Constituição Federal de 1988, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Cabe habeas corpus, pois há coação ilegal à locomoção (art. 5º, LXVIII); a custódia sem flagrante nem ordem judicial viola o art. 5º, LXI — o MS não substitui o HC quando a lesão é à locomoção (LXIX).",
+      "B": "Cabe mandado de segurança contra o auto de infração, por lesão a direito líquido e certo, ainda que o condutor esteja sob custódia na base da PM após a blitz.",
+      "C": "A custódia policial de até doze horas é legítima em fiscalização de trânsito, dispensando flagrante delito quando o condutor contesta a autuação do agente da STTP.",
+      "D": "O habeas corpus contra a custódia deve ser dirigido ao órgão máximo executivo de trânsito da União, competente para rever blitzes com apoio da polícia militar."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Cabimento do habeas corpus por coação ilegal à liberdade de locomoção (art. 5º, LXVIII), limites da prisão (art. 5º, LXI) e exclusão do mandado de segurança quando a lesão atinge a locomoção (art. 5º, LXIX).",
+      "fundamento_legal": "CF/88, art. 5º, LXVIII: \"conceder-se-á habeas corpus sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder\". CF/88, art. 5º, LXI: \"ninguém será preso senão em flagrante delito ou por ordem escrita e fundamentada de autoridade judiciária competente\". CF/88, art. 5º, LXIX: o mandado de segurança protege direito líquido e certo \"não amparado por habeas corpus ou habeas data\".",
+      "passo_a_passo": [
+        "1. O caso reúne custódia de seis horas na base da PM, impedimento de locomoção e contato familiar, ausência de flagrante delito e inexistência de ordem judicial — há coação ilegal à liberdade de locomoção.",
+        "2. B erra por termo_unico (indica mandado de segurança contra o auto quando a lesão imediata é à locomoção por custódia ilegal — hipótese do habeas corpus, não do MS); C erra por regra_excecao (cria exceção inexistente autorizando custódia policial prolongada na fiscalização de trânsito sem flagrante); D erra por competencia_snt (atribui impetração de habeas corpus ao órgão máximo de trânsito da União — remédio constitucional não se dirige a órgão do SNT).",
+        "3. A está correta: cabe habeas corpus (LXVIII), a custódia ofende o art. 5º, LXI e o MS não substitui o HC quando a lesão é à locomoção (LXIX)."
+      ],
+      "pegadinha": "A banca troca habeas corpus (locomoção coercitiva) por mandado de segurança (direito líquido e certo contra o auto) ou inventa custódia administrativa na blitz — o HC é o remédio imediato contra coação ilegal à locomoção.",
+      "macete": "Locomoção coercitiva = HC (LXVIII). MS só se não couber HC/HD (LXIX). Prisão = flagrante ou ordem judicial (LXI).",
+      "estudo_reverso": [
+        "CF art. 5º, LXVIII",
+        "CF art. 5º, LXI",
+        "CF art. 5º, LXIX"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CF_art5_LXVIII",
+      "macete_visual": "Locomoção = HC",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Custódia de 6 h na PM após blitz sem flagrante. A banca oferece MS ou custódia administrativa — locomoção coercitiva pede habeas corpus.",
+            "destaques": ["custódia", "habeas corpus", "locomoção"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método rápido",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Há coação à liberdade de locomoção?", "tipo": "pergunta" },
+              { "id": "p2", "label": "A lesão é só direito líquido e certo sem locomoção?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Habeas corpus — LXVIII", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["MS contra o auto na custódia", "HC quando a lesão é locomoção (LXIX exclui MS)"],
+              ["Blitz autoriza custódia de horas", "Prisão só com flagrante ou ordem judicial (LXI)"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXVIII",
+            "texto": "conceder-se-á habeas corpus sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder",
+            "trechos_grifados": [
+              {
+                "inicio": 111,
+                "fim": 133,
+                "motivo": "regra — liberdade de locomoção",
+                "texto_grifado": "liberdade de locomoção"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Locomoção coercitiva = HC. MS só sem HC/HD. Prisão = flagrante ou ordem judicial.",
+            "destaques": ["HC", "MS", "flagrante"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, LXVIII",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 240,
+      "fundamento_slug": "CF_art5_LXVIII",
+      "macete_visual": "Locomoção = HC",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Custódia na PM após blitz pede HC — MS não substitui quando a lesão é locomoção",
+        "eixos_legais": ["CF_art5_LXVIII", "CF_art5_LXI", "CF_art5_LXIX"],
+        "isca_por_alternativa": {
+          "B": "mandado de segurança contra auto ainda com condutor sob custódia na PM",
+          "C": "custódia de até 12 h legítima na fiscalização sem flagrante",
+          "D": "habeas corpus impetrado perante órgão máximo de trânsito da União"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: qual remédio na custódia?",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A (habeas corpus por coação à locomoção).\n\nB — mandado de segurança contra o auto: ignora custódia ilegal e troca HC por MS.\nC — custódia de 12 h na blitz: inventa exceção sem flagrante delito.\nD — HC perante órgão de trânsito da União: confunde competência do SNT com remédio constitucional.\n\nPromessa: escolher HC quando a lesão imediata é locomoção.",
+            "destaques": ["habeas corpus", "custódia", "locomoção"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de decidir: 3 remédios",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "HABEAS CORPUS: protege locomoção contra coação ilegal ou abuso de poder. MANDADO DE SEGURANÇA: direito líquido e certo não amparado por HC ou habeas data. CUSTÓDIA SEM FLAGRANTE: exige ordem judicial escrita — fiscalização de trânsito não autoriza prisão administrativa por horas.",
+            "destaques": ["habeas corpus", "mandado de segurança", "flagrante"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual remédio cabe?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Há violência ou coação à liberdade de locomoção?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "A lesão se resume a direito líquido e certo sem locomoção?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Habeas corpus — gabarito A",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — custódia na PM" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa dos remédios no art. 5º",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Remédio", "Quando cabe"],
+            "linhas": [
+              {
+                "faixa": "Habeas corpus (LXVIII)",
+                "classificacao": "Coação ilegal à locomoção",
+                "destaque": true
+              },
+              { "faixa": "Mandado de segurança (LXIX)", "classificacao": "Direito líquido e certo — sem HC/HD" },
+              { "faixa": "Habeas data (LXXII)", "classificacao": "Dados pessoais em registros públicos" },
+              { "faixa": "Mandado de injunção (LXXI)", "classificacao": "Falta de norma regulamentadora" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença × lei: MS × HC",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Contestou auto → mandado de segurança basta",
+                "Custódia ilegal = lesão à locomoção → habeas corpus (LXIX exclui MS)"
+              ],
+              [
+                "Blitz permite reter na PM por horas",
+                "Prisão só em flagrante ou ordem judicial (LXI)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — termo_unico",
+                "Substitui habeas corpus por mandado de segurança contra o auto com condutor sob custódia"
+              ],
+              [
+                "C — regra_excecao",
+                "Inventa custódia policial de até 12 h na fiscalização sem flagrante delito"
+              ],
+              [
+                "D — competencia_snt",
+                "Direciona habeas corpus ao órgão máximo de trânsito da União"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo a custódia na blitz",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Conclusão"],
+            "linhas": [
+              ["Seis horas na base da PM sem flagrante nem ordem judicial", "Coação à locomoção — cabe HC (LXVIII)"],
+              ["Condutor contestou autuação da STTP", "Não autoriza custódia prolongada (C falsa)"],
+              ["Defesa busca remédio imediato", "HC, não MS contra o auto (B falsa)"],
+              ["Resultado", "Alternativa A"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "LXVIII × LXI × LXIX",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Papel no caso"],
+            "linhas": [
+              ["Art. 5º, LXVIII", "Habeas corpus — coação à locomoção"],
+              ["Art. 5º, LXI", "Veda custódia sem flagrante ou ordem judicial"],
+              ["Art. 5º, LXIX", "MS excluído quando couber HC"],
+              ["Caso concreto", "Custódia na PM → HC + violação do LXI"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 5º, LXVIII — habeas corpus",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXVIII",
+            "texto": "conceder-se-á habeas corpus sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder",
+            "trechos_grifados": [
+              {
+                "inicio": 97,
+                "fim": 103,
+                "motivo": "fluxo — coação presente na custódia",
+                "texto_grifado": "coação"
+              },
+              {
+                "inicio": 111,
+                "fim": 133,
+                "motivo": "contraste — lesão que afasta o MS",
+                "texto_grifado": "liberdade de locomoção"
+              },
+              {
+                "inicio": 139,
+                "fim": 168,
+                "motivo": "caso — custódia ilegal na base da PM",
+                "texto_grifado": "ilegalidade ou abuso de poder"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 5º, LXI — limites da prisão",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXI",
+            "texto": "ninguém será preso senão em flagrante delito ou por ordem escrita e fundamentada de autoridade judiciária competente",
+            "trechos_grifados": [
+              {
+                "inicio": 28,
+                "fim": 44,
+                "motivo": "mapa — ausente no caso",
+                "texto_grifado": "flagrante delito"
+              },
+              {
+                "inicio": 52,
+                "fim": 116,
+                "motivo": "hierarquia — segunda hipótese lícita de prisão",
+                "texto_grifado": "ordem escrita e fundamentada de autoridade judiciária competente"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Locomoção coercitiva = HC (LXVIII).\nMS só sem HC/HD (LXIX).\nPrisão = flagrante ou ordem judicial (LXI).\n\nNear-transfer: se o condutor apenas recebesse multa e seguisse viagem, sem custódia, a discussão do auto poderia ser MS — mas retenção na PM muda o remédio para habeas corpus.",
+            "destaques": ["HC", "MS", "LXI"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, LXVIII",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        },
+        {
+          "rotulo": "CF/88, art. 5º, LXI",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "habeas_corpus",
+      "art5_lxviii",
+      "remedios_constitucionais",
+      "locomocao",
+      "blitz"
+    ]
+  }
+]

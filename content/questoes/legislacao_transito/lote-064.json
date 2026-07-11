@@ -1,0 +1,312 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_infracoes",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 5,
+    "fundamento_slug": "CTB_art_203_I",
+    "enunciado": "Em trecho de rodovia com curva acentuada nas proximidades de Campina Grande/PB, agente da STTP autua condutor que ultrapassa automóvel mais lento invadindo a faixa de fluxo oposto, em local sem visibilidade suficiente da via. Não havia linha dupla contínua amarela no trecho nem ponte, viaduto ou túnel. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA quanto à infração:",
+    "alternativas": {
+      "A": "Configura infração gravíssima por ultrapassar outro veículo pelo acostamento, nos termos do art. 202, I, do CTB.",
+      "B": "Configura infração gravíssima por ultrapassar pela contramão onde houver marcação viária de linha dupla contínua amarela, conforme o art. 203, V, do CTB.",
+      "C": "Configura infração gravíssima por ultrapassar pela contramão em curva sem visibilidade suficiente, nos termos do art. 203, I, do CTB.",
+      "D": "Configura infração gravíssima por ultrapassar pela contramão em ponte, viaduto ou túnel, conforme o art. 203, III, do CTB."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Art. 203, I — ultrapassar pela contramão em curva sem visibilidade suficiente (gravíssima); distinção do art. 202, I (acostamento), inciso V (linha contínua) e inciso III (ponte/viaduto/túnel).",
+      "fundamento_legal": "CTB, art. 203, I: ultrapassar pela contramão outro veículo nas curvas, aclives e declives, sem visibilidade suficiente — infração gravíssima; penalidade — multa (cinco vezes). CTB, art. 202, I: ultrapassar pelo acostamento — gravíssima. CTB, art. 203, III: em pontes, viadutos ou túneis — gravíssima. CTB, art. 203, V: linha dupla contínua ou simples contínua amarela — gravíssima.",
+      "passo_a_passo": [
+        "1. Caso: ultrapassagem pela contramão em curva sem visibilidade suficiente — núcleo do art. 203, I.",
+        "2. A erra por termo_unico (art. 202, I exige acostamento, não invasão da faixa oposta); B erra por numero_vizinho (inciso V exige linha contínua amarela, ausente no enunciado); D erra por regra_excecao (inciso III exige ponte, viaduto ou túnel, inexistentes no caso).",
+        "3. C correta: art. 203, I — infração gravíssima."
+      ],
+      "pegadinha": "A IDECAN troca contramão em curva (203, I) por acostamento (202, I), linha contínua (203, V) ou ponte/túnel (203, III).",
+      "macete": "203, I = CONTRAMÃO · CURVA · SEM VISIBILIDADE · GRAVÍSSIMA · ≠ 202 acostamento.",
+      "estudo_reverso": [
+        "CTB art. 203, I",
+        "CTB art. 203, V",
+        "CTB art. 202, I",
+        "CTB art. 203, III"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 80,
+      "fundamento_slug": "CTB_art_203_I",
+      "macete_visual": "203, I curva = GRAVÍSSIMA",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Ultrapassagem pela contramão em curva sem visibilidade.\n\nGabarito C: art. 203, I — gravíssima.",
+            "destaques": ["contramão", "203, I", "GRAVÍSSIMA"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Contramão em curva?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Ultrapassou pela contramão em curva sem visibilidade?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gravíssima — contramão em curva",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Contramão × acostamento",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Confusão ✗", "Regra ✓"],
+            "linhas": [
+              ["Ultrapassar = sempre acostamento", "Contramão em curva = art. 203, I"],
+              ["Linha contínua = única hipótese", "Curva sem visibilidade é inciso I"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "203, I = CONTRAMÃO · CURVA · GRAVÍSSIMA.",
+            "destaques": ["203, I", "CURVA", "GRAVÍSSIMA"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 203",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 285,
+      "fundamento_slug": "CTB_art_203_I",
+      "macete_visual": "203, I curva = GRAVÍSSIMA",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Ultrapassar pela contramão em curva sem visibilidade é art. 203, I gravíssima — não é acostamento (202, I), linha contínua (203, V) nem ponte/túnel (203, III)",
+        "eixos_legais": ["CTB_art_203_I", "CTB_art_202_I"],
+        "isca_por_alternativa": {
+          "A": "confunde contramão em curva com ultrapassagem pelo acostamento — art. 202, I",
+          "B": "aplica inciso V de linha contínua sem marcação no trecho",
+          "D": "aplica inciso III de ponte/viaduto/túnel ausentes no caso"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: contramão ≠ acostamento",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — confundiu contramão com acostamento: art. 202, I exige desvio lateral, não invasão da faixa oposta.\nB — aplicou inciso V (linha contínua): o enunciado afasta marcação de linha dupla amarela.\nD — aplicou inciso III (ponte/viaduto/túnel): o fato é curva em trecho aberto.\n\nCondutor ultrapassou invadindo a faixa de fluxo oposto em curva sem visibilidade.",
+            "destaques": ["Gabarito C", "contramão", "gravíssima"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 distinções",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CONTRAMÃO: invadir faixa de fluxo oposto para ultrapassar — art. 203.\n\nACOSTAMENTO: faixa lateral fora da pista de rolamento — art. 202, I.\n\nVISIBILIDADE SUFICIENTE: requisito do inciso I em curvas, aclives e declives.",
+            "destaques": ["CONTRAMÃO", "ACOSTAMENTO", "VISIBILIDADE"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual inciso do art. 203?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Ultrapassou pela contramão?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Em curva sem visibilidade suficiente?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gravíssima — contramão em curva",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — invadiu faixa oposta" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Incisos do art. 203",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Hipótese", "Inciso"],
+            "linhas": [
+              ["Curva sem visibilidade", "I — gravíssima"],
+              ["Faixa de pedestre", "II — gravíssima"],
+              ["Ponte, viaduto ou túnel", "III — gravíssima"],
+              ["Linha contínua amarela", "V — gravíssima"],
+              ["Acostamento (art. 202)", "Dispositivo distinto"]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: curva × linha × ponte",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Contramão = sempre linha contínua",
+                "Curva sem visibilidade é inciso I, independente de marcação"
+              ],
+              [
+                "Ultrapassar = acostamento",
+                "Acostamento é art. 202, I — conduta distinta da contramão"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Confunde contramão com acostamento — art. 202, I exige faixa lateral, não faixa oposta"
+              ],
+              [
+                "B — numero_vizinho",
+                "Aplica inciso V de linha contínua — enunciado afasta marcação amarela no trecho"
+              ],
+              [
+                "D — regra_excecao",
+                "Aplica inciso III de ponte/viaduto/túnel — fato é curva em trecho aberto"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado — Campina Grande",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Conclusão legal"],
+            "linhas": [
+              ["Invasão da faixa de fluxo oposto", "Ultrapassagem pela contramão — art. 203"],
+              ["Curva acentuada sem visibilidade", "Núcleo do inciso I"],
+              ["Sem linha contínua nem ponte/túnel", "Afasta incisos V e III"],
+              ["Resultado", "Gabarito C — infração gravíssima"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "203, I × 202, I × 203, V",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Conduta"],
+            "linhas": [
+              ["Art. 203, I", "Contramão em curva sem visibilidade — gravíssima"],
+              ["Art. 202, I", "Ultrapassar pelo acostamento — gravíssima"],
+              ["Art. 203, V", "Contramão com linha contínua amarela — gravíssima"],
+              ["Art. 203, III", "Contramão em ponte/viaduto/túnel — gravíssima"],
+              ["Caso", "Art. 203, I — gravíssima"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 203, I — curva sem visibilidade",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 203, I",
+            "texto": "I - nas curvas, aclives e declives, sem visibilidade suficiente: Infração - gravíssima.",
+            "trechos_grifados": [
+              {
+                "inicio": 8,
+                "fim": 34,
+                "motivo": "mapa — curvas, aclives e declives é hipótese do inciso I"
+              },
+              {
+                "inicio": 40,
+                "fim": 63,
+                "motivo": "contraste — sem visibilidade suficiente no caso"
+              },
+              {
+                "inicio": 76,
+                "fim": 86,
+                "motivo": "gradacao — gravíssima com multa cinco vezes no CTB"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "203, I = CONTRAMÃO · CURVA · SEM VISIBILIDADE · GRAVÍSSIMA · ≠ 202 acostamento.\n\nNear-transfer: mesmo condutor ultrapassa pelo acostamento em trecho reto — art. 202, I (gravíssima); conduta distinta da contramão em curva.",
+            "destaques": ["203, I", "202, I", "GRAVÍSSIMA"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 203",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "tags": [
+      "infracoes",
+      "art_203",
+      "ultrapassagem",
+      "contramao",
+      "curva",
+      "gravissima"
+    ]
+  }
+]

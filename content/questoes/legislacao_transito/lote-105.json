@@ -1,0 +1,360 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_432_alcoolemia",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_432_art_9",
+    "enunciado": "Durante blitz da STTP em Campina Grande/PB, condutor autuado por embriaguez (art. 165 do CTB) teve o veículo retido nos termos da Resolução CONTRAN nº 432/2013. Cerca de uma hora depois, amigo habilitado na categoria B comparece ao local com CNH válida para retirar o automóvel, alegando que não ingeriu álcool e recusando-se a realizar o teste com etilômetro. O condutor autuado sustenta que a apresentação de condutor habilitado bastaria para liberação imediata, independentemente de nova fiscalização. O supervisor da equipe consulta a Resolução. Considerando a Resolução CONTRAN nº 432/2013, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O veículo deve ser liberado assim que o amigo apresentar CNH válida — a retenção visa apenas impedir que o condutor autuado continue dirigindo, sem exigir teste do substituto.",
+      "B": "A retenção perdura até o condutor autuado comparecer ao DETRAN-PB em cinco dias para recuperar a CNH recolhida — o substituto não pode retirar o veículo antes disso.",
+      "C": "A STTP deve recolher o veículo ao depósito imediatamente após a autuação, sem possibilidade de liberação por condutor substituto no local da blitz.",
+      "D": "O veículo só pode ser liberado com condutor habilitado submetido à fiscalização de alcoolemia; se o substituto recusar o teste ou estiver inapto, aplica-se o recolhimento ao depósito (art. 9º)."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Medida administrativa de retenção do veículo — liberação com condutor habilitado submetido à fiscalização (art. 9º, caput) × recolhimento ao depósito se ausência ou inaptidão do substituto (art. 9º, parágrafo único), distinto do recolhimento da CNH (art. 10).",
+      "fundamento_legal": "Res. CONTRAN 432/2013, art. 9º, caput: 'O veículo será retido até a apresentação de condutor habilitado, que também será submetido à fiscalização.' Parágrafo único: 'Caso não se apresente condutor habilitado ou o agente verifique que ele não está em condições de dirigir, o veículo será recolhido ao depósito do órgão ou entidade responsável pela fiscalização, mediante recibo.' Art. 10: recolhimento do documento de habilitação do condutor autuado — regime distinto da liberação do veículo.",
+      "passo_a_passo": [
+        "1. Caso: veículo retido após art. 165 — amigo com CNH recusa etilômetro e pede liberação imediata.",
+        "2. A erra por regra_excecao (trata CNH do substituto como suficiente — ignora que o art. 9º exige fiscalização do condutor que vai retirar o veículo); B erra por numero_vizinho (confunde prazo de cinco dias do art. 10 para recuperar CNH com condição de liberação do veículo); C erra por termo_unico (veda substituto — o art. 9º, caput, admite liberação com condutor habilitado fiscalizado).",
+        "3. D correta: art. 9º, caput + parágrafo único — substituto deve ser submetido à fiscalização; recusa ou inaptidão → depósito."
+      ],
+      "pegadinha": "A IDECAN induz a crer que basta CNH válida do amigo — mas o art. 9º submete o substituto à mesma fiscalização de alcoolemia; recusa ou inaptidão leva ao depósito.",
+      "macete": "VEÍCULO RETIDO = habilitado + FISCALIZADO · recusa/inapto = DEPÓSITO (art. 9) · CNH recolhida = art. 10 (outro regime).",
+      "estudo_reverso": [
+        "Res. CONTRAN 432/2013 art. 9",
+        "Res. CONTRAN 432/2013 art. 10",
+        "CTB art. 165"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "CNH do substituto não basta — art. 9º exige fiscalização de alcoolemia do condutor que retira o veículo",
+      "eixos_legais": [
+        "CONTRAN_432_art_9",
+        "CONTRAN_432_art_10"
+      ],
+      "isca_por_alternativa": {
+        "A": "CNH válida do amigo libera veículo sem teste do substituto",
+        "B": "prazo de cinco dias do art. 10 bloqueia substituto na blitz",
+        "C": "veda qualquer liberação por condutor substituto"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "numero_vizinho",
+        "termo_unico"
+      ]
+    },
+    "tags": [
+      "alcoolemia",
+      "resolucao_432",
+      "retencao_veiculo",
+      "substituto",
+      "etilometro"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_432_art_9",
+      "macete_visual": "Habilitado + fiscalizado · senão depósito",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D: substituto com CNH também passa por fiscalização — recusa ou inaptidão → depósito.",
+            "destaques": ["Gabarito D", "substituto", "fiscalização"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "CNH × fiscalização do substituto",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["CNH válida libera na hora", "Substituto submetido à fiscalização"],
+              ["Recusa do amigo não impede", "Recusa/inapto → depósito"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VEÍCULO RETIDO = habilitado + FISCALIZADO.\nRecusa/inapto = DEPÓSITO.\nCNH recolhida = regime do art. 10.",
+            "destaques": ["FISCALIZADO", "DEPÓSITO", "art. 10"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 432/2013",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 432, DE 23 DE JANEIRO DE 2013.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CONTRAN_432_art_9",
+      "macete_visual": "Habilitado + fiscalizado · senão depósito",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "CNH do substituto não basta — art. 9º exige fiscalização de alcoolemia do condutor que retira o veículo",
+        "eixos_legais": [
+          "CONTRAN_432_art_9",
+          "CONTRAN_432_art_10"
+        ],
+        "isca_por_alternativa": {
+          "A": "CNH válida do amigo libera veículo sem teste do substituto",
+          "B": "prazo de cinco dias do art. 10 bloqueia substituto na blitz",
+          "C": "veda qualquer liberação por condutor substituto"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: libera o veículo para o amigo?",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — CNH válida do amigo libera veículo sem teste do substituto.\nB — prazo de cinco dias bloqueia substituto na blitz.\nC — veda qualquer liberação por condutor substituto.\n\nPegadinha: substituto habilitado também passa pela fiscalização de alcoolemia.",
+            "destaques": ["Gabarito D", "substituto", "etilômetro"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "RETENÇÃO DO VEÍCULO: medida até apresentar condutor habilitado apto — art. 9º.\n\nCONDUTOR SUBSTITUTO: terceiro habilitado que retira o veículo — não escapa à fiscalização.\n\nRECOLHIMENTO DA CNH: medida sobre o documento do autuado — art. 10, regime distinto.",
+            "destaques": ["RETENÇÃO", "SUBSTITUTO", "CNH"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: cabe liberar o veículo?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Compareceu condutor habilitado para retirar o veículo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Substituto recusou etilômetro ou está inapto?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Recolher ao depósito — gabarito D",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — amigo com CNH"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — recusa no caso"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Medidas sobre veículo × CNH",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Medida", "Objeto"],
+            "linhas": [
+              {
+                "faixa": "Retenção do veículo",
+                "classificacao": "Até condutor habilitado fiscalizado — art. 9º",
+                "destaque": true
+              },
+              {
+                "faixa": "Substituto recusa teste",
+                "classificacao": "Depósito do veículo — § único do art. 9º"
+              },
+              {
+                "faixa": "Recolhimento da CNH",
+                "classificacao": "Documento do autuado — art. 10 (prazo 5 dias)"
+              },
+              {
+                "faixa": "Liberação só com CNH",
+                "classificacao": "Isca — falta fiscalizar substituto"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: CNH válida basta",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Amigo com CNH libera na hora",
+                "Caput do art. 9º: substituto submetido à fiscalização"
+              ],
+              [
+                "Recusa do amigo não altera nada",
+                "§ único: inapto ou ausente → depósito"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "CNH do substituto não dispensa fiscalização do art. 9º"
+              ],
+              [
+                "B — numero_vizinho",
+                "Confunde prazo de cinco dias do art. 10 com liberação do veículo"
+              ],
+              [
+                "C — termo_unico",
+                "Veda substituto — caput admite condutor habilitado fiscalizado"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "Veículo retido após autuação por embriaguez",
+                "Hipótese do art. 9º"
+              ],
+              [
+                "Amigo habilitado recusa etilômetro",
+                "Não libera sem fiscalização do substituto"
+              ],
+              [
+                "Substituto inapto ou recusante",
+                "Recolhimento ao depósito — § único"
+              ],
+              [
+                "Resultado",
+                "Alternativa D"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Art. 9º × art. 10",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função"],
+            "linhas": [
+              [
+                "Art. 9º, caput",
+                "Retenção até condutor habilitado fiscalizado"
+              ],
+              [
+                "Art. 9º, § único",
+                "Depósito se ausência ou inaptidão do substituto"
+              ],
+              [
+                "Art. 10, caput",
+                "Recolhe CNH do condutor autuado"
+              ],
+              [
+                "Art. 10, § 1º",
+                "Prazo de 5 dias para comparecer — não bloqueia substituto"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 9º, caput — liberação do veículo",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 432/2013, art. 9º, caput",
+            "texto": "O veículo será retido até a apresentação de condutor habilitado, que também será submetido à fiscalização.",
+            "trechos_grifados": [
+              {
+                "inicio": 69,
+                "fim": 105,
+                "motivo": "mapa — substituto não escapa à fiscalização de alcoolemia",
+                "texto_grifado": "também será submetido à fiscalização"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 9º, § único — depósito",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 432/2013, art. 9º, parágrafo único",
+            "texto": "Caso não se apresente condutor habilitado ou o agente verifique que ele não está em condições de dirigir, o veículo será recolhido ao depósito do órgão ou entidade responsável pela fiscalização, mediante recibo.",
+            "trechos_grifados": [
+              {
+                "inicio": 121,
+                "fim": 142,
+                "motivo": "fluxo — recusa do substituto leva ao depósito",
+                "texto_grifado": "recolhido ao depósito"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VEÍCULO RETIDO = habilitado + FISCALIZADO (art. 9).\nRecusa/inapto = DEPÓSITO (§ único).\nCNH recolhida = art. 10 — outro regime.\n\nNear-transfer: se o substituto aceitar o etilômetro e estiver apto, o veículo libera — a recusa do autuado original não contamina automaticamente o amigo, mas ele deve ser testado.",
+            "destaques": ["FISCALIZADO", "DEPÓSITO", "etilômetro"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 432/2013",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 432, DE 23 DE JANEIRO DE 2013.pdf"
+        }
+      ]
+    }
+  }
+]

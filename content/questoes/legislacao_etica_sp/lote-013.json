@@ -1,0 +1,311 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_1_2",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "LGPD_art11_biometrico",
+    "enunciado": "A STTP de Campina Grande passou a coletar imagem facial dos condutores para autenticação no sistema de autuações eletrônicas, mediante única cláusula de consentimento no formulário de cadastro, fundamentada no art. 7º, I, da LGPD. Um condutor questiona a legalidade, alegando que a biometria facial vinculada à pessoa é dado sensível. A administração defende que política pública de trânsito dispensaria requisitos específicos; outro setor entende que nome e CPF seguem o mesmo regime da biometria. À luz da Lei nº 13.709/2018, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Biometria vinculada à pessoa é dado sensível (art. 5º, II); o tratamento exige hipótese do art. 11 — consentimento específico e destacado ou dispensa do inciso II —, não bastando cláusula genérica do art. 7º, I.",
+      "B": "A única cláusula de consentimento do cadastro, com fundamento no art. 7º, I, autoriza todos os dados coletados, inclusive biométricos, dispensando regime especial.",
+      "C": "Biometria facial de autenticação é dado pessoal comum (art. 5º, I), submetido às mesmas hipóteses do art. 7º aplicáveis a nome e CPF.",
+      "D": "O dever de informação do art. 9º substitui o consentimento específico do art. 11 quando a STTP publica aviso sobre coleta biométrica no site."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Dado pessoal sensível — biometria vinculada à pessoa (art. 5º, II) — e regime especial de tratamento no art. 11, que não se substitui por consentimento genérico do art. 7º, I.",
+      "fundamento_legal": "LGPD, art. 5º, II: \"dado genético ou biométrico, quando vinculado a uma pessoa natural\". Art. 11, I: \"quando o titular ou seu responsável legal consentir, de forma específica e destacada, para finalidades específicas\". Art. 11, II, g: \"garantia da prevenção à fraude e à segurança do titular, nos processos de identificação e autenticação de cadastro em sistemas eletrônicos\".",
+      "passo_a_passo": [
+        "1. Imagem facial vinculada ao condutor é biometria — dado sensível (art. 5º, II); o art. 7º, I isolado não governa o tratamento sem observar o art. 11.",
+        "2. B erra por regra_excecao (trata consentimento genérico do art. 7º, I como suficiente para sensíveis, ignorando o art. 11); C erra por termo_unico (equipara biometria a dado pessoal comum); D erra por numero_vizinho (substitui art. 11 pelo art. 9º — dever de informação).",
+        "3. A está correta: sensível exige art. 11 (consentimento específico e destacado ou hipótese do inciso II, como autenticação cadastral); cláusula única do art. 7º, I não basta."
+      ],
+      "pegadinha": "A banca usa cláusula genérica de cadastro ou política pública para fazer tratar biometria como dado comum — mas sensível tem regime próprio no art. 11.",
+      "macete": "Sensível = art. 11 (específico + destacado ou inciso II) — biometria não é CPF; art. 9 informa, não substitui base legal.",
+      "estudo_reverso": [
+        "LGPD art. 5º, II",
+        "LGPD art. 11, I",
+        "LGPD art. 11, II, g",
+        "LGPD art. 7º, I"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 50,
+      "fundamento_slug": "LGPD_art11_biometrico",
+      "macete_visual": "Sensível = art. 11 · genérico do art. 7 não basta",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Biometria facial vinculada ao condutor é dado sensível — exige regime especial, não basta consentimento genérico do cadastro.",
+            "destaques": ["sensível", "biometria", "genérico"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Dado sensível?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Biometria vinculada à pessoa natural?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Regime sensível — não só consentimento genérico", "tipo": "resultado" }
+            ],
+            "arestas": [{ "de": "p1", "para": "r1", "rotulo": "Sim" }]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Genérico × específico",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Cláusula única do cadastro basta", "Consentimento específico e destacado (art. 11)"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Sensível = art. 11. Biometria não é CPF — art. 9 informa, não substitui base legal.",
+            "destaques": ["art. 11", "Sensível", "biometria"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 13.709/2018 (LGPD)",
+          "path": "conteúdo/legislação federal/lei-13709-lgpd.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 265,
+      "fundamento_slug": "LGPD_art11_biometrico",
+      "macete_visual": "Sensível = art. 11 · genérico do art. 7 não basta",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Cláusula genérica do cadastro não governa biometria — regime do art. 11",
+        "eixos_legais": ["LGPD_art5_II", "LGPD_art11_I", "LGPD_art11_II_g"],
+        "isca_por_alternativa": {
+          "B": "consentimento genérico do art. 7º, I dispensa regime do art. 11",
+          "C": "biometria = dado comum como nome e CPF",
+          "D": "art. 9º substitui consentimento específico do art. 11"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: biometria exige art. 11",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — consentimento genérico do cadastro basta: ignora regime especial para sensíveis.\nC — biometria = dado comum: confunde dado pessoal e dado sensível.\nD — dever de informação substitui consentimento específico: informação não é base de tratamento.\n\nA isca é a cláusula única do formulário empurrar para regime comum do consentimento genérico.",
+            "destaques": ["Gabarito A", "sensível", "art. 11"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DADO PESSOAL: informação de pessoa identificada ou identificável — art. 5º, I (ex.: nome, CPF).\n\nDADO SENSÍVEL: inclui biometria vinculada à pessoa — art. 5º, II (imagem facial do condutor).\n\nCONSENTIMENTO ESPECÍFICO E DESTACADO: exigência do art. 11 para sensíveis — não basta cláusula genérica.",
+            "destaques": ["DADO PESSOAL", "DADO SENSÍVEL", "ESPECÍFICO E DESTACADO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual regime se aplica?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Biometria facial vinculada ao condutor?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Consentimento é cláusula genérica do cadastro?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito A — regime sensível, não genérico",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Dois regimes de tratamento",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Tipo de dado", "Hipóteses legais"],
+            "linhas": [
+              ["Dado pessoal comum (nome, CPF)", "Art. 7º — inclusive consentimento (inciso I)"],
+              ["Dado sensível (biometria facial)", "Art. 11 — consentimento específico ou inciso II"],
+              ["Cláusula genérica do cadastro", "Insuficiente para sensível — isca B"]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: genérico × específico",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Uma cláusula no cadastro cobre biometria",
+                "Art. 11 exige consentimento específico e destacado"
+              ],
+              [
+                "Aviso no site (art. 9º) basta",
+                "Informação não substitui hipótese do art. 11"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — regra_excecao",
+                "Trata consentimento genérico do art. 7º, I como suficiente — ignora art. 11 para sensíveis"
+              ],
+              [
+                "C — termo_unico",
+                "Equipara biometria a dado comum — ignora definição do art. 5º, II"
+              ],
+              [
+                "D — numero_vizinho",
+                "Substitui art. 11 pelo art. 9º — dever de informação não é base de tratamento"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo a coleta facial da STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Enquadramento"],
+            "linhas": [
+              ["Imagem facial para autenticação cadastral", "Biometria sensível — art. 5º, II"],
+              ["Única cláusula de consentimento (art. 7º, I)", "Genérica — insuficiente para art. 11"],
+              ["Autenticação em sistema eletrônico", "Possível hipótese art. 11, II, g"],
+              ["Resultado", "Gabarito A"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 7º não substitui art. 11",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              ["Art. 7º, I", "Consentimento para dados comuns — não basta sozinho para sensível"],
+              ["Art. 11", "Regime próprio para sensíveis — específico ou inciso II"],
+              ["Art. 9º", "Transparência e informação — não substitui hipótese do art. 11"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 5º, II — dado sensível",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LGPD, art. 5º, II",
+            "texto": "II - dado pessoal sensível: dado pessoal sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico, quando vinculado a uma pessoa natural;",
+            "trechos_grifados": [
+              {
+                "inicio": 236,
+                "fim": 302,
+                "motivo": "caso — imagem facial do condutor é biometria sensível",
+                "texto_grifado": "dado genético ou biométrico, quando vinculado a uma pessoa natural"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 11 — consentimento e autenticação",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LGPD, art. 11, I e II, g",
+            "texto": "I - quando o titular ou seu responsável legal consentir, de forma específica e destacada, para finalidades específicas; g) garantia da prevenção à fraude e à segurança do titular, nos processos de identificação e autenticação de cadastro em sistemas eletrônicos, resguardados os direitos mencionados no art. 9º desta Lei e exceto no caso de prevalecerem direitos e liberdades fundamentais do titular que exijam a proteção dos dados pessoais.",
+            "trechos_grifados": [
+              {
+                "inicio": 57,
+                "fim": 118,
+                "motivo": "contraste — consentimento específico, não cláusula genérica",
+                "texto_grifado": "de forma específica e destacada, para finalidades específicas"
+              },
+              {
+                "inicio": 197,
+                "fim": 261,
+                "motivo": "caso — autenticação cadastral da STTP",
+                "texto_grifado": "identificação e autenticação de cadastro em sistemas eletrônicos"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Sensível = art. 11 (específico + destacado ou inciso II). Biometria não é CPF — art. 9 informa, não substitui base legal.\n\nNear-transfer: STTP coleta apenas CPF e nome com cláusula genérica — regime do art. 7º, I pode bastar; biometria exigiria art. 11.",
+            "destaques": ["art. 11", "Near-transfer", "Sensível"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 13.709/2018 (LGPD)",
+          "path": "conteúdo/legislação federal/lei-13709-lgpd.html"
+        }
+      ]
+    },
+    "tags": [
+      "lgpd",
+      "dado_sensivel",
+      "biometria",
+      "consentimento",
+      "art_11",
+      "sttp"
+    ]
+  }
+]

@@ -1,0 +1,180 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 275,
+  "fundamento_slug": "CTB_art_277_2",
+  "macete_visual": "§2 prova · §3 recusa · 165 + 165-A",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Sem etilômetro positivo ainda cabe art. 165 por imagem/vídeo/sinais — recusa cumula 165-A autônoma",
+    "eixos_legais": ["CTB_art_277_2", "CTB_art_277_3", "CTB_art_165-A"],
+    "isca_por_alternativa": {
+      "A": "sem etilômetro positivo limita-se à orientação verbal",
+      "C": "prova por imagem não vale na colisão — exige etilômetro positivo apesar do vídeo",
+      "D": "vídeo corporal não substitui etilômetro — aguardar sangue"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: sem bafômetro não autua?",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — sem etilômetro positivo limita-se à orientação verbal.\nC — prova por imagem não vale na colisão — exige etilômetro positivo apesar do vídeo.\nD — vídeo corporal não substitui etilômetro — aguardar exame de sangue.\n\nPegadinha: imagem, vídeo e sinais caracterizam embriaguez; recusa gera infração autônoma cumulável.",
+        "destaques": ["Gabarito B", "vídeo corporal", "recusa"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "SINAIS DE ALTERAÇÃO: odor, fala, marcha — conjunto que indica capacidade psicomotora alterada na forma do Contran.\n\nPROVA POR IMAGEM/VÍDEO: meio autônomo de caracterizar embriaguez — art. 277, §2.\n\nRECUSA AUTÔNOMA: negativa ao teste gera infração própria do art. 165-A — art. 277, §3.",
+        "destaques": ["SINAIS", "IMAGEM/VÍDEO", "RECUSA"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: cabe autuar embriaguez?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Há imagem, vídeo ou sinais de alteração psicomotora?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Condutor recusou o etilômetro?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Embriaguez + recusa autônoma — gabarito B", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim — vídeo corporal no caso" },
+          { "de": "p2", "para": "r1", "rotulo": "Sim — recusa no caso" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Meios de prova da embriaguez",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Meio de prova", "Efeito"],
+        "linhas": [
+          { "faixa": "Imagem ou vídeo", "classificacao": "Caracteriza embriaguez — §2 do art. 277", "destaque": true },
+          { "faixa": "Sinais de alteração", "classificacao": "Constatação na forma do Contran — §2" },
+          { "faixa": "Etilômetro positivo", "classificacao": "Prova técnica — não é único meio" },
+          { "faixa": "Recusa ao teste", "classificacao": "Infração autônoma — §3 do art. 277" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: só bafômetro autua",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Crença ✗", "Lei ✓"],
+        "linhas": [
+          ["Sem etilômetro positivo não há infração", "§2: imagem, vídeo e sinais caracterizam embriaguez"],
+          ["Recusa isenta de penalidade", "§3: recusa gera infração autônoma cumulável"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — regra_excecao", "Exige etilômetro positivo — §2 admite imagem, vídeo e sinais"],
+          ["C — regra_excecao", "Nega §2 apesar do vídeo na colisão — caput abrange sinistro e §2 autoriza imagem/sinais"],
+          ["D — termo_unico", "Subordina autuação ao exame de sangue — vídeo é prova autônoma"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Consequência"],
+        "linhas": [
+          ["Colisão leve em cruzamento fiscalizado pela STTP", "Hipótese de sinistro — caput do art. 277"],
+          ["Vídeo corporal com odor, fala e marcha alterados", "Prova por imagem e sinais — §2"],
+          ["Recusa expressa ao etilômetro", "Infração autônoma cumulável — §3"],
+          ["Resultado", "Alternativa B"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Embriaguez × recusa autônoma",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Infração", "Gatilho"],
+        "linhas": [
+          ["Art. 165 — embriaguez", "Imagem, vídeo, sinais ou etilômetro — §2"],
+          ["Art. 165-A — recusa", "Negativa a qualquer procedimento do caput — §3"],
+          ["Cumulação", "Recusa não impede prova por vídeo/sinais no mesmo caso"]
+        ]
+      }
+    },
+    {
+      "id": "lei1",
+      "titulo": "Art. 277, §2 — provas alternativas",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 277, §2",
+        "texto": "A infração prevista no art. 165 também poderá ser caracterizada mediante imagem, vídeo, constatação de sinais que indiquem, na forma disciplinada pelo Contran, alteração da capacidade psicomotora ou produção de quaisquer outras provas em direito admitidas.",
+        "trechos_grifados": [
+          {
+            "inicio": 64,
+            "fim": 86,
+            "motivo": "mapa — vídeo corporal caracteriza embriaguez sem etilômetro",
+            "texto_grifado": "mediante imagem, vídeo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 277, §3 — recusa autônoma",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 277, §3",
+        "texto": "Serão aplicadas as penalidades e medidas administrativas estabelecidas no art. 165-A deste Código ao condutor que se recusar a se submeter a qualquer dos procedimentos previstos no caput deste artigo.",
+        "trechos_grifados": [
+          {
+            "inicio": 74,
+            "fim": 84,
+            "motivo": "fluxo — recusa ao etilômetro gera infração autônoma cumulável",
+            "texto_grifado": "art. 165-A"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "SEM BAFÔMETRO ≠ SEM INFRAÇÃO.\n§2 = imagem/vídeo/sinais → embriaguez.\nRecusa → infração autônoma cumulável.\n\nNear-transfer: em blitz sem sinistro, o mesmo §2 vale — vídeo da viatura ou sinais do Contran autuam embriaguez mesmo com recusa ao etilômetro.",
+        "destaques": ["SEM BAFÔMETRO", "§2", "cumulável"]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "CTB art. 277",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

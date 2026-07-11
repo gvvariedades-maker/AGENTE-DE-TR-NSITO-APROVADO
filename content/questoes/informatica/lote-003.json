@@ -1,0 +1,335 @@
+[
+  {
+    "disciplina": "informatica",
+    "topico": "informatica_7_2",
+    "tipo": "assertivas",
+    "estilo_idecan": "assertivas",
+    "dificuldade": 4,
+    "fundamento_slug": "info_protocolos_pop_imap_http",
+    "enunciado": "Um agente de trânsito da STTP configura o correio institucional no computador da fiscalização. O suporte informa que as mensagens acessadas pelo celular e pelo PC devem permanecer no servidor, e o manual cita os protocolos POP3, IMAP e HTTP. Sobre esses protocolos de internet e correio eletrônico, analise as afirmativas a seguir.\n\nI. O protocolo IMAP mantém os e-mails sincronizados no servidor, permitindo acesso às mesmas mensagens em diferentes dispositivos.\nII. O protocolo POP3, em sua configuração padrão, transfere as mensagens ao cliente local e as remove do servidor de correio.\nIII. O protocolo HTTP é utilizado exclusivamente para transferência de páginas web com criptografia TLS integrada.\n\nEstão CORRETAS apenas as afirmativas:",
+    "alternativas": {
+      "A": "Estão corretas as afirmativas I e II, relativas aos protocolos IMAP e POP3 de correio eletrônico.",
+      "B": "Estão corretas as afirmativas I e III, quanto ao IMAP e ao protocolo HTTP com criptografia TLS.",
+      "C": "Estão corretas as afirmativas II e III, sobre o POP3 e o HTTP com segurança integrada.",
+      "D": "Estão corretas as afirmativas I, II e III, sobre protocolos de internet e correio eletrônico."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Distinção entre IMAP (sincronização no servidor), POP3 (download padrão com remoção) e HTTP versus HTTPS (TLS não é exclusividade do HTTP).",
+      "fundamento_legal": "Conceitos técnicos — internet e correio eletrônico (Anexo I, itens 7.2 e 5.1): IMAP mantém mensagens sincronizadas no servidor; POP3, em configuração padrão, transfere e-mails ao cliente e remove-os do servidor; HTTP transporta páginas sem criptografia — TLS integrada caracteriza o HTTPS.",
+      "passo_a_passo": [
+        "1. I correta (IMAP sincroniza no servidor — cenário celular + PC da STTP); II correta (POP3 padrão baixa e remove do servidor); III falsa — HTTP não usa TLS por padrão (isso é HTTPS).",
+        "2. B erra por termo_unico (inclui III falsa — confunde HTTP com HTTPS/TLS); C erra por termo_unico (combina II correta com III falsa sobre TLS no HTTP); D erra por regra_excecao (marca todas incluindo III incorreta).",
+        "3. Gabarito A: apenas I e II estão corretas."
+      ],
+      "pegadinha": "A banca mistura HTTP com HTTPS na assertiva III — candidato decora 'protocolo web seguro' e generaliza TLS para o HTTP básico.",
+      "macete": "IMAP = sincroniza no servidor | POP3 padrão = baixa e remove | HTTP = sem TLS (HTTPS = com TLS).",
+      "estudo_reverso": [
+        "Protocolo IMAP — sincronização no servidor",
+        "Protocolo POP3 — download padrão com remoção do servidor",
+        "HTTP versus HTTPS (TLS)"
+      ]
+    },
+    "tags": [
+      "pop3",
+      "imap",
+      "http",
+      "https",
+      "correio_eletronico",
+      "protocolos"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "matriz_assertivas",
+      "arquetipo_secundario": "comparacao",
+      "fundamento_slug": "info_protocolos_pop_imap_http",
+      "macete_visual": "IMAP=sincroniza | POP3=baixa+remove | HTTP≠HTTPS",
+      "duracao_estimada_seg": 60,
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Assertivas sobre POP3, IMAP e HTTP. A pegadinha está na III: HTTP não traz TLS — isso é HTTPS.",
+            "destaques": [
+              "IMAP",
+              "POP3",
+              "HTTP"
+            ]
+          }
+        },
+        {
+          "id": "matriz",
+          "titulo": "Mapa I–II–III",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              {
+                "id": "I",
+                "texto": "IMAP sincroniza no servidor",
+                "correto": true
+              },
+              {
+                "id": "II",
+                "texto": "POP3 padrão baixa e remove",
+                "correto": true
+              },
+              {
+                "id": "III",
+                "texto": "HTTP exclusivamente com TLS",
+                "correto": false
+              }
+            ],
+            "gabarito_resumo": "I e II corretas → alternativa A"
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha HTTP×HTTPS",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
+            "linhas": [
+              [
+                "HTTP sempre com TLS",
+                "HTTP sem TLS; HTTPS adiciona TLS"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "IMAP sincroniza | POP3 baixa e remove | HTTP ≠ HTTPS (S = secure).",
+            "destaques": [
+              "IMAP",
+              "POP3",
+              "HTTPS"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, itens 7.2 e 5.1",
+          "path": "conteúdo/edital/"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "matriz_assertivas",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 195,
+      "fundamento_slug": "info_protocolos_pop_imap_http",
+      "macete_visual": "IMAP=sincroniza | POP3=baixa+remove | HTTP≠HTTPS",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: III mistura HTTP com HTTPS",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A (I e II corretas).\n\nB — inclui III falsa: confunde HTTP com HTTPS/TLS.\nC — combina II correta com III falsa sobre TLS no HTTP.\nD — marca todas, comprando a III incorreta.\n\nSTTP precisa de e-mail no celular e no PC — suporte citou IMAP, POP3 e HTTP.",
+            "destaques": [
+              "IMAP",
+              "POP3",
+              "HTTP"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de classificar: 3 protocolos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "IMAP = mantém mensagens no servidor e sincroniza entre dispositivos. POP3 = baixa para o PC; no padrão, remove do servidor. HTTP = páginas web sem criptografia; HTTPS = HTTP + TLS (cadeado).",
+            "destaques": [
+              "IMAP",
+              "POP3",
+              "HTTPS"
+            ]
+          }
+        },
+        {
+          "id": "matriz",
+          "titulo": "Classificar I–II–III",
+          "secao": "metodo",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              {
+                "id": "I",
+                "texto": "IMAP sincroniza no servidor — correta (caso STTP)",
+                "correto": true
+              },
+              {
+                "id": "II",
+                "texto": "POP3 padrão baixa e remove — correta",
+                "correto": true
+              },
+              {
+                "id": "III",
+                "texto": "HTTP exclusivamente com TLS — ERRADA",
+                "correto": false
+              }
+            ],
+            "gabarito_resumo": "I e II corretas → alternativa A"
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Assertiva-isca: III",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "O que a III afirma ✗",
+              "O que é tecnicamente correto ✓"
+            ],
+            "linhas": [
+              [
+                "HTTP usado exclusivamente com TLS integrada",
+                "HTTP transporta páginas sem criptografia; HTTPS adiciona TLS"
+              ],
+              [
+                "Todo protocolo web é seguro por padrão",
+                "Segurança de transporte é função do HTTPS, não do HTTP básico"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "B — termo_unico",
+                "Inclui III falsa — confunde HTTP com HTTPS/TLS integrada"
+              ],
+              [
+                "C — termo_unico",
+                "Combina II correta com III falsa sobre TLS no HTTP"
+              ],
+              [
+                "D — regra_excecao",
+                "Marca I, II e III como corretas — III é falsa"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Montando o gabarito STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Assertiva",
+              "Veredito"
+            ],
+            "linhas": [
+              [
+                "I — IMAP sincroniza no servidor",
+                "Correta — celular + PC da STTP"
+              ],
+              [
+                "II — POP3 padrão baixa e remove",
+                "Correta — comportamento padrão do POP3"
+              ],
+              [
+                "III — HTTP exclusivamente com TLS",
+                "Falsa — TLS é do HTTPS"
+              ],
+              [
+                "Resultado",
+                "I + II = alternativa A"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Referência — protocolos de correio e web",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Anexo I — Informática, itens 7.2 e 5.1",
+            "texto": "No correio eletrônico, o protocolo IMAP mantém as mensagens sincronizadas no servidor; o protocolo POP3, em configuração padrão, transfere os e-mails ao cliente e remove-os do servidor. O protocolo HTTP transporta páginas sem criptografia; o HTTPS adiciona TLS.",
+            "trechos_grifados": [
+              {
+                "inicio": 35,
+                "fim": 85,
+                "motivo": "matriz — IMAP sincroniza (assertiva I correta)",
+                "texto_grifado": "IMAP mantém as mensagens sincronizadas no servidor"
+              },
+              {
+                "inicio": 99,
+                "fim": 184,
+                "motivo": "matriz — POP3 padrão baixa e remove (assertiva II)",
+                "texto_grifado": "POP3, em configuração padrão, transfere os e-mails ao cliente e remove-os do servidor"
+              },
+              {
+                "inicio": 198,
+                "fim": 238,
+                "motivo": "contraste — HTTP sem TLS (assertiva III falsa)",
+                "texto_grifado": "HTTP transporta páginas sem criptografia"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "IMAP = sincroniza no servidor | POP3 padrão = baixa e remove | HTTP ≠ HTTPS.\n\nNear-transfer: colega quer ler o mesmo e-mail no celular e no PC da STTP — escolha IMAP, não POP3 padrão.",
+            "destaques": [
+              "IMAP",
+              "POP3",
+              "HTTPS"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, itens 7.2 e 5.1",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "meta": {
+        "padrao_familia": "B_assertivas",
+        "pegadinha_em_uma_frase": "Assertiva III mistura HTTP com HTTPS — TLS não é exclusividade do HTTP básico",
+        "eixos_legais": [
+          "info_IMAP_sincronizacao",
+          "info_POP3_download_padrao"
+        ],
+        "eixos_mecanismo": [
+          "termo_unico",
+          "regra_excecao"
+        ],
+        "isca_por_alternativa": {
+          "B": "inclui III falsa — confunde HTTP com HTTPS/TLS",
+          "C": "combina II correta com III falsa sobre TLS",
+          "D": "marca todas incluindo III incorreta"
+        }
+      }
+    }
+  }
+]

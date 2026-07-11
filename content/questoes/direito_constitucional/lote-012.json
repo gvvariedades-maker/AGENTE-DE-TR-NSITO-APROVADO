@@ -1,0 +1,352 @@
+[
+  {
+    "disciplina": "direito_constitucional",
+    "topico": "dir_const_3_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "enunciado": "Um agente da STTP de Campina Grande recebe denúncia anônima de que veículo possivelmente produto de furto está guardado na residência de um morador. Às 23 horas, sem mandado judicial e sem consentimento do morador, dois policiais militares acompanham o agente na tentativa de ingresso na casa para verificar placas dos automóveis no quintal. O morador impede a entrada. Os envolvidos debatem qual órgão ou hipótese legal autorizaria a medida. Com base na Constituição Federal de 1988, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A entrada noturna na residência do morador é legítima porque a suspeita de furto de veículo configura flagrante delito, dispensando consentimento e mandado judicial.",
+      "B": "O agente da STTP, com apoio dos policiais militares que o acompanham, pode autorizar o ingresso domiciliar noturno na residência para verificar veículos no quintal.",
+      "C": "A entrada é inconstitucional: o art. 5º, XI só permite ingresso sem consentimento em flagrante delito, desastre, socorro ou, durante o dia, ordem judicial — suspeita às 23 h não autoriza.",
+      "D": "A ordem judicial de busca domiciliar pode ser cumprida em qualquer horário na residência do morador, desde que emitida por juiz competente."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Inviolabilidade do domicílio e exceções taxativas do art. 5º, XI da CF/88 (flagrante delito, desastre, socorro ou ordem judicial durante o dia), em contraste com suspeita de furto e ingresso noturno sem mandado.",
+      "fundamento_legal": "CF/88, art. 5º, XI: \"a casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial\". CF/88, art. 5º, LXI: \"ninguém será preso senão em flagrante delito ou por ordem escrita e fundamentada de autoridade judiciária competente\" — a mera suspeita de furto não equivale a flagrante delito.",
+      "passo_a_passo": [
+        "1. O caso reúne ausência de consentimento, horário noturno (23 h), inexistência de mandado judicial e mera suspeita de furto com veículo no quintal — nenhuma exceção do art. 5º, XI se aplica.",
+        "2. A erra por regra_excecao (trata suspeita de furto como flagrante delito autorizando entrada noturna sem mandado); B erra por competencia_snt (atribui ao agente da STTP, com PM, poder de autorizar ingresso domiciliar noturno — função estranha ao órgão de trânsito e às hipóteses do XI); D erra por termo_unico (suprime a exigência \"durante o dia\" para cumprimento de ordem judicial de busca domiciliar).",
+        "3. C está correta: reproduz o rol taxativo do art. 5º, XI e afasta a entrada noturna fundada apenas em suspeita."
+      ],
+      "pegadinha": "A banca confunde suspeita de crime com flagrante delito e ignora que ordem judicial para ingresso domiciliar só pode ser cumprida durante o dia — não a qualquer hora.",
+      "macete": "DOMICÍLIO = consentimento OU 4 SALVOS: Flagrante · Desastre · Socorro · Ordem judicial DE DIA. Suspeita ≠ flagrante.",
+      "estudo_reverso": [
+        "CF art. 5º, XI",
+        "CF art. 5º, LXI"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CF_art5_XI",
+      "macete_visual": "4 SALVOS + de dia",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Ingresso às 23 h sem mandado nem consentimento. A banca trata suspeita de furto como flagrante delito ou ignora \"durante o dia\" no art. 5º, XI.",
+            "destaques": ["23 h", "flagrante", "durante o dia"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método rápido",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Morador consentiu o ingresso?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Há flagrante delito em curso?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Sem exceção — entrada vedada", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não" },
+              { "de": "p2", "para": "r1", "rotulo": "Só suspeita" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Suspeita de furto = flagrante", "Flagrante exige crime em curso — não mera denúncia"],
+              ["Mandado vale à noite", "Ordem judicial só \"durante o dia\" (XI)"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, XI",
+            "texto": "a casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial",
+            "trechos_grifados": [
+              {
+                "inicio": 70,
+                "fim": 98,
+                "motivo": "regra — consentimento do morador",
+                "texto_grifado": "sem consentimento do morador"
+              },
+              {
+                "inicio": 117,
+                "fim": 133,
+                "motivo": "exceção flagrante",
+                "texto_grifado": "flagrante delito"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "4 SALVOS: Flagrante · Desastre · Socorro · Ordem judicial DE DIA. Suspeita ≠ flagrante.",
+            "destaques": ["4 SALVOS", "DE DIA", "flagrante"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, XI",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 240,
+      "fundamento_slug": "CF_art5_XI",
+      "macete_visual": "4 SALVOS + de dia",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Suspeita de furto não é flagrante — e mandado domiciliar só vale durante o dia",
+        "eixos_legais": ["CF_art5_XI", "CF_art5_LXI"],
+        "isca_por_alternativa": {
+          "A": "suspeita de furto vira flagrante delito autorizando entrada noturna",
+          "B": "agente STTP com PM autoriza ingresso domiciliar noturno",
+          "D": "ordem judicial cumpre-se a qualquer hora, sem limite diurno"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: domicílio inviolável",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (exceções taxativas do domicílio).\n\nA — suspeita de furto vira crime em curso autorizando entrada às 23 h.\nB — agente de trânsito com PM abre a residência noturna por denúncia.\nD — mandado judicial cumpre-se de madrugada, sem limite horário.\n\nPromessa: fixar os quatro salvos e o limite diurno da ordem judicial.",
+            "destaques": ["XI", "flagrante", "durante o dia"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de decidir: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ASILO INVIOLÁVEL: a casa só admite ingresso sem consentimento nas exceções do art. 5º, XI. FLAGRANTE DELITO: crime em curso ou acabado de cometer — não basta suspeita ou denúncia. DURANTE O DIA: ordem judicial de busca domiciliar não autoriza penetração noturna pelo texto constitucional.",
+            "destaques": ["asilo inviolável", "flagrante delito", "durante o dia"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: pode entrar sem consentimento?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Morador consentiu o ingresso na residência?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Há flagrante delito, desastre ou socorro no caso?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Entrada vedada — suspeita às 23 h sem mandado diurno",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não" },
+              { "de": "p2", "para": "r1", "rotulo": "Só suspeita de furto" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa do art. 5º, XI — 4 exceções",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Exceção", "Quando autoriza ingresso"],
+            "linhas": [
+              { "faixa": "1º", "classificacao": "Flagrante delito" },
+              { "faixa": "2º", "classificacao": "Desastre" },
+              { "faixa": "3º", "classificacao": "Prestar socorro" },
+              {
+                "faixa": "4º",
+                "classificacao": "Durante o dia — determinação judicial",
+                "destaque": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença × lei: suspeita × flagrante",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Denúncia de furto autoriza entrada noturna",
+                "Suspeita não é flagrante delito — precisa crime em curso"
+              ],
+              [
+                "Mandado judicial vale à noite",
+                "Ordem judicial só \"durante o dia\" no art. 5º, XI"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Estende flagrante delito à mera suspeita de furto com veículo no quintal"
+              ],
+              [
+                "B — competencia_snt",
+                "Atribui ao agente da STTP, com PM, autorizar ingresso domiciliar noturno"
+              ],
+              [
+                "D — termo_unico",
+                "Suprime \"durante o dia\" — mandado não vale a qualquer horário"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo a residência às 23 h",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Conclusão"],
+            "linhas": [
+              ["23 h, sem mandado, sem consentimento do morador", "Ordem judicial diurna não existe — demais salvos não configurados"],
+              ["Denúncia anônima de veículo possivelmente furtado no quintal", "Suspeita ≠ flagrante delito em curso"],
+              ["Agente STTP com policiais militares tentam entrar", "Nenhum órgão do caso autoriza violar o XI"],
+              ["Resultado", "Alternativa C"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 5º, XI × art. 5º, LXI — flagrante",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "O que exige"],
+            "linhas": [
+              ["Art. 5º, XI", "Exceção domiciliar — flagrante delito entre os 4 salvos"],
+              ["Art. 5º, LXI", "Prisão — flagrante delito ou ordem judicial escrita"],
+              ["Caso concreto", "Mera suspeita de furto não preenche flagrante em nenhum dos dois"],
+              ["Horário", "Mandado domiciliar: só durante o dia (XI)"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 5º, XI — asilo inviolável",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, XI",
+            "texto": "a casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial",
+            "trechos_grifados": [
+              {
+                "inicio": 70,
+                "fim": 98,
+                "motivo": "fluxo — regra do consentimento do morador",
+                "texto_grifado": "sem consentimento do morador"
+              },
+              {
+                "inicio": 117,
+                "fim": 133,
+                "motivo": "contraste — flagrante delito (não suspeita)",
+                "texto_grifado": "flagrante delito"
+              },
+              {
+                "inicio": 176,
+                "fim": 216,
+                "motivo": "mapa — ordem judicial só durante o dia",
+                "texto_grifado": "durante o dia, por determinação judicial"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 5º, LXI — flagrante na prisão",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXI",
+            "texto": "ninguém será preso senão em flagrante delito ou por ordem escrita e fundamentada de autoridade judiciária competente",
+            "trechos_grifados": [
+              {
+                "inicio": 28,
+                "fim": 44,
+                "motivo": "hierarquia — flagrante exige crime em curso, não denúncia",
+                "texto_grifado": "flagrante delito"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "4 SALVOS: Flagrante · Desastre · Socorro · Ordem judicial DE DIA.\nSuspeita ≠ flagrante (XI e LXI).\n\nNear-transfer: se às 14 h houvesse mandado judicial válido e o morador recusasse, o ingresso poderia ser autorizado — mas às 23 h sem mandado a entrada continua vedada.",
+            "destaques": ["4 SALVOS", "DE DIA", "flagrante"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, XI",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        },
+        {
+          "rotulo": "CF/88, art. 5º, LXI",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "art5_xi",
+      "domicilio",
+      "direitos_individuais",
+      "flagrante_delito",
+      "asilo_inviolavel"
+    ]
+  }
+]

@@ -1,0 +1,155 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 255,
+  "fundamento_slug": "CTB_art_45",
+  "macete_visual": "VERDE ≠ ENTRAR · se não passa limpo · não bloquear transversal",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Semáforo verde não autoriza entrar se você pode ficar preso no meio do cruzamento",
+    "eixos_legais": ["CTB_art_45", "CTB_art_44"],
+    "isca_por_alternativa": {
+      "A": "verde autoriza entrada mesmo bloqueando cruzamento — regra_excecao",
+      "C": "exige semáforo desfavorável para aplicar a regra — termo_unico",
+      "D": "substitui art. 45 por velocidade moderada do art. 44 — numero_vizinho"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-084.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: preso no cruzamento com verde",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — verde liberou tudo: art. 45 veda entrar se puder ficar imobilizado no cruzamento.\nC — exigiu sinal desfavorável: a regra vale justamente com semáforo favorável.\nD — citou só velocidade moderada: art. 44 não substitui proibição de bloquear a interseção.\n\nNesta aula você fixa verde ≠ direito de entrar sem passar limpo.",
+        "destaques": ["Gabarito B", "semáforo favorável", "área do cruzamento"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "INTERSEÇÃO: área do cruzamento entre vias — onde não se pode permanecer bloqueando.\n\nSEMÁFORO FAVORÁVEL: luz verde para o condutor — não dispensa avaliar se passa limpo.\n\nTRÂNSITO TRANSVERSAL: veículos que cruzam a via perpendicular — passagem que não se pode obstruir.",
+        "destaques": ["INTERSEÇÃO", "FAVORÁVEL", "TRANSVERSAL"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: pode entrar no cruzamento?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Semáforo está favorável?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Há risco de ficar preso no cruzamento?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Entrada vedada — não bloquear", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Sim" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Art. 45 — regra e exceção ao verde",
+      "secao": "mapa",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Situação", "Conduta"],
+        "linhas": [
+          ["Verde + passa limpo", "Entrada permitida"],
+          ["Verde + fila à frente", "Aguardar antes da interseção"],
+          ["Imobilizado no cruzamento", "Obstrui trânsito transversal — vedado"]
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: verde manda entrar",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Farol verde autoriza entrar sempre", "Mesmo favorável, não entrar se ficar preso"],
+          ["Basta moderar na aproximação", "Art. 45 proíbe bloquear a área do cruzamento"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — regra_excecao", "Trata verde como autorização absoluta — art. 45 limita a entrada"],
+          ["C — termo_unico", "Inventa exigência de sinal desfavorável — regra incide com semáforo favorável"],
+          ["D — numero_vizinho", "Transpõe art. 44 — velocidade moderada não autoriza bloquear interseção"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Semáforo verde em cruzamento de Campina Grande", "Hipótese expressa do art. 45"],
+          ["Fila à frente impede desocupar a interseção", "Risco de imobilização na área do cruzamento"],
+          ["Resultado", "Gabarito B — entrada vedada"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Art. 44 × art. 45",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Dispositivo", "Foco"],
+        "linhas": [
+          ["Art. 44", "Aproximar com velocidade moderada — prudência"],
+          ["Art. 45", "Não entrar se puder ficar preso — bloqueio vedado"],
+          ["Pegadinha D", "Moderar ≠ entrar e parar no meio do cruzamento"]
+        ]
+      }
+    },
+    {
+      "id": "lei45",
+      "titulo": "Art. 45 — literal da regra",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 45",
+        "texto": "Art. 45. Mesmo que a indicação luminosa do semáforo lhe seja favorável, nenhum condutor pode entrar em uma interseção se houver possibilidade de ser obrigado a imobilizar o veículo na área do cruzamento, obstruindo ou impedindo a passagem do trânsito transversal.",
+        "trechos_grifados": [
+          { "inicio": 21, "fim": 70, "motivo": "contraste — verde não dispensa avaliar passagem limpa" },
+          { "inicio": 184, "fim": 202, "motivo": "caso — veículo preso na fila do cruzamento" },
+          { "inicio": 242, "fim": 262, "motivo": "glossario — fluxo perpendicular obstruído" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "VERDE ≠ ENTRAR SEM PASSAR LIMPO (art. 45).\nFila à frente → aguarde antes da faixa.\nNão bloqueie o transversal.\nArt. 44 é aproximar; 45 é não ficar preso.\n\nNear-transfer: no verde, se o carro da frente não avançou e a interseção está cheia, não entre — espere atrás da linha de retenção.",
+        "destaques": ["VERDE ≠ ENTRAR", "área do cruzamento", "Near-transfer"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 45", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

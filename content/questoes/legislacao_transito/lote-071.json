@@ -1,0 +1,377 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_circulacao_conduta",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_38_I",
+    "enunciado": "Em via urbana de Campina Grande/PB, de um só sentido e com três faixas de rolamento, um condutor pretende ingressar em posto de combustível (lote lindeiro) à direita. Permanece na faixa central, aciona a luz indicadora de direção e inicia a conversão sem aproximar-se do bordo direito da pista, alegando que, em via de um só sentido, pode converter a partir de qualquer faixa. Considerando as normas de circulação e conduta do Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Deve aproximar-se o máximo possível do bordo direito da pista e executar a manobra no menor espaço possível, nos termos do art. 38, I, do CTB.",
+      "B": "Em via de um só sentido com múltiplas faixas, o condutor pode converter à direita a partir de qualquer faixa, desde que sinalize com antecedência conforme o art. 35 do CTB.",
+      "C": "Deve aproximar-se do bordo esquerdo da pista antes de converter à direita, à semelhança do posicionamento previsto no art. 38, II, para vias de um só sentido.",
+      "D": "A sinalização com antecedência, nos termos do art. 35 do CTB, dispensa o condutor de aproximar-se do bordo direito antes de ingressar no lote lindeiro."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Art. 38, I — conversão à direita: aproximar-se do bordo direito e executar no menor espaço; distinção do inciso II e do art. 35 (sinalização).",
+      "fundamento_legal": "CTB, art. 38, I: ao sair da via pelo lado direito, aproximar-se o máximo possível do bordo direito da pista e executar sua manobra no menor espaço possível. CTB, art. 35: antes de iniciar qualquer manobra que implique um deslocamento lateral, o condutor deverá indicar seu propósito de forma clara e com a devida antecedência.",
+      "passo_a_passo": [
+        "1. Caso: conversão à direita para lote lindeiro a partir da faixa central, sem aproximar do bordo direito — núcleo do art. 38, I.",
+        "2. B erra por regra_excecao (inventa que via de um sentido dispensa bordo direito); C erra por termo_unico (aplica inciso II em conversão à direita); D erra por regra_excecao (seta do art. 35 não dispensa posicionamento do art. 38).",
+        "3. A correta: inciso I impõe bordo direito e menor espaço possível na conversão à direita."
+      ],
+      "pegadinha": "A IDECAN induz a crer que múltiplas faixas em via de um sentido autorizam converter da faixa central — o inciso I não prevê essa exceção.",
+      "macete": "DIREITA → BORDO DIR · MENOR ESPAÇO (I) · seta ≠ posicionar.",
+      "estudo_reverso": [
+        "CTB art. 38",
+        "CTB art. 35"
+      ]
+    },
+    "tags": [
+      "conversao",
+      "bordo_direito",
+      "lote_lindeiro",
+      "art_38",
+      "circulacao"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CTB_art_38_I",
+      "macete_visual": "DIR→BORDO DIR · MENOR ESPAÇO",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Conversão à direita da faixa central para posto de combustível.\n\nGabarito A: bordo direito + menor espaço — art. 38, I.",
+            "destaques": ["art. 38, I", "bordo direito", "Gabarito A"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Faixa central × bordo direito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Um sentido = qualquer faixa", "Inciso I exige bordo direito"],
+              ["Seta dispensa posicionar", "Art. 38 posiciona antes da curva"]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Decisão rápida",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Conversão à direita para sair da via?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Bordo direito, menor espaço possível",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DIREITA → BORDO DIR.\nMENOR ESPAÇO.\nSeta não dispensa.",
+            "destaques": ["BORDO DIR", "MENOR ESPAÇO"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 38, I",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 250,
+      "fundamento_slug": "CTB_art_38_I",
+      "macete_visual": "DIR→BORDO DIR · MENOR ESPAÇO",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Conversão à direita exige bordo direito e menor espaço — não vale converter da faixa central",
+        "eixos_legais": [
+          "CTB_art_38_I",
+          "CTB_art_38_II"
+        ],
+        "isca_por_alternativa": {
+          "B": "via de um sentido permite converter de qualquer faixa — regra_excecao",
+          "C": "aplica inciso II (bordo esquerdo) na conversão à direita — termo_unico",
+          "D": "seta do art. 35 dispensa posicionamento do art. 38 — regra_excecao"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: direita = bordo direito",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — permitiu converter da faixa central: inciso I exige aproximar-se do bordo direito.\nC — mandou bordo esquerdo: inciso II rege conversão à esquerda, não à direita.\nD — achou que seta basta: art. 35 sinaliza — art. 38 posiciona antes da curva.\n\nNesta aula você separa inciso I (direita) de inciso II (esquerda).",
+            "destaques": [
+              "Gabarito A",
+              "bordo direito",
+              "menor espaço"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SAIR PELO LADO DIREITO: conversão à direita para lote lindeiro ou outra via — hipótese do inciso I.\n\nBORDO DIREITO: margem direita da pista — onde o condutor deve se aproximar antes da curva.\n\nMENOR ESPAÇO POSSÍVEL: executar a manobra de forma compacta — segundo comando do inciso I.",
+            "destaques": [
+              "LADO DIREITO",
+              "BORDO DIREITO",
+              "MENOR ESPAÇO"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: conversão à direita — onde posicionar?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Manobra é sair da via pelo lado direito?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Condutor aproximou-se do bordo direito?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Executar no menor espaço possível",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Art. 38 — incisos I e II",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Manobra",
+              "Posicionamento"
+            ],
+            "linhas": [
+              [
+                "Conversão à direita — inciso I",
+                "Bordo direito, menor espaço possível"
+              ],
+              [
+                "Conversão à esquerda, duplo sentido — II",
+                "Eixo ou linha divisória"
+              ],
+              [
+                "Conversão à esquerda, um sentido — II",
+                "Bordo esquerdo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: faixa central × bordo direito",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
+            "linhas": [
+              [
+                "Em via de um sentido, converte de qualquer faixa",
+                "Inciso I exige bordo direito mesmo em múltiplas faixas"
+              ],
+              [
+                "Seta acionada dispensa aproximar do bordo",
+                "Art. 38 posiciona — art. 35 apenas sinaliza"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "B — regra_excecao",
+                "Inventa que via de um sentido dispensa bordo direito — inciso I não prevê exceção"
+              ],
+              [
+                "C — termo_unico",
+                "Aplica inciso II (esquerda/eixo) em conversão à direita"
+              ],
+              [
+                "D — regra_excecao",
+                "Confunde sinalização do art. 35 com posicionamento obrigatório do art. 38"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Fato do caso",
+              "Conclusão legal"
+            ],
+            "linhas": [
+              [
+                "Conversão à direita para lote lindeiro a partir da faixa central",
+                "Deve aproximar-se do bordo direito — inciso I"
+              ],
+              [
+                "Seta acionada sem deslocamento lateral prévio",
+                "Sinalização não substitui posicionamento"
+              ],
+              [
+                "Resultado",
+                "Gabarito A — art. 38, I"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Inciso I × inciso II — lados opostos",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Inciso",
+              "Regra"
+            ],
+            "linhas": [
+              [
+                "I — sair à direita",
+                "Bordo direito da pista, menor espaço possível"
+              ],
+              [
+                "II — sair à esquerda, um sentido",
+                "Bordo esquerdo da pista"
+              ],
+              [
+                "Pegadinha C",
+                "Inciso II não rege conversão à direita"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei38i",
+          "titulo": "Art. 38 — caput e inciso I",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 38, I",
+            "texto": "Antes de entrar à direita ou à esquerda, em outra via ou em lotes lindeiros, o condutor deverá: I - ao sair da via pelo lado direito, aproximar-se o máximo possível do bordo direito da pista e executar sua manobra no menor espaço possível;",
+            "trechos_grifados": [
+              {
+                "inicio": 120,
+                "fim": 132,
+                "motivo": "glossario — sair pelo lado direito do caso"
+              },
+              {
+                "inicio": 168,
+                "fim": 181,
+                "motivo": "contraste — bordo direito obrigatório"
+              },
+              {
+                "inicio": 217,
+                "fim": 238,
+                "motivo": "caso — executar no menor espaço possível"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DIREITA → BORDO DIR (I).\nMENOR ESPAÇO na curva.\nESQUERDA = inciso II (outra regra).\nSeta não dispensa posicionar.\n\nNear-transfer: via de duplo sentido, conversão à direita para entrada de posto — ainda deve colar no bordo direito antes de entrar, não cortar a curva da faixa central.",
+            "destaques": [
+              "BORDO DIR",
+              "MENOR ESPAÇO",
+              "Near-transfer"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 38, I",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        },
+        {
+          "rotulo": "CTB art. 35",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,139 @@
+{
+  "versao": 2,
+  "arquetipo": "tabela_gradacao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 220,
+  "fundamento_slug": "CONTRAN_991_art_3",
+  "macete_visual": "19/04 ato · 25/04 DOU · 02/05 VIGOR",
+  "meta": {
+    "padrao_familia": "D_gradacao",
+    "pegadinha_em_uma_frase": "Candidato confunde DOU 25/04 ou assinatura 19/04 com vigência 02/05",
+    "eixos_legais": ["CONTRAN_991_art_3"],
+    "isca_por_alternativa": {
+      "A": "publicação DOU = vigor",
+      "B": "data da resolução = vigor",
+      "C": "qualquer dia de maio serve"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: 01/05 antecipou o art. 3º",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito D (vigor em 02/05/2023 — art. 3º).\n\nA — publicação DOU em 25/04 como vigor: numero_vizinho — marco distinto.\nB — assinatura em 19/04 como vigor: numero_vizinho — data do ato ≠ vigência.\nC — qualquer dia de maio: regra_excecao — art. 3º fixa dia exato.\n\nPRF implementou PagTesouro em 01/05/2023, um dia antes do art. 3º.",
+        "destaques": ["Gabarito D", "02/05/2023", "01/05"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 marcos distintos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "DATA DO ATO: 19/04/2023 — cabeçalho da Resolução (quando foi editada).\n\nPUBLICAÇÃO DOU: 25/04/2023 — ciência oficial; não é automaticamente vigência.\n\nVIGÊNCIA: 02/05/2023 — art. 3º; quando arts. 25 e 27 alterados passam a valer.",
+        "destaques": ["19/04", "25/04", "02/05"]
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Linha do tempo da Res. 991",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Marco", "Data / efeito"],
+        "linhas": [
+          { "faixa": "Resolução editada", "classificacao": "19 de abril de 2023" },
+          { "faixa": "Publicação no DOU", "classificacao": "25 de abril de 2023" },
+          { "faixa": "Entrada em vigor — art. 3º", "classificacao": "02 de maio de 2023", "destaque": true },
+          { "faixa": "Implementação PRF no caso", "classificacao": "01/05/2023 — antecipada" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: publicação = vigor?",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Publicou no DOU dia 25 → já vigorava", "Art. 3º fixa vigência em 02/05/2023 — marco próprio"],
+          ["1º de maio já é maio → pode implementar", "Vigor é dia 2 — antecipação de 1 dia é inválida"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — numero_vizinho", "Usa publicação DOU (25/04) como vigência — art. 3º fixa 02/05"],
+          ["B — numero_vizinho", "Usa data da resolução (19/04) como vigência — distinta do art. 3º"],
+          ["C — regra_excecao", "Inventa vigência por mês civil — art. 3º indica dia exato"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Datas do enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Marco", "Conclusão"],
+        "linhas": [
+          ["Resolução de 19/04/2023", "Data do ato — não é vigência"],
+          ["DOU em 25/04/2023", "Publicação — não substitui art. 3º"],
+          ["Implementação PRF: 01/05/2023", "1 dia antes do vigor legal"],
+          ["Art. 3º: vigor 02/05/2023", "Gabarito D — antecipação inválida"]
+        ]
+      }
+    },
+    {
+      "id": "linha_tempo",
+      "titulo": "Cronologia 991/2023",
+      "tipo": "linha_tempo",
+      "conteudo": {
+        "eventos": [
+          { "ordem": 1, "rotulo": "19/04/2023", "descricao": "Resolução CONTRAN nº 991 editada" },
+          { "ordem": 2, "rotulo": "25/04/2023", "descricao": "Publicação no DOU — ainda sem vigor" },
+          { "ordem": 3, "rotulo": "01/05/2023", "descricao": "PRF implementa PagTesouro — antecipada" },
+          { "ordem": 4, "rotulo": "02/05/2023", "descricao": "Entrada em vigor — art. 3º" }
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 3º — vigência expressa",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 991/2023, art. 3º",
+        "texto": "Esta Resolução entra em vigor em 02 de maio de 2023.",
+        "trechos_grifados": [
+          { "inicio": 33, "fim": 51, "motivo": "gradacao — marco de vigência (destaque)" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "991: assinada 19/04 · DOU 25/04 · VIGOR 02/05 — só o art. 3º manda.\n\nNear-transfer: STTP implementa cartão no art. 27 em 03/05/2023 — após o vigor? Sim, desde 02/05 a Res. 991 já vale; 01/05 ainda não.",
+        "destaques": ["02/05", "03/05", "art. 3º"]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 991/2023",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 991, DE 19 DE ABRIL DE 2023.pdf"
+    }
+  ]
+}

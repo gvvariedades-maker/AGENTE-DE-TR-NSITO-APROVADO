@@ -1,0 +1,186 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "todos",
+  "duracao_estimada_seg": 250,
+  "fundamento_slug": "CONTRAN_918_art_24_3",
+  "macete_visual": "§3 à vista+integral · MAS parcela CRÉDITO SPB",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "À vista e integral não elimina parcelamento no cartão — mesma frase do § 3º",
+    "eixos_legais": ["CONTRAN_918_art_24_3", "CONTRAN_918_art_27"],
+    "isca_por_alternativa": {
+      "A": "à vista integral sem ressalva do parcelamento",
+      "B": "cartão só no art. 27, não na rede",
+      "D": "parcelamento só no débito"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: § 3º não veda o cartão",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C (parcelamento por cartão de crédito na rede arrecadadora — art. 24, § 3º).\n\nA — veda parcelamento pela leitura de \"à vista e integral\": regra_excecao — mesma norma prevê exceção expressa.\nB — cartão só no art. 27: regra_excecao — art. 27 é canal complementar, não revoga § 3º.\nD — só cartão de débito: termo_unico — § 3º menciona cartão de crédito.\n\nSTTP invalida 6× no crédito na rede bancária.",
+        "destaques": ["Gabarito C", "§ 3º", "6×"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do § 3º",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "REDE ARRECADADORA: instituição bancária conveniada — pagamento previsto no § 2º do art. 24.\n\nÀ VISTA E INTEGRAL: regra geral do recebimento na rede — não exclui a ressalva seguinte do § 3º.\n\nSPB: Sistema de Pagamentos Brasileiro — instituição assume conta e risco do parcelamento no cartão.",
+        "destaques": ["REDE", "À VISTA", "SPB"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: exceção do § 3º se aplica?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Recebimento na rede arrecadadora (§ 2º)?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Parcelamento no cartão de crédito (§ 3º)?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Operação válida — Gabarito C", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim — rede STTP" },
+          { "de": "p2", "para": "r1", "rotulo": "Sim — 6 prestações" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Art. 24 — § 2º × § 3º × art. 27",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Dispositivo", "Efeito"],
+        "linhas": [
+          { "faixa": "§ 2º — rede bancária", "classificacao": "Pagamento na rede arrecadadora" },
+          {
+            "faixa": "§ 3º — à vista + parcelamento cartão",
+            "classificacao": "Integral na rede, mas pode parcelar no crédito (SPB)",
+            "destaque": true
+          },
+          { "faixa": "Art. 27 — parceria cartão", "classificacao": "Canal complementar com autorização SENATRAN" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: parar na primeira metade do § 3º",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          [
+            "\"Exclusivamente à vista e integral\" proíbe 6× no cartão",
+            "Continuação do § 3º: \"podendo ser realizado parcelamento\" no crédito"
+          ],
+          [
+            "Cartão na rede e cartão no art. 27 são mutuamente excludentes",
+            "§ 3º (rede) e art. 27 (parceria) são canais distintos e cumulativos"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Corta o § 3º na metade \"à vista e integral\" — ignora a exceção do parcelamento no mesmo dispositivo"
+          ],
+          [
+            "B — regra_excecao",
+            "Trata art. 27 como única via de cartão — § 3º autoriza parcelamento na rede sem parceria do art. 27"
+          ],
+          [
+            "D — termo_unico",
+            "Inventa vedação ao crédito — § 3º expressamente prevê cartão de crédito"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos do parcelamento na STTP",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Elemento", "Conclusão"],
+        "linhas": [
+          ["Rede bancária arrecadadora conveniada", "§ 2º do art. 24"],
+          ["Parcelamento 6× no cartão de crédito", "Exceção expressa do § 3º"],
+          ["STTP invalida a operação", "Contrário ao § 3º — operação válida"],
+          ["Resultado", "Gabarito C"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Res. 991/2023 — o que não mudou",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Dispositivo", "Relação com o caso"],
+        "linhas": [
+          [
+            "Res. 991 alterou arts. 25 e 27",
+            "Art. 24 (§ 2º e § 3º) permanece para arrecadadores subnacionais"
+          ],
+          [
+            "Art. 27 pós-991 = só multas no cartão",
+            "Não revoga parcelamento na rede do § 3º"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Res. 918/2022 — art. 24, § 3º",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 918/2022, art. 24, § 3º",
+        "texto": "O recebimento de multas pela rede arrecadadora será feito exclusivamente à vista e de forma integral, podendo ser realizado parcelamento, por meio de cartão de crédito, por conta e risco de instituições integrantes do Sistema de Pagamentos Brasileiro (SPB).",
+        "trechos_grifados": [
+          { "inicio": 58, "fim": 100, "motivo": "contraste — isca \"à vista e integral\"" },
+          { "inicio": 102, "fim": 136, "motivo": "fluxo — exceção do parcelamento" },
+          { "inicio": 150, "fim": 167, "motivo": "distratores — cartão de crédito (não só débito)" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "§3 = À VISTA+INTEGRAL · MAS pode PARCELAR no CRÉDITO (SPB) · art.27 = outro canal.\n\nNear-transfer: DETRAN-PB recusa parcelamento 12× no crédito na rede do Banco do Brasil alegando integralidade — mesmo § 3º: parcelamento no cartão é exceção legal na rede arrecadadora.",
+        "destaques": ["PARCELAR", "CRÉDITO", "DETRAN-PB"]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 918/2022",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 918, DE 28 DE MARÇO DE 2022.pdf"
+    },
+    {
+      "rotulo": "Res. CONTRAN 991/2023",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 991, DE 19 DE ABRIL DE 2023.pdf"
+    }
+  ]
+}

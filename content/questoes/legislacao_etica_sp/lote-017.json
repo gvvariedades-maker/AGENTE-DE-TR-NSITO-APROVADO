@@ -1,0 +1,275 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_1_3",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_prazo",
+    "dificuldade": 4,
+    "fundamento_slug": "LAI_art11_prazo",
+    "enunciado": "Vereador protocola na STTP de Campina Grande pedido de informação sobre a quantidade de autuações por radar fixo no primeiro semestre, dado ainda não compilado no sistema. O setor de comunicação responde que o prazo legal é de 10 dias; o jurídico sustenta que, por não haver acesso imediato, a autarquia pode aguardar 30 dias corridos sem necessidade de justificativa; o protocolo afirma que qualquer pedido exige resposta imediata, sob pena de sanção. À luz da Lei nº 12.527/2011 (LAI), assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Como a informação não está pronta, a STTP pode aguardar 30 dias sem justificativa — prazo máximo único previsto para pedidos que exijam compilação de dados.",
+      "B": "O prazo para resposta ao pedido é de 10 dias, contados do protocolo, por analogia ao recurso do interessado previsto no art. 15 da LAI.",
+      "C": "Sem acesso imediato, a STTP responde em até 20 dias (art. 11, §1); admite prorrogação de mais 10 dias com justificativa expressa (art. 11, §2); informação já disponível deve ser fornecida imediatamente (caput).",
+      "D": "Enquanto a informação não estiver publicada no site, o órgão está desonerado de qualquer prazo — basta indicar o endereço eletrônico onde o dado será divulgado futuramente."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Prazos de resposta ao pedido de informação na LAI: acesso imediato quando disponível (art. 11, caput), prazo de 20 dias (§1) e prorrogação de mais 10 dias com justificativa (§2).",
+      "fundamento_legal": "LAI, art. 11, caput: \"O órgão ou entidade pública deverá autorizar ou conceder o acesso imediato à informação disponível\". § 1º: \"em prazo não superior a 20 (vinte) dias\". § 2º: \"O prazo referido no § 1º poderá ser prorrogado por mais 10 (dez) dias, mediante justificativa expressa, da qual será cientificado o requerente\".",
+      "passo_a_passo": [
+        "1. O dado não está compilado — não há acesso imediato; aplica-se o §1 (20 dias), não o caput isolado nem prazo de 10 dias do art. 15.",
+        "2. A erra por numero_vizinho (30 dias sem justificativa — confunde teto de 20+10 com prazo automático de 30); B erra por numero_vizinho (aplica 10 dias do recurso do art. 15 ao prazo de resposta do art. 11); D erra por regra_excecao (usa desoneração do §6 para afastar todo prazo de resposta).",
+        "3. C está correta: caput = imediato se disponível; §1 = 20 dias; §2 = +10 com justificativa expressa."
+      ],
+      "pegadinha": "A banca mistura 10 dias (recurso do art. 15), 30 dias sem justificativa e resposta imediata obrigatória mesmo sem dado pronto — o candidato troca os prazos do art. 11.",
+      "macete": "LAI resposta: imediato se pronto · 20 dias · +10 com justificativa — 10 dias é recurso (art. 15), não prazo de resposta.",
+      "estudo_reverso": [
+        "LAI art. 11, caput",
+        "LAI art. 11, §1",
+        "LAI art. 11, §2",
+        "LAI art. 15"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "LAI_art11_prazo",
+      "macete_visual": "Imediato · 20 dias · +10 justificado",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Dado não compilado — não é imediato. Prazo padrão é 20 dias; mais 10 só com justificativa. Dez dias é recurso, não resposta ao pedido.",
+            "destaques": ["20 dias", "10 dias", "imediato"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Prazos de resposta — art. 11",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Situação", "Prazo"],
+            "linhas": [
+              { "faixa": "Informação disponível", "classificacao": "Imediato (caput)" },
+              { "faixa": "Sem acesso imediato (caso)", "classificacao": "20 dias (§1)", "destaque": true },
+              { "faixa": "Prorrogação justificada", "classificacao": "+10 dias (§2)" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha dos vizinhos",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["Resposta em 10 dias (art. 15)", "20 dias no art. 11, §1"],
+              ["30 dias sem justificativa", "20 + 10 apenas com justificativa expressa"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Imediato · 20 dias · +10 justificado. Dez dias é recurso (art. 15), não prazo de resposta.",
+            "destaques": ["20 dias", "recurso", "justificativa"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 12.527/2011 (LAI)",
+          "path": "conteúdo/legislação federal/lei-12527-lai.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 240,
+      "fundamento_slug": "LAI_art11_prazo",
+      "macete_visual": "Imediato · 20 dias · +10 justificado",
+      "meta": {
+        "padrao_familia": "D_gradacao",
+        "pegadinha_em_uma_frase": "Setores empurram 10 dias do recurso ou 30 dias sem justificativa no pedido não imediato",
+        "eixos_legais": ["LAI_art11_caput", "LAI_art11_par1", "LAI_art11_par2"],
+        "isca_por_alternativa": {
+          "A": "30 dias sem justificativa como prazo único de compilação",
+          "B": "10 dias do art. 15 aplicados ao prazo de resposta",
+          "D": "desoneração do site afasta todo prazo de resposta"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: 20 dias, não 10 nem 30 automáticos",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — 30 dias sem justificativa: confunde teto de 20+10 com prazo automático.\nB — 10 dias do recurso: aplica prazo do interessado ao prazo de resposta.\nD — desoneração pelo site: usa exceção da publicação para afastar prazo de resposta.\n\nA isca são os setores da STTP empurrando 10 ou 30 dias no dado ainda não compilado.",
+            "destaques": ["Gabarito C", "20 dias", "justificativa"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 prazos distintos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ACESSO IMEDIATO: quando a informação já está disponível — caput do art. 11.\n\nPRAZO DE RESPOSTA: até 20 dias se não houver acesso imediato — §1 do art. 11.\n\nRECURSO DO INTERESSADO: 10 dias da ciência do indeferimento — art. 15 (não confundir com resposta).",
+            "destaques": ["IMEDIATO", "20 dias", "RECURSO"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Mapa de prazos — art. 11",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Situação", "Prazo legal"],
+            "linhas": [
+              { "faixa": "Informação disponível", "classificacao": "Acesso imediato (caput)" },
+              { "faixa": "Sem acesso imediato (caso STTP)", "classificacao": "20 dias (§1)", "destaque": true },
+              { "faixa": "Prorrogação justificada", "classificacao": "+10 dias (§2)" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: 10 e 30 no lugar de 20",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Resposta ao pedido em 10 dias (art. 15)",
+                "20 dias no art. 11, §1 — 10 dias é recurso"
+              ],
+              [
+                "30 dias automáticos sem justificativa",
+                "20 dias + 10 apenas com justificativa expressa (§2)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — numero_vizinho",
+                "Confunde 20+10 com 30 dias automáticos — ignora exigência de justificativa no §2"
+              ],
+              [
+                "B — numero_vizinho",
+                "Aplica 10 dias do recurso (art. 15) ao prazo de resposta do art. 11"
+              ],
+              [
+                "D — regra_excecao",
+                "Usa desoneração do §6 (info já publicada) para afastar prazo quando dado não existe"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o pedido do vereador",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato / argumento", "Enquadramento"],
+            "linhas": [
+              ["Dado de autuações ainda não compilado", "Sem acesso imediato — §1, não caput isolado"],
+              ["Comunicação cita 10 dias", "Confunde art. 15 (recurso) com art. 11 (resposta)"],
+              ["Jurídico propõe 30 dias sem justificativa", "Teto 20+10 exige justificativa no §2"],
+              ["Resultado", "Gabarito C — até 20 dias, prorrogável +10"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 11 — imediato e 20 dias",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LAI, art. 11, caput e §1",
+            "texto": "Art. 11. O órgão ou entidade pública deverá autorizar ou conceder o acesso imediato à informação disponível. § 1º Não sendo possível conceder o acesso imediato, na forma disposta no caput, o órgão ou entidade que receber o pedido deverá, em prazo não superior a 20 (vinte) dias:",
+            "trechos_grifados": [
+              {
+                "inicio": 75,
+                "fim": 83,
+                "motivo": "gradacao — informação pronta exige resposta imediata",
+                "texto_grifado": "imediato"
+              },
+              {
+                "inicio": 262,
+                "fim": 272,
+                "motivo": "caso — dado não compilado: prazo do §1",
+                "texto_grifado": "20 (vinte)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 11, §2 — prorrogação de 10 dias",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LAI, art. 11, §2",
+            "texto": "§ 2º O prazo referido no § 1º poderá ser prorrogado por mais 10 (dez) dias, mediante justificativa expressa, da qual será cientificado o requerente.",
+            "trechos_grifados": [
+              {
+                "inicio": 61,
+                "fim": 69,
+                "motivo": "contraste — +10 não é automático; exige justificativa (isca A)",
+                "texto_grifado": "10 (dez)"
+              },
+              {
+                "inicio": 85,
+                "fim": 107,
+                "motivo": "distratores — sem justificativa não há 30 dias automáticos",
+                "texto_grifado": "justificativa expressa"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Imediato se pronto · 20 dias · +10 com justificativa. Dez dias é recurso (art. 15), não prazo de resposta.\n\nNear-transfer: relatório já publicado no portal da transparência — STTP pode indicar o link (§6), mas se o vereador não tiver meios, mantém-se o dever de fornecer.",
+            "destaques": ["20 dias", "Near-transfer", "recurso"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 12.527/2011 (LAI)",
+          "path": "conteúdo/legislação federal/lei-12527-lai.html"
+        }
+      ]
+    },
+    "tags": [
+      "lai",
+      "prazo",
+      "pedido_informacao",
+      "acesso_passivo",
+      "sttp"
+    ]
+  }
+]

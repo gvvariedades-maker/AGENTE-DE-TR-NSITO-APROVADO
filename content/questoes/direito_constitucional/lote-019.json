@@ -1,0 +1,354 @@
+[
+  {
+    "disciplina": "direito_constitucional",
+    "topico": "dir_const_4_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "enunciado": "Após blitz de fiscalização de trânsito em Campina Grande, servidor da STTP notifica condutor autuado de que, na manhã seguinte, policiais militares o conduzirão coercitivamente à sede da autarquia para \"esclarecimentos\", sem flagrante delito nem ordem judicial escrita. O motorista de aplicativo impetra remédio constitucional imediato alegando ameaça de coação à liberdade de locomoção e discute com a defesa a competência do juízo e se cabe habeas corpus preventivo ou mandado de segurança. Com base na Constituição Federal de 1988, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O habeas corpus só cabe após efetiva privação da locomoção; a mera notificação de condução coercitiva futura não configura ameaça constitucionalmente relevante para impetração imediata.",
+      "B": "A fiscalização de trânsito autoriza a STTP, com apoio da polícia militar, convocar o condutor coercitivamente para esclarecimentos administrativos, dispensando flagrante delito ou ordem judicial.",
+      "C": "Cabe habeas corpus preventivo: o art. 5º, LXVIII alcança quem sofre ou se acha ameaçado de coação à liberdade de locomoção; a notificação de condução coercitiva sem base legal viola a locomoção livre (XV) e não se legitima sem flagrante ou ordem judicial.",
+      "D": "O habeas corpus contra a ameaça de condução coercitiva deve ser impetrado perante o órgão máximo executivo de trânsito da União, competente para disciplinar blitzes com apoio da polícia militar."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Cabimento do habeas corpus preventivo por ameaça de coação à liberdade de locomoção (art. 5º, LXVIII), em contraste com a liberdade de locomoção (art. 5º, XV), limites da prisão (art. 5º, LXI) e exclusão do mandado de segurança (art. 5º, LXIX).",
+      "fundamento_legal": "CF/88, art. 5º, LXVIII: \"conceder-se-á habeas corpus sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder\". CF/88, art. 5º, XV: \"é livre a locomoção no território nacional em tempo de paz, podendo qualquer pessoa, nos termos da lei, nele entrar, permanecer ou dele sair com seus bens\".",
+      "passo_a_passo": [
+        "1. O caso reúne notificação de condução coercitiva futura pela STTP com apoio da PM, ausência de flagrante delito e inexistência de ordem judicial — há ameaça de coação à liberdade de locomoção, não mera discussão sobre o auto de infração.",
+        "2. A erra por termo_unico (restringe o habeas corpus à privação já consumada, negando a hipótese de quem \"se achar ameaçado\" no LXVIII); B erra por regra_excecao (inventa exceção autorizando condução coercitiva administrativa na fiscalização de trânsito sem flagrante); D erra por competencia_snt (atribui impetração de habeas corpus ao órgão máximo de trânsito da União — remédio constitucional não se dirige a órgão do SNT).",
+        "3. C está correta: cabe habeas corpus preventivo (LXVIII) — a ameaça de condução coercitiva sem base legal ofende a locomoção livre (XV); MS não substitui HC quando a lesão é à locomoção (LXIX)."
+      ],
+      "pegadinha": "A banca nega o HC preventivo (exige privação consumada) ou trata fiscalização de trânsito como salvo-conduto para condução coercitiva sem ordem judicial.",
+      "macete": "AMEAÇA de coação = HC preventivo (LXVIII). Locomoção livre (XV). Fiscalizar ≠ conduzir coercitivamente. MS não substitui HC na locomoção.",
+      "estudo_reverso": [
+        "CF art. 5º, LXVIII",
+        "CF art. 5º, XV",
+        "CF art. 5º, LXI"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CF_art5_LXVIII_XV",
+      "macete_visual": "Ameaça = HC preventivo",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Notificação de condução coercitiva futura após blitz. A banca nega HC preventivo ou inventa poder coercitivo da fiscalização — ameaça à locomoção pede habeas corpus.",
+            "destaques": ["ameaça", "habeas corpus", "locomoção"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método rápido",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Há ameaça de coação à locomoção?", "tipo": "pergunta" },
+              { "id": "p2", "label": "A lesão é só direito líquido e certo sem locomoção?", "tipo": "pergunta" },
+              { "id": "r1", "label": "HC preventivo — LXVIII", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — condução coercitiva anunciada" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["HC só após privação consumada", "LXVIII inclui quem se acha ameaçado"],
+              ["Blitz autoriza condução coercitiva", "Locomoção livre — sem flagrante ou ordem judicial"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXVIII",
+            "texto": "conceder-se-á habeas corpus sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 13,
+                "motivo": "pegadinha — remédio constitucional",
+                "texto_grifado": "conceder-se-á"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "AMEAÇA = HC preventivo (LXVIII). Locomoção livre (XV). Fiscalizar ≠ conduzir coercitivamente.",
+            "destaques": ["ameaça", "HC", "locomoção"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, LXVIII",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 245,
+      "fundamento_slug": "CF_art5_LXVIII_XV",
+      "macete_visual": "Ameaça = HC | XV livre",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "HC preventivo cabe na ameaça de condução coercitiva — fiscalizar trânsito não autoriza privar locomoção",
+        "eixos_legais": ["CF_art5_LXVIII", "CF_art5_XV"],
+        "isca_por_alternativa": {
+          "A": "habeas corpus só após privação consumada, não na mera notificação de condução futura",
+          "B": "fiscalização de trânsito autoriza condução coercitiva para esclarecimentos sem ordem judicial",
+          "D": "habeas corpus deve ser impetrado perante o órgão máximo de trânsito da União"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: HC preventivo × ameaça",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (habeas corpus preventivo por ameaça de coação).\n\nA — HC só depois da privação consumada; notificação futura não basta.\nB — STTP com PM pode conduzir coercitivamente para esclarecimentos na blitz.\nD — HC contra a ameaça vai ao órgão máximo de trânsito da União.\n\nPromessa: fixar quando a ameaça de condução coercitiva autoriza HC imediato.",
+            "destaques": ["ameaça", "preventivo", "locomoção"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de decidir: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "HC PREVENTIVO: impetrado quando há ameaça de coação — o LXVIII fala em quem \"sofrer ou se achar ameaçado\". LOCOMOÇÃO LIVRE (art. 5º, XV): entrar, permanecer ou sair com bens — condução coercitiva sem base legal a ameaça. MS (art. 5º, LXIX): não substitui HC quando a lesão é à locomoção.",
+            "destaques": ["preventivo", "locomoção", "MS"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: cabe HC imediato?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Há coação ou ameaça à liberdade de locomoção?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "A lesão é só direito líquido e certo sem locomoção?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "HC preventivo — ameaça de condução coercitiva ilegal",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — notificação de condução futura" },
+              { "de": "p2", "para": "r1", "rotulo": "Não — lesão é locomoção" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa: remédios na locomoção",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Situação", "Remédio"],
+            "linhas": [
+              { "faixa": "Privação consumada", "classificacao": "Habeas corpus — LXVIII" },
+              { "faixa": "Ameaça de coação", "classificacao": "HC preventivo — LXVIII" },
+              { "faixa": "Só lesão a direito líquido e certo", "classificacao": "Mandado de segurança — LXIX" },
+              {
+                "faixa": "Condução coercitiva sem flagrante/ordem",
+                "classificacao": "Ilegal — viola XV e LXI",
+                "destaque": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença × lei: ameaça × consumação",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "HC só depois que a PM levar o condutor",
+                "LXVIII inclui quem se acha ameaçado de coação"
+              ],
+              [
+                "Blitz autoriza condução coercitiva administrativa",
+                "Locomoção livre — sem flagrante ou ordem judicial"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Restringe HC à privação consumada, negando hipótese de ameaça no LXVIII"
+              ],
+              [
+                "B — regra_excecao",
+                "Inventa exceção autorizando condução coercitiva na fiscalização sem flagrante"
+              ],
+              [
+                "D — competencia_snt",
+                "Atribui impetração de HC ao órgão máximo de trânsito da União"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo a notificação da STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Conclusão"],
+            "linhas": [
+              ["Notificação de condução coercitiva na manhã seguinte", "Ameaça de coação — LXVIII"],
+              ["Sem flagrante delito nem ordem judicial escrita", "Viola limites da prisão — LXI"],
+              ["Motorista de aplicativo impetra remédio imediato", "HC preventivo, não MS (LXIX)"],
+              ["Resultado", "Alternativa C"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 5º, LXVIII × art. 5º, XV — dupla base",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "O que exige no caso"],
+            "linhas": [
+              ["Art. 5º, LXVIII", "HC quando há coação ou ameaça à locomoção"],
+              ["Art. 5º, XV", "Locomoção livre — entrar, permanecer, sair com bens"],
+              ["Caso concreto", "Notificação de condução coercitiva ameaça ambos"],
+              ["Fiscalização legítima", "Autuar e exigir teste ≠ convocar coercitivamente"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 5º, LXVIII — habeas corpus",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXVIII",
+            "texto": "conceder-se-á habeas corpus sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 13,
+                "motivo": "fluxo — remédio cabível",
+                "texto_grifado": "conceder-se-á"
+              },
+              {
+                "inicio": 56,
+                "fim": 83,
+                "motivo": "contraste — HC preventivo",
+                "texto_grifado": "se achar ameaçado de sofrer"
+              },
+              {
+                "inicio": 111,
+                "fim": 133,
+                "motivo": "caso — coação à locomoção",
+                "texto_grifado": "liberdade de locomoção"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 5º, XV — locomoção livre",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, XV",
+            "texto": "é livre a locomoção no território nacional em tempo de paz, podendo qualquer pessoa, nos termos da lei, nele entrar, permanecer ou dele sair com seus bens",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 19,
+                "motivo": "mapa — direito fundamental",
+                "texto_grifado": "é livre a locomoção"
+              },
+              {
+                "inicio": 109,
+                "fim": 140,
+                "motivo": "hierarquia — entrar, permanecer, sair",
+                "texto_grifado": "entrar, permanecer ou dele sair"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "AMEAÇA = HC preventivo (LXVIII).\nLocomoção LIVRE (XV).\nFiscalizar ≠ conduzir coercitivamente.\n\nNear-transfer: se a PM já tivesse o condutor na base por 6 h sem flagrante, seria HC repressivo pelo mesmo LXVIII — mas a notificação futura também configura ameaça.",
+            "destaques": ["AMEAÇA", "XV", "LXVIII"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, LXVIII",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        },
+        {
+          "rotulo": "CF/88, art. 5º, XV",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "art5_lxviii",
+      "art5_xv",
+      "habeas_corpus",
+      "hc_preventivo",
+      "locomocao",
+      "remedios_constitucionais"
+    ]
+  }
+]

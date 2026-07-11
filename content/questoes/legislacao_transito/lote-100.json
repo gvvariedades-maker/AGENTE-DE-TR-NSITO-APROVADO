@@ -1,0 +1,342 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_1009_alteracoes",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_1009_art_22_2",
+    "enunciado": "Durante fiscalização da STTP em Campina Grande/PB, agente verifica condutor que, à época, estava habilitado na categoria C e deixou de realizar o exame toxicológico periódico previsto no art. 10-A da Resolução CONTRAN nº 923/2022, com prazo já vencido. O condutor comprova que, no 18º dia após o vencimento desse prazo, requereu ao DETRAN-PB a mudança para a categoria B, concluída antes da abordagem. O supervisor consulta se a STTP pode lavrar Auto de Infração pelo art. 165-D do CTB. Considerando a Resolução CONTRAN nº 1.009/2024 e o CTB, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A STTP deve autuar pelo art. 165-D: a mudança para categoria B não dispensa o exame toxicológico periódico nem afasta a infração após o vencimento do prazo.",
+      "B": "Só o cancelamento da CNH afasta o art. 165-D — a mudança de categoria C para B no 18º dia não produz efeito liberatório.",
+      "C": "Não cabe autuação pelo art. 165-D: a Res. 923/2022, alterada pela Res. 1.009/2024, afasta a penalidade se a mudança para B ocorrer até o 30º dia após o vencimento do exame periódico.",
+      "D": "A contagem de 30 dias para afastar o art. 165-D inicia-se na data da mudança para categoria B — como se passaram apenas 18 dias desde o vencimento, a STTP ainda pode autuar."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Exceção do art. 22, §2º, da Res. CONTRAN 923/2022 (alterada pela Res. 1.009/2024) — mudança para B/AB ou cancelamento da CNH até o 30º dia após vencimento do exame periódico (art. 10-A) afasta o art. 165-D do CTB.",
+      "fundamento_legal": "Res. CONTRAN 923/2022, art. 22, §2º (redação da Res. CONTRAN 1.009/2024): 'A mudança das categorias C, D ou E para as categorias B e AB ou a solicitação de cancelamento da CNH, até o trigésimo dia após o vencimento do prazo para realização do exame de que trata o art. 10-A desta Resolução, afasta a aplicação da penalidade prevista no art. 165-D do CTB.' CTB, art. 165-D: infração gravíssima por deixar de realizar exame toxicológico após 30 dias do vencimento do prazo (§2º do art. 148-A).",
+      "passo_a_passo": [
+        "1. Caso: condutor categoria C com prazo do exame periódico (art. 10-A) vencido — mudou para B no 18º dia após o vencimento, antes da fiscalização da STTP.",
+        "2. A erra por regra_excecao (trata mudança de categoria como irrelevante — ignora o §2º do art. 22 da Res. 923/2022, alterado pela Res. 1.009/2024); B erra por termo_unico (restringe o benefício ao cancelamento da CNH — o §2º inclui mudança para B ou AB); D erra por numero_vizinho (desloca o marco dos 30 dias para a data da mudança em vez do vencimento do prazo periódico).",
+        "3. C correta: art. 22, §2º, da Res. 923/2022 + art. 165-D do CTB — mudança para B no 18º dia após o vencimento afasta a penalidade."
+      ],
+      "pegadinha": "A IDECAN induz a autuar sempre que o exame periódico venceu — mas a Res. 1.009/2024 incluiu exceção: downgrade para B/AB (ou cancelamento) até 30 dias após o vencimento afasta o art. 165-D.",
+      "macete": "PERIÓDICO VENCEU → 30 DIAS → B/AB ou CANCELAR = sem 165-D · depois disso = art. 165-D.",
+      "estudo_reverso": [
+        "Res. CONTRAN 1.009/2024 art. 3",
+        "Res. CONTRAN 923/2022 art. 22",
+        "CTB art. 165-D"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Mudança para B até 30 dias após vencimento do toxicológico periódico afasta art. 165-D",
+      "eixos_legais": [
+        "CONTRAN_923_art_22",
+        "CTB_art_165-D"
+      ],
+      "isca_por_alternativa": {
+        "A": "mudança para B não afasta infração após vencimento do prazo periódico",
+        "B": "só cancelamento da CNH afasta — mudança de categoria não vale",
+        "D": "30 dias contam da data da mudança, não do vencimento do exame"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico",
+        "numero_vizinho"
+      ]
+    },
+    "tags": [
+      "resolucao_1009",
+      "resolucao_923",
+      "toxicologico",
+      "art_165-D",
+      "categoria_c"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_1009_art_22_2",
+      "macete_visual": "30 dias pós-vencimento · B/AB = sem 165-D",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C: mudança para B no 18º dia após vencimento do toxicológico periódico afasta art. 165-D. A isca é autuar sempre que o prazo venceu.",
+            "destaques": ["Gabarito C", "18º dia", "165-D"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Exceção pós-vencimento",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Prazo venceu → autua 165-D", "Mudança para B até 30 dias afasta penalidade"],
+              ["Só cancelamento libera", "B/AB ou cancelamento no prazo"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PERIÓDICO VENCEU → 30 DIAS → B/AB ou CANCELAR = sem 165-D.",
+            "destaques": ["30 DIAS", "B/AB", "165-D"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.009/2024",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.009, DE 24 DE ABRIL DE 2024.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 275,
+      "fundamento_slug": "CONTRAN_1009_art_22_2",
+      "macete_visual": "30 dias pós-vencimento · B/AB = sem 165-D",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Mudança para B até 30 dias após vencimento do toxicológico periódico afasta art. 165-D",
+        "eixos_legais": [
+          "CONTRAN_923_art_22",
+          "CTB_art_165-D"
+        ],
+        "isca_por_alternativa": {
+          "A": "mudança para B não afasta infração após vencimento do prazo periódico",
+          "B": "só cancelamento da CNH afasta — mudança de categoria não vale",
+          "D": "30 dias contam da data da mudança, não do vencimento do exame"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: downgrade no prazo afasta 165-D",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — mudança para B não afasta infração após vencimento do exame periódico.\nB — só cancelamento da CNH afasta — mudança de categoria não vale.\nD — 30 dias contam da data da mudança, não do vencimento do prazo.\n\nPegadinha: até o 30º dia após o vencimento, mudança para B/AB afasta a penalidade.",
+            "destaques": ["Gabarito C", "18º dia", "mudança para B"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "EXAME PERIÓDICO (art. 10-A): toxicológico a cada 2 anos e 6 meses para categorias C, D e E com menos de 70 anos.\n\nART. 165-D: infração gravíssima por não realizar exame toxicológico após 30 dias do vencimento do prazo.\n\nDOWNGRADE: mudança de C, D ou E para B ou AB — pode afastar 165-D se no prazo do §2º.",
+            "destaques": ["PERIÓDICO", "165-D", "DOWNGRADE"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: cabe autuação 165-D?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Mudança para B/AB ou cancelamento até o 30º dia após vencimento do periódico?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Sem infração administrativa — gabarito C",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim — 18º dia no caso" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Janela após vencimento do periódico",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Conduta", "Consequência"],
+            "linhas": [
+              {
+                "faixa": "Mudança para B/AB ou cancelamento até 30º dia",
+                "classificacao": "Afasta art. 165-D — caso do 18º dia",
+                "destaque": true
+              },
+              {
+                "faixa": "Nenhuma medida após 30º dia",
+                "classificacao": "Configura art. 165-D do CTB"
+              },
+              {
+                "faixa": "Só antes do vencimento",
+                "classificacao": "Isca — exceção vale também após vencer"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: prazo venceu = autua",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Exame periódico vencido → sempre 165-D",
+                "§2º do art. 22: downgrade ou cancelamento em 30 dias afasta"
+              ],
+              [
+                "Só cancelamento da CNH libera",
+                "Mudança para B ou AB também afasta a penalidade"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Ignora exceção do §2º — mudança para B no prazo afasta 165-D"
+              ],
+              [
+                "B — termo_unico",
+                "Restringe benefício ao cancelamento — §2º inclui mudança para B/AB"
+              ],
+              [
+                "D — numero_vizinho",
+                "Conta 30 dias da mudança — marco é o vencimento do periódico"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "Categoria C com prazo do art. 10-A vencido",
+                "Hipótese do exame periódico não realizado"
+              ],
+              [
+                "Mudança para B no 18º dia após vencimento",
+                "Dentro da janela de 30 dias do §2º"
+              ],
+              [
+                "Fiscalização posterior da STTP",
+                "Penalidade do art. 165-D afastada"
+              ],
+              [
+                "Resultado",
+                "Alternativa C"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Resolução × infração do CTB",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função"],
+            "linhas": [
+              [
+                "Res. 923/2022, art. 22, §2º (Res. 1.009/2024)",
+                "Afasta 165-D se downgrade ou cancelamento em 30 dias"
+              ],
+              [
+                "CTB, art. 165-D",
+                "Infração após 30 dias do vencimento do toxicológico"
+              ],
+              [
+                "Res. 923/2022, art. 10-A",
+                "Exame toxicológico periódico — prazo vencido no caso"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 22, §2º — exceção à penalidade",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 923/2022, art. 22, §2º (Res. 1.009/2024)",
+            "texto": "A mudança das categorias C, D ou E para as categorias B e AB ou a solicitação de cancelamento da CNH, até o trigésimo dia após o vencimento do prazo para realização do exame de que trata o art. 10-A desta Resolução, afasta a aplicação da penalidade prevista no art. 165-D do CTB.",
+            "trechos_grifados": [
+              {
+                "inicio": 102,
+                "fim": 139,
+                "motivo": "mapa — janela de 30 dias após vencimento do periódico",
+                "texto_grifado": "até o trigésimo dia após o vencimento"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 165-D — infração afastada",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 165-D",
+            "texto": "Deixar de realizar o exame toxicológico previsto no § 2º do art. 148-A deste Código, após 30 (trinta) dias do vencimento do prazo estabelecido",
+            "trechos_grifados": [
+              {
+                "inicio": 85,
+                "fim": 120,
+                "motivo": "contraste — infração só após 30 dias e se não houver exceção do §2º",
+                "texto_grifado": "após 30 (trinta) dias do vencimento"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PERIÓDICO VENCEU → 30 DIAS → B/AB ou CANCELAR = sem 165-D.\n\nNear-transfer: se a banca trocar o 18º dia pelo 35º dia após o vencimento, entra art. 165-D — a exceção não alcança.",
+            "destaques": ["30 DIAS", "165-D", "35º dia"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.009/2024",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.009, DE 24 DE ABRIL DE 2024.pdf"
+        },
+        {
+          "rotulo": "CTB art. 165-D",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

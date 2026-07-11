@@ -1,0 +1,155 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 250,
+  "fundamento_slug": "CTB_art_30_I",
+  "macete_visual": "ESQUERDA→DIREITA (I) · NUNCA ACELERA",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Ultrapassado na faixa esquerda deve ir à direita — não permanecer nem acelerar",
+    "eixos_legais": ["CTB_art_30_I", "CTB_art_30_II"],
+    "isca_por_alternativa": {
+      "A": "aplica inciso II (ficar na faixa) na faixa esquerda — regra_excecao",
+      "C": "ultrapassado pode acelerar para liberar — termo_unico",
+      "D": "restringe art. 30 a vias urbanas — regra_excecao"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-072.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: esquerda → direita",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — mandou ficar na faixa esquerda: inciso II vale nas demais faixas — na esquerda, vai à direita (I).\nC — autorizou acelerar: ultrapassado nunca deve acelerar a marcha.\nD — limitou a vias urbanas: art. 30 é norma geral de circulação.\n\nNesta aula você fecha o par inciso I × inciso II do art. 30.",
+        "destaques": ["Gabarito B", "faixa da esquerda", "sem acelerar"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "ULTRAPASSADO: condutor à frente com outro veículo atrás com intenção de ultrapassar — destinatário do art. 30.\n\nFAIXA DA ESQUERDA: faixa de ultrapassagem em rodovia — inciso I manda deslocar à direita.\n\nSEM ACELERAR A MARCHA: proibição comum aos incisos I e II — vedado impedir a ultrapassagem acelerando.",
+        "destaques": ["ULTRAPASSADO", "FAIXA DA ESQUERDA", "SEM ACELERAR"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: em qual faixa está o ultrapassado?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Outro veículo pretende ultrapassar?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Ultrapassado está na faixa da esquerda?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Deslocar-se à direita — sem acelerar", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Sim" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Art. 30 — os dois incisos",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Faixa", "Conduta do ultrapassado"],
+        "linhas": [
+          { "faixa": "Faixa da esquerda — inciso I", "classificacao": "Deslocar-se à direita, sem acelerar", "destaque": true },
+          { "faixa": "Demais faixas — inciso II", "classificacao": "Manter-se na faixa, sem acelerar" },
+          { "faixa": "Proibido em ambos", "classificacao": "Acelerar a marcha para impedir ultrapassagem" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: ficar × ir à direita",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Na esquerda, permanece na faixa", "Inciso I: deslocar-se à direita, sem acelerar"],
+          ["Pode acelerar para liberar a ultrapassagem", "Sem acelerar a marcha — vedado em ambos incisos"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — regra_excecao", "Aplica inciso II na faixa esquerda — inciso I exige ir à direita"],
+          ["C — termo_unico", "Inverte o dever: ultrapassado não deve acelerar a marcha"],
+          ["D — regra_excecao", "Restringe art. 30 a vias urbanas — norma geral de circulação"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Caminhão na faixa da esquerda da BR-230", "Incide art. 30, I"],
+          ["Permanece na esquerda ao ser ultrapassado", "Deve deslocar-se à direita"],
+          ["Resultado", "Gabarito B — sem acelerar a marcha"]
+        ]
+      }
+    },
+    {
+      "id": "inciso2",
+      "titulo": "Quando vale o inciso II",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Situação", "Regra"],
+        "linhas": [
+          ["Ultrapassado na faixa da esquerda", "Deslocar à direita — inciso I"],
+          ["Ultrapassado na faixa central ou direita", "Manter-se na faixa — inciso II"],
+          ["Pegadinha A", "Inciso II não vale na faixa esquerda"]
+        ]
+      }
+    },
+    {
+      "id": "lei30i",
+      "titulo": "Art. 30 — inciso I",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 30, I",
+        "texto": "Todo condutor, ao perceber que outro que o segue tem o propósito de ultrapassá-lo, deverá: I - se estiver circulando pela faixa da esquerda, deslocar-se para a faixa da direita, sem acelerar a marcha;",
+        "trechos_grifados": [
+          { "inicio": 122, "fim": 139, "motivo": "glossario — faixa da esquerda do caminhão" },
+          { "inicio": 160, "fim": 176, "motivo": "contraste — deslocar-se à direita (gabarito B)" },
+          { "inicio": 178, "fim": 199, "motivo": "caso — proibição de acelerar" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "ESQUERDA → DIREITA (I).\nDEMAIS → FICA (II).\nNUNCA ACELERA.\n\nNear-transfer: ultrapassado na faixa central — inciso II manda ficar na faixa, não ir à direita nem acelerar.",
+        "destaques": ["ESQUERDA → DIREITA", "NUNCA ACELERA", "Near-transfer"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 30", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

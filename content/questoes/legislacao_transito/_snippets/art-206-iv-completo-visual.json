@@ -9,11 +9,14 @@
   "meta": {
     "padrao_familia": "A_caso_regra_excecao",
     "pegadinha_em_uma_frase": "Retorno em interseção entrando na contramão é art. 206, IV gravíssima — não é conversão (207) nem exige prejuízo do inciso V",
-    "eixos_legais": ["CTB_art_206_IV", "CTB_art_207"],
+    "eixos_legais": [
+      "CTB_art_206_IV",
+      "CTB_art_207"
+    ],
     "isca_por_alternativa": {
-      "B": "confunde retorno com conversão proibida — art. 207 grave",
-      "C": "aplica inciso V de prejuízo em local permitido ignorando o inciso IV",
-      "D": "classifica retorno em interseção como grave em vez de gravíssima"
+      "A": "confunde retorno com conversão proibida — art. 207 grave",
+      "B": "aplica inciso V vizinho de prejuízo em local permitido ignorando o inciso IV",
+      "D": "inventa que ausência de placa autoriza retorno com contramão na interseção"
     }
   },
   "telas": [
@@ -23,8 +26,12 @@
       "secao": "diagnostico",
       "tipo": "texto_destaque",
       "conteudo": {
-        "texto": "Gabarito A.\n\nB — confundiu retorno com conversão proibida: art. 207 é conversão, não retorno com contramão.\nC — aplicou inciso V (prejuízo em local permitido): o fato é interseção com contramão — inciso IV.\nD — classificou como grave: art. 206 é gravíssima em todos os incisos.\n\nCondutor fez retorno entrando na contramão da via transversal.",
-        "destaques": ["Gabarito A", "retorno", "gravíssima"]
+        "texto": "Gabarito C.\n\nA — confundiu retorno com conversão proibida: art. 207 exige placa vedando conversão — ausente no caso.\nB — aplicou inciso V (prejuízo em local permitido): o fato é interseção com contramão — inciso IV.\nD — inventou liberação sem placa: inciso IV veda retorno com contramão na interseção independentemente de sinalização adicional.\n\nCondutor fez retorno entrando na contramão da via transversal.",
+        "destaques": [
+          "Gabarito C",
+          "retorno",
+          "gravíssima"
+        ]
       }
     },
     {
@@ -33,7 +40,11 @@
       "tipo": "texto_destaque",
       "conteudo": {
         "texto": "RETORNO: manobra para inverter o sentido de marcha — art. 206.\n\nCONVERSÃO: mudar de direção à direita ou à esquerda — art. 207, hipótese distinta.\n\nCONTRAMÃO NA TRANSVERSAL: entrar na via cruzada pelo lado oposto ao fluxo — inciso IV do art. 206.",
-        "destaques": ["RETORNO", "CONVERSÃO", "CONTRAMÃO"]
+        "destaques": [
+          "RETORNO",
+          "CONVERSÃO",
+          "CONTRAMÃO"
+        ]
       }
     },
     {
@@ -60,8 +71,16 @@
           }
         ],
         "arestas": [
-          { "de": "p1", "para": "p2", "rotulo": "Sim" },
-          { "de": "p2", "para": "r1", "rotulo": "Sim" }
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim"
+          }
         ]
       }
     },
@@ -71,31 +90,52 @@
       "secao": "mapa",
       "tipo": "comparacao",
       "conteudo": {
-        "colunas": ["Hipótese", "Inciso"],
+        "colunas": [
+          "Hipótese",
+          "Inciso"
+        ],
         "linhas": [
-          ["Local proibido por sinalização", "I — gravíssima"],
-          ["Curva, ponte, túnel", "II — gravíssima"],
-          ["Sobre calçada ou faixa de pedestres", "III — gravíssima"],
-          ["Interseção com contramão transversal", "IV — gravíssima"],
-          ["Prejuízo em local permitido", "V — gravíssima"]
+          [
+            "Local proibido por sinalização",
+            "I — gravíssima"
+          ],
+          [
+            "Curva, ponte, túnel",
+            "II — gravíssima"
+          ],
+          [
+            "Sobre calçada ou faixa de pedestres",
+            "III — gravíssima"
+          ],
+          [
+            "Interseção com contramão transversal",
+            "IV — gravíssima"
+          ],
+          [
+            "Prejuízo em local permitido",
+            "V — gravíssima"
+          ]
         ]
       }
     },
     {
       "id": "contraste",
-      "titulo": "A armadilha: retorno × conversão",
+      "titulo": "A armadilha: retorno × conversão × inciso V",
       "secao": "contraste",
       "tipo": "comparacao",
       "conteudo": {
-        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a lei diz ✓"
+        ],
         "linhas": [
           [
             "Retorno na esquina = conversão proibida",
             "Retorno com contramão é art. 206, IV — gravíssima"
           ],
           [
-            "Sem placa de proibição = pode retornar",
-            "Inciso IV veda retorno na interseção com contramão"
+            "Sem placa = pode retornar na interseção",
+            "Inciso IV veda retorno com contramão independentemente de placa"
           ]
         ]
       }
@@ -106,19 +146,22 @@
       "secao": "distratores",
       "tipo": "comparacao",
       "conteudo": {
-        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
         "linhas": [
           [
-            "B — termo_unico",
-            "Confunde retorno com conversão proibida — art. 207, grave"
+            "A — termo_unico",
+            "Confunde retorno com conversão proibida — art. 207 grave, sem placa no caso"
           ],
           [
-            "C — regra_excecao",
-            "Aplica inciso V de prejuízo em local permitido — fato é inciso IV com contramão"
+            "B — numero_vizinho",
+            "Aplica inciso V vizinho de prejuízo em local permitido — fato é inciso IV com contramão"
           ],
           [
-            "D — gravidade",
-            "Classifica retorno em interseção como grave — art. 206 é gravíssima"
+            "D — regra_excecao",
+            "Inventa que ausência de placa autoriza retorno com contramão na interseção"
           ]
         ]
       }
@@ -129,53 +172,83 @@
       "secao": "metodo",
       "tipo": "comparacao",
       "conteudo": {
-        "colunas": ["Fato do caso", "Conclusão legal"],
+        "colunas": [
+          "Fato do caso",
+          "Conclusão legal"
+        ],
         "linhas": [
-          ["Operação de retorno no cruzamento", "Hipótese do art. 206"],
-          ["Entrada na contramão da via transversal", "Inciso IV"],
-          ["Alegação de conversão sem placa", "Não afasta inciso IV"],
-          ["Resultado", "Gabarito A — infração gravíssima"]
+          [
+            "Retorno na interseção",
+            "Operação de retorno — art. 206"
+          ],
+          [
+            "Ingresso na contramão da via transversal",
+            "Núcleo do inciso IV"
+          ],
+          [
+            "Sem placa R-4a nem sinal vermelho",
+            "Afasta arts. 207 e 208"
+          ],
+          [
+            "Resultado",
+            "Gabarito C — infração gravíssima"
+          ]
         ]
       }
     },
     {
       "id": "hierarquia",
-      "titulo": "206 × 207",
+      "titulo": "206, IV × 207 × 206, V",
       "secao": "conceito",
       "tipo": "comparacao",
       "conteudo": {
-        "colunas": ["Artigo", "Conduta"],
+        "colunas": [
+          "Dispositivo",
+          "Conduta"
+        ],
         "linhas": [
-          ["Art. 206, IV", "Retorno na interseção com contramão — gravíssima"],
-          ["Art. 207", "Conversão proibida por sinalização — grave"],
-          ["Art. 206, V", "Retorno com prejuízo em local permitido — gravíssima"],
-          ["Caso (retorno contramão)", "Art. 206, IV"]
+          [
+            "Art. 206, IV",
+            "Retorno com contramão na interseção — gravíssima"
+          ],
+          [
+            "Art. 207",
+            "Conversão proibida por sinalização — grave"
+          ],
+          [
+            "Art. 206, V",
+            "Retorno com prejuízo em local permitido — gravíssima"
+          ],
+          [
+            "Caso",
+            "Art. 206, IV — gravíssima"
+          ]
         ]
       }
     },
     {
       "id": "lei",
-      "titulo": "Art. 206, IV — retorno na interseção",
+      "titulo": "Art. 206, IV — retorno com contramão",
       "secao": "lei",
       "tipo": "trecho_legal",
       "conteudo": {
         "fonte": "CTB art. 206, IV",
-        "texto": "Executar operação de retorno: IV - nas interseções, entrando na contramão de direção da via transversal; Infração - gravíssima.",
+        "texto": "IV - nas interseções, entrando na contramão de direção da via transversal: Infração - gravíssima.",
         "trechos_grifados": [
           {
-            "inicio": 39,
-            "fim": 50,
-            "motivo": "mapa — interseção é hipótese do inciso IV"
+            "inicio": 9,
+            "fim": 20,
+            "motivo": "mapa — interseções é hipótese do inciso IV"
           },
           {
-            "inicio": 52,
-            "fim": 103,
-            "motivo": "contraste — contramão da via transversal define o IV"
+            "inicio": 34,
+            "fim": 43,
+            "motivo": "contraste — contramão da via transversal"
           },
           {
-            "inicio": 116,
-            "fim": 126,
-            "motivo": "gradacao — art. 206 é gravíssima, não grave"
+            "inicio": 86,
+            "fim": 96,
+            "motivo": "gradacao — gravíssima em todos os incisos do art. 206"
           }
         ]
       }
@@ -186,8 +259,12 @@
       "secao": "macete",
       "tipo": "texto_destaque",
       "conteudo": {
-        "texto": "206, IV: retorno + interseção + contramão = GRAVÍSSIMA · ≠ 207 (conversão) · ≠ V (prejuízo em local permitido).\n\nNear-transfer: mesmo condutor converte à esquerda onde placa R-4 proíbe — art. 207 (grave); manobra distinta de retorno com contramão.",
-        "destaques": ["206", "207", "GRAVÍSSIMA"]
+        "texto": "206, IV = RETORNO na interseção · CONTRAMÃO transversal · GRAVÍSSIMA · ≠ 207 conversão.\n\nNear-transfer: mesmo condutor converte à esquerda com placa R-4a — art. 207 (grave); manobra distinta do retorno com contramão.",
+        "destaques": [
+          "206, IV",
+          "207",
+          "GRAVÍSSIMA"
+        ]
       }
     }
   ],

@@ -1,0 +1,155 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 255,
+  "fundamento_slug": "CTB_art_40_III",
+  "macete_visual": "PISCAR FAROL = 2 FINS · ultrapassar OU risco contrário · curto",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Piscar farol serve também para alertar risco a quem vem no sentido contrário — não só para ultrapassar",
+    "eixos_legais": ["CTB_art_40_III", "CTB_art_40_V"],
+    "isca_por_alternativa": {
+      "A": "reduz inciso III só à ultrapassagem — regra_excecao",
+      "C": "substitui piscar de farol por pisca-alerta — termo_unico",
+      "D": "veda piscar em rodovia — regra_excecao"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-076.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: piscar para quem vem de frente",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — limitou a ultrapassar: inciso III também admite advertir risco a quem vem no sentido contrário.\nC — exigiu pisca-alerta: alerta com farol intermitente é hipótese própria do inciso III.\nD — vedou em rodovia: não há proibição por tipo de via — valem as duas finalidades legais.\n\nNesta aula você fixa as duas portas do piscar de farol e separa de pisca-alerta.",
+        "destaques": ["Gabarito B", "sentido contrário", "inciso III"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "TROCA INTERMITENTE: alternar luz baixa e alta por curto período — só nas hipóteses do inciso III.\n\nADVERTIR MOTORISTAS: finalidade legal do piscar — ultrapassar o da frente ou alertar risco contrário.\n\nSENTIDO CONTRÁRIO: veículos que vêm em direção oposta — destinatários do alerta de risco do caso.",
+        "destaques": ["INTERMITENTE", "ADVERTIR", "SENTIDO CONTRÁRIO"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: pode piscar o farol?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Troca é intermitente e por curto período?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Finalidade é ultrapassar à frente ou alertar risco contrário?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Uso permitido do inciso III", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim" },
+          { "de": "p2", "para": "r1", "rotulo": "Sim" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Inciso III — duas finalidades",
+      "secao": "mapa",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Finalidade", "Destinatário"],
+        "linhas": [
+          ["Indicar intenção de ultrapassar", "Veículo que segue à frente"],
+          ["Indicar risco à segurança", "Veículos em sentido contrário"],
+          ["Qualquer outro uso", "Vedado pelo só poderá"]
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: só para ultrapassar",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Piscar farol serve só para passar o lento", "Também alerta risco a quem vem de frente"],
+          ["Alerta de perigo exige pisca-alerta", "Inciso III autoriza farol intermitente para risco contrário"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — regra_excecao", "Elimina segunda finalidade do inciso III — risco a sentido contrário é expressa"],
+          ["C — termo_unico", "Troca piscar de farol por pisca-alerta — dispositivos e hipóteses distintas"],
+          ["D — regra_excecao", "Inventa vedação em rodovia — lei não restringe por classe de via"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Fato do caso", "Conclusão legal"],
+        "linhas": [
+          ["Animal na pista à noite na BR-230", "Risco à segurança a ser advertido"],
+          ["Piscar farol brevemente para veículo contrário", "Segunda hipótese do inciso III"],
+          ["Resultado", "Gabarito B — alerta de risco a sentido contrário"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Inciso III × inciso V",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Dispositivo", "Uso"],
+        "linhas": [
+          ["III", "Farol alto/baixo intermitente — ultrapassar ou risco contrário"],
+          ["V", "Pisca-alerta — imobilização, emergência ou determinação da via"],
+          ["Pegadinha C", "Alerta em movimento com farol ≠ pisca-alerta parado/emergência"]
+        ]
+      }
+    },
+    {
+      "id": "lei40iii",
+      "titulo": "Art. 40, III — literal da regra",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 40, III",
+        "texto": "III - a troca de luz baixa e alta, de forma intermitente e por curto período de tempo, com o objetivo de advertir outros motoristas, só poderá ser utilizada para indicar a intenção de ultrapassar o veículo que segue à frente ou para indicar a existência de risco à segurança para os veículos que circulam no sentido contrário;",
+        "trechos_grifados": [
+          { "inicio": 44, "fim": 56, "motivo": "glossario — troca breve de luzes do caso" },
+          { "inicio": 184, "fim": 195, "motivo": "mapa — primeira finalidade (ultrapassar)" },
+          { "inicio": 257, "fim": 274, "motivo": "caso — advertir risco a quem vem de frente" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "PISCAR FAROL = 2 FINS (inc. III).\nUltrapassar o da frente OU risco ao contrário.\nCurto e intermitente — não é cumprimento.\n≠ pisca-alerta (inc. V).\n\nNear-transfer: ao ver buraco na sua faixa à noite, um piscar breve para o carro que vem pode ser lícito — alerta risco no sentido contrário.",
+        "destaques": ["2 FINS", "risco ao contrário", "Near-transfer"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 40", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

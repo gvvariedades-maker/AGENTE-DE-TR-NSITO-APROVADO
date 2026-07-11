@@ -1,0 +1,347 @@
+[
+  {
+    "disciplina": "direito_constitucional",
+    "topico": "dir_const_4_5",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "enunciado": "Um cidadão de Campina Grande ajuíza ação contra contrato da STTP que terceiriza a arrecadação de multas de trânsito a empresa privada sem licitação, alegando lesão ao patrimônio público municipal e à moralidade administrativa. O Município sustenta que o cidadão carece de legitimidade e que a via correta seria mandado de segurança individual. Os envolvidos debatem qual órgão julgador e qual remédio constitucional se aplicam. Com base na Constituição Federal de 1988, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Cabe mandado de segurança individual do cidadão, porque o contrato sem licitação lesiona direito líquido e certo do contribuinte à gestão eficiente dos recursos municipais.",
+      "B": "A ação popular só pode ser proposta pelo Ministério Público ou por associação com mais de um ano de funcionamento, não por qualquer cidadão isoladamente.",
+      "C": "Cabe ação popular: qualquer cidadão é parte legítima (art. 5º, LXXIII) para anular ato lesivo ao patrimônio público e à moralidade administrativa — lesão coletiva, não direito líquido e certo individual (LXIX).",
+      "D": "A competência para a ação cabe ao órgão máximo executivo de trânsito da União, por se tratar de arrecadação de multas de trânsito em todo o território nacional."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Legitimação universal do cidadão na ação popular (art. 5º, LXXIII) para tutela de patrimônio público e moralidade administrativa, em contraste com mandado de segurança individual (art. 5º, LXIX).",
+      "fundamento_legal": "CF/88, art. 5º, LXXIII: \"qualquer cidadão é parte legítima para propor ação popular que vise a anular ato lesivo ao patrimônio público ou de entidade de que o Estado participe, à moralidade administrativa, ao meio ambiente e ao patrimônio histórico e cultural\". CF/88, art. 5º, LXIX: mandado de segurança protege direito líquido e certo individual não amparado por habeas corpus ou habeas data — não substitui a tutela coletiva da ação popular.",
+      "passo_a_passo": [
+        "1. O caso envolve contrato municipal sem licitação que terceiriza arrecadação de multas — lesão ao patrimônio público e à moralidade administrativa, interesse difuso, não direito individual líquido e certo.",
+        "2. A erra por termo_unico (indica mandado de segurança individual do cidadão para lesão coletiva ao erário e à moralidade); B erra por regra_excecao (restringe a legitimidade ao MP ou associação, ignorando \"qualquer cidadão\" do LXXIII); D erra por competencia_snt (atribui julgamento ao órgão máximo de trânsito da União — ação popular é via judicial, não competência administrativa do SNT).",
+        "3. C está correta: cabe ação popular (LXXIII) — qualquer cidadão é parte legítima; MS (LXIX) não tutela esse tipo de lesão coletiva."
+      ],
+      "pegadinha": "A banca troca ação popular (qualquer cidadão, lesão ao patrimônio público/moralidade) por mandado de segurança individual ou restringe a legitimidade ao MP/associação.",
+      "macete": "Patrimônio público + moralidade + qualquer cidadão = AÇÃO POPULAR (LXXIII). Direito individual líquido e certo = MS (LXIX).",
+      "estudo_reverso": [
+        "CF art. 5º, LXXIII",
+        "CF art. 5º, LXIX",
+        "CF art. 5º, LXX"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CF_art5_LXXIII",
+      "macete_visual": "Coletivo = popular",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Contrato sem licitação da STTP. A banca oferece MS individual ou restringe legitimidade — lesão ao erário pede ação popular de qualquer cidadão.",
+            "destaques": ["ação popular", "patrimônio público", "MS"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método rápido",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Lesão ao patrimônio público ou moralidade?", "tipo": "pergunta" },
+              { "id": "p2", "label": "É direito líquido e certo individual?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Ação popular — LXXIII", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não — coletivo" }
+            ]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Armadilha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              ["MS individual do cidadão", "Lesão coletiva → ação popular (LXXIII)"],
+              ["Só MP ou associação pode propor", "Qualquer cidadão é parte legítima"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Lei seca",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXXIII",
+            "texto": "qualquer cidadão é parte legítima para propor ação popular que vise a anular ato lesivo ao patrimônio público ou de entidade de que o Estado participe, à moralidade administrativa, ao meio ambiente e ao patrimônio histórico e cultural, ficando o autor, salvo comprovada má-fé, isento de custas judiciais e do ônus da sucumbência",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 33,
+                "motivo": "regra — legitimidade universal",
+                "texto_grifado": "qualquer cidadão é parte legítima"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Patrimônio público + moralidade + qualquer cidadão = ação popular (LXXIII).",
+            "destaques": ["ação popular", "qualquer cidadão", "patrimônio público"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, LXXIII",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 235,
+      "fundamento_slug": "CF_art5_LXXIII",
+      "macete_visual": "Coletivo = popular",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Contrato sem licitação lesa erário — qualquer cidadão propõe ação popular, não MS individual",
+        "eixos_legais": ["CF_art5_LXXIII", "CF_art5_LXIX", "CF_art5_LXX"],
+        "isca_por_alternativa": {
+          "A": "mandado de segurança individual do contribuinte contra contrato lesivo coletivo",
+          "B": "ação popular restrita ao MP ou associação com 1 ano",
+          "D": "competência do órgão máximo de trânsito da União para julgar a ação"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: popular × segurança",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (ação popular por qualquer cidadão).\n\nA — mandado de segurança individual: troca lesão coletiva por direito líquido e certo.\nB — só MP ou associação: ignora legitimidade universal do LXXIII.\nD — órgão de trânsito da União julga: confunde SNT com via judicial.\n\nPromessa: fixar quando a lesão ao erário pede ação popular.",
+            "destaques": ["ação popular", "mandado de segurança", "qualquer cidadão"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Antes de decidir: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "AÇÃO POPULAR: qualquer cidadão pode anular ato lesivo ao patrimônio público, moralidade administrativa, meio ambiente ou patrimônio cultural. MANDADO DE SEGURANÇA: tutela direito líquido e certo individual contra autoridade. MANDADO DE SEGURANÇA COLETIVO (LXX): partido, sindicato ou associação — rol fechado, distinto da ação popular.",
+            "destaques": ["ação popular", "mandado de segurança", "coletivo"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual remédio cabe?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "O ato lesa patrimônio público ou moralidade administrativa?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "A lesão é direito líquido e certo de uma pessoa?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Ação popular — gabarito C",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — contrato sem licitação" },
+              { "de": "p2", "para": "r1", "rotulo": "Não — interesse difuso" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa: tutelas coletivas no art. 5º",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Remédio", "Legitimado / objeto"],
+            "linhas": [
+              {
+                "faixa": "Ação popular (LXXIII)",
+                "classificacao": "Qualquer cidadão — patrimônio público, moralidade, ambiente",
+                "destaque": true
+              },
+              { "faixa": "MS coletivo (LXX)", "classificacao": "Partido, sindicato, associação (1 ano)" },
+              { "faixa": "MS individual (LXIX)", "classificacao": "Direito líquido e certo — pessoa determinada" },
+              { "faixa": "Habeas corpus (LXVIII)", "classificacao": "Locomoção da pessoa" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença × lei: popular × MS",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Contribuinte ofendido → mandado de segurança",
+                "Lesão ao erário/moralidade → ação popular (LXXIII)"
+              ],
+              [
+                "Só MP ou associação podem propor",
+                "Qualquer cidadão é parte legítima (LXXIII)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Substitui ação popular coletiva por mandado de segurança individual do cidadão"
+              ],
+              [
+                "B — regra_excecao",
+                "Restringe legitimidade ao MP ou associação, ignorando qualquer cidadão (LXXIII)"
+              ],
+              [
+                "D — competencia_snt",
+                "Atribui julgamento ao órgão máximo de trânsito da União — via é judicial"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o contrato da STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Conclusão"],
+            "linhas": [
+              ["Terceirização de arrecadação sem licitação", "Lesão ao patrimônio público e moralidade"],
+              ["Cidadão propõe ação", "Legitimidade universal — LXXIII"],
+              ["Município indica MS individual", "Pegadinha — lesão não é direito líquido e certo (A falsa)"],
+              ["Resultado", "Alternativa C"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "LXXIII × LXIX × LXX",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Papel no caso"],
+            "linhas": [
+              ["Art. 5º, LXXIII", "Ação popular — qualquer cidadão, patrimônio público"],
+              ["Art. 5º, LXIX", "MS individual — não tutela lesão difusa ao erário"],
+              ["Art. 5º, LXX", "MS coletivo — rol restrito (partido, sindicato, associação)"],
+              ["Caso concreto", "Contrato ilegal da STTP → ação popular"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 5º, LXXIII — ação popular",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXXIII",
+            "texto": "qualquer cidadão é parte legítima para propor ação popular que vise a anular ato lesivo ao patrimônio público ou de entidade de que o Estado participe, à moralidade administrativa, ao meio ambiente e ao patrimônio histórico e cultural, ficando o autor, salvo comprovada má-fé, isento de custas judiciais e do ônus da sucumbência",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 33,
+                "motivo": "fluxo — legitimidade do cidadão autor",
+                "texto_grifado": "qualquer cidadão é parte legítima"
+              },
+              {
+                "inicio": 91,
+                "fim": 109,
+                "motivo": "caso — contrato sem licitação lesa o erário",
+                "texto_grifado": "patrimônio público"
+              },
+              {
+                "inicio": 154,
+                "fim": 179,
+                "motivo": "contraste — segundo objeto tutelado no caso",
+                "texto_grifado": "moralidade administrativa"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 5º, LXIX — limite do MS individual",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 5º, LXIX",
+            "texto": "conceder-se-á mandado de segurança para proteger direito líquido e certo, não amparado por habeas corpus ou habeas data, quando o responsável pela ilegalidade ou abuso de poder for autoridade pública ou agente de pessoa jurídica no exercício de atribuições do Poder Público",
+            "trechos_grifados": [
+              {
+                "inicio": 49,
+                "fim": 72,
+                "motivo": "hierarquia — lesão individual, não coletiva do caso",
+                "texto_grifado": "direito líquido e certo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Erário + moralidade + QUALQUER cidadão = AÇÃO POPULAR (LXXIII).\nMS individual = direito líquido e certo (LXIX).\nMS coletivo = rol fechado (LXX).\n\nNear-transfer: se o cidadão quisesse apenas liberar seu veículo quitado no pátio, seria mandado de segurança — mas contrato sem licitação lesando o Município pede ação popular.",
+            "destaques": ["ação popular", "LXIX", "qualquer cidadão"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88, art. 5º, LXXIII",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        },
+        {
+          "rotulo": "CF/88, art. 5º, LXIX",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "acao_popular",
+      "art5_lxxiii",
+      "remedios_constitucionais",
+      "patrimonio_publico",
+      "moralidade_administrativa"
+    ]
+  }
+]

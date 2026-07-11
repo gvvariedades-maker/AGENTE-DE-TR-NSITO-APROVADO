@@ -1,0 +1,320 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_1_2",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "LGPD_art5_art7_III",
+    "enunciado": "A Superintendência de Trânsito e Transportes Públicos (STTP) de Campina Grande contratou empresa privada para hospedar o banco de dados eletrônico das autuações de trânsito. A STTP define quais dados pessoais serão coletados, as finalidades do tratamento e as regras de acesso; a contratada executa o armazenamento e o processamento técnico conforme instruções da autarquia. Um motorista autuado sustenta que o tratamento de seus dados exige consentimento prévio, em razão da participação da empresa privada na operação. À luz da Lei nº 13.709/2018 (LGPD), assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Exige consentimento prévio do titular, pois a participação de operador privado afasta as hipóteses legais de dispensa previstas na LGPD.",
+      "B": "A empresa hospedeira é controladora por deter o banco; a STTP apenas se beneficia das decisões técnicas da contratada.",
+      "C": "STTP é controladora e a empresa operadora (art. 5º); tratamento para políticas públicas dispensa consentimento (art. 7º, III); operador segue o controlador (art. 39).",
+      "D": "Compete ao encarregado definir finalidades e contratar operadores, nos termos do art. 40 da LGPD, cabendo ao controlador divulgar seu contato."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Papéis de controlador e operador na LGPD (art. 5º), hipótese de tratamento pela administração pública para políticas públicas (art. 7º, III) e dever do operador de seguir instruções do controlador (art. 39).",
+      "fundamento_legal": "LGPD, art. 5º, VI e VII: \"VI - controlador: pessoa natural ou jurídica, de direito público ou privado, a quem competem as decisões referentes ao tratamento de dados pessoais; VII - operador: pessoa natural ou jurídica, de direito público ou privado, que realiza o tratamento de dados pessoais em nome do controlador;\". Art. 7º, III: \"pela administração pública, para o tratamento e uso compartilhado de dados necessários à execução de políticas públicas previstas em leis e regulamentos ou respaldadas em contratos, convênios ou instrumentos congêneres\". Art. 39: \"O operador deverá realizar o tratamento segundo as instruções fornecidas pelo controlador\".",
+      "passo_a_passo": [
+        "1. A STTP decide finalidades e regras; a empresa trata em nome da autarquia — configura controlador (STTP) e operador (empresa), não consentimento automático por haver contratada privada.",
+        "2. A erra por regra_excecao (trata operador privado como barreira às hipóteses legais, ignorando políticas públicas); B erra por termo_unico (inverte controlador e operador pela posse física do banco); D erra por numero_vizinho (atribui ao art. 40 papel do encarregado previsto no art. 41).",
+        "3. C está correta: art. 5º define os agentes; art. 7º, III autoriza o tratamento público sem consentimento; art. 39 vincula o operador às instruções da STTP."
+      ],
+      "pegadinha": "A banca usa a contratação de empresa privada para induzir consentimento obrigatório ou inversão controlador-operador — mas quem decide é a STTP e o art. 7º, III dispensa consentimento para políticas públicas.",
+      "macete": "Controlador decide; operador executa; encarregado é canal (DPO) — contratada privada não vira controladora nem exige consentimento se couber art. 7º, III.",
+      "estudo_reverso": [
+        "LGPD art. 5º, VI e VII",
+        "LGPD art. 7º, III",
+        "LGPD art. 39",
+        "LGPD art. 41"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 50,
+      "fundamento_slug": "LGPD_art5_art7_III",
+      "macete_visual": "Controlador decide · operador executa · política pública dispensa consentimento",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Contratada privada não torna o tratamento dependente de consentimento nem inverte controlador e operador — STTP decide; empresa executa; políticas públicas dispensam consentimento.",
+            "destaques": ["consentimento", "controlador", "políticas públicas"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Quem decide o tratamento?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "STTP define finalidades e regras?", "tipo": "pergunta" },
+              { "id": "r1", "label": "STTP controladora — empresa operadora", "tipo": "resultado" }
+            ],
+            "arestas": [{ "de": "p1", "para": "r1", "rotulo": "Sim" }]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Consentimento × política pública",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              [
+                "Operador privado exige consentimento prévio",
+                "Políticas públicas dispensam consentimento na LGPD"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Controlador decide; operador executa; encarregado é canal — contratada privada não vira controladora.",
+            "destaques": ["Controlador", "operador", "políticas públicas"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 13.709/2018 (LGPD)",
+          "path": "conteúdo/legislação federal/lei-13709-lgpd.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "LGPD_art5_art7_III",
+      "macete_visual": "Controlador decide · operador executa · art. 7 III dispensa consentimento",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Contratada privada induz consentimento obrigatório ou inversão controlador-operador",
+        "eixos_legais": ["LGPD_art5_VI_VII", "LGPD_art7_III", "LGPD_art39"],
+        "isca_por_alternativa": {
+          "A": "operador privado afasta hipóteses do art. 7º — exige consentimento",
+          "B": "quem hospeda fisicamente o banco é controlador",
+          "D": "encarregado com papel do art. 40 em vez do art. 41"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: privada no banco ≠ consentimento automático",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — operador privado afasta hipóteses legais: ignora tratamento para políticas públicas.\nB — quem hospeda o banco é controlador: inverte papéis de controlador e operador.\nD — encarregado com artigo errado: confunde dispositivo do encarregado com outro da LGPD.\n\nA isca é a contratada privada empurrar para consentimento ou inversão de papéis.",
+            "destaques": ["Gabarito C", "políticas públicas", "controlador"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 agentes da LGPD",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CONTROLADOR: quem decide sobre o tratamento — art. 5º, VI (no caso, a STTP).\n\nOPERADOR: quem trata em nome do controlador — art. 5º, VII (a empresa contratada).\n\nENCARREGADO: canal entre titulares, controlador e ANPD — art. 5º, VIII; não decide finalidades.",
+            "destaques": ["CONTROLADOR", "OPERADOR", "ENCARREGADO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: precisa de consentimento?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "A STTP define finalidades e regras de acesso?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Tratamento executa política pública de trânsito?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito C — política pública + operador subordinado",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa dos agentes de tratamento",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Agente no caso", "Papel legal"],
+            "linhas": [
+              ["STTP", "Controladora — decide o tratamento (art. 5º, VI)"],
+              ["Empresa contratada", "Operadora — trata em nome da STTP (art. 5º, VII)"],
+              ["Encarregado (DPO)", "Canal de comunicação — não define finalidades (art. 5º, VIII)"]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: consentimento × política pública",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Operador privado exige consentimento prévio",
+                "Art. 7º, III — administração pública e políticas públicas"
+              ],
+              [
+                "Quem guarda o banco decide o tratamento",
+                "Controlador decide; operador executa em nome dele (art. 5º)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Trata operador privado como barreira ao art. 7º — ignora inciso III para políticas públicas"
+              ],
+              [
+                "B — termo_unico",
+                "Confunde posse física do banco com papel de controlador — inverte art. 5º, VI e VII"
+              ],
+              [
+                "D — numero_vizinho",
+                "Cita art. 40 (interoperabilidade) em vez do art. 41 — papel do encarregado"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o caso da STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Enquadramento legal"],
+            "linhas": [
+              ["STTP define dados, finalidades e regras de acesso", "Controladora — art. 5º, VI"],
+              ["Empresa armazena e processa por instrução da STTP", "Operadora — art. 5º, VII e art. 39"],
+              ["Autuações vinculadas a política pública de trânsito", "Hipótese art. 7º, III — sem consentimento"],
+              ["Resultado", "Gabarito C"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Operador segue o controlador",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Quem", "Obrigação"],
+            "linhas": [
+              ["Operador (empresa)", "Tratar segundo instruções do controlador — art. 39"],
+              ["Controlador (STTP)", "Verificar observância das instruções e das normas — art. 39"],
+              ["Encarregado", "Canal titular ↔ ANPD — art. 41, § 2º (não contrata nem define finalidades)"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 5º — controlador e operador",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LGPD, art. 5º, VI e VII",
+            "texto": "VI - controlador: pessoa natural ou jurídica, de direito público ou privado, a quem competem as decisões referentes ao tratamento de dados pessoais; VII - operador: pessoa natural ou jurídica, de direito público ou privado, que realiza o tratamento de dados pessoais em nome do controlador;",
+            "trechos_grifados": [
+              {
+                "inicio": 77,
+                "fim": 129,
+                "motivo": "mapa — STTP decide finalidades e regras (controladora)",
+                "texto_grifado": "a quem competem as decisões referentes ao tratamento"
+              },
+              {
+                "inicio": 267,
+                "fim": 289,
+                "motivo": "caso — empresa trata por instrução da STTP",
+                "texto_grifado": "em nome do controlador"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 7º, III e art. 39",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "LGPD, art. 7º, III e art. 39",
+            "texto": "III - pela administração pública, para o tratamento e uso compartilhado de dados necessários à execução de políticas públicas previstas em leis e regulamentos ou respaldadas em contratos, convênios ou instrumentos congêneres, observadas as disposições do Capítulo IV desta Lei. O operador deverá realizar o tratamento segundo as instruções fornecidas pelo controlador, que verificará a observância das próprias instruções e das normas sobre a matéria.",
+            "trechos_grifados": [
+              {
+                "inicio": 95,
+                "fim": 125,
+                "motivo": "contraste — dispensa consentimento para políticas públicas",
+                "texto_grifado": "execução de políticas públicas"
+              },
+              {
+                "inicio": 318,
+                "fim": 367,
+                "motivo": "hierarquia — operador vinculado ao controlador",
+                "texto_grifado": "segundo as instruções fornecidas pelo controlador"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Controlador decide; operador executa; encarregado é canal — contratada privada não vira controladora nem exige consentimento se couber art. 7º, III.\n\nNear-transfer: se a STTP apenas terceiriza backup em nuvem, mas continua definindo finalidades e acesso, permanece controladora e a nuvem é operadora.",
+            "destaques": ["Controlador", "operador", "Near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei nº 13.709/2018 (LGPD)",
+          "path": "conteúdo/legislação federal/lei-13709-lgpd.html"
+        }
+      ]
+    },
+    "tags": [
+      "lgpd",
+      "controlador",
+      "operador",
+      "consentimento",
+      "politicas_publicas",
+      "sttp"
+    ]
+  }
+]

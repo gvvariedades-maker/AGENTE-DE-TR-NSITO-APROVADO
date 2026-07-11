@@ -1,0 +1,328 @@
+[
+  {
+    "disciplina": "direito_administrativo",
+    "topico": "dir_adm_5_3",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "caso_pratico",
+    "dificuldade": 5,
+    "fundamento_slug": "CF_art_175",
+    "enunciado": "O Município de Campina Grande estuda delegar a operação do estacionamento rotativo em vias da área de atuação da STTP a particular, sob regime de permissão, com dispensa de licitação por se tratar de serviço auxiliar de mobilidade urbana. A Procuradoria sustenta que a modalidade exige licitação. Considerando a delegação de serviços públicos e a Constituição Federal, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A permissão de serviço público dispensa licitação por ser delegação precária e revogável a qualquer tempo.",
+      "B": "A prestação de serviços públicos pelo Poder Público, diretamente ou sob concessão ou permissão, exige licitação na forma da lei.",
+      "C": "Concessão e permissão são institutos equivalentes e dispensam fiscalização estatal contínua sobre o serviço delegado.",
+      "D": "Serviços públicos de mobilidade urbana só podem ser prestados diretamente pela Administração, sendo vedada delegação a particulares."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Delegação de serviços públicos: concessão, permissão e obrigatoriedade de licitação (CF art. 175).",
+      "fundamento_legal": "CF/88, art. 175: \"Incumbe ao Poder Público, na forma da lei, diretamente ou sob regime de concessão ou permissão, sempre através de licitação, a prestação de serviços públicos.\" § único, I: regime das concessionárias e permissionárias, fiscalização e rescisão; IV: obrigação de manter serviço adequado.",
+      "passo_a_passo": [
+        "1. Art. 175: três formas de prestação (direta, concessão, permissão) — todas com licitação. Permissão não dispensa licitação. Delegação a particular é constitucionalmente admitida.",
+        "2. A erra por regra_excecao (dispensa licitação na permissão); C erra por termo_unico (equipara concessão e permissão e afasta fiscalização); D erra por regra_excecao (veda delegação — art. 175 admite concessão e permissão).",
+        "3. B correta: transcrição do núcleo do art. 175 — licitação na prestação direta ou delegada."
+      ],
+      "pegadinha": "A banca trata permissão como atalho para dispensar licitação — o art. 175 impõe licitação em qualquer modalidade de prestação.",
+      "macete": "175 = direta OU concessão OU permissão | SEMPRE licitação | fiscaliza o serviço.",
+      "estudo_reverso": [
+        "CF art. 175",
+        "CF art. 37, XXI",
+        "CF art. 175, § único, I"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CF_art_175",
+      "macete_visual": "direta|concessão|permissão + SEMPRE licitação",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Permissão não dispensa licitação — art. 175 exige licitação na prestação direta ou delegada.",
+            "destaques": ["permissão", "licitação", "art. 175"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Permissão × licitação",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "Art. 175 ✓"],
+            "linhas": [
+              [
+                "Permissão dispensa licitação por ser precária",
+                "Sempre através de licitação — direta, concessão ou permissão"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Caminho do caso",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Proposta dispensa licitação na permissão?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Permissão autoriza pular licitação?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Gabarito B — licitação obrigatória", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 175 — prestação",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 175",
+            "texto": "Incumbe ao Poder Público, na forma da lei, diretamente ou sob regime de concessão ou permissão, sempre através de licitação, a prestação de serviços públicos.",
+            "trechos_grifados": [
+              { "inicio": 96, "fim": 123, "motivo": "sempre licitação" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "175 = direta OU concessão OU permissão | SEMPRE licitação | fiscaliza o serviço.",
+            "destaques": ["SEMPRE licitação", "permissão", "concessão"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88 art. 175",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CF_art_175",
+      "macete_visual": "direta|concessão|permissão + SEMPRE licitação",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Permissão não dispensa licitação — art. 175 impõe licitação em todas as formas",
+        "eixos_legais": ["CF_art_175"],
+        "isca_por_alternativa": {
+          "A": "trata permissão como dispensa de licitação por ser precária",
+          "C": "equipara concessão e permissão e afasta fiscalização",
+          "D": "veda delegação a particulares — art. 175 admite concessão e permissão"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: delegação e licitação",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — permissão dispensa licitação: art. 175 diz sempre licitação.\nC — equivalentes sem fiscalização: § único I e IV exigem controle.\nD — veda delegação: CF admite concessão e permissão.\n\nPegadinha: precariedade da permissão não elimina licitação.",
+            "destaques": ["Gabarito B", "licitação", "permissão"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Concessão: delegação precária de serviço público mediante contrato e licitação — titularidade permanece no Estado.\nPermissão: delegação a título precário, também via licitação (art. 175).\nPrestação direta: o próprio Poder Público executa o serviço — igualmente com licitação quando couber contratação.",
+            "destaques": ["Concessão", "Permissão", "Prestação direta"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "MÉTODO: rotativo da STTP",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Proposta dispensa licitação na permissão?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Permissão autoriza pular licitação?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito B — licitação obrigatória",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Não" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Formas de prestação (art. 175)",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Forma", "Regra"],
+            "linhas": [
+              {
+                "faixa": "Prestação direta",
+                "classificacao": "Pelo Poder Público — com licitação"
+              },
+              {
+                "faixa": "Concessão",
+                "classificacao": "Delegação contratual — com licitação"
+              },
+              {
+                "faixa": "Permissão",
+                "classificacao": "Delegação precária — com licitação",
+                "destaque": true
+              },
+              {
+                "faixa": "Regra comum",
+                "classificacao": "Sempre através de licitação"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Precária × sem licitação",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a banca insinua ✗", "Art. 175 ✓"],
+            "linhas": [
+              [
+                "Permissão dispensa licitação por ser auxiliar",
+                "Sempre através de licitação — qualquer forma de prestação"
+              ],
+              [
+                "Delegação dispensa controle estatal",
+                "§ único: fiscalização, rescisão e serviço adequado"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Trata permissão precária como exceção à licitação obrigatória"
+              ],
+              [
+                "C — termo_unico",
+                "Equipara concessão e permissão e afasta fiscalização contínua"
+              ],
+              [
+                "D — regra_excecao",
+                "Veda delegação — art. 175 admite concessão e permissão"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso STTP", "Consequência"],
+            "linhas": [
+              ["Estacionamento rotativo por particular", "Hipótese de permissão ou concessão"],
+              ["Dispensa de licitação proposta", "Contraria art. 175 — sempre licitação"],
+              ["Procuradoria exige licitação", "Correta — forma da lei"],
+              ["Resultado", "Alternativa B — única defensável"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 175 — licitação",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 175",
+            "texto": "Incumbe ao Poder Público, na forma da lei, diretamente ou sob regime de concessão ou permissão, sempre através de licitação, a prestação de serviços públicos.",
+            "trechos_grifados": [
+              {
+                "inicio": 43,
+                "fim": 94,
+                "motivo": "mapa — três formas de prestação"
+              },
+              {
+                "inicio": 96,
+                "fim": 123,
+                "motivo": "contraste — sempre licitação"
+              },
+              {
+                "inicio": 127,
+                "fim": 157,
+                "motivo": "fluxo — prestação de serviços públicos"
+              }
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "§ único — controle da delegação",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Inciso", "Conteúdo"],
+            "linhas": [
+              ["I", "Fiscalização e rescisão de concessão ou permissão"],
+              ["II", "Direitos dos usuários"],
+              ["IV", "Obrigação de manter serviço adequado"],
+              ["Alternativa C", "Errada — há fiscalização estatal"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "175 = direta OU concessão OU permissão | SEMPRE licitação | fiscaliza o serviço.\n\nNear-transfer: Município quer contratar empresa para operar parquímetro sem licitação por valor baixo — pode? Não, se for prestação de serviço público delegada; art. 175 exige licitação (salvo hipóteses legais específicas, não a precariedade da permissão).",
+            "destaques": ["SEMPRE licitação", "permissão", "near-transfer"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CF/88 art. 175",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "concessao",
+      "permissao",
+      "licitacao",
+      "cf_88"
+    ]
+  }
+]

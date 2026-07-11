@@ -1,0 +1,319 @@
+[
+  {
+    "disciplina": "legislacao_etica_sp",
+    "topico": "etica_sp_2_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "L8112_art116_IV_CF37",
+    "enunciado": "Supervisor da STTP de Campina Grande ordena verbalmente que agente de trânsito deixe de lavrar autuação contra veículo de empresário aliado à gestão municipal, sob argumento de \"relação institucional\". O agente recusa. Em sindicância, o supervisor sustenta desobediência; o setor jurídico afirma que ordem verbal de chefe imediato deve ser cumprida salvo tipificação penal expressa; a ouvidoria entende que urbanidade exigiria flexibilizar a conduta. À luz da ética no serviço público, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Ordem verbal do chefe imediato obriga o agente — só pode recusar se a ilegalidade estiver tipificada como crime com sanção penal específica.",
+      "B": "Urbanidade exige tratar o empresário com cortesia diferenciada, dispensando autuação para preservar relação institucional com a gestão.",
+      "C": "O agente cumpre ordens superiores salvo quando manifestamente ilegais (art. 116, IV, Lei 8.112/90), com zelo pelas atribuições (art. 116, I) e impessoalidade (art. 37, CF); omitir autuação por favor pessoal viola esses deveres.",
+      "D": "Representar contra abuso de poder é faculdade do servidor — a recusa imediata à ordem configura insubordinação, ainda que a ordem seja ilegal."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Dever de cumprir ordens superiores salvo manifesta ilegalidade (Lei 8.112/90, art. 116, IV), zelo pelas atribuições (art. 116, I) e princípio da impessoalidade (CF/88, art. 37).",
+      "fundamento_legal": "Lei 8.112/90, art. 116, IV: \"cumprir as ordens superiores, exceto quando manifestamente ilegais\". Art. 116, I: \"exercer com zelo e dedicação as atribuições do cargo\". CF/88, art. 37, caput: princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência.",
+      "passo_a_passo": [
+        "1. Ordenar omitir autuação por vínculo com empresário aliado é ordem manifestamente ilegal — o agente deve recusar, não cumprir.",
+        "2. A erra por termo_unico (reduz ilegalidade manifesta à tipificação penal expressa); B erra por regra_excecao (usa urbanidade para dispensar dever funcional e favorecer terceiro); D erra por termo_unico (trata representação como faculdade que legitima obediência à ordem ilegal).",
+        "3. C está correta: art. 116, IV autoriza recusa; art. 116, I e impessoalidade (art. 37) vedam favorecimento por relação pessoal ou política."
+      ],
+      "pegadinha": "A banca usa hierarquia verbal, urbanidade ou tipificação penal para obrigar o agente a omitir autuação — mas ordem manifestamente ilegal não se cumpre e impessoalidade veda favor.",
+      "macete": "Ordem ilegal = não cumpre (art. 116, IV). Urbanidade ≠ favor. Crime tipificado não é único critério de ilegalidade manifesta.",
+      "estudo_reverso": [
+        "Lei 8.112/90 art. 116, IV",
+        "Lei 8.112/90 art. 116, I",
+        "CF/88 art. 37, caput",
+        "Lei 8.112/90 art. 116, XI"
+      ]
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 50,
+      "fundamento_slug": "L8112_art116_IV_CF37",
+      "macete_visual": "Ordem ilegal = não cumpre · urbanidade ≠ favor",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Omitir autuação por favor ao empresário é ordem manifestamente ilegal — o agente deve recusar. Hierarquia verbal e urbanidade não autorizam favorecimento.",
+            "destaques": ["ilegal", "impessoalidade", "recusa"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Deve cumprir a ordem?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Ordem de omitir autuação por favor pessoal?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Recusa correta — ordem manifestamente ilegal", "tipo": "resultado" }
+            ],
+            "arestas": [{ "de": "p1", "para": "r1", "rotulo": "Sim" }]
+          }
+        },
+        {
+          "id": "pegadinha",
+          "titulo": "Hierarquia × ilegalidade",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha", "Correto"],
+            "linhas": [
+              [
+                "Chefe verbal obriga omitir autuação",
+                "Cumprir ordens exceto quando manifestamente ilegais"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Ordem ilegal = não cumpre. Urbanidade ≠ favor. Crime tipificado não é único teste de ilegalidade.",
+            "destaques": ["ilegal", "urbanidade", "impessoalidade"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 8.112/90 e CF/88, art. 37",
+          "path": "conteúdo/legislação federal/lei-8112-servidores.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "L8112_art116_IV_CF37",
+      "macete_visual": "Ordem ilegal = não cumpre · urbanidade ≠ favor",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Hierarquia verbal ou urbanidade induzem omitir autuação por favor — ordem manifestamente ilegal não se cumpre",
+        "eixos_legais": ["L8112_art116_IV", "L8112_art116_I", "CF_art37_impessoalidade"],
+        "isca_por_alternativa": {
+          "A": "só recusa se houver tipificação penal expressa",
+          "B": "urbanidade dispensa autuação por relação institucional",
+          "D": "representação é faculdade que obriga cumprir ordem ilegal"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: ordem ilegal não se cumpre",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — tipificação penal expressa: reduz ilegalidade manifesta ao crime tipificado.\nB — urbanidade com empresário: usa cortesia para dispensar dever funcional.\nD — representação facultativa: legitima obediência à ordem ilegal.\n\nA isca é o supervisor e a ouvidoria empurrarem hierarquia ou urbanidade para omitir autuação.",
+            "destaques": ["Gabarito C", "ilegal", "impessoalidade"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 deveres éticos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ORDEM MANIFESTAMENTE ILEGAL: comando superior que viola a lei de forma evidente — não deve ser cumprido.\n\nIMPESSOALIDADE: tratar casos iguais de forma igual, sem favor por vínculo pessoal ou político.\n\nZELO: exercer com dedicação as atribuições do cargo — inclui lavrar autuação quando cabível.",
+            "destaques": ["ILEGAL", "IMPESSOALIDADE", "ZELO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: cumprir a ordem do supervisor?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Supervisor ordenou omitir autuação por favor ao empresário?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "A ordem é manifestamente ilegal?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito C — agente deve recusar",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "LIMPE no caso da autuação",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Princípio / dever", "No caso do agente"],
+            "linhas": [
+              ["Legalidade", "Omitir infração viola normas de trânsito"],
+              ["Impessoalidade", "Favorecimento ao empresário aliado"],
+              ["Moralidade", "Conduta incompatível com ética pública"],
+              ["Zelo funcional", "Dever de exercer atribuições com dedicação"]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: hierarquia × ilegalidade manifesta",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Ordem verbal do chefe sempre obriga",
+                "Cumprir ordens exceto quando manifestamente ilegais"
+              ],
+              [
+                "Urbanidade autoriza dispensar autuação",
+                "Urbanidade é educação no trato — não exceção ao dever funcional"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Reduz ilegalidade manifesta à tipificação penal — ignora violação administrativa evidente"
+              ],
+              [
+                "B — regra_excecao",
+                "Usa urbanidade como exceção para omitir autuação por relação institucional"
+              ],
+              [
+                "D — termo_unico",
+                "Confunde dever de representar com obrigação de cumprir ordem ilegal"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo a sindicância da STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do enunciado", "Enquadramento"],
+            "linhas": [
+              ["Ordem de não autuar empresário aliado", "Ordem manifestamente ilegal"],
+              ["Agente recusa cumprir", "Conduta correta — art. 116, IV"],
+              ["Supervisor alega desobediência", "Ilegalidade manifesta dispensa cumprimento"],
+              ["Resultado", "Gabarito C — zelo + impessoalidade"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Deveres encadeados",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Mensagem"],
+            "linhas": [
+              ["Art. 116, IV", "Cumprir ordens exceto manifestamente ilegais"],
+              ["Art. 116, I", "Zelo e dedicação nas atribuições do cargo"],
+              ["CF, art. 37 — impessoalidade", "Veda favor por vínculo pessoal ou político"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 116, IV e I — ordens e zelo",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Lei 8.112/90, art. 116, IV e I",
+            "texto": "IV - cumprir as ordens superiores, exceto quando manifestamente ilegais; I - exercer com zelo e dedicação as atribuições do cargo;",
+            "trechos_grifados": [
+              {
+                "inicio": 49,
+                "fim": 71,
+                "motivo": "contraste — recusa correta do agente (isca A)",
+                "texto_grifado": "manifestamente ilegais"
+              },
+              {
+                "inicio": 77,
+                "fim": 129,
+                "motivo": "caso — omitir autuação viola dever de zelo",
+                "texto_grifado": "exercer com zelo e dedicação as atribuições do cargo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "CF, art. 37 — impessoalidade",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CF/88, art. 37, caput",
+            "texto": "Art. 37. A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência",
+            "trechos_grifados": [
+              {
+                "inicio": 175,
+                "fim": 189,
+                "motivo": "mapa — favorecimento ao empresário aliado",
+                "texto_grifado": "impessoalidade"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Ordem ilegal = não cumpre (art. 116, IV). Urbanidade ≠ favor. Crime tipificado não é único teste de ilegalidade manifesta.\n\nNear-transfer: supervisor ordena registrar infração inexistente para atingir meta — também é ordem manifestamente ilegal, passível de recusa.",
+            "destaques": ["ilegal", "Near-transfer", "impessoalidade"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 8.112/90",
+          "path": "conteúdo/legislação federal/lei-8112-servidores.html"
+        },
+        {
+          "rotulo": "CF/88, art. 37",
+          "path": "conteúdo/legislação federal/cf-1988.html"
+        }
+      ]
+    },
+    "tags": [
+      "etica",
+      "ordem_ilegal",
+      "impessoalidade",
+      "zelo",
+      "lei_8112",
+      "sttp"
+    ]
+  }
+]

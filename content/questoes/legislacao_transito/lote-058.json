@@ -1,0 +1,378 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_circulacao_conduta",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "regra_excecao",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_33",
+    "enunciado": "Em via urbana de Campina Grande/PB, o condutor de um automóvel inicia ultrapassagem de caminhão de carga a cerca de 40 metros de cruzamento sem semáforo, em trecho retilíneo com boa visibilidade e faixa contínua amarela simples à esquerda. O condutor alega que ainda não está \"na\" interseção e que a visibilidade permitia concluir a manobra com segurança. Considerando as normas de circulação e conduta do Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A ultrapassagem é permitida quando há boa visibilidade e o condutor ainda não entrou na interseção, pois o art. 33 só veda a manobra no exato ponto de cruzamento das vias.",
+      "B": "Havendo boa visibilidade em trecho retilíneo, aplica-se a mesma exceção prevista no art. 32, autorizando a ultrapassagem mesmo nas proximidades de interseção.",
+      "C": "Nas interseções e suas proximidades, o condutor não poderá efetuar ultrapassagem, conforme o art. 33 do CTB — sem exceção por visibilidade ou distância em relação ao cruzamento.",
+      "D": "Nas proximidades de cruzamento sem semáforo, a ultrapassagem é vedada apenas para veículos de grande porte; automóveis podem ultrapassar se a manobra for concluída antes da faixa de pedestres."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Art. 33 — vedação absoluta de ultrapassagem nas interseções e proximidades; distinção do art. 32 (lista taxativa com exceção por sinalização).",
+      "fundamento_legal": "CTB, art. 33: nas interseções e suas proximidades, o condutor não poderá efetuar ultrapassagem. CTB, art. 32: o condutor não poderá ultrapassar veículos em vias com duplo sentido de direção e pista única, nos trechos em curvas e em aclives sem visibilidade suficiente, nas passagens de nível, nas pontes e viadutos e nas travessias de pedestres, exceto quando houver sinalização permitindo a ultrapassagem.",
+      "passo_a_passo": [
+        "1. Caso: ultrapassagem de caminhão a ~40 m de cruzamento sem semáforo — núcleo das proximidades do art. 33.",
+        "2. A erra por termo_unico (restringe a vedação ao ponto exato da interseção, ignorando proximidades); B erra por regra_excecao (importa exceção do art. 32 para hipótese do art. 33); D erra por termo_unico (inventa distinção por porte de veículo).",
+        "3. C correta: art. 33 veda ultrapassagem nas interseções e proximidades, sem cláusula de visibilidade ou sinalização."
+      ],
+      "pegadinha": "A IDECAN induz a crer que boa visibilidade ou distância do cruzamento autorizam — o art. 33 é regra curta e absoluta; a exceção por sinalização pertence ao art. 32, não se estende ao art. 33.",
+      "macete": "CRUZ + PERTO = NÃO ultrapassa · art. 33 sem saída · art. 32 = 6 locais + SINAL.",
+      "estudo_reverso": [
+        "CTB art. 33",
+        "CTB art. 32",
+        "CTB art. 30"
+      ]
+    },
+    "tags": [
+      "ultrapassagem",
+      "intersecao",
+      "proximidades",
+      "art_33",
+      "circulacao"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CTB_art_33",
+      "macete_visual": "CRUZ + PERTO = NÃO ultrapassa",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Ultrapassagem a 40 m de cruzamento com boa visibilidade.\n\nGabarito C: art. 33 veda nas interseções e proximidades — sem exceção.",
+            "destaques": ["art. 33", "proximidades", "Gabarito C"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Visibilidade × proximidade",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Boa visão autoriza perto do cruzamento", "Art. 33 veda — sem cláusula de visibilidade"],
+              ["Sinalização do art. 32 vale aqui", "Exceção do art. 32 não migra ao art. 33"]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Decisão rápida",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Ultrapassagem nas proximidades de interseção?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Vedada — regra absoluta",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CRUZ + PERTO = NÃO ultrapassa.\nArt. 33 sem saída.\nArt. 32 = 6 locais + SINAL.",
+            "destaques": ["CRUZ + PERTO", "sem saída"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 33",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 260,
+      "fundamento_slug": "CTB_art_33",
+      "macete_visual": "CRUZ + PERTO = NÃO ultrapassa · art. 33 sem saída",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Proximidades de cruzamento vedam ultrapassagem — art. 33 não admite exceção de visibilidade nem de sinalização como o art. 32",
+        "eixos_legais": [
+          "CTB_art_33",
+          "CTB_art_32"
+        ],
+        "isca_por_alternativa": {
+          "A": "restringe vedação ao ponto exato da interseção — termo_unico",
+          "B": "importa exceção do art. 32 para proximidades de cruzamento — regra_excecao",
+          "D": "inventa distinção por porte do veículo — termo_unico"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: proximidade já veda",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — achou que só vale na linha do cruzamento: o art. 33 inclui as proximidades — 40 m antes já é hipótese típica.\nB — citou exceção do art. 32: sinalização permissiva não salva ultrapassagem nas proximidades de interseção.\nD — restringiu a vedação a caminhões: o art. 33 fala em condutor, sem distinção de porte.\n\nNesta aula você separa a lista com exceção (art. 32) da vedação absoluta em cruzamentos (art. 33).",
+            "destaques": [
+              "Gabarito C",
+              "proximidades",
+              "art. 33"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "INTERSEÇÃO: encontro de vias no mesmo nível — cruzamento sem semáforo entra na hipótese do art. 33.\n\nPROXIMIDADES: trecho imediatamente anterior ou posterior ao cruzamento — ultrapassar a 40 m já pode configurar proximidade.\n\nULTRAPASSAGEM: transpor veículo que segue à frente, invadindo faixa ou sentido contrário — manobra vedada pelo art. 33 no local.",
+            "destaques": [
+              "INTERSEÇÃO",
+              "PROXIMIDADES",
+              "ULTRAPASSAGEM"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: onde está a manobra?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Ultrapassagem nas proximidades de interseção ou cruzamento?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Há exceção expressa de sinalização neste dispositivo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Vedada — regra absoluta sem saída por sinalização",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Três regras de ultrapassagem próximas",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Hipótese",
+              "Dispositivo"
+            ],
+            "linhas": [
+              [
+                "6 trechos em pista única duplo sentido (curva, aclive, ponte…)",
+                "Art. 32 — vedado, salvo sinalização permissiva"
+              ],
+              [
+                "Interseções e proximidades",
+                "Art. 33 — vedado, sem exceção no texto"
+              ],
+              [
+                "Condutor sendo ultrapassado",
+                "Art. 30 — não acelerar a marcha"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: visibilidade × proximidade",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
+            "linhas": [
+              [
+                "Boa visibilidade autoriza ultrapassar perto do cruzamento",
+                "Art. 33 veda nas interseções e proximidades — sem cláusula de visibilidade"
+              ],
+              [
+                "Sinalização do art. 32 vale aqui também",
+                "Exceção do art. 32 não se estende ao art. 33"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Restringe a vedação ao ponto exato do cruzamento — o texto inclui proximidades"
+              ],
+              [
+                "B — regra_excecao",
+                "Transfere a exceção por sinalização do art. 32 para hipótese do art. 33"
+              ],
+              [
+                "D — termo_unico",
+                "Inventa distinção por porte — o art. 33 não diferencia automóvel e caminhão"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Fato do caso",
+              "Conclusão legal"
+            ],
+            "linhas": [
+              [
+                "Ultrapassagem de caminhão a ~40 m de cruzamento sem semáforo",
+                "Proximidades de interseção — hipótese do art. 33"
+              ],
+              [
+                "Trecho retilíneo com boa visibilidade alegada pelo condutor",
+                "Visibilidade não cria exceção no art. 33"
+              ],
+              [
+                "Resultado",
+                "Gabarito C — ultrapassagem vedada"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Art. 32 × art. 33 — exceção só em um",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Art. 32",
+              "Art. 33"
+            ],
+            "linhas": [
+              [
+                "Locais: curvas, aclives, pontes, travessias em pista única duplo sentido",
+                "Interseções e proximidades — qualquer via"
+              ],
+              [
+                "Exceção por sinalização permissiva — cláusula final expressa",
+                "Sem exceção no texto — vedação absoluta"
+              ],
+              [
+                "Caso: não é hipótese de pista única duplo sentido",
+                "Cruzamento urbano a 40 m — art. 33 aplica"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei33",
+          "titulo": "Art. 33 — literal da regra",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 33",
+            "texto": "Nas interseções e suas proximidades, o condutor não poderá efetuar ultrapassagem.",
+            "trechos_grifados": [
+              {
+                "inicio": 4,
+                "fim": 15,
+                "motivo": "glossario — cruzamento sem semáforo do caso"
+              },
+              {
+                "inicio": 23,
+                "fim": 35,
+                "motivo": "contraste — 40 m antes do cruzamento = proximidades"
+              },
+              {
+                "inicio": 48,
+                "fim": 80,
+                "motivo": "caso — vedação absoluta à ultrapassagem"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CRUZ + PERTO = NÃO ultrapassa (art. 33).\nVisibilidade boa não salva.\nSinalização do art. 32 não migra para o art. 33.\n\nNear-transfer: em rotatória com fluxo contínuo, ultrapassar na aproximação da entrada também é proximidade de interseção — art. 33 veda, mesmo com visão livre.",
+            "destaques": [
+              "CRUZ + PERTO",
+              "art. 33",
+              "Near-transfer"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 33",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        },
+        {
+          "rotulo": "CTB art. 32",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,358 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_circulacao_conduta",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_40_V",
+    "enunciado": "À noite, em trecho da BR-230 nas proximidades de Campina Grande/PB, um automóvel imobiliza-se no acostamento por pane mecânica. O condutor aciona o pisca-alerta e aguarda socorro, sem obstruir a faixa de rolamento. Considerando as normas de circulação e conduta do Código de Trânsito Brasileiro sobre o uso de luzes, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O pisca-alerta só pode ser acionado quando a regulamentação da via o determinar, não em imobilizações por pane mecânica.",
+      "B": "Em emergência na pista, deve alternar farol alto e baixo, sendo vedado o pisca-alerta previsto no art. 40, V, do CTB.",
+      "C": "O condutor utilizará o pisca-alerta em imobilizações ou situações de emergência, nos termos do art. 40, V, alínea a, do CTB.",
+      "D": "Em imobilização no acostamento, bastam as luzes de posição à noite, dispensado o pisca-alerta do art. 40."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Art. 40, V — pisca-alerta em imobilizações ou emergências (alínea a) e quando a via determinar (alínea b); distinção do inciso III (piscar farol).",
+      "fundamento_legal": "CTB, art. 40, V: o condutor utilizará o pisca-alerta nas seguintes situações: a) em imobilizações ou situações de emergência; b) quando a regulamentação da via assim o determinar. CTB, art. 40, III: a troca de luz baixa e alta, de forma intermitente e por curto período de tempo, com o objetivo de advertir outros motoristas, só poderá ser utilizada para indicar a intenção de ultrapassar o veículo que segue à frente ou para indicar a existência de risco à segurança para os veículos que circulam no sentido contrário.",
+      "passo_a_passo": [
+        "1. Caso: veículo imobilizado por pane no acostamento com pisca-alerta — núcleo da alínea a do art. 40, V.",
+        "2. A erra por regra_excecao (restringe pisca-alerta à regulamentação da via, ignorando imobilização e emergência); B erra por termo_unico (substitui pisca-alerta por piscar de farol do inciso III); D erra por numero_vizinho (invoca luzes de posição do inciso VII — hipótese de parada para embarque/carga, não de pane no acostamento).",
+        "3. C correta: inciso V, alínea a, impõe pisca-alerta em imobilizações ou situações de emergência."
+      ],
+      "pegadinha": "A IDECAN induz a crer que pisca-alerta depende de determinação da via — a alínea a é autônoma para pane e emergência.",
+      "macete": "PISCA = IMOBILIZA/EMERGÊNCIA (a) · ou VIA MANDA (b) · ≠ piscar farol.",
+      "estudo_reverso": [
+        "CTB art. 40, V",
+        "CTB art. 40, III"
+      ]
+    },
+    "tags": [
+      "luzes",
+      "pisca_alerta",
+      "imobilizacao",
+      "art_40",
+      "circulacao"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CTB_art_40_V",
+      "macete_visual": "PISCA = IMOBILIZA/EMERGÊNCIA",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Pane no acostamento — pisca-alerta acionado.\n\nGabarito C: inciso V, alínea a.",
+            "destaques": ["pisca-alerta", "Gabarito C", "imobilização"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Via manda × pane",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Pisca só com placa na via", "Pane e emergência bastam na alínea a"],
+              ["Emergência = piscar farol", "Pisca-alerta é inciso V"]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Decisão rápida",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Imobilização ou emergência?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Acionar pisca-alerta", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PISCA = IMOBILIZA/EMERGÊNCIA.\nOu via manda.\n≠ piscar farol.",
+            "destaques": ["IMOBILIZA", "pisca-alerta"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 40",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "CTB_art_40_V",
+      "macete_visual": "PISCA = IMOBILIZA/EMERGÊNCIA · ou via manda · ≠ piscar farol",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Pisca-alerta vale em pane ou emergência — não só quando a via regulamentar manda",
+        "eixos_legais": [
+          "CTB_art_40_V",
+          "CTB_art_40_III"
+        ],
+        "isca_por_alternativa": {
+          "A": "reduz pisca-alerta só à regulamentação da via — regra_excecao",
+          "B": "substitui pisca-alerta por piscar de farol do inc. III — termo_unico",
+          "D": "dispensa pisca-alerta e invoca só luzes de posição do inc. VII — numero_vizinho"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: pane no acostamento",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — limitou à regulamentação da via: alínea a cobre imobilização e emergência.\nB — mandou piscar farol: inciso III é outro dispositivo — aqui é pisca-alerta parado.\nD — bastaram posição: imobilização por pane aciona pisca-alerta, não dispensa.\n\nNesta aula você fixa as duas hipóteses do inciso V e separa de piscar farol.",
+            "destaques": [
+              "Gabarito C",
+              "imobilizações",
+              "emergência"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PISCA-ALERTA: luzes de emergência do veículo — inciso V do art. 40.\n\nIMOBILIZAÇÃO: veículo parado por pane ou impedimento — hipótese da alínea a.\n\nSITUAÇÃO DE EMERGÊNCIA: risco imediato que exige sinalização — também na alínea a.",
+            "destaques": [
+              "PISCA-ALERTA",
+              "IMOBILIZAÇÃO",
+              "EMERGÊNCIA"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: acionar pisca-alerta?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Há imobilização ou emergência?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Deve sinalizar com pisca-alerta?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Utilizar pisca-alerta (inc. V)",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Inciso V — duas hipóteses",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Hipótese",
+              "Quando"
+            ],
+            "linhas": [
+              {
+                "faixa": "Alínea a",
+                "classificacao": "Imobilizações ou situações de emergência",
+                "destaque": true
+              },
+              {
+                "faixa": "Alínea b",
+                "classificacao": "Quando a regulamentação da via determinar"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: só se a via mandar",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
+            "linhas": [
+              [
+                "Pisca-alerta depende de placa na via",
+                "Pane e emergência bastam pela alínea a"
+              ],
+              [
+                "Emergência exige piscar farol em movimento",
+                "Pisca-alerta é dispositivo do inciso V"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Ignora alínea a — imobilização e emergência não exigem regulamentação prévia"
+              ],
+              [
+                "B — termo_unico",
+                "Troca pisca-alerta por piscar farol do inciso III — finalidades distintas"
+              ],
+              [
+                "D — numero_vizinho",
+                "Transpõe inciso VII (posição em embarque/carga) — pane no acostamento exige pisca-alerta"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Fato do caso",
+              "Conclusão legal"
+            ],
+            "linhas": [
+              [
+                "Pane mecânica — veículo imobilizado no acostamento",
+                "Hipótese da alínea a do inciso V"
+              ],
+              [
+                "Pisca-alerta acionado à noite na BR-230",
+                "Conduta prevista em imobilização/emergência"
+              ],
+              [
+                "Resultado",
+                "Gabarito C — pisca-alerta na alínea a"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Inciso V × inciso III",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Dispositivo",
+              "Uso"
+            ],
+            "linhas": [
+              [
+                "V — pisca-alerta",
+                "Imobilização, emergência ou determinação da via"
+              ],
+              [
+                "III — farol intermitente",
+                "Ultrapassar à frente ou alertar risco contrário em movimento"
+              ],
+              [
+                "Pegadinha B",
+                "Pane parado = pisca-alerta, não piscar farol"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei40v",
+          "titulo": "Art. 40, V — literal da regra",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 40, V",
+            "texto": "O condutor utilizará o pisca-alerta nas seguintes situações: a) em imobilizações ou situações de emergência; b) quando a regulamentação da via assim o determinar;",
+            "trechos_grifados": [
+              {
+                "inicio": 23,
+                "fim": 35,
+                "motivo": "glossario — dispositivo acionado no caso"
+              },
+              {
+                "inicio": 67,
+                "fim": 80,
+                "motivo": "caso — pane imobiliza o veículo no acostamento"
+              },
+              {
+                "inicio": 84,
+                "fim": 107,
+                "motivo": "mapa — alínea a cobre emergência e imobilização"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PISCA-ALERTA = IMOBILIZA/EMERGÊNCIA (a) · ou VIA MANDA (b).\n≠ piscar farol (inc. III).\nPane no acostamento → pisca, não só posição.\n\nNear-transfer: caminhão com pneu furado parado na margem à noite — acione pisca-alerta; não basta farol baixo ou posição.",
+            "destaques": [
+              "IMOBILIZA/EMERGÊNCIA",
+              "pisca-alerta",
+              "Near-transfer"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 40",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

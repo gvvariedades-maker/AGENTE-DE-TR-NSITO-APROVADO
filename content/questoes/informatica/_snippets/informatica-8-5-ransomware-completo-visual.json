@@ -1,0 +1,205 @@
+{
+  "versao": 2,
+  "arquetipo": "tabela_gradacao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 190,
+  "fundamento_slug": "info_malware_ransomware_trojan",
+  "macete_visual": "Ransomware=cripto+resgate | Worm=sozinho | Trojan=disfarce",
+  "meta": {
+    "padrao_familia": "D_gradacao",
+    "pegadinha_em_uma_frase": "Candidato troca ransomware (cripto + resgate) por worm ou spyware",
+    "eixos_legais": [
+      "info_ransomware_criptografia_resgate",
+      "info_trojan_disfarce"
+    ],
+    "eixos_mecanismo": [
+      "termo_unico",
+      "regra_excecao"
+    ],
+    "isca_por_alternativa": {
+      "A": "trata como spyware — ignora criptografia e resgate",
+      "B": "classifica como worm — autopropagação sem abrir anexo",
+      "C": "generaliza como vírus — ignora sequestro por criptografia"
+    },
+    "referencia_lote": "content/questoes/informatica/lote-004.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: cripto + resgate = ransomware",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito D (ransomware).\n\nA — trata como spyware: suporte já descartou monitoramento sem criptografar Autuacoes_2026.\nB — classifica como worm: TI descartou replicação automática na rede sem abrir anexo.\nC — generaliza como vírus comum: ignora o pedido de resgate em criptomoeda.\n\nAnexo Relatorio_Multas.pdf.exe era programa disfarçado de PDF.",
+        "destaques": [
+          "ransomware",
+          "criptografados",
+          "pdf.exe"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Antes de classificar: 4 tipos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Ransomware = criptografa arquivos e cobra resgate. Trojan = disfarça programa como arquivo inofensivo. Worm = replica-se sozinho na rede. Spyware = espiona uso sem necessariamente criptografar.",
+        "destaques": [
+          "Ransomware",
+          "Trojan",
+          "Worm"
+        ]
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Mapa de malware — decore o padrão",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Tipo",
+          "Sinal no caso"
+        ],
+        "linhas": [
+          {
+            "faixa": "Ransomware",
+            "classificacao": "Criptografa + exige resgate",
+            "destaque": true
+          },
+          {
+            "faixa": "Trojan",
+            "classificacao": "Disfarce (.pdf.exe) induz execução"
+          },
+          {
+            "faixa": "Worm",
+            "classificacao": "Espalha sozinho na rede"
+          },
+          {
+            "faixa": "Spyware",
+            "classificacao": "Monitora sem criptografar"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: worm ou spyware",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que o caso mostra ✓"
+        ],
+        "linhas": [
+          [
+            "Arquivos criptografados = worm na rede",
+            "Criptografia + resgate = ransomware (agente abriu anexo)"
+          ],
+          [
+            "Malware em PC = só spyware monitorando",
+            "Há sequestro de arquivos — não é mera espionagem"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — termo_unico",
+            "Confunde com spyware — caso tem criptografia e pedido de resgate"
+          ],
+          [
+            "B — regra_excecao",
+            "Aplica worm (autopropagação) — gatilho foi abrir anexo, não replicação automática"
+          ],
+          [
+            "C — termo_unico",
+            "Generaliza como vírus — eixo é sequestro por criptografia (ransomware)"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Caso STTP — Relatorio_Multas.pdf.exe",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do enunciado",
+          "Resultado"
+        ],
+        "linhas": [
+          [
+            "Anexo .pdf.exe aberto pelo agente",
+            "Trojan disfarçado — vetor de entrada"
+          ],
+          [
+            "Pasta Autuacoes_2026 criptografada + resgate",
+            "Padrão ransomware → Gabarito D"
+          ],
+          [
+            "Suporte: programa disfarçado de documento",
+            "Descarta spyware (só monitora) e worm (sem abrir anexo)"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Referência — malware e ataques",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Anexo I — Informática, item 8.5",
+        "texto": "O ransomware é um tipo de malware que criptografa arquivos da vítima e exige pagamento para restaurar o acesso. O cavalo de Troia (trojan) disfarça-se de arquivo legítimo para induzir a execução pelo usuário.",
+        "trechos_grifados": [
+          {
+            "inicio": 38,
+            "fim": 86,
+            "motivo": "gradacao — ransomware criptografa e exige resgate",
+            "texto_grifado": "criptografa arquivos da vítima e exige pagamento"
+          },
+          {
+            "inicio": 139,
+            "fim": 170,
+            "motivo": "caso — anexo .pdf.exe disfarçado (trojan)",
+            "texto_grifado": "disfarça-se de arquivo legítimo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Ransomware = cripto + resgate | Worm = espalha sozinho | Trojan = disfarce | Spyware = espiona.\n\nNear-transfer: colega abre \"boleto.docx.exe\" e a tela pede bitcoin — ransomware, não worm.",
+        "destaques": [
+          "ransomware",
+          "worm",
+          "trojan"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Anexo I — Informática, item 8.5",
+      "path": "conteúdo/edital/"
+    }
+  ]
+}
