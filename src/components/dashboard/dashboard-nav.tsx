@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { TrafficCone } from "lucide-react";
+import { InstallAppButton } from "@/components/pwa/install-app-button";
 import { signOut } from "@/app/actions/auth";
 import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -56,6 +57,7 @@ export function DashboardNav() {
               );
             })}
           </ul>
+          <InstallAppButton />
           <form action={signOut}>
             <Button
               type="submit"

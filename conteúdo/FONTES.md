@@ -117,6 +117,18 @@ Fonte: [Prefeitura de Campina Grande](https://campinagrande.pb.gov.br/wp-content
 
 ---
 
+## Material Estratégia Concursos (uso pessoal — não copiar literalmente)
+
+Apostilas e PDFs comentados para estudo e referência no Cursor. **Não** entram no app nem no `analyze:idecan` — fundamento legal das questões inéditas continua vindo de `legislação federal/` e `resoluções CONTRAN/`.
+
+| Documento | Arquivo | Disciplina | Status |
+|-----------|---------|------------|--------|
+| Legislação de Trânsito 01 | `estrategia/legislacao-transito/Legislação de Trânsito 01.pdf` | Legislação de Trânsito | OK (local 12/07/2026) |
+
+**Origem:** `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\`
+
+---
+
 ## Questões reais IDECAN (calibragem de estilo — não copiar)
 
 **Corpus:** `npm run analyze:idecan` → `corpus-idecan-stats.json` + `perfil-banca.md`.

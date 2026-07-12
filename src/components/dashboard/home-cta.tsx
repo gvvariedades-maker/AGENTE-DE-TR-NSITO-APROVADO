@@ -10,6 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ModoTreinoCard } from "@/components/dashboard/modo-treino-card";
+import { InstallAppButton } from "@/components/pwa/install-app-button";
 import { PROVA_DATA } from "@/types";
 
 interface HomeCtaProps {
@@ -58,12 +59,22 @@ export function HomeCta({ diasParaProva }: HomeCtaProps) {
               </div>
             </div>
 
-            <Link
-              href="/estudo?disciplina=legislacao_transito"
-              className={cn(buttonVariants({ size: "lg" }), "w-full min-h-11")}
-            >
-              Estudar CTB agora
-            </Link>
+            <div className="flex flex-col gap-2 sm:flex-row">
+              <Link
+                href="/estudo?disciplina=legislacao_transito"
+                className={cn(
+                  buttonVariants({ size: "lg" }),
+                  "w-full min-h-11 sm:flex-1",
+                )}
+              >
+                Estudar CTB agora
+              </Link>
+              <InstallAppButton
+                variant="outline"
+                size="lg"
+                className="w-full min-h-11 sm:w-auto"
+              />
+            </div>
           </CardContent>
         </Card>
 
