@@ -1,12 +1,22 @@
-const CACHE = "ata-aprovado-v1";
+const CACHE = "ata-aprovado-v2";
 
 const PRECACHE_URLS = [
-  "/",
   "/manifest.json",
   "/icon-192.png",
   "/icon-512.png",
   "/apple-touch-icon.png",
+  "/favicon-32.png",
 ];
+
+function isStaticAsset(pathname) {
+  return (
+    pathname.startsWith("/_next/static/") ||
+    pathname.endsWith(".png") ||
+    pathname.endsWith(".svg") ||
+    pathname.endsWith(".ico") ||
+    pathname === "/manifest.json"
+  );
+}
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -31,20 +41,26 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  if (event.request.method !== "GET") return;
+  const { request } = event;
+  if (request.method !== "GET") return;
 
-  const url = new URL(event.request.url);
+  const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
 
+  // Páginas e dados dinâmicos: sempre rede (evita tela travada com HTML antigo).
+  if (request.mode === "navigate" || !isStaticAsset(url.pathname)) {
+    return;
+  }
+
   event.respondWith(
-    fetch(event.request)
-      .then((response) => {
-        if (response.ok && url.pathname.startsWith("/_next/static/")) {
-          const copy = response.clone();
-          caches.open(CACHE).then((cache) => cache.put(event.request, copy));
-        }
+    caches.match(request).then((cached) => {
+      if (cached) return cached;
+      return fetch(request).then((response) => {
+        if (!response.ok) return response;
+        const copy = response.clone();
+        caches.open(CACHE).then((cache) => cache.put(request, copy));
         return response;
-      })
-      .catch(() => caches.match(event.request).then((cached) => cached ?? caches.match("/"))),
+      });
+    }),
   );
 });
