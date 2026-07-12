@@ -1,0 +1,298 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 265,
+  "fundamento_slug": "CONTRAN_996_art_18_II",
+  "macete_visual": "Competição ≠ uso esportivo · arterial = 45 km/h",
+  "eixos_legais": [
+    "CONTRAN_996_art_18_II",
+    "CONTRAN_996_art_8",
+    "CONTRAN_996_art_2_par3",
+    "CONTRAN_996_art_4"
+  ],
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: invocou dispensa de competição",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — dispensa de veículo de competição libera bike esportiva sem teto em arterial: errado.\nB — equiparação à bicicleta comum afasta limite de 45 km/h: ignora regras de uso esportivo.\nD — órgão local autoriza liberar velocidade na hora da fiscalização: confunde competência regulatória.\n\nPegadinha: esportivo não é automaticamente veículo de competição dispensado.",
+        "destaques": [
+          "veículo de competição",
+          "45 km/h",
+          "uso esportivo"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "VEÍCULO DE COMPETIÇÃO: categoria do art. 18, II — dispensa requisitos da Resolução.\n\nUSO ESPORTIVO: bike elétrica do art. 2, §3º — teto 45 km/h em arteriais/rodovias.\n\nART. 10: órgão pode regulamentar velocidade/vias — não substitui teto do art. 8 isoladamente.",
+        "destaques": [
+          "COMPETIÇÃO",
+          "USO ESPORTIVO",
+          "ART. 10"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: bike esportiva em arterial",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Bike esportiva a 48 km/h em arterial?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Invoca dispensa de veículo de competição?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Irregular — teto 45 km/h — gabarito C",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — caso do enunciado"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — dispensa não alcança"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Limites de velocidade — uso esportivo",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Via / situação",
+          "Teto motor auxiliar"
+        ],
+        "linhas": [
+          {
+            "faixa": "Regra geral — art. 2, III, d",
+            "classificacao": "32 km/h",
+            "destaque": false
+          },
+          {
+            "faixa": "Uso esportivo — art. 2, §3º",
+            "classificacao": "45 km/h (estradas/rodovias/competição autorizada)",
+            "destaque": false
+          },
+          {
+            "faixa": "Arterial — art. 8",
+            "classificacao": "45 km/h máx. assistida",
+            "destaque": true
+          },
+          {
+            "faixa": "Caso: 48 km/h em arterial",
+            "classificacao": "Excede — irregular",
+            "destaque": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: esportivo = competição",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a lei diz ✓"
+        ],
+        "linhas": [
+          [
+            "Modalidade esportiva dispensa tudo pelo art. 18 II",
+            "Art. 18 II alcança veículos de competição — não bike em via aberta"
+          ],
+          [
+            "Art. 11 equipara e libera velocidade",
+            "Art. 8 impõe 45 km/h em arteriais para uso esportivo"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Estende dispensa do art. 18 II a bike esportiva em arterial — afasta teto de velocidade"
+          ],
+          [
+            "B — termo_unico",
+            "Art. 11 equipara circulação, mas não revoga limite do art. 2 §3º e art. 8"
+          ],
+          [
+            "D — competencia_snt",
+            "Art. 10 exige estudo técnico prévio — não autoriza ignorar art. 8 na fiscalização"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos do enunciado → gabarito",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Elemento",
+          "Conclusão"
+        ],
+        "linhas": [
+          [
+            "Bike elétrica uso esportivo, pedal-assist",
+            "Sujeita a arts. 4 e 8 — não art. 18 II"
+          ],
+          [
+            "48 km/h em arterial Epitácio Pessoa",
+            "Excede 45 km/h do art. 8"
+          ],
+          [
+            "Equipamentos do art. 4 apresentados",
+            "Regular nos equipamentos — irregular na velocidade"
+          ],
+          [
+            "Resultado",
+            "Gabarito C — irregular pela velocidade"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Art. 18 II × art. 8 — regra e exceção",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Art. 18, II",
+            "Dispensa requisitos para veículos de competição"
+          ],
+          [
+            "Art. 8 — vizinho",
+            "Limita bike esportiva a 45 km/h em arteriais"
+          ],
+          [
+            "Art. 2, §3º",
+            "Define exceção de 45 km/h para uso esportivo"
+          ],
+          [
+            "Art. 4",
+            "Equipamentos obrigatórios — cumpridos no caso"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 18 — dispensas da Resolução",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 996/2023 art. 18",
+        "texto": "Art. 18. Ficam dispensados do cumprimento dos requisitos desta Resolução: I - os veículos de uso exclusivo fora de estrada; II - os veículos de competição; e III - os equipamentos destinados à locomoção de pessoas com deficiência ou com comprometimento de mobilidade.",
+        "trechos_grifados": [
+          {
+            "inicio": 0,
+            "fim": 72,
+            "motivo": "hierarquia — campo de aplicação das dispensas",
+            "texto_grifado": "Art. 18. Ficam dispensados do cumprimento dos requisitos desta Resolução"
+          },
+          {
+            "inicio": 124,
+            "fim": 154,
+            "motivo": "contraste — categoria que o condutor invocou",
+            "texto_grifado": "II - os veículos de competição"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 8 — limite em arteriais",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 996/2023 art. 8",
+        "texto": "Art. 8º A circulação de bicicletas elétricas para uso esportivo deve observar velocidade máxima assistida limitada a 45 km/h quando em uso nas vias arteriais, estradas, rodovias ou quando em competição esportiva, devendo, nas demais vias, ciclovias e ciclofaixas, seguir os limites estabelecidos no art. 7º ou na sinalização de regulamentação viária existente.",
+        "trechos_grifados": [
+          {
+            "inicio": 0,
+            "fim": 77,
+            "motivo": "mapa — sujeito do limite no caso",
+            "texto_grifado": "Art. 8º A circulação de bicicletas elétricas para uso esportivo deve observar"
+          },
+          {
+            "inicio": 78,
+            "fim": 157,
+            "motivo": "caso — teto violado pelo condutor a 48 km/h",
+            "texto_grifado": "velocidade máxima assistida limitada a 45 km/h quando em uso nas vias arteriais"
+          },
+          {
+            "inicio": 213,
+            "fim": 262,
+            "motivo": "fluxo — demais vias seguem art. 7º ou sinalização",
+            "texto_grifado": "devendo, nas demais vias, ciclovias e ciclofaixas"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near/far-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "COMPETIÇÃO ≠ USO ESPORTIVO · arterial = 45 km/h (art. 8).\nNear: 50 km/h em ciclovia — ainda não é art. 18 II; vale art. 7º/sinalização.\nFar: quadriciclo de pista fechada — art. 18 II dispensa; em via pública, não.\nNão muda: art. 18 II = veículos de competição, não bike esportiva em via aberta.\nCadeia: vizinho = art. 8 (teto em arteriais).",
+        "destaques": [
+          "45 km/h",
+          "ciclovia",
+          "quadriciclo",
+          "art. 8"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 996/2023",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 996, DE 15 DE JUNHO DE 2023.pdf"
+    }
+  ]
+}

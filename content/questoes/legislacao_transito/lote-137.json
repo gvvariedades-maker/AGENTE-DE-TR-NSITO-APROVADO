@@ -1,0 +1,342 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_educacao_transito",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_93",
+    "enunciado": "A Prefeitura de Campina Grande/PB aprovou licença para hipermercado em avenida de grande fluxo, reconhecido como potencial pólo atrativo de trânsito. O projeto prevê área de estacionamento, mas não indica vias de acesso adequadas — o secretário de obras afirma que a STTP definirá os acessos após a inauguração. A licença foi expedida sem anuência prévia da STTP, sob o argumento de que normas do CONTRAN sobre engenharia de tráfego já bastariam. O procurador municipal consulta o CTB (arts. 91 a 93). Assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A aprovação é irregular — o art. 93 exige anuência prévia do órgão com circunscrição sobre a via, área de estacionamento e indicação das vias de acesso no projeto; normas do CONTRAN (art. 91) não dispensam esses requisitos nem autorizam postergar os acessos.",
+      "B": "A licença é válida se o estacionamento previsto atender à demanda — com área de vagas no projeto, dispensam-se a indicação das vias de acesso e a anuência prévia da STTP.",
+      "C": "A anuência prévia de empreendimento pólo atrativo compete exclusivamente ao CONTRAN — cabe à STTP apenas fiscalizar o trânsito após a inauguração do hipermercado.",
+      "D": "A licença urbanística municipal substitui a anuência do órgão com circunscrição sobre a via quando o projeto já contempla estacionamento e o empreendimento se enquadra em normas nacionais de engenharia de tráfego."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Art. 93 (anuência prévia + estacionamento + vias de acesso no projeto) × art. 91 (CONTRAN normatiza engenharia de tráfego, sem substituir anuência local).",
+      "fundamento_legal": "CTB, art. 91: 'O CONTRAN estabelecerá as normas e regulamentos a serem adotados em todo o território nacional quando da implementação das soluções adotadas pela Engenharia de Tráfego, assim como padrões a serem praticados por todos os órgãos e entidades do Sistema Nacional de Trânsito.' Art. 93: 'Nenhum projeto de edificação que possa transformar-se em pólo atrativo de trânsito poderá ser aprovado sem prévia anuência do órgão ou entidade com circunscrição sobre a via e sem que do projeto conste área para estacionamento e indicação das vias de acesso adequadas.'",
+      "passo_a_passo": [
+        "1. Caso: hipermercado pólo atrativo em Campina Grande — projeto com estacionamento, sem vias de acesso indicadas, licença sem anuência da STTP, invocando normas do CONTRAN.",
+        "2. B erra por regra_excecao (estacionamento no projeto dispensa vias de acesso e anuência prévia — art. 93 exige os três requisitos cumulativos); C erra por competencia_snt (atribui anuência exclusiva ao CONTRAN — art. 93 reserva ao órgão com circunscrição sobre a via); D erra por termo_unico (licença municipal substitui anuência da STTP — requisito distinto do art. 93).",
+        "3. A correta: art. 93 — anuência prévia, estacionamento e vias de acesso no projeto; art. 91 normatiza engenharia de tráfego, mas não dispensa anuência nem posterga acessos."
+      ],
+      "pegadinha": "A IDECAN induz a validar a licença porque o projeto já tem estacionamento — mas o art. 93 exige também vias de acesso indicadas no projeto e anuência prévia da STTP.",
+      "macete": "93 = anuência + estacionamento + acessos NO PROJETO · 91 = CONTRAN normatiza, não anuencia.",
+      "estudo_reverso": [
+        "CTB art. 91",
+        "CTB art. 93"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Estacionamento no projeto não dispensa vias de acesso indicadas nem anuência prévia da STTP",
+      "eixos_legais": [
+        "CTB_art_93",
+        "CTB_art_91"
+      ],
+      "eixo_vizinho": "CTB_art_91",
+      "isca_por_alternativa": {
+        "B": "estacionamento no projeto dispensa vias de acesso e anuência prévia da STTP",
+        "C": "anuência de pólo atrativo compete exclusivamente ao CONTRAN, não à STTP",
+        "D": "licença municipal substitui anuência do órgão com circunscrição quando há estacionamento"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "competencia_snt",
+        "termo_unico"
+      ],
+      "near_transfer": "Arena poliesportiva com estacionamento mas sem vias de acesso no projeto — mesmo regime cumulativo do art. 93.",
+      "far_transfer": "CONTRAN edita padrões de engenharia de tráfego (art. 91) — não substitui anuência prévia do órgão da via nem autoriza aprovar projeto incompleto.",
+      "o_que_nao_muda": "Pólo atrativo exige anuência prévia + estacionamento + vias de acesso indicadas no projeto — requisitos cumulativos do art. 93.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "engenharia_transito",
+      "contran",
+      "sttp",
+      "polo_atrativo",
+      "hipermercado",
+      "art_91",
+      "art_93"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CTB_art_93",
+      "macete_visual": "93 = anuência + vagas + acessos",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A: estacionamento não dispensa vias de acesso no projeto nem anuência prévia da STTP.",
+            "destaques": ["Gabarito A", "estacionamento", "anuência"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Estacionamento × acessos",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "Lei ✓"],
+            "linhas": [
+              ["Vagas bastam — acessos depois", "Vias de acesso indicadas no projeto"],
+              ["CONTRAN dispensa anuência local", "Anuência prévia do órgão da via"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "93 = anuência + estacionamento + acessos NO PROJETO.\n91 = CONTRAN normatiza, não anuencia.",
+            "destaques": ["anuência", "acessos", "CONTRAN"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.503/97 — CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "todos",
+      "duracao_estimada_seg": 265,
+      "fundamento_slug": "CTB_art_93",
+      "macete_visual": "93 = anuência + vagas + acessos",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: tinha estacionamento",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — estacionamento dispensa vias de acesso e anuência: errado.\nC — anuência exclusiva do CONTRAN: confunde competência.\nD — licença municipal substitui anuência da STTP: confunde atos distintos.\n\nPegadinha: vagas no projeto não autorizam postergar acessos nem dispensar anuência.",
+            "destaques": ["estacionamento", "acessos", "anuência"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PÓLO ATRATIVO: empreendimento que concentra fluxo de trânsito — hipótese do art. 93.\n\nANUÊNCIA PRÉVIA: aprovação do órgão com circunscrição sobre a via antes da licença.\n\nVIAS DE ACESSO: devem constar no projeto — não podem ser definidas só após inauguração.",
+            "destaques": ["PÓLO ATRATIVO", "ANUÊNCIA", "ACESSOS"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: aprovar pólo atrativo?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Empreendimento pode ser pólo atrativo de trânsito?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Projeto tem anuência prévia, estacionamento e vias de acesso?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Aprovação irregular — gabarito A",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — hipermercado em avenida movimentada"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — faltam acessos e anuência STTP"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Requisitos cumulativos do art. 93",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Requisito", "No caso do hipermercado"],
+            "linhas": [
+              ["Anuência prévia do órgão da via", "Ausente — licença sem STTP"],
+              ["Área de estacionamento no projeto", "Presente"],
+              ["Indicação de vias de acesso adequadas", "Ausente — postergada"],
+              ["Resultado", "Irregular — gabarito A"]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: estacionamento basta",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Vagas no projeto dispensam vias de acesso",
+                "Projeto deve indicar vias de acesso adequadas"
+              ],
+              [
+                "Acessos podem ser definidos após inauguração",
+                "Requisitos devem constar no projeto aprovado"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — regra_excecao",
+                "Estacionamento dispensa vias de acesso e anuência — art. 93 exige requisitos cumulativos"
+              ],
+              [
+                "C — competencia_snt",
+                "Atribui anuência exclusiva ao CONTRAN — art. 93 reserva ao órgão com circunscrição"
+              ],
+              [
+                "D — termo_unico",
+                "Licença municipal substitui anuência da STTP — atos distintos"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos do enunciado → gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              ["Hipermercado em avenida movimentada — pólo atrativo", "Aplica-se o art. 93"],
+              ["Estacionamento previsto, acessos postergados", "Projeto incompleto"],
+              ["Licença sem anuência prévia da STTP", "Viola anuência prévia"],
+              ["Invocação de normas do CONTRAN", "Art. 91 não dispensa art. 93"],
+              ["Resultado", "Gabarito A"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 91 × art. 93 — normatizar × anuir",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              ["Art. 91 — vizinho", "CONTRAN normatiza engenharia de tráfego e padrões do SNT"],
+              ["Art. 93", "Anuência prévia + estacionamento + vias de acesso no projeto"],
+              ["Normas do CONTRAN", "Não substituem anuência da STTP"],
+              ["Licença municipal", "Não substitui anuência do órgão da via"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 93 — pólo atrativo",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 93",
+            "texto": "Nenhum projeto de edificação que possa transformar-se em pólo atrativo de trânsito poderá ser aprovado sem prévia anuência do órgão ou entidade com circunscrição sobre a via e sem que do projeto conste área para estacionamento e indicação das vias de acesso adequadas.",
+            "trechos_grifados": [
+              {
+                "inicio": 57,
+                "fim": 82,
+                "motivo": "fluxo — hipermercado como pólo atrativo",
+                "texto_grifado": "pólo atrativo de trânsito"
+              },
+              {
+                "inicio": 107,
+                "fim": 173,
+                "motivo": "caso — licença sem anuência prévia da STTP",
+                "texto_grifado": "prévia anuência do órgão ou entidade com circunscrição sobre a via"
+              },
+              {
+                "inicio": 202,
+                "fim": 267,
+                "motivo": "contraste — acessos postergados violam requisito cumulativo",
+                "texto_grifado": "área para estacionamento e indicação das vias de acesso adequadas"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 91 — CONTRAN normatiza",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 91",
+            "texto": "O CONTRAN estabelecerá as normas e regulamentos a serem adotados em todo o território nacional quando da implementação das soluções adotadas pela Engenharia de Tráfego, assim como padrões a serem praticados por todos os órgãos e entidades do Sistema Nacional de Trânsito.",
+            "trechos_grifados": [
+              {
+                "inicio": 2,
+                "fim": 47,
+                "motivo": "hierarquia — CONTRAN normatiza, não anuencia projeto local",
+                "texto_grifado": "CONTRAN estabelecerá as normas e regulamentos"
+              },
+              {
+                "inicio": 146,
+                "fim": 167,
+                "motivo": "mapa — engenharia de tráfego no SNT",
+                "texto_grifado": "Engenharia de Tráfego"
+              },
+              {
+                "inicio": 180,
+                "fim": 270,
+                "motivo": "contraste — padrões do SNT não dispensam art. 93",
+                "texto_grifado": "padrões a serem praticados por todos os órgãos e entidades do Sistema Nacional de Trânsito"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "93 = anuência + estacionamento + acessos NO PROJETO · 91 = CONTRAN normatiza, não anuencia.\nNear: arena com vagas mas sem acessos no projeto — mesmo regime cumulativo.\nFar: CONTRAN edita padrões de engenharia de tráfego — não substitui anuência da STTP.\nNão muda: três requisitos cumulativos do art. 93 para pólo atrativo.\nCadeia: vizinho = art. 91 (normatização federal × anuência local).",
+            "destaques": ["anuência", "acessos", "CONTRAN", "art. 91"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.503/97 — CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,290 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "todos",
+  "duracao_estimada_seg": 250,
+  "fundamento_slug": "CONTRAN_970_art_5_2",
+  "macete_visual": "Prerrogativa = luz + sirene",
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: ambulância sem sirene",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — luz azul dispensa sirene em urgência para livre circulação.\nC — hipótese seria ausência de lanterna acesa durante atendimento.\nD — fiscalização exclusiva do CONTRAN sobre lanternas de emergência.\n\nPegadinha: prerrogativa de livre circulação exige acionamento conjunto.",
+        "destaques": [
+          "Gabarito B",
+          "sirene",
+          "CONTRAN"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "LANTERNA DE EMERGÊNCIA: dispositivo azul, vermelho ou combinação — exclusivo de veículos do art. 5º.\n\nPRERROGATIVA: livre circulação e parada em urgência — não se confunde com simples deslocamento.\n\nACIONAMENTO CONJUNTO: sirene e lanternas juntas quando da prerrogativa — regra do §2.",
+        "destaques": [
+          "EMERGÊNCIA",
+          "PRERROGATIVA",
+          "CONJUNTO"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: acionamento regular?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Condutor usa prerrogativa de livre circulação e parada?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Sirene e lanternas acionadas conjuntamente?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Irregular — gabarito B",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — deslocamento acima do fluxo na Av. Epitácio Pessoa"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Não — só luz azul, sem sirene"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Veículos de emergência × requisito",
+      "secao": "mapa",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Situação",
+          "Requisito"
+        ],
+        "linhas": [
+          [
+            "Serviço de urgência autorizado — §1º",
+            "Circunstância que permita prerrogativa"
+          ],
+          [
+            "Uso de livre circulação e parada — §2º",
+            "Sirene E lanternas conjuntas"
+          ],
+          [
+            "Ambulância do caso",
+            "Falta sirene conjunta"
+          ],
+          [
+            "Veículo comum",
+            "Vedado usar lanterna de emergência"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: luz azul basta",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o condutor alega ✗",
+          "O que o §2 diz ✓"
+        ],
+        "linhas": [
+          [
+            "Basta lanterna azul em transporte urgente",
+            "Prerrogativa exige sirene e lanternas juntas"
+          ],
+          [
+            "Dispositivo sonoro é facultativo",
+            "Acionamento conjunto é obrigatório"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Dispensa sirene em urgência — §2 exige acionamento conjunto"
+          ],
+          [
+            "C — numero_vizinho",
+            "Aplica art. 222 de manter lanterna acesa — caso é falta de sirene"
+          ],
+          [
+            "D — competencia_snt",
+            "Atribui fiscalização exclusiva ao CONTRAN — STTP verifica uso na via"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos do enunciado → gabarito",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Elemento",
+          "Conclusão"
+        ],
+        "linhas": [
+          [
+            "Ambulância municipal em transporte urgente",
+            "Veículo de emergência do art. 5º"
+          ],
+          [
+            "Lanternas acesas sem sirene",
+            "Viola exigência de acionamento conjunto"
+          ],
+          [
+            "Deslocamento acima do fluxo",
+            "Uso de prerrogativa de livre circulação"
+          ],
+          [
+            "Tipificação",
+            "Art. 15, I, a → art. 169 do CTB"
+          ],
+          [
+            "Resultado",
+            "Gabarito B"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "§1º × §2º do art. 5º",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "§1º — vizinho",
+            "Autoriza acionamento em serviço de urgência"
+          ],
+          [
+            "§2º — gabarito",
+            "Exige sirene conjunta na prerrogativa"
+          ],
+          [
+            "Art. 15, I, a",
+            "Remete ao art. 169 do CTB"
+          ],
+          [
+            "Inciso VII do art. 29 do CTB",
+            "Base da prerrogativa citada no §1º"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 5º, §2º — acionamento conjunto",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 970/2022, art. 5º, §2º",
+        "texto": "§ 2º Quando do uso da prerrogativa de livre circulação e de parada, os dispositivos sonoros devem ser acionados de forma conjunta com as lanternas especiais.",
+        "trechos_grifados": [
+          {
+            "inicio": 15,
+            "fim": 66,
+            "motivo": "fluxo — condutor usa livre circulação na Av. Epitácio Pessoa",
+            "texto_grifado": "uso da prerrogativa de livre circulação e de parada"
+          },
+          {
+            "inicio": 68,
+            "fim": 156,
+            "motivo": "contraste — ambulância sem sirene no caso",
+            "texto_grifado": "os dispositivos sonoros devem ser acionados de forma conjunta com as lanternas especiais"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 5º, §1º — quando acionar",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 970/2022, art. 5º, §1º",
+        "texto": "§ 1º O acionamento das lanternas especiais deverá ocorrer somente em circunstâncias que permitam o uso das prerrogativas de prioridade de trânsito e de livre circulação, estacionamento e parada, quando efetivamente esteja sendo prestado serviço de urgência, de policiamento ostensivo ou de preservação da ordem pública, observadas as disposições previstas no inciso VII do art. 29 do CTB.",
+        "trechos_grifados": [
+          {
+            "inicio": 215,
+            "fim": 256,
+            "motivo": "caso — transporte de paciente em estado grave",
+            "texto_grifado": "esteja sendo prestado serviço de urgência"
+          },
+          {
+            "inicio": 69,
+            "fim": 193,
+            "motivo": "hierarquia — vizinho que autoriza o acionamento",
+            "texto_grifado": "circunstâncias que permitam o uso das prerrogativas de prioridade de trânsito e de livre circulação, estacionamento e parada"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near/far-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Urgência + prerrogativa = LUZ E SIRENE juntas (§2 art. 5º).\nNear: PM com giroflex sem sirene ao desviar do fluxo — mesma exigência conjunta.\nFar: guincho com âmbar no deslocamento — regime do art. 6º, sem prerrogativa de emergência.\nNão muda: livre circulação e parada exigem sirene e lanternas acionadas conjuntamente.\nCadeia: vizinho = §1º (quando pode acionar em urgência).",
+        "destaques": [
+          "SIRENE",
+          "PM",
+          "guincho",
+          "§1º"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 970/2022",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 970, DE 20 DE JUNHO DE 2022.pdf"
+    },
+    {
+      "rotulo": "CTB art. 169",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

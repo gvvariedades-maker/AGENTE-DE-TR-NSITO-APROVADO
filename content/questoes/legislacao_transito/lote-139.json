@@ -1,0 +1,306 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_227_iluminacao",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_227_art_1_par7",
+    "enunciado": "Durante fiscalização noturna em Campina Grande/PB, agente da STTP aborda caminhonete com dez dispositivos de iluminação frontal acionados simultaneamente: dois faróis principais em facho baixo, dois de neblina dianteiros, dois auxiliares na grade, dois de barra LED no teto e dois de milha laterais. O condutor alega que neblina, LED e milha não entram no limite legal porque têm finalidade distinta dos faróis principais. Considerando a Resolução CONTRAN nº 227/2007, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Apenas os dois faróis principais em facho baixo contam para o limite — neblina, auxiliares, barra LED e milha ficam fora do teto de oito dispositivos.",
+      "B": "Dez faróis simultâneos é regular, pois o limite de oito alcança somente dispositivos de fábrica — barras LED e milhas instaladas no acessório não se submetem ao §7º do art. 1º.",
+      "C": "A STTP deve autuar exclusivamente pelo art. 230, XIII, do CTB, por alteração do sistema de iluminação — a instalação de barras LED afasta a tipificação pelo art. 230, IX.",
+      "D": "A configuração viola o art. 1º, §7º, da Res. 227/2007 — no máximo oito faróis simultâneos, independentemente da finalidade; o descumprimento sujeita às penalidades do art. 6º-A, conforme a infração apurada no art. 230 do CTB."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Limite de oito faróis simultâneos (art. 1º, §7º, Res. 227/2007) × consequência do descumprimento (art. 6º-A → art. 230 do CTB).",
+      "fundamento_legal": "Res. CONTRAN 227/2007, art. 1º, §7º: 'Ficam limitados a instalação e o funcionamento simultâneo de no máximo 8 (oito) faróis, independentemente de suas finalidades.' Art. 6º-A: 'O não atendimento ao disposto nesta Resolução sujeita o infrator à aplicação das penalidades e medidas administrativas previstas no artigo 230, incisos IX, XII, XIII e XXII do CTB, conforme infração a ser apurada.'",
+      "passo_a_passo": [
+        "1. Caso: caminhonete com dez dispositivos frontais acionados ao mesmo tempo — condutor exclui neblina, LED e milha do limite.",
+        "2. A erra por regra_excecao (só principais contam — o §7º não distingue finalidade); B erra por termo_unico (acessórios aftermarket ficam fora do limite — o §7º abrange qualquer farol simultâneo); C erra por numero_vizinho (fixa art. 230, XIII, exclusivamente — art. 6º-A remete ao inciso conforme infração apurada).",
+        "3. D correta: §7º limita a oito simultâneos; art. 6º-A vincula ao art. 230 conforme o caso."
+      ],
+      "pegadinha": "A IDECAN induz a excluir neblina e LED do limite por terem finalidade distinta — mas o §7º conta qualquer farol simultâneo, sem distinção de função.",
+      "macete": "227 §7 = 8 faróis JUNTOS · qualquer função · 6º-A → art. 230.",
+      "estudo_reverso": [
+        "Res. CONTRAN 227/2007 art. 1",
+        "Res. CONTRAN 227/2007 art. 6-A",
+        "CTB art. 230"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "D_gradacao",
+      "pegadinha_em_uma_frase": "Neblina e LED contam no limite — o §7º não distingue finalidade dos oito faróis simultâneos",
+      "eixos_legais": [
+        "CONTRAN_227_art_1_par7",
+        "CONTRAN_227_art_6_A"
+      ],
+      "eixo_vizinho": "CONTRAN_227_art_6_A",
+      "isca_por_alternativa": {
+        "A": "só faróis principais contam no teto de oito — neblina e LED ficam fora",
+        "B": "limite de oito alcança só dispositivos de fábrica, não barras LED aftermarket",
+        "C": "autuação exclusiva pelo art. 230, XIII, afastando o inciso IX"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico",
+        "numero_vizinho"
+      ],
+      "near_transfer": "Oito dispositivos acionados ao mesmo tempo — regular; ao acender o nono, viola o §7º.",
+      "far_transfer": "Caminhão inacabado sem lanternas delimitadoras traseiras — art. 1º, §2º, dispensa temporariamente dispositivos listados.",
+      "o_que_nao_muda": "Máximo de oito faróis em funcionamento simultâneo, qualquer que seja a finalidade (§7º).",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "contran_227",
+      "iluminacao",
+      "farois",
+      "limite_oito",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_227_art_1_par7",
+      "macete_visual": "8 faróis juntos · qualquer função",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D: dez faróis simultâneos violam o limite de oito — finalidade não exclui neblina nem LED.",
+            "destaques": ["dez", "oito", "finalidade"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Limite simultâneo",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Faróis ligados", "Situação"],
+            "linhas": [
+              { "faixa": "Até 8 simultâneos", "classificacao": "Regular — §7º" },
+              { "faixa": "9 ou mais simultâneos", "classificacao": "Irregular — caso: 10 na blitz", "destaque": true }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "227 §7 = 8 JUNTOS.\nQualquer função.\n6º-A → art. 230.",
+            "destaques": ["8", "função", "230"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 227/2007",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 227, DE 9 DE FEVEREIRO DE 2007.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "todos",
+      "duracao_estimada_seg": 240,
+      "fundamento_slug": "CONTRAN_227_art_1_par7",
+      "macete_visual": "8 faróis juntos · qualquer função",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: dez acesos ao mesmo tempo",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — só principais contam no limite: errado.\nB — acessórios aftermarket ficam fora do teto: ignora finalidade irrelevante.\nC — autuação exclusiva por alteração: fixa inciso sem apurar a infração.\n\nPegadinha: neblina e LED entram na contagem — o limite é simultaneidade, não função.",
+            "destaques": ["dez", "neblina", "LED"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "FAROL: qualquer dispositivo de iluminação frontal abrangido pelo §7º — sem distinção de função.\n\nSIMULTÂNEO: ligados ao mesmo tempo na fiscalização — é o que se conta.\n\nART. 6º-A: descumprimento da Res. 227/2007 remete ao art. 230 do CTB conforme a infração apurada.",
+            "destaques": ["FAROL", "SIMULTÂNEO", "6º-A"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Faixa do §7º — faróis simultâneos",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Quantidade ligada", "Situação legal"],
+            "linhas": [
+              { "faixa": "1 a 8 faróis simultâneos", "classificacao": "Regular" },
+              { "faixa": "9 ou mais simultâneos", "classificacao": "Irregular — viola §7º", "destaque": true },
+              { "faixa": "Neblina + LED + milha", "classificacao": "Contam se acionados juntos" },
+              { "faixa": "Caso: 10 na caminhonete", "classificacao": "Irregular — gabarito D" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: finalidade distinta dispensa",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Neblina e LED não contam no limite de oito",
+                "§7º: máximo oito simultâneos, qualquer finalidade"
+              ],
+              [
+                "Só faróis principais entram na contagem",
+                "Instalação e funcionamento simultâneo de faróis — sem exceção por tipo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Exclui neblina, LED e milha — §7º não distingue finalidade"
+              ],
+              [
+                "B — termo_unico",
+                "Restringe limite a dispositivos de fábrica — §7º abrange qualquer farol"
+              ],
+              [
+                "C — numero_vizinho",
+                "Fixa art. 230, XIII, exclusivamente — art. 6º-A remete ao inciso conforme apuração"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Contagem do enunciado → gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Conta", "Resultado"],
+            "linhas": [
+              ["2 principais + 2 neblina + 2 grade + 2 LED teto + 2 milha", "10 simultâneos"],
+              ["Limite legal do §7º", "8 máximo"],
+              ["10 > 8", "Irregular"],
+              ["Consequência", "Art. 6º-A → art. 230 conforme infração"],
+              ["Gabarito", "Alternativa D"]
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Dispositivos do caso × contagem",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Conta no limite?"],
+            "linhas": [
+              ["Faróis principais + neblina + grade", "6"],
+              ["Barra LED teto + milha lateral", "4"],
+              ["Total simultâneo na blitz", "10 — excede 8"],
+              ["Limite do §7º", "8 máximo"],
+              ["Resultado", "Irregular — gabarito D"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 1º, §7º — limite de oito",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 227/2007, art. 1º, §7º",
+            "texto": "Ficam limitados a instalação e o funcionamento simultâneo de no máximo 8 (oito) faróis, independentemente de suas finalidades.",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 32,
+                "motivo": "gradacao — instalação e funcionamento limitados",
+                "texto_grifado": "Ficam limitados a instalação e o"
+              },
+              {
+                "inicio": 33,
+                "fim": 86,
+                "motivo": "contraste — dez simultâneos violam o teto de oito",
+                "texto_grifado": "funcionamento simultâneo de no máximo 8 (oito) faróis"
+              },
+              {
+                "inicio": 88,
+                "fim": 125,
+                "motivo": "caso — neblina e LED não ficam fora por finalidade",
+                "texto_grifado": "independentemente de suas finalidades"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 6º-A — consequência no CTB",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 227/2007, art. 6º-A",
+            "texto": "O não atendimento ao disposto nesta Resolução sujeita o infrator à aplicação das penalidades e medidas administrativas previstas no artigo 230, incisos IX, XII, XIII e XXII do CTB, conforme infração a ser apurada.",
+            "trechos_grifados": [
+              {
+                "inicio": 2,
+                "fim": 45,
+                "motivo": "fluxo — descumprimento da Res. 227/2007 na blitz",
+                "texto_grifado": "não atendimento ao disposto nesta Resolução"
+              },
+              {
+                "inicio": 132,
+                "fim": 172,
+                "motivo": "contraste — inciso conforme apuração, não só XIII",
+                "texto_grifado": "artigo 230, incisos IX, XII, XIII e XXII"
+              },
+              {
+                "inicio": 181,
+                "fim": 213,
+                "motivo": "caso — STTP tipifica conforme infração encontrada",
+                "texto_grifado": "conforme infração a ser apurada."
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "227 §7 = 8 faróis JUNTOS · qualquer função · 6º-A → art. 230.\nNear: oito ligados — regular; nono aceso — irregular.\nFar: caminhão inacabado sem lanternas traseiras — §2º dispensa dispositivos listados.\nNão muda: limite de oito simultâneos sem distinção de finalidade.\nCadeia: vizinho = art. 6º-A (remissão ao art. 230 do CTB).",
+            "destaques": ["8", "nono", "inacabado", "6º-A"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 227/2007",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 227, DE 9 DE FEVEREIRO DE 2007.pdf"
+        }
+      ]
+    }
+  }
+]

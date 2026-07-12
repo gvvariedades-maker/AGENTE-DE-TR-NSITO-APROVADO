@@ -1,0 +1,426 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_pedestres_nao_motorizados",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_68_par3",
+    "enunciado": "Em trecho rural da BR-230, próximo a Campina Grande/PB, sem acostamento utilizável, agentes da STTP observam dois pedestres caminhando pela pista de rolamento, em fila única junto ao bordo. Um deles segue no mesmo sentido do fluxo dos veículos e alega que, com prioridade sobre os veículos, pode escolher o bordo e o sentido, nos termos do art. 68 do CTB. O outro caminha em sentido contrário ao dos veículos. Considerando o CTB, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Ambos podem circular pelo bordo da pista em qualquer sentido, desde que em fila única e com prioridade sobre os veículos — a escolha do sentido é livre em vias rurais sem acostamento.",
+      "B": "Nenhum deles pode usar a pista de rolamento — sem acostamento, a circulação de pedestres fica proibida até que o órgão de trânsito implante passeio provisório.",
+      "C": "Apenas o pedestre que caminha em sentido contrário ao dos veículos circula regularmente — em via rural sem acostamento, o art. 68, §3º, exige fila única pelo bordo em sentido oposto ao fluxo; a regra do §2º não se aplica.",
+      "D": "Na via rural, os pedestres devem circular pela faixa de segurança a até 50 m do cruzamento mais próximo, nos termos do art. 69 — é vedado usar a pista de rolamento fora dessa faixa."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Circulação de pedestres em via rural sem acostamento — art. 68, §3º (sentido contrário ao dos veículos) × regra urbana do §2º (sem obrigação de sentido contrário).",
+      "fundamento_legal": "CTB, art. 68, §2º: 'Nas áreas urbanas, quando não houver passeios ou quando não for possível a utilização destes, a circulação de pedestres na pista de rolamento será feita com prioridade sobre os veículos, pelos bordos da pista, em fila única, exceto em locais proibidos pela sinalização e nas situações em que a segurança ficar comprometida.' §3º: 'Nas vias rurais, quando não houver acostamento ou quando não for possível a utilização dele, a circulação de pedestres, na pista de rolamento, será feita com prioridade sobre os veículos, pelos bordos da pista, em fila única, em sentido contrário ao deslocamento de veículos, exceto em locais proibidos pela sinalização e nas situações em que a segurança ficar comprometida.'",
+      "passo_a_passo": [
+        "1. Caso: trecho rural da BR-230 sem acostamento — um pedestre no mesmo sentido do fluxo; outro em sentido contrário.",
+        "2. A erra por regra_excecao (estende a liberdade de sentido da área urbana à via rural — ignora o §3º); B erra por termo_unico (veda uso da pista sem acostamento — o §3º autoriza pelo bordo em fila única); D erra por numero_vizinho (aplica a faixa de segurança do art. 69 a trecho rural sem cruzamento — dispositivo vizinho de travessia, não de circulação pela pista).",
+        "3. C correta: art. 68, §3º — em via rural sem acostamento, sentido contrário ao dos veículos."
+      ],
+      "pegadinha": "A IDECAN induz a validar o pedestre que caminha a favor do fluxo porque tem prioridade — mas em via rural o §3º impõe sentido contrário, distinto do §2º urbano.",
+      "macete": "URBANO §2º = bordo + fila única · RURAL §3º = + SENTIDO CONTRÁRIO.",
+      "estudo_reverso": [
+        "CTB art. 68",
+        "CTB art. 69",
+        "CTB art. 70"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Via rural sem acostamento exige sentido contrário ao fluxo — prioridade não libera ir a favor dos veículos",
+      "eixos_legais": [
+        "CTB_art_68_par3",
+        "CTB_art_68_par2"
+      ],
+      "eixo_vizinho": "CTB_art_68_par2",
+      "isca_por_alternativa": {
+        "A": "prioridade sobre veículos libera escolher qualquer sentido no bordo da via rural",
+        "B": "sem acostamento proíbe pedestres na pista até haver passeio provisório",
+        "D": "aplica faixa de segurança do art. 69 a trecho rural sem cruzamento — regra de travessia, não de circulação pela pista"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico",
+        "numero_vizinho"
+      ],
+      "near_transfer": "Mesma situação em área urbana sem passeio — vale o §2º: bordo e fila única, sem obrigação de sentido contrário.",
+      "far_transfer": "Ciclista desmontado empurrando a bike na calçada — equipara-se ao pedestre pelo §1º, sem regra de sentido na pista.",
+      "o_que_nao_muda": "Rural sem acostamento = fila única pelo bordo em sentido contrário ao dos veículos (§3º); prioridade sobre veículos vale nos dois parágrafos.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
+    },
+    "tags": [
+      "ctb",
+      "pedestres",
+      "art_68",
+      "via_rural",
+      "acostamento",
+      "br_230"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CTB_art_68_par3",
+      "macete_visual": "Rural §3º = sentido contrário",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C: em via rural sem acostamento, só o sentido contrário ao fluxo é regular.",
+            "destaques": [
+              "Gabarito C",
+              "rural",
+              "sentido contrário"
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Urbano × rural",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pegadinha ✗",
+              "Lei ✓"
+            ],
+            "linhas": [
+              [
+                "Prioridade = qualquer sentido",
+                "Rural §3º exige sentido contrário"
+              ],
+              [
+                "Regra urbana vale na BR-230",
+                "§2º é para área urbana"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "URBANO §2º = bordo + fila única.\nRURAL §3º = + sentido contrário.",
+            "destaques": [
+              "§2º",
+              "§3º",
+              "contrário"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.503/97 — CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 265,
+      "fundamento_slug": "CTB_art_68_par3",
+      "macete_visual": "Rural §3º = sentido contrário",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: invocou prioridade",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — prioridade libera qualquer sentido no bordo rural: errado.\nB — sem acostamento proíbe pedestres na pista: ignora que a lei autoriza pelo bordo.\nD — faixa de segurança a 50 m vale na rodovia: confunde travessia com circulação.\n\nPegadinha: prioridade não substitui sentido contrário em via rural.",
+            "destaques": [
+              "prioridade",
+              "sentido contrário",
+              "rural"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VIA URBANA: área edificada — regra do §2º quando não há passeio.\n\nVIA RURAL: trecho sem acostamento utilizável — regra do §3º.\n\nSENTIDO CONTRÁRIO: oposto ao fluxo dos veículos — obrigatório no rural pelo §3º.",
+            "destaques": [
+              "URBANA",
+              "RURAL",
+              "CONTRÁRIO"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: pedestre na pista rural",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Via rural sem acostamento utilizável?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Pedestre no mesmo sentido do fluxo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Irregular — exige sentido contrário — gabarito C",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — caso da BR-230"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — viola §3º"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Urbano × rural — pedestre na pista",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Situação",
+              "Regra"
+            ],
+            "linhas": [
+              [
+                "Urbano sem passeio — §2º",
+                "Bordo + fila única + prioridade"
+              ],
+              [
+                "Rural sem acostamento — §3º",
+                "Bordo + fila única + sentido contrário"
+              ],
+              [
+                "Caso: mesmo sentido do fluxo na BR-230",
+                "Irregular"
+              ],
+              [
+                "Caso: sentido contrário na BR-230",
+                "Regular"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: prioridade = qualquer sentido",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
+            "linhas": [
+              [
+                "Prioridade permite caminhar a favor do fluxo",
+                "§3º impõe sentido contrário em via rural"
+              ],
+              [
+                "Regra urbana vale na rodovia",
+                "§2º alcança áreas urbanas sem passeio"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Estende liberdade de sentido da área urbana à via rural — ignora §3º"
+              ],
+              [
+                "B — termo_unico",
+                "Proíbe pedestres na pista sem acostamento — §3º autoriza pelo bordo"
+              ],
+              [
+                "D — numero_vizinho",
+                "Aplica faixa de segurança do art. 69 a trecho rural — regra de travessia, não de circulação pela pista"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos do enunciado → gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Elemento",
+              "Conclusão"
+            ],
+            "linhas": [
+              [
+                "Trecho rural da BR-230 sem acostamento",
+                "Aplica-se o §3º"
+              ],
+              [
+                "Pedestre no mesmo sentido do fluxo",
+                "Irregular — viola sentido contrário"
+              ],
+              [
+                "Pedestre em sentido contrário",
+                "Regular — cumpre §3º"
+              ],
+              [
+                "Resultado",
+                "Gabarito C"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "§2º × §3º — regra urbana e rural",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Dispositivo",
+              "Função no caso"
+            ],
+            "linhas": [
+              [
+                "Art. 68, §2º — vizinho",
+                "Urbano sem passeio — bordo e fila única"
+              ],
+              [
+                "Art. 68, §3º",
+                "Rural sem acostamento — acrescenta sentido contrário"
+              ],
+              [
+                "Prioridade sobre veículos",
+                "Comum aos dois parágrafos"
+              ],
+              [
+                "Sinalização proibitiva",
+                "Exceção em ambos os parágrafos"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 68, §3º — via rural",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 68, §3º",
+            "texto": "§ 3º Nas vias rurais, quando não houver acostamento ou quando não for possível a utilização dele, a circulação de pedestres, na pista de rolamento, será feita com prioridade sobre os veículos, pelos bordos da pista, em fila única, em sentido contrário ao deslocamento de veículos, exceto em locais proibidos pela sinalização e nas situações em que a segurança ficar comprometida.",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 20,
+                "motivo": "fluxo — gatilho via rural do caso",
+                "texto_grifado": "§ 3º Nas vias rurais"
+              },
+              {
+                "inicio": 22,
+                "fim": 96,
+                "motivo": "caso — ausência de acostamento na BR-230",
+                "texto_grifado": "quando não houver acostamento ou quando não for possível a utilização dele"
+              },
+              {
+                "inicio": 231,
+                "fim": 279,
+                "motivo": "contraste — sentido exigido que o pedestre ignorou",
+                "texto_grifado": "em sentido contrário ao deslocamento de veículos"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 68, §2º — via urbana",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 68, §2º",
+            "texto": "§ 2º Nas áreas urbanas, quando não houver passeios ou quando não for possível a utilização destes, a circulação de pedestres na pista de rolamento será feita com prioridade sobre os veículos, pelos bordos da pista, em fila única, exceto em locais proibidos pela sinalização e nas situações em que a segurança ficar comprometida.",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 22,
+                "motivo": "hierarquia — parágrafo vizinho urbano",
+                "texto_grifado": "§ 2º Nas áreas urbanas"
+              },
+              {
+                "inicio": 24,
+                "fim": 97,
+                "motivo": "mapa — hipótese sem passeio na cidade",
+                "texto_grifado": "quando não houver passeios ou quando não for possível a utilização destes"
+              },
+              {
+                "inicio": 192,
+                "fim": 228,
+                "motivo": "contraste — não exige sentido contrário",
+                "texto_grifado": "pelos bordos da pista, em fila única"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "URBANO §2º = bordo + fila única · RURAL §3º = + sentido contrário.\nNear: área urbana sem passeio — não exige sentido contrário (§2º).\nFar: ciclista desmontado na calçada — equipara-se ao pedestre (§1º).\nNão muda: rural sem acostamento exige sentido oposto ao fluxo.\nCadeia: vizinho = §2º (regra urbana sem passeio).",
+            "destaques": [
+              "§2º",
+              "§3º",
+              "urbana",
+              "§1º"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.503/97 — CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

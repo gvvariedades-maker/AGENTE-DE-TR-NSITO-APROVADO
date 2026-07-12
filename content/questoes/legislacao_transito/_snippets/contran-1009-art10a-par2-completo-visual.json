@@ -1,0 +1,307 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 265,
+  "fundamento_slug": "CONTRAN_1009_art_10A_par2",
+  "macete_visual": "Segunda via ≠ renovação · marco = emissão original",
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: invocou nova emissão",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — segunda via recalcula calendário para 12/02/2029: errado.\nB — marco é última coleta toxicológica, não emissão da CNH: desloca âncora da emissão original.\nD — DETRAN-PB adia vencimento localmente: confunde competência.\n\nPegadinha: nova data na segunda via não reinicia o periódico.",
+        "destaques": [
+          "segunda via",
+          "12/02/2029",
+          "15/09/2026"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "EMISSÃO ORIGINAL: data registrada no RENACH que ancora o calendário — §1º.\n\nSEGUNDA VIA: reemissão do documento por perda ou dano — não altera calendário — §2º.\n\nRENOVAÇÃO: novo ciclo de validade da CNH — reinicia contagem do caput do art. 10-A.",
+        "destaques": [
+          "EMISSÃO ORIGINAL",
+          "SEGUNDA VIA",
+          "RENOVAÇÃO"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: segunda via altera vencimento?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Segunda via com nova data de emissão?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Condutor pede reinício do calendário?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Vencimento mantido — gabarito C",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — caso do enunciado"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — trava da segunda via"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Marcos do calendário periódico",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Evento",
+          "Efeito no vencimento"
+        ],
+        "linhas": [
+          {
+            "faixa": "Emissão original — 15/03/2024",
+            "classificacao": "Marco do §1º → vence 15/09/2026",
+            "destaque": true
+          },
+          {
+            "faixa": "Segunda via — 12/08/2026",
+            "classificacao": "Sem alteração — §2º",
+            "destaque": true
+          },
+          {
+            "faixa": "Renovação da CNH",
+            "classificacao": "Reinicia ciclo do caput",
+            "destaque": false
+          },
+          {
+            "faixa": "Última coleta toxicológica",
+            "classificacao": "Não ancora calendário do §1º",
+            "destaque": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: nova emissão = novo prazo",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a lei diz ✓"
+        ],
+        "linhas": [
+          [
+            "Data da segunda via reinicia dois anos e seis meses",
+            "§2º proíbe alterar calendário do §1º"
+          ],
+          [
+            "DETRAN municipal adia vencimento",
+            "Calendário calculado pelo órgão máximo da União"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Trata segunda via como renovação que reinicia calendário — ignora §2º"
+          ],
+          [
+            "B — numero_vizinho",
+            "Ancora prazo na última coleta em vez da emissão da CNH do §1º"
+          ],
+          [
+            "D — competencia_snt",
+            "Atribui ao DETRAN-PB flexibilizar calendário — competência do órgão máximo da União"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos do enunciado → gabarito",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Elemento",
+          "Conclusão"
+        ],
+        "linhas": [
+          [
+            "Emissão original 15/03/2024 no RENACH",
+            "Marco do §1º — vence 15/09/2026"
+          ],
+          [
+            "Segunda via 12/08/2026",
+            "Não altera calendário — §2º"
+          ],
+          [
+            "Alegação de vencimento 12/02/2029",
+            "Incorreta — ignora §2º"
+          ],
+          [
+            "Resultado",
+            "Gabarito C — vencimento permanece 15/09/2026"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "§1º × §2º — regra e trava",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Art. 10-A, §1º — vizinho",
+            "Calendário pela emissão original no RENACH"
+          ],
+          [
+            "Art. 10-A, §2º",
+            "Segunda via não altera calendário do §1º"
+          ],
+          [
+            "Caput art. 10-A",
+            "Periodicidade de dois anos e seis meses"
+          ],
+          [
+            "CTB art. 165-D",
+            "Penalidade se vencido sem exceção aplicável"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 10-A, §§1º e 2º — calendário periódico",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 923/2022 art. 10-A, §§1º e 2º (Res. 1.009/2024)",
+        "texto": "§ 1º O calendário de realização dos exames toxicológicos periódicos será calculado pelo órgão máximo executivo de trânsito da União com base na data da emissão da CNH registrada no RENACH, respeitada a periodicidade de dois anos e seis meses, nos termos do caput. §2º A emissão de segunda via da CNH não alterará o calendário estabelecido no §1º.",
+        "trechos_grifados": [
+          {
+            "inicio": 0,
+            "fim": 187,
+            "motivo": "hierarquia — marco do calendário no caso",
+            "texto_grifado": "§ 1º O calendário de realização dos exames toxicológicos periódicos será calculado pelo órgão máximo executivo de trânsito da União com base na data da emissão da CNH registrada no RENACH"
+          },
+          {
+            "inicio": 189,
+            "fim": 263,
+            "motivo": "mapa — periodicidade de dois anos e seis meses",
+            "texto_grifado": "respeitada a periodicidade de dois anos e seis meses, nos termos do caput."
+          },
+          {
+            "inicio": 264,
+            "fim": 346,
+            "motivo": "contraste — trava da segunda via",
+            "texto_grifado": "§2º A emissão de segunda via da CNH não alterará o calendário estabelecido no §1º."
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 10-A, caput — periodicidade",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 923/2022 art. 10-A, caput (Res. 1.009/2024)",
+        "texto": "Art. 10-A. Além da realização do exame previsto no art. 10 desta Resolução, os condutores das categorias C, D e E com idade inferior a setenta anos serão submetidos a novo exame a cada período de dois anos e seis meses, a partir da obtenção ou renovação da CNH, nos termos do § 2º do art. 148-A do CTB, independentemente da validade dos demais exames de que trata o inciso I do art. 147 do CTB.",
+        "trechos_grifados": [
+          {
+            "inicio": 0,
+            "fim": 74,
+            "motivo": "fluxo — sujeitos do exame periódico",
+            "texto_grifado": "Art. 10-A. Além da realização do exame previsto no art. 10 desta Resolução"
+          },
+          {
+            "inicio": 148,
+            "fim": 220,
+            "motivo": "caso — periodicidade que o condutor tentou reiniciar",
+            "texto_grifado": "serão submetidos a novo exame a cada período de dois anos e seis meses, "
+          },
+          {
+            "inicio": 222,
+            "fim": 275,
+            "motivo": "mapa — renovação reinicia; segunda via não",
+            "texto_grifado": "partir da obtenção ou renovação da CNH, nos termos do"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near/far-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "SEGUNDA VIA ≠ RENOVAÇÃO · marco = emissão original no RENACH (§1º–§2º).\nNear: segunda via após vencimento — calendário segue original; mudança para B em 30 dias pode afastar 165-D.\nFar: renovação da CNH C reinicia ciclo do caput — segunda via não equivale a renovação.\nNão muda: §2º veda alterar calendário do §1º pela segunda via.\nCadeia: vizinho = §1º (emissão original no RENACH).",
+        "destaques": [
+          "SEGUNDA VIA",
+          "RENOVAÇÃO",
+          "§1º",
+          "165-D"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 1.009/2024",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.009, DE 24 DE ABRIL DE 2024.pdf"
+    },
+    {
+      "rotulo": "Res. CONTRAN 923/2022",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 923, DE 28 DE MARÇO DE 2022.pdf"
+    }
+  ],
+  "eixos_legais": [
+    "CONTRAN_923_art_10A_par1",
+    "CONTRAN_923_art_10A_par2",
+    "CTB_art_165-D"
+  ]
+}

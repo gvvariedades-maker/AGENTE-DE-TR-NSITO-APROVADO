@@ -1,0 +1,244 @@
+{
+  "versao": 2,
+  "arquetipo": "matriz_assertivas",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "todos",
+  "duracao_estimada_seg": 235,
+  "fundamento_slug": "CONTRAN_968_art_6_1",
+  "macete_visual": "1ª direita · 2ª esquerda · sem oculta",
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: a isca é a assertiva III",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B (I e II corretas).\n\nA — marcou só II sobre segunda gravação; esqueceu I da primeira na longarina direita.\nC — comprou III falsa: identificação oculta obrigatória no semirreboque de carga.\nD — tratou todas corretas, inclusive obrigatoriedade da identificação oculta.\n\nPegadinha: semirreboques estão isentos da identificação oculta — não obrigados.",
+        "destaques": [
+          "Gabarito B",
+          "III",
+          "semirreboque"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "PRIMEIRA GRAVAÇÃO: VIN principal no chassi ou longarina — regra do §6 do art. 5º para semirreboques.\n\nSEGUNDA GRAVAÇÃO: réplica do VIN em outro ponto — longarina esquerda no semirreboque.\n\nIDENTIFICAÇÃO OCULTA: número VIS ou VIN em local não visível — inciso XIII do art. 4º, com isenções no §4.",
+        "destaques": [
+          "PRIMEIRA GRAVAÇÃO",
+          "SEGUNDA GRAVAÇÃO",
+          "OCULTA"
+        ]
+      }
+    },
+    {
+      "id": "matriz",
+      "titulo": "Classificar I–III",
+      "secao": "metodo",
+      "tipo": "matriz_assertivas",
+      "conteudo": {
+        "itens": [
+          {
+            "id": "I",
+            "texto": "1ª gravação na longarina direita — correta",
+            "correto": true
+          },
+          {
+            "id": "II",
+            "texto": "2ª gravação na longarina esquerda — correta",
+            "correto": true
+          },
+          {
+            "id": "III",
+            "texto": "Identificação oculta obrigatória — ERRADA (§4 isenta)",
+            "correto": false
+          }
+        ],
+        "gabarito_resumo": "I e II corretas → alternativa B"
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Onde gravar o VIN no semirreboque",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Gravação",
+          "Local legal"
+        ],
+        "linhas": [
+          {
+            "faixa": "1ª gravação — assertiva I",
+            "classificacao": "Longarina direita, até 10% da longarina",
+            "destaque": true
+          },
+          {
+            "faixa": "2ª gravação — assertiva II",
+            "classificacao": "Longarina esquerda, mesmas especificações",
+            "destaque": true
+          },
+          {
+            "faixa": "Identificação oculta — assertiva III",
+            "classificacao": "Isenta para semirreboques"
+          },
+          {
+            "faixa": "Automóvel comum",
+            "classificacao": "2ª gravação obrigatória — regra geral"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Assertiva-isca: III",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que a III afirma ✗",
+          "O que o §4 diz ✓"
+        ],
+        "linhas": [
+          [
+            "Identificação oculta obrigatória em semirreboques",
+            "Semirreboques estão isentos do inciso XIII"
+          ],
+          [
+            "Ausência de identificação oculta configura irregularidade",
+            "Isenção alcança reboques e semirreboques"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — termo_unico",
+            "Marca só II — ignora I correta da primeira gravação na longarina direita"
+          ],
+          [
+            "C — regra_excecao",
+            "Inclui III falsa — semirreboque isento da identificação oculta"
+          ],
+          [
+            "D — gravidade",
+            "Compra III falsa e trata todas as assertivas como corretas"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Montando o gabarito",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Assertiva / fato",
+          "V/F"
+        ],
+        "linhas": [
+          [
+            "I — semirreboque com VIN na longarina direita",
+            "Verdadeira"
+          ],
+          [
+            "II — segunda gravação na longarina esquerda",
+            "Verdadeira"
+          ],
+          [
+            "III — ausência de identificação oculta irregular",
+            "Falsa — isenção do §4"
+          ],
+          [
+            "Resultado",
+            "Alternativa B"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 5º, §6 — primeira gravação",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 968/2022, art. 5º, §6",
+        "texto": "§ 6º Nos veículos reboques, semirreboques e nos veículos de transporte coletivo de passageiros M3, o VIN deverá ser gravado: I - na face lateral externa da longarina direita, ou estrutura equivalente; e III - numa porção delimitada a no máximo 10% do tamanho total da longarina e em local de fácil acesso e visualização, no caso de reboques e semirreboques, considerando a posição final da gravação após a montagem do veículo.",
+        "trechos_grifados": [
+          {
+            "inicio": 129,
+            "fim": 173,
+            "motivo": "matriz — assertiva I correta na vistoria",
+            "texto_grifado": "na face lateral externa da longarina direita"
+          },
+          {
+            "inicio": 209,
+            "fim": 247,
+            "motivo": "gradacao — porção de até 10% da longarina",
+            "texto_grifado": "numa porção delimitada a no máximo 10%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 6º, §1, e art. 4º, §4",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 968/2022, art. 6º, §1, e art. 4º, §4",
+        "texto": "§ 1º Para reboques e semirreboques, a segunda gravação do VIN deve ser feita na longarina esquerda, com as mesmas especificações da primeira gravação. § 4º Os ciclomotores, motonetas, motocicletas, triciclos, quadriciclos, reboques e semirreboques e os veículos de transporte coletivo de passageiros M3 estão isentos de atendimento ao inciso XIII do caput.",
+        "trechos_grifados": [
+          {
+            "inicio": 77,
+            "fim": 98,
+            "motivo": "caso — segunda gravação no semirreboque vistoriado",
+            "texto_grifado": "na longarina esquerda"
+          },
+          {
+            "inicio": 303,
+            "fim": 355,
+            "motivo": "contraste — afasta obrigatoriedade da III",
+            "texto_grifado": "estão isentos de atendimento ao inciso XIII do caput"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near/far-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "1ª = longarina direita · 2ª = longarina esquerda · semirreboque = sem oculta.\nNear: reboque de mesma carga — mesma regra de longarinas opostas.\nFar: caminhão com PBT ≥ 4.536 kg exige identificação da caixa de câmbio — outro identificador do capítulo.\nNão muda: semirreboque exige duas gravações em longarinas opostas; identificação oculta não se aplica.\nCadeia: vizinho = §4 do art. 4º (isenção do inciso XIII).",
+        "destaques": [
+          "direita",
+          "esquerda",
+          "reboque",
+          "câmbio",
+          "inciso XIII"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 968/2022",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 968, DE 20 DE JUNHO DE 2022.pdf"
+    }
+  ]
+}

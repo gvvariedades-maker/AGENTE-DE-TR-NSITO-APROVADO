@@ -1,0 +1,292 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 265,
+  "fundamento_slug": "CONTRAN_1013_art_9_par6",
+  "macete_visual": "Homologado + art. 8 → 209-A · §6 veda",
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: PRF autuou sem homologação",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — prazo vencido sempre autoriza 209-A mesmo sem homologação: errado.\nB — CONTRAN homologa retroativamente e convalida o auto: errado.\nD — STTP exclusiva em rodovia federal: confunde esfera.\n\nPegadinha: vencer o prazo da tarifa não basta — sistema precisa estar homologado.",
+        "destaques": [
+          "homologação",
+          "prazo vencido",
+          "209-A"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "HOMOLOGAÇÃO: aprovação do órgão máximo executivo de trânsito da União antes de operar o free flow.\n\nART. 8º: direito do usuário a registros digitais de passagem e situação de pagamento.\n\n209-A: infração de evasão — só autuável se regra e exceção do art. 9º permitirem.",
+        "destaques": [
+          "HOMOLOGAÇÃO",
+          "ART. 8º",
+          "209-A"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: cabe autuação 209-A?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Sistema free flow sem homologação do órgão máximo da União?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "PRF lavrou auto por evasão de pedágio?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Vedada lavratura — gabarito C",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — caso do enunciado"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — auto nulo pelo §6"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Regra × exceção no art. 9º",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Situação",
+          "Autuação 209-A"
+        ],
+        "linhas": [
+          {
+            "faixa": "Caput — prazo art. 7 vencido + sistema regular",
+            "classificacao": "Configura infração",
+            "destaque": false
+          },
+          {
+            "faixa": "§6 — não homologado ou art. 8 descumprido",
+            "classificacao": "Vedada lavratura",
+            "destaque": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: prazo vencido = sempre multa",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a lei diz ✓"
+        ],
+        "linhas": [
+          [
+            "35 dias sem tarifa → autua sempre",
+            "§6 afasta infração se não homologado"
+          ],
+          [
+            "CONTRAN convalida depois",
+            "Homologação antes da operação — art. 3º §1º"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Generaliza o caput do art. 9º — ignora §6 que afasta infração sem homologação"
+          ],
+          [
+            "B — competencia_snt",
+            "Atribui homologação retroativa ao CONTRAN — §1º do art. 3º exige homologação prévia"
+          ],
+          [
+            "D — competencia_snt",
+            "Inventa exclusividade da STTP municipal em rodovia federal — órgão rodoviário competente"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos do enunciado → gabarito",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Elemento",
+          "Conclusão"
+        ],
+        "linhas": [
+          [
+            "BR-230 — rodovia federal concessão",
+            "Esfera federal/rodoviária"
+          ],
+          [
+            "Free flow sem homologação do órgão máximo União",
+            "Viola art. 3º §1º — aciona §6"
+          ],
+          [
+            "PRF autua 209-A no 35º dia",
+            "Auto nulo — §6 veda lavratura"
+          ],
+          [
+            "Resultado",
+            "Gabarito C — exceção do §6"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Caput × §6 × homologação",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Art. 3º §1º — vizinho",
+            "Homologação obrigatória antes de operar"
+          ],
+          [
+            "Art. 9º caput",
+            "Regra geral — inadimplência art. 7 → 209-A"
+          ],
+          [
+            "Art. 9º §6",
+            "Exceção — não homologado ou art. 8 → veda 209-A"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 9º, §6 — exceção à autuação",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 1.013/2024 art. 9º, §6",
+        "texto": "A utilização de sistemas de livre passagem (free flow) não homologados pelo órgão máximo executivo de trânsito da União, ou a não observância ao disposto no art. 8º desta Resolução afastam a infração disposta no caput, sendo vedada a lavratura de auto de infração de trânsito com base no art. 209-A do CTB.",
+        "trechos_grifados": [
+          {
+            "inicio": 55,
+            "fim": 119,
+            "motivo": "fluxo — sistema não homologado",
+            "texto_grifado": "não homologados pelo órgão máximo executivo de trânsito da União"
+          },
+          {
+            "inicio": 126,
+            "fim": 164,
+            "motivo": "contraste — art. 8 descumprido também afasta",
+            "texto_grifado": "não observância ao disposto no art. 8º"
+          },
+          {
+            "inicio": 225,
+            "fim": 298,
+            "motivo": "caso — vedada lavratura no enunciado",
+            "texto_grifado": "vedada a lavratura de auto de infração de trânsito com base no art. 209-A"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 3º, §1º — homologação prévia",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 1.013/2024 art. 3º, §1º",
+        "texto": "Os sistemas de livre passagem (free flow) devem ser homologados junto ao órgão máximo executivo de trânsito da União, conforme especificações por ele definidas em normativo específico, antes de iniciada sua operação.",
+        "trechos_grifados": [
+          {
+            "inicio": 42,
+            "fim": 116,
+            "motivo": "hierarquia — homologação pelo órgão máximo da União",
+            "texto_grifado": "devem ser homologados junto ao órgão máximo executivo de trânsito da União"
+          },
+          {
+            "inicio": 185,
+            "fim": 215,
+            "motivo": "hierarquia — antes de operar",
+            "texto_grifado": "antes de iniciada sua operação"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near/far-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "209-A só se: homologado + art. 8 ok + prazo art. 7 vencido.\nNear: homologado, mas sem acesso digital — §6 também veda.\nFar: homologado, art. 8 ok e 35 dias sem tarifa — aí cabe 209-A.\nNão muda: sem homologação ou sem art. 8, vedada lavratura 209-A.\nCadeia: próximo = art. 3º §1º (homologação antes de operar).",
+        "destaques": [
+          "homologado",
+          "art. 8",
+          "35 dias",
+          "art. 3º §1º"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 1.013/2024",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.013, DE 16 DE OUTUBRO DE 2024.pdf"
+    }
+  ],
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Prazo do art. 7º vencido não basta — §6 veda 209-A se free flow não homologado",
+    "eixos_legais": [
+      "CONTRAN_1013_art_9_par6",
+      "CONTRAN_1013_art_9",
+      "CONTRAN_1013_art_3_par1"
+    ],
+    "isca_por_alternativa": {
+      "A": "prazo do art. 7º sempre autoriza 209-A mesmo sem homologação",
+      "B": "CONTRAN homologa retroativamente e convalida o auto da PRF",
+      "D": "STTP tem competência exclusiva de autuar evasão em rodovia federal"
+    }
+  }
+}

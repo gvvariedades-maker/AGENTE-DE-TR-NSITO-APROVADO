@@ -1,0 +1,290 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "todos",
+  "duracao_estimada_seg": 255,
+  "fundamento_slug": "CONTRAN_955_art_7_II",
+  "macete_visual": "Noite = luz + refletor vermelhos",
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: sofá à noite sem luz vermelha",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — fita diurna dispensa luz e refletor noturnos na projeção traseira.\nC — hipótese seria derramamento na via, não sinalização noturna.\nD — fiscalização exclusiva do DETRAN com concessão de AET.\n\nPegadinha: período noturno exige luz vermelha e refletor vermelho.",
+        "destaques": [
+          "Gabarito B",
+          "noite",
+          "DETRAN"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CARGA INDIVISÍVEL: item que não pode ser fracionado sem dano — sofá no caso.\n\nPROJEÇÃO TRASEIRA: carga que sobressai além da caçamba — inciso II do art. 7º.\n\nAET: Autorização Especial de Trânsito — dispensada e vedada para este transporte.",
+        "destaques": [
+          "INDIVISÍVEL",
+          "PROJEÇÃO",
+          "AET"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: sinalização regular à noite?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Carga projeta além do veículo para trás?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Período noturno com luz vermelha e refletor vermelho?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Irregular — gabarito B",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — sofá além da caçamba"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Não — só fita amarela diurna"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Sinalização da projeção traseira",
+      "secao": "mapa",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Período",
+          "Requisito"
+        ],
+        "linhas": [
+          [
+            "Diurno — inciso II",
+            "Bem visível e sinalizada"
+          ],
+          [
+            "Noturno — inciso II — caso",
+            "Luz vermelha + refletor vermelho"
+          ],
+          [
+            "AET — art. 4º",
+            "Dispensada e vedada"
+          ],
+          [
+            "Derramamento — art. 231, II",
+            "Hipótese distinta"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: fita diurna basta à noite",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o condutor alega ✗",
+          "O que o inciso II diz ✓"
+        ],
+        "linhas": [
+          [
+            "Fita amarela visível de dia dispensa requisito noturno",
+            "Período noturno exige luz vermelha e refletor vermelho"
+          ],
+          [
+            "Precisa de AET do DETRAN-PB",
+            "§2º dispensa AET e §3º veda concessão"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Estende sinalização diurna à noite — inciso II exige luz e refletor vermelhos"
+          ],
+          [
+            "C — numero_vizinho",
+            "Aplica art. 231, II, de derramamento — caso é falta de sinalização noturna"
+          ],
+          [
+            "D — competencia_snt",
+            "Atribui AET e fiscalização exclusivas ao DETRAN — STTP verifica na via"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos do enunciado → gabarito",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Elemento",
+          "Conclusão"
+        ],
+        "linhas": [
+          [
+            "Sofá indivisível projetando além da caçamba",
+            "Inciso II do art. 7º"
+          ],
+          [
+            "Fiscalização noturna da STTP",
+            "Exige luz e refletor vermelhos"
+          ],
+          [
+            "Fita refletiva amarela de dia",
+            "Não substitui requisito noturno"
+          ],
+          [
+            "Pedido de AET",
+            "Vedada pelo §3º do art. 4º"
+          ],
+          [
+            "Resultado",
+            "Gabarito B"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Art. 7º, II × art. 4º, §2º",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Art. 7º, II — gabarito",
+            "Luz vermelha + refletor noturnos na projeção"
+          ],
+          [
+            "Art. 4º, §2º — vizinho",
+            "Dispensa AET para este transporte"
+          ],
+          [
+            "Art. 4º, §3º",
+            "Veda concessão de AET em caminhonete"
+          ],
+          [
+            "Art. 11, V, b",
+            "Remete ao art. 235 do CTB"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 7º, II — sinalização noturna",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 955/2022, art. 7º, II",
+        "texto": "II - as cargas que sobressaiam ou se projetem além do veículo para trás, deverão estar bem visíveis e sinalizadas e, no período noturno, essa sinalização deverá ser feita por meio de uma luz vermelha e um dispositivo refletor de cor vermelha;",
+        "trechos_grifados": [
+          {
+            "inicio": 117,
+            "fim": 135,
+            "motivo": "fluxo — fiscalização noturna da STTP",
+            "texto_grifado": "no período noturno"
+          },
+          {
+            "inicio": 187,
+            "fim": 241,
+            "motivo": "contraste — fita amarela diurna não basta",
+            "texto_grifado": "luz vermelha e um dispositivo refletor de cor vermelha"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 4º, §2º e §3º — AET",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 955/2022, art. 4º, §2º e §3º",
+        "texto": "§ 2º. Para a realização do transporte de cargas disciplinado por esta Resolução não se faz necessária a obtenção de Autorização Especial de Trânsito - AET. § 3º. É vedada, em qualquer hipótese, a concessão de AET para o transporte de cargas ou bicicletas nas partes externas dos veículos classificados nas espécies automóvel, caminhonete, camioneta e utilitário.",
+        "trechos_grifados": [
+          {
+            "inicio": 80,
+            "fim": 148,
+            "motivo": "hierarquia — vizinho que dispensa AET no caso",
+            "texto_grifado": "não se faz necessária a obtenção de Autorização Especial de Trânsito"
+          },
+          {
+            "inicio": 162,
+            "fim": 212,
+            "motivo": "caso — condutor pede AET do DETRAN-PB",
+            "texto_grifado": "É vedada, em qualquer hipótese, a concessão de AET"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near/far-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Projeção traseira · noite = luz vermelha + refletor · AET = vedada.\nNear: mesma carga de dia com bandeira visível — à noite volta a exigência de luz e refletor.\nFar: extensor de caçamba encobrindo lanternas — art. 5º (régua/2ª placa), não sinalização do inciso II.\nNão muda: projeção traseira exige sinalização noturna vermelha; AET não se aplica.\nCadeia: vizinho = §2º do art. 4º (dispensa de AET).",
+        "destaques": [
+          "noite",
+          "bandeira",
+          "extensor",
+          "§2º"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 955/2022",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 955, DE 28 DE MARÇO DE 2022.pdf"
+    },
+    {
+      "rotulo": "CTB art. 235",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

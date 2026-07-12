@@ -1,0 +1,328 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_procedimentos_operacionais",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_985_mbft_mesma_raiz",
+    "enunciado": "Durante blitz da STTP em Campina Grande/PB, agente aborda automóvel em movimento na Av. Epitácio Pessoa e constata condutor e passageiro do banco dianteiro sem cinto de segurança. Pretende lavrar dois AITs distintos — código 507-81 para o condutor e 507-82 para o passageiro — entendendo tratar-se de infrações concomitantes independentes. Considerando o MBFT (Resolução CONTRAN nº 985/2022), seção 7 — Autuação, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Deve lavrar um único AIT pela infração de não utilizar o cinto de segurança, consignando no campo observações a constatação do condutor e do passageiro sem o dispositivo, pois os códigos 507-81 e 507-82 possuem mesma raiz — considera-se apenas uma infração.",
+      "B": "Deve lavrar dois AITs distintos, pois condutor e passageiro cometem infrações concomitantes independentes com códigos diferentes.",
+      "C": "Deve lavrar um único AIT apenas contra o condutor, por ser a infração de maior risco à integridade física no banco dianteiro.",
+      "D": "A STTP não pode incluir o passageiro no auto, pois a responsabilização do ocupante por cinto de segurança compete exclusivamente ao DETRAN-PB."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "MBFT seção 7 — uma infração por auto × mesma raiz de código (três primeiros dígitos) × campo observações para especificar condutas — distinção das concomitantes com raízes distintas.",
+      "fundamento_legal": "MBFT (Res. CONTRAN 985/2022), seção 7: \"O agente da autoridade só poderá registrar uma infração por auto e, no caso da constatação de infrações em que os códigos infracionais possuam a mesma raiz (os três primeiros dígitos), considerar-se-á apenas uma infração.\" MBFT, seção 7, campo Observações, alínea a): \"poderá ser preenchido, consignando informações com o objetivo de especificar a conduta constatada e/ou adicionar outras informações relevantes, conforme exemplos constantes nas fichas de fiscalização.\" CTB, art. 167: uso do cinto de segurança pelo condutor e passageiros.",
+      "passo_a_passo": [
+        "1. Caso: veículo em movimento com condutor e passageiro sem cinto — códigos 507-81 e 507-82, mesma raiz 507.",
+        "2. B erra por regra_excecao (aplica concomitantes ignorando mesma raiz — raízes distintas exigiriam tantos AITs quantas condutas); C erra por gravidade (prioriza só o condutor sem previsão no MBFT); D erra por competencia_snt (atribui responsabilização do passageiro exclusivamente ao DETRAN-PB — STTP fiscaliza na via).",
+        "3. A correta: um AIT, uma infração — observações detalham condutor e passageiro sem cinto."
+      ],
+      "pegadinha": "A IDECAN induz a dois AITs porque há duas pessoas sem cinto — mas códigos com mesma raiz contam como uma só infração por auto.",
+      "macete": "MESMA RAIZ = 1 INFRAÇÃO · 3 dígitos iguais · OBS detalha quem errou.",
+      "estudo_reverso": [
+        "MBFT seção 7 mesma raiz",
+        "MBFT seção 7 observações",
+        "CTB art. 167"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Duas pessoas sem cinto não geram dois AITs se os códigos têm a mesma raiz 507",
+      "eixos_legais": [
+        "CONTRAN_985_mbft_mesma_raiz",
+        "CONTRAN_985_mbft_observacoes",
+        "CTB_art_167"
+      ],
+      "eixo_vizinho": "CONTRAN_985_mbft_concomitantes",
+      "isca_por_alternativa": {
+        "B": "dois AITs como concomitantes independentes com códigos 507-81 e 507-82",
+        "C": "autua só o condutor por ser infração de maior risco no banco dianteiro",
+        "D": "responsabilização do passageiro compete exclusivamente ao DETRAN-PB"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "gravidade",
+        "competencia_snt"
+      ],
+      "near_transfer": "Mesmo veículo com condutor sem cinto e segurando celular — raízes 507 e 745 distintas → dois AITs concomitantes.",
+      "far_transfer": "Veículo estacionado com condutor sem cinto e sem condução constatada — regra das não simultâneas: autua só estacionamento, não o cinto.",
+      "o_que_nao_muda": "Códigos com mesma raiz (três primeiros dígitos) contam como uma infração por auto — observações especificam a conduta.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "mbft",
+      "resolucao_985",
+      "mesma_raiz",
+      "cinto",
+      "507",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_985_mbft_mesma_raiz",
+      "macete_visual": "Mesma raiz = 1 infração",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A: condutor e passageiro sem cinto — mesma raiz 507 = um AIT com observações.",
+            "destaques": ["Gabarito A", "mesma raiz", "observações"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Duas pessoas × um auto",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "MBFT ✓"],
+            "linhas": [
+              ["Cada ocupante = 1 AIT", "Mesma raiz = 1 infração"],
+              ["507-81 e 507-82 = concomitantes", "Raiz 507 unifica"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "MESMA RAIZ = 1 INFRAÇÃO.\nOBS detalha quem errou.",
+            "destaques": ["MESMA RAIZ", "OBS"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 985/2022 — MBFT",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 985, DE 15 DE DEZEMBRO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "todos",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "CONTRAN_985_mbft_mesma_raiz",
+      "macete_visual": "Mesma raiz = 1 infração · OBS detalha",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: duas pessoas ≠ dois autos",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — dois AITs: confunde concomitantes com mesma raiz de código.\nC — só condutor: inventa prioridade para o motorista sem base no MBFT.\nD — passageiro exclusivo do DETRAN: confunde fiscalização na via.\n\nCondutor e passageiro sem cinto — códigos 507-81 e 507-82.",
+            "destaques": ["Gabarito A", "mesma raiz", "DETRAN"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "MESMA RAIZ: os três primeiros dígitos do código infracional são idênticos — 507 no caso.\n\nUMA INFRAÇÃO POR AUTO: cada AIT registra no máximo uma infração.\n\nOBSERVAÇÕES: campo para especificar a conduta constatada quando necessário.",
+            "destaques": ["MESMA RAIZ", "UMA INFRAÇÃO", "OBSERVAÇÕES"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: quantos AITs lavrar?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Os códigos infracionais têm mesma raiz?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Há mais de uma conduta no mesmo formulário?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Um AIT com observações — gabarito A",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — raiz 507"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — condutor e passageiro sem cinto"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa: regras de contagem",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Hipótese MBFT", "Quantidade de AITs"],
+            "linhas": [
+              { "faixa": "Mesma raiz — caso 507", "classificacao": "1 AIT — uma infração", "destaque": true },
+              { "faixa": "Concorrentes", "classificacao": "1 AIT — conduta principal" },
+              { "faixa": "Concomitantes — raízes distintas", "classificacao": "Tantos AITs quantas condutas" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: cada ocupante = 1 AIT",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o agente pensa ✗", "O que o MBFT diz ✓"],
+            "linhas": [
+              [
+                "507-81 e 507-82 geram dois autos",
+                "Mesma raiz 507 = apenas uma infração"
+              ],
+              [
+                "Concomitante sempre unifica",
+                "Concomitante exige raízes distintas e condutas independentes"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — regra_excecao",
+                "Aplica concomitantes ignorando a regra da mesma raiz"
+              ],
+              [
+                "C — gravidade",
+                "Prioriza só o condutor sem previsão no MBFT"
+              ],
+              [
+                "D — competencia_snt",
+                "Atribui passageiro exclusivamente ao DETRAN-PB"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos do enunciado → gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              ["Automóvel em movimento na Av. Epitácio Pessoa", "Fiscalização válida"],
+              ["Condutor e passageiro sem cinto", "Duas condutas constatadas"],
+              ["Códigos 507-81 e 507-82", "Mesma raiz 507"],
+              ["Registro correto", "1 AIT + observações"],
+              ["Resultado", "Gabarito A"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Mesma raiz × concomitantes × observações",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Regra MBFT", "Função no caso"],
+            "linhas": [
+              ["Mesma raiz — gabarito", "507 unifica condutor e passageiro"],
+              ["Concomitantes — vizinho", "167 + 252 com raízes distintas = 2 AITs"],
+              ["Uma infração por auto", "Limite do formulário"],
+              ["Campo observações", "Especifica condutor e passageiro sem cinto"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "MBFT — mesma raiz de código",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7",
+            "texto": "O agente da autoridade só poderá registrar uma infração por auto e, no caso da constatação de infrações em que os códigos infracionais possuam a mesma raiz (os três primeiros dígitos), considerar-se-á apenas uma infração.",
+            "trechos_grifados": [
+              {
+                "inicio": 23,
+                "fim": 64,
+                "motivo": "mapa — limite de uma infração por AIT",
+                "texto_grifado": "só poderá registrar uma infração por auto"
+              },
+              {
+                "inicio": 135,
+                "fim": 220,
+                "motivo": "contraste — critério de unificação da raiz 507",
+                "texto_grifado": "possuam a mesma raiz (os três primeiros dígitos), considerar-se-á apenas uma infração"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "MBFT — campo observações",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7, campo Observações, alínea a)",
+            "texto": "O campo de Observações do AIT: a) poderá ser preenchido, consignando informações com o objetivo de especificar a conduta constatada e/ou adicionar outras informações relevantes, conforme exemplos constantes nas fichas de fiscalização;",
+            "trechos_grifados": [
+              {
+                "inicio": 99,
+                "fim": 131,
+                "motivo": "caso — detalhar condutor e passageiro sem cinto",
+                "texto_grifado": "especificar a conduta constatada"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "MESMA RAIZ = 1 INFRAÇÃO · 3 dígitos iguais · OBS detalha quem errou.\nNear: cinto + celular no mesmo veículo — raízes 507 e 745 distintas → dois AITs.\nFar: estacionado com condutor sem cinto sem condução — só estacionamento, não cinto.\nNão muda: mesma raiz conta como uma infração por auto.\nCadeia: vizinho = concomitantes com raízes distintas (167 + 252).",
+            "destaques": ["MESMA RAIZ", "celular", "estacionado", "concomitantes"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 985/2022 — MBFT",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 985, DE 15 DE DEZEMBRO DE 2022.pdf"
+        },
+        {
+          "rotulo": "CTB art. 167",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

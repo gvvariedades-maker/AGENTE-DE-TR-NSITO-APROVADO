@@ -1,0 +1,256 @@
+{
+  "versao": 2,
+  "arquetipo": "matriz_assertivas",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "todos",
+  "duracao_estimada_seg": 225,
+  "fundamento_slug": "SENATRAN_966_anexo1_item5",
+  "macete_visual": "3 anos · 70% + 75% · VIII–IX = remoto",
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: a isca é a assertiva I",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito A (II correta).\n\nB — comprou I falsa com atualização bienal.\nC — marcou II e III; III libera módulos finais só à distância.\nD — tratou I, II e III como corretas.\n\nPegadinha: atualização é a cada três anos — não dois.",
+        "destaques": [
+          "Gabarito A",
+          "bienal",
+          "remoto"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CURSO DE FORMAÇÃO: 200 h/a — Anexo I — exige 70% e 75% por módulo.\n\nCURSO DE ATUALIZAÇÃO: 32 h/a — Anexo II — a cada três anos (art. 4º).\n\nMODALIDADES: módulos I–VII podem ser à distância e remoto; VIII–IX só remoto.",
+        "destaques": [
+          "FORMAÇÃO",
+          "ATUALIZAÇÃO",
+          "REMOTO"
+        ]
+      }
+    },
+    {
+      "id": "matriz",
+      "titulo": "Classificar I–III",
+      "secao": "metodo",
+      "tipo": "matriz_assertivas",
+      "conteudo": {
+        "itens": [
+          {
+            "id": "I",
+            "texto": "Atualização bienal — ERRADA (trienal)",
+            "correto": false
+          },
+          {
+            "id": "II",
+            "texto": "70% nota + 75% frequência — correta",
+            "correto": true
+          },
+          {
+            "id": "III",
+            "texto": "VIII–IX à distância — ERRADA (só remoto)",
+            "correto": false
+          }
+        ],
+        "gabarito_resumo": "II correta → alternativa A"
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Prazos e percentuais do curso",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Requisito",
+          "Valor legal"
+        ],
+        "linhas": [
+          {
+            "faixa": "Atualização — art. 4º",
+            "classificacao": "A cada 3 anos",
+            "destaque": true
+          },
+          {
+            "faixa": "Aproveitamento — item 5.2",
+            "classificacao": "Mínimo 70% por módulo",
+            "destaque": true
+          },
+          {
+            "faixa": "Frequência — item 5.4",
+            "classificacao": "Mínimo 75% por módulo",
+            "destaque": true
+          },
+          {
+            "faixa": "Isca bienal",
+            "classificacao": "2 anos — incorreto",
+            "destaque": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Assertiva-isca: I",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que a I afirma ✗",
+          "O que o art. 4º diz ✓"
+        ],
+        "linhas": [
+          [
+            "Atualização a cada dois anos",
+            "Curso de atualização a cada três anos"
+          ],
+          [
+            "Prazo menor facilita matrícula",
+            "Anexo II com 32 h/a mínimas"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "B — numero_vizinho",
+            "Inclui I falsa — troca prazo trienal por bienal"
+          ],
+          [
+            "C — termo_unico",
+            "Marca II correta mas compra III falsa — remoto vira à distância"
+          ],
+          [
+            "D — gravidade",
+            "Compra I e III falsas — trata todas as assertivas como corretas"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Montando o gabarito",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Assertiva",
+          "Veredito"
+        ],
+        "linhas": [
+          [
+            "I — atualização bienal",
+            "Falsa — art. 4º fixa três anos"
+          ],
+          [
+            "II — 70% e 75% por módulo",
+            "Correta — itens 5.2 e 5.4"
+          ],
+          [
+            "III — VIII–IX à distância",
+            "Falsa — item 6.6 só remoto"
+          ],
+          [
+            "Resultado",
+            "II = alternativa A"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 4º — periodicidade da atualização",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Portaria SENATRAN 966/2022 art. 4º",
+        "texto": "Art. 4º O profissional que exerce a atividade de agente de trânsito deverá realizar curso de atualização a cada três anos, conforme estrutura curricular disposta no Anexo II desta Portaria.",
+        "trechos_grifados": [
+          {
+            "inicio": 0,
+            "fim": 67,
+            "motivo": "contraste — sujeito obrigado à atualização",
+            "texto_grifado": "Art. 4º O profissional que exerce a atividade de agente de trânsito"
+          },
+          {
+            "inicio": 68,
+            "fim": 121,
+            "motivo": "gradacao — prazo que a I trocou por dois anos",
+            "texto_grifado": "deverá realizar curso de atualização a cada três anos"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Anexo I — aprovação e modalidades",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Portaria SENATRAN 966/2022 Anexo I itens 5.2, 5.4 e 6.6",
+        "texto": "5.2. Será considerado aprovado no curso de capacitação o aluno que obtiver aproveitamento mínimo de 70 % em cada módulo. 5.4. Com frequência mínima de 75% em cada um dos módulos. 6.6. Os módulos VIII e IX poderão ser realizados na modalidade de ensino remoto.",
+        "trechos_grifados": [
+          {
+            "inicio": 0,
+            "fim": 120,
+            "motivo": "caso — II correta sobre aproveitamento mínimo",
+            "texto_grifado": "5.2. Será considerado aprovado no curso de capacitação o aluno que obtiver aproveitamento mínimo de 70 % em cada módulo."
+          },
+          {
+            "inicio": 121,
+            "fim": 178,
+            "motivo": "gradacao — frequência mínima por módulo",
+            "texto_grifado": "5.4. Com frequência mínima de 75% em cada um dos módulos."
+          },
+          {
+            "inicio": 179,
+            "fim": 259,
+            "motivo": "contraste — III falsa: só remoto, não à distância",
+            "texto_grifado": "6.6. Os módulos VIII e IX poderão ser realizados na modalidade de ensino remoto."
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near/far-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "ATUALIZAÇÃO = 3 ANOS · 70% + 75% POR MÓDULO.\nNear: reprovação em um módulo — refaz prova sem parar os demais (item 5.3).\nFar: curso de atualização — avaliação por observação, sem nota final (item 5.5).\nNão muda: formação exige 70% e 75% em cada módulo.\nCadeia: vizinho = art. 3º (quem ministra o curso no SNT).",
+        "destaques": [
+          "3 ANOS",
+          "70%",
+          "atualização",
+          "art. 3º"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Portaria SENATRAN 966/2022",
+      "path": "conteúdo/senatran/PORTARIA Nº 966, DE 25 DE JULHO DE 2022.pdf"
+    }
+  ],
+  "eixos_legais": [
+    "SENATRAN_966_art_4",
+    "SENATRAN_966_anexo1_item5",
+    "SENATRAN_966_anexo1_item6"
+  ]
+}

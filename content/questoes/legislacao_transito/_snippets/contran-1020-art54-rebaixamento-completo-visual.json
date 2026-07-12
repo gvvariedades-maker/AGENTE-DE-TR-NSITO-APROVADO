@@ -1,0 +1,304 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 265,
+  "fundamento_slug": "CONTRAN_1020_art_54_par2",
+  "macete_visual": "Rebaixar E→B = dispensa I–IV",
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: CFC exigiu art. 52 inteiro",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito A.\n\nB — rebaixamento exige refazer toxicológico e curso prático: errado.\nC — dispensa só aptidão e prático, mantendo toxicológico: ignora ampliação para destino B.\nD — CONTRAN homologa cada rebaixamento: confunde competência.\n\nPegadinha: rebaixar não é mudar de categoria para cima — há dispensa de etapas.",
+        "destaques": [
+          "rebaixamento",
+          "art. 52",
+          "toxicológico"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "REBAIXAMENTO: condutor C/D/E pede categoria inferior — art. 54.\n\nMUDANÇA DE CATEGORIA: ascensão B→C→D→E — art. 52 completo.\n\nART. 52: etapas da mudança — toxicológico, aptidão, curso prático, exames de direção.",
+        "destaques": [
+          "REBAIXAMENTO",
+          "MUDANÇA",
+          "ART. 52"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: E para B — refaz art. 52?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Pedido de rebaixamento E para B?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "CFC exige toxicológico e curso prático?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Dispensados incisos I a IV — gabarito A",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — caso do enunciado"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — exigência ilegal"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Etapas do art. 52 × dispensa",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Inciso art. 52",
+          "Rebaixamento E→B"
+        ],
+        "linhas": [
+          {
+            "faixa": "I — toxicológico",
+            "classificacao": "Dispensado — §2º",
+            "destaque": true
+          },
+          {
+            "faixa": "II a IV — aptidão, curso, direção",
+            "classificacao": "Dispensados — §1º",
+            "destaque": true
+          },
+          {
+            "faixa": "V — expedição CNH",
+            "classificacao": "Mantida",
+            "destaque": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: rebaixar = mudar categoria",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a lei diz ✓"
+        ],
+        "linhas": [
+          [
+            "Rebaixar exige refazer art. 52 inteiro",
+            "Art. 54 dispensa incisos II a IV — e I se destino B"
+          ],
+          [
+            "Toxicológico sempre obrigatório",
+            "§2º dispensa inciso I no rebaixamento para B"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "B — regra_excecao",
+            "Equipara rebaixamento a mudança ascendente — ignora dispensa do art. 54"
+          ],
+          [
+            "C — numero_vizinho",
+            "Aplica só §1º (II–IV) e esquece §2º que dispensa também o inciso I em E→B"
+          ],
+          [
+            "D — competencia_snt",
+            "Atribui homologação prévia ao CONTRAN — processo é do DETRAN estadual"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos do enunciado → gabarito",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Elemento",
+          "Conclusão"
+        ],
+        "linhas": [
+          [
+            "Condutor categoria E no DETRAN-PB",
+            "Pode requerer rebaixamento — art. 54"
+          ],
+          [
+            "Destino: categoria B",
+            "Aciona §2º — dispensa também inciso I"
+          ],
+          [
+            "CFC exige toxicológico e curso prático",
+            "Exigência contrária ao art. 54"
+          ],
+          [
+            "Resultado",
+            "Gabarito A — dispensados incisos I a IV"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Art. 52 × art. 54 — regra e exceção",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Art. 52 — vizinho",
+            "Etapas da mudança de categoria (regra geral)"
+          ],
+          [
+            "Art. 54 §1º",
+            "Rebaixamento dispensa incisos II a IV"
+          ],
+          [
+            "Art. 54 §2º",
+            "Destino B dispensa também inciso I"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 54, §§1º e 2º — dispensa no rebaixamento",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 1.020/2025 art. 54, §§1º e 2º",
+        "texto": "§ 1º No rebaixamento de categoria, ficam dispensados as etapas previstas no art. 52, incisos II a IV. § 2º Quando o rebaixamento for para a categoria B, aplica-se também a dispensa do exame referido no art. 52, inciso I, além do disposto no §1º.",
+        "trechos_grifados": [
+          {
+            "inicio": 35,
+            "fim": 100,
+            "motivo": "mapa — dispensa incisos II a IV pelo §1º",
+            "texto_grifado": "ficam dispensados as etapas previstas no art. 52, incisos II a IV"
+          },
+          {
+            "inicio": 107,
+            "fim": 151,
+            "motivo": "contraste — destino categoria B aciona §2º",
+            "texto_grifado": "Quando o rebaixamento for para a categoria B"
+          },
+          {
+            "inicio": 153,
+            "fim": 219,
+            "motivo": "caso — dispensa toxicológico no E→B",
+            "texto_grifado": "aplica-se também a dispensa do exame referido no art. 52, inciso I"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 52 — etapas da mudança",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 1.020/2025 art. 52",
+        "texto": "Art. 52. O processo de mudança de categoria constitui-se das seguintes etapas: I - realização de exame toxicológico de larga janela de detecção; II - realização dos exames de aptidão física e mental; III - realização de curso especializado prático de direção veicular; IV - realização dos exames de direção veicular; e V - expedição da CNH.",
+        "trechos_grifados": [
+          {
+            "inicio": 83,
+            "fim": 143,
+            "motivo": "fluxo — toxicológico exigido pelo CFC",
+            "texto_grifado": "realização de exame toxicológico de larga janela de detecção"
+          },
+          {
+            "inicio": 206,
+            "fim": 267,
+            "motivo": "caso — curso prático que o CFC exigiu",
+            "texto_grifado": "realização de curso especializado prático de direção veicular"
+          },
+          {
+            "inicio": 323,
+            "fim": 339,
+            "motivo": "mapa — única etapa mantida no rebaixamento",
+            "texto_grifado": "expedição da CNH"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near/far-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "REBAIXAR ≠ SUBIR · E→B = dispensa I–IV (§§1º e 2º).\nNear: E→D dispensa só II–IV — toxicológico permanece.\nFar: B→C exige art. 52 completo — ascensão não é rebaixamento.\nNão muda: todo rebaixamento dispensa pelo menos II–IV.\nCadeia: vizinho = art. 52 (etapas da mudança de categoria).",
+        "destaques": [
+          "E→B",
+          "E→D",
+          "B→C",
+          "II–IV",
+          "art. 52"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 1.020/2025",
+      "path": "conteúdo/resoluções CONTRAN/Resolução - 1020 - 2025.pdf"
+    }
+  ],
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Rebaixamento E→B dispensa art. 52 I–IV — não exige refazer toxicológico nem curso prático",
+    "eixos_legais": [
+      "CONTRAN_1020_art_54_par1",
+      "CONTRAN_1020_art_54_par2",
+      "CONTRAN_1020_art_52"
+    ],
+    "isca_por_alternativa": {
+      "B": "rebaixamento exige integralmente todas as etapas do art. 52 como mudança de categoria",
+      "C": "dispensa só incisos II a IV — toxicológico do inciso I permanece obrigatório em E→B",
+      "D": "CONTRAN homologa previamente cada pedido de rebaixamento no DETRAN"
+    }
+  }
+}

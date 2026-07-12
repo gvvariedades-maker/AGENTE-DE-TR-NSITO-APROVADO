@@ -1,0 +1,313 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_engenharia_fiscalizacao",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_95",
+    "enunciado": "A Prefeitura de Campina Grande/PB autorizou, por licença cultural, desfile cívico com interdição parcial da Av. Epitácio Pessoa. A Polícia Militar da Paraíba apoiará o policiamento ostensivo, mas a STTP não concedeu permissão prévia para a obra ou evento. O organizador anunciou na rádio local, com doze horas de antecedência, o bloqueio parcial da via, sem indicar caminhos alternativos. O procurador municipal consulta o CTB (arts. 94 a 99). Assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A licença cultural da Prefeitura substitui a permissão prévia da STTP — eventos cívicos em via municipal dispensam anuência do órgão com circunscrição sobre a via.",
+      "B": "Desfiles cívicos com apoio da PM dispensam permissão prévia da STTP — eventos de curta duração em via municipal bastam licença cultural e policiamento ostensivo.",
+      "C": "O desfile exige permissão prévia da STTP; licença cultural não substitui essa anuência, e o aviso com doze horas não atende ao §2º do art. 95, que exige quarenta e oito horas por meios de comunicação social com caminhos alternativos.",
+      "D": "O aviso radiofônico com doze horas de antecedência é suficiente para interdição parcial em evento cultural de curta duração — o prazo de quarenta e oito horas alcança apenas obras permanentes."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Art. 95 (permissão prévia do órgão com circunscrição; aviso de 48h com caminhos alternativos) × papéis distintos da Prefeitura, PM e STTP.",
+      "fundamento_legal": "CTB, art. 95: 'Nenhuma obra ou evento que possa perturbar ou interromper a livre circulação de veículos e pedestres, ou colocar em risco sua segurança, será iniciada sem permissão prévia do órgão ou entidade de trânsito com circunscrição sobre a via.' §1º: 'A obrigação de sinalizar é do responsável pela execução ou manutenção da obra ou do evento.' §2º: 'Salvo em casos de emergência, a autoridade de trânsito com circunscrição sobre a via avisará a comunidade, por intermédio dos meios de comunicação social, com quarenta e oito horas de antecedência, de qualquer interdição da via, indicando-se os caminhos alternativos a serem utilizados.'",
+      "passo_a_passo": [
+        "1. Caso: desfile com interdição parcial na Av. Epitácio Pessoa — licença cultural sem permissão STTP; PM no policiamento; aviso radiofônico 12h sem rotas alternativas.",
+        "2. A erra por termo_unico (licença cultural substitui permissão da STTP — atos distintos); B erra por regra_excecao (inventa dispensa de permissão para desfile cívico com apoio da PM); D erra por numero_vizinho (12h no lugar das 48h exigidas para interdição de via, salvo emergência).",
+        "3. C correta: art. 95 — permissão prévia da STTP; §2º exige 48h por meios de comunicação social com caminhos alternativos."
+      ],
+      "pegadinha": "A IDECAN induz a validar a licença cultural ou o apoio da PM — mas obra ou evento que interrompe a via exige permissão prévia da STTP e aviso de 48 horas.",
+      "macete": "95 = STTP autoriza + 48h com rotas · PM policia, não autoriza evento.",
+      "estudo_reverso": [
+        "CTB art. 95",
+        "CTB art. 94"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "C_competencia_snt",
+      "pegadinha_em_uma_frase": "Licença cultural não substitui permissão da STTP — aviso de 12h não cumpre as 48h do §2º",
+      "eixos_legais": [
+        "CTB_art_95",
+        "CTB_art_95_par2",
+        "CTB_art_95_par1"
+      ],
+      "eixo_vizinho": "CTB_art_95_par1",
+      "isca_por_alternativa": {
+        "A": "licença cultural da Prefeitura dispensa permissão prévia da STTP em evento cívico",
+        "B": "desfile cívico com apoio da PM dispensa permissão prévia da STTP em via municipal",
+        "D": "aviso de 12h substitui as 48h exigidas para interdição de via em evento cultural"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico",
+        "numero_vizinho"
+      ],
+      "near_transfer": "Obra de pavimentação com interdição parcial — mesma permissão prévia da STTP e aviso de 48h com rotas alternativas.",
+      "far_transfer": "Lombada sonora instalada sem anuência — art. 94, parágrafo único, exige caso especial do órgão competente nos padrões do CONTRAN.",
+      "o_que_nao_muda": "Obra ou evento que perturba a via exige permissão prévia do órgão com circunscrição; interdição exige aviso de 48h (salvo emergência).",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "engenharia_transito",
+      "evento",
+      "sttp",
+      "pm",
+      "art_95",
+      "interdicao"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CTB_art_95",
+      "macete_visual": "STTP autoriza · 48h com rotas",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C: permissão prévia da STTP e aviso de 48h com caminhos alternativos — licença cultural não basta.",
+            "destaques": ["STTP", "48h", "licença cultural"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem autoriza o quê",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "sttp", "label": "STTP — permissão prévia (art. 95)", "nivel": 2 },
+              { "id": "pref", "label": "Prefeitura — licença cultural", "nivel": 1 },
+              { "id": "pm", "label": "PM — policiamento ostensivo", "nivel": 1 }
+            ],
+            "arestas": [
+              { "de": "pref", "para": "sttp", "rotulo": "não substitui permissão" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "95 = STTP autoriza + 48h com rotas.\nPM policia — não autoriza evento.",
+            "destaques": ["STTP", "48h", "PM"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.503/97 — CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "todos",
+      "duracao_estimada_seg": 250,
+      "fundamento_slug": "CTB_art_95",
+      "macete_visual": "STTP autoriza · 48h com rotas",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: licença cultural sem STTP",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — licença cultural dispensa permissão da STTP: confunde atos distintos.\nB — desfile cívico com PM dispensa permissão: inventa exceção inexistente.\nD — aviso de 12h basta para evento cultural: prazo insuficiente para interdição.\n\nPegadinha: interdição de via exige permissão da STTP e aviso de 48 horas.",
+            "destaques": ["licença cultural", "STTP", "12h"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 papéis no caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "STTP: órgão com circunscrição sobre a via — concede permissão prévia para obra ou evento (art. 95).\n\nPREFEITURA: licença cultural — não substitui permissão de trânsito.\n\nPM: policiamento ostensivo — apoio operacional, sem autorizar interdição da via.",
+            "destaques": ["STTP", "PREFEITURA", "PM"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem faz o quê no desfile",
+          "secao": "metodo",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "sttp", "label": "STTP — permissão prévia e aviso 48h", "nivel": 2 },
+              { "id": "pref", "label": "Prefeitura — licença cultural", "nivel": 1 },
+              { "id": "pm", "label": "PM-PB — policiamento ostensivo", "nivel": 1 },
+              { "id": "org", "label": "Organizador — sinalizar evento (§1º)", "nivel": 1 }
+            ],
+            "arestas": [
+              { "de": "pref", "para": "sttp", "rotulo": "licença ≠ permissão" },
+              { "de": "pm", "para": "sttp", "rotulo": "apoio ≠ autorização" },
+              { "de": "org", "para": "sttp", "rotulo": "depende de permissão" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: licença cultural × permissão STTP",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Licença cultural autoriza interdição da via",
+                "Permissão prévia do órgão com circunscrição (art. 95)"
+              ],
+              [
+                "PM no policiamento supre permissão de trânsito",
+                "Policiamento ostensivo ≠ autorização de obra ou evento"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Licença cultural substitui permissão da STTP — atos administrativos distintos"
+              ],
+              [
+                "B — regra_excecao",
+                "Inventa dispensa de permissão para desfile cívico com apoio da PM"
+              ],
+              [
+                "D — numero_vizinho",
+                "Substitui 48h por 12h no aviso de interdição de via"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos do enunciado → gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              ["Desfile com interdição parcial na Av. Epitácio Pessoa", "Obra ou evento — art. 95"],
+              ["Licença cultural sem permissão STTP", "Irregular — falta permissão prévia"],
+              ["PM apenas no policiamento ostensivo", "Não supre permissão de trânsito"],
+              ["Aviso radiofônico 12h sem rotas alternativas", "Não cumpre §2º — exige 48h"],
+              ["Resultado", "Gabarito C"]
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Matriz: órgão × função",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Órgão", "Função no caso"],
+            "linhas": [
+              ["STTP", "Permissão prévia + aviso de 48h com caminhos alternativos"],
+              ["Prefeitura", "Licença cultural — não autoriza interdição de via"],
+              ["PM-PB", "Policiamento ostensivo — sem permissão de trânsito"],
+              ["Organizador", "Obrigação de sinalizar — §1º do art. 95"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 95 — permissão prévia",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 95, caput",
+            "texto": "Nenhuma obra ou evento que possa perturbar ou interromper a livre circulação de veículos e pedestres, ou colocar em risco sua segurança, será iniciada sem permissão prévia do órgão ou entidade de trânsito com circunscrição sobre a via.",
+            "trechos_grifados": [
+              {
+                "inicio": 8,
+                "fim": 22,
+                "motivo": "fluxo — desfile como evento na Av. Epitácio Pessoa",
+                "texto_grifado": "obra ou evento"
+              },
+              {
+                "inicio": 33,
+                "fim": 100,
+                "motivo": "caso — interdição parcial que perturba a circulação",
+                "texto_grifado": "perturbar ou interromper a livre circulação de veículos e pedestres"
+              },
+              {
+                "inicio": 155,
+                "fim": 235,
+                "motivo": "contraste — licença cultural não substitui permissão da STTP",
+                "texto_grifado": "permissão prévia do órgão ou entidade de trânsito com circunscrição sobre a via."
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 95, §2º — aviso de 48h",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 95, §2º",
+            "texto": "Salvo em casos de emergência, a autoridade de trânsito com circunscrição sobre a via avisará a comunidade, por intermédio dos meios de comunicação social, com quarenta e oito horas de antecedência, de qualquer interdição da via, indicando-se os caminhos alternativos a serem utilizados.",
+            "trechos_grifados": [
+              {
+                "inicio": 32,
+                "fim": 84,
+                "motivo": "diagrama — STTP como autoridade de trânsito da via",
+                "texto_grifado": "autoridade de trânsito com circunscrição sobre a via"
+              },
+              {
+                "inicio": 159,
+                "fim": 196,
+                "motivo": "contraste — aviso de 12h não atende o prazo legal",
+                "texto_grifado": "quarenta e oito horas de antecedência"
+              },
+              {
+                "inicio": 245,
+                "fim": 286,
+                "motivo": "caso — faltaram caminhos alternativos no aviso radiofônico",
+                "texto_grifado": "caminhos alternativos a serem utilizados."
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "95 = STTP autoriza + 48h com rotas · PM policia, não autoriza evento.\nNear: obra de pavimentação com interdição — mesma permissão prévia e aviso de 48h.\nFar: lombada sonora sem anuência — art. 94, parágrafo único, exige órgão competente nos padrões do CONTRAN.\nNão muda: obra ou evento que perturba a via exige permissão prévia; interdição exige 48h (salvo emergência).\nCadeia: vizinho = §1º (organizador sinaliza o evento).",
+            "destaques": ["STTP", "48h", "lombada", "§1º"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.503/97 — CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

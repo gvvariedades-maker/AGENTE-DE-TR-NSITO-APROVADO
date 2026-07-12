@@ -1,0 +1,292 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "todos",
+  "duracao_estimada_seg": 255,
+  "fundamento_slug": "CONTRAN_940_art_2",
+  "macete_visual": "Cabine fechada = dispensa",
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: triciclo sem capacete",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — todo triciclo dispensado: estende exceção sem cabine fechada.\nC — fiscalização exclusiva do CONTRAN: confunde normatizar com autuar.\nD — infração por especificação do equipamento: hipótese distinta — aqui falta uso.\n\nPegadinha: triciclo aberto não está na exceção de cabine fechada.",
+        "destaques": [
+          "triciclo aberto",
+          "CONTRAN",
+          "ausência"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "TRICICLO MOTORIZADO ABERTO: veículo de entrega sem cabine fechada — não alcançado pela exceção.\n\nCABINE FECHADA: requisito da dispensa no parágrafo único do art. 1º.\n\nCINTA JUGULAR: afixação obrigatória sob o maxilar inferior — art. 2º.",
+        "destaques": [
+          "ABERTO",
+          "CABINE FECHADA",
+          "JUGULAR"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: exige capacete?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Triciclo ou quadriciclo com cabine fechada?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Condutor usa capacete afixado pela jugular?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Irregular — sem capacete — gabarito B",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Não — triciclo aberto de entrega"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Não — sem capacete"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Veículo × obrigação de capacete",
+      "secao": "mapa",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Veículo",
+          "Capacete obrigatório?"
+        ],
+        "linhas": [
+          [
+            "Triciclo com cabine fechada",
+            "Não — parágrafo único do art. 1º"
+          ],
+          [
+            "Quadriciclo com cabine fechada",
+            "Não — parágrafo único do art. 1º"
+          ],
+          [
+            "Triciclo motorizado aberto — caso",
+            "Sim — art. 2º"
+          ],
+          [
+            "Motocicleta",
+            "Sim — art. 2º"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: todo triciclo dispensado",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a lei diz ✓"
+        ],
+        "linhas": [
+          [
+            "Resolução 940 dispensa qualquer triciclo",
+            "Dispensa só triciclo com cabine fechada"
+          ],
+          [
+            "Certificação INMETRO substitui o uso",
+            "Art. 2º exige uso afixado pela jugular"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Estende dispensa a todo triciclo — exceção exige cabine fechada"
+          ],
+          [
+            "C — competencia_snt",
+            "Atribui fiscalização exclusiva ao CONTRAN — agentes verificam pelo art. 3º"
+          ],
+          [
+            "D — numero_vizinho",
+            "Aplica art. 230, X — caso é ausência de uso (art. 5º, III → art. 244, I ou II)"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos do enunciado → gabarito",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Elemento",
+          "Conclusão"
+        ],
+        "linhas": [
+          [
+            "Triciclo motorizado aberto na Av. Epitácio Pessoa",
+            "Não é cabine fechada"
+          ],
+          [
+            "Condutor sem capacete",
+            "Viola art. 2º"
+          ],
+          [
+            "Alegação de dispensa para triciclos",
+            "Confunde parágrafo único do art. 1º"
+          ],
+          [
+            "Tipificação",
+            "Art. 5º, III → art. 244, I ou II"
+          ],
+          [
+            "Resultado",
+            "Gabarito B"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Art. 1º, parágrafo único × art. 2º",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Art. 1º, parágrafo único — vizinho",
+            "Dispensa só cabine fechada"
+          ],
+          [
+            "Art. 2º",
+            "Obriga capacete afixado no triciclo aberto"
+          ],
+          [
+            "Art. 5º, III",
+            "Remete ao art. 244, I ou II sem uso"
+          ],
+          [
+            "Art. 3º",
+            "STTP fiscaliza cumprimento da resolução"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 1º, parágrafo único — exceção",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 940/2022, art. 1º, parágrafo único",
+        "texto": "As disposições desta Resolução não se aplicam aos triciclos com cabine fechada e quadriciclos com cabine fechada.",
+        "trechos_grifados": [
+          {
+            "inicio": 31,
+            "fim": 78,
+            "motivo": "contraste — triciclo aberto do caso não está dispensado",
+            "texto_grifado": "não se aplicam aos triciclos com cabine fechada"
+          },
+          {
+            "inicio": 79,
+            "fim": 113,
+            "motivo": "hierarquia — exceção também alcança quadriciclo fechado",
+            "texto_grifado": "e quadriciclos com cabine fechada."
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 2º e art. 5º, III — uso e tipificação",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 940/2022, art. 2º, e art. 5º, III",
+        "texto": "É obrigatório, para circular nas vias públicas, o uso de capacete motociclístico pelo condutor e passageiro de motocicleta, motoneta, ciclomotor, triciclo motorizado e quadriciclo motorizado, devidamente afixado à cabeça pelo conjunto formado pela cinta jugular e engate, por debaixo do maxilar inferior. III - art. 244, inciso I ou II: quando dirigir ou conduzir passageiro sem o uso de capacete motociclístico, capacete não encaixado na cabeça ou uso de capacete indevido, conforme Anexo;",
+        "trechos_grifados": [
+          {
+            "inicio": 146,
+            "fim": 190,
+            "motivo": "caso — triciclo motorizado aberto na fiscalização",
+            "texto_grifado": "triciclo motorizado e quadriciclo motorizado"
+          },
+          {
+            "inicio": 248,
+            "fim": 304,
+            "motivo": "fluxo — afixação pela jugular exigida",
+            "texto_grifado": "cinta jugular e engate, por debaixo do maxilar inferior."
+          },
+          {
+            "inicio": 375,
+            "fim": 411,
+            "motivo": "contraste — ausência de uso tipifica art. 244, I ou II",
+            "texto_grifado": "sem o uso de capacete motociclístico"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near/far-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CABINE FECHADA = dispensa · TRICICLO ABERTO = capacete + jugular · 5º-III → 244 I/II.\nNear: quadriciclo com cabine fechada — dispensado pelo parágrafo único.\nFar: moto com queixeira levantada em circulação — regra do art. 4º e tipificação distinta.\nNão muda: exceção exige cabine fechada; triciclo aberto exige uso afixado.\nCadeia: vizinho = parágrafo único do art. 1º (limite da dispensa).",
+        "destaques": [
+          "CABINE FECHADA",
+          "quadriciclo",
+          "queixeira",
+          "art. 1º"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 940/2022",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 940, DE 28 DE MARÇO DE 2022.pdf"
+    }
+  ]
+}
