@@ -1,12 +1,15 @@
-# Estudo Reverso Visual — Documentação completa (v3.0)
+# Estudo Reverso Visual — Documentação completa (v3.4)
 
 Documentação de referência para produção, validação, integração no app e retrofit de conteúdo legado.
 
 | Documento | Papel |
 |-----------|--------|
-| [SKILL.md](./SKILL.md) | Instruções operacionais para o Agent (geração) |
-| [checklist-mayer.md](./checklist-mayer.md) | Gate binário 8/8 antes do npm |
-| [exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md](./exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md) | **Hub padrão ouro v3** — famílias A–D |
+| [SKILL.md](./SKILL.md) | Instruções operacionais para o Agent (geração) — **v3.4** |
+| [checklist-mayer.md](./checklist-mayer.md) | Gate Mayer 8/8 + editorial #18/#19 (E1–E3) |
+| [exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md](./exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md) | **Hub padrão ouro v3.4** — famílias A–D, transferência |
+| [../examinador-idecan/SKILL.md](../examinador-idecan/SKILL.md) | Questão IDECAN — **v2.1** (`near_transfer`, `far_transfer`, `eixo_vizinho`) |
+| [../examinador-idecan/prompt-nova-conversa.txt](../examinador-idecan/prompt-nova-conversa.txt) | **Prompt pronto** — copiar e colar (nova conversa Agent) |
+| [../examinador-idecan/prompt-questao-aula-completa.md](../examinador-idecan/prompt-questao-aula-completa.md) | Variantes do prompt + checklist pós-geração |
 | [exemplos-ouro/familias/](./exemplos-ouro/familias/) | Guias por família |
 | [exemplos-ouro/PADRAO-AULA-COMPLETA-v2.md](./exemplos-ouro/PADRAO-AULA-COMPLETA-v2.md) | Legado Família A (MÉTODO linear) |
 | [arquetipos/](./arquetipos/) | Templates por componente visual |
@@ -16,11 +19,22 @@ Documentação de referência para produção, validação, integração no app 
 
 ---
 
+## 0. Nova conversa Agent (1 questão)
+
+1. Copiar [../examinador-idecan/prompt-nova-conversa.txt](../examinador-idecan/prompt-nova-conversa.txt) inteiro → colar em conversa **Agent**.
+2. Agente executa `npm run proxima -- legislacao_transito` (ou outra disciplina — trocar no `.txt`).
+3. Pipeline esperado: gravar lote → `grifo:offsets` → `validate:lote` (5 gates) → `index:questoes` → `db:seed`.
+4. Checklist humano: [../examinador-idecan/prompt-questao-aula-completa.md](../examinador-idecan/prompt-questao-aula-completa.md) § checklist pós-geração.
+
+Variantes (escopo manual, lote, outras disciplinas): mesmo arquivo `.md` acima.
+
+---
+
 ## 1. Visão geral
 
 O **estudo reverso visual** é a micro-aula segmentada que abre **automaticamente** após o aluno confirmar a resposta no modo estudo. Cada aula é **exclusiva da questão** — nunca genérica, nunca reusada entre microtópicos.
 
-A skill v3.0 unifica dois modos que coexistem no mesmo JSON da questão:
+A skill **v3.4** unifica dois modos que coexistem no mesmo JSON da questão. A questão-mãe vem do **examinador-idecan v2.1** com `meta.near_transfer`, `meta.far_transfer`, `meta.o_que_nao_muda` e `meta.eixo_vizinho` (quando couber).
 
 ```mermaid
 flowchart LR
@@ -68,7 +82,7 @@ Quando ambos existem: **nunca substituir v1 por v2**; retrofit = adicionar v2 se
 **Núcleo obrigatório (3):**
 1. `texto_destaque` — o que a IDECAN testou
 2. Arquétipo principal (ver [tabela de decisão](./SKILL.md#tabela-de-decisão-do-arquétipo-principal-com-desempate))
-3. `texto_destaque` — macete visual
+3. `texto_destaque` — macete visual (**inclui far-transfer em 1 linha** quando `meta.far_transfer` existe)
 
 **Condicionais (+até 2):**
 - `comparacao` — par confundível da pegadinha
@@ -83,7 +97,9 @@ Quando ambos existem: **nunca substituir v1 por v2**; retrofit = adicionar v2 se
 4. `comparacao` — **distratores por mecanismo** (`id: "distratores"`)
 5. `comparacao` ou `fluxograma` — caso do enunciado resolvido
 6. `trecho_legal` — dispositivo principal grifado
-7. `texto_destaque` — macete
+7. `texto_destaque` — macete (**regra + near + far + o que NÃO muda**; citar `eixo_vizinho` se houver)
+
+**Transferência (v3.4):** o macete consome `meta` da questão (`examinador-idecan` v2.1). Gate editorial **#18** (far ≠ near) e **#19** (checklist E1–E3). Ver [PADRAO-AULA-COMPLETA-v3.md](./exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md).
 
 **Condicionais (+até 4, antes do arquétipo quando forem pré-treino):**
 - glossário (≤3 termos)
@@ -91,7 +107,7 @@ Quando ambos existem: **nunca substituir v1 por v2**; retrofit = adicionar v2 se
 - segundo `trecho_legal`
 - `comparacao` extra (segundo par confundível)
 
-**Padrão ouro v3:** [PADRAO-AULA-COMPLETA-v3.md](./exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md) — hub + famílias A–D. Referência Família A: `lote-007` / `ctb-normas-circulacao-art29.json`.
+**Padrão ouro v3.4:** [PADRAO-AULA-COMPLETA-v3.md](./exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md) — hub + famílias A–D + transferência. Piloto: `lote-127` (art. 280 §2). Referência Família A: `lote-007` / `ctb-normas-circulacao-art29.json`.
 
 ### 3.3 Slide MÉTODO — fluxograma linear (v3.1, 2026-07-08)
 
@@ -218,6 +234,11 @@ npm run validate:lote -- content/questoes/legislacao_transito/lote-001.json
 # Sem corpus legal (rascunho / CI)
 npm run validate:lote -- arquivo.json --skip-citacoes
 
+# Lotes legados (até retrofit)
+npm run validate:lote -- arquivo.json --legacy-grifos          # sem texto_grifado
+npm run validate:lote -- arquivo.json --legacy-transferencia   # sem meta near/far/o_que_nao_muda (nível 4+)
+npm run validate:lote -- arquivo.json --legacy-grifos --legacy-transferencia
+
 # Validadores individuais
 npm run validate:questoes -- arquivo.json
 npm run validate:indistinguibilidade -- arquivo.json
@@ -236,6 +257,8 @@ npm run db:seed
 | Regra | Onde |
 |-------|------|
 | `estudo_reverso_visual_completo` obrigatório | `questaoSeedImportSchema` (seed + validate:lote) |
+| Transferência pedagógica (nível 4+) | `validarTransferenciaPedagogica` em `transferencia-pedagogica.ts` — `meta.near_transfer`, `far_transfer`, `o_que_nao_muda`; `eixo_vizinho` se gabarito remete a outro artigo; macete ecoa meta |
+| Modo legado transferência | `--legacy-transferencia` ou `TRANSFERENCIA_LEGACY=1` — pula gate T1–T4 em lotes antigos |
 | Passo 2 com slug por errada | `validarPasso2Mecanismos` em `questao-mecanismo.ts` |
 | Núcleo v2 (ordem das 7 telas) | `validarNucleoV2` em `estudo-reverso-visual.ts` |
 | Fluxograma MÉTODO linear | `validarLimitesComponente` — `secao === "metodo"` |
@@ -246,10 +269,11 @@ Schema **rascunho** (v2 opcional): `questaoSeedSchema` — só para exemplos par
 
 ### O que o validador Zod verifica
 
-Implementação: `src/lib/validations/estudo-reverso-visual.ts`
+Implementação: `src/lib/validations/estudo-reverso-visual.ts` + `src/lib/validations/transferencia-pedagogica.ts`
 
 - Schema v1: `versao: 1`, 3–5 telas, limites v1
 - Schema v2: `versao: 2`, 7–11 telas, tela distratores obrigatória, limites v2
+- **Transferência (nível 4+, gate T1–T4):** `meta.near_transfer` + `far_transfer` + `o_que_nao_muda` obrigatórios; `far_transfer` ≠ paráfrase de `near_transfer`; `eixo_vizinho` se comentário remete a outro artigo; tela `macete` ecoa os três campos
 - Fluxograma MÉTODO (`secao: "metodo"`): ≤4 nós, 1 resultado, grafo linear, labels sem `art.`
 - Coerência v1↔v2 (quando ambos presentes):
   - `fundamento_slug` idêntico
@@ -389,6 +413,9 @@ src/components/estudo-reverso/
 
 | Data | Versão | Mudança |
 |------|--------|---------|
+| 2026-07-11 | **3.4.2** | `prompt-nova-conversa.txt` — prompt pronto para colar (fonte canônica); `prompt-questao-aula-completa.md` = variantes + checklist |
+| 2026-07-11 | **3.4.1** | Gate Zod `validarTransferenciaPedagogica` (T1–T4); `--legacy-transferencia` para lotes legados sem meta de transferência |
+| 2026-07-11 | **3.4** | Far-transfer obrigatório no macete; meta `near_transfer`/`far_transfer`/`o_que_nao_muda`/`eixo_vizinho`; gate editorial #18/#19; checklist E1–E3; alinhamento com examinador v2.1 |
 | 2026-07-08 | **3.3** | **MÉTODO linear** — regra, validação Zod, player (`fluxograma-caminho.ts`), retrofit lotes 006–019; doc em PADRAO §3 |
 | 2026-07-08 | **3.3** | Hub v3 + famílias A–D; gate editorial 12/12; ouros B/C/D v2; retrofit art. 29 |
 | 2026-07-08 | **3.2** | Padrão ouro v2 — `PADRAO-AULA-COMPLETA-v2.md`; `lote-007` |

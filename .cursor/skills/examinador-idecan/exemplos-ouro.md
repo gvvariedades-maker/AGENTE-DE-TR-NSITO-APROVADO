@@ -23,7 +23,8 @@ Toda questão seedada exige `estudo_reverso_visual_completo`. Padrão canônico 
 |---------|---------|
 | Hub padrão ouro v3 | `.cursor/skills/estudo-reverso-visual/exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md` |
 | Família A (caso, 11 telas) | `familias/PADRAO-A-caso-regra-excecao.md` + `ctb-normas-circulacao-art29.json` |
-| **Prompt copiável (nova conversa)** | `.cursor/skills/examinador-idecan/prompt-questao-aula-completa.md` |
+| **Prompt pronto (nova conversa)** | `.cursor/skills/examinador-idecan/prompt-nova-conversa.txt` |
+| Variantes + checklist | `.cursor/skills/examinador-idecan/prompt-questao-aula-completa.md` |
 | JSON espelho | `.cursor/skills/estudo-reverso-visual/exemplos-ouro/ctb-normas-circulacao-art29.json` |
 | Seed de referência | `content/questoes/legislacao_transito/lote-007.json` |
 

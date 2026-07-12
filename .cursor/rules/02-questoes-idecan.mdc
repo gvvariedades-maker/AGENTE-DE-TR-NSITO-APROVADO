@@ -51,10 +51,25 @@ Referência de estilo: PDFs em `conteúdo/questões reais/` (CTB, Português, In
 
 | Campo visual | Obrigatório no seed | Telas | Doc |
 |--------------|---------------------|-------|-----|
-| `estudo_reverso_visual_completo` | **Sim** | 7–11 (`versao: 2`) | `.cursor/skills/estudo-reverso-visual/DOCUMENTACAO.md` |
+| `estudo_reverso_visual_completo` | **Sim** | 7–11 (`versao: 2`) | `.cursor/skills/estudo-reverso-visual/DOCUMENTACAO.md` (v3.4) |
 | `estudo_reverso_visual` | Recomendado | 3–5 (`versao: 1`) | idem |
 
-Validar com `npm run validate:estudo-reverso-visual`. Tipos: `src/types/estudo-reverso-visual.ts`. v2 exige tela de distratores com slugs IDECAN (`numero_vizinho`, `competencia_snt`, `gravidade`, `regra_excecao`, `termo_unico`).
+### `meta` recomendado (níveis 4–5 — examinador v2.1)
+
+Campos opcionais no Zod; obrigatórios no gate de 1ª passagem (item 10) e consumidos pela aula v3.4:
+
+| Campo | Uso |
+|-------|-----|
+| `near_transfer` | Cenário próximo (1 fato do stem trocado) |
+| `far_transfer` | Cenário distante (mesmo dispositivo) |
+| `o_que_nao_muda` | Invariante legal citável |
+| `eixo_vizinho` | Slug do artigo seguinte, se o gabarito remete |
+| `isca_por_alternativa` | Isca por errada (A/B/D) — tela `contexto` |
+| `eficacia_pos_aula` | `["E1","E2","E3"]` quando checklist passou |
+
+Skills: `examinador-idecan` v2.1 + `estudo-reverso-visual` v3.4. Prompt pronto: `prompt-nova-conversa.txt` (variantes: `prompt-questao-aula-completa.md`).
+
+Validar com `npm run validate:lote` (5 gates). Tipos: `src/types/estudo-reverso-visual.ts`. v2 exige tela de distratores com slugs IDECAN (`numero_vizinho`, `competencia_snt`, `gravidade`, `regra_excecao`, `termo_unico`).
 
 ## Comentário Professor Elite (sempre nesta ordem)
 

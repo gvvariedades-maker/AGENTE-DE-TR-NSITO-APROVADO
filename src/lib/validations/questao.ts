@@ -4,6 +4,11 @@ import {
   estudoReversoVisualSchema,
 } from "@/lib/validations/estudo-reverso-visual";
 import { validarPasso2Mecanismos, validarDistratorOnCase } from "@/lib/validations/questao-mecanismo";
+import {
+  metaQuestaoSchema,
+  resolveMetaTransferencia,
+  validarTransferenciaPedagogica,
+} from "@/lib/validations/transferencia-pedagogica";
 import { DISCIPLINAS } from "@/types";
 
 const comentarioSchema = z.object({
@@ -32,6 +37,7 @@ const questaoSeedBaseSchema = z.object({
   estudo_reverso_visual_completo: estudoReversoVisualCompletoSchema.optional(),
   /** Dispositivo principal da pegadinha — espelha visual v2; usado no índice de cobertura. */
   fundamento_slug: z.string().min(1).optional(),
+  meta: metaQuestaoSchema,
   tags: z.array(z.string()).optional(),
 });
 
@@ -75,6 +81,15 @@ export const questaoSeedImportSchema = questaoSeedBaseSchema
   })
   .superRefine((q, ctx) => {
     questaoSeedBaseRefine(q, ctx);
+    validarTransferenciaPedagogica(
+      {
+        dificuldade: q.dificuldade,
+        comentario: q.comentario,
+        meta: resolveMetaTransferencia(q),
+        telas: q.estudo_reverso_visual_completo.telas,
+      },
+      ctx,
+    );
   });
 
 export const questoesFileSchema = z.array(questaoSeedSchema);

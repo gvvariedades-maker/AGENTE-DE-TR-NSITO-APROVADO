@@ -47,7 +47,7 @@ Condicionais (+até 4) só com gatilho real — ver guia de cada família. Total
 | `contraste` | **1 eixo** crença × lei; 2–3 linhas; sem slugs | Tabela de distratores disfarçada |
 | `distratores` | `LETRA — slug` = `passo_a_passo[1]` | Slug inventado / genérico |
 | `caso` | Substantivos do enunciado + linha Resultado | Repetir arquétipo sem fatos do stem |
-| `macete` | `macete_visual` + regra 1 frase + **near-transfer** (hipotética 1 frase) | Só mnemônico / só nº de artigo |
+| `macete` | `macete_visual` + regra 1 frase + **near-transfer** + **far-transfer** + **o que NÃO muda** (eco de `meta`) | Só mnemônico / só nº de artigo / near sem far |
 | `trecho_legal` | Literal `conteúdo/` + grifo `indexOf` + `motivo` cita **id da tela** que ensinou o token | Paráfrase; grifo “no olho” |
 
 ### Slugs de distrator (examinador-idecan)
@@ -69,9 +69,16 @@ O schema Zod ainda não exige estes campos — use em `meta` para o Agent audita
     "A": "aplica direita cedo demais",
     "B": "sem placa = sem preferência",
     "D": "inverte §2º"
-  }
+  },
+  "near_transfer": "mesmo dispositivo, 1 fato do stem trocado",
+  "far_transfer": "mesmo dispositivo, cenário distante",
+  "o_que_nao_muda": "invariante legal citável",
+  "eixo_vizinho": "CTB_art_281",
+  "eficacia_pos_aula": ["E1", "E2", "E3"]
 }
 ```
+
+`near_transfer` / `far_transfer` / `o_que_nao_muda` vêm do examinador-idecan v2.1 (`<transferencia_obrigatoria>`). `eixo_vizinho` só se o gabarito remete a outro artigo. `eficacia_pos_aula` = checklist E1–E3 passou.
 
 ---
 
@@ -83,14 +90,18 @@ O schema Zod ainda não exige estes campos — use em `meta` para o Agent audita
 | 9 | Operação cognitiva única por tela (tabela em cada família) |
 | 10 | Diagnóstico cobre **todas** as erradas |
 | 11 | Arquétipo com pergunta/classificação **discriminante** |
-| 12 | Macete com near-transfer aplicável em 5 s |
+| 12 | Macete com near-transfer **e** far-transfer aplicáveis em 5 s |
 | 13 | Distratores ≡ slugs do `passo_a_passo` |
 | 14 | Grifo `motivo` ecoa id da tela (`mapa`, `contraste`, `gradacao`…) |
 | 15 | Zero proposição repetida em telas adjacentes |
 | 16 | Teste de colagem: aula não serve em outra Q do lote |
 | 17 | Grifo com `texto_grifado` validado (`npm run grifo:offsets` + `preview:grifos` no `validate:lote`) |
+| 18 | Macete (ou tela imediata antes) distingue **o que muda × o que NÃO muda**; far ≠ paráfrase do near |
+| 19 | `<checklist_eficacia_pos_aula>` E1–E3 (invariante / errada tentadora / far) — 3× sim |
 
 Reprovou 1 → corrigir antes de `npm run validate:lote`.
+
+> Itens 1–17 = gate histórico. **#18 e #19** = eficácia máxima (skill v3.4) — obrigatórios em questão nova nível 4–5.
 
 ---
 
@@ -140,7 +151,7 @@ Família A|B|C|D → JSON ouro da família (não art.29 cego)
 Gate Mayer 8/8 + editorial 12/12 → validate:lote → db:seed
 ```
 
-Ver também [prompt-questao-aula-completa.md](../../examinador-idecan/prompt-questao-aula-completa.md).
+Ver também [prompt-nova-conversa.txt](../../examinador-idecan/prompt-nova-conversa.txt) (pronto para colar) e [prompt-questao-aula-completa.md](../../examinador-idecan/prompt-questao-aula-completa.md) (variantes).
 
 ---
 
@@ -150,10 +161,11 @@ Ver também [prompt-questao-aula-completa.md](../../examinador-idecan/prompt-que
 - Diagnóstico monoisca (“se marcou A…”)
 - Telas adjacentes com a mesma proposição (fluxo + mapa + caso repetindo RO-RO-DI)
 - `contraste` com slugs (isso é `distratores`)
-- Macete sem hipotética de near-transfer
+- Macete sem hipotética de near-transfer **ou** sem far-transfer distinto
 - Condicional sem gatilho (decorar para 11 telas)
 - MÉTODO com árvore de decisão (Família A)
 - Recall na aula — recall = questão + FSRS
+- Aula que passa no Mayer mas falha E1–E3 (aluno não transfere)
 
 ---
 
@@ -193,5 +205,6 @@ Ver também [prompt-questao-aula-completa.md](../../examinador-idecan/prompt-que
 
 | Data | Mudança |
 |------|---------|
+| 2026-07-11 | **v3.4** — macete near+far+o que não muda; meta transferência/eixo; gate editorial #18/#19; checklist eficácia E1–E3 |
 | 2026-07-08 | **v3** — hub + famílias A–D; contratos editoriais; gate 12/12; ouros B/C/D v2 |
 | 2026-07-08 | v2 — MÉTODO linear; lote-007 art. 29 (migrado para Família A) |

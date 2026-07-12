@@ -24,7 +24,7 @@
 | 6 | `caso` | `metodo` | `comparacao` | Números do stem → % → inciso | **Sempre** |
 | 7 | `linha_tempo` | — | `linha_tempo` | Alteração de faixas/prazos | Lei nova relevante |
 | 8 | `lei` | `lei` | `trecho_legal` | Inciso da faixa correta | **Sempre** |
-| 9 | `macete` | `macete` | `texto_destaque` | Faixas + near-transfer | **Sempre** |
+| 9 | `macete` | `macete` | `texto_destaque` | Faixas + near/far + o que NÃO muda | **Sempre** |
 
 **Núcleo D:** contexto → **gradacao** → contraste → distratores → caso → lei → macete.
 
@@ -51,8 +51,11 @@ Cálculo vai **dentro de `caso`**, não em tela separada antes do contraste.
 - Colunas: Conta | Resultado legal
 - Ex.: (84−60)÷60 = 40% | art. 218, II — grave | Gabarito D
 
-### `macete` near-transfer
-- “Radar marca 95 km/h no mesmo limite 60 — qual faixa?” → >50% gravíssima.
+### `macete` — transferência (v3.4)
+
+- Faixas mnemônicas + **near** + **far** + **o que NÃO muda** (eco de `meta`)
+- Near: “Radar marca 95 km/h no mesmo limite 60 — qual faixa?” → >50% gravíssima.
+- Far: outro tipo de gradação (prazo, %, idade) no mesmo artigo — cenário distinto
 
 ---
 

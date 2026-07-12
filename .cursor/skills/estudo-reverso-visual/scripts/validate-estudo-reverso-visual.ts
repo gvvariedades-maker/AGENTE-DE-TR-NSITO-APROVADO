@@ -17,6 +17,11 @@ import {
   estudoReversoVisualSchema,
   listarErrosCoerenciaV1V2,
 } from "../../../../src/lib/validations/estudo-reverso-visual";
+import { DIFICULDADE_MINIMA_BANCO } from "../../../../src/lib/validations/dificuldade-banco";
+import {
+  isTransferenciaLegacyMode,
+  resolveMetaTransferencia,
+} from "../../../../src/lib/validations/transferencia-pedagogica";
 import { questoesImportFileSchema } from "../../../../src/lib/validations/questao";
 import type { TelaVisual } from "../../../../src/types/estudo-reverso-visual";
 import type { GrifoInput } from "../../../../src/lib/grifo-offsets";
@@ -42,11 +47,14 @@ async function main() {
   if (args.includes("--legacy-grifos")) {
     process.env.GRIFO_LEGACY = "1";
   }
+  if (args.includes("--legacy-transferencia")) {
+    process.env.TRANSFERENCIA_LEGACY = "1";
+  }
   const filePath = args.find((a) => !a.startsWith("--"));
 
   if (!filePath) {
     console.error(
-      "Uso: npm run validate:estudo-reverso-visual -- <arquivo.json> [--skip-citacoes]",
+      "Uso: npm run validate:estudo-reverso-visual -- <arquivo.json> [--skip-citacoes] [--legacy-grifos] [--legacy-transferencia]",
     );
     process.exit(1);
   }
@@ -114,6 +122,16 @@ async function main() {
         console.log(
           `  ✓ ${label} — ${completoResult.data.telas.length} telas completo (v2)`,
         );
+
+        if (isTransferenciaLegacyMode() && q.dificuldade >= DIFICULDADE_MINIMA_BANCO) {
+          const meta = resolveMetaTransferencia(q);
+          if (!meta?.near_transfer || !meta?.far_transfer || !meta?.o_que_nao_muda) {
+            avisos++;
+            console.warn(
+              `  ⚠ ${label}: transferência pedagógica ausente (modo --legacy-transferencia)`,
+            );
+          }
+        }
 
         if (process.env.GRIFO_LEGACY === "1") {
           for (const tela of completoResult.data.telas) {

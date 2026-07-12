@@ -359,9 +359,15 @@ function validarLote(questoes: QuestaoSeedImportInput[]): Achado[] {
 }
 
 async function main() {
-  const filePath = process.argv[2];
+  const args = process.argv.slice(2);
+  if (args.includes("--legacy-transferencia")) {
+    process.env.TRANSFERENCIA_LEGACY = "1";
+  }
+  const filePath = args.find((a) => !a.startsWith("--"));
   if (!filePath) {
-    console.error("Uso: npx tsx validate-indistinguibilidade.ts <arquivo.json>");
+    console.error(
+      "Uso: npx tsx validate-indistinguibilidade.ts <arquivo.json> [--legacy-transferencia]",
+    );
     process.exit(1);
   }
 

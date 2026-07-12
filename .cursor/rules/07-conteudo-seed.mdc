@@ -32,7 +32,7 @@ alwaysApply: false
 
 ## Fluxo de import
 
-1. Validar JSON com `npm run validate:lote -- content/questoes/.../lote.json` (questões + cobertura + visual; ou validadores separados)
+1. Validar JSON com `npm run validate:lote -- content/questoes/.../lote.json` (questões + cobertura + visual; ou validadores separados). Lotes antigos sem transferência: acrescentar `--legacy-transferencia` (nível 4+ sem `meta.near_transfer`/`far_transfer`/`o_que_nao_muda`)
 2. `npm run index:questoes` — regenerar mapa de eixos ocupados (`content/questoes/_index/cobertura.json`)
 3. `npm run db:seed:topics` — upsert `topics` (Anexo I retificado) — **obrigatório na 1ª vez ou após mudar edital**
 4. `npm run db:seed` — upsert topics + insert/update `questions` (rejeita lote sem `estudo_reverso_visual_completo`)
@@ -41,7 +41,10 @@ Diagnóstico pós-seed: `npm run check:catalogo-db` e `npm run check:visual-comp
 
 ## Ao criar questões novas
 
-- Usar skills `examinador-idecan` + `estudo-reverso-visual` v3 (v2 completa obrigatória; v1 expressa recomendada)
+- Usar skills **examinador-idecan v2.1** + **estudo-reverso-visual v3.4** (v2 completa obrigatória; v1 expressa recomendada)
+- Prompt pronto: `.cursor/skills/examinador-idecan/prompt-nova-conversa.txt` (variantes: `prompt-questao-aula-completa.md`)
+- Questão nível 4–5: `meta.near_transfer`, `meta.far_transfer`, `meta.o_que_nao_muda` (obrigatórios no Zod; gate T1–T4); `meta.eixo_vizinho` se o gabarito remete a outro artigo
+- Aula: macete com near + far + o que NÃO muda; gate editorial #18/#19 + Mayer 8/8
 - Priorizar CTB e Resoluções CONTRAN da pasta `conteúdo/`
 - Consultar `content/questoes/_index/cobertura.json` (`npm run index:questoes`) antes de escolher eixo legal
 - **Modelo ouro:** 1 questão premium + `estudo_reverso_visual_completo` (aula v2, 7–11 telas) por microtópico; v1 expressa recomendada

@@ -16,13 +16,21 @@ function main() {
   const args = process.argv.slice(2);
   const skipCitacoes = args.includes("--skip-citacoes");
   const legacyGrifos = args.includes("--legacy-grifos");
+  const legacyTransferencia = args.includes("--legacy-transferencia");
   const filePath = args.find((a) => !a.startsWith("--"));
 
   if (!filePath) {
     console.error(
-      "Uso: npm run validate:lote -- <arquivo.json> [--skip-citacoes]",
+      "Uso: npm run validate:lote -- <arquivo.json> [--skip-citacoes] [--legacy-grifos] [--legacy-transferencia]",
     );
     process.exit(1);
+  }
+
+  if (legacyGrifos) {
+    process.env.GRIFO_LEGACY = "1";
+  }
+  if (legacyTransferencia) {
+    process.env.TRANSFERENCIA_LEGACY = "1";
   }
 
   const relativePath = relative(process.cwd(), resolve(process.cwd(), filePath));
@@ -35,6 +43,7 @@ function main() {
     const npmArgs = ["run", script, "--", relativePath];
     if (skipCitacoes) npmArgs.push("--skip-citacoes");
     if (legacyGrifos) npmArgs.push("--legacy-grifos");
+    if (legacyTransferencia) npmArgs.push("--legacy-transferencia");
 
     const result = spawnSync("npm", npmArgs, {
       cwd: process.cwd(),

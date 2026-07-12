@@ -2,6 +2,10 @@ import { z } from "zod";
 import { ARQUETIPOS_VISUAIS, SECOES_VISUAIS, type ConteudoFluxograma } from "@/types/estudo-reverso-visual";
 import { isFluxogramaLinear } from "@/lib/estudo-reverso/fluxograma-caminho";
 import { validarGrifosTrechoLegal, type GrifoInput } from "@/lib/grifo-offsets";
+import {
+  metaQuestaoSchema,
+  type MetaTransferenciaCampos,
+} from "@/lib/validations/transferencia-pedagogica";
 
 /**
  * Validação Zod do estudo reverso visual (v1 expressa + v2 completa).
@@ -508,7 +512,7 @@ function validarGrifosNasTelas(
 
 function validarContextoLeve(
   telas: z.infer<typeof telaVisualSchema>[],
-  meta: z.infer<typeof metaAulaCompletaSchema> | undefined,
+  meta: MetaTransferenciaCampos | undefined,
   ctx: z.RefinementCtx,
 ) {
   const contextoIdx = telas.findIndex((t) => t.id === "contexto");
@@ -563,7 +567,7 @@ function validarRegrasVisuais(
   telas: z.infer<typeof telaVisualSchema>[],
   maxPalavras: number,
   ctx: z.RefinementCtx,
-  opts: { exigirDistratores: boolean; meta?: z.infer<typeof metaAulaCompletaSchema> },
+  opts: { exigirDistratores: boolean; meta?: MetaTransferenciaCampos },
 ) {
   validarPalavrasPorTela(telas, maxPalavras, ctx);
   validarSemTextoConsecutivo(telas, ctx);
@@ -661,15 +665,9 @@ const conteudoTrechoLegalSchema = z.object({
     .optional(),
 });
 
-const metaAulaCompletaSchema = z
-  .object({
-    padrao_familia: z.string().optional(),
-    pegadinha_em_uma_frase: z.string().optional(),
-    eixos_legais: z.array(z.string()).optional(),
-    eixos_mecanismo: z.array(z.string()).optional(),
-    isca_por_alternativa: z.record(z.string(), z.string()).optional(),
-  })
-  .optional();
+const metaAulaCompletaSchema = metaQuestaoSchema;
+
+export { metaQuestaoSchema, type MetaTransferenciaCampos } from "@/lib/validations/transferencia-pedagogica";
 
 const conteudoLinhaTempoSchema = z.object({
   eventos: z

@@ -25,7 +25,7 @@
 | 7 | `caso` | `metodo` | `comparacao` | Montar gabarito: I✓ II✗ III✓ → letra | **Sempre** |
 | 8 | `lei` | `lei` | `trecho_legal` | Inciso da assertiva-isca | **Sempre** |
 | 9 | `lei2` | `lei` | `trecho_legal` | 2º inciso se gabarito usa dois | 2 fundamentos |
-| 10 | `macete` | `macete` | `texto_destaque` | Mnemônico + near-transfer | **Sempre** |
+| 10 | `macete` | `macete` | `texto_destaque` | Mnemônico + near/far + o que NÃO muda | **Sempre** |
 
 **Núcleo B:** contexto → **matriz** → contraste → distratores → caso → lei → macete.
 
@@ -52,8 +52,11 @@
 ### `caso`
 - Linhas: I → ✓/✗ + inciso | II → ✓/✗ | III → ✓/✗ | Resultado → letra B
 
-### `macete` near-transfer
-- “Se a banca trocar só a faixa do meio no art. 219, o que muda?” — 1 frase.
+### `macete` — transferência (v3.4)
+
+- Regra 1 frase + **near** + **far** + **o que NÃO muda** (eco de `meta` da questão)
+- Near exemplo: “Se a banca trocar só a faixa do meio no art. 219, o que muda?” — 1 frase.
+- Far: cenário distinto (outro inciso ou outro tipo de infração na mesma tabela)
 
 ---
 

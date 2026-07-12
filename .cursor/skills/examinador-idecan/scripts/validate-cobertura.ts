@@ -14,6 +14,12 @@ import { questoesImportFileSchema } from "../../../../src/lib/validations/questa
 
 async function main() {
   const args = process.argv.slice(2);
+  if (args.includes("--legacy-grifos")) {
+    process.env.GRIFO_LEGACY = "1";
+  }
+  if (args.includes("--legacy-transferencia")) {
+    process.env.TRANSFERENCIA_LEGACY = "1";
+  }
   const filePath = args.find((a) => !a.startsWith("--"));
 
   if (!filePath) {

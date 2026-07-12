@@ -24,7 +24,7 @@
 | 6 | `caso` | `metodo` | `comparacao` | Via + fato + órgão → letra | **Sempre** |
 | 7 | `mapa` | `mapa` | `comparacao` | Matriz via × órgão (scan) | ≥3 órgãos no microtópico |
 | 8 | `lei` | `lei` | `trecho_legal` | art. 23/24… grifado | **Sempre** |
-| 9 | `macete` | `macete` | `texto_destaque` | Via X + fato Y = órgão Z + near-transfer | **Sempre** |
+| 9 | `macete` | `macete` | `texto_destaque` | Via × órgão + near/far + o que NÃO muda | **Sempre** |
 
 **Núcleo C:** contexto → **diagrama** → contraste → distratores → caso → lei → macete.
 
@@ -48,8 +48,11 @@
 ### `caso`
 - Via municipal | estacionamento irregular | STTP autua | Gabarito B
 
-### `macete` near-transfer
-- “Mesma infração em rodovia federal no perímetro urbano — quem autua?” — 1 frase.
+### `macete` — transferência (v3.4)
+
+- Regra via+órgão + **near** + **far** + **o que NÃO muda** (eco de `meta`)
+- Near exemplo: “Mesma infração em rodovia federal no perímetro urbano — quem autua?” — 1 frase.
+- Far: outro par de órgãos (ex.: CONTRAN↔CETRAN) no mesmo dispositivo
 
 ---
 

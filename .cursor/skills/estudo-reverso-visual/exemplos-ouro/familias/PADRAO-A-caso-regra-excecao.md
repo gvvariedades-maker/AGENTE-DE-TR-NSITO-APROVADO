@@ -24,7 +24,7 @@
 | 7 | `caso` | `metodo` | `comparacao` | Amarrar conflitos do stem | Caso prático |
 | 8 | `eixo2` / `hierarquia` | `conceito` | `comparacao` | Separar 2º fundamento | 2º dispositivo no gabarito |
 | 9–10 | `lei*` | `lei` | `trecho_legal` | Ancorar literal + grifo | 1–2 dispositivos |
-| 11 | `macete` | `macete` | `texto_destaque` | Recuperar + near-transfer | **Sempre** |
+| 11 | `macete` | `macete` | `texto_destaque` | Recuperar + near/far + o que NÃO muda | **Sempre** |
 
 ---
 
@@ -46,8 +46,17 @@
 | MAPA | Todos os desfechos legais | Inacabado+frete vedado · Acabado+ATV · Só DANFe |
 | CASO | Fatos do enunciado → dispositivo | Caminhão inacabado + frete + DANFe insuficiente |
 
-### `macete` near-transfer
-- Hipotética 1 frase no mesmo microtópico: “Se só houvesse rotatória × via comum, quem passa?”
+### `macete` — transferência (v3.4)
+
+Consome `meta` da questão (`examinador-idecan` v2.1):
+
+1. **Regra** (1 frase) — invariante do gabarito
+2. **Near-transfer** — eco de `meta.near_transfer` (cenário próximo)
+3. **Far-transfer** — eco de `meta.far_transfer` (cenário distante; ≠ near)
+4. **O que NÃO muda** — eco de `meta.o_que_nao_muda`
+5. **Cadeia** (se houver) — `meta.eixo_vizinho` em 1 frase (“próximo na cadeia: art. X”)
+
+Exemplo near: “Se só houvesse rotatória × via comum, quem passa?” — 1 frase.
 
 ---
 

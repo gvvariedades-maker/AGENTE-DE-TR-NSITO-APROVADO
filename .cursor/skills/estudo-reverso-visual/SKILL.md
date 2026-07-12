@@ -7,7 +7,7 @@ description: Especialista em micro-aulas visuais de alta retenção para o playe
 
 > **Documentação completa:** [DOCUMENTACAO.md](./DOCUMENTACAO.md) — arquitetura, validação, retrofit, integração app.
 
-versão 3.0 — unifica `estudo-reverso-visual` + `estudo-reverso-visual-completo` em uma skill com dois modos; tabela de decisão com desempate; telas obrigatórias vs condicionais; gate Mayer binário inline; distratores por mecanismo; verificação de coerência entre os dois campos. Changelog no fim.
+versão 3.4 — v3.3 + far-transfer obrigatório no macete, checklist de eficácia pós-aula (3×15s) e coerência de eixo vizinho. Changelog no fim.
 
 Designer instrucional + examinador IDECAN. Cada micro-aula consolida **uma questão específica** — nunca genérica, nunca reusada entre microtópicos.
 
@@ -150,7 +150,7 @@ Estourou o limite → dividir em 2 telas (segmentação), nunca comprimir remove
 Obrigatórias (3):
 1. `texto_destaque` — o que a IDECAN testou (1 frase + veredito do aluno)
 2. **Arquétipo principal** (tabela de decisão)
-3. `texto_destaque` — macete visual
+3. `texto_destaque` — macete visual (**inclui far-transfer em 1 linha** quando `meta.far_transfer` existe; se estourar 120 palavras, priorizar regra + far)
 
 Condicionais (+até 2, só se o gatilho existir):
 - `comparacao` da pegadinha — se o mecanismo dominante é par confundível (pode↔deve, grave↔gravíssima, CONTRAN↔CETRAN)
@@ -167,15 +167,58 @@ Núcleo obrigatório (7, nesta ordem — progressão problema → mecanismo → 
 4. `comparacao` — **análise dos distratores, organizada por mecanismo** (formato canônico acima)
 5. `comparacao` ou `fluxograma` — caso concreto do enunciado resolvido
 6. `trecho_legal` — dispositivo principal grifado
-7. `texto_destaque` — macete
+7. `texto_destaque` — macete (**near-transfer + far-transfer + o que NÃO muda** — ver § Transferência)
 
 Condicionais (+até 4, só com gatilho real — inserir **antes** do arquétipo principal quando forem pré-treino):
 - `texto_destaque` glossário/pré-treino (≤3 termos) — se a questão usa ≥2 termos técnicos que um iniciante não conhece
 - `linha_tempo` contexto legislativo — se houve alteração legal relevante ao tópico (ex.: Lei 13.281, art. 165-A)
 - `trecho_legal` 2 — se § único/inciso distinto é o eixo da pegadinha
-- `comparacao` extra — se há segundo par confundível no mesmo microtópico
+- `comparacao` extra — se há segundo par confundível no mesmo microtópico **ou** se `meta.eixo_vizinho` existe e cabe tabela "dispositivo × função" (não decorar)
 
 7 telas = núcleo puro. 11 = núcleo + 4 condicionais. Tela condicional sem gatilho = decoração = reprovação.
+
+### Transferência no macete (obrigatória — consome `examinador-idecan` v2.1)
+
+A última tela (`macete`) **deve** conter, no `conteudo.texto` ou em `macete_visual` + texto:
+
+1. **Regra** (1 frase) — o invariante do gabarito
+2. **Near-transfer** — eco de `meta.near_transfer` (cenário próximo)
+3. **Far-transfer** — eco de `meta.far_transfer` (cenário distante)
+4. **O que NÃO muda** — eco de `meta.o_que_nao_muda` (invariante legal)
+
+Formato canônico sugerido (1 tela, sem estourar 150 palavras):
+
+```
+[Regra 1 frase]
+Near: …
+Far: …
+Não muda: …
+[+ se meta.eixo_vizinho] Cadeia: próximo = art. X
+```
+
+Alternativa (quando near/far não cabem no texto_destaque sem estourar limite): tela condicional `comparacao` **imediatamente antes** do macete, com colunas `O que muda` | `O que NÃO muda` (≤3 linhas) — conta no teto de 11.
+
+Sem far-transfer distinto do near → **reprova** gate editorial #18.
+
+### Coerência de eixo vizinho
+
+Se a questão traz `meta.eixo_vizinho` (ou `comentario.estudo_reverso` cita o artigo seguinte):
+
+- Macete (ou tela `eixo2`/hierarquia da Família A) **nomeia** o vizinho em 1 frase ("próximo na cadeia: art. X — não cobrado aqui").
+- Não abrir aula genérica do vizinho — só âncora de cadeia.
+- Gate Mayer item 8 (coerência v1↔v2): se v1 e v2 existem, ambas mencionam o mesmo vizinho ou ambas omitem.
+
+### `<checklist_eficacia_pos_aula>` (3 perguntas × 15s)
+
+Antes de gravar a aula, o elaborador responde **sim** às 3 — se qualquer for "não", cortar tela decorativa ou reescrever macete/contraste:
+
+| # | Pergunta (o aluno deve conseguir em ≤15s após a aula) |
+|---|---|
+| E1 | Qual é o **invariante** legal (o que NÃO muda entre near e far)? |
+| E2 | Por que a **errada mais tentadora** cai (slug + 1 fato do stem)? |
+| E3 | Em um cenário **novo** (far-transfer), a mesma regra aplica — sim/não e por quê? |
+
+Registrar em `meta.eficacia_pos_aula: ["E1","E2","E3"]` na aula completa (ou na raiz) quando as 3 passam. Gate editorial #19.
 
 ### Padrão ouro v3 (hub + famílias A–D)
 
@@ -203,18 +246,18 @@ Reprovou 1 item → corrigir antes de rodar qualquer npm:
 5. Arquétipo escolhido expõe a pegadinha do gabarito (não só "ilustra o tema")?
 6. Limites por componente respeitados (tabela acima)?
 7. Zero elemento decorativo (cada ícone/cor/box sustenta a pegadinha)?
-8. **Coerência v1↔v2:** mesma pegadinha nomeada, mesmo `fundamento_slug`, macetes não contraditórios entre `estudo_reverso_visual` e `estudo_reverso_visual_completo` da mesma questão?
+8. **Coerência v1↔v2:** mesma pegadinha nomeada, mesmo `fundamento_slug`, macetes não contraditórios entre `estudo_reverso_visual` e `estudo_reverso_visual_completo` da mesma questão? Se há `eixo_vizinho`, ambas citam ou ambas omitem?
 
-Itens 2, 4, 6 e 8 são parcialmente enforceados pelo validador Zod. Itens 1, 3, 5 e 7 permanecem revisão humana.
+Itens 2, 4, 6 e 8 são parcialmente enforceados pelo validador Zod. Itens 1, 3, 5 e 7 permanecem revisão humana. Após Mayer: `<checklist_eficacia_pos_aula>` E1–E3 + gate editorial hub (#18 far-transfer, #19 eficácia).
 
-Depois: `npm run validate:lote -- arquivo.json` até zero erros (inclui `preview:grifos`). Lotes legados sem `texto_grifado`: `validate:lote -- --legacy-grifos` até `npm run retrofit:grifos -- --write`. Checklist detalhado: [checklist-mayer.md](checklist-mayer.md).
+Depois: `npm run validate:lote -- arquivo.json` até zero erros (inclui `preview:grifos`). Lotes legados: `--legacy-grifos` (sem `texto_grifado`; retrofit `npm run retrofit:grifos -- --write`) e/ou `--legacy-transferencia` (sem `meta` near/far/o_que_nao_muda em nível 4+). Checklist detalhado: [checklist-mayer.md](checklist-mayer.md).
 
 ## Workflow por questão
 
-1. Ler enunciado + `comentario` (incl. slugs de mecanismo no `passo_a_passo`) + gabarito + `estilo_idecan`
+1. Ler enunciado + `comentario` (incl. slugs de mecanismo no `passo_a_passo`) + gabarito + `estilo_idecan` + `meta` (`near_transfer`, `far_transfer`, `o_que_nao_muda`, `eixo_vizinho`)
 2. Classificar família A|B|C|D — [PADRAO-AULA-COMPLETA-v3.md](exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md)
-3. Montar EXPRESSA (3–5) e COMPLETA (7–11) — estrutura da família, condicionais só com gatilho
-4. `<gate_mayer>` 8/8 + gate editorial 12/12 (hub v3)
+3. Montar EXPRESSA (3–5) e COMPLETA (7–11) — estrutura da família, condicionais só com gatilho; macete com near+far+o que não muda
+4. `<gate_mayer>` 8/8 + gate editorial 12/12 + #18/#19 (hub v3) + `<checklist_eficacia_pos_aula>` E1–E3
 5. Grifos: `npm run grifo:offsets` → preencher `texto_grifado` → `npm run preview:grifos`
 6. `npm run validate:lote -- arquivo.json` (5 gates, inclui preview de grifos)
 
@@ -263,12 +306,14 @@ Gere content/questoes/legislacao_transito/lote-00X.json:
 - [checklist-mayer.md](checklist-mayer.md)
 - [exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md](exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md) — **hub padrão ouro v3 (famílias A–D)**
 - [exemplos-ouro/familias/](exemplos-ouro/familias/) — guias por família
-- [../examinador-idecan/prompt-questao-aula-completa.md](../examinador-idecan/prompt-questao-aula-completa.md) — prompt copiável (nova conversa)
+- [../examinador-idecan/prompt-nova-conversa.txt](../examinador-idecan/prompt-nova-conversa.txt) — prompt pronto (nova conversa)
+- [../examinador-idecan/prompt-questao-aula-completa.md](../examinador-idecan/prompt-questao-aula-completa.md) — variantes + checklist
 - [arquetipos/](arquetipos/) — templates por arquétipo
 - [exemplos-ouro/](exemplos-ouro/) — incl. [ctb-normas-circulacao-art29.json](exemplos-ouro/ctb-normas-circulacao-art29.json) (canônico) e [ctb-embriaguez.json](exemplos-ouro/ctb-embriaguez.json)
 
 ## Changelog
 
+- **3.4** — eficácia máxima: macete exige near + far-transfer + o que NÃO muda (consome `meta` do examinador v2.1); coerência de `eixo_vizinho` no macete; `<checklist_eficacia_pos_aula>` E1–E3 (15s); gate editorial hub #18/#19; EXPRESSA também ecoa far em 1 linha no macete quando houver espaço.
 - **3.3** — Hub v3 + famílias A–D; contratos editoriais; gate 12/12; ouros B/C/D com `estudo_reverso_visual_completo`; retrofit art. 29.
 - **3.1** — MÉTODO linear — ver [PADRAO-A-caso-regra-excecao.md](exemplos-ouro/familias/PADRAO-A-caso-regra-excecao.md) / [PADRAO-AULA-COMPLETA-v2.md](exemplos-ouro/PADRAO-AULA-COMPLETA-v2.md) §3.
 - **3.0** — unificação das skills `estudo-reverso-visual` + `estudo-reverso-visual-completo`; tabela de decisão com desempate; núcleo + condicionais; distratores por slug IDECAN; gate Mayer 8 itens; limites por componente; coerência v1↔v2; `<cadeia_anti_alucinacao>`; mapeamento arquetipo→tipo; formato canônico distratores; política de seed (v2 obrigatório, v1 recomendado).

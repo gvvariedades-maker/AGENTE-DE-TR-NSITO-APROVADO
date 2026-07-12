@@ -1,0 +1,322 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_processo_administrativo",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_280_par_2",
+    "enunciado": "Em cruzamento sinalizado de Campina Grande/PB, agente da STTP presencia veículo avançando o sinal vermelho. Não há câmera nem radar no local. O agente lavra o auto de infração com tipificação, local, data e hora, placa, marca e espécie, identificação do órgão autuador e declaração própria como meio de comprovação. O condutor alega nulidade: sem equipamento eletrônico regulamentado pelo CONTRAN a infração não se prova, e só policial militar designado poderia lavrar o auto. Considerando o CTB, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O procedimento é válido: o art. 280, §2, admite comprovação por declaração do agente da autoridade de trânsito, e o §4 admite que o agente seja servidor civil da STTP.",
+      "B": "A autuação é nula: sem aparelho eletrônico ou audiovisual previamente regulamentado pelo CONTRAN, a declaração do agente não comprova a infração.",
+      "C": "A declaração do agente só vale se acompanhada de reações químicas ou de equipamento audiovisual — isolada, não constitui meio de prova do §2.",
+      "D": "Compete exclusivamente à Polícia Militar designada lavrar o auto; servidor civil da STTP está impedido de autuar com base em declaração própria."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Meios de comprovação da infração (art. 280, §2) e legitimidade do servidor civil da STTP para autuar (§4).",
+      "fundamento_legal": "CTB, art. 280, §2: A infração deverá ser comprovada por declaração da autoridade ou do agente da autoridade de trânsito, por aparelho eletrônico ou por equipamento audiovisual, reações químicas ou qualquer outro meio tecnologicamente disponível, previamente regulamentado pelo CONTRAN. §4: O agente da autoridade de trânsito competente para lavrar o auto de infração poderá ser servidor civil, estatutário ou celetista ou, ainda, policial militar designado pela autoridade de trânsito com jurisdição sobre a via no âmbito de sua competência.",
+      "passo_a_passo": [
+        "1. Caso: avanço de sinal vermelho flagrado por agente da STTP, sem câmera/radar; AIT lastreado na declaração do agente; condutor exige equipamento CONTRAN e exclusividade da PM.",
+        "2. B erra por regra_excecao (transforma os meios do §2 em exclusividade de equipamento eletrônico); C erra por termo_unico (exige cumulação de meios — o §2 lista alternativas, não requisitos cumulativos); D erra por competencia_snt (inventa exclusividade da PM — §4 admite servidor civil).",
+        "3. A correta: §2 inclui expressamente a declaração do agente; §4 inclui servidor civil da STTP."
+      ],
+      "pegadinha": "A IDECAN induz a anular o auto por falta de equipamento eletrônico — mas o §2 lista declaração do agente como meio autônomo de comprovação, em alternativa ao equipamento.",
+      "macete": "§2 = declaração OU equipamento (não só radar) · STTP civil autua (§4) · próximo na cadeia: art. 281. Near: ultrapassagem sem radar — declaração basta. Far: etilômetro regulamentado — também cabe no §2. Não muda: meios são alternativos.",
+      "estudo_reverso": [
+        "CTB art. 280, §2",
+        "CTB art. 280, §4",
+        "CTB art. 281"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Declaração do agente basta — §2 não exige equipamento eletrônico em toda hipótese",
+      "eixos_legais": ["CTB_art_280_par_2", "CTB_art_280_par_4"],
+      "eixo_vizinho": "CTB_art_281",
+      "isca_por_alternativa": {
+        "B": "sem aparelho eletrônico regulamentado pelo CONTRAN a declaração do agente não comprova",
+        "C": "declaração só vale se acompanhada de reações químicas ou equipamento audiovisual",
+        "D": "compete exclusivamente à Polícia Militar designada lavrar o auto"
+      },
+      "eixos_mecanismo": ["competencia_snt", "regra_excecao", "termo_unico"],
+      "near_transfer": "Agente presencia ultrapassagem em faixa contínua sem radar — declaração do agente no AIT basta pelo §2.",
+      "far_transfer": "Fiscalização com etilômetro regulamentado pelo CONTRAN — também é meio válido do §2 (outro item da lista).",
+      "o_que_nao_muda": "O §2 enumera meios alternativos (declaração OU aparelho OU outro meio regulamentado), não um único meio obrigatório.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "processo_administrativo",
+      "autuacao",
+      "art_280",
+      "meios_prova",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 60,
+      "fundamento_slug": "CTB_art_280_par_2",
+      "macete_visual": "§2 = declaração OU equipamento · STTP §4",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Avanço de sinal sem câmera. Gabarito A: declaração do agente comprova; STTP civil autua.",
+            "destaques": ["declaração do agente", "STTP civil"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Equipamento × declaração",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Sem radar/câmera = auto nulo", "§2 — declaração do agente basta"],
+              ["Só PM pode autuar", "§4 — servidor civil da STTP também"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + far-transfer",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "§2 = declaração OU equipamento.\nFar: etilômetro regulamentado também cabe no §2.\nNão muda: meios alternativos.",
+            "destaques": ["declaração OU", "etilômetro", "alternativos"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 280",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 280,
+      "fundamento_slug": "CTB_art_280_par_2",
+      "macete_visual": "§2 = declaração OU equipamento · STTP §4",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Declaração do agente basta — §2 não exige equipamento eletrônico em toda hipótese",
+        "eixos_legais": ["CTB_art_280_par_2", "CTB_art_280_par_4"],
+        "eixo_vizinho": "CTB_art_281",
+        "isca_por_alternativa": {
+          "B": "sem aparelho eletrônico regulamentado pelo CONTRAN a declaração do agente não comprova",
+          "C": "declaração só vale se acompanhada de reações químicas ou equipamento audiovisual",
+          "D": "compete exclusivamente à Polícia Militar designada lavrar o auto"
+        },
+        "near_transfer": "Agente presencia ultrapassagem em faixa contínua sem radar — declaração do agente no AIT basta pelo §2.",
+        "far_transfer": "Fiscalização com etilômetro regulamentado pelo CONTRAN — também é meio válido do §2 (outro item da lista).",
+        "o_que_nao_muda": "O §2 enumera meios alternativos (declaração OU aparelho OU outro meio regulamentado), não um único meio obrigatório.",
+        "eficacia_pos_aula": ["E1", "E2", "E3"]
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: avanço de sinal sem câmera",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — sem aparelho eletrônico regulamentado pelo CONTRAN a declaração do agente não comprova.\nC — declaração só vale se acompanhada de reações químicas ou equipamento audiovisual.\nD — compete exclusivamente à Polícia Militar designada lavrar o auto.\n\nPegadinha: a declaração do agente é meio autônomo de prova — não exige radar em toda hipótese.",
+            "destaques": ["Gabarito A", "declaração do agente", "meio autônomo"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DECLARAÇÃO DO AGENTE: meio de prova autônomo na lavratura do AIT — basta por si.\n\nAPARELHO ELETRÔNICO: radar/câmera etc., se regulamentado pelo CONTRAN — outro meio da lista.\n\nSERVIDOR CIVIL STTP: a lei admite civil estatutário/celetista como agente autuador.",
+            "destaques": ["DECLARAÇÃO DO AGENTE", "APARELHO ELETRÔNICO", "SERVIDOR CIVIL"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: há meio de prova válido?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Agente presenciou e declarou no AIT?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Autuador é servidor civil da STTP?", "tipo": "pergunta" },
+              { "id": "r1", "label": "§2 + §4 — AIT válido sem câmera", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Meios do §2 — lista alternativa",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Meio", "Papel"],
+            "linhas": [
+              { "faixa": "Declaração do agente", "classificacao": "Basta sozinha" },
+              { "faixa": "Aparelho eletrônico / audiovisual", "classificacao": "Alternativa (se regulamentado)" },
+              { "faixa": "Reações químicas / outro meio", "classificacao": "Alternativa (se regulamentado)" },
+              { "faixa": "Só equipamento = obrigatório?", "classificacao": "Não — pegadinha" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: radar obrigatório?",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Sem equipamento eletrônico o auto é nulo",
+                "§2 — declaração do agente comprova"
+              ],
+              [
+                "Meios do §2 são cumulativos",
+                "São alternativos (OU, não E)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — regra_excecao",
+                "Transforma a lista do §2 em exclusividade de equipamento eletrônico"
+              ],
+              [
+                "C — termo_unico",
+                "Exige cumulação (declaração + química/audiovisual) — o §2 não exige"
+              ],
+              [
+                "D — competencia_snt",
+                "Inventa exclusividade da PM — §4 admite servidor civil da STTP"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado — Campina Grande",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Conclusão legal"],
+            "linhas": [
+              ["Avanço de sinal; agente presencia", "Há flagrante visual do agente"],
+              ["Sem câmera/radar no local", "Não impede — §2 admite declaração"],
+              ["AIT com declaração do agente STTP", "§2 + §4 — meios e legitimidade ok"],
+              ["Resultado", "Gabarito A — procedimento válido"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "§2 × §4 — papéis distintos",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              ["§2 — Meios de comprovação", "Declaração do agente basta"],
+              ["§4 — Quem autua", "Servidor civil STTP ou PM designado"],
+              ["Art. 281 — Vizinho", "Autoridade julga consistência do AIT"]
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 280, §2 — meios de comprovação",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 280, §2",
+            "texto": "A infração deverá ser comprovada por declaração da autoridade ou do agente da autoridade de trânsito, por aparelho eletrônico ou por equipamento audiovisual, reações químicas ou qualquer outro meio tecnologicamente disponível, previamente regulamentado pelo CONTRAN.",
+            "trechos_grifados": [
+              {
+                "inicio": 37,
+                "fim": 100,
+                "motivo": "contraste — declaração do agente como meio autônomo",
+                "texto_grifado": "declaração da autoridade ou do agente da autoridade de trânsito"
+              },
+              {
+                "inicio": 102,
+                "fim": 156,
+                "motivo": "mapa — aparelho eletrônico é alternativa, não exclusividade",
+                "texto_grifado": "por aparelho eletrônico ou por equipamento audiovisual"
+              },
+              {
+                "inicio": 227,
+                "fim": 265,
+                "motivo": "fluxo — regulamentação CONTRAN aplica-se aos meios tecnológicos",
+                "texto_grifado": "previamente regulamentado pelo CONTRAN"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei4",
+          "titulo": "Art. 280, §4 — quem pode autuar",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 280, §4",
+            "texto": "O agente da autoridade de trânsito competente para lavrar o auto de infração poderá ser servidor civil, estatutário ou celetista ou, ainda, policial militar designado pela autoridade de trânsito com jurisdição sobre a via no âmbito de sua competência.",
+            "trechos_grifados": [
+              {
+                "inicio": 88,
+                "fim": 128,
+                "motivo": "hierarquia — servidor civil da STTP pode autuar",
+                "texto_grifado": "servidor civil, estatutário ou celetista"
+              },
+              {
+                "inicio": 140,
+                "fim": 156,
+                "motivo": "distratores — PM é alternativa, não exclusividade",
+                "texto_grifado": "policial militar"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "§2 = declaração OU equipamento (não só radar) · STTP civil autua (§4).\nNear: ultrapassagem sem radar — declaração basta.\nFar: etilômetro regulamentado — também cabe no §2.\nNão muda: meios são alternativos.\nCadeia: próximo = art. 281 (autoridade julga o AIT).",
+            "destaques": ["declaração OU", "ultrapassagem sem radar", "etilômetro", "alternativos", "art. 281"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 280",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

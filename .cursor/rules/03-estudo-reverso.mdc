@@ -48,8 +48,10 @@ aluno" (ver `.cursor/skills/frontend-design/retencao-visual.md`).
 - O player abre **sempre** a aula completa após confirmar resposta (quando existir)
 - Campo legado `estudo_reverso_visual` (v1 expressa) permanece no schema como fallback de geração, não como trilha preferida
 - Sessões em `estudo_reverso_sessions`; métricas por conclusão da aula
-- Skill: `.cursor/skills/estudo-reverso-visual/` (v3 unificada — modos EXPRESSA e COMPLETA)
+- Skill: `.cursor/skills/estudo-reverso-visual/` (**v3.4** — modos EXPRESSA e COMPLETA; far-transfer + E1–E3)
+- Questão: `.cursor/skills/examinador-idecan/` (**v2.1** — transferência + eixo vizinho)
 - Documentação: `.cursor/skills/estudo-reverso-visual/DOCUMENTACAO.md`
+- Prompt copiável: `.cursor/skills/examinador-idecan/prompt-nova-conversa.txt` (variantes em `prompt-questao-aula-completa.md`)
 
 ## Estudo Reverso (ao errar)
 
@@ -119,6 +121,7 @@ mais `interval_days`): `aprendendo` (<7d) → `jovem` (7-21d) → `maduro`
 
 ## Changelog
 
+- **2026-07-11** — skills examinador-idecan v2.1 + estudo-reverso-visual v3.4: macete com near/far-transfer, `meta.o_que_nao_muda`, `eixo_vizinho`, checklist eficácia E1–E3 (gate editorial #18/#19).
 - **2026-07-08 (f)** — skill estudo-reverso-visual v3 unificada; `validate:lote`; v2 obrigatório no seed; núcleo v2 + passo 2 com slugs; CI + git hooks.
 - **2026-07-08 (c)** — com estudo reverso visual na questão, remove `FeedbackElaborado` da UI (evita duplicar conteúdo da trilha); `comentario` JSON permanece no seed como fonte editorial.
 - **2026-07-08 (e)** — removido `micro_recall` (Fixação ativa) do player, schema, conteúdo e skills; aula termina no macete/fechamento.

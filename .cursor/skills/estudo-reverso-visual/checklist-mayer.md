@@ -1,10 +1,10 @@
-# Checklist Mayer (gate bloqueante — espelho do `<gate_mayer>` v3)
+# Checklist Mayer (gate bloqueante — espelho do `<gate_mayer>` v3.4)
 
 Documentação completa: [DOCUMENTACAO.md](./DOCUMENTACAO.md).
 
 Reprovou **1 item** → corrigir antes de `npm run validate:estudo-reverso-visual`.
 
-**Gate editorial 12/12** (itens 9–16): ver [PADRAO-AULA-COMPLETA-v3.md](./exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md).
+**Gate editorial** (itens 9–19): ver [PADRAO-AULA-COMPLETA-v3.md](./exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md). Itens **#18** (far-transfer distinto do near) e **#19** (E1–E3) obrigatórios em questão nova nível 4–5.
 
 ## Gate 8/8
 
@@ -15,7 +15,23 @@ Reprovou **1 item** → corrigir antes de `npm run validate:estudo-reverso-visua
 - [ ] **5.** Arquétipo expõe a pegadinha do gabarito (não só ilustra o tema)?
 - [ ] **6.** Limites por componente respeitados? *(validador Zod — ver tabela na SKILL)*
 - [ ] **7.** Zero elemento decorativo (cada item sustenta a pegadinha)?
-- [ ] **8.** Coerência v1↔v2: mesmo `fundamento_slug`, macetes não contraditórios? *(validador Zod quando ambos existem)*
+- [ ] **8.** Coerência v1↔v2: mesmo `fundamento_slug`, macetes não contraditórios? Se há `eixo_vizinho`, ambas citam ou ambas omitem? *(validador Zod quando ambos existem)*
+
+## Checklist eficácia pós-aula (E1–E3) — gate editorial #19
+
+Após Mayer 8/8, o elaborador responde **sim** às 3 (aluno em ≤15s cada):
+
+- [ ] **E1.** Qual é o **invariante** legal (o que NÃO muda entre near e far)?
+- [ ] **E2.** Por que a **errada mais tentadora** cai (slug + 1 fato do stem)?
+- [ ] **E3.** Em cenário **novo** (far-transfer), a mesma regra aplica — sim/não e por quê?
+
+Registrar `meta.eficacia_pos_aula: ["E1","E2","E3"]` quando passar.
+
+## Gate editorial #18 (macete)
+
+- [ ] Macete (ou tela imediata antes) distingue **o que muda × o que NÃO muda**
+- [ ] **Far-transfer** ≠ paráfrase do near-transfer
+- [ ] Eco de `meta.near_transfer`, `meta.far_transfer`, `meta.o_que_nao_muda` da questão
 
 ## Limites rápidos
 

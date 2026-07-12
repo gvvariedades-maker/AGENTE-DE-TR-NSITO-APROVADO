@@ -1,15 +1,26 @@
-# Prompt — Questão inédita IDECAN + aula completa (padrão v3)
+# Prompt — Questão inédita IDECAN + aula completa (padrão v3.4 / examinador v2.1)
 
-Copie e cole em uma **nova conversa no modo Agent**.
+## Prompt pronto (copiar e colar)
+
+**Arquivo:** [prompt-nova-conversa.txt](./prompt-nova-conversa.txt) — abra, `Ctrl+A`, cole em uma **nova conversa no modo Agent**. Sem markdown, sem extrair bloco de código.
+
+| Arquivo | Uso |
+|---------|-----|
+| **[prompt-nova-conversa.txt](./prompt-nova-conversa.txt)** | **Padrão** — 1 questão, tópico via `npm run proxima` |
+| Este `.md` | Variantes (completo, curto, lote), checklist, tabela por disciplina |
 
 > **Política do banco:** dificuldade mínima **4** (`src/lib/validations/dificuldade-banco.ts`). O `npm run proxima` já retorna o escopo com nível 4+.
+> **Eficácia:** examinador-idecan **v2.1** (transferência + eixo vizinho + calibração) · estudo-reverso-visual **v3.4** (far-transfer + E1–E3).
+> **Validação:** `validate:lote` strict exige `meta.near_transfer` / `far_transfer` / `o_que_nao_muda` em nível 4+ (gate Zod T1–T4). Lotes legados: `--legacy-transferencia`.
+
+**Variante disciplina:** no `.txt`, troque `legislacao_transito` nas duas linhas do `proxima` e em `Disciplina:`.
 
 ---
 
-## Prompt nova conversa (copiar inteiro)
+## Prompt nova conversa (espelho do .txt)
 
 ```text
-Modo Agent. Skills: examinador-idecan + estudo-reverso-visual.
+Modo Agent. Skills: examinador-idecan (v2.1) + estudo-reverso-visual (v3.4).
 
 Disciplina: legislacao_transito
 
@@ -17,7 +28,7 @@ Passo 0 — escolher tópico automaticamente:
 → npm run proxima -- legislacao_transito
 → Usar o bloco "Escopo pronto" retornado (tópico, recorte, família, lote, dificuldade 4+).
 
-Gerar 1 questão inédita IDECAN + aula completa v3 nesse tópico.
+Gerar 1 questão inédita IDECAN + aula completa v3.4 nesse tópico.
 Consultar perfil vertical da disciplina (mapa slug→arquivo na SKILL.md) para forma e mecanismos.
 
 ## Dificuldade mínima 4 (banco de treino)
@@ -27,19 +38,22 @@ Consultar perfil vertical da disciplina (mapa slug→arquivo na SKILL.md) para f
 - estilo_idecan: pegadinha_* | assertivas | incorreta
 - Pegadinha obrigatória; gate primeira passagem item 4: número bate com dificuldade_operacional
 
-## Questão
+## Questão (examinador v2.1)
 - 4 alt A–D; mecanismo declarado em cada errada
 - <cadeia_anti_alucinacao> em toda citação legal
 - Gate 9: cada errada on-case (deriva do enunciado); competencia_snt só se o stem citar órgão/competência
+- Gate 10: meta.near_transfer + meta.far_transfer + meta.o_que_nao_muda (distintos); meta.eixo_vizinho se o gabarito remete a outro artigo
+- <gate_calibracao_corpus> (envelope + estilo top + mecanismo alinhado)
 - meta.isca_por_alternativa (A/B/D) + meta.eixos_mecanismo quando cruzar ≥2 slugs
 
-## Aula v3
+## Aula v3.4
 - Hub: exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md + família do proxima
 - estudo_reverso_visual_completo versao 2, 7–11 telas
 - contexto: só iscas — análise por mecanismo fica em distratores
+- Macete: regra + near + far + o que NÃO muda (eco da meta); citar eixo_vizinho se houver
 - Grifos: npm run grifo:offsets → texto_grifado obrigatório; motivo ecoa id da tela
 - Família A com 2 dispositivos: tela eixo2 ou hierarquia (2º fundamento do gabarito, não eixo órfão)
-- Gate Mayer 8/8 + editorial 12/12 + item #17 (preview:grifos)
+- Gate Mayer 8/8 + editorial 12/12 + #17 (preview:grifos) + #18 (far) + #19 (E1–E3)
 
 ## Entrega
 1. Gravar lote + snippet em _snippets/
@@ -47,10 +61,10 @@ Consultar perfil vertical da disciplina (mapa slug→arquivo na SKILL.md) para f
 3. npm run index:questoes → npm run db:seed
 4. Não commitar
 
-Reportar: família, gabarito, pegadinha em 1 frase, nº de telas, resultado dos 5 gates, caminho do arquivo.
+Reportar: família, gabarito, pegadinha em 1 frase, near/far em 1 linha cada, nº de telas, E1–E3 ok?, resultado dos 5 gates, caminho do arquivo.
 ```
 
-**Variante disciplina:** troque `legislacao_transito` no `proxima` e no bloco Escopo.
+> Mantenha [prompt-nova-conversa.txt](./prompt-nova-conversa.txt) sincronizado com o bloco acima ao editar o prompt padrão.
 
 ---
 
@@ -58,7 +72,7 @@ Reportar: família, gabarito, pegadinha em 1 frase, nº de telas, resultado dos 
 
 | Nome | O que é |
 |------|---------|
-| **Padrão pedagógico v3** | Hub + famílias A–D, contratos de tela, gate editorial 12/12 + #17 grifo → [PADRAO-AULA-COMPLETA-v3.md](../estudo-reverso-visual/exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md) |
+| **Padrão pedagógico v3.4** | Hub + famílias A–D + far-transfer + E1–E3 → [PADRAO-AULA-COMPLETA-v3.md](../estudo-reverso-visual/exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md) |
 | **Campo JSON v2** | `estudo_reverso_visual_completo` com `"versao": 2`, 7–11 telas — formato gravado no banco e validado pelo Zod |
 
 **Não existe `versao: 3` no schema.** Sempre produzir com o **guia v3** e gravar no **campo v2**.
@@ -105,8 +119,8 @@ Criar 1 questão inédita IDECAN + aula completa no padrão pedagógico v3, grav
 1. Classificar família A|B|C|D — PADRAO-AULA-COMPLETA-v3.md
 2. Abrir familias/PADRAO-{X}-….md + JSON ouro da família (não copiar art.29 cego)
 3. Copiar estrutura (ids, ordem, tipos, seções) da família — NUNCA reusar texto literal
-4. Diagnóstico com isca por errada; macete com near-transfer
-5. .cursor/skills/examinador-idecan/SKILL.md (gate + mecanismos de distrator)
+4. Diagnóstico com isca por errada; macete com near + far + o que NÃO muda
+5. .cursor/skills/examinador-idecan/SKILL.md (gate 10/10 + transferência + calibração + mecanismos)
 
 ## Questão (estilo IDECAN real)
 - 100% inédita; fundamento legal verificável em conteúdo/ (<cadeia_anti_alucinacao>)
@@ -115,6 +129,7 @@ Criar 1 questão inédita IDECAN + aula completa no padrão pedagógico v3, grav
 - Cada errada com 1 mecanismo: numero_vizinho | competencia_snt | gravidade | regra_excecao | termo_unico
 - passo_a_passo[1] nomeia o slug de cada alternativa errada
 - Gate 9: cada errada on-case; competencia_snt só com órgão/competência no stem
+- Gate 10 + meta: near_transfer, far_transfer, o_que_nao_muda; eixo_vizinho se couber
 - meta.isca_por_alternativa + meta.eixos_mecanismo quando aplicável
 - Pegadinha obrigatória se dificuldade ≥ 3
 - Comentário Professor Elite completo (objeto comentario no JSON)
@@ -127,7 +142,8 @@ Criar 1 questão inédita IDECAN + aula completa no padrão pedagógico v3, grav
 - trecho_legal: texto literal de conteúdo/, grifos por indexOf com `texto_grifado` (npm run grifo:offsets), motivo ecoa id da tela
 - contexto: só iscas (meta.isca_por_alternativa) — análise por mecanismo fica em distratores
 - Família A + 2 dispositivos: tela eixo2 ou hierarquia (2º fundamento, não competência órfã)
-- Gate Mayer 8/8 + editorial 12/12 + #17 → npm run preview:grifos antes do validate:lote
+- Macete: near + far + o que NÃO muda; checklist E1–E3
+- Gate Mayer 8/8 + editorial 12/12 + #17–#19 → npm run preview:grifos antes do validate:lote
 
 ## Entrega
 1. Gravar em content/questoes/[disciplina]/lote-[NNN].json (criar lote ou acrescentar)
@@ -140,7 +156,9 @@ Criar 1 questão inédita IDECAN + aula completa no padrão pedagógico v3, grav
 ## Ao final, reportar
 - Família A|B|C|D usada
 - Gabarito e pegadinha em 1 frase
+- Near-transfer e far-transfer (1 linha cada) + o que NÃO muda
 - Número de telas da aula
+- E1–E3 ok?
 - Resultado dos 5 gates de validate:lote (inclui preview:grifos)
 - Caminho do arquivo gravado
 ```
@@ -152,7 +170,7 @@ Criar 1 questão inédita IDECAN + aula completa no padrão pedagógico v3, grav
 O agente escolhe o tópico por **déficit de demanda** (peso IDECAN × lacuna no banco). Prioridades em `scripts/edital-topics-prioridades.ts` (espelha perfis §9–§10).
 
 ```text
-Modo Agent. Skills: examinador-idecan + estudo-reverso-visual.
+Modo Agent. Skills: examinador-idecan (v2.1) + estudo-reverso-visual (v3.4).
 
 Disciplina: legislacao_transito
 
@@ -160,13 +178,13 @@ Passo 0 — escolher tópico automaticamente:
 → npm run proxima -- legislacao_transito
 → Usar o bloco "Escopo pronto" retornado (tópico, recorte, família, lote, dificuldade 4+).
 
-Gerar 1 questão inédita IDECAN + aula completa v3 nesse tópico.
+Gerar 1 questão inédita IDECAN + aula completa v3.4 nesse tópico.
 Consultar perfil vertical da disciplina (mapa slug→arquivo na SKILL.md) para forma e mecanismos.
 
 Dificuldade mínima 4: caso_pratico + 2 mecanismos cruzados + 2 dispositivos no gabarito.
-Questão: 4 alt A–D; mecanismos nos distratores; pegadinha obrigatória; erradas on-case (gate 9).
+Questão: 4 alt A–D; mecanismos nos distratores; pegadinha obrigatória; erradas on-case (gate 9); transferência near+far+o_que_nao_muda (gate 10).
 meta.isca_por_alternativa + grifos com texto_grifado (grifo:offsets).
-Aula: contexto só iscas; Mayer 8/8 + editorial 12/12 + #17.
+Aula: contexto só iscas; macete com far-transfer; Mayer 8/8 + editorial #17–#19 + E1–E3.
 → validate:lote (5 gates, inclui preview:grifos) → index:questoes → db:seed. Não commitar.
 ```
 
@@ -213,14 +231,15 @@ Questão:
 - 4 alternativas A–D; cada errada com 1 slug: numero_vizinho | competencia_snt | gravidade | regra_excecao | termo_unico
 - passo_a_passo[1] nomeia o mecanismo de cada alternativa errada
 - Gate 9: erradas on-case; competencia_snt só com órgão/competência no stem
+- Gate 10: meta.near_transfer + far_transfer + o_que_nao_muda; eixo_vizinho se couber
 - meta.isca_por_alternativa (A/B/D)
 - Pegadinha obrigatória se dificuldade ≥ 3
 
 Diagnóstico: contexto só iscas; distratores com análise por mecanismo.
 Grifos: npm run grifo:offsets → texto_grifado; motivo ecoa id da tela.
-Macete com near-transfer.
+Macete com near + far + o que NÃO muda; E1–E3.
 <cadeia_anti_alucinacao> em toda citação legal.
-Gate primeira passagem 9/9 → Mayer 8/8 + editorial 12/12 + #17 → validate:lote (5 gates) → index:questoes → db:seed. Não commitar.
+Gate primeira passagem 10/10 → Mayer 8/8 + editorial #17–#19 → validate:lote (5 gates) → index:questoes → db:seed. Não commitar.
 
 Gravar em: content/questoes/[SLUG]/lote-[NNN].json
 ```
@@ -265,7 +284,7 @@ Gerar content/questoes/[disciplina]/lote-[NNN].json:
 - Campo JSON: estudo_reverso_visual_completo, versao 2, 7–11 telas
 - Hub: PADRAO-AULA-COMPLETA-v3.md + família + JSON ouro correspondente
 - contexto só iscas; grifos com texto_grifado; erradas on-case
-- Gate primeira passagem 9/9 + Mayer 8/8 + editorial 12/12 + #17 por questão → validate:lote (5 gates) → db:seed
+- Gate primeira passagem 10/10 + Mayer 8/8 + editorial #17–#19 + E1–E3 por questão → validate:lote (5 gates) → db:seed
 - Não commitar
 ```
 
@@ -276,7 +295,9 @@ Gerar content/questoes/[disciplina]/lote-[NNN].json:
 - [ ] Família A|B|C|D correta para o tipo de questão
 - [ ] Questão inédita — não repete enunciado/eixo de lotes existentes
 - [ ] Gabarito único e defensável com dispositivo citável
-- [ ] Aula amarrada ao enunciado desta questão (não genérica)
+- [ ] `meta.near_transfer` / `far_transfer` / `o_que_nao_muda` preenchidos e distintos
+- [ ] Aula amarrada ao enunciado desta questão (não genérica); macete com far-transfer
+- [ ] E1–E3 respondíveis em 15s cada
 - [ ] `estudo_reverso_visual_completo.versao === 2`
-- [ ] `npm run validate:lote` passou nos 5 gates (inclui preview:grifos)
+- [ ] `npm run validate:lote` passou nos 5 gates (inclui preview:grifos). Lote legado sem transferência: `--legacy-transferencia`
 - [ ] Seed aplicado (`db:seed`)

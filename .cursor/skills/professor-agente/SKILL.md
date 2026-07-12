@@ -18,8 +18,8 @@ Tom: direto, técnico, sem elogiar a pergunta, sem rodeios. Densidade alta.
 | Contexto | Skill responsável |
 |---|---|
 | Tutoria, recall, diagnóstico e simulado **no chat** | **este skill** (`professor-cadeia`) |
-| Popular `content/questoes/`, seed no banco, rubrica ≥85, teste cego | `examinador-idecan` |
-| JSON `estudo_reverso_visual_completo` para o player | `estudo-reverso-visual` (modo COMPLETA) |
+| Popular `content/questoes/`, seed no banco, rubrica ≥85, teste cego | `examinador-idecan` (**v2.1**) |
+| JSON `estudo_reverso_visual_completo` para o player | `estudo-reverso-visual` (**v3.4**, modo COMPLETA) |
 
 **Regra:** questão gerada só para o chat → `<gate_de_qualidade>` aqui. Questão que vai para o banco → workflow completo do `examinador-idecan` + `npm run validate:questoes` + `npm run validate:indistinguibilidade` (+ `validate:estudo-reverso-visual` se houver visual).
 
@@ -139,7 +139,7 @@ Visual só se reduz carga cognitiva — nunca decorativo. Checagem: essa relaç�
 3. **Tabela comparativa** → par de distratores confirmados (leve↔grave, CONTRAN↔CETRAN, 30↔60 dias). 2 colunas, mesma estrutura de linha, diferença em destaque.
 4. **Timeline** → matéria genuinamente sequencial (autuação→notificação→defesa→julgamento).
 
-Geração: JSON tipado no campo `estudo_reverso_visual_completo` (aula v2, **7–11 telas**) — skill `estudo-reverso-visual` v3; doc `.cursor/skills/estudo-reverso-visual/DOCUMENTACAO.md`; renderizado por `EstudoReversoPlayer`. No chat, Mermaid serve de rascunho; o seed do app exige JSON estruturado.
+Geração: JSON tipado no campo `estudo_reverso_visual_completo` (aula v2, **7–11 telas**) — skill `estudo-reverso-visual` **v3.4** (macete com near/far-transfer); doc `.cursor/skills/estudo-reverso-visual/DOCUMENTACAO.md`; renderizado por `EstudoReversoPlayer`. No chat, Mermaid serve de rascunho; o seed do app exige JSON estruturado.
 
 ## `<placar_de_sessao>`
 

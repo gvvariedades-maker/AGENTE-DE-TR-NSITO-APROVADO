@@ -1,0 +1,322 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_snt_competencias",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_23_III",
+    "enunciado": "Durante blitz conjunta da STTP e da Polícia Militar da Paraíba em via municipal de Campina Grande, policial militar lavra auto de infração por ultrapassagem em local proibido, sem convênio específico entre a PM e o órgão executivo municipal de trânsito. O condutor sustenta nulidade do auto. A autoridade da STTP consulta as competências dos órgãos do Sistema Nacional de Trânsito. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A Polícia Militar possui competência autônoma e exclusiva para fiscalizar e autuar infrações de trânsito em vias municipais, independentemente de convênio com o órgão executivo de trânsito local.",
+      "B": "A fiscalização pela Polícia Militar depende de convênio firmado, atuando como agente do órgão ou entidade executivo de trânsito ou rodoviário, concomitantemente com os demais agentes credenciados — nos termos do art. 23, III, do CTB.",
+      "C": "O CONTRAN deve autorizar previamente cada operação conjunta em via municipal antes que policiais militares possam lavrar autos de infração, conforme competência normativa do art. 12 do CTB.",
+      "D": "Compete privativamente à STTP a lavratura de autos em vias municipais, sendo vedada qualquer atuação da Polícia Militar na fiscalização de trânsito, ainda que em blitz conjunta."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Competência da PM para fiscalizar trânsito apenas como agente do executivo, mediante convênio (art. 23, III) × competência direta do órgão municipal (art. 24, VI).",
+      "fundamento_legal": "CTB, art. 23, III: executar a fiscalização de trânsito, quando e conforme convênio firmado, como agente do órgão ou entidade executivos de trânsito ou executivos rodoviários, concomitantemente com os demais agentes credenciados. Art. 24, VI: compete aos órgãos executivos de trânsito dos Municípios executar a fiscalização de trânsito em vias terrestres, autuar e aplicar penalidades pelas infrações previstas neste Código, notificando os infratores e arrecadando as multas que aplicar.",
+      "passo_a_passo": [
+        "1. Caso: PM autua ultrapassagem em via municipal de Campina Grande sem convênio com a STTP — condutor alega nulidade; autoridade consulta competências do SNT.",
+        "2. A erra por competencia_snt (atribui à PM competência autônoma e exclusiva em via municipal); C erra por competencia_snt (confunde normatização do CONTRAN com autorização de cada blitz); D erra por regra_excecao (veda totalmente a PM, ignorando que o art. 23, III, admite atuação como agente com convênio).",
+        "3. B correta: art. 23, III — PM só fiscaliza quando e conforme convênio, como agente do executivo de trânsito ou rodoviário, concomitantemente com demais agentes credenciados; a STTP autua diretamente pelo art. 24, VI."
+      ],
+      "pegadinha": "A IDECAN induz a tratar a PM como autuadora exclusiva em via municipal — mas o art. 23, III, condiciona a fiscalização a convênio e à atuação como agente do executivo, não como competência própria.",
+      "macete": "PM autua só com convênio (23, III) · STTP autua direto (24, VI) · diretrizes conjuntas (24, V). Near: com convênio PM-STTP, PM autua como agente. Far: em rodovia estadual, mesma lógica com executivo rodoviário. Não muda: PM nunca tem competência autônoma de autuação.",
+      "estudo_reverso": [
+        "CTB art. 23, III",
+        "CTB art. 24, VI",
+        "CTB art. 24, V"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "C_competencia_snt",
+      "pegadinha_em_uma_frase": "PM não autua com competência própria — só como agente do executivo, mediante convênio (art. 23, III)",
+      "eixos_legais": [
+        "CTB_art_23_III",
+        "CTB_art_24_VI",
+        "CTB_art_24_V"
+      ],
+      "eixo_vizinho": "CTB_art_24_V",
+      "isca_por_alternativa": {
+        "A": "PM possui competência autônoma e exclusiva em vias municipais sem convênio",
+        "C": "CONTRAN autoriza previamente cada operação conjunta em via municipal",
+        "D": "STTP tem competência privativa e veda qualquer atuação da PM em blitz conjunta"
+      },
+      "eixos_mecanismo": [
+        "competencia_snt",
+        "regra_excecao"
+      ],
+      "near_transfer": "Com convênio PM-STTP firmado, policial militar autua ultrapassagem como agente do executivo municipal, concomitantemente com agentes credenciados da STTP.",
+      "far_transfer": "Em rodovia estadual, PM só fiscaliza com convênio como agente do órgão executivo rodoviário — mesma regra do art. 23, III, em outro tipo de via e outro executivo.",
+      "o_que_nao_muda": "A Polícia Militar nunca exerce competência autônoma de autuação — apenas como agente do executivo de trânsito ou rodoviário, quando e conforme convênio (art. 23, III).",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "competencia_snt",
+      "pm",
+      "sttp",
+      "convenio",
+      "art_23",
+      "art_24"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CTB_art_23_III",
+      "macete_visual": "PM = agente com convênio · STTP = executivo direto",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: PM só fiscaliza com convênio, como agente do executivo — não com competência autônoma em via municipal.",
+            "destaques": ["convênio", "agente", "STTP"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "PM × STTP no caso",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "sttp", "label": "STTP — autua direto (art. 24, VI)", "nivel": 2 },
+              { "id": "pm", "label": "PM — agente com convênio (art. 23, III)", "nivel": 1 }
+            ],
+            "arestas": [
+              { "de": "pm", "para": "sttp", "rotulo": "depende de convênio" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Autonomia × agente",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Pegadinha ✗", "Lei ✓"],
+            "linhas": [
+              ["PM autua sozinha em via municipal", "PM fiscaliza só com convênio, como agente (art. 23, III)"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PM = agente com convênio (23, III).\nSTTP = executivo direto (24, VI).\nFar: rodovia estadual — mesma lógica de convênio.",
+            "destaques": ["convênio", "24, VI", "rodovia"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 23",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 240,
+      "fundamento_slug": "CTB_art_23_III",
+      "macete_visual": "PM = agente com convênio · STTP = executivo direto",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: PM autuou sem convênio",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — PM autônoma e exclusiva em via municipal sem convênio: errado.\nC — CONTRAN autoriza cada blitz municipal: confunde normatizar com operar.\nD — STTP privativa e PM totalmente vedada: ignora possibilidade de convênio.\n\nPegadinha: PM não tem competência própria de autuação — só atua como agente do executivo, com convênio.",
+            "destaques": ["convênio", "agente", "STTP"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 papéis no caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "STTP: órgão executivo municipal de Campina Grande — fiscaliza e autua diretamente em vias terrestres (art. 24, VI).\n\nPM: policiamento ostensivo — fiscaliza trânsito somente como agente do executivo, com convênio (art. 23, III).\n\nCONTRAN: normatiza o SNT (art. 12) — não autoriza blitz caso a caso.",
+            "destaques": ["STTP", "PM", "CONTRAN"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem faz o quê neste caso",
+          "secao": "metodo",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "contran", "label": "CONTRAN — normatiza SNT (art. 12)", "nivel": 0 },
+              { "id": "sttp", "label": "STTP — autua direto (art. 24, VI)", "nivel": 2 },
+              { "id": "pm", "label": "PM — agente com convênio (art. 23, III)", "nivel": 1 }
+            ],
+            "arestas": [
+              { "de": "pm", "para": "sttp", "rotulo": "convênio obrigatório" },
+              { "de": "sttp", "para": "contran", "rotulo": "executa normas" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: PM autônoma em via municipal",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              ["PM autua sozinha em via municipal", "PM só fiscaliza com convênio, como agente (art. 23, III)"],
+              ["CONTRAN libera cada blitz", "CONTRAN normatiza — executivo municipal autua (art. 24, VI)"]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              ["A — competencia_snt", "Atribui competência autônoma à PM — art. 23, III exige convênio e atuação como agente"],
+              ["C — competencia_snt", "Confunde normatização do CONTRAN (art. 12) com autorização operacional de blitz"],
+              ["D — regra_excecao", "Veda totalmente a PM — o art. 23, III admite atuação como agente com convênio"]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos do enunciado → gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              ["Via municipal de Campina Grande", "Esfera do executivo municipal"],
+              ["PM lavra auto sem convênio", "Viola art. 23, III — falta convênio e papel de agente"],
+              ["STTP é o executivo local", "Pode autuar diretamente pelo art. 24, VI"],
+              ["Resultado", "Gabarito B — regra do convênio"]
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Matriz: órgão × função",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Órgão", "Função no SNT (caso)"],
+            "linhas": [
+              ["CONTRAN", "Normatiza procedimentos — não autua em blitz municipal"],
+              ["STTP", "Executivo municipal — autua direto em vias terrestres"],
+              ["PM-PB", "Agente do executivo — só com convênio firmado"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 23, III — PM como agente",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 23, III",
+            "texto": "III - executar a fiscalização de trânsito, quando e conforme convênio firmado, como agente do órgão ou entidade executivos de trânsito ou executivos rodoviários, concomitantemente com os demais agentes credenciados;",
+            "trechos_grifados": [
+              {
+                "inicio": 43,
+                "fim": 77,
+                "motivo": "contraste — convênio é condição da fiscalização",
+                "texto_grifado": "quando e conforme convênio firmado"
+              },
+              {
+                "inicio": 79,
+                "fim": 160,
+                "motivo": "diagrama — PM atua como agente do executivo",
+                "texto_grifado": "como agente do órgão ou entidade executivos de trânsito ou executivos rodoviários"
+              },
+              {
+                "inicio": 162,
+                "fim": 214,
+                "motivo": "caso — atuação concomitante com agentes credenciados",
+                "texto_grifado": "concomitantemente com os demais agentes credenciados"
+              }
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Art. 24, VI × art. 23, III — papéis distintos",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              ["Art. 24, VI — STTP", "Executivo municipal autua diretamente em vias terrestres"],
+              ["Art. 23, III — PM", "Só fiscaliza como agente, com convênio"],
+              ["Art. 24, V — vizinho", "Diretrizes de policiamento ostensivo em conjunto com a PM"]
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 24, VI — competência da STTP",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 24, VI",
+            "texto": "VI - executar a fiscalização de trânsito em vias terrestres, edificações de uso público e edificações privadas de uso coletivo, autuar e aplicar as penalidades de advertência por escrito e multa e as medidas administrativas cabíveis pelas infrações previstas neste Código, notificando os infratores e arrecadando as multas que aplicar;",
+            "trechos_grifados": [
+              {
+                "inicio": 5,
+                "fim": 59,
+                "motivo": "diagrama — executivo municipal em vias terrestres",
+                "texto_grifado": "executar a fiscalização de trânsito em vias terrestres"
+              },
+              {
+                "inicio": 128,
+                "fim": 134,
+                "motivo": "caso — STTP autua ultrapassagem municipal",
+                "texto_grifado": "autuar"
+              },
+              {
+                "inicio": 137,
+                "fim": 232,
+                "motivo": "mapa — penalidades e medidas do executivo",
+                "texto_grifado": "aplicar as penalidades de advertência por escrito e multa e as medidas administrativas cabíveis"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PM = agente com convênio (23, III) · STTP = executivo direto (24, VI).\nNear: com convênio PM-STTP, PM autua como agente concomitantemente.\nFar: em rodovia estadual, PM só com convênio como agente do rodoviário.\nNão muda: PM nunca tem competência autônoma de autuação.\nCadeia: próximo = art. 24, V (diretrizes de policiamento ostensivo em conjunto).",
+            "destaques": ["convênio", "rodovia estadual", "autônoma", "art. 24, V"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 23",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        },
+        {
+          "rotulo": "CTB art. 24",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]
