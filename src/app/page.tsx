@@ -14,9 +14,9 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-1 flex-col">
-      <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-8 p-4 md:p-8">
-        <HomeHero diasParaProva={dias} />
-        <HomeCta />
+      <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-6 p-4 md:gap-8 md:p-8">
+        <HomeHero />
+        <HomeCta diasParaProva={dias} />
         <ProvaDistribuicaoBar />
       </main>
     </div>

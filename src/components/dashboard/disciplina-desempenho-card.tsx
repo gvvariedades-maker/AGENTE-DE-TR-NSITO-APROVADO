@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -106,9 +107,12 @@ export function DisciplinaDesempenhoCard({
 
         <Link
           href={`/estudo?disciplina=${d.disciplina}&modo=auto`}
-          className="text-xs text-primary underline-offset-4 hover:underline"
+          className={cn(
+            buttonVariants({ variant: "outline", size: "sm" }),
+            "w-full",
+          )}
         >
-          Estudar {d.label.split(" ")[0]} →
+          Estudar {d.label.split(" ")[0]}
         </Link>
 
         {expandida && topicos.length > 0 && (

@@ -14,17 +14,46 @@ interface EstudoReversoResumoCardProps {
 }
 
 export function EstudoReversoResumoCard({ resumo }: EstudoReversoResumoCardProps) {
+  const deltaPositivo =
+    resumo.deltaAcerto !== null && resumo.deltaAcerto >= 0;
+
   return (
-    <Card>
+    <Card className="h-full border-border bg-card">
       <CardHeader className="pb-2">
         <CardTitle className="text-base">Estudo reverso visual</CardTitle>
         <CardDescription>
-          Aulas completas concluídas após responder questões
+          Aulas completas após responder questões
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
         {resumo.hasData ? (
           <>
+            {resumo.amostrasPosVisual > 0 && resumo.deltaAcerto !== null ? (
+              <div className="rounded-lg border border-border bg-muted/20 px-4 py-3 text-center">
+                <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
+                  Ganho após a aula
+                </p>
+                <p
+                  className={`mt-1 text-3xl font-bold tabular-nums ${
+                    deltaPositivo
+                      ? "text-semaforo-verde"
+                      : "text-semaforo-vermelho"
+                  }`}
+                >
+                  {resumo.deltaAcerto >= 0 ? "+" : ""}
+                  {resumo.deltaAcerto} pp
+                </p>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  {resumo.taxaAcertoPreVisual ?? "—"}% pré →{" "}
+                  {resumo.taxaAcertoPosVisual ?? "—"}% pós
+                </p>
+              </div>
+            ) : (
+              <p className="text-sm text-muted-foreground">
+                Conclua aulas após errar para medir o ganho de acerto.
+              </p>
+            )}
+
             <dl className="grid grid-cols-2 gap-3 text-center">
               <div>
                 <dt className="text-xs text-muted-foreground">Sessões</dt>
@@ -41,38 +70,9 @@ export function EstudoReversoResumoCard({ resumo }: EstudoReversoResumoCardProps
             </dl>
 
             {resumo.amostrasPosVisual > 0 && (
-              <dl className="grid grid-cols-3 gap-3 rounded-lg border border-border bg-muted/20 p-3 text-center">
-                <div>
-                  <dt className="text-xs text-muted-foreground">Acerto pré-visual</dt>
-                  <dd className="text-lg font-semibold tabular-nums">
-                    {resumo.taxaAcertoPreVisual ?? "—"}%
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-xs text-muted-foreground">Acerto pós-visual</dt>
-                  <dd className="text-lg font-semibold tabular-nums text-semaforo-verde">
-                    {resumo.taxaAcertoPosVisual ?? "—"}%
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-xs text-muted-foreground">Delta</dt>
-                  <dd
-                    className={`text-lg font-semibold tabular-nums ${
-                      resumo.deltaAcerto !== null && resumo.deltaAcerto >= 0
-                        ? "text-semaforo-verde"
-                        : "text-semaforo-vermelho"
-                    }`}
-                  >
-                    {resumo.deltaAcerto !== null
-                      ? `${resumo.deltaAcerto >= 0 ? "+" : ""}${resumo.deltaAcerto} pp`
-                      : "—"}
-                  </dd>
-                </div>
-              </dl>
-            )}
-            {resumo.amostrasPosVisual > 0 && (
               <p className="text-center text-xs text-muted-foreground">
-                Baseado em {resumo.amostrasPosVisual} reattempt(s) após aula completa
+                Baseado em {resumo.amostrasPosVisual} reattempt(s) após aula
+                completa
               </p>
             )}
           </>

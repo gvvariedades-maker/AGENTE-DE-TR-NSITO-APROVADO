@@ -37,26 +37,26 @@ const ESTADOS: {
 interface CicloRetencaoProps {
   resumo: RetencaoResumo;
   atividade: AtividadeDia[];
+  embedded?: boolean;
 }
 
-export function CicloRetencao({ resumo, atividade }: CicloRetencaoProps) {
+export function CicloRetencao({
+  resumo,
+  atividade,
+  embedded = false,
+}: CicloRetencaoProps) {
   const total = resumo.aprendendo + resumo.jovem + resumo.maduro;
   const maxAtividade = Math.max(1, ...atividade.map((a) => a.total));
 
   const diasLabel = ["D", "S", "T", "Q", "Q", "S", "S"];
 
-  return (
-    <section aria-labelledby="retencao-titulo" className="flex flex-col gap-4">
-      <div>
-        <h2 id="retencao-titulo" className="text-lg font-semibold">
-          Ciclo de retenção
-        </h2>
-        <p className="text-sm text-muted-foreground">
-          Acompanhe como o conteúdo vai fixando na memória ao longo dos dias
-        </p>
-      </div>
-
-      <div className="grid gap-4 lg:grid-cols-2">
+  const cards = (
+    <div
+      className={cn(
+        "grid gap-4",
+        embedded ? "grid-cols-1" : "lg:grid-cols-2",
+      )}
+    >
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-base">Mapa de memória</CardTitle>
@@ -154,13 +154,30 @@ export function CicloRetencao({ resumo, atividade }: CicloRetencaoProps) {
             </div>
             {!atividade.some((a) => a.total > 0) && (
               <p className="mt-3 text-center text-sm text-muted-foreground">
-                Nenhuma questão nos últimos 7 dias. Use &quot;Sua prova hoje&quot;
-                acima para iniciar.
+                Nenhuma questão nos últimos 7 dias. Inicie pelo próximo passo
+                acima.
               </p>
             )}
           </CardContent>
         </Card>
+    </div>
+  );
+
+  if (embedded) {
+    return cards;
+  }
+
+  return (
+    <section aria-labelledby="retencao-titulo" className="flex flex-col gap-4">
+      <div>
+        <h2 id="retencao-titulo" className="text-lg font-semibold">
+          Ciclo de retenção
+        </h2>
+        <p className="text-sm text-muted-foreground">
+          Acompanhe como o conteúdo vai fixando na memória ao longo dos dias
+        </p>
       </div>
+      {cards}
     </section>
   );
 }

@@ -17,9 +17,15 @@ import {
 } from "@/lib/edital-topicos";
 import { PainelHero } from "@/components/dashboard/painel-hero";
 import { ModoTreinoCard } from "@/components/dashboard/modo-treino-card";
-import { DisciplinaItem } from "@/components/dashboard/disciplina-item";
+import { DisciplinasMapa } from "@/components/dashboard/disciplinas-mapa";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { DISCIPLINAS } from "@/types";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -94,9 +100,11 @@ export default async function DashboardPage() {
   );
   const mostrarAlertaInicio =
     !desempenho.hasData && semaforo.disciplinasEmRisco.length === 0;
+  const temPontosFracos = pioresTopicos.some((p) => p.tentativas > 0);
+  const temPrioridade = prioridadeEdital.length > 0;
 
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-6 p-4 md:p-8">
+    <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-6 p-4 md:gap-8 md:p-8">
       <PainelHero
         desempenho={desempenho}
         retencao={retencao}
@@ -152,53 +160,75 @@ export default async function DashboardPage() {
         </Alert>
       )}
 
-      {pioresTopicos.some((p) => p.tentativas > 0) && (
-        <section className="rounded-xl border border-border bg-card/50 p-4">
-          <h2 className="text-sm font-semibold">Pontos fracos</h2>
-          <ul className="mt-2 flex flex-col gap-1">
-            {pioresTopicos.slice(0, 3).map((p) => (
-              <li key={p.slug} className="flex items-baseline gap-2 text-sm">
-                <Link
-                  href={hrefEstudoTopico(p.slug, p.disciplina)}
-                  className="hover:underline"
-                >
-                  {labelPiorTopico(p)}
-                </Link>
-                {p.erros > 0 && (
-                  <Link
-                    href={hrefEstudoErros(p.slug)}
-                    className="text-xs text-semaforo-vermelho hover:underline"
-                  >
-                    erros
-                  </Link>
-                )}
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+      {(temPontosFracos || temPrioridade) && (
+        <div className="grid gap-4 md:grid-cols-2">
+          {temPontosFracos && (
+            <Card className="border-border bg-card">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm font-semibold">
+                  Pontos fracos
+                </CardTitle>
+                <CardDescription>
+                  Tópicos com maior taxa de erro
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="flex flex-col gap-2">
+                  {pioresTopicos.slice(0, 3).map((p) => (
+                    <li
+                      key={p.slug}
+                      className="flex items-baseline justify-between gap-2 text-sm"
+                    >
+                      <Link
+                        href={hrefEstudoTopico(p.slug, p.disciplina)}
+                        className="min-w-0 hover:underline"
+                      >
+                        {labelPiorTopico(p)}
+                      </Link>
+                      {p.erros > 0 && (
+                        <Link
+                          href={hrefEstudoErros(p.slug)}
+                          className="shrink-0 text-xs text-semaforo-vermelho hover:underline"
+                        >
+                          erros
+                        </Link>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          )}
 
-      {prioridadeEdital.length > 0 && (
-        <section className="rounded-xl border border-border bg-card/50 p-4">
-          <h2 className="text-sm font-semibold">Prioridade do edital</h2>
-          <p className="mt-0.5 text-xs text-muted-foreground">
-            {pioresTopicos.some((p) => p.tentativas > 0)
-              ? "Próximos tópicos estudáveis ainda não vistos"
-              : "Sugestão inicial — CTB, CONTRAN e disciplinas de risco"}
-          </p>
-          <ul className="mt-2 flex flex-col gap-1 text-sm text-muted-foreground">
-            {prioridadeEdital.map((p) => (
-              <li key={p.slug}>
-                <Link
-                  href={hrefEstudoTopico(p.slug, p.disciplina)}
-                  className="text-foreground hover:underline"
-                >
-                  {labelTopicoEdital(p.slug)}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
+          {temPrioridade && (
+            <Card className="border-border bg-card">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm font-semibold">
+                  Prioridade do edital
+                </CardTitle>
+                <CardDescription>
+                  {temPontosFracos
+                    ? "Próximos tópicos estudáveis ainda não vistos"
+                    : "Sugestão inicial — CTB, CONTRAN e disciplinas de risco"}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="flex flex-col gap-2 text-sm">
+                  {prioridadeEdital.map((p) => (
+                    <li key={p.slug}>
+                      <Link
+                        href={hrefEstudoTopico(p.slug, p.disciplina)}
+                        className="text-foreground hover:underline"
+                      >
+                        {labelTopicoEdital(p.slug)}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          )}
+        </div>
       )}
 
       <section className="flex flex-col gap-3">
@@ -232,15 +262,7 @@ export default async function DashboardPage() {
             Ver evolução completa →
           </Link>
         </div>
-        <ul className="grid gap-2 sm:grid-cols-2">
-          {DISCIPLINAS.map((d) => (
-            <DisciplinaItem
-              key={d}
-              disciplina={d}
-              desempenho={desempenhoPorDisciplina.get(d)}
-            />
-          ))}
-        </ul>
+        <DisciplinasMapa desempenhoPorDisciplina={desempenhoPorDisciplina} />
       </section>
     </div>
   );
