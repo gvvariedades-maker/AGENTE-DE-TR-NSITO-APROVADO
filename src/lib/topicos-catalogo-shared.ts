@@ -8,6 +8,7 @@ export interface TopicoCatalogo {
   editalRef: string | null;
   grupo: string;
   questoesCount: number;
+  questoesReaisCount: number;
   tentativas: number;
   acertos: number;
   taxaAcerto: number;
@@ -19,6 +20,7 @@ export interface TopicosDisciplinaResumo {
   topicos: TopicoCatalogo[];
   totalMapeados: number;
   totalEstudaveis: number;
+  totalReais: number;
   totalVistos: number;
   coberturaPct: number;
 }

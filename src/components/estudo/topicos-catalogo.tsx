@@ -6,6 +6,7 @@ import { ChevronRight, Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { hrefEstudoTopico } from "@/lib/estudo-links";
+import { BadgeQuestaoReal } from "@/components/estudo/badge-questao-real";
 import {
   agruparTopicos,
   type TopicoCatalogo,
@@ -15,18 +16,29 @@ import { DISCIPLINA_LABELS, type Disciplina } from "@/types";
 
 interface TopicosCatalogoProps {
   resumo: TopicosDisciplinaResumo;
+  /** Só microtópicos com questões reais e links no modo reais_idecan. */
+  somenteReais?: boolean;
 }
 
 function TopicoRow({
   topico,
   disciplina,
+  somenteReais = false,
 }: {
   topico: TopicoCatalogo;
   disciplina: Disciplina;
+  somenteReais?: boolean;
 }) {
   const isTransito = disciplina === "legislacao_transito";
 
-  if (!topico.estudavel) {
+  const countLabel = somenteReais
+    ? topico.questoesReaisCount
+    : topico.questoesCount;
+  const estudavel = somenteReais
+    ? topico.questoesReaisCount > 0
+    : topico.estudavel;
+
+  if (!estudavel) {
     return (
       <div
         className={cn(
@@ -46,7 +58,9 @@ function TopicoRow({
 
   return (
     <Link
-      href={hrefEstudoTopico(topico.slug, disciplina)}
+      href={hrefEstudoTopico(topico.slug, disciplina, {
+        modo: somenteReais ? "reais_idecan" : undefined,
+      })}
       className={cn(
         "flex items-center justify-between gap-3 rounded-lg border px-4 py-3 text-sm transition-colors",
         "hover:bg-muted/50 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50",
@@ -57,6 +71,12 @@ function TopicoRow({
     >
       <div className="min-w-0 flex-1">
         <p className="leading-snug">{topico.label}</p>
+        {topico.questoesReaisCount > 0 && !somenteReais && (
+          <p className="mt-0.5 text-xs text-amber-800/80 dark:text-amber-200/80">
+            {topico.questoesReaisCount} real
+            {topico.questoesReaisCount > 1 ? "is" : ""} IDECAN
+          </p>
+        )}
         {topico.tentativas > 0 && (
           <p className="mt-0.5 text-xs text-muted-foreground">
             {topico.tentativas} tentativas · {topico.taxaAcerto}% acerto
@@ -64,8 +84,11 @@ function TopicoRow({
         )}
       </div>
       <div className="flex shrink-0 items-center gap-2">
+        {somenteReais && (
+          <BadgeQuestaoReal tags={["real_idecan"]} variant="compact" />
+        )}
         <Badge variant="secondary" className="tabular-nums text-xs">
-          {topico.questoesCount}Q
+          {countLabel}Q
         </Badge>
         <ChevronRight className="size-4 text-muted-foreground" aria-hidden />
       </div>
@@ -73,9 +96,12 @@ function TopicoRow({
   );
 }
 
-export function TopicosCatalogo({ resumo }: TopicosCatalogoProps) {
+export function TopicosCatalogo({ resumo, somenteReais = false }: TopicosCatalogoProps) {
   const [busca, setBusca] = useState("");
-  const { disciplina, topicos } = resumo;
+  const { disciplina, topicos: topicosRaw } = resumo;
+  const topicos = somenteReais
+    ? topicosRaw.filter((t) => t.questoesReaisCount > 0)
+    : topicosRaw;
   const mostrarBusca = topicos.length > 12;
 
   const topicosFiltrados = useMemo(() => {
@@ -132,7 +158,11 @@ export function TopicosCatalogo({ resumo }: TopicosCatalogoProps) {
             <ul className="flex flex-col gap-1.5">
               {lista.map((topico) => (
                 <li key={topico.id}>
-                  <TopicoRow topico={topico} disciplina={disciplina} />
+                  <TopicoRow
+                    topico={topico}
+                    disciplina={disciplina}
+                    somenteReais={somenteReais}
+                  />
                 </li>
               ))}
             </ul>

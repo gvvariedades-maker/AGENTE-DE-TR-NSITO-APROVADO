@@ -38,6 +38,7 @@ import type { EstudoReversoVisual } from "@/types/estudo-reverso-visual";
 import { FocusModeToggle } from "@/components/estudo/focus-mode-toggle";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { BadgeQuestaoReal } from "@/components/estudo/badge-questao-real";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { cn } from "@/lib/utils";
 
@@ -438,6 +439,7 @@ export function QuestaoView({
             <Badge variant="secondary" className="text-xs font-normal">
               {DISCIPLINA_LABELS[questao.disciplina]}
             </Badge>
+            <BadgeQuestaoReal tags={questao.tags} />
             {isDemo && (
               <Badge variant="outline" className="text-xs font-normal">
                 Demonstração

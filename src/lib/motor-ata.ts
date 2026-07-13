@@ -1,5 +1,6 @@
 import { sql } from "drizzle-orm";
 import { db } from "@/lib/db";
+import { sqlSomenteQuestoesReais } from "@/lib/questoes-reais";
 import { getSemaforoData } from "@/lib/semaforo";
 import { SIMULADO_ESPELHO_DISTRIBUICAO, type Disciplina } from "@/types";
 
@@ -15,7 +16,8 @@ export type ModoSessaoEstudo =
   | "normal"
   | "erros"
   | "anti_zerar"
-  | "pegadinha";
+  | "pegadinha"
+  | "reais_idecan";
 
 export interface FiltrosMotor {
   disciplina?: Disciplina;
@@ -25,6 +27,7 @@ export interface FiltrosMotor {
   filtrarSomentePrioritarias?: boolean;
   somentePegadinha?: boolean;
   somenteErros?: boolean;
+  somenteReaisIdecan?: boolean;
 }
 
 export function parseModoSessao(raw?: string): ModoSessaoEstudo {
@@ -34,6 +37,7 @@ export function parseModoSessao(raw?: string): ModoSessaoEstudo {
     "erros",
     "anti_zerar",
     "pegadinha",
+    "reais_idecan",
   ];
   if (raw && valid.includes(raw as ModoSessaoEstudo)) {
     return raw as ModoSessaoEstudo;
@@ -49,6 +53,8 @@ export function labelModoSessao(modo: ModoSessaoEstudo): string {
       return "Anti-zerar";
     case "pegadinha":
       return "Pegadinha IDECAN";
+    case "reais_idecan":
+      return "Questões reais IDECAN";
     case "erros":
       return "Caderno de erros";
     default:
@@ -99,6 +105,10 @@ export async function resolverFiltrosMotor(
 
   if (modo === "pegadinha") {
     return { ...base, somentePegadinha: true };
+  }
+
+  if (modo === "reais_idecan") {
+    return { ...base, somenteReaisIdecan: true };
   }
 
   if (!userId) return base;
@@ -177,6 +187,10 @@ export async function buscarIdsPraticaPontuados(
       ? sql`AND la.acertou = false`
       : sql``;
 
+    const filtroReaisSql = filtros.somenteReaisIdecan
+      ? sql`AND ${sqlSomenteQuestoesReais("q.tags")}`
+      : sql``;
+
     const filtroExcluirSql =
       excluirIds.length > 0
         ? sql`AND q.id NOT IN (${sql.join(
@@ -214,6 +228,7 @@ export async function buscarIdsPraticaPontuados(
       ${filtroTopicoSql}
       ${filtroPegadinhaSql}
       ${filtroErrosSql}
+      ${filtroReaisSql}
       ${filtroExcluirSql}
       ORDER BY (
         CASE WHEN sc.next_review IS NOT NULL AND sc.next_review <= NOW() THEN 1000 ELSE 0 END

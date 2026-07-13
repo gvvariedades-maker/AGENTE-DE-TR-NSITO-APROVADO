@@ -21,7 +21,15 @@ export const metaTransferenciaCamposSchema = z.object({
 
 export type MetaTransferenciaCampos = z.infer<typeof metaTransferenciaCamposSchema>;
 
-export const metaQuestaoSchema = metaTransferenciaCamposSchema.optional();
+/** Meta de questões reais IDECAN (Tec) — campos extras além da transferência pedagógica. */
+export const metaQuestaoRealSchema = metaTransferenciaCamposSchema.extend({
+  origem: z.literal("real_idecan").optional(),
+  nivel_escolaridade: z.string().optional(),
+  fonte_arquivo: z.string().optional(),
+  tec_id: z.string().optional(),
+});
+
+export const metaQuestaoSchema = metaQuestaoRealSchema.optional();
 
 export function isTransferenciaLegacyMode(): boolean {
   return process.env.TRANSFERENCIA_LEGACY === "1";

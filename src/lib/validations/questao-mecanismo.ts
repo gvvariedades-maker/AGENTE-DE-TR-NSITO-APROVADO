@@ -127,7 +127,10 @@ export function validarDistratorOnCase(
   dificuldade: number,
   ctx: z.RefinementCtx,
   pathPrefix: (string | number)[] = ["comentario", "passo_a_passo"],
+  opts?: { origem?: string },
 ) {
+  if (opts?.origem === "real_idecan") return;
+
   const passo2 = obterPasso2Mecanismos(passo_a_passo);
   if (!passo2?.trim()) return;
 

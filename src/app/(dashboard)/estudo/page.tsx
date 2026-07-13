@@ -13,13 +13,15 @@ import { SessaoPreview } from "@/components/estudo/sessao-preview";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { BadgeQuestaoReal } from "@/components/estudo/badge-questao-real";
 import {
   DISCIPLINAS,
   DISCIPLINA_LABELS,
   type Disciplina,
 } from "@/types";
+import { hrefVitrineReais } from "@/lib/estudo-links";
 import { getEditalTopic, labelTopicoEdital } from "@/lib/edital-topicos";
-import { Badge } from "@/components/ui/badge";
 
 export const dynamic = "force-dynamic";
 
@@ -88,6 +90,7 @@ export default async function EstudoPage({
       : undefined;
 
   const podeDemo =
+    modo !== "reais_idecan" &&
     (modo === "auto" || modo === "normal") &&
     (!topico ||
       topico === DEMO_TOPICO ||
@@ -118,10 +121,13 @@ export default async function EstudoPage({
       ? `${DISCIPLINA_LABELS[disciplina]} · ${tituloFiltro}`
       : tituloFiltro;
 
+  const sessaoReaisVazia =
+    modo === "reais_idecan" && questoesDb.length === 0 && !isDemo;
+
   const sessaoErrosVazia =
     modo === "erros" && user && questoesDb.length === 0 && !isDemo;
 
-  const emSessao = questoes.length > 0 && !sessaoErrosVazia;
+  const emSessao = questoes.length > 0 && !sessaoErrosVazia && !sessaoReaisVazia;
   const modoLabel = labelModoSessao(modo);
 
   return (
@@ -139,6 +145,9 @@ export default async function EstudoPage({
               {modoLabel}
             </Badge>
           )}
+          {modo === "reais_idecan" && (
+            <BadgeQuestaoReal tags={["real_idecan"]} variant="compact" />
+          )}
         </div>
       )}
 
@@ -150,6 +159,7 @@ export default async function EstudoPage({
         questoesDb.length > 0 &&
         !isDemo &&
         modo !== "erros" &&
+        modo !== "reais_idecan" &&
         !emSessao && (
         <Alert className="mx-4 mt-4 max-w-3xl self-center" data-foco-hide>
           <AlertTitle>Sessão {modoLabel}</AlertTitle>
@@ -170,6 +180,29 @@ export default async function EstudoPage({
         </Alert>
       )}
 
+      {modo === "reais_idecan" &&
+        questoesDb.length > 0 &&
+        !isDemo &&
+        !emSessao && (
+        <Alert className="mx-4 mt-4 max-w-3xl self-center border-amber-500/30 bg-amber-500/5" data-foco-hide>
+          <AlertTitle className="flex flex-wrap items-center gap-2">
+            Questões reais IDECAN
+            <BadgeQuestaoReal tags={["real_idecan"]} variant="compact" />
+          </AlertTitle>
+          <AlertDescription>
+            Sessão só com provas do corpus superior — enunciado fiel ao PDF, com
+            aula completa após cada resposta.
+            {topico && (
+              <>
+                {" "}
+                Foco:{" "}
+                <span className="font-medium text-foreground">{tituloFiltro}</span>.
+              </>
+            )}
+          </AlertDescription>
+        </Alert>
+      )}
+
       {isDemo && !emSessao && (
         <Alert className="mx-4 mt-3 max-w-3xl self-center py-3" data-foco-hide>
           <AlertTitle className="text-sm">Demonstração CTB</AlertTitle>
@@ -180,7 +213,31 @@ export default async function EstudoPage({
         </Alert>
       )}
 
-      {sessaoErrosVazia ? (
+      {sessaoReaisVazia ? (
+        <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8 text-center">
+          <p className="text-muted-foreground">
+            Nenhuma questão real IDECAN
+            {topico ? ` em "${tituloFiltro}"` : ""}
+            {disciplina && !topico
+              ? ` em ${DISCIPLINA_LABELS[disciplina]}`
+              : ""}
+            .
+          </p>
+          <div className="flex flex-wrap justify-center gap-2">
+            <Link href={hrefVitrineReais()} className={cn(buttonVariants())}>
+              Ver vitrine de reais
+            </Link>
+            {disciplina && (
+              <Link
+                href={`/estudo/catalogo?disciplina=${disciplina}`}
+                className={cn(buttonVariants({ variant: "outline" }))}
+              >
+                Catálogo completo
+              </Link>
+            )}
+          </div>
+        </div>
+      ) : sessaoErrosVazia ? (
         <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8 text-center">
           <p className="text-muted-foreground">
             Nenhuma questão com erro recente

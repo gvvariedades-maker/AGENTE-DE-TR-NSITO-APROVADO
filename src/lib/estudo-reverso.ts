@@ -8,12 +8,9 @@ import {
   type FsrsState,
   type SrsCardState,
 } from "@/lib/srs";
-import { getQuestaoById, type QuestaoUI } from "@/lib/questoes";
-import { PROVA_DATA, type ComentarioQuestao, type Disciplina } from "@/types";
-import {
-  resolveEstudoReversoVisual,
-  resolveEstudoReversoVisualCompleto,
-} from "@/lib/estudo-reverso-visual-fallback";
+import { getQuestaoById, mapRowToQuestao, type QuestaoUI } from "@/lib/questoes";
+import { sqlSomenteQuestoesReais } from "@/lib/questoes-reais";
+import { PROVA_DATA, type Disciplina } from "@/types";
 import {
   buscarIdsPraticaPontuados,
   contarPraticaPontuada,
@@ -244,15 +241,20 @@ export async function buscarIdsRevisaoPendentes(
   limit = 10,
   disciplina?: Disciplina,
   topicoSlug?: string,
+  somenteReaisIdecan = false,
 ): Promise<string[]> {
   const conditions = [
     eq(srsCards.userId, userId),
     lte(srsCards.nextReview, new Date()),
     disciplina ? eq(topics.disciplina, disciplina) : undefined,
     topicoSlug ? eq(topics.nome, topicoSlug) : undefined,
+    somenteReaisIdecan ? sqlSomenteQuestoesReais("questions.tags") : undefined,
   ].filter(Boolean);
 
-  const needsJoin = disciplina !== undefined || topicoSlug !== undefined;
+  const needsJoin =
+    disciplina !== undefined ||
+    topicoSlug !== undefined ||
+    somenteReaisIdecan;
 
   if (needsJoin) {
     const rows = await db
@@ -302,6 +304,7 @@ export async function previewSessaoEstudo(
     limit,
     disciplina,
     topicoSlug,
+    modo === "reais_idecan",
   );
   const revisoesSrs = idsRevisao.length;
   const faltam = limit - revisoesSrs;
@@ -347,6 +350,7 @@ export async function montarSessaoEstudo(
       limit,
       disciplina,
       topicoSlug,
+      modo === "reais_idecan",
     );
     for (const id of idsRevisao) {
       const q = await getQuestaoById(id);
@@ -392,6 +396,7 @@ export async function montarSessaoEstudo(
     disciplina,
     [...idsUsados, ...resultado.map((q) => q.id)],
     topicoSlug,
+    modo === "reais_idecan",
   );
   return [...resultado, ...novas];
 }
@@ -401,12 +406,14 @@ async function buscarQuestoesNovas(
   disciplina?: Disciplina,
   excluirIds: string[] = [],
   topicoSlug?: string,
+  somenteReaisIdecan = false,
 ): Promise<QuestaoUI[]> {
   try {
     const filters = [
       disciplina ? eq(topics.disciplina, disciplina) : undefined,
       topicoSlug ? eq(topics.nome, topicoSlug) : undefined,
       excluirIds.length > 0 ? notInArray(questions.id, excluirIds) : undefined,
+      somenteReaisIdecan ? sqlSomenteQuestoesReais("questions.tags") : undefined,
     ].filter(Boolean);
 
     const conditions = filters.length > 0 ? and(...filters) : undefined;
@@ -425,6 +432,7 @@ async function buscarQuestoesNovas(
         estudoReversoVisualJson: questions.estudoReversoVisualJson,
         estudoReversoVisualCompletoJson: questions.estudoReversoVisualCompletoJson,
         disciplina: topics.disciplina,
+        tags: questions.tags,
       })
       .from(questions)
       .innerJoin(topics, eq(questions.topicId, topics.id))
@@ -433,27 +441,7 @@ async function buscarQuestoesNovas(
 
     const rows = await (conditions ? query.where(conditions) : query);
 
-    return rows.map((row) => ({
-      id: row.id,
-      disciplina: row.disciplina,
-      enunciado: row.enunciado,
-      alternativas: {
-        A: row.altA,
-        B: row.altB,
-        C: row.altC,
-        D: row.altD,
-        ...(row.altE ? { E: row.altE } : {}),
-      },
-      gabarito: row.gabarito,
-      comentario: (row.comentarioJson as ComentarioQuestao) ?? null,
-      estudoReversoVisual: resolveEstudoReversoVisual(
-        row.estudoReversoVisualJson,
-        (row.comentarioJson as ComentarioQuestao) ?? null,
-      ),
-      estudoReversoVisualCompleto: resolveEstudoReversoVisualCompleto(
-        row.estudoReversoVisualCompletoJson,
-      ),
-    }));
+    return rows.map(mapRowToQuestao);
   } catch {
     return [];
   }

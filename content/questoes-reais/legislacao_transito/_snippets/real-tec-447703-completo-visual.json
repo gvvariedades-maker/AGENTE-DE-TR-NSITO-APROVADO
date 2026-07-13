@@ -1,0 +1,196 @@
+{
+  "versao": 2,
+  "arquetipo": "diagrama_competencia",
+  "arquetipo_secundario": "comparacao",
+  "duracao_estimada_seg": 190,
+  "fundamento_slug": "CTB_art_14_V_a",
+  "macete_visual": "CETRAN julga JARI · CONTRAN normatiza",
+  "publico_alvo": "iniciante",
+  "links_fonte": [
+    {
+      "rotulo": "CTB",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ],
+  "meta": {
+    "near_transfer": "Art. 14, V, b — CETRAN julga recurso de inaptidão permanente.",
+    "far_transfer": "JARI julga em 1ª instância — CETRAN é 2ª instância recursal.",
+    "o_que_nao_muda": "Art. 14, V, a = CETRAN julga recurso da JARI."
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: competência do CETRAN",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — Câmaras Temáticas: CONTRAN.\nB — regimento JARI: CONTRAN.\nD — habilitação: CONTRAN.\n\nCETRAN julga recurso da JARI.",
+        "destaques": [
+          "Gabarito C",
+          "CETRAN",
+          "CONTRAN"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 órgãos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CETRAN: conselho estadual — julga recursos e coordena o SNT no Estado.\nCONTRAN: órgão máximo normativo federal.\nJARI: junta que julga infrações em 1ª instância — recurso vai ao CETRAN.",
+        "destaques": [
+          "CETRAN",
+          "CONTRAN",
+          "JARI"
+        ]
+      }
+    },
+    {
+      "id": "diagrama",
+      "titulo": "Fluxo recursal",
+      "secao": "metodo",
+      "tipo": "diagrama_competencia",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "jari",
+            "label": "JARI — 1ª instância",
+            "nivel": 2
+          },
+          {
+            "id": "cetran",
+            "label": "CETRAN — julga recursos JARI",
+            "nivel": 1
+          },
+          {
+            "id": "contran",
+            "label": "CONTRAN — normas",
+            "nivel": 0
+          }
+        ],
+        "arestas": [
+          {
+            "de": "jari",
+            "para": "cetran",
+            "rotulo": "recurso"
+          },
+          {
+            "de": "contran",
+            "para": "jari",
+            "rotulo": "regimento"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: atribuir ao CETRAN o que é CONTRAN",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa ✗",
+          "Órgão correto ✓"
+        ],
+        "linhas": [
+          [
+            "Criar Câmaras Temáticas",
+            "CONTRAN"
+          ],
+          [
+            "Diretrizes regimento JARI",
+            "CONTRAN"
+          ],
+          [
+            "Normatizar habilitação",
+            "CONTRAN"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — competencia_snt",
+            "Câmaras Temáticas são do CONTRAN — não do CETRAN"
+          ],
+          [
+            "B — competencia_snt",
+            "Regimento JARI é competência do CONTRAN"
+          ],
+          [
+            "D — competencia_snt",
+            "Normatizar habilitação é competência do CONTRAN"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Qual é do CETRAN?",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Atribuição",
+          "Órgão"
+        ],
+        "linhas": [
+          [
+            "Julgar recurso da JARI",
+            "CETRAN — gabarito C"
+          ],
+          [
+            "Diretrizes regimento JARI",
+            "CONTRAN"
+          ],
+          [
+            "Normatizar habilitação",
+            "CONTRAN"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Competência recursal do CETRAN",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 14, V, a",
+        "texto": "V - julgar os recursos interpostos contra decisões: a) das JARI;",
+        "trechos_grifados": [
+          {
+            "inicio": 4,
+            "fim": 64,
+            "motivo": "gabarito — recurso da JARI",
+            "texto_grifado": "julgar os recursos interpostos contra decisões: a) das JARI;"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CETRAN julga JARI · CONTRAN normatiza.\nNear: CETRAN também julga recurso de inaptidão permanente.\nFar: JARI é primeira instância; CETRAN é segunda.\nNão muda: CETRAN julga recurso interposto contra decisão da JARI.",
+        "destaques": [
+          "JARI",
+          "primeira instância",
+          "CETRAN"
+        ]
+      }
+    }
+  ]
+}

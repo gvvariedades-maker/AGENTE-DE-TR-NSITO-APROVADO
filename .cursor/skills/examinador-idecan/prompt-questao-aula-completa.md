@@ -6,8 +6,9 @@
 
 | Arquivo | Uso |
 |---------|-----|
-| **[prompt-nova-conversa.txt](./prompt-nova-conversa.txt)** | **Padrão** — 1 questão, tópico via `npm run proxima` |
+| **[prompt-nova-conversa.txt](./prompt-nova-conversa.txt)** | **Padrão** — 1 questão **inédita**, tópico via `npm run proxima` |
 | Este `.md` | Variantes (completo, curto, lote), checklist, tabela por disciplina |
+| **[prompt-questao-real-aula.md](./prompt-questao-real-aula.md)** | Questão **real** IDECAN superior + aula — pasta `content/questoes-reais/` |
 
 > **Política do banco:** dificuldade mínima **4** (`src/lib/validations/dificuldade-banco.ts`). O `npm run proxima` já retorna o escopo com nível 4+.
 > **Eficácia:** examinador-idecan **v2.1** (transferência + eixo vizinho + calibração) · estudo-reverso-visual **v3.4** (far-transfer + E1–E3).
@@ -30,6 +31,7 @@ Passo 0 — escolher tópico automaticamente:
 
 Gerar 1 questão inédita IDECAN + aula completa v3.4 nesse tópico.
 Consultar perfil vertical da disciplina (mapa slug→arquivo na SKILL.md) para forma e mecanismos.
+Se existir nota ou PDF em conteúdo/estrategia/ para o tópico: consultar organização didática (nunca copiar literal; validar lei em conteúdo/).
 
 ## Dificuldade mínima 4 (banco de treino)
 - "dificuldade": 4 ou 5 — nunca 1–3

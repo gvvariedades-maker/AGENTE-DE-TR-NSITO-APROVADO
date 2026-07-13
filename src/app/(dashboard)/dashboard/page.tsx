@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {
   BookOpen,
+  BookMarked,
   Crosshair,
   Scale,
   ShieldAlert,
@@ -9,6 +10,7 @@ import { createClient } from "@/lib/supabase/server";
 import { getDesempenhoResumo, getAtividadeHoje } from "@/lib/desempenho";
 import { getRetencaoResumo } from "@/lib/retencao";
 import { getQuestoesCount } from "@/lib/questoes";
+import { getContagemQuestoesReais } from "@/lib/questoes-reais";
 import { getPioresTopicos, getPrioridadeEdital } from "@/lib/piores-topicos";
 import { DISCIPLINA_LABELS } from "@/lib/desempenho";
 import {
@@ -61,6 +63,14 @@ const MODOS = [
     ativo: true,
   },
   {
+    slug: "reais_idecan",
+    label: "Questões reais IDECAN",
+    desc: "Provas do corpus superior com aula completa",
+    href: "/estudo/reais",
+    icon: BookMarked,
+    ativo: true,
+  },
+  {
     slug: "pegadinha_idecan",
     label: "Pegadinha IDECAN",
     desc: "Armadilhas típicas da banca",
@@ -83,6 +93,7 @@ export default async function DashboardPage() {
     retencao,
     atividadeHoje,
     questoesCount,
+    questoesReaisCount,
     pioresTopicos,
     prioridadeEdital,
   ] = await Promise.all([
@@ -90,6 +101,7 @@ export default async function DashboardPage() {
     getRetencaoResumo(user?.id),
     getAtividadeHoje(user?.id),
     getQuestoesCount(),
+    getContagemQuestoesReais(),
     getPioresTopicos(user?.id),
     getPrioridadeEdital(user?.id, 5),
   ]);
@@ -241,10 +253,18 @@ export default async function DashboardPage() {
               key={modo.slug}
               icon={modo.icon}
               label={modo.label}
-              desc={modo.desc}
+              desc={
+                modo.slug === "reais_idecan" && questoesReaisCount > 0
+                  ? `${questoesReaisCount} questões · corpus superior`
+                  : modo.desc
+              }
               href={"href" in modo ? modo.href : undefined}
               destaque={"destaque" in modo ? modo.destaque : false}
-              ativo={modo.ativo}
+              ativo={
+                modo.slug === "reais_idecan"
+                  ? questoesReaisCount > 0
+                  : modo.ativo
+              }
             />
           ))}
         </div>

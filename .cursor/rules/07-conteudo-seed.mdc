@@ -14,9 +14,10 @@ alwaysApply: false
 
 ## Destino estruturado
 
-- Questões em `content/questoes/{disciplina}/*.json`
+- Questões **inéditas** em `content/questoes/{disciplina}/*.json`
+- Questões **reais IDECAN (superior)** em `content/questoes-reais/{disciplina}/*.json` — pipeline paralelo; **não** entram em `index:questoes` / `proxima`
 - Tópicos Anexo I: `scripts/edital-topics.ts` (fonte viva) → `npm run db:seed:topics` ou integrado em `db:seed`
-- Script questões: `scripts/seed-questions.ts` (Drizzle + validação Zod)
+- Script questões: `scripts/seed-questions.ts` (Drizzle + validação Zod; `--only-reais` / `--only-ineditas`)
 
 ## Volume MVP (~660 questões inéditas)
 
@@ -36,8 +37,15 @@ alwaysApply: false
 2. `npm run index:questoes` — regenerar mapa de eixos ocupados (`content/questoes/_index/cobertura.json`)
 3. `npm run db:seed:topics` — upsert `topics` (Anexo I retificado) — **obrigatório na 1ª vez ou após mudar edital**
 4. `npm run db:seed` — upsert topics + insert/update `questions` (rejeita lote sem `estudo_reverso_visual_completo`)
+5. Reais superior: extrair com `npm run extract:reais-superior` → montar com [prompt-questao-real-aula.md](../skills/examinador-idecan/prompt-questao-real-aula.md) → `validate:lote` → `npm run db:seed:reais`
 
 Diagnóstico pós-seed: `npm run check:catalogo-db` e `npm run check:visual-completo`.
+
+### Questões reais (não atrapalhar inéditas)
+
+- Só PDFs **SUPERIOR**; `meta.origem: "real_idecan"` + tags `real_idecan`/`superior`
+- Pasta `content/questoes-reais/` (raw em `_raw/`) — fora do déficit do `proxima`
+- Dificuldade pode ser 1–3; aula v2 completa obrigatória no seed
 
 ## Ao criar questões novas
 

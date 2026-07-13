@@ -104,6 +104,7 @@ function temComandoExplicito(enunciado: string): boolean {
 function validarQuestao(q: QuestaoSeedImportInput, index: number): Achado[] {
   const achados: Achado[] = [];
   const n = index + 1;
+  const isRealIdecan = q.meta?.origem === "real_idecan";
   const push = (nivel: Nivel, codigo: string, mensagem: string) => {
     achados.push({ questao: n, topico: q.topico, nivel, codigo, mensagem });
   };
@@ -124,14 +125,16 @@ function validarQuestao(q: QuestaoSeedImportInput, index: number): Achado[] {
 
   const altLens = keys.map((k) => q.alternativas[k]?.length ?? 0);
   const altRatio = ratioMaxMin(altLens);
-  if (altRatio > 2.2) {
-    push("erro", "A3", `Alternativas desbalanceadas (razão máx/mín = ${altRatio.toFixed(2)}; meta ≤ 1,8)`);
-  } else if (altRatio > 1.8) {
-    push("aviso", "A3", `Alternativas levemente desbalanceadas (razão = ${altRatio.toFixed(2)})`);
+  if (!isRealIdecan) {
+    if (altRatio > 2.2) {
+      push("erro", "A3", `Alternativas desbalanceadas (razão máx/mín = ${altRatio.toFixed(2)}; meta ≤ 1,8)`);
+    } else if (altRatio > 1.8) {
+      push("aviso", "A3", `Alternativas levemente desbalanceadas (razão = ${altRatio.toFixed(2)})`);
+    }
   }
 
   const faixaAlt = FAIXAS_ALTERNATIVA[q.disciplina];
-  if (faixaAlt) {
+  if (faixaAlt && !isRealIdecan) {
     for (const k of keys) {
       const len = q.alternativas[k]?.length ?? 0;
       if (len < faixaAlt.min * 0.7 || len > faixaAlt.max * 1.3) {
@@ -147,7 +150,7 @@ function validarQuestao(q: QuestaoSeedImportInput, index: number): Achado[] {
     }
   } else {
     const faixaEn = FAIXAS_ENUNCIADO[q.disciplina];
-    if (faixaEn && (enunciadoLen < faixaEn.min * 0.7 || enunciadoLen > faixaEn.max * 1.3)) {
+    if (faixaEn && !isRealIdecan && (enunciadoLen < faixaEn.min * 0.7 || enunciadoLen > faixaEn.max * 1.3)) {
       push("aviso", "A2", `Enunciado com ${enunciadoLen} chars (faixa ~${faixaEn.min}–${faixaEn.max})`);
     }
   }
@@ -177,7 +180,7 @@ function validarQuestao(q: QuestaoSeedImportInput, index: number): Achado[] {
     push("aviso", "B2", `estilo_idecan não catalogado: ${q.estilo_idecan}`);
   }
 
-  if (q.dificuldade < DIFICULDADE_MINIMA_BANCO) {
+  if (!isRealIdecan && q.dificuldade < DIFICULDADE_MINIMA_BANCO) {
     push(
       "erro",
       "D1",

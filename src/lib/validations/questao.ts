@@ -65,6 +65,8 @@ const questaoSeedBaseRefine = (
     q.comentario.passo_a_passo,
     q.dificuldade,
     ctx,
+    ["comentario", "passo_a_passo"],
+    { origem: q.meta?.origem },
   );
 };
 

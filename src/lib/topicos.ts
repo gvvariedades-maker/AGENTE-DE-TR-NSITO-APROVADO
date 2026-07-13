@@ -1,4 +1,5 @@
 import { eq, sql } from "drizzle-orm";
+import { sqlSomenteQuestoesReais } from "@/lib/questoes-reais";
 import { EDITAL_TOPICS } from "../../scripts/edital-topics";
 import { db } from "@/lib/db";
 import { questions, topics } from "@/lib/db/schema";
@@ -21,11 +22,14 @@ function buildResumo(
   const totalEstudaveis = estudaveis.length;
   const totalVistos = estudaveis.filter((t) => t.tentativas > 0).length;
 
+  const totalReais = topicos.reduce((acc, t) => acc + t.questoesReaisCount, 0);
+
   return {
     disciplina,
     topicos,
     totalMapeados: topicos.length,
     totalEstudaveis,
+    totalReais,
     totalVistos,
     coberturaPct:
       totalEstudaveis > 0
@@ -43,6 +47,7 @@ function topicosEstaticosEdital(disciplina: Disciplina): TopicoCatalogo[] {
       editalRef: t.editalRef,
       grupo: grupoTopico(t.slug, disciplina),
       questoesCount: 0,
+      questoesReaisCount: 0,
       tentativas: 0,
       acertos: 0,
       taxaAcerto: 0,
@@ -57,6 +62,7 @@ function mapRowToTopico(
     slug: string;
     edital_ref: string | null;
     questoes_count: number;
+    questoes_reais_count: number;
     tentativas: number;
     acertos: number;
   },
@@ -71,6 +77,7 @@ function mapRowToTopico(
     editalRef: r.edital_ref,
     grupo: grupoTopico(r.slug, disciplina),
     questoesCount: r.questoes_count,
+    questoesReaisCount: r.questoes_reais_count,
     tentativas,
     acertos,
     taxaAcerto:
@@ -93,6 +100,7 @@ export async function getTopicosPorDisciplina(
           slug: string;
           edital_ref: string | null;
           questoes_count: number;
+          questoes_reais_count: number;
           tentativas: number;
           acertos: number;
         }>(sql`
@@ -101,6 +109,7 @@ export async function getTopicosPorDisciplina(
             t.nome AS slug,
             t.edital_ref,
             count(DISTINCT q.id)::int AS questoes_count,
+            count(DISTINCT CASE WHEN ${sqlSomenteQuestoesReais("q.tags")} THEN q.id END)::int AS questoes_reais_count,
             count(a.id)::int AS tentativas,
             count(*) FILTER (WHERE a.acertou)::int AS acertos
           FROM topics t
@@ -116,6 +125,7 @@ export async function getTopicosPorDisciplina(
           slug: string;
           edital_ref: string | null;
           questoes_count: number;
+          questoes_reais_count: number;
           tentativas: number;
           acertos: number;
         }>(sql`
@@ -124,6 +134,7 @@ export async function getTopicosPorDisciplina(
             t.nome AS slug,
             t.edital_ref,
             count(DISTINCT q.id)::int AS questoes_count,
+            count(DISTINCT CASE WHEN ${sqlSomenteQuestoesReais("q.tags")} THEN q.id END)::int AS questoes_reais_count,
             0::int AS tentativas,
             0::int AS acertos
           FROM topics t

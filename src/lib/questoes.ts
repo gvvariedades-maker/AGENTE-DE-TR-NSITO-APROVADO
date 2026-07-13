@@ -1,4 +1,4 @@
-import { eq, sql } from "drizzle-orm";
+import { eq, sql, and } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { questions, topics } from "@/lib/db/schema";
 import type { ComentarioQuestao, Disciplina } from "@/types";
@@ -6,6 +6,7 @@ import { SIMULADO_ESPELHO_DISTRIBUICAO } from "@/types";
 import type { EstudoReversoVisual, EstudoReversoVisualV2 } from "@/types/estudo-reverso-visual";
 import { DEMO_ESTUDO_REVERSO_VISUAL } from "@/lib/demo-estudo-reverso-visual";
 import { resolveEstudoReversoVisual, resolveEstudoReversoVisualCompleto } from "@/lib/estudo-reverso-visual-fallback";
+import { sqlSomenteQuestoesReais } from "@/lib/questoes-reais";
 
 export interface QuestaoUI {
   id: string;
@@ -16,6 +17,7 @@ export interface QuestaoUI {
   comentario: ComentarioQuestao | null;
   estudoReversoVisual: EstudoReversoVisual | null;
   estudoReversoVisualCompleto: EstudoReversoVisualV2 | null;
+  tags: string[];
 }
 
 const QUESTAO_DEMO: QuestaoUI = {
@@ -50,6 +52,7 @@ const QUESTAO_DEMO: QuestaoUI = {
   },
   estudoReversoVisual: DEMO_ESTUDO_REVERSO_VISUAL,
   estudoReversoVisualCompleto: null,
+  tags: [],
 };
 
 function mapRowToQuestao(row: {
@@ -65,6 +68,7 @@ function mapRowToQuestao(row: {
   estudoReversoVisualJson: unknown;
   estudoReversoVisualCompletoJson: unknown;
   disciplina: Disciplina;
+  tags?: string[] | null;
 }): QuestaoUI {
   const alternativas: Record<string, string> = {
     A: row.altA,
@@ -88,8 +92,11 @@ function mapRowToQuestao(row: {
     estudoReversoVisualCompleto: resolveEstudoReversoVisualCompleto(
       row.estudoReversoVisualCompletoJson,
     ),
+    tags: row.tags ?? [],
   };
 }
+
+export { mapRowToQuestao };
 
 export async function getQuestaoById(id: string): Promise<QuestaoUI | null> {
   try {
@@ -107,6 +114,7 @@ export async function getQuestaoById(id: string): Promise<QuestaoUI | null> {
         estudoReversoVisualJson: questions.estudoReversoVisualJson,
         estudoReversoVisualCompletoJson: questions.estudoReversoVisualCompletoJson,
         disciplina: topics.disciplina,
+        tags: questions.tags,
       })
       .from(questions)
       .innerJoin(topics, eq(questions.topicId, topics.id))
@@ -122,11 +130,16 @@ export async function getQuestaoById(id: string): Promise<QuestaoUI | null> {
 export async function getQuestoesLista(
   limit = 60,
   disciplina?: Disciplina,
+  options?: { excluirReais?: boolean },
 ): Promise<QuestaoUI[]> {
   try {
-    const conditions = disciplina
-      ? eq(topics.disciplina, disciplina)
-      : undefined;
+    const parts = [];
+    if (disciplina) parts.push(eq(topics.disciplina, disciplina));
+    if (options?.excluirReais) {
+      parts.push(sql`NOT (${sqlSomenteQuestoesReais("questions.tags")})`);
+    }
+    const conditions =
+      parts.length > 1 ? and(...parts) : parts[0];
 
     const query = db
       .select({
@@ -142,6 +155,7 @@ export async function getQuestoesLista(
         estudoReversoVisualJson: questions.estudoReversoVisualJson,
         estudoReversoVisualCompletoJson: questions.estudoReversoVisualCompletoJson,
         disciplina: topics.disciplina,
+        tags: questions.tags,
       })
       .from(questions)
       .innerJoin(topics, eq(questions.topicId, topics.id))
@@ -172,7 +186,9 @@ export async function getQuestoesEspelho(): Promise<{
   ) as Disciplina[]) {
     const esperado = SIMULADO_ESPELHO_DISTRIBUICAO[disciplina];
     totalEsperado += esperado;
-    const lote = await getQuestoesLista(esperado, disciplina);
+    const lote = await getQuestoesLista(esperado, disciplina, {
+      excluirReais: true,
+    });
     porDisciplina[disciplina] = lote.length;
     questoes.push(...lote);
   }

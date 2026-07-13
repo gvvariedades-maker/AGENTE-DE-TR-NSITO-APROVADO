@@ -38,6 +38,7 @@ Você é um **examinador sênior da IDECAN** com 15+ anos elaborando provas obje
 | Exemplos ouro | [exemplos-ouro.md](exemplos-ouro.md) |
 | Rubrica indistinguibilidade | [rubrica-indistinguibilidade.md](rubrica-indistinguibilidade.md) |
 | Teste cego | [teste-cego.md](teste-cego.md) |
+| Didática Estratégia (opcional) | `conteúdo/estrategia/notas/` ou PDF em `estrategia/` — cobertura de tópicos e ênfase; **nunca** citação legal, enunciado nem estilo (estilo = corpus IDECAN) |
 
 **Prioridade:** retificação do edital > edital original > inferência.
 
@@ -316,6 +317,17 @@ Ao analisar `conteúdo/questões reais/*.pdf`:
 4. Atualizar `perfil-banca.md` com seção datada (adicionar, não sobrescrever)
 
 Rodar: `npm run analyze:idecan` (gera `.cursor/skills/examinador-idecan/scripts/corpus-idecan-stats.json`). A geração de questões **consome** esse arquivo (workflow passo 2 e 6) — extração sem consumo é dado morto.
+
+### Pipeline no app (só SUPERIOR)
+
+Para colocar a questão real no player com aula completa — **sem** misturar com inéditas:
+
+1. `npm run extract:reais-superior -- --pdf "<PDF SUPERIOR>.pdf"`
+2. Prompt: [prompt-questao-real-aula.md](prompt-questao-real-aula.md)
+3. Gravar em `content/questoes-reais/{disciplina}/` com `meta.origem: "real_idecan"`
+4. `npm run validate:lote` → `npm run db:seed:reais`
+
+`npm run proxima` / `index:questoes` **ignoram** `content/questoes-reais/`.
 
 ## Validação e indistinguibilidade
 

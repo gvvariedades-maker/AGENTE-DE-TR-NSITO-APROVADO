@@ -1,10 +1,18 @@
 /**
- * Importa questões de content/questoes/{disciplina}/*.json para o Supabase.
+ * Importa questões de content/questoes/ e content/questoes-reais/ para o Supabase.
  *
- * Uso: npm run db:seed
+ * Uso:
+ *   npm run db:seed
+ *   npm run db:seed -- --only-reais
+ *   npm run db:seed -- --only-ineditas
+ *
  * Requer: DATABASE_PASSWORD + SUPABASE_PROJECT_REF (ou DATABASE_URL válida)
  *
  * Upsert por (topico + enunciado): insere se nova; atualiza todos os campos se já existir.
+ *
+ * - Inéditas (`content/questoes/`): exigem gate lote-007 ouro.
+ * - Reais (`content/questoes-reais/`, meta.origem=real_idecan): seed com aula v2;
+ *   NÃO entram no índice de cobertura / npm run proxima.
  */
 import { existsSync } from "node:fs";
 import { readdir, readFile } from "node:fs/promises";
@@ -27,7 +35,36 @@ if (existsSync(".env.local")) {
   config();
 }
 
-const CONTENT_DIR = join(process.cwd(), "content", "questoes");
+const CONTENT_INEDITAS = join(process.cwd(), "content", "questoes");
+const CONTENT_REAIS = join(process.cwd(), "content", "questoes-reais");
+
+type SeedRoot = {
+  label: "ineditas" | "reais";
+  dir: string;
+};
+
+function parseArgs(argv: string[]) {
+  const onlyReais = argv.includes("--only-reais");
+  const onlyIneditas = argv.includes("--only-ineditas");
+  return { onlyReais, onlyIneditas };
+}
+
+function isRealIdecan(q: QuestaoSeedImportInput): boolean {
+  return q.meta?.origem === "real_idecan";
+}
+
+function shouldSeedQuestion(q: QuestaoSeedImportInput, root: SeedRoot): boolean {
+  if (root.label === "reais" || isRealIdecan(q)) {
+    return Boolean(q.estudo_reverso_visual_completo);
+  }
+  return isNivelLote007Ouro(q);
+}
+
+function shouldScanJson(fileName: string): boolean {
+  if (!fileName.endsWith(".json")) return false;
+  if (fileName.startsWith("_")) return false;
+  return fileName.includes("lote");
+}
 
 async function getOrCreateTopic(
   topics: typeof import("../src/lib/db/schema").topics,
@@ -72,6 +109,10 @@ async function questionExists(
 
 function questionValuesFromSeed(topicId: string, q: QuestaoSeedImportInput) {
   const alts = q.alternativas;
+  const tags = [...(q.tags ?? [])];
+  if (isRealIdecan(q) && !tags.includes("real_idecan")) {
+    tags.push("real_idecan");
+  }
   return {
     topicId,
     enunciado: q.enunciado,
@@ -87,34 +128,33 @@ function questionValuesFromSeed(topicId: string, q: QuestaoSeedImportInput) {
     comentarioJson: q.comentario,
     estudoReversoVisualJson: q.estudo_reverso_visual ?? null,
     estudoReversoVisualCompletoJson: q.estudo_reverso_visual_completo,
-    tags: q.tags ?? [],
+    tags,
   };
 }
 
-async function main() {
-  const topicResult = await seedTopics();
-  console.log(
-    `Tópicos Anexo I: ${topicResult.created} criados | ${topicResult.updated} atualizados | ${topicResult.skipped} já ok`,
-  );
-  console.log("");
+async function seedRoot(
+  root: SeedRoot,
+  questions: typeof import("../src/lib/db/schema").questions,
+  topics: typeof import("../src/lib/db/schema").topics,
+  counters: { inserted: number; updated: number; skipped: number; errors: number },
+) {
+  if (!existsSync(root.dir)) {
+    console.log(`(pasta ausente) ${root.dir}`);
+    return;
+  }
 
-  const { questions, topics } = await import("../src/lib/db/schema");
-
-  let inserted = 0;
-  let updated = 0;
-  let skipped = 0;
-  let errors = 0;
-
-  const disciplinas = await readdir(CONTENT_DIR, { withFileTypes: true });
+  console.log(`\n── ${root.label}: ${root.dir} ──`);
+  const disciplinas = await readdir(root.dir, { withFileTypes: true });
 
   for (const dir of disciplinas) {
     if (!dir.isDirectory()) continue;
+    if (dir.name.startsWith("_")) continue;
 
-    const disciplinaPath = join(CONTENT_DIR, dir.name);
+    const disciplinaPath = join(root.dir, dir.name);
     const files = await readdir(disciplinaPath);
 
     for (const file of files) {
-      if (!file.endsWith(".json")) continue;
+      if (!shouldScanJson(file)) continue;
 
       const raw = await readFile(join(disciplinaPath, file), "utf-8");
       const json = JSON.parse(raw) as unknown;
@@ -124,22 +164,25 @@ async function main() {
       if (!parsed.success) {
         console.error(`❌ ${dir.name}/${file}:`, parsed.error.flatten());
         console.error(
-          "  → Rode npm run validate:lote -- content/questoes/.../arquivo.json antes do seed",
+          "  → Rode npm run validate:lote -- <arquivo.json> antes do seed",
         );
-        errors++;
+        counters.errors++;
         continue;
       }
 
+      let fileInserted = 0;
+      let fileUpdated = 0;
+      let fileSkipped = 0;
+
       for (const q of parsed.data) {
-        if (!isNivelLote007Ouro(q)) {
-          skipped++;
+        if (!shouldSeedQuestion(q, root)) {
+          fileSkipped++;
+          counters.skipped++;
           continue;
         }
 
         const topicId = await getOrCreateTopic(topics, q.disciplina, q.topico);
-
         const existente = await questionExists(questions, topicId, q.enunciado);
-
         const values = questionValuesFromSeed(topicId, q);
 
         if (existente) {
@@ -147,20 +190,48 @@ async function main() {
             .update(questions)
             .set(values)
             .where(eq(questions.id, existente.id));
-          updated++;
+          fileUpdated++;
+          counters.updated++;
           continue;
         }
 
         await scriptDb.insert(questions).values(values);
-        inserted++;
+        fileInserted++;
+        counters.inserted++;
       }
 
-      console.log(`✓ ${dir.name}/${file}`);
+      console.log(
+        `✓ ${root.label}/${dir.name}/${file} (+${fileInserted} ~${fileUpdated} skip ${fileSkipped})`,
+      );
     }
+  }
+}
+
+async function main() {
+  const { onlyReais, onlyIneditas } = parseArgs(process.argv.slice(2));
+
+  const topicResult = await seedTopics();
+  console.log(
+    `Tópicos Anexo I: ${topicResult.created} criados | ${topicResult.updated} atualizados | ${topicResult.skipped} já ok`,
+  );
+
+  const { questions, topics } = await import("../src/lib/db/schema");
+  const counters = { inserted: 0, updated: 0, skipped: 0, errors: 0 };
+
+  const roots: SeedRoot[] = [];
+  if (!onlyReais) {
+    roots.push({ label: "ineditas", dir: CONTENT_INEDITAS });
+  }
+  if (!onlyIneditas) {
+    roots.push({ label: "reais", dir: CONTENT_REAIS });
+  }
+
+  for (const root of roots) {
+    await seedRoot(root, questions, topics, counters);
   }
 
   console.log(
-    `\nInseridas: ${inserted} | Atualizadas (upsert): ${updated} | Ignoradas (abaixo lote-007): ${skipped} | Erros: ${errors}`,
+    `\nInseridas: ${counters.inserted} | Atualizadas (upsert): ${counters.updated} | Ignoradas: ${counters.skipped} | Erros: ${counters.errors}`,
   );
   await closeScriptDb();
 }

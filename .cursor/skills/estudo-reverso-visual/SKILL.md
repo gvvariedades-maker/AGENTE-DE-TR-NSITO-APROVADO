@@ -29,6 +29,7 @@ Designer instrucional + examinador IDECAN. Cada micro-aula consolida **uma quest
 | Questão base (enunciado, comentario, mecanismos) | JSON gerado por `examinador-idecan` |
 | Perfil vertical da disciplina | `../examinador-idecan/perfis/perfil-{disciplina}.md` — mapa slug→arquivo em [SKILL.md](../examinador-idecan/SKILL.md) § Mapa slug → perfil vertical; §8 mapa arquétipo por disciplina |
 | Lei seca | `conteúdo/` — índice em `conteúdo/FONTES.md` (nunca só internet) |
+| Didática Estratégia (opcional) | `conteúdo/estrategia/notas/` ou PDF em `estrategia/` — ordem de estudo e ênfase; **nunca** `trecho_legal` nem cópia literal |
 | Tipos TS | `src/types/estudo-reverso-visual.ts` |
 | Validação Zod | `src/lib/validations/estudo-reverso-visual.ts` |
 | Checklist Mayer | [checklist-mayer.md](checklist-mayer.md) |

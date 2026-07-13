@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { getTopicosPorDisciplina } from "@/lib/topicos";
+import { getContagemQuestoesReais } from "@/lib/questoes-reais";
 import { TopicosCatalogo } from "@/components/estudo/topicos-catalogo";
+import { hrefEstudoReaisIdecan, hrefVitrineReais } from "@/lib/estudo-links";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -31,8 +33,9 @@ export default async function EstudoCatalogoPage({
   const disciplina = parseDisciplina(disciplinaRaw);
 
   if (!disciplina) {
-    return (
-      <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-6 p-4 md:p-8">
+    const totalReais = await getContagemQuestoesReais();
+
+    return (      <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-6 p-4 md:p-8">
         <header className="flex flex-col gap-1">
           <h1 className="text-2xl font-bold tracking-tight">
             Catálogo do edital
@@ -69,8 +72,23 @@ export default async function EstudoCatalogoPage({
             </li>
           ))}
         </ul>
-        <Link
-          href="/dashboard"
+        {totalReais > 0 && (
+          <div className="flex flex-wrap gap-2">
+            <Link
+              href={hrefVitrineReais()}
+              className={cn(buttonVariants({ variant: "outline" }))}
+            >
+              Questões reais IDECAN ({totalReais}Q)
+            </Link>
+            <Link
+              href={hrefEstudoReaisIdecan()}
+              className={cn(buttonVariants({ variant: "outline" }))}
+            >
+              Estudar só reais
+            </Link>
+          </div>
+        )}
+        <Link          href="/dashboard"
           className={cn(buttonVariants({ variant: "ghost", size: "sm" }), "w-fit")}
         >
           ← Voltar ao painel
@@ -113,8 +131,17 @@ export default async function EstudoCatalogoPage({
             </h1>
             <p className="text-sm text-muted-foreground">
               {resumo.totalMapeados} microtópicos mapeados ·{" "}
-              {resumo.totalEstudaveis} com questões ·{" "}
-              {SIMULADO_ESPELHO_DISTRIBUICAO[disciplina]}Q na prova
+              {resumo.totalEstudaveis} com questões
+              {resumo.totalReais > 0 && (
+                <>
+                  {" "}
+                  ·{" "}
+                  <span className="text-amber-800 dark:text-amber-200">
+                    {resumo.totalReais} reais IDECAN
+                  </span>
+                </>
+              )}{" "}
+              · {SIMULADO_ESPELHO_DISTRIBUICAO[disciplina]}Q na prova
             </p>
           </div>
           {resumo.totalEstudaveis > 0 && (
@@ -133,6 +160,20 @@ export default async function EstudoCatalogoPage({
             )}
           >
             Estudar tudo (motor ATA)
+          </Link>
+          {resumo.totalReais > 0 && (
+            <Link
+              href={hrefEstudoReaisIdecan(disciplina)}
+              className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+            >
+              Só reais IDECAN ({resumo.totalReais}Q)
+            </Link>
+          )}
+          <Link
+            href={`/estudo/reais?disciplina=${disciplina}`}
+            className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+          >
+            Vitrine reais
           </Link>
           <Link
             href={`/desempenho?disciplina=${disciplina}`}

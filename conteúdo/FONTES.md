@@ -123,15 +123,58 @@ Apostilas e PDFs comentados para estudo e referência no Cursor. **Não** entram
 
 | Documento | Arquivo | Disciplina | Status |
 |-----------|---------|------------|--------|
-| Legislação de Trânsito 01 | `estrategia/legislacao-transito/Legislação de Trânsito 01.pdf` | Legislação de Trânsito | OK (local 12/07/2026) |
+| Legislação de Trânsito 01 (Aula 00) | `estrategia/legislacao-transito/Legislação de Trânsito 01.pdf` | Legislação de Trânsito | OK — `notas/legislacao-transito/indice-ctb-aula00.md` |
+| Legislação de Trânsito 02 (Aula 02) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Legislação de Trânsito - estrategia - aula 02.pdf` | Legislação de Trânsito | OK — `notas/legislacao-transito/indice-ctb-aula02.md` |
+| Legislação de Trânsito 03 (Aula 03) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Legislação de Trânsito - estrategia - aula 03.pdf` | Legislação de Trânsito | OK — `notas/legislacao-transito/indice-ctb-aula03.md` |
+| Legislação de Trânsito 04 (Aula 04) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Legislação de Trânsito - estrategia - aula 04.pdf` | Legislação de Trânsito | OK — `notas/legislacao-transito/indice-ctb-aula04.md` |
+| Legislação de Trânsito 05 (Aula 05) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Legislação de Trânsito - estrategia - aula 05.pdf` | Legislação de Trânsito | OK — `notas/legislacao-transito/indice-ctb-aula05.md` |
+| Legislação de Trânsito 06 (Aula 06) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Legislação de Trânsito - estrategia - aula 06.pdf` | Legislação de Trânsito | OK — `notas/legislacao-transito/indice-ctb-aula06.md` |
+| Legislação de Trânsito 07 (Aula 07) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Legislação de Trânsito - estrategia - aula 07.pdf` | Legislação de Trânsito | OK — `notas/legislacao-transito/indice-ctb-aula07.md` |
+| Legislação de Trânsito 08 (Aula 08) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Legislação de Trânsito - estrategia - aula 08.pdf` | Legislação de Trânsito | OK — `notas/legislacao-transito/indice-ctb-aula08.md` |
+| Legislação de Trânsito 09 (Aula 09) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Legislação de Trânsito - estrategia - aula 09.pdf` | Legislação de Trânsito | OK — `notas/legislacao-transito/indice-ctb-aula09.md` |
+| Legislação de Trânsito 10 (Aula 10) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Legislação de Trânsito - estrategia - aula 10.pdf` | Legislação de Trânsito | OK — `notas/legislacao-transito/indice-ctb-aula10.md` |
+| Resoluções CONTRAN (Aula 11) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Resoluções - estrategia.pdf` | Legislação de Trânsito | OK — `indice-resolucoes-contran.md` + `lacunas-resolucoes-oficial.md` |
+| Legislação e Ética SP 02 (Aula 02) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Legislação e Ética no Serviço Público - estrategia - aula 02.pdf` | Legislação e Ética SP | OK — `notas/legislacao-etica-sp/indice-aula02-principios-administracao.md` |
+| Legislação e Ética SP 03 (Aula 03) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Legislação e Ética no Serviço Público - estrategia - aula 03.pdf` | Legislação e Ética SP | OK — `notas/legislacao-etica-sp/indice-aula03-lai-12527.md` |
+| Legislação e Ética SP 04 (Aula 04) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Legislação e Ética no Serviço Público - estrategia - aula 04.pdf` | Legislação e Ética SP | OK — `notas/legislacao-etica-sp/indice-aula04-lgpd-13709.md` |
+| Legislação e Ética SP 05 (Aula 05) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Legislação e Ética no Serviço Público - estrategia - aula 05.pdf` | Legislação e Ética SP | OK — `notas/legislacao-etica-sp/indice-aula05-etica-servico-publico.md` |
+| Legislação e Ética SP 06 (Aula 06) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Legislação e Ética no Serviço Público - estrategia - aula 06.pdf` | Legislação e Ética SP | OK — `notas/legislacao-etica-sp/indice-aula06-etica-moral-filosofia.md` |
+| Direito Administrativo 00 (Aula 00) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Administrativo - estrategia - 00.pdf` | Direito Administrativo | OK — `notas/direito-administrativo/indice-aula00-regime-juridico-principios.md` |
+| Direito Administrativo 01 (Aula 01) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Administrativo - estrategia - 01.pdf` | Direito Administrativo | OK — `notas/direito-administrativo/indice-aula01-introducao-estado-administracao.md` |
+| Direito Administrativo 02 (Aula 02) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Administrativo - estrategia - 02.pdf` | Direito Administrativo | OK — `notas/direito-administrativo/indice-aula02-poderes-administracao.md` |
+| Direito Administrativo 03 (Aula 03) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Administrativo - estrategia - 03.pdf` | Direito Administrativo | OK — `notas/direito-administrativo/indice-aula03-atos-administrativos-parte1.md` |
+| Direito Administrativo 04 (Aula 04) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Administrativo - estrategia - 04.pdf` | Direito Administrativo | OK — `notas/direito-administrativo/indice-aula04-atos-administrativos-parte2.md` |
+| Direito Administrativo 05 (Aula 05) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Administrativo - estrategia - 05.pdf` | Direito Administrativo | OK — `notas/direito-administrativo/indice-aula05-organizacao-administrativa.md` |
+| Direito Administrativo 06 (Aula 06) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Administrativo - estrategia - 06.pdf` | Direito Administrativo | OK — `notas/direito-administrativo/indice-aula06-agentes-publicos.md` |
+| Direito Administrativo 07 (Aula 07) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Administrativo - estrategia - 07.pdf` | Direito Administrativo | OK — `notas/direito-administrativo/indice-aula07-responsabilidade-servidor.md` |
+| Direito Administrativo 08 (Aula 08) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Administrativo - estrategia - 08.pdf` | Direito Administrativo | OK — `notas/direito-administrativo/indice-aula08-servicos-publicos.md` |
+| Direito Administrativo 09 (Aula 09) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Administrativo - estrategia - 09.pdf` | Direito Administrativo | OK — `notas/direito-administrativo/indice-aula09-responsabilidade-civil-estado.md` |
+| Direito Administrativo 10 (Aula 10) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Administrativo - estrategia - 10.pdf` | Direito Administrativo | OK — `notas/direito-administrativo/indice-aula10-revisao-geral.md` |
+| Direito Constitucional 00 (Aula 00) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Constitucional - estrategia - aula 00.pdf` | Direito Constitucional | OK — `notas/direito-constitucional/indice-aula00-teoria-constituicao.md` |
+| Direito Constitucional 01 (Aula 01) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Constitucional - estrategia - aula 01.pdf` | Direito Constitucional | OK — `notas/direito-constitucional/indice-aula01-interpretacao-principios-direitos.md` |
+| Direito Constitucional 02 (Aula 02) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Constitucional - estrategia - aula 02.pdf` | Direito Constitucional | OK — `notas/direito-constitucional/indice-aula02-art5-incisos-i-xxxi.md` |
+| Direito Constitucional 03 (Aula 03) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Constitucional - estrategia - aula 03.pdf` | Direito Constitucional | OK — `notas/direito-constitucional/indice-aula03-art5-xxxii-lxxix-remedios.md` |
+| Direito Constitucional 04 (Aula 04) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Constitucional - estrategia - aula 04.pdf` | Direito Constitucional | OK — `notas/direito-constitucional/indice-aula04-direitos-sociais-art6-11.md` |
+| Direito Constitucional 05 (Aula 05) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Constitucional - estrategia - aula 05.pdf` | Direito Constitucional | OK — `notas/direito-constitucional/indice-aula05-nacionalidade-art12.md` |
+| Direito Constitucional 06 (Aula 06) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Constitucional - estrategia - aula 06.pdf` | Direito Constitucional | OK — `notas/direito-constitucional/indice-aula06-direitos-politicos-art14-16.md` |
+| Direito Constitucional 07 (Aula 07) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Constitucional - estrategia - aula 07.pdf` | Direito Constitucional | OK — `notas/direito-constitucional/indice-aula07-partidos-politicos-art17.md` |
+| Direito Constitucional 08 (Aula 08) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Constitucional - estrategia - aula 08.pdf` | Direito Constitucional | OK — `notas/direito-constitucional/indice-aula08-organizacao-estado-federacao-competencias.md` |
+| Direito Constitucional 09 (Aula 09) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Constitucional - estrategia - aula 09.pdf` | Direito Constitucional | OK — `notas/direito-constitucional/indice-aula09-administracao-publica-art37-42.md` |
+| Direito Constitucional 10 (Aula 10) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Constitucional - estrategia - aula 10.pdf` | Direito Constitucional | OK — `notas/direito-constitucional/indice-aula10-defesa-estado-seguranca-publica-art144.md` |
 
 **Origem:** `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\`
+
+**Hierarquia:** retificação/edital → lei seca em `conteúdo/` → corpus IDECAN (`questões reais/`, estilo) → Estratégia (opcional, só didática).
+
+**Uso pelo Agent:** preferir `estrategia/notas/` (notas destiladas); se ausente, consultar PDF em `estrategia/` para organização, ênfase e pegadinhas frequentes — sempre reescritas e validadas na lei seca. Nunca copiar enunciado, comentário, diagrama ou trecho longo da apostila. Fluxo recomendado: PDF na conversa → destilar em `estrategia/notas/{disciplina}/` (template em `estrategia/notas/README.md`).
 
 ---
 
 ## Questões reais IDECAN (calibragem de estilo — não copiar)
 
 **Corpus:** `npm run analyze:idecan` → `corpus-idecan-stats.json` + `perfil-banca.md`.
+
+**No app (aula completa):** só nível **SUPERIOR** → `content/questoes-reais/` (pipeline paralelo às inéditas; ver README e `prompt-questao-real-aula.md`). Extração: `npm run extract:reais-superior`.
 
 | Disciplina | Arquivos em `questões reais/` | Status |
 |------------|-------------------------------|--------|
