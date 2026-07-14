@@ -1,0 +1,299 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_36_advertencia",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_36_art_1_pu",
+    "enunciado": "Na BR-230, trecho próximo a Campina Grande/PB, condutor imobilizou caminhonete por superaquecimento do motor. Acionou o pisca-alerta e instalou o triângulo de sinalização a 40 metros da parte traseira do veículo, porém posicionou o equipamento paralelamente ao eixo da via, sem garantir visibilidade adequada aos veículos que se aproximam pela pista. A PRF consulta a conformidade da sinalização com o Código de Trânsito Brasileiro e a Resolução CONTRAN nº 36/1998. Considerando o caso, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A sinalização está regular, pois a distância de 40 metros supre a exigência legal e a orientação do triângulo é discricionária do condutor.",
+      "B": "A sinalização está regular, pois o pisca-alerta acionado dispensa a exigência de perpendicularidade do triângulo em rodovia federal.",
+      "C": "A sinalização está irregular, pois o art. 1º da Resolução CONTRAN nº 36/1998 exige pisca-alerta imediato e triângulo a no mínimo 30 metros da traseira, e o parágrafo único impõe instalação perpendicular ao eixo da via e em boa visibilidade.",
+      "D": "A sinalização só seria irregular se a distância fosse inferior a 30 metros — com 40 metros, a posição paralela ao eixo da via regulariza o conjunto."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Sinalização de advertência na imobilização — cumulação pisca + triângulo (art. 1º, caput) × instalação perpendicular e visibilidade (art. 1º, § único) × remissão do CTB (art. 46).",
+      "fundamento_legal": "CTB, art. 46: sempre que for necessária a imobilização temporária de um veículo no leito viário, em situação de emergência, deverá ser providenciada a imediata sinalização de advertência, na forma estabelecida pelo CONTRAN. Res. CONTRAN 36/1998, art. 1º: o condutor deverá acionar de imediato as luzes de advertência (pisca-alerta) providenciando a colocação do triângulo de sinalização ou equipamento similar à distância mínima de 30 metros da parte traseira do veículo. Parágrafo único: o equipamento de sinalização de emergência deverá ser instalado perpendicularmente ao eixo da via, e em condição de boa visibilidade.",
+      "passo_a_passo": [
+        "1. Caso: BR-230, pane por superaquecimento — pisca-alerta acionado, triângulo a 40 m, mas paralelo ao eixo da via e sem boa visibilidade.",
+        "2. A erra por termo_unico (40 m atende distância, mas ignora perpendicularidade e visibilidade do § único); B erra por regra_excecao (pisca-alerta não dispensa posicionamento perpendicular do triângulo); D erra por numero_vizinho (foca só no limiar de 30 m e trata 40 m como regularizando posição irregular).",
+        "3. C correta: caput do art. 1º (pisca + triângulo ≥ 30 m) + § único (perpendicular ao eixo e boa visibilidade) — posição paralela viola a forma do CONTRAN referida no art. 46 do CTB."
+      ],
+      "pegadinha": "A banca induz a validar o caso porque 40 m supera 30 m — mas o § único da Res. 36 exige instalação perpendicular ao eixo da via e em boa visibilidade, independentemente da distância.",
+      "macete": "PISCA + TRIÂNGULO ≥ 30 m · PERPENDICULAR + VISÍVEL · art. 46 remete ao CONTRAN.",
+      "estudo_reverso": [
+        "CTB art. 46",
+        "Res. CONTRAN 36/1998 art. 1",
+        "CTB art. 230"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "D_gradacao",
+      "pegadinha_em_uma_frase": "40 m não salva triângulo paralelo ao eixo — § único exige perpendicularidade e boa visibilidade",
+      "eixos_legais": [
+        "CONTRAN_36_art_1",
+        "CONTRAN_36_art_1_pu"
+      ],
+      "eixo_vizinho": "CTB_art_46",
+      "isca_por_alternativa": {
+        "A": "40 metros supre a exigência e orientação do triângulo é discricionária",
+        "B": "pisca-alerta dispensa perpendicularidade do triângulo em rodovia federal",
+        "D": "40 metros regulariza posição paralela ao eixo da via"
+      },
+      "eixos_mecanismo": [
+        "termo_unico",
+        "regra_excecao",
+        "numero_vizinho"
+      ],
+      "near_transfer": "Mesmo caso, triângulo perpendicular a 28 metros da traseira — falha na distância mínima, não só na orientação.",
+      "far_transfer": "Parada rápida para embarque em via urbana — art. 47, sem imobilização por emergência nem Res. 36.",
+      "o_que_nao_muda": "Imobilização por emergência exige pisca + triângulo na forma do CONTRAN — distância e posicionamento são requisitos cumulativos.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "sinalizacao_advertencia",
+      "resolucao_36",
+      "triangulo",
+      "perpendicularidade",
+      "br_230"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_36_art_1_pu",
+      "macete_visual": "30 m + perpendicular + visível",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C: 40 m não basta — triângulo paralelo ao eixo viola o § único da Res. 36.",
+            "destaques": ["Gabarito C", "perpendicular", "40 m"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Requisitos cumulativos",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Requisito", "Regra"],
+            "linhas": [
+              { "faixa": "Pisca-alerta", "classificacao": "Imediato — caput" },
+              { "faixa": "Distância", "classificacao": "≥ 30 m da traseira" },
+              { "faixa": "Posição", "classificacao": "Perpendicular ao eixo + visível", "destaque": true }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PISCA + TRIÂNGULO ≥ 30 m.\nPERPENDICULAR + VISÍVEL.",
+            "destaques": ["30 m", "PERPENDICULAR"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 36/1998",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 36, DE 21 DE MAIO DE 1998.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 245,
+      "fundamento_slug": "CONTRAN_36_art_1_pu",
+      "macete_visual": "30 m + perpendicular + visível",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: 40 m não salva posição paralela",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — 40 m supre tudo e orientação é discricionária: ignora perpendicularidade.\nB — pisca dispensa perpendicularidade em rodovia: cumulativos, não substitutos.\nD — só irregular abaixo de 30 m: distância não regulariza posição paralela.\n\nPegadinha: equipamento deve ficar perpendicular ao eixo e com boa visibilidade.",
+            "destaques": ["Gabarito C", "perpendicular", "40 m"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "EIXO DA VIA: linha direcional do fluxo — triângulo deve ficar perpendicular a ela.\n\nPARTE TRASEIRA: referência para medir os 30 metros mínimos do triângulo.\n\nBOA VISIBILIDADE: condição de ser visto pelos veículos que se aproximam — não basta estar no acostamento.",
+            "destaques": ["EIXO", "TRASEIRA", "VISIBILIDADE"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Mapa de requisitos da Res. 36",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Requisito", "Regra legal"],
+            "linhas": [
+              { "faixa": "1º — imediato", "classificacao": "Pisca-alerta acionado" },
+              { "faixa": "2º — distância", "classificacao": "Triângulo ≥ 30 m da traseira" },
+              { "faixa": "3º — posição", "classificacao": "Perpendicular ao eixo + boa visibilidade", "destaque": true }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: distância × orientação",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "40 m regulariza qualquer posição do triângulo",
+                "Equipamento perpendicular ao eixo e com boa visibilidade"
+              ],
+              [
+                "Pisca-alerta dispensa posicionamento do triângulo",
+                "Caput: pisca e triângulo cumulativamente"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "40 m atende distância, mas ignora perpendicularidade exigida na Res. 36"
+              ],
+              [
+                "B — regra_excecao",
+                "Pisca não dispensa posicionamento perpendicular do triângulo"
+              ],
+              [
+                "D — numero_vizinho",
+                "Foca só no limiar de 30 m — 40 m não cura posição paralela"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato da pane", "Avaliação"],
+            "linhas": [
+              ["Pisca-alerta acionado na BR-230", "Requisito 1º atendido"],
+              ["Triângulo a 40 m da traseira", "Distância acima de 30 m — OK isoladamente"],
+              ["Posição paralela ao eixo, sem visibilidade", "Viola exigência de perpendicularidade — irregular"],
+              ["Resultado", "Alternativa C"]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: conferir os 3 requisitos",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Triângulo perpendicular ao eixo e visível?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Irregular — gabarito C (paralelo ao eixo)", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Não — 40 m não salva" }
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Caput × § único da Res. 36",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função"],
+            "linhas": [
+              ["Res. 36 — caput", "Pisca imediato + triângulo ≥ 30 m da traseira"],
+              ["Res. 36 — parágrafo único", "Perpendicular ao eixo + boa visibilidade"],
+              ["CTB — imobilização emergencial", "Remete à forma estabelecida pelo CONTRAN"],
+              ["Caso BR-230", "Falha na perpendicularidade — posição paralela"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Res. 36, art. 1º, caput",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 36/1998, art. 1º",
+            "texto": "Art. 1º O condutor deverá acionar de imediato as luzes de advertência (pisca-alerta) providenciando a colocação do triângulo de sinalização ou equipamento similar à distância mínima de 30 metros da parte traseira do veículo.",
+            "trechos_grifados": [
+              {
+                "inicio": 163,
+                "fim": 223,
+                "motivo": "gradacao — distância mínima 30 m da traseira",
+                "texto_grifado": "à distância mínima de 30 metros da parte traseira do veículo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Res. 36, art. 1º, § único",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 36/1998, art. 1º, parágrafo único",
+            "texto": "Parágrafo único. O equipamento de sinalização de emergência deverá ser instalado perpendicularmente ao eixo da via, e em condição de boa visibilidade.",
+            "trechos_grifados": [
+              {
+                "inicio": 81,
+                "fim": 149,
+                "motivo": "contraste — triângulo paralelo ao eixo viola o § único",
+                "texto_grifado": "perpendicularmente ao eixo da via, e em condição de boa visibilidade"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PISCA + TRIÂNGULO ≥ 30 m · PERPENDICULAR + VISÍVEL.\n\nNear: triângulo perpendicular a 28 m — falha na distância.\n\nFar: parada para embarque — art. 47, sem emergência nem Res. 36.\n\nO que NÃO muda: imobilização por emergência exige forma completa do CONTRAN.\n\nCadeia: vizinho = art. 46 do CTB (remissão ao CONTRAN).",
+            "destaques": ["PERPENDICULAR", "28 m", "art. 46"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 36/1998",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 36, DE 21 DE MAIO DE 1998.html"
+        },
+        {
+          "rotulo": "CTB art. 46",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

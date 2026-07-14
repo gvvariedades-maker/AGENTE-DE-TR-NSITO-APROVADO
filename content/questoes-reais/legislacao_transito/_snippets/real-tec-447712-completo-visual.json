@@ -1,0 +1,235 @@
+{
+  "tec_id": "447712",
+  "disciplina": "legislacao_transito",
+  "gabarito": "A",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "fluxograma_decisao",
+    "arquetipo_secundario": "tabela_gradacao",
+    "duracao_estimada_seg": 200,
+    "fundamento_slug": "CTB_art_29_XII",
+    "macete_visual": "Trilhos = preferência · RO-RO-DI",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Bonde em cruzamento — preferência sobre carros.",
+      "far_transfer": "Batedores (VI) — prioridade distinta dos trilhos.",
+      "o_que_nao_muda": "Trilhos sempre têm preferência no art. 29, XII."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito A.\n\nB — acostamento: norma verdadeira.\nC — RO-RO-DI: norma verdadeira.\nD — faixas direita/esquerda: norma verdadeira.\n\nPegadinha: EXCETO + \"não terão\" nos trilhos — a lei diz o contrário.",
+          "destaques": [
+            "Gabarito A",
+            "EXCETO",
+            "trilhos"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Três termos da questão",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "EXCETO: marque a afirmativa falsa — as demais são normas válidas do art. 29.\nTrilhos: bonde, VLT, trem — inciso XII do art. 29.\nRO-RO-DI: rodovia, rotatória, direita — ordem do inciso III.",
+          "destaques": [
+            "EXCETO",
+            "trilhos",
+            "RO-RO-DI"
+          ]
+        }
+      },
+      {
+        "id": "fluxo",
+        "titulo": "Método: comando EXCETO",
+        "secao": "metodo",
+        "tipo": "fluxograma",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "p1",
+              "label": "A nega preferência dos trilhos?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "p2",
+              "label": "As demais alternativas transcrevem normas verdadeiras?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "r1",
+              "label": "Incorreta = A — gabarito",
+              "tipo": "resultado"
+            }
+          ],
+          "arestas": [
+            {
+              "de": "p1",
+              "para": "p2",
+              "rotulo": "Sim"
+            },
+            {
+              "de": "p2",
+              "para": "r1",
+              "rotulo": "Sim"
+            }
+          ]
+        }
+      },
+      {
+        "id": "mapa",
+        "titulo": "Prioridades do art. 29",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": [
+            "Inciso",
+            "Regra"
+          ],
+          "linhas": [
+            {
+              "faixa": "III",
+              "classificacao": "RO-RO-DI no cruzamento não sinalizado",
+              "destaque": false
+            },
+            {
+              "faixa": "IV",
+              "classificacao": "Faixa direita = lentos/maiores · esquerda = ultrapassagem",
+              "destaque": false
+            },
+            {
+              "faixa": "XII",
+              "classificacao": "Trilhos = preferência sobre os demais",
+              "destaque": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "Trilhos não têm preferência de passagem",
+              "Art. 29, XII — terão preferência sobre os demais"
+            ],
+            [
+              "EXCETO = qualquer alternativa longa",
+              "B, C e D transcrevem normas verdadeiras do art. 29"
+            ],
+            [
+              "Bonde obedece só às regras gerais",
+              "Preferência dos trilhos + normas de circulação"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que B, C e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "B — regra_excecao",
+              "Afirmativa verdadeira do art. 29, V — não pode ser EXCETO"
+            ],
+            [
+              "C — numero_vizinho",
+              "Reproduz corretamente a ordem RO-RO-DI do art. 29, III"
+            ],
+            [
+              "D — termo_unico",
+              "Transcreve fielmente o art. 29, IV sobre faixas"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Afirmativa",
+            "É EXCETO?"
+          ],
+          "linhas": [
+            [
+              "Trilhos não terão preferência",
+              "Sim — gabarito A (falsa)"
+            ],
+            [
+              "Acostamento só para entrar/sair de imóvel",
+              "Não — B é verdadeira"
+            ],
+            [
+              "RO-RO-DI no cruzamento",
+              "Não — C é verdadeira"
+            ],
+            [
+              "Faixas direita/esquerda",
+              "Não — D é verdadeira"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto do CTB",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 29, XII",
+          "texto": "XII - os veículos que se deslocam sobre trilhos terão preferência de passagem sobre os demais, respeitadas as normas de circulação.",
+          "trechos_grifados": [
+            {
+              "inicio": 0,
+              "fim": 131,
+              "motivo": "contraste — A inverte \"terão\" para \"não terão\"",
+              "texto_grifado": "XII - os veículos que se deslocam sobre trilhos terão preferência de passagem sobre os demais, respeitadas as normas de circulação."
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: trilhos = preferência (inciso XII) — negar isso é EXCETO.\nNear: bonde em cruzamento sem placa — carro cede passagem.\nFar: batedores (inciso VI) — outra prioridade, não confundir.\nNão muda: \"terão preferência\" é literal — troca por \"não terão\" é pegadinha clássica.\nCadeia: próximo = inciso VI — veículos precedidos de batedores.",
+          "destaques": [
+            "trilhos",
+            "preferência",
+            "EXCETO",
+            "RO-RO-DI"
+          ]
+        }
+      }
+    ]
+  }
+}

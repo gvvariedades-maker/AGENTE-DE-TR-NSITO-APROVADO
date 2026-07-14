@@ -1,0 +1,301 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_968_identificacao",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "assertivas",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_968_art_4_VIII",
+    "enunciado": "Em vistoria no DETRAN-PB em Campina Grande, analista examina semirreboque de carga com Peso Bruto Total (PBT) de 4.200 kg e constata ausência de número de identificação no eixo, além de questionar se o patamar de exigência seria o mesmo dos veículos automotores. Sobre os critérios de identificação veicular da Resolução CONTRAN nº 968/2022, analise as assertivas e assinale a alternativa CORRETA:\n\nI. Veículos automotores com PBT igual ou superior a 4.536 kg devem ter número de identificação do eixo de tração, quando existente.\n\nII. Veículos rebocados com PBT superior a 3.500 kg devem ter número de identificação do(s) eixo(s).\n\nIII. O patamar de PBT para identificação de eixo em rebocados é o mesmo dos automotores (4.536 kg).",
+    "alternativas": {
+      "A": "Está correto o que se afirma em II, apenas — acerta a exigência para rebocados acima de 3.500 kg, mas ignora a I sobre eixo de tração em automotores com PBT ≥ 4.536 kg.",
+      "B": "Está correto o que se afirma em I e II, apenas — confirma os patamares distintos de PBT para eixo em automotores e rebocados, sem igualar os limites na assertiva III.",
+      "C": "Está correto o que se afirma em I e III, apenas — acerta o eixo de tração em automotores e fixa 4.536 kg também para rebocados como no semirreboque vistoriado.",
+      "D": "Está correto o que se afirma em I, II e III — inclusive patamar único de 4.536 kg para identificação de eixo em automotores e rebocados."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Identificação de eixo de tração em automotores (art. 4º, VII, PBT ≥ 4.536 kg) × identificação de eixo em rebocados (art. 4º, VIII, PBT > 3.500 kg) — patamares distintos.",
+      "fundamento_legal": "Res. CONTRAN 968/2022, art. 4º, VII: número de identificação do(s) eixo(s) de tração dos veículos automotores com PBT igual ou superior a 4.536 quilogramas. VIII: número de identificação do(s) eixo(s) dos veículos rebocados com PBT superior a 3.500 quilogramas.",
+      "passo_a_passo": [
+        "1. I correta (art. 4º, VII — eixo de tração em automotor com PBT ≥ 4.536 kg); II correta (art. 4º, VIII — eixo em rebocado com PBT > 3.500 kg, como o semirreboque de 4.200 kg); III falsa (numero_vizinho — patamar de rebocados é 3.500 kg, não 4.536 kg dos automotores).",
+        "2. A erra por termo_unico (marca só II e ignora I correta sobre automotores); C erra por numero_vizinho (compra III falsa que iguala patamares em 4.536 kg); D erra por gravidade (trata I, II e III como corretas, unificando o limite).",
+        "3. Gabarito B: I e II corretas — patamares distintos para eixo em automotores e rebocados, sem adotar 4.536 kg para rebocados."
+      ],
+      "pegadinha": "A banca induz a aplicar o patamar de 4.536 kg dos automotores aos rebocados — mas o inciso VIII fixa PBT superior a 3.500 kg para veículos rebocados.",
+      "macete": "AUTOMOTOR ≥ 4.536 = eixo tração · REBOCADO > 3.500 = eixo · patamares ≠.",
+      "estudo_reverso": [
+        "Res. CONTRAN 968/2022 art. 4",
+        "CTB art. 114"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "B_assertivas",
+      "pegadinha_em_uma_frase": "Rebocado exige eixo acima de 3.500 kg — não 4.536 kg dos automotores",
+      "eixos_legais": [
+        "CONTRAN_968_art_4_VIII",
+        "CONTRAN_968_art_4_VII"
+      ],
+      "eixo_vizinho": "CONTRAN_968_art_4_III",
+      "isca_por_alternativa": {
+        "A": "marca só II sobre rebocados e ignora I correta do eixo de tração em automotores ≥ 4.536 kg",
+        "C": "compra III falsa que iguala patamar de rebocados ao de automotores em 4.536 kg",
+        "D": "trata I, II e III como corretas com patamar único de 4.536 kg para automotores e rebocados"
+      },
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "termo_unico",
+        "gravidade"
+      ],
+      "near_transfer": "Semirreboque com PBT de 3.600 kg sem identificação no eixo — mesma exigência do inciso VIII.",
+      "far_transfer": "Caminhão automotor com PBT de 5.000 kg sem identificação na caixa de câmbio — inciso III do art. 4º, outro identificador do automotor.",
+      "o_que_nao_muda": "Patamares de PBT são distintos — automotor ≥ 4.536 kg para eixo de tração; rebocado > 3.500 kg para eixo.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "resolucao_968",
+      "vin",
+      "pbt_3500",
+      "pbt_4536",
+      "semirreboque",
+      "eixo"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "matriz_assertivas",
+      "arquetipo_secundario": "tabela_gradacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CONTRAN_968_art_4_VIII",
+      "macete_visual": "≥4.536 automotor · >3.500 rebocado",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B (I e II). A isca é a III: rebocado usa 3.500 kg, não 4.536 kg do automotor.",
+            "destaques": ["Gabarito B", "3.500", "4.536"]
+          }
+        },
+        {
+          "id": "matriz",
+          "titulo": "Mapa I–III",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              { "id": "I", "texto": "Eixo de tração em automotor PBT ≥ 4.536 kg — correta", "correto": true },
+              { "id": "II", "texto": "Eixo em rebocado PBT > 3.500 kg — correta", "correto": true },
+              { "id": "III", "texto": "Patamar único 4.536 kg em rebocados — ERRADA", "correto": false }
+            ],
+            "gabarito_resumo": "I e II corretas → alternativa B"
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "AUTOMOTOR ≥ 4.536 · REBOCADO > 3.500 · patamares distintos.",
+            "destaques": ["4.536", "3.500", "distintos"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 968/2022",
+          "path": "https://www.in.gov.br/web/dou/-/resolucao-contran-n-968-de-20-de-junho-de-2022-410048371"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "matriz_assertivas",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "todos",
+      "duracao_estimada_seg": 245,
+      "fundamento_slug": "CONTRAN_968_art_4_VIII",
+      "macete_visual": "≥4.536 automotor · >3.500 rebocado",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: a isca é a assertiva III",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B (I e II corretas).\n\nA — marcou só II sobre rebocados; esqueceu I do eixo de tração em automotores.\nC — comprou III falsa: patamar único de 4.536 kg também para rebocados.\nD — tratou todas corretas, igualando os limites de PBT.\n\nPegadinha: semirreboque de 4.200 kg exige eixo — mas o limite é 3.500 kg, não 4.536 kg.",
+            "destaques": ["Gabarito B", "III", "4.200 kg"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "AUTOMOTOR: veículo com tração própria — patamar de 4.536 kg no inciso VII.\n\nREBOCADO: reboque ou semirreboque — patamar de 3.500 kg no inciso VIII.\n\nPBT: peso bruto total que define qual identificador de eixo entra na vistoria.",
+            "destaques": ["AUTOMOTOR", "REBOCADO", "PBT"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Faixas de PBT × eixo",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Tipo de veículo", "Patamar PBT"],
+            "linhas": [
+              { "faixa": "Automotor — eixo de tração", "classificacao": "PBT ≥ 4.536 kg — inciso VII" },
+              { "faixa": "Rebocado — eixo", "classificacao": "PBT > 3.500 kg — inciso VIII", "destaque": true },
+              { "faixa": "Semirreboque 4.200 kg do caso", "classificacao": "Exige identificação no eixo" },
+              { "faixa": "Patamar único 4.536 kg em rebocados", "classificacao": "Falso — assertiva III" }
+            ]
+          }
+        },
+        {
+          "id": "matriz",
+          "titulo": "Classificar I–III",
+          "secao": "metodo",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              { "id": "I", "texto": "Eixo de tração em automotor PBT ≥ 4.536 kg — correta (VII)", "correto": true },
+              { "id": "II", "texto": "Eixo em rebocado PBT > 3.500 kg — correta (VIII)", "correto": true },
+              { "id": "III", "texto": "Patamar 4.536 kg também para rebocados — ERRADA", "correto": false }
+            ],
+            "gabarito_resumo": "I e II corretas → alternativa B"
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Assertiva-isca: III",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a III afirma ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Rebocados usam o mesmo patamar de 4.536 kg dos automotores",
+                "Inciso VIII fixa PBT superior a 3.500 kg para rebocados"
+              ],
+              [
+                "Semirreboque de 4.200 kg estaria abaixo do limite",
+                "4.200 kg supera 3.500 kg — exige identificação no eixo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Marca só II — ignora I correta do eixo de tração em automotores ≥ 4.536 kg"
+              ],
+              [
+                "C — numero_vizinho",
+                "Inclui III falsa — iguala patamar de rebocados ao de automotores em 4.536 kg"
+              ],
+              [
+                "D — gravidade",
+                "Compra III falsa e trata todas as assertivas como corretas"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Montando o gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Assertiva / fato", "V/F"],
+            "linhas": [
+              ["I — eixo de tração em automotor PBT ≥ 4.536 kg", "Verdadeira"],
+              ["II — eixo em rebocado PBT > 3.500 kg", "Verdadeira"],
+              ["III — patamar único 4.536 kg em rebocados", "Falsa — inciso VIII usa 3.500 kg"],
+              ["Semirreboque 4.200 kg sem ID no eixo", "Irregular"],
+              ["Resultado", "Alternativa B"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Inciso VII × VIII — patamares distintos",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Papel no caso"],
+            "linhas": [
+              ["Art. 4º, VII", "Automotor — eixo de tração com PBT ≥ 4.536 kg — assertiva I"],
+              ["Art. 4º, VIII", "Rebocado — eixo com PBT > 3.500 kg — assertiva II"],
+              ["Assertiva III", "Erra ao unificar patamares em 4.536 kg"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 4º, VII e VIII — patamares de PBT",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 968/2022, art. 4º, VII e VIII",
+            "texto": "VII - número de identificação do(s) eixo(s) de tração dos veículos automotores com PBT igual ou superior a 4.536 quilogramas; VIII - número de identificação do(s) eixo(s) dos veículos rebocados com PBT superior a 3.500 quilogramas;",
+            "trechos_grifados": [
+              {
+                "inicio": 83,
+                "fim": 124,
+                "motivo": "gradacao — patamar do automotor na assertiva I",
+                "texto_grifado": "PBT igual ou superior a 4.536 quilogramas"
+              },
+              {
+                "inicio": 198,
+                "fim": 230,
+                "motivo": "matriz — patamar distinto do rebocado na assertiva II",
+                "texto_grifado": "PBT superior a 3.500 quilogramas"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 4º, VIII — rebocados",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 968/2022, art. 4º, VIII",
+            "texto": "VIII - número de identificação do(s) eixo(s) dos veículos rebocados com PBT superior a 3.500 quilogramas;",
+            "trechos_grifados": [
+              {
+                "inicio": 72,
+                "fim": 104,
+                "motivo": "contraste — semirreboque 4.200 kg alcançado",
+                "texto_grifado": "PBT superior a 3.500 quilogramas"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "AUTOMOTOR ≥ 4.536 = eixo tração · REBOCADO > 3.500 = eixo · patamares ≠.\nNear: semirreboque 3.600 kg sem ID no eixo — mesma exigência do inciso VIII.\nFar: caminhão 5.000 kg sem ID na caixa de câmbio — inciso III, outro identificador do automotor.\nNão muda: patamares de PBT são distintos entre automotor e rebocado.\nCadeia: vizinho = inciso III (câmbio em automotor ≥ 4.536 kg).",
+            "destaques": ["4.536", "3.500", "câmbio"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 968/2022",
+          "path": "https://www.in.gov.br/web/dou/-/resolucao-contran-n-968-de-20-de-junho-de-2022-410048371"
+        }
+      ]
+    }
+  }
+]

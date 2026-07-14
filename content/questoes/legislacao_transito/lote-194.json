@@ -1,0 +1,283 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_engenharia_fiscalizacao",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_95_par1",
+    "enunciado": "Empreiteira executa obra de substituição de rede de água na Av. Assis Chateaubriand, em Campina Grande/PB, com permissão prévia da STTP e aviso de quarenta e oito horas em rádio local indicando caminhos alternativos. A empresa interditou parcialmente a faixa sem instalar sinalização de obra. Notificada, alega que a sinalização é dever exclusivo da STTP por ser o órgão com circunscrição sobre a via. A PM-PB apoia o policiamento ostensivo no trecho. O procurador municipal consulta o CTB (arts. 94 a 99). Assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Com permissão prévia concedida, a sinalização da obra é dever exclusivo da STTP — o órgão com circunscrição sobre a via deve implantar os dispositivos no trecho interditado.",
+      "B": "A obrigação de sinalizar a obra é do responsável pela execução — o §1º do art. 95 fixa esse dever na empreiteira, ainda com permissão prévia da STTP e aviso publicitário de quarenta e oito horas.",
+      "C": "Compete à PM-PB sinalizar obras em vias municipais quando apoiar o policiamento ostensivo no trecho em intervenção.",
+      "D": "O aviso de quarenta e oito horas por meio de comunicação social dispensa sinalização física no trecho em obra, bastando a permissão prévia da STTP."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Art. 95, §1º (sinalização a cargo do executor da obra) × art. 95 caput e §2º (permissão prévia e aviso de 48h pela autoridade de trânsito) — circunscrição não transfere dever de sinalizar.",
+      "fundamento_legal": "CTB, art. 95, §1º: 'A obrigação de sinalizar é do responsável pela execução ou manutenção da obra ou do evento.' Caput: permissão prévia do órgão ou entidade de trânsito com circunscrição sobre a via. §2º: autoridade de trânsito avisa a comunidade com quarenta e oito horas de antecedência, indicando caminhos alternativos. Art. 94: obstáculo não removível deve ser devida e imediatamente sinalizado.",
+      "passo_a_passo": [
+        "1. Caso: obra autorizada pela STTP com aviso de 48h — empreiteira interditou faixa sem sinalização e atribui o dever à STTP; PM apenas no policiamento.",
+        "2. A erra por competencia_snt (confunde circunscrição com dever de sinalizar — §1º fixa responsabilidade no executor); C erra por competencia_snt (PM apoia policiamento, não sinaliza obra); D erra por regra_excecao (aviso de 48h não dispensa sinalização física no trecho).",
+        "3. B correta: §1º do art. 95 — empreiteira deve sinalizar a obra."
+      ],
+      "pegadinha": "A IDECAN induz a transferir a sinalização à STTP porque ela autorizou a obra — mas permissão prévia e aviso de 48h não deslocam o dever de sinalizar ao órgão da via.",
+      "macete": "95 CAPUT = STTP AUTORIZA · §2º = 48h COM ROTAS · §1º = EMPREITEIRA SINALIZA.",
+      "estudo_reverso": [
+        "CTB art. 95",
+        "CTB art. 94"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "C_competencia_snt",
+      "pegadinha_em_uma_frase": "Permissão da STTP não transfere sinalização da obra — §1º fixa dever no executor",
+      "eixos_legais": [
+        "CTB_art_95_par1",
+        "CTB_art_95"
+      ],
+      "eixo_vizinho": "CTB_art_94",
+      "isca_por_alternativa": {
+        "A": "permissão prévia transfere sinalização exclusivamente à STTP por circunscrição sobre a via",
+        "C": "PM-PB sinaliza obras em vias municipais quando apoia policiamento ostensivo",
+        "D": "aviso de 48h dispensa sinalização física no trecho em obra"
+      },
+      "eixos_mecanismo": [
+        "competencia_snt",
+        "regra_excecao"
+      ],
+      "near_transfer": "Desfile cultural autorizado pela STTP — organizador do evento deve sinalizar conforme o §1º, não a autoridade de trânsito.",
+      "far_transfer": "Entulho na calçada não removível — art. 94 exige sinalização imediata pelo responsável pelo obstáculo.",
+      "o_que_nao_muda": "Executor da obra ou evento deve sinalizar — §1º do art. 95; permissão prévia não desloca esse dever.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "engenharia_transito",
+      "obra",
+      "sinalizacao",
+      "sttp",
+      "art_95"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CTB_art_95_par1",
+      "macete_visual": "STTP autoriza · empreiteira sinaliza",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: empreiteira sinaliza a obra — permissão da STTP não transfere o dever do §1º.",
+            "destaques": ["Gabarito B", "empreiteira", "STTP"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem sinaliza a obra?",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "sttp", "label": "STTP — permissão prévia", "nivel": 2 },
+              { "id": "emp", "label": "Empreiteira — sinalizar obra", "nivel": 1 }
+            ],
+            "arestas": [
+              { "de": "sttp", "para": "emp", "rotulo": "autoriza ≠ sinaliza" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "STTP AUTORIZA · EMPREITEIRA SINALIZA.",
+            "destaques": ["AUTORIZA", "SINALIZA"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB arts. 94–95",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "todos",
+      "duracao_estimada_seg": 250,
+      "fundamento_slug": "CTB_art_95_par1",
+      "macete_visual": "STTP autoriza · empreiteira sinaliza",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: permissão não transfere sinalização",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — STTP sinaliza porque tem circunscrição: confunde autorizar com sinalizar.\nC — PM sinaliza obra em via municipal: policiamento não inclui sinalização.\nD — aviso de 48h dispensa sinalização física: comunicação não substitui dispositivos no trecho.\n\nPegadinha: executor da obra deve sinalizar — permissão não desloca dever à STTP.",
+            "destaques": ["Gabarito B", "empreiteira", "48h"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 papéis",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "STTP: concede permissão prévia e publica aviso de 48h com rotas — não sinaliza a obra.\n\nEMPREITEIRA: executa a intervenção e deve sinalizar o trecho conforme o §1º.\n\nPM-PB: policiamento ostensivo — apoio operacional, sem sinalizar obra.",
+            "destaques": ["STTP", "EMPREITEIRA", "PM-PB"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem faz o quê na obra",
+          "secao": "metodo",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "sttp", "label": "STTP — permissão + aviso 48h", "nivel": 2 },
+              { "id": "emp", "label": "Empreiteira — sinalizar obra", "nivel": 1 },
+              { "id": "pm", "label": "PM-PB — policiamento ostensivo", "nivel": 1 }
+            ],
+            "arestas": [
+              { "de": "sttp", "para": "emp", "rotulo": "autoriza ≠ sinaliza" },
+              { "de": "pm", "para": "emp", "rotulo": "apoio ≠ sinalização" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: STTP autorizou, logo sinaliza",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a empreiteira pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Circunscrição da STTP inclui sinalizar a obra",
+                "§1º fixa sinalização no responsável pela execução"
+              ],
+              [
+                "Aviso de 48h substitui dispositivos no trecho",
+                "Comunicação social não dispensa sinalização física"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — competencia_snt",
+                "Confunde circunscrição com dever de sinalizar — §1º fixa executor"
+              ],
+              [
+                "C — competencia_snt",
+                "PM apoia policiamento — não sinaliza obra em via municipal"
+              ],
+              [
+                "D — regra_excecao",
+                "Aviso de 48h não dispensa sinalização física no trecho interditado"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos do enunciado → gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              ["Obra de rede na Av. Assis Chateaubriand", "Intervenção com permissão prévia"],
+              ["STTP concedeu permissão e aviso de 48h", "Atos da autoridade de trânsito"],
+              ["Faixa interditada sem sinalização", "Violação do §1º"],
+              ["Empreiteira atribui dever à STTP", "Confunde papéis — gabarito B"],
+              ["Resultado", "Alternativa B"]
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Matriz: órgão × função",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Ator", "Função na obra"],
+            "linhas": [
+              ["STTP", "Permissão prévia + aviso de 48h com rotas"],
+              ["Empreiteira", "Executar e sinalizar o trecho — §1º"],
+              ["PM-PB", "Policiamento ostensivo — sem sinalização"],
+              ["Aviso radiofônico", "Não substitui dispositivos físicos"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 95, §1º — quem sinaliza",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 95, §1º",
+            "texto": "§ 1º A obrigação de sinalizar é do responsável pela execução ou manutenção da obra ou do evento.",
+            "trechos_grifados": [
+              {
+                "inicio": 5,
+                "fim": 95,
+                "motivo": "diagrama — dever na empreiteira, não na STTP",
+                "texto_grifado": "A obrigação de sinalizar é do responsável pela execução ou manutenção da obra ou do evento"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 94 — obstáculo sinalizado",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 94, caput",
+            "texto": "Art. 94. Qualquer obstáculo à livre circulação e à segurança de veículos e pedestres, tanto na via quanto na calçada, caso não possa ser retirado, deve ser devida e imediatamente sinalizado.",
+            "trechos_grifados": [
+              {
+                "inicio": 147,
+                "fim": 189,
+                "motivo": "mapa — vizinho: sinalização imediata de obstáculo",
+                "texto_grifado": "deve ser devida e imediatamente sinalizado"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "STTP AUTORIZA · §2º = 48h COM ROTAS · §1º = EMPREITEIRA SINALIZA.\nNear: desfile autorizado — organizador sinaliza, não a STTP.\nFar: entulho na calçada — sinalização imediata pelo responsável pelo obstáculo.\nNão muda: executor da obra deve sinalizar — permissão não desloca o dever.\nCadeia: vizinho = art. 94 (obstáculo não removível).",
+            "destaques": ["EMPREITEIRA", "48h", "art. 94"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB arts. 94–95",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

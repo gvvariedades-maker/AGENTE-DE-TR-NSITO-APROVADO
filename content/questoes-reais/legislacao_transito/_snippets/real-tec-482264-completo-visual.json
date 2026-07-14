@@ -1,0 +1,240 @@
+{
+  "tec_id": "482264",
+  "disciplina": "legislacao_transito",
+  "gabarito": "A",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "diagrama_competencia",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 220,
+    "fundamento_slug": "CTB_art_19",
+    "macete_visual": "Senatran art. 19 · estada = rodoviário",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Art. 24, XI — município também arrecada estada/remoção.",
+      "far_transfer": "Art. 19, XIII — Senatran coordena multas, não pátio.",
+      "o_que_nao_muda": "Art. 19 = executivo máximo federal — estada/remoção é operacional de rodovia."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito A.\n\nB — improbidade: parece Polícia, mas é Senatran.\nC — supervisão da PNT: confunde com CONTRAN.\nD — articulação intersistêmica: também é do executivo máximo.\n\nPegadinha: tudo que parece 'operacional de rua' vira Senatran — estada/remoção é PRF/rodoviário.",
+          "destaques": [
+            "Gabarito A",
+            "Senatran",
+            "estada"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Três órgãos que a banca mistura",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "CONTRAN: normas e diretrizes (art. 12).\nSenatran: executivo máximo federal — art. 19 (política, cadastros, supervisão).\nPRF/rodoviários: fiscalização e arrecadação em via — arts. 20–21 (estada, remoção, escolta).",
+          "destaques": [
+            "CONTRAN",
+            "Senatran",
+            "PRF"
+          ]
+        }
+      },
+      {
+        "id": "diagrama",
+        "titulo": "Quem faz o quê no SNT federal",
+        "secao": "metodo",
+        "tipo": "diagrama_competencia",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "contran",
+              "label": "CONTRAN — normas",
+              "nivel": 0
+            },
+            {
+              "id": "senatran",
+              "label": "Senatran — art. 19",
+              "nivel": 1
+            },
+            {
+              "id": "prf",
+              "label": "PRF — rodovia federal",
+              "nivel": 2
+            },
+            {
+              "id": "estada",
+              "label": "Estada/remoção — FORA do art. 19",
+              "nivel": 2
+            }
+          ],
+          "arestas": [
+            {
+              "de": "contran",
+              "para": "senatran",
+              "rotulo": "diretrizes"
+            },
+            {
+              "de": "senatran",
+              "para": "prf",
+              "rotulo": "supervisão"
+            },
+            {
+              "de": "prf",
+              "para": "estada",
+              "rotulo": "arrecada"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "Senatran arrecada estada e remoção em pátio",
+              "Art. 21, VII — executivos rodoviários; PRF art. 20, III"
+            ],
+            [
+              "Improbidade em trânsito é só da Polícia",
+              "Art. 19, IV — executivo máximo federal apura improbidade"
+            ],
+            [
+              "Supervisão da PNT é do CONTRAN",
+              "Art. 19, II — Senatran supervisiona a execução"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que B, C e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "B — competencia_snt",
+              "Improbidade em trânsito está no art. 19, IV — é competência do Senatran"
+            ],
+            [
+              "C — competencia_snt",
+              "Supervisão da PNT/PNT é art. 19, II — texto literal do executivo máximo"
+            ],
+            [
+              "D — competencia_snt",
+              "Articulação com Transporte e Segurança Pública é art. 19, III — também compete"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Atribuição citada",
+            "Compete ao executivo máximo?"
+          ],
+          "linhas": [
+            [
+              "Arrecadar estada, remoção e escolta",
+              "Não — gabarito A (arts. 20–21)"
+            ],
+            [
+              "Apurar improbidade em trânsito",
+              "Sim — art. 19, IV"
+            ],
+            [
+              "Supervisionar PNT e PNT",
+              "Sim — art. 19, II"
+            ],
+            [
+              "Articular com SNT, Transporte e Segurança",
+              "Sim — art. 19, III"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Art. 19 — o que compete",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 19, II e IV",
+          "texto": "II - proceder à supervisão, à coordenação, à correição dos órgãos delegados, ao controle e à fiscalização da execução da Política Nacional de Trânsito e do Programa Nacional de Trânsito; IV - apurar, prevenir e reprimir a prática de atos de improbidade contra a fé pública, o patrimônio, ou a administração pública ou privada, referentes à segurança do trânsito;",
+          "trechos_grifados": [
+            {
+              "inicio": 0,
+              "fim": 186,
+              "motivo": "contraste — B e C estão no art. 19",
+              "texto_grifado": "II - proceder à supervisão, à coordenação, à correição dos órgãos delegados, ao controle e à fiscalização da execução da Política Nacional de Trânsito e do Programa Nacional de Trânsito;"
+            },
+            {
+              "inicio": 187,
+              "fim": 362,
+              "motivo": "contraste — improbidade é Senatran",
+              "texto_grifado": "IV - apurar, prevenir e reprimir a prática de atos de improbidade contra a fé pública, o patrimônio, ou a administração pública ou privada, referentes à segurança do trânsito;"
+            }
+          ]
+        }
+      },
+      {
+        "id": "lei2",
+        "titulo": "Onde está a estada/remoção",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 21, VII",
+          "texto": "VII - arrecadar valores provenientes de estada e remoção de veículos e objetos, e escolta de veículos de cargas superdimensionadas ou perigosas;",
+          "trechos_grifados": [
+            {
+              "inicio": 0,
+              "fim": 144,
+              "motivo": "caso — gabarito A: competência rodoviária, não art. 19",
+              "texto_grifado": "VII - arrecadar valores provenientes de estada e remoção de veículos e objetos, e escolta de veículos de cargas superdimensionadas ou perigosas;"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: art. 19 = Senatran executa política, cadastros e supervisão — não opera pátio.\nNear: no município, estada/remoção é art. 24, XI.\nFar: Senatran coordena multas (art. 19, XIII) — não confundir com estada.\nNão muda: estada/remoção/escolta = PRF e executivos rodoviários.\nCadeia: próximo = art. 21, VII — não cobrado no art. 19.",
+          "destaques": [
+            "art. 19",
+            "estada",
+            "PRF",
+            "art. 21"
+          ]
+        }
+      }
+    ]
+  }
+}

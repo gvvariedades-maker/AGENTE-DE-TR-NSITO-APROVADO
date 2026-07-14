@@ -1,0 +1,310 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_processo_administrativo",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_287",
+    "enunciado": "Condutor domiciliado em Campina Grande/PB, com veículo licenciado no Rio de Janeiro/RJ, foi autuado por excesso de velocidade em rodovia fluminense. Após notificação de penalidade emitida pelo órgão de trânsito do Rio de Janeiro, o condutor protocolou recurso no DETRAN-PB, alegando residir em Campina Grande. A autoridade carioca sustenta que o recurso é inadmissível por incompetência do DETRAN-PB, pois a infração ocorreu em localidade diversa do domicílio e do licenciamento. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O recurso é inadmissível no DETRAN-PB: deve ser apresentado exclusivamente ao órgão de trânsito do Rio de Janeiro que impôs a penalidade.",
+      "B": "O DETRAN-PB pode julgar definitivamente o recurso, pois o domicílio do infrator em Campina Grande confere competência plena ao órgão da Paraíba.",
+      "C": "O recurso pode ser apresentado no DETRAN-PB, órgão do domicílio do infrator, devendo este remetê-lo de pronto ao órgão autuador do Rio de Janeiro, nos termos do art. 287.",
+      "D": "Só é admissível recurso no local da infração ou no órgão de licenciamento do veículo — vedada apresentação no domicílio do condutor."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Recurso em UF diversa do licenciamento — art. 287 (apresentação no domicílio do infrator) × parágrafo único (remessa imediata ao órgão autuador).",
+      "fundamento_legal": "CTB, art. 287: se a infração for cometida em localidade diversa daquela do licenciamento do veículo, o recurso poderá ser apresentado junto ao órgão ou entidade de trânsito da residência ou domicílio do infrator. Parágrafo único: a autoridade de trânsito que receber o recurso deverá remetê-lo, de pronto, à autoridade que impôs a penalidade acompanhado das cópias dos prontuários necessários ao julgamento.",
+      "passo_a_passo": [
+        "1. Caso: infração no RJ, veículo licenciado no RJ, condutor domiciliado em Campina Grande/PB — recurso protocolado no DETRAN-PB; autuador alega incompetência.",
+        "2. A erra por competencia_snt (exige apresentação exclusiva no órgão autuador — o art. 287 faculta o domicílio); B erra por termo_unico (atribui julgamento definitivo ao DETRAN-PB — o § único manda remeter ao autuador); D erra por numero_vizinho (restringe a local da infração ou licenciamento — ignora a opção do domicílio).",
+        "3. C correta: art. 287, caput (recurso no domicílio) + § único (remessa de pronto ao órgão que impôs a penalidade)."
+      ],
+      "pegadinha": "A banca induz a crer que só o órgão autuador recebe o recurso — o art. 287 faculta apresentação no domicílio, com remessa imediata ao autuador.",
+      "macete": "UF DIVERSA = PODE NO DOMICÍLIO · receptor remete de pronto ao autuador.",
+      "estudo_reverso": [
+        "CTB art. 287",
+        "CTB art. 286",
+        "CTB art. 288",
+        "CTB art. 282"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Infração em UF diversa do licenciamento permite recurso no domicílio — órgão receptor remete de pronto ao autuador",
+      "eixos_legais": [
+        "CTB_art_287",
+        "CTB_art_287_pu"
+      ],
+      "eixo_vizinho": "CTB_art_286",
+      "isca_por_alternativa": {
+        "A": "recurso inadmissível no DETRAN-PB — deve ser apresentado exclusivamente ao órgão autuador do Rio de Janeiro",
+        "B": "DETRAN-PB pode julgar definitivamente por ser o domicílio do infrator em Campina Grande",
+        "D": "só é admissível recurso no local da infração ou no órgão de licenciamento do veículo"
+      },
+      "eixos_mecanismo": [
+        "competencia_snt",
+        "termo_unico",
+        "numero_vizinho"
+      ],
+      "near_transfer": "Mesmo caso, mas condutor protocola diretamente no órgão autuador do RJ — também válido, sem impedir a via do domicílio.",
+      "far_transfer": "Infração e licenciamento na mesma UF da Paraíba — art. 287 não se aplica, cenário distinto.",
+      "o_que_nao_muda": "Apresentação no domicílio não transfere julgamento — o § único obriga remessa imediata ao autuador.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "processo_administrativo",
+      "recurso",
+      "uf_diversa",
+      "domicilio",
+      "detran"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CTB_art_287",
+      "macete_visual": "UF diversa = domicílio · remete ao autuador",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C: recurso no DETRAN-PB é admissível — órgão remete de pronto ao autuador do RJ.",
+            "destaques": ["Gabarito C", "DETRAN-PB", "remete"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Só autuador × domicílio",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Autuador ✗", "Lei ✓"],
+            "linhas": [
+              ["Recurso só no RJ", "Pode apresentar no domicílio — art. 287"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "UF DIVERSA = PODE NO DOMICÍLIO · receptor remete de pronto ao autuador.",
+            "destaques": ["DOMICÍLIO", "remete", "autuador"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 287",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 265,
+      "fundamento_slug": "CTB_art_287",
+      "macete_visual": "UF diversa = domicílio · remete ao autuador",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Infração em UF diversa do licenciamento permite recurso no domicílio — órgão receptor remete de pronto ao autuador",
+        "eixos_legais": [
+          "CTB_art_287",
+          "CTB_art_287_pu"
+        ],
+        "isca_por_alternativa": {
+          "A": "recurso inadmissível no DETRAN-PB — deve ser apresentado exclusivamente ao órgão autuador do Rio de Janeiro",
+          "B": "DETRAN-PB pode julgar definitivamente por ser o domicílio do infrator em Campina Grande",
+          "D": "só é admissível recurso no local da infração ou no órgão de licenciamento do veículo"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: recurso no DETRAN-PB",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — recurso inadmissível no DETRAN-PB, exclusivamente no órgão autuador do RJ.\nB — DETRAN-PB julga definitivamente por ser domicílio do infrator.\nD — só no local da infração ou no órgão de licenciamento.\n\nPegadinha: UF diversa do licenciamento faculta recurso no domicílio com remessa ao autuador.",
+            "destaques": ["Gabarito C", "DETRAN-PB", "domicílio"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "LOCALIDADE DO LICENCIAMENTO: UF onde o veículo está registrado — distinta da infração no caso.\n\nDOMICÍLIO DO INFRATOR: residência habitual — Campina Grande/PB no enunciado.\n\nREMETENTE RECEPTOR: órgão que recebe o recurso e encaminha de pronto ao autuador.",
+            "destaques": ["LICENCIAMENTO", "DOMICÍLIO", "REMETENTE"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: onde protocolar o recurso?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Infração em localidade diversa do licenciamento?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Condutor protocola no órgão do domicílio?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Admissível — remeter de pronto ao autuador — gabarito C", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — RJ × licenciamento RJ, domicílio PB" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim — DETRAN-PB" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Vias de apresentação do recurso",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Órgão", "Admissibilidade no caso"],
+            "linhas": [
+              { "faixa": "Órgão autuador (RJ)", "classificacao": "Sempre competente para julgar" },
+              { "faixa": "Órgão do domicílio (DETRAN-PB)", "classificacao": "Facultado pelo art. 287 — caso do enunciado", "destaque": true },
+              { "faixa": "Local da infração isoladamente", "classificacao": "Não é a única via — isca da alternativa D" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: exclusividade do autuador",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Autuador ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Recurso só no órgão do RJ",
+                "Pode apresentar no domicílio — caput do art. 287"
+              ],
+              [
+                "DETRAN-PB julga definitivamente",
+                "§ único: remete de pronto ao autuador"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — competencia_snt",
+                "Exige apresentação exclusiva no autuador — art. 287 faculta o domicílio"
+              ],
+              [
+                "B — termo_unico",
+                "Atribui julgamento definitivo ao DETRAN-PB — § único manda remeter ao autuador"
+              ],
+              [
+                "D — numero_vizinho",
+                "Restringe a local da infração ou licenciamento — ignora opção do domicílio"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Encaixe no enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              ["Infração em rodovia fluminense", "Localidade diversa do domicílio PB"],
+              ["Veículo licenciado no RJ", "Hipótese do art. 287"],
+              ["Recurso no DETRAN-PB", "Facultado no domicílio"],
+              ["Remessa ao autuador RJ", "Dever do § único"],
+              ["Resultado", "Alternativa C"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Competência: receptor × autuador",
+          "secao": "conceito",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "pb", "label": "DETRAN-PB — recebe no domicílio", "nivel": 1 },
+              { "id": "rj", "label": "Órgão autuador RJ — julga", "nivel": 2 }
+            ],
+            "arestas": [
+              { "de": "pb", "para": "rj", "rotulo": "remete de pronto — § único" }
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "CTB, art. 287, caput",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 287, caput",
+            "texto": "Art. 287. Se a infração for cometida em localidade diversa daquela do licenciamento do veículo, o recurso poderá ser apresentado junto ao órgão ou entidade de trânsito da residência ou domicílio do infrator.",
+            "trechos_grifados": [
+              {
+                "inicio": 96,
+                "fim": 206,
+                "motivo": "caso — recurso protocolado no DETRAN-PB do domicílio",
+                "texto_grifado": "o recurso poderá ser apresentado junto ao órgão ou entidade de trânsito da residência ou domicílio do infrator"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "CTB, art. 287, § único",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 287, parágrafo único",
+            "texto": "Parágrafo único. A autoridade de trânsito que receber o recurso deverá remetê-lo, de pronto, à autoridade que impôs a penalidade acompanhado das cópias dos prontuários necessários ao julgamento.",
+            "trechos_grifados": [
+              {
+                "inicio": 71,
+                "fim": 128,
+                "motivo": "contraste — DETRAN-PB não julga, remete ao autuador",
+                "texto_grifado": "remetê-lo, de pronto, à autoridade que impôs a penalidade"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "UF DIVERSA = PODE NO DOMICÍLIO · receptor remete de pronto ao autuador.\n\nNear: condutor protocola diretamente no órgão autuador do RJ — também válido.\nFar: infração e licenciamento na mesma UF — art. 287 não se aplica.\nNão muda: apresentação no domicílio não transfere julgamento definitivo.\nCadeia: vizinho = art. 286 (recurso sem pagar a multa).",
+            "destaques": ["DOMICÍLIO", "remete", "art. 286"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 287",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

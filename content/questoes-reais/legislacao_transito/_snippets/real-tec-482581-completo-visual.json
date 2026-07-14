@@ -1,0 +1,258 @@
+{
+  "tec_id": "482581",
+  "disciplina": "legislacao_transito",
+  "gabarito": "B",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "fluxograma_decisao",
+    "arquetipo_secundario": "tabela_gradacao",
+    "duracao_estimada_seg": 195,
+    "fundamento_slug": "CTB_art_90",
+    "macete_visual": "Sinal ruim = sem multa",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Órgão de trânsito responde pela sinalização — §1 do art. 90.",
+      "far_transfer": "Prevalência: agente > semáforo > sinais — art. 89.",
+      "o_que_nao_muda": "Não serão aplicadas sanções — literal do art. 90."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito B.\n\nA — gestos são sinais de trânsito: correta.\nC — faixas de pedestres: correta.\nD — publicidade proibida na placa: correta.\n\nPegadinha: B troca \"não serão\" por \"serão\" — sinalização falha não multa o condutor.",
+          "destaques": [
+            "Gabarito B",
+            "INCORRETA",
+            "não serão"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Três termos da questão",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Sinais de trânsito: verticais, horizontais, luminosos, sonoros e gestos — art. 87.\nSinalização insuficiente ou incorreta: exceção à multa — art. 90.\nPublicidade na placa: proibida se não relacionada à mensagem — art. 82.",
+          "destaques": [
+            "sinais",
+            "insuficiente",
+            "publicidade"
+          ]
+        }
+      },
+      {
+        "id": "fluxo",
+        "titulo": "Método: comando INCORRETA",
+        "secao": "metodo",
+        "tipo": "fluxograma",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "p1",
+              "label": "A afirmativa diz que haverá sanção com sinalização falha?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "p2",
+              "label": "As demais reproduzem normas fiéis ao CTB?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "r1",
+              "label": "Incorreta = B — gabarito",
+              "tipo": "resultado"
+            }
+          ],
+          "arestas": [
+            {
+              "de": "p1",
+              "para": "p2",
+              "rotulo": "Sim"
+            },
+            {
+              "de": "p2",
+              "para": "r1",
+              "rotulo": "Sim"
+            }
+          ]
+        }
+      },
+      {
+        "id": "mapa",
+        "titulo": "Normas das alternativas",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": [
+            "Alternativa",
+            "Base legal"
+          ],
+          "linhas": [
+            {
+              "faixa": "A",
+              "classificacao": "Art. 87, VI — gestos como sinais",
+              "destaque": false
+            },
+            {
+              "faixa": "B",
+              "classificacao": "Art. 90 invertido — INCORRETA",
+              "destaque": true
+            },
+            {
+              "faixa": "C",
+              "classificacao": "Art. 85 — faixas de pedestres",
+              "destaque": false
+            },
+            {
+              "faixa": "D",
+              "classificacao": "Art. 82 — publicidade na placa",
+              "destaque": false
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "Condutor multa mesmo com placa errada ou ausente",
+              "Art. 90 — não serão aplicadas sanções se sinalização insuficiente ou incorreta"
+            ],
+            [
+              "Gestos do agente não são sinais de trânsito",
+              "Art. 87, VI — gestos do agente e do condutor classificam-se como sinais"
+            ],
+            [
+              "Publicidade pode cobrir a placa se for discreta",
+              "Art. 82 — proibido afixar publicidade não relacionada à mensagem"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que A, C e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "A — numero_vizinho",
+              "Assertiva correta do art. 87, VI — não é a INCORRETA"
+            ],
+            [
+              "C — numero_vizinho",
+              "Reproduz fielmente o art. 85 sobre faixas de pedestres"
+            ],
+            [
+              "D — regra_excecao",
+              "Transcreve o art. 82 — norma válida sobre publicidade"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Afirmativa",
+            "É INCORRETA?"
+          ],
+          "linhas": [
+            [
+              "Gestos são sinais de trânsito",
+              "Não — A é correta"
+            ],
+            [
+              "Multa mesmo com sinalização insuficiente",
+              "Sim — gabarito B"
+            ],
+            [
+              "Faixas de pedestres obrigatórias",
+              "Não — C é correta"
+            ],
+            [
+              "Publicidade proibida na placa",
+              "Não — D é correta"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto do CTB",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 90",
+          "texto": "Não serão aplicadas as sanções previstas neste Código por inobservância à sinalização quando esta for insuficiente ou incorreta.",
+          "trechos_grifados": [
+            {
+              "inicio": 0,
+              "fim": 128,
+              "motivo": "contraste — B inverte \"não serão\" para \"serão\"",
+              "texto_grifado": "Não serão aplicadas as sanções previstas neste Código por inobservância à sinalização quando esta for insuficiente ou incorreta."
+            }
+          ]
+        }
+      },
+      {
+        "id": "lei2",
+        "titulo": "Classificação dos sinais",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 87, VI",
+          "texto": "VI - gestos do agente de trânsito e do condutor.",
+          "trechos_grifados": [
+            {
+              "inicio": 0,
+              "fim": 48,
+              "motivo": "mapa — assertiva A correta",
+              "texto_grifado": "VI - gestos do agente de trânsito e do condutor."
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: sinalização insuficiente ou incorreta = não multa o condutor (art. 90).\nNear: órgão de trânsito responde pela implantação — §1 do art. 90.\nFar: prevalência agente > semáforo > sinais — art. 89.\nNão muda: \"não serão aplicadas\" — tirar o \"não\" é pegadinha clássica.\nCadeia: próximo = art. 82 — publicidade proibida na placa.",
+          "destaques": [
+            "não serão",
+            "condutor",
+            "art. 82",
+            "publicidade"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "tec_id": "482571",
+  "disciplina": "legislacao_transito",
+  "gabarito": "A",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "fluxograma_decisao",
+    "arquetipo_secundario": "tabela_gradacao",
+    "duracao_estimada_seg": 200,
+    "fundamento_slug": "CTB_art_35",
+    "macete_visual": "Lateral = faixas + conversões + retornos",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Sinalizar antes de retorno — caput do art. 35.",
+      "far_transfer": "Retorno no acostamento — art. 37, regra distinta.",
+      "o_que_nao_muda": "Retornos sempre no parágrafo único do art. 35."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito A.\n\nB — domínio do veículo: norma correta.\nC — equipamentos e combustível: norma correta.\nD — ultrapassagem com exceção sinalizada: norma correta.\n\nPegadinha: \"exceto retornos\" — a lei diz \"e retornos\".",
+          "destaques": [
+            "Gabarito A",
+            "retornos",
+            "INCORRETA"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Três termos da questão",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Deslocamento lateral: transposição de faixas, conversões e retornos — parágrafo único do art. 35.\nDomínio do veículo: atenção e cuidados permanentes — art. 28.\nUltrapassagem: proibida em locais de risco, salvo sinalização — art. 32.",
+          "destaques": [
+            "lateral",
+            "domínio",
+            "ultrapassagem"
+          ]
+        }
+      },
+      {
+        "id": "fluxo",
+        "titulo": "Método: comando INCORRETA",
+        "secao": "metodo",
+        "tipo": "fluxograma",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "p1",
+              "label": "A exclui retornos do deslocamento lateral?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "p2",
+              "label": "As demais reproduzem normas fiéis ao CTB?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "r1",
+              "label": "Incorreta = A — gabarito",
+              "tipo": "resultado"
+            }
+          ],
+          "arestas": [
+            {
+              "de": "p1",
+              "para": "p2",
+              "rotulo": "Sim"
+            },
+            {
+              "de": "p2",
+              "para": "r1",
+              "rotulo": "Sim"
+            }
+          ]
+        }
+      },
+      {
+        "id": "mapa",
+        "titulo": "Normas citadas nas alternativas",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": [
+            "Alternativa",
+            "Base legal"
+          ],
+          "linhas": [
+            {
+              "faixa": "A",
+              "classificacao": "Art. 35 — definição de deslocamento lateral",
+              "destaque": true
+            },
+            {
+              "faixa": "B",
+              "classificacao": "Art. 28 — domínio do veículo",
+              "destaque": false
+            },
+            {
+              "faixa": "C",
+              "classificacao": "Art. 27 — equipamentos e combustível",
+              "destaque": false
+            },
+            {
+              "faixa": "D",
+              "classificacao": "Art. 32 — ultrapassagem proibida",
+              "destaque": false
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "Retorno não é deslocamento lateral",
+              "Parágrafo único do art. 35 inclui retornos"
+            ],
+            [
+              "INCORRETA = a alternativa mais longa",
+              "B, C e D transcrevem arts. 28, 27 e 32 corretamente"
+            ],
+            [
+              "\"Exceto retornos\" é detalhe irrelevante",
+              "Troca \"e retornos\" por \"exceto retornos\" inverte a definição"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que B, C e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "B — numero_vizinho",
+              "Assertiva correta do art. 28 — não é a INCORRETA"
+            ],
+            [
+              "C — numero_vizinho",
+              "Reproduz fielmente o art. 27 sobre equipamentos"
+            ],
+            [
+              "D — regra_excecao",
+              "Transcreve o art. 32 com exceção sinalizada — norma válida"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Afirmativa",
+            "É INCORRETA?"
+          ],
+          "linhas": [
+            [
+              "Deslocamento lateral exceto retornos",
+              "Sim — gabarito A"
+            ],
+            [
+              "Domínio permanente do veículo",
+              "Não — B é correta"
+            ],
+            [
+              "Verificar equipamentos antes de circular",
+              "Não — C é correta"
+            ],
+            [
+              "Ultrapassagem proibida salvo sinalização",
+              "Não — D é correta"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto do CTB",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 35, parágrafo único",
+          "texto": "Parágrafo único. Entende-se por deslocamento lateral a transposição de faixas, movimentos de conversão à direita, à esquerda e retornos.",
+          "trechos_grifados": [
+            {
+              "inicio": 0,
+              "fim": 136,
+              "motivo": "contraste — A troca \"e retornos\" por \"exceto retornos\"",
+              "texto_grifado": "Parágrafo único. Entende-se por deslocamento lateral a transposição de faixas, movimentos de conversão à direita, à esquerda e retornos."
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: deslocamento lateral = faixas + conversões + retornos (parágrafo único do art. 35).\nNear: sinalizar antes de qualquer manobra lateral, inclusive retorno (caput do art. 35).\nFar: sem local apropriado, retorno no acostamento — art. 37.\nNão muda: retornos sempre integram a definição — excluí-los é pegadinha clássica.\nCadeia: próximo = art. 37 — retorno e conversão à esquerda.",
+          "destaques": [
+            "retornos",
+            "lateral",
+            "sinalizar",
+            "art. 37"
+          ]
+        }
+      }
+    ]
+  }
+}

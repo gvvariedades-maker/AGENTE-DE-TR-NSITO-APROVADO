@@ -1,0 +1,248 @@
+{
+  "tec_id": "482565",
+  "disciplina": "legislacao_transito",
+  "gabarito": "C",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "tabela_gradacao",
+    "arquetipo_secundario": "fluxograma_decisao",
+    "duracao_estimada_seg": 195,
+    "fundamento_slug": "CTB_art_96_II",
+    "macete_visual": "Espécie 3+extra · Tração automotor",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Camioneta = misto (espécie) — não automotor.",
+      "far_transfer": "Reboque = tração — eixo distinto da espécie.",
+      "o_que_nao_muda": "Automotor só no inciso I — nunca espécie."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito C.\n\nA — misto: espécie válida.\nB — de carga: espécie válida.\nD — de passageiros: espécie válida.\n\nPegadinha: automotor parece tipo geral, mas no CTB é critério de tração — não de espécie.",
+          "destaques": [
+            "Gabarito C",
+            "automotor",
+            "tração"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Três termos da questão",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Espécie: passageiros, carga, misto, competição e tração de competição — inciso II do art. 96.\nTração: automotor, propulsão humana, animal, reboque — inciso I.\nAutomotor: motor próprio — classifica por tração, não por espécie.",
+          "destaques": [
+            "espécie",
+            "tração",
+            "automotor"
+          ]
+        }
+      },
+      {
+        "id": "mapa",
+        "titulo": "Dois eixos do art. 96",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": [
+            "Inciso",
+            "Critério"
+          ],
+          "linhas": [
+            {
+              "faixa": "I",
+              "classificacao": "Quanto à tração — automotor, propulsão humana, animal, reboque",
+              "destaque": false
+            },
+            {
+              "faixa": "II",
+              "classificacao": "Quanto à espécie — passageiros, carga, misto, competição, tração",
+              "destaque": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "fluxo",
+        "titulo": "Método: espécie ou tração?",
+        "secao": "metodo",
+        "tipo": "fluxograma",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "p1",
+              "label": "A alternativa está no inciso II (espécie)?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "p2",
+              "label": "É automotor do inciso I (tração)?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "r1",
+              "label": "Não é espécie — gabarito C",
+              "tipo": "resultado"
+            }
+          ],
+          "arestas": [
+            {
+              "de": "p1",
+              "para": "p2",
+              "rotulo": "Não"
+            },
+            {
+              "de": "p2",
+              "para": "r1",
+              "rotulo": "Sim"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "Automotor é espécie de veículo como carga ou passageiros",
+              "Automotor classifica-se quanto à tração — inciso I, a"
+            ],
+            [
+              "Misto não é categoria de espécie",
+              "Misto figura no inciso II, c — espécie válida"
+            ],
+            [
+              "De carga e de passageiros são tração, não espécie",
+              "Passageiros (II, a) e carga (II, b) são espécies do art. 96"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que A, B e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "A — regra_excecao",
+              "Misto é espécie válida — não pode ser o NÃO do enunciado"
+            ],
+            [
+              "B — numero_vizinho",
+              "De carga integra o rol de espécies — isca por confundir eixos"
+            ],
+            [
+              "D — termo_unico",
+              "De passageiros é espécie — parece fora do rol, mas está no II, a"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "É espécie?"
+          ],
+          "linhas": [
+            [
+              "Mistos",
+              "Sim — A é espécie (misto)"
+            ],
+            [
+              "De carga",
+              "Sim — B é espécie"
+            ],
+            [
+              "Automotor",
+              "Não — gabarito C (é tração)"
+            ],
+            [
+              "De passageiros",
+              "Sim — D é espécie"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto do CTB",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 96, II",
+          "texto": "II - quanto à espécie:\na) de passageiros;\nb) de carga;\nc) misto;\nd) de competição;\ne) de tração;",
+          "trechos_grifados": [
+            {
+              "inicio": 0,
+              "fim": 96,
+              "motivo": "mapa — espécies válidas; automotor não está aqui",
+              "texto_grifado": "II - quanto à espécie:\na) de passageiros;\nb) de carga;\nc) misto;\nd) de competição;\ne) de tração;"
+            }
+          ]
+        }
+      },
+      {
+        "id": "lei2",
+        "titulo": "Classificação por tração",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 96, I",
+          "texto": "I - quanto à tração:\na) automotor;\nb) de propulsão humana;",
+          "trechos_grifados": [
+            {
+              "inicio": 21,
+              "fim": 34,
+              "motivo": "contraste — automotor é tração, não espécie",
+              "texto_grifado": "a) automotor;"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: espécie = passageiros · carga · misto · competição · tração (II) — automotor não entra.\nNear: camioneta/utilitário = misto (espécie II, c).\nFar: reboque = tração (I, e) — outro eixo, não confundir com espécie.\nNão muda: automotor só no inciso I — nunca subtipo de espécie.\nCadeia: próximo = art. 97 — definições de cada tipo.",
+          "destaques": [
+            "automotor",
+            "espécie",
+            "misto",
+            "tração"
+          ]
+        }
+      }
+    ]
+  }
+}

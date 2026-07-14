@@ -1,0 +1,352 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_914_semirreboque",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_numero",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_914_art_3_III",
+    "enunciado": "Em fiscalização na Avenida Epitácio Pessoa, em Campina Grande/PB, agente da STTP aborda condutor de motocicleta com motor de 150 cm³ de cilindrada tracionando semirreboque especialmente projetado para motocicletas, homologado pelo órgão máximo executivo de trânsito da União, com todos os equipamentos obrigatórios previstos na Resolução CONTRAN nº 914/2022. O CRLV-e registra CMT de 130 kg; a carga tracionada totaliza 95 kg. Laudo de medição constata largura do conjunto semirreboque de 1,20 m, com altura de 0,85 m e comprimento total de 2,10 m, incluída a lança de acoplamento. O condutor alega que a homologação e a CMT respeitada regularizam o conjunto. Considerando a Resolução CONTRAN nº 914/2022, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A infração enquadra-se no art. 230, X, do CTB, pois a largura de 1,20 m excede o limite de 1,15 m do art. 3º, III, a, da Resolução — equipamento em desacordo com as especificações, conforme o art. 5º, II.",
+      "B": "A infração enquadra-se no art. 244, VI, do CTB, por tracionar semirreboque em desacordo com o art. 2º da Resolução, uma vez que a largura de 1,20 m viola os limites dimensionais.",
+      "C": "A circulação é regular, pois a homologação do semirreboque e o respeito à CMT dispensam a verificação das dimensões máximas previstas no art. 3º da Resolução.",
+      "D": "A circulação é regular, pois cabe à STTP, como autoridade de trânsito local, autorizar semirreboques com largura superior a 1,15 m nas vias de Campina Grande, nos termos do art. 4º da Resolução."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Dimensões máximas do semirreboque — art. 3º, III, da Res. CONTRAN 914/2022 × tipificação art. 5º, II (CTB art. 230, X), distinto de violação do art. 2º (art. 5º, III → art. 244, VI) e de competência local do art. 4º.",
+      "fundamento_legal": "Res. CONTRAN 914/2022, art. 3º, III, a: largura máxima 1,15 m (com ou sem carga). Art. 5º, II: semirreboque com equipamento obrigatório em desacordo com as especificações estabelecidas nesta Resolução tipifica CTB art. 230, X. Art. 5º, III: violação do art. 2º tipifica CTB art. 244, VI. Art. 4º: autoridade de trânsito decide sobre circulação na via, não altera dimensões do art. 3º.",
+      "passo_a_passo": [
+        "1. Caso: moto 150 cm³, semirreboque homologado e equipado, CMT respeitada (95 kg ≤ 130 kg), mas largura 1,20 m > 1,15 m — altura e comprimento dentro dos limites.",
+        "2. B erra por termo_unico (aplica art. 244, VI por desacordo com art. 2º — violação dimensional é especificação do art. 3º, tipificada pelo art. 5º, II no art. 230, X); C erra por regra_excecao (homologação e CMT não dispensam dimensões do art. 3º); D erra por competencia_snt (art. 4º trata de permitir circulação na via, não de autorizar largura acima do limite).",
+        "3. A correta: largura excede 1,15 m — equipamento em desacordo com especificações — art. 5º, II → CTB art. 230, X."
+      ],
+      "pegadinha": "A IDECAN induz a validar porque o semirreboque é homologado, equipado e dentro da CMT — mas 1,20 m ultrapassa o teto de 1,15 m do art. 3º, III, a, tipificado pelo art. 5º, II, não pelo art. 244, VI.",
+      "macete": "914 DIMENSÃO: 1,15 × 0,90 × 2,15 m · fora do limite = art. 230, X (art. 5º, II) · art. 2º = art. 244, VI.",
+      "estudo_reverso": [
+        "Res. CONTRAN 914/2022 art. 3",
+        "Res. CONTRAN 914/2022 art. 5",
+        "Res. CONTRAN 914/2022 art. 2",
+        "CTB art. 230"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "1,20 m > 1,15 m tipifica art. 230 X pelo art. 5º II — não art. 244 VI do art. 2º",
+      "eixos_legais": [
+        "CONTRAN_914_art_3_III",
+        "CONTRAN_914_art_5_II",
+        "CONTRAN_914_art_2"
+      ],
+      "eixo_vizinho": "CONTRAN_914_art_2",
+      "isca_por_alternativa": {
+        "B": "art. 244 VI por largura excessiva como violação do art. 2º",
+        "C": "homologação e CMT dispensam verificação das dimensões do art. 3º",
+        "D": "STTP autoriza largura superior a 1,15 m via art. 4º"
+      },
+      "eixos_mecanismo": [
+        "termo_unico",
+        "regra_excecao",
+        "competencia_snt"
+      ],
+      "near_transfer": "Mesmo conjunto com largura 1,10 m, mas altura de 0,95 m — falha no limite de 0,90 m, mesma tipificação art. 230, X.",
+      "far_transfer": "Motoneta 118 cm³ com semirreboque regular — violação do art. 2º tipifica art. 244, VI (art. 5º, III), não dimensão.",
+      "o_que_nao_muda": "Homologação e CMT não dispensam limites dimensionais do art. 3º; art. 4º não autoriza exceder especificações técnicas.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "semirreboque",
+      "resolucao_914",
+      "dimensoes",
+      "largura",
+      "art_230_x"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "duracao_estimada_seg": 60,
+      "fundamento_slug": "CONTRAN_914_art_3_III",
+      "macete_visual": "1,15 m largura · fora = art. 230 X",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A: largura 1,20 m > 1,15 m — art. 230, X, não art. 244, VI.",
+            "destaques": ["1,20 m", "1,15 m", "art. 230, X"]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Limites dimensionais",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Dimensão", "Máximo"],
+            "linhas": [
+              { "faixa": "Largura", "classificacao": "1,15 m", "destaque": true },
+              { "faixa": "Altura", "classificacao": "0,90 m" },
+              { "faixa": "Comprimento total", "classificacao": "2,15 m" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "1,15 × 0,90 × 2,15 m.\nFora do limite = art. 230, X.",
+            "destaques": ["1,15", "art. 230, X"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 914/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 914, DE 28 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 260,
+      "fundamento_slug": "CONTRAN_914_art_3_III",
+      "macete_visual": "1,15 m largura · fora = art. 230 X",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "1,20 m > 1,15 m tipifica art. 230 X pelo art. 5º II — não art. 244 VI do art. 2º",
+        "eixos_legais": [
+          "CONTRAN_914_art_3_III",
+          "CONTRAN_914_art_5_II",
+          "CONTRAN_914_art_2"
+        ],
+        "isca_por_alternativa": {
+          "B": "art. 244 VI por largura excessiva como violação do art. 2º",
+          "C": "homologação e CMT dispensam verificação das dimensões do art. 3º",
+          "D": "STTP autoriza largura superior a 1,15 m via art. 4º"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: homologado não dispensa dimensão",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — tipificação por rebocar em desacordo: dimensão é especificação, não requisito de tração.\nC — homologação e CMT dispensam medidas: limites dimensionais permanecem.\nD — competência local autoriza largura maior: não altera especificação técnica.\n\nPegadinha: 1,20 m ultrapassa 1,15 m — equipamento em desacordo.",
+            "destaques": ["Gabarito A", "1,20 m", "homologado"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "DIMENSÕES MÁXIMAS: limites do art. 3º, III — largura, altura e comprimento total com lança.\n\nEQUIPAMENTO EM DESACORDO: especificação violada — tipificação no inciso II do art. 5º.\n\nCMT: capacidade máxima de tração no CRLV-e — 95 kg está dentro dos 130 kg, mas largura falhou.",
+            "destaques": ["DIMENSÕES", "DESACORDO", "CMT"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual tipificação?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Largura acima de 1,15 m?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Cilindrada, homologação ou CMT violados?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Equipamento em desacordo — gabarito A (dimensão)",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — 1,20 m no caso"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — falha é dimensão fora do limite"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Art. 3º, III — limites e tipificação",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Dimensão / violação", "Regra"],
+            "linhas": [
+              {
+                "faixa": "Largura máxima 1,15 m",
+                "classificacao": "Caso: 1,20 m — excede limite",
+                "destaque": true
+              },
+              {
+                "faixa": "Altura máxima 0,90 m",
+                "classificacao": "Caso: 0,85 m — regular"
+              },
+              {
+                "faixa": "Comprimento máx. 2,15 m",
+                "classificacao": "Caso: 2,10 m — regular"
+              },
+              {
+                "faixa": "Tipificação dimensão irregular",
+                "classificacao": "Art. 230, X — art. 5º, II"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: art. 230, X × art. 244, VI",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Largura excessiva = art. 244, VI",
+                "Dimensão fora do art. 3º = art. 230, X pelo art. 5º, II"
+              ],
+              [
+                "Homologado dispensa medidas",
+                "Art. 3º, III é requisito cumulativo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — termo_unico",
+                "Art. 244, VI é para violação do art. 2º — dimensão é art. 3º"
+              ],
+              [
+                "C — regra_excecao",
+                "Homologação e CMT não dispensam limites dimensionais"
+              ],
+              [
+                "D — competencia_snt",
+                "Art. 4º decide circulação na via, não autoriza largura acima do limite"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Encaixe no enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato da fiscalização", "Avaliação"],
+            "linhas": [
+              ["Moto 150 cm³", "Atende art. 2º — mais de 120 cm³"],
+              ["Homologado e equipado", "Art. 2º, I e II e art. 3º, II ok"],
+              ["95 kg ≤ CMT 130 kg", "CMT respeitada"],
+              ["Largura 1,20 m", "Excede 1,15 m — irregular"],
+              ["Resultado", "Alternativa A — art. 230, X"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 5º — qual inciso do CTB?",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Hipótese", "Tipificação"],
+            "linhas": [
+              ["Equipamento ausente — art. 3º, II", "Art. 230, IX — art. 5º, I"],
+              ["Especificação violada — dimensões art. 3º, III", "Art. 230, X — art. 5º, II"],
+              ["Violação art. 2º (cilindrada, CMT, homologação)", "Art. 244, VI — art. 5º, III"],
+              ["Art. 4º — circulação na via", "Competência local — não altera art. 3º"]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 3º, III, a — largura máxima",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 914/2022, art. 3º, III, a",
+            "texto": "a) largura máxima: 1,15 m;",
+            "trechos_grifados": [
+              {
+                "inicio": 3,
+                "fim": 25,
+                "motivo": "mapa — caso mediu 1,20 m, acima do limite",
+                "texto_grifado": "largura máxima: 1,15 m"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 5º, II — tipificação CTB",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 914/2022, art. 5º, II",
+            "texto": "II - art. 230, X: semirreboque com qualquer dos equipamentos obrigatórios em desacordo com as especificações estabelecidas nesta Resolução;",
+            "trechos_grifados": [
+              {
+                "inicio": 5,
+                "fim": 16,
+                "motivo": "hierarquia — gabarito A tipifica equipamento em desacordo",
+                "texto_grifado": "art. 230, X"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "914 DIMENSÃO: 1,15 × 0,90 × 2,15 m · fora = art. 230, X (art. 5º, II) · art. 2º = art. 244, VI.\n\nNear: mesma moto com altura 0,95 m — excede 0,90 m, mesma tipificação.\n\nFar: motoneta 118 cm³ — violação do art. 2º, art. 244, VI.\n\nO que NÃO muda: homologação e CMT não dispensam dimensões; art. 4º não autoriza exceder limites.\n\nCadeia: vizinho = art. 2º (cilindrada, homologação e CMT).",
+            "destaques": ["1,15", "0,95 m", "art. 2º"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 914/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 914, DE 28 DE MARÇO DE 2022.pdf"
+        },
+        {
+          "rotulo": "CTB art. 230",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

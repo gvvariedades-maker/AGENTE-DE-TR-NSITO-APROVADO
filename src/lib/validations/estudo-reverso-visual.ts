@@ -922,16 +922,18 @@ export function isNivelLote007Ouro(input: {
   if (input.tipo !== "caso_pratico" || input.dificuldade < 3) return false;
 
   const ids = new Set((v2.telas ?? []).map((t) => t.id));
-  const base = ["glossario", "fluxo", "caso"] as const;
+  const competenciaSnt = passo2TemCompetenciaSnt(input.comentario?.passo_a_passo);
+  const base = ["glossario", "caso"] as const;
   if (!base.every((id) => ids.has(id))) return false;
+  if (!ids.has("fluxo") && !(competenciaSnt && ids.has("diagrama")) && !ids.has("gradacao")) return false;
 
   const doisDispositivos = gabaritoCruzaDoisDispositivos(input);
   if (doisDispositivos) {
-    if (!ids.has("eixo2") && !ids.has("hierarquia")) return false;
+    if (!ids.has("eixo2") && !ids.has("hierarquia") && !ids.has("lei2")) return false;
   }
 
-  if (passo2TemCompetenciaSnt(input.comentario?.passo_a_passo)) {
-    if (!ids.has("hierarquia") && !ids.has("diagrama")) return false;
+  if (competenciaSnt && !ids.has("hierarquia") && !ids.has("diagrama")) {
+    return false;
   }
 
   return true;

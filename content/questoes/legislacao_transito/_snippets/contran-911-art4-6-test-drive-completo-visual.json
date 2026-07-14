@@ -1,0 +1,292 @@
+{
+  "disciplina": "legislacao_transito",
+  "topico": "CONTRAN_911_registro",
+  "fundamento_slug": "CONTRAN_911_art_4_6_test_drive",
+  "gabarito": "B",
+  "pegadinha": "DANFe não autoriza test-drive com cliente — § 6º exige vínculo empregatício e art. 12 veda finalidade diversa",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "fluxograma_decisao",
+    "arquetipo_secundario": "comparacao",
+    "publico_alvo": "iniciante",
+    "duracao_estimada_seg": 285,
+    "fundamento_slug": "CONTRAN_911_art_4_6_test_drive",
+    "macete_visual": "Concessionária = empregado · Cliente = não",
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "DANFe não autoriza test-drive com cliente — § 6º exige vínculo empregatício e art. 12 veda finalidade diversa",
+      "eixos_legais": [
+        "CONTRAN_911_art_4_6",
+        "CONTRAN_911_art_12",
+        "CONTRAN_911_art_11_III"
+      ],
+      "isca_por_alternativa": {
+        "A": "DANFe dentro de quinze dias autoriza test-drive em via pública como atividade de comercialização",
+        "C": "Campina Grande no Nordeste garante trinta dias de circulação com DANFe pelo § 1º do art. 4º",
+        "D": "fiscalização do DANFe compete exclusivamente ao DETRAN do Estado de origem"
+      }
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Diagnóstico: test-drive sem registro",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito B.\n\nA — DANFe de quinze dias autoriza test-drive como comercialização.\nC — Nordeste garante trinta dias de circulação com DANFe.\nD — fiscalização do DANFe compete só ao DETRAN de origem.\n\nPegadinha: cliente em test-drive não tem vínculo empregatício nem finalidade prevista na Resolução.",
+          "destaques": [
+            "Gabarito B",
+            "test-drive",
+            "empregatício"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Pré-treino: 3 termos",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "CONSIGNADO AO CONCESSIONÁRIO: veículo novo destinado à comercialização — regime especial do § 6º do art. 4º.\n\nVÍNCULO EMPREGATÍCIO: relação de emprego com a concessionária — requisito para transportar pessoas antes do registro.\n\nFINALIDADE PREVISTA: hipóteses autorizadas na Resolução — test-drive com cliente não integra a lista do art. 12.",
+          "destaques": [
+            "CONSIGNADO",
+            "EMPREGATÍCIO",
+            "FINALIDADE"
+          ]
+        }
+      },
+      {
+        "id": "fluxo",
+        "titulo": "Método: cabe test-drive com cliente?",
+        "secao": "metodo",
+        "tipo": "fluxograma",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "p1",
+              "label": "Veículo consignado à concessionária sem registro?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "p2",
+              "label": "Condutor ou passageiro tem vínculo empregatício?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "r1",
+              "label": "Irregular — gabarito B",
+              "tipo": "resultado"
+            }
+          ],
+          "arestas": [
+            {
+              "de": "p1",
+              "para": "p2",
+              "rotulo": "Sim — automóveis novos na loja"
+            },
+            {
+              "de": "p2",
+              "para": "r1",
+              "rotulo": "Não — cliente em test-drive"
+            }
+          ]
+        }
+      },
+      {
+        "id": "mapa",
+        "titulo": "Quem pode circular antes do registro",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": [
+            "Situação",
+            "Regra"
+          ],
+          "linhas": [
+            {
+              "faixa": "Trajeto origem → município de registro com DANFe",
+              "classificacao": "15 dias — 30 só Região Norte — § 1º art. 4º"
+            },
+            {
+              "faixa": "Concessionária + empregado ao volante",
+              "classificacao": "Permitido — § 6º art. 4º"
+            },
+            {
+              "faixa": "Test-drive com cliente na via pública",
+              "classificacao": "Irregular — § 6º + art. 12",
+              "destaque": true
+            },
+            {
+              "faixa": "Carga própria da concessionária",
+              "classificacao": "Permitido — § 6º art. 4º"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Armadilha: DANFe = test-drive liberado",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "DANFe de quinze dias autoriza qualquer uso comercial",
+              "§ 6º limita pessoas a vínculo empregatício"
+            ],
+            [
+              "Nordeste tem trinta dias como a Região Norte",
+              "§ 1º: 30 dias só nos Estados da Região Norte"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que cada alternativa erra",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Mecanismo + por quê"
+          ],
+          "linhas": [
+            [
+              "A — regra_excecao",
+              "Generaliza DANFe + prazo a test-drive — ignora § 6º e art. 12"
+            ],
+            [
+              "C — numero_vizinho",
+              "Confunde Nordeste com Região Norte — PB tem 15 dias pelo § 1º"
+            ],
+            [
+              "D — competencia_snt",
+              "Atribui fiscalização exclusiva ao DETRAN/SP — STTP fiscaliza na circunscrição"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Resolvendo o enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Fato do caso",
+            "Consequência"
+          ],
+          "linhas": [
+            [
+              "Automóveis novos sem registro",
+              "Regime do art. 4º antes do licenciamento"
+            ],
+            [
+              "Clientes em test-drive na via pública",
+              "Sem vínculo empregatício — § 6º"
+            ],
+            [
+              "DANFe no 10º dia",
+              "Prazo regular, mas não expande finalidade"
+            ],
+            [
+              "Invocação de comercialização",
+              "Art. 12 veda finalidade diversa — alternativa B"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "hierarquia",
+        "titulo": "§ 6º × art. 12 × art. 11, III",
+        "secao": "conceito",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Dispositivo",
+            "Função no caso"
+          ],
+          "linhas": [
+            [
+              "Art. 4º, § 6º",
+              "Só cargas próprias e pessoas com vínculo empregatício"
+            ],
+            [
+              "Art. 12",
+              "Proíbe trânsito para finalidade não prevista na Resolução"
+            ],
+            [
+              "Art. 11, III",
+              "Tipifica art. 230, V, do CTB — desacordo com finalidade"
+            ],
+            [
+              "Caso STTP",
+              "Cliente em test-drive — três dispositivos convergem"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei1",
+        "titulo": "Res. 911/2022, art. 4º — § 6º",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "Res. CONTRAN 911/2022, art. 4º, § 6º",
+          "texto": "§ 6º Os veículos consignados aos concessionários, para comercialização, e os veículos adquiridos por entidades privadas e públicas, a serem licenciados nas categorias particular e oficial, somente poderão transportar cargas próprias e pessoas que tenham vínculo empregatício com os mesmos.",
+          "trechos_grifados": [
+            {
+              "inicio": 189,
+              "fim": 288,
+              "motivo": "fluxo — pessoas só com vínculo empregatício",
+              "texto_grifado": "somente poderão transportar cargas próprias e pessoas que tenham vínculo empregatício com os mesmos"
+            }
+          ]
+        }
+      },
+      {
+        "id": "lei2",
+        "titulo": "Res. 911/2022, art. 12",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "Res. CONTRAN 911/2022, art. 12",
+          "texto": "Art. 12. Fica proibido o trânsito, antes do registro e licenciamento, do veículo novo, nacional ou importado, para qualquer finalidade diferente daquelas previstas nesta Resolução.",
+          "trechos_grifados": [
+            {
+              "inicio": 110,
+              "fim": 179,
+              "motivo": "contraste — test-drive com cliente é finalidade diversa",
+              "texto_grifado": "para qualquer finalidade diferente daquelas previstas nesta Resolução"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Macete + near/far-transfer",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Concessionária = carga própria + empregado · Cliente test-drive = irregular.\nNear: trajeto São Paulo → Campina Grande com DANFe no 12º dia — regular pelo § 1º.\nFar: vendedor empregado leva veículo entre pátios da mesma rede — § 6º atendido.\nNão muda: antes do registro, finalidade tem que estar na Resolução — DANFe não abre test-drive com cliente.\nCadeia: vizinho = prazo 15 dias (30 só Região Norte) do § 1º do art. 4º.",
+          "destaques": [
+            "empregado",
+            "cliente",
+            "15 dias",
+            "Região Norte"
+          ]
+        }
+      }
+    ],
+    "links_fonte": [
+      {
+        "rotulo": "Res. CONTRAN 911/2022",
+        "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 911, DE 28 DE MARÇO DE 2022.pdf"
+      }
+    ]
+  }
+}

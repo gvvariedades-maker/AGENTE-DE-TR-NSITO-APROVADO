@@ -1,0 +1,212 @@
+{
+  "tec_id": "3780648",
+  "disciplina": "legislacao_transito",
+  "gabarito": "D",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "fluxograma_decisao",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 200,
+    "fundamento_slug": "CTB_art_29_VII",
+    "macete_visual": "Urgência + devagar + regras valem",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Deslocamento sem urgência — sem alarme.",
+      "far_transfer": "Transporte eletivo em ambulância — sem prerrogativa de urgência.",
+      "o_que_nao_muda": "Urgência real + cuidados de segurança para todos."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito D.\n\nA — segurança não autoriza atrasar ocorrência sem critério.\nB — tráfego intenso não justifica recusar atendimento.\nC — serviço não suspende as regras de trânsito.\n\nPegadinha: viatura = pode tudo. Lei: urgência real + zelo por todos.",
+          "destaques": [
+            "Gabarito D",
+            "urgência",
+            "viatura"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Três termos da questão",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Serviço de urgência: ocorrência que exige deslocamento imediato — base da prerrogativa.\nPrioridade de trânsito: passagem preferencial, não imunidade às normas.\nDispositivos de alarme: só na efetiva prestação de serviço de urgência.",
+          "destaques": [
+            "urgência",
+            "prioridade",
+            "alarme"
+          ]
+        }
+      },
+      {
+        "id": "fluxo",
+        "titulo": "Método: viatura em serviço",
+        "secao": "metodo",
+        "tipo": "fluxograma",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "p1",
+              "label": "Há serviço de urgência real?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "p2",
+              "label": "Passagem com cuidados e demais normas?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "r1",
+              "label": "Conduta correta — gabarito D",
+              "tipo": "resultado"
+            }
+          ],
+          "arestas": [
+            {
+              "de": "p1",
+              "para": "p2",
+              "rotulo": "Sim"
+            },
+            {
+              "de": "p2",
+              "para": "r1",
+              "rotulo": "Sim"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "Viatura em serviço pode ignorar o CTB",
+              "Prioridade exige velocidade reduzida e demais normas"
+            ],
+            [
+              "Alarme pode ficar ligado em qualquer deslocamento",
+              "Alarme só na efetiva prestação de serviço de urgência"
+            ],
+            [
+              "Tráfego intenso autoriza recusar a ocorrência",
+              "Não há exceção legal para recusa por congestionamento"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que A, B e C enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "A — termo_unico",
+              "Segurança não legitima atrasar o atendimento sem fundamento legal"
+            ],
+            [
+              "B — regra_excecao",
+              "Não existe exceção para recusar ocorrência por tráfego intenso"
+            ],
+            [
+              "C — regra_excecao",
+              "Serviço não suspende as demais normas — alínea d obriga obedecê-las"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Conduta proposta",
+            "Ética e legal?"
+          ],
+          "linhas": [
+            [
+              "Prioridade só em urgência real, zelando por todos",
+              "Sim — gabarito D"
+            ],
+            [
+              "Atrasar ocorrência priorizando só a si",
+              "Não — A"
+            ],
+            [
+              "Recusar atendimento em via congestionada",
+              "Não — B"
+            ],
+            [
+              "Desconsiderar regras sempre em serviço",
+              "Não — C"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto do CTB",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 29, VII, c e d",
+          "texto": "c) o uso de dispositivos de alarme sonoro e de iluminação intermitente somente poderá ocorrer por ocasião da efetiva prestação de serviço de urgência; d) a prioridade de passagem na via e no cruzamento deverá se dar com velocidade reduzida e com os devidos cuidados de segurança, obedecidas as demais normas deste Código;",
+          "trechos_grifados": [
+            {
+              "inicio": 0,
+              "fim": 150,
+              "motivo": "contraste — alarme só em urgência",
+              "texto_grifado": "c) o uso de dispositivos de alarme sonoro e de iluminação intermitente somente poderá ocorrer por ocasião da efetiva prestação de serviço de urgência;"
+            },
+            {
+              "inicio": 151,
+              "fim": 321,
+              "motivo": "caso — gabarito D: passagem com cuidados",
+              "texto_grifado": "d) a prioridade de passagem na via e no cruzamento deverá se dar com velocidade reduzida e com os devidos cuidados de segurança, obedecidas as demais normas deste Código;"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: urgência real + passagem com cuidados + demais normas valem.\nNear: deslocamento sem urgência — sem alarme, sem prioridade plena.\nFar: ambulância em transporte eletivo — mesma lógica, sem serviço de urgência.\nNão muda: prerrogativa não é licença para colocar terceiros em risco.\nCadeia: próximo = alínea e — identificação por dispositivos regulamentares.",
+          "destaques": [
+            "urgência",
+            "cuidados",
+            "regras",
+            "alarme"
+          ]
+        }
+      }
+    ]
+  }
+}

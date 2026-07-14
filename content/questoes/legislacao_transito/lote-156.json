@@ -1,0 +1,312 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_penalidades",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_percentual",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_261_2",
+    "enunciado": "Em fiscalização eletrônica da STTP em Campina Grande/PB, radar fixo registra veículo a 96 km/h em via sinalizada com limite de 60 km/h. O condutor possui apenas 5 pontos no prontuário nos últimos doze meses. Autuado pelo art. 218, III, do CTB, o infrator sustenta que não cabe suspensão do direito de dirigir, pois a pontuação está aquém dos patamares do art. 261, I. O DETRAN-PB consulta a penalidade aplicável. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Não cabe suspensão: com 5 pontos no prontuário, o condutor não atingiu os limites de 20, 30 ou 40 pontos previstos no art. 261, I.",
+      "B": "Cabe apenas multa triplicada — a suspensão do direito de dirigir depende de atingir 30 pontos por gravíssima na contagem de doze meses.",
+      "C": "Cabe suspensão pelo art. 261, II, pois o art. 218, III, prevê suspensão específica; o processo deve ser instaurado concomitantemente à multa (art. 261, § 10).",
+      "D": "Cabe suspensão imediata no flagrante com recolhimento da CNH no local — a infração autoriza sanção instantânea independentemente de processo administrativo."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Suspensão autônoma por infração com penalidade específica — art. 261, II (independente da pontuação) × art. 218, III (excesso >50% com suspensão) × processo concomitante (art. 261, § 10).",
+      "fundamento_legal": "CTB, art. 218, III: quando a velocidade for superior à máxima em mais de 50% — infração gravíssima; penalidade: multa (três vezes) e suspensão do direito de dirigir. Art. 261, II: a penalidade de suspensão do direito de dirigir será imposta por transgressão às normas cujas infrações preveem, de forma específica, a penalidade de suspensão do direito de dirigir. Art. 261, § 10: o processo de suspensão referente ao inciso II do caput deverá ser instaurado concomitantemente com o processo de aplicação da penalidade de multa.",
+      "passo_a_passo": [
+        "1. Caso: 96 km/h em limite 60 → excesso de 60% (>50%) — art. 218, III; condutor com 5 pontos defende ausência de suspensão por não atingir patamares do art. 261, I.",
+        "2. A erra por numero_vizinho (aplica só suspensão por pontuação — ignora hipótese autônoma do inciso II); B erra por regra_excecao (condiciona suspensão a 30 pontos quando o dispositivo infracional já a prevê); D erra por termo_unico (inventa suspensão imediata no flagrante — Lei 14.071/2020 retirou a suspensão instantânea com recolhimento no local).",
+        "3. C correta: art. 261, II (suspensão específica independente de pontos) + art. 218, III (excesso >50%) + art. 261, § 10 (processo concomitante)."
+      ],
+      "pegadinha": "A banca induz a crer que suspensão só vem com 20/30/40 pontos — o inciso II do art. 261 impõe suspensão autônoma quando a própria infração a prevê, como no art. 218, III.",
+      "macete": "PONTOS ≠ ÚNICA VIA · >50% = suspensão autônoma · inc. II independe da contagem.",
+      "estudo_reverso": [
+        "CTB art. 218",
+        "CTB art. 261",
+        "CTB art. 261, § 10",
+        "CTB art. 259"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "D_gradacao",
+      "pegadinha_em_uma_frase": "Suspensão não depende só de 20/30/40 pontos — inciso II do art. 261 aplica quando a infração prevê suspensão específica",
+      "eixos_legais": [
+        "CTB_art_261_2",
+        "CTB_art_218_III",
+        "CTB_art_261_10"
+      ],
+      "eixo_vizinho": "CTB_art_261_I",
+      "isca_por_alternativa": {
+        "A": "5 pontos no prontuário impedem suspensão por não atingir limites de 20, 30 ou 40 pontos",
+        "B": "suspensão depende de atingir 30 pontos por gravíssima na contagem de doze meses",
+        "D": "suspensão imediata no flagrante com recolhimento da CNH no local da autuação"
+      },
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
+      ],
+      "near_transfer": "Mesmo limite 60 km/h com 84 km/h — excesso de 40% (art. 218, II, grave) sem suspensão autônoma; só multa.",
+      "far_transfer": "Condutor com 25 pontos e nova gravíssima sem suspensão específica — hipótese do inciso I, cenário distinto.",
+      "o_que_nao_muda": "Infração com suspensão específica gera processo pelo inciso II independentemente da pontuação acumulada.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "penalidades",
+      "suspensao",
+      "art_218",
+      "velocidade",
+      "autossuspensiva"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CTB_art_261_2",
+      "macete_visual": "Pontos ≠ única via · >50% = autônoma",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C: 60% de excesso gera suspensão autônoma — inciso II independe dos 5 pontos no prontuário.",
+            "destaques": ["Gabarito C", "60%", "autônoma"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pontuação × suspensão específica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Defesa ✗", "Lei ✓"],
+            "linhas": [
+              ["5 pontos = sem suspensão", "Inciso II: infração com suspensão específica autônoma"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PONTOS ≠ ÚNICA VIA · >50% = suspensão autônoma · inc. II independe da contagem.",
+            "destaques": ["PONTOS", ">50%", "inc. II"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 261",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 265,
+      "fundamento_slug": "CTB_art_261_2",
+      "macete_visual": "Pontos ≠ única via · >50% = autônoma",
+      "meta": {
+        "padrao_familia": "D_gradacao",
+        "pegadinha_em_uma_frase": "Suspensão não depende só de 20/30/40 pontos — inciso II do art. 261 aplica quando a infração prevê suspensão específica",
+        "eixos_legais": [
+          "CTB_art_261_2",
+          "CTB_art_218_III",
+          "CTB_art_261_10"
+        ],
+        "isca_por_alternativa": {
+          "A": "5 pontos no prontuário impedem suspensão por não atingir limites de 20, 30 ou 40 pontos",
+          "B": "suspensão depende de atingir 30 pontos por gravíssima na contagem de doze meses",
+          "D": "suspensão imediata no flagrante com recolhimento da CNH no local da autuação"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: defesa invoca pontuação",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — 5 pontos impedem suspensão por não atingir limites de 20, 30 ou 40.\nB — suspensão depende de atingir 30 pontos por gravíssima.\nD — suspensão imediata no flagrante com recolhimento da CNH no local.\n\nPegadinha: excesso >50% prevê suspensão autônoma — independe da contagem de pontos.",
+            "destaques": ["Gabarito C", "5 pontos", ">50%"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SUSPENSÃO POR PONTOS: hipótese do inciso I — patamares 20/30/40 em doze meses.\n\nSUSPENSÃO AUTÔNOMA: inciso II — quando a própria infração prevê suspensão específica.\n\nEXCESSO >50%: faixa do art. 218, III — gravíssima com multa triplicada e suspensão.",
+            "destaques": ["POR PONTOS", "AUTÔNOMA", ">50%"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: cabe suspensão autônoma?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Infração prevê suspensão específica?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Excesso de velocidade >50%?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Suspensão pelo inciso II — gabarito C", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — art. 218, III" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim — 60% de excesso" }
+            ]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Duas vias de suspensão no art. 261",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Hipótese", "Gatilho"],
+            "linhas": [
+              { "faixa": "Inciso I — por pontuação", "classificacao": "20 / 30 / 40 pontos em 12 meses" },
+              { "faixa": "Inciso II — autônoma", "classificacao": "Infração com suspensão específica no dispositivo", "destaque": true },
+              { "faixa": "Art. 218, III — exemplo", "classificacao": "Velocidade >50% acima do máximo" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Pontuação baixa × suspensão autônoma",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Defesa ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "5 pontos = sem suspensão",
+                "Inciso II independe da contagem acumulada"
+              ],
+              [
+                "Suspensão só aos 30 pontos",
+                "Art. 218, III já prevê suspensão específica"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — numero_vizinho",
+                "Aplica só suspensão por pontos — ignora hipótese autônoma do inciso II"
+              ],
+              [
+                "B — regra_excecao",
+                "Condiciona suspensão a 30 pontos quando o dispositivo infracional já a prevê"
+              ],
+              [
+                "D — termo_unico",
+                "Inventa suspensão imediata no flagrante — redação atual exige processo administrativo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Cálculo e encaixe legal",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Conta / fato", "Resultado legal"],
+            "linhas": [
+              ["(96 − 60) ÷ 60 = 60%", "Superior a 50% — art. 218, III"],
+              ["5 pontos no prontuário", "Irrelevante para inciso II"],
+              ["Suspensão específica prevista", "Art. 261, II"],
+              ["Processo concomitante à multa", "Art. 261, § 10"],
+              ["Resultado", "Alternativa C"]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Art. 218, III × art. 261, II",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              ["Art. 218, III — >50%", "Gravíssima com multa ×3 e suspensão"],
+              ["Art. 261, II", "Impõe suspensão autônoma pela infração"],
+              ["Art. 261, § 10", "Processo de suspensão junto com a multa"],
+              ["Vizinho — inciso I", "Suspensão por 20/30/40 pontos — não é o caso"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "CTB, art. 261, inciso II",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 261, inciso II",
+            "texto": "II - por transgressão às normas estabelecidas neste Código, cujas infrações preveem, de forma específica, a penalidade de suspensão do direito de dirigir.",
+            "trechos_grifados": [
+              {
+                "inicio": 60,
+                "fim": 153,
+                "motivo": "gradacao — suspensão autônoma independente de pontos",
+                "texto_grifado": "cujas infrações preveem, de forma específica, a penalidade de suspensão do direito de dirigir"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "CTB, art. 261, § 10",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 261, § 10",
+            "texto": "§ 10. O processo de suspensão do direito de dirigir referente ao inciso II do caput deste artigo deverá ser instaurado concomitantemente com o processo de aplicação da penalidade de multa.",
+            "trechos_grifados": [
+              {
+                "inicio": 108,
+                "fim": 187,
+                "motivo": "caso — processo de suspensão junto com a multa",
+                "texto_grifado": "instaurado concomitantemente com o processo de aplicação da penalidade de multa"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PONTOS ≠ ÚNICA VIA · >50% = suspensão autônoma · inc. II independe da contagem.\n\nNear: 84 km/h no limite 60 — excesso 40% (grave), só multa, sem suspensão autônoma.\nFar: 25 pontos + gravíssima sem suspensão específica — inciso I, cenário distinto.\nNão muda: infração com suspensão específica gera processo pelo inciso II independente da pontuação.\nCadeia: vizinho = inciso I (20/30/40 pontos).",
+            "destaques": ["PONTOS", ">50%", "inciso I"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 261",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

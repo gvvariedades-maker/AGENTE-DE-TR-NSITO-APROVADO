@@ -1,0 +1,375 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_1009_alteracoes",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_1009_art_10A_par3",
+    "enunciado": "Condutor habilitado na categoria D, com 52 anos, residente em Campina Grande/PB, renovou a CNH em 20/02/2026 com validade de dois anos (vencimento em 20/02/2028). O RENACH ainda exibe calendário do exame toxicológico periódico previsto no art. 10-A da Resolução CONTRAN nº 923/2022 para 15/08/2026, calculado com base na emissão original de 2024. O condutor sustenta estar dispensado do periódico enquanto vigorar a CNH atual. O supervisor da STTP consulta se pode exigir a realização do exame até agosto/2026 e, em caso de omissão, autuar pelo art. 165-D do CTB. Considerando a Resolução CONTRAN nº 1.009/2024 e o CTB, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Não cabe exigir o exame periódico do art. 10-A enquanto vigorar a CNH atual: o §3º dispensa condutores com idade inferior a setenta anos cuja CNH tenha validade inferior a três anos, ainda que o RENACH exiba calendário anterior.",
+      "B": "Deve realizar o periódico até 15/08/2026: o calendário calculado pelo órgão máximo executivo de trânsito da União com base na emissão original no RENACH prevalece sobre a validade documental da CNH renovada.",
+      "C": "A dispensa do §3º aplica-se somente à categoria C — condutores da categoria D permanecem obrigados ao exame periódico independentemente da validade da CNH.",
+      "D": "O resultado negativo de exame toxicológico coletado em janeiro/2026, com validade de noventa dias prevista no art. 10-B, substitui a obrigação do periódico com vencimento em agosto/2026."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Dispensa do exame periódico — art. 10-A, §3º, da Res. CONTRAN 923/2022 (redação Res. 1.009/2024) × calendário do §1º × art. 10-B (validade de 90 dias do exame pontual).",
+      "fundamento_legal": "Res. CONTRAN 923/2022, art. 10-A, §3º (Res. CONTRAN 1.009/2024): 'O exame de que trata o caput não será exigido para condutores das categorias C, D e E com idade inferior a setenta anos e cuja CNH tenha validade inferior a três anos.' §1º: 'O calendário de realização dos exames toxicológicos periódicos será calculado pelo órgão máximo executivo de trânsito da União com base na data da emissão da CNH registrada no RENACH, respeitada a periodicidade de dois anos e seis meses, nos termos do caput.' Art. 10-B: 'Os exames toxicológicos de que tratam os artigos 10 e 10-A desta Resolução terão validade de noventa dias, contados a partir da data da coleta da amostra, podendo seu resultado ser utilizado nesse período para todos os fins.' CTB, art. 165-D: infração por deixar de realizar exame toxicológico após vencimento do prazo.",
+      "passo_a_passo": [
+        "1. Caso: condutor D, 52 anos, CNH renovada em 20/02/2026 com validade de 2 anos — RENACH indica periódico para 15/08/2026 — condutor invoca dispensa pela validade documental.",
+        "2. B erra por regra_excecao (prioriza calendário do §1º e ignora §3º — validade inferior a três anos dispensa o periódico do caput); C erra por termo_unico (restringe dispensa à categoria C — §3º abrange C, D e E); D erra por numero_vizinho (confunde validade de 90 dias do exame pontual do art. 10-B com dispensa ou substituição do periódico do art. 10-A).",
+        "3. A correta: art. 10-A, §3º — CNH com validade de dois anos dispensa periódico enquanto vigorar; calendário exibido no RENACH não revoga a dispensa."
+      ],
+      "pegadinha": "A IDECAN induz a priorizar a data do calendário no RENACH — mas CNH com validade inferior a três anos dispensa o periódico pelo §3º, mesmo com prazo anterior no sistema.",
+      "macete": "CNH < 3 ANOS = sem periódico · calendário no RENACH ≠ obrigação · 90 dias = exame pontual.",
+      "estudo_reverso": [
+        "Res. CONTRAN 1.009/2024 art. 3",
+        "Res. CONTRAN 923/2022 art. 10-A",
+        "Res. CONTRAN 923/2022 art. 10-B",
+        "CTB art. 165-D"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "CNH com validade inferior a três anos dispensa periódico — calendário no RENACH não revoga o §3º",
+      "eixos_legais": [
+        "CONTRAN_923_art_10A_par3",
+        "CONTRAN_923_art_10A_par1"
+      ],
+      "eixo_vizinho": "CONTRAN_923_art_10A_par1",
+      "isca_por_alternativa": {
+        "B": "calendário do RENACH pela emissão original prevalece sobre validade documental da CNH renovada",
+        "C": "dispensa do §3º aplica-se somente à categoria C, não à D",
+        "D": "validade de noventa dias do exame de janeiro substitui obrigação do periódico de agosto"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico",
+        "numero_vizinho"
+      ],
+      "near_transfer": "Mesmo condutor com CNH renovada por cinco anos de validade — aí o §3º não dispensa e o periódico de agosto/2026 permanece exigível.",
+      "far_transfer": "Condutor com 71 anos e CNH de dois anos — idade ≥ 70 anos afasta o §3º e o periódico volta a ser exigível.",
+      "o_que_nao_muda": "§3º exige idade inferior a setenta anos e CNH com validade inferior a três anos — dispensa o periódico do caput, não o exame de habilitação do art. 10.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "resolucao_1009",
+      "resolucao_923",
+      "toxicologico_periodico",
+      "validade_cnh",
+      "art_10-A"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_1009_art_10A_par3",
+      "macete_visual": "CNH < 3 anos = sem periódico",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A: CNH com dois anos de validade dispensa periódico — calendário no RENACH não revoga o §3º.",
+            "destaques": ["Gabarito A", "dois anos", "dispensa"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "CNH com validade < 3 anos?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "CNH com validade inferior a três anos?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Dispensado do periódico — gabarito A", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim — renovação com 2 anos" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CNH < 3 ANOS = sem periódico.\nCalendário no RENACH ≠ obrigação.",
+            "destaques": ["3 ANOS", "RENACH"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.009/2024",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.009, DE 24 DE ABRIL DE 2024.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 275,
+      "fundamento_slug": "CONTRAN_1009_art_10A_par3",
+      "macete_visual": "CNH < 3 anos = sem periódico",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "CNH com validade inferior a três anos dispensa periódico — calendário no RENACH não revoga o §3º",
+        "eixos_legais": [
+          "CONTRAN_923_art_10A_par3",
+          "CONTRAN_923_art_10A_par1"
+        ],
+        "isca_por_alternativa": {
+          "B": "calendário do RENACH pela emissão original prevalece sobre validade documental da CNH renovada",
+          "C": "dispensa do §3º aplica-se somente à categoria C, não à D",
+          "D": "validade de noventa dias do exame de janeiro substitui obrigação do periódico de agosto"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: calendário vs dispensa",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — calendário do RENACH prevalece sobre dispensa: ignora validade da CNH inferior a três anos.\nC — dispensa só para categoria C: abrange C, D e E.\nD — validade de noventa dias do exame de janeiro substitui periódico: confunde exame pontual com periodicidade.\n\nPegadinha: CNH com dois anos de validade dispensa o periódico mesmo com data antiga no sistema.",
+            "destaques": ["Gabarito A", "dois anos", "dispensa"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VALIDADE DA CNH: prazo de vigência do documento — inferior a três anos ativa dispensa do periódico.\n\nCALENDÁRIO NO RENACH: data exibida pelo sistema — pode persistir mesmo quando há dispensa aplicável.\n\nPERIÓDICO: exame toxicológico a cada dois anos e seis meses para categorias C, D e E com menos de setenta anos.",
+            "destaques": ["VALIDADE", "RENACH", "PERIÓDICO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: cabe exigir periódico?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Idade inferior a setenta anos?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "CNH com validade inferior a três anos?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Dispensado do periódico — gabarito A",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — 52 anos no caso"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — renovação com 2 anos"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Quando o periódico é exigível",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Situação", "Periódico do caput"],
+            "linhas": [
+              {
+                "faixa": "CNH com validade ≥ 3 anos — C, D ou E < 70 anos",
+                "classificacao": "Exigível a cada 2 anos e 6 meses"
+              },
+              {
+                "faixa": "CNH com validade < 3 anos — C, D ou E < 70 anos",
+                "classificacao": "Dispensado — §3º — caso da renovação",
+                "destaque": true
+              },
+              {
+                "faixa": "Condutor com 70 anos ou mais",
+                "classificacao": "§3º não alcança — periódico segue regra geral"
+              },
+              {
+                "faixa": "Calendário antigo no RENACH",
+                "classificacao": "Não revoga dispensa do §3º"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: data no RENACH manda",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Calendário de agosto/2026 obriga exame",
+                "CNH com validade de 2 anos dispensa periódico pelo §3º"
+              ],
+              [
+                "Dispensa vale só para categoria C",
+                "§3º abrange categorias C, D e E"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — regra_excecao",
+                "Prioriza calendário do §1º — ignora dispensa do §3º pela validade da CNH"
+              ],
+              [
+                "C — termo_unico",
+                "Restringe dispensa à categoria C — §3º inclui D e E"
+              ],
+              [
+                "D — numero_vizinho",
+                "Confunde validade de 90 dias do exame pontual com dispensa do periódico"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos do enunciado → gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              [
+                "Renovação 20/02/2026 — validade 2 anos",
+                "CNH com validade inferior a três anos"
+              ],
+              [
+                "RENACH indica periódico 15/08/2026",
+                "Calendário do §1º — não revoga §3º"
+              ],
+              [
+                "Condutor D, 52 anos",
+                "§3º alcança — idade inferior a setenta"
+              ],
+              [
+                "Resultado",
+                "Gabarito A — dispensado do periódico"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "§3º × §1º — dispensa e calendário",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              [
+                "Art. 10-A, §3º",
+                "Dispensa periódico — CNH com validade de 2 anos"
+              ],
+              [
+                "Art. 10-A, §1º — vizinho",
+                "Calendário pela emissão original — exibido no RENACH"
+              ],
+              [
+                "Art. 10-B",
+                "Validade de 90 dias do exame pontual — não substitui periódico"
+              ],
+              [
+                "CTB art. 165-D",
+                "Penalidade se exigível e não realizado"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Res. 923/2022, art. 10-A, §3º",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 923/2022, art. 10-A, §3º (Res. 1.009/2024)",
+            "texto": "O exame de que trata o caput não será exigido para condutores das categorias C, D e E com idade inferior a setenta anos e cuja CNH tenha validade inferior a três anos.",
+            "trechos_grifados": [
+              {
+                "inicio": 137,
+                "fim": 166,
+                "motivo": "fluxo — dispensa quando CNH tem validade inferior a tres anos",
+                "texto_grifado": "validade inferior a três anos"
+              },
+              {
+                "inicio": 66,
+                "fim": 119,
+                "motivo": "caso — categorias C, D e E com menos de setenta anos",
+                "texto_grifado": "categorias C, D e E com idade inferior a setenta anos"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Res. 923/2022, art. 10-A, §1º",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 923/2022, art. 10-A, §1º (Res. 1.009/2024)",
+            "texto": "O calendário de realização dos exames toxicológicos periódicos será calculado pelo órgão máximo executivo de trânsito da União com base na data da emissão da CNH registrada no RENACH, respeitada a periodicidade de dois anos e seis meses, nos termos do caput.",
+            "trechos_grifados": [
+              {
+                "inicio": 127,
+                "fim": 182,
+                "motivo": "contraste — calendario no RENACH nao revoga dispensa do paragrafo 3",
+                "texto_grifado": "com base na data da emissão da CNH registrada no RENACH"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CNH < 3 ANOS = sem periódico · calendário no RENACH ≠ obrigação · 90 dias = exame pontual.\n\nNear: mesma situação com CNH renovada por cinco anos — §3º não dispensa e periódico de agosto/2026 permanece exigível.\nFar: condutor com 71 anos e CNH de dois anos — idade afasta §3º e periódico volta a ser obrigatório.\nNão muda: §3º dispensa o periódico do caput, não o exame de habilitação do art. 10.\nCadeia: vizinho = §1º (calendário pela emissão original no RENACH).",
+            "destaques": ["3 ANOS", "RENACH", "§1º"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.009/2024",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.009, DE 24 DE ABRIL DE 2024.pdf"
+        }
+      ]
+    }
+  }
+]

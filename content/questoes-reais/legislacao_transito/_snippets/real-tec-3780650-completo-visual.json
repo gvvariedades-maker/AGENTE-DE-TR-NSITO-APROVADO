@@ -1,0 +1,212 @@
+{
+  "tec_id": "3780650",
+  "disciplina": "legislacao_transito",
+  "gabarito": "A",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "fluxograma_decisao",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 200,
+    "fundamento_slug": "CTB_art_29_VII",
+    "macete_visual": "Dispositivos + urgência = prerrogativa",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Estacionamento livre: só iluminação intermitente basta.",
+      "far_transfer": "Utilidade pública: identificação pelo CONTRAN — regra distinta.",
+      "o_que_nao_muda": "Dispositivos regulamentares + urgência = base da prerrogativa."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito A.\n\nB — sinalização não dispensa manutenção.\nC — passeio não vira ambulância sem conversão autorizada.\nD — prioridade exige identificação por alarme e luz regulamentares.\n\nPegadinha: viatura = pode tudo sem placa nem giroflex. Lei: dispositivos + urgência.",
+          "destaques": [
+            "Gabarito A",
+            "dispositivos",
+            "urgência"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Três termos da questão",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Dispositivos regulamentares: alarme sonoro e iluminação intermitente previstos pelo CONTRAN.\nServiço de urgência: base para acionar alarme e luz — não qualquer deslocamento.\nIdentificação: prerrogativa de circulação/parada só com dispositivos instalados.",
+          "destaques": [
+            "dispositivos",
+            "urgência",
+            "identificação"
+          ]
+        }
+      },
+      {
+        "id": "fluxo",
+        "titulo": "Método: viatura de emergência",
+        "secao": "metodo",
+        "tipo": "fluxograma",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "p1",
+              "label": "Veículo identificado por dispositivos regulamentares?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "p2",
+              "label": "Alarme e luz só em serviço de urgência?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "r1",
+              "label": "Característica correta — gabarito A",
+              "tipo": "resultado"
+            }
+          ],
+          "arestas": [
+            {
+              "de": "p1",
+              "para": "p2",
+              "rotulo": "Sim"
+            },
+            {
+              "de": "p2",
+              "para": "r1",
+              "rotulo": "Sim"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "Viatura de emergência não precisa de sinalização diferenciada",
+              "Prerrogativa exige dispositivos regulamentares de alarme e luz"
+            ],
+            [
+              "Qualquer carro de passeio pode ser ambulância",
+              "Alteração de características exige autorização prévia"
+            ],
+            [
+              "Sinalização dispensa manutenção preventiva",
+              "Conservação e equipamentos obrigatórios não são afastados"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que B, C e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "B — regra_excecao",
+              "Não há dispensa de manutenção — equipamentos e conservação permanecem obrigatórios"
+            ],
+            [
+              "C — regra_excecao",
+              "Ambulância é categoria do art. 29, VII — conversão de passeio exige autorização"
+            ],
+            [
+              "D — regra_excecao",
+              "Prioridade condiciona-se à identificação por alarme e luz regulamentares"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Afirmativa",
+            "Correta?"
+          ],
+          "linhas": [
+            [
+              "Identificação visual + alarme/luz só em urgência",
+              "Sim — gabarito A"
+            ],
+            [
+              "Dispensa manutenção se tiver sinalização",
+              "Não — B"
+            ],
+            [
+              "Passeio como ambulância por bom estado",
+              "Não — C"
+            ],
+            [
+              "Prioridade sem sinalização diferenciada",
+              "Não — D"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto do CTB",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 29, VII, c e e",
+          "texto": "c) o uso de dispositivos de alarme sonoro e de iluminação intermitente somente poderá ocorrer por ocasião da efetiva prestação de serviço de urgência; e) as prerrogativas de livre circulação e de parada serão aplicadas somente quando os veículos estiverem identificados por dispositivos regulamentares de alarme sonoro e iluminação intermitente;",
+          "trechos_grifados": [
+            {
+              "inicio": 0,
+              "fim": 150,
+              "motivo": "contraste — alarme/luz exclusivamente em urgência",
+              "texto_grifado": "c) o uso de dispositivos de alarme sonoro e de iluminação intermitente somente poderá ocorrer por ocasião da efetiva prestação de serviço de urgência;"
+            },
+            {
+              "inicio": 151,
+              "fim": 345,
+              "motivo": "caso — gabarito A: identificação regulamentar",
+              "texto_grifado": "e) as prerrogativas de livre circulação e de parada serão aplicadas somente quando os veículos estiverem identificados por dispositivos regulamentares de alarme sonoro e iluminação intermitente;"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: dispositivos regulamentares + serviço de urgência = prerrogativa válida.\nNear: estacionamento livre — só iluminação intermitente (alínea f).\nFar: utilidade pública — identificação pelo CONTRAN, regra distinta.\nNão muda: sem dispositivos regulamentares em urgência, não há prerrogativa plena.\nCadeia: próximo = alínea f — estacionamento com iluminação apenas.",
+          "destaques": [
+            "dispositivos",
+            "urgência",
+            "prerrogativa",
+            "identificação"
+          ]
+        }
+      }
+    ]
+  }
+}

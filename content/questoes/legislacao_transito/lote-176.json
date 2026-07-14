@@ -1,0 +1,378 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_1012_rsv",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_1012_art_6_area_seguranca",
+    "enunciado": "Agente da STTP em Campina Grande/PB constata automóvel estacionado em trecho da via frontal ao Hospital de Trauma, sinalizado com R-6c \"Proibido Parar e Estacionar\" e informação complementar \"Área de Segurança\", com extensão equivalente à testada do imóvel. O condutor exibe credencial de pessoa com deficiência válida no painel e alega que o documento autoriza estacionamento em vias públicas regulamentadas. O supervisor questiona se subsiste autuação. Considerando a Resolução CONTRAN nº 965/2022 (RSV — alterada pela Res. 1.012/2024), assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Não subsiste a autuação, pois a credencial válida habilita o beneficiário a estacionar em vias públicas regulamentadas, afastando a proibição da sinalização R-6c quando há vaga reservada próxima.",
+      "B": "Subsiste a autuação pelo art. 181, XIX, do CTB: o art. 6º da Res. 965/2022 veda parada e estacionamento de qualquer veículo na área de segurança, independentemente da credencial, nos termos do art. 21, II, da mesma Resolução.",
+      "C": "Subsiste apenas autuação pelo art. 181, XX, do CTB, por estacionar fora de vaga reservada a pessoa com deficiência, afastando o inciso XIX quando a credencial está regular no painel.",
+      "D": "A STTP deve limitar-se a notificar o hospital para remoção do veículo, pois a fiscalização da área frontal ao estabelecimento de saúde compete exclusivamente ao permissionário do imóvel."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Área de segurança (art. 6º RSV 965) — veda estacionamento de qualquer veículo × credencial PcD válida × art. 21, II / CTB art. 181, XIX (parada e estacionamento proibidos pela sinalização R-6c).",
+      "fundamento_legal": "Res. CONTRAN 965/2022, art. 6º, caput: área de segurança é a parte da via necessária à segurança das edificações públicas ou consideradas especiais, com extensão igual à testada do imóvel, nas quais a parada e o estacionamento são proibidos, sendo vedado o seu uso para estacionamento por qualquer veículo. § 3º: a área de segurança deve ser sinalizada com o sinal R-6c \"Proibido Parar e Estacionar\", com a informação complementar \"Área de Segurança\". Art. 21, II: art. 181, inciso XIX, do CTB, quando o veículo estiver estacionado em locais e horários de estacionamento e parada proibidos pela sinalização, nos termos desta Resolução. CTB, art. 181, XIX: em locais e horários de estacionamento e parada proibidos pela sinalização (placa — Proibido Parar e Estacionar) — infração grave.",
+      "passo_a_passo": [
+        "1. Caso: veículo estacionado em área de segurança R-6c na testada do hospital — condutor com credencial PcD válida alega dispensa.",
+        "2. A erra por regra_excecao (generaliza a credencial e ignora vedação expressa do art. 6º a qualquer veículo na área de segurança); C erra por gravidade (fixa art. 181, XX, de vaga reservada — o caso é proibição geral de parada e estacionamento, não ocupação de vaga PcD); D erra por competencia_snt (atribui fiscalização exclusiva ao hospital/permissionário — art. 6º, § 2º, incumbe ao órgão com circunscrição sobre a via aplicar penalidades do CTB).",
+        "3. B correta: art. 6º veda estacionamento de qualquer veículo na área de segurança + art. 21, II, remete ao art. 181, XIX, pela sinalização R-6c."
+      ],
+      "pegadinha": "A IDECAN induz a crer que credencial PcD válida dispensa proibições de estacionamento na via — mas o art. 6º da RSV veda parada e estacionamento de qualquer veículo na área de segurança, com ou sem credencial.",
+      "macete": "Área de segurança = R-6c · qualquer veículo vedado · credencial não afasta · art. 181, XIX.",
+      "estudo_reverso": [
+        "Res. CONTRAN 965/2022 art. 6",
+        "Res. CONTRAN 965/2022 art. 21",
+        "CTB art. 181, XIX"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Credencial PcD válida não dispensa proibição da área de segurança sinalizada R-6c",
+      "eixos_legais": [
+        "CONTRAN_965_art_6",
+        "CONTRAN_965_art_21_II",
+        "CTB_art_181_XIX"
+      ],
+      "eixo_vizinho": "CONTRAN_1012_art_18_rotativo",
+      "isca_por_alternativa": {
+        "A": "credencial válida habilita estacionar em vias públicas regulamentadas, afastando proibição R-6c",
+        "C": "só art. 181, XX, afastando XIX quando credencial está regular no painel",
+        "D": "fiscalização da área frontal ao hospital compete exclusivamente ao permissionário do imóvel"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "gravidade",
+        "competencia_snt"
+      ],
+      "near_transfer": "Mesma área de segurança com credencial de pessoa idosa válida no painel — a vedação do art. 6º permanece idêntica.",
+      "far_transfer": "Veículo com credencial estacionado em vaga reservada PcD sinalizada com SIA e R-6b \"COM CREDENCIAL\" — aí sim o uso é permitido com credencial, distinto da área de segurança.",
+      "o_que_nao_muda": "Área de segurança proíbe parada e estacionamento de qualquer veículo — a credencial habilita vagas reservadas, não afasta a proibição da R-6c.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "resolucao_1012",
+      "resolucao_965",
+      "area_seguranca",
+      "credencial",
+      "r-6c",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_1012_art_6_area_seguranca",
+      "macete_visual": "Área segurança = qualquer veículo vedado",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: área de segurança R-6c veda qualquer veículo — credencial não dispensa.",
+            "destaques": ["Gabarito B", "R-6c", "qualquer veículo"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Credencial dispensa R-6c?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Veículo em área de segurança R-6c?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Autua art. 181, XIX — gabarito B", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim — testada do hospital" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Área de segurança = R-6c.\nQualquer veículo vedado.\nCredencial não afasta.",
+            "destaques": ["R-6c", "qualquer veículo", "credencial"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 965/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 965, DE 17 DE MAIO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 285,
+      "fundamento_slug": "CONTRAN_1012_art_6_area_seguranca",
+      "macete_visual": "Área segurança = R-6c · qualquer veículo vedado",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Credencial PcD válida não dispensa proibição da área de segurança sinalizada R-6c",
+        "eixos_legais": [
+          "CONTRAN_965_art_6",
+          "CONTRAN_965_art_21_II",
+          "CTB_art_181_XIX"
+        ],
+        "isca_por_alternativa": {
+          "A": "credencial válida habilita estacionar em vias públicas regulamentadas, afastando proibição R-6c",
+          "C": "só art. 181, XX, afastando XIX quando credencial está regular no painel",
+          "D": "fiscalização da área frontal ao hospital compete exclusivamente ao permissionário do imóvel"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: credencial na área R-6c",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — credencial válida habilita estacionar em vias regulamentadas, afastando proibição R-6c.\nC — só infração de vaga reservada, afastando XIX quando credencial está no painel.\nD — fiscalização compete exclusivamente ao permissionário do hospital.\n\nPegadinha: credencial PcD não dispensa a vedação da área de segurança.",
+            "destaques": ["Gabarito B", "R-6c", "credencial"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ÁREA DE SEGURANÇA: trecho da via na testada de edificação pública ou especial — parada e estacionamento proibidos para qualquer veículo.\n\nR-6c: placa de proibição de parar e estacionar com complemento \"Área de Segurança\".\n\nCREDENCIAL: documento que habilita vagas reservadas PcD/idoso — não afasta proibições gerais da via.",
+            "destaques": ["ÁREA DE SEGURANÇA", "R-6c", "CREDENCIAL"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: credencial dispensa área de segurança?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Veículo em área de segurança sinalizada R-6c?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Condutor apresenta credencial PcD válida?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Vedação subsiste — gabarito B",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — testada do hospital"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Credencial não afasta art. 6º"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "O que a credencial faz e não faz",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Situação", "Efeito da credencial"],
+            "linhas": [
+              [
+                "Vaga reservada PcD/idoso — Cap. III/IV",
+                "Habilita estacionamento com credencial válida"
+              ],
+              [
+                "Rotativo pago — art. 18",
+                "Não exime pagamento da tarifa"
+              ],
+              [
+                "Área de segurança R-6c — art. 6º",
+                "Não dispensa — qualquer veículo vedado"
+              ],
+              [
+                "Descumprimento da proibição R-6c",
+                "Art. 181, XIX, do CTB"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: credencial = passe livre na via",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Credencial PcD dispensa proibição R-6c",
+                "Art. 6º veda estacionamento de qualquer veículo na área de segurança"
+              ],
+              [
+                "Com credencial no painel não há infração de estacionamento",
+                "R-6c proíbe parada e estacionamento — art. 181, XIX"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Generaliza a credencial — ignora vedação expressa do art. 6º a qualquer veículo"
+              ],
+              [
+                "C — gravidade",
+                "Fixa art. 181, XX, de vaga reservada — caso é proibição geral R-6c, não ocupação de vaga PcD"
+              ],
+              [
+                "D — competencia_snt",
+                "Atribui fiscalização ao hospital — art. 6º, § 2º, incumbe ao órgão com circunscrição sobre a via"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "Via frontal ao Hospital de Trauma",
+                "Edificação pública — área de segurança"
+              ],
+              [
+                "Sinalização R-6c \"Área de Segurança\"",
+                "Parada e estacionamento proibidos"
+              ],
+              [
+                "Credencial PcD válida no painel",
+                "Não afasta vedação do art. 6º"
+              ],
+              [
+                "Extensão = testada do imóvel",
+                "Critério do caput do art. 6º atendido"
+              ],
+              [
+                "Resultado",
+                "Alternativa B — art. 181, XIX"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "XIX × XX × área de segurança",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Eixo", "Regra no caso"],
+            "linhas": [
+              [
+                "Art. 181, XIX — parada/estacionamento proibidos",
+                "Área de segurança R-6c — art. 21, II"
+              ],
+              [
+                "Art. 181, XX — vaga reservada PcD",
+                "Só quando ocupa vaga reservada sem credencial"
+              ],
+              [
+                "Art. 6º, § 2º — fiscalização",
+                "Órgão com circunscrição sobre a via aplica CTB"
+              ],
+              [
+                "Caso Hospital de Trauma",
+                "XIX pela R-6c — não XX"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "RSV art. 6º — área de segurança",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 965/2022, art. 6º, caput",
+            "texto": "Art. 6º Área de segurança é a parte da via necessária à segurança das edificações públicas ou consideradas especiais, com extensão igual à testada do imóvel, nas quais a parada e o estacionamento são proibidos, sendo vedado o seu uso para estacionamento por qualquer veículo.",
+            "trechos_grifados": [
+              {
+                "inicio": 211,
+                "fim": 274,
+                "motivo": "fluxo — vedação que subsiste mesmo com credencial PcD no caso da STTP",
+                "texto_grifado": "sendo vedado o seu uso para estacionamento por qualquer veículo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "RSV art. 21, II — remissão ao CTB",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 965/2022, art. 21, II",
+            "texto": "II - art. 181, inciso XIX: quando o veículo estiver estacionado em locais e horários de estacionamento e parada proibidos pela sinalização, nos termos desta Resolução;",
+            "trechos_grifados": [
+              {
+                "inicio": 88,
+                "fim": 138,
+                "motivo": "hierarquia — tipificação correta para área de segurança R-6c",
+                "texto_grifado": "estacionamento e parada proibidos pela sinalização"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Área de segurança = R-6c · qualquer veículo vedado · credencial não afasta · art. 181, XIX.\nNear: mesma área com credencial de idoso válida — vedação idêntica.\nFar: vaga reservada PcD com SIA e R-6b \"COM CREDENCIAL\" — uso permitido com credencial.\nNão muda: área de segurança proíbe parada e estacionamento de qualquer veículo.\nCadeia: vizinho = credencial não exime rotativo pago (art. 18).",
+            "destaques": ["R-6c", "qualquer veículo", "vaga reservada", "art. 18"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 965/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 965, DE 17 DE MAIO DE 2022.pdf"
+        },
+        {
+          "rotulo": "CTB art. 181",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

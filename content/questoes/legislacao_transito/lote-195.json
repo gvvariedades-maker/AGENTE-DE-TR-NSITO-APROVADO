@@ -1,0 +1,294 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_227_iluminacao",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_227_art_1_par4",
+    "enunciado": "Durante fiscalização em Campina Grande/PB, agente da STTP intercepta chassi e plataforma de ônibus com cabina incompleta, sem carroceria, trafegando para encarroçadora. O veículo não possui lanternas delimitadoras dianteiras nem traseiras, lanternas laterais, retrorrefletores, lanterna de iluminação da placa traseira nem lanterna de marcha-a-ré. Os faróis principais estão instalados e funcionando. O condutor alega regularidade com base na mesma dispensa aplicável ao caminhão inacabado com cabina e sem carroçaria. Considerando a Resolução CONTRAN nº 227/2007, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A circulação é irregular — a ausência de lanternas delimitadoras, laterais, retrorrefletores, placa e marcha-a-ré configura infração pelo art. 230, IX, do CTB, pois o veículo já transita em via pública como unidade acabada.",
+      "B": "Quanto aos cinco grupos de dispositivos ausentes, a situação é regular — o art. 1º, §4º, dispensa esses itens em chassi e plataforma para ônibus com cabina incompleta em trânsito para complementação; o §5 impõe aplicação quando da encarroçação.",
+      "C": "A dispensa alcança apenas lanternas delimitadoras traseiras, laterais traseiras e retrorrefletores laterais traseiros — o caso se enquadra no §2, não no §4, porque a cabina incompleta equivale a caminhão sem carroçaria.",
+      "D": "O §4 dispensa todo o sistema de iluminação em qualquer inacabado — inclusive faróis principais — desde que o destino seja concessionário ou encarroçador."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Art. 1º, §4º (dispensa ampliada para chassi ônibus/microônibus com cabina incompleta ou sem cabina) × §2 (hipótese restrita: caminhão com cabina sem carroçaria) × §5 (aplicação na complementação).",
+      "fundamento_legal": "Res. CONTRAN 227/2007, art. 1º, §4º: veículos inacabados (chassi de caminhão com cabina incompleta ou sem cabina, chassi e plataforma para ônibus ou microônibus) com destino ao concessionário, encarroçador ou complementação por terceiros não estão sujeitos a lanternas delimitadoras dianteiras e traseiras; lanternas laterais dianteiras, traseiras e intermediárias; retrorrefletores laterais, dianteiros, traseiros e intermediários; lanterna de iluminação da placa traseira; e lanterna de marcha-a-ré. §5: esses dispositivos devem ser aplicados quando da complementação. §2: hipótese distinta — caminhão com cabina e sem carroçaria — dispensa somente três itens traseiros/laterais traseiros.",
+      "passo_a_passo": [
+        "1. Caso: chassi/plataforma de ônibus, cabina incompleta, sem cinco grupos de dispositivos, faróis OK — condutor invoca regra do caminhão inacabado.",
+        "2. A erra por termo_unico (trata inacabado como veículo acabado — ignora §4); C erra por numero_vizinho (aplica §2 ao ônibus — §4 tem lista mais ampla e hipótese distinta); D erra por regra_excecao (generaliza §4 para todo o sistema, inclusive faróis principais).",
+        "3. B correta: §4 dispensa exatamente os cinco grupos ausentes nesta fase; §5 fixa aplicação na complementação."
+      ],
+      "pegadinha": "A IDECAN induz a transportar a dispensa do caminhão (§2) para o ônibus de chassi — mas §4 abrange cabina incompleta ou sem cabina e inclui marcha-a-ré e placa traseira na lista de dispensa.",
+      "macete": "227 inacabado: §2 = caminhão cabina sem carroçaria (3 itens) · §4 = ônibus chassi cabina incompleta (5 grupos) · §5 = na encarroça.",
+      "estudo_reverso": [
+        "Res. CONTRAN 227/2007 art. 1",
+        "Res. CONTRAN 227/2007 art. 6-A",
+        "CTB art. 230"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "D_gradacao",
+      "pegadinha_em_uma_frase": "Ônibus de chassi com cabina incompleta usa §4 — dispensa mais dispositivos que o §2 do caminhão",
+      "eixos_legais": [
+        "CONTRAN_227_art_1_par4",
+        "CONTRAN_227_art_1_par5"
+      ],
+      "eixo_vizinho": "CONTRAN_227_art_1_par2",
+      "isca_por_alternativa": {
+        "A": "ausência de dispositivos configura art. 230, IX, como se o veículo já estivesse acabado",
+        "C": "cabina incompleta equivale a caminhão sem carroçaria — só §2 com três dispensa traseiras",
+        "D": "§4 dispensa todo o sistema de iluminação, inclusive faróis principais, em qualquer inacabado"
+      },
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
+      ],
+      "near_transfer": "Caminhão chassi com cabina e sem carroçaria sem delimitadoras traseiras — §2 dispensa só três itens, não marcha-a-ré nem placa.",
+      "far_transfer": "Picape com dez faróis acionados simultaneamente — art. 1º, §7º, outro limite numérico da mesma Resolução.",
+      "o_que_nao_muda": "Tipo de inacabado define a lista de dispensa — §2 e §4 não são intercambiáveis.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "contran_227",
+      "iluminacao",
+      "inacabado",
+      "onibus",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_227_art_1_par4",
+      "macete_visual": "§4 ônibus chassi · 5 grupos dispensados",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: ônibus de chassi com cabina incompleta — dispensa ampliada, não a regra do caminhão.",
+            "destaques": ["ônibus", "chassi", "caminhão"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Faixas de dispensa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Hipótese inacabada", "Dispensa"],
+            "linhas": [
+              { "faixa": "Caminhão cabina sem carroçaria", "classificacao": "3 itens traseiros — regra restrita" },
+              { "faixa": "Ônibus chassi cabina incompleta", "classificacao": "5 grupos amplos — caso do enunciado", "destaque": true }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "§2 caminhão · §4 ônibus chassi · §5 na encarroça.",
+            "destaques": ["§2", "§4", "§5"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 227/2007",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 227, DE 9 DE FEVEREIRO DE 2007.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "todos",
+      "duracao_estimada_seg": 250,
+      "fundamento_slug": "CONTRAN_227_art_1_par4",
+      "macete_visual": "§4 ônibus chassi · 5 grupos dispensados",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: caminhão ≠ ônibus de chassi",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — autua como veículo acabado: ignora dispensa do inacabado.\nC — aplica regra do caminhão sem carroçaria: confunde hipóteses.\nD — dispensa faróis principais: generaliza a exceção.\n\nPegadinha: ônibus de chassi com cabina incompleta tem lista própria de dispensa — mais ampla que a do caminhão.",
+            "destaques": ["ônibus", "caminhão", "faróis"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 conceitos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "INACABADO: chassi em trânsito para encarroçadora — não é veículo acabado.\n\n§4: chassi ônibus/microônibus com cabina incompleta ou sem cabina — dispensa cinco grupos de dispositivos.\n\n§5: dispositivos dispensados devem ser aplicados na complementação.",
+            "destaques": ["INACABADO", "§4", "§5"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Gradação: qual dispensa vale?",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Tipo de inacabado", "Alcance da dispensa"],
+            "linhas": [
+              { "faixa": "Caminhão — cabina sem carroçaria", "classificacao": "3 itens traseiros/laterais traseiros" },
+              { "faixa": "Ônibus — chassi cabina incompleta", "classificacao": "5 grupos — inclui placa e marcha-a-ré", "destaque": true },
+              { "faixa": "Faróis principais no caso", "classificacao": "Exigidos — não entram na dispensa" },
+              { "faixa": "Destino encarroçadora", "classificacao": "Requisito comum às hipóteses" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: mesma regra do caminhão",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o condutor pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Caminhão inacabado e ônibus de chassi seguem a mesma dispensa",
+                "§4 é hipótese distinta com lista mais ampla que o §2"
+              ],
+              [
+                "Marcha-a-ré e placa traseira são sempre obrigatórias em trânsito",
+                "§4 dispensa esses dispositivos na fase de complementação"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Trata inacabado como acabado — ignora dispensa do §4"
+              ],
+              [
+                "C — numero_vizinho",
+                "Aplica §2 ao ônibus — cabina incompleta não equivale a caminhão sem carroçaria"
+              ],
+              [
+                "D — regra_excecao",
+                "Generaliza §4 para todo o sistema — faróis principais continuam exigidos"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos do enunciado → gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              ["Chassi e plataforma de ônibus, cabina incompleta", "Hipótese do §4"],
+              ["Faltam delimitadoras, laterais, retrorrefletores, placa e marcha-a-ré", "Cinco grupos do §4"],
+              ["Faróis principais instalados e funcionando", "Parte exigida — fora da dispensa"],
+              ["Condutor invoca regra do caminhão", "Confunde §2 com §4"],
+              ["Resultado", "Alternativa B"]
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Dispositivos ausentes × dispensa",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo ausente", "No caso"],
+            "linhas": [
+              ["Lanternas delimitadoras dianteiras e traseiras", "Dispensadas — §4, a"],
+              ["Lanternas laterais (todas)", "Dispensadas — §4, b"],
+              ["Retrorrefletores (todos)", "Dispensados — §4, c"],
+              ["Lanterna da placa traseira", "Dispensada — §4, d"],
+              ["Lanterna de marcha-a-ré", "Dispensada — §4, e"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 1º, §4º — dispensa ampliada",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 227/2007, art. 1º, §4º",
+            "texto": "§ 4º Os veículos inacabados (chassi de caminhão com cabina incompleta ou sem cabina, chassi e plataforma para ônibus ou microônibus) com destino ao concessionário, encarroçador ou, ainda, a serem complementados por terceiros, não estão sujeitos à aplicação dos dispositivos relacionados abaixo: a) lanternas delimitadoras dianteiras e traseiras; b) lanternas laterais e dianteiras, traseiras e intermediárias; c) retrorrefletores laterais e dianteiros, traseiros e intermediários; d) lanternas de iluminação da placa traseira; e e) lanterna de marcha-a-ré.",
+            "trechos_grifados": [
+              {
+                "inicio": 85,
+                "fim": 131,
+                "motivo": "gradacao — ônibus chassi cabina incompleta",
+                "texto_grifado": "chassi e plataforma para ônibus ou microônibus"
+              },
+              {
+                "inicio": 226,
+                "fim": 293,
+                "motivo": "contraste — dispensa ampliada na fase inacabada",
+                "texto_grifado": "não estão sujeitos à aplicação dos dispositivos relacionados abaixo"
+              },
+              {
+                "inicio": 532,
+                "fim": 555,
+                "motivo": "mapa — marcha-a-ré dispensada no caso",
+                "texto_grifado": "lanterna de marcha-a-ré"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 1º, §5º — complementação",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 227/2007, art. 1º, §5º",
+            "texto": "§ 5º Os dispositivos mencionados no parágrafo anterior devem ser aplicados, conforme o caso, quando da complementação do veículo.",
+            "trechos_grifados": [
+              {
+                "inicio": 93,
+                "fim": 128,
+                "motivo": "caso — aplicação na encarroçação",
+                "texto_grifado": "quando da complementação do veículo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "227 inacabado: §2 = caminhão cabina sem carroçaria (3 itens) · §4 = ônibus chassi cabina incompleta (5 grupos) · §5 = na encarroça.\nNear: caminhão inacabado só sem delimitadoras traseiras — §2, não §4.\nFar: dez faróis simultâneos na picape — §7, outro limite da Resolução.\nNão muda: tipo de inacabado define a lista de dispensa.\nCadeia: vizinho = §2 (hipótese restrita do caminhão).",
+            "destaques": ["§2", "§4", "§7"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 227/2007",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 227, DE 9 DE FEVEREIRO DE 2007.pdf"
+        }
+      ]
+    }
+  }
+]

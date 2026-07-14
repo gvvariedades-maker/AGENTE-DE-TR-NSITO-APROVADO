@@ -1,0 +1,309 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_pedestres_nao_motorizados",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_70_pu",
+    "enunciado": "Em cruzamento sinalizado com faixa de pedestres e foco de pedestres na Avenida Epitácio Pessoa, em Campina Grande/PB, idoso inicia travessia com sinal verde para pedestres, mas demora-se no meio da faixa para ajustar a bolsa. No momento em que o semáforo muda liberando o fluxo veicular, o pedestre ainda não concluiu a travessia. O motorista argumenta ter prioridade porque o semáforo já liberou a passagem dos veículos. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O motorista tem prioridade — com o semáforo verde para veículos, cessa a preferência do pedestre que demorou na faixa de pedestres.",
+      "B": "O pedestre perde a prioridade ao parar desnecessariamente na faixa — a vedação de demorar-se na pista autoriza a passagem do veículo mesmo com travessia incompleta.",
+      "C": "O motorista deve aguardar — mesmo com mudança do semáforo liberando veículos, mantém-se preferência ao pedestre que não concluiu a travessia, nos termos do parágrafo único do art. 70 do CTB.",
+      "D": "Cessa a prioridade porque a faixa tem sinalização semafórica — o caput do art. 70 só garante preferência onde não há semáforo de controle de passagem."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Prioridade na faixa com semáforo — art. 70, caput (exceção semafórica) × parágrafo único (preferência a quem não concluiu a travessia mesmo após mudança do semáforo).",
+      "fundamento_legal": "CTB, art. 70: os pedestres que estiverem atravessando a via sobre as faixas delimitadas para esse fim terão prioridade de passagem, exceto nos locais com sinalização semafórica, onde deverão ser respeitadas as disposições deste Código. Parágrafo único: nos locais em que houver sinalização semafórica de controle de passagem será dada preferência aos pedestres que não tenham concluído a travessia, mesmo em caso de mudança do semáforo liberando a passagem dos veículos.",
+      "passo_a_passo": [
+        "1. Caso: faixa com foco de pedestres na Avenida Epitácio Pessoa — idoso no meio da faixa quando o semáforo libera veículos; travessia não concluída.",
+        "2. A erra por regra_excecao (semáforo verde para veículos não cancela o § único do art. 70); B erra por termo_unico (aplica vedação de demorar-se do art. 69, III, b, para negar a preferência residual do § único); D erra por gravidade (inverte o caput — a sinalização semafórica não afasta o § único, que o complementa).",
+        "3. C correta: art. 70, § único — preferência ao pedestre que não concluiu a travessia mesmo após mudança do semáforo."
+      ],
+      "pegadinha": "A IDECAN induz a validar o motorista porque o semáforo já liberou veículos — mas o § único do art. 70 protege quem ainda está na faixa, independentemente da mudança de fase.",
+      "macete": "FAIXA + SEMÁFORO = CAPUT EXCETA · NÃO CONCLUIU = § ÚNICO PROTEGE.",
+      "estudo_reverso": [
+        "CTB art. 70",
+        "CTB art. 69",
+        "CTB art. 68"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Semáforo verde para veículos não cancela preferência ao pedestre que ainda não concluiu a travessia na faixa",
+      "eixos_legais": [
+        "CTB_art_70",
+        "CTB_art_70_pu"
+      ],
+      "eixo_vizinho": "CTB_art_69_III_b",
+      "isca_por_alternativa": {
+        "A": "semáforo verde para veículos cessa preferência do pedestre demorado na faixa",
+        "B": "parar na faixa autoriza veículo passar mesmo com travessia incompleta",
+        "D": "sinalização semafórica afasta toda prioridade do caput do art. 70"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico",
+        "gravidade"
+      ],
+      "near_transfer": "Mesmo cruzamento, pedestre a um passo da calçada quando muda o semáforo — motorista ainda aguarda até concluir.",
+      "far_transfer": "Ciclista desmontado empurrando bike na calçada obstruída — art. 68, §6, exige sinalização provisória, outro dispositivo.",
+      "o_que_nao_muda": "Quem não concluiu a travessia na faixa semafórica mantém preferência após mudança do semáforo.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "ctb",
+      "pedestres",
+      "art_70",
+      "faixa_pedestres",
+      "semaforo",
+      "campina_grande"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 60,
+      "fundamento_slug": "CTB_art_70_pu",
+      "macete_visual": "não concluiu = § único protege",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C: semáforo verde para veículos não cancela preferência de quem ainda está na faixa.",
+            "destaques": ["Gabarito C", "faixa", "semáforo"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Semáforo verde × travessia incompleta",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Motorista ✗", "Lei ✓"],
+            "linhas": [
+              ["Semáforo liberou = posso passar", "§ único protege quem não concluiu"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "NÃO CONCLUIU = § ÚNICO PROTEGE.\nSemáforo verde para veículos não cancela.",
+            "destaques": ["NÃO CONCLUIU", "§ ÚNICO"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 70",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 260,
+      "fundamento_slug": "CTB_art_70_pu",
+      "macete_visual": "não concluiu = § único protege",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Semáforo verde para veículos não cancela preferência ao pedestre que ainda não concluiu a travessia na faixa",
+        "eixos_legais": [
+          "CTB_art_70",
+          "CTB_art_70_pu"
+        ],
+        "isca_por_alternativa": {
+          "A": "semáforo verde para veículos cessa preferência do pedestre demorado na faixa",
+          "B": "parar na faixa autoriza veículo passar mesmo com travessia incompleta",
+          "D": "sinalização semafórica afasta toda prioridade do caput do art. 70"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: semáforo mudou, pedestre ainda na faixa",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — semáforo verde para veículos cessa preferência do pedestre na faixa.\nB — parar na faixa autoriza o veículo passar com travessia incompleta.\nD — semáforo afasta toda prioridade do caput.\n\nPegadinha: mudança de fase não cancela quem ainda não concluiu a travessia.",
+            "destaques": ["Gabarito C", "faixa", "travessia"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "FAIXA DE PEDESTRES: travessia delimitada na pista — regra do art. 70.\n\nFOCO DE PEDESTRES: sinalização semafórica específica para travessia — integra o controle de passagem.\n\nTRAVESIA INCOMPLETA: pedestre ainda sobre a faixa quando muda a fase do semáforo — hipótese do § único.",
+            "destaques": ["FAIXA", "FOCO", "INCOMPLETA"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: pedestre ainda na faixa?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Pedestre ainda na faixa sem concluir travessia?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Semáforo mudou liberando veículos?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Motorista aguarda — gabarito C", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — idoso no meio da faixa" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim — § único mantém preferência" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Caput × parágrafo único do art. 70",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Hipótese", "Regra"],
+            "linhas": [
+              { "faixa": "Faixa sem semáforo", "classificacao": "Caput — prioridade de passagem", "destaque": false },
+              { "faixa": "Faixa com semáforo — fase pedestre", "classificacao": "Disposições gerais do CTB", "destaque": false },
+              { "faixa": "Travessia incompleta após mudança de fase", "classificacao": "§ único — preferência mantida", "destaque": true }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: semáforo verde para veículos",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o motorista pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Semáforo liberou veículos = posso passar",
+                "§ único protege quem não concluiu a travessia"
+              ],
+              [
+                "Demorou na faixa = perdeu prioridade",
+                "Mudança de fase não cancela travessia incompleta"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Semáforo verde para veículos não cancela o § único"
+              ],
+              [
+                "B — termo_unico",
+                "Vedação de demorar-se não afasta preferência residual do § único"
+              ],
+              [
+                "D — gravidade",
+                "Semáforo complementa o caput — não afasta o § único"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Encaixe no enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato da Avenida Epitácio Pessoa", "Avaliação"],
+            "linhas": [
+              ["Faixa com foco de pedestres", "Sinalização semafórica de controle"],
+              ["Idoso no meio da faixa ajustando bolsa", "Travessia não concluída"],
+              ["Semáforo muda liberando veículos", "§ único mantém preferência"],
+              ["Motorista alega prioridade", "Deve aguardar — gabarito C"],
+              ["Resultado", "Alternativa C"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 70 — caput e § único",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Efeito no caso"],
+            "linhas": [
+              ["Caput — prioridade na faixa", "Regra geral — exceto com semáforo"],
+              ["Exceção semafórica do caput", "Aplica disposições do CTB na faixa sinalizada"],
+              ["§ único — travessia incompleta", "Preferência mantida após mudança de fase — gabarito C"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "CTB, art. 70, caput",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 70, caput",
+            "texto": "Art. 70. Os pedestres que estiverem atravessando a via sobre as faixas delimitadas para esse fim terão prioridade de passagem, exceto nos locais com sinalização semafórica, onde deverão ser respeitadas as disposições deste Código.",
+            "trechos_grifados": [
+              {
+                "inicio": 103,
+                "fim": 171,
+                "motivo": "mapa — prioridade na faixa com exceção semafórica",
+                "texto_grifado": "prioridade de passagem, exceto nos locais com sinalização semafórica"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "CTB, art. 70, § único",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 70, parágrafo único",
+            "texto": "Parágrafo único. Nos locais em que houver sinalização semafórica de controle de passagem será dada preferência aos pedestres que não tenham concluído a travessia, mesmo em caso de mudança do semáforo liberando a passagem dos veículos.",
+            "trechos_grifados": [
+              {
+                "inicio": 99,
+                "fim": 161,
+                "motivo": "contraste — gabarito C protege travessia incompleta",
+                "texto_grifado": "preferência aos pedestres que não tenham concluído a travessia"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "FAIXA + SEMÁFORO = CAPUT EXCETA · NÃO CONCLUIU = § ÚNICO PROTEGE.\n\nNear: pedestre a um passo da calçada quando muda o semáforo — motorista ainda aguarda.\nFar: calçada obstruída com ciclista desmontado — art. 68, §6, exige sinalização provisória.\nNão muda: travessia incompleta na faixa semafórica mantém preferência após mudança de fase.\nCadeia: vizinho = art. 69, III, b (não demorar na pista sem necessidade).",
+            "destaques": ["§ ÚNICO", "NÃO CONCLUIU", "art. 69"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 70",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,314 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_955_cargas_externas",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_955_art_7_III",
+    "enunciado": "Durante fiscalização da STTP em Campina Grande/PB, agente mede utilitário transportando viga de aço indivisível com balanço traseiro de 2,10 m, contado a partir do eixo traseiro até a extremidade da carga. A distância entre os dois eixos do veículo é de 3,00 m. O comprimento total do conjunto permanece dentro dos limites de pesos e dimensões fixados em resolução do CONTRAN, e a projeção está sinalizada com refletores vermelhos. O condutor alega que, estando dentro dos limites dimensionais gerais, pode circular com o balanço traseiro medido. Considerando a Resolução CONTRAN nº 955/2022 e o CTB, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A circulação é regular — o comprimento total dentro dos limites dimensionais do CONTRAN dispensa o controle do balanço traseiro previsto no art. 7º da Resolução.",
+      "B": "A circulação é irregular — o inciso III do art. 7º limita o balanço traseiro a 60% da distância entre os dois eixos (1,80 m no caso); com 2,10 m, enquadra-se no art. 11, V, b, remetendo ao art. 235 do CTB, pois as dimensões totais não ultrapassam os limites legais.",
+      "C": "A irregularidade seria a ausência de Autorização Especial de Trânsito do DETRAN-PB — o transporte de carga indivisível além da caçamba exige AET prévia, independentemente do balanço traseiro.",
+      "D": "O supervisor deve autuar pelo art. 231, inciso IV, alínea a, do CTB, por dimensões superiores aos limites do CONTRAN, pois a viga projeta além do compartimento de carga do utilitário."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Balanço traseiro máximo de 60% do entre-eixos (art. 7º, III) × tipificação pelo art. 11, V, b (art. 235 do CTB quando dimensões totais legais) × dispensa de AET (art. 4º, §2º) — Res. CONTRAN 955/2022.",
+      "fundamento_legal": "Res. CONTRAN 955/2022, art. 7º, III: o balanço traseiro não deve exceder 60% do valor da distância entre os dois eixos do veículo. Art. 11, V, b: art. 235 do CTB quando transportar carga indivisível em desacordo com o art. 7º, desde que as dimensões do veículo ou sua carga não ultrapassem os limites estabelecidos em resolução do CONTRAN. Art. 4º, §2º: não se exige AET para o transporte disciplinado por esta Resolução. Art. 4º, §3º: vedada a concessão de AET para cargas em automóvel, caminhonete, camioneta e utilitário.",
+      "passo_a_passo": [
+        "1. Caso: utilitário com viga indivisível, balanço traseiro 2,10 m, entre-eixos 3,00 m (60% = 1,80 m), comprimento total legal — condutor invoca conformidade dimensional geral.",
+        "2. A erra por regra_excecao (dispensa controle do balanço porque o comprimento total está legal — o inciso III do art. 7º impõe teto autônomo de 60% do entre-eixos); C erra por termo_unico (exige AET — o §2º do art. 4º dispensa e o §3º veda concessão); D erra por numero_vizinho (aplica art. 231, IV, de superdimensionamento — as dimensões totais estão dentro do limite; a irregularidade é o balanço acima de 60%, art. 11, V, b).",
+        "3. B correta: 2,10 m excede 1,80 m (60% de 3,00 m); tipificação pelo art. 235 via art. 11, V, b, pois as dimensões totais não ultrapassam os limites legais."
+      ],
+      "pegadinha": "A IDECAN induz a achar que dimensão total legal basta — mas o inciso III do art. 7º limita o balanço traseiro a 60% do entre-eixos, independentemente do comprimento total permitido.",
+      "macete": "Balanço ≤ 60% entre-eixos · total legal = art. 235 · AET = vedada.",
+      "estudo_reverso": [
+        "Res. CONTRAN 955/2022 art. 7",
+        "Res. CONTRAN 955/2022 art. 11",
+        "Res. CONTRAN 955/2022 art. 4",
+        "CTB art. 235"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Comprimento total legal não dispensa balanço traseiro acima de 60% do entre-eixos",
+      "eixos_legais": [
+        "CONTRAN_955_art_7_III",
+        "CONTRAN_955_art_11_V_b",
+        "CONTRAN_955_art_4_2"
+      ],
+      "eixo_vizinho": "CONTRAN_955_art_7_II",
+      "isca_por_alternativa": {
+        "A": "comprimento total dentro dos limites dimensionais dispensa controle do balanço traseiro do art. 7º",
+        "C": "carga indivisível além da caçamba exige Autorização Especial de Trânsito do DETRAN estadual",
+        "D": "deve autuar pelo art. 231 IV por dimensões superiores aos limites do CONTRAN"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico",
+        "numero_vizinho"
+      ],
+      "near_transfer": "Mesmo utilitário com balanço de 1,75 m e entre-eixos de 3,00 m — dentro dos 60% (1,80 m).",
+      "far_transfer": "Caminhonete circulando com tampa aberta transportando carga que cabe na caçamba — art. 7º, parágrafo único, e hipótese distinta.",
+      "o_que_nao_muda": "Balanço traseiro máximo de 60% do entre-eixos vale mesmo quando o comprimento total do conjunto está dentro do limite legal.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "resolucao_955",
+      "balanco_traseiro",
+      "carga_indivisivel",
+      "utilitario",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_955_art_7_III",
+      "macete_visual": "Balanço ≤ 60% entre-eixos",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: balanço 2,10 m excede 60% de 3,00 m (1,80 m) — total legal não dispensa o inciso III.",
+            "destaques": ["Gabarito B", "2,10 m", "60%"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Balanço ≤ 60% do entre-eixos?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Balanço traseiro ≤ 60% do entre-eixos?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Irregular — gabarito B", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Não — 2,10 m > 1,80 m" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Balanço ≤ 60% entre-eixos.\nTotal legal ≠ dispensa balanço.",
+            "destaques": ["60%", "balanço"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 955/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 955, DE 28 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "todos",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "CONTRAN_955_art_7_III",
+      "macete_visual": "Balanço ≤ 60% entre-eixos",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Comprimento total legal não dispensa balanço traseiro acima de 60% do entre-eixos",
+        "eixos_legais": [
+          "CONTRAN_955_art_7_III",
+          "CONTRAN_955_art_11_V_b",
+          "CONTRAN_955_art_4_2"
+        ],
+        "isca_por_alternativa": {
+          "A": "comprimento total dentro dos limites dimensionais dispensa controle do balanço traseiro do art. 7º",
+          "C": "carga indivisível além da caçamba exige Autorização Especial de Trânsito do DETRAN estadual",
+          "D": "deve autuar pelo art. 231 IV por dimensões superiores aos limites do CONTRAN"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: total legal não basta",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — comprimento total legal dispensa controle do balanço traseiro.\nC — carga indivisível exige AET do DETRAN antes de circular.\nD — superdimensionamento por dimensões totais — medidas estão legais.\n\nPegadinha: 2,10 m de balanço em entre-eixos de 3,00 m ultrapassa 60% (1,80 m).",
+            "destaques": ["Gabarito B", "2,10 m", "60%"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "BALANÇO TRASEIRO: distância do eixo traseiro à extremidade da carga — inciso III do art. 7º.\n\nENTRE-EIXOS: distância entre os dois eixos — base do cálculo dos 60%.\n\nAET: Autorização Especial de Trânsito — dispensada e vedada neste transporte.",
+            "destaques": ["BALANÇO", "ENTRE-EIXOS", "AET"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: balanço regular?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Balanço traseiro ≤ 60% do entre-eixos?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Irregular — gabarito B", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Não — 2,10 m > 1,80 m (60% de 3,00 m)" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Balanço × dimensão total",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Critério", "No caso"],
+            "linhas": [
+              ["Balanço máximo — inciso III", "60% × 3,00 m = 1,80 m"],
+              ["Balanço medido na blitz", "2,10 m — excede"],
+              ["Comprimento total do conjunto", "Dentro do limite legal"],
+              ["Tipificação", "Art. 235 via art. 11, V, b"]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: total legal dispensa balanço",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o condutor alega ✗", "O que o inciso III diz ✓"],
+            "linhas": [
+              [
+                "Comprimento total legal basta para circular",
+                "Balanço traseiro não pode exceder 60% do entre-eixos"
+              ],
+              [
+                "Refletores vermelhos regularizam a projeção",
+                "Sinalização não corrige balanço acima do limite"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Dispensa balanço por total legal — inciso III impõe teto autônomo de 60%"
+              ],
+              [
+                "C — termo_unico",
+                "Exige AET — §2º dispensa e §3º veda concessão para este transporte"
+              ],
+              [
+                "D — numero_vizinho",
+                "Aplica art. 231, IV — dimensões totais legais; erro é balanço do art. 7º, III"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos do enunciado → gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              ["Viga de aço indivisível", "Hipótese do art. 7º"],
+              ["Entre-eixos 3,00 m", "Teto de balanço = 1,80 m"],
+              ["Balanço medido 2,10 m", "Excede 60% — irregular"],
+              ["Comprimento total legal", "Tipifica art. 235, não art. 231, IV"],
+              ["Resultado", "Gabarito B"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Inciso III × art. 11, V, b × AET",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Papel no caso"],
+            "linhas": [
+              ["Art. 7º, III — gabarito", "Limita balanço a 60% do entre-eixos"],
+              ["Art. 11, V, b", "Remete ao art. 235 quando total legal"],
+              ["Art. 4º, §2º — vizinho", "Dispensa AET neste transporte"],
+              ["Art. 7º, II — vizinho", "Regra distinta de sinalização da projeção"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 7º, III — balanço traseiro",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 955/2022, art. 7º, III",
+            "texto": "III- o balanço traseiro não deve exceder 60% do valor da distância entre os dois eixos do veículo.",
+            "trechos_grifados": [
+              {
+                "inicio": 5,
+                "fim": 97,
+                "motivo": "fluxo — balanço 2,10 m excede 60% de 3,00 m",
+                "texto_grifado": "o balanço traseiro não deve exceder 60% do valor da distância entre os dois eixos do veículo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 11, V, b — tipificação",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 955/2022, art. 11, V, b",
+            "texto": "b) transportar carga indivisível em desacordo com o art. 7º, desde que as dimensões do veículo ou sua carga não ultrapassem os limites estabelecidos pela Resolução do CONTRAN que estabelece os limites de pesos e dimensões.",
+            "trechos_grifados": [
+              {
+                "inicio": 3,
+                "fim": 59,
+                "motivo": "caso — viga indivisível com balanço acima do inciso III",
+                "texto_grifado": "transportar carga indivisível em desacordo com o art. 7º"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Balanço ≤ 60% entre-eixos · total legal = art. 235 · AET = vedada.\nNear: balanço 1,75 m em entre-eixos 3,00 m — dentro dos 60%.\nFar: tampa aberta com carga que cabe na caçamba — parágrafo único do art. 7º.\nNão muda: 60% do entre-eixos vale mesmo com comprimento total legal.\nCadeia: vizinho = inciso II (sinalização da projeção traseira).",
+            "destaques": ["60%", "art. 235", "inciso II"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 955/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 955, DE 28 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,380 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_918_multas",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_percentual",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_918_art_22_juros",
+    "enunciado": "Condutor autuado pela STTP em Campina Grande/PB recebeu Notificação de Penalidade com valor original de R$ 293,47 (infração gravíssima) e vencimento em 10/05/2026. Não quitou até a data indicada e, em 28/05/2026 — ainda no mês seguinte ao vencimento — efetuou pagamento de R$ 296,40 na rede bancária arrecadadora. A coordenação financeira sustenta que o condutor faria jus ao desconto de 80% do valor original previsto para pagamento até o vencimento, ou, alternativamente, ao desconto de 60% por ter recebido a NP por notificação eletrônica e reconhecido a infração. Considerando a Resolução CONTRAN nº 918/2022, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O pagamento é irregular, pois o desconto de 80% do valor original aplica-se somente até a data de vencimento indicada na NP — após o vencimento, o valor devido é o original acrescido de 1% de juros relativos ao mês de pagamento, conforme o art. 22.",
+      "B": "O pagamento é regular pelo art. 20, pois o desconto de 80% do valor original subsiste enquanto o débito for quitado no mês subsequente ao vencimento indicado na NP.",
+      "C": "O pagamento é regular pelo art. 21, pois a NP eletrônica com reconhecimento da infração autoriza quitação a 60% do valor original mesmo após o vencimento, desde que no mês seguinte.",
+      "D": "O pagamento é irregular, pois, após o vencimento, o valor devido deve ser corrigido pela variação mensal da taxa SELIC somada a 1% de juros — regra do art. 23 — e não apenas pelo acréscimo fixo de 1% do art. 22."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Graduação de valores após vencimento da NP — art. 22 (original + 1% no mês seguinte ao vencimento) × art. 23 (SELIC + 1% após o mês subsequente) × arts. 20 e 21 (descontos só até vencimento).",
+      "fundamento_legal": "Res. CONTRAN 918/2022, art. 22: Para quitação da multa no período compreendido entre a data imediata após o vencimento e o último dia do mês seguinte ao do vencimento, será cobrado o valor original da multa acrescido de juros relativos ao mês de pagamento, no percentual de 1% (um por cento), de acordo com a seguinte fórmula: I - valor original x 1,01 = valor corrigido a pagar. Art. 23: Para quitação da multa após o mês subsequente ao do vencimento, será cobrado o valor original da multa, acrescido da variação mensal da taxa SELIC [...] adicionado ainda o percentual de 1% (um por cento) relativo a juros do mês de pagamento. Art. 20 e art. 21: descontos de 80% e 60% aplicam-se somente até a data de vencimento indicada na NP.",
+      "passo_a_passo": [
+        "1. Caso: NP R$ 293,47, vencimento 10/05/2026, pagamento 28/05/2026 (entre o dia após o vencimento e o último dia do mês seguinte) — R$ 296,40 = 293,47 × 1,01.",
+        "2. B erra por regra_excecao (estende desconto de 80% do art. 20 para após vencimento — arts. 20 e 21 só vigoram até a data da NP); C erra por regra_excecao (aplica 60% do art. 21 após vencimento — confissão eletrônica não reduz multa em mora); D erra por numero_vizinho (antecipa regra SELIC do art. 23 — pagamento em 28/05 ainda está na faixa do art. 22, não na do art. 23).",
+        "3. A correta: art. 22 — original + 1% no mês de pagamento; descontos de 80% ou 60% não alcançam débito vencido."
+      ],
+      "pegadinha": "A IDECAN induz a manter desconto de 80% ou 60% após o vencimento — mas arts. 20 e 21 só vigoram até a data da NP; no mês seguinte ao vencimento, o art. 22 cobra original + 1%.",
+      "macete": "Até vencimento = 80% ou 60% · Mês após = +1% · Depois = SELIC + 1%.",
+      "estudo_reverso": [
+        "Res. CONTRAN 918/2022 art. 22",
+        "Res. CONTRAN 918/2022 art. 23",
+        "Res. CONTRAN 918/2022 art. 20",
+        "Res. CONTRAN 918/2022 art. 21"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "D_gradacao",
+      "pegadinha_em_uma_frase": "Desconto de 80% ou 60% não sobrevive ao vencimento — no mês seguinte, art. 22 cobra original + 1%",
+      "eixos_legais": [
+        "CONTRAN_918_art_22",
+        "CONTRAN_918_art_23"
+      ],
+      "eixo_vizinho": "CONTRAN_918_art_23",
+      "isca_por_alternativa": {
+        "B": "desconto de 80% do art. 20 subsiste no mês subsequente ao vencimento",
+        "C": "NP eletrônica com confissão autoriza 60% mesmo após vencimento no mês seguinte",
+        "D": "SELIC do art. 23 já incide em 28/05, não o acréscimo fixo de 1% do art. 22"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "numero_vizinho"
+      ],
+      "near_transfer": "Mesma multa quitada em 09/05/2026 — um dia antes do vencimento — aí sim 80% pelo art. 20 ou 60% pelo art. 21, conforme o caso.",
+      "far_transfer": "Pagamento em 15/07/2026 — após o mês subsequente ao vencimento — art. 23 com SELIC acumulada + 1%, sem desconto nem teto de 1,01.",
+      "o_que_nao_muda": "Descontos de 80% e 60% exigem quitação até a data de vencimento da NP; após vencimento, a graduação passa a juros de mora.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "resolucao_918",
+      "multas",
+      "juros_mora",
+      "vencimento",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_918_art_22_juros",
+      "macete_visual": "Ate vencimento = 80/60% · Mes apos = +1%",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A: R$ 296,40 = 293,47 × 1,01 — pagamento após vencimento no mês seguinte.",
+            "destaques": ["Gabarito A", "1,01", "296,40"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Graduação após vencimento",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Faixa de pagamento", "Valor"],
+            "linhas": [
+              {
+                "faixa": "Até vencimento da NP",
+                "classificacao": "80% ou 60% — arts. 20 e 21"
+              },
+              {
+                "faixa": "Dia após vencimento até fim do mês seguinte",
+                "classificacao": "Original × 1,01 — art. 22",
+                "destaque": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Até vencimento = 80% ou 60%.\nMês após = original + 1%.",
+            "destaques": ["vencimento", "+ 1%"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 918/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 918, DE 28 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CONTRAN_918_art_22_juros",
+      "macete_visual": "Ate vencimento = 80/60% · Mes apos = +1%",
+      "meta": {
+        "padrao_familia": "D_gradacao",
+        "pegadinha_em_uma_frase": "Desconto de 80% ou 60% não sobrevive ao vencimento — no mês seguinte, art. 22 cobra original + 1%",
+        "eixos_legais": [
+          "CONTRAN_918_art_22",
+          "CONTRAN_918_art_23"
+        ],
+        "isca_por_alternativa": {
+          "B": "desconto de 80% do art. 20 subsiste no mês subsequente ao vencimento",
+          "C": "NP eletrônica com confissão autoriza 60% mesmo após vencimento no mês seguinte",
+          "D": "SELIC do art. 23 já incide em 28/05, não o acréscimo fixo de 1% do art. 22"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: coordenação manteve desconto",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — desconto de 80% subsiste no mês após vencimento: descontos só vigoram até a data da NP.\nC — NP eletrônica com confissão autoriza 60% após vencimento: confissão exige quitação até vencimento.\nD — SELIC já incide em 28/05: pagamento ainda está na faixa de +1%, não na correção SELIC.\n\nPegadinha: R$ 296,40 é 293,47 × 1,01 — mora no mês seguinte ao vencimento, sem desconto.",
+            "destaques": ["Gabarito A", "296,40", "1,01"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VENCIMENTO: data-limite na NP — marco que encerra descontos de 80% e 60%.\n\nMÊS SEGUINTE AO VENCIMENTO: faixa do art. 22 — do dia após o vencimento até o último dia do mês seguinte.\n\nSELIC: correção monetária do art. 23 — só após o mês subsequente ao vencimento, somada a 1% de juros.",
+            "destaques": ["VENCIMENTO", "MÊS SEGUINTE", "SELIC"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Graduação: quanto pagar?",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Faixa de pagamento", "Valor devido"],
+            "linhas": [
+              {
+                "faixa": "Até vencimento — regra geral",
+                "classificacao": "80% do original — art. 20"
+              },
+              {
+                "faixa": "Até vencimento — NP eletrônica + confissão",
+                "classificacao": "60% do original — art. 21"
+              },
+              {
+                "faixa": "Dia após vencimento até fim do mês seguinte",
+                "classificacao": "Original × 1,01 — art. 22",
+                "destaque": true
+              },
+              {
+                "faixa": "Após o mês subsequente ao vencimento",
+                "classificacao": "SELIC acumulada + 1% — art. 23"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual faixa no caso?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Pagamento até a data de vencimento da NP?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Pagamento entre o dia após vencimento e o último dia do mês seguinte?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Original × 1,01 — gabarito A",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Não — quitou em 28/05, vencimento 10/05"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — ainda no mês seguinte ao vencimento"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: desconto após vencimento",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "80% ou 60% valem no mês após vencimento",
+                "Arts. 20 e 21 exigem quitação até a data da NP"
+              ],
+              [
+                "SELIC incide logo após vencimento",
+                "Art. 22 (+1%) vem antes; SELIC só no art. 23"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — regra_excecao",
+                "Estende desconto de 80% para após vencimento — art. 20 não alcança mora"
+              ],
+              [
+                "C — regra_excecao",
+                "Aplica 60% do art. 21 após vencimento — confissão eletrônica exige quitação até vencimento"
+              ],
+              [
+                "D — numero_vizinho",
+                "Antecipa SELIC do art. 23 — 28/05 ainda está na faixa de +1% do art. 22"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Cálculo do enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Conta", "Resultado"],
+            "linhas": [
+              [
+                "Valor original da multa",
+                "R$ 293,47"
+              ],
+              [
+                "293,47 × 0,80 (se ainda no prazo)",
+                "R$ 234,78 — não é o caso"
+              ],
+              [
+                "293,47 × 0,60 (se NP eletrônica no prazo)",
+                "R$ 176,08 — não é o caso"
+              ],
+              [
+                "293,47 × 1,01 — art. 22",
+                "R$ 296,40"
+              ],
+              [
+                "Pagamento em 28/05/2026",
+                "Alternativa A"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Art. 22 × art. 23",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              [
+                "Art. 22 — original + 1%",
+                "Faixa do pagamento em 28/05 — mês seguinte ao vencimento de 10/05"
+              ],
+              [
+                "Art. 23 — SELIC + 1%",
+                "Cenário distinto: após o mês subsequente ao vencimento"
+              ],
+              [
+                "Arts. 20 e 21 — descontos",
+                "Só até vencimento — coordenação errou ao manter 80% ou 60%"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Res. 918/2022, art. 22",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 918/2022, art. 22",
+            "texto": "Para quitação da multa no período compreendido entre a data imediata após o vencimento e o último dia do mês seguinte ao do vencimento, será cobrado o valor original da multa acrescido de juros relativos ao mês de pagamento, no percentual de 1% (um por cento), de acordo com a seguinte fórmula: I - valor original x 1,01 = valor corrigido a pagar.",
+            "trechos_grifados": [
+              {
+                "inicio": 47,
+                "fim": 134,
+                "motivo": "gradacao — faixa temporal do art. 22 no caso de 28/05",
+                "texto_grifado": "entre a data imediata após o vencimento e o último dia do mês seguinte ao do vencimento"
+              },
+              {
+                "inicio": 299,
+                "fim": 346,
+                "motivo": "caso — formula original x 1,01 = R$ 296,40",
+                "texto_grifado": "valor original x 1,01 = valor corrigido a pagar"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Res. 918/2022, art. 23",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 918/2022, art. 23",
+            "texto": "Para quitação da multa após o mês subsequente ao do vencimento, será cobrado o valor original da multa, acrescido da variação mensal da taxa SELIC e adicionado o percentual de 1% relativo a juros do mês de pagamento.",
+            "trechos_grifados": [
+              {
+                "inicio": 23,
+                "fim": 62,
+                "motivo": "contraste — SELIC só após o mes subsequente, nao em 28/05",
+                "texto_grifado": "após o mês subsequente ao do vencimento"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Até vencimento = 80% ou 60% · Mês após = +1% · Depois = SELIC + 1%.\n\nNear: quitação em 09/05 — um dia antes do vencimento — desconto de 80% ou 60% conforme o caso.\nFar: pagamento em 15/07 — após o mês subsequente — art. 23 com SELIC acumulada + 1%.\nNão muda: descontos exigem quitação até a data da NP; após vencimento, só juros de mora.\nCadeia: vizinho = art. 23 (SELIC após o mês subsequente).",
+            "destaques": ["+1%", "SELIC", "vencimento"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 918/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 918, DE 28 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,299 @@
+{
+  "disciplina": "legislacao_transito",
+  "topico": "CTB_habilitacao",
+  "fundamento_slug": "CTB_art_144_agricola_construcao",
+  "gabarito": "B",
+  "pegadinha": "Parágrafo único do art. 144 não alcança equipamento de construção — só trator de roda e equipamento agrícola com categoria B",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "fluxograma_decisao",
+    "arquetipo_secundario": "comparacao",
+    "publico_alvo": "iniciante",
+    "duracao_estimada_seg": 285,
+    "fundamento_slug": "CTB_art_144_agricola_construcao",
+    "macete_visual": "Obra = C/D/E · agrícola = B ok",
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Parágrafo único do art. 144 não alcança equipamento de construção — só trator de roda e equipamento agrícola com categoria B",
+      "eixos_legais": [
+        "CTB_art_144_caput",
+        "CTB_art_144_par_unico",
+        "CTB_art_162_III"
+      ],
+      "isca_por_alternativa": {
+        "A": "parágrafo único autoriza categoria B para qualquer trator ou equipamento sobre rodas em via pública",
+        "C": "exige autuação só se PBT acima de 3.500 kg pelo art. 143, III, afastando o art. 144",
+        "D": "deslocamento urbano de máquina de obra não configura condução no sentido do art. 162"
+      }
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Diagnóstico: categoria B na retroescavadeira",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito B.\n\nA — parágrafo único autoriza categoria B para qualquer trator ou equipamento sobre rodas.\nC — exige autuação só se PBT acima de 3.500 kg, afastando regra do tipo de equipamento.\nD — deslocamento urbano de máquina de obra não configura condução.\n\nPegadinha: exceção da categoria B é só para trator de roda e equipamento agrícola.",
+          "destaques": [
+            "Gabarito B",
+            "agrícola",
+            "construção"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Pré-treino: 3 termos",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "CAPUT DO ART. 144: regra geral — trator e equipamento de carga, agrícola, terraplenagem, construção ou pavimentação exigem C, D ou E na via pública.\n\nPARÁGRAFO ÚNICO: exceção restrita — trator de roda e equipamento agrícola também podem ser conduzidos com categoria B.\n\nCATEGORIA DIVERSA: conduzir com habilitação incompatível — tipificação pelo art. 162, III.",
+          "destaques": [
+            "CAPUT",
+            "PARÁGRAFO ÚNICO",
+            "CATEGORIA DIVERSA"
+          ]
+        }
+      },
+      {
+        "id": "fluxo",
+        "titulo": "Método: qual categoria exige?",
+        "secao": "metodo",
+        "tipo": "fluxograma",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "p1",
+              "label": "Equipamento de construção, terraplenagem ou pavimentação?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "p2",
+              "label": "Exceção da categoria B alcança apenas trator de roda e equipamento agrícola?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "r1",
+              "label": "Subsiste autuação — gabarito B",
+              "tipo": "resultado"
+            }
+          ],
+          "arestas": [
+            {
+              "de": "p1",
+              "para": "p2",
+              "rotulo": "Sim — retroescavadeira de obra"
+            },
+            {
+              "de": "p2",
+              "para": "r1",
+              "rotulo": "Sim — exceção não cobre construção"
+            }
+          ]
+        }
+      },
+      {
+        "id": "mapa",
+        "titulo": "Caput × exceção agrícola",
+        "secao": "mapa",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Equipamento",
+            "Categoria exigida"
+          ],
+          "linhas": [
+            [
+              "Retroescavadeira de construção",
+              "C, D ou E — caput"
+            ],
+            [
+              "Trator de roda em trabalho agrícola",
+              "B, C, D ou E — parágrafo único"
+            ],
+            [
+              "Trator de esteira em terraplenagem",
+              "C, D ou E — caput (sem exceção B)"
+            ],
+            [
+              "Categoria B em equipamento de obra",
+              "Art. 162, III — categoria diversa"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Armadilha: sobre rodas = categoria B",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "Qualquer máquina sobre rodas aceita categoria B",
+              "Parágrafo único só alcança trator de roda e equipamento agrícola"
+            ],
+            [
+              "PBT define a categoria no art. 144",
+              "O caput discrimina pelo tipo de trabalho do equipamento"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que cada alternativa erra",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Mecanismo + por quê"
+          ],
+          "linhas": [
+            [
+              "A — regra_excecao",
+              "Generaliza parágrafo único a qualquer equipamento sobre rodas — ignora limite a trabalhos agrícolas"
+            ],
+            [
+              "C — termo_unico",
+              "Subordina exigência ao PBT de 3.500 kg — art. 144 exige C/D/E pelo tipo de equipamento, não só pelo peso"
+            ],
+            [
+              "D — regra_excecao",
+              "Inventa que deslocamento urbano de máquina de obra não é condução — afasta art. 162 sem fundamento"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Resolvendo o enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Fato do caso",
+            "Consequência"
+          ],
+          "linhas": [
+            [
+              "Retroescavadeira de construção civil",
+              "Equipamento abrangido pelo caput do art. 144"
+            ],
+            [
+              "Condutor com categoria B",
+              "Categoria inferior à exigida"
+            ],
+            [
+              "Deslocamento em via urbana",
+              "Condução na via pública — art. 144 aplica"
+            ],
+            [
+              "Invocação do parágrafo único",
+              "Inadequada — exceção não alcança obra"
+            ],
+            [
+              "Resultado",
+              "Alternativa B — subsiste autuação"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "hierarquia",
+        "titulo": "Art. 144 × art. 162, III",
+        "secao": "conceito",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Dispositivo",
+            "Função no caso"
+          ],
+          "linhas": [
+            [
+              "Art. 144, caput",
+              "Define categoria mínima C/D/E para equipamento de construção"
+            ],
+            [
+              "Art. 144, parágrafo único",
+              "Exceção B restrita a trator de roda e equipamento agrícola"
+            ],
+            [
+              "Art. 162, III",
+              "Tipifica condução com categoria diversa — gravíssima"
+            ],
+            [
+              "Caso STTP",
+              "B em retroescavadeira de obra — caput + 162, III"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei1",
+        "titulo": "CTB art. 144 — caput",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB, art. 144, caput",
+          "texto": "Art. 144. O trator de roda, o trator de esteira, o trator misto ou o equipamento automotor destinado à movimentação de cargas ou execução de trabalho agrícola, de terraplenagem, de construção ou de pavimentação só podem ser conduzidos na via pública por condutor habilitado nas categorias C, D ou E.",
+          "trechos_grifados": [
+            {
+              "inicio": 211,
+              "fim": 298,
+              "motivo": "fluxo — regra geral que exige C/D/E para retroescavadeira de construção",
+              "texto_grifado": "só podem ser conduzidos na via pública por condutor habilitado nas categorias C, D ou E"
+            }
+          ]
+        }
+      },
+      {
+        "id": "lei2",
+        "titulo": "CTB art. 144 — parágrafo único",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB, art. 144, parágrafo único",
+          "texto": "Parágrafo único. O trator de roda e os equipamentos automotores destinados a executar trabalhos agrícolas poderão ser conduzidos em via pública também por condutor habilitado na categoria B.",
+          "trechos_grifados": [
+            {
+              "inicio": 19,
+              "fim": 105,
+              "motivo": "contraste — exceção restrita que não alcança equipamento de construção",
+              "texto_grifado": "trator de roda e os equipamentos automotores destinados a executar trabalhos agrícolas"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Macete + near/far-transfer",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Art. 144 caput = C/D/E · exceção B = trator de roda + agrícola só · obra = caput.\nNear: trator de roda entre propriedades agrícolas — categoria B pelo parágrafo único.\nFar: trator de esteira em terraplenagem com condutor C — caput atendido, sem exceção agrícola.\nNão muda: equipamento de construção ou terraplenagem exige C, D ou E — exceção B não se estende.\nCadeia: vizinho = combinação B com semirreboque leve (art. 143, § 4º).",
+          "destaques": [
+            "C/D/E",
+            "agrícola",
+            "esteira",
+            "art. 143"
+          ]
+        }
+      }
+    ],
+    "links_fonte": [
+      {
+        "rotulo": "CTB art. 144",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      },
+      {
+        "rotulo": "CTB art. 162",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ]
+  }
+}

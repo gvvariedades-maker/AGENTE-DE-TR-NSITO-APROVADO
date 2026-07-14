@@ -1,0 +1,348 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_snt_competencias",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_12_XIV",
+    "enunciado": "No trecho da BR-230 na divisa Paraíba/Pernambuco, o DETRAN-PB e o DETRAN-PE disputam circunscrição e competência de fiscalização em segmento limítrofe: ambos afirmam competência exclusiva para coordenar cadastro de condutores e autuações na rodovia estadual na fronteira. O coordenador da STTP de Campina Grande consulta qual órgão do Sistema Nacional de Trânsito deve dirimir o conflito interestadual de circunscrição e competência de trânsito. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Compete ao CETRAN-PB dirimir o conflito, pois a consulta partiu de Campina Grande, no âmbito paraibano.",
+      "B": "Compete ao CETRAN de Pernambuco dirimir a disputa, por ser o conselho estadual da UF vizinha à divisa.",
+      "C": "Compete ao CONTRAN dirimir o conflito de circunscrição e competência no âmbito da União, dos Estados e do Distrito Federal, nos termos do art. 12, XIV.",
+      "D": "Compete ao DETRAN-PB fixar unilateralmente a circunscrição do trecho e comunicar ao DETRAN-PE, encerrando a disputa sem participação do colegiado federal."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Dirimência de conflito interestadual de circunscrição — CONTRAN (art. 12, XIV) × CETRAN municipal (art. 14, IX) × atuação unilateral do DETRAN.",
+      "fundamento_legal": "CTB, art. 12, XIV: compete ao CONTRAN dirimir conflitos sobre circunscrição e competência de trânsito no âmbito da União, dos Estados e do Distrito Federal. CTB, art. 14, IX: compete aos CETRAN dirimir conflitos sobre circunscrição e competência de trânsito no âmbito dos Municípios.",
+      "passo_a_passo": [
+        "1. Caso: DETRAN-PB × DETRAN-PE disputam circunscrição na BR-230 na divisa PB/PE — conflito entre órgãos executivos estaduais, não entre municípios.",
+        "2. A erra por competencia_snt (atribui ao CETRAN-PB — art. 14, IX alcança apenas conflitos municipais, não interestaduais); B erra por competencia_snt (CETRAN-PE no mesmo erro de âmbito); D erra por regra_excecao (DETRAN estadual não fixa circunscrição entre UFs unilateralmente — cabe dirimência do CONTRAN).",
+        "3. C correta: art. 12, XIV — CONTRAN dirime circunscrição e competência na esfera União/UF/DF."
+      ],
+      "pegadinha": "A IDECAN induz a remeter ao CETRAN porque a consulta veio de Campina Grande — mas disputa entre DETRANs estaduais sobe ao CONTRAN (art. 12, XIV), não ao conselho que dirime apenas conflitos municipais (art. 14, IX).",
+      "macete": "Estado × Estado = CONTRAN (12, XIV) · Município × Município = CETRAN (14, IX).",
+      "estudo_reverso": [
+        "CTB art. 12",
+        "CTB art. 14",
+        "CTB art. 22"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "C_competencia_snt",
+      "pegadinha_em_uma_frase": "Conflito entre DETRANs estaduais não vai ao CETRAN — CONTRAN dirime na esfera União/UF/DF",
+      "eixos_legais": [
+        "CTB_art_12_XIV",
+        "CTB_art_14_IX"
+      ],
+      "eixo_vizinho": "CTB_art_14_IX",
+      "isca_por_alternativa": {
+        "A": "consulta partiu de Campina Grande — CETRAN-PB dirime",
+        "B": "CETRAN de Pernambuco por ser UF vizinha na divisa",
+        "D": "DETRAN-PB fixa circunscrição unilateralmente e encerra a disputa"
+      },
+      "eixos_mecanismo": [
+        "competencia_snt",
+        "regra_excecao"
+      ],
+      "near_transfer": "Conflito de circunscrição entre STTP Campina Grande e STTP Queimadas na mesma avenida limítrofe — CETRAN-PB (art. 14, IX), não CONTRAN.",
+      "far_transfer": "Recurso contra multa lavrada pela STTP em via municipal — JARI/CETRAN julga penalidade (art. 14, V), não dirimência de circunscrição entre órgãos.",
+      "o_que_nao_muda": "A chave é o âmbito do conflito — municipal = CETRAN; União/UF/DF = CONTRAN.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "snt",
+      "contran",
+      "cetran",
+      "circunscricao",
+      "interestadual",
+      "detran"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CTB_art_12_XIV",
+      "macete_visual": "Estado × Estado = CONTRAN",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C: DETRAN-PB × DETRAN-PE na divisa → CONTRAN (art. 12, XIV). A isca é mandar ao CETRAN porque a consulta veio de Campina Grande.",
+            "destaques": ["Gabarito C", "CONTRAN", "DETRAN"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem dirime o quê",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "contran", "label": "CONTRAN — dirime UF × UF", "nivel": 0 },
+              { "id": "pb", "label": "DETRAN-PB", "nivel": 1 },
+              { "id": "pe", "label": "DETRAN-PE", "nivel": 1 }
+            ],
+            "arestas": [
+              { "de": "contran", "para": "pb", "rotulo": "circunscrição" },
+              { "de": "contran", "para": "pe", "rotulo": "circunscrição" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Estado × Estado = CONTRAN.\nMunicípio × Município = CETRAN.",
+            "destaques": ["CONTRAN", "CETRAN"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 12",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "CTB_art_12_XIV",
+      "macete_visual": "Estado × Estado = CONTRAN · Município = CETRAN",
+      "meta": {
+        "padrao_familia": "C_competencia_snt",
+        "pegadinha_em_uma_frase": "Conflito entre DETRANs estaduais não vai ao CETRAN — CONTRAN dirime na esfera União/UF/DF",
+        "eixos_legais": [
+          "CTB_art_12_XIV",
+          "CTB_art_14_IX"
+        ],
+        "isca_por_alternativa": {
+          "A": "consulta partiu de Campina Grande — CETRAN-PB dirime",
+          "B": "CETRAN de Pernambuco por ser UF vizinha na divisa",
+          "D": "DETRAN-PB fixa circunscrição unilateralmente e encerra a disputa"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: Estado × Estado não é CETRAN",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — CETRAN-PB porque a consulta veio de Campina Grande: conselho estadual dirime só conflitos municipais.\nB — CETRAN-PE por ser UF vizinha: mesmo erro de esfera.\nD — DETRAN-PB fixa sozinho: não há competência unilateral entre UFs.\n\nPegadinha: DETRAN-PB × DETRAN-PE = CONTRAN federal.",
+            "destaques": ["Gabarito C", "CONTRAN", "DETRAN"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 órgãos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CONTRAN: colegiado normativo federal — dirime conflitos de circunscrição na esfera União/UF/DF.\n\nCETRAN: conselho estadual — dirime conflitos entre municípios.\n\nDETRAN: órgão executivo estadual — opera trânsito, não dirime circunscrição entre UFs.",
+            "destaques": ["CONTRAN", "CETRAN", "DETRAN"]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Mapa de competência no caso",
+          "secao": "metodo",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              { "id": "contran", "label": "CONTRAN — dirime UF × UF", "nivel": 0 },
+              { "id": "cetran", "label": "CETRAN — só municipal", "nivel": 1 },
+              { "id": "pb", "label": "DETRAN-PB", "nivel": 2 },
+              { "id": "pe", "label": "DETRAN-PE", "nivel": 2 }
+            ],
+            "arestas": [
+              { "de": "contran", "para": "pb", "rotulo": "dirime circunscrição" },
+              { "de": "contran", "para": "pe", "rotulo": "dirime circunscrição" },
+              { "de": "cetran", "para": "pb", "rotulo": "não alcança inter-UF" }
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: quem dirime o conflito?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Conflito entre órgãos executivos estaduais (DETRAN × DETRAN)?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "CONTRAN — gabarito C",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim — PB × PE na BR-230" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: mandar ao CETRAN",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Consulta de Campina Grande → CETRAN-PB decide",
+                "Conflito entre Estados → CONTRAN"
+              ],
+              [
+                "DETRAN estadual fixa circunscrição entre UFs",
+                "Dirimência cabe ao CONTRAN — não há atuação unilateral"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — competencia_snt",
+                "CETRAN dirime municipal — não alcança DETRAN × DETRAN"
+              ],
+              [
+                "B — competencia_snt",
+                "CETRAN-PE no mesmo erro — conflito interestadual, não municipal"
+              ],
+              [
+                "D — regra_excecao",
+                "DETRAN não encerra disputa entre UFs sem CONTRAN"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos do enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              [
+                "BR-230 na divisa PB/PE",
+                "Rodovia estadual limítrofe"
+              ],
+              [
+                "DETRAN-PB × DETRAN-PE disputam circunscrição",
+                "Conflito interestadual"
+              ],
+              [
+                "Consulta da STTP Campina Grande",
+                "Não muda o âmbito — esfera UF/UF"
+              ],
+              [
+                "Resultado",
+                "Alternativa C — CONTRAN"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Dois incisos, dois âmbitos",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no SNT"],
+            "linhas": [
+              [
+                "Art. 12, XIV — CONTRAN",
+                "Dirime circunscrição União/UF/DF"
+              ],
+              [
+                "Art. 14, IX — CETRAN",
+                "Dirime circunscrição entre municípios"
+              ],
+              [
+                "Caso DETRAN-PB × DETRAN-PE",
+                "Aplica inciso XIV — não inciso IX"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 12, XIV — conflitos interestaduais",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 12, XIV",
+            "texto": "XIV - dirimir conflitos sobre circunscrição e competência de trânsito no âmbito da União, dos Estados e do Distrito Federal.",
+            "trechos_grifados": [
+              {
+                "inicio": 70,
+                "fim": 123,
+                "motivo": "diagrama — âmbito União/UF/DF = CONTRAN",
+                "texto_grifado": "no âmbito da União, dos Estados e do Distrito Federal"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Art. 14, IX — esfera distinta (vizinho)",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 14, IX",
+            "texto": "IX - dirimir conflitos sobre circunscrição e competência de trânsito no âmbito dos Municípios;",
+            "trechos_grifados": [
+              {
+                "inicio": 69,
+                "fim": 93,
+                "motivo": "contraste — não alcança disputa entre DETRANs estaduais",
+                "texto_grifado": "no âmbito dos Municípios"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Estado × Estado → CONTRAN · Município × Município → CETRAN.\n\nNear: STTP Campina Grande × STTP Queimadas — CETRAN-PB, não CONTRAN.\n\nFar: recurso de multa municipal — JARI/CETRAN, não circunscrição.\n\nO que NÃO muda: o âmbito do conflito define o órgão dirimidor.\n\nCadeia: vizinho = art. 14, IX (CETRAN dirime municipal).",
+            "destaques": ["CONTRAN", "CETRAN", "âmbito"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 12",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        },
+        {
+          "rotulo": "CTB art. 14",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

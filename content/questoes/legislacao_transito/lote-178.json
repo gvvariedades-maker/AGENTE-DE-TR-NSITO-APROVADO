@@ -1,0 +1,373 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_sinalizacao",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_80_3_responsabilidade_interna",
+    "enunciado": "Em shopping center de Campina Grande/PB, a administração instalou placas de regulamentação não previstas no CTB nas vias internas do estacionamento coletivo, sem autorização experimental. O gerente alega que a STTP é responsável pela implantação da sinalização em qualquer área com circulação de veículos e que o art. 80 do CTB veda sinalização estranha apenas em vias públicas. O supervisor da STTP analisa quem responde pela sinalização no local. Considerando o CTB, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A STTP responde pela sinalização em todo o shopping, inclusive estacionamento coletivo interno, pois o CTB disciplina o trânsito em qualquer via por onde circulem veículos.",
+      "B": "A responsabilidade pela sinalização nas vias internas do estacionamento coletivo é do proprietário do estabelecimento — art. 80, § 3 — não da STTP, que responde pela implantação nas vias públicas de sua circunscrição — art. 90, § 1.",
+      "C": "Compete ao órgão máximo executivo de trânsito da União autorizar e fiscalizar a sinalização experimental nas vias internas, afastando a responsabilidade do proprietário prevista no art. 80.",
+      "D": "Não há obrigação de sinalização nas vias internas de estacionamento coletivo privado, pois o art. 80, § 3, alcança apenas condomínios residenciais, não estabelecimentos comerciais."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Art. 80, § 3 (responsabilidade do proprietário em vias internas de condomínio e estacionamento coletivo privado) × art. 90, § 1 (responsabilidade do órgão com circunscrição sobre a via pública).",
+      "fundamento_legal": "CTB, art. 80, § 3: a responsabilidade pela instalação da sinalização nas vias internas pertencentes aos condomínios constituídos por unidades autônomas e nas vias e áreas de estacionamento de estabelecimentos privados de uso coletivo é de seu proprietário. CTB, art. 90, § 1: o órgão ou entidade de trânsito com circunscrição sobre a via é responsável pela implantação da sinalização, respondendo pela sua falta, insuficiência ou incorreta colocação.",
+      "passo_a_passo": [
+        "1. Caso: shopping com placas não previstas no CTB no estacionamento coletivo interno — gerente atribui responsabilidade à STTP em toda área com circulação de veículos.",
+        "2. A erra por regra_excecao (generaliza responsabilidade da STTP a estacionamento coletivo privado — ignora art. 80, § 3); C erra por competencia_snt (atribui ao órgão federal a fiscalização que não afasta dever do proprietário nas áreas do § 3); D erra por termo_unico (restringe o § 3 a condomínios residenciais — o dispositivo inclui expressamente estabelecimentos privados de uso coletivo).",
+        "3. B correta: proprietário responde pela sinalização interna do estacionamento coletivo; STTP responde pelas vias públicas de circunscrição."
+      ],
+      "pegadinha": "A IDECAN induz a crer que a STTP responde por toda sinalização onde há trânsito — mas o art. 80, § 3, atribui ao proprietário a instalação nas vias internas de condomínio e de estacionamento coletivo privado.",
+      "macete": "Interno coletivo = proprietário · via pública = STTP.",
+      "estudo_reverso": [
+        "CTB art. 80, § 3",
+        "CTB art. 90, § 1",
+        "CTB art. 80"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Estacionamento coletivo privado — responsabilidade do proprietário pelo art. 80, § 3, não da STTP",
+      "eixos_legais": [
+        "CTB_art_80_3",
+        "CTB_art_90_par1"
+      ],
+      "eixo_vizinho": "CTB_art_84",
+      "isca_por_alternativa": {
+        "A": "STTP responde pela sinalização em todo o shopping, inclusive estacionamento coletivo interno",
+        "C": "órgão máximo executivo de trânsito da União autoriza e fiscaliza sinalização experimental afastando responsabilidade do proprietário",
+        "D": "art. 80, § 3, alcança apenas condomínios residenciais, não estabelecimentos comerciais"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "competencia_snt",
+        "termo_unico"
+      ],
+      "near_transfer": "Mesmo shopping, mas placa irregular na calçada de acesso à via pública — aí a responsabilidade recai sobre a STTP pelo art. 90, § 1.",
+      "far_transfer": "Condomínio residencial vertical com sinalização ausente nas vias internas do pátio — proprietário responde pelo art. 80, § 3, sem envolver circunscrição da STTP.",
+      "o_que_nao_muda": "Vias internas de condomínio e estacionamento coletivo privado têm responsabilidade do proprietário — a STTP só responde pela sinalização nas vias de sua circunscrição.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "sinalizacao",
+      "art_80",
+      "art_90",
+      "responsabilidade",
+      "estacionamento",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CTB_art_80_3_responsabilidade_interna",
+      "macete_visual": "Interno = dono · pública = STTP",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: estacionamento coletivo interno — proprietário responde, não a STTP.",
+            "destaques": ["Gabarito B", "proprietário", "STTP"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Via interna ou pública?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Estacionamento coletivo privado interno?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Proprietário responde — gabarito B", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim — vias internas do shopping" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Interno coletivo = proprietário.\nVia pública = STTP.",
+            "destaques": ["proprietário", "STTP"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 80",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 285,
+      "fundamento_slug": "CTB_art_80_3_responsabilidade_interna",
+      "macete_visual": "Interno = dono · pública = STTP",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Estacionamento coletivo privado — responsabilidade do proprietário pelo art. 80, § 3, não da STTP",
+        "eixos_legais": [
+          "CTB_art_80_3",
+          "CTB_art_90_par1"
+        ],
+        "isca_por_alternativa": {
+          "A": "STTP responde pela sinalização em todo o shopping, inclusive estacionamento coletivo interno",
+          "C": "órgão máximo executivo de trânsito da União autoriza e fiscaliza sinalização experimental afastando responsabilidade do proprietário",
+          "D": "art. 80, § 3, alcança apenas condomínios residenciais, não estabelecimentos comerciais"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: quem sinaliza o estacionamento?",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — STTP responde por todo o shopping, inclusive estacionamento interno.\nC — órgão federal autoriza experimental e afasta responsabilidade do proprietário.\nD — regra só vale para condomínios residenciais.\n\nPegadinha: estacionamento coletivo privado é do proprietário, não da STTP.",
+            "destaques": ["Gabarito B", "proprietário", "coletivo"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "USO COLETIVO PRIVADO: estacionamento de estabelecimento comercial acessível a vários usuários — não é via pública.\n\nCIRCUNSCRIÇÃO SOBRE A VIA: competência do órgão de trânsito municipal sobre vias públicas da cidade.\n\nINSTALAÇÃO DA SINALIZAÇÃO: colocar e manter placas, marcas e equipamentos — distinto de normatizar padrões nacionais.",
+            "destaques": ["USO COLETIVO", "CIRCUNSCRIÇÃO", "INSTALAÇÃO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: quem responde?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Vias internas de estacionamento coletivo privado?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Proprietário do estabelecimento deve instalar a sinalização?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Responsabilidade do proprietário — gabarito B",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — estacionamento do shopping"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — § 3 do art. 80"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Quem responde por quê",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Local", "Responsável"],
+            "linhas": [
+              {
+                "faixa": "Via pública municipal",
+                "classificacao": "Órgão com circunscrição — art. 90, § 1"
+              },
+              {
+                "faixa": "Vias internas de condomínio",
+                "classificacao": "Proprietário — art. 80, § 3"
+              },
+              {
+                "faixa": "Estacionamento coletivo privado",
+                "classificacao": "Proprietário — art. 80, § 3",
+                "destaque": true
+              },
+              {
+                "faixa": "Calçada de acesso à via pública",
+                "classificacao": "Órgão com circunscrição — art. 90, § 1"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: trânsito = STTP em tudo",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Onde há veículo circulando, a STTP sinaliza",
+                "Estacionamento coletivo privado é do proprietário pelo § 3"
+              ],
+              [
+                "Autorização experimental federal dispensa o proprietário",
+                "§ 2 autoriza experimento — § 3 mantém dever de instalação interna"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Generaliza responsabilidade da STTP a área privada coletiva — ignora art. 80, § 3"
+              ],
+              [
+                "C — competencia_snt",
+                "Atribui ao órgão federal autorização experimental que não afasta dever do proprietário nas vias internas"
+              ],
+              [
+                "D — termo_unico",
+                "Restringe § 3 a condomínios residenciais — o texto inclui estabelecimentos privados de uso coletivo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "Placas não previstas no estacionamento interno",
+                "Área de uso coletivo privado — art. 80, § 3"
+              ],
+              [
+                "Gerente atribui tudo à STTP",
+                "Confunde via pública com interna"
+              ],
+              [
+                "Sem autorização experimental",
+                "Irrelevante para definir responsável pela instalação"
+              ],
+              [
+                "Supervisor analisa competência",
+                "Proprietário responde — alternativa B"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 80, § 3 × art. 90, § 1",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              [
+                "Art. 80, § 3",
+                "Atribui instalação da sinalização ao proprietário em vias internas e estacionamento coletivo"
+              ],
+              [
+                "Art. 90, § 1",
+                "Órgão com circunscrição responde pela sinalização nas vias públicas"
+              ],
+              [
+                "Shopping interno",
+                "§ 3 — proprietário"
+              ],
+              [
+                "Via pública de acesso",
+                "§ 1 — STTP"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "CTB art. 80 — § 3",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 80, § 3",
+            "texto": "§ 3 A responsabilidade pela instalação da sinalização nas vias internas pertencentes aos condomínios constituídos por unidades autônomas e nas vias e áreas de estacionamento de estabelecimentos privados de uso coletivo é de seu proprietário.",
+            "trechos_grifados": [
+              {
+                "inicio": 139,
+                "fim": 240,
+                "motivo": "fluxo — proprietário responde pelo estacionamento coletivo privado",
+                "texto_grifado": "nas vias e áreas de estacionamento de estabelecimentos privados de uso coletivo é de seu proprietário"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "CTB art. 90 — § 1",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 90, § 1",
+            "texto": "§ 1º O órgão ou entidade de trânsito com circunscrição sobre a via é responsável pela implantação da sinalização, respondendo pela sua falta, insuficiência ou incorreta colocação.",
+            "trechos_grifados": [
+              {
+                "inicio": 5,
+                "fim": 112,
+                "motivo": "hierarquia — STTP responde apenas nas vias de sua circunscrição",
+                "texto_grifado": "O órgão ou entidade de trânsito com circunscrição sobre a via é responsável pela implantação da sinalização"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Interno coletivo = proprietário · via pública = STTP.\nNear: placa irregular na calçada de acesso à via pública — STTP pelo art. 90, § 1.\nFar: condomínio residencial com sinalização ausente no pátio interno — proprietário pelo § 3, sem STTP.\nNão muda: § 3 cobre condomínio e estacionamento coletivo privado — circunscrição municipal só nas vias públicas.\nCadeia: vizinho = retirada de elemento que prejudica visibilidade na via pública.",
+            "destaques": ["proprietário", "STTP", "condomínio", "visibilidade"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 80",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        },
+        {
+          "rotulo": "CTB art. 90",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

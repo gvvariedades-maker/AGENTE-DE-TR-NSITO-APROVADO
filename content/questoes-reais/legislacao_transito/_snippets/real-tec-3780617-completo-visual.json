@@ -1,0 +1,254 @@
+{
+  "tec_id": "3780617",
+  "disciplina": "legislacao_transito",
+  "gabarito": "A",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "tabela_gradacao",
+    "arquetipo_secundario": "fluxograma_decisao",
+    "duracao_estimada_seg": 195,
+    "fundamento_slug": "CTB_art_143_4",
+    "macete_visual": "menos 6000 = B · mais 6000 = E",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Semirreboque 6.000 kg — categoria E.",
+      "far_transfer": "Trator agrícola — art. 144, regra distinta.",
+      "o_que_nao_muda": "Limite 6.000 kg define B/C/D × E."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito A (\"B\").\n\nTrator até 3.500 kg + semirreboque até 5.999 kg.\n\nB — \"C\": exagera a gradação.\nC — \"D\": pula categorias sem base.\nD — \"E\": só a partir de 6.000 kg no reboque.\n\nPegadinha: combinação não exige E automaticamente — 5.999 kg está abaixo do limiar.",
+          "destaques": [
+            "Gabarito A",
+            "B",
+            "5.999",
+            "6.000"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Três termos da questão",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Categoria B: automotor até 3.500 kg PBT e até 8 lugares — inciso II.\nCombinação: trator + semirreboque — regras do §4 e inciso V.\n6.000 kg: limiar da unidade acoplada — abaixo = B/C/D; a partir = E.",
+          "destaques": [
+            "B",
+            "combinação",
+            "6.000"
+          ]
+        }
+      },
+      {
+        "id": "mapa",
+        "titulo": "Gradação da combinação",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": [
+            "Situação",
+            "Categoria mínima"
+          ],
+          "linhas": [
+            {
+              "faixa": "Trator ≤ 3.500 kg",
+              "classificacao": "Enquadra na categoria B — inciso II",
+              "destaque": false
+            },
+            {
+              "faixa": "Semirreboque 5.999 kg",
+              "classificacao": "< 6.000 kg — §4 permite B/C/D",
+              "destaque": true
+            },
+            {
+              "faixa": "Semirreboque ≥ 6.000 kg",
+              "classificacao": "Exige categoria E — inciso V",
+              "destaque": false
+            }
+          ]
+        }
+      },
+      {
+        "id": "fluxo",
+        "titulo": "Método: qual categoria mínima?",
+        "secao": "metodo",
+        "tipo": "fluxograma",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "p1",
+              "label": "A unidade acoplada tem menos de 6.000 kg?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "p2",
+              "label": "O trator enquadra-se na categoria B?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "r1",
+              "label": "Categoria mínima B — gabarito A",
+              "tipo": "resultado"
+            }
+          ],
+          "arestas": [
+            {
+              "de": "p1",
+              "para": "p2",
+              "rotulo": "Sim"
+            },
+            {
+              "de": "p2",
+              "para": "r1",
+              "rotulo": "Sim"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "Toda combinação com semirreboque exige categoria E",
+              "§4 — B/C/D bastam se unidade acoplada < 6.000 kg"
+            ],
+            [
+              "Semirreboque acima de 3.500 kg já exige categoria C",
+              "Limite da combinação é 6.000 kg na unidade acoplada, não 3.500 kg"
+            ],
+            [
+              "Automotor até 3.500 kg sempre é só categoria B isolada",
+              "§4 autoriza B a conduzir combinação leve com semirreboque < 6.000 kg"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que B, C e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "B — gravidade",
+              "Exige C pelo peso — ignora que 5.999 kg < 6.000 kg (§4)"
+            ],
+            [
+              "C — numero_vizinho",
+              "Pula para D sem critério legal da combinação"
+            ],
+            [
+              "D — regra_excecao",
+              "Inciso V só quando unidade acoplada ≥ 6.000 kg"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Dado do caso",
+            "Efeito"
+          ],
+          "linhas": [
+            [
+              "Automotor até 3.500 kg",
+              "Trator enquadra na categoria B"
+            ],
+            [
+              "Semirreboque até 5.999 kg",
+              "Abaixo de 6.000 kg — §4 aplica"
+            ],
+            [
+              "Categoria mínima",
+              "B — gabarito A"
+            ],
+            [
+              "Se fosse 6.000 kg no reboque",
+              "Aí sim categoria E"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto do CTB",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 143, §4",
+          "texto": "§ 4º Respeitada a capacidade máxima de tração da unidade tratora, os condutores das categorias B, C e D podem conduzir combinação de veículos cuja unidade tratora se enquadre na respectiva categoria de habilitação e cuja unidade acoplada, reboque, semirreboque, trailer ou articulada tenha menos de 6.000 kg (seis mil quilogramas) de peso bruto total, e cuja lotação não exceda a 8 (oito) lugares.",
+          "trechos_grifados": [
+            {
+              "inicio": 290,
+              "fim": 350,
+              "motivo": "mapa — 5.999 kg está abaixo deste limiar",
+              "texto_grifado": "menos de 6.000 kg (seis mil quilogramas) de peso bruto total"
+            }
+          ]
+        }
+      },
+      {
+        "id": "lei2",
+        "titulo": "Categoria B",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 143, II",
+          "texto": "II - Categoria B - condutor de veículo motorizado, não abrangido pela categoria A, cujo peso bruto total não exceda a três mil e quinhentos quilogramas e cuja lotação não exceda a oito lugares, excluído o do motorista;",
+          "trechos_grifados": [
+            {
+              "inicio": 0,
+              "fim": 218,
+              "motivo": "caso — trator até 3.500 kg enquadra na B",
+              "texto_grifado": "II - Categoria B - condutor de veículo motorizado, não abrangido pela categoria A, cujo peso bruto total não exceda a três mil e quinhentos quilogramas e cuja lotação não exceda a oito lugares, excluído o do motorista;"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: semirreboque < 6.000 kg + trator B = categoria mínima B.\nNear: reboque com 6.000 kg ou mais — categoria E (inciso V).\nFar: trator agrícola em via — art. 144, exceção distinta.\nNão muda: limiar de 6.000 kg na unidade acoplada define B/C/D × E.\nCadeia: próximo = art. 145 — requisitos para obter cada categoria.",
+          "destaques": [
+            "6.000",
+            "B",
+            "E",
+            "semirreboque"
+          ]
+        }
+      }
+    ]
+  }
+}

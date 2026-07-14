@@ -1,0 +1,252 @@
+{
+  "tec_id": "482579",
+  "disciplina": "legislacao_transito",
+  "gabarito": "C",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "tabela_gradacao",
+    "arquetipo_secundario": "fluxograma_decisao",
+    "duracao_estimada_seg": 195,
+    "fundamento_slug": "CTB_art_61",
+    "macete_visual": "80-60-40-30 urbano",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Com placa, obedeça a sinalização — §1º só sem regulamentação.",
+      "far_transfer": "Rodovia rural sem placa — inciso II, outra escala.",
+      "o_que_nao_muda": "Coletora urbana sem sinalização = 40 km/h."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito C.\n\nA — local 20 km/h: lei diz 30.\nB — arterial 80 km/h: 80 é trânsito rápido.\nD — rápido 100 km/h: lei diz 80.\n\nPegadinha: embaralha número e tipo de via na escala 80-60-40-30.",
+          "destaques": [
+            "Gabarito C",
+            "40 km/h",
+            "coletora"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Três termos da questão",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Sinalização regulamentadora: placa de velocidade máxima — prevalece sobre o padrão legal.\nVia coletora: tipo urbano intermediário — art. 60, I, c.\n§1º do art. 61: limites apenas quando não houver sinalização.",
+          "destaques": [
+            "sinalização",
+            "coletora",
+            "§1º"
+          ]
+        }
+      },
+      {
+        "id": "mapa",
+        "titulo": "Escala urbana sem placa",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": [
+            "Tipo de via",
+            "Velocidade máxima"
+          ],
+          "linhas": [
+            {
+              "faixa": "Trânsito rápido",
+              "classificacao": "80 km/h",
+              "destaque": false
+            },
+            {
+              "faixa": "Arterial",
+              "classificacao": "60 km/h",
+              "destaque": false
+            },
+            {
+              "faixa": "Coletora",
+              "classificacao": "40 km/h — gabarito C",
+              "destaque": true
+            },
+            {
+              "faixa": "Local",
+              "classificacao": "30 km/h",
+              "destaque": false
+            }
+          ]
+        }
+      },
+      {
+        "id": "fluxo",
+        "titulo": "Método: tipo de via × km/h",
+        "secao": "metodo",
+        "tipo": "fluxograma",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "p1",
+              "label": "Há sinalização regulamentadora na via?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "p2",
+              "label": "Sem placa: o par via × km/h bate com o §1º?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "r1",
+              "label": "Coletora 40 km/h — gabarito C",
+              "tipo": "resultado"
+            }
+          ],
+          "arestas": [
+            {
+              "de": "p1",
+              "para": "p2",
+              "rotulo": "Não"
+            },
+            {
+              "de": "p2",
+              "para": "r1",
+              "rotulo": "Sim"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "Arterial e trânsito rápido têm a mesma velocidade",
+              "80 km/h só no trânsito rápido; arterial = 60 km/h"
+            ],
+            [
+              "Via local permite até 20 km/h sem placa",
+              "Alínea d do §1º — local = 30 km/h"
+            ],
+            [
+              "Trânsito rápido urbano pode 100 km/h sem sinalização",
+              "Alínea a — máximo 80 km/h nas urbanas"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que A, B e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "A — numero_vizinho",
+              "Local = 30 km/h, não 20 — número vizinho inventado"
+            ],
+            [
+              "B — numero_vizinho",
+              "80 km/h é do trânsito rápido — arterial é 60"
+            ],
+            [
+              "D — numero_vizinho",
+              "Trânsito rápido = 80 km/h, não 100 — patamar rural confundido"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Par via × velocidade",
+            "Correto?"
+          ],
+          "linhas": [
+            [
+              "Local 20 km/h",
+              "Não — A"
+            ],
+            [
+              "Arterial 80 km/h",
+              "Não — B"
+            ],
+            [
+              "Coletora 40 km/h",
+              "Sim — gabarito C"
+            ],
+            [
+              "Trânsito rápido 100 km/h",
+              "Não — D"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto do CTB",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 61, §1º, I",
+          "texto": "a) oitenta quilômetros por hora, nas vias de trânsito rápido; b) sessenta quilômetros por hora, nas vias arteriais; c) quarenta quilômetros por hora, nas vias coletoras; d) trinta quilômetros por hora, nas vias locais;",
+          "trechos_grifados": [
+            {
+              "inicio": 62,
+              "fim": 115,
+              "motivo": "contraste — arterial 60 km/h (isca B usa 80)",
+              "texto_grifado": "b) sessenta quilômetros por hora, nas vias arteriais;"
+            },
+            {
+              "inicio": 116,
+              "fim": 169,
+              "motivo": "caso — gabarito C: coletora 40 km/h",
+              "texto_grifado": "c) quarenta quilômetros por hora, nas vias coletoras;"
+            },
+            {
+              "inicio": 170,
+              "fim": 218,
+              "motivo": "contraste — local 30 km/h (isca A usa 20)",
+              "texto_grifado": "d) trinta quilômetros por hora, nas vias locais;"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: urbano sem placa = 80 · 60 · 40 · 30 (rápido → local).\nNear: com placa regulamentadora, obedeça a sinalização — §1º não se aplica.\nFar: rodovia sem placa — inciso II do §1º, patamares rurais.\nNão muda: coletora = 40 km/h — gabarito C desta questão.\nCadeia: próximo = art. 60 — classificação das vias urbanas.",
+          "destaques": [
+            "80",
+            "40",
+            "30",
+            "coletora"
+          ]
+        }
+      }
+    ]
+  }
+}

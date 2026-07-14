@@ -1,0 +1,298 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_direitos_deveres",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "assertivas",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_89_II",
+    "enunciado": "Em cruzamento da Av. Epitácio Pessoa, em Campina Grande/PB, semáforo indica verde para veículos, mas placa R-1 (PARE) permanece visível por falha na retirada após reforma da sinalização. Não há agente de trânsito no local. A STTP autua condutor que seguiu no verde por desobediência à placa. Sobre os direitos e deveres relativos à sinalização previstos no CTB (arts. 88 a 90), analise as assertivas e assinale a alternativa CORRETA:\n\nI. O semáforo prevalece sobre a placa de regulamentação quando estiverem em conflito, nos termos do art. 89 do CTB.\n\nII. O condutor pode ser autuado normalmente por desobediência à placa R-1, pois a sinalização vertical prevalece sobre as indicações do semáforo.\n\nIII. Não serão aplicadas as sanções por inobservância à sinalização quando esta for insuficiente ou incorreta, conforme o art. 90 do CTB.",
+    "alternativas": {
+      "A": "Está correto o que se afirma em II, apenas — mantém autuação pela placa R-1 apesar do semáforo verde no cruzamento da Av. Epitácio Pessoa.",
+      "B": "Está correto o que se afirma em I e II, apenas — semáforo prevalece sobre a placa e ainda autoriza autuação por desobediência à R-1.",
+      "C": "Está correto o que se afirma em I e III, apenas — semáforo prevalece sobre a placa e sinalização incorreta afasta sanção na blitz.",
+      "D": "Está correto o que se afirma em I, II e III — inclusive autuação pela placa com semáforo verde e sinalização conflitante."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Hierarquia semáforo × placa (art. 89, II e III) × dispensa de sanção por sinalização incorreta (art. 90), sem agente no local.",
+      "fundamento_legal": "CTB, art. 89, II: as indicações do semáforo sobre os demais sinais. III: as indicações dos sinais sobre as demais normas de trânsito. Art. 90: não serão aplicadas as sanções previstas neste Código por inobservância à sinalização quando esta for insuficiente ou incorreta.",
+      "passo_a_passo": [
+        "1. I correta — art. 89, II prevalece sobre III: semáforo verde manda sobre placa R-1 conflitante; II falsa — inverte a hierarquia colocando placa acima do semáforo; III correta — sinalização conflitante é incorreta, art. 90 afasta sanção.",
+        "2. A erra por termo_unico (marca só II falsa e ignora I e III corretas); B erra por regra_excecao (aceita I correta mas compra II falsa que autoriza autuação); D erra por gravidade (trata II falsa como correta junto com I e III).",
+        "3. Gabarito C: I e III corretas."
+      ],
+      "pegadinha": "A banca induz a marcar A ou B porque a placa R-1 permanece visível — mas o art. 89, II coloca o semáforo acima das placas, e o art. 90 afasta sanção quando a sinalização é incorreta.",
+      "macete": "89-II = SEMÁFORO > PLACA · 90 = SINAL RUIM = SEM SANÇÃO · AGENTE (I) AINDA MANDA SOBRE AMBOS.",
+      "estudo_reverso": [
+        "CTB art. 89",
+        "CTB art. 90",
+        "CTB art. 88"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "B_assertivas",
+      "pegadinha_em_uma_frase": "II inverte o art. 89 — semáforo prevalece sobre placa, não o contrário; sinal conflitante afasta sanção",
+      "eixos_legais": [
+        "CTB_art_89_II",
+        "CTB_art_89_III",
+        "CTB_art_90"
+      ],
+      "eixo_vizinho": "CTB_art_89_I",
+      "isca_por_alternativa": {
+        "A": "mantém autuação pela placa R-1 apesar do semáforo verde no cruzamento",
+        "B": "aceita semáforo prevalecendo mas ainda autoriza autuação pela placa conflitante",
+        "D": "trata autuação pela placa como correta com semáforo verde e sinalização conflitante"
+      },
+      "eixos_mecanismo": [
+        "termo_unico",
+        "regra_excecao",
+        "gravidade"
+      ],
+      "near_transfer": "Mesmo cruzamento com placa R-2 (dê preferência) conflitando com semáforo vermelho — semáforo prevalece sobre a placa.",
+      "far_transfer": "Agente da STTP presente ordenando parada com semáforo verde — art. 89, I, prevalece sobre semáforo e placa.",
+      "o_que_nao_muda": "Sem agente, semáforo fica acima das placas; sinalização incorreta afasta sanção ao condutor.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "sinalizacao",
+      "art_89",
+      "art_90",
+      "hierarquia_sinais",
+      "semaforo",
+      "campina_grande"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "matriz_assertivas",
+      "arquetipo_secundario": "tabela_gradacao",
+      "duracao_estimada_seg": 70,
+      "fundamento_slug": "CTB_art_89_II",
+      "macete_visual": "semáforo > placa · sinal ruim = sem sanção",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (I e III). II inverte hierarquia — semáforo manda sobre placa R-1; sinal conflitante afasta sanção.",
+            "destaques": ["Gabarito C", "semáforo", "placa R-1"]
+          }
+        },
+        {
+          "id": "matriz",
+          "titulo": "Mapa I–III",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              { "id": "I", "texto": "Semáforo prevalece sobre placa — correta", "correto": true },
+              { "id": "II", "texto": "Placa prevalece sobre semáforo — ERRADA", "correto": false },
+              { "id": "III", "texto": "Sinal incorreto afasta sanção — correta", "correto": true }
+            ],
+            "gabarito_resumo": "I e III → alternativa C"
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SEMÁFORO > PLACA.\nSINAL CONFLITANTE = SEM SANÇÃO.\nAGENTE MANDA SOBRE AMBOS.",
+            "destaques": ["SEMÁFORO", "PLACA", "AGENTE"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB arts. 89–90",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "matriz_assertivas",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "todos",
+      "duracao_estimada_seg": 235,
+      "fundamento_slug": "CTB_art_89_II",
+      "macete_visual": "semáforo > placa · 90 = sem sanção",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: a isca é a assertiva II",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (I e III corretas).\n\nA — autuação pela placa R-1 apesar do semáforo verde.\nB — semáforo prevalece mas ainda autoriza autuação pela placa.\nD — trata I, II e III como corretas.\n\nPegadinha: placa visível não vence semáforo — e sinal conflitante afasta sanção.",
+            "destaques": ["Gabarito C", "placa R-1", "semáforo verde"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SINALIZAÇÃO VERTICAL: placas como R-1 (PARE) — inciso III do art. 89 na hierarquia.\n\nSEMÁFORO: controle luminoso de passagem — inciso II prevalece sobre placas.\n\nSINALIZAÇÃO INCORRETA: placas conflitantes com semáforo — art. 90 afasta sanção ao condutor.",
+            "destaques": ["VERTICAL", "SEMÁFORO", "INCORRETA"]
+          }
+        },
+        {
+          "id": "matriz",
+          "titulo": "Classificar I–III",
+          "secao": "metodo",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              { "id": "I", "texto": "Semáforo prevalece sobre placa — correta", "correto": true },
+              { "id": "II", "texto": "Placa prevalece sobre semáforo — ERRADA", "correto": false },
+              { "id": "III", "texto": "Sinal incorreto afasta sanção — correta", "correto": true }
+            ],
+            "gabarito_resumo": "I e III → alternativa C"
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Assertiva-isca: II",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a II afirma ✗", "O que o art. 89 diz ✓"],
+            "linhas": [
+              [
+                "Placa R-1 prevalece sobre semáforo verde",
+                "Semáforo prevalece sobre os demais sinais — inciso II"
+              ],
+              [
+                "Autuação normal pela placa conflitante",
+                "Sinalização incorreta afasta sanção — art. 90"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Marca só II falsa — ignora I e III corretas"
+              ],
+              [
+                "B — regra_excecao",
+                "Aceita I mas compra II que autoriza autuação pela placa"
+              ],
+              [
+                "D — gravidade",
+                "Trata II falsa como correta junto com I e III"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Montando o gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Assertiva", "Veredito"],
+            "linhas": [
+              ["I — semáforo prevalece sobre placa", "Correta — art. 89, II"],
+              ["II — placa prevalece sobre semáforo", "Falsa — inverte hierarquia"],
+              ["III — sinal incorreto afasta sanção", "Correta — art. 90"],
+              ["Resultado", "I e III = alternativa C"]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual sinal manda sem agente?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Há agente de trânsito no local?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Semáforo conflita com placa R-1?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Semáforo prevalece — I correta — gabarito C", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Não — caso da Av. Epitácio Pessoa" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim — verde × placa PARE" }
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 89 — ordem de prevalência",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Inciso", "Efeito no caso"],
+            "linhas": [
+              ["I — agente", "Ausente — não aplicado no enunciado"],
+              ["II — semáforo", "Verde prevalece sobre placa R-1 — I correta"],
+              ["III — sinais/placas", "Abaixo do semáforo — II falsa inverte"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "CTB, art. 89, II e III",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 89, II e III",
+            "texto": "II - as indicações do semáforo sobre os demais sinais; III - as indicações dos sinais sobre as demais normas de trânsito.",
+            "trechos_grifados": [
+              {
+                "inicio": 5,
+                "fim": 53,
+                "motivo": "matriz — I correta: semáforo sobre placas",
+                "texto_grifado": "as indicações do semáforo sobre os demais sinais"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "CTB, art. 90 — dispensa de sanção",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 90, caput",
+            "texto": "Art. 90. Não serão aplicadas as sanções previstas neste Código por inobservância à sinalização quando esta for insuficiente ou incorreta.",
+            "trechos_grifados": [
+              {
+                "inicio": 111,
+                "fim": 136,
+                "motivo": "caso — III correta: placa conflitante com semáforo",
+                "texto_grifado": "insuficiente ou incorreta"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "89-II = SEMÁFORO > PLACA · 90 = SINAL RUIM = SEM SANÇÃO.\n\nNear: placa R-2 conflitando com semáforo vermelho — semáforo prevalece.\nFar: agente da STTP ordenando parada com semáforo verde — inciso I manda sobre ambos.\nNão muda: sem agente, semáforo fica acima das placas; sinal incorreto afasta sanção.\nCadeia: vizinho = art. 89, I (agente prevalece sobre semáforo e placas).",
+            "destaques": ["SEMÁFORO", "SEM SANÇÃO", "agente"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB arts. 89–90",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

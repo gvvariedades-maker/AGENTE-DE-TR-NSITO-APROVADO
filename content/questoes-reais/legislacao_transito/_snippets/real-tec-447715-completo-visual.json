@@ -1,0 +1,236 @@
+{
+  "tec_id": "447715",
+  "disciplina": "legislacao_transito",
+  "gabarito": "B",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "tabela_gradacao",
+    "arquetipo_secundario": "fluxograma_decisao",
+    "duracao_estimada_seg": 195,
+    "fundamento_slug": "CTB_art_60",
+    "macete_visual": "Urbano 4 · Rural rodovia+estrada",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Velocidade padrão diferencia arterial e coletora — ambas urbanas.",
+      "far_transfer": "Caput do art. 2º lista rodovias como vias terrestres — classificação funcional é outra.",
+      "o_que_nao_muda": "Rodovia só no inciso II — nunca subtipo urbano."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito B.\n\nA — arterial: tipo urbano válido.\nC — coletora: tipo urbano válido.\nD — trânsito rápido: tipo urbano válido.\n\nPegadinha: rodovia parece via de cidade, mas no CTB é classificação rural.",
+          "destaques": [
+            "Gabarito B",
+            "rodovia",
+            "urbana"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Três termos da questão",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Via urbana: trânsito rápido, arterial, coletora ou local — inciso I do art. 60.\nVia rural: rodovia ou estrada — inciso II.\nClassificação funcional: critério do art. 60, distinto do caput do art. 2º.",
+          "destaques": [
+            "urbana",
+            "rural",
+            "classificação"
+          ]
+        }
+      },
+      {
+        "id": "mapa",
+        "titulo": "Taxonomia do art. 60",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": [
+            "Grupo",
+            "Tipos"
+          ],
+          "linhas": [
+            {
+              "faixa": "I — urbanas",
+              "classificacao": "Trânsito rápido · arterial · coletora · local",
+              "destaque": true
+            },
+            {
+              "faixa": "II — rurais",
+              "classificacao": "Rodovia · estrada",
+              "destaque": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "fluxo",
+        "titulo": "Método: urbano ou rural?",
+        "secao": "metodo",
+        "tipo": "fluxograma",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "p1",
+              "label": "A alternativa está no inciso I (urbanas)?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "p2",
+              "label": "É rodovia ou estrada do inciso II?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "r1",
+              "label": "Não é classificação urbana — gabarito B",
+              "tipo": "resultado"
+            }
+          ],
+          "arestas": [
+            {
+              "de": "p1",
+              "para": "p2",
+              "rotulo": "Não"
+            },
+            {
+              "de": "p2",
+              "para": "r1",
+              "rotulo": "Sim"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "Rodovia pode ser via urbana em área metropolitana",
+              "Rodovia só no inciso II — vias rurais"
+            ],
+            [
+              "Trânsito rápido é rodovia urbana",
+              "Trânsito rápido é subtipo urbano (I, a)"
+            ],
+            [
+              "Arterial e coletora são categorias rurais",
+              "Arterial e coletora estão no inciso I — urbanas"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que A, C e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "A — numero_vizinho",
+              "Arterial é via urbana do inciso I, b — não é a resposta NÃO"
+            ],
+            [
+              "C — numero_vizinho",
+              "Coletora está no rol urbano I, c — norma válida como tipo urbano"
+            ],
+            [
+              "D — termo_unico",
+              "Trânsito rápido é urbana I, a — confunde velocidade com rodovia"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Tipo",
+            "Classifica via urbana?"
+          ],
+          "linhas": [
+            [
+              "Arterial",
+              "Sim — A não é gabarito"
+            ],
+            [
+              "Rodovia",
+              "Não — gabarito B"
+            ],
+            [
+              "Coletora",
+              "Sim — C não é gabarito"
+            ],
+            [
+              "Trânsito rápido",
+              "Sim — D não é gabarito"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto do CTB",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 60",
+          "texto": "I - vias urbanas: a) via de trânsito rápido; b) via arterial; c) via coletora; d) via local; II - vias rurais: a) rodovias; b) estradas.",
+          "trechos_grifados": [
+            {
+              "inicio": 0,
+              "fim": 92,
+              "motivo": "mapa — A, C e D são subtipos urbanos do inciso I",
+              "texto_grifado": "I - vias urbanas: a) via de trânsito rápido; b) via arterial; c) via coletora; d) via local;"
+            },
+            {
+              "inicio": 93,
+              "fim": 123,
+              "motivo": "contraste — rodovia é rural, não urbana",
+              "texto_grifado": "II - vias rurais: a) rodovias;"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: urbano = rápido · arterial · coletora · local; rural = rodovia · estrada.\nNear: sem placa — arterial 60 km/h, coletora 40 km/h (confirma que são urbanas).\nFar: caput do art. 2º cita rodovias como vias terrestres — classificação funcional é outra.\nNão muda: rodovia só no inciso II — nunca subtipo de via urbana.\nCadeia: próximo = art. 61 — velocidades por tipo de via.",
+          "destaques": [
+            "urbano",
+            "rodovia",
+            "rural",
+            "art. 61"
+          ]
+        }
+      }
+    ]
+  }
+}

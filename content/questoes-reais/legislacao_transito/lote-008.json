@@ -1,0 +1,385 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_infracoes_pontuacao",
+    "tipo": "lei_seca",
+    "estilo_idecan": "correta",
+    "dificuldade": 2,
+    "fundamento_slug": "CTB_art_259",
+    "enunciado": "A cada infração cometida são computados os seguintes números de pontos:",
+    "alternativas": {
+      "A": "Gravíssima - sete pontos; grave - cinco pontos; média - quatro pontos; leve - três pontos.",
+      "B": "Gravíssima - nove pontos; grave - cinco pontos; média - três pontos; leve - dois pontos.",
+      "C": "Gravíssima - oito pontos; grave - seis pontos; média - quatro pontos; leve - dois pontos.",
+      "D": "Gravíssima - nove pontos; grave - oito pontos; média - sete pontos; leve - três pontos."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Escala de pontuação por gravidade da infração — art. 259: 7, 5, 4 e 3 pontos.",
+      "fundamento_legal": "CTB, art. 259: gravíssima — sete pontos; grave — cinco pontos; média — quatro pontos; leve — três pontos.",
+      "passo_a_passo": [
+        "1. O comando pede a tabela literal de pontos por gravidade — art. 259, incisos I a IV.",
+        "2. B erra por numero_vizinho (9 e 2 nos extremos, 3 na média); C erra por gravidade (8, 6 e 2 fora da escala); D erra por termo_unico (escala inflada — 9, 8, 7, 3).",
+        "3. Gabarito A: reproduz fielmente 7 · 5 · 4 · 3 do art. 259."
+      ],
+      "pegadinha": "A banca troca um único número (ex.: média com 3 ou gravíssima com 9) — decorar a sequência 7-5-4-3.",
+      "macete": "Pontos: gravíssima 7 · grave 5 · média 4 · leve 3.",
+      "estudo_reverso": [
+        "CTB art. 259",
+        "CTB art. 260",
+        "CTB art. 258"
+      ]
+    },
+    "tags": [
+      "real_idecan",
+      "superior",
+      "ctb",
+      "art_259",
+      "pontuacao",
+      "infracoes"
+    ],
+    "meta": {
+      "origem": "real_idecan",
+      "nivel_escolaridade": "superior",
+      "fonte_arquivo": "CTB - IDECAN - SUPERIOR - TEC.pdf",
+      "tec_id": "369556",
+      "padrao_familia": "D_gradacao_numerica",
+      "pegadinha_em_uma_frase": "Escala fixa 7-5-4-3 — qualquer troca numérica é isca",
+      "eixos_legais": [
+        "CTB_art_259",
+        "CTB_art_260",
+        "CTB_art_258"
+      ],
+      "eixo_vizinho": "CTB_art_261",
+      "isca_por_alternativa": {
+        "B": "9 e 2 nos extremos — confunde com limiar de suspensão ou escala antiga",
+        "C": "8, 6 e 2 — progressão numérica falsa",
+        "D": "9, 8, 7, 3 — escala inflada em todas as faixas"
+      },
+      "near_transfer": "Art. 260 — suspensão ao atingir 20 pontos em 12 meses (regra distinta da tabela).",
+      "far_transfer": "Art. 258 — classificação das multas por valor, não pontuação na CNH.",
+      "o_que_nao_muda": "Gravíssima 7 · grave 5 · média 4 · leve 3 — literal do art. 259.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "macete_visual": "Gravíssima 7 · grave 5 · média 4 · leve 3"
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "duracao_estimada_seg": 45,
+      "fundamento_slug": "CTB_art_259",
+      "macete_visual": "Gravíssima 7 · grave 5 · média 4 · leve 3",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Gabarito A",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A. Gravíssima 7 · grave 5 · média 4 · leve 3 — art. 259.",
+            "destaques": [
+              "Gabarito A",
+              "7",
+              "5",
+              "4",
+              "3"
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Escala de pontos",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Gravidade",
+              "Pontos"
+            ],
+            "linhas": [
+              {
+                "faixa": "Gravíssima",
+                "classificacao": "7 pontos",
+                "destaque": true
+              },
+              {
+                "faixa": "Grave",
+                "classificacao": "5 pontos",
+                "destaque": true
+              },
+              {
+                "faixa": "Média",
+                "classificacao": "4 pontos",
+                "destaque": true
+              },
+              {
+                "faixa": "Leve",
+                "classificacao": "3 pontos",
+                "destaque": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "7 · 5 · 4 · 3 — gravíssima ao leve",
+            "destaques": [
+              "7",
+              "5",
+              "4",
+              "3"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "fluxograma_decisao",
+      "duracao_estimada_seg": 180,
+      "fundamento_slug": "CTB_art_259",
+      "macete_visual": "Gravíssima 7 · grave 5 · média 4 · leve 3",
+      "publico_alvo": "iniciante",
+      "links_fonte": [
+        {
+          "rotulo": "CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ],
+      "meta": {
+        "near_transfer": "20 pontos em 12 meses — suspensão (art. 260).",
+        "far_transfer": "Multas por valor — art. 258, não pontos.",
+        "o_que_nao_muda": "7-5-4-3 é literal do art. 259."
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Você acertou — e a isca da banca",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — troca gravíssima (9) e leve (2).\nC — escala 8-6-4-2 falsa.\nD — infla todas as faixas (9-8-7-3).\n\nPegadinha: um único número errado na tabela — decorar 7 · 5 · 4 · 3.",
+            "destaques": [
+              "Gabarito A",
+              "7",
+              "5",
+              "4",
+              "3"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Três termos da questão",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Pontuação na CNH: soma por infração cometida — art. 259.\nGravidade: gravíssima, grave, média ou leve — art. 258 (multa) e art. 259 (pontos).\nSuspensão: limiar de 20 pontos em 12 meses — art. 260 (não confundir com a tabela).",
+            "destaques": [
+              "pontuação",
+              "gravidade",
+              "20 pontos"
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Tabela do art. 259",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Gravidade",
+              "Pontos CNH"
+            ],
+            "linhas": [
+              {
+                "faixa": "I — gravíssima",
+                "classificacao": "7 pontos",
+                "destaque": true
+              },
+              {
+                "faixa": "II — grave",
+                "classificacao": "5 pontos",
+                "destaque": true
+              },
+              {
+                "faixa": "III — média",
+                "classificacao": "4 pontos",
+                "destaque": true
+              },
+              {
+                "faixa": "IV — leve",
+                "classificacao": "3 pontos",
+                "destaque": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: conferir a escala",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "A alternativa traz 7-5-4-3 na ordem gravíssima→leve?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Algum número foi trocado (9, 8, 2)?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Correta = A — gabarito",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença do candidato × lei",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
+            "linhas": [
+              [
+                "Gravíssima vale 9 pontos como nas multas altas",
+                "Art. 259, I — gravíssima: sete pontos"
+              ],
+              [
+                "Leve vale só 2 pontos por ser infração menor",
+                "Art. 259, IV — leve: três pontos"
+              ],
+              [
+                "A escala sobe de 3 em 3 (3, 6, 9)",
+                "Progressão 7, 5, 4, 3 — não é aritmética regular"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que B, C e D enganam",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que erra"
+            ],
+            "linhas": [
+              [
+                "B — numero_vizinho",
+                "9 na gravíssima e 2 na leve — fora do art. 259"
+              ],
+              [
+                "C — gravidade",
+                "8, 6 e 2 — progressão falsa"
+              ],
+              [
+                "D — termo_unico",
+                "Escala inflada 9-8-7-3 em todas as faixas"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Aplicando ao enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Bate 7-5-4-3?"
+            ],
+            "linhas": [
+              [
+                "A — gravíssima 7, grave 5, média 4, leve 3",
+                "Sim — gabarito"
+              ],
+              [
+                "B — gravíssima 9, leve 2",
+                "Não"
+              ],
+              [
+                "C — 8, 6, 4, 2",
+                "Não"
+              ],
+              [
+                "D — 9, 8, 7, 3",
+                "Não"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Texto do CTB",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 259",
+            "texto": "A cada infração cometida são computados os seguintes números de pontos:\nI - gravíssima - sete pontos;\nII - grave - cinco pontos;\nIII - média - quatro pontos;\nIV - leve - três pontos.",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 182,
+                "motivo": "mapa — tabela completa 7-5-4-3",
+                "texto_grifado": "A cada infração cometida são computados os seguintes números de pontos:\nI - gravíssima - sete pontos;\nII - grave - cinco pontos;\nIII - média - quatro pontos;\nIV - leve - três pontos."
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Leve para a prova",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Regra: gravíssima 7 · grave 5 · média 4 · leve 3 (art. 259).\nNear: 20 pontos em 12 meses — suspensão (art. 260).\nFar: multas por valor — art. 258, não pontos na CNH.\nNão muda: 7-5-4-3 — literal dos incisos I a IV.\nCadeia: próximo = art. 261 — cassação da CNH.",
+            "destaques": [
+              "7",
+              "5",
+              "4",
+              "3",
+              "20 pontos"
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,268 @@
+{
+  "disciplina": "legislacao_transito",
+  "topico": "CONTRAN_1003_mbft",
+  "fundamento_slug": "CONTRAN_1003_mbft_medida_transbordo",
+  "gabarito": "B",
+  "pegadinha": "694-73 exige transbordo — regularização é medida do 682-31, não de carga externa dentro do limite legal",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "tabela_gradacao",
+    "arquetipo_secundario": "comparacao",
+    "publico_alvo": "iniciante",
+    "duracao_estimada_seg": 270,
+    "fundamento_slug": "CONTRAN_1003_mbft_medida_transbordo",
+    "macete_visual": "694-73 = transbordo · 682-31 = regularização",
+    "meta": {
+      "padrao_familia": "D_gradacao",
+      "pegadinha_em_uma_frase": "694-73 exige transbordo — regularização é medida do 682-31, não de carga externa dentro do limite legal",
+      "eixos_legais": [
+        "CONTRAN_1003_mbft_694_73",
+        "CTB_art_235",
+        "CTB_art_231_IV"
+      ],
+      "isca_por_alternativa": {
+        "A": "carga nas partes externas sempre exige regularização dimensional, independentemente do código MBFT",
+        "C": "projeção além da caçamba caracteriza superdimensionamento e exige 682-31 com regularização",
+        "D": "Res. 955 dispensa medida administrativa em carga indivisível na caçamba"
+      }
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Diagnóstico: 694-73 com medida errada",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito B.\n\nA — carga externa sempre exige regularização dimensional, independentemente do código MBFT.\nC — projeção além da caçamba caracteriza superdimensionamento e exige 682-31 com regularização.\nD — Res. 955 dispensa medida administrativa em carga indivisível na caçamba.\n\nPegadinha: o código 694-73 estava certo — a falha foi trocar transbordo por regularização.",
+          "destaques": ["Gabarito B", "694-73", "transbordo"]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Pré-treino: 3 termos",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "TRANSBORDO: medida administrativa do art. 235 — retirar ou redistribuir carga nas partes externas do veículo.\n\nREGULARIZAÇÃO: medida administrativa do art. 231, IV — adequar dimensões ou carga aos limites legais.\n\nPAREAMENTO CÓDIGO × MEDIDA: cada enquadramento MBFT carrega a medida do artigo CTB tipificado — não se misturam.",
+          "destaques": ["TRANSBORDO", "REGULARIZAÇÃO", "PAREAMENTO"]
+        }
+      },
+      {
+        "id": "fluxo",
+        "titulo": "Método: código certo, medida certa",
+        "secao": "metodo",
+        "tipo": "fluxograma",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "p1",
+              "label": "Dimensões dentro dos limites legais do CONTRAN?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "p2",
+              "label": "Medida registrada é transbordo?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "r1",
+              "label": "Manter 694-73 e corrigir medida — gabarito B",
+              "tipo": "resultado"
+            }
+          ],
+          "arestas": [
+            {
+              "de": "p1",
+              "para": "p2",
+              "rotulo": "Sim — 2,05 m e 2,72 m"
+            },
+            {
+              "de": "p2",
+              "para": "r1",
+              "rotulo": "Não — estava regularização"
+            }
+          ]
+        }
+      },
+      {
+        "id": "gradacao",
+        "titulo": "Graduação: código e medida",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": ["Enquadramento MBFT", "Medida administrativa"],
+          "linhas": [
+            {
+              "faixa": "694-73 — projeta caçamba, dentro limites legais",
+              "classificacao": "Retenção para transbordo (art. 235)",
+              "destaque": true
+            },
+            {
+              "faixa": "682-31 — excede limites legais de dimensão",
+              "classificacao": "Retenção para regularização (art. 231, IV)"
+            },
+            {
+              "faixa": "666-10 — equipamento proibido pelo fabricante",
+              "classificacao": "Retenção para regularização (art. 230, XII)"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Armadilha: regularização em todo caso externo",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["Crença ✗", "Lei ✓"],
+          "linhas": [
+            [
+              "Carga na caçamba sempre leva regularização",
+              "694-73 tipifica art. 235 — medida é transbordo"
+            ],
+            [
+              "Medida administrativa é intercambiável entre códigos",
+              "Cada código MBFT carrega medida do artigo CTB correspondente"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que cada alternativa erra",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["Alternativa", "Mecanismo + por quê"],
+          "linhas": [
+            [
+              "A — regra_excecao",
+              "Generaliza regularização para carga externa — ignora medida do art. 235 no 694-73"
+            ],
+            [
+              "C — regra_excecao",
+              "Troca para 682-31 só pela projeção — dimensões 2,05 m e 2,72 m estão dentro do limite legal"
+            ],
+            [
+              "D — termo_unico",
+              "Dispensa medida por permissão da Res. 955 — não afasta medida do artigo tipificado"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Resolvendo o enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["Dado do caso", "Conclusão"],
+          "linhas": [
+            [
+              "Paletes projetando 65 cm além da caçamba",
+              "Há carga nas partes externas"
+            ],
+            [
+              "Largura 2,05 m · altura 2,72 m",
+              "Dentro dos limites legais de dimensão"
+            ],
+            [
+              "Código 694-73 no AIT",
+              "Enquadramento correto"
+            ],
+            [
+              "Medida registrada: regularização",
+              "Incorreta — deve ser transbordo"
+            ],
+            [
+              "Resultado",
+              "Alternativa B — manter 694-73 e corrigir medida"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "eixo2",
+        "titulo": "Hierarquia: primeiro o código, depois a medida",
+        "secao": "conceito",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": ["Passo", "Operação"],
+          "linhas": [
+            [
+              "1. Verificar limites legais de dimensão",
+              "Dentro → 694-73 · Excede → 682-31"
+            ],
+            [
+              "2. Aplicar medida do artigo tipificado",
+              "694-73 → transbordo · 682-31 → regularização"
+            ],
+            [
+              "Caso STTP (dentro dos limites)",
+              "Código certo + medida transbordo"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei1",
+        "titulo": "CTB art. 235 — medida transbordo",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB, art. 235",
+          "texto": "Art. 235. Conduzir pessoas, animais ou carga nas partes externas do veículo, salvo nos casos devidamente autorizados: Infração - grave; Penalidade - multa; Medida administrativa - retenção do veículo para transbordo.",
+          "trechos_grifados": [
+            {
+              "inicio": 180,
+              "fim": 215,
+              "motivo": "gradacao — medida correta do 694-73 no caso da STTP",
+              "texto_grifado": "retenção do veículo para transbordo"
+            }
+          ]
+        }
+      },
+      {
+        "id": "lei2",
+        "titulo": "CTB art. 231, IV — medida regularização",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB, art. 231, IV",
+          "texto": "IV - com suas dimensões ou de sua carga superiores aos limites estabelecidos legalmente ou pela sinalização, sem autorização: Infração - grave; Penalidade - multa; Medida administrativa - retenção do veículo para regularização;",
+          "trechos_grifados": [
+            {
+              "inicio": 188,
+              "fim": 226,
+              "motivo": "contraste — medida do 682-31, não aplicável quando dimensões estão dentro do limite legal",
+              "texto_grifado": "retenção do veículo para regularização"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Macete + near/far-transfer",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "694-73 = transbordo · 682-31 = regularização · código e medida andam juntos.\nNear: mesmos paletes com transbordo já registrado — procedimento correto.\nFar: largura 2,55 m acima do limite legal — aí sim 682-31 com regularização.\nNão muda: medida administrativa segue o artigo tipificado pelo código MBFT.\nCadeia: vizinho = art. 231, IV (regularização do superdimensionamento).",
+          "destaques": ["transbordo", "regularização", "682-31"]
+        }
+      }
+    ],
+    "links_fonte": [
+      {
+        "rotulo": "Res. CONTRAN 1.003/2023",
+        "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.003, DE 21 DE DEZEMBRO DE 2023.pdf"
+      },
+      {
+        "rotulo": "CTB art. 235",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      },
+      {
+        "rotulo": "CTB art. 231",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ]
+  }
+}

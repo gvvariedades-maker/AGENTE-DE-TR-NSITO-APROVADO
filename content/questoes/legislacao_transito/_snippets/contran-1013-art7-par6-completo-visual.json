@@ -1,0 +1,289 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 275,
+  "fundamento_slug": "CONTRAN_1013_art_7_par6",
+  "macete_visual": "Estrangeiro + debito = nao sai",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Contestação não suspende prazo nem autoriza saída — §6º veda veículo estrangeiro sair com tarifa pendente",
+    "eixos_legais": [
+      "CONTRAN_1013_art_7_par6",
+      "CONTRAN_1013_art_7_par4"
+    ],
+    "isca_por_alternativa": {
+      "A": "contestação suspende prazo de pagamento e autoriza saída com débito pendente",
+      "C": "contestação no 22º dia impede medida coercitiva na fronteira até apreciação da concessionária",
+      "D": "concessionária cobra sozinha — autoridade de fronteira não pode reter veículo estrangeiro"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: contestou e quis sair",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — contestação suspende prazo e autoriza saída com débito: errado.\nC — contestação no 22º dia impede retenção até apreciação: errado.\nD — só concessionária cobra, sem retenção na fronteira: errado.\n\nPegadinha: veículo estrangeiro com tarifa pendente não pode deixar o país — mesmo com contestação aberta.",
+        "destaques": [
+          "Gabarito B",
+          "estrangeiro",
+          "contestação"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "FREE FLOW: pedágio eletrônico sem cancela — tarifa paga em até trinta dias da passagem.\n\nCONTESTAÇÃO: canal para impugnar passagem ou valor — não suspende o prazo de pagamento.\n\nRETENÇÃO: impedimento de saída do país até quitar tarifa pendente — veículo licenciado no exterior.",
+        "destaques": [
+          "FREE FLOW",
+          "CONTESTAÇÃO",
+          "RETENÇÃO"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: cabe retenção na fronteira?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Veículo licenciado no exterior?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Débito de tarifa de pedágio em free flow pendente?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Retenção lícita — gabarito B",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — placa argentina"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — 38º dia sem quitar"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Regra geral × veículo estrangeiro",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Situação",
+          "Consequência"
+        ],
+        "linhas": [
+          {
+            "faixa": "Usuário comum — tarifa vencida",
+            "classificacao": "Pode configurar 209-A pelo art. 9º caput"
+          },
+          {
+            "faixa": "Veículo licenciado no exterior — débito pendente",
+            "classificacao": "Vedada saída do país — retenção §6º",
+            "destaque": true
+          },
+          {
+            "faixa": "Contestação registrada",
+            "classificacao": "Não suspende prazo do caput — §4º"
+          },
+          {
+            "faixa": "Tarifa quitada na fronteira",
+            "classificacao": "Regularização libera saída"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: contestar libera saída",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Crença ✗",
+          "Lei ✓"
+        ],
+        "linhas": [
+          [
+            "Contestação suspende prazo e autoriza sair com débito",
+            "§4º não interrompe prazo — §6º veda saída com tarifa pendente"
+          ],
+          [
+            "Só após multa 209-A pode reter",
+            "§6º opera sobre débito de tarifa, sem exigir autuação prévia"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Trata contestação como suspensão do prazo — §4º veda interrupção do caput"
+          ],
+          [
+            "C — regra_excecao",
+            "Condiciona retenção à apreciação da contestação do 22º dia — §4º não suspende prazo nem afasta §6º"
+          ],
+          [
+            "D — competencia_snt",
+            "Nega poder de retenção na fronteira — §6º autoriza autoridade competente"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos do enunciado → gabarito",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Elemento",
+          "Conclusão"
+        ],
+        "linhas": [
+          [
+            "Veículo argentino — BR-277 free flow",
+            "Licenciado no exterior — §6º aplicável"
+          ],
+          [
+            "Contestação no 22º dia",
+            "Não suspende prazo — §4º"
+          ],
+          [
+            "38º dia — tarifa pendente",
+            "Prazo de 30 dias vencido — débito em aberto"
+          ],
+          [
+            "Tentativa de saída para Paraguai",
+            "Gabarito B — retenção lícita até regularizar"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "§6º × §4º × caput",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Art. 7º caput — vizinho",
+            "Trinta dias da passagem para pagar tarifa"
+          ],
+          [
+            "Art. 7º §4º",
+            "Contestação não interrompe prazo do caput"
+          ],
+          [
+            "Art. 7º §6º",
+            "Veda saída do país com débito — retenção até quitar"
+          ],
+          [
+            "Art. 9º caput + 209-A",
+            "Cenário distinto — autuação por evasão, não regra da fronteira"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei1",
+      "titulo": "Res. 1.013/2024, art. 7º, §6º",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 1.013/2024, art. 7º, §6º",
+        "texto": "Os veículos licenciados no exterior que possuírem débitos relacionados à tarifa de pedágio por passagem em pedágios eletrônicos não poderão deixar o país antes de efetuado o pagamento, estando sujeitos à retenção pela autoridade competente, até a regularização das pendências.",
+        "trechos_grifados": [
+          {
+            "inicio": 128,
+            "fim": 183,
+            "motivo": "fluxo — veda saida do pais com debito pendente",
+            "texto_grifado": "não poderão deixar o país antes de efetuado o pagamento"
+          },
+          {
+            "inicio": 204,
+            "fim": 275,
+            "motivo": "caso — retencao pela autoridade competente ate regularizar",
+            "texto_grifado": "retenção pela autoridade competente, até a regularização das pendências"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Res. 1.013/2024, art. 7º, §4º",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 1.013/2024, art. 7º, §4º",
+        "texto": "O registro da contestação de que trata o § 3º não interrompe o prazo previsto no caput, garantidos o direito de defesa prévia e de interposição de recursos, em caso de infração de trânsito, nos termos da Lei nº 9.503, de 1997, e dos regulamentos do Conselho Nacional de Trânsito - CONTRAN.",
+        "trechos_grifados": [
+          {
+            "inicio": 46,
+            "fim": 86,
+            "motivo": "contraste — contestacao nao suspende prazo do caput",
+            "texto_grifado": "não interrompe o prazo previsto no caput"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near/far-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "ESTRANGEIRO + DÉBITO = NÃO SAI · contestar ≠ parar relógio (§4º) · retenção sem esperar 209-A.\n\nNear: argentino quita tarifa na fronteira pelos meios do §7º — regularização libera saída.\nFar: veículo brasileiro de Campina Grande com tarifa vencida — §6º não alcança; segue art. 9º e eventual 209-A.\nNão muda: §6º exige quitação antes da saída; contestação não suspende prazo do caput.\nCadeia: vizinho = caput do art. 7º (30 dias da passagem).",
+        "destaques": [
+          "NÃO SAI",
+          "§4º",
+          "30 dias"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 1.013/2024",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.013, DE 16 DE OUTUBRO DE 2024.pdf"
+    }
+  ]
+}
