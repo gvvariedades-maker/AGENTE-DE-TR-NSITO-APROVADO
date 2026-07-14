@@ -323,11 +323,13 @@ Rodar: `npm run analyze:idecan` (gera `.cursor/skills/examinador-idecan/scripts/
 Para colocar a questão real no player com aula completa — **sem** misturar com inéditas:
 
 1. `npm run extract:reais-superior -- --pdf "<PDF SUPERIOR>.pdf"`
-2. Prompt: [prompt-questao-real-aula.md](prompt-questao-real-aula.md)
+2. Prompt: [prompt-questao-real-nova-conversa.txt](prompt-questao-real-nova-conversa.txt) (troque `Disciplina:`) · completo: [prompt-questao-real-aula.md](prompt-questao-real-aula.md)
 3. Gravar em `content/questoes-reais/{disciplina}/` com `meta.origem: "real_idecan"`
-4. `npm run validate:lote` → `npm run db:seed:reais`
+4. `npm run validate:lote` → `npm run db:seed:reais` (alias de `db:seed -- --only-reais`)
 
 `npm run proxima` / `index:questoes` **ignoram** `content/questoes-reais/`.
+
+Em path `questoes-reais/`, o `validate:lote` encadeia **`validate:aula-real`** (6º gate): contraste Crença×Lei, macete Near/Far/Não muda, 7–11 telas, `padrao_familia` + E1–E3. Ver `content/questoes-reais/_ouro/real-aula-nota-10.md`.
 
 ## Validação e indistinguibilidade
 
@@ -338,7 +340,9 @@ Ordem completa dos gates (nesta sequência, sem pular):
 | 1ª passagem | `<gate_primeira_passagem>` (self-check) | 10/10 por questão |
 | Schema + lei | `validate:questoes` | Zero erros |
 | Cobertura | `validate:cobertura` / `index:questoes` | Zero erros de eixo/enunciado |
-| Heurísticas | `validate:indistinguibilidade` | Zero erros (avisos revisados) |
+| Heurísticas | `validate:indistinguibilidade` | Zero erros (avisos revisados); D1/C6 relaxados em `real_idecan` |
+| Visual v2 | `validate:estudo-reverso-visual` + `preview:grifos` | 7–11 telas, grifos, Mayer |
+| **Paridade aula real** | `validate:aula-real` | **Só** `content/questoes-reais/` — Crença×Lei, macete transferência, meta E1–E3 |
 | Rubrica | [rubrica-indistinguibilidade.md](rubrica-indistinguibilidade.md) | Questão ≥ 85; lote média ≥ 80 |
 | Teste cego | [teste-cego.md](teste-cego.md) | ≥ 20 itens misturados; acurácia ≤ 55% |
 
@@ -370,6 +374,8 @@ O `validate-questao.ts` já verifica citações contra `conteúdo/` (`--skip-cit
 - [exemplos-ouro.md](exemplos-ouro.md) — questões modelo comentadas
 - [prompt-nova-conversa.txt](prompt-nova-conversa.txt) — **prompt pronto** (abrir, Ctrl+A, colar no Agent)
 - [prompt-questao-aula-completa.md](prompt-questao-aula-completa.md) — variantes (completo, curto, lote) + checklist
+- [prompt-questao-real-nova-conversa.txt](prompt-questao-real-nova-conversa.txt) — **prompt pronto** reais (troque `Disciplina:`)
+- [prompt-questao-real-aula.md](prompt-questao-real-aula.md) — questão **real** superior + aula (`content/questoes-reais/`)
 - `npm run proxima -- <disciplina|all>` — escolhe tópico por déficit (prioridades em `scripts/edital-topics-prioridades.ts`)
 - [rubrica-indistinguibilidade.md](rubrica-indistinguibilidade.md) — paridade com questões reais
 - [teste-cego.md](teste-cego.md) — protocolo de comparação cega

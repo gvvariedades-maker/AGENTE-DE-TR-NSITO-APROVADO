@@ -1,0 +1,232 @@
+{
+  "versao": 2,
+  "arquetipo": "diagrama_competencia",
+  "arquetipo_secundario": "comparacao",
+  "duracao_estimada_seg": 190,
+  "fundamento_slug": "CTB_art_10",
+  "macete_visual": "CONTRAN normativo · Ministro preside · Sec-Exec União · absoluta · sem voto",
+  "publico_alvo": "iniciante",
+  "links_fonte": [
+    {
+      "rotulo": "CTB",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ],
+  "meta": {
+    "near_transfer": "Confundir Senatran (executivo) com CONTRAN (normativo) — A erra o papel máximo do SNT.",
+    "far_transfer": "Secretário-Executivo do Contran é do órgão executivo da União, não do DETRAN estadual.",
+    "o_que_nao_muda": "Quórum do Contran é maioria absoluta (§6) e convidados do art. 10-A nunca votam."
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: presidência do Contran",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — Senatran não é órgão máximo normativo (CONTRAN é, art. 7º, I).\nC — Secretário-Executivo é da União, não do Estado.\nD — quórum é maioria absoluta (art. 10, §6), não simples.\nE — convidados participam sem direito a voto (art. 10-A).",
+        "destaques": [
+          "Gabarito B",
+          "CONTRAN",
+          "maioria absoluta"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 4 papéis",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CONTRAN: máximo normativo e consultivo do SNT (art. 7º, I).\nSenatran: órgão máximo executivo de trânsito da União.\nSecretário-Executivo: dirigente do executivo federal (art. 10, §5).\nConvidados: ouvem, não votam (art. 10-A).",
+        "destaques": [
+          "normativo",
+          "executivo",
+          "sem voto"
+        ]
+      }
+    },
+    {
+      "id": "diagrama",
+      "titulo": "Quem faz o quê no SNT federal",
+      "secao": "metodo",
+      "tipo": "diagrama_competencia",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "snt",
+            "label": "SNT",
+            "nivel": 0
+          },
+          {
+            "id": "contran",
+            "label": "CONTRAN — normativo (I)",
+            "nivel": 1
+          },
+          {
+            "id": "senatran",
+            "label": "Senatran — executivo União",
+            "nivel": 1
+          },
+          {
+            "id": "ministro",
+            "label": "Ministro preside Contran (§3-A)",
+            "nivel": 2
+          },
+          {
+            "id": "secex",
+            "label": "Sec-Exec = dirigente Senatran (§5)",
+            "nivel": 2
+          }
+        ],
+        "arestas": [
+          {
+            "de": "snt",
+            "para": "contran",
+            "rotulo": "coordena normas"
+          },
+          {
+            "de": "snt",
+            "para": "senatran",
+            "rotulo": "executa"
+          },
+          {
+            "de": "contran",
+            "para": "ministro",
+            "rotulo": "presidência"
+          },
+          {
+            "de": "senatran",
+            "para": "secex",
+            "rotulo": "secretaria"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Normativo × executivo",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Órgão",
+          "Papel"
+        ],
+        "linhas": [
+          [
+            "CONTRAN (art. 7º, I)",
+            "Máximo normativo e consultivo — coordena o SNT"
+          ],
+          [
+            "Senatran",
+            "Máximo executivo federal — aplica e fiscaliza"
+          ],
+          [
+            "DETRAN estadual",
+            "Executivo estadual — não preside o Contran"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que A, C, D e E erram",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — competencia_snt",
+            "Troca CONTRAN (normativo) por Senatran (executivo)"
+          ],
+          [
+            "C — competencia_snt",
+            "Secretário-Executivo é do executivo da União, não do Estado"
+          ],
+          [
+            "D — prazo_quorum",
+            "Quórum é maioria absoluta (§6), não maioria simples"
+          ],
+          [
+            "E — competencia_snt",
+            "Art. 10-A: convidados participam sem direito a voto"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Bate com a lei?",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Afirmativa",
+          "CTB"
+        ],
+        "linhas": [
+          [
+            "B — Ministro preside Contran",
+            "Art. 10, §3-A — correto"
+          ],
+          [
+            "D — maioria simples",
+            "§6 diz maioria absoluta — errado"
+          ],
+          [
+            "E — com voto",
+            "Art. 10-A — sem voto — errado"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 10, §3-A e §6",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 10, §§ 3-A, 5 e 6",
+        "texto": "§ 3º-A. O Contran será presidido pelo Ministro de Estado ao qual estiver subordinado o órgão máximo executivo de trânsito da União. § 5º Compete ao dirigente do órgão máximo executivo de trânsito da União atuar como Secretário-Executivo do Contran. § 6º O quórum de votação e de aprovação no Contran é o de maioria absoluta.",
+        "trechos_grifados": [
+          {
+            "inicio": 0,
+            "fim": 120,
+            "motivo": "gabarito B — presidência do Contran",
+            "texto_grifado": "§ 3º-A. O Contran será presidido pelo Ministro de Estado ao qual estiver subordinado o órgão máximo executivo de trânsito da União."
+          },
+          {
+            "inicio": 121,
+            "fim": 230,
+            "motivo": "pegadinha C — Secretário-Executivo é da União",
+            "texto_grifado": "§ 5º Compete ao dirigente do órgão máximo executivo de trânsito da União atuar como Secretário-Executivo do Contran."
+          },
+          {
+            "inicio": 231,
+            "fim": 320,
+            "motivo": "pegadinha D — maioria absoluta",
+            "texto_grifado": "§ 6º O quórum de votação e de aprovação no Contran é o de maioria absoluta."
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CONTRAN normativo · Senatran executivo.\nNear: não troque Senatran por coordenador normativo.\nFar: Sec-Exec é federal, não DETRAN.\nNão muda: quórum absoluto e convidado sem voto.",
+        "destaques": [
+          "CONTRAN",
+          "absoluta",
+          "sem voto"
+        ]
+      }
+    }
+  ]
+}

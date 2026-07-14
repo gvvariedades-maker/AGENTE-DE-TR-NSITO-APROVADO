@@ -1,0 +1,381 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_918_multas",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_percentual",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_918_art_21_desconto",
+    "enunciado": "Condutor autuado pela STTP em Campina Grande/PB recebeu Notificação de Penalidade por sistema de notificação eletrônica, no valor original de R$ 294,00 (infração gravíssima). Optou por não apresentar defesa prévia nem recurso, reconhecendo o cometimento da infração, e quitou R$ 176,40 até a data de vencimento indicada na NP. A coordenação financeira sustenta que o desconto máximo seria de 80% do valor original, nos termos do art. 20 da Resolução CONTRAN nº 918/2022. Considerando a Res. 918/2022, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O pagamento é irregular, pois o desconto máximo até o vencimento é de 80% do valor original — art. 20 — e o art. 21 não se aplica quando a NP é emitida pela STTP.",
+      "B": "O pagamento é regular, pois o art. 21 autoriza o valor equivalente a 60% do original quando o infrator recebe a NP por notificação eletrônica, não apresenta defesa prévia nem recurso e reconhece a infração, até o vencimento.",
+      "C": "O pagamento é irregular, pois o reconhecimento da infração exige quitação integral de 100% do valor original, sem qualquer desconto previsto na Resolução.",
+      "D": "O pagamento é regular apenas se efetuado em até cinco dias da emissão da NP — após esse prazo, mesmo com notificação eletrônica, o desconto máximo seria de 80% pelo art. 20."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Graduação de desconto no pagamento de multa — art. 20 (80% até vencimento) × art. 21 (60% com NP eletrônica + sem defesa + reconhecimento).",
+      "fundamento_legal": "Res. CONTRAN 918/2022, art. 20: para pagamento da multa até a data de vencimento indicada na NP, será cobrado o valor equivalente a 80% (oitenta por cento) do valor original da multa, conforme caput do art. 284 do CTB, de acordo com a seguinte fórmula: I - valor original x 0,80 = valor a pagar. Art. 21: quando o infrator optar pelo recebimento da NP pelo sistema de notificação eletrônica e opte por não apresentar defesa prévia nem recurso, reconhecendo o cometimento da infração, conforme previsto no § 1º do art. 284 do CTB, poderá efetuar o pagamento da multa pelo valor equivalente a 60% (sessenta por cento) do seu valor original, em qualquer fase do processo, até o vencimento da multa, de acordo com a seguinte fórmula: I - valor original x 0,60 = valor a pagar.",
+      "passo_a_passo": [
+        "1. Caso: NP eletrônica STTP, R$ 294,00, sem defesa prévia, reconhecimento da infração, pagamento de R$ 176,40 (60%) até vencimento.",
+        "2. A erra por regra_excecao (generaliza art. 20 e ignora art. 21 — NP eletrônica + confissão autoriza 60%); C erra por termo_unico (inventa quitação integral obrigatória ao reconhecer); D erra por numero_vizinho (cria prazo de cinco dias inexistente — art. 21 exige pagamento até vencimento, não em cinco dias da emissão).",
+        "3. B correta: 294 × 0,60 = 176,40 — art. 21 prevalece sobre o desconto geral de 80% do art. 20 quando cumpridos os requisitos cumulativos."
+      ],
+      "pegadinha": "A IDECAN induz a crer que o teto de desconto é sempre 80% até o vencimento — mas NP eletrônica com reconhecimento da infração autoriza pagamento a 60% pelo art. 21.",
+      "macete": "NP eletrônica + confissão = 60% · vencimento simples = 80%.",
+      "estudo_reverso": [
+        "Res. CONTRAN 918/2022 art. 20",
+        "Res. CONTRAN 918/2022 art. 21",
+        "Res. CONTRAN 918/2022 art. 22",
+        "CTB art. 284"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "D_gradacao",
+      "pegadinha_em_uma_frase": "NP eletrônica com reconhecimento da infração autoriza 60%, não apenas 80% do art. 20",
+      "eixos_legais": [
+        "CONTRAN_918_art_20",
+        "CONTRAN_918_art_21"
+      ],
+      "eixo_vizinho": "CONTRAN_918_art_22",
+      "isca_por_alternativa": {
+        "A": "desconto máximo de 80% pelo art. 20, sem aplicar art. 21 à NP eletrônica da STTP",
+        "C": "reconhecimento da infração exige quitação integral de 100% sem desconto",
+        "D": "desconto de 60% só em até cinco dias da emissão da NP, não até o vencimento"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico",
+        "numero_vizinho"
+      ],
+      "near_transfer": "Mesma multa com NP eletrônica, mas condutor apresentou defesa prévia — aí o teto volta a 80% pelo art. 20, não 60%.",
+      "far_transfer": "Pagamento no mês seguinte ao vencimento — art. 22 cobra valor original acrescido de 1% de juros, sem desconto de 60% ou 80%.",
+      "o_que_nao_muda": "NP eletrônica + sem defesa + reconhecimento = 60% até vencimento; desconto de 80% do art. 20 é regra geral quando não há confissão eletrônica.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "resolucao_918",
+      "multas",
+      "desconto",
+      "np_eletronica",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_918_art_21_desconto",
+      "macete_visual": "NP eletronica + confissao = 60% · vencimento = 80%",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: R$ 176,40 = 60% de R$ 294,00 — NP eletrônica com reconhecimento da infração.",
+            "destaques": ["Gabarito B", "60%", "176,40"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Graduação de desconto",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Condição", "Valor"],
+            "linhas": [
+              {
+                "faixa": "Até vencimento (regra geral)",
+                "classificacao": "80% — art. 20"
+              },
+              {
+                "faixa": "NP eletrônica + sem defesa + confissão",
+                "classificacao": "60% — art. 21",
+                "destaque": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "NP eletrônica + confissão = 60%.\nVencimento simples = 80%.",
+            "destaques": ["60%", "80%", "confissão"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 918/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 918, DE 28 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 265,
+      "fundamento_slug": "CONTRAN_918_art_21_desconto",
+      "macete_visual": "NP eletronica + confissao = 60% · vencimento = 80%",
+      "meta": {
+        "padrao_familia": "D_gradacao",
+        "pegadinha_em_uma_frase": "NP eletrônica com reconhecimento da infração autoriza 60%, não apenas 80% do art. 20",
+        "eixos_legais": [
+          "CONTRAN_918_art_20",
+          "CONTRAN_918_art_21"
+        ],
+        "isca_por_alternativa": {
+          "A": "desconto máximo de 80% pelo art. 20, sem aplicar art. 21 à NP eletrônica da STTP",
+          "C": "reconhecimento da infração exige quitação integral de 100% sem desconto",
+          "D": "desconto de 60% só em até cinco dias da emissão da NP, não até o vencimento"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: coordenação fixou 80%",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — desconto máximo de 80% sem aplicar regra da NP eletrônica com confissão.\nC — reconhecimento da infração exige quitação integral de 100% sem desconto.\nD — desconto de 60% só em até cinco dias da emissão, não até o vencimento.\n\nPegadinha: R$ 176,40 é 60% de R$ 294,00 — NP eletrônica com reconhecimento autoriza desconto maior que 80%.",
+            "destaques": ["Gabarito B", "60%", "176,40"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "NP ELETRÔNICA: notificação recebida por sistema eletrônico — requisito do art. 21 para desconto de 60%.\n\nRECONHECIMENTO DA INFRAÇÃO: opção por não apresentar defesa prévia nem recurso — cumulativo com NP eletrônica.\n\nVENCIMENTO: data-limite na NP — prazo para 60% ou 80%, distinto de prazo fictício de cinco dias.",
+            "destaques": ["NP ELETRÔNICA", "RECONHECIMENTO", "VENCIMENTO"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Graduação: quanto pagar?",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Condição de pagamento", "Percentual"],
+            "linhas": [
+              {
+                "faixa": "Até vencimento — regra geral",
+                "classificacao": "80% do original — art. 20"
+              },
+              {
+                "faixa": "NP eletrônica + sem defesa + confissão",
+                "classificacao": "60% do original — art. 21",
+                "destaque": true
+              },
+              {
+                "faixa": "Mês após vencimento",
+                "classificacao": "Original + 1% — art. 22"
+              },
+              {
+                "faixa": "Após mês subsequente ao vencimento",
+                "classificacao": "SELIC + 1% — art. 23"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual desconto no caso?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "NP recebida por sistema de notificação eletrônica?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Sem defesa prévia e com reconhecimento da infração?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "60% até vencimento — gabarito B",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — NP eletrônica STTP"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — condutor confessou e quitou 176,40"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: teto sempre 80%",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Desconto máximo até vencimento é 80%",
+                "NP eletrônica + confissão autoriza 60% pelo art. 21"
+              ],
+              [
+                "Reconhecimento exige pagamento integral",
+                "Confissão reduz para 60%, não elimina desconto"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Generaliza art. 20 (80%) — ignora art. 21 para NP eletrônica com confissão"
+              ],
+              [
+                "C — termo_unico",
+                "Inventa quitação integral obrigatória ao reconhecer a infração"
+              ],
+              [
+                "D — numero_vizinho",
+                "Cria prazo de cinco dias inexistente — art. 21 usa vencimento da NP"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Cálculo do enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Conta", "Resultado"],
+            "linhas": [
+              [
+                "Valor original da multa",
+                "R$ 294,00"
+              ],
+              [
+                "294 × 0,60",
+                "R$ 176,40 — art. 21"
+              ],
+              [
+                "294 × 0,80 (se só art. 20)",
+                "R$ 235,20 — não é o caso"
+              ],
+              [
+                "Pagamento efetuado",
+                "R$ 176,40 até vencimento"
+              ],
+              [
+                "Resultado",
+                "Alternativa B"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Art. 20 × art. 21",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              [
+                "Art. 20 — 80% até vencimento",
+                "Regra geral — coordenação fixou este teto erroneamente"
+              ],
+              [
+                "Art. 21 — 60% com confissão",
+                "Prevalece quando NP eletrônica + sem defesa + reconhecimento"
+              ],
+              [
+                "Art. 22 — após vencimento",
+                "Cenário distinto: original + 1% no mês seguinte"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Res. 918/2022, art. 20",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 918/2022, art. 20",
+            "texto": "Para pagamento da multa até a data de vencimento indicada na NP, será cobrado o valor equivalente a 80% (oitenta por cento) do valor original da multa, conforme caput do art. 284 do CTB, de acordo com a seguinte fórmula: I - valor original x 0,80 = valor a pagar.",
+            "trechos_grifados": [
+              {
+                "inicio": 65,
+                "fim": 150,
+                "motivo": "gradacao — regra geral de 80% até vencimento",
+                "texto_grifado": "será cobrado o valor equivalente a 80% (oitenta por cento) do valor original da multa"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Res. 918/2022, art. 21",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 918/2022, art. 21",
+            "texto": "Quando o infrator optar pelo recebimento da NP pelo sistema de notificação eletrônica e opte por não apresentar defesa prévia nem recurso, reconhecendo o cometimento da infração, poderá efetuar o pagamento da multa pelo valor equivalente a 60% (sessenta por cento) do seu valor original, até o vencimento da multa.",
+            "trechos_grifados": [
+              {
+                "inicio": 179,
+                "fim": 286,
+                "motivo": "contraste — desconto de 60% no caso da NP eletrônica com confissão",
+                "texto_grifado": "poderá efetuar o pagamento da multa pelo valor equivalente a 60% (sessenta por cento) do seu valor original"
+              },
+              {
+                "inicio": 47,
+                "fim": 177,
+                "motivo": "caso — requisitos cumulativos satisfeitos no enunciado",
+                "texto_grifado": "pelo sistema de notificação eletrônica e opte por não apresentar defesa prévia nem recurso, reconhecendo o cometimento da infração"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "NP eletrônica + confissão = 60% · vencimento simples = 80%.\n\nNear: mesma NP eletrônica, mas com defesa prévia apresentada — teto volta a 80% pelo art. 20.\nFar: pagamento no mês após vencimento — art. 22 cobra original + 1%, sem 60% nem 80%.\nNão muda: NP eletrônica + sem defesa + reconhecimento = 60% até vencimento.\nCadeia: vizinho = art. 22 (mora após vencimento).",
+            "destaques": ["60%", "80%", "art. 22", "vencimento"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 918/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 918, DE 28 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    }
+  }
+]

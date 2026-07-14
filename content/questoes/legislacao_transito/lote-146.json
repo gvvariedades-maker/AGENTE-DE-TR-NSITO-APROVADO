@@ -1,0 +1,377 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_1012_rsv",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_1012_art_18_rotativo",
+    "enunciado": "Agente da STTP em Campina Grande/PB constata automóvel estacionado em área de estacionamento rotativo pago na Av. Epitácio Pessoa, com credencial de pessoa com deficiência válida no painel e sem comprovante de pagamento da tarifa municipal. O condutor alega que a credencial o dispensa do rotativo. O supervisor questiona o enquadramento. Considerando a Resolução CONTRAN nº 965/2022 (RSV — alterada pela Res. 1.012/2024), assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A credencial não exime o pagamento do rotativo pago — art. 18 da Res. 965/2022 — e o estacionamento sem cumprir a condição regulamentada do rotativo enquadra-se no art. 181, XVII, do CTB, nos termos do art. 21, I, da mesma Resolução.",
+      "B": "A credencial dispensa o pagamento do rotativo pago quando o beneficiário estaciona em via pública regulamentada pela STTP, pois o art. 11 da Res. 965/2022 autoriza o uso da credencial em todo o território nacional.",
+      "C": "Subsiste apenas autuação pelo art. 181, XX, do CTB, por estacionar fora de vaga reservada a pessoa com deficiência, afastando o art. 181, XVII, quando há credencial válida no painel.",
+      "D": "A STTP não pode autuar pelo rotativo pago, pois a cobrança e a fiscalização da tarifa competem exclusivamente ao permissionário do estacionamento, sem tipificação no CTB."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Credencial em rotativo pago — art. 18 (não exime cobrança) × art. 21, I / CTB art. 181, XVII (desacordo com condição regulamentada) — Res. 965/2022 (RSV).",
+      "fundamento_legal": "Res. CONTRAN 965/2022, art. 18: a credencial não exime o beneficiário do pagamento de cobranças em estacionamento rotativo pago, em estabelecimentos privados de uso coletivo, entre outros. Art. 21, I: art. 181, XVII, do CTB, quando o veículo estiver estacionado em desacordo com o horário, o local, ou qualquer outra condição regulamentada especificamente pela sinalização, nos termos desta Resolução. CTB, art. 181, XVII: estacionar em desacordo com as condições regulamentadas especificamente pela sinalização (placa — Estacionamento Regulamentado). Res. CONTRAN 965/2022, art. 3º, VI: área de estacionamento rotativo é a parte da via sinalizada para estacionamento de veículos, gratuito ou pago.",
+      "passo_a_passo": [
+        "1. Caso: rotativo pago na Av. Epitácio Pessoa, credencial PcD válida no painel, sem pagamento da tarifa — condutor alega dispensa.",
+        "2. B erra por regra_excecao (generaliza validade nacional do art. 11 e ignora art. 18 — credencial não exime rotativo pago); C erra por gravidade (fixa art. 181, XX, de vaga reservada, ignorando desacordo com condição do rotativo — art. 181, XVII); D erra por competencia_snt (atribui fiscalização exclusiva ao permissionário — STTP fiscaliza via pública e aplica CTB).",
+        "3. A correta: art. 18 veda dispensa do rotativo + art. 21, I, remete ao art. 181, XVII, pelo descumprimento da condição regulamentada."
+      ],
+      "pegadinha": "A IDECAN induz a crer que credencial PcD dispensa qualquer cobrança em via pública — mas o art. 18 da Res. 965/2022 exclui expressamente o rotativo pago.",
+      "macete": "Credencial ≠ isenção de rotativo · art. 18 · sem pagar = art. 181, XVII.",
+      "estudo_reverso": [
+        "Res. CONTRAN 965/2022 art. 18",
+        "Res. CONTRAN 965/2022 art. 21",
+        "CTB art. 181, XVII"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Credencial PcD válida não dispensa pagamento do estacionamento rotativo pago",
+      "eixos_legais": [
+        "CONTRAN_1012_art_18_rotativo",
+        "CONTRAN_965_art_21_I",
+        "CTB_art_181_XVII"
+      ],
+      "eixo_vizinho": "CONTRAN_1012_art_12A_4",
+      "isca_por_alternativa": {
+        "B": "credencial dispensa rotativo pago por valer em todo o território nacional",
+        "C": "só art. 181, XX, afastando XVII quando há credencial no painel",
+        "D": "STTP não pode autuar rotativo — competência exclusiva do permissionário"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "gravidade",
+        "competencia_snt"
+      ],
+      "near_transfer": "Mesma credencial em estacionamento de estabelecimento privado de uso coletivo com cobrança — art. 18 também não exime o pagamento.",
+      "far_transfer": "Veículo com credencial estacionado em área de segurança sinalizada R-6c — parada e estacionamento proibidos para qualquer veículo, independentemente da credencial (art. 6º da Res. 965/2022).",
+      "o_que_nao_muda": "A credencial habilita vagas reservadas e fiscalização própria — não afasta cobrança do rotativo pago nem descumprimento de condição regulamentada.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "resolucao_1012",
+      "resolucao_965",
+      "rotativo",
+      "credencial",
+      "vaga_pcd",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_1012_art_18_rotativo",
+      "macete_visual": "Credencial ≠ rotativo pago",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A: credencial não exime rotativo pago — art. 18 — sem tarifa = art. 181, XVII.",
+            "destaques": ["Gabarito A", "art. 18", "rotativo"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Credencial × rotativo pago",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Credencial PcD dispensa rotativo pago",
+                "Art. 18: credencial não exime cobrança do rotativo"
+              ],
+              [
+                "Com credencial no painel não cabe art. 181, XVII",
+                "Descumprir condição do rotativo = art. 181, XVII"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Credencial ≠ isenção de rotativo.\nArt. 18 · sem pagar = art. 181, XVII.",
+            "destaques": ["art. 18", "rotativo", "XVII"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 965/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.012, DE 14 DE OUTUBRO DE 2024.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 285,
+      "fundamento_slug": "CONTRAN_1012_art_18_rotativo",
+      "macete_visual": "Credencial ≠ rotativo pago",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Credencial PcD válida não dispensa pagamento do estacionamento rotativo pago",
+        "eixos_legais": [
+          "CONTRAN_1012_art_18_rotativo",
+          "CTB_art_181_XVII"
+        ],
+        "isca_por_alternativa": {
+          "B": "credencial dispensa rotativo pago por valer em todo o território nacional",
+          "C": "só art. 181, XX, afastando XVII quando há credencial no painel",
+          "D": "STTP não pode autuar rotativo — competência exclusiva do permissionário"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: credencial no rotativo sem tarifa",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — credencial dispensa rotativo pago por valer em todo o território nacional.\nC — só infração de vaga reservada, afastando desacordo com condição do rotativo quando há credencial no painel.\nD — STTP não pode autuar rotativo — competência exclusiva do permissionário.\n\nPegadinha: credencial PcD válida não dispensa pagamento do rotativo pago.",
+            "destaques": ["Gabarito A", "rotativo pago", "credencial"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ROTATIVO PAGO: área de estacionamento regulamentada com cobrança de tarifa — art. 3º, VI, da Res. 965/2022.\n\nCREDENCIAL: documento que habilita uso de vagas reservadas — não isenta cobranças do rotativo (art. 18).\n\nESTACIONAMENTO REGULAMENTADO: condições de horário, local e pagamento fixadas pela sinalização — art. 181, XVII, do CTB.",
+            "destaques": ["ROTATIVO PAGO", "CREDENCIAL", "REGULAMENTADO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: credencial dispensa rotativo?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Veículo em área de rotativo pago sem comprovante de tarifa?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Condutor alega dispensa por credencial PcD válida?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Credencial não exime rotativo — gabarito A",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — Av. Epitácio Pessoa"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Credencial não exime rotativo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "O que a credencial faz e não faz",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Situação", "Efeito da credencial"],
+            "linhas": [
+              [
+                "Vaga reservada PcD/idoso — Cap. V",
+                "Habilita estacionamento com credencial válida"
+              ],
+              [
+                "Rotativo pago — art. 18",
+                "Não exime pagamento da tarifa"
+              ],
+              [
+                "Estabelecimento privado coletivo — art. 18",
+                "Não exime cobranças"
+              ],
+              [
+                "Descumprimento de condição do rotativo",
+                "Art. 181, XVII, do CTB"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: credencial = isenção total",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Credencial PcD dispensa rotativo pago na via",
+                "Art. 18 exclui expressamente o rotativo pago"
+              ],
+              [
+                "Com credencial no painel não há infração de estacionamento",
+                "Sem tarifa no rotativo = desacordo regulamentado — art. 181, XVII"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — regra_excecao",
+                "Generaliza validade nacional do art. 11 — ignora vedação expressa do art. 18 ao rotativo pago"
+              ],
+              [
+                "C — gravidade",
+                "Fixa art. 181, XX, de vaga reservada — ignora desacordo com condição do rotativo (XVII)"
+              ],
+              [
+                "D — competencia_snt",
+                "Atribui fiscalização exclusiva ao permissionário — STTP fiscaliza via pública e aplica CTB"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "Rotativo pago na Av. Epitácio Pessoa",
+                "Área regulamentada com tarifa municipal"
+              ],
+              [
+                "Credencial PcD válida no painel",
+                "Não dispensa pagamento — art. 18"
+              ],
+              [
+                "Sem comprovante de tarifa",
+                "Desacordo com condição regulamentada"
+              ],
+              [
+                "Resultado",
+                "Alternativa A — art. 181, XVII"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Competência STTP × tipificação XVII/XX",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Eixo", "Regra no caso"],
+            "linhas": [
+              [
+                "STTP × permissionário do rotativo",
+                "STTP fiscaliza via pública e aplica CTB — cobrança não é exclusiva do permissionário"
+              ],
+              [
+                "Art. 181, XVII — estacionamento regulamentado",
+                "Descumprir condição do rotativo sem tarifa"
+              ],
+              [
+                "Art. 181, XX — vaga reservada PcD",
+                "Só quando o veículo ocupa vaga reservada sem credencial"
+              ],
+              [
+                "Caso Epitácio Pessoa",
+                "XVII pelo rotativo — não XX"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Res. 965/2022 — art. 18",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 965/2022, art. 18 (RSV — vigente com alterações da Res. 1.012/2024)",
+            "texto": "Art. 18. A credencial não exime o beneficiário do pagamento de cobranças em estacionamento rotativo pago, em estabelecimentos privados de uso coletivo, entre outros.",
+            "trechos_grifados": [
+              {
+                "inicio": 22,
+                "fim": 104,
+                "motivo": "contraste — vedação expressa à dispensa do rotativo pago",
+                "texto_grifado": "não exime o beneficiário do pagamento de cobranças em estacionamento rotativo pago"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Res. 965/2022 — art. 21, I",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 965/2022, art. 21, I (remissão ao CTB art. 181, XVII)",
+            "texto": "Art. 21. O descumprimento do disposto nesta Resolução implicará, conforme o caso, na aplicação ao infrator das seguintes penalidades e medidas administrativas previstas no CTB: I - art. 181, inciso XVII: quando o veículo estiver estacionado em desacordo com o horário, o local, ou qualquer outra condição regulamentada especificamente pela sinalização, nos termos desta Resolução;",
+            "trechos_grifados": [
+              {
+                "inicio": 241,
+                "fim": 351,
+                "motivo": "caso — tipificação do rotativo sem cumprir condição regulamentada",
+                "texto_grifado": "em desacordo com o horário, o local, ou qualquer outra condição regulamentada especificamente pela sinalização"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Credencial ≠ isenção de rotativo · art. 18 · sem pagar = art. 181, XVII.\n\nNear: mesma credencial em shopping com cobrança de estacionamento — art. 18 também não exime.\nFar: credencial em área de segurança R-6c — parada e estacionamento proibidos para qualquer veículo.\nNão muda: credencial habilita vagas reservadas, não afasta rotativo pago.\nCadeia: vizinho = credencial digital vinculada dispensa painel (art. 12-A §4).",
+            "destaques": ["art. 18", "shopping", "área de segurança", "art. 12-A"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 965/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.012, DE 14 DE OUTUBRO DE 2024.pdf"
+        },
+        {
+          "rotulo": "CTB art. 181, XVII",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

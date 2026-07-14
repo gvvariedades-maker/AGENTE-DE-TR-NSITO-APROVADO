@@ -1,0 +1,207 @@
+{
+  "tec_id": "676461",
+  "disciplina": "informatica",
+  "gabarito": "A",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "tabela_gradacao",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 195,
+    "fundamento_slug": "info_UCP_ULA",
+    "macete_visual": "ULA=calcula · UC=coordena · Cache/Reg=guardam",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "Anexo I — Informática, item 1.1 (Hardware)",
+        "path": "conteúdo/edital/"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Coordena instruções = Unidade de Controle (B).",
+      "far_transfer": "HDD armazena arquivos — não calcula na UCP.",
+      "o_que_nao_muda": "ULA = cálculos matemáticos e operações lógicas."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito A (Unidade Lógica de Processamento).\n\nB — Unidade de Controle: coordena, não calcula.\nC — memória cache: armazena para acesso rápido.\nD — registradores: guardam operandos — cálculo é da ULA.\n\nPegadinha: quatro componentes da UCP — só a ULA executa cálculos.",
+          "destaques": [
+            "Gabarito A",
+            "ULA",
+            "cálculos"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Pré-treino: 4 funções",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "ULA: Unidade Lógica e Aritmética — também chamada Unidade Lógica de Processamento — faz cálculos.\nUNIDADE DE CONTROLE: decodifica e coordena instruções.\nCACHE: memória rápida auxiliar.\nREGISTRADORES: células internas que guardam operandos.",
+          "destaques": [
+            "ULA",
+            "UNIDADE DE CONTROLE",
+            "REGISTRADORES"
+          ]
+        }
+      },
+      {
+        "id": "gradacao",
+        "titulo": "Mapa: quem faz o quê na UCP",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": [
+            "Componente",
+            "Função"
+          ],
+          "linhas": [
+            {
+              "faixa": "ULA (ULP)",
+              "classificacao": "Cálculos matemáticos e operações lógicas",
+              "destaque": true
+            },
+            {
+              "faixa": "Unidade de Controle",
+              "classificacao": "Coordena fluxo de instruções"
+            },
+            {
+              "faixa": "Memória cache",
+              "classificacao": "Armazena dados para acesso rápido"
+            },
+            {
+              "faixa": "Registradores",
+              "classificacao": "Armazenam operandos temporários"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × conceito",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Conceito ✓"
+          ],
+          "linhas": [
+            [
+              "Unidade de Controle executa cálculos matemáticos",
+              "ULA executa cálculos e operações lógicas"
+            ],
+            [
+              "Memória cache realiza operações aritméticas",
+              "Cache armazena dados para reduzir latência"
+            ],
+            [
+              "Registradores são a unidade que calcula",
+              "Registradores guardam operandos — ULA calcula"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que B, C e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Mecanismo + por quê"
+          ],
+          "linhas": [
+            [
+              "B — termo_unico",
+              "Atribui cálculos à Unidade de Controle — função dela é coordenar instruções"
+            ],
+            [
+              "C — termo_unico",
+              "Confunde cache (armazenamento rápido) com unidade aritmética"
+            ],
+            [
+              "D — termo_unico",
+              "Registradores guardam operandos — quem executa a operação é a ULA"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Pergunta do enunciado",
+            "Resposta"
+          ],
+          "linhas": [
+            [
+              "Realiza cálculos matemáticos e operações lógicas",
+              "ULA — Unidade Lógica de Processamento (A)"
+            ],
+            [
+              "Coordena instruções",
+              "Unidade de Controle — não é o gabarito"
+            ],
+            [
+              "Armazena dados temporários",
+              "Cache ou Registradores — não calculam"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Referência — funções da UCP",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "Anexo I — Informática, item 1.1 (Hardware)",
+          "texto": "A ULA (Unidade Lógica e Aritmética), também chamada Unidade Lógica de Processamento, executa cálculos matemáticos e operações lógicas. A Unidade de Controle coordena o fluxo de instruções. Registradores e memória cache armazenam dados temporários — não realizam cálculos.",
+          "trechos_grifados": [
+            {
+              "inicio": 85,
+              "fim": 133,
+              "motivo": "caso — gabarito A (ULA calcula)",
+              "texto_grifado": "executa cálculos matemáticos e operações lógicas"
+            },
+            {
+              "inicio": 137,
+              "fim": 173,
+              "motivo": "contraste — B erra ao atribuir cálculos à UC",
+              "texto_grifado": "Unidade de Controle coordena o fluxo"
+            },
+            {
+              "inicio": 219,
+              "fim": 246,
+              "motivo": "contraste — C e D armazenam, não calculam",
+              "texto_grifado": "armazenam dados temporários"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "ULA calcula · UC coordena · Cache/Registradores guardam.\nNear: quem coordena instruções? → Unidade de Controle (B).\nFar: HDD armazena arquivos — não é componente que calcula na UCP.\nNão muda: ULA = cálculos matemáticos e operações lógicas.",
+          "destaques": [
+            "ULA",
+            "Near",
+            "Não muda"
+          ]
+        }
+      }
+    ]
+  }
+}

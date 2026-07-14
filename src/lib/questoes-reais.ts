@@ -2,13 +2,12 @@ import { sql } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { questions, topics } from "@/lib/db/schema";
 import { DISCIPLINAS, type Disciplina } from "@/types";
+import {
+  TAG_QUESTAO_REAL_IDECAN,
+  isQuestaoRealIdecan,
+} from "@/lib/questoes-reais-tags";
 
-/** Tag gravada no seed de `content/questoes-reais/`. */
-export const TAG_QUESTAO_REAL_IDECAN = "real_idecan";
-
-export function isQuestaoRealIdecan(tags: string[] | null | undefined): boolean {
-  return tags?.includes(TAG_QUESTAO_REAL_IDECAN) ?? false;
-}
+export { TAG_QUESTAO_REAL_IDECAN, isQuestaoRealIdecan };
 
 /** Filtro SQL: coluna `tags` contém questão real IDECAN. */
 export function sqlSomenteQuestoesReais(coluna = "q.tags") {

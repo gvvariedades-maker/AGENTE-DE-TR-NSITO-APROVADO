@@ -18,8 +18,20 @@ export function TelaRenderer({ tela }: TelaRendererProps) {
       return <TelaTextoDestaque conteudo={tela.conteudo} />;
     case "fluxograma":
       return <TelaFluxograma conteudo={tela.conteudo} />;
-    case "comparacao":
-      return <TelaComparacao conteudo={tela.conteudo} />;
+    case "comparacao": {
+      const id = tela.id.toLowerCase();
+      const titulo = tela.titulo.toLowerCase();
+      const humanizarDistratores =
+        id.includes("distrat") ||
+        titulo.includes("errada") ||
+        titulo.includes("distrator");
+      return (
+        <TelaComparacao
+          conteudo={tela.conteudo}
+          humanizarDistratores={humanizarDistratores}
+        />
+      );
+    }
     case "matriz_assertivas":
       return <TelaMatrizAssertivas conteudo={tela.conteudo} />;
     case "tabela_gradacao":

@@ -1,0 +1,313 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_900_recursos",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_900_art_9",
+    "enunciado": "Transportadora solidariamente responsável por multa de excesso de peso lavrada pela STTP em Campina Grande/PB apresentou recurso em primeira instância tempestivo e formalmente regular. A JARI intimou a empresa a juntar, em dez dias, cópia do manifesto de carga para comprovar alegação de erro na pesagem. A transportadora não atendeu a intimação. O relator sustenta que o recurso deve ser arquivado sem julgamento por descumprimento da diligência. Outro conselheiro afirma que a STTP poderia obter o Auto de Infração e demais dados da autuação de seus próprios arquivos, sem exigir cópia do requerente. Considerando a Resolução CONTRAN nº 900/2022, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O recurso deve ser arquivado sem julgamento, pois a transportadora descumpriu a intimação e a JARI fica impedida de prosseguir sem o manifesto de carga solicitado.",
+      "B": "O recurso deve ser analisado e julgado no estado em que se encontra, nos termos do parágrafo único do art. 9º, ainda sem o manifesto; o órgão autuador deve suprir informações disponíveis em seus arquivos, conforme o art. 10.",
+      "C": "O recurso somente será conhecido se a transportadora juntar o manifesto no prazo fixado — a intimação do art. 9º torna o documento indispensável à admissibilidade.",
+      "D": "A intimação suspende o prazo recursal até o cumprimento da diligência — sem manifesto em dez dias, o processo retorna à fase de defesa prévia junto à STTP."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Intimação probatória na fase recursal — art. 9º (solicitação de documentos × julgamento no estado) × art. 10 (suprimento pelo órgão quando disponível), com legitimidade do transportador (art. 2º, IV).",
+      "fundamento_legal": "Res. CONTRAN 900/2022, art. 2º, IV: o transportador, quando responsável exclusiva ou solidariamente pela infração, é parte legítima para apresentar defesa prévia ou recurso. Art. 9º: o órgão ou entidade de trânsito e os órgãos recursais poderão solicitar ao requerente que apresente documentos ou outras provas admitidas em direito, definindo prazo para sua apresentação. Parágrafo único: caso não seja atendida a solicitação citada no caput, será a defesa prévia ou o recurso analisado e julgado no estado que se encontra. Art. 10: o órgão ou entidade de trânsito ou os órgãos recursais deverão suprir eventual ausência de informação ou documento, quando disponível.",
+      "passo_a_passo": [
+        "1. Caso: transportadora legitimada recorre; JARI intima manifesto em 10 dias; requerente não atende; relator pede arquivamento sem julgamento.",
+        "2. A erra por regra_excecao (inventa arquivamento obrigatório por descumprimento — § único do art. 9 manda julgar no estado); C erra por termo_unico (transforma intimação em requisito de admissibilidade); D erra por numero_vizinho (cria suspensão do prazo e retorno à defesa prévia inexistentes na Resolução).",
+        "3. B correta: art. 9º, § único (julgar sem manifesto) + art. 10 (suprir AIT e dados disponíveis nos arquivos da STTP)."
+      ],
+      "pegadinha": "A banca induz a arquivar o recurso por não juntar o manifesto — o § único do art. 9 manda julgar no estado em que se encontra, e o art. 10 obriga o órgão a suprir o que tiver disponível.",
+      "macete": "INTIMAÇÃO ≠ ADMISSIBILIDADE · não atendeu = julga no estado · órgão supre o que tiver.",
+      "estudo_reverso": [
+        "Res. CONTRAN 900/2022 art. 2",
+        "Res. CONTRAN 900/2022 art. 9",
+        "Res. CONTRAN 900/2022 art. 10",
+        "CTB art. 231"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Não atender intimação do art. 9 não arquiva o recurso — julga-se no estado e o órgão supre o disponível",
+      "eixos_legais": [
+        "CONTRAN_900_art_9",
+        "CONTRAN_900_art_10",
+        "CONTRAN_900_art_2"
+      ],
+      "eixo_vizinho": "CONTRAN_900_art_5",
+      "isca_por_alternativa": {
+        "A": "recurso arquivado sem julgamento por descumprimento da intimação da JARI",
+        "C": "manifesto de carga torna-se indispensável à admissibilidade do recurso",
+        "D": "intimação suspende prazo recursal e retorna processo à defesa prévia na STTP"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico",
+        "numero_vizinho"
+      ],
+      "near_transfer": "Mesma intimação, mas transportadora juntou o manifesto no prazo — análise com o documento, sem mudar a regra do § único.",
+      "far_transfer": "Requerente desiste por escrito antes do julgamento — art. 11 encerra o recurso, cenário distinto da intimação não atendida.",
+      "o_que_nao_muda": "Descumprimento da intimação não impede julgamento; órgão supre informações disponíveis nos próprios arquivos.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "contran_900",
+      "recursos",
+      "jari",
+      "intimacao",
+      "transportador"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 60,
+      "fundamento_slug": "CONTRAN_900_art_9",
+      "macete_visual": "Intimação ≠ admissibilidade · julga no estado",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: sem manifesto a JARI julga no estado — órgão supre dados disponíveis nos arquivos.",
+            "destaques": ["Gabarito B", "julga no estado", "suprir"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Intimação × admissibilidade",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Sem manifesto, arquiva sem julgar", "§ único do art. 9: julga no estado"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "INTIMAÇÃO ≠ ADMISSIBILIDADE · não atendeu = julga no estado · órgão supre o que tiver.",
+            "destaques": ["INTIMAÇÃO", "julga no estado", "suprir"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 900/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 900, DE 9 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 265,
+      "fundamento_slug": "CONTRAN_900_art_9",
+      "macete_visual": "Intimação ≠ admissibilidade · julga no estado",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Não atender intimação do art. 9 não arquiva o recurso — julga-se no estado e o órgão supre o disponível",
+        "eixos_legais": [
+          "CONTRAN_900_art_9",
+          "CONTRAN_900_art_10",
+          "CONTRAN_900_art_2"
+        ],
+        "isca_por_alternativa": {
+          "A": "recurso arquivado sem julgamento por descumprimento da intimação da JARI",
+          "C": "manifesto de carga torna-se indispensável à admissibilidade do recurso",
+          "D": "intimação suspende prazo recursal e retorna processo à defesa prévia na STTP"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: relator pede arquivamento",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — recurso arquivado sem julgamento por descumprimento da intimação da JARI.\nC — manifesto de carga torna-se indispensável à admissibilidade do recurso.\nD — intimação suspende prazo recursal e retorna processo à defesa prévia na STTP.\n\nPegadinha: não atender intimação não arquiva — julga-se no estado e o órgão supre o disponível.",
+            "destaques": ["Gabarito B", "intimação", "arquivamento"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "INTIMAÇÃO PROBATÓRIA: pedido de documentos complementares na fase recursal — distinto da admissibilidade inicial.\n\nJULGAMENTO NO ESTADO: análise do recurso mesmo sem o documento solicitado — regra do § único do art. 9.\n\nSUPRIMENTO PELO ÓRGÃO: completar informações disponíveis nos arquivos do autuador — dever do art. 10.",
+            "destaques": ["INTIMAÇÃO", "NO ESTADO", "SUPRIMENTO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: requerente não atendeu intimação",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "JARI intimou documento complementar no prazo?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Requerente atendeu a intimação?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Julgar no estado + suprir o disponível — gabarito B", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — manifesto em 10 dias" },
+              { "de": "p2", "para": "r1", "rotulo": "Não — caso da transportadora" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Fases do recurso — diligência × julgamento",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Momento", "Efeito legal"],
+            "linhas": [
+              { "faixa": "Admissibilidade inicial", "classificacao": "Requisitos do art. 3º e art. 4º" },
+              { "faixa": "Intimação probatória", "classificacao": "Pedido facultativo — art. 9º, caput" },
+              { "faixa": "Não atendimento da intimação", "classificacao": "Julgamento no estado — § único", "destaque": true },
+              { "faixa": "Dados nos arquivos do autuador", "classificacao": "Suprimento obrigatório — art. 10" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: intimação vira admissibilidade",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Relator ✗", "Resolução ✓"],
+            "linhas": [
+              [
+                "Sem manifesto, arquiva sem julgar",
+                "§ único do art. 9: analisa e julga no estado"
+              ],
+              [
+                "Requerente deve fornecer cópia do AIT",
+                "Art. 10: órgão supre informação disponível"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Inventa arquivamento obrigatório — § único manda julgar no estado"
+              ],
+              [
+                "C — termo_unico",
+                "Transforma intimação em requisito de admissibilidade — art. 9 é diligência probatória"
+              ],
+              [
+                "D — numero_vizinho",
+                "Cria suspensão de prazo e retorno à defesa prévia — inexistentes na Resolução"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Encaixe no enunciado STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              ["Transportadora solidariamente responsável", "Legítima — art. 2º, IV"],
+              ["Intimação de manifesto em 10 dias", "Facultativa — art. 9º, caput"],
+              ["Não atendimento da intimação", "Julgar no estado — § único"],
+              ["AIT nos arquivos da STTP", "Suprir — art. 10"],
+              ["Resultado", "Alternativa B"]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Art. 9 × art. 10",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              ["Art. 9º, caput — intimação", "JARI pode pedir manifesto de carga"],
+              ["Art. 9º, § único", "Sem manifesto, julga no estado"],
+              ["Art. 10 — suprimento", "STTP completa AIT e dados disponíveis"],
+              ["Art. 5º, § único — vizinho", "Admissibilidade não exige cópias do autuador"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Res. 900/2022, art. 9º, § único",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 900/2022, art. 9º, § único",
+            "texto": "Caso não seja atendida a solicitação citada no caput, será a defesa prévia ou o recurso analisado e julgado no estado que se encontra.",
+            "trechos_grifados": [
+              {
+                "inicio": 54,
+                "fim": 133,
+                "motivo": "contraste — julgamento no estado sem manifesto",
+                "texto_grifado": "será a defesa prévia ou o recurso analisado e julgado no estado que se encontra"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Res. 900/2022, art. 10",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 900/2022, art. 10",
+            "texto": "O órgão ou entidade de trânsito ou os órgãos recursais deverão suprir eventual ausência de informação ou documento, quando disponível.",
+            "trechos_grifados": [
+              {
+                "inicio": 63,
+                "fim": 133,
+                "motivo": "caso — STTP supre AIT dos próprios arquivos",
+                "texto_grifado": "suprir eventual ausência de informação ou documento, quando disponível"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "INTIMAÇÃO ≠ ADMISSIBILIDADE · não atendeu = julga no estado · órgão supre o que tiver.\n\nNear: transportadora juntou manifesto no prazo — análise com o documento, sem mudar a regra do § único.\nFar: desistência por escrito antes do julgamento — art. 11 encerra o recurso, cenário distinto.\nNão muda: descumprimento da intimação não impede julgamento; órgão supre o disponível.\nCadeia: vizinho = art. 5 (admissibilidade não exige cópias emitidas pelo autuador).",
+            "destaques": ["INTIMAÇÃO", "julga no estado", "art. 11", "art. 5"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 900/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 900, DE 9 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    }
+  }
+]

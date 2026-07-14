@@ -1,0 +1,374 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_habilitacao",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_143_4_combinacao",
+    "enunciado": "Paulo, habilitado na categoria B, pretende conduzir em Campina Grande/PB caminhonete com semirreboque acoplado para transporte de material de construção. O semirreboque tem peso bruto total de 5.200 kg e a lotação do conjunto é de sete lugares, incluído o motorista. A capacidade máxima de tração da caminhonete comporta o conjunto. O despachante orienta que Paulo precisa habilitar-se na categoria E por se tratar de combinação de veículos. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Paulo precisa da categoria E, pois qualquer combinação de veículos com unidade acoplada exige habilitação na categoria E, nos termos do inciso V do art. 143.",
+      "B": "Paulo pode conduzir o conjunto com a categoria B, pois o semirreboque tem menos de 6.000 kg de peso bruto total e a lotação não excede oito lugares, conforme o § 4º do art. 143.",
+      "C": "Paulo precisa da categoria C, pois o peso bruto total do semirreboque excede 3.500 kg, independentemente do limite de 6.000 kg para combinações.",
+      "D": "Paulo pode conduzir o conjunto apenas com Permissão para Dirigir na categoria B, sem necessidade de Carteira Nacional de Habilitação definitiva."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Combinação de veículos — art. 143, § 4º (B/C/D com unidade acoplada < 6.000 kg) × inciso V (categoria E quando ≥ 6.000 kg ou lotação > 8).",
+      "fundamento_legal": "CTB, art. 143, § 4º: respeitada a capacidade máxima de tração da unidade tratora, os condutores das categorias B, C e D podem conduzir combinação de veículos cuja unidade tratora se enquadre na respectiva categoria de habilitação e cuja unidade acoplada, reboque, semirreboque, trailer ou articulada tenha menos de 6.000 kg de peso bruto total, e cuja lotação não exceda a 8 lugares. CTB, art. 143, V: categoria E — combinação em que a unidade acoplada tenha 6.000 kg ou mais de peso bruto total, ou cuja lotação exceda 8 lugares.",
+      "passo_a_passo": [
+        "1. Caso: categoria B + semirreboque 5.200 kg PBT + lotação 7 — dentro da capacidade de tração.",
+        "2. A erra por regra_excecao (generaliza inciso V e ignora exceção do § 4º para unidade acoplada abaixo de 6.000 kg); C erra por gravidade (confunde requisito de categoria C com limiar de combinação do § 4º); D erra por termo_unico (confunde CNH definitiva com permissão para conduzir combinação legal).",
+        "3. B correta: § 4º autoriza B/C/D quando unidade acoplada < 6.000 kg e lotação ≤ 8."
+      ],
+      "pegadinha": "A IDECAN induz a exigir categoria E em toda combinação — mas o § 4º do art. 143 dispensa E quando o semirreboque tem menos de 6.000 kg e lotação até oito lugares.",
+      "macete": "COMBINAÇÃO: < 6.000 kg + ≤ 8 lugares = B/C/D · ≥ 6.000 kg ou > 8 = E.",
+      "estudo_reverso": [
+        "CTB art. 143 §4",
+        "CTB art. 143 V",
+        "CTB art. 145"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Combinação com semirreboque abaixo de 6.000 kg não exige categoria E se lotação ≤ 8",
+      "eixos_legais": [
+        "CTB_art_143_4",
+        "CTB_art_143_V"
+      ],
+      "eixo_vizinho": "CTB_art_145_II_a",
+      "isca_por_alternativa": {
+        "A": "qualquer combinação com unidade acoplada exige categoria E pelo inciso V",
+        "C": "semirreboque acima de 3.500 kg exige categoria C independentemente do limite de combinação",
+        "D": "basta Permissão para Dirigir em vez de CNH definitiva na categoria B"
+      },
+      "eixos_mecanismo": [
+        "gravidade",
+        "regra_excecao",
+        "termo_unico"
+      ],
+      "near_transfer": "Mesmo condutor com semirreboque de 6.200 kg — aí sim exige categoria E pelo inciso V do art. 143.",
+      "far_transfer": "Trator de roda em via pública para lavoura — regra distinta do art. 144: categoria C/D/E, com exceção agrícola para B no parágrafo único.",
+      "o_que_nao_muda": "O limiar de 6.000 kg de PBT da unidade acoplada (e oito lugares de lotação) define se basta B/C/D ou exige E.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "habilitacao",
+      "categoria_b",
+      "categoria_e",
+      "combinacao",
+      "semirreboque"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CTB_art_143_4_combinacao",
+      "macete_visual": "menos 6000 = B/C/D · mais 6000 = categoria E",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: semirreboque 5.200 kg + 7 lugares — categoria B basta pela regra de combinação leve.",
+            "destaques": ["Gabarito B", "5.200 kg", "categoria B"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Combinação = sempre E?",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Qualquer reboque exige categoria E",
+                "§ 4º dispensa E se unidade acoplada < 6.000 kg"
+              ],
+              [
+                "Peso acima de 3.500 kg já exige C",
+                "Limite da combinação é 6.000 kg, não 3.500 kg"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "< 6.000 kg + ≤ 8 lugares = B/C/D.\n≥ 6.000 kg ou > 8 lugares = E.",
+            "destaques": ["6.000 kg", "8 lugares", "categoria E"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 143",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 285,
+      "fundamento_slug": "CTB_art_143_4_combinacao",
+      "macete_visual": "menos 6000 = B/C/D · mais 6000 = categoria E",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Combinação com semirreboque abaixo de 6.000 kg não exige categoria E se lotação ≤ 8",
+        "eixos_legais": [
+          "CTB_art_143_4",
+          "CTB_art_143_V"
+        ],
+        "isca_por_alternativa": {
+          "A": "qualquer combinação com unidade acoplada exige categoria E pelo inciso V",
+          "C": "semirreboque acima de 3.500 kg exige categoria C independentemente do limite de combinação",
+          "D": "basta Permissão para Dirigir em vez de CNH definitiva na categoria B"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: despachante pediu categoria E",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — qualquer combinação com unidade acoplada exige categoria E pelo inciso V.\nC — semirreboque acima de 3.500 kg exige categoria C independentemente do limite de combinação.\nD — basta Permissão para Dirigir em vez de CNH definitiva na categoria B.\n\nPegadinha: semirreboque de 5.200 kg com sete lugares não exige categoria E — basta B pela regra de combinação leve.",
+            "destaques": ["Gabarito B", "5.200 kg", "categoria B"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "UNIDADE ACOPLADA: reboque, semirreboque, trailer ou articulada ligada à unidade tratora.\n\nPESO BRUTO TOTAL (PBT): massa máxima do veículo carregado — limiar da combinação é 6.000 kg na unidade acoplada.\n\nCOMBINAÇÃO DE VEÍCULOS: unidade tratora + unidade acoplada — regra distinta para B/C/D (§ 4º) e E (inciso V).",
+            "destaques": ["UNIDADE ACOPLADA", "PBT", "COMBINAÇÃO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: precisa de categoria E?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Unidade acoplada com menos de 6.000 kg de PBT?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Lotação do conjunto não excede oito lugares?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Categoria B suficiente — gabarito B",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — semirreboque 5.200 kg"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — sete lugares no conjunto"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Graduação: combinação no art. 143",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["PBT unidade acoplada", "Habilitação"],
+            "linhas": [
+              {
+                "faixa": "Menos de 6.000 kg + lotação ≤ 8",
+                "classificacao": "B, C ou D da tratora — § 4º",
+                "destaque": true
+              },
+              {
+                "faixa": "6.000 kg ou mais, ou lotação > 8",
+                "classificacao": "Categoria E — inciso V"
+              },
+              {
+                "faixa": "Categoria C isolada (carga)",
+                "classificacao": "Veículo único > 3.500 kg — inciso III"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: combinação = categoria E",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Todo semirreboque exige categoria E",
+                "§ 4º autoriza B/C/D se unidade acoplada < 6.000 kg"
+              ],
+              [
+                "Acima de 3.500 kg na acoplada = categoria C",
+                "3.500 kg é limite do inciso III; combinação usa 6.000 kg"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Generaliza inciso V — ignora exceção do § 4º para unidade acoplada abaixo de 6.000 kg"
+              ],
+              [
+                "C — gravidade",
+                "Confunde limiar de categoria C (3.500 kg) com limiar de combinação (6.000 kg)"
+              ],
+              [
+                "D — termo_unico",
+                "Confunde CNH definitiva com permissão — não é o eixo da combinação legal"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dado do caso", "Conclusão"],
+            "linhas": [
+              [
+                "Paulo habilitado na categoria B",
+                "Tratora enquadrada na categoria B"
+              ],
+              [
+                "Semirreboque com 5.200 kg de PBT",
+                "Abaixo do limiar de 6.000 kg"
+              ],
+              [
+                "Lotação de sete lugares no conjunto",
+                "Dentro do limite de oito lugares"
+              ],
+              [
+                "Capacidade de tração compatível",
+                "Respeitado o caput do § 4º"
+              ],
+              [
+                "Resultado",
+                "Alternativa B"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "§ 4º × inciso V do art. 143",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              [
+                "§ 4º — combinação leve",
+                "Autoriza B/C/D com unidade acoplada < 6.000 kg — caso Paulo"
+              ],
+              [
+                "Inciso V — categoria E",
+                "Obrigatória se unidade acoplada ≥ 6.000 kg ou lotação > 8"
+              ],
+              [
+                "Inciso III — categoria C",
+                "Veículo único de carga > 3.500 kg — não é regra da combinação"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "CTB art. 143, § 4º",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 143, § 4º",
+            "texto": "§ 4º Respeitada a capacidade máxima de tração da unidade tratora, os condutores das categorias B, C e D podem conduzir combinação de veículos cuja unidade tratora se enquadre na respectiva categoria de habilitação e cuja unidade acoplada, reboque, semirreboque, trailer ou articulada tenha menos de 6.000 kg (seis mil quilogramas) de peso bruto total, e cuja lotação não exceda a 8 (oito) lugares.",
+            "trechos_grifados": [
+              {
+                "inicio": 284,
+                "fim": 350,
+                "motivo": "mapa — limiar que mantém categoria B no caso de Paulo",
+                "texto_grifado": "tenha menos de 6.000 kg (seis mil quilogramas) de peso bruto total"
+              },
+              {
+                "inicio": 354,
+                "fim": 396,
+                "motivo": "caso — lotação de sete lugares dentro do limite",
+                "texto_grifado": "cuja lotação não exceda a 8 (oito) lugares"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "CTB art. 143, V — categoria E",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 143, V",
+            "texto": "V - Categoria E - condutor de combinação de veículos em que a unidade tratora se enquadre nas categorias B, C ou D e cuja unidade acoplada, reboque, semirreboque, trailer ou articulada tenha 6.000 kg (seis mil quilogramas) ou mais de peso bruto total, ou cuja lotação exceda a 8 (oito) lugares.",
+            "trechos_grifados": [
+              {
+                "inicio": 185,
+                "fim": 250,
+                "motivo": "contraste — gatilho que tornaria obrigatória a categoria E",
+                "texto_grifado": "tenha 6.000 kg (seis mil quilogramas) ou mais de peso bruto total"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "COMBINAÇÃO: < 6.000 kg + ≤ 8 lugares = B/C/D · ≥ 6.000 kg ou > 8 = E.\n\nNear: semirreboque de 6.200 kg — aí sim categoria E pelo inciso V.\nFar: trator de roda em via pública — art. 144 exige C/D/E, com exceção agrícola para B.\nNão muda: limiar de 6.000 kg na unidade acoplada define B/C/D × E.\nCadeia: vizinho = tempo mínimo na categoria anterior para D/E (art. 145, II).",
+            "destaques": ["6.000 kg", "6.200 kg", "trator", "art. 145"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 143",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

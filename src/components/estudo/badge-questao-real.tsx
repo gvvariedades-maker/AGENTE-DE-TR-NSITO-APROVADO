@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import { isQuestaoRealIdecan } from "@/lib/questoes-reais";
+import { isQuestaoRealIdecan } from "@/lib/questoes-reais-tags";
 
 interface BadgeQuestaoRealProps {
   tags?: string[] | null;

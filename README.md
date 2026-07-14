@@ -78,7 +78,8 @@ Após responder uma questão no modo estudo, abre automaticamente a **aula compl
 ### Validação visual
 
 ```bash
-npm run validate:lote -- content/questoes/.../lote.json   # gate único (4 validadores + cobertura)
+npm run validate:lote -- content/questoes/.../lote.json   # 5 gates (inéditas)
+npm run validate:lote -- content/questoes-reais/.../lote.json   # 6 gates (+ validate:aula-real)
 npm run index:questoes                                    # mapa de eixos legais já cobertos
 npm run setup:git-hooks   # pre-commit em lotes staged (opcional)
 npm run check:visual-completo
@@ -86,6 +87,25 @@ npm run audit:estudo-reverso
 ```
 
 Lotes legados podem falhar na v3 até retrofit (distratores sem slug, `fundamento_slug` divergente) — ver seção 11 em `DOCUMENTACAO.md`.
+
+### Questões reais IDECAN (pipeline paralelo)
+
+Enunciados fiéis ao PDF Tec **SUPERIOR**; aulas com **paridade pedagógica** das inéditas (hub v3.4, gate editorial 12/12). Não entra no `npm run proxima` nem no índice de cobertura.
+
+| Recurso | Caminho |
+|---------|---------|
+| README do pipeline | `content/questoes-reais/README.md` |
+| Prompt Agent | `.cursor/skills/examinador-idecan/prompt-questao-real-nova-conversa.txt` |
+| Contrato ouro | `content/questoes-reais/_ouro/real-aula-nota-10.md` |
+| Lotes seedáveis | `content/questoes-reais/{disciplina}/lote-*.json` |
+
+```bash
+npm run extract:reais-superior -- --pdf "CTB - IDECAN - SUPERIOR - TEC.pdf"
+npm run validate:lote -- content/questoes-reais/legislacao_transito/lote-001.json   # 6 gates (inclui validate:aula-real)
+npm run db:seed:reais   # ou: npm run db:seed -- --only-reais
+```
+
+Legado em lotes antigos: `--legacy-aula-real` e/ou `--legacy-transferencia`. Inéditas em `content/questoes/` **não** passam pelo gate `validate:aula-real`.
 
 ## Scripts úteis
 
@@ -95,7 +115,10 @@ Lotes legados podem falhar na v3 até retrofit (distratores sem slug, `fundament
 | `npm run db:seed` | Importa `content/questoes/**/*.json` |
 | `npm run index:questoes` | Gera `content/questoes/_index/cobertura.json` |
 | `npm run validate:cobertura -- arquivo.json` | Anti-repetição de eixo/enunciado |
-| `npm run validate:lote -- arquivo.json` | Gate único: questões + cobertura + IDECAN + visual v2 |
+| `npm run validate:lote -- arquivo.json` | Gate único: questões + cobertura + IDECAN + visual v2 (+ `validate:aula-real` se path `questoes-reais/`) |
+| `npm run validate:aula-real -- arquivo.json` | Paridade aula real × inédita (só `meta.origem: real_idecan`) |
+| `npm run db:seed:reais` | Importa só `content/questoes-reais/**/*.json` |
+| `npm run extract:reais-superior` | Extrai PDFs Tec SUPERIOR → `questoes-reais/_raw/` |
 | `npm run setup:git-hooks` | Pre-commit em `content/questoes/*.json` staged |
 | `npm run validate:questoes -- arquivo.json` | Schema import (v2 obrig.) + citações |
 | `npm run validate:estudo-reverso-visual -- arquivo.json` | Valida v1 e v2 visual |
@@ -108,7 +131,8 @@ Lotes legados podem falhar na v3 até retrofit (distratores sem slug, `fundament
 
 - `conteúdo/edital/` — edital + retificação
 - `conteúdo/FONTES.md` — índice de legislação
-- `content/questoes/` — lotes JSON para seed
+- `content/questoes/` — lotes JSON inéditas para seed
+- `content/questoes-reais/` — questões reais IDECAN (superior) + aulas com paridade inédita
 - `.cursor/rules/` — regras do projeto para o Agent
 
 ## Deploy

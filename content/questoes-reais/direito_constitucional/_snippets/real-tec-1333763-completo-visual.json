@@ -1,0 +1,206 @@
+{
+  "tec_id": "1333763",
+  "disciplina": "direito_constitucional",
+  "gabarito": "D",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "diagrama_competencia",
+    "duracao_estimada_seg": 180,
+    "fundamento_slug": "CF_art_144_organizacao",
+    "macete_visual": "Função ≠ órgão · quartetinho estadual",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CF/88",
+        "path": "conteúdo/legislação federal/cf-1988.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "PM ostensiva é função do §5º — instituição continua sendo PM.",
+      "far_transfer": "Guarda municipal não entra no rol clássico do caput.",
+      "o_que_nao_muda": "PC investiga; PM patrulha."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Diagnóstico",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito D.\n\nPegadinha: misturar função (ostensiva, viária) com nome de órgão. A banca oferece listas com guarda municipal ou segurança viária — fora do esquema pedido.",
+          "destaques": [
+            "Gabarito D",
+            "função",
+            "órgão"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Função × órgão",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Polícia administrativa (ostensiva): PM, PRF, guardas.\nPolícia judiciária: PC, PF.\nÓrgãos estaduais caput: PM, CBM, PC.",
+          "destaques": [
+            "administrativa",
+            "judiciária"
+          ]
+        }
+      },
+      {
+        "id": "diagrama",
+        "titulo": "Órgãos estaduais",
+        "secao": "mapa",
+        "tipo": "diagrama_competencia",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "est",
+              "label": "SP estadual",
+              "nivel": 0
+            },
+            {
+              "id": "pm",
+              "label": "PM",
+              "nivel": 1
+            },
+            {
+              "id": "cbm",
+              "label": "CBM",
+              "nivel": 1
+            },
+            {
+              "id": "pc",
+              "label": "PC",
+              "nivel": 1
+            }
+          ],
+          "arestas": [
+            {
+              "de": "est",
+              "para": "pm"
+            },
+            {
+              "de": "est",
+              "para": "cbm"
+            },
+            {
+              "de": "est",
+              "para": "pc"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "O que não é a lista Lenza",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Na alternativa ✗",
+            "Na CF ✓"
+          ],
+          "linhas": [
+            [
+              "Segurança viária como rótulo",
+              "§10 — competência, não órgão do caput"
+            ],
+            [
+              "Guarda municipal",
+              "§8 — opcional municipal"
+            ],
+            [
+              "Só funções soltas",
+              "Instituições: PM, CBM, PC"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Erros A, B e C",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "A — termo_unico",
+              "Viária e ostensiva são funções, não o quartetinho"
+            ],
+            [
+              "B — competencia_snt",
+              "Guarda municipal não é categoria lenziana clássica"
+            ],
+            [
+              "C — termo_unico",
+              "Ostensiva + administrativa redundantes; falta CBM"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Montando a resposta",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Lista",
+            "Veredito"
+          ],
+          "linhas": [
+            [
+              "D: adm / PM / CBM / PC",
+              "Correta — órgãos estaduais"
+            ],
+            [
+              "A com viária",
+              "Errada"
+            ],
+            [
+              "B com guarda",
+              "Errada"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Caput e incisos",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CF/88, art. 144, caput e incisos IV e V",
+          "texto": "A segurança pública, dever do Estado, direito e responsabilidade de todos, é exercida para a preservação da ordem pública e da incolumidade das pessoas e do patrimônio, através dos seguintes órgãos: IV - polícias civis; V - polícias militares e corpos de bombeiros militares.",
+          "trechos_grifados": [
+            {
+              "inicio": 204,
+              "fim": 274,
+              "motivo": "Mapa — incisos IV e V",
+              "texto_grifado": "polícias civis; V - polícias militares e corpos de bombeiros militares"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Macete",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: quartetinho D = administrativa + PM + CBM + PC.\nNear: PM ostensiva (§5º) é função da instituição PM.\nFar: guarda municipal é §8, não inciso.\nNão muda: PC = judiciária; PM = ostensiva.",
+          "destaques": [
+            "quartetinho",
+            "§5º",
+            "§8"
+          ]
+        }
+      }
+    ]
+  }
+}

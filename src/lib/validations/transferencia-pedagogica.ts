@@ -36,14 +36,31 @@ export function isTransferenciaLegacyMode(): boolean {
 }
 
 export function resolveMetaTransferencia(q: {
-  meta?: MetaTransferenciaCampos | null;
-  estudo_reverso_visual_completo?: { meta?: MetaTransferenciaCampos | null } | null;
-}): MetaTransferenciaCampos | undefined {
-  return (
-    q.estudo_reverso_visual_completo?.meta ??
-    q.meta ??
-    undefined
-  );
+  meta?: (MetaTransferenciaCampos & { origem?: string }) | null;
+  estudo_reverso_visual_completo?: {
+    meta?: MetaTransferenciaCampos | null;
+  } | null;
+}): (MetaTransferenciaCampos & { origem?: string }) | undefined {
+  const base = q.meta;
+  const aula = q.estudo_reverso_visual_completo?.meta;
+  if (!base && !aula) return undefined;
+  return {
+    ...base,
+    ...aula,
+    // Campos de identidade/eficácia ficam na meta da questão (não no bloco da aula).
+    origem: base?.origem,
+    padrao_familia: base?.padrao_familia ?? aula?.padrao_familia,
+    pegadinha_em_uma_frase:
+      base?.pegadinha_em_uma_frase ?? aula?.pegadinha_em_uma_frase,
+    isca_por_alternativa: base?.isca_por_alternativa ?? aula?.isca_por_alternativa,
+    eixos_legais: base?.eixos_legais ?? aula?.eixos_legais,
+    eixos_mecanismo: base?.eixos_mecanismo ?? aula?.eixos_mecanismo,
+    eficacia_pos_aula: base?.eficacia_pos_aula ?? aula?.eficacia_pos_aula,
+    near_transfer: aula?.near_transfer ?? base?.near_transfer,
+    far_transfer: aula?.far_transfer ?? base?.far_transfer,
+    o_que_nao_muda: aula?.o_que_nao_muda ?? base?.o_que_nao_muda,
+    eixo_vizinho: aula?.eixo_vizinho ?? base?.eixo_vizinho,
+  };
 }
 
 function normalizar(s: string): string {
@@ -106,12 +123,20 @@ export interface TransferenciaPedagogicaInput {
     passo_a_passo?: string[];
     estudo_reverso?: string[];
   };
-  meta?: MetaTransferenciaCampos;
+  meta?: MetaTransferenciaCampos & { origem?: string };
   telas?: MaceteTelaLike[];
 }
 
+function exigeTransferenciaObrigatoria(input: TransferenciaPedagogicaInput): boolean {
+  if (isTransferenciaLegacyMode()) return false;
+  if (input.meta?.origem === "real_idecan") return true;
+  return input.dificuldade >= DIFICULDADE_MINIMA_BANCO;
+}
+
 /**
- * Gate T1–T4: transferência obrigatória em questões nível 4+ (banco).
+ * Gate T1–T4: transferência obrigatória em questões nível 4+ (banco)
+ * e em todas as questões reais IDECAN (`meta.origem === "real_idecan"`),
+ * independentemente da dificuldade.
  * Modo legado: TRANSFERENCIA_LEGACY=1 ou --legacy-transferencia no validate:lote.
  */
 export function validarTransferenciaPedagogica(
@@ -119,35 +144,62 @@ export function validarTransferenciaPedagogica(
   ctx: z.RefinementCtx,
   pathPrefix: (string | number)[] = [],
 ): void {
-  if (input.dificuldade < DIFICULDADE_MINIMA_BANCO) return;
-  if (isTransferenciaLegacyMode()) return;
+  if (!exigeTransferenciaObrigatoria(input)) return;
 
   const meta = input.meta;
   const metaPath = [...pathPrefix, "meta"];
+  const isReal = meta?.origem === "real_idecan";
+  const motivo = isReal
+    ? "obrigatório em questão real_idecan (paridade aula inédita) — use --legacy-transferencia para lotes legados"
+    : "obrigatório (dificuldade ≥ 4) — use --legacy-transferencia para lotes legados";
 
   if (!meta?.near_transfer?.trim()) {
     ctx.addIssue({
       code: z.ZodIssueCode.custom,
-      message:
-        "meta.near_transfer obrigatório (dificuldade ≥ 4) — use --legacy-transferencia para lotes legados",
+      message: `meta.near_transfer ${motivo}`,
       path: [...metaPath, "near_transfer"],
     });
   }
   if (!meta?.far_transfer?.trim()) {
     ctx.addIssue({
       code: z.ZodIssueCode.custom,
-      message:
-        "meta.far_transfer obrigatório (dificuldade ≥ 4) — use --legacy-transferencia para lotes legados",
+      message: `meta.far_transfer ${motivo}`,
       path: [...metaPath, "far_transfer"],
     });
   }
   if (!meta?.o_que_nao_muda?.trim()) {
     ctx.addIssue({
       code: z.ZodIssueCode.custom,
-      message:
-        "meta.o_que_nao_muda obrigatório (dificuldade ≥ 4) — use --legacy-transferencia para lotes legados",
+      message: `meta.o_que_nao_muda ${motivo}`,
       path: [...metaPath, "o_que_nao_muda"],
     });
+  }
+
+  if (isReal) {
+    if (!meta?.padrao_familia?.trim()) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message:
+          "meta.padrao_familia obrigatório em real_idecan (família A–D do hub v3)",
+        path: [...metaPath, "padrao_familia"],
+      });
+    }
+    if (!meta?.isca_por_alternativa || Object.keys(meta.isca_por_alternativa).length === 0) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message:
+          "meta.isca_por_alternativa obrigatório em real_idecan (isca por cada errada)",
+        path: [...metaPath, "isca_por_alternativa"],
+      });
+    }
+    if (!meta?.eficacia_pos_aula || meta.eficacia_pos_aula.length !== 3) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message:
+          'meta.eficacia_pos_aula obrigatório em real_idecan — use ["E1","E2","E3"]',
+        path: [...metaPath, "eficacia_pos_aula"],
+      });
+    }
   }
 
   if (

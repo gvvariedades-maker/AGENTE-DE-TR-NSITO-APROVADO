@@ -44,15 +44,25 @@ Condicionais (+até 4) só com gatilho real — ver guia de cada família. Total
 | Tela | Aceita | Reprova |
 |------|--------|---------|
 | `contexto` | Gabarito + **isca por cada errada** (A/B/D) + promessa = pegadinha | Só “se marcou X…”; texto colável em outra questão |
-| `contraste` | **1 eixo** crença × lei; 2–3 linhas; sem slugs | Tabela de distratores disfarçada |
-| `distratores` | `LETRA — slug` = `passo_a_passo[1]` | Slug inventado / genérico |
-| `caso` | Substantivos do enunciado + linha Resultado | Repetir arquétipo sem fatos do stem |
+| `contraste` | **Só crença FALSA** × lei; 2–4 linhas; órgãos diferentes nos lados quando a correção troca o órgão | Fato **verdadeiro** na coluna ✗ (ex.: “PRF patrulha rodovia” \| “PRF — §2º”); slug; tabela de distratores |
+| `distratores` | JSON: `LETRA — slug` = `passo_a_passo[1]`; UI mostra **rótulo humano** | Slug inventado; título “stem” |
+| `caso` | Substantivos do **enunciado** + linha Resultado; título sem jargão | Título com “stem”; repetir arquétipo sem fatos |
 | `macete` | `macete_visual` + regra 1 frase + **near-transfer** + **far-transfer** + **o que NÃO muda** (eco de `meta`) | Só mnemônico / só nº de artigo / near sem far |
 | `trecho_legal` | Literal `conteúdo/` + grifo `indexOf` + `motivo` cita **id da tela** que ensinou o token | Paráfrase; grifo “no olho” |
+
+### Contraste — regra de ouro (gate Zod `validarContrastePedagogico`)
+
+1. Coluna esquerda = o que o candidato **pensa e está errado**.
+2. Coluna direita = o que a **lei** diz.
+3. **Proibido** colocar na esquerda um fato que a direita confirma sobre o **mesmo órgão** (ex.: PRF+rodovia nos dois lados).
+4. Verdades vão no **mapa/glossário**, não no contraste.
+5. Títulos: “enunciado”, nunca “stem”.
 
 ### Slugs de distrator (examinador-idecan)
 
 `numero_vizinho` | `competencia_snt` | `gravidade` | `regra_excecao` | `termo_unico`
+
+No **player**, `TelaComparacao` substitui slugs por labels (`src/lib/mecanismo-distrator-labels.ts`).
 
 ---
 
@@ -98,10 +108,12 @@ O schema Zod ainda não exige estes campos — use em `meta` para o Agent audita
 | 17 | Grifo com `texto_grifado` validado (`npm run grifo:offsets` + `preview:grifos` no `validate:lote`) |
 | 18 | Macete (ou tela imediata antes) distingue **o que muda × o que NÃO muda**; far ≠ paráfrase do near |
 | 19 | `<checklist_eficacia_pos_aula>` E1–E3 (invariante / errada tentadora / far) — 3× sim |
+| 20 | **Contraste:** nenhuma linha com fato verdadeiro na coluna ✗ (gate Zod `validarContrastePedagogico`) |
+| 21 | **Copy aluno:** sem “stem” em títulos; slugs só no JSON — UI com rótulo humano |
 
 Reprovou 1 → corrigir antes de `npm run validate:lote`.
 
-> Itens 1–17 = gate histórico. **#18 e #19** = eficácia máxima (skill v3.4) — obrigatórios em questão nova nível 4–5.
+> Itens 1–17 = gate histórico. **#18 e #19** = eficácia máxima (skill v3.4). **#20 e #21** = pacote qualidade contraste/copy (2026-07).
 
 ---
 

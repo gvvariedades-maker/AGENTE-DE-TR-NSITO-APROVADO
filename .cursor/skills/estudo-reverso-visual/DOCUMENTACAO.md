@@ -228,8 +228,9 @@ Checklist bloqueante **antes** de rodar qualquer `npm run validate:*`. Espelho e
 ### Comandos
 
 ```bash
-# Gate único (recomendado) — encadeia os 3 validadores
+# Gate único (recomendado) — encadeia validadores (5 em inéditas; 6 em questoes-reais/)
 npm run validate:lote -- content/questoes/legislacao_transito/lote-001.json
+npm run validate:lote -- content/questoes-reais/legislacao_transito/lote-001.json
 
 # Sem corpus legal (rascunho / CI)
 npm run validate:lote -- arquivo.json --skip-citacoes
@@ -237,13 +238,28 @@ npm run validate:lote -- arquivo.json --skip-citacoes
 # Lotes legados (até retrofit)
 npm run validate:lote -- arquivo.json --legacy-grifos          # sem texto_grifado
 npm run validate:lote -- arquivo.json --legacy-transferencia   # sem meta near/far/o_que_nao_muda (nível 4+)
+npm run validate:lote -- arquivo.json --legacy-aula-real       # só questoes-reais — pula paridade aula
 npm run validate:lote -- arquivo.json --legacy-grifos --legacy-transferencia
 
 # Validadores individuais
 npm run validate:questoes -- arquivo.json
 npm run validate:indistinguibilidade -- arquivo.json
 npm run validate:estudo-reverso-visual -- arquivo.json
+npm run validate:aula-real -- content/questoes-reais/.../lote.json
 ```
+
+### Gates por tipo de lote
+
+| Gate | Inéditas (`content/questoes/`) | Reais (`content/questoes-reais/`) |
+|------|-------------------------------|-----------------------------------|
+| `validate:questoes` | ✓ | ✓ |
+| `validate:cobertura` | ✓ | ✓ |
+| `validate:indistinguibilidade` | ✓ | ✓ (D1/C6 relaxados para `real_idecan`) |
+| `validate:estudo-reverso-visual` | ✓ | ✓ |
+| `preview:grifos` | ✓ | ✓ |
+| **`validate:aula-real`** | — | ✓ (paridade Crença×Lei, macete Near/Far/Não muda, meta E1–E3) |
+
+O 6º gate é acionado automaticamente quando o path contém `questoes-reais/` (`scripts/validate-lote.ts`). Critérios: `scripts/validate-aula-real.ts` e `content/questoes-reais/_ouro/real-aula-nota-10.md`.
 
 ### Pipeline completo de lote novo
 
@@ -252,12 +268,23 @@ npm run validate:lote -- content/questoes/.../lote.json
 npm run db:seed
 ```
 
+### Pipeline questão real (superior)
+
+```bash
+npm run validate:lote -- content/questoes-reais/.../lote.json
+npm run db:seed:reais
+```
+
+Prompt: `.cursor/skills/examinador-idecan/prompt-questao-real-aula.md` · README: `content/questoes-reais/README.md`
+
 ### Enforcement automático (v3.1)
 
 | Regra | Onde |
 |-------|------|
 | `estudo_reverso_visual_completo` obrigatório | `questaoSeedImportSchema` (seed + validate:lote) |
 | Transferência pedagógica (nível 4+) | `validarTransferenciaPedagogica` em `transferencia-pedagogica.ts` — `meta.near_transfer`, `far_transfer`, `o_que_nao_muda`; `eixo_vizinho` se gabarito remete a outro artigo; macete ecoa meta |
+| Transferência em **reais** (`real_idecan`) | Mesmos campos **sempre** (mesmo dificuldade 1–3) + `padrao_familia`, `isca_por_alternativa`, `eficacia_pos_aula` E1–E3 |
+| Paridade aula real | `validate:aula-real` — 7–11 telas, contraste Crença×Lei, macete Near/Far/Não muda, sem "stem" no título |
 | Modo legado transferência | `--legacy-transferencia` ou `TRANSFERENCIA_LEGACY=1` — pula gate T1–T4 em lotes antigos |
 | Passo 2 com slug por errada | `validarPasso2Mecanismos` em `questao-mecanismo.ts` |
 | Núcleo v2 (ordem das 7 telas) | `validarNucleoV2` em `estudo-reverso-visual.ts` |
@@ -413,6 +440,7 @@ src/components/estudo-reverso/
 
 | Data | Versão | Mudança |
 |------|--------|---------|
+| 2026-07-13 | **3.4.3** | Pipeline questões reais: `validate:aula-real` (6º gate em `questoes-reais/`); paridade pedagógica com inéditas; Zod `real_idecan` exige transferência + E1–E3 sempre; doc em `content/questoes-reais/README.md` |
 | 2026-07-11 | **3.4.2** | `prompt-nova-conversa.txt` — prompt pronto para colar (fonte canônica); `prompt-questao-aula-completa.md` = variantes + checklist |
 | 2026-07-11 | **3.4.1** | Gate Zod `validarTransferenciaPedagogica` (T1–T4); `--legacy-transferencia` para lotes legados sem meta de transferência |
 | 2026-07-11 | **3.4** | Far-transfer obrigatório no macete; meta `near_transfer`/`far_transfer`/`o_que_nao_muda`/`eixo_vizinho`; gate editorial #18/#19; checklist E1–E3; alinhamento com examinador v2.1 |

@@ -1,0 +1,221 @@
+{
+  "tec_id": "482263",
+  "disciplina": "legislacao_transito",
+  "gabarito": "A",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "diagrama_competencia",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 200,
+    "fundamento_slug": "CTB_art_14_V_a",
+    "macete_visual": "CETRAN julga JARI · CONTRAN normatiza",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Art. 14, V, b — CETRAN julga recurso de inaptidão permanente.",
+      "far_transfer": "CONTRAN dirime conflitos União/Estados/DF — CETRAN só entre municípios.",
+      "o_que_nao_muda": "Art. 14, V, a = CETRAN julga recurso da JARI."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito A.\n\nB — coordenar o SNT: CONTRAN.\nC — normatizar multas e repasse: CONTRAN.\nD — avocar conflitos de competência: CONTRAN.\n\nPegadinha: tudo que parece 'conselho estadual' vira CETRAN — só julgar recurso da JARI é dele.",
+          "destaques": [
+            "Gabarito A",
+            "CETRAN",
+            "CONTRAN"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Três nomes que a banca mistura",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "CETRAN/CONTRANDIFE: conselho estadual/DF — julga recursos contra JARI.\nCONTRAN: órgão máximo normativo federal — coordena SNT e normatiza.\nJARI: 1ª instância administrativa — recurso sobe ao CETRAN.",
+          "destaques": [
+            "CETRAN",
+            "CONTRAN",
+            "JARI"
+          ]
+        }
+      },
+      {
+        "id": "diagrama",
+        "titulo": "Quem faz o quê no SNT",
+        "secao": "metodo",
+        "tipo": "diagrama_competencia",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "contran",
+              "label": "CONTRAN — normas e coordenação",
+              "nivel": 0
+            },
+            {
+              "id": "cetran",
+              "label": "CETRAN — 2ª instância",
+              "nivel": 1
+            },
+            {
+              "id": "jari",
+              "label": "JARI — 1ª instância",
+              "nivel": 2
+            },
+            {
+              "id": "avocar",
+              "label": "Avocar conflitos — FORA do CETRAN",
+              "nivel": 2
+            },
+            {
+              "id": "multas",
+              "label": "Normatizar multas — FORA do CETRAN",
+              "nivel": 2
+            }
+          ],
+          "arestas": [
+            {
+              "de": "jari",
+              "para": "cetran",
+              "rotulo": "recurso"
+            },
+            {
+              "de": "contran",
+              "para": "cetran",
+              "rotulo": "diretrizes"
+            },
+            {
+              "de": "contran",
+              "para": "jari",
+              "rotulo": "regimento"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "CETRAN coordena todo o SNT nacionalmente",
+              "Coordenar o SNT é CONTRAN (art. 12, II)"
+            ],
+            [
+              "CETRAN normatiza multas e repasse",
+              "Normatizar multas é CONTRAN (art. 12, VIII)"
+            ],
+            [
+              "CETRAN avoca conflitos de competência",
+              "Avocar conflitos é CONTRAN (art. 12, XIII)"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que B, C e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "B — competencia_snt",
+              "Coordenar o SNT é art. 12, II — competência do CONTRAN"
+            ],
+            [
+              "C — competencia_snt",
+              "Normatizar multas e repasse é art. 12, VIII — CONTRAN"
+            ],
+            [
+              "D — competencia_snt",
+              "Avocar conflitos é art. 12, XIII — CETRAN só dirime entre municípios (art. 14, IX)"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Atribuição citada",
+            "Órgão competente"
+          ],
+          "linhas": [
+            [
+              "Julgar recurso das JARI",
+              "CETRAN/CONTRANDIFE — gabarito A"
+            ],
+            [
+              "Coordenar órgãos do SNT",
+              "CONTRAN"
+            ],
+            [
+              "Normatizar multas e repasse",
+              "CONTRAN"
+            ],
+            [
+              "Avocar conflitos de competência",
+              "CONTRAN"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto do CTB",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 14, V, a",
+          "texto": "V - julgar os recursos interpostos contra decisões: a) das JARI;",
+          "trechos_grifados": [
+            {
+              "inicio": 4,
+              "fim": 64,
+              "motivo": "caso — recurso da JARI sobe ao CETRAN",
+              "texto_grifado": "julgar os recursos interpostos contra decisões: a) das JARI;"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: CETRAN julga recurso da JARI — CONTRAN coordena, normatiza e avoca.\nNear: art. 14, V, b — CETRAN também julga inaptidão permanente.\nFar: CONTRAN dirime conflitos União/Estados/DF — CETRAN só entre municípios.\nNão muda: art. 14, V, a = recurso da JARI no CETRAN.",
+          "destaques": [
+            "CETRAN",
+            "CONTRAN",
+            "JARI",
+            "municípios"
+          ]
+        }
+      }
+    ]
+  }
+}

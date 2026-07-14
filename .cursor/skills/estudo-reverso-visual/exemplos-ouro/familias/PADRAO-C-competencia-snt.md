@@ -37,7 +37,10 @@
 - **Reprova:** organograma completo do SNT; nós sem relação com o stem
 
 ### `contraste`
-- **Aceita:** 1 par — “só PM autua” × “órgão executivo municipal — art. 24, VI”
+- **Aceita:** 1–4 pares — crença **falsa** (“só PM autua”, “PRF faz fronteira”) × órgão/lei correta
+- **Reprova:** fato verdadeiro na coluna ✗ (mesmo órgão nos dois lados, ex. “PRF patrulha rodovia” \| “PRF — §2º”); organograma disfarçado
+- **Art. 144 / STTP:** incluir par agente de trânsito ≠ PRF quando o caso tocar §10
+- Gate Zod: `validarContrastePedagogico`
 - **Reprova:** 4 órgãos na mesma tela
 
 ### `distratores`

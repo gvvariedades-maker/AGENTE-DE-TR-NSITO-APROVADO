@@ -1,0 +1,207 @@
+{
+  "tec_id": "600063",
+  "disciplina": "informatica",
+  "gabarito": "C",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "tabela_gradacao",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 195,
+    "fundamento_slug": "info_SO_multiprogramacao",
+    "macete_visual": "PROGRAMA=CPU+processos · TAREFA=usuário · USUÁRIO=contas · CPU=processadores",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "Anexo I — Informática, item 2 (Sistemas operacionais)",
+        "path": "conteúdo/edital/"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Multitarefa = usuário alterna tarefas — gabarito A.",
+      "far_transfer": "Dois processadores físicos em paralelo = multiprocessamento — gabarito D.",
+      "o_que_nao_muda": "Multiprogramação = divide tempo de CPU entre processos — definição do enunciado."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito C (Multiprogramação).\n\nA — multitarefa: usuário alterna tarefas, não divisão de tempo na CPU.\nB — multiusuário: várias contas simultâneas, não gerenciamento de processos.\nD — multiprocessamento: várias CPUs físicas, não só divisão de tempo.\n\nPegadinha: quatro termos com prefixo multi- — a definição cita processos e CPU ocupada.",
+          "destaques": [
+            "Gabarito C",
+            "processos",
+            "CPU ocupada"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Pré-treino: 4 classificações",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "PROCESSO: programa em execução na memória.\nMULTIPROGRAMAÇÃO: CPU divide tempo entre processos.\nMULTITAREFA: um usuário alterna entre aplicativos.\nMULTIPROCESSAMENTO: mais de um processador físico no hardware.",
+          "destaques": [
+            "MULTIPROGRAMAÇÃO",
+            "MULTITAREFA",
+            "MULTIPROCESSAMENTO"
+          ]
+        }
+      },
+      {
+        "id": "gradacao",
+        "titulo": "Mapa: classificação do SO",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": [
+            "Classificação",
+            "O que mede"
+          ],
+          "linhas": [
+            {
+              "faixa": "Multiprogramação",
+              "classificacao": "Divide tempo de CPU entre processos",
+              "destaque": true
+            },
+            {
+              "faixa": "Multitarefa",
+              "classificacao": "Usuário executa várias tarefas alternando"
+            },
+            {
+              "faixa": "Multiusuário",
+              "classificacao": "Vários usuários ao mesmo tempo"
+            },
+            {
+              "faixa": "Multiprocessamento",
+              "classificacao": "Vários processadores físicos"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × conceito",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Conceito ✓"
+          ],
+          "linhas": [
+            [
+              "Multitarefa divide tempo entre processos na CPU",
+              "Multiprogramação divide tempo entre processos mantendo CPU ocupada"
+            ],
+            [
+              "Multiprocessamento é só dividir tempo em um processador",
+              "Multiprocessamento exige mais de um processador físico"
+            ],
+            [
+              "Multiusuário gerencia fila de processos do processador",
+              "Multiusuário suporta várias contas de usuário simultâneas"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que A, B e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Mecanismo + por quê"
+          ],
+          "linhas": [
+            [
+              "A — termo_unico",
+              "Multitarefa trata de alternância de tarefas do usuário — não de divisão de tempo entre processos"
+            ],
+            [
+              "B — termo_unico",
+              "Multiusuário trata de vários usuários simultâneos — não de ocupação da CPU por processos"
+            ],
+            [
+              "D — termo_unico",
+              "Multiprocessamento exige múltiplos processadores físicos — não apenas divisão de tempo"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Fato do enunciado",
+            "Resultado"
+          ],
+          "linhas": [
+            [
+              "Divide tempo entre vários processos",
+              "Multiprogramação — gabarito C"
+            ],
+            [
+              "Mantém processador sempre ocupado",
+              "Confirma multiprogramação (não multitarefa)"
+            ],
+            [
+              "Alternativas A, B e D",
+              "Cada uma mede eixo diferente — descartadas"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Referência — classificação do SO",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "Anexo I — Informática, item 2 (Sistemas operacionais)",
+          "texto": "Multiprogramação: o sistema operacional divide o tempo de processamento entre vários processos, mantendo o processador ocupado. Multitarefa: permite ao usuário executar várias tarefas alternando entre elas. Multiusuário: suporta vários usuários simultaneamente. Multiprocessamento: utiliza mais de um processador físico.",
+          "trechos_grifados": [
+            {
+              "inicio": 40,
+              "fim": 94,
+              "motivo": "gradacao — definição do enunciado (gabarito C)",
+              "texto_grifado": "divide o tempo de processamento entre vários processos"
+            },
+            {
+              "inicio": 141,
+              "fim": 183,
+              "motivo": "contraste — A erra ao confundir com multitarefa",
+              "texto_grifado": "permite ao usuário executar várias tarefas"
+            },
+            {
+              "inicio": 282,
+              "fim": 319,
+              "motivo": "contraste — D erra ao confundir com multiprocessamento",
+              "texto_grifado": "utiliza mais de um processador físico"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "PROGRAMA = processos + CPU · TAREFA = usuário · USUÁRIO = contas · PROCESSAMENTO = CPUs.\nNear: definição de multitarefa (usuário alterna apps) → gabarito A.\nFar: servidor com dois processadores físicos → gabarito D.\nNão muda: divide tempo entre processos mantendo CPU ocupada = multiprogramação.",
+          "destaques": [
+            "PROGRAMA",
+            "Near",
+            "Não muda"
+          ]
+        }
+      }
+    ]
+  }
+}

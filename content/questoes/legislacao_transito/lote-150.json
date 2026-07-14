@@ -1,0 +1,382 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_911_registro",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_911_art_9_exportacao",
+    "enunciado": "Encarroçadora de Campina Grande/PB desloca três ônibus novos, destinados à exportação, em comboio pela BR-230 em direção ao Porto de Suape/PE. Os veículos portam DANFe emitida pelo fabricante, mas a empresa não comunicou previamente os órgãos de trânsito com circunscrição sobre os trechos do itinerário. O responsável alega que o DANFe, por si só, autoriza a circulação até a fronteira ou local de embarque. Agente da PRF questiona a regularidade. Considerando a Resolução CONTRAN nº 911/2022, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A circulação é irregular: o art. 9º, § 1º, exige comunicação prévia aos órgãos com circunscrição sobre o itinerário com antecedência mínima de cinco dias úteis — o DANFe do art. 10 comprova a exportação, mas não substitui essa exigência — ensejando o art. 230, V, do CTB (art. 11, III, da Res. 911/2022).",
+      "B": "A circulação é regular, pois o DANFe autoriza trânsito por trinta dias consecutivos em todo o território nacional para veículos destinados à exportação, independentemente de comunicação prévia.",
+      "C": "A circulação é regular se comunicada apenas ao órgão de trânsito do porto de embarque, pois a exportação compete exclusivamente à fiscalização alfandegária federal, sem anuência dos órgãos dos trechos intermediários.",
+      "D": "A circulação é regular porque veículos destinados à exportação estão dispensados de comunicação prévia quando portam DANFe e respeitam os limites dimensionais do art. 8º da Resolução."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Exportação de veículos novos — art. 9º, § 1º (comunicação prévia de 5 dias úteis) × art. 10 (porte de DANFe) × art. 11, III (art. 230, V, CTB).",
+      "fundamento_legal": "Res. CONTRAN 911/2022, art. 9º: fica autorizada a circulação de ônibus, micro-ônibus, caminhões, reboques e semirreboques novos, destinados à exportação, entre o fabricante, transformador ou encarroçador e a fronteira nacional ou local de embarque. Art. 9º, § 1º: a circulação desses veículos deverá ser precedida da comunicação aos órgãos e entidades executivos e rodoviários de trânsito com circunscrição sobre os trechos do itinerário a ser percorrido em território nacional, com antecedência mínima de cinco dias úteis. Art. 10: a comprovação de que o veículo é destinado à exportação se dará mediante apresentação do DANFe ou fatura emitida pelo fabricante, sendo obrigatório o porte de um destes documentos. Art. 11, III: art. 230, V, do CTB, quando transitar fora do prazo, sem documento fiscal, em desacordo com a finalidade ou fora do itinerário.",
+      "passo_a_passo": [
+        "1. Caso: ônibus novos para exportação na BR-230 com DANFe, sem comunicação prévia aos órgãos com circunscrição sobre o itinerário — alegação de que DANFe basta.",
+        "2. B erra por numero_vizinho (generaliza 30 dias para todo o país — prazo do art. 4º, § 1º, é 15 dias, 30 só na Região Norte, e não dispensa comunicação do art. 9º, § 1º); C erra por competencia_snt (restringe comunicação ao porto de embarque — § 1º exige órgãos com circunscrição sobre os trechos do itinerário); D erra por regra_excecao (confunde limites dimensionais da remonta do art. 8º com regime de exportação do art. 9º).",
+        "3. A correta: art. 9º, § 1º (5 dias úteis de antecedência) + art. 10 (DANFe comprova exportação, mas não substitui comunicação) + art. 11, III (art. 230, V, CTB)."
+      ],
+      "pegadinha": "A IDECAN induz a crer que o DANFe autoriza sozinho o comboio de exportação — mas o § 1º do art. 9º exige comunicação prévia de cinco dias úteis aos órgãos de cada trecho do itinerário.",
+      "macete": "EXPORTAÇÃO = DANFe + 5 dias úteis de comunicação no itinerário.",
+      "estudo_reverso": [
+        "Res. CONTRAN 911/2022 art. 9",
+        "Res. CONTRAN 911/2022 art. 10",
+        "Res. CONTRAN 911/2022 art. 11",
+        "CTB art. 230, V"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "DANFe comprova exportação, mas não dispensa comunicação prévia de cinco dias úteis no itinerário",
+      "eixos_legais": [
+        "CONTRAN_911_art_9_par1",
+        "CONTRAN_911_art_10",
+        "CONTRAN_911_art_11_III"
+      ],
+      "eixo_vizinho": "CONTRAN_911_art_4",
+      "isca_por_alternativa": {
+        "B": "DANFe autoriza trinta dias em todo o território para exportação sem comunicação prévia",
+        "C": "comunicação basta ao órgão do porto de embarque, sem anuência dos trechos intermediários",
+        "D": "exportação com DANFe dispensa comunicação prévia se respeitar limites dimensionais do art. 8º"
+      },
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "competencia_snt",
+        "regra_excecao"
+      ],
+      "near_transfer": "Mesmo comboio com DANFe regular, mas comunicação enviada apenas três dias úteis antes — ainda irregular pelo § 1º do art. 9º.",
+      "far_transfer": "Venda doméstica com DANFe da origem ao Município de registro — regime do art. 4º, sem exigência de comunicação de exportação do art. 9º.",
+      "o_que_nao_muda": "Exportação exige DANFe e comunicação prévia de cinco dias úteis aos órgãos de cada trecho do itinerário — documento fiscal não substitui anuência prévia.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "resolucao_911",
+      "exportacao",
+      "danfe",
+      "onibus",
+      "br230"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_911_art_9_exportacao",
+      "macete_visual": "exportacao = DANFe + comunicacao 5 dias uteis",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A: ônibus para exportação com DANFe, mas sem comunicação prévia de cinco dias úteis no itinerário.",
+            "destaques": ["Gabarito A", "DANFe", "cinco dias úteis"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "DANFe × comunicação prévia",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "DANFe autoriza sozinho o comboio de exportação",
+                "§ 1º do art. 9º exige comunicação prévia de cinco dias úteis"
+              ],
+              [
+                "30 dias em todo o país para exportação",
+                "15 dias no art. 4º — 30 só na Região Norte"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "EXPORTAÇÃO = DANFe + 5 dias úteis de comunicação no itinerário.",
+            "destaques": ["DANFe", "5 dias úteis", "itinerário"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 911/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 911, DE 28 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 275,
+      "fundamento_slug": "CONTRAN_911_art_9_exportacao",
+      "macete_visual": "exportacao = DANFe + comunicacao 5 dias uteis",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "DANFe comprova exportação, mas não dispensa comunicação prévia de cinco dias úteis no itinerário",
+        "eixos_legais": [
+          "CONTRAN_911_art_9_par1",
+          "CONTRAN_911_art_10",
+          "CONTRAN_911_art_11_III"
+        ],
+        "isca_por_alternativa": {
+          "B": "DANFe autoriza trinta dias em todo o território para exportação sem comunicação prévia",
+          "C": "comunicação basta ao órgão do porto de embarque, sem anuência dos trechos intermediários",
+          "D": "exportação com DANFe dispensa comunicação prévia se respeitar limites dimensionais do art. 8º"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: comboio com DANFe sem comunicação",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — DANFe autoriza trinta dias em todo o território para exportação sem comunicação prévia.\nC — comunicação basta ao órgão do porto de embarque, sem anuência dos trechos intermediários.\nD — exportação com DANFe dispensa comunicação prévia se respeitar limites dimensionais.\n\nPegadinha: DANFe comprova exportação, mas não substitui comunicação prévia de cinco dias úteis no itinerário.",
+            "destaques": ["Gabarito A", "DANFe", "cinco dias úteis"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "EXPORTAÇÃO: veículos novos destinados ao exterior — circulação autorizada entre fabricante/encarroçador e fronteira ou local de embarque.\n\nDANFe: documento fiscal que comprova destino de exportação — porte obrigatório, mas não substitui comunicação prévia.\n\nCIRCUNSCRIÇÃO NO ITINERÁRIO: órgãos executivos e rodoviários de trânsito de cada trecho da rota nacional — devem ser comunicados com cinco dias úteis de antecedência.",
+            "destaques": ["EXPORTAÇÃO", "DANFe", "CIRCUNSCRIÇÃO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: comboio de exportação é regular?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Veículos novos destinados à exportação em itinerário nacional?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Houve comunicação prévia com cinco dias úteis aos órgãos do itinerário?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Irregular — falta comunicação prévia de cinco dias úteis",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — ônibus para Suape com DANFe"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — empresa não comunicou os órgãos"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Requisitos cumulativos da exportação",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Requisito", "Dispositivo"],
+            "linhas": [
+              {
+                "faixa": "Circulação autorizada fabricante → embarque",
+                "classificacao": "Art. 9º — caput"
+              },
+              {
+                "faixa": "Comunicação prévia cinco dias úteis",
+                "classificacao": "Art. 9º, § 1º",
+                "destaque": true
+              },
+              {
+                "faixa": "Porte de DANFe ou fatura do fabricante",
+                "classificacao": "Art. 10",
+                "destaque": true
+              },
+              {
+                "faixa": "Penalidade por desacordo",
+                "classificacao": "Art. 230, V, CTB — art. 11, III"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: DANFe basta sozinho",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "DANFe autoriza circulação sem comunicação prévia",
+                "§ 1º do art. 9º exige cinco dias úteis de antecedência"
+              ],
+              [
+                "Comunicação só no porto de embarque",
+                "Órgãos com circunscrição sobre cada trecho do itinerário"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — numero_vizinho",
+                "Generaliza 30 dias para todo o país — ignora comunicação do § 1º do art. 9º"
+              ],
+              [
+                "C — competencia_snt",
+                "Restringe comunicação ao porto — § 1º exige órgãos de cada trecho do itinerário"
+              ],
+              [
+                "D — regra_excecao",
+                "Confunde limites dimensionais da remonta com regime de exportação"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dado do caso", "Conclusão"],
+            "linhas": [
+              [
+                "Três ônibus novos destinados à exportação",
+                "Regime do art. 9º — caput"
+              ],
+              [
+                "Comboio pela BR-230 em direção ao Porto de Suape",
+                "Itinerário nacional com circunscrição de vários órgãos"
+              ],
+              [
+                "Porte de DANFe regular",
+                "Atende art. 10 — mas é requisito cumulativo"
+              ],
+              [
+                "Sem comunicação prévia aos órgãos do itinerário",
+                "Viola § 1º do art. 9º — art. 230, V, CTB"
+              ],
+              [
+                "Resultado",
+                "Alternativa A"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Órgãos do itinerário × art. 9º e art. 10",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              [
+                "Art. 9º, § 1º — comunicação prévia",
+                "Cinco dias úteis aos órgãos de cada trecho — exigência não cumprida"
+              ],
+              [
+                "Art. 10 — DANFe",
+                "Comprova destino de exportação — porte obrigatório, mas não substitui § 1º"
+              ],
+              [
+                "Art. 11, III — penalidade",
+                "Art. 230, V, CTB — transitar em desacordo com finalidade ou itinerário"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Res. 911/2022, art. 9º, § 1º",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 911/2022, art. 9º, § 1º",
+            "texto": "A circulação desses veículos deverá ser precedida da comunicação aos órgãos e entidades executivos e rodoviários de trânsito com circunscrição sobre os trechos do itinerário a ser percorrido em território nacional, com antecedência mínima de cinco dias úteis.",
+            "trechos_grifados": [
+              {
+                "inicio": 53,
+                "fim": 173,
+                "motivo": "fluxo — comunicação prévia não realizada no caso",
+                "texto_grifado": "comunicação aos órgãos e entidades executivos e rodoviários de trânsito com circunscrição sobre os trechos do itinerário"
+              },
+              {
+                "inicio": 219,
+                "fim": 258,
+                "motivo": "mapa — prazo mínimo de antecedência",
+                "texto_grifado": "antecedência mínima de cinco dias úteis"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Res. 911/2022, art. 10",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 911/2022, art. 10",
+            "texto": "A comprovação de que o veículo é destinado à exportação, identificado por seu número de chassi e/ou carroçaria, se dará mediante apresentação do DANFe ou fatura emitida pelo fabricante, sendo obrigatório o porte de um destes documentos, conforme o caso.",
+            "trechos_grifados": [
+              {
+                "inicio": 186,
+                "fim": 235,
+                "motivo": "contraste — DANFe comprova exportação, mas não substitui comunicação",
+                "texto_grifado": "sendo obrigatório o porte de um destes documentos"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "EXPORTAÇÃO = DANFe + 5 dias úteis de comunicação no itinerário.\n\nNear: comunicação enviada apenas três dias úteis antes — ainda irregular pelo § 1º.\nFar: venda doméstica com DANFe até o Município de registro — regime do art. 4º, sem art. 9º.\nNão muda: exportação exige DANFe e comunicação prévia de cinco dias úteis em cada trecho.\nCadeia: vizinho = art. 4º (15/30 dias para registro doméstico, sem comunicação de exportação).",
+            "destaques": ["DANFe", "5 dias úteis", "art. 4º", "itinerário"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 911/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 911, DE 28 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,2031 @@
+[
+  {
+    "disciplina": "informatica",
+    "topico": "informatica_2_1",
+    "tipo": "conceitual",
+    "estilo_idecan": "conceito_informatica",
+    "dificuldade": 2,
+    "fundamento_slug": "info_SO_multiprogramacao",
+    "enunciado": "Os sistemas operacionais podem ser classificados de acordo com algumas características como, por exemplo: projeto (arquitetura), gerenciamento de processos, quantidade de usuários etc. Uma dessas características tem a seguinte definição: \"o SO divide o tempo de processamento entre vários processos mantendo o processador sempre ocupado\". Assinale a alternativa que apresenta essa classificação.",
+    "alternativas": {
+      "A": "Multitarefa.",
+      "B": "Multiusuário.",
+      "C": "Multiprogramação.",
+      "D": "Multiprocessamento."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Classificação de sistemas operacionais — multiprogramação (divisão de tempo entre processos mantendo CPU ocupada) × multitarefa, multiusuário e multiprocessamento.",
+      "fundamento_legal": "Conceitos técnicos — Sistemas operacionais (Anexo I, item 2): multiprogramação divide o tempo de processamento entre vários processos mantendo o processador ocupado; multitarefa alterna tarefas para um usuário; multiusuário suporta vários usuários simultâneos; multiprocessamento usa mais de um processador físico.",
+      "passo_a_passo": [
+        "1. O enunciado transcreve a definição clássica de multiprogramação: divisão de tempo entre processos com CPU sempre ocupada.",
+        "2. A erra por termo_unico (multitarefa alterna tarefas para um usuário — não é divisão de tempo entre processos); B erra por termo_unico (multiusuário trata de vários usuários simultâneos — não de gerenciamento de tempo da CPU); D erra por termo_unico (multiprocessamento exige múltiplos processadores físicos — não apenas divisão de tempo em um único núcleo).",
+        "3. C correta: a definição do enunciado corresponde exatamente à multiprogramação."
+      ],
+      "pegadinha": "A banca lista quatro termos com prefixo \"multi-\" e induz a marcar multitarefa (tarefas) ou multiprocessamento (processadores) em vez de multiprogramação (processos + tempo de CPU).",
+      "macete": "PROGRAMA = processos + tempo de CPU · TAREFA = usuário alterna apps · USUÁRIO = várias contas · PROCESSAMENTO = várias CPUs.",
+      "estudo_reverso": [
+        "SO — classificação por gerenciamento de processos",
+        "SO — multiprogramação × multitarefa × multiusuário × multiprocessamento"
+      ]
+    },
+    "tags": [
+      "real_idecan",
+      "superior",
+      "sistema_operacional",
+      "multiprogramacao",
+      "classificacao_SO"
+    ],
+    "meta": {
+      "origem": "real_idecan",
+      "nivel_escolaridade": "superior",
+      "fonte_arquivo": "INFORMÁTICA - IDECAN - SUPERIOR -TEC.pdf",
+      "tec_id": "600063",
+      "padrao_familia": "D_gradacao",
+      "pegadinha_em_uma_frase": "Quatro termos com prefixo multi- — a definição do enunciado é multiprogramação (tempo de CPU entre processos), não multitarefa nem multiprocessamento",
+      "eixos_legais": [
+        "info_SO_multiprogramacao",
+        "info_SO_multitarefa",
+        "info_SO_multiusuario",
+        "info_SO_multiprocessamento"
+      ],
+      "isca_por_alternativa": {
+        "A": "multitarefa — confunde alternância de tarefas do usuário com divisão de tempo entre processos na CPU",
+        "B": "multiusuário — confunde vários usuários simultâneos com gerenciamento de tempo do processador",
+        "D": "multiprocessamento — confunde múltiplos processadores físicos com divisão de tempo em um único núcleo"
+      },
+      "near_transfer": "Definição de multitarefa: o usuário executa várias tarefas alternando entre elas — gabarito seria A, não C.",
+      "far_transfer": "Servidor com dois processadores físicos trabalhando em paralelo — classificação multiprocessamento (D), não divisão de tempo entre processos.",
+      "o_que_nao_muda": "Multiprogramação = divide tempo de CPU entre processos mantendo o processador ocupado — invariante da definição citada no enunciado.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "macete_visual": "PROGRAMA=CPU+processos · TAREFA=usuário · USUÁRIO=contas · CPU=processadores"
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "fundamento_slug": "info_SO_multiprogramacao",
+      "macete_visual": "PROGRAMA=CPU · TAREFA=usuário · USUÁRIO=contas · CPU=processadores",
+      "duracao_estimada_seg": 50,
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Gabarito C",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Definição do enunciado = multiprogramação (divide tempo entre processos). Não confunda com multitarefa (usuário) nem multiprocessamento (várias CPUs).",
+            "destaques": [
+              "multiprogramação",
+              "processos",
+              "CPU"
+            ]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Mapa multi-",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Classificação",
+              "Foco"
+            ],
+            "linhas": [
+              {
+                "faixa": "Multiprogramação",
+                "classificacao": "Tempo de CPU entre processos",
+                "destaque": true
+              },
+              {
+                "faixa": "Multitarefa",
+                "classificacao": "Usuário alterna tarefas"
+              },
+              {
+                "faixa": "Multiusuário",
+                "classificacao": "Vários usuários simultâneos"
+              },
+              {
+                "faixa": "Multiprocessamento",
+                "classificacao": "Vários processadores físicos"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PROGRAMA = processos + CPU. TAREFA = usuário. USUÁRIO = contas. PROCESSAMENTO = CPUs.",
+            "destaques": [
+              "PROGRAMA",
+              "TAREFA",
+              "USUÁRIO"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 2",
+          "path": "conteúdo/edital/"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 195,
+      "fundamento_slug": "info_SO_multiprogramacao",
+      "macete_visual": "PROGRAMA=CPU+processos · TAREFA=usuário · USUÁRIO=contas · CPU=processadores",
+      "publico_alvo": "iniciante",
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 2 (Sistemas operacionais)",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "meta": {
+        "near_transfer": "Multitarefa = usuário alterna tarefas — gabarito A.",
+        "far_transfer": "Dois processadores físicos em paralelo = multiprocessamento — gabarito D.",
+        "o_que_nao_muda": "Multiprogramação = divide tempo de CPU entre processos — definição do enunciado."
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Você acertou — e a isca da banca",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (Multiprogramação).\n\nA — multitarefa: usuário alterna tarefas, não divisão de tempo na CPU.\nB — multiusuário: várias contas simultâneas, não gerenciamento de processos.\nD — multiprocessamento: várias CPUs físicas, não só divisão de tempo.\n\nPegadinha: quatro termos com prefixo multi- — a definição cita processos e CPU ocupada.",
+            "destaques": [
+              "Gabarito C",
+              "processos",
+              "CPU ocupada"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 4 classificações",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PROCESSO: programa em execução na memória.\nMULTIPROGRAMAÇÃO: CPU divide tempo entre processos.\nMULTITAREFA: um usuário alterna entre aplicativos.\nMULTIPROCESSAMENTO: mais de um processador físico no hardware.",
+            "destaques": [
+              "MULTIPROGRAMAÇÃO",
+              "MULTITAREFA",
+              "MULTIPROCESSAMENTO"
+            ]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Mapa: classificação do SO",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Classificação",
+              "O que mede"
+            ],
+            "linhas": [
+              {
+                "faixa": "Multiprogramação",
+                "classificacao": "Divide tempo de CPU entre processos",
+                "destaque": true
+              },
+              {
+                "faixa": "Multitarefa",
+                "classificacao": "Usuário executa várias tarefas alternando"
+              },
+              {
+                "faixa": "Multiusuário",
+                "classificacao": "Vários usuários ao mesmo tempo"
+              },
+              {
+                "faixa": "Multiprocessamento",
+                "classificacao": "Vários processadores físicos"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença do candidato × conceito",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Crença ✗",
+              "Conceito ✓"
+            ],
+            "linhas": [
+              [
+                "Multitarefa divide tempo entre processos na CPU",
+                "Multiprogramação divide tempo entre processos mantendo CPU ocupada"
+              ],
+              [
+                "Multiprocessamento é só dividir tempo em um processador",
+                "Multiprocessamento exige mais de um processador físico"
+              ],
+              [
+                "Multiusuário gerencia fila de processos do processador",
+                "Multiusuário suporta várias contas de usuário simultâneas"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que A, B e D enganam",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Multitarefa trata de alternância de tarefas do usuário — não de divisão de tempo entre processos"
+              ],
+              [
+                "B — termo_unico",
+                "Multiusuário trata de vários usuários simultâneos — não de ocupação da CPU por processos"
+              ],
+              [
+                "D — termo_unico",
+                "Multiprocessamento exige múltiplos processadores físicos — não apenas divisão de tempo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Aplicando ao enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Fato do enunciado",
+              "Resultado"
+            ],
+            "linhas": [
+              [
+                "Divide tempo entre vários processos",
+                "Multiprogramação — gabarito C"
+              ],
+              [
+                "Mantém processador sempre ocupado",
+                "Confirma multiprogramação (não multitarefa)"
+              ],
+              [
+                "Alternativas A, B e D",
+                "Cada uma mede eixo diferente — descartadas"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Referência — classificação do SO",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Anexo I — Informática, item 2 (Sistemas operacionais)",
+            "texto": "Multiprogramação: o sistema operacional divide o tempo de processamento entre vários processos, mantendo o processador ocupado. Multitarefa: permite ao usuário executar várias tarefas alternando entre elas. Multiusuário: suporta vários usuários simultaneamente. Multiprocessamento: utiliza mais de um processador físico.",
+            "trechos_grifados": [
+              {
+                "inicio": 40,
+                "fim": 94,
+                "motivo": "gradacao — definição do enunciado (gabarito C)",
+                "texto_grifado": "divide o tempo de processamento entre vários processos"
+              },
+              {
+                "inicio": 141,
+                "fim": 183,
+                "motivo": "contraste — A erra ao confundir com multitarefa",
+                "texto_grifado": "permite ao usuário executar várias tarefas"
+              },
+              {
+                "inicio": 282,
+                "fim": 319,
+                "motivo": "contraste — D erra ao confundir com multiprocessamento",
+                "texto_grifado": "utiliza mais de um processador físico"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Leve para a prova",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PROGRAMA = processos + CPU · TAREFA = usuário · USUÁRIO = contas · PROCESSAMENTO = CPUs.\nNear: definição de multitarefa (usuário alterna apps) → gabarito A.\nFar: servidor com dois processadores físicos → gabarito D.\nNão muda: divide tempo entre processos mantendo CPU ocupada = multiprogramação.",
+            "destaques": [
+              "PROGRAMA",
+              "Near",
+              "Não muda"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "disciplina": "informatica",
+    "topico": "informatica_1_1",
+    "tipo": "conceitual",
+    "estilo_idecan": "conceito_informatica",
+    "dificuldade": 2,
+    "fundamento_slug": "info_UCP_cache",
+    "enunciado": "Sobre a UCP, assinale a alternativa correta.",
+    "alternativas": {
+      "A": "As memórias RAM e ROM são componentes da UCP.",
+      "B": "A Unidade Lógica e Aritmética é responsável pelo controle de entrada e saída de dados na UCP.",
+      "C": "Unidade Lógica e Aritmética, Registradores e Unidade de Controle não são componentes da UCP.",
+      "D": "A memória cache do processador é uma memória de acesso rápido, usada pela Unidade Central de Processamento com o objetivo de reduzir o tempo médio de acesso aos dados armazenados na memória."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Componentes da UCP (ULA, Unidade de Controle, Registradores, cache) × memórias externas (RAM/ROM).",
+      "fundamento_legal": "Conceitos técnicos — Hardware (Anexo I, item 1.1): a UCP é composta por ULA, Unidade de Controle e Registradores; a memória cache do processador é memória de acesso rápido que reduz o tempo de acesso à memória principal; RAM e ROM são memórias externas à UCP.",
+      "passo_a_passo": [
+        "1. O comando pede a alternativa correta sobre a UCP (Unidade Central de Processamento).",
+        "2. A erra por termo_unico (RAM e ROM são memórias principais/auxiliares — não integram o chip do processador); B erra por termo_unico (ULA executa cálculos lógicos e aritméticos — controle de E/S é função da Unidade de Controle); C erra por regra_excecao (nega que ULA, Registradores e Unidade de Controle são componentes — quando na verdade são o núcleo da UCP).",
+        "3. D correta: define corretamente a memória cache como memória rápida auxiliar da UCP para reduzir latência de acesso à memória principal."
+      ],
+      "pegadinha": "A banca mistura memórias externas (RAM/ROM) com componentes internos da UCP e troca a função da ULA (cálculos) pela da Unidade de Controle (coordenação).",
+      "macete": "ULA = cálculos · UC = controle · Registradores = armazenamento interno · Cache = ponte rápida · RAM/ROM = fora da UCP.",
+      "estudo_reverso": [
+        "Hardware — componentes da UCP",
+        "Hardware — memória cache × RAM/ROM"
+      ]
+    },
+    "tags": [
+      "real_idecan",
+      "superior",
+      "hardware",
+      "UCP",
+      "cache",
+      "processador"
+    ],
+    "meta": {
+      "origem": "real_idecan",
+      "nivel_escolaridade": "superior",
+      "fonte_arquivo": "INFORMÁTICA - IDECAN - SUPERIOR -TEC.pdf",
+      "tec_id": "3324116",
+      "padrao_familia": "D_gradacao",
+      "pegadinha_em_uma_frase": "RAM/ROM não são da UCP — a banca troca memória externa por componente interno e inverte função da ULA",
+      "eixos_legais": [
+        "info_UCP_componentes",
+        "info_UCP_cache",
+        "info_RAM_ROM_externas"
+      ],
+      "isca_por_alternativa": {
+        "A": "RAM e ROM dentro da UCP — confunde memória principal com chip do processador",
+        "B": "ULA controla entrada e saída — atribui função da Unidade de Controle à ULA",
+        "C": "ULA, Registradores e UC fora da UCP — nega componentes que são o núcleo do processador"
+      },
+      "near_transfer": "Pergunta sobre qual componente executa cálculos matemáticos na UCP — gabarito seria ULA, não cache.",
+      "far_transfer": "SSD como armazenamento não volátil — não é cache interno do processador nem componente da UCP.",
+      "o_que_nao_muda": "Cache do processador = memória de acesso rápido para reduzir tempo de acesso à memória principal.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "macete_visual": "ULA=cálculos · UC=controle · Cache=ponte · RAM/ROM=fora"
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "fundamento_slug": "info_UCP_cache",
+      "macete_visual": "ULA=cálculos · UC=controle · Cache=ponte · RAM/ROM=fora",
+      "duracao_estimada_seg": 50,
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Gabarito D",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Cache = memória rápida da UCP para reduzir acesso à RAM. RAM/ROM ficam fora do processador. ULA calcula; Unidade de Controle coordena.",
+            "destaques": [
+              "cache",
+              "RAM/ROM",
+              "ULA"
+            ]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Mapa UCP",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Componente",
+              "Função"
+            ],
+            "linhas": [
+              {
+                "faixa": "ULA",
+                "classificacao": "Cálculos lógicos e aritméticos"
+              },
+              {
+                "faixa": "Unidade de Controle",
+                "classificacao": "Coordena operações da UCP"
+              },
+              {
+                "faixa": "Cache",
+                "classificacao": "Memória rápida — reduz latência",
+                "destaque": true
+              },
+              {
+                "faixa": "RAM/ROM",
+                "classificacao": "Memórias externas à UCP"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ULA = cálculos. UC = controle. Cache = ponte rápida. RAM/ROM = fora da UCP.",
+            "destaques": [
+              "ULA",
+              "Cache",
+              "RAM/ROM"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 1.1",
+          "path": "conteúdo/edital/"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 195,
+      "fundamento_slug": "info_UCP_cache",
+      "macete_visual": "ULA=cálculos · UC=controle · Cache=ponte · RAM/ROM=fora",
+      "publico_alvo": "iniciante",
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 1.1 (Hardware)",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "meta": {
+        "near_transfer": "Componente que executa cálculos na UCP = ULA.",
+        "far_transfer": "SSD = armazenamento — não é cache do processador.",
+        "o_que_nao_muda": "Cache = memória rápida para reduzir acesso à memória principal."
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Você acertou — e a isca da banca",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D (memória cache).\n\nA — RAM e ROM na UCP: são memórias externas ao processador.\nB — ULA controla E/S: controle é da Unidade de Controle.\nC — ULA, Registradores e UC fora da UCP: são o núcleo do processador.\n\nPegadinha: mistura memórias externas com componentes internos da UCP.",
+            "destaques": [
+              "Gabarito D",
+              "cache",
+              "RAM/ROM"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 5 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "UCP: processador — chip que executa instruções.\nULA: Unidade Lógica e Aritmética — faz cálculos.\nUNIDADE DE CONTROLE: coordena fluxo de instruções.\nCACHE: memória ultra-rápida dentro ou junto ao processador.\nRAM/ROM: memórias principais — ficam fora da UCP.",
+            "destaques": [
+              "UCP",
+              "ULA",
+              "CACHE"
+            ]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Mapa: dentro e fora da UCP",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Item",
+              "Onde fica"
+            ],
+            "linhas": [
+              {
+                "faixa": "ULA + UC + Registradores",
+                "classificacao": "Dentro da UCP",
+                "destaque": true
+              },
+              {
+                "faixa": "Memória cache",
+                "classificacao": "Auxiliar da UCP — acesso rápido",
+                "destaque": true
+              },
+              {
+                "faixa": "RAM",
+                "classificacao": "Memória principal — fora da UCP"
+              },
+              {
+                "faixa": "ROM",
+                "classificacao": "Memória somente leitura — fora da UCP"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença do candidato × conceito",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Crença ✗",
+              "Conceito ✓"
+            ],
+            "linhas": [
+              [
+                "RAM e ROM são componentes da UCP",
+                "RAM e ROM são memórias externas ao processador"
+              ],
+              [
+                "ULA controla entrada e saída de dados",
+                "ULA executa cálculos; Unidade de Controle coordena"
+              ],
+              [
+                "ULA, Registradores e UC não pertencem à UCP",
+                "Esses três são o núcleo interno da UCP"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que A, B e C enganam",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Confunde RAM/ROM (memória principal) com componentes internos do chip do processador"
+              ],
+              [
+                "B — termo_unico",
+                "Atribui à ULA a função de controle de E/S — papel da Unidade de Controle"
+              ],
+              [
+                "C — regra_excecao",
+                "Nega que ULA, Registradores e UC são da UCP — quando são o núcleo do processador"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Aplicando ao enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Veredito"
+            ],
+            "linhas": [
+              [
+                "A — RAM e ROM na UCP",
+                "Falsa — memórias externas"
+              ],
+              [
+                "B — ULA controla E/S",
+                "Falsa — ULA calcula"
+              ],
+              [
+                "C — ULA/UC/Registradores fora",
+                "Falsa — são da UCP"
+              ],
+              [
+                "D — cache rápida",
+                "Correta — gabarito D"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Referência — arquitetura da UCP",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Anexo I — Informática, item 1.1 (Hardware)",
+            "texto": "A UCP (CPU) é composta por Unidade Lógica e Aritmética (ULA), Unidade de Controle e Registradores. A memória cache do processador é memória de acesso rápido que reduz o tempo médio de acesso aos dados da memória principal. RAM e ROM são memórias externas à UCP, não componentes do processador.",
+            "trechos_grifados": [
+              {
+                "inicio": 27,
+                "fim": 97,
+                "motivo": "gradacao — núcleo interno da UCP",
+                "texto_grifado": "Unidade Lógica e Aritmética (ULA), Unidade de Controle e Registradores"
+              },
+              {
+                "inicio": 101,
+                "fim": 156,
+                "motivo": "caso — gabarito D (definição de cache)",
+                "texto_grifado": "memória cache do processador é memória de acesso rápido"
+              },
+              {
+                "inicio": 223,
+                "fim": 260,
+                "motivo": "contraste — A erra ao incluir RAM/ROM na UCP",
+                "texto_grifado": "RAM e ROM são memórias externas à UCP"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Leve para a prova",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ULA = cálculos · UC = controle · Cache = ponte rápida · RAM/ROM = fora da UCP.\nNear: qual componente faz cálculos? → ULA (não cache).\nFar: SSD armazena dados — não é cache interno do processador.\nNão muda: cache = memória rápida para reduzir acesso à memória principal.",
+            "destaques": [
+              "ULA",
+              "Near",
+              "Não muda"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "disciplina": "informatica",
+    "topico": "informatica_1_1",
+    "tipo": "conceitual",
+    "estilo_idecan": "conceito_informatica",
+    "dificuldade": 2,
+    "fundamento_slug": "info_UCP_ULA",
+    "enunciado": "Sabendo que o processador de um dispositivo computacional é dividido em componentes, indique a alternativa com o item que realiza os cálculos matemáticos e operações lógicas.",
+    "alternativas": {
+      "A": "Unidade Lógica de Processamento.",
+      "B": "Unidade de Controle.",
+      "C": "Memória cache.",
+      "D": "Registradores."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Função da ULA (Unidade Lógica de Processamento / Unidade Lógica e Aritmética) — cálculos e operações lógicas × Unidade de Controle, cache e registradores.",
+      "fundamento_legal": "Conceitos técnicos — Hardware (Anexo I, item 1.1): a ULA (também chamada Unidade Lógica de Processamento) executa cálculos matemáticos e operações lógicas; a Unidade de Controle coordena instruções; registradores e cache armazenam dados temporários.",
+      "passo_a_passo": [
+        "1. O enunciado pergunta qual componente do processador realiza cálculos matemáticos e operações lógicas.",
+        "2. B erra por termo_unico (Unidade de Controle coordena o fluxo de instruções — não executa cálculos); C erra por termo_unico (memória cache armazena dados para acesso rápido — não calcula); D erra por termo_unico (registradores guardam operandos temporários — os cálculos são feitos pela ULA).",
+        "3. A correta: Unidade Lógica de Processamento é sinônimo de ULA — executa cálculos e operações lógicas."
+      ],
+      "pegadinha": "A banca lista quatro componentes da UCP e induz a marcar Unidade de Controle (coordenação) ou registradores/cache (armazenamento) em vez da unidade que efetivamente calcula.",
+      "macete": "ULA calcula · UC coordena · Cache/Registradores guardam.",
+      "estudo_reverso": [
+        "Hardware — ULA (Unidade Lógica e Aritmética)",
+        "Hardware — funções dos componentes da UCP"
+      ]
+    },
+    "tags": [
+      "real_idecan",
+      "superior",
+      "hardware",
+      "UCP",
+      "ULA",
+      "processador"
+    ],
+    "meta": {
+      "origem": "real_idecan",
+      "nivel_escolaridade": "superior",
+      "fonte_arquivo": "INFORMÁTICA - IDECAN - SUPERIOR -TEC.pdf",
+      "tec_id": "676461",
+      "padrao_familia": "D_gradacao",
+      "pegadinha_em_uma_frase": "Confunde coordenação (UC) e armazenamento (cache/registradores) com a unidade que calcula — ULA",
+      "eixos_legais": [
+        "info_UCP_ULA",
+        "info_UCP_unidade_controle",
+        "info_UCP_registradores_cache"
+      ],
+      "isca_por_alternativa": {
+        "B": "Unidade de Controle — confunde coordenação de instruções com execução de cálculos",
+        "C": "memória cache — confunde armazenamento rápido com unidade aritmética",
+        "D": "registradores — confunde armazenamento de operandos com quem executa a operação"
+      },
+      "near_transfer": "Qual componente coordena o fluxo de instruções na UCP? → Unidade de Controle (gabarito B).",
+      "far_transfer": "Disco rígido armazena arquivos permanentemente — não realiza cálculos na UCP.",
+      "o_que_nao_muda": "ULA (Unidade Lógica de Processamento) = cálculos matemáticos e operações lógicas.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "macete_visual": "ULA=calcula · UC=coordena · Cache/Reg=guardam"
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "fundamento_slug": "info_UCP_ULA",
+      "macete_visual": "ULA=calcula · UC=coordena · Cache/Reg=guardam",
+      "duracao_estimada_seg": 45,
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Gabarito A",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Cálculos e operações lógicas = ULA (Unidade Lógica de Processamento). UC coordena; cache e registradores armazenam.",
+            "destaques": [
+              "ULA",
+              "cálculos",
+              "coordena"
+            ]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Funções da UCP",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Componente",
+              "Função"
+            ],
+            "linhas": [
+              {
+                "faixa": "ULA",
+                "classificacao": "Cálculos e operações lógicas",
+                "destaque": true
+              },
+              {
+                "faixa": "Unidade de Controle",
+                "classificacao": "Coordena instruções"
+              },
+              {
+                "faixa": "Cache / Registradores",
+                "classificacao": "Armazenam dados temporários"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ULA calcula. UC coordena. Cache e Registradores guardam.",
+            "destaques": [
+              "ULA",
+              "UC",
+              "guardam"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 1.1",
+          "path": "conteúdo/edital/"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 195,
+      "fundamento_slug": "info_UCP_ULA",
+      "macete_visual": "ULA=calcula · UC=coordena · Cache/Reg=guardam",
+      "publico_alvo": "iniciante",
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, item 1.1 (Hardware)",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "meta": {
+        "near_transfer": "Coordena instruções = Unidade de Controle (B).",
+        "far_transfer": "HDD armazena arquivos — não calcula na UCP.",
+        "o_que_nao_muda": "ULA = cálculos matemáticos e operações lógicas."
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Você acertou — e a isca da banca",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A (Unidade Lógica de Processamento).\n\nB — Unidade de Controle: coordena, não calcula.\nC — memória cache: armazena para acesso rápido.\nD — registradores: guardam operandos — cálculo é da ULA.\n\nPegadinha: quatro componentes da UCP — só a ULA executa cálculos.",
+            "destaques": [
+              "Gabarito A",
+              "ULA",
+              "cálculos"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 4 funções",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ULA: Unidade Lógica e Aritmética — também chamada Unidade Lógica de Processamento — faz cálculos.\nUNIDADE DE CONTROLE: decodifica e coordena instruções.\nCACHE: memória rápida auxiliar.\nREGISTRADORES: células internas que guardam operandos.",
+            "destaques": [
+              "ULA",
+              "UNIDADE DE CONTROLE",
+              "REGISTRADORES"
+            ]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Mapa: quem faz o quê na UCP",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Componente",
+              "Função"
+            ],
+            "linhas": [
+              {
+                "faixa": "ULA (ULP)",
+                "classificacao": "Cálculos matemáticos e operações lógicas",
+                "destaque": true
+              },
+              {
+                "faixa": "Unidade de Controle",
+                "classificacao": "Coordena fluxo de instruções"
+              },
+              {
+                "faixa": "Memória cache",
+                "classificacao": "Armazena dados para acesso rápido"
+              },
+              {
+                "faixa": "Registradores",
+                "classificacao": "Armazenam operandos temporários"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença do candidato × conceito",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Crença ✗",
+              "Conceito ✓"
+            ],
+            "linhas": [
+              [
+                "Unidade de Controle executa cálculos matemáticos",
+                "ULA executa cálculos e operações lógicas"
+              ],
+              [
+                "Memória cache realiza operações aritméticas",
+                "Cache armazena dados para reduzir latência"
+              ],
+              [
+                "Registradores são a unidade que calcula",
+                "Registradores guardam operandos — ULA calcula"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que B, C e D enganam",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "B — termo_unico",
+                "Atribui cálculos à Unidade de Controle — função dela é coordenar instruções"
+              ],
+              [
+                "C — termo_unico",
+                "Confunde cache (armazenamento rápido) com unidade aritmética"
+              ],
+              [
+                "D — termo_unico",
+                "Registradores guardam operandos — quem executa a operação é a ULA"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Aplicando ao enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Pergunta do enunciado",
+              "Resposta"
+            ],
+            "linhas": [
+              [
+                "Realiza cálculos matemáticos e operações lógicas",
+                "ULA — Unidade Lógica de Processamento (A)"
+              ],
+              [
+                "Coordena instruções",
+                "Unidade de Controle — não é o gabarito"
+              ],
+              [
+                "Armazena dados temporários",
+                "Cache ou Registradores — não calculam"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Referência — funções da UCP",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Anexo I — Informática, item 1.1 (Hardware)",
+            "texto": "A ULA (Unidade Lógica e Aritmética), também chamada Unidade Lógica de Processamento, executa cálculos matemáticos e operações lógicas. A Unidade de Controle coordena o fluxo de instruções. Registradores e memória cache armazenam dados temporários — não realizam cálculos.",
+            "trechos_grifados": [
+              {
+                "inicio": 85,
+                "fim": 133,
+                "motivo": "caso — gabarito A (ULA calcula)",
+                "texto_grifado": "executa cálculos matemáticos e operações lógicas"
+              },
+              {
+                "inicio": 137,
+                "fim": 173,
+                "motivo": "contraste — B erra ao atribuir cálculos à UC",
+                "texto_grifado": "Unidade de Controle coordena o fluxo"
+              },
+              {
+                "inicio": 219,
+                "fim": 246,
+                "motivo": "contraste — C e D armazenam, não calculam",
+                "texto_grifado": "armazenam dados temporários"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Leve para a prova",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ULA calcula · UC coordena · Cache/Registradores guardam.\nNear: quem coordena instruções? → Unidade de Controle (B).\nFar: HDD armazena arquivos — não é componente que calcula na UCP.\nNão muda: ULA = cálculos matemáticos e operações lógicas.",
+            "destaques": [
+              "ULA",
+              "Near",
+              "Não muda"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "disciplina": "informatica",
+    "topico": "informatica_3_1",
+    "tipo": "conceitual",
+    "estilo_idecan": "conceito_informatica",
+    "dificuldade": 2,
+    "fundamento_slug": "info_word_2007_fonte_negrito",
+    "enunciado": "Na ferramenta Microsoft Office Word 2007 (configuração padrão), os recursos para aplicar os efeitos negrito, itálico e sublinhado em um texto selecionado estão localizados no grupo:",
+    "alternativas": {
+      "A": "Fonte da guia Início.",
+      "B": "Estilo da guia Exibição.",
+      "C": "Parágrafo da guia Formatar.",
+      "D": "Edição da guia Layout da Página."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Localização dos comandos de formatação de caracteres (negrito, itálico, sublinhado) no Word 2007 — grupo Fonte da guia Início.",
+      "fundamento_legal": "Conceitos técnicos — Editor de textos (Anexo I, itens 3.1–3.3): no Word 2007, negrito, itálico e sublinhado ficam no grupo Fonte da guia Início; alinhamento e recuo ficam no grupo Parágrafo da mesma guia.",
+      "passo_a_passo": [
+        "1. O enunciado pergunta onde estão negrito, itálico e sublinhado no Word 2007 (configuração padrão).",
+        "2. B erra por termo_unico (guia Exibição não concentra formatação de fonte — grupo Estilo trata de estilos pré-definidos); C erra por termo_unico (guia \"Formatar\" não existe no ribbon 2007 — Parágrafo fica na guia Início); D erra por numero_vizinho (guia Layout da Página trata de margens e orientação — não negrito/itálico).",
+        "3. A correta: grupo Fonte da guia Início reúne negrito, itálico, sublinhado e cor da fonte."
+      ],
+      "pegadinha": "A banca inventa guias inexistentes (Formatar) ou desloca o grupo Parágrafo/Estilo para guias erradas — negrito sempre no grupo Fonte da guia Início.",
+      "macete": "Caractere = Fonte (Início) · Parágrafo = Parágrafo (Início) · Página = Layout.",
+      "estudo_reverso": [
+        "Word 2007 — guia Início, grupo Fonte",
+        "Word 2007 — distinção Fonte × Parágrafo"
+      ]
+    },
+    "tags": [
+      "real_idecan",
+      "superior",
+      "word_2007",
+      "editor_textos",
+      "formatacao",
+      "negrito"
+    ],
+    "meta": {
+      "origem": "real_idecan",
+      "nivel_escolaridade": "superior",
+      "fonte_arquivo": "INFORMÁTICA - IDECAN - SUPERIOR 01 - TEC.pdf",
+      "tec_id": "1102727",
+      "padrao_familia": "D_gradacao",
+      "pegadinha_em_uma_frase": "Inventa guia Formatar ou desloca negrito para Exibição/Layout — grupo Fonte da guia Início é o correto",
+      "eixos_legais": [
+        "info_word_2007_guia_inicio",
+        "info_word_2007_grupo_fonte",
+        "info_word_2007_grupo_paragrafo"
+      ],
+      "isca_por_alternativa": {
+        "B": "Estilo na guia Exibição — confunde estilos com formatação direta de fonte",
+        "C": "Parágrafo na guia Formatar — guia inexistente no ribbon 2007",
+        "D": "Edição no Layout da Página — confunde formatação de página com formatação de caractere"
+      },
+      "near_transfer": "Alinhamento e recuo do parágrafo — grupo Parágrafo da guia Início (não Fonte).",
+      "far_transfer": "Inserir sumário automático — guia Referências, grupo Sumário.",
+      "o_que_nao_muda": "Negrito, itálico e sublinhado = grupo Fonte da guia Início no Word 2007.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "macete_visual": "Fonte=Início · Parágrafo=Início · Página=Layout"
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "fundamento_slug": "info_word_2007_fonte_negrito",
+      "macete_visual": "Fonte=Início · Parágrafo=Início · Página=Layout",
+      "duracao_estimada_seg": 45,
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Gabarito A",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Negrito, itálico e sublinhado = grupo Fonte da guia Início. Parágrafo é outro grupo. Layout da Página é margens.",
+            "destaques": [
+              "Fonte",
+              "Início",
+              "negrito"
+            ]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Mapa Word 2007",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Recurso",
+              "Onde fica"
+            ],
+            "linhas": [
+              {
+                "faixa": "Negrito / Itálico / Sublinhado",
+                "classificacao": "Grupo Fonte — guia Início",
+                "destaque": true
+              },
+              {
+                "faixa": "Alinhamento / Recuo",
+                "classificacao": "Grupo Parágrafo — guia Início"
+              },
+              {
+                "faixa": "Margens / Orientação",
+                "classificacao": "Guia Layout da Página"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Caractere = Fonte (Início). Parágrafo = Parágrafo (Início). Página = Layout.",
+            "destaques": [
+              "Fonte",
+              "Parágrafo",
+              "Layout"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, itens 3.1–3.3",
+          "path": "conteúdo/edital/"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 195,
+      "fundamento_slug": "info_word_2007_fonte_negrito",
+      "macete_visual": "Fonte=Início · Parágrafo=Início · Página=Layout",
+      "publico_alvo": "iniciante",
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, itens 3.1–3.3 (Editor de textos)",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "meta": {
+        "near_transfer": "Alinhamento = grupo Parágrafo da guia Início.",
+        "far_transfer": "Sumário = guia Referências.",
+        "o_que_nao_muda": "Negrito/itálico/sublinhado = grupo Fonte da guia Início."
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Você acertou — e a isca da banca",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A (Fonte da guia Início).\n\nB — Estilo na Exibição: estilos pré-definidos, não negrito direto.\nC — Parágrafo na guia Formatar: guia Formatar não existe no ribbon 2007.\nD — Edição no Layout: margens e orientação, não fonte.\n\nPegadinha: inventa guia ou desloca grupo para aba errada.",
+            "destaques": [
+              "Gabarito A",
+              "Fonte",
+              "Início"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 grupos do ribbon",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "GRUPO FONTE: formata o caractere — negrito, itálico, sublinhado, cor.\nGRUPO PARÁGRAFO: alinhamento, recuo, espaçamento entre linhas.\nGUIA LAYOUT DA PÁGINA: margens, orientação, tamanho do papel.",
+            "destaques": [
+              "GRUPO FONTE",
+              "PARÁGRAFO",
+              "LAYOUT"
+            ]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Mapa: onde fica cada formatação",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Formatação",
+              "Grupo / Guia"
+            ],
+            "linhas": [
+              {
+                "faixa": "Negrito, itálico, sublinhado",
+                "classificacao": "Fonte — guia Início",
+                "destaque": true
+              },
+              {
+                "faixa": "Alinhamento e recuo",
+                "classificacao": "Parágrafo — guia Início"
+              },
+              {
+                "faixa": "Margens e orientação",
+                "classificacao": "Layout da Página"
+              },
+              {
+                "faixa": "Sumário automático",
+                "classificacao": "Referências — grupo Sumário"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença do candidato × conceito",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Crença ✗",
+              "Conceito ✓"
+            ],
+            "linhas": [
+              [
+                "Negrito fica no grupo Estilo da guia Exibição",
+                "Negrito fica no grupo Fonte da guia Início"
+              ],
+              [
+                "Parágrafo está na guia Formatar",
+                "Parágrafo está na guia Início — guia Formatar não existe"
+              ],
+              [
+                "Itálico e sublinhado ficam no Layout da Página",
+                "Layout trata de margens — fonte fica no grupo Fonte"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que B, C e D enganam",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "B — termo_unico",
+                "Desloca formatação de fonte para guia Exibição e grupo Estilo"
+              ],
+              [
+                "C — termo_unico",
+                "Inventa guia Formatar — no Word 2007 Parágrafo fica na guia Início"
+              ],
+              [
+                "D — numero_vizinho",
+                "Confunde guia Layout da Página (margens) com formatação de caractere"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Aplicando ao enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Comando do enunciado",
+              "Localização"
+            ],
+            "linhas": [
+              [
+                "Negrito, itálico e sublinhado",
+                "Grupo Fonte — guia Início (A)"
+              ],
+              [
+                "Texto selecionado",
+                "Formatação de caractere — não de parágrafo nem página"
+              ],
+              [
+                "Word 2007 padrão",
+                "Ribbon com guia Início na faixa superior"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Referência — ribbon Word 2007",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Anexo I — Informática, itens 3.1–3.3 (Editor de textos)",
+            "texto": "No Microsoft Word 2007, o grupo Fonte da guia Início concentra negrito, itálico, sublinhado e cor da fonte. O grupo Parágrafo da mesma guia trata de alinhamento e recuo. A guia Referências agrupa sumário e citações.",
+            "trechos_grifados": [
+              {
+                "inicio": 26,
+                "fim": 52,
+                "motivo": "gradacao — grupo correto (gabarito A)",
+                "texto_grifado": "grupo Fonte da guia Início"
+              },
+              {
+                "inicio": 63,
+                "fim": 91,
+                "motivo": "caso — negrito, itálico e sublinhado do enunciado",
+                "texto_grifado": "negrito, itálico, sublinhado"
+              },
+              {
+                "inicio": 110,
+                "fim": 139,
+                "motivo": "contraste — near-transfer alinhamento vai ao Parágrafo",
+                "texto_grifado": "grupo Parágrafo da mesma guia"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Leve para a prova",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Caractere = Fonte (Início) · Parágrafo = Parágrafo (Início) · Página = Layout.\nNear: alinhamento e recuo → grupo Parágrafo da guia Início.\nFar: sumário automático → guia Referências.\nNão muda: negrito, itálico e sublinhado = grupo Fonte da guia Início.",
+            "destaques": [
+              "Fonte",
+              "Near",
+              "Não muda"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "disciplina": "informatica",
+    "topico": "informatica_3_1",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "conceito_informatica",
+    "dificuldade": 2,
+    "fundamento_slug": "info_word_2007_comentarios",
+    "enunciado": "Durante a produção de um trabalho de conclusão de curso, ficou acordado entre o orientador e o aluno que eles utilizariam a ferramenta Microsoft Word 2007 (configuração padrão) para confeccionar o trabalho. Para organizar o processo de revisão do que foi escrito pelo aluno, foi sugerido ao orientador que utilize o recurso de comentários, de modo que as alterações fiquem registradas no próprio documento. Para adicionar comentários na ferramenta em questão, o orientador deverá clicar na guia:",
+    "alternativas": {
+      "A": "Exibição e no grupo Opções clicar em Novo Comentário.",
+      "B": "Revisão e no grupo Comentários clicar em Novo Comentário.",
+      "C": "Início e no grupo Ferramentas clicar em Adicionar Comentário.",
+      "D": "Inserir e no grupo Documentação clicar em Adicionar Comentário."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Localização do recurso Novo Comentário no Word 2007 — guia Revisão, grupo Comentários.",
+      "fundamento_legal": "Conceitos técnicos — Editor de textos (Anexo I, itens 3.1–3.3): no Word 2007, comentários e revisão de texto ficam na guia Revisão; o grupo Comentários contém o botão Novo Comentário.",
+      "passo_a_passo": [
+        "1. Caso: orientador revisa TCC no Word 2007 e precisa inserir comentários no documento.",
+        "2. A erra por termo_unico (guia Exibição trata de modos de visualização — não comentários); C erra por termo_unico (guia Início tem formatação — grupo Ferramentas não existe para comentários); D erra por termo_unico (guia Inserir adiciona objetos — grupo Documentação é inventado).",
+        "3. B correta: guia Revisão → grupo Comentários → Novo Comentário."
+      ],
+      "pegadinha": "A banca desloca comentários para guias de formatação (Início) ou inserção (Inserir/Exibição) — revisão colaborativa fica na guia Revisão.",
+      "macete": "Comentário = Revisão · Fonte = Início · Objeto = Inserir.",
+      "estudo_reverso": [
+        "Word 2007 — guia Revisão, grupo Comentários",
+        "Word 2007 — distinção Revisão × Início × Inserir"
+      ]
+    },
+    "tags": [
+      "real_idecan",
+      "superior",
+      "word_2007",
+      "comentarios",
+      "revisao",
+      "editor_textos"
+    ],
+    "meta": {
+      "origem": "real_idecan",
+      "nivel_escolaridade": "superior",
+      "fonte_arquivo": "INFORMÁTICA - IDECAN - SUPERIOR 01 - TEC.pdf",
+      "tec_id": "1104426",
+      "padrao_familia": "D_gradacao",
+      "pegadinha_em_uma_frase": "Comentário não fica em Início nem Inserir — guia Revisão, grupo Comentários, Novo Comentário",
+      "eixos_legais": [
+        "info_word_2007_guia_revisao",
+        "info_word_2007_comentarios",
+        "info_word_2007_guia_inicio"
+      ],
+      "isca_por_alternativa": {
+        "A": "Exibição e Opções — confunde modo de visualização com revisão colaborativa",
+        "C": "Início e Ferramentas — desloca comentário para formatação; grupo inexistente",
+        "D": "Inserir e Documentação — confunde inserir objetos com comentários; grupo inventado"
+      },
+      "near_transfer": "Controlar alterações e exibir marcações — também na guia Revisão.",
+      "far_transfer": "Inserir tabela ou imagem — guia Inserir, não Revisão.",
+      "o_que_nao_muda": "Novo Comentário = guia Revisão, grupo Comentários no Word 2007.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "macete_visual": "Comentário=Revisão · Fonte=Início · Objeto=Inserir"
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "fundamento_slug": "info_word_2007_comentarios",
+      "macete_visual": "Comentário=Revisão · Fonte=Início · Objeto=Inserir",
+      "duracao_estimada_seg": 45,
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Gabarito B",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Comentários no Word 2007 = guia Revisão, grupo Comentários, Novo Comentário. Não confunda com Início (fonte) nem Inserir (objetos).",
+            "destaques": [
+              "Revisão",
+              "Comentários",
+              "Novo Comentário"
+            ]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Mapa das guias",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Recurso",
+              "Guia"
+            ],
+            "linhas": [
+              {
+                "faixa": "Novo Comentário",
+                "classificacao": "Revisão — grupo Comentários",
+                "destaque": true
+              },
+              {
+                "faixa": "Negrito / Itálico",
+                "classificacao": "Início — grupo Fonte"
+              },
+              {
+                "faixa": "Tabela / Imagem",
+                "classificacao": "Inserir"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Comentário = Revisão. Fonte = Início. Objeto = Inserir.",
+            "destaques": [
+              "Revisão",
+              "Início",
+              "Inserir"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, itens 3.1–3.3",
+          "path": "conteúdo/edital/"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 195,
+      "fundamento_slug": "info_word_2007_comentarios",
+      "macete_visual": "Comentário=Revisão · Fonte=Início · Objeto=Inserir",
+      "publico_alvo": "iniciante",
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, itens 3.1–3.3 (Editor de textos)",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "meta": {
+        "near_transfer": "Controlar alterações = guia Revisão.",
+        "far_transfer": "Inserir imagem = guia Inserir.",
+        "o_que_nao_muda": "Novo Comentário = Revisão, grupo Comentários."
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Você acertou — e a isca da banca",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B (Revisão → Comentários → Novo Comentário).\n\nA — Exibição: modos de visualização, não comentários.\nC — Início/Ferramentas: formatação — grupo Ferramentas não existe.\nD — Inserir/Documentação: objetos no documento — grupo inventado.\n\nCaso: orientador revisa TCC e registra comentários no arquivo.",
+            "destaques": [
+              "Gabarito B",
+              "Revisão",
+              "TCC"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 guias do ribbon",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "INÍCIO: formatação de fonte e parágrafo.\nREVISÃO: comentários, controle de alterações, ortografia.\nINSERIR: tabelas, imagens, hyperlinks e objetos.",
+            "destaques": [
+              "REVISÃO",
+              "INÍCIO",
+              "INSERIR"
+            ]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Mapa: recurso × guia Word 2007",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Recurso",
+              "Guia / Grupo"
+            ],
+            "linhas": [
+              {
+                "faixa": "Novo Comentário",
+                "classificacao": "Revisão — Comentários",
+                "destaque": true
+              },
+              {
+                "faixa": "Controlar alterações",
+                "classificacao": "Revisão — Alterações"
+              },
+              {
+                "faixa": "Negrito / Itálico",
+                "classificacao": "Início — Fonte"
+              },
+              {
+                "faixa": "Tabela / Imagem",
+                "classificacao": "Inserir — Tabelas / Ilustrações"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença do candidato × conceito",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Crença ✗",
+              "Conceito ✓"
+            ],
+            "linhas": [
+              [
+                "Comentário fica na guia Início ou Inserir",
+                "Comentário fica na guia Revisão, grupo Comentários"
+              ],
+              [
+                "Exibição concentra revisão colaborativa",
+                "Exibição altera modo de visualização do documento"
+              ],
+              [
+                "Grupo Documentação ou Ferramentas adiciona comentário",
+                "Botão correto é Novo Comentário no grupo Comentários"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que A, C e D enganam",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Desloca comentário para guia Exibição — trata de visualização, não revisão"
+              ],
+              [
+                "C — termo_unico",
+                "Inventa grupo Ferramentas na guia Início — formatação não insere comentário"
+              ],
+              [
+                "D — termo_unico",
+                "Confunde Inserir (objetos) com comentários — grupo Documentação não existe"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Aplicando ao enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Fato do caso",
+              "Caminho correto"
+            ],
+            "linhas": [
+              [
+                "Orientador revisa TCC do aluno",
+                "Usar comentários no próprio documento"
+              ],
+              [
+                "Word 2007 configuração padrão",
+                "Guia Revisão na faixa superior"
+              ],
+              [
+                "Registrar observações sem alterar texto",
+                "Revisão → Comentários → Novo Comentário (B)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Referência — guia Revisão Word 2007",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Anexo I — Informática, itens 3.1–3.3 (Editor de textos)",
+            "texto": "No Word 2007, comentários e revisão de texto ficam na guia Revisão. O grupo Comentários contém Novo Comentário. A guia Início concentra formatação de fonte e parágrafo. A guia Inserir adiciona objetos, tabelas e imagens.",
+            "trechos_grifados": [
+              {
+                "inicio": 54,
+                "fim": 66,
+                "motivo": "gradacao — guia correta (gabarito B)",
+                "texto_grifado": "guia Revisão"
+              },
+              {
+                "inicio": 70,
+                "fim": 110,
+                "motivo": "caso — caminho Novo Comentário no TCC",
+                "texto_grifado": "grupo Comentários contém Novo Comentário"
+              },
+              {
+                "inicio": 114,
+                "fim": 146,
+                "motivo": "contraste — C erra ao deslocar para Início",
+                "texto_grifado": "guia Início concentra formatação"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Leve para a prova",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Comentário = Revisão · Fonte = Início · Objeto = Inserir.\nNear: controlar alterações → também guia Revisão.\nFar: inserir tabela ou imagem → guia Inserir.\nNão muda: Novo Comentário = Revisão, grupo Comentários.",
+            "destaques": [
+              "Revisão",
+              "Near",
+              "Não muda"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "disciplina": "informatica",
+    "topico": "informatica_3_1",
+    "tipo": "conceitual",
+    "estilo_idecan": "conceito_informatica",
+    "dificuldade": 2,
+    "fundamento_slug": "info_word_2007_alinhar_direita",
+    "enunciado": "Na ferramenta Microsoft Office Word 2007 (configuração padrão), o botão é utilizado para:",
+    "alternativas": {
+      "A": "Alinhar o texto à direita.",
+      "B": "Alinhar o texto à esquerda.",
+      "C": "Formar a cor do realce do texto.",
+      "D": "Alterar o espaçamento entre linhas do texto."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Identificação do botão Alinhar à direita no grupo Parágrafo da guia Início do Word 2007 (ícone do PDF Tec).",
+      "fundamento_legal": "Conceitos técnicos — Editor de textos (Anexo I, itens 3.1–3.3): no Word 2007, alinhamento (esquerda, centro, direita, justificado) fica no grupo Parágrafo da guia Início; cor do realce fica no grupo Fonte; espaçamento entre linhas é botão distinto no mesmo grupo Parágrafo.",
+      "passo_a_passo": [
+        "1. O enunciado remete ao ícone do botão de alinhar à direita (grupo Parágrafo) — recurso visual do PDF original.",
+        "2. B erra por numero_vizinho (botão vizinho de alinhar à esquerda — mesma faixa de alinhamento); C erra por termo_unico (cor do realce pertence ao grupo Fonte, não ao de alinhamento); D erra por termo_unico (espaçamento entre linhas é outro botão do grupo Parágrafo).",
+        "3. A correta: o ícone indicado no PDF corresponde a Alinhar o texto à direita."
+      ],
+      "pegadinha": "A banca coloca botões vizinhos do mesmo grupo (esquerda × direita) ou funções do Parágrafo (espaçamento) e do Fonte (realce) na mesma lista.",
+      "macete": "Alinhar = Parágrafo (Início) · Realce = Fonte · Esquerda/Direita = vizinhos.",
+      "estudo_reverso": [
+        "Word 2007 — grupo Parágrafo, alinhamento",
+        "Word 2007 — distinção Fonte × Parágrafo"
+      ]
+    },
+    "tags": [
+      "real_idecan",
+      "superior",
+      "word_2007",
+      "paragrafo",
+      "alinhamento",
+      "editor_textos"
+    ],
+    "meta": {
+      "origem": "real_idecan",
+      "nivel_escolaridade": "superior",
+      "fonte_arquivo": "INFORMÁTICA - IDECAN - SUPERIOR 01 - TEC.pdf",
+      "tec_id": "1104435",
+      "padrao_familia": "D_gradacao",
+      "pegadinha_em_uma_frase": "Botões vizinhos de alinhamento (esquerda × direita) e função do Fonte (realce) na mesma pergunta",
+      "eixos_legais": [
+        "info_word_2007_grupo_paragrafo",
+        "info_word_2007_alinhamento",
+        "info_word_2007_grupo_fonte"
+      ],
+      "isca_por_alternativa": {
+        "B": "alinhar à esquerda — botão vizinho na faixa de alinhamento do grupo Parágrafo",
+        "C": "cor do realce — função do grupo Fonte, não de alinhamento",
+        "D": "espaçamento entre linhas — outro botão do Parágrafo, não o de alinhar à direita"
+      },
+      "near_transfer": "Ícone de alinhar à esquerda no mesmo grupo — gabarito seria B.",
+      "far_transfer": "Negrito ou itálico — grupo Fonte da guia Início, não Parágrafo.",
+      "o_que_nao_muda": "Alinhar à direita = botão do grupo Parágrafo na guia Início.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "macete_visual": "Alinhar=Parágrafo · Realce=Fonte · Esq/Dir=vizinhos"
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "fundamento_slug": "info_word_2007_alinhar_direita",
+      "macete_visual": "Alinhar=Parágrafo · Realce=Fonte · Esq/Dir=vizinhos",
+      "duracao_estimada_seg": 45,
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Gabarito A",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Ícone do PDF = alinhar à direita. Grupo Parágrafo, guia Início. Não confunda com esquerda (vizinho) nem realce (Fonte).",
+            "destaques": [
+              "direita",
+              "Parágrafo",
+              "Fonte"
+            ]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Botões do Parágrafo",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Botão",
+              "Função"
+            ],
+            "linhas": [
+              {
+                "faixa": "Alinhar à direita",
+                "classificacao": "Parágrafo — Início",
+                "destaque": true
+              },
+              {
+                "faixa": "Alinhar à esquerda",
+                "classificacao": "Parágrafo — vizinho"
+              },
+              {
+                "faixa": "Cor do realce",
+                "classificacao": "Fonte — Início"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Alinhar = Parágrafo. Realce = Fonte. Esquerda e direita = vizinhos.",
+            "destaques": [
+              "Parágrafo",
+              "Fonte",
+              "vizinhos"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, itens 3.1–3.3",
+          "path": "conteúdo/edital/"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 195,
+      "fundamento_slug": "info_word_2007_alinhar_direita",
+      "macete_visual": "Alinhar=Parágrafo · Realce=Fonte · Esq/Dir=vizinhos",
+      "publico_alvo": "iniciante",
+      "links_fonte": [
+        {
+          "rotulo": "Anexo I — Informática, itens 3.1–3.3 (Editor de textos)",
+          "path": "conteúdo/edital/"
+        }
+      ],
+      "meta": {
+        "near_transfer": "Alinhar à esquerda = botão vizinho (B).",
+        "far_transfer": "Negrito = grupo Fonte.",
+        "o_que_nao_muda": "Alinhar à direita = grupo Parágrafo, guia Início."
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Você acertou — e a isca da banca",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A (Alinhar à direita).\n\nB — alinhar à esquerda: botão vizinho na faixa de alinhamento.\nC — cor do realce: grupo Fonte, não Parágrafo.\nD — espaçamento entre linhas: outro botão do Parágrafo.\n\nPegadinha: ícone do PDF — vizinhos de alinhamento e funções do Fonte na mesma lista.",
+            "destaques": [
+              "Gabarito A",
+              "direita",
+              "vizinho"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 2 grupos da guia Início",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "GRUPO PARÁGRAFO: alinhamento (esquerda, centro, direita, justificado), recuo, espaçamento entre linhas.\nGRUPO FONTE: negrito, itálico, sublinhado, cor da fonte e cor do realce.",
+            "destaques": [
+              "PARÁGRAFO",
+              "FONTE",
+              "alinhamento"
+            ]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Mapa: botão × função Word 2007",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Botão / Recurso",
+              "Grupo"
+            ],
+            "linhas": [
+              {
+                "faixa": "Alinhar à direita",
+                "classificacao": "Parágrafo — guia Início",
+                "destaque": true
+              },
+              {
+                "faixa": "Alinhar à esquerda",
+                "classificacao": "Parágrafo — botão vizinho"
+              },
+              {
+                "faixa": "Cor do realce",
+                "classificacao": "Fonte — guia Início"
+              },
+              {
+                "faixa": "Espaçamento entre linhas",
+                "classificacao": "Parágrafo — botão distinto"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença do candidato × conceito",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Crença ✗",
+              "Conceito ✓"
+            ],
+            "linhas": [
+              [
+                "Ícone de alinhar à direita alinha à esquerda",
+                "Alinhar à direita desloca o texto para a margem direita"
+              ],
+              [
+                "Botão de alinhamento define cor do realce",
+                "Cor do realce fica no grupo Fonte"
+              ],
+              [
+                "Alinhar à direita altera espaçamento entre linhas",
+                "Espaçamento é botão separado no grupo Parágrafo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que B, C e D enganam",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "B — numero_vizinho",
+                "Troca alinhar à direita pelo botão vizinho de alinhar à esquerda"
+              ],
+              [
+                "C — termo_unico",
+                "Atribui ao ícone de alinhamento a função de cor do realce — grupo Fonte"
+              ],
+              [
+                "D — termo_unico",
+                "Confunde alinhamento horizontal com espaçamento entre linhas — mesmo grupo, botão distinto"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Aplicando ao enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Elemento da questão",
+              "Leitura correta"
+            ],
+            "linhas": [
+              [
+                "Ícone do botão no PDF",
+                "Alinhar texto à direita — linhas encostam na margem direita"
+              ],
+              [
+                "Word 2007 padrão",
+                "Grupo Parágrafo na guia Início"
+              ],
+              [
+                "Gabarito",
+                "A — Alinhar o texto à direita"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Referência — grupo Parágrafo Word 2007",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Anexo I — Informática, itens 3.1–3.3 (Editor de textos)",
+            "texto": "No Word 2007, o alinhamento do parágrafo fica no grupo Parágrafo da guia Início: esquerda, centro, direita e justificado. Cor do realce e negrito ficam no grupo Fonte. Espaçamento entre linhas também está no grupo Parágrafo, em botão distinto do alinhamento.",
+            "trechos_grifados": [
+              {
+                "inicio": 49,
+                "fim": 79,
+                "motivo": "gradacao — local do botão (gabarito A)",
+                "texto_grifado": "grupo Parágrafo da guia Início"
+              },
+              {
+                "inicio": 99,
+                "fim": 120,
+                "motivo": "caso — função do ícone do PDF",
+                "texto_grifado": "direita e justificado"
+              },
+              {
+                "inicio": 155,
+                "fim": 166,
+                "motivo": "contraste — C erra ao misturar com Fonte",
+                "texto_grifado": "grupo Fonte"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Leve para a prova",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Alinhar = Parágrafo · Realce = Fonte · Esquerda/Direita = vizinhos.\nNear: ícone de alinhar à esquerda → gabarito B.\nFar: negrito ou itálico → grupo Fonte.\nNão muda: alinhar à direita = grupo Parágrafo, guia Início.",
+            "destaques": [
+              "Parágrafo",
+              "Near",
+              "Não muda"
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

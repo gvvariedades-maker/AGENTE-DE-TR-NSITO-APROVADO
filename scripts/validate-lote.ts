@@ -1,10 +1,11 @@
 /**
- * Gate único de lote — encadeia os 3 validadores de questão ouro.
+ * Gate único de lote — encadeia validadores de questão ouro.
+ * Em path content/questoes-reais/, inclui validate:aula-real (paridade aula).
  */
 import { spawnSync } from "node:child_process";
 import { relative, resolve } from "node:path";
 
-const VALIDADORES = [
+const VALIDADORES_BASE = [
   "validate:questoes",
   "validate:cobertura",
   "validate:indistinguibilidade",
@@ -17,11 +18,12 @@ function main() {
   const skipCitacoes = args.includes("--skip-citacoes");
   const legacyGrifos = args.includes("--legacy-grifos");
   const legacyTransferencia = args.includes("--legacy-transferencia");
+  const legacyAulaReal = args.includes("--legacy-aula-real");
   const filePath = args.find((a) => !a.startsWith("--"));
 
   if (!filePath) {
     console.error(
-      "Uso: npm run validate:lote -- <arquivo.json> [--skip-citacoes] [--legacy-grifos] [--legacy-transferencia]",
+      "Uso: npm run validate:lote -- <arquivo.json> [--skip-citacoes] [--legacy-grifos] [--legacy-transferencia] [--legacy-aula-real]",
     );
     process.exit(1);
   }
@@ -32,18 +34,29 @@ function main() {
   if (legacyTransferencia) {
     process.env.TRANSFERENCIA_LEGACY = "1";
   }
+  if (legacyAulaReal) {
+    process.env.AULA_REAL_LEGACY = "1";
+  }
 
-  const relativePath = relative(process.cwd(), resolve(process.cwd(), filePath));
+  const absolute = resolve(process.cwd(), filePath);
+  const relativePath = relative(process.cwd(), absolute);
+  const isReais = /questoes-reais[/\\]/.test(relativePath.replace(/\\/g, "/"));
+
+  const validadores: string[] = [...VALIDADORES_BASE];
+  if (isReais) {
+    validadores.push("validate:aula-real");
+  }
 
   let falhas = 0;
   console.log(`\n🔒 validate:lote — ${filePath}\n`);
 
-  for (const script of VALIDADORES) {
+  for (const script of validadores) {
     console.log(`── ${script} ──`);
     const npmArgs = ["run", script, "--", relativePath];
     if (skipCitacoes) npmArgs.push("--skip-citacoes");
     if (legacyGrifos) npmArgs.push("--legacy-grifos");
     if (legacyTransferencia) npmArgs.push("--legacy-transferencia");
+    if (legacyAulaReal) npmArgs.push("--legacy-aula-real");
 
     const result = spawnSync("npm", npmArgs, {
       cwd: process.cwd(),
@@ -61,11 +74,11 @@ function main() {
   }
 
   if (falhas > 0) {
-    console.error(`validate:lote: ${falhas}/${VALIDADORES.length} validador(es) falharam`);
+    console.error(`validate:lote: ${falhas}/${validadores.length} validador(es) falharam`);
     process.exit(1);
   }
 
-  console.log(`✅ validate:lote — ${filePath} passou nos ${VALIDADORES.length} gates\n`);
+  console.log(`✅ validate:lote — ${filePath} passou nos ${validadores.length} gates\n`);
 }
 
 main();

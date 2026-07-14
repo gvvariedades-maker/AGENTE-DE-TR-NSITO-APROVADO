@@ -1,196 +1,221 @@
 {
-  "versao": 2,
-  "arquetipo": "diagrama_competencia",
-  "arquetipo_secundario": "comparacao",
-  "duracao_estimada_seg": 195,
-  "fundamento_slug": "CTB_art_22_VIII",
-  "macete_visual": "Estado comunica CNH · Município sinaliza",
-  "publico_alvo": "iniciante",
-  "links_fonte": [
-    {
-      "rotulo": "CTB",
-      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
-    }
-  ],
-  "meta": {
-    "near_transfer": "Art. 22, VI — penalidades estaduais exceto privativas municipais.",
-    "far_transfer": "DETRAN suspende localmente mas comunica à União para RENACH.",
-    "o_que_nao_muda": "Art. 22,VIII = comunicar suspensão/cassação CNH à União."
-  },
-  "telas": [
-    {
-      "id": "contexto",
-      "titulo": "Diagnóstico: Estado, não Município",
-      "secao": "diagnostico",
-      "tipo": "texto_destaque",
-      "conteudo": {
-        "texto": "Gabarito D.\n\nA — rotativo pago: competência municipal.\nB — bike e carroça: competência municipal.\nC — sinalização: competência municipal.\n\nEstado comunica suspensão e cassação de CNH à União.",
-        "destaques": [
-          "Gabarito D",
-          "municipal",
-          "União"
-        ]
+  "tec_id": "447705",
+  "disciplina": "legislacao_transito",
+  "gabarito": "D",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "diagrama_competencia",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 210,
+    "fundamento_slug": "CTB_art_22_VIII",
+    "macete_visual": "Estado comunica CNH · Município sinaliza",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
       }
+    ],
+    "meta": {
+      "near_transfer": "Art. 22, VI — Estado aplica penalidades exceto as privativas do Município (§4º art. 24).",
+      "far_transfer": "DETRAN-PB suspende CNH localmente — mas deve comunicar à União (art. 22, VIII) para integração nacional.",
+      "o_que_nao_muda": "Art. 22, VIII = comunicar suspensão/cassação/recolhimento CNH ao órgão federal — não é municipal."
     },
-    {
-      "id": "glossario",
-      "titulo": "Pré-treino: 3 níveis",
-      "tipo": "texto_destaque",
-      "conteudo": {
-        "texto": "Executivo estadual: DETRAN-PB — habilitação e comunicação à União.\nExecutivo municipal: STTP — sinalização, rotativo, fiscalização local.\nÓrgão federal: integra dados nacionais de CNH (RENACH).",
-        "destaques": [
-          "DETRAN",
-          "STTP",
-          "RENACH"
-        ]
-      }
-    },
-    {
-      "id": "diagrama",
-      "titulo": "Estado comunica à União",
-      "secao": "metodo",
-      "tipo": "diagrama_competencia",
-      "conteudo": {
-        "nos": [
-          {
-            "id": "uf",
-            "label": "DETRAN estadual",
-            "nivel": 1
-          },
-          {
-            "id": "uni",
-            "label": "Órgão executivo União",
-            "nivel": 0
-          },
-          {
-            "id": "mun",
-            "label": "STTP municipal",
-            "nivel": 2
-          }
-        ],
-        "arestas": [
-          {
-            "de": "uf",
-            "para": "uni",
-            "rotulo": "comunica CNH suspensa/cassada"
-          },
-          {
-            "de": "mun",
-            "para": "mun",
-            "rotulo": "art. 24 — sinalização"
-          }
-        ]
-      }
-    },
-    {
-      "id": "contraste",
-      "titulo": "Armadilha: competência municipal no enunciado estadual",
-      "secao": "contraste",
-      "tipo": "comparacao",
-      "conteudo": {
-        "colunas": [
-          "Alternativa ✗",
-          "Competência real ✓"
-        ],
-        "linhas": [
-          [
-            "Estacionamento rotativo",
-            "Município"
-          ],
-          [
-            "Propulsão humana e tração animal",
-            "Município"
-          ],
-          [
-            "Sinalização viária",
-            "Município"
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito D.\n\nA — rotativo pago: isca municipal.\nB — bike e carroça: isca municipal.\nC — sinalização: isca municipal.\n\nPegadinha: enunciado pede Estado — banca oferece tarefas típicas do Município.",
+          "destaques": [
+            "Gabarito D",
+            "municipal",
+            "Estado"
           ]
-        ]
-      }
-    },
-    {
-      "id": "distratores",
-      "titulo": "Por que cada alternativa erra",
-      "secao": "distratores",
-      "tipo": "comparacao",
-      "conteudo": {
-        "colunas": [
-          "Alternativa",
-          "Mecanismo + por quê"
-        ],
-        "linhas": [
-          [
-            "A — competencia_snt",
-            "Rotativo pago é competência municipal"
-          ],
-          [
-            "B — competencia_snt",
-            "Propulsão humana e tração animal são municipais"
-          ],
-          [
-            "C — competencia_snt",
-            "Sinalização é competência municipal"
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Três esferas que a banca mistura",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Estado (DETRAN-PB): habilitação, penalidades e comunicação à União.\nMunicípio (STTP/CG): sinalização, rotativo, fiscalização local.\nUnião: cadastro nacional de CNH — recebe suspensão e cassação do Estado.",
+          "destaques": [
+            "Estado",
+            "Município",
+            "União"
           ]
-        ]
-      }
-    },
-    {
-      "id": "caso",
-      "titulo": "Qual é do Estado?",
-      "secao": "metodo",
-      "tipo": "comparacao",
-      "conteudo": {
-        "colunas": [
-          "Atribuição",
-          "Esfera"
-        ],
-        "linhas": [
-          [
-            "Comunicar CNH à União",
-            "Estado — gabarito D"
+        }
+      },
+      {
+        "id": "diagrama",
+        "titulo": "Quem comunica a CNH",
+        "secao": "metodo",
+        "tipo": "diagrama_competencia",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "uni",
+              "label": "Executivo União (RENACH)",
+              "nivel": 0
+            },
+            {
+              "id": "uf",
+              "label": "DETRAN-PB (art. 22)",
+              "nivel": 1
+            },
+            {
+              "id": "mun",
+              "label": "STTP — rotativo/sinalização (isca A–C)",
+              "nivel": 2
+            }
           ],
-          [
-            "Sinalização",
-            "Município"
-          ],
-          [
-            "Rotativo pago",
-            "Município"
+          "arestas": [
+            {
+              "de": "uf",
+              "para": "uni",
+              "rotulo": "comunica CNH suspensa/cassada"
+            }
           ]
-        ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "Rotativo pago é competência estadual",
+              "Estacionamento rotativo = Município (art. 24, X)"
+            ],
+            [
+              "Sinalização viária é do Estado",
+              "Sinalização = Município (art. 24, III)"
+            ],
+            [
+              "Suspender CNH basta no Estado — não precisa avisar a União",
+              "Estado comunica suspensão/cassação CNH à União (art. 22, VIII)"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que A, B e C enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "A — competencia_snt",
+              "Rotativo pago é art. 24, X — competência municipal"
+            ],
+            [
+              "B — competencia_snt",
+              "Propulsão humana e tração animal são art. 24, XVIII — municipal"
+            ],
+            [
+              "C — competencia_snt",
+              "Sinalização e controle viário são art. 24, III — municipal"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Etapa (cenário PB)",
+            "Esfera / resultado"
+          ],
+          "linhas": [
+            [
+              "DETRAN-PB cassou CNH após processo administrativo",
+              "Estado — deve comunicar à União"
+            ],
+            [
+              "STTP/CG implantaria rotativo na Av. Epitácio Pessoa",
+              "Município — isca A (não é art. 22)"
+            ],
+            [
+              "Alternativa D do enunciado",
+              "Gabarito — comunicar CNH à União"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto do CTB — art. 22",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 22, VIII",
+          "texto": "VIII - comunicar ao órgão executivo de trânsito da União a suspensão e a cassação do direito de dirigir e o recolhimento da Carteira Nacional de Habilitação;",
+          "trechos_grifados": [
+            {
+              "inicio": 7,
+              "fim": 157,
+              "motivo": "caso — gabarito D",
+              "texto_grifado": "comunicar ao órgão executivo de trânsito da União a suspensão e a cassação do direito de dirigir e o recolhimento da Carteira Nacional de Habilitação;"
+            }
+          ]
+        }
+      },
+      {
+        "id": "lei2",
+        "titulo": "Texto do CTB — art. 24 (iscas)",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 24, III, X e XVIII",
+          "texto": "III - implantar, manter e operar o sistema de sinalização, os dispositivos e os equipamentos de controle viário; X - implantar, manter e operar sistema de estacionamento rotativo pago nas vias; XVIII - conceder autorização para conduzir veículos de propulsão humana e de tração animal;",
+          "trechos_grifados": [
+            {
+              "inicio": 6,
+              "fim": 112,
+              "motivo": "distratores — isca C",
+              "texto_grifado": "implantar, manter e operar o sistema de sinalização, os dispositivos e os equipamentos de controle viário;"
+            },
+            {
+              "inicio": 117,
+              "fim": 193,
+              "motivo": "distratores — isca A",
+              "texto_grifado": "implantar, manter e operar sistema de estacionamento rotativo pago nas vias;"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: Estado comunica CNH à União · Município sinaliza e rotativo.\nNear: art. 22, VI — penalidades estaduais exceto as privativas do Município.\nFar: DETRAN suspende localmente mas integra ao cadastro nacional via União.\nNão muda: suspensão, cassação e recolhimento de CNH → comunicar à União.",
+          "destaques": [
+            "Estado",
+            "Município",
+            "União",
+            "CNH"
+          ]
+        }
       }
-    },
-    {
-      "id": "lei",
-      "titulo": "Comunicação de CNH à União",
-      "secao": "lei",
-      "tipo": "trecho_legal",
-      "conteudo": {
-        "fonte": "CTB art. 22, VIII",
-        "texto": "VIII - comunicar ao órgão executivo de trânsito da União a suspensão e a cassação do direito de dirigir e o recolhimento da Carteira Nacional de Habilitação;",
-        "trechos_grifados": [
-          {
-            "inicio": 7,
-            "fim": 157,
-            "motivo": "gabarito — dever do executivo estadual",
-            "texto_grifado": "comunicar ao órgão executivo de trânsito da União a suspensão e a cassação do direito de dirigir e o recolhimento da Carteira Nacional de Habilitação;"
-          }
-        ]
-      }
-    },
-    {
-      "id": "macete",
-      "titulo": "Macete + transferência",
-      "secao": "macete",
-      "tipo": "texto_destaque",
-      "conteudo": {
-        "texto": "Estado comunica CNH à União.\nNear: Estado aplica penalidades exceto as privativas do Município.\nFar: DETRAN comunica ao cadastro nacional RENACH.\nNão muda: suspensão, cassação e recolhimento de CNH → comunicar à União.",
-        "destaques": [
-          "União",
-          "RENACH",
-          "suspensão"
-        ]
-      }
-    }
-  ]
+    ]
+  }
 }

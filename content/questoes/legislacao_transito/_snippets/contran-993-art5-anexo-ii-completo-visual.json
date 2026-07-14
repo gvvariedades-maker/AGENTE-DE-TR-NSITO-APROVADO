@@ -1,0 +1,288 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "diagrama_competencia",
+  "publico_alvo": "todos",
+  "duracao_estimada_seg": 230,
+  "fundamento_slug": "CONTRAN_993_art_5",
+  "macete_visual": "Anexo II + Anexo I · art. 5 adiciona · art. 9 = SENATRAN",
+  "meta": {
+    "padrao_familia": "B_assertivas",
+    "pegadinha_em_uma_frase": "Coordenador descentraliza Anexos no CETRAN — art. 9 aponta o órgão máximo executivo federal (SENATRAN)",
+    "eixos_legais": [
+      "CONTRAN_993_art_3_1",
+      "CONTRAN_993_art_5",
+      "CONTRAN_993_art_9"
+    ],
+    "isca_por_alternativa": {
+      "A": "Anexo I prevalece sobre Anexo II — dispensa requisitos técnicos gerais de construção",
+      "C": "CETRAN estadual republica Anexos e CONTRAN vedado de acrescentar equipamentos",
+      "D": "Anexo II só para fabricantes e importadores, não para fiscalização de circulação"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: coordenador fixou CETRAN",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — Anexo I prevalece sobre Anexo II e dispensa requisitos de construção.\nC — CETRAN estadual republica Anexos e CONTRAN vedado de acrescentar equipamentos.\nD — Anexo II só para fabricantes, não para fiscalização de circulação.\n\nPegadinha: Anexos ficam no órgão máximo executivo federal, não no CETRAN-PB.",
+        "destaques": [
+          "Gabarito B",
+          "CETRAN",
+          "SENATRAN"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos da Res. 993",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "ANEXO I: equipamentos obrigatórios para circular — macaco, triângulo, extintor conforme tabela por tipo de veículo.\n\nANEXO II: requisitos técnicos gerais de construção — cumulativos com o Anexo I, não substitutivos.\n\nÓRGÃO MÁXIMO EXECUTIVO FEDERAL: SENATRAN — repositório oficial dos Anexos, distinto dos CETRAN que julgam recursos estaduais.",
+        "destaques": [
+          "ANEXO I",
+          "ANEXO II",
+          "SENATRAN"
+        ]
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Camadas da Res. 993",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Camada normativa",
+          "Função"
+        ],
+        "linhas": [
+          {
+            "faixa": "Anexo I",
+            "classificacao": "Equipamentos obrigatórios para circular"
+          },
+          {
+            "faixa": "Anexo II",
+            "classificacao": "Requisitos técnicos gerais de construção",
+            "destaque": true
+          },
+          {
+            "faixa": "Resolução específica",
+            "classificacao": "Equipamentos adicionais — ex.: faixa refletiva, ABS"
+          },
+          {
+            "faixa": "Publicação dos Anexos",
+            "classificacao": "Sítio do órgão máximo executivo federal"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: avaliar a orientação do coordenador",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Anexos republicados no CETRAN estadual?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Anexo I dispensa Anexo II?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Orientação incorreta — gabarito B",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — erro de competência"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — Anexo II é cumulativo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Quem publica os Anexos?",
+      "secao": "conceito",
+      "tipo": "diagrama_competencia",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "senatran",
+            "label": "SENATRAN — órgão máximo executivo federal",
+            "nivel": 2
+          },
+          {
+            "id": "cetran",
+            "label": "CETRAN-PB — recursos estaduais",
+            "nivel": 1
+          }
+        ],
+        "arestas": [
+          {
+            "de": "cetran",
+            "para": "senatran",
+            "rotulo": "Anexos oficiais no sítio federal"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: CETRAN republica Anexos",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Orientação do coordenador ✗",
+          "Resolução ✓"
+        ],
+        "linhas": [
+          [
+            "Consultar Anexos no sítio do CETRAN-PB",
+            "Anexos no sítio do órgão máximo executivo de trânsito da União"
+          ],
+          [
+            "Anexo I dispensa Anexo II",
+            "§ 1º exige requisitos de construção do Anexo II cumulativamente"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — termo_unico",
+            "Reduz exigência ao Anexo I — ignora Anexo II cumulativo do § 1º"
+          ],
+          [
+            "C — competencia_snt",
+            "Valida republicação estadual e veda equipamentos adicionais do art. 5º"
+          ],
+          [
+            "D — regra_excecao",
+            "Restringe Anexo II a fabricantes — § 1º alcança veículos do art. 2º em circulação"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Encaixe no enunciado STTP",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Afirmação do coordenador",
+          "Veredito legal"
+        ],
+        "linhas": [
+          [
+            "Anexos no CETRAN-PB",
+            "Falso — órgão máximo executivo federal"
+          ],
+          [
+            "Anexo I dispensa Anexo II",
+            "Falso — § 1º cumulativo"
+          ],
+          [
+            "CONTRAN vedado de acrescentar equipamentos",
+            "Falso — art. 5º autoriza por resolução específica"
+          ],
+          [
+            "Resultado",
+            "Alternativa B"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Art. 3º, § 1º — Anexo II",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 993/2023, art. 3º, § 1º",
+        "texto": "Os veículos de que trata o art. 2º devem atender aos requisitos técnicos gerais de construção relacionados no Anexo II e aos demais estabelecidos sucessivamente em regulamentação específica do CONTRAN.",
+        "trechos_grifados": [
+          {
+            "inicio": 53,
+            "fim": 118,
+            "motivo": "gradacao — Anexo II cumulativo",
+            "texto_grifado": "requisitos técnicos gerais de construção relacionados no Anexo II"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Art. 5º e art. 9º",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 993/2023, art. 5º e art. 9º",
+        "texto": "Art. 5º O CONTRAN pode estabelecer, por meio de Resolução específica, equipamentos obrigatórios adicionais aos previstos nesta Resolução. Art. 9º Os Anexos desta Resolução encontram-se disponíveis no sítio eletrônico do órgão máximo executivo de trânsito da União.",
+        "trechos_grifados": [
+          {
+            "inicio": 70,
+            "fim": 136,
+            "motivo": "caso — equipamentos adicionais autorizados",
+            "texto_grifado": "equipamentos obrigatórios adicionais aos previstos nesta Resolução"
+          },
+          {
+            "inicio": 220,
+            "fim": 263,
+            "motivo": "hierarquia — repositório federal, não CETRAN",
+            "texto_grifado": "órgão máximo executivo de trânsito da União"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near/far-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "ANEXO II + ANEXO I · art. 5 adiciona · art. 9 = SENATRAN.\n\nNear: mesma orientação, mas coordenador cita corretamente o sítio federal — restam só os erros sobre Anexo II e art. 5º.\nFar: veículo destinado à exportação — art. 7 exclui a Resolução; cenário distinto de publicação dos Anexos.\nNão muda: Anexo II cumulativo com Anexo I; extras só por resolução CONTRAN específica.\nCadeia: vizinho = fiscalização constata funcionamento dos equipamentos do Anexo I (§ 2º).",
+        "destaques": [
+          "ANEXO II",
+          "art. 5",
+          "SENATRAN",
+          "exportação"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 993/2023",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 993, DE 15 DE JUNHO DE 2023.pdf"
+    }
+  ]
+}

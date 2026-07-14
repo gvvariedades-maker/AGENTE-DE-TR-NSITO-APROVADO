@@ -1,0 +1,212 @@
+{
+  "tec_id": "3324116",
+  "disciplina": "informatica",
+  "gabarito": "D",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "tabela_gradacao",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 195,
+    "fundamento_slug": "info_UCP_cache",
+    "macete_visual": "ULA=cálculos · UC=controle · Cache=ponte · RAM/ROM=fora",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "Anexo I — Informática, item 1.1 (Hardware)",
+        "path": "conteúdo/edital/"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Componente que executa cálculos na UCP = ULA.",
+      "far_transfer": "SSD = armazenamento — não é cache do processador.",
+      "o_que_nao_muda": "Cache = memória rápida para reduzir acesso à memória principal."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito D (memória cache).\n\nA — RAM e ROM na UCP: são memórias externas ao processador.\nB — ULA controla E/S: controle é da Unidade de Controle.\nC — ULA, Registradores e UC fora da UCP: são o núcleo do processador.\n\nPegadinha: mistura memórias externas com componentes internos da UCP.",
+          "destaques": [
+            "Gabarito D",
+            "cache",
+            "RAM/ROM"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Pré-treino: 5 termos",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "UCP: processador — chip que executa instruções.\nULA: Unidade Lógica e Aritmética — faz cálculos.\nUNIDADE DE CONTROLE: coordena fluxo de instruções.\nCACHE: memória ultra-rápida dentro ou junto ao processador.\nRAM/ROM: memórias principais — ficam fora da UCP.",
+          "destaques": [
+            "UCP",
+            "ULA",
+            "CACHE"
+          ]
+        }
+      },
+      {
+        "id": "gradacao",
+        "titulo": "Mapa: dentro e fora da UCP",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": [
+            "Item",
+            "Onde fica"
+          ],
+          "linhas": [
+            {
+              "faixa": "ULA + UC + Registradores",
+              "classificacao": "Dentro da UCP",
+              "destaque": true
+            },
+            {
+              "faixa": "Memória cache",
+              "classificacao": "Auxiliar da UCP — acesso rápido",
+              "destaque": true
+            },
+            {
+              "faixa": "RAM",
+              "classificacao": "Memória principal — fora da UCP"
+            },
+            {
+              "faixa": "ROM",
+              "classificacao": "Memória somente leitura — fora da UCP"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × conceito",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Conceito ✓"
+          ],
+          "linhas": [
+            [
+              "RAM e ROM são componentes da UCP",
+              "RAM e ROM são memórias externas ao processador"
+            ],
+            [
+              "ULA controla entrada e saída de dados",
+              "ULA executa cálculos; Unidade de Controle coordena"
+            ],
+            [
+              "ULA, Registradores e UC não pertencem à UCP",
+              "Esses três são o núcleo interno da UCP"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que A, B e C enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Mecanismo + por quê"
+          ],
+          "linhas": [
+            [
+              "A — termo_unico",
+              "Confunde RAM/ROM (memória principal) com componentes internos do chip do processador"
+            ],
+            [
+              "B — termo_unico",
+              "Atribui à ULA a função de controle de E/S — papel da Unidade de Controle"
+            ],
+            [
+              "C — regra_excecao",
+              "Nega que ULA, Registradores e UC são da UCP — quando são o núcleo do processador"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Veredito"
+          ],
+          "linhas": [
+            [
+              "A — RAM e ROM na UCP",
+              "Falsa — memórias externas"
+            ],
+            [
+              "B — ULA controla E/S",
+              "Falsa — ULA calcula"
+            ],
+            [
+              "C — ULA/UC/Registradores fora",
+              "Falsa — são da UCP"
+            ],
+            [
+              "D — cache rápida",
+              "Correta — gabarito D"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Referência — arquitetura da UCP",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "Anexo I — Informática, item 1.1 (Hardware)",
+          "texto": "A UCP (CPU) é composta por Unidade Lógica e Aritmética (ULA), Unidade de Controle e Registradores. A memória cache do processador é memória de acesso rápido que reduz o tempo médio de acesso aos dados da memória principal. RAM e ROM são memórias externas à UCP, não componentes do processador.",
+          "trechos_grifados": [
+            {
+              "inicio": 27,
+              "fim": 97,
+              "motivo": "gradacao — núcleo interno da UCP",
+              "texto_grifado": "Unidade Lógica e Aritmética (ULA), Unidade de Controle e Registradores"
+            },
+            {
+              "inicio": 101,
+              "fim": 156,
+              "motivo": "caso — gabarito D (definição de cache)",
+              "texto_grifado": "memória cache do processador é memória de acesso rápido"
+            },
+            {
+              "inicio": 223,
+              "fim": 260,
+              "motivo": "contraste — A erra ao incluir RAM/ROM na UCP",
+              "texto_grifado": "RAM e ROM são memórias externas à UCP"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "ULA = cálculos · UC = controle · Cache = ponte rápida · RAM/ROM = fora da UCP.\nNear: qual componente faz cálculos? → ULA (não cache).\nFar: SSD armazena dados — não é cache interno do processador.\nNão muda: cache = memória rápida para reduzir acesso à memória principal.",
+          "destaques": [
+            "ULA",
+            "Near",
+            "Não muda"
+          ]
+        }
+      }
+    ]
+  }
+}

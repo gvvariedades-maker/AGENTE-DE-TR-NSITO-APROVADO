@@ -1,0 +1,55 @@
+Modo Agent. Skills: examinador-idecan (v2.1) + estudo-reverso-visual (v3.4).
+Pipeline: QUESTÃO REAL IDECAN — nível SUPERIOR.
+Contrato completo: .cursor/skills/examinador-idecan/prompt-questao-real-aula.md
+Ouro: content/questoes-reais/_ouro/real-aula-nota-10.md
+
+Disciplina: legislacao_transito
+
+Passo 0 — escolher próxima questão automaticamente (sem perguntar):
+1. Mapear disciplina → PDFs SUPERIOR em conteúdo/questões reais/:
+   - legislacao_transito → CTB, TRANSITO, Transporte e Trânsito
+   - direito_constitucional → CONSTITUCIONAL
+   - direito_administrativo → ADMINISTRATIVO
+   - legislacao_etica_sp → ÉTICA, LAI, LGPD, SP
+   - portugues → PORTUGUÊS
+   - informatica → INFORMÁTICA
+   - historia_cg_pb → HISTORIA, CAMPINA
+   (só PDFs com "SUPERIOR" no nome; se não houver, reportar e parar)
+2. Extrair se necessário: python scripts/extrair-questoes-reais-superior.py --pdf "<PDF>"
+   → content/questoes-reais/_raw/
+3. Listar tec_id já em content/questoes-reais/{disciplina}/lote-*.json
+4. Escolher a 1ª questão do _raw ainda não montada, com 4 alt (A–D)
+5. Reportar: tec_id, PDF, gabarito, enunciado (1ª linha), lote destino
+
+Gerar 1 questão + aula completa v3.4 (paridade inédita).
+Gravar em content/questoes-reais/{disciplina}/lote-NNN.json (append ou novo lote).
+Snippet: _snippets/real-tec-{tec_id}-completo-visual.json
+
+## Questão (real_idecan)
+- Limpar cabeçalho Tec; enunciado fiel ao PDF
+- meta: origem=real_idecan, nivel_escolaridade=superior, tec_id, fonte_arquivo
+- tags: real_idecan, superior
+- dificuldade honesta (pode 1–3; NÃO forçar mínimo 4)
+- comentario Professor Elite + cadeia_anti_alucinacao (lei em conteúdo/)
+- meta: padrao_familia, isca_por_alternativa, near_transfer, far_transfer, o_que_nao_muda (distintos), eficacia_pos_aula ["E1","E2","E3"]
+
+## Aula v3.4
+- Hub: exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md + família A–D
+- estudo_reverso_visual_completo v2, 7–11 telas + v1 recomendada
+- contexto: gabarito + isca por errada — SEM análise por slug (slug só em distratores)
+- contraste: Crença ✗ × Lei ✓ — só crença FALSA na esquerda
+- distratores: LETRA — slug = passo_a_passo[1]
+- caso: substantivos do enunciado; título sem "stem"
+- lei: literal conteúdo/ + grifo texto_grifado; macete: regra + Near + Far + Não muda
+- Gate Mayer 8/8 + editorial 12/12 (#18–#21)
+
+NÃO usar npm run proxima nem content/questoes/.
+
+## Entrega
+1. Gravar lote + snippet
+2. npm run validate:lote -- content/questoes-reais/{disciplina}/lote-NNN.json
+   (6 gates em questoes-reais, inclui validate:aula-real)
+3. npm run db:seed -- --only-reais
+4. Não commitar
+
+Reportar: tec_id, gabarito, família, fundamento, nº telas, checklist 12/12, gates OK, caminho do arquivo.

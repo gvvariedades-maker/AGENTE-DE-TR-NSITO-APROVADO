@@ -1,0 +1,380 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_sinalizacao",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_83_84_publicidade",
+    "enunciado": "Empresa de eventos instalou painel publicitário luminoso ao lado de placa de velocidade na Av. Epitácio Pessoa, em Campina Grande/PB, sem consultar a STTP. O painel reduz a visibilidade noturna da placa para condutores que trafegam sentido centro. A empresa alega que basta seguir normas do CONTRAN e que a STTP não pode remover o equipamento sem ordem judicial. Agente da STTP questiona o enquadramento. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A publicidade ao longo de vias depende de autorização prévia do CONTRAN, por ser norma de competência federal de sinalização — a STTP apenas fiscaliza o cumprimento das resoluções nacionais.",
+      "B": "A instalação é lícita porque o art. 82 do CTB proíbe publicidade apenas afixada sobre a placa de velocidade ou seu suporte, não ao lado do equipamento de sinalização.",
+      "C": "A afixação condiciona-se à prévia aprovação da STTP — art. 83 do CTB — e o órgão pode determinar a imediata retirada do painel, com ônus para a empresa, por prejudicar a visibilidade da sinalização — art. 84 do CTB.",
+      "D": "A retirada do painel depende de decisão judicial prévia, pois a publicidade em via pública constitui direito de livre iniciativa não passível de remoção administrativa imediata pela STTP."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Publicidade ao longo da via — art. 83 (aprovação prévia do órgão com circunscrição) × art. 84 (retirada imediata com ônus por prejuízo à visibilidade).",
+      "fundamento_legal": "CTB, art. 83: a afixação de publicidade ou de quaisquer legendas ou símbolos ao longo das vias condiciona-se à prévia aprovação do órgão ou entidade com circunscrição sobre a via. CTB, art. 84: o órgão ou entidade de trânsito com circunscrição sobre a via poderá retirar ou determinar a imediata retirada de qualquer elemento que prejudique a visibilidade da sinalização viária e a segurança do trânsito, com ônus para quem o tenha colocado. CTB, art. 82: é proibido afixar sobre a sinalização de trânsito e respectivos suportes, ou junto a ambos, qualquer tipo de publicidade, inscrições, legendas e símbolos que não se relacionem com a mensagem da sinalização.",
+      "passo_a_passo": [
+        "1. Caso: painel luminoso ao lado de placa de velocidade na Av. Epitácio Pessoa, sem aprovação STTP, reduz visibilidade noturna — empresa invoca CONTRAN e exige ordem judicial.",
+        "2. A erra por competencia_snt (atribui aprovação ao CONTRAN — art. 83 exige órgão com circunscrição sobre a via, a STTP); B erra por regra_excecao (limita art. 82 a publicidade sobre a placa, ignorando art. 83 para publicidade ao longo da via); D erra por termo_unico (exige decisão judicial onde o art. 84 autoriza retirada administrativa imediata com ônus).",
+        "3. C correta: art. 83 — aprovação prévia da STTP; art. 84 — retirada imediata com ônus por prejuízo à visibilidade."
+      ],
+      "pegadinha": "A IDECAN induz a crer que CONTRAN normatiza e dispensa anuência local — mas o art. 83 exige aprovação prévia do órgão com circunscrição sobre a via, e o art. 84 autoriza retirada administrativa.",
+      "macete": "Ao longo da via = aprovação STTP · prejuízo à visibilidade = retirada com ônus.",
+      "estudo_reverso": [
+        "CTB art. 83",
+        "CTB art. 84",
+        "CTB art. 82"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Publicidade ao longo da via exige aprovação da STTP, não só normas do CONTRAN",
+      "eixos_legais": [
+        "CTB_art_83",
+        "CTB_art_84"
+      ],
+      "eixo_vizinho": "CTB_art_82",
+      "isca_por_alternativa": {
+        "A": "aprovação prévia do CONTRAN dispensa anuência da STTP em via municipal",
+        "B": "art. 82 só veda publicidade sobre a placa, não ao lado dela",
+        "D": "retirada depende de decisão judicial prévia, não de ato administrativo da STTP"
+      },
+      "eixos_mecanismo": [
+        "competencia_snt",
+        "regra_excecao",
+        "termo_unico"
+      ],
+      "near_transfer": "Mesmo painel sem reduzir visibilidade, mas sem aprovação prévia — art. 83 ainda exige anuência da STTP antes da instalação.",
+      "far_transfer": "Propaganda colada no suporte da placa R-19 — art. 82 veda afixação sobre a sinalização, regime distinto do art. 83 (ao longo da via).",
+      "o_que_nao_muda": "Publicidade ao longo da via exige aprovação prévia do órgão com circunscrição; prejuízo à visibilidade autoriza retirada imediata com ônus de quem instalou.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "sinalizacao",
+      "publicidade",
+      "sttp",
+      "visibilidade",
+      "campina_grande"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CTB_art_83_84_publicidade",
+      "macete_visual": "via publica = aprovacao STTP · visibilidade = retirada com onus",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C: painel ao lado da placa sem aprovação STTP — aprovação prévia + retirada com ônus por visibilidade.",
+            "destaques": ["Gabarito C", "aprovação STTP", "retirada"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "CONTRAN aprova = basta?",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "CONTRAN normatiza e dispensa anuência local",
+                "Art. 83 exige aprovação prévia do órgão com circunscrição"
+              ],
+              [
+                "Retirada só com ordem judicial",
+                "Art. 84 autoriza retirada administrativa imediata com ônus"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Ao longo da via = aprovação STTP.\nPrejuízo à visibilidade = retirada com ônus.",
+            "destaques": ["aprovação STTP", "visibilidade", "ônus"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB arts. 83–84",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 285,
+      "fundamento_slug": "CTB_art_83_84_publicidade",
+      "macete_visual": "via publica = aprovacao STTP · visibilidade = retirada com onus",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Publicidade ao longo da via exige aprovação da STTP, não só normas do CONTRAN",
+        "eixos_legais": [
+          "CTB_art_83",
+          "CTB_art_84"
+        ],
+        "isca_por_alternativa": {
+          "A": "aprovação prévia do CONTRAN dispensa anuência da STTP em via municipal",
+          "B": "art. 82 só veda publicidade sobre a placa, não ao lado dela",
+          "D": "retirada depende de decisão judicial prévia, não de ato administrativo da STTP"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: empresa invocou CONTRAN e judicial",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — aprovação prévia do CONTRAN dispensa anuência da STTP em via municipal.\nB — proibição sobre a placa só alcança publicidade afixada no suporte, não ao lado dela.\nD — retirada depende de decisão judicial prévia, não de ato administrativo da STTP.\n\nPegadinha: painel ao lado da placa sem aprovação STTP — exige anuência prévia e pode ser retirado com ônus por visibilidade.",
+            "destaques": ["Gabarito C", "CONTRAN", "visibilidade"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "AO LONGO DA VIA: publicidade instalada nas margens ou no entorno da via — regime do art. 83 (aprovação prévia).\n\nCIRCUNSCRIÇÃO: competência do órgão de trânsito sobre aquela via — STTP nas vias municipais de Campina Grande.\n\nVISIBILIDADE DA SINALIZAÇÃO: capacidade do condutor de ler a placa — prejuízo autoriza retirada com ônus pelo art. 84.",
+            "destaques": ["AO LONGO DA VIA", "CIRCUNSCRIÇÃO", "VISIBILIDADE"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: painel ao lado da placa é lícito?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Publicidade instalada ao longo da via pública?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Houve aprovação prévia do órgão com circunscrição?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito C — aprovação STTP + retirada se prejudicar visibilidade",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — painel na Av. Epitácio Pessoa"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — empresa não consultou a STTP"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Graduação: onde a publicidade pode ir",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Local da afixação", "Regra"],
+            "linhas": [
+              {
+                "faixa": "Sobre placa ou suporte (ou junto)",
+                "classificacao": "Vedado — art. 82",
+                "destaque": false
+              },
+              {
+                "faixa": "Ao longo da via",
+                "classificacao": "Aprovação prévia do órgão com circunscrição — art. 83",
+                "destaque": true
+              },
+              {
+                "faixa": "Prejuízo à visibilidade ou segurança",
+                "classificacao": "Retirada imediata com ônus — art. 84",
+                "destaque": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: CONTRAN normatiza = dispensa STTP",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "CONTRAN aprova publicidade em vias",
+                "Art. 83 exige aprovação do órgão com circunscrição sobre a via"
+              ],
+              [
+                "Só art. 82 importa quando não está sobre a placa",
+                "Art. 83 rege publicidade ao longo da via, independentemente do art. 82"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — competencia_snt",
+                "Atribui aprovação ao CONTRAN — art. 83 exige órgão com circunscrição sobre a via (STTP)"
+              ],
+              [
+                "B — regra_excecao",
+                "Limita art. 82 a publicidade sobre a placa — ignora art. 83 para publicidade ao longo da via"
+              ],
+              [
+                "D — termo_unico",
+                "Exige decisão judicial — art. 84 autoriza retirada administrativa imediata com ônus"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dado do caso", "Conclusão"],
+            "linhas": [
+              [
+                "Painel luminoso ao lado de placa de velocidade",
+                "Publicidade ao longo da via — art. 83"
+              ],
+              [
+                "Sem consulta ou aprovação da STTP",
+                "Falta requisito de aprovação prévia"
+              ],
+              [
+                "Reduz visibilidade noturna da placa",
+                "Prejuízo à sinalização — art. 84"
+              ],
+              [
+                "Empresa alega ordem judicial necessária",
+                "Art. 84 dispensa decisão judicial para retirada"
+              ],
+              [
+                "Resultado",
+                "Alternativa C"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "STTP × CONTRAN × arts. 83 e 84",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Ator / dispositivo", "Papel no caso"],
+            "linhas": [
+              [
+                "CONTRAN — normatização federal",
+                "Edita padrões de sinalização — não substitui aprovação local do art. 83"
+              ],
+              [
+                "STTP — circunscrição municipal",
+                "Aprova publicidade ao longo da via e determina retirada pelo art. 84"
+              ],
+              [
+                "Art. 83 — aprovação prévia",
+                "Condição para instalar publicidade ao longo da via"
+              ],
+              [
+                "Art. 84 — retirada com ônus",
+                "Consequência quando elemento prejudica visibilidade da sinalização"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "CTB art. 83",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 83",
+            "texto": "A afixação de publicidade ou de quaisquer legendas ou símbolos ao longo das vias condiciona-se à prévia aprovação do órgão ou entidade com circunscrição sobre a via.",
+            "trechos_grifados": [
+              {
+                "inicio": 63,
+                "fim": 164,
+                "motivo": "mapa — publicidade ao longo da via exige anuência prévia",
+                "texto_grifado": "ao longo das vias condiciona-se à prévia aprovação do órgão ou entidade com circunscrição sobre a via"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "CTB art. 84",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 84",
+            "texto": "O órgão ou entidade de trânsito com circunscrição sobre a via poderá retirar ou determinar a imediata retirada de qualquer elemento que prejudique a visibilidade da sinalização viária e a segurança do trânsito, com ônus para quem o tenha colocado.",
+            "trechos_grifados": [
+              {
+                "inicio": 80,
+                "fim": 183,
+                "motivo": "contraste — retirada administrativa imediata, sem ordem judicial",
+                "texto_grifado": "determinar a imediata retirada de qualquer elemento que prejudique a visibilidade da sinalização viária"
+              },
+              {
+                "inicio": 211,
+                "fim": 246,
+                "motivo": "caso — ônus recai sobre a empresa instaladora",
+                "texto_grifado": "com ônus para quem o tenha colocado"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Ao longo da via = aprovação STTP · prejuízo à visibilidade = retirada com ônus.\n\nNear: painel sem afetar visibilidade, mas sem aprovação — art. 83 ainda exige anuência prévia.\nFar: propaganda no suporte da placa — art. 82 veda, regime distinto do art. 83.\nNão muda: aprovação prévia do órgão com circunscrição + retirada com ônus se prejudicar sinalização.\nCadeia: vizinho = art. 82 (sobre a placa × ao longo da via).",
+            "destaques": ["aprovação STTP", "visibilidade", "art. 82", "ônus"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB arts. 83–84",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

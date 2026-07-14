@@ -1,0 +1,213 @@
+{
+  "tec_id": "1039079",
+  "disciplina": "informatica",
+  "gabarito": "C",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "tabela_gradacao",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 200,
+    "fundamento_slug": "info_word_2007_atalhos_B_I_U",
+    "macete_visual": "B=Bold · I=Italic · U=Underline · S=Save",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "Anexo I — Informática, itens 3.1–3.3 (Editor de textos)",
+        "path": "conteúdo/edital/"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Ctrl+B isolado — só negrito, não o trio completo.",
+      "far_transfer": "Excel: Ctrl+B também aplica negrito.",
+      "o_que_nao_muda": "Negrito/itálico/sublinhado = Ctrl+B / Ctrl+I / Ctrl+U no Word 2007."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito oficial Tec: C — mas o trio técnico é Ctrl+B / Ctrl+I / Ctrl+U.\n\nA — Alt+B/I/S: modificador Alt — não formata no Word.\nB — Alt+N/L/N: combinação sem sentido no ribbon.\nC — Ctrl+N/I/S: só Ctrl+I (itálico) acerta; N=novo, S=salvar (isca de sublinhado).\nD — Ctrl+B/U/L: B=negrito ok, mas U e L não fecham itálico+sublinhado na ordem.\n\nPegadinha: Ctrl+S parece sublinhado (S) — atalho real de sublinhado é Ctrl+U.",
+          "destaques": [
+            "Ctrl+B",
+            "Ctrl+I",
+            "Ctrl+U"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Pré-treino: mnemônicos em inglês",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "B = Bold (negrito). I = Italic (itálico). U = Underline (sublinhado).\nS = Save (salvar) — não confunda com sublinhado.\nN = New (novo documento). L = Left (alinhar à esquerda).",
+          "destaques": [
+            "Bold",
+            "Italic",
+            "Underline"
+          ]
+        }
+      },
+      {
+        "id": "gradacao",
+        "titulo": "Mapa: atalho × função (grupo Fonte)",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": [
+            "Ordem pedida",
+            "Atalho"
+          ],
+          "linhas": [
+            {
+              "faixa": "1º — Negrito",
+              "classificacao": "Ctrl+B",
+              "destaque": true
+            },
+            {
+              "faixa": "2º — Itálico",
+              "classificacao": "Ctrl+I",
+              "destaque": true
+            },
+            {
+              "faixa": "3º — Sublinhado",
+              "classificacao": "Ctrl+U",
+              "destaque": true
+            },
+            {
+              "faixa": "Salvar arquivo",
+              "classificacao": "Ctrl+S (não é sublinhado)"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × conceito",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Conceito ✓"
+          ],
+          "linhas": [
+            [
+              "Sublinhado usa Ctrl+S porque começa com S",
+              "Sublinhado = Ctrl+U (Underline); Ctrl+S salva o arquivo"
+            ],
+            [
+              "Negrito usa Ctrl+N (N de negrito)",
+              "Negrito = Ctrl+B (Bold); Ctrl+N abre documento novo"
+            ],
+            [
+              "Atalhos de formatação usam tecla Alt",
+              "Grupo Fonte usa Ctrl+B, Ctrl+I e Ctrl+U no Word 2007"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que A, B e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Mecanismo + por quê"
+          ],
+          "linhas": [
+            [
+              "A — termo_unico",
+              "Usa Alt em vez de Ctrl — modificador errado para negrito/itálico no Word"
+            ],
+            [
+              "B — termo_unico",
+              "Alt+N/L/N sem correspondência nos atalhos padrão do grupo Fonte"
+            ],
+            [
+              "D — numero_vizinho",
+              "Ctrl+B acerta negrito, mas Ctrl+U/L não fecham itálico e sublinhado na sequência"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Botão (grupo Fonte)",
+            "Atalho"
+          ],
+          "linhas": [
+            [
+              "Negrito",
+              "Ctrl+B"
+            ],
+            [
+              "Itálico",
+              "Ctrl+I"
+            ],
+            [
+              "Sublinhado",
+              "Ctrl+U"
+            ],
+            [
+              "Gabarito Tec (PDF)",
+              "C — ressalva: trio técnico não está integralmente em C"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Referência — atalhos do grupo Fonte",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "Anexo I — Informática, itens 3.1–3.3 (Editor de textos)",
+          "texto": "No Word 2007 (configuração padrão, português Brasil), os atalhos do grupo Fonte para negrito, itálico e sublinhado são, respectivamente, Ctrl+B (Bold), Ctrl+I (Italic) e Ctrl+U (Underline). Ctrl+S salva o arquivo; Ctrl+N abre documento novo; Ctrl+L alinha à esquerda — não substituem o trio de formatação.",
+          "trechos_grifados": [
+            {
+              "inicio": 137,
+              "fim": 188,
+              "motivo": "caso — trio correto negrito/itálico/sublinhado",
+              "texto_grifado": "Ctrl+B (Bold), Ctrl+I (Italic) e Ctrl+U (Underline)"
+            },
+            {
+              "inicio": 190,
+              "fim": 212,
+              "motivo": "contraste — C erra ao usar Ctrl+S no 3º atalho",
+              "texto_grifado": "Ctrl+S salva o arquivo"
+            },
+            {
+              "inicio": 214,
+              "fim": 240,
+              "motivo": "contraste — C erra ao usar Ctrl+N no 1º atalho",
+              "texto_grifado": "Ctrl+N abre documento novo"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "B=Bold · I=Italic · U=Underline · S=Save.\nNear: só Ctrl+B — negrito isolado, não o trio.\nFar: no Excel, Ctrl+B também aplica negrito.\nNão muda: negrito/itálico/sublinhado = Ctrl+B / Ctrl+I / Ctrl+U.",
+          "destaques": [
+            "Bold",
+            "Near",
+            "Não muda"
+          ]
+        }
+      }
+    ]
+  }
+}

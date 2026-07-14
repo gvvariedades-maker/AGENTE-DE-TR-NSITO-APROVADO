@@ -1,0 +1,211 @@
+{
+  "tec_id": "3333270",
+  "disciplina": "portugues",
+  "gabarito": "C",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "tabela_gradacao",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 210,
+    "fundamento_slug": "portugues_4_1_ortografia_s",
+    "macete_visual": "conselho/suspense=s · sumiço=ç · c≠/s/ antes de e/i",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "Anexo I — Língua Portuguesa, item 4.1 (Ortografia)",
+        "path": "conteúdo/edital/"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Frase com conselhos (s) em vez de concelhos — todas corretas; gabarito seria essa alternativa.",
+      "far_transfer": "Palavras com x para /s/ (xampu, luxo) — outro grafema do mesmo som; regra de posição distinta.",
+      "o_que_nao_muda": "Uma única palavra errada invalida a alternativa inteira — todas devem estar corretas."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito C.\n\nA — concelhos: c no lugar de s.\nB — sumisso: falta o ç de sumiço.\nD — suspence: c no lugar de s.\n\nPegadinha: texto longo distrai — a prova cobra ortografia do som /s/ em cada frase inteira.",
+          "destaques": [
+            "Gabarito C",
+            "som /s/",
+            "todas as palavras"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Pré-treino: 3 grafemas do /s/",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "S: conselho, suspense — entre vogais ou final.\nÇ: sumiço — após ditongo oral.\nC: só para /k/ ou /s/ antes de a/o/u — não antes de e/i para som /s/.",
+          "destaques": [
+            "S",
+            "Ç",
+            "C"
+          ]
+        }
+      },
+      {
+        "id": "gradacao",
+        "titulo": "Mapa do som /s/",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": [
+            "Grafema",
+            "Quando usar"
+          ],
+          "linhas": [
+            {
+              "faixa": "s",
+              "classificacao": "Entre vogais ou final: conselho, suspense",
+              "destaque": true
+            },
+            {
+              "faixa": "ç",
+              "classificacao": "Após ditongo oral: sumiço"
+            },
+            {
+              "faixa": "c (erro)",
+              "classificacao": "Não para /s/ antes de e/i: concelho, suspence"
+            },
+            {
+              "faixa": "ss",
+              "classificacao": "Entre vogais em certas palavras: passo, missa"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × norma culta",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Norma ✓"
+          ],
+          "linhas": [
+            [
+              "Todo som /s/ antes de e se escreve com c",
+              "Suspense e conselho usam s — não suspence nem concelho"
+            ],
+            [
+              "Sumisso é grafia aceita para desaparecimento",
+              "A forma correta é sumiço, com ç após ditongo"
+            ],
+            [
+              "Basta uma palavra certa na frase",
+              "Todas as palavras da alternativa devem estar corretas"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que A, B e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Mecanismo + por quê"
+          ],
+          "linhas": [
+            [
+              "A — termo_unico",
+              "Concelhos troca s por c — o correto é conselhos"
+            ],
+            [
+              "B — termo_unico",
+              "Sumisso omite o ç — a forma padrão é sumiço"
+            ],
+            [
+              "D — termo_unico",
+              "Suspence usa c antes de e — o correto é suspense"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Frase da alternativa",
+            "Resultado"
+          ],
+          "linhas": [
+            [
+              "A: concelhos de seu pai",
+              "Erro ortográfico — descarta A"
+            ],
+            [
+              "B: sumisso do pai",
+              "Erro ortográfico — descarta B"
+            ],
+            [
+              "C: pais, pedem, abençoe, filhos",
+              "Todas corretas — gabarito C"
+            ],
+            [
+              "D: filmes de suspence",
+              "Erro ortográfico — descarta D"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Referência — ortografia do /s/",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "Anexo I — Língua Portuguesa, item 4.1 (Ortografia oficial)",
+          "texto": "Ortografia do som /s/ no português: emprega-se s em posição final e entre vogais (conselho, suspense); ç após ditongo oral (sumiço); evita-se c para o som /s/ antes de e ou i (não se escreve concelho nem suspence). Na prova, a alternativa só vale se todas as palavras da frase estiverem grafadas corretamente.",
+          "trechos_grifados": [
+            {
+              "inicio": 82,
+              "fim": 90,
+              "motivo": "gradacao — A erra com concelhos",
+              "texto_grifado": "conselho"
+            },
+            {
+              "inicio": 92,
+              "fim": 100,
+              "motivo": "distratores — D erra com suspence",
+              "texto_grifado": "suspense"
+            },
+            {
+              "inicio": 124,
+              "fim": 130,
+              "motivo": "distratores — B erra com sumisso",
+              "texto_grifado": "sumiço"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Macete de prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: uma palavra errada mata a alternativa inteira.\nNear: conselhos com s — frase toda correta.\nFar: xampu/luxo com x — outro grafema do /s/.\nNão muda: todas as palavras devem estar certas.",
+          "destaques": [
+            "Near",
+            "Far",
+            "Não muda"
+          ]
+        }
+      }
+    ]
+  }
+}

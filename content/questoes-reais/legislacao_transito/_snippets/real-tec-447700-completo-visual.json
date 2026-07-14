@@ -1,231 +1,242 @@
 {
-  "versao": 2,
-  "arquetipo": "diagrama_competencia",
-  "arquetipo_secundario": "comparacao",
-  "duracao_estimada_seg": 185,
-  "fundamento_slug": "CTB_art_7",
-  "macete_visual": "PRF+PM+JARI sim · Civil fora",
-  "publico_alvo": "iniciante",
-  "links_fonte": [
-    {
-      "rotulo": "CTB",
-      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
-    }
-  ],
-  "meta": {
-    "near_transfer": "JARI (VII) compõe — não confundir com órgão municipal genérico.",
-    "far_transfer": "Polícia Federal não está no art. 7º — outro órgão de segurança.",
-    "o_que_nao_muda": "Rol taxativo do art. 7º — Polícia Civil nunca integra o SNT."
-  },
-  "telas": [
-    {
-      "id": "contexto",
-      "titulo": "Diagnóstico: EXCETO Polícia Civil",
-      "secao": "diagnostico",
-      "tipo": "texto_destaque",
-      "conteudo": {
-        "texto": "Gabarito B.\n\nA — PRF: inciso V, compõe.\nC — PM: inciso VI, compõe.\nD — executivos rodoviários: inciso IV, compõem.\n\nPegadinha: PM e Civil são 'polícias', mas só a PM está no SNT.",
-        "destaques": [
-          "Gabarito B",
-          "PM",
-          "Civil"
-        ]
+  "tec_id": "447700",
+  "disciplina": "legislacao_transito",
+  "gabarito": "B",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "diagrama_competencia",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 200,
+    "fundamento_slug": "CTB_art_7",
+    "macete_visual": "PRF+PM+JARI sim · Civil fora",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
       }
+    ],
+    "meta": {
+      "near_transfer": "JARI (VII) compõe — não confundir com órgão municipal genérico.",
+      "far_transfer": "Polícia Federal também fica fora do art. 7º do CTB.",
+      "o_que_nao_muda": "Rol taxativo do art. 7º — Polícia Civil nunca integra o SNT."
     },
-    {
-      "id": "glossario",
-      "titulo": "Pré-treino: 3 órgãos",
-      "tipo": "texto_destaque",
-      "conteudo": {
-        "texto": "SNT: sistema integrado de planejamento, fiscalização e julgamento de trânsito.\nPRF: polícia ostensiva em rodovias federais — inciso V.\nPM: policiamento ostensivo estadual — inciso VI. Polícia Civil: investigação — fora do art. 7º.",
-        "destaques": [
-          "SNT",
-          "PRF",
-          "Civil"
-        ]
-      }
-    },
-    {
-      "id": "diagrama",
-      "titulo": "Mapa do art. 7º",
-      "secao": "metodo",
-      "tipo": "diagrama_competencia",
-      "conteudo": {
-        "nos": [
-          {
-            "id": "snt",
-            "label": "SNT — art. 7º",
-            "nivel": 0
-          },
-          {
-            "id": "i",
-            "label": "CONTRAN (I)",
-            "nivel": 1
-          },
-          {
-            "id": "v",
-            "label": "PRF (V)",
-            "nivel": 1
-          },
-          {
-            "id": "vi",
-            "label": "PM (VI)",
-            "nivel": 1
-          },
-          {
-            "id": "vii",
-            "label": "JARI (VII)",
-            "nivel": 1
-          },
-          {
-            "id": "fora",
-            "label": "Polícia Civil",
-            "nivel": 2
-          }
-        ],
-        "arestas": [
-          {
-            "de": "snt",
-            "para": "i",
-            "rotulo": "compõe"
-          },
-          {
-            "de": "snt",
-            "para": "v",
-            "rotulo": "compõe"
-          },
-          {
-            "de": "snt",
-            "para": "vi",
-            "rotulo": "compõe"
-          },
-          {
-            "de": "snt",
-            "para": "vii",
-            "rotulo": "compõe"
-          }
-        ]
-      }
-    },
-    {
-      "id": "contraste",
-      "titulo": "PM × Polícia Civil",
-      "secao": "contraste",
-      "tipo": "comparacao",
-      "conteudo": {
-        "colunas": [
-          "Órgão",
-          "No SNT?"
-        ],
-        "linhas": [
-          [
-            "Polícia Militar (VI)",
-            "Sim — policiamento ostensivo de trânsito"
-          ],
-          [
-            "Polícia Civil",
-            "Não — não consta no art. 7º"
-          ],
-          [
-            "PRF (V)",
-            "Sim — rodovias federais"
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito B.\n\nA — PRF compõe o SNT.\nC — PM compõe o SNT.\nD — executivos rodoviários compõem o SNT.\n\nPegadinha: PM e Civil são polícias — só a PM entra no SNT.",
+          "destaques": [
+            "Gabarito B",
+            "PM",
+            "Civil"
           ]
-        ]
-      }
-    },
-    {
-      "id": "distratores",
-      "titulo": "Por que cada alternativa erra",
-      "secao": "distratores",
-      "tipo": "comparacao",
-      "conteudo": {
-        "colunas": [
-          "Alternativa",
-          "Mecanismo + por quê"
-        ],
-        "linhas": [
-          [
-            "A — competencia_snt",
-            "PRF é inciso V do art. 7º — integra o SNT"
-          ],
-          [
-            "C — competencia_snt",
-            "PM é inciso VI — integra o SNT"
-          ],
-          [
-            "D — competencia_snt",
-            "Executivos rodoviários são inciso IV — integram o SNT"
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Três nomes que a banca mistura",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "PRF: ostensiva em rodovias federais — integra o SNT.\nPM: ostensiva e ordem pública no Estado — integra o SNT.\nPolícia Civil: investigação criminal — não integra o SNT.\n\nSNT = planejar, fiscalizar e julgar o trânsito. Civil = apurar crime.",
+          "destaques": [
+            "PRF",
+            "PM",
+            "Polícia Civil"
           ]
-        ]
-      }
-    },
-    {
-      "id": "caso",
-      "titulo": "EXCETO = quem falta no rol",
-      "secao": "metodo",
-      "tipo": "comparacao",
-      "conteudo": {
-        "colunas": [
-          "Alternativa",
-          "No art. 7º?"
-        ],
-        "linhas": [
-          [
-            "A — PRF",
-            "Sim — V"
+        }
+      },
+      {
+        "id": "diagrama",
+        "titulo": "Quem compõe o SNT",
+        "secao": "metodo",
+        "tipo": "diagrama_competencia",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "snt",
+              "label": "SNT (rol taxativo)",
+              "nivel": 0
+            },
+            {
+              "id": "contran",
+              "label": "CONTRAN (I)",
+              "nivel": 1
+            },
+            {
+              "id": "prf",
+              "label": "PRF (V)",
+              "nivel": 1
+            },
+            {
+              "id": "pm",
+              "label": "PM (VI)",
+              "nivel": 1
+            },
+            {
+              "id": "jari",
+              "label": "JARI (VII)",
+              "nivel": 1
+            },
+            {
+              "id": "civil",
+              "label": "Polícia Civil — FORA",
+              "nivel": 2
+            },
+            {
+              "id": "pf",
+              "label": "Polícia Federal — FORA",
+              "nivel": 2
+            }
           ],
-          [
-            "B — Polícia Civil",
-            "Não — gabarito EXCETO"
-          ],
-          [
-            "C — PM",
-            "Sim — VI"
-          ],
-          [
-            "D — executivos rodoviários",
-            "Sim — IV"
+          "arestas": [
+            {
+              "de": "snt",
+              "para": "contran",
+              "rotulo": "compõe"
+            },
+            {
+              "de": "snt",
+              "para": "prf",
+              "rotulo": "compõe"
+            },
+            {
+              "de": "snt",
+              "para": "pm",
+              "rotulo": "compõe"
+            },
+            {
+              "de": "snt",
+              "para": "jari",
+              "rotulo": "compõe"
+            }
           ]
-        ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+                [
+                  "Toda polícia entra no SNT",
+                  "Só as listadas no art. 7º — Civil fora"
+                ],
+                [
+                  "Polícia Civil compõe o SNT",
+                  "Civil não consta no rol do art. 7º"
+                ],
+                [
+                  "PRF não é órgão de trânsito",
+                  "PRF é inciso V do art. 7º"
+                ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que A, C e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "A — competencia_snt",
+              "PRF está no inciso V — integra o SNT"
+            ],
+            [
+              "C — competencia_snt",
+              "PM está no inciso VI — isca polícia genérica"
+            ],
+            [
+              "D — competencia_snt",
+              "Executivos rodoviários estão no inciso IV — integram"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "No rol do art. 7º?"
+          ],
+          "linhas": [
+            [
+              "A — PRF",
+              "Sim — gabarito EXCETO errado"
+            ],
+            [
+              "B — Polícia Civil",
+              "Não — gabarito"
+            ],
+            [
+              "C — PM",
+              "Sim — gabarito EXCETO errado"
+            ],
+            [
+              "D — executivos rodoviários",
+              "Sim — gabarito EXCETO errado"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto do CTB",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 7º, incisos V a VII",
+          "texto": "V - a Polícia Rodoviária Federal; VI - as Polícias Militares dos Estados e do Distrito Federal; e VII - as Juntas Administrativas de Recursos de Infrações - JARI.",
+          "trechos_grifados": [
+            {
+              "inicio": 0,
+              "fim": 33,
+              "motivo": "diagrama — PRF integra",
+              "texto_grifado": "V - a Polícia Rodoviária Federal;"
+            },
+            {
+              "inicio": 34,
+              "fim": 95,
+              "motivo": "contraste — PM integra; Civil ausente",
+              "texto_grifado": "VI - as Polícias Militares dos Estados e do Distrito Federal;"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: SNT = CONTRAN + CETRAN + executivos + PRF + PM + JARI. Civil FORA.\nNear: JARI (VII) compõe — não troque por junta municipal genérica.\nFar: Polícia Federal também fica fora do art. 7º.\nNão muda: rol taxativo — Civil nunca integra o SNT.",
+          "destaques": [
+            "Civil FORA",
+            "JARI",
+            "Federal",
+            "taxativo"
+          ]
+        }
       }
-    },
-    {
-      "id": "lei",
-      "titulo": "Art. 7º — incisos V a VII",
-      "secao": "lei",
-      "tipo": "trecho_legal",
-      "conteudo": {
-        "fonte": "CTB art. 7º, incisos V a VII",
-        "texto": "V - a Polícia Rodoviária Federal; VI - as Polícias Militares dos Estados e do Distrito Federal; e VII - as Juntas Administrativas de Recursos de Infrações - JARI.",
-        "trechos_grifados": [
-          {
-            "inicio": 0,
-            "fim": 33,
-            "motivo": "contraste — PRF integra",
-            "texto_grifado": "V - a Polícia Rodoviária Federal;"
-          },
-          {
-            "inicio": 34,
-            "fim": 95,
-            "motivo": "contraste — PM integra; Civil não",
-            "texto_grifado": "VI - as Polícias Militares dos Estados e do Distrito Federal;"
-          }
-        ]
-      }
-    },
-    {
-      "id": "macete",
-      "titulo": "Macete + transferência",
-      "secao": "macete",
-      "tipo": "texto_destaque",
-      "conteudo": {
-        "texto": "PRF+PM+JARI = SNT.\nNear: JARI (VII) compõe — não confundir com DETRAN.\nFar: Polícia Federal fora do art. 7º.\nNão muda: Civil nunca integra o SNT.",
-        "destaques": [
-          "JARI",
-          "Federal",
-          "Civil"
-        ]
-      }
-    }
-  ]
+    ]
+  }
 }

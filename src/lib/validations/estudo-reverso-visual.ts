@@ -6,21 +6,17 @@ import {
   metaQuestaoSchema,
   type MetaTransferenciaCampos,
 } from "@/lib/validations/transferencia-pedagogica";
+import {
+  MECANISMOS_DISTRATOR,
+  type MecanismoDistrator,
+} from "@/lib/mecanismo-distrator-labels";
+
+export { MECANISMOS_DISTRATOR, type MecanismoDistrator };
 
 /**
  * Validação Zod do estudo reverso visual (v1 expressa + v2 completa).
  * @see .cursor/skills/estudo-reverso-visual/DOCUMENTACAO.md
  */
-
-export const MECANISMOS_DISTRATOR = [
-  "numero_vizinho",
-  "competencia_snt",
-  "gravidade",
-  "regra_excecao",
-  "termo_unico",
-] as const;
-
-export type MecanismoDistrator = (typeof MECANISMOS_DISTRATOR)[number];
 
 const MAX_PALAVRAS_TELA = 120;
 const MAX_PALAVRAS_TELA_COMPLETO = 150;
@@ -174,6 +170,101 @@ export function validarTelaDistratores(
       message: `Tela "${tela.id}": cada linha deve incluir slug de mecanismo (${MECANISMOS_DISTRATOR.join(", ")}) na 1ª coluna`,
       path: ["telas", telas.indexOf(tela)],
     });
+  }
+}
+
+const ORGAOS_CONTRASTE = [
+  "prf",
+  "pf",
+  "pff",
+  "pm",
+  "pc",
+  "cbm",
+  "contran",
+  "cetran",
+  "detran",
+  "senatran",
+  "jari",
+  "guarda",
+  "sttp",
+] as const;
+
+function normalizarTextoContraste(texto: string): string {
+  return texto
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/\p{M}/gu, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function extrairOrgaosContraste(texto: string): string[] {
+  const n = normalizarTextoContraste(texto);
+  return ORGAOS_CONTRASTE.filter((o) => new RegExp(`\\b${o}\\b`).test(n));
+}
+
+function isTelaContraste(tela: z.infer<typeof telaVisualSchema>): boolean {
+  if (tela.tipo !== "comparacao") return false;
+  if (isTelaDistratores(tela)) return false;
+  const id = tela.id.toLowerCase();
+  const secao = (tela.secao ?? "").toLowerCase();
+  const titulo = tela.titulo.toLowerCase();
+  return (
+    id === "contraste" ||
+    secao === "contraste" ||
+    titulo.includes("contraste") ||
+    titulo.includes("crença") ||
+    titulo.includes("crenca")
+  );
+}
+
+/**
+ * Gate contraste pedagógico: coluna esquerda = crença FALSA; direita = lei.
+ * Reprova fato verdadeiro na coluna ✗ (ex.: "PRF patrulha rodovia" | "PRF — §2º").
+ */
+export function linhaContrasteAfirmaMesmoOrgao(
+  esquerda: string,
+  direita: string,
+): boolean {
+  const e = normalizarTextoContraste(esquerda);
+  if (/\bnao\b/.test(e) || /\bnunca\b/.test(e)) return false;
+
+  const orgE = extrairOrgaosContraste(esquerda);
+  const orgD = extrairOrgaosContraste(direita);
+  if (orgE.length === 0 || orgD.length === 0) return false;
+
+  // Mesmo órgão nos dois lados sem negação = esquerda afirma o que a direita confirma
+  return orgE.some((o) => orgD.includes(o));
+}
+
+/** Gate: contraste só com crenças falsas; títulos sem jargão de fabricação. */
+export function validarContrastePedagogico(
+  telas: z.infer<typeof telaVisualSchema>[],
+  ctx: z.RefinementCtx,
+) {
+  for (let i = 0; i < telas.length; i++) {
+    const tela = telas[i]!;
+
+    if (/\bstem\b/i.test(tela.titulo)) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: `Tela "${tela.id}": título não pode usar jargão "stem" — use "enunciado"`,
+        path: ["telas", i, "titulo"],
+      });
+    }
+
+    if (!isTelaContraste(tela) || tela.tipo !== "comparacao") continue;
+
+    for (let j = 0; j < tela.conteudo.linhas.length; j++) {
+      const [esquerda, direita] = tela.conteudo.linhas[j]!;
+      if (linhaContrasteAfirmaMesmoOrgao(esquerda, direita)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: `Tela "${tela.id}" linha ${j + 1}: coluna esquerda afirma fato verdadeiro sobre o mesmo órgão da direita ("${esquerda}" | "${direita}"). Contraste exige crença FALSA × lei — tire verdades da coluna ✗.`,
+          path: ["telas", i, "conteudo", "linhas", j],
+        });
+      }
+    }
   }
 }
 
@@ -577,6 +668,7 @@ function validarRegrasVisuais(
     validarTelaDistratores(telas, ctx);
     validarNucleoV2(telas, ctx);
     validarContextoLeve(telas, opts.meta, ctx);
+    validarContrastePedagogico(telas, ctx);
   }
 }
 

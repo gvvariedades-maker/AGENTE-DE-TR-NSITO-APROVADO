@@ -1,0 +1,208 @@
+{
+  "tec_id": "1105306",
+  "disciplina": "informatica",
+  "gabarito": "A",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "tabela_gradacao",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 195,
+    "fundamento_slug": "info_word_atalhos_A_S",
+    "macete_visual": "A=All · S=Save · O=Open · B=Bold",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "Anexo I — Informática, itens 3.1–3.3 (Editor de textos)",
+        "path": "conteúdo/edital/"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Só Ctrl+S salva — metade do par.",
+      "far_transfer": "Excel: Ctrl+S também salva.",
+      "o_que_nao_muda": "Ctrl+A + Ctrl+S = selecionar tudo e salvar."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito A (Ctrl+A / Ctrl+S).\n\nB — Ctrl+L/Ctrl+O: alinhar e abrir — não selecionar+salvar.\nC — Ctrl+T/Ctrl+B: recuo e negrito — formatação.\nD — Ctrl+R/Ctrl+D: alinhar à direita e fonte.\n\nPegadinha: mesma tecla Ctrl com funções vizinhas (B, O, L).",
+          "destaques": [
+            "Gabarito A",
+            "Ctrl+A",
+            "Ctrl+S"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Pré-treino: mnemônicos em inglês",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "A = All (tudo). S = Save (salvar). O = Open (abrir). B = Bold (negrito). L = Left (alinhar à esquerda). R = Right (alinhar à direita).",
+          "destaques": [
+            "All",
+            "Save",
+            "Bold"
+          ]
+        }
+      },
+      {
+        "id": "gradacao",
+        "titulo": "Mapa: atalho × função Word 2007",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": [
+            "Atalho",
+            "Função"
+          ],
+          "linhas": [
+            {
+              "faixa": "Ctrl+A",
+              "classificacao": "Selecionar todo o conteúdo",
+              "destaque": true
+            },
+            {
+              "faixa": "Ctrl+S",
+              "classificacao": "Salvar arquivo",
+              "destaque": true
+            },
+            {
+              "faixa": "Ctrl+O",
+              "classificacao": "Abrir documento"
+            },
+            {
+              "faixa": "Ctrl+B",
+              "classificacao": "Negrito"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × conceito",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Conceito ✓"
+          ],
+          "linhas": [
+            [
+              "Ctrl+B faz parte do par selecionar+salvar",
+              "Ctrl+A seleciona tudo; Ctrl+S salva"
+            ],
+            [
+              "Ctrl+O salva o arquivo",
+              "Ctrl+O abre documento; Ctrl+S salva"
+            ],
+            [
+              "Ctrl+L seleciona todo o conteúdo",
+              "Ctrl+L alinha à esquerda; Ctrl+A seleciona tudo"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que B, C e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Mecanismo + por quê"
+          ],
+          "linhas": [
+            [
+              "B — numero_vizinho",
+              "Ctrl+L e Ctrl+O são atalhos plausíveis — alinhar e abrir, não A+S"
+            ],
+            [
+              "C — termo_unico",
+              "Ctrl+B é negrito — confunde formatação com seleção e gravação"
+            ],
+            [
+              "D — numero_vizinho",
+              "Ctrl+R/D são vizinhos de alinhamento e fonte — não o par pedido"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Pedido do enunciado",
+            "Atalho"
+          ],
+          "linhas": [
+            [
+              "Selecionar todo o conteúdo",
+              "Ctrl+A"
+            ],
+            [
+              "Salvar o arquivo",
+              "Ctrl+S"
+            ],
+            [
+              "Par correto",
+              "Alternativa A"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Referência — atalhos Word 2007",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "Anexo I — Informática, itens 3.1–3.3 (Editor de textos)",
+          "texto": "No Word 2007 (Windows, configuração padrão em português), Ctrl+A seleciona todo o conteúdo do documento e Ctrl+S salva o arquivo. Ctrl+O abre documento; Ctrl+B aplica negrito; Ctrl+L alinha à esquerda.",
+          "trechos_grifados": [
+            {
+              "inicio": 58,
+              "fim": 90,
+              "motivo": "caso — selecionar todo (1º atalho do par)",
+              "texto_grifado": "Ctrl+A seleciona todo o conteúdo"
+            },
+            {
+              "inicio": 106,
+              "fim": 128,
+              "motivo": "caso — salvar arquivo (2º atalho do par)",
+              "texto_grifado": "Ctrl+S salva o arquivo"
+            },
+            {
+              "inicio": 153,
+              "fim": 174,
+              "motivo": "contraste — C erra com Ctrl+B",
+              "texto_grifado": "Ctrl+B aplica negrito"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "A = All · S = Save · O = Open · B = Bold.\nNear: só salvar → Ctrl+S isolado.\nFar: no Excel, Ctrl+S também salva.\nNão muda: Ctrl+A seleciona tudo + Ctrl+S salva.",
+          "destaques": [
+            "All",
+            "Near",
+            "Não muda"
+          ]
+        }
+      }
+    ]
+  }
+}

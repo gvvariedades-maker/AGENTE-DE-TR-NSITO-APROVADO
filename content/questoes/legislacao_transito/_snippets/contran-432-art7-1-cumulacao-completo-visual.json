@@ -1,0 +1,287 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CONTRAN_432_art_7_1",
+  "macete_visual": "Crime não elide 165 · 0,05 admin · 0,34 crime",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Crime configurado não cancela art. 165 — § 1º do art. 7 veda elisão administrativa",
+    "eixos_legais": [
+      "CONTRAN_432_art_7_1",
+      "CONTRAN_432_art_6",
+      "CONTRAN_432_art_7"
+    ],
+    "isca_por_alternativa": {
+      "A": "crime do art. 306 absorve a sanção do art. 165 quando MR atinge 0,40 mg/L",
+      "B": "com MR ≥ 0,34 mg/L o art. 6º, II, deixa de produzir efeitos administrativos",
+      "D": "AIT deve ser anulado até exame de sangue confirmar o crime após encaminhamento policial"
+    }
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: defesa pede cancelamento do AIT",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — crime absorve a sanção administrativa quando MR atinge 0,40 mg/L.\nB — com MR ≥ 0,34 mg/L a infração administrativa deixa de produzir efeitos.\nD — AIT deve ser anulado até exame de sangue confirmar o crime após encaminhamento policial.\n\nPegadinha: crime configurado não cancela infração administrativa — cumulação vedada a elisão.",
+        "destaques": [
+          "Gabarito C",
+          "0,40 mg/L",
+          "não elide"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "MR (MEDIÇÃO REALIZADA): leitura bruta do etilômetro — patamar de comparação nos arts. 6º e 7º.\n\nELISÃO: extinção de uma sanção por outra — vedada entre crime e art. 165 pelo § 1º do art. 7º.\n\nCUMULAÇÃO: infração administrativa e crime podem coexistir quando MR atinge ambos os patamares.",
+        "destaques": [
+          "MR",
+          "ELISÃO",
+          "CUMULAÇÃO"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: MR 0,40 configura o quê?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "MR ≥ 0,05 mg/L para infração administrativa?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "MR ≥ 0,34 mg/L para crime pelo etilômetro?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Infração administrativa + crime — cumulação — gabarito C",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — 0,40 mg/L"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — cumulação pelo § 1º"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gradacao",
+      "titulo": "Patamares do etilômetro",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Patamar MR",
+          "Consequência"
+        ],
+        "linhas": [
+          {
+            "faixa": "MR < 0,05 mg/L",
+            "classificacao": "Sem art. 165 por etilômetro"
+          },
+          {
+            "faixa": "MR 0,05 a 0,33 mg/L",
+            "classificacao": "Art. 165 — sem crime 306"
+          },
+          {
+            "faixa": "MR ≥ 0,34 mg/L",
+            "classificacao": "Art. 165 + crime art. 306",
+            "destaque": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: crime absorve o AIT",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Defesa ✗",
+          "Resolução ✓"
+        ],
+        "linhas": [
+          [
+            "Configurado o crime, cancela-se o art. 165",
+            "§ 1º do art. 7: crime não elide art. 165 do CTB"
+          ],
+          [
+            "MR 0,40 só gera esfera criminal",
+            "MR 0,40 atende art. 6º, II, e art. 7º, II, cumulativamente"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Inventa absorção do art. 165 pelo crime — § 1º do art. 7 veda elisão"
+          ],
+          [
+            "B — termo_unico",
+            "Exclui art. 6º, II, quando MR ≥ 0,34 — patamares administrativo e criminal coexistem"
+          ],
+          [
+            "D — numero_vizinho",
+            "Suspende AIT até sangue — art. 3º, § 3º, autoriza autuação sem aguardar exame complementar"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do caso",
+          "Consequência"
+        ],
+        "linhas": [
+          [
+            "MR 0,40 mg/L na blitz STTP",
+            "≥ 0,05 → art. 165 (art. 6º, II)"
+          ],
+          [
+            "MR 0,40 mg/L",
+            "≥ 0,34 → crime art. 306 (art. 7º, II)"
+          ],
+          [
+            "VC 0,37 mg/L após margem",
+            "Não substitui MR para os patamares"
+          ],
+          [
+            "Defesa pede cancelamento do AIT",
+            "§ 1º do art. 7 veda — cumulação"
+          ],
+          [
+            "Resultado",
+            "Alternativa C"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Art. 165 × art. 306",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Esfera",
+          "Dispositivo no caso"
+        ],
+        "linhas": [
+          [
+            "Infração administrativa — art. 165",
+            "Art. 6º, II — MR ≥ 0,05 mg/L"
+          ],
+          [
+            "Crime — art. 306",
+            "Art. 7º, II — MR ≥ 0,34 mg/L"
+          ],
+          [
+            "Vínculo cumulativo",
+            "Art. 7º, § 1º — crime não elide art. 165"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Res. 432/2013, art. 7º, § 1º",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 432/2013, art. 7º, § 1º",
+        "texto": "A ocorrência do crime de que trata o caput não elide a aplicação do disposto no art. 165 do CTB.",
+        "trechos_grifados": [
+          {
+            "inicio": 43,
+            "fim": 95,
+            "motivo": "contraste — crime não cancela infração administrativa",
+            "texto_grifado": "não elide a aplicação do disposto no art. 165 do CTB"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei2",
+      "titulo": "Arts. 6º, II, e 7º, II",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 432/2013, art. 6º, II, e art. 7º, II",
+        "texto": "Art. 6º, II: teste de etilômetro com medição realizada igual ou superior a 0,05 miligrama de álcool por litro de ar alveolar expirado (0,05 mg/L). Art. 7º, II: teste de etilômetro com medição realizada igual ou superior a 0,34 miligrama de álcool por litro de ar alveolar expirado (0,34 mg/L).",
+        "trechos_grifados": [
+          {
+            "inicio": 37,
+            "fim": 89,
+            "motivo": "gradacao — patamar administrativo no caso 0,40",
+            "texto_grifado": "medição realizada igual ou superior a 0,05 miligrama"
+          },
+          {
+            "inicio": 184,
+            "fim": 236,
+            "motivo": "caso — patamar criminal atingido com MR 0,40",
+            "texto_grifado": "medição realizada igual ou superior a 0,34 miligrama"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near/far-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CRIME NÃO ELIDE 165 · MR 0,05 = admin · MR 0,34 = crime · cumulam.\n\nNear: mesma defesa com MR 0,32 mg/L — só art. 165 subsiste, mas o § 1º continuaria vedando elisão se houvesse crime por outro meio.\nFar: vítima fatal de acidente — art. 11 impõe exame de alcoolemia obrigatório, cenário distinto da blitz.\nNão muda: crime configurado não elide art. 165; patamares 0,05 e 0,34 são independentes.\nCadeia: vizinho = art. 8 (conteúdo obrigatório do AIT por tipo de prova).",
+        "destaques": [
+          "NÃO ELIDE",
+          "0,05",
+          "0,34",
+          "art. 11"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 432/2013",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 432, DE 23 DE JANEIRO DE 2013.pdf"
+    }
+  ]
+}

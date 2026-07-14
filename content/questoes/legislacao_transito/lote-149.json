@@ -1,0 +1,352 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_veiculos",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "assertivas",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_98_110_modificacao",
+    "enunciado": "Oficina de Campina Grande/PB adaptou picape para competição em pista de terra, com suspensão rebaixada e escapamento esportivo, sem autorização prévia. O proprietário alega que basta licenciamento anual no DETRAN-PB para circular na cidade. Em fiscalização na BR-230, agente da PRF questiona se o veículo pode trafegar normalmente. Sobre modificações e circulação de veículos no CTB (arts. 98 e 110), analise as assertivas e assinale a alternativa CORRETA:\n\nI. É vedado ao proprietário ou responsável modificar características de fábrica do veículo sem prévia autorização da autoridade competente.\n\nII. O veículo com características alteradas para competição automobilística pode circular livremente nas vias públicas desde que esteja regularmente licenciado.\n\nIII. Veículos da espécie misto, tipo utilitário, carroceria jipe, podem alterar o diâmetro externo do conjunto roda-pneu sem observar restrições do fabricante ou do CONTRAN.",
+    "alternativas": {
+      "A": "Está correto o que se afirma em I, apenas — a modificação exige autorização prévia e o licenciamento regular não autoriza circulação livre de veículo adaptado para competição.",
+      "B": "Está correto o que se afirma em I e II, apenas — a adaptação para competição é lícita com licenciamento anual, desde que haja autorização prévia para as modificações.",
+      "C": "Está correto o que se afirma em I e III, apenas — a alteração de pneus em utilitário jipe dispensa restrições do fabricante quando há autorização prévia geral.",
+      "D": "Está correto o que se afirma em I, II e III — inclusive circulação livre do veículo de competição licenciado e alteração de pneus sem restrição."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Modificação de veículos — art. 98 (autorização prévia) × art. 98, §2 (exceção utilitário jipe com restrições) × art. 110 (competição exige licença especial com itinerário e horário fixados).",
+      "fundamento_legal": "CTB, art. 98: nenhum proprietário ou responsável poderá, sem prévia autorização da autoridade competente, fazer ou ordenar que sejam feitas no veículo modificações de suas características de fábrica. CTB, art. 98, §2: veículos classificados na espécie misto, tipo utilitário, carroceria jipe poderão ter alterado o diâmetro externo do conjunto formado por roda e pneu, observadas restrições impostas pelo fabricante e exigências fixadas pelo CONTRAN. CTB, art. 110: o veículo que tiver alterada qualquer de suas características para competição ou finalidade análoga só poderá circular nas vias públicas com licença especial da autoridade de trânsito, em itinerário e horário fixados.",
+      "passo_a_passo": [
+        "1. I correta (art. 98 — autorização prévia para modificar características de fábrica); II falsa (art. 110 — competição exige licença especial com itinerário e horário fixados, não circulação livre com licenciamento); III falsa (art. 98, §2 — alteração de pneu em utilitário jipe observa restrições do fabricante e do CONTRAN).",
+        "2. B erra por regra_excecao (inclui II falsa — generaliza licenciamento anual e dispensa licença especial de competição); C erra por termo_unico (inclui III falsa — ignora restrições do fabricante e do CONTRAN na exceção do §2); D erra por gravidade (compra II e III falsas e trata todas as assertivas como corretas).",
+        "3. Gabarito A: apenas I correta — modificação exige autorização prévia; competição e alteração de pneus têm regimes próprios."
+      ],
+      "pegadinha": "A IDECAN induz a marcar B porque I parece óbvia e o licenciamento parece suficiente — mas o art. 110 exige licença especial com itinerário e horário fixados, não circulação livre.",
+      "macete": "98 = autorização prévia · 110 = competição com licença especial · §2 jipe = restrições fabricante/CONTRAN.",
+      "estudo_reverso": [
+        "CTB art. 98",
+        "CTB art. 98, §2",
+        "CTB art. 110"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "B_assertivas",
+      "pegadinha_em_uma_frase": "Licenciamento anual não dispensa licença especial com itinerário e horário fixados para veículo de competição",
+      "eixos_legais": [
+        "CTB_art_98",
+        "CTB_art_98_par2",
+        "CTB_art_110"
+      ],
+      "eixo_vizinho": "CTB_art_98_par1",
+      "isca_por_alternativa": {
+        "B": "comprou II falsa — licenciamento anual basta para veículo adaptado para competição",
+        "C": "comprou III falsa — alteração de pneu em jipe dispensa restrições do fabricante",
+        "D": "tratou I, II e III como corretas incluindo circulação livre de veículo de competição"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico",
+        "gravidade"
+      ],
+      "near_transfer": "Mesmo veículo de competição com licença especial, mas circulando fora do horário fixado — irregularidade persiste.",
+      "far_transfer": "Veículo modificado sem atender limites de emissão de poluentes — art. 98, §1º impõe responsabilidade ao proprietário e à entidade executora da modificação.",
+      "o_que_nao_muda": "Toda modificação de características de fábrica exige autorização prévia; competição e exceção do §2 têm requisitos adicionais próprios.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "veiculos",
+      "modificacao",
+      "competicao",
+      "art_98",
+      "art_110"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "matriz_assertivas",
+      "arquetipo_secundario": "tabela_gradacao",
+      "duracao_estimada_seg": 75,
+      "fundamento_slug": "CTB_art_98_110_modificacao",
+      "macete_visual": "modificacao = autorizacao · competicao = licenca especial",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A (I apenas). A isca é a II: licenciamento não basta — competição exige licença especial.",
+            "destaques": ["Gabarito A", "licenciamento", "licença especial"]
+          }
+        },
+        {
+          "id": "matriz",
+          "titulo": "Mapa I–III",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              { "id": "I", "texto": "Autorização prévia para modificar — correta", "correto": true },
+              { "id": "II", "texto": "Competição circula livre com licenciamento — ERRADA", "correto": false },
+              { "id": "III", "texto": "Jipe altera pneu sem restrições — ERRADA", "correto": false }
+            ],
+            "gabarito_resumo": "I correta → alternativa A"
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "98 = autorização prévia.\n110 = licença especial com itinerário e horário.\n§2 jipe = restrições fabricante/CONTRAN.",
+            "destaques": ["autorização", "licença especial", "restrições"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB arts. 98 e 110",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "matriz_assertivas",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "todos",
+      "duracao_estimada_seg": 240,
+      "fundamento_slug": "CTB_art_98_110_modificacao",
+      "macete_visual": "modificacao = autorizacao · competicao = licenca especial",
+      "meta": {
+        "padrao_familia": "B_assertivas",
+        "pegadinha_em_uma_frase": "Licenciamento anual não dispensa licença especial com itinerário e horário fixados para veículo de competição",
+        "eixos_legais": [
+          "CTB_art_98",
+          "CTB_art_98_par2",
+          "CTB_art_110"
+        ],
+        "isca_por_alternativa": {
+          "B": "comprou II falsa — licenciamento anual basta para veículo adaptado para competição",
+          "C": "comprou III falsa — alteração de pneu em jipe dispensa restrições do fabricante",
+          "D": "tratou I, II e III como corretas incluindo circulação livre de veículo de competição"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: a isca é a assertiva II",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A (I correta).\n\nB — comprou II falsa: licenciamento anual basta para veículo de competição.\nC — comprou III falsa: jipe altera pneu sem restrições do fabricante.\nD — tratou todas corretas, inclusive circulação livre do veículo adaptado.\n\nPegadinha: licenciamento regular não substitui licença especial com itinerário e horário fixados.",
+            "destaques": ["Gabarito A", "II", "licenciamento"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CARACTERÍSTICAS DE FÁBRICA: configuração original do veículo — modificação exige autorização prévia pelo art. 98.\n\nLICENÇA ESPECIAL: autorização distinta do licenciamento anual — veículo de competição só circula com itinerário e horário fixados (art. 110).\n\nESPÉCIE MISTO UTILITÁRIO JIPE: exceção parcial do §2 do art. 98 para diâmetro de roda-pneu, com restrições do fabricante e do CONTRAN.",
+            "destaques": ["FÁBRICA", "LICENÇA ESPECIAL", "UTILITÁRIO JIPE"]
+          }
+        },
+        {
+          "id": "matriz",
+          "titulo": "Classificar I–III",
+          "secao": "metodo",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              { "id": "I", "texto": "Autorização prévia para modificar — correta", "correto": true },
+              { "id": "II", "texto": "Competição circula livre com licenciamento — ERRADA", "correto": false },
+              { "id": "III", "texto": "Jipe altera pneu sem restrições — ERRADA (§2)", "correto": false }
+            ],
+            "gabarito_resumo": "I correta → alternativa A"
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: picape adaptada pode circular?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Modificação de fábrica sem autorização prévia?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Proprietário alega licenciamento basta para competição?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito A — apenas assertiva I correta",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — oficina adaptou sem consultar DETRAN"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — mas licenciamento não substitui licença especial"
+              }
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Art. 98 × art. 110 × §2",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              [
+                "Art. 98 — modificação geral",
+                "Autorização prévia — assertiva I correta"
+              ],
+              [
+                "Art. 110 — competição",
+                "Licença especial com itinerário e horário — II falsa"
+              ],
+              [
+                "Art. 98, §2 — utilitário jipe",
+                "Alteração de pneu com restrições — III falsa"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Assertiva-isca: II",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a II afirma ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Licenciamento anual basta para circular livremente",
+                "Licença especial com itinerário e horário fixados"
+              ],
+              [
+                "Veículo de competição trafega como qualquer automóvel",
+                "Circulação restrita à autorização especial da autoridade de trânsito"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — regra_excecao",
+                "Inclui II falsa — generaliza licenciamento e dispensa licença especial de competição"
+              ],
+              [
+                "C — termo_unico",
+                "Inclui III falsa — ignora restrições do fabricante e do CONTRAN no §2"
+              ],
+              [
+                "D — gravidade",
+                "Compra II e III falsas e trata todas as assertivas como corretas"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Montando o gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Assertiva / fato", "V/F"],
+            "linhas": [
+              [
+                "I — picape modificada sem autorização prévia",
+                "Verdadeira"
+              ],
+              [
+                "II — proprietário alega licenciamento basta para competição",
+                "Falsa"
+              ],
+              [
+                "III — jipe altera pneu sem qualquer restrição",
+                "Falsa"
+              ],
+              [
+                "Resultado",
+                "Alternativa A"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "CTB art. 98",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 98",
+            "texto": "Nenhum proprietário ou responsável poderá, sem prévia autorização da autoridade competente, fazer ou ordenar que sejam feitas no veículo modificações de suas características de fábrica.",
+            "trechos_grifados": [
+              {
+                "inicio": 43,
+                "fim": 90,
+                "motivo": "matriz — assertiva I correta",
+                "texto_grifado": "sem prévia autorização da autoridade competente"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "CTB art. 110",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 110",
+            "texto": "O veículo que tiver alterada qualquer de suas características para competição ou finalidade análoga só poderá circular nas vias públicas com licença especial da autoridade de trânsito, em itinerário e horário fixados.",
+            "trechos_grifados": [
+              {
+                "inicio": 137,
+                "fim": 216,
+                "motivo": "contraste — II falsa: não basta licenciamento",
+                "texto_grifado": "com licença especial da autoridade de trânsito, em itinerário e horário fixados"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "98 = autorização prévia · 110 = licença especial com itinerário e horário · §2 jipe = restrições fabricante/CONTRAN.\n\nNear: veículo de competição com licença especial, mas fora do horário fixado — continua irregular.\nFar: modificação sem atender limites de poluentes — art. 98, §1º responsabiliza proprietário e entidade executora.\nNão muda: toda modificação de fábrica exige autorização prévia; regimes de competição e §2 são adicionais.\nCadeia: vizinho = art. 98, §1º (poluentes e ruído após alteração).",
+            "destaques": ["autorização prévia", "licença especial", "poluentes", "§1º"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB arts. 98 e 110",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

@@ -1,240 +1,241 @@
 {
-  "versao": 2,
-  "arquetipo": "fluxograma_decisao",
-  "arquetipo_secundario": "tabela_gradacao",
-  "duracao_estimada_seg": 180,
-  "fundamento_slug": "CTB_art_2_par_unico",
-  "macete_visual": "Praia+condomínio+coletivo SIM · individual NÃO",
-  "publico_alvo": "iniciante",
-  "links_fonte": [
-    {
-      "rotulo": "CTB",
-      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
-    }
-  ],
-  "meta": {
-    "near_transfer": "Garagem de shopping — estacionamento coletivo: é via pelo parágrafo único.",
-    "far_transfer": "Calçada pública = caput; garagem residencial fechada = uso individual, fora do rol.",
-    "o_que_nao_muda": "Parágrafo único só amplia para praias, condomínios e coletivo — não alcança uso individual."
-  },
-  "telas": [
-    {
-      "id": "contexto",
-      "titulo": "Diagnóstico: o que NÃO é via",
-      "secao": "diagnostico",
-      "tipo": "texto_destaque",
-      "conteudo": {
-        "texto": "Gabarito B.\n\nA — praia: incluída no parágrafo único.\nC — estacionamento coletivo: incluído.\nD — condomínio autônomo: incluído.\n\nPegadinha: a lei lista o que passou a ser via — a exceção real é o imóvel de uso individual.",
-        "destaques": [
-          "Gabarito B",
-          "parágrafo único",
-          "individual"
-        ]
+  "tec_id": "447710",
+  "disciplina": "legislacao_transito",
+  "gabarito": "B",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "fluxograma_decisao",
+    "arquetipo_secundario": "tabela_gradacao",
+    "duracao_estimada_seg": 195,
+    "fundamento_slug": "CTB_art_2_par_unico",
+    "macete_visual": "Praia+condomínio+coletivo SIM · individual NÃO",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
       }
+    ],
+    "meta": {
+      "near_transfer": "Garagem de shopping — estacionamento coletivo: é via pelo parágrafo único.",
+      "far_transfer": "Calçada pública = caput; garagem residencial fechada = uso individual, fora do rol.",
+      "o_que_nao_muda": "Parágrafo único só amplia para praias, condomínios e coletivo — não alcança uso individual."
     },
-    {
-      "id": "glossario",
-      "titulo": "Pré-treino: 3 termos",
-      "tipo": "texto_destaque",
-      "conteudo": {
-        "texto": "VIA TERRESTRE: ruas, rodovias e extensões do parágrafo único.\nUSO COLETIVO: shopping, hipermercado — estacionamento aberto ao público.\nUSO INDIVIDUAL: garagem de residência unifamiliar — fora do rol legal.",
-        "destaques": [
-          "COLETIVO",
-          "INDIVIDUAL",
-          "parágrafo único"
-        ]
-      }
-    },
-    {
-      "id": "fluxo",
-      "titulo": "Método: é via terrestre?",
-      "secao": "metodo",
-      "tipo": "fluxograma",
-      "conteudo": {
-        "nos": [
-          {
-            "id": "p1",
-            "label": "É imóvel de uso individual?",
-            "tipo": "pergunta"
-          },
-          {
-            "id": "p2",
-            "label": "Não está na lista legal de vias?",
-            "tipo": "pergunta"
-          },
-          {
-            "id": "r1",
-            "label": "NÃO é via — gabarito B",
-            "tipo": "resultado"
-          }
-        ],
-        "arestas": [
-          {
-            "de": "p1",
-            "para": "p2",
-            "rotulo": "Sim"
-          },
-          {
-            "de": "p2",
-            "para": "r1",
-            "rotulo": "Sim"
-          }
-        ]
-      }
-    },
-    {
-      "id": "gradacao",
-      "titulo": "Mapa: o que conta como via",
-      "secao": "mapa",
-      "tipo": "tabela_gradacao",
-      "conteudo": {
-        "titulo_colunas": [
-          "Local",
-          "É via terrestre?"
-        ],
-        "linhas": [
-          {
-            "faixa": "Praia aberta",
-            "classificacao": "Sim — parágrafo único",
-            "destaque": false
-          },
-          {
-            "faixa": "Condomínio autônomo",
-            "classificacao": "Sim — parágrafo único",
-            "destaque": false
-          },
-          {
-            "faixa": "Estacionamento coletivo",
-            "classificacao": "Sim — parágrafo único",
-            "destaque": false
-          },
-          {
-            "faixa": "Imóvel uso individual",
-            "classificacao": "Não — fora do rol",
-            "destaque": true
-          }
-        ]
-      }
-    },
-    {
-      "id": "contraste",
-      "titulo": "Armadilha: marcar o que a lei incluiu",
-      "secao": "contraste",
-      "tipo": "comparacao",
-      "conteudo": {
-        "colunas": [
-          "O que o candidato pensa ✗",
-          "O que a lei diz ✓"
-        ],
-        "linhas": [
-          [
-            "Praia não é via pública",
-            "Parágrafo único inclui praias abertas"
-          ],
-          [
-            "Condomínio é área privada sem CTB",
-            "Vias internas de condomínio autônomo são vias"
-          ],
-          [
-            "Shopping é propriedade privada",
-            "Estacionamento coletivo está no parágrafo único"
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito B.\n\nA — praia: incluída no parágrafo único.\nC — estacionamento coletivo: incluído.\nD — condomínio autônomo: incluído.\n\nPegadinha: a lei lista o que passou a ser via — a exceção real é o imóvel de uso individual.",
+          "destaques": [
+            "Gabarito B",
+            "parágrafo único",
+            "individual"
           ]
-        ]
-      }
-    },
-    {
-      "id": "distratores",
-      "titulo": "Por que cada alternativa erra",
-      "secao": "distratores",
-      "tipo": "comparacao",
-      "conteudo": {
-        "colunas": [
-          "Alternativa",
-          "Mecanismo + por quê"
-        ],
-        "linhas": [
-          [
-            "A — regra_excecao",
-            "Praia aberta está expressamente no parágrafo único — é via"
-          ],
-          [
-            "C — regra_excecao",
-            "Estacionamento de uso coletivo está no parágrafo único — é via"
-          ],
-          [
-            "D — regra_excecao",
-            "Condomínio autônomo está no parágrafo único — é via"
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Pré-treino: 3 termos",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "VIA TERRESTRE: ruas, rodovias e extensões do parágrafo único.\nUSO COLETIVO: shopping, hipermercado — estacionamento aberto ao público.\nUSO INDIVIDUAL: garagem de residência unifamiliar — fora do rol legal.",
+          "destaques": [
+            "COLETIVO",
+            "INDIVIDUAL",
+            "parágrafo único"
           ]
-        ]
-      }
-    },
-    {
-      "id": "caso",
-      "titulo": "Aplicando ao enunciado",
-      "secao": "metodo",
-      "tipo": "comparacao",
-      "conteudo": {
-        "colunas": [
-          "Alternativa",
-          "Veredito"
-        ],
-        "linhas": [
-          [
-            "A — praia",
-            "É via — errada como resposta NÃO"
+        }
+      },
+      {
+        "id": "fluxo",
+        "titulo": "Método: é via terrestre?",
+        "secao": "metodo",
+        "tipo": "fluxograma",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "p1",
+              "label": "É imóvel de uso individual?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "p2",
+              "label": "Não está na lista legal de vias?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "r1",
+              "label": "NÃO é via — gabarito B",
+              "tipo": "resultado"
+            }
           ],
-          [
-            "B — imóvel individual",
-            "NÃO é via — gabarito"
-          ],
-          [
-            "C — estacionamento coletivo",
-            "É via — errada"
-          ],
-          [
-            "D — condomínio",
-            "É via — errada"
+          "arestas": [
+            {
+              "de": "p1",
+              "para": "p2",
+              "rotulo": "Sim"
+            },
+            {
+              "de": "p2",
+              "para": "r1",
+              "rotulo": "Sim"
+            }
           ]
-        ]
+        }
+      },
+      {
+        "id": "gradacao",
+        "titulo": "Mapa: o que conta como via",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": [
+            "Local",
+            "É via terrestre?"
+          ],
+          "linhas": [
+            {
+              "faixa": "Praia aberta",
+              "classificacao": "Sim — parágrafo único",
+              "destaque": false
+            },
+            {
+              "faixa": "Condomínio autônomo",
+              "classificacao": "Sim — parágrafo único",
+              "destaque": false
+            },
+            {
+              "faixa": "Estacionamento coletivo",
+              "classificacao": "Sim — parágrafo único",
+              "destaque": false
+            },
+            {
+              "faixa": "Imóvel uso individual",
+              "classificacao": "Não — fora do rol",
+              "destaque": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "Praia não é via pública",
+              "Parágrafo único inclui praias abertas"
+            ],
+            [
+              "Condomínio é área privada sem CTB",
+              "Vias internas de condomínio autônomo são vias"
+            ],
+            [
+              "Shopping é propriedade privada",
+              "Estacionamento coletivo está no parágrafo único"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que A, C e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "A — regra_excecao",
+              "Praia aberta está expressamente no parágrafo único — é via"
+            ],
+            [
+              "C — regra_excecao",
+              "Estacionamento de uso coletivo está no parágrafo único — é via"
+            ],
+            [
+              "D — regra_excecao",
+              "Condomínio autônomo está no parágrafo único — é via"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Cenário",
+            "É via terrestre?"
+          ],
+          "linhas": [
+            [
+              "Garagem de shopping em Campina Grande (coletivo)",
+              "Sim — parágrafo único (isca se marcar NÃO)"
+            ],
+            [
+              "Garagem de casa unifamiliar (individual)",
+              "Não — gabarito B"
+            ],
+            [
+              "Praia aberta em Cabedelo",
+              "Sim — parágrafo único (isca A)"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Parágrafo único do art. 2º",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 2º, parágrafo único",
+          "texto": "Parágrafo único. Para os efeitos deste Código, são consideradas vias terrestres as praias abertas à circulação pública, as vias internas pertencentes aos condomínios constituídos por unidades autônomas e as vias e áreas de estacionamento de estabelecimentos privados de uso coletivo.",
+          "trechos_grifados": [
+            {
+              "inicio": 47,
+              "fim": 118,
+              "motivo": "caso — praia incluída",
+              "texto_grifado": "são consideradas vias terrestres as praias abertas à circulação pública"
+            },
+            {
+              "inicio": 241,
+              "fim": 283,
+              "motivo": "contraste — coletivo incluído; individual fica fora",
+              "texto_grifado": "estabelecimentos privados de uso coletivo."
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Praia + condomínio + coletivo = via.\nNear: garagem de shopping = coletivo, é via.\nFar: calçada pública = caput; garagem de casa = individual, não é via.\nNão muda: parágrafo único só amplia — individual fica fora.",
+          "destaques": [
+            "coletivo",
+            "shopping",
+            "individual"
+          ]
+        }
       }
-    },
-    {
-      "id": "lei",
-      "titulo": "Parágrafo único do art. 2º",
-      "secao": "lei",
-      "tipo": "trecho_legal",
-      "conteudo": {
-        "fonte": "CTB art. 2º, parágrafo único",
-        "texto": "Parágrafo único. Para os efeitos deste Código, são consideradas vias terrestres as praias abertas à circulação pública, as vias internas pertencentes aos condomínios constituídos por unidades autônomas e as vias e áreas de estacionamento de estabelecimentos privados de uso coletivo.",
-        "trechos_grifados": [
-          {
-            "inicio": 47,
-            "fim": 118,
-            "motivo": "caso — praia incluída",
-            "texto_grifado": "são consideradas vias terrestres as praias abertas à circulação pública"
-          },
-          {
-            "inicio": 241,
-            "fim": 283,
-            "motivo": "contraste — coletivo incluído; individual fica fora",
-            "texto_grifado": "estabelecimentos privados de uso coletivo."
-          }
-        ]
-      }
-    },
-    {
-      "id": "macete",
-      "titulo": "Macete + transferência",
-      "secao": "macete",
-      "tipo": "texto_destaque",
-      "conteudo": {
-        "texto": "Praia + condomínio + coletivo = via.\nNear: garagem de shopping = coletivo, é via.\nFar: calçada pública = caput; garagem de casa = individual, não é via.\nNão muda: parágrafo único só amplia — individual fica fora.",
-        "destaques": [
-          "coletivo",
-          "shopping",
-          "individual"
-        ]
-      }
-    }
-  ]
+    ]
+  }
 }

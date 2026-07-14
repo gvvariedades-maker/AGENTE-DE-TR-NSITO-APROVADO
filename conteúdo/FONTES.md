@@ -161,6 +161,7 @@ Apostilas e PDFs comentados para estudo e referência no Cursor. **Não** entram
 | Direito Constitucional 08 (Aula 08) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Constitucional - estrategia - aula 08.pdf` | Direito Constitucional | OK — `notas/direito-constitucional/indice-aula08-organizacao-estado-federacao-competencias.md` |
 | Direito Constitucional 09 (Aula 09) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Constitucional - estrategia - aula 09.pdf` | Direito Constitucional | OK — `notas/direito-constitucional/indice-aula09-administracao-publica-art37-42.md` |
 | Direito Constitucional 10 (Aula 10) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Constitucional - estrategia - aula 10.pdf` | Direito Constitucional | OK — `notas/direito-constitucional/indice-aula10-defesa-estado-seguranca-publica-art144.md` |
+| Direito Constitucional 11 (Aula 11) | `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\Noções de Direito Constitucional - estrategia - aula 11.pdf` | Direito Constitucional | OK — `notas/direito-constitucional/indice-aula11-ordem-social-art193.md` |
 
 **Origem:** `D:\CONCURSO DE AGENTE DE TRÂNSITO DE CAMPINA GRANDE PB 2026\`
 

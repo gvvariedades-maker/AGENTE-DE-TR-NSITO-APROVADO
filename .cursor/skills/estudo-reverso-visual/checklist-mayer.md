@@ -17,6 +17,11 @@ Reprovou **1 item** → corrigir antes de `npm run validate:estudo-reverso-visua
 - [ ] **7.** Zero elemento decorativo (cada item sustenta a pegadinha)?
 - [ ] **8.** Coerência v1↔v2: mesmo `fundamento_slug`, macetes não contraditórios? Se há `eixo_vizinho`, ambas citam ou ambas omitem? *(validador Zod quando ambos existem)*
 
+## Gate contraste + copy (#20–#21)
+
+- [ ] **20.** Tela `contraste`: cada linha esquerda é crença **falsa**; nenhuma afirma o mesmo órgão que a direita confirma? *(Zod `validarContrastePedagogico`)*
+- [ ] **21.** Títulos sem “stem”; distratores com slug no JSON e rótulo humano no player?
+
 ## Checklist eficácia pós-aula (E1–E3) — gate editorial #19
 
 Após Mayer 8/8, o elaborador responde **sim** às 3 (aluno em ≤15s cada):

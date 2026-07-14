@@ -1,0 +1,239 @@
+{
+  "tec_id": "3180976",
+  "disciplina": "direito_constitucional",
+  "gabarito": "C",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "diagrama_competencia",
+    "duracao_estimada_seg": 200,
+    "fundamento_slug": "CF_art_144_6",
+    "macete_visual": "PRF rodovia · PF fronteira · §6 Governador",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CF/88",
+        "path": "conteúdo/legislação federal/cf-1988.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Fiscalização municipal de trânsito: §10, não PRF.",
+      "far_transfer": "PFF patrulha ferrovias federais — paralelo à PRF.",
+      "o_que_nao_muda": "§6º subordina PM, CBM, PC e penais ao Governador."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Diagnóstico",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito C.\n\nA — inventa 20 mil hab. para guarda (guardas não exige).\nB — segurança viária não é só municipal nem exclusivamente os 3 pilares.\nD — confunde PRF com PF (fronteira/marítima/aeroportuária).",
+          "destaques": [
+            "Gabarito C",
+            "PRF",
+            "PF"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "3 órgãos que a banca troca",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "PRF: patrulhamento ostensivo de rodovias federais (§2º).\nPF: polícia marítima, aeroportuária e de fronteiras (§1º, III).\nSegurança viária: Estados, DF e Municípios — agentes de trânsito em carreira (§10).",
+          "destaques": [
+            "PRF",
+            "PF",
+            "§10"
+          ]
+        }
+      },
+      {
+        "id": "diagrama",
+        "titulo": "Mapa de competências",
+        "secao": "mapa",
+        "tipo": "diagrama_competencia",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "uni",
+              "label": "União",
+              "nivel": 0
+            },
+            {
+              "id": "est",
+              "label": "Estado / DF",
+              "nivel": 0
+            },
+            {
+              "id": "mun",
+              "label": "Município",
+              "nivel": 0
+            },
+            {
+              "id": "prf",
+              "label": "PRF — rodovias federais",
+              "nivel": 1
+            },
+            {
+              "id": "pf",
+              "label": "PF — fronteira/porto/aeroporto",
+              "nivel": 1
+            },
+            {
+              "id": "gov",
+              "label": "Governador — PM+PC+penais §6º",
+              "nivel": 1
+            },
+            {
+              "id": "via",
+              "label": "Agente de trânsito §10",
+              "nivel": 1
+            }
+          ],
+          "arestas": [
+            {
+              "de": "uni",
+              "para": "prf",
+              "rotulo": "§2º"
+            },
+            {
+              "de": "uni",
+              "para": "pf",
+              "rotulo": "§1º III"
+            },
+            {
+              "de": "est",
+              "para": "gov",
+              "rotulo": "§6º"
+            },
+            {
+              "de": "mun",
+              "para": "via",
+              "rotulo": "§10"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "PRF × PF",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "PRF faz fronteira",
+              "PF — §1º, III"
+            ],
+            [
+              "PRF é polícia judiciária da União",
+              "PF — exclusividade §1º, IV"
+            ],
+            [
+              "Guarda exige 20 mil hab.",
+              "§8 — qualquer município pode, por lei"
+            ],
+            [
+              "Agente de trânsito = PRF",
+              "Segurança viária: órgãos e agentes de trânsito (§10)"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que erram A, B e D",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "A — regra_excecao",
+              "Cria requisito populacional inexistente no §8"
+            ],
+            [
+              "B — competencia_snt",
+              "Restringe §10 ao Município e usa exclusivamente"
+            ],
+            [
+              "D — competencia_snt",
+              "Atribui à PRF competência da PF"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Veredito"
+          ],
+          "linhas": [
+            [
+              "A — guarda 20 mil",
+              "Errada"
+            ],
+            [
+              "B — viária só município",
+              "Errada"
+            ],
+            [
+              "C — subordinação §6º",
+              "Correta"
+            ],
+            [
+              "D — PRF fronteira",
+              "Errada"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto legal",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CF/88, art. 144, §6º",
+          "texto": "As polícias militares e os corpos de bombeiros militares, forças auxiliares e reserva do Exército subordinam-se, juntamente com as polícias civis e as polícias penais estaduais e distrital, aos Governadores dos Estados, do Distrito Federal e dos Territórios.",
+          "trechos_grifados": [
+            {
+              "inicio": 151,
+              "fim": 206,
+              "motivo": "Gabarito C — §6º art. 144",
+              "texto_grifado": "polícias penais estaduais e distrital, aos Governadores"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Macete + transferência",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: PRF = rodovia federal · PF = fronteira/porto/aeroporto · §6º = Governador.\nNear: agente municipal de trânsito → §10 (viária), não PRF.\nFar: PFF → ferrovia federal (§3º).\nNão muda: penais entraram no §6º com EC 104.",
+          "destaques": [
+            "PRF",
+            "PF",
+            "§10",
+            "EC 104"
+          ]
+        }
+      }
+    ]
+  }
+}
