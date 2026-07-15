@@ -88,3 +88,25 @@ export function agruparTopicos(
 
   return ordenarGrupos(disciplina, map);
 }
+
+const LIMITE_SUGERIDOS_PAINEL = 6;
+
+/** Ordena microtópicos estudáveis para o painel: não vistos → pior acerto → nome. */
+export function priorizarTopicosEstudo(
+  topicos: TopicoCatalogo[],
+  limit = LIMITE_SUGERIDOS_PAINEL,
+): TopicoCatalogo[] {
+  const estudaveis = topicos.filter((t) => t.estudavel);
+  const ordenados = [...estudaveis].sort((a, b) => {
+    if (a.tentativas === 0 && b.tentativas > 0) return -1;
+    if (b.tentativas === 0 && a.tentativas > 0) return 1;
+    if (a.tentativas > 0 && b.tentativas > 0) {
+      if (a.taxaAcerto !== b.taxaAcerto) return a.taxaAcerto - b.taxaAcerto;
+      return b.tentativas - a.tentativas;
+    }
+    return a.label.localeCompare(b.label, "pt-BR");
+  });
+  return ordenados.slice(0, limit);
+}
+
+export { LIMITE_SUGERIDOS_PAINEL };

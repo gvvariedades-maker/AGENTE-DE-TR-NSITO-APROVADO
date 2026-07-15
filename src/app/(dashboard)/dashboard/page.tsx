@@ -1,49 +1,35 @@
 import Link from "next/link";
-import {
-  BookOpen,
-  BookMarked,
-  Crosshair,
-  Scale,
-  ShieldAlert,
-} from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { getDesempenhoResumo, getAtividadeHoje } from "@/lib/desempenho";
 import { getRetencaoResumo } from "@/lib/retencao";
 import { getQuestoesCount } from "@/lib/questoes";
 import { getContagemQuestoesReais } from "@/lib/questoes-reais";
-import { getPioresTopicos, getPrioridadeEdital } from "@/lib/piores-topicos";
+import { getPioresTopicos } from "@/lib/piores-topicos";
+import { calcularProximoPasso } from "@/lib/proximo-passo";
 import { DISCIPLINA_LABELS } from "@/lib/desempenho";
-import {
-  DISCIPLINAS_CRITICAS_INICIO,
-  labelTopicoEdital,
-} from "@/lib/edital-topicos";
+import { DISCIPLINAS_CRITICAS_INICIO } from "@/lib/edital-topicos";
 import { PainelHero } from "@/components/dashboard/painel-hero";
-import { ModoTreinoCard } from "@/components/dashboard/modo-treino-card";
-import { DisciplinasMapa } from "@/components/dashboard/disciplinas-mapa";
+import { PainelAtalhos } from "@/components/dashboard/painel-atalhos";
+import { PainelCatalogoEditalLoader } from "@/components/dashboard/painel-catalogo-edital-loader";
+import { PainelDisciplinasSeletor } from "@/components/dashboard/painel-disciplinas-seletor";
+import { PainelMaisModos } from "@/components/dashboard/painel-mais-modos";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
-import {
-  hrefEstudoErros,
-  hrefEstudoTopico,
-  labelPiorTopico,
-} from "@/lib/piores-topicos";
 import { withTimeout } from "@/lib/with-timeout";
 import type { DesempenhoResumo } from "@/lib/desempenho";
 import type { RetencaoResumo } from "@/lib/retencao";
-import { DISCIPLINAS, PROVA_DATA, SIMULADO_ESPELHO_DISTRIBUICAO } from "@/types";
+import { DISCIPLINAS, PROVA_DATA, SIMULADO_ESPELHO_DISTRIBUICAO, type Disciplina } from "@/types";
 import {
   isDisciplinaGeral,
+  MAX_PONTOS_ESPECIFICOS,
+  MAX_PONTOS_GERAIS,
   MIN_PONTOS_DISCIPLINA_ESPECIFICO,
   MIN_PONTOS_DISCIPLINA_GERAL,
 } from "@/lib/edital-constants";
+
+/** Timeout em contagem de reais → não desativar o card (evita "Em breve" falso). */
+const REAIS_COUNT_UNKNOWN = -1;
 
 function diasParaProvaFallback() {
   const diff = PROVA_DATA.getTime() - Date.now();
@@ -62,12 +48,12 @@ function desempenhoFallback(): DesempenhoResumo {
   };
   return {
     semaforo: {
-      gerais: { ...zonaVazia, label: "Gerais", maximo: 33.33, minimo: 1 },
+      gerais: { ...zonaVazia, label: "Gerais", maximo: MAX_PONTOS_GERAIS, minimo: MIN_PONTOS_DISCIPLINA_GERAL },
       especificos: {
         ...zonaVazia,
         label: "Específicos",
-        maximo: 66.67,
-        minimo: 2,
+        maximo: MAX_PONTOS_ESPECIFICOS,
+        minimo: MIN_PONTOS_DISCIPLINA_ESPECIFICO,
       },
       total: { ...zonaVazia, label: "Total", maximo: 100, minimo: 50 },
       hasData: false,
@@ -92,6 +78,7 @@ function desempenhoFallback(): DesempenhoResumo {
       coberturaPct: 0,
       questoesProva: SIMULADO_ESPELHO_DISTRIBUICAO[d],
     })),
+    overview: { total: 0, acertos: 0, erros: 0, taxaAcerto: 0 },
     coberturaEditalPct: 0,
     topicosTotal: 0,
     topicosVistos: 0,
@@ -110,59 +97,30 @@ const retencaoFallback: RetencaoResumo = {
   hasData: false,
 };
 
-const MODOS = [
-  {
-    slug: "simulado_espelho",
-    label: "Simulado Espelho",
-    desc: "60 questões · 4 horas · proporção IDECAN",
-    href: "/simulado",
-    icon: Scale,
-    destaque: true,
-    ativo: true,
-  },
-  {
-    slug: "sniper_ctb",
-    label: "Sniper CTB",
-    desc: "Foco total em Legislação de Trânsito",
-    href: "/estudo?disciplina=legislacao_transito",
-    icon: Crosshair,
-    ativo: true,
-  },
-  {
-    slug: "anti_zerar",
-    label: "Anti-zerar",
-    desc: "Disciplinas abaixo do mínimo do edital",
-    href: "/estudo?modo=anti_zerar",
-    icon: ShieldAlert,
-    ativo: true,
-  },
-  {
-    slug: "reais_idecan",
-    label: "Questões reais IDECAN",
-    desc: "Provas do corpus superior com aula completa",
-    href: "/estudo/reais",
-    icon: BookMarked,
-    ativo: true,
-  },
-  {
-    slug: "pegadinha_idecan",
-    label: "Pegadinha IDECAN",
-    desc: "Armadilhas típicas da banca",
-    href: "/estudo?modo=pegadinha",
-    icon: BookOpen,
-    ativo: true,
-  },
-] as const;
-
 export const dynamic = "force-dynamic";
 
-export default async function DashboardPage() {
+function parseDisciplinaPainel(raw?: string): Disciplina {
+  if (raw && DISCIPLINAS.includes(raw as Disciplina)) {
+    return raw as Disciplina;
+  }
+  return "legislacao_transito";
+}
+
+export default async function DashboardPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ disciplina?: string }>;
+}) {
+  const { disciplina: disciplinaRaw } = await searchParams;
+  const disciplinaPainel = parseDisciplinaPainel(disciplinaRaw);
+
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
 
   const QUERY_MS = 8_000;
+
   const [
     desempenho,
     retencao,
@@ -170,7 +128,6 @@ export default async function DashboardPage() {
     questoesCount,
     questoesReaisCount,
     pioresTopicos,
-    prioridadeEdital,
   ] = await Promise.all([
     withTimeout(
       getDesempenhoResumo(user?.id),
@@ -191,35 +148,52 @@ export default async function DashboardPage() {
       "atividadeHoje",
     ),
     withTimeout(getQuestoesCount(), QUERY_MS, 0, "questoesCount"),
-    withTimeout(getContagemQuestoesReais(), QUERY_MS, 0, "questoesReais"),
-    withTimeout(getPioresTopicos(user?.id), QUERY_MS, [], "pioresTopicos"),
     withTimeout(
-      getPrioridadeEdital(user?.id, 5),
+      getContagemQuestoesReais(),
       QUERY_MS,
-      [],
-      "prioridadeEdital",
+      REAIS_COUNT_UNKNOWN,
+      "questoesReais",
     ),
+    withTimeout(getPioresTopicos(user?.id), QUERY_MS, [], "pioresTopicos"),
   ]);
 
   const { semaforo } = desempenho;
+  const emRisco = semaforo.disciplinasEmRisco.length > 0;
+  const mostrarAlertaInicio =
+    !desempenho.hasData && semaforo.disciplinasEmRisco.length === 0;
+
+  const proximo = calcularProximoPasso({
+    emRisco,
+    revisoesHoje: retencao.revisoesHoje,
+    questoesDisponiveis: questoesCount > 0,
+  });
+
+  const desempenhoDisciplina = desempenho.disciplinas.find(
+    (d) => d.disciplina === disciplinaPainel,
+  );
   const desempenhoPorDisciplina = new Map(
     desempenho.disciplinas.map((d) => [d.disciplina, d]),
   );
-  const mostrarAlertaInicio =
-    !desempenho.hasData && semaforo.disciplinasEmRisco.length === 0;
-  const temPontosFracos = pioresTopicos.some((p) => p.tentativas > 0);
-  const temPrioridade = prioridadeEdital.length > 0;
+
+  const reaisAtivo = questoesReaisCount !== 0;
+  const reaisDesc =
+    questoesReaisCount > 0
+      ? `${questoesReaisCount} questões · corpus superior`
+      : questoesReaisCount < 0
+        ? "Corpus superior IDECAN"
+        : "Aguardando seed no banco";
 
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-6 p-4 md:gap-8 md:p-8">
+    <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-5 p-4 md:gap-6 md:p-8">
       <PainelHero
         desempenho={desempenho}
         retencao={retencao}
         atividadeHoje={atividadeHoje}
-        questoesDisponiveis={questoesCount > 0}
+        proximo={proximo}
+        pioresTopicos={pioresTopicos}
       />
 
-      {semaforo.disciplinasEmRisco.length > 0 && (
+      {emRisco ? (
         <Alert variant="destructive">
           <AlertTitle>Risco de eliminação</AlertTitle>
           <AlertDescription>
@@ -242,143 +216,38 @@ export default async function DashboardPage() {
             </Link>
           </AlertDescription>
         </Alert>
-      )}
-
-      {mostrarAlertaInicio && (
-        <Alert>
-          <AlertTitle>Comece pelas disciplinas de risco</AlertTitle>
-          <AlertDescription className="text-sm">
-            Na prova, cada disciplina geral exige mínimo de{" "}
-            <strong>1 ponto</strong> para não zerar. Priorize:{" "}
-            {DISCIPLINAS_CRITICAS_INICIO.map((d) => DISCIPLINA_LABELS[d]).join(
-              ", ",
-            )}
-            .
-            <Link
-              href="/estudo?modo=anti_zerar"
-              className={cn(
-                buttonVariants({ variant: "outline", size: "sm" }),
-                "mt-3 block w-fit",
+      ) : (
+        mostrarAlertaInicio && (
+          <Alert>
+            <AlertTitle>Primeiro passo</AlertTitle>
+            <AlertDescription className="text-sm">
+              Cada disciplina geral exige mínimo de{" "}
+              <strong>1 ponto</strong> na prova. Comece por:{" "}
+              {DISCIPLINAS_CRITICAS_INICIO.map((d) => DISCIPLINA_LABELS[d]).join(
+                ", ",
               )}
-            >
-              Modo anti-zerar
-            </Link>
-          </AlertDescription>
-        </Alert>
+              .
+            </AlertDescription>
+          </Alert>
+        )
       )}
 
-      {(temPontosFracos || temPrioridade) && (
-        <div className="grid gap-4 md:grid-cols-2">
-          {temPontosFracos && (
-            <Card className="border-border bg-card">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-semibold">
-                  Pontos fracos
-                </CardTitle>
-                <CardDescription>
-                  Tópicos com maior taxa de erro
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="flex flex-col gap-2">
-                  {pioresTopicos.slice(0, 3).map((p) => (
-                    <li
-                      key={p.slug}
-                      className="flex items-baseline justify-between gap-2 text-sm"
-                    >
-                      <Link
-                        href={hrefEstudoTopico(p.slug, p.disciplina)}
-                        className="min-w-0 hover:underline"
-                      >
-                        {labelPiorTopico(p)}
-                      </Link>
-                      {p.erros > 0 && (
-                        <Link
-                          href={hrefEstudoErros(p.slug)}
-                          className="shrink-0 text-xs text-semaforo-vermelho hover:underline"
-                        >
-                          erros
-                        </Link>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          )}
+      <PainelAtalhos />
 
-          {temPrioridade && (
-            <Card className="border-border bg-card">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-semibold">
-                  Prioridade do edital
-                </CardTitle>
-                <CardDescription>
-                  {temPontosFracos
-                    ? "Próximos tópicos estudáveis ainda não vistos"
-                    : "Sugestão inicial — CTB, CONTRAN e disciplinas de risco"}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="flex flex-col gap-2 text-sm">
-                  {prioridadeEdital.map((p) => (
-                    <li key={p.slug}>
-                      <Link
-                        href={hrefEstudoTopico(p.slug, p.disciplina)}
-                        className="text-foreground hover:underline"
-                      >
-                        {labelTopicoEdital(p.slug)}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          )}
-        </div>
-      )}
+      <PainelDisciplinasSeletor
+        disciplinaAtiva={disciplinaPainel}
+        desempenhoPorDisciplina={desempenhoPorDisciplina}
+      />
 
-      <section className="flex flex-col gap-3">
-        <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
-          Modos de treino
-        </h2>
-        <div className="grid gap-2 sm:grid-cols-2">
-          {MODOS.map((modo) => (
-            <ModoTreinoCard
-              key={modo.slug}
-              icon={modo.icon}
-              label={modo.label}
-              desc={
-                modo.slug === "reais_idecan" && questoesReaisCount > 0
-                  ? `${questoesReaisCount} questões · corpus superior`
-                  : modo.desc
-              }
-              href={"href" in modo ? modo.href : undefined}
-              destaque={"destaque" in modo ? modo.destaque : false}
-              ativo={
-                modo.slug === "reais_idecan"
-                  ? questoesReaisCount > 0
-                  : modo.ativo
-              }
-            />
-          ))}
-        </div>
-      </section>
+      <PainelCatalogoEditalLoader
+        disciplina={disciplinaPainel}
+        desempenhoDisciplina={desempenhoDisciplina}
+      />
 
-      <section className="flex flex-col gap-3">
-        <div className="flex items-center justify-between">
-          <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
-            Disciplinas
-          </h2>
-          <Link
-            href="/desempenho"
-            className="text-xs text-primary underline-offset-4 hover:underline"
-          >
-            Ver evolução completa →
-          </Link>
-        </div>
-        <DisciplinasMapa desempenhoPorDisciplina={desempenhoPorDisciplina} />
-      </section>
+      <PainelMaisModos
+        questoesReaisAtivo={reaisAtivo}
+        questoesReaisDesc={reaisDesc}
+      />
     </div>
   );
 }

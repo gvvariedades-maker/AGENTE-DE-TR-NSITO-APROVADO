@@ -11,7 +11,6 @@ import { Button, buttonVariants } from "@/components/ui/button";
 const NAV = [
   { href: "/dashboard", label: "Painel", match: (p: string) => p === "/dashboard" },
   { href: "/desempenho", label: "Desempenho", match: (p: string) => p.startsWith("/desempenho") },
-  { href: "/estudo", label: "Estudo", match: (p: string) => p.startsWith("/estudo") },
   { href: "/simulado", label: "Simulado", match: (p: string) => p.startsWith("/simulado") },
 ] as const;
 

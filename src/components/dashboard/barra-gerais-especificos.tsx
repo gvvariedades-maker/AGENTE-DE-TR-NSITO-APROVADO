@@ -34,7 +34,7 @@ export function BarraGeraisEspecificos({
           <span className="font-medium tabular-nums">
             {gerais.toFixed(1)}
             <span className="text-muted-foreground">
-              /{MAX_PONTOS_GERAIS.toFixed(0)}
+              /{MAX_PONTOS_GERAIS.toFixed(0)} pts
             </span>
           </span>
         </div>
@@ -54,7 +54,7 @@ export function BarraGeraisEspecificos({
           <span className="font-medium tabular-nums">
             {especificos.toFixed(1)}
             <span className="text-muted-foreground">
-              /{MAX_PONTOS_ESPECIFICOS.toFixed(0)}
+              /{MAX_PONTOS_ESPECIFICOS.toFixed(0)} pts
             </span>
           </span>
         </div>

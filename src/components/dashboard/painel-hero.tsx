@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Target } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -15,13 +14,21 @@ import { PainelSparkline } from "@/components/dashboard/painel-sparkline";
 import { SemaforoVisual } from "@/components/dashboard/semaforo-visual";
 import type { DesempenhoResumo } from "@/lib/desempenho";
 import type { RetencaoResumo } from "@/lib/retencao";
+import type { ProximoPasso } from "@/lib/proximo-passo";
+import {
+  hrefEstudoErros,
+  hrefEstudoTopico,
+  labelPiorTopico,
+  type PiorTopico,
+} from "@/lib/piores-topicos";
 import { PROVA_DATA } from "@/types";
 
 interface PainelHeroProps {
   desempenho: DesempenhoResumo;
   retencao: RetencaoResumo;
   atividadeHoje: { questoes: number; acertos: number };
-  questoesDisponiveis: boolean;
+  proximo: ProximoPasso;
+  pioresTopicos: PiorTopico[];
 }
 
 function formatarDataProva() {
@@ -48,35 +55,16 @@ export function PainelHero({
   desempenho,
   retencao,
   atividadeHoje,
-  questoesDisponiveis,
+  proximo,
+  pioresTopicos,
 }: PainelHeroProps) {
   const { semaforo } = desempenho;
   const nota = semaforo.total.pontos;
   const zona = piorZona(semaforo);
-
-  const ctaHref = questoesDisponiveis
-    ? "/estudo?modo=auto"
-    : "/estudo?disciplina=legislacao_transito";
-
-  const ctaLabel = !questoesDisponiveis
-    ? "Começar com CTB"
-    : retencao.revisoesHoje > 0
-      ? `Estudar agora · ${retencao.revisoesHoje} revisões`
-      : "Estudar agora";
-
-  const prioridadeLabel =
-    semaforo.gerais.zona === "vermelho"
-      ? "Disciplinas gerais em risco"
-      : retencao.revisoesHoje > 0
-        ? `${retencao.revisoesHoje} revisões pendentes`
-        : "Legislação de Trânsito";
-
-  const prioridadeDesc =
-    semaforo.gerais.zona === "vermelho"
-      ? "Gerais abaixo do mínimo — risco de eliminação"
-      : retencao.revisoesHoje > 0
-        ? "FSRS reagendou tópicos para hoje"
-        : "30 das 60 questões · 50% da prova";
+  const temPontosFracos = pioresTopicos.some((p) => p.tentativas > 0);
+  const topicosFracos = pioresTopicos
+    .filter((p) => p.tentativas > 0)
+    .slice(0, 3);
 
   return (
     <section className="grid gap-4 md:grid-cols-5">
@@ -94,15 +82,21 @@ export function PainelHero({
                 <span className="text-lg text-muted-foreground">/ 100</span>
               </div>
               <p className="mt-0.5 text-xs text-muted-foreground">
-                Nota projetada
-                {semaforo.hasData && (
+                {desempenho.hasData ? (
                   <>
-                    {" "}
-                    ·{" "}
-                    {semaforo.fonte === "simulado"
-                      ? "último simulado"
-                      : "suas tentativas"}
+                    Nota projetada
+                    {semaforo.hasData && (
+                      <>
+                        {" "}
+                        ·{" "}
+                        {semaforo.fonte === "simulado"
+                          ? "último simulado"
+                          : "suas tentativas"}
+                      </>
+                    )}
                   </>
+                ) : (
+                  "Resolva questões para destravar a projeção"
                 )}
               </p>
             </div>
@@ -113,48 +107,56 @@ export function PainelHero({
         <CardContent className="flex flex-col gap-4">
           <BarraGeraisEspecificos semaforo={semaforo} />
 
-          <div className="grid gap-4 border-t border-border pt-4 sm:grid-cols-2">
-            <PainelSparkline atividade={desempenho.atividade} />
+          {desempenho.hasData ? (
+            <div className="grid gap-4 border-t border-border pt-4 sm:grid-cols-2">
+              <PainelSparkline atividade={desempenho.atividade} />
 
-            <div className="flex flex-col justify-center gap-2">
-              <div className="flex flex-wrap gap-2">
-                <Badge variant="outline" className="tabular-nums">
-                  Edital {desempenho.coberturaEditalPct}% coberto
-                </Badge>
-                {desempenho.topicosMapeados > 0 && (
-                  <Badge
-                    variant="outline"
-                    className="tabular-nums text-muted-foreground"
-                  >
-                    {desempenho.topicosMapeados} tópicos mapeados
+              <div className="flex flex-col justify-center gap-2">
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="outline" className="tabular-nums">
+                    Edital {desempenho.coberturaEditalPct}% coberto
                   </Badge>
-                )}
+                  {desempenho.topicosMapeados > 0 && (
+                    <Badge
+                      variant="outline"
+                      className="tabular-nums text-muted-foreground"
+                    >
+                      {desempenho.topicosMapeados} tópicos mapeados
+                    </Badge>
+                  )}
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Hoje:{" "}
+                  <span className="font-medium text-foreground">
+                    {atividadeHoje.questoes} questões
+                  </span>
+                  {atividadeHoje.questoes > 0 && (
+                    <>
+                      {" "}
+                      ·{" "}
+                      <span className="font-medium text-foreground">
+                        {atividadeHoje.acertos} acertos
+                      </span>
+                    </>
+                  )}
+                  {desempenho.topicosTotal > 0 && (
+                    <>
+                      {" "}
+                      · {desempenho.topicosVistos}/{desempenho.topicosTotal}{" "}
+                      tópicos estudáveis
+                    </>
+                  )}
+                </p>
               </div>
-              <p className="text-xs text-muted-foreground">
-                Hoje:{" "}
-                <span className="font-medium text-foreground">
-                  {atividadeHoje.questoes} questões
-                </span>
-                {atividadeHoje.questoes > 0 && (
-                  <>
-                    {" "}
-                    ·{" "}
-                    <span className="font-medium text-foreground">
-                      {atividadeHoje.acertos} acertos
-                    </span>
-                  </>
-                )}
-                {desempenho.topicosTotal > 0 && (
-                  <>
-                    {" "}
-                    ·{" "}
-                    {desempenho.topicosVistos}/{desempenho.topicosTotal}{" "}
-                    tópicos estudáveis
-                  </>
-                )}
-              </p>
             </div>
-          </div>
+          ) : (
+            <p className="border-t border-border pt-4 text-sm text-muted-foreground">
+              Comece pelo modo{" "}
+              <strong className="font-medium text-foreground">Anti-zerar</strong>{" "}
+              ou <strong className="font-medium text-foreground">CTB</strong> — 10
+              minutos já alimentam o semáforo.
+            </p>
+          )}
         </CardContent>
       </Card>
 
@@ -165,30 +167,60 @@ export function PainelHero({
         </CardHeader>
 
         <CardContent className="flex flex-col gap-4">
-          <div className="flex items-start gap-3 rounded-lg border border-transito/25 bg-transito/5 px-4 py-3">
-            <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-transito/15 ring-1 ring-transito/30">
-              <Target
-                className="size-4 text-transito-foreground"
-                aria-hidden
-              />
-            </div>
-            <div className="min-w-0">
-              <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
-                Priorize agora
-              </p>
-              <p className="mt-0.5 text-sm font-semibold text-foreground">
-                {prioridadeLabel}
-              </p>
-              <p className="text-xs text-muted-foreground">{prioridadeDesc}</p>
-            </div>
+          <div className="rounded-lg border border-transito/25 bg-transito/5 px-4 py-3">
+            <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
+              Priorize agora
+            </p>
+            <p className="mt-0.5 text-sm font-semibold text-foreground">
+              {proximo.label}
+            </p>
+            <p className="text-xs text-muted-foreground">{proximo.motivo}</p>
           </div>
 
           <Link
-            href={ctaHref}
+            href={proximo.href}
             className={cn(buttonVariants({ size: "lg" }), "w-full min-h-11")}
           >
-            {ctaLabel}
+            {proximo.label}
           </Link>
+
+          {temPontosFracos && (
+            <div>
+              <p className="mb-2 text-xs font-medium tracking-wide text-muted-foreground uppercase">
+                Pontos fracos
+              </p>
+              <ul className="flex flex-col gap-1.5">
+                {topicosFracos.map((p) => (
+                  <li
+                    key={p.slug}
+                    className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5"
+                  >
+                    <Link
+                      href={hrefEstudoTopico(p.slug, p.disciplina)}
+                      className="text-sm text-foreground underline-offset-4 hover:underline"
+                    >
+                      {labelPiorTopico(p)}
+                    </Link>
+                    {p.erros > 0 && (
+                      <Link
+                        href={hrefEstudoErros(p.slug)}
+                        className="text-xs text-semaforo-vermelho underline-offset-4 hover:underline"
+                      >
+                        só erros
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {retencao.revisoesHoje > 0 && !temPontosFracos && (
+            <p className="text-xs text-muted-foreground">
+              {retencao.revisoesHoje} revisão
+              {retencao.revisoesHoje > 1 ? "ões" : ""} FSRS para hoje.
+            </p>
+          )}
 
           <div className="flex flex-wrap gap-2 border-t border-border pt-4">
             <Link

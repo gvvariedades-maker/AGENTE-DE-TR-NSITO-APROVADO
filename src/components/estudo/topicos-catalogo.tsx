@@ -20,7 +20,7 @@ interface TopicosCatalogoProps {
   somenteReais?: boolean;
 }
 
-function TopicoRow({
+export function TopicoRow({
   topico,
   disciplina,
   somenteReais = false,

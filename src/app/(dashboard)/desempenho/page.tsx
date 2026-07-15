@@ -5,20 +5,20 @@ import {
   getDesempenhoTopicos,
   DISCIPLINA_LABELS,
 } from "@/lib/desempenho";
-import { getRetencaoResumo, getEstudoReversoResumo } from "@/lib/retencao";
-import { MIN_PONTOS_TOTAL } from "@/lib/edital-constants";
+import { getRetencaoResumo } from "@/lib/retencao";
 import { calcularProximoPasso } from "@/lib/proximo-passo";
 import { DISCIPLINAS, type Disciplina } from "@/types";
 import { getQuestoesCount } from "@/lib/questoes";
 import { CicloRetencao } from "@/components/dashboard/ciclo-retencao";
-import { EstudoReversoResumoCard } from "@/components/dashboard/estudo-reverso-resumo";
-import { SemaforoZonaCard } from "@/components/dashboard/semaforo-zona-card";
-import { DesempenhoMapaCtb } from "@/components/dashboard/desempenho-mapa-ctb";
 import { ProximoPassoCard } from "@/components/dashboard/proximo-passo-card";
 import {
   DisciplinaDesempenhoCard,
   SessoesRecentesList,
 } from "@/components/dashboard/disciplina-desempenho-card";
+import { DesempenhoPeriodoFilter } from "@/components/dashboard/desempenho-periodo-filter";
+import { SemaforoCompacto } from "@/components/dashboard/semaforo-compacto";
+import { DesempenhoDonut } from "@/components/dashboard/desempenho-donut";
+import { DesempenhoDisciplinasLista } from "@/components/dashboard/desempenho-disciplinas-lista";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -28,6 +28,11 @@ import {
 } from "@/components/ui/alert";
 import { ResetDesempenhoForm } from "@/components/dashboard/reset-desempenho-form";
 import { withTimeout } from "@/lib/with-timeout";
+import {
+  labelPeriodo,
+  parsePeriodoDesempenho,
+  periodoSince,
+} from "@/lib/desempenho-periodo";
 
 export const dynamic = "force-dynamic";
 
@@ -41,17 +46,6 @@ const retencaoFallback = {
   hasData: false,
 };
 
-const reversoFallback = {
-  sessoesTotal: 0,
-  sessoesConcluidas: 0,
-  taxaConclusao: 0,
-  taxaAcertoPreVisual: null as number | null,
-  taxaAcertoPosVisual: null as number | null,
-  deltaAcerto: null as number | null,
-  amostrasPosVisual: 0,
-  hasData: false,
-};
-
 function parseDisciplina(raw?: string): Disciplina | undefined {
   if (!raw) return undefined;
   return DISCIPLINAS.includes(raw as Disciplina)
@@ -59,23 +53,24 @@ function parseDisciplina(raw?: string): Disciplina | undefined {
     : undefined;
 }
 
-function ordenarDisciplinas(
-  disciplinas: Awaited<ReturnType<typeof getDesempenhoResumo>>["disciplinas"],
-) {
-  return [...disciplinas].sort((a, b) => {
-    if (a.zona === "vermelho" && b.zona !== "vermelho") return -1;
-    if (b.zona === "vermelho" && a.zona !== "vermelho") return 1;
-    return b.pontos - a.pontos;
-  });
-}
-
 export default async function DesempenhoPage({
   searchParams,
 }: {
-  searchParams: Promise<{ disciplina?: string; reset?: string }>;
+  searchParams: Promise<{
+    disciplina?: string;
+    reset?: string;
+    periodo?: string;
+  }>;
 }) {
-  const { disciplina: disciplinaRaw, reset } = await searchParams;
+  const {
+    disciplina: disciplinaRaw,
+    reset,
+    periodo: periodoRaw,
+  } = await searchParams;
   const disciplinaFoco = parseDisciplina(disciplinaRaw);
+  const periodo = parsePeriodoDesempenho(periodoRaw);
+  const since = periodoSince(periodo);
+  const periodoLabel = labelPeriodo(periodo);
 
   const supabase = await createClient();
   const {
@@ -83,38 +78,31 @@ export default async function DesempenhoPage({
   } = await supabase.auth.getUser();
 
   const emptyDesempenho = await getDesempenhoResumo(null);
-  const [desempenho, retencao, questoesCount, reversoResumo, topicosFoco] =
-    await Promise.all([
-      withTimeout(
-        getDesempenhoResumo(user?.id),
-        QUERY_MS,
-        emptyDesempenho,
-        "desempenho",
-      ),
-      withTimeout(
-        getRetencaoResumo(user?.id),
-        QUERY_MS,
-        retencaoFallback,
-        "retencao",
-      ),
-      withTimeout(getQuestoesCount(), QUERY_MS, 0, "questoesCount"),
-      withTimeout(
-        getEstudoReversoResumo(user?.id),
-        QUERY_MS,
-        reversoFallback,
-        "reverso",
-      ),
-      disciplinaFoco && user?.id
-        ? withTimeout(
-            getDesempenhoTopicos(user.id, disciplinaFoco),
-            QUERY_MS,
-            [],
-            "topicosFoco",
-          )
-        : Promise.resolve([]),
-    ]);
+  const [desempenho, retencao, questoesCount, topicosFoco] = await Promise.all([
+    withTimeout(
+      getDesempenhoResumo(user?.id, { since }),
+      QUERY_MS,
+      emptyDesempenho,
+      "desempenho",
+    ),
+    withTimeout(
+      getRetencaoResumo(user?.id),
+      QUERY_MS,
+      retencaoFallback,
+      "retencao",
+    ),
+    withTimeout(getQuestoesCount(), QUERY_MS, 0, "questoesCount"),
+    disciplinaFoco && user?.id
+      ? withTimeout(
+          getDesempenhoTopicos(user.id, disciplinaFoco),
+          QUERY_MS,
+          [],
+          "topicosFoco",
+        )
+      : Promise.resolve([]),
+  ]);
 
-  const { semaforo } = desempenho;
+  const { semaforo, overview } = desempenho;
   const emRisco = semaforo.disciplinasEmRisco.length > 0;
   const proximo = calcularProximoPasso({
     emRisco,
@@ -122,24 +110,13 @@ export default async function DesempenhoPage({
     questoesDisponiveis: questoesCount > 0,
   });
 
-  const ctb = desempenho.disciplinas.find(
-    (d) => d.disciplina === "legislacao_transito",
-  );
-  const demais = ordenarDisciplinas(
-    desempenho.disciplinas.filter(
-      (d) => d.disciplina !== "legislacao_transito",
-    ),
-  );
-
-  const disciplinasVisiveis = disciplinaFoco
-    ? desempenho.disciplinas.filter((d) => d.disciplina === disciplinaFoco)
-    : null;
-
   const temHistorico =
-    desempenho.hasData || retencao.hasData || reversoResumo.hasData;
+    desempenho.hasData || retencao.hasData || overview.total > 0;
+
+  const periodoQs = periodo !== "inicio" ? `periodo=${periodo}` : "";
 
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-6 p-4 md:gap-8 md:p-8">
+    <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-5 p-4 md:gap-6 md:p-8">
       {reset === "ok" && (
         <Alert>
           <AlertDescription>
@@ -148,11 +125,17 @@ export default async function DesempenhoPage({
         </Alert>
       )}
 
-      <header className="flex flex-col gap-1">
-        <h1 className="text-2xl font-bold tracking-tight">Desempenho</h1>
-        <p className="text-sm text-muted-foreground">
-          Não zerar → passar dos 50 → aprofundar CTB → fixar na memória
-        </p>
+      <header className="flex flex-col gap-3">
+        <div>
+          <h1 className="text-2xl font-bold tracking-tight">Desempenho</h1>
+          <p className="text-sm text-muted-foreground">
+            Visão clara do que está indo bem — e o que pode eliminar você
+          </p>
+        </div>
+        <DesempenhoPeriodoFilter
+          periodo={periodo}
+          disciplina={disciplinaFoco}
+        />
       </header>
 
       {emRisco && (
@@ -180,63 +163,33 @@ export default async function DesempenhoPage({
         </Alert>
       )}
 
-      <section className="flex flex-col gap-3" aria-labelledby="semaforo-titulo">
-        <h2 id="semaforo-titulo" className="text-lg font-semibold">
-          Semáforo de aprovação
-        </h2>
-        <div className="grid gap-4 sm:grid-cols-3">
-          <SemaforoZonaCard
-            metrica={semaforo.gerais}
-            minimoLabel="Mín. 1 pt/disciplina geral"
-          />
-          <SemaforoZonaCard
-            metrica={semaforo.especificos}
-            minimoLabel="Mín. 2 pts/disciplina específica"
-          />
-          <SemaforoZonaCard
-            metrica={semaforo.total}
-            minimoLabel={`Mín. ${MIN_PONTOS_TOTAL} pts na prova`}
-          />
-        </div>
-      </section>
+      <SemaforoCompacto
+        gerais={semaforo.gerais}
+        especificos={semaforo.especificos}
+        total={semaforo.total}
+      />
 
-      <div className="grid gap-4 md:grid-cols-5">
-        <DesempenhoMapaCtb
-          className="md:col-span-3"
-          ctb={ctb}
-          demais={demais}
-        />
-        <ProximoPassoCard
-          className="md:col-span-2"
-          href={proximo.href}
-          label={proximo.label}
-          motivo={proximo.motivo}
-        />
-      </div>
-
-      <section className="flex flex-col gap-4">
-        <div className="flex flex-wrap items-end justify-between gap-2">
-          <div>
-            <h2 className="text-lg font-semibold">Por disciplina</h2>
-            <p className="text-sm text-muted-foreground">
-              {disciplinaFoco
-                ? `Foco: ${DISCIPLINA_LABELS[disciplinaFoco]}`
-                : "CTB em destaque — clique para ver tópicos"}
-            </p>
-          </div>
-          {disciplinaFoco && (
+      {disciplinaFoco ? (
+        <section className="flex flex-col gap-4">
+          <div className="flex flex-wrap items-end justify-between gap-2">
+            <div>
+              <h2 className="text-lg font-semibold">
+                {DISCIPLINA_LABELS[disciplinaFoco]}
+              </h2>
+              <p className="text-sm text-muted-foreground">
+                Tópicos no período · {periodoLabel}
+              </p>
+            </div>
             <Link
-              href="/desempenho"
+              href={periodoQs ? `/desempenho?${periodoQs}` : "/desempenho"}
               className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
             >
-              Ver todas
+              Voltar à visão geral
             </Link>
-          )}
-        </div>
-
-        {disciplinasVisiveis ? (
-          <div className="grid gap-3">
-            {disciplinasVisiveis.map((d) => (
+          </div>
+          {desempenho.disciplinas
+            .filter((d) => d.disciplina === disciplinaFoco)
+            .map((d) => (
               <DisciplinaDesempenhoCard
                 key={d.disciplina}
                 disciplina={d}
@@ -248,44 +201,60 @@ export default async function DesempenhoPage({
                 }))}
               />
             ))}
-          </div>
-        ) : (
-          <div className="flex flex-col gap-3">
-            {ctb && (
-              <DisciplinaDesempenhoCard disciplina={ctb} />
-            )}
-            <div className="grid gap-3 sm:grid-cols-2">
-              {demais.map((d) => (
-                <DisciplinaDesempenhoCard key={d.disciplina} disciplina={d} />
-              ))}
-            </div>
-          </div>
-        )}
-      </section>
-
-      <section className="flex flex-col gap-4" aria-labelledby="memoria-titulo">
-        <div>
-          <h2 id="memoria-titulo" className="text-lg font-semibold">
-            Memória e fixação
+        </section>
+      ) : (
+        <section
+          aria-labelledby="visao-geral-titulo"
+          className="grid gap-4 lg:grid-cols-5"
+        >
+          <h2 id="visao-geral-titulo" className="sr-only">
+            Visão geral e disciplinas
           </h2>
-          <p className="text-sm text-muted-foreground">
-            Ciclo de revisão e ganho após estudo reverso visual
-          </p>
-        </div>
-        <div className="grid gap-4 lg:grid-cols-2">
+          <DesempenhoDonut
+            overview={overview}
+            periodoLabel={periodoLabel}
+            className="lg:col-span-2"
+          />
+          <DesempenhoDisciplinasLista
+            disciplinas={desempenho.disciplinas}
+            periodo={periodo}
+            className="lg:col-span-3"
+          />
+        </section>
+      )}
+
+      <div className="grid gap-4 md:grid-cols-5">
+        <ProximoPassoCard
+          className="md:col-span-2"
+          href={proximo.href}
+          label={proximo.label}
+          motivo={proximo.motivo}
+        />
+        <div className="md:col-span-3">
           <CicloRetencao
             resumo={retencao}
             atividade={desempenho.atividade}
             embedded
           />
-          <EstudoReversoResumoCard resumo={reversoResumo} />
         </div>
-      </section>
+      </div>
 
-      <section className="flex flex-col gap-3">
-        <h2 className="text-lg font-semibold">Sessões recentes</h2>
-        <SessoesRecentesList sessoes={desempenho.sessoesRecentes} />
-      </section>
+      <details className="group rounded-xl border border-border bg-card">
+        <summary className="cursor-pointer list-none px-4 py-3 text-sm font-medium marker:content-none [&::-webkit-details-marker]:hidden">
+          <span className="flex items-center justify-between gap-2">
+            Sessões recentes
+            <span className="text-xs font-normal text-muted-foreground group-open:hidden">
+              ver
+            </span>
+            <span className="hidden text-xs font-normal text-muted-foreground group-open:inline">
+              ocultar
+            </span>
+          </span>
+        </summary>
+        <div className="border-t border-border px-4 py-3">
+          <SessoesRecentesList sessoes={desempenho.sessoesRecentes} />
+        </div>
+      </details>
 
       <ResetDesempenhoForm temHistorico={temHistorico} />
     </div>

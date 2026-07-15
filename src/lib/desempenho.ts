@@ -18,6 +18,7 @@ import { getSemaforoData, type SemaforoData } from "@/lib/semaforo";
 import { projetarPontosDisciplina } from "@/lib/semaforo-projecao";
 import {
   getAttemptStatsByDisciplina,
+  getAttemptOverview,
   countAttempts,
 } from "@/lib/attempt-stats";
 import {
@@ -67,9 +68,17 @@ export interface SessaoEstudoResumo {
   startedAt: Date;
 }
 
+export interface DesempenhoOverview {
+  total: number;
+  acertos: number;
+  erros: number;
+  taxaAcerto: number;
+}
+
 export interface DesempenhoResumo {
   semaforo: SemaforoData;
   disciplinas: DesempenhoDisciplina[];
+  overview: DesempenhoOverview;
   coberturaEditalPct: number;
   /** Tópicos estudáveis (com questão no banco). */
   topicosTotal: number;
@@ -80,6 +89,13 @@ export interface DesempenhoResumo {
   sessoesRecentes: SessaoEstudoResumo[];
   hasData: boolean;
 }
+
+const OVERVIEW_VAZIO: DesempenhoOverview = {
+  total: 0,
+  acertos: 0,
+  erros: 0,
+  taxaAcerto: 0,
+};
 
 function calcularZonaDisciplina(
   pontos: number,
@@ -184,7 +200,10 @@ async function getCatalogoTopicos(): Promise<{
 
 export async function getDesempenhoResumo(
   userId?: string | null,
+  options?: { since?: Date | null },
 ): Promise<DesempenhoResumo> {
+  const since = options?.since ?? null;
+
   if (!userId) {
     const dias = Math.max(
       0,
@@ -241,6 +260,7 @@ export async function getDesempenhoResumo(
         coberturaPct: 0,
         questoesProva: SIMULADO_ESPELHO_DISTRIBUICAO[d],
       })),
+      overview: OVERVIEW_VAZIO,
       coberturaEditalPct: 0,
       topicosTotal: 0,
       topicosVistos: 0,
@@ -276,6 +296,7 @@ export async function getDesempenhoResumo(
       coberturaPct: 0,
       questoesProva: SIMULADO_ESPELHO_DISTRIBUICAO[d],
     })),
+    overview: OVERVIEW_VAZIO,
     coberturaEditalPct: 0,
     topicosTotal: catalogo.topicosComQuestao,
     topicosVistos: 0,
@@ -286,9 +307,21 @@ export async function getDesempenhoResumo(
   };
 
   try {
-    const [statsRows, coberturaRows, sessoes, notasSimulado, totalAttempts] =
-      await Promise.all([
-      getAttemptStatsByDisciplina(userId),
+    const [
+      statsRows,
+      statsAllTimeRows,
+      coberturaRows,
+      sessoes,
+      notasSimulado,
+      totalAttempts,
+      overview,
+    ] = await Promise.all([
+      getAttemptStatsByDisciplina(userId, since),
+      since
+        ? getAttemptStatsByDisciplina(userId)
+        : Promise.resolve(null as Awaited<
+            ReturnType<typeof getAttemptStatsByDisciplina>
+          > | null),
 
       db.execute<{
         disciplina: Disciplina;
@@ -328,6 +361,7 @@ export async function getDesempenhoResumo(
 
       getNotasSimuladoPorDisciplina(userId),
       countAttempts(userId),
+      getAttemptOverview(userId, since),
     ]);
 
     const coberturaMap = new Map(
@@ -345,6 +379,17 @@ export async function getDesempenhoResumo(
       });
     }
 
+    const porDisciplinaPontos = new Map<
+      Disciplina,
+      { acertos: number; tentativas: number }
+    >();
+    for (const row of statsAllTimeRows ?? statsRows) {
+      porDisciplinaPontos.set(row.disciplina, {
+        acertos: row.acertos,
+        tentativas: row.tentativas,
+      });
+    }
+
     const emRiscoSet = new Set(
       semaforo.disciplinasEmRisco.map((r) => r.disciplina),
     );
@@ -354,6 +399,10 @@ export async function getDesempenhoResumo(
 
     const disciplinas: DesempenhoDisciplina[] = DISCIPLINAS.map((d) => {
       const stats = porDisciplina.get(d) ?? { acertos: 0, tentativas: 0 };
+      const statsPontos = porDisciplinaPontos.get(d) ?? {
+        acertos: 0,
+        tentativas: 0,
+      };
       const cob = coberturaMap.get(d);
       const topicosMapeados = cob?.topicos_mapeados ?? 0;
       const topicosTotal = cob?.topicos_com_questao ?? 0;
@@ -362,8 +411,12 @@ export async function getDesempenhoResumo(
       topicosVistosGeral += topicosVistos;
 
       const pontos =
-        stats.tentativas > 0
-          ? projetarPontosDisciplina(stats.acertos, stats.tentativas, d)
+        statsPontos.tentativas > 0
+          ? projetarPontosDisciplina(
+              statsPontos.acertos,
+              statsPontos.tentativas,
+              d,
+            )
           : (notasSimulado?.[d] ?? 0);
 
       const minimo = isDisciplinaGeral(d)
@@ -401,6 +454,7 @@ export async function getDesempenhoResumo(
     return {
       semaforo,
       disciplinas,
+      overview,
       coberturaEditalPct,
       topicosTotal: topicosEstudaveisGeral,
       topicosVistos: topicosVistosGeral,
