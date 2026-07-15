@@ -1,4 +1,4 @@
-import { and, eq, gte, lte, sql } from "drizzle-orm";
+import { and, desc, eq, gte, lte, sql } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { attempts, estudoReversoSessions, srsCards } from "@/lib/db/schema";
 
@@ -218,7 +218,9 @@ async function calcularEficaciaEstudoReverso(
         eq(estudoReversoSessions.userId, userId),
         eq(estudoReversoSessions.concluido, true),
       ),
-    );
+    )
+    .orderBy(desc(estudoReversoSessions.concluidoEm))
+    .limit(40);
 
   if (sessoes.length === 0) return vazio;
 

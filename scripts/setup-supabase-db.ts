@@ -14,7 +14,7 @@ const ENV_PATH = join(process.cwd(), ".env.local");
 const PROJECT_REF = "ytmppmmazcjkxbpfzewp";
 const DEFAULT_DB_PASSWORD = "AgenteTransito2026";
 const DEFAULT_DB_HOST = "aws-1-us-east-2.pooler.supabase.com";
-const DEFAULT_DB_PORT = "5432";
+const DEFAULT_DB_PORT = "6543";
 
 if (existsSync(ENV_PATH)) {
   config({ path: ENV_PATH });
@@ -131,7 +131,7 @@ async function main() {
   writeFileSync(ENV_PATH, envContent, "utf-8");
 
   console.log("✓ .env.local atualizado");
-  console.log(`  DATABASE_PASSWORD definida (session pooler 5432)`);
+  console.log(`  DATABASE_PASSWORD definida (transaction pooler ${DEFAULT_DB_PORT})`);
   console.log(`  SUPABASE_SERVICE_ROLE_KEY definida\n`);
   console.log("Aguarde ~30s e rode: npm run db:seed");
 }

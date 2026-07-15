@@ -27,8 +27,30 @@ import {
   AlertTitle,
 } from "@/components/ui/alert";
 import { ResetDesempenhoForm } from "@/components/dashboard/reset-desempenho-form";
+import { withTimeout } from "@/lib/with-timeout";
 
 export const dynamic = "force-dynamic";
+
+const QUERY_MS = 8_000;
+
+const retencaoFallback = {
+  aprendendo: 0,
+  jovem: 0,
+  maduro: 0,
+  revisoesHoje: 0,
+  hasData: false,
+};
+
+const reversoFallback = {
+  sessoesTotal: 0,
+  sessoesConcluidas: 0,
+  taxaConclusao: 0,
+  taxaAcertoPreVisual: null as number | null,
+  taxaAcertoPosVisual: null as number | null,
+  deltaAcerto: null as number | null,
+  amostrasPosVisual: 0,
+  hasData: false,
+};
 
 function parseDisciplina(raw?: string): Disciplina | undefined {
   if (!raw) return undefined;
@@ -60,14 +82,35 @@ export default async function DesempenhoPage({
     data: { user },
   } = await supabase.auth.getUser();
 
+  const emptyDesempenho = await getDesempenhoResumo(null);
   const [desempenho, retencao, questoesCount, reversoResumo, topicosFoco] =
     await Promise.all([
-      getDesempenhoResumo(user?.id),
-      getRetencaoResumo(user?.id),
-      getQuestoesCount(),
-      getEstudoReversoResumo(user?.id),
+      withTimeout(
+        getDesempenhoResumo(user?.id),
+        QUERY_MS,
+        emptyDesempenho,
+        "desempenho",
+      ),
+      withTimeout(
+        getRetencaoResumo(user?.id),
+        QUERY_MS,
+        retencaoFallback,
+        "retencao",
+      ),
+      withTimeout(getQuestoesCount(), QUERY_MS, 0, "questoesCount"),
+      withTimeout(
+        getEstudoReversoResumo(user?.id),
+        QUERY_MS,
+        reversoFallback,
+        "reverso",
+      ),
       disciplinaFoco && user?.id
-        ? getDesempenhoTopicos(user.id, disciplinaFoco)
+        ? withTimeout(
+            getDesempenhoTopicos(user.id, disciplinaFoco),
+            QUERY_MS,
+            [],
+            "topicosFoco",
+          )
         : Promise.resolve([]),
     ]);
 

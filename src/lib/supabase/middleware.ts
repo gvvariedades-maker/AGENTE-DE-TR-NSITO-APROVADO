@@ -8,10 +8,26 @@ const ROTAS_PROTEGIDAS = [
   "/desempenho",
 ] as const;
 
+const AUTH_COOKIE_PREFIX = "sb-";
+
 function rotaProtegida(pathname: string): boolean {
   return ROTAS_PROTEGIDAS.some(
     (rota) => pathname === rota || pathname.startsWith(`${rota}/`),
   );
+}
+
+function clearAuthCookies(response: NextResponse, request: NextRequest) {
+  for (const cookie of request.cookies.getAll()) {
+    if (
+      cookie.name.startsWith(AUTH_COOKIE_PREFIX) ||
+      cookie.name.includes("-auth-token")
+    ) {
+      response.cookies.set(cookie.name, "", {
+        path: "/",
+        maxAge: 0,
+      });
+    }
+  }
 }
 
 export async function updateSession(request: NextRequest) {
@@ -41,9 +57,19 @@ export async function updateSession(request: NextRequest) {
     },
   });
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  let user = null;
+  try {
+    const result = await Promise.race([
+      supabase.auth.getUser(),
+      new Promise<never>((_, reject) => {
+        setTimeout(() => reject(new Error("auth_timeout")), 8000);
+      }),
+    ]);
+    user = result.data.user;
+  } catch {
+    clearAuthCookies(supabaseResponse, request);
+    user = null;
+  }
 
   const { pathname } = request.nextUrl;
 
@@ -51,7 +77,9 @@ export async function updateSession(request: NextRequest) {
     const loginUrl = request.nextUrl.clone();
     loginUrl.pathname = "/login";
     loginUrl.searchParams.set("next", pathname);
-    return NextResponse.redirect(loginUrl);
+    const redirect = NextResponse.redirect(loginUrl);
+    clearAuthCookies(redirect, request);
+    return redirect;
   }
 
   if (

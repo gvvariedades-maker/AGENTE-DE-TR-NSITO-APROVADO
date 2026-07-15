@@ -1,4 +1,4 @@
-const CACHE = "ata-aprovado-v2";
+const CACHE = "ata-aprovado-v3";
 
 const PRECACHE_URLS = [
   "/manifest.json",

@@ -4,22 +4,37 @@
  *
  * Supabase pooler: porta 6543 (transaction mode) evita EMAXCONNSESSION com Next dev + seed.
  */
-function defaultPoolerPort(host: string): string {
-  if (process.env.DATABASE_PORT?.trim()) {
-    return process.env.DATABASE_PORT.trim();
+const TRANSACTION_POOLER_PORT = "6543";
+const SESSION_POOLER_PORT = "5432";
+
+function isPoolerHost(host: string): boolean {
+  return host.includes("pooler.supabase.com");
+}
+
+/** Em serverless (Vercel) sempre transaction mode; local respeita DATABASE_PORT. */
+function resolvePoolerPort(host: string): string {
+  if (!isPoolerHost(host)) {
+    return process.env.DATABASE_PORT?.trim() || SESSION_POOLER_PORT;
   }
-  return host.includes("pooler.supabase.com") ? "6543" : "5432";
+
+  if (process.env.VERCEL) {
+    return TRANSACTION_POOLER_PORT;
+  }
+
+  const explicit = process.env.DATABASE_PORT?.trim();
+  if (explicit) return explicit;
+
+  return TRANSACTION_POOLER_PORT;
 }
 
 function preferTransactionPooler(urlString: string): string {
-  if (process.env.DATABASE_PORT?.trim()) return urlString;
   try {
     const url = new URL(urlString);
     if (
-      url.hostname.includes("pooler.supabase.com") &&
-      (url.port === "5432" || url.port === "")
+      isPoolerHost(url.hostname) &&
+      (url.port === SESSION_POOLER_PORT || url.port === "")
     ) {
-      url.port = "6543";
+      url.port = resolvePoolerPort(url.hostname);
       return url.toString();
     }
   } catch {
@@ -36,7 +51,7 @@ export function resolveDatabaseUrl(): string {
   if (password && projectRef) {
     const host =
       process.env.DATABASE_HOST?.trim() ?? "aws-1-us-east-2.pooler.supabase.com";
-    const port = defaultPoolerPort(host);
+    const port = resolvePoolerPort(host);
     const user = `postgres.${projectRef}`;
     const encoded = encodeURIComponent(password);
     return `postgresql://${user}:${encoded}@${host}:${port}/postgres`;

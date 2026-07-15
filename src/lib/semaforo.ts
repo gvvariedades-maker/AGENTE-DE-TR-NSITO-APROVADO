@@ -1,6 +1,6 @@
 import { desc, eq } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { attempts, questions, simulados, topics } from "@/lib/db/schema";
+import { simulados } from "@/lib/db/schema";
 import {
   DISCIPLINAS_ESPECIFICOS,
   DISCIPLINAS_GERAIS,
@@ -18,6 +18,10 @@ import {
   type Disciplina,
 } from "@/types";
 import { projetarPontosDisciplina } from "@/lib/semaforo-projecao";
+import {
+  getAttemptStatsByDisciplina,
+  type AttemptStatsDisciplina,
+} from "@/lib/attempt-stats";
 
 export interface ZonaMetrica {
   label: string;
@@ -167,6 +171,74 @@ export function calcularDeSimulado(
   };
 }
 
+function calcularDeStats(
+  stats: AttemptStatsDisciplina[],
+): Omit<SemaforoData, "diasParaProva" | "fonte"> {
+  const disciplinasEmRisco: SemaforoData["disciplinasEmRisco"] = [];
+  const pontosDisciplina = new Map<Disciplina, number>();
+
+  for (const row of stats) {
+    const pts = projetarPontosDisciplina(
+      row.acertos,
+      row.tentativas,
+      row.disciplina,
+    );
+    pontosDisciplina.set(row.disciplina, pts);
+
+    const minimo = isDisciplinaGeral(row.disciplina)
+      ? MIN_PONTOS_DISCIPLINA_GERAL
+      : MIN_PONTOS_DISCIPLINA_ESPECIFICO;
+
+    if (pts < minimo) {
+      disciplinasEmRisco.push({
+        disciplina: row.disciplina,
+        pontos: pts,
+        minimo,
+      });
+    }
+  }
+
+  let pontosGerais = 0;
+  for (const d of DISCIPLINAS_GERAIS) {
+    pontosGerais += pontosDisciplina.get(d) ?? 0;
+  }
+
+  let pontosEspecificos = 0;
+  for (const d of DISCIPLINAS_ESPECIFICOS) {
+    pontosEspecificos += pontosDisciplina.get(d) ?? 0;
+  }
+
+  const notaTotal = pontosGerais + pontosEspecificos;
+  const totalTentativas = stats.reduce((acc, row) => acc + row.tentativas, 0);
+
+  const emRiscoGerais = disciplinasEmRisco.some((r) =>
+    isDisciplinaGeral(r.disciplina),
+  );
+  const emRiscoEspecificos = disciplinasEmRisco.some(
+    (r) => !isDisciplinaGeral(r.disciplina),
+  );
+
+  return {
+    gerais: buildZona(
+      "Gerais",
+      pontosGerais,
+      MAX_PONTOS_GERAIS,
+      MIN_PONTOS_DISCIPLINA_GERAL,
+      emRiscoGerais,
+    ),
+    especificos: buildZona(
+      "Específicos",
+      pontosEspecificos,
+      MAX_PONTOS_ESPECIFICOS,
+      MIN_PONTOS_DISCIPLINA_ESPECIFICO,
+      emRiscoEspecificos,
+    ),
+    total: buildZona("Total", notaTotal, 100, MIN_PONTOS_TOTAL),
+    hasData: totalTentativas > 0,
+    disciplinasEmRisco,
+  };
+}
+
 function calcularDeAttempts(
   rows: { disciplina: Disciplina; acertou: boolean }[],
 ): Omit<SemaforoData, "diasParaProva" | "fonte"> {
@@ -277,22 +349,14 @@ export async function getSemaforoData(
       };
     }
 
-    const rows = await db
-      .select({
-        disciplina: topics.disciplina,
-        acertou: attempts.acertou,
-      })
-      .from(attempts)
-      .innerJoin(questions, eq(attempts.questionId, questions.id))
-      .innerJoin(topics, eq(questions.topicId, topics.id))
-      .where(eq(attempts.userId, userId));
+    const stats = await getAttemptStatsByDisciplina(userId);
 
-    if (rows.length === 0) {
+    if (stats.length === 0) {
       return { ...semaforoVazio(), diasParaProva: dias };
     }
 
     return {
-      ...calcularDeAttempts(rows),
+      ...calcularDeStats(stats),
       diasParaProva: dias,
       fonte: "attempts",
     };

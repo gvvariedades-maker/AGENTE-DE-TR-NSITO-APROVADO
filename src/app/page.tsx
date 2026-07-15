@@ -1,24 +1,16 @@
-import { HomeHero } from "@/components/dashboard/home-hero";
-import { HomeCta } from "@/components/dashboard/home-cta";
-import { ProvaDistribuicaoBar } from "@/components/dashboard/prova-distribuicao-bar";
-import { PROVA_DATA } from "@/types";
+import { redirect } from "next/navigation";
+import { LandingPage } from "@/components/landing/landing-page";
+import { createClient } from "@/lib/supabase/server";
 
-function diasParaProva() {
-  const hoje = new Date();
-  const diff = PROVA_DATA.getTime() - hoje.getTime();
-  return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
-}
+export default async function HomePage() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
-export default function HomePage() {
-  const dias = diasParaProva();
+  if (user) {
+    redirect("/dashboard");
+  }
 
-  return (
-    <div className="flex flex-1 flex-col">
-      <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-6 p-4 md:gap-8 md:p-8">
-        <HomeHero />
-        <HomeCta diasParaProva={dias} />
-        <ProvaDistribuicaoBar />
-      </main>
-    </div>
-  );
+  return <LandingPage />;
 }

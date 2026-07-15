@@ -46,6 +46,21 @@ console.log("✓ Variáveis de ambiente OK\n");
 console.log(`  URL: ${process.env.NEXT_PUBLIC_SUPABASE_URL}`);
 console.log(`  DB:  ${databaseUrl.replace(/:[^:@]+@/, ":****@")}`);
 
+try {
+  const parsed = new URL(databaseUrl);
+  if (
+    parsed.hostname.includes("pooler.supabase.com") &&
+    parsed.port === "5432" &&
+    !process.env.VERCEL
+  ) {
+    console.warn(
+      "  ⚠ Pooler na porta 5432 (session mode) — prefira 6543 ou remova DATABASE_PORT=5432",
+    );
+  }
+} catch {
+  /* ignore */
+}
+
 const sql = postgres(databaseUrl, { max: 1, connect_timeout: 10 });
 
 async function testConnection() {

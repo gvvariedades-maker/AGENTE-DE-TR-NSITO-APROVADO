@@ -17,8 +17,13 @@ import { getAtividadeSemanal, type AtividadeDia } from "@/lib/retencao";
 import { getSemaforoData, type SemaforoData } from "@/lib/semaforo";
 import { projetarPontosDisciplina } from "@/lib/semaforo-projecao";
 import {
+  getAttemptStatsByDisciplina,
+  countAttempts,
+} from "@/lib/attempt-stats";
+import {
   DISCIPLINAS,
   DISCIPLINA_LABELS,
+  PROVA_DATA,
   SIMULADO_ESPELHO_DISTRIBUICAO,
   type Disciplina,
 } from "@/types";
@@ -180,6 +185,72 @@ async function getCatalogoTopicos(): Promise<{
 export async function getDesempenhoResumo(
   userId?: string | null,
 ): Promise<DesempenhoResumo> {
+  if (!userId) {
+    const dias = Math.max(
+      0,
+      Math.ceil((PROVA_DATA.getTime() - Date.now()) / (1000 * 60 * 60 * 24)),
+    );
+    return {
+      semaforo: {
+        gerais: {
+          label: "Gerais",
+          pontos: null,
+          maximo: 33.33,
+          minimo: MIN_PONTOS_DISCIPLINA_GERAL,
+          zona: "vazio",
+          percentual: 0,
+          statusLabel: "Sem dados",
+        },
+        especificos: {
+          label: "Específicos",
+          pontos: null,
+          maximo: 66.67,
+          minimo: MIN_PONTOS_DISCIPLINA_ESPECIFICO,
+          zona: "vazio",
+          percentual: 0,
+          statusLabel: "Sem dados",
+        },
+        total: {
+          label: "Total",
+          pontos: null,
+          maximo: 100,
+          minimo: 50,
+          zona: "vazio",
+          percentual: 0,
+          statusLabel: "Sem dados",
+        },
+        hasData: false,
+        diasParaProva: dias,
+        disciplinasEmRisco: [],
+        fonte: "vazio",
+      },
+      disciplinas: DISCIPLINAS.map((d) => ({
+        disciplina: d,
+        label: DISCIPLINA_LABELS[d],
+        pontos: 0,
+        minimo: isDisciplinaGeral(d)
+          ? MIN_PONTOS_DISCIPLINA_GERAL
+          : MIN_PONTOS_DISCIPLINA_ESPECIFICO,
+        zona: "vazio" as const,
+        tentativas: 0,
+        acertos: 0,
+        taxaAcerto: 0,
+        topicosTotal: 0,
+        topicosMapeados: 0,
+        topicosVistos: 0,
+        coberturaPct: 0,
+        questoesProva: SIMULADO_ESPELHO_DISTRIBUICAO[d],
+      })),
+      coberturaEditalPct: 0,
+      topicosTotal: 0,
+      topicosVistos: 0,
+      topicosMapeados: 0,
+      atividade: [],
+      sessoesRecentes: [],
+      hasData: false,
+    };
+  }
+
   const [semaforo, atividade, catalogo] = await Promise.all([
     getSemaforoData(userId),
     getAtividadeSemanal(userId),
@@ -214,19 +285,10 @@ export async function getDesempenhoResumo(
     hasData: false,
   };
 
-  if (!userId) return vazio;
-
   try {
-    const [statsRows, coberturaRows, sessoes, notasSimulado] = await Promise.all([
-      db
-        .select({
-          disciplina: topics.disciplina,
-          acertou: attempts.acertou,
-        })
-        .from(attempts)
-        .innerJoin(questions, eq(attempts.questionId, questions.id))
-        .innerJoin(topics, eq(questions.topicId, topics.id))
-        .where(eq(attempts.userId, userId)),
+    const [statsRows, coberturaRows, sessoes, notasSimulado, totalAttempts] =
+      await Promise.all([
+      getAttemptStatsByDisciplina(userId),
 
       db.execute<{
         disciplina: Disciplina;
@@ -265,6 +327,7 @@ export async function getDesempenhoResumo(
         .limit(8),
 
       getNotasSimuladoPorDisciplina(userId),
+      countAttempts(userId),
     ]);
 
     const coberturaMap = new Map(
@@ -276,13 +339,10 @@ export async function getDesempenhoResumo(
       { acertos: number; tentativas: number }
     >();
     for (const row of statsRows) {
-      const atual = porDisciplina.get(row.disciplina) ?? {
-        acertos: 0,
-        tentativas: 0,
-      };
-      atual.tentativas += 1;
-      if (row.acertou) atual.acertos += 1;
-      porDisciplina.set(row.disciplina, atual);
+      porDisciplina.set(row.disciplina, {
+        acertos: row.acertos,
+        tentativas: row.tentativas,
+      });
     }
 
     const emRiscoSet = new Set(
@@ -358,7 +418,7 @@ export async function getDesempenhoResumo(
         completed: s.completed,
         startedAt: s.startedAt,
       })),
-      hasData: statsRows.length > 0 || sessoes.length > 0 || notasSimulado !== null,
+      hasData: totalAttempts > 0 || sessoes.length > 0 || notasSimulado !== null,
     };
   } catch {
     return vazio;
