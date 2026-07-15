@@ -1,0 +1,388 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_1012_rsv",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_1012_art_3_VII_curta_duracao",
+    "enunciado": "Agente da STTP em Campina Grande/PB constata automóvel estacionado em faixa sinalizada de estacionamento de curta duração na Rua João Pessoa, sem pisca-alerta acionado e há aproximadamente 50 minutos — o limite regulamentado pela sinalização é de 30 minutos. O condutor alega que a área é estacionamento gratuito e que não precisa acionar o pisca-alerta por se tratar de via urbana de baixo movimento. O supervisor questiona o enquadramento. Considerando a Resolução CONTRAN nº 965/2022 (RSV — alterada pela Res. 1.012/2024), assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Não cabe autuação, pois o estacionamento de curta duração é gratuito e dispensado de condições adicionais quando a via é municipal de baixo movimento.",
+      "B": "Subsiste autuação pelo art. 181, XVII, do CTB: o art. 3º, VII, da Res. 965/2022 exige pisca-alerta ativado e tempo regulamentado de até 30 minutos — art. 21, I, da mesma Resolução.",
+      "C": "Subsiste autuação pelo art. 181, XIX, do CTB, pois permanecer além de 30 minutos converte a área em proibição absoluta de parada e estacionamento pela sinalização.",
+      "D": "Deve enquadrar no rotativo pago por ausência de comprovante de tarifa, pois toda área regulamentada na via pública exige pagamento nos termos do art. 18 da Res. 965/2022."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Estacionamento de curta duração — art. 3º, VII (pisca-alerta obrigatório + até 30 min) × art. 21, I / CTB art. 181, XVII (desacordo com condição regulamentada) — Res. 965/2022 (RSV).",
+      "fundamento_legal": "Res. CONTRAN 965/2022, art. 3º, VII: área de estacionamento de curta duração é a parte da via sinalizada para estacionamento não pago, com uso obrigatório do pisca-alerta ativado, em período de tempo determinado e regulamentado de até 30 minutos. Art. 21, I: art. 181, inciso XVII, do CTB, quando o veículo estiver estacionado em desacordo com o horário, o local, ou qualquer outra condição regulamentada especificamente pela sinalização, nos termos desta Resolução. CTB, art. 181, XVII: estacionar em desacordo com as condições regulamentadas especificamente pela sinalização (placa — Estacionamento Regulamentado). Art. 21, II / art. 181, XIX: hipótese distinta — locais de parada e estacionamento proibidos pela sinalização (ex.: área de segurança R-6c).",
+      "passo_a_passo": [
+        "1. Caso: curta duração na Rua João Pessoa — sem pisca-alerta, 50 min em limite de 30 min — condutor alega gratuidade sem condições.",
+        "2. A erra por regra_excecao (trata curta duração como estacionamento livre e ignora pisca-alerta obrigatório e prazo do art. 3º, VII); C erra por gravidade (aplica art. 181, XIX, de proibição absoluta — o caso é descumprimento de condição regulamentada, art. 181, XVII); D erra por termo_unico (confunde curta duração não pago com rotativo pago sujeito ao art. 18).",
+        "3. B correta: art. 3º, VII (pisca + prazo) + art. 21, I, remete ao art. 181, XVII, pelo desacordo com condições da sinalização."
+      ],
+      "pegadinha": "A IDECAN induz a crer que curta duração é estacionamento gratuito sem exigências — mas o art. 3º, VII exige pisca-alerta ativado e limite de até 30 minutos.",
+      "macete": "Curta duração = pisca + 30 min · sem condição = XVII · proibição total = XIX.",
+      "estudo_reverso": [
+        "Res. CONTRAN 965/2022 art. 3",
+        "Res. CONTRAN 965/2022 art. 21",
+        "CTB art. 181, XVII"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Curta duração exige pisca-alerta e até 30 min — gratuidade não dispensa condições regulamentadas",
+      "eixos_legais": [
+        "CONTRAN_1012_art_3_VII_curta_duracao",
+        "CONTRAN_965_art_21_I",
+        "CTB_art_181_XVII"
+      ],
+      "eixo_vizinho": "CONTRAN_1012_art_18_rotativo",
+      "isca_por_alternativa": {
+        "A": "curta duração é gratuito e dispensado de condições adicionais em via municipal de baixo movimento",
+        "C": "permanecer além de 30 minutos converte a área em proibição absoluta — art. 181, XIX",
+        "D": "toda área regulamentada exige comprovante de tarifa nos termos do art. 18"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "gravidade",
+        "termo_unico"
+      ],
+      "near_transfer": "Mesma faixa de curta duração com pisca-alerta acionado, mas 35 minutos — subsiste art. 181, XVII pelo excesso de tempo.",
+      "far_transfer": "Veículo na testada do hospital em área de segurança R-6c — parada e estacionamento proibidos para qualquer veículo, art. 181, XIX, não XVII.",
+      "o_que_nao_muda": "Curta duração é estacionamento regulamentado com condições próprias — gratuidade não afasta pisca-alerta nem o prazo máximo.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "resolucao_1012",
+      "resolucao_965",
+      "curta_duracao",
+      "pisca_alerta",
+      "estacionamento_regulamentado",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_1012_art_3_VII_curta_duracao",
+      "macete_visual": "Curta duração = pisca + 30 min",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: curta duração exige pisca-alerta e até 30 min — sem condição = XVII do CTB.",
+            "destaques": ["Gabarito B", "pisca-alerta", "30 min"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Gratuito × regulamentado",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Curta duração é estacionamento livre sem exigências",
+                "Art. 3º, VII exige pisca-alerta e prazo de até 30 min"
+              ],
+              [
+                "Exceder 30 min vira proibição absoluta — XIX",
+                "Descumprir condição regulamentada = art. 181, XVII"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Curta duração = pisca + 30 min.\nSem condição = XVII · proibição total = XIX.",
+            "destaques": ["pisca", "30 min", "XVII"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 965/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 965, DE 17 DE MAIO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 285,
+      "fundamento_slug": "CONTRAN_1012_art_3_VII_curta_duracao",
+      "macete_visual": "Curta duração = pisca + 30 min",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Curta duração exige pisca-alerta e até 30 min — gratuidade não dispensa condições regulamentadas",
+        "eixos_legais": [
+          "CONTRAN_1012_art_3_VII_curta_duracao",
+          "CONTRAN_965_art_21_I",
+          "CTB_art_181_XVII"
+        ],
+        "isca_por_alternativa": {
+          "A": "curta duração é gratuito e dispensado de condições adicionais em via municipal de baixo movimento",
+          "C": "permanecer além de 30 minutos converte a área em proibição absoluta — art. 181, XIX",
+          "D": "toda área regulamentada exige comprovante de tarifa nos termos do art. 18"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: curta duração sem pisca",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — curta duração é gratuito e dispensado de condições em via de baixo movimento.\nC — exceder 30 min converte em proibição absoluta — XIX do CTB.\nD — toda área regulamentada exige tarifa no rotativo pago.\n\nPegadinha: gratuidade não dispensa pisca-alerta nem prazo de 30 minutos.",
+            "destaques": ["Gabarito B", "pisca-alerta", "30 min"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CURTA DURAÇÃO: área sinalizada para estacionamento não pago com condições próprias — pisca-alerta e prazo máximo.\n\nPISCA-ALERTA: luzes de advertência que devem permanecer ativadas durante o estacionamento na faixa.\n\nESTACIONAMENTO REGULAMENTADO: condições de horário, local, pisca ou pagamento fixadas pela sinalização — tipificação no XVII do CTB.",
+            "destaques": ["CURTA DURAÇÃO", "PISCA-ALERTA", "REGULAMENTADO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: curta duração é livre?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Veículo em faixa de curta duração sem pisca-alerta?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Tempo superior ao regulamentado (50 min > 30 min)?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Desacordo regulamentado — gabarito B",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — Rua João Pessoa"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Pisca + prazo violados"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Tipos de estacionamento regulamentado RSV",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Área", "Condição principal"],
+            "linhas": [
+              [
+                "Curta duração — art. 3º, VII",
+                "Não pago · pisca-alerta · até 30 min"
+              ],
+              [
+                "Rotativo pago — art. 3º, VI",
+                "Gratuito ou pago · tarifa quando pago"
+              ],
+              [
+                "Vaga PcD/idoso — Cap. III/IV",
+                "Credencial obrigatória"
+              ],
+              [
+                "Área de segurança — art. 6º",
+                "Proibição absoluta R-6c — qualquer veículo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: gratuito = sem regra",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Curta duração é estacionamento livre na via",
+                "Art. 3º, VII impõe pisca-alerta e prazo máximo"
+              ],
+              [
+                "Exceder 30 min gera art. 181, XIX",
+                "Descumprir condição regulamentada = art. 181, XVII"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Trata curta duração como livre — ignora pisca-alerta obrigatório e prazo do art. 3º, VII"
+              ],
+              [
+                "C — gravidade",
+                "Aplica art. 181, XIX, de proibição absoluta — caso é condição regulamentada (XVII)"
+              ],
+              [
+                "D — termo_unico",
+                "Confunde curta duração não pago com rotativo pago sujeito ao art. 18"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "Faixa de curta duração — Rua João Pessoa",
+                "Área regulamentada pelo art. 3º, VII"
+              ],
+              [
+                "Pisca-alerta desligado",
+                "Viola condição obrigatória"
+              ],
+              [
+                "50 minutos em limite de 30 min",
+                "Viola prazo regulamentado"
+              ],
+              [
+                "Condutor alega gratuidade sem exigências",
+                "Isca regra_excecao — alternativa A"
+              ],
+              [
+                "Resultado",
+                "Alternativa B — art. 181, XVII"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "XVII × XIX × rotativo pago",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Eixo", "Regra no caso"],
+            "linhas": [
+              [
+                "Art. 181, XVII — condição regulamentada",
+                "Curta duração: pisca + prazo — art. 21, I"
+              ],
+              [
+                "Art. 181, XIX — proibição absoluta",
+                "Área de segurança R-6c — não é o caso"
+              ],
+              [
+                "Art. 18 — rotativo pago",
+                "Exige tarifa quando pago — distinto da curta duração"
+              ],
+              [
+                "Caso Rua João Pessoa",
+                "XVII pelo desacordo com condições"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "RSV art. 3º, VII — curta duração",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 965/2022, art. 3º, VII",
+            "texto": "VII - área de estacionamento de curta duração é a parte da via sinalizada para estacionamento não pago, com uso obrigatório do pisca-alerta ativado, em período de tempo determinado e regulamentado de até 30 minutos;",
+            "trechos_grifados": [
+              {
+                "inicio": 108,
+                "fim": 147,
+                "motivo": "fluxo — pisca-alerta obrigatório no caso da STTP",
+                "texto_grifado": "uso obrigatório do pisca-alerta ativado"
+              },
+              {
+                "inicio": 183,
+                "fim": 214,
+                "motivo": "caso — 50 min excede o limite regulamentado",
+                "texto_grifado": "regulamentado de até 30 minutos"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "RSV art. 21, I — remissão ao CTB",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 965/2022, art. 21, I",
+            "texto": "I - art. 181, inciso XVII: quando o veículo estiver estacionado em desacordo com o horário, o local, ou qualquer outra condição regulamentada especificamente pela sinalização, nos termos desta Resolução;",
+            "trechos_grifados": [
+              {
+                "inicio": 64,
+                "fim": 141,
+                "motivo": "hierarquia — tipificação correta para curta duração",
+                "texto_grifado": "em desacordo com o horário, o local, ou qualquer outra condição regulamentada"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Curta duração = pisca + 30 min · sem condição = XVII · proibição total = XIX.\nNear: pisca acionado, mas 35 min — subsiste XVII pelo tempo.\nFar: área de segurança R-6c no hospital — XIX, não XVII.\nNão muda: gratuidade não afasta condições regulamentadas da faixa.\nCadeia: vizinho = credencial não exime rotativo pago (art. 18).",
+            "destaques": ["pisca", "30 min", "R-6c", "art. 18"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 965/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 965, DE 17 DE MAIO DE 2022.pdf"
+        },
+        {
+          "rotulo": "CTB art. 181",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

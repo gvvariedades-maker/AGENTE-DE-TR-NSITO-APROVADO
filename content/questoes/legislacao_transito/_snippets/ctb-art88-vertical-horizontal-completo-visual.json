@@ -1,0 +1,384 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_sinalizacao",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_88_vertical_horizontal",
+    "enunciado": "A Prefeitura de Campina Grande/PB reabriu ao trânsito trecho recapeado da Av. Senador Raimundo Figueirêdo com placas verticais de limite de velocidade instaladas, mas sem faixas de divisão de fluxo nem marcação de bordas no leito pavimentado. O engenheiro de trânsito alega que a sinalização vertical já garante segurança suficiente e que a horizontal pode ser concluída em cronograma posterior. O supervisor da STTP consulta a conformidade com o CTB. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A reabertura está regular, pois as placas verticais de velocidade bastam após recapeamento, dispensando a sinalização horizontal até a conclusão do cronograma municipal.",
+      "B": "A reabertura está irregular: o art. 88 do CTB exige sinalização vertical e horizontal antes de reabrir via pavimentada após obra ou manutenção — e o parágrafo único impõe sinalização específica em trechos em obras.",
+      "C": "A reabertura só é irregular se faltar a sinalização específica de obras do parágrafo único — a sinalização horizontal permanente pode ser implantada depois da liberação ao trânsito.",
+      "D": "A Prefeitura pode liberar o trecho com sinalização vertical imediata e completar as faixas horizontais em até quinze dias, prazo máximo para conclusão de obras de recapeamento em vias arteriais de Campina Grande."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Reabertura de via após manutenção — art. 88 (vertical e horizontal cumulativas) × parágrafo único (sinalização específica em obras).",
+      "fundamento_legal": "CTB, art. 88: nenhuma via pavimentada poderá ser entregue após sua construção, ou reaberta ao trânsito após a realização de obras ou de manutenção, enquanto não estiver devidamente sinalizada, vertical e horizontalmente, de forma a garantir as condições adequadas de segurança na circulação. Parágrafo único: nas vias ou trechos de vias em obras deverá ser afixada sinalização específica e adequada. CTB, art. 91: CONTRAN estabelece normas de engenharia de tráfego — dispositivo distinto da condição de reabertura do art. 88.",
+      "passo_a_passo": [
+        "1. Caso: recapeamento reaberto com placas verticais, sem faixas horizontais — engenheiro dispensa horizontal em cronograma posterior.",
+        "2. A erra por regra_excecao (trata placas verticais como suficientes e ignora exigência cumulativa vertical e horizontal do art. 88); C erra por termo_unico (subordina irregularidade só à sinalização de obras do parágrafo único e posterga horizontal permanente); D erra por numero_vizinho (inventa prazo de quinze dias para completar horizontal após liberação — art. 88 não autoriza reabertura parcial).",
+        "3. B correta: art. 88 veda reabertura sem vertical e horizontal; parágrafo único acrescenta sinalização específica em trechos em obras."
+      ],
+      "pegadinha": "A IDECAN induz a aceitar reabertura só com placas verticais — mas o art. 88 exige sinalização vertical e horizontal cumulativamente antes de liberar a via.",
+      "macete": "Reabrir via = vertical + horizontal · obra = sinalização específica também.",
+      "estudo_reverso": [
+        "CTB art. 88",
+        "CTB art. 88 parágrafo único",
+        "CTB art. 90, § 1"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Placas verticais não dispensam sinalização horizontal na reabertura de via pavimentada",
+      "eixos_legais": [
+        "CTB_art_88",
+        "CTB_art_88_par_unico",
+        "CTB_art_90_par1"
+      ],
+      "eixo_vizinho": "CTB_art_90",
+      "isca_por_alternativa": {
+        "A": "placas verticais de velocidade bastam após recapeamento, dispensando horizontal em cronograma posterior",
+        "C": "irregularidade só se faltar sinalização de obras do parágrafo único — horizontal permanente pode ser posterior",
+        "D": "Prefeitura pode liberar com vertical imediata e completar horizontal em até quinze dias no cronograma de recapeamento"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico",
+        "numero_vizinho"
+      ],
+      "near_transfer": "Mesmo trecho reaberto com faixas horizontais pintadas, mas sem placas verticais de velocidade — também viola o art. 88 pela ausência de um dos eixos.",
+      "far_transfer": "Via em obra ativa com sinalização permanente instalada, mas sem placas temporárias de desvio — falta sinalização específica do parágrafo único, distinto da reabertura definitiva.",
+      "o_que_nao_muda": "Reabertura de via pavimentada exige vertical e horizontal juntas — um eixo não substitui o outro.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "sinalizacao",
+      "art_88",
+      "horizontal",
+      "vertical",
+      "obra",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CTB_art_88_vertical_horizontal",
+      "macete_visual": "Reabrir = vertical + horizontal",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: reabertura sem faixas horizontais viola exigência cumulativa vertical + horizontal.",
+            "destaques": ["Gabarito B", "vertical", "horizontal"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Vertical × cumulativa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Placas verticais bastam para reabrir via",
+                "Art. 88 exige vertical e horizontal antes da reabertura"
+              ],
+              [
+                "Horizontal pode ficar para cronograma posterior",
+                "Ambas devem estar prontas antes de liberar o trânsito"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Reabrir via = vertical + horizontal.\nObra = sinalização específica também.",
+            "destaques": ["vertical", "horizontal", "obra"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 88",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 285,
+      "fundamento_slug": "CTB_art_88_vertical_horizontal",
+      "macete_visual": "Reabrir = vertical + horizontal",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Placas verticais não dispensam sinalização horizontal na reabertura de via pavimentada",
+        "eixos_legais": [
+          "CTB_art_88",
+          "CTB_art_88_par_unico",
+          "CTB_art_90_par1"
+        ],
+        "isca_por_alternativa": {
+          "A": "placas verticais de velocidade bastam após recapeamento, dispensando horizontal em cronograma posterior",
+          "C": "irregularidade só se faltar sinalização de obras do parágrafo único — horizontal permanente pode ser posterior",
+          "D": "Prefeitura pode liberar com vertical imediata e completar horizontal em até quinze dias no cronograma de recapeamento"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: reabertura só com vertical",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — placas verticais bastam e horizontal fica para cronograma posterior.\nC — só irregular se faltar sinalização de obras — horizontal pode ser depois.\nD — vertical imediata e horizontal em até quinze dias no cronograma municipal.\n\nPegadinha: vertical não dispensa horizontal na reabertura.",
+            "destaques": ["Gabarito B", "vertical", "horizontal"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "SINALIZAÇÃO VERTICAL: placas e postes de regulamentação, advertência e indicação.\n\nSINALIZAÇÃO HORIZONTAL: faixas, marcas e demarcações pintadas no leito da via.\n\nREABERTURA: liberação ao trânsito após obra ou manutenção — exige ambos os eixos pelo art. 88.",
+            "destaques": ["VERTICAL", "HORIZONTAL", "REABERTURA"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: pode reabrir a via?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Via pavimentada reaberta após recapeamento?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Sinalização vertical e horizontal instaladas?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Reabertura irregular — gabarito B",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — Av. Senador Raimundo Figueirêdo"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — só vertical"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "O que o art. 88 exige na reabertura",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Eixo", "No caso"],
+            "linhas": [
+              [
+                "Sinalização vertical",
+                "Placas de velocidade — presente"
+              ],
+              [
+                "Sinalização horizontal",
+                "Faixas e bordas — ausente"
+              ],
+              [
+                "Condição do art. 88",
+                "Cumulativa — ambas obrigatórias"
+              ],
+              [
+                "Parágrafo único — obras",
+                "Sinalização específica adicional em trecho em obra"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: vertical basta",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Placas verticais garantem segurança suficiente",
+                "Art. 88 exige vertical e horizontal antes de reabrir"
+              ],
+              [
+                "Horizontal pode ser cronograma posterior",
+                "Reabertura só após ambas instaladas"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Dispensa horizontal em cronograma posterior — ignora exigência cumulativa do art. 88"
+              ],
+              [
+                "C — termo_unico",
+                "Reduz irregularidade à sinalização de obras do parágrafo único — posterga horizontal permanente"
+              ],
+              [
+                "D — numero_vizinho",
+                "Inventa prazo de quinze dias para horizontal após liberação — art. 88 não autoriza reabertura parcial"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "Recapeamento na Av. Senador Raimundo Figueirêdo",
+                "Obra/manutenção — art. 88 aplica"
+              ],
+              [
+                "Placas verticais de velocidade instaladas",
+                "Um eixo presente — insuficiente sozinho"
+              ],
+              [
+                "Sem faixas de divisão nem bordas",
+                "Horizontal ausente — reabertura irregular"
+              ],
+              [
+                "Engenheiro dispensa horizontal",
+                "Isca regra_excecao — alternativa A"
+              ],
+              [
+                "Resultado",
+                "Alternativa B"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 88 × parágrafo único × art. 90",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Eixo", "Função no caso"],
+            "linhas": [
+              [
+                "Art. 88 — caput",
+                "Vertical e horizontal cumulativas na reabertura"
+              ],
+              [
+                "Parágrafo único",
+                "Sinalização específica em trecho ainda em obra"
+              ],
+              [
+                "Art. 90, § 1",
+                "Órgão com circunscrição responde por falta ou insuficiência"
+              ],
+              [
+                "Art. 91 — CONTRAN",
+                "Normas de engenharia — não autoriza reabertura sem sinalização"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "CTB art. 88",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 88",
+            "texto": "Art. 88. Nenhuma via pavimentada poderá ser entregue após sua construção, ou reaberta ao trânsito após a realização de obras ou de manutenção, enquanto não estiver devidamente sinalizada, vertical e horizontalmente, de forma a garantir as condições adequadas de segurança na circulação.",
+            "trechos_grifados": [
+              {
+                "inicio": 77,
+                "fim": 141,
+                "motivo": "fluxo — reabertura após recapeamento no caso",
+                "texto_grifado": "reaberta ao trânsito após a realização de obras ou de manutenção"
+              },
+              {
+                "inicio": 188,
+                "fim": 214,
+                "motivo": "caso — faltam faixas horizontais no trecho",
+                "texto_grifado": "vertical e horizontalmente"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "CTB art. 88, parágrafo único",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 88, parágrafo único",
+            "texto": "Parágrafo único. Nas vias ou trechos de vias em obras deverá ser afixada sinalização específica e adequada.",
+            "trechos_grifados": [
+              {
+                "inicio": 73,
+                "fim": 106,
+                "motivo": "hierarquia — exigência adicional em trecho em obra",
+                "texto_grifado": "sinalização específica e adequada"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Reabrir via = vertical + horizontal · obra = sinalização específica também.\nNear: faixas horizontais pintadas, mas sem placas verticais — também irregular.\nFar: obra ativa com sinalização permanente, sem placas temporárias de desvio — falta parágrafo único.\nNão muda: vertical e horizontal são cumulativas na reabertura.\nCadeia: vizinho = art. 90 afasta sanção ao condutor por sinalização insuficiente.",
+            "destaques": ["vertical", "horizontal", "parágrafo único", "art. 90"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 88",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

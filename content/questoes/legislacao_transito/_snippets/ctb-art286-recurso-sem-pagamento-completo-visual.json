@@ -1,0 +1,345 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_processo_administrativo",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_286_recurso_sem_pagamento",
+    "enunciado": "Renata, proprietária residente em Campina Grande/PB, teve mantida pela JARI da STTP a penalidade de multa por estacionamento irregular. No prazo legal, protocolou recurso ao CETRAN-PB sem recolher o valor da multa. O setor de protocolo da STTP indeferiu a admissibilidade por ausência de comprovante de pagamento, sob o argumento de que a multa deve ser quitada antes do recurso. Renata sustenta que o pagamento não é condição para interpor o recurso. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O recurso é inadmissível sem comprovante de pagamento prévio da multa — condição de admissibilidade prevista para recurso contra penalidade de multa.",
+      "B": "O recurso é admissível sem recolhimento prévio da multa, nos termos do art. 286 do CTB; se Renata houver pago e o recurso for provido, fará jus à devolução atualizada, conforme o § 2º.",
+      "C": "O recurso é intempestivo, pois o prazo de trinta dias conta da lavratura do auto de infração, não da decisão da JARI, conforme o art. 288 do CTB.",
+      "D": "Renata deve recolher oitenta por cento do valor até o vencimento para obter admissibilidade do recurso, pois o desconto do art. 284 do CTB condiciona o acesso à via recursal."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Recurso contra multa sem pagamento prévio — art. 286, caput × § 2º (restituição se pagou e recurso procedente) × art. 284 (desconto de 80% é faculdade de pagamento, não admissibilidade).",
+      "fundamento_legal": "CTB, art. 286, caput: o recurso contra a imposição de multa poderá ser interposto no prazo legal, sem o recolhimento do seu valor. § 2º: se o infrator recolher o valor da multa e apresentar recurso, se julgada improcedente a penalidade, ser-lhe-á devolvida a importância paga, atualizada. Art. 284: o pagamento da multa poderá ser efetuado até a data do vencimento por oitenta por cento do seu valor — regra de desconto, distinta da admissibilidade recursal. Art. 288, § 2º (revogado): exigência de pagamento para recurso — não vigente.",
+      "passo_a_passo": [
+        "1. Caso: JARI manteve multa; Renata recorre ao CETRAN sem pagar; STTP indeferiu por falta de comprovante.",
+        "2. A erra por termo_unico (reproduz regra revogada de pagamento prévio — art. 286, caput, dispensa recolhimento); C erra por numero_vizinho (conta prazo de trinta dias da lavratura do AIT em vez da publicação ou notificação da decisão da JARI — art. 288); D erra por regra_excecao (confunde desconto de 80% do art. 284 com condição de admissibilidade do recurso).",
+        "3. B correta: art. 286, caput (recurso sem pagamento) + § 2º (restituição se pagou e recurso provido)."
+      ],
+      "pegadinha": "A IDECAN induz a exigir pagamento prévio para recorrer — regra antiga revogada; o art. 286 autoriza recurso sem recolhimento da multa.",
+      "macete": "RECURSO = PODE SEM PAGAR (286) · pagou + ganhou = devolve (§2) · 80% = desconto, não admissibilidade.",
+      "estudo_reverso": [
+        "CTB art. 286",
+        "CTB art. 284",
+        "CTB art. 288",
+        "CTB art. 287"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Recurso contra multa não exige pagamento prévio — art. 286, caput, dispensa recolhimento",
+      "eixos_legais": [
+        "CTB_art_286",
+        "CTB_art_284"
+      ],
+      "eixo_vizinho": "CTB_art_287",
+      "isca_por_alternativa": {
+        "A": "recurso inadmissível sem comprovante de pagamento prévio da multa",
+        "C": "prazo de trinta dias conta da lavratura do AIT, não da decisão da JARI",
+        "D": "deve recolher 80% até o vencimento para obter admissibilidade do recurso"
+      },
+      "eixos_mecanismo": [
+        "termo_unico",
+        "numero_vizinho",
+        "regra_excecao"
+      ],
+      "near_transfer": "Mesmo recurso, mas Renata pagou 80% antes de recorrer e o CETRAN dá provimento — faz jus à devolução atualizada pelo § 2º do art. 286.",
+      "far_transfer": "Condutor adere ao SNE e reconhece a infração para pagar 60% — hipótese do art. 284, § 1º, distinta da admissibilidade do recurso.",
+      "o_que_nao_muda": "O desconto de 80% até o vencimento permanece facultativo — não condiciona o direito de recorrer sem pagar.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "processo_administrativo",
+      "recurso",
+      "multa",
+      "sttp",
+      "cetran"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 50,
+      "fundamento_slug": "CTB_art_286_recurso_sem_pagamento",
+      "macete_visual": "Recurso sem pagar = admissível",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: recurso ao CETRAN sem pagar é admissível — art. 286 dispensa recolhimento prévio.",
+            "destaques": ["Gabarito B", "sem pagar", "admissível"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Exige pagamento para recorrer?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Recurso interposto no prazo?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Admissível sem pagamento", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim — Renata protocolou no CETRAN" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Recurso = pode sem pagar · pagou + ganhou = devolve · 80% ≠ admissibilidade.",
+            "destaques": ["sem pagar", "devolve", "80%"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB — Lei 9.503/97",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 275,
+      "fundamento_slug": "CTB_art_286_recurso_sem_pagamento",
+      "macete_visual": "Recurso sem pagar = admissível",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Recurso contra multa não exige pagamento prévio — art. 286, caput, dispensa recolhimento",
+        "eixos_legais": [
+          "CTB_art_286",
+          "CTB_art_284"
+        ],
+        "isca_por_alternativa": {
+          "A": "recurso inadmissível sem comprovante de pagamento prévio da multa",
+          "C": "prazo de trinta dias conta da lavratura do AIT, não da decisão da JARI",
+          "D": "deve recolher 80% até o vencimento para obter admissibilidade do recurso"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: recurso sem pagamento",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — inadmissível sem comprovante de pagamento prévio.\nC — prazo de trinta dias conta da lavratura do AIT, não da JARI.\nD — deve recolher 80% para obter admissibilidade.\n\nPegadinha: pagamento prévio não é condição de recurso — regra antiga revogada.",
+            "destaques": ["Gabarito B", "sem pagamento", "admissível"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "RECOLHIMENTO PRÉVIO: pagar a multa antes de recorrer — não é exigido pelo art. 286.\n\nADMISSIBILIDADE: exame formal do recurso — distinto do mérito da infração.\n\nDESCONTO DE 80%: faculdade de pagar até o vencimento — não condiciona o recurso.",
+            "destaques": ["RECOLHIMENTO", "ADMISSIBILIDADE", "DESCONTO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: exige pagamento para recorrer?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Recurso interposto no prazo legal?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Comprovante de pagamento exigido?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Admissível — gabarito B", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — protocolo no CETRAN" },
+              { "de": "p2", "para": "r1", "rotulo": "Não — art. 286 dispensa" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Pagamento × recurso",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Situação", "Regra"],
+            "linhas": [
+              {
+                "faixa": "Recurso sem pagar",
+                "classificacao": "Admissível — caput do art. 286",
+                "destaque": true
+              },
+              {
+                "faixa": "Pagou e recurso provido",
+                "classificacao": "Devolução atualizada — § 2º"
+              },
+              {
+                "faixa": "Pagamento até vencimento",
+                "classificacao": "80% — art. 284 (facultativo)"
+              },
+              {
+                "faixa": "Pagamento prévio obrigatório",
+                "classificacao": "Isca — regra revogada"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: pagar para recorrer",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Multa deve ser quitada antes do recurso",
+                "Art. 286: recurso sem recolhimento do valor"
+              ],
+              [
+                "Desconto de 80% condiciona admissibilidade",
+                "Art. 284 é faculdade de pagamento, não requisito recursal"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Reproduz exigência revogada de pagamento prévio"
+              ],
+              [
+                "C — numero_vizinho",
+                "Prazo de 30 dias conta da decisão da JARI — não da lavratura do AIT"
+              ],
+              [
+                "D — regra_excecao",
+                "Confunde desconto de 80% com admissibilidade do recurso"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "JARI manteve a multa",
+                "Renata pode recorrer ao CETRAN"
+              ],
+              [
+                "Protocolo sem comprovante de pagamento",
+                "Admissível pelo art. 286"
+              ],
+              [
+                "STTP indeferiu por falta de pagamento",
+                "Orientação incorreta"
+              ],
+              [
+                "Resultado",
+                "Alternativa B"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 286 × art. 284",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              [
+                "Art. 286 — caput",
+                "Recurso sem recolhimento prévio"
+              ],
+              [
+                "Art. 286 — § 2º",
+                "Restituição se pagou e recurso provido"
+              ],
+              [
+                "Art. 284 (vizinho)",
+                "Desconto de 80% — faculdade de pagamento"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "CTB, art. 286 — caput",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 286, caput",
+            "texto": "Art. 286. O recurso contra a imposição de multa poderá ser interposto no prazo legal, sem o recolhimento do seu valor.",
+            "trechos_grifados": [
+              {
+                "inicio": 86,
+                "fim": 117,
+                "motivo": "fluxo — recurso sem recolhimento prévio",
+                "texto_grifado": "sem o recolhimento do seu valor"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "CTB, art. 286 — § 2º",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 286, § 2º",
+            "texto": "§ 2º Se o infrator recolher o valor da multa e apresentar recurso, se julgada improcedente a penalidade, ser-lhe-á devolvida a importância paga, atualizada em UFIR ou por índice legal de correção dos débitos fiscais.",
+            "trechos_grifados": [
+              {
+                "inicio": 105,
+                "fim": 143,
+                "motivo": "mapa — restituição se pagou e recurso provido",
+                "texto_grifado": "ser-lhe-á devolvida a importância paga"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Recurso = pode sem pagar · pagou + ganhou = devolve · 80% = desconto, não admissibilidade.\nNear: Renata pagou 80% e CETRAN dá provimento — devolução atualizada pelo § 2º.\nFar: adesão ao SNE com reconhecimento para pagar 60% — hipótese distinta do art. 284, § 1º.\nNão muda: desconto de 80% até vencimento permanece facultativo.\nCadeia: vizinho = art. 287 (protocolo no domicílio, sem exigir pagamento).",
+            "destaques": ["sem pagar", "devolve", "287"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB — Lei 9.503/97",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

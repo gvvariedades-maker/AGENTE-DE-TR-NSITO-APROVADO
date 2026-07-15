@@ -1,0 +1,337 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_1003_mbft",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_1003_mbft_666_10",
+    "enunciado": "Agente da STTP em Campina Grande/PB fiscaliza utilitário com bagageiro metálico fixado no teto transportando escadas de alumínio devidamente amarradas. O manual do fabricante proíbe a instalação de bagageiros ou suportes no veículo. A largura total do conjunto é 1,95 m e a altura 2,65 m — ambas dentro dos limites legais de pesos e dimensões fixados em resolução do CONTRAN. O agente lavrou Auto de Infração de Trânsito com código 694-73 (art. 235 do CTB), entendendo tratar-se apenas de carga nas partes externas. O supervisor revisa o enquadramento. Considerando o MBFT (Res. CONTRAN 985/2022, alterada pela Res. 1.003/2023), a Res. CONTRAN 955/2022 e o CTB, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Deve manter o 694-73, pois as escadas no bagageiro caracterizam carga nas partes externas e as dimensões totais estão dentro dos limites legais de pesos e dimensões do CONTRAN.",
+      "B": "Deve substituir o enquadramento pelo 666-10 (art. 230, XII, do CTB), pois a instalação do bagageiro é proibida pelo fabricante — eixo que prevalece sobre a mera projeção de carga externa.",
+      "C": "Deve substituir o enquadramento pelo 682-31 (art. 231, IV, do CTB), pois o bagageiro no teto eleva o conjunto e configura dimensões superiores aos limites legais do CONTRAN.",
+      "D": "Não cabe autuação, pois a Res. CONTRAN 955/2022 autoriza transporte de carga em suporte apropriado no teto, dispensando enquadramento quando a carga está amarrada."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "MBFT ficha 666-10 (equipamento proibido pelo fabricante, art. 230, XII) × graduação 694-73/682-31 × vedação da Res. 955/2022, art. 2º, parágrafo único.",
+      "fundamento_legal": "Res. CONTRAN 955/2022, art. 2º, parágrafo único: \"Não devem ser instalados bagageiros ou suportes em veículos cujo fabricante não recomende ou proíba a sua instalação.\" MBFT (Res. CONTRAN 985/2022, alterada pela Res. 1.003/2023), ficha 666-10: veículo com equipamento adicional cuja instalação é proibida pelo fabricante do veículo — art. 230, XII, do CTB. CTB, art. 230, inciso XII: com equipamento ou acessório proibido. MBFT, ficha 694-73, \"Quando Autuar\", item 3: carga ultrapassando compartimento sem exceder limites legais de dimensão — hipótese distinta quando o suporte é vedado pelo fabricante.",
+      "passo_a_passo": [
+        "1. Caso: utilitário com bagageiro proibido pelo manual do fabricante, escadas amarradas no teto, dimensões 1,95 m × 2,65 m dentro dos limites legais — agente usou 694-73.",
+        "2. A erra por regra_excecao (trata só carga externa e ignora vedação do fabricante ao bagageiro — eixo 666-10); C erra por gravidade (aplica 682-31 por elevação do conjunto, mas largura e altura medidas estão dentro dos limites legais); D erra por termo_unico (generaliza permissão do art. 6º da Res. 955 e dispensa autuação apesar da proibição do parágrafo único do art. 2º).",
+        "3. B correta: bagageiro vedado pelo fabricante → 666-10 (art. 230, XII), independentemente de as dimensões totais estarem regulares."
+      ],
+      "pegadinha": "A IDECAN induz a 694-73 porque há carga no teto — mas o manual proíbe o bagageiro, e o MBFT reserva o 666-10 para equipamento vedado pelo fabricante.",
+      "macete": "Fabricante proíbe suporte = 666-10 · dentro limite + passou caçamba = 694-73.",
+      "estudo_reverso": [
+        "MBFT ficha 666-10 Res. 1003",
+        "Res. CONTRAN 955/2022 art. 2",
+        "CTB art. 230, XII"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "D_gradacao",
+      "pegadinha_em_uma_frase": "Carga no teto com bagageiro proibido pelo fabricante é 666-10, não 694-73",
+      "eixos_legais": [
+        "CONTRAN_1003_mbft_666_10",
+        "CONTRAN_955_art_2",
+        "CTB_art_230_XII"
+      ],
+      "eixo_vizinho": "CONTRAN_1003_mbft_694_73",
+      "isca_por_alternativa": {
+        "A": "mantém 694-73 porque escadas no bagageiro são carga externa dentro dos limites legais de dimensão",
+        "C": "substitui por 682-31 porque bagageiro no teto eleva dimensões acima dos limites legais do CONTRAN",
+        "D": "Res. 955 autoriza suporte no teto e dispensa autuação com carga amarrada"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "gravidade",
+        "termo_unico"
+      ],
+      "near_transfer": "Mesmo utilitário com bagageiro homologado pelo fabricante e escadas projetando 60 cm além da carroçaria, dimensões dentro do limite legal — aí sim 694-73.",
+      "far_transfer": "Caminhonete sem bagageiro, mas largura 2,55 m acima do limite legal com tubos na caçamba — 682-31, não 666-10.",
+      "o_que_nao_muda": "Vedação do fabricante ao suporte dispara 666-10 antes da graduação dimensional 694-73/682-31.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "mbft",
+      "resolucao_1003",
+      "resolucao_955",
+      "666-10",
+      "694-73",
+      "bagageiro",
+      "fabricante",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "tabela_gradacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_1003_mbft_666_10",
+      "macete_visual": "Fabricante proíbe = 666-10",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: bagageiro proibido pelo manual → 666-10, não 694-73 por carga externa.",
+            "destaques": ["Gabarito B", "666-10", "fabricante"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Trilha de enquadramento MBFT",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Situação", "Código"],
+            "linhas": [
+              {
+                "faixa": "Suporte proibido pelo fabricante",
+                "classificacao": "666-10 — art. 230, XII",
+                "destaque": true
+              },
+              {
+                "faixa": "Projeção além da caçamba, dentro limites legais",
+                "classificacao": "694-73 — art. 235"
+              },
+              {
+                "faixa": "Excede limites legais de dimensão",
+                "classificacao": "682-31 — art. 231, IV"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Fabricante proíbe suporte = 666-10.\nDentro limite + passou caçamba = 694-73.",
+            "destaques": ["666-10", "694-73", "fabricante"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.003/2023",
+          "path": "https://www.in.gov.br/web/dou/-/resolucao-contran-n-1-003-de-21-de-dezembro-de-2023-1-1"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "tabela_gradacao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "todos",
+      "duracao_estimada_seg": 265,
+      "fundamento_slug": "CONTRAN_1003_mbft_666_10",
+      "macete_visual": "Fabricante proíbe = 666-10 · depois 694/682",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: carga no teto não basta",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — mantém 694-73 porque escadas no bagageiro são carga externa dentro dos limites legais.\nC — substitui por 682-31 porque bagageiro no teto eleva dimensões acima dos limites legais.\nD — Res. 955 autoriza suporte no teto e dispensa autuação com carga amarrada.\n\nPegadinha: o manual proíbe o bagageiro — eixo 666-10 antes da graduação 694-73.",
+            "destaques": ["Gabarito B", "666-10", "manual"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "666-10: equipamento cuja instalação o fabricante proíbe — art. 230, XII.\n\n694-73: carga ultrapassa compartimento, mas dimensões totais legais — art. 235.\n\n682-31: dimensões ou carga excedem limites legais do CONTRAN — art. 231, IV.",
+            "destaques": ["666-10", "694-73", "682-31"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Graduação: qual código primeiro?",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Gatilho", "Enquadramento MBFT"],
+            "linhas": [
+              {
+                "faixa": "Fabricante proíbe bagageiro ou suporte",
+                "classificacao": "666-10 — art. 230, XII",
+                "destaque": true
+              },
+              {
+                "faixa": "Projeção além da caçamba, dentro limites legais",
+                "classificacao": "694-73 — art. 235"
+              },
+              {
+                "faixa": "Largura ou altura acima do limite legal",
+                "classificacao": "682-31 — art. 231, IV"
+              },
+              {
+                "faixa": "Caso — bagageiro vedado, 1,95 m × 2,65 m",
+                "classificacao": "666-10"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: carga externa = 694-73?",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Escadas no teto sempre geram 694-73",
+                "Suporte proibido pelo fabricante → 666-10 primeiro"
+              ],
+              [
+                "Dimensões regulares dispensam autuação",
+                "Vedação do fabricante independe dos limites legais medidos"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Mantém 694-73 só pela carga externa — ignora proibição do fabricante ao bagageiro"
+              ],
+              [
+                "C — gravidade",
+                "Aplica 682-31 por elevação — 1,95 m e 2,65 m estão dentro dos limites legais"
+              ],
+              [
+                "D — termo_unico",
+                "Generaliza permissão de suporte no teto — parágrafo único do art. 2º veda instalação"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dado do caso", "Conclusão"],
+            "linhas": [
+              [
+                "Manual proíbe bagageiro no teto",
+                "Gatilho 666-10"
+              ],
+              [
+                "Escadas amarradas no suporte vedado",
+                "Não redireciona para 694-73"
+              ],
+              [
+                "Largura 1,95 m e altura 2,65 m legais",
+                "682-31 não se aplica"
+              ],
+              [
+                "Resultado",
+                "Alternativa B — 666-10"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Res. 955 × MBFT 666-10",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              [
+                "Res. 955/2022, art. 2º, parágrafo único",
+                "Veda bagageiro quando fabricante proíbe instalação"
+              ],
+              [
+                "MBFT ficha 666-10",
+                "Tipifica art. 230, XII, do CTB"
+              ],
+              [
+                "MBFT ficha 694-73",
+                "Vizinho — só após suporte lícito e projeção dentro do limite legal"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Res. 955/2022, art. 2º, parágrafo único",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 955/2022, art. 2º, parágrafo único",
+            "texto": "Parágrafo único. Não devem ser instalados bagageiros ou suportes em veículos cujo fabricante não recomende ou proíba a sua instalação.",
+            "trechos_grifados": [
+              {
+                "inicio": 17,
+                "fim": 64,
+                "motivo": "contraste — vedação do bagageiro no caso",
+                "texto_grifado": "Não devem ser instalados bagageiros ou suportes"
+              },
+              {
+                "inicio": 77,
+                "fim": 133,
+                "motivo": "caso — manual do fabricante proíbe instalação",
+                "texto_grifado": "cujo fabricante não recomende ou proíba a sua instalação"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "CTB, art. 230, XII",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 230, inciso XII",
+            "texto": "XII - com equipamento ou acessório proibido;",
+            "trechos_grifados": [
+              {
+                "inicio": 6,
+                "fim": 43,
+                "motivo": "gradacao — tipificação do 666-10",
+                "texto_grifado": "com equipamento ou acessório proibido"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Fabricante proíbe suporte = 666-10 · dentro limite + passou caçamba = 694-73.\nNear: bagageiro permitido pelo fabricante com escadas projetando 60 cm — 694-73.\nFar: sem bagageiro, largura 2,55 m na caçamba — 682-31.\nNão muda: vedação do fabricante precede graduação 694/682.\nCadeia: vizinho = 694-73 quando suporte é lícito e dimensões legais.",
+            "destaques": ["666-10", "694-73", "682-31"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 955/2022",
+          "path": "https://www.in.gov.br/web/dou/-/resolucao-contran-n-955-de-28-de-marco-de-2022-390285990"
+        },
+        {
+          "rotulo": "CTB art. 230",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,331 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_veiculos",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "assertivas",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_108_precario",
+    "enunciado": "Em distrito rural de Campina Grande/PB sem linha regular de ônibus, a Prefeitura autorizou, há dezoito meses, o transporte diário de trabalhadores rurais em utilitário de categoria mista, com base na ausência de serviço coletivo regular. O supervisor da STTP analisa a legalidade da autorização e a obrigação de implantar transporte regular. Sobre o transporte de passageiros em veículos de carga ou misto no CTB (arts. 108 e 109), analise as assertivas e assinale a alternativa CORRETA:\n\nI. O art. 108 permite autorização precária de transporte de passageiros em veículo de carga ou misto onde não houver linha regular de ônibus.\n\nII. A autorização pode ser renovada indefinidamente enquanto não houver linha regular de ônibus na localidade.\n\nIII. Decorrido o prazo máximo da autorização, a autoridade responsável deve implantar serviço regular de transporte coletivo de passageiros.",
+    "alternativas": {
+      "A": "Está correto o que se afirma em II, apenas — a ausência de ônibus regular prorroga a autorização enquanto perdurar a lacuna.",
+      "B": "Está correto o que se afirma em I e II, apenas — autorização precária e renovação indefinida sem linha regular.",
+      "C": "Está correto o que se afirma em I e III, apenas — autorização precária com prazo máximo e dever de implantar transporte regular.",
+      "D": "Está correto o que se afirma em I, II e III — inclusive renovação indefinida da autorização precária."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Art. 108 (autorização precária em veículo de carga ou misto sem linha regular) × parágrafo único (prazo máximo de 12 meses e dever de implantar transporte coletivo) — II falsa por renovação indefinida.",
+      "fundamento_legal": "CTB, art. 108: onde não houver linha regular de ônibus, a autoridade com circunscrição sobre a via poderá autorizar, a título precário, o transporte de passageiros em veículo de carga ou misto, desde que obedecidas as condições de segurança estabelecidas neste Código e pelo CONTRAN. Parágrafo único: a autorização citada no caput não poderá exceder a doze meses, prazo a partir do qual a autoridade pública responsável deverá implantar o serviço regular de transporte coletivo de passageiros, em conformidade com a legislação pertinente e com os dispositivos deste Código. CTB, art. 109: transporte de carga em veículo de passageiros conforme normas do CONTRAN — dispositivo distinto do transporte precário de passageiros em carga/misto.",
+      "passo_a_passo": [
+        "1. I correta — art. 108 autoriza precariamente passageiros em carga/misto sem linha regular; II falsa — parágrafo único limita a 12 meses, não renovação indefinida; III correta — após o prazo máximo, deve implantar transporte coletivo regular.",
+        "2. A erra por regra_excecao (marca só II falsa e ignora I e III corretas); B erra por termo_unico (aceita I mas compra II de renovação indefinida); D erra por gravidade (trata II falsa como correta junto com I e III).",
+        "3. Gabarito C: I e III corretas."
+      ],
+      "pegadinha": "A IDECAN induz a crer que a ausência de ônibus regular autoriza prorrogação indefinida — mas o parágrafo único do art. 108 fixa prazo máximo de doze meses.",
+      "macete": "Sem ônibus = precário em carga/misto · máx. 12 meses · depois = coletivo regular.",
+      "estudo_reverso": [
+        "CTB art. 108",
+        "CTB art. 108 parágrafo único",
+        "CTB art. 109"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "B_assertivas",
+      "pegadinha_em_uma_frase": "Autorização precária não renova indefinidamente — prazo máximo de doze meses no parágrafo único",
+      "eixos_legais": [
+        "CTB_art_108",
+        "CTB_art_108_par_unico",
+        "CTB_art_109"
+      ],
+      "eixo_vizinho": "CTB_art_109",
+      "isca_por_alternativa": {
+        "A": "ausência de ônibus regular prorroga a autorização enquanto perdurar a lacuna",
+        "B": "aceita autorização precária e renovação indefinida sem linha regular",
+        "D": "trata renovação indefinida da autorização precária como correta junto com I e III"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico",
+        "gravidade"
+      ],
+      "near_transfer": "Mesma localidade com autorização há onze meses — ainda dentro do prazo máximo do parágrafo único.",
+      "far_transfer": "Transporte de ferramentas no porta-malas de micro-ônibus de passageiros — art. 109 e normas do CONTRAN, não art. 108.",
+      "o_que_nao_muda": "Precário em carga/misto só sem linha regular de ônibus — e nunca além de doze meses sem implantar coletivo.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "veiculos",
+      "art_108",
+      "transporte_coletivo",
+      "precario",
+      "utilitario",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "matriz_assertivas",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CTB_art_108_precario",
+      "macete_visual": "Precário · 12 meses · coletivo",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (I e III). II falsa — precário não renova indefinidamente sem ônibus regular.",
+            "destaques": ["Gabarito C", "precário", "12 meses"]
+          }
+        },
+        {
+          "id": "matriz",
+          "titulo": "Mapa I–III",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              { "id": "I", "texto": "Autorização precária sem linha regular — correta", "correto": true },
+              { "id": "II", "texto": "Renovação indefinida sem ônibus — ERRADA", "correto": false },
+              { "id": "III", "texto": "Após prazo máximo, implantar coletivo — correta", "correto": true }
+            ],
+            "gabarito_resumo": "I e III → alternativa C"
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Sem ônibus = precário em carga/misto.\nMáx. 12 meses · depois = coletivo regular.",
+            "destaques": ["precário", "12 meses", "coletivo"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 108",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "matriz_assertivas",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CTB_art_108_precario",
+      "macete_visual": "Precário · 12 meses · coletivo",
+      "meta": {
+        "padrao_familia": "B_assertivas",
+        "pegadinha_em_uma_frase": "Autorização precária não renova indefinidamente — prazo máximo de doze meses no parágrafo único",
+        "eixos_legais": [
+          "CTB_art_108",
+          "CTB_art_108_par_unico",
+          "CTB_art_109"
+        ],
+        "isca_por_alternativa": {
+          "A": "ausência de ônibus regular prorroga a autorização enquanto perdurar a lacuna",
+          "B": "aceita autorização precária e renovação indefinida sem linha regular",
+          "D": "trata renovação indefinida da autorização precária como correta junto com I e III"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: utilitário há 18 meses",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (I e III corretas).\n\nA — ausência de ônibus prorroga autorização enquanto durar a lacuna.\nB — precário e renovação indefinida sem linha regular.\nD — trata I, II e III como corretas.\n\nPegadinha: precário tem prazo máximo de doze meses.",
+            "destaques": ["Gabarito C", "18 meses", "precário"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "LINHA REGULAR DE ÔNIBUS: serviço coletivo formal — ausência abre hipótese do art. 108.\n\nAUTORIZAÇÃO PRECÁRIA: solução temporária em veículo de carga ou misto — não substitui coletivo.\n\nVEÍCULO MISTO: espécie que combina carga e passageiros — utilitário do caso.",
+            "destaques": ["LINHA REGULAR", "PRECÁRIA", "MISTO"]
+          }
+        },
+        {
+          "id": "matriz",
+          "titulo": "Classificar I–III",
+          "secao": "metodo",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              { "id": "I", "texto": "Precário em carga/misto sem ônibus — correta", "correto": true },
+              { "id": "II", "texto": "Renovação indefinida — ERRADA", "correto": false },
+              { "id": "III", "texto": "Implantar coletivo após prazo — correta", "correto": true }
+            ],
+            "gabarito_resumo": "I e III → alternativa C"
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Precário × transporte regular",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Modalidade", "Regra"],
+            "linhas": [
+              [
+                "Transporte coletivo regular",
+                "Linha formal de ônibus — regra geral"
+              ],
+              [
+                "Autorização precária — art. 108",
+                "Só sem linha regular · carga ou misto"
+              ],
+              [
+                "Prazo máximo",
+                "Doze meses — parágrafo único"
+              ],
+              [
+                "Após o prazo",
+                "Implantar serviço coletivo regular"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Assertiva-isca: II",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que a II afirma ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Renovação indefinida enquanto não houver ônibus",
+                "Autorização não pode exceder doze meses"
+              ],
+              [
+                "Ausência de linha regular prorroga o precário",
+                "Após o prazo, deve implantar transporte coletivo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Marca só II falsa — ignora I e III corretas sobre precário e implantação de coletivo"
+              ],
+              [
+                "B — termo_unico",
+                "Aceita I correta mas compra II de renovação indefinida"
+              ],
+              [
+                "D — gravidade",
+                "Trata II falsa como correta junto com I e III"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Montando o gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Assertiva", "Resultado"],
+            "linhas": [
+              [
+                "I — precário sem linha regular",
+                "Correta"
+              ],
+              [
+                "II — renovação indefinida",
+                "Errada — 18 meses excedem teto"
+              ],
+              [
+                "III — implantar coletivo após prazo",
+                "Correta"
+              ],
+              [
+                "Combinação",
+                "Alternativa C — I e III"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "CTB art. 108",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 108",
+            "texto": "Art. 108. Onde não houver linha regular de ônibus, a autoridade com circunscrição sobre a via poderá autorizar, a título precário, o transporte de passageiros em veículo de carga ou misto, desde que obedecidas as condições de segurança estabelecidas neste Código e pelo CONTRAN.",
+            "trechos_grifados": [
+              {
+                "inicio": 10,
+                "fim": 49,
+                "motivo": "matriz — hipótese do distrito rural sem ônibus",
+                "texto_grifado": "Onde não houver linha regular de ônibus"
+              },
+              {
+                "inicio": 101,
+                "fim": 187,
+                "motivo": "caso — utilitário misto com trabalhadores rurais",
+                "texto_grifado": "autorizar, a título precário, o transporte de passageiros em veículo de carga ou misto"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "CTB art. 108, parágrafo único",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 108, parágrafo único",
+            "texto": "Parágrafo único. A autorização citada no caput não poderá exceder a doze meses, prazo a partir do qual a autoridade pública responsável deverá implantar o serviço regular de transporte coletivo de passageiros, em conformidade com a legislação pertinente e com os dispositivos deste Código.",
+            "trechos_grifados": [
+              {
+                "inicio": 47,
+                "fim": 78,
+                "motivo": "contraste — II erra ao prever renovação indefinida",
+                "texto_grifado": "não poderá exceder a doze meses"
+              },
+              {
+                "inicio": 136,
+                "fim": 208,
+                "motivo": "caso — obrigação após os 18 meses do enunciado",
+                "texto_grifado": "deverá implantar o serviço regular de transporte coletivo de passageiros"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Sem ônibus = precário em carga/misto · máx. 12 meses · depois = coletivo regular.\nNear: autorização há onze meses — ainda dentro do teto.\nFar: carga no porta-malas de micro-ônibus — art. 109, não precário do art. 108.\nNão muda: precário nunca ultrapassa doze meses sem implantar coletivo.\nCadeia: vizinho = art. 109 (carga em veículo de passageiros).",
+            "destaques": ["12 meses", "coletivo", "art. 109"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 108",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,347 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_procedimentos_operacionais",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_985_mbft_concorrentes",
+    "enunciado": "Durante fiscalização móvel da STTP em Campina Grande/PB, agente presencia automóvel ultrapassando fila de veículos pelo acostamento da Av. Assis Chateaubriand. Lavra dois Autos de Infração de Trânsito distintos — um pelo art. 202 do CTB (ultrapassar pelo acostamento) e outro pelo art. 193 (transitar com o veículo pelo acostamento) — entendendo tratar-se de condutas autônomas e independentes. O supervisor revisa a lavratura. Considerando o MBFT (Resolução CONTRAN nº 985/2022), seção 7 — Autuação, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Mantêm-se os dois AITs, pois ultrapassar pelo acostamento e transitar pelo acostamento são tipificações distintas que exigem autuação separada de cada conduta.",
+      "B": "Deve lavrar-se um único AIT pela conduta principal do art. 202 do CTB, pois as infrações são concorrentes — ultrapassar pelo acostamento implica necessariamente transitar pelo acostamento.",
+      "C": "Deve lavrar-se um único AIT apenas pelo art. 193 do CTB, por ser a infração de base que caracteriza o uso irregular do acostamento.",
+      "D": "A STTP deve anular os AITs e encaminhar o caso ao DETRAN-PB, pois a fiscalização de ultrapassagem pelo acostamento em via urbana compete exclusivamente ao órgão estadual de trânsito."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "MBFT seção 7 — infrações concorrentes (exemplo arts. 202/193: um único AIT na conduta principal) × distinção de concomitantes.",
+      "fundamento_legal": "MBFT (Res. CONTRAN 985/2022), seção 7: \"São concorrentes aquelas em que o cometimento de uma infração implica necessariamente o cometimento de outra. Nesses casos, o agente deverá fazer um único AIT.\" Exemplo: \"Ultrapassar pelo acostamento (art. 202), implica necessariamente a prática da infração de transitar com o veículo pelo acostamento (art. 193). Neste caso, autuar apenas no art. 202.\"",
+      "passo_a_passo": [
+        "1. Caso: automóvel ultrapassa fila pelo acostamento na Av. Assis Chateaubriand — agente lavra dois AITs (202 e 193) na mesma conduta.",
+        "2. A erra por regra_excecao (trata 202 e 193 como concomitantes autônomas — o MBFT exemplifica como concorrentes com um único AIT); C erra por gravidade (inverte a conduta principal e autua só no 193); D erra por competencia_snt (atribui fiscalização exclusiva ao DETRAN-PB — a STTP fiscaliza na via municipal).",
+        "3. B correta: concorrentes — um AIT pelo art. 202, que absorve o art. 193."
+      ],
+      "pegadinha": "A IDECAN induz a dois AITs porque há dois artigos do CTB — mas o MBFT trata 202 e 193 como concorrentes e manda autuar apenas na conduta principal.",
+      "macete": "CONCORRENTE = 1 AIT · principal absorve · 202+193 = só 202 · ≠ concomitante.",
+      "estudo_reverso": [
+        "MBFT seção 7 concorrentes",
+        "CTB art. 202",
+        "CTB art. 193"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Ultrapassar e transitar pelo acostamento não geram dois AITs — são concorrentes e autua-se só no art. 202",
+      "eixos_legais": [
+        "CONTRAN_985_mbft_concorrentes",
+        "CTB_art_202"
+      ],
+      "eixo_vizinho": "CONTRAN_985_mbft_concomitantes",
+      "isca_por_alternativa": {
+        "A": "dois AITs separados porque ultrapassar e transitar pelo acostamento são tipificações autônomas",
+        "C": "um AIT apenas pelo art. 193 por ser a infração de base do uso do acostamento",
+        "D": "encaminha o caso ao DETRAN-PB por entender que fiscalização de ultrapassagem pelo acostamento compete exclusivamente ao órgão estadual"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "gravidade",
+        "competencia_snt"
+      ],
+      "near_transfer": "Mesmo condutor, na mesma ultrapassagem, também deixa de usar a seta — conduta concomitante independente: dois AITs (202 e falta de seta).",
+      "far_transfer": "Veículo estacionado na esquina com CRLV vencido e sem condutor — infrações não simultâneas: autua-se só pelo estacionamento.",
+      "o_que_nao_muda": "Concorrentes exigem um único AIT na conduta principal quando uma infração implica necessariamente a outra.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "mbft",
+      "resolucao_985",
+      "concorrentes",
+      "acostamento",
+      "autuacao",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_985_mbft_concorrentes",
+      "macete_visual": "CONCORRENTE = 1 AIT · 202 absorve 193",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: ultrapassagem pelo acostamento gera um AIT na conduta principal — concorrente absorve transitar pelo acostamento.",
+            "destaques": ["Gabarito B", "concorrentes", "202"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: dois artigos = dois AITs?",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "202 e 193 sempre exigem AITs separados",
+                "MBFT: concorrentes — um AIT na conduta principal"
+              ],
+              [
+                "Concorrente = concomitante",
+                "Concomitante = N AITs; concorrente = 1 AIT"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CONCORRENTE = 1 AIT.\n202 absorve 193.\n≠ concomitante.",
+            "destaques": ["1 AIT", "202", "concomitante"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 985/2022 — MBFT",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 985, DE 15 DE DEZEMBRO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "todos",
+      "duracao_estimada_seg": 265,
+      "fundamento_slug": "CONTRAN_985_mbft_concorrentes",
+      "macete_visual": "CONCORRENTE = 1 AIT · 202 absorve 193",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: dois AITs no acostamento",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — dois AITs separados porque ultrapassar e transitar pelo acostamento seriam tipificações autônomas.\nC — um AIT só pela tipificação de transitar pelo acostamento por ser a infração de base.\nD — encaminha ao DETRAN-PB por entender que a fiscalização compete exclusivamente ao órgão estadual.\n\nPegadinha: dois tipos infracionais não significam dois autos — o MBFT exemplifica ultrapassagem e trânsito no acostamento como concorrentes.",
+            "destaques": ["Gabarito B", "concorrentes", "202"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CONCORRENTES: cometimento de uma infração implica necessariamente a outra — um único AIT na conduta principal.\n\nCONCOMITANTES: condutas independentes — tantos AITs quantas infrações.\n\nCONDUTA PRINCIPAL: tipificação que absorve a concorrente — no exemplo do MBFT, o art. 202.",
+            "destaques": ["CONCORRENTES", "CONCOMITANTES", "PRINCIPAL"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: quantos AITs?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Ultrapassagem pelo acostamento implica trânsito no acostamento?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Agente lavrou dois autos separados (202 e 193)?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Um AIT pela conduta principal — alternativa B",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — caso da Av. Assis Chateaubriand" },
+              { "de": "p2", "para": "r1", "rotulo": "Concorrentes exigem um só auto" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Concorrente × concomitante × não simultânea",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Tipo MBFT", "Regra de AIT"],
+            "linhas": [
+              { "faixa": "Concorrentes (202/193)", "classificacao": "Um AIT — autuar na conduta principal (202)", "destaque": true },
+              { "faixa": "Concomitantes (167 + 252)", "classificacao": "Um AIT por conduta independente" },
+              { "faixa": "Não simultâneas (estacionamento + documento)", "classificacao": "Um AIT — só a compatível com o fato" },
+              { "faixa": "Caso — ultrapassagem pelo acostamento", "classificacao": "Um AIT pelo art. 202" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: confundir com concomitante",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Dois artigos do CTB = dois AITs sempre",
+                "Concorrentes: uma conduta implica a outra — um AIT"
+              ],
+              [
+                "Autuar no art. 193 por ser a base",
+                "MBFT manda autuar apenas no art. 202"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Trata 202 e 193 como concomitantes autônomas — MBFT exemplifica como concorrentes"
+              ],
+              [
+                "C — gravidade",
+                "Inverte a conduta principal e autua só no art. 193"
+              ],
+              [
+                "D — competencia_snt",
+                "Atribui fiscalização exclusiva ao DETRAN-PB — STTP autua na via municipal"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "Automóvel ultrapassa fila pelo acostamento",
+                "Art. 202 + art. 193 implicados"
+              ],
+              [
+                "Agente lavra dois AITs distintos",
+                "Viola regra das concorrentes"
+              ],
+              [
+                "MBFT exemplifica 202/193",
+                "Um AIT apenas no art. 202"
+              ],
+              [
+                "Resultado",
+                "Alternativa B"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Regra concorrente × exemplo 202/193",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              [
+                "MBFT seção 7 — concorrentes",
+                "Uma infração implica a outra → um único AIT"
+              ],
+              [
+                "MBFT — exemplo 202/193",
+                "Autuar apenas no art. 202 (conduta principal)"
+              ],
+              [
+                "MBFT — concomitantes",
+                "Vizinho — condutas independentes geram N AITs"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "MBFT — regra das concorrentes",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7",
+            "texto": "São concorrentes aquelas em que o cometimento de uma infração implica necessariamente o cometimento de outra. Nesses casos, o agente deverá fazer um único AIT.",
+            "trechos_grifados": [
+              {
+                "inicio": 62,
+                "fim": 108,
+                "motivo": "contraste — definição de concorrente",
+                "texto_grifado": "implica necessariamente o cometimento de outra"
+              },
+              {
+                "inicio": 124,
+                "fim": 158,
+                "motivo": "fluxo — um auto apenas",
+                "texto_grifado": "o agente deverá fazer um único AIT"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "MBFT — exemplo 202/193",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "MBFT (Res. CONTRAN 985/2022), seção 7 — exemplo",
+            "texto": "Ultrapassar pelo acostamento (art. 202), implica necessariamente a prática da infração de transitar com o veículo pelo acostamento (art. 193). Neste caso, autuar apenas no art. 202.",
+            "trechos_grifados": [
+              {
+                "inicio": 0,
+                "fim": 39,
+                "motivo": "caso — ultrapassagem na Av. Assis Chateaubriand",
+                "texto_grifado": "Ultrapassar pelo acostamento (art. 202)"
+              },
+              {
+                "inicio": 155,
+                "fim": 180,
+                "motivo": "mapa — conduta principal do gabarito",
+                "texto_grifado": "autuar apenas no art. 202"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CONCORRENTE = 1 AIT · 202 absorve 193 · ≠ concomitante.\nNear: mesma ultrapassagem sem seta — concomitante → AIT adicional pela seta.\nFar: carro na esquina com CRLV vencido sem condutor — não simultâneas → só estacionamento.\nNão muda: concorrente = uma conduta implica a outra = um AIT na principal.\nCadeia: vizinho = concomitantes (167 + 252 = dois autos).",
+            "destaques": ["1 AIT", "202", "concomitante"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 985/2022 — MBFT",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 985, DE 15 DE DEZEMBRO DE 2022.pdf"
+        }
+      ]
+    }
+  }
+]

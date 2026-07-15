@@ -1,0 +1,321 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_993_equipamentos",
+    "tipo": "assertivas",
+    "estilo_idecan": "assertivas",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_993_anexo_I_isencoes_estepe",
+    "enunciado": "Agente da STTP em Campina Grande/PB fiscaliza frota de ônibus do transporte urbano metropolitano e caminhões de coleta de lixo quanto aos equipamentos do Anexo I da Resolução CONTRAN nº 993/2023. Sobre as isenções de roda sobressalente, macaco e chave de roda previstas nas notas do Anexo I, analise as assertivas e assinale a alternativa CORRETA:\n\nI. A roda sobressalente permanece obrigatória para ônibus integrantes do sistema de transporte urbano de passageiros em região metropolitana, sem isenção prevista no Anexo I.\n\nII. A nota (35) do Anexo I dispensa roda sobressalente, macaco e chave de roda em caminhões com características específicas para transporte de lixo e de concreto.\n\nIII. A nota (32) do Anexo I dispensa roda sobressalente, macaco e chave de roda em veículos de carroçaria blindada para transporte de valores.",
+    "alternativas": {
+      "A": "Está correto o que se afirma em II, apenas — acerta a isenção para caminhões de lixo/concreto, mas ignora a III sobre transporte de valores.",
+      "B": "Está correto o que se afirma em I e II, apenas — inclui obrigatoriedade de estepe em ônibus urbano metropolitano e isenção para caminhões de lixo.",
+      "C": "Está correto o que se afirma em II e III, apenas — isenções da nota (35) para lixo/concreto e da nota (32) para carroçaria blindada de valores.",
+      "D": "Está correto o que se afirma em I, II e III — inclusive estepe obrigatório em ônibus urbano metropolitano e isenções nas notas (32) e (35)."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Isenções de roda sobressalente, macaco e chave de roda no Anexo I, Tabela 1 — nota (36) × nota (35) × nota (32), à luz do art. 3º (equipamentos obrigatórios) e art. 8º (penalidades).",
+      "fundamento_legal": "Res. CONTRAN 993/2023, Anexo I, notas: (32) Isento nos veículos de carroçaria blindada para transporte de valores. (35) Isento em veículo dotados de características específicas para transporte de lixo e de concreto. (36) Isento para veículo que integram o sistema de transporte urbano de passageiros, no municípios, regiões e microrregiões metropolitanas ou conglomerados urbanos. Art. 3º, caput: veículos devem estar dotados dos equipamentos obrigatórios do Anexo I, conforme o caso — com as isenções das notas. Art. 8º: penalidades do art. 230 do CTB quando desprovidos dos requisitos, respeitadas exceções da Resolução.",
+      "passo_a_passo": [
+        "1. I falsa — nota (36) dispensa estepe/macaco/chave em ônibus do transporte urbano metropolitano; II correta — nota (35) para lixo/concreto; III correta — nota (32) para blindados de valores.",
+        "2. A erra por termo_unico (marca só II e ignora III correta); B erra por regra_excecao (inclui I falsa que nega isenção do ônibus urbano pela nota 36); D erra por gravidade (compra I falsa junto com II e III corretas).",
+        "3. Gabarito C: II e III corretas — leitura fiel das notas (32) e (35), sem aderir à I."
+      ],
+      "pegadinha": "A IDECAN induz a marcar B porque ônibus urbano costuma ter fiscalização de estepe — mas a nota (36) dispensa roda sobressalente, macaco e chave nesse sistema de transporte metropolitano.",
+      "macete": "993 ISENÇÕES: (36) ônibus urbano · (35) lixo/concreto · (32) valores blindado · demais = Anexo I vale.",
+      "estudo_reverso": [
+        "Res. CONTRAN 993/2023 Anexo I notas 32, 35, 36",
+        "Res. CONTRAN 993/2023 art. 3",
+        "Res. CONTRAN 993/2023 art. 8",
+        "CTB art. 230"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "B_assertivas",
+      "pegadinha_em_uma_frase": "I nega isenção do ônibus urbano — nota 36 dispensa estepe/macaco/chave no transporte metropolitano",
+      "eixos_legais": [
+        "CONTRAN_993_anexo_I_nota_36",
+        "CONTRAN_993_anexo_I_nota_35",
+        "CONTRAN_993_anexo_I_nota_32"
+      ],
+      "eixo_vizinho": "CONTRAN_993_art_8",
+      "isca_por_alternativa": {
+        "A": "marca só II e ignora III correta sobre carroçaria blindada de valores",
+        "B": "compra I falsa que nega isenção do ônibus urbano metropolitano pela nota 36",
+        "D": "compra I falsa junto com II e III corretas"
+      },
+      "eixos_mecanismo": [
+        "termo_unico",
+        "regra_excecao",
+        "gravidade"
+      ],
+      "near_transfer": "Mesmo ônibus, mas em linha intermunicipal fora do sistema urbano metropolitano — nota 36 não alcança; estepe volta a ser exigível conforme a Tabela 1.",
+      "far_transfer": "Automóvel elétrico com kit de reparo homologado — nota 34 dispensa estepe/macaco/chave, cenário distinto de ônibus urbano ou caminhão de lixo.",
+      "o_que_nao_muda": "Isenção é por nota do Anexo I para equipamentos específicos — os demais itens da Tabela 1 continuam obrigatórios e sujeitos ao § 2º do art. 3º.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "contran_993",
+      "anexo_i",
+      "estepe",
+      "isencao",
+      "onibus_urbano",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "matriz_assertivas",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_993_anexo_I_isencoes_estepe",
+      "macete_visual": "(36) urbano · (35) lixo · (32) valores",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (II e III). I falsa — ônibus urbano metropolitano tem isenção pela nota 36.",
+            "destaques": ["Gabarito C", "nota 36", "ônibus urbano"]
+          }
+        },
+        {
+          "id": "matriz",
+          "titulo": "Mapa I–III",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              { "id": "I", "texto": "Estepe obrigatório em ônibus urbano — ERRADA (nota 36)", "correto": false },
+              { "id": "II", "texto": "Nota 35 — lixo e concreto — correta", "correto": true },
+              { "id": "III", "texto": "Nota 32 — valores blindado — correta", "correto": true }
+            ],
+            "gabarito_resumo": "II e III → alternativa C"
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "(36) ônibus urbano · (35) lixo/concreto · (32) valores blindado.",
+            "destaques": ["36", "35", "32"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 993/2023 — Anexo I",
+          "path": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9932023Anexo.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "matriz_assertivas",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 275,
+      "fundamento_slug": "CONTRAN_993_anexo_I_isencoes_estepe",
+      "macete_visual": "(36) urbano · (35) lixo · (32) valores",
+      "meta": {
+        "padrao_familia": "B_assertivas",
+        "pegadinha_em_uma_frase": "I nega isenção do ônibus urbano — nota 36 dispensa estepe/macaco/chave no transporte metropolitano",
+        "eixos_legais": [
+          "CONTRAN_993_anexo_I_nota_36",
+          "CONTRAN_993_anexo_I_nota_35",
+          "CONTRAN_993_anexo_I_nota_32"
+        ],
+        "isca_por_alternativa": {
+          "A": "marca só II e ignora III correta sobre carroçaria blindada de valores",
+          "B": "compra I falsa que nega isenção do ônibus urbano metropolitano pela nota 36",
+          "D": "compra I falsa junto com II e III corretas"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: ônibus urbano e lixo",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (II e III corretas).\n\nA — marca só II e ignora III sobre valores blindados.\nB — compra I falsa (estepe obrigatório em ônibus urbano).\nD — trata I, II e III como corretas.\n\nPegadinha: ônibus do transporte urbano metropolitano tem isenção pela nota 36.",
+            "destaques": ["Gabarito C", "nota 36", "ônibus urbano"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "RODA SOBRESSALENTE: pneu e aro de reserva — linha da Tabela 1 sujeita às notas de isenção.\n\nNOTAS DO ANEXO I: exceções numeradas que dispensam equipamentos em hipóteses específicas — leitura obrigatória na prova.\n\nTRANSPORTE URBANO METROPOLITANO: sistema de passageiros no município, região ou microrregião metropolitana — gatilho da nota 36.",
+            "destaques": ["RODA SOBRESSALENTE", "NOTAS", "URBANO METROPOLITANO"]
+          }
+        },
+        {
+          "id": "matriz",
+          "titulo": "Classificar I–III",
+          "secao": "metodo",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              { "id": "I", "texto": "Estepe obrigatório em ônibus urbano sem isenção — FALSA (nota 36)", "correto": false },
+              { "id": "II", "texto": "Nota 35 dispensa em lixo e concreto — CORRETA", "correto": true },
+              { "id": "III", "texto": "Nota 32 dispensa em valores blindado — CORRETA", "correto": true }
+            ],
+            "gabarito_resumo": "II e III → alternativa C"
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Mapa: isenções de estepe",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Nota", "Hipótese de isenção"],
+            "linhas": [
+              {
+                "faixa": "Nota (32)",
+                "classificacao": "Carroçaria blindada — transporte de valores"
+              },
+              {
+                "faixa": "Nota (35)",
+                "classificacao": "Caminhões — lixo e concreto"
+              },
+              {
+                "faixa": "Nota (36)",
+                "classificacao": "Ônibus/micro — transporte urbano metropolitano",
+                "destaque": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: ônibus urbano sem estepe",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Ônibus urbano metropolitano deve portar estepe sempre",
+                "Nota 36 dispensa roda sobressalente, macaco e chave"
+              ],
+              [
+                "Isenção de lixo vale também para automóvel particular",
+                "Nota 35 alcança caminhões de lixo e concreto"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Marca só II correta; ignora III também correta (nota 32)"
+              ],
+              [
+                "B — regra_excecao",
+                "Inclui I falsa — nega isenção do ônibus urbano (nota 36)"
+              ],
+              [
+                "D — gravidade",
+                "Compra I falsa junto com II e III corretas"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Montando o gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Assertiva", "Veredito"],
+            "linhas": [
+              [
+                "I — estepe obrigatório em ônibus urbano",
+                "Falsa — nota 36 isenta"
+              ],
+              [
+                "II — nota 35 lixo/concreto",
+                "Correta"
+              ],
+              [
+                "III — nota 32 valores blindado",
+                "Correta"
+              ],
+              [
+                "Resultado",
+                "II + III = alternativa C"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Anexo I — nota (35)",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 993/2023, Anexo I, nota (35)",
+            "texto": "(35) Isento em veículo dotados de características específicas para transporte de lixo e de concreto.",
+            "trechos_grifados": [
+              {
+                "inicio": 67,
+                "fim": 99,
+                "motivo": "matriz — II correta: isenção para lixo e concreto",
+                "texto_grifado": "transporte de lixo e de concreto"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Anexo I — nota (36)",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 993/2023, Anexo I, nota (36)",
+            "texto": "(36) Isento para veículo que integram o sistema de transporte urbano de passageiros, no municípios, regiões e microrregiões metropolitanas ou conglomerados urbanos.",
+            "trechos_grifados": [
+              {
+                "inicio": 40,
+                "fim": 83,
+                "motivo": "contraste — I falsa: ônibus urbano metropolitano isento",
+                "texto_grifado": "sistema de transporte urbano de passageiros"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "(36) ônibus urbano · (35) lixo/concreto · (32) valores blindado · demais = Anexo I vale.\nNear: ônibus intermunicipal fora do sistema urbano — nota 36 não alcança, estepe exigível.\nFar: automóvel elétrico com kit de reparo — nota 34, não nota 36.\nNão muda: isenção não dispensa os demais equipamentos da Tabela 1 nem o § 2º do art. 3º.\nCadeia: vizinho = art. 8 (penalidade art. 230 CTB se desprovido fora das notas).",
+            "destaques": ["36", "35", "32", "art. 8"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 993/2023",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 993, DE 15 DE JUNHO DE 2023.pdf"
+        },
+        {
+          "rotulo": "Res. CONTRAN 993/2023 — Anexo I",
+          "path": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9932023Anexo.pdf"
+        }
+      ]
+    }
+  }
+]

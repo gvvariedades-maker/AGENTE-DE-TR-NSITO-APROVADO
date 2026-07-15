@@ -1,0 +1,384 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_habilitacao",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_143_1_categoria_C",
+    "enunciado": "Atendente do Detran da Paraíba em Campina Grande recebe pedido de habilitação na categoria C de Carla, condutora com CNH categoria B há 18 meses. No prontuário constam duas infrações gravíssimas nos últimos doze meses e nenhuma infração grave. O atendente informou que Carla está apta porque não há infrações graves no período. O supervisor revisa a análise. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Carla está apta, pois 18 meses na categoria B superam o prazo mínimo de um ano e a ausência de infrações graves satisfaz o art. 143, § 1º, do CTB.",
+      "B": "Carla está apta, pois pode obter a categoria C apenas com exame teórico complementar, dispensando os demais exames por já conduzir veículo da categoria B.",
+      "C": "Carla não está apta, pois o art. 143, § 1º, exige no mínimo dois anos na categoria B, nos mesmos moldes do art. 145 para a categoria D.",
+      "D": "Carla não está apta, pois o art. 143, § 1º, limita a no máximo uma infração gravíssima em doze meses — e a obtenção da nova categoria exige exames complementares nos termos do art. 146."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Requisitos para habilitação na categoria C — art. 143, § 1º (1 ano na B + máx. 1 gravíssima/12 meses) × art. 146 (exames complementares) — redação Lei 14.440/2022.",
+      "fundamento_legal": "CTB, art. 143, § 1º: para habilitar-se na categoria C, o condutor deverá estar habilitado no mínimo há 1 (um) ano na categoria B e não ter cometido mais de uma infração gravíssima nos últimos 12 (doze) meses. Art. 146: para conduzir veículos de outra categoria o condutor deverá realizar exames complementares exigidos para habilitação na categoria pretendida. CTB, art. 145, II, a: requisito de dois anos na categoria B aplica-se à categoria D — dispositivo distinto do § 1º do art. 143.",
+      "passo_a_passo": [
+        "1. Caso: Carla, 18 meses na B, 2 gravíssimas e 0 graves em 12 meses — atendente focou ausência de graves.",
+        "2. A erra por regra_excecao (trata ausência de infrações graves como suficiente — ignora teto de uma gravíssima do § 1º); B erra por termo_unico (dispensa exames complementares do art. 146 — mudança de categoria exige exames da categoria pretendida); C erra por numero_vizinho (confunde prazo de 2 anos do art. 145, II, a, para categoria D com o de 1 ano do art. 143, § 1º, para categoria C).",
+        "3. D correta: duas gravíssimas impedem o § 1º — e, quando preenchidos os requisitos, ainda cabem exames complementares do art. 146."
+      ],
+      "pegadinha": "A IDECAN induz a validar por não haver infrações graves — mas o § 1º do art. 143 conta só gravíssimas e veda mais de uma em doze meses.",
+      "macete": "CAT C: 1 ano B · máx. 1 gravíssima/12m · exames complementares (art. 146).",
+      "estudo_reverso": [
+        "CTB art. 143, § 1º",
+        "CTB art. 146",
+        "CTB art. 145, II, a"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Categoria C exige no máximo uma gravíssima em 12 meses — infração grave não é o critério do § 1º",
+      "eixos_legais": [
+        "CTB_art_143_1",
+        "CTB_art_146",
+        "CTB_art_145_II_a"
+      ],
+      "eixo_vizinho": "CTB_art_145_III",
+      "isca_por_alternativa": {
+        "A": "18 meses na B e ausência de infrações graves satisfazem o art. 143, § 1º",
+        "B": "pode obter categoria C só com exame teórico complementar, dispensando demais exames",
+        "C": "art. 143, § 1º, exige dois anos na categoria B como para categoria D"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico",
+        "numero_vizinho"
+      ],
+      "near_transfer": "Mesma Carla com 18 meses na B e apenas uma gravíssima em 12 meses — aí sim atende o § 1º, restando os exames complementares do art. 146.",
+      "far_transfer": "Candidato à categoria D com duas gravíssimas em 12 meses — art. 145, III, aplica a mesma regra de teto de uma gravíssima, mas com prazo de 2 anos na B.",
+      "o_que_nao_muda": "Desde a Lei 14.440/2022, o impeditivo do § 1º é gravíssima — não grave nem reincidência em média.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "habilitacao",
+      "categoria_c",
+      "art_143",
+      "gravissima",
+      "detran"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CTB_art_143_1_categoria_C",
+      "macete_visual": "CAT C: 1B + 1 gravíssima",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D: duas gravíssimas impedem categoria C — grave não é o critério do parágrafo primeiro.",
+            "destaques": ["Gabarito D", "gravíssima", "categoria C"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Grave × gravíssima no § 1º",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Sem infração grave = apta para categoria C",
+                "§ 1º limita a no máximo uma gravíssima em 12 meses"
+              ],
+              [
+                "Mudança de categoria dispensa novos exames",
+                "Art. 146 exige exames complementares"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CAT C: 1 ano B · máx. 1 gravíssima/12m · exames complementares.",
+            "destaques": ["1 ano B", "gravíssima", "exames"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 143",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 285,
+      "fundamento_slug": "CTB_art_143_1_categoria_C",
+      "macete_visual": "CAT C: 1B + 1 gravíssima",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Categoria C exige no máximo uma gravíssima em 12 meses — infração grave não é o critério do § 1º",
+        "eixos_legais": [
+          "CTB_art_143_1",
+          "CTB_art_146",
+          "CTB_art_145_II_a"
+        ],
+        "isca_por_alternativa": {
+          "A": "18 meses na B e ausência de infrações graves satisfazem o art. 143, § 1º",
+          "B": "pode obter categoria C só com exame teórico complementar, dispensando demais exames",
+          "C": "art. 143, § 1º, exige dois anos na categoria B como para categoria D"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: aptidão para categoria C",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — 18 meses na B e ausência de graves satisfazem o requisito temporal e disciplinar.\nB — dispensa exames complementares por já conduzir categoria B.\nC — exige dois anos na B como para categoria D.\n\nPegadinha: o parágrafo primeiro conta gravíssimas, não graves.",
+            "destaques": ["Gabarito D", "gravíssima", "categoria C"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CATEGORIA C: conduz veículos da categoria B e de carga com PBT acima de 3.500 kg — gradação do art. 143.\n\nGRAVÍSSIMA: única natureza que o § 1º conta para o teto de 12 meses — grave e média não entram na regra atual.\n\nEXAMES COMPLEMENTARES: obrigatórios ao mudar de categoria — art. 146.",
+            "destaques": ["CATEGORIA C", "GRAVÍSSIMA", "EXAMES COMPLEMENTARES"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: Carla está apta?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Habilitada na categoria B há pelo menos 1 ano?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Mais de uma gravíssima nos últimos 12 meses?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Não apta — gabarito D",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — 18 meses"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — 2 gravíssimas"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Requisitos § 1º × prontuário de Carla",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Requisito", "Carla"],
+            "linhas": [
+              {
+                "faixa": "1 ano na categoria B",
+                "classificacao": "18 meses ✓"
+              },
+              {
+                "faixa": "Máx. 1 gravíssima/12 meses",
+                "classificacao": "2 gravíssimas ✗",
+                "destaque": true
+              },
+              {
+                "faixa": "Infrações graves no período",
+                "classificacao": "0 graves — irrelevante"
+              },
+              {
+                "faixa": "Exames complementares (art. 146)",
+                "classificacao": "Exigidos após requisitos"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: sem grave = apta",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Ausência de infração grave libera categoria C",
+                "§ 1º limita gravíssimas — máximo uma em 12 meses"
+              ],
+              [
+                "Já conduz B, então dispensa exames",
+                "Art. 146 exige exames complementares da categoria pretendida"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Foca ausência de graves — ignora teto de uma gravíssima do § 1º"
+              ],
+              [
+                "B — termo_unico",
+                "Dispensa exames complementares do art. 146 sem fundamento"
+              ],
+              [
+                "C — numero_vizinho",
+                "Confunde 2 anos do art. 145 para categoria D com 1 ano do § 1º para C"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "CNH categoria B há 18 meses",
+                "Requisito temporal do § 1º atendido"
+              ],
+              [
+                "2 gravíssimas em 12 meses",
+                "Impeditivo do § 1º — acima do teto"
+              ],
+              [
+                "0 infrações graves",
+                "Critério irrelevante na redação atual"
+              ],
+              [
+                "Atendente focou ausência de graves",
+                "Isca regra_excecao — alternativa A"
+              ],
+              [
+                "Resultado",
+                "Alternativa D — não apta"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "§ 1º (C) × art. 145 (D)",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Eixo", "Regra"],
+            "linhas": [
+              [
+                "Art. 143, § 1º — categoria C",
+                "1 ano na B + máx. 1 gravíssima/12 meses"
+              ],
+              [
+                "Art. 145, II, a — categoria D",
+                "2 anos na B ou 1 ano na C"
+              ],
+              [
+                "Art. 145, III — categoria D/E",
+                "Mesmo teto de uma gravíssima/12 meses"
+              ],
+              [
+                "Art. 146 — qualquer mudança",
+                "Exames complementares da categoria pretendida"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "CTB art. 143, § 1º",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 143, § 1º",
+            "texto": "§ 1º Para habilitar-se na categoria C, o condutor deverá estar habilitado no mínimo há 1 (um) ano na categoria B e não ter cometido mais de uma infração gravíssima nos últimos 12 (doze) meses.",
+            "trechos_grifados": [
+              {
+                "inicio": 63,
+                "fim": 112,
+                "motivo": "fluxo — prazo que Carla já cumpre com 18 meses",
+                "texto_grifado": "habilitado no mínimo há 1 (um) ano na categoria B"
+              },
+              {
+                "inicio": 115,
+                "fim": 191,
+                "motivo": "caso — 2 gravíssimas excedem o teto",
+                "texto_grifado": "não ter cometido mais de uma infração gravíssima nos últimos 12 (doze) meses"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "CTB art. 146",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 146",
+            "texto": "Art. 146. Para conduzir veículos de outra categoria o condutor deverá realizar exames complementares exigidos para habilitação na categoria pretendida.",
+            "trechos_grifados": [
+              {
+                "inicio": 70,
+                "fim": 150,
+                "motivo": "hierarquia — exames após requisitos do § 1º",
+                "texto_grifado": "realizar exames complementares exigidos para habilitação na categoria pretendida"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CAT C: 1 ano B · máx. 1 gravíssima/12m · exames complementares (art. 146).\nNear: mesma Carla com 1 gravíssima — atende § 1º, faltam exames.\nFar: candidato à categoria D — 2 anos B e mesmo teto de gravíssima no art. 145.\nNão muda: só gravíssima conta no teto — grave não impede.\nCadeia: vizinho = art. 145, III, para D/E.",
+            "destaques": ["gravíssima", "1 gravíssima", "categoria D", "art. 145"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 143",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    }
+  }
+]

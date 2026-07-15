@@ -1,0 +1,345 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_432_alcoolemia",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_432_art_11_fatal",
+    "enunciado": "Após acidente de trânsito com vítima fatal em Campina Grande/PB, o supervisor da STTP orienta a equipe de perícia de que o exame de alcoolemia na vítima é facultativo, bastando registrar indícios de ingestão de álcool no boletim de ocorrência para eventual perícia posterior. O médico legista do IML questiona a orientação antes da necropsia. Considerando a Resolução CONTRAN nº 432/2013, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O exame é facultativo, pois a Resolução exige alcoolemia apenas quando houver indício de embriaguez do condutor sobrevivente, não da vítima fatal.",
+      "B": "O exame de alcoolemia é obrigatório para vítimas fatais de acidentes de trânsito, nos termos do art. 11 da Resolução — independentemente de indícios prévios ou de perícia posterior.",
+      "C": "A exigência compete exclusivamente à Polícia Civil em inquérito criminal — a STTP não pode determinar coleta de sangue em vítima fatal de acidente municipal.",
+      "D": "O exame é obrigatório apenas em acidentes com dois ou mais veículos em rodovia federal, não em colisões urbanas com vítima única."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "o_que_testa": "Exame de alcoolemia em vítima fatal — art. 11 (obrigatoriedade) × art. 3º (procedimentos no condutor vivo), distinto de fiscalização de blitz.",
+      "fundamento_legal": "Res. CONTRAN 432/2013, art. 11: É obrigatória a realização do exame de alcoolemia para as vítimas fatais de acidentes de trânsito. Art. 3º: a confirmação da alteração da capacidade psicomotora no condutor vivo dar-se-á por exame de sangue, etilômetro, sinais ou outros meios — dispositivo distinto do art. 11.",
+      "passo_a_passo": [
+        "1. Caso: acidente com vítima fatal em Campina Grande — supervisor STTP trata alcoolemia como facultativa; legista do IML questiona.",
+        "2. A erra por regra_excecao (condiciona alcoolemia a indício no condutor sobrevivente — art. 11 impõe exame na vítima fatal sem essa condição); C erra por competencia_snt (restringe exigência à Polícia Civil excluindo aplicação da Resolução em acidente sob fiscalização de trânsito); D erra por numero_vizinho (inventa hipótese de rodovia federal e pluralidade de veículos — art. 11 não fixa esses limites).",
+        "3. B correta: art. 11 — obrigatoriedade do exame de alcoolemia para vítimas fatais de acidentes de trânsito."
+      ],
+      "pegadinha": "A IDECAN induz a crer que alcoolemia em vítima fatal depende de indício ou de inquérito policial — o art. 11 torna o exame obrigatório, sem dispensa por suspeita.",
+      "macete": "VÍTIMA FATAL = ALCOOLEMIA OBRIGATÓRIA (art. 11) · condutor vivo = art. 3º.",
+      "estudo_reverso": [
+        "Res. CONTRAN 432/2013 art. 11",
+        "Res. CONTRAN 432/2013 art. 3",
+        "CTB art. 165",
+        "CTB art. 306"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Alcoolemia em vítima fatal não é facultativa — art. 11 impõe exame sem depender de indício",
+      "eixos_legais": [
+        "CONTRAN_432_art_11",
+        "CONTRAN_432_art_3"
+      ],
+      "eixo_vizinho": "CONTRAN_432_art_3",
+      "isca_por_alternativa": {
+        "A": "alcoolemia facultativa e exigida só com indício no condutor sobrevivente",
+        "C": "exigência exclusiva da Polícia Civil em inquérito, sem aplicação da Resolução pela STTP",
+        "D": "obrigatoriedade só em acidentes com dois ou mais veículos em rodovia federal"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "competencia_snt",
+        "numero_vizinho"
+      ],
+      "near_transfer": "Mesmo acidente fatal, mas supervisor já orienta corretamente a coleta antes da necropsia — art. 11 atendido; a dúvida passa a ser prazo, não obrigatoriedade.",
+      "far_transfer": "Condutor vivo recusa etilômetro na blitz — regime do art. 3º e art. 165-A do CTB, não do art. 11.",
+      "o_que_nao_muda": "Art. 11 alcança toda vítima fatal de acidente de trânsito — não depende de indício, de via federal ou de quantidade de veículos.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "resolucao_432",
+      "alcoolemia",
+      "vitima_fatal",
+      "iml",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_432_art_11_fatal",
+      "macete_visual": "Fatal = alcoolemia obrigatória",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B: vítima fatal exige exame de alcoolemia — art. 11, sem dispensa por indício.",
+            "destaques": ["Gabarito B", "vítima fatal", "obrigatório"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Vítima fatal no acidente?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Vítima fatal de acidente de trânsito?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Alcoolemia obrigatória — art. 11", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim — caso do enunciado" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Vítima fatal = alcoolemia obrigatória.\nCondutor vivo = art. 3º.",
+            "destaques": ["fatal", "obrigatória", "art. 3"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 432/2013",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 432, DE 23 DE JANEIRO DE 2013.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 275,
+      "fundamento_slug": "CONTRAN_432_art_11_fatal",
+      "macete_visual": "Fatal = alcoolemia obrigatória",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Alcoolemia em vítima fatal não é facultativa — art. 11 impõe exame sem depender de indício",
+        "eixos_legais": [
+          "CONTRAN_432_art_11",
+          "CONTRAN_432_art_3"
+        ],
+        "isca_por_alternativa": {
+          "A": "alcoolemia facultativa e exigida só com indício no condutor sobrevivente",
+          "C": "exigência exclusiva da Polícia Civil em inquérito, sem aplicação da Resolução pela STTP",
+          "D": "obrigatoriedade só em acidentes com dois ou mais veículos em rodovia federal"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: exame na vítima fatal",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito B.\n\nA — alcoolemia facultativa, só com indício no condutor sobrevivente.\nC — exigência exclusiva da Polícia Civil.\nD — obrigatório só em rodovia federal com dois veículos.\n\nPegadinha: vítima fatal tem exame obrigatório — sem depender de indício.",
+            "destaques": ["Gabarito B", "vítima fatal", "obrigatório"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VÍTIMA FATAL: óbito em acidente de trânsito — gatilho do art. 11 para alcoolemia obrigatória.\n\nEXAME DE ALCOOLEMIA: coleta para dosagem de álcool — distinto de indícios no boletim.\n\nCONDUTOR VIVO: sujeito da fiscalização de blitz — regime do art. 3º, não do art. 11.",
+            "destaques": ["VÍTIMA FATAL", "ALCOOLEMIA", "CONDUTOR VIVO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: cabe dispensar o exame?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Vítima fatal de acidente de trânsito?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Exame de alcoolemia é obrigatório?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Obrigatório — gabarito B", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — acidente em Campina Grande" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim — sem dispensa por indício" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Fatal × condutor vivo",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Situação", "Regra"],
+            "linhas": [
+              {
+                "faixa": "Vítima fatal de acidente",
+                "classificacao": "Alcoolemia obrigatória — art. 11",
+                "destaque": true
+              },
+              {
+                "faixa": "Condutor vivo na blitz",
+                "classificacao": "Etilômetro, sinais ou exame — art. 3º"
+              },
+              {
+                "faixa": "Indício no boletim",
+                "classificacao": "Não substitui obrigação do art. 11"
+              },
+              {
+                "faixa": "Rodovia federal / 2 veículos",
+                "classificacao": "Isca — art. 11 não fixa esses limites"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: facultativo se não houver indício",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              [
+                "Alcoolemia na vítima fatal depende de indício",
+                "Art. 11: exame obrigatório para vítimas fatais"
+              ],
+              [
+                "Boletim com suspeita dispensa coleta de sangue",
+                "Indício documental não substitui exame obrigatório"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Trata exame como facultativo — art. 11 é imperativo"
+              ],
+              [
+                "C — competencia_snt",
+                "Atribui exigência só à Polícia Civil — ignora art. 11 da Resolução"
+              ],
+              [
+                "D — numero_vizinho",
+                "Inventa rodovia federal e dois veículos — art. 11 não condiciona"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Fato do caso", "Consequência"],
+            "linhas": [
+              [
+                "Acidente com vítima fatal",
+                "Hipótese do art. 11"
+              ],
+              [
+                "Supervisor trata exame como facultativo",
+                "Orientação incorreta"
+              ],
+              [
+                "Indícios apenas no boletim",
+                "Não dispensam alcoolemia"
+              ],
+              [
+                "Legista questiona antes da necropsia",
+                "Alternativa B"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 11 × art. 3º",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              [
+                "Art. 11",
+                "Obriga alcoolemia em vítima fatal"
+              ],
+              [
+                "Art. 3º (vizinho)",
+                "Procedimentos no condutor vivo — distinto"
+              ],
+              [
+                "Caso STTP",
+                "Fatal em Campina Grande — art. 11 manda coletar"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Res. 432/2013, art. 11",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 432/2013, art. 11",
+            "texto": "Art. 11. É obrigatória a realização do exame de alcoolemia para as vítimas fatais de acidentes de trânsito.",
+            "trechos_grifados": [
+              {
+                "inicio": 9,
+                "fim": 58,
+                "motivo": "fluxo — obrigatoriedade em vítima fatal",
+                "texto_grifado": "É obrigatória a realização do exame de alcoolemia"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Res. 432/2013, art. 3º — caput",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 432/2013, art. 3º",
+            "texto": "Art. 3º A confirmação da alteração da capacidade psicomotora em razão da influência de álcool ou de outra substância psicoativa que determine dependência dar-se-á por meio de, pelo menos, um dos seguintes procedimentos a serem realizados no condutor de veículo automotor.",
+            "trechos_grifados": [
+              {
+                "inicio": 238,
+                "fim": 270,
+                "motivo": "mapa — regime distinto do condutor vivo",
+                "texto_grifado": "no condutor de veículo automotor"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Vítima fatal = alcoolemia obrigatória (art. 11) · condutor vivo = art. 3º.\nNear: mesmo acidente, supervisor orienta coleta antes da necropsia — dúvida de prazo, não de obrigatoriedade.\nFar: condutor vivo recusa etilômetro na blitz — art. 3º e 165-A, não art. 11.\nNão muda: art. 11 não exige indício, via federal nem pluralidade de veículos.\nCadeia: vizinho = art. 3º (procedimentos no condutor abordado).",
+            "destaques": ["fatal", "obrigatória", "165-A", "art. 3"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 432/2013",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 432, DE 23 DE JANEIRO DE 2013.pdf"
+        }
+      ]
+    }
+  }
+]
