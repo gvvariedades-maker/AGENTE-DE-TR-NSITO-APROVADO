@@ -5,13 +5,6 @@ import { getSemaforoData } from "@/lib/semaforo";
 import type { ModoSessaoEstudo } from "@/lib/motor-ata-shared";
 import { SIMULADO_ESPELHO_DISTRIBUICAO, type Disciplina } from "@/types";
 
-/** Disciplinas gerais com maior risco de zerar (regra do projeto). */
-const DISCIPLINAS_RISCO_PADRAO: Disciplina[] = [
-  "informatica",
-  "historia_cg_pb",
-  "legislacao_etica_sp",
-];
-
 export type { ModoSessaoEstudo } from "@/lib/motor-ata-shared";
 export { parseModoSessao, labelModoSessao } from "@/lib/motor-ata-shared";
 
@@ -19,7 +12,7 @@ export interface FiltrosMotor {
   disciplina?: Disciplina;
   topicoSlug?: string;
   disciplinasPrioritarias?: Disciplina[];
-  /** Anti-zerar: restringe prática só às disciplinas em risco. */
+  /** Se true, restringe a fila só às disciplinas prioritárias. */
   filtrarSomentePrioritarias?: boolean;
   somentePegadinha?: boolean;
   somenteErros?: boolean;
@@ -38,20 +31,6 @@ async function resolverContextoAuto(
     };
   }
   return {};
-}
-
-async function resolverAntiZerar(
-  userId: string,
-): Promise<Pick<FiltrosMotor, "disciplinasPrioritarias">> {
-  const semaforo = await getSemaforoData(userId);
-  if (semaforo.disciplinasEmRisco.length > 0) {
-    return {
-      disciplinasPrioritarias: semaforo.disciplinasEmRisco.map(
-        (r) => r.disciplina,
-      ),
-    };
-  }
-  return { disciplinasPrioritarias: [...DISCIPLINAS_RISCO_PADRAO] };
 }
 
 /** Traduz modo de URL + semáforo em filtros concretos para o motor. */
@@ -79,22 +58,12 @@ export async function resolverFiltrosMotor(
 
   if (disciplina || topicoSlug) return base;
 
-  switch (modo) {
-    case "anti_zerar": {
-      const ctx = await resolverAntiZerar(userId);
-      return {
-        ...base,
-        disciplinasPrioritarias: ctx.disciplinasPrioritarias,
-        filtrarSomentePrioritarias: true,
-      };
-    }
-    case "auto": {
-      const ctx = await resolverContextoAuto(userId);
-      return { ...base, disciplinasPrioritarias: ctx.disciplinasPrioritarias };
-    }
-    default:
-      return base;
+  if (modo === "auto") {
+    const ctx = await resolverContextoAuto(userId);
+    return { ...base, disciplinasPrioritarias: ctx.disciplinasPrioritarias };
   }
+
+  return base;
 }
 
 function pesoEditalDisciplina(disciplina: Disciplina): number {

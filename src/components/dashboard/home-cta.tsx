@@ -127,7 +127,7 @@ export function HomeCta({ diasParaProva }: HomeCtaProps) {
         <ModoTreinoCard
           icon={BookOpen}
           label="Painel semáforo"
-          desc="Métricas de aprovação e risco de eliminação"
+          desc="Nota projetada, semáforo e evolução"
           href="/dashboard"
           ativo
         />

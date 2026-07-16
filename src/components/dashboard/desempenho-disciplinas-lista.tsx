@@ -154,9 +154,7 @@ export function DesempenhoDisciplinasLista({
             href={
               isSimulado
                 ? "/simulado"
-                : pior.zona === "vermelho"
-                  ? "/estudo?modo=anti_zerar"
-                  : `/estudo?disciplina=${pior.disciplina}`
+                : `/estudo?disciplina=${pior.disciplina}`
             }
             className={cn(
               buttonVariants({ size: "lg" }),

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Crosshair, Scale, ShieldAlert } from "lucide-react";
+import { BookOpen, Crosshair, Scale } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 
@@ -12,10 +12,10 @@ const ATALHOS = [
     destaque: true,
   },
   {
-    href: "/estudo?modo=anti_zerar",
-    label: "Anti-zerar",
-    desc: "Evitar eliminação",
-    icon: ShieldAlert,
+    href: "/estudo?modo=auto",
+    label: "Estudar",
+    desc: "Motor ATA",
+    icon: BookOpen,
     destaque: false,
   },
   {

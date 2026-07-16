@@ -174,8 +174,7 @@ export default async function EstudoPage({
         <Alert className="mx-4 mt-4 max-w-3xl self-center" data-foco-hide>
           <AlertTitle>Sessão {modoLabel}</AlertTitle>
           <AlertDescription>
-            Revisões SRS vencidas entram primeiro. O motor ATA prioriza lacunas,
-            risco de eliminação e peso do edital.
+            O motor prioriza revisões SRS, lacunas e peso do edital.
             {topico && (
               <>
                 {" "}

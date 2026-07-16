@@ -382,11 +382,7 @@ export async function montarSessaoEstudo(
     if (resultado.length >= limit) return resultado;
   }
 
-  const modosEstritos: ModoSessaoEstudo[] = [
-    "erros",
-    "pegadinha",
-    "anti_zerar",
-  ];
+  const modosEstritos: ModoSessaoEstudo[] = ["erros", "pegadinha"];
   if (modosEstritos.includes(modo)) return resultado;
 
   const novas = await buscarQuestoesNovas(

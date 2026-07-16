@@ -151,10 +151,11 @@ export function PainelHero({
             </div>
           ) : (
             <p className="border-t border-border pt-4 text-sm text-muted-foreground">
-              Comece pelo modo{" "}
-              <strong className="font-medium text-foreground">Anti-zerar</strong>{" "}
-              ou <strong className="font-medium text-foreground">CTB</strong> — 10
-              minutos já alimentam o semáforo.
+              Comece pelo{" "}
+              <strong className="font-medium text-foreground">CTB</strong> ou
+              pelo{" "}
+              <strong className="font-medium text-foreground">Motor ATA</strong>{" "}
+              — 10 minutos já alimentam o semáforo.
             </p>
           )}
         </CardContent>

@@ -50,8 +50,8 @@ export function SimuladoResultado({
   const motivo = motivoEliminacao(data);
   const primeiraRisco = resultado.disciplinasEmRisco[0];
   const hrefEstudoRisco = primeiraRisco
-    ? `/estudo?modo=anti_zerar&disciplina=${primeiraRisco.disciplina}`
-    : "/estudo?modo=anti_zerar";
+    ? `/estudo?disciplina=${primeiraRisco.disciplina}`
+    : "/estudo?modo=auto";
 
   const geraisPts = semaforo?.gerais.pontos ?? null;
   const especPts = semaforo?.especificos.pontos ?? null;
@@ -304,7 +304,7 @@ export function SimuladoResultado({
           >
             {primeiraRisco
               ? `Estudar ${DISCIPLINA_LABELS[primeiraRisco.disciplina]}`
-              : "Estudar anti-zerar"}
+              : "Continuar estudo"}
           </Link>
         ) : (
           <Link

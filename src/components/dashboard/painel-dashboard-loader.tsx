@@ -12,7 +12,6 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { calcularProximoPasso } from "@/lib/proximo-passo";
 import { DISCIPLINA_LABELS, type Disciplina } from "@/types";
-import { DISCIPLINAS_CRITICAS_INICIO } from "@/lib/edital-topicos";
 import type { DashboardResumo } from "@/types/dashboard-resumo";
 
 interface PainelDashboardLoaderProps {
@@ -103,6 +102,7 @@ export function PainelDashboardLoader({
 
   const proximo = calcularProximoPasso({
     emRisco,
+    disciplinaRisco: semaforo.disciplinasEmRisco[0]?.disciplina,
     revisoesHoje: retencao.revisoesHoje,
     questoesDisponiveis: questoesCount > 0,
   });
@@ -132,9 +132,9 @@ export function PainelDashboardLoader({
         pioresTopicos={pioresTopicos}
       />
 
-      {emRisco ? (
+      {emRisco && desempenho.hasData ? (
         <Alert variant="destructive">
-          <AlertTitle>Risco de eliminação</AlertTitle>
+          <AlertTitle>Disciplinas abaixo do mínimo</AlertTitle>
           <AlertDescription>
             <ul className="mt-2 list-inside list-disc text-sm">
               {semaforo.disciplinasEmRisco.map((r) => (
@@ -145,13 +145,13 @@ export function PainelDashboardLoader({
               ))}
             </ul>
             <Link
-              href="/estudo?modo=anti_zerar"
+              href={proximo.href}
               className={cn(
                 buttonVariants({ variant: "outline", size: "sm" }),
                 "mt-3",
               )}
             >
-              Treinar anti-zerar
+              {proximo.label}
             </Link>
           </AlertDescription>
         </Alert>
@@ -160,12 +160,8 @@ export function PainelDashboardLoader({
           <Alert>
             <AlertTitle>Primeiro passo</AlertTitle>
             <AlertDescription className="text-sm">
-              Cada disciplina geral exige mínimo de{" "}
-              <strong>1 ponto</strong> na prova. Comece por:{" "}
-              {DISCIPLINAS_CRITICAS_INICIO.map((d) => DISCIPLINA_LABELS[d]).join(
-                ", ",
-              )}
-              .
+              Comece pelo CTB (50% da prova) ou pelo Motor ATA — o semáforo
+              mostra o progresso automaticamente.
             </AlertDescription>
           </Alert>
         )

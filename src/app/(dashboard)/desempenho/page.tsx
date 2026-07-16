@@ -79,6 +79,7 @@ export default async function DesempenhoPage({
   const emRisco = semaforo.disciplinasEmRisco.length > 0;
   const proximo = calcularProximoPasso({
     emRisco,
+    disciplinaRisco: semaforo.disciplinasEmRisco[0]?.disciplina,
     revisoesHoje: retencao.revisoesHoje,
     questoesDisponiveis: questoesCount > 0,
   });
@@ -172,8 +173,8 @@ export default async function DesempenhoPage({
         <Alert variant="destructive">
           <AlertTitle>
             {isSimulados
-              ? "Risco no último espelho"
-              : "Risco de eliminação"}
+              ? "Abaixo do mínimo no último espelho"
+              : "Disciplinas abaixo do mínimo"}
           </AlertTitle>
           <AlertDescription>
             <ul className="mt-2 list-inside list-disc text-sm">
@@ -188,14 +189,14 @@ export default async function DesempenhoPage({
               href={
                 isSimulados
                   ? "/simulado"
-                  : "/estudo?modo=anti_zerar"
+                  : proximo.href
               }
               className={cn(
                 buttonVariants({ variant: "outline", size: "sm" }),
                 "mt-3",
               )}
             >
-              {isSimulados ? "Refazer simulado" : "Treinar anti-zerar"}
+              {isSimulados ? "Refazer simulado" : proximo.label}
             </Link>
           </AlertDescription>
         </Alert>

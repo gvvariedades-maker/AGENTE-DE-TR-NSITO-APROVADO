@@ -5,7 +5,6 @@ import {
   CalendarDays,
   CheckCircle2,
   Scale,
-  ShieldAlert,
   Target,
   TrendingUp,
 } from "lucide-react";
@@ -45,9 +44,9 @@ const PILARES = [
     desc: "Provas do corpus superior com enunciado fiel e aula completa.",
   },
   {
-    icon: ShieldAlert,
-    titulo: "Semáforo anti-eliminação",
-    desc: "Saiba onde está em risco de zerar antes que seja tarde.",
+    icon: TrendingUp,
+    titulo: "Semáforo de desempenho",
+    desc: "Nota projetada e progresso por disciplina — foque no que importa.",
   },
 ] as const;
 
