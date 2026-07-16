@@ -22,7 +22,7 @@ export function DashboardNav() {
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3 md:px-8">
         <Link
           href="/"
-          className="flex items-center gap-2.5 text-sm font-semibold tracking-tight"
+          className="flex items-center gap-2.5 text-base font-semibold tracking-tight sm:text-sm"
         >
           <span className="flex size-8 items-center justify-center rounded-lg bg-transito/15 ring-1 ring-transito/30 text-transito-foreground">
             <TrafficCone className="size-4" aria-hidden />

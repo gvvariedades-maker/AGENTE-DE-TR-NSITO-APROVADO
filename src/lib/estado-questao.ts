@@ -2,6 +2,8 @@ export interface EstadoQuestao {
   selecionada: string | null;
   confirmada: boolean;
   revelada: boolean;
+  /** Marcar para revisão — amarelo no cartão-resposta (modo prova). */
+  marcadaRevisao?: boolean;
   acertou?: boolean;
   dominioAlcancado?: boolean;
   tipoErroLabel?: string;
@@ -12,7 +14,16 @@ export const ESTADO_QUESTAO_INICIAL: EstadoQuestao = {
   selecionada: null,
   confirmada: false,
   revelada: false,
+  marcadaRevisao: false,
 };
+
+export function contarMarcadasRevisao(estados: Map<string, EstadoQuestao>) {
+  let n = 0;
+  for (const estado of estados.values()) {
+    if (estado.marcadaRevisao) n++;
+  }
+  return n;
+}
 
 export function getEstadoQuestao(
   estados: Map<string, EstadoQuestao>,

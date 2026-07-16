@@ -168,17 +168,36 @@
       var(--transito-gradient-to)
     );
   }
+
+  /* Legendas em px fixo — legíveis no mobile (base 18px) */
+  @media (max-width: 639px) {
+    [class*="text-[10px]"] {
+      font-size: 0.75rem !important;
+      line-height: 1.35;
+    }
+    [class*="text-[11px]"] {
+      font-size: 0.8125rem !important;
+      line-height: 1.35;
+    }
+  }
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
   html {
     @apply font-sans;
+    /* Mobile: base 18px — melhora leitura em telas pequenas (Tailwind usa rem). */
+    font-size: 1.125rem;
+  }
+  @media (min-width: 640px) {
+    html {
+      font-size: 1rem;
+    }
+  }
+  body {
+    @apply bg-background text-foreground text-base leading-relaxed;
   }
   html[data-foco="true"] nav {
     display: none;

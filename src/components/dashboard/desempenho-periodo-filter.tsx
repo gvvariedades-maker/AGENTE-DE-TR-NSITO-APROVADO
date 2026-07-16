@@ -9,11 +9,13 @@ import {
 interface DesempenhoPeriodoFilterProps {
   periodo: PeriodoDesempenho;
   disciplina?: string;
+  visao?: string;
 }
 
 export function DesempenhoPeriodoFilter({
   periodo,
   disciplina,
+  visao,
 }: DesempenhoPeriodoFilterProps) {
   return (
     <nav
@@ -25,6 +27,7 @@ export function DesempenhoPeriodoFilter({
         const params = new URLSearchParams();
         if (p.value !== "inicio") params.set("periodo", p.value);
         if (disciplina) params.set("disciplina", disciplina);
+        if (visao && visao !== "geral") params.set("visao", visao);
         const qs = params.toString();
         const href = qs ? `/desempenho?${qs}` : "/desempenho";
 

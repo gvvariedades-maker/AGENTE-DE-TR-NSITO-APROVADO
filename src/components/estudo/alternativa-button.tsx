@@ -32,7 +32,7 @@ export function AlternativaButton({
       aria-disabled={desabilitada}
       onClick={() => !desabilitada && onSelect(letra)}
       className={cn(
-        "flex min-h-11 w-full items-start gap-3 rounded-lg border border-border bg-card px-4 py-3 text-left text-base leading-relaxed transition-colors",
+        "flex min-h-12 w-full items-start gap-3 rounded-lg border border-border bg-card px-4 py-3.5 text-left text-lg leading-relaxed transition-colors sm:min-h-11 sm:py-3 sm:text-base",
         "hover:bg-muted/60 focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none",
         desabilitada && "pointer-events-none",
         desabilitada && !isAcerto && !isErro && "opacity-40",

@@ -20,9 +20,15 @@ function filtroDesde(since: Date | null | undefined) {
   return sql`AND a.created_at >= ${since}`;
 }
 
+function filtroModo(modo?: string) {
+  if (!modo) return sql``;
+  return sql`AND a.modo = ${modo}`;
+}
+
 export async function getAttemptStatsByDisciplina(
   userId: string,
   since?: Date | null,
+  modo?: string,
 ): Promise<AttemptStatsDisciplina[]> {
   try {
     return await db.execute<{
@@ -39,6 +45,7 @@ export async function getAttemptStatsByDisciplina(
       INNER JOIN topics t ON q.topic_id = t.id
       WHERE a.user_id = ${userId}::uuid
         ${filtroDesde(since)}
+        ${filtroModo(modo)}
       GROUP BY t.disciplina
     `);
   } catch {
@@ -49,6 +56,7 @@ export async function getAttemptStatsByDisciplina(
 export async function getAttemptOverview(
   userId: string,
   since?: Date | null,
+  modo?: string,
 ): Promise<AttemptOverview> {
   const vazio: AttemptOverview = {
     total: 0,
@@ -68,6 +76,7 @@ export async function getAttemptOverview(
       FROM attempts a
       WHERE a.user_id = ${userId}::uuid
         ${filtroDesde(since)}
+        ${filtroModo(modo)}
     `);
 
     const total = row?.total ?? 0;

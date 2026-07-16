@@ -22,6 +22,17 @@ export interface DisciplinaEmRisco {
   total: number;
 }
 
+/** Detalhe por disciplina presente na prova (total > 0). */
+export interface DetalheDisciplinaSimulado {
+  disciplina: Disciplina;
+  pontos: number;
+  minimo: number;
+  acertos: number;
+  total: number;
+  emRisco: boolean;
+  peso: number;
+}
+
 export interface ResultadoSimulado {
   notaTotal: number;
   notasDisciplina: Record<Disciplina, number>;
@@ -31,6 +42,8 @@ export interface ResultadoSimulado {
   erros: number;
   totalQuestoes: number;
   disciplinasEmRisco: DisciplinaEmRisco[];
+  /** Só disciplinas que tiveram questões neste caderno. */
+  detalhesDisciplina: DetalheDisciplinaSimulado[];
 }
 
 function minimoDisciplina(disciplina: Disciplina): number {
@@ -73,22 +86,38 @@ export function calcularResultadoSimulado(
   const notasDisciplina = {} as Record<Disciplina, number>;
   let notaTotal = 0;
   const disciplinasEmRisco: DisciplinaEmRisco[] = [];
+  const detalhesDisciplina: DetalheDisciplinaSimulado[] = [];
 
   for (const disciplina of DISCIPLINAS) {
     const acertosDisc = acertosPorDisciplina.get(disciplina) ?? 0;
-    const pts = acertosDisc * pesoAcerto(disciplina);
+    const peso = pesoAcerto(disciplina);
+    const pts = acertosDisc * peso;
     notasDisciplina[disciplina] = pts;
     notaTotal += pts;
 
     const totalDisc = totalPorDisciplina.get(disciplina) ?? 0;
     const minimo = minimoDisciplina(disciplina);
-    if (totalDisc > 0 && pts < minimo) {
+    const emRisco = totalDisc > 0 && pts < minimo;
+
+    if (emRisco) {
       disciplinasEmRisco.push({
         disciplina,
         pontos: pts,
         minimo,
         acertos: acertosDisc,
         total: totalDisc,
+      });
+    }
+
+    if (totalDisc > 0) {
+      detalhesDisciplina.push({
+        disciplina,
+        pontos: pts,
+        minimo,
+        acertos: acertosDisc,
+        total: totalDisc,
+        emRisco,
+        peso,
       });
     }
   }
@@ -105,6 +134,7 @@ export function calcularResultadoSimulado(
     erros: respostas.length - acertos,
     totalQuestoes: respostas.length,
     disciplinasEmRisco,
+    detalhesDisciplina,
   };
 }
 

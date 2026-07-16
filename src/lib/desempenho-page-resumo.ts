@@ -1,4 +1,5 @@
 import { getDesempenhoResumo, getDesempenhoTopicos } from "@/lib/desempenho";
+import { getDesempenhoSimuladosResumo, desempenhoSimuladosVazio } from "@/lib/desempenho-simulados";
 import { getRetencaoResumo } from "@/lib/retencao";
 import { getQuestoesCount } from "@/lib/questoes";
 import { withTimeout } from "@/lib/with-timeout";
@@ -19,6 +20,12 @@ export async function loadDesempenhoPageResumo(
     QUERY_MS,
     desempenhoFallback(),
     "desempenho",
+  );
+  const simulados = await withTimeout(
+    getDesempenhoSimuladosResumo(userId, { since }),
+    QUERY_MS,
+    desempenhoSimuladosVazio(),
+    "desempenhoSimulados",
   );
   const retencao = await withTimeout(
     getRetencaoResumo(userId),
@@ -42,5 +49,5 @@ export async function loadDesempenhoPageResumo(
         )
       : [];
 
-  return { desempenho, retencao, questoesCount, topicosFoco };
+  return { desempenho, simulados, retencao, questoesCount, topicosFoco };
 }

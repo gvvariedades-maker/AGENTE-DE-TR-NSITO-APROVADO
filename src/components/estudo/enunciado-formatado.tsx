@@ -14,14 +14,14 @@ export function EnunciadoFormatado({
 
   if (partes.tipo === "simples") {
     return (
-      <p className={cn("text-lg leading-relaxed whitespace-pre-line", className)}>
+      <p className={cn("text-xl leading-relaxed whitespace-pre-line sm:text-lg", className)}>
         {partes.texto}
       </p>
     );
   }
 
   return (
-    <div className={cn("space-y-4 text-lg leading-relaxed", className)}>
+    <div className={cn("space-y-4 text-xl leading-relaxed sm:text-lg", className)}>
       <p>{partes.intro}</p>
       <ol className="space-y-3">
         {partes.assertivas.map((item) => {
