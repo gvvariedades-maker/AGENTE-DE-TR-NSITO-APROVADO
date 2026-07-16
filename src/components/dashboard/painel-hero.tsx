@@ -20,7 +20,7 @@ import {
   hrefEstudoTopico,
   labelPiorTopico,
   type PiorTopico,
-} from "@/lib/piores-topicos";
+} from "@/lib/piores-topicos-shared";
 import { PROVA_DATA } from "@/types";
 
 interface PainelHeroProps {

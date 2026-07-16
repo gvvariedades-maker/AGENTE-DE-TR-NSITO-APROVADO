@@ -1,14 +1,8 @@
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
-import {
-  getDesempenhoResumo,
-  getDesempenhoTopicos,
-  DISCIPLINA_LABELS,
-} from "@/lib/desempenho";
-import { getRetencaoResumo } from "@/lib/retencao";
+import { DISCIPLINA_LABELS } from "@/types";
 import { calcularProximoPasso } from "@/lib/proximo-passo";
 import { DISCIPLINAS, type Disciplina } from "@/types";
-import { getQuestoesCount } from "@/lib/questoes";
 import { CicloRetencao } from "@/components/dashboard/ciclo-retencao";
 import { ProximoPassoCard } from "@/components/dashboard/proximo-passo-card";
 import {
@@ -27,7 +21,7 @@ import {
   AlertTitle,
 } from "@/components/ui/alert";
 import { ResetDesempenhoForm } from "@/components/dashboard/reset-desempenho-form";
-import { withTimeout } from "@/lib/with-timeout";
+import { loadDesempenhoPageResumo } from "@/lib/desempenho-page-resumo";
 import {
   labelPeriodo,
   parsePeriodoDesempenho,
@@ -35,16 +29,6 @@ import {
 } from "@/lib/desempenho-periodo";
 
 export const dynamic = "force-dynamic";
-
-const QUERY_MS = 8_000;
-
-const retencaoFallback = {
-  aprendendo: 0,
-  jovem: 0,
-  maduro: 0,
-  revisoesHoje: 0,
-  hasData: false,
-};
 
 function parseDisciplina(raw?: string): Disciplina | undefined {
   if (!raw) return undefined;
@@ -77,30 +61,8 @@ export default async function DesempenhoPage({
     data: { user },
   } = await supabase.auth.getUser();
 
-  const emptyDesempenho = await getDesempenhoResumo(null);
-  const [desempenho, retencao, questoesCount, topicosFoco] = await Promise.all([
-    withTimeout(
-      getDesempenhoResumo(user?.id, { since }),
-      QUERY_MS,
-      emptyDesempenho,
-      "desempenho",
-    ),
-    withTimeout(
-      getRetencaoResumo(user?.id),
-      QUERY_MS,
-      retencaoFallback,
-      "retencao",
-    ),
-    withTimeout(getQuestoesCount(), QUERY_MS, 0, "questoesCount"),
-    disciplinaFoco && user?.id
-      ? withTimeout(
-          getDesempenhoTopicos(user.id, disciplinaFoco),
-          QUERY_MS,
-          [],
-          "topicosFoco",
-        )
-      : Promise.resolve([]),
-  ]);
+  const { desempenho, retencao, questoesCount, topicosFoco } =
+    await loadDesempenhoPageResumo(user?.id, { since, disciplinaFoco });
 
   const { semaforo, overview } = desempenho;
   const emRisco = semaforo.disciplinasEmRisco.length > 0;

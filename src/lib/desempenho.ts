@@ -271,11 +271,9 @@ export async function getDesempenhoResumo(
     };
   }
 
-  const [semaforo, atividade, catalogo] = await Promise.all([
-    getSemaforoData(userId),
-    getAtividadeSemanal(userId),
-    getCatalogoTopicos(),
-  ]);
+  const semaforo = await getSemaforoData(userId);
+  const atividade = await getAtividadeSemanal(userId);
+  const catalogo = await getCatalogoTopicos();
 
   const vazio: DesempenhoResumo = {
     semaforo,
@@ -307,28 +305,16 @@ export async function getDesempenhoResumo(
   };
 
   try {
-    const [
-      statsRows,
-      statsAllTimeRows,
-      coberturaRows,
-      sessoes,
-      notasSimulado,
-      totalAttempts,
-      overview,
-    ] = await Promise.all([
-      getAttemptStatsByDisciplina(userId, since),
-      since
-        ? getAttemptStatsByDisciplina(userId)
-        : Promise.resolve(null as Awaited<
-            ReturnType<typeof getAttemptStatsByDisciplina>
-          > | null),
-
-      db.execute<{
-        disciplina: Disciplina;
-        topicos_mapeados: number;
-        topicos_com_questao: number;
-        topicos_vistos: number;
-      }>(sql`
+    const statsRows = await getAttemptStatsByDisciplina(userId, since);
+    const statsAllTimeRows = since
+      ? await getAttemptStatsByDisciplina(userId)
+      : null;
+    const coberturaRows = await db.execute<{
+      disciplina: Disciplina;
+      topicos_mapeados: number;
+      topicos_com_questao: number;
+      topicos_vistos: number;
+    }>(sql`
         SELECT
           t.disciplina,
           count(distinct t.id)::int AS topicos_mapeados,
@@ -339,30 +325,27 @@ export async function getDesempenhoResumo(
         LEFT JOIN attempts a
           ON a.question_id = q.id AND a.user_id = ${userId}::uuid
         GROUP BY t.disciplina
-      `),
-
-      db
-        .select({
-          id: studySessions.id,
-          modo: studySessions.modo,
-          disciplina: studySessions.disciplina,
-          topicoSlug: studySessions.topicoSlug,
-          plannedCount: studySessions.plannedCount,
-          answeredCount: studySessions.answeredCount,
-          acertos: studySessions.acertos,
-          erros: studySessions.erros,
-          completed: studySessions.completed,
-          startedAt: studySessions.startedAt,
-        })
-        .from(studySessions)
-        .where(eq(studySessions.userId, userId))
-        .orderBy(desc(studySessions.startedAt))
-        .limit(8),
-
-      getNotasSimuladoPorDisciplina(userId),
-      countAttempts(userId),
-      getAttemptOverview(userId, since),
-    ]);
+      `);
+    const sessoes = await db
+      .select({
+        id: studySessions.id,
+        modo: studySessions.modo,
+        disciplina: studySessions.disciplina,
+        topicoSlug: studySessions.topicoSlug,
+        plannedCount: studySessions.plannedCount,
+        answeredCount: studySessions.answeredCount,
+        acertos: studySessions.acertos,
+        erros: studySessions.erros,
+        completed: studySessions.completed,
+        startedAt: studySessions.startedAt,
+      })
+      .from(studySessions)
+      .where(eq(studySessions.userId, userId))
+      .orderBy(desc(studySessions.startedAt))
+      .limit(8);
+    const notasSimulado = await getNotasSimuladoPorDisciplina(userId);
+    const totalAttempts = await countAttempts(userId);
+    const overview = await getAttemptOverview(userId, since);
 
     const coberturaMap = new Map(
       coberturaRows.map((r) => [r.disciplina, r]),

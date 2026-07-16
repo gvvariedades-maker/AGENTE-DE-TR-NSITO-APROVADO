@@ -2,20 +2,13 @@ import { eq, sql } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { attempts, questions, topics } from "@/lib/db/schema";
 import {
-  labelTopicoEdital,
   TOPICOS_PRIORIDADE_EDITAL,
   type TopicoPrioridade,
 } from "@/lib/edital-topicos";
+import type { PiorTopico } from "@/lib/piores-topicos-shared";
 import type { Disciplina } from "@/types";
 
-export interface PiorTopico {
-  topicId: string | null;
-  slug: string;
-  disciplina: Disciplina;
-  erros: number;
-  tentativas: number;
-  taxaErro: number;
-}
+export type { PiorTopico } from "@/lib/piores-topicos-shared";
 
 export async function getPioresTopicos(
   userId?: string | null,
@@ -131,12 +124,3 @@ function padroesPrioridade(limit: number): PiorTopico[] {
   );
 }
 
-export function labelPiorTopico(p: PiorTopico): string {
-  const nome = labelTopicoEdital(p.slug);
-  if (p.tentativas === 0) {
-    return `${nome} — prioridade do edital`;
-  }
-  return `${nome} — ${p.taxaErro}% erros`;
-}
-
-export { hrefEstudoErros, hrefEstudoTopico } from "@/lib/estudo-links";

@@ -12,7 +12,7 @@ import {
 import { Progress } from "@/components/ui/progress";
 import { SemaforoVisual } from "@/components/dashboard/semaforo-visual";
 import type { DesempenhoDisciplina } from "@/lib/desempenho";
-import { labelModoSessao } from "@/lib/motor-ata";
+import { labelModoSessao } from "@/lib/motor-ata-shared";
 import { labelTopicoEdital } from "@/lib/edital-topicos";
 import type { SessaoEstudoResumo } from "@/lib/desempenho";
 

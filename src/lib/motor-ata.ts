@@ -2,6 +2,7 @@ import { sql } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { sqlSomenteQuestoesReais } from "@/lib/questoes-reais";
 import { getSemaforoData } from "@/lib/semaforo";
+import type { ModoSessaoEstudo } from "@/lib/motor-ata-shared";
 import { SIMULADO_ESPELHO_DISTRIBUICAO, type Disciplina } from "@/types";
 
 /** Disciplinas gerais com maior risco de zerar (regra do projeto). */
@@ -11,13 +12,8 @@ const DISCIPLINAS_RISCO_PADRAO: Disciplina[] = [
   "legislacao_etica_sp",
 ];
 
-export type ModoSessaoEstudo =
-  | "auto"
-  | "normal"
-  | "erros"
-  | "anti_zerar"
-  | "pegadinha"
-  | "reais_idecan";
+export type { ModoSessaoEstudo } from "@/lib/motor-ata-shared";
+export { parseModoSessao, labelModoSessao } from "@/lib/motor-ata-shared";
 
 export interface FiltrosMotor {
   disciplina?: Disciplina;
@@ -28,38 +24,6 @@ export interface FiltrosMotor {
   somentePegadinha?: boolean;
   somenteErros?: boolean;
   somenteReaisIdecan?: boolean;
-}
-
-export function parseModoSessao(raw?: string): ModoSessaoEstudo {
-  const valid: ModoSessaoEstudo[] = [
-    "auto",
-    "normal",
-    "erros",
-    "anti_zerar",
-    "pegadinha",
-    "reais_idecan",
-  ];
-  if (raw && valid.includes(raw as ModoSessaoEstudo)) {
-    return raw as ModoSessaoEstudo;
-  }
-  return "auto";
-}
-
-export function labelModoSessao(modo: ModoSessaoEstudo): string {
-  switch (modo) {
-    case "auto":
-      return "Motor ATA";
-    case "anti_zerar":
-      return "Anti-zerar";
-    case "pegadinha":
-      return "Pegadinha IDECAN";
-    case "reais_idecan":
-      return "Questões reais IDECAN";
-    case "erros":
-      return "Caderno de erros";
-    default:
-      return "Prática livre";
-  }
 }
 
 async function resolverContextoAuto(

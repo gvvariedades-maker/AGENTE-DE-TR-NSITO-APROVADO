@@ -16,7 +16,7 @@ import {
   hrefEstudoTopico,
   labelPiorTopico,
   type PiorTopico,
-} from "@/lib/piores-topicos";
+} from "@/lib/piores-topicos-shared";
 
 interface SuaProvaHojeProps {
   retencao: RetencaoResumo;
