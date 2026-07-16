@@ -1,4 +1,4 @@
-import { eq, sql, and } from "drizzle-orm";
+import { eq, inArray, sql, and } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { questions, topics } from "@/lib/db/schema";
 import type { ComentarioQuestao, Disciplina } from "@/types";
@@ -98,32 +98,44 @@ function mapRowToQuestao(row: {
 
 export { mapRowToQuestao };
 
+const questaoSelectFields = {
+  id: questions.id,
+  enunciado: questions.enunciado,
+  altA: questions.altA,
+  altB: questions.altB,
+  altC: questions.altC,
+  altD: questions.altD,
+  altE: questions.altE,
+  gabarito: questions.gabarito,
+  comentarioJson: questions.comentarioJson,
+  estudoReversoVisualJson: questions.estudoReversoVisualJson,
+  estudoReversoVisualCompletoJson: questions.estudoReversoVisualCompletoJson,
+  disciplina: topics.disciplina,
+  tags: questions.tags,
+} as const;
+
 export async function getQuestaoById(id: string): Promise<QuestaoUI | null> {
+  const lista = await getQuestoesByIds([id]);
+  return lista[0] ?? null;
+}
+
+/** Carrega várias questões em uma query, preservando a ordem dos IDs. */
+export async function getQuestoesByIds(ids: string[]): Promise<QuestaoUI[]> {
+  if (ids.length === 0) return [];
+
   try {
-    const [row] = await db
-      .select({
-        id: questions.id,
-        enunciado: questions.enunciado,
-        altA: questions.altA,
-        altB: questions.altB,
-        altC: questions.altC,
-        altD: questions.altD,
-        altE: questions.altE,
-        gabarito: questions.gabarito,
-        comentarioJson: questions.comentarioJson,
-        estudoReversoVisualJson: questions.estudoReversoVisualJson,
-        estudoReversoVisualCompletoJson: questions.estudoReversoVisualCompletoJson,
-        disciplina: topics.disciplina,
-        tags: questions.tags,
-      })
+    const rows = await db
+      .select(questaoSelectFields)
       .from(questions)
       .innerJoin(topics, eq(questions.topicId, topics.id))
-      .where(eq(questions.id, id))
-      .limit(1);
+      .where(inArray(questions.id, ids));
 
-    return row ? mapRowToQuestao(row) : null;
+    const porId = new Map(rows.map((row) => [row.id, mapRowToQuestao(row)]));
+    return ids
+      .map((id) => porId.get(id))
+      .filter((q): q is QuestaoUI => q != null);
   } catch {
-    return null;
+    return [];
   }
 }
 
@@ -142,21 +154,7 @@ export async function getQuestoesLista(
       parts.length > 1 ? and(...parts) : parts[0];
 
     const query = db
-      .select({
-        id: questions.id,
-        enunciado: questions.enunciado,
-        altA: questions.altA,
-        altB: questions.altB,
-        altC: questions.altC,
-        altD: questions.altD,
-        altE: questions.altE,
-        gabarito: questions.gabarito,
-        comentarioJson: questions.comentarioJson,
-        estudoReversoVisualJson: questions.estudoReversoVisualJson,
-        estudoReversoVisualCompletoJson: questions.estudoReversoVisualCompletoJson,
-        disciplina: topics.disciplina,
-        tags: questions.tags,
-      })
+      .select(questaoSelectFields)
       .from(questions)
       .innerJoin(topics, eq(questions.topicId, topics.id))
       .orderBy(sql`random()`);

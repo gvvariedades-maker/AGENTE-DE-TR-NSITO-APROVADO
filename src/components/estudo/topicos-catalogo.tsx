@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
+import Link, { useLinkStatus } from "next/link";
 import { ChevronRight, Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
@@ -18,6 +18,28 @@ interface TopicosCatalogoProps {
   resumo: TopicosDisciplinaResumo;
   /** Só microtópicos com questões reais e links no modo reais_idecan. */
   somenteReais?: boolean;
+}
+
+function TopicoLinkInner({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  const { pending } = useLinkStatus();
+  return (
+    <span
+      className={cn(
+        className,
+        "flex items-center justify-between gap-3",
+        pending && "pointer-events-none opacity-60",
+      )}
+      aria-busy={pending}
+    >
+      {children}
+    </span>
+  );
 }
 
 export function TopicoRow({
@@ -61,37 +83,40 @@ export function TopicoRow({
       href={hrefEstudoTopico(topico.slug, disciplina, {
         modo: somenteReais ? "reais_idecan" : undefined,
       })}
+      prefetch
       className={cn(
-        "flex items-center justify-between gap-3 rounded-lg border px-4 py-3 text-sm transition-colors",
+        "block rounded-lg border text-sm transition-colors",
         "hover:bg-muted/50 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50",
         isTransito
           ? "border-transito/20 bg-card/50 hover:bg-transito/5"
           : "border-border bg-card/50",
       )}
     >
-      <div className="min-w-0 flex-1">
-        <p className="leading-snug">{topico.label}</p>
-        {topico.questoesReaisCount > 0 && !somenteReais && (
-          <p className="mt-0.5 text-xs text-amber-800/80 dark:text-amber-200/80">
-            {topico.questoesReaisCount} real
-            {topico.questoesReaisCount > 1 ? "is" : ""} IDECAN
-          </p>
-        )}
-        {topico.tentativas > 0 && (
-          <p className="mt-0.5 text-xs text-muted-foreground">
-            {topico.tentativas} tentativas · {topico.taxaAcerto}% acerto
-          </p>
-        )}
-      </div>
-      <div className="flex shrink-0 items-center gap-2">
-        {somenteReais && (
-          <BadgeQuestaoReal tags={["real_idecan"]} variant="compact" />
-        )}
-        <Badge variant="secondary" className="tabular-nums text-xs">
-          {countLabel}Q
-        </Badge>
-        <ChevronRight className="size-4 text-muted-foreground" aria-hidden />
-      </div>
+      <TopicoLinkInner className="px-4 py-3">
+        <div className="min-w-0 flex-1">
+          <p className="leading-snug">{topico.label}</p>
+          {topico.questoesReaisCount > 0 && !somenteReais && (
+            <p className="mt-0.5 text-xs text-amber-800/80 dark:text-amber-200/80">
+              {topico.questoesReaisCount} real
+              {topico.questoesReaisCount > 1 ? "is" : ""} IDECAN
+            </p>
+          )}
+          {topico.tentativas > 0 && (
+            <p className="mt-0.5 text-xs text-muted-foreground">
+              {topico.tentativas} tentativas · {topico.taxaAcerto}% acerto
+            </p>
+          )}
+        </div>
+        <div className="flex shrink-0 items-center gap-2">
+          {somenteReais && (
+            <BadgeQuestaoReal tags={["real_idecan"]} variant="compact" />
+          )}
+          <Badge variant="secondary" className="tabular-nums text-xs">
+            {countLabel}Q
+          </Badge>
+          <ChevronRight className="size-4 text-muted-foreground" aria-hidden />
+        </div>
+      </TopicoLinkInner>
     </Link>
   );
 }

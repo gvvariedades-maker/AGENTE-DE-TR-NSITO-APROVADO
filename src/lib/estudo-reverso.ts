@@ -8,7 +8,7 @@ import {
   type FsrsState,
   type SrsCardState,
 } from "@/lib/srs";
-import { getQuestaoById, mapRowToQuestao, type QuestaoUI } from "@/lib/questoes";
+import { getQuestoesByIds, mapRowToQuestao, type QuestaoUI } from "@/lib/questoes";
 import { sqlSomenteQuestoesReais } from "@/lib/questoes-reais";
 import { PROVA_DATA, type Disciplina } from "@/types";
 import {
@@ -352,11 +352,11 @@ export async function montarSessaoEstudo(
       topicoSlug,
       modo === "reais_idecan",
     );
-    for (const id of idsRevisao) {
-      const q = await getQuestaoById(id);
-      if (q && (!disciplina || q.disciplina === disciplina)) {
+    const revisao = await getQuestoesByIds(idsRevisao);
+    for (const q of revisao) {
+      if (!disciplina || q.disciplina === disciplina) {
         resultado.push(q);
-        idsUsados.add(id);
+        idsUsados.add(q.id);
       }
     }
   }
@@ -377,10 +377,8 @@ export async function montarSessaoEstudo(
       filtros,
       [...idsUsados],
     );
-    for (const id of idsPratica) {
-      const q = await getQuestaoById(id);
-      if (q) resultado.push(q);
-    }
+    const pratica = await getQuestoesByIds(idsPratica);
+    resultado.push(...pratica);
     if (resultado.length >= limit) return resultado;
   }
 

@@ -61,22 +61,32 @@ export default async function EstudoPage({
     data: { user },
   } = await supabase.auth.getUser();
 
-  const [questoesDb, preview] = await Promise.all([
-    montarSessaoEstudo(
-      user?.id,
-      LIMITE_SESSAO,
-      disciplina,
-      topico,
-      modo,
-    ),
-    previewSessaoEstudo(
-      user?.id,
-      LIMITE_SESSAO,
-      disciplina,
-      topico,
-      modo,
-    ),
-  ]);
+  const questoesDb = await montarSessaoEstudo(
+    user?.id,
+    LIMITE_SESSAO,
+    disciplina,
+    topico,
+    modo,
+  );
+
+  // Preview só quando a tela de resumo pode aparecer (evita queries duplicadas).
+  const preview =
+    topico || questoesDb.length > 0
+      ? {
+          total: questoesDb.length,
+          revisoesSrs: 0,
+          questoesPratica: questoesDb.length,
+          modo,
+          topicoSlug: topico,
+          disciplina,
+        }
+      : await previewSessaoEstudo(
+          user?.id,
+          LIMITE_SESSAO,
+          disciplina,
+          topico,
+          modo,
+        );
 
   const sessionId =
     user && questoesDb.length > 0
