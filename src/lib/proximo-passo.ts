@@ -1,4 +1,5 @@
-import { DISCIPLINA_LABELS, type Disciplina } from "@/types";
+import type { PlanoProvaResumo } from "@/lib/plano-prova";
+import { MIN_PONTOS_TOTAL } from "@/lib/edital-constants";
 
 export interface ProximoPasso {
   href: string;
@@ -6,61 +7,52 @@ export interface ProximoPasso {
   motivo: string;
 }
 
-interface ProximoPassoInput {
-  emRisco: boolean;
-  /** Primeira disciplina abaixo do mínimo (quando houver). */
-  disciplinaRisco?: Disciplina;
-  revisoesHoje: number;
-  questoesDisponiveis: boolean;
-}
-
 /**
- * Próxima ação do painel — 3 caminhos claros:
- * 1) disciplina abaixo do mínimo → estudar essa disciplina
- * 2) revisões FSRS → motor auto
- * 3) padrão → CTB (50% da prova)
+ * Próxima ação do painel — prioriza o pacote do plano até a prova.
  */
-export function calcularProximoPasso({
-  emRisco,
-  disciplinaRisco,
-  revisoesHoje,
-  questoesDisponiveis,
-}: ProximoPassoInput): ProximoPasso {
-  if (emRisco && disciplinaRisco) {
+export function calcularProximoPasso(plano: PlanoProvaResumo): ProximoPasso {
+  if (
+    plano.fase === "semana_final" &&
+    plano.revisoesHoje > 0
+  ) {
     return {
-      href: `/estudo?disciplina=${disciplinaRisco}`,
-      label: `Estudar ${DISCIPLINA_LABELS[disciplinaRisco]}`,
-      motivo: "Abaixo do mínimo nesta disciplina",
+      href: plano.pacote.href,
+      label: plano.pacote.label,
+      motivo: plano.pacote.motivo,
     };
   }
 
-  if (emRisco) {
+  if (
+    plano.espelhoMedia !== null &&
+    plano.espelhoMedia < MIN_PONTOS_TOTAL &&
+    plano.diasParaProva <= 30
+  ) {
     return {
-      href: "/estudo?modo=auto",
-      label: "Continuar estudo",
-      motivo: "Há disciplinas abaixo do mínimo — o motor prioriza essas lacunas",
+      href: "/simulado",
+      label: "Fazer simulado",
+      motivo: `Média dos últimos simulados abaixo de ${MIN_PONTOS_TOTAL} — treine a prova completa`,
     };
   }
 
-  if (revisoesHoje > 0) {
+  if (plano.diasAtraso > 0) {
     return {
-      href: "/estudo?modo=auto",
-      label: `Revisar · ${revisoesHoje}`,
-      motivo: "Itens no ciclo FSRS para hoje",
+      href: plano.pacote.href,
+      label: plano.pacote.label,
+      motivo: plano.pacote.motivo,
     };
   }
 
-  if (!questoesDisponiveis) {
+  if (plano.revisoesHoje > 0) {
     return {
-      href: "/estudo?disciplina=legislacao_transito",
-      label: "Começar com CTB",
-      motivo: "Inicie pela metade da prova",
+      href: plano.pacote.href,
+      label: plano.pacote.label,
+      motivo: plano.pacote.motivo,
     };
   }
 
   return {
-    href: "/estudo?disciplina=legislacao_transito",
-    label: "Estudar CTB",
-    motivo: "50% da prova — Legislação de Trânsito",
+    href: plano.pacote.href,
+    label: plano.pacote.label,
+    motivo: plano.pacote.motivo,
   };
 }

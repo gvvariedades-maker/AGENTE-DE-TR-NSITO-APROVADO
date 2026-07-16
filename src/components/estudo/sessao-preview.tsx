@@ -14,11 +14,19 @@ import { DISCIPLINA_LABELS } from "@/types";
 interface SessaoPreviewProps {
   preview: SessaoEstudoPreview;
   tituloFiltro?: string | null;
+  missaoHoje?: boolean;
+  metaQuestoes?: number;
 }
 
-export function SessaoPreview({ preview, tituloFiltro }: SessaoPreviewProps) {
+export function SessaoPreview({
+  preview,
+  tituloFiltro,
+  missaoHoje = false,
+  metaQuestoes,
+}: SessaoPreviewProps) {
   const { total, revisoesSrs, questoesPratica, modo } = preview;
   const isErros = modo === "erros";
+  const isRevisoes = modo === "revisoes";
   const modoLabel = labelModoSessao(modo);
 
   if (total === 0) return null;
@@ -31,13 +39,19 @@ export function SessaoPreview({ preview, tituloFiltro }: SessaoPreviewProps) {
         ? labelTopicoEdital(preview.topicoSlug)
         : "geral");
 
+  const tituloCard = missaoHoje
+    ? `Missão de hoje · ${metaQuestoes ?? total} questões`
+    : isErros
+      ? "Sessão de erros"
+      : isRevisoes
+        ? "Revisões de hoje"
+        : "Preview da sessão";
+
   return (
     <Card className="mx-4 mt-4 max-w-3xl self-center border-border">
       <CardHeader className="pb-2">
         <div className="flex flex-wrap items-center gap-2">
-          <CardTitle className="text-base">
-            {isErros ? "Sessão de erros" : "Preview da sessão"}
-          </CardTitle>
+          <CardTitle className="text-base">{tituloCard}</CardTitle>
           <Badge variant="outline" className="text-xs">
             {modoLabel}
           </Badge>
@@ -51,9 +65,13 @@ export function SessaoPreview({ preview, tituloFiltro }: SessaoPreviewProps) {
           )}
         </div>
         <CardDescription>
-          {isErros
-            ? `Revisão das questões que você ainda não domina em ${escopo}.`
-            : `Composição da sessão focada em ${escopo} — motor ATA ativo.`}
+          {missaoHoje
+            ? `Fila escolhida pela IA para hoje — só estas questões contam na meta. Foco: ${escopo}.`
+            : isErros
+              ? `Revisão das questões que você ainda não domina em ${escopo}.`
+              : isRevisoes
+                ? `Só itens agendados para rever hoje — repetição espaçada, sem questões novas.`
+                : `Composição da sessão focada em ${escopo} — motor ATA ativo.`}
         </CardDescription>
       </CardHeader>
       <CardContent>

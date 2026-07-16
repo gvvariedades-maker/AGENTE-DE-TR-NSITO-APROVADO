@@ -1,5 +1,5 @@
-import { PainelAtalhos } from "@/components/dashboard/painel-atalhos";
 import { PainelDashboardLoader } from "@/components/dashboard/painel-dashboard-loader";
+import { PainelProvaCountdown } from "@/components/dashboard/painel-prova-countdown";
 import { DISCIPLINAS, type Disciplina } from "@/types";
 
 export const dynamic = "force-dynamic";
@@ -21,7 +21,7 @@ export default async function DashboardPage({
 
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-5 p-4 md:gap-6 md:p-8">
-      <PainelAtalhos />
+      <PainelProvaCountdown />
       <PainelDashboardLoader disciplinaAtiva={disciplinaPainel} />
     </div>
   );

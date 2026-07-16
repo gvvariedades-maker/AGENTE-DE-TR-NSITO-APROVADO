@@ -29,6 +29,7 @@ export function TelaRenderer({ tela }: TelaRendererProps) {
         <TelaComparacao
           conteudo={tela.conteudo}
           humanizarDistratores={humanizarDistratores}
+          secao={tela.secao}
         />
       );
     }

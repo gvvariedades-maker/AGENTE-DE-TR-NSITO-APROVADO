@@ -6,6 +6,7 @@ import { ChevronRight, Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { hrefEstudoTopico } from "@/lib/estudo-links";
+import { labelContagemQuestoes } from "@/lib/format-questoes";
 import { BadgeQuestaoReal } from "@/components/estudo/badge-questao-real";
 import {
   agruparTopicos,
@@ -18,6 +19,8 @@ interface TopicosCatalogoProps {
   resumo: TopicosDisciplinaResumo;
   /** Só microtópicos com questões reais e links no modo reais_idecan. */
   somenteReais?: boolean;
+  /** Painel do dashboard já tem busca própria. */
+  ocultarBusca?: boolean;
 }
 
 function TopicoLinkInner({
@@ -111,8 +114,8 @@ export function TopicoRow({
           {somenteReais && (
             <BadgeQuestaoReal tags={["real_idecan"]} variant="compact" />
           )}
-          <Badge variant="secondary" className="tabular-nums text-xs">
-            {countLabel}Q
+          <Badge variant="secondary" className="text-xs whitespace-nowrap">
+            {labelContagemQuestoes(countLabel)}
           </Badge>
           <ChevronRight className="size-4 text-muted-foreground" aria-hidden />
         </div>
@@ -121,13 +124,17 @@ export function TopicoRow({
   );
 }
 
-export function TopicosCatalogo({ resumo, somenteReais = false }: TopicosCatalogoProps) {
+export function TopicosCatalogo({
+  resumo,
+  somenteReais = false,
+  ocultarBusca = false,
+}: TopicosCatalogoProps) {
   const [busca, setBusca] = useState("");
   const { disciplina, topicos: topicosRaw } = resumo;
   const topicos = somenteReais
     ? topicosRaw.filter((t) => t.questoesReaisCount > 0)
     : topicosRaw;
-  const mostrarBusca = topicos.length > 12;
+  const mostrarBusca = !ocultarBusca && topicos.length > 12;
 
   const topicosFiltrados = useMemo(() => {
     const q = busca.trim().toLowerCase();
@@ -168,7 +175,7 @@ export function TopicosCatalogo({ resumo, somenteReais = false }: TopicosCatalog
 
       {grupos.length === 0 ? (
         <p className="py-8 text-center text-sm text-muted-foreground">
-          Nenhum microtópico encontrado
+          Nenhum assunto encontrado
           {busca ? ` para “${busca}”` : ""}.
         </p>
       ) : (

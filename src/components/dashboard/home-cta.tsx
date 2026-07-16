@@ -118,7 +118,7 @@ export function HomeCta({ diasParaProva }: HomeCtaProps) {
       <div className="grid gap-2 sm:grid-cols-2">
         <ModoTreinoCard
           icon={Scale}
-          label="Simulado espelho"
+          label="Simulado"
           desc="60 questões · 4 horas · proporção IDECAN"
           href="/simulado"
           destaque

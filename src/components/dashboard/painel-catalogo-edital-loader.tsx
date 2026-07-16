@@ -83,10 +83,10 @@ export function PainelCatalogoEditalLoader({
       <Card>
         <CardHeader className="pb-3">
           <CardTitle className="text-base">
-            Microtópicos · {DISCIPLINA_LABELS[disciplina]}
+            {DISCIPLINA_LABELS[disciplina]}
           </CardTitle>
           <CardDescription>
-            O banco demorou para responder. Os microtópicos com questões não
+            O banco demorou para responder. Os assuntos com questões não
             carregaram — tente de novo em alguns segundos.
           </CardDescription>
         </CardHeader>

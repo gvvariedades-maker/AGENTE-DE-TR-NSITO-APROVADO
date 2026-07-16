@@ -1,10 +1,22 @@
+import { createClient } from "@/lib/supabase/server";
 import { getQuestoesEspelho, QUESTAO_DEMO } from "@/lib/questoes";
 import { QuestaoView } from "@/components/estudo/questao-view";
 
 export const dynamic = "force-dynamic";
 
 export default async function SimuladoPage() {
-  const { questoes: questoesDb, totalEsperado } = await getQuestoesEspelho();
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  const {
+    questoes: questoesDb,
+    totalEsperado,
+    questoesReaisCount,
+    metaCaderno,
+  } = await getQuestoesEspelho({ userId: user?.id });
+
   const questoes =
     questoesDb.length > 0
       ? questoesDb
@@ -22,6 +34,8 @@ export default async function SimuladoPage() {
         duracaoMinutos={240}
         isDemo={isDemo}
         totalEsperado={totalEsperado}
+        questoesReaisCount={questoesReaisCount}
+        metaCaderno={metaCaderno}
       />
     </div>
   );

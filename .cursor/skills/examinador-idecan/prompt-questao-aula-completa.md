@@ -13,59 +13,7 @@
 
 > **Política do banco:** dificuldade mínima **4** (`src/lib/validations/dificuldade-banco.ts`). O `npm run proxima` já retorna o escopo com nível 4+.
 > **Eficácia:** examinador-idecan **v2.1** (transferência + eixo vizinho + calibração) · estudo-reverso-visual **v3.4** (far-transfer + E1–E3).
-> **Validação:** `validate:lote` strict exige `meta.near_transfer` / `far_transfer` / `o_que_nao_muda` em nível 4+ (gate Zod T1–T4). Lotes legados: `--legacy-transferencia`.
-
-**Variante disciplina:** no `.txt`, troque `legislacao_transito` nas duas linhas do `proxima` e em `Disciplina:`.
-
----
-
-## Prompt nova conversa (espelho do .txt)
-
-```text
-Modo Agent. Skills: examinador-idecan (v2.1) + estudo-reverso-visual (v3.4).
-
-Disciplina: legislacao_transito
-
-Passo 0 — escolher tópico automaticamente:
-→ npm run proxima -- legislacao_transito
-→ Usar o bloco "Escopo pronto" retornado (tópico, recorte, família, lote, dificuldade 4+).
-
-Gerar 1 questão inédita IDECAN + aula completa v3.4 nesse tópico.
-Consultar perfil vertical da disciplina (mapa slug→arquivo na SKILL.md) para forma e mecanismos.
-Se existir nota ou PDF em conteúdo/estrategia/ para o tópico: consultar organização didática (nunca copiar literal; validar lei em conteúdo/).
-
-## Dificuldade mínima 4 (banco de treino)
-- "dificuldade": 4 ou 5 — nunca 1–3
-- Estrutura: caso_pratico + ≥2 mecanismos cruzados + ≥2 dispositivos no gabarito
-- passo_a_passo[1]: ≥2 slugs distintos (numero_vizinho | competencia_snt | gravidade | regra_excecao | termo_unico)
-- estilo_idecan: pegadinha_* | assertivas | incorreta
-- Pegadinha obrigatória; gate primeira passagem item 4: número bate com dificuldade_operacional
-
-## Questão (examinador v2.1)
-- 4 alt A–D; mecanismo declarado em cada errada
-- <cadeia_anti_alucinacao> em toda citação legal
-- Gate 9: cada errada on-case (deriva do enunciado); competencia_snt só se o stem citar órgão/competência
-- Gate 10: meta.near_transfer + meta.far_transfer + meta.o_que_nao_muda (distintos); meta.eixo_vizinho se o gabarito remete a outro artigo
-- <gate_calibracao_corpus> (envelope + estilo top + mecanismo alinhado)
-- meta.isca_por_alternativa (A/B/D) + meta.eixos_mecanismo quando cruzar ≥2 slugs
-
-## Aula v3.4
-- Hub: exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md + família do proxima
-- estudo_reverso_visual_completo versao 2, 7–11 telas
-- contexto: só iscas — análise por mecanismo fica em distratores
-- Macete: regra + near + far + o que NÃO muda (eco da meta); citar eixo_vizinho se houver
-- Grifos: npm run grifo:offsets → texto_grifado obrigatório; motivo ecoa id da tela
-- Família A com 2 dispositivos: tela eixo2 ou hierarquia (2º fundamento do gabarito, não eixo órfão)
-- Gate Mayer 8/8 + editorial 12/12 + #17 (preview:grifos) + #18 (far) + #19 (E1–E3)
-
-## Entrega
-1. Gravar lote + snippet em _snippets/
-2. npm run grifo:offsets + preview:grifos no lote (ou validate:lote — 5 gates)
-3. npm run index:questoes → npm run db:seed
-4. Não commitar
-
-Reportar: família, gabarito, pegadinha em 1 frase, near/far em 1 linha cada, nº de telas, E1–E3 ok?, resultado dos 5 gates, caminho do arquivo.
-```
+> **Validação:** `validate:lote` strict exige `meta.near_transfer` / `far_transfer` / `o_que_nao_muda` em nível 4+ (gate Zod T1–
 
 > Mantenha [prompt-nova-conversa.txt](./prompt-nova-conversa.txt) sincronizado com o bloco acima ao editar o prompt padrão.
 

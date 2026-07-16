@@ -17,7 +17,36 @@ import {
   resolverFiltrosMotor,
   type ModoSessaoEstudo,
 } from "@/lib/motor-ata";
+import {
+  alocarSlotsSessaoAuto,
+  calcularFase,
+  permitirNovasAleatorias,
+  type SlotsSessaoAuto,
+} from "@/lib/plano-prova-calc";
+import { diasParaProva } from "@/lib/prova-data";
 import { registrarRespostaSessao } from "@/lib/study-sessions";
+import type { TutorCalibracao } from "@/lib/tutor/calibracao";
+
+function slotsSessaoAuto(limit: number, override?: SlotsSessaoAuto) {
+  if (override) return override;
+  return alocarSlotsSessaoAuto(calcularFase(diasParaProva()), limit);
+}
+
+export interface SessaoMissaoContext {
+  slots?: SlotsSessaoAuto;
+  disciplinaFoco?: Disciplina;
+  boostDisciplinas?: TutorCalibracao["boostDisciplinas"];
+  topicosPrioritarios?: string[];
+}
+
+function extrasMotorMissao(ctx?: SessaoMissaoContext) {
+  if (!ctx) return undefined;
+  return {
+    disciplinaMissao: ctx.disciplinaFoco,
+    boostDisciplinas: ctx.boostDisciplinas,
+    topicosPrioritarios: ctx.topicosPrioritarios,
+  };
+}
 
 export type { ModoSessaoEstudo };
 export {
@@ -192,7 +221,11 @@ export async function registrarTentativa(
       cardState,
       input.fsrsGrade ?? input.acertou,
       now,
-      { examDate: PROVA_DATA },
+      {
+        examDate: PROVA_DATA,
+        requestedRetention:
+          calcularFase(diasParaProva()) === "semana_final" ? 0.92 : undefined,
+      },
     );
 
     const valores = {
@@ -287,6 +320,7 @@ export async function previewSessaoEstudo(
   disciplina?: Disciplina,
   topicoSlug?: string,
   modo: ModoSessaoEstudo = "normal",
+  missao?: SessaoMissaoContext,
 ): Promise<SessaoEstudoPreview> {
   const base: SessaoEstudoPreview = {
     total: 0,
@@ -299,29 +333,72 @@ export async function previewSessaoEstudo(
 
   if (!userId) return base;
 
+  if (modo === "revisoes") {
+    const idsRevisao = await buscarIdsRevisaoPendentes(
+      userId,
+      limit,
+      disciplina,
+      topicoSlug,
+    );
+    return {
+      ...base,
+      revisoesSrs: idsRevisao.length,
+      questoesPratica: 0,
+      total: idsRevisao.length,
+    };
+  }
+
+  const slots =
+    modo === "auto"
+      ? slotsSessaoAuto(limit, missao?.slots)
+      : { revisoes: limit, erros: 0, pratica: limit };
+  const motorExtras = extrasMotorMissao(missao);
+  const disciplinaEfetiva = disciplina ?? missao?.disciplinaFoco;
   const idsRevisao = await buscarIdsRevisaoPendentes(
     userId,
-    limit,
-    disciplina,
+    slots.revisoes,
+    disciplinaEfetiva,
     topicoSlug,
     modo === "reais_idecan",
   );
   const revisoesSrs = idsRevisao.length;
-  const faltam = limit - revisoesSrs;
+  const excluir = [...idsRevisao];
+  let usados = revisoesSrs;
 
   let questoesPratica = 0;
+  if (modo === "auto" && slots.erros > 0 && usados < limit) {
+    const filtrosErros = await resolverFiltrosMotor(
+      "erros",
+      userId,
+      disciplinaEfetiva,
+      topicoSlug,
+      motorExtras,
+    );
+    const idsErros = await buscarIdsPraticaPontuados(
+      userId,
+      Math.min(slots.erros, limit - usados),
+      filtrosErros,
+      excluir,
+    );
+    questoesPratica += idsErros.length;
+    usados += idsErros.length;
+    excluir.push(...idsErros);
+  }
+
+  const faltam = limit - usados;
   if (faltam > 0) {
     const filtros = await resolverFiltrosMotor(
       modo,
       userId,
-      disciplina,
+      disciplinaEfetiva,
       topicoSlug,
+      motorExtras,
     );
-    questoesPratica = await contarPraticaPontuada(
+    questoesPratica += await contarPraticaPontuada(
       userId,
       faltam,
       filtros,
-      idsRevisao,
+      excluir,
     );
   }
 
@@ -333,30 +410,65 @@ export async function previewSessaoEstudo(
   };
 }
 
-/** Monta sessão: revisões SRS vencidas primeiro, depois prática (novas ou erros). */
+/** Monta sessão: revisões SRS, erros (fase), prática pontuada; novas só se permitido. */
 export async function montarSessaoEstudo(
   userId: string | undefined,
   limit = 20,
   disciplina?: Disciplina,
   topicoSlug?: string,
   modo: ModoSessaoEstudo = "normal",
+  missao?: SessaoMissaoContext,
 ): Promise<QuestaoUI[]> {
   const resultado: QuestaoUI[] = [];
   const idsUsados = new Set<string>();
+  const fase = calcularFase(diasParaProva());
+  const slots =
+    modo === "auto"
+      ? slotsSessaoAuto(limit, missao?.slots)
+      : { revisoes: limit, erros: 0, pratica: limit };
+  const motorExtras = extrasMotorMissao(missao);
+  const disciplinaEfetiva = disciplina ?? missao?.disciplinaFoco;
 
   if (userId) {
     const idsRevisao = await buscarIdsRevisaoPendentes(
       userId,
-      limit,
-      disciplina,
+      slots.revisoes,
+      disciplinaEfetiva,
       topicoSlug,
       modo === "reais_idecan",
     );
     const revisao = await getQuestoesByIds(idsRevisao);
     for (const q of revisao) {
-      if (!disciplina || q.disciplina === disciplina) {
+      if (!disciplinaEfetiva || q.disciplina === disciplinaEfetiva) {
         resultado.push(q);
         idsUsados.add(q.id);
+      }
+    }
+
+    if (modo === "revisoes") {
+      return resultado;
+    }
+
+    if (modo === "auto" && slots.erros > 0 && resultado.length < limit) {
+      const filtrosErros = await resolverFiltrosMotor(
+        "erros",
+        userId,
+        disciplinaEfetiva,
+        topicoSlug,
+        motorExtras,
+      );
+      const idsErros = await buscarIdsPraticaPontuados(
+        userId,
+        Math.min(slots.erros, limit - resultado.length),
+        filtrosErros,
+        [...idsUsados],
+      );
+      const erros = await getQuestoesByIds(idsErros);
+      for (const q of erros) {
+        if (!idsUsados.has(q.id)) {
+          resultado.push(q);
+          idsUsados.add(q.id);
+        }
       }
     }
   }
@@ -364,30 +476,53 @@ export async function montarSessaoEstudo(
   const faltam = limit - resultado.length;
   if (faltam <= 0) return resultado;
 
+  let filtrosAuto: Awaited<ReturnType<typeof resolverFiltrosMotor>> | null =
+    null;
+
   if (userId) {
-    const filtros = await resolverFiltrosMotor(
+    filtrosAuto = await resolverFiltrosMotor(
       modo,
       userId,
-      disciplina,
+      disciplinaEfetiva,
       topicoSlug,
+      motorExtras,
     );
     const idsPratica = await buscarIdsPraticaPontuados(
       userId,
       faltam,
-      filtros,
+      filtrosAuto,
       [...idsUsados],
     );
     const pratica = await getQuestoesByIds(idsPratica);
-    resultado.push(...pratica);
+    for (const q of pratica) {
+      if (!idsUsados.has(q.id)) {
+        resultado.push(q);
+        idsUsados.add(q.id);
+      }
+    }
     if (resultado.length >= limit) return resultado;
   }
 
-  const modosEstritos: ModoSessaoEstudo[] = ["erros", "pegadinha"];
+  const modosEstritos: ModoSessaoEstudo[] = ["erros", "pegadinha", "revisoes"];
   if (modosEstritos.includes(modo)) return resultado;
+
+  const temBuracoCritico = Boolean(
+    filtrosAuto?.filtrarSomentePrioritarias &&
+      (filtrosAuto.disciplinasPrioritarias?.length ?? 0) > 0,
+  );
+  if (
+    modo === "auto" &&
+    !permitirNovasAleatorias(fase, temBuracoCritico)
+  ) {
+    return resultado;
+  }
 
   const novas = await buscarQuestoesNovas(
     limit - resultado.length,
-    disciplina,
+    disciplina ??
+      (temBuracoCritico
+        ? filtrosAuto?.disciplinasPrioritarias?.[0]
+        : undefined),
     [...idsUsados, ...resultado.map((q) => q.id)],
     topicoSlug,
     modo === "reais_idecan",

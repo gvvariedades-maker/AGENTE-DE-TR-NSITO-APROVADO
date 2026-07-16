@@ -160,9 +160,6 @@ export function EstudoReversoPlayer({
           </p>
           <Badge variant="secondary" className="w-fit text-[10px] font-normal">
             {labelTrilhaEstudoReverso(visual)}
-            {visual.versao === 2 && visual.publico_alvo === "iniciante"
-              ? " · iniciante"
-              : ""}
           </Badge>
         </div>
         <Button
@@ -184,8 +181,8 @@ export function EstudoReversoPlayer({
         secoes={telas.map((t) => t.secao)}
       />
 
-      <div className="flex flex-1 flex-col overflow-y-auto px-4 py-4">
-        <div className="mx-auto flex w-full max-w-md flex-col gap-4">
+      <div className="flex flex-1 flex-col overflow-y-auto bg-muted/20 px-4 py-5">
+        <div className="mx-auto flex w-full max-w-lg flex-col gap-4">
           <div className="flex items-start gap-3">
             {(() => {
               const meta = metaSecaoVisual(tela.secao);
@@ -204,7 +201,7 @@ export function EstudoReversoPlayer({
             })()}
             <h2
               id="estudo-reverso-titulo"
-              className="min-w-0 flex-1 text-lg font-semibold leading-snug text-foreground"
+              className="min-w-0 flex-1 text-xl font-semibold leading-snug tracking-tight text-foreground"
             >
               {tela.titulo}
             </h2>
@@ -215,12 +212,12 @@ export function EstudoReversoPlayer({
 
       <footer className="border-t border-border bg-background p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
         {visual.links_fonte.length > 0 && (
-          <div className="mb-3 flex flex-wrap justify-center gap-1.5">
+          <div className="mb-3 flex flex-wrap justify-center gap-1">
             {visual.links_fonte.map((link) => (
               <Badge
                 key={link.rotulo}
                 variant="outline"
-                className="text-xs font-normal"
+                className="border-border/60 px-1.5 py-0 text-[10px] font-normal text-muted-foreground"
                 title={link.path}
               >
                 {link.rotulo}

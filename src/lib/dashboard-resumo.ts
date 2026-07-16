@@ -1,10 +1,32 @@
-import { getDesempenhoResumo, getAtividadeHoje, type DesempenhoResumo } from "@/lib/desempenho";
+import { getDesempenhoResumo, getAtividadeHoje, getProgressoMissaoHoje, type DesempenhoResumo } from "@/lib/desempenho";
 import { getRetencaoResumo, type RetencaoResumo } from "@/lib/retencao";
 import { getQuestoesCount } from "@/lib/questoes";
 import { getContagemQuestoesReais } from "@/lib/questoes-reais";
 import { getPioresTopicos } from "@/lib/piores-topicos";
 import { withTimeout } from "@/lib/with-timeout";
-import { DISCIPLINA_LABELS, DISCIPLINAS, PROVA_DATA, SIMULADO_ESPELHO_DISTRIBUICAO } from "@/types";
+import { getPlanoProvaResumo, planoProvaFallback } from "@/lib/plano-prova";
+import type { PlanoProvaResumo } from "@/lib/plano-prova-calc";
+import {
+  montarSemanaChegada,
+  semanaChegadaFallback,
+  type SemanaChegadaResumo,
+} from "@/lib/semana-chegada";
+import {
+  dominioResumoVazio,
+  getDominioResumo,
+} from "@/lib/tutor/dominio-resumo";
+import {
+  montarHistoricoCalib,
+  recalcularCalibracao,
+} from "@/lib/tutor/calibracao";
+import {
+  getTutorCalibracao,
+  salvarTutorCalibracao,
+} from "@/lib/tutor/calibracao-store";
+import { decidirMetaQuestoes } from "@/lib/tutor/politica";
+import { carregarTutorContexto } from "@/lib/tutor/contexto";
+import { diasParaProva } from "@/lib/prova-data";
+import { DISCIPLINA_LABELS, DISCIPLINAS, SIMULADO_ESPELHO_DISTRIBUICAO } from "@/types";
 import type { DashboardResumo } from "@/types/dashboard-resumo";
 import {
   isDisciplinaGeral,
@@ -19,13 +41,8 @@ const QUERY_MS = 8_000;
 /** Contagem de reais desconhecida → não desativar o card. */
 export const REAIS_COUNT_UNKNOWN = -1;
 
-function diasParaProvaFallback() {
-  const diff = PROVA_DATA.getTime() - Date.now();
-  return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
-}
-
 export function desempenhoFallback(): DesempenhoResumo {
-  const dias = diasParaProvaFallback();
+  const dias = diasParaProva();
   const zonaVazia = {
     pontos: null as number | null,
     maximo: 0,
@@ -53,6 +70,13 @@ export function desempenhoFallback(): DesempenhoResumo {
       diasParaProva: dias,
       disciplinasEmRisco: [],
       fonte: "vazio",
+      espelho: {
+        janela: 3,
+        quantidade: 0,
+        ultimo: null,
+        media: null,
+        melhor: null,
+      },
     },
     disciplinas: DISCIPLINAS.map((d) => ({
       disciplina: d,
@@ -90,6 +114,31 @@ export const retencaoFallback: RetencaoResumo = {
   hasData: false,
 };
 
+export function buildSemanaChegadaResumo(input: {
+  plano: PlanoProvaResumo;
+  desempenho: DesempenhoResumo;
+  atividadeHoje: { questoes: number };
+  pioresTopicos: DashboardResumo["pioresTopicos"];
+  calibracao?: Awaited<ReturnType<typeof getTutorCalibracao>>;
+}): SemanaChegadaResumo {
+  try {
+    return montarSemanaChegada({
+      plano: input.plano,
+      atividadeHoje: input.atividadeHoje,
+      disciplinasEmRisco: input.desempenho.semaforo.disciplinasEmRisco,
+      disciplinas: input.desempenho.disciplinas.map((d) => ({
+        disciplina: d.disciplina,
+        coberturaPct: d.coberturaPct,
+      })),
+      espelho: input.desempenho.semaforo.espelho,
+      pioresTopicos: input.pioresTopicos,
+      calibracao: input.calibracao,
+    });
+  } catch {
+    return semanaChegadaFallback(input.plano);
+  }
+}
+
 /** Uma query por vez — evita saturar pool Postgres (max:1) na Vercel. */
 export async function loadDashboardResumo(
   userId?: string | null,
@@ -112,6 +161,12 @@ export async function loadDashboardResumo(
     { questoes: 0, acertos: 0 },
     "atividadeHoje",
   );
+  const progressoMissaoHoje = await withTimeout(
+    getProgressoMissaoHoje(userId),
+    QUERY_MS,
+    { questoes: 0, acertos: 0, filaSize: 0 },
+    "progressoMissaoHoje",
+  );
   const questoesCount = await withTimeout(
     getQuestoesCount(),
     QUERY_MS,
@@ -130,10 +185,70 @@ export async function loadDashboardResumo(
     [],
     "pioresTopicos",
   );
+  const dominio = await withTimeout(
+    getDominioResumo(userId),
+    QUERY_MS,
+    dominioResumoVazio(),
+    "dominio",
+  );
+  const calibracaoRaw = await withTimeout(
+    getTutorCalibracao(userId),
+    QUERY_MS,
+    await getTutorCalibracao(null),
+    "calibracao",
+  );
+  const plano = await withTimeout(
+    getPlanoProvaResumo(userId, dominio),
+    QUERY_MS,
+    planoProvaFallback(),
+    "plano",
+  );
+
+  const ctxCalib = carregarTutorContexto({
+    plano,
+    dominio,
+    desempenho,
+    retencao,
+    atividadeHoje,
+    calibracao: calibracaoRaw,
+  });
+  const metaPadrao = decidirMetaQuestoes(ctxCalib, calibracaoRaw);
+  const historico = montarHistoricoCalib(desempenho.atividade, metaPadrao);
+  const calibracao = recalcularCalibracao({
+    atual: calibracaoRaw,
+    historico,
+    fase: plano.fase,
+    espelhoMedia: plano.espelhoMedia,
+    disciplinasEmRisco: desempenho.semaforo.disciplinasEmRisco.map(
+      (r) => r.disciplina,
+    ),
+  });
+  if (userId) {
+    const mudou =
+      calibracao.capacidadeQuestoes !== calibracaoRaw.capacidadeQuestoes ||
+      calibracao.biasRevisao !== calibracaoRaw.biasRevisao ||
+      JSON.stringify(calibracao.boostDisciplinas) !==
+        JSON.stringify(calibracaoRaw.boostDisciplinas);
+    if (mudou) {
+      await salvarTutorCalibracao(userId, calibracao).catch(() => undefined);
+    }
+  }
+
+  const semana = buildSemanaChegadaResumo({
+    plano,
+    desempenho,
+    atividadeHoje: { questoes: progressoMissaoHoje.questoes },
+    pioresTopicos,
+    calibracao,
+  });
 
   return {
     desempenho,
     retencao,
+    plano,
+    semana,
+    dominio,
+    calibracao,
     atividadeHoje,
     questoesCount,
     questoesReaisCount,

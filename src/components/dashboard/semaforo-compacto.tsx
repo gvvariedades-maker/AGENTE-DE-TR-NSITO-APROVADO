@@ -21,6 +21,7 @@ interface SemaforoCompactoProps {
   gerais: ZonaMetrica;
   especificos: ZonaMetrica;
   total: ZonaMetrica;
+  descricao?: string;
 }
 
 function Chip({ metrica }: { metrica: ZonaMetrica }) {
@@ -57,18 +58,22 @@ export function SemaforoCompacto({
   gerais,
   especificos,
   total,
+  descricao = "Último simulado entregue — treino avulso não entra na nota.",
 }: SemaforoCompactoProps) {
   return (
     <section
       aria-labelledby="semaforo-compacto-titulo"
       className="flex flex-col gap-2"
     >
-      <h2
-        id="semaforo-compacto-titulo"
-        className="text-sm font-semibold text-muted-foreground"
-      >
-        Semáforo de aprovação
-      </h2>
+      <div>
+        <h2
+          id="semaforo-compacto-titulo"
+          className="text-sm font-semibold text-muted-foreground"
+        >
+          Semáforo de aprovação
+        </h2>
+        <p className="mt-0.5 text-xs text-muted-foreground">{descricao}</p>
+      </div>
       <div className="flex gap-2">
         <Chip metrica={gerais} />
         <Chip metrica={especificos} />

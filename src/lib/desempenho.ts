@@ -1,4 +1,4 @@
-import { and, desc, eq, gte, sql } from "drizzle-orm";
+import { and, desc, eq, gte, inArray, sql } from "drizzle-orm";
 import { db } from "@/lib/db";
 import {
   attempts,
@@ -16,15 +16,16 @@ import {
 import { getAtividadeSemanal, type AtividadeDia } from "@/lib/retencao";
 import { getSemaforoData, type SemaforoData } from "@/lib/semaforo";
 import { projetarPontosDisciplina } from "@/lib/semaforo-projecao";
+import { diasParaProva } from "@/lib/prova-data";
 import {
   getAttemptStatsByDisciplina,
   getAttemptOverview,
   countAttempts,
 } from "@/lib/attempt-stats";
+import { idsFilaMissaoHoje } from "@/lib/study-sessions";
 import {
   DISCIPLINAS,
   DISCIPLINA_LABELS,
-  PROVA_DATA,
   SIMULADO_ESPELHO_DISTRIBUICAO,
   type Disciplina,
 } from "@/types";
@@ -205,10 +206,7 @@ export async function getDesempenhoResumo(
   const since = options?.since ?? null;
 
   if (!userId) {
-    const dias = Math.max(
-      0,
-      Math.ceil((PROVA_DATA.getTime() - Date.now()) / (1000 * 60 * 60 * 24)),
-    );
+    const dias = diasParaProva();
     return {
       semaforo: {
         gerais: {
@@ -242,6 +240,13 @@ export async function getDesempenhoResumo(
         diasParaProva: dias,
         disciplinasEmRisco: [],
         fonte: "vazio",
+        espelho: {
+          janela: 3,
+          quantidade: 0,
+          ultimo: null,
+          media: null,
+          melhor: null,
+        },
       },
       disciplinas: DISCIPLINAS.map((d) => ({
         disciplina: d,
@@ -487,6 +492,49 @@ export async function getAtividadeHoje(
     };
   } catch {
     return { questoes: 0, acertos: 0 };
+  }
+}
+
+/**
+ * Progresso da missão do dia: só tentativas em questões da fila da IA.
+ * Sem sessão de missão hoje → 0 (estudo livre não avança a meta).
+ */
+export async function getProgressoMissaoHoje(
+  userId?: string | null,
+): Promise<{ questoes: number; acertos: number; filaSize: number }> {
+  if (!userId) return { questoes: 0, acertos: 0, filaSize: 0 };
+
+  try {
+    const fila = await idsFilaMissaoHoje(userId);
+    if (fila.length === 0) {
+      return { questoes: 0, acertos: 0, filaSize: 0 };
+    }
+
+    const hoje = new Date();
+    hoje.setHours(0, 0, 0, 0);
+
+    const [row] = await db
+      .select({
+        questoes: sql<number>`count(DISTINCT ${attempts.questionId})::int`,
+        acertos: sql<number>`count(DISTINCT ${attempts.questionId})
+          filter (where ${attempts.acertou})::int`,
+      })
+      .from(attempts)
+      .where(
+        and(
+          eq(attempts.userId, userId),
+          gte(attempts.createdAt, hoje),
+          inArray(attempts.questionId, fila),
+        ),
+      );
+
+    return {
+      questoes: row?.questoes ?? 0,
+      acertos: row?.acertos ?? 0,
+      filaSize: fila.length,
+    };
+  } catch {
+    return { questoes: 0, acertos: 0, filaSize: 0 };
   }
 }
 

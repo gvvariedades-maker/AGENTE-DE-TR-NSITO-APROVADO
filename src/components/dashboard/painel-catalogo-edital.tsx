@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { Search } from "lucide-react";
+import { Search, ChevronDown } from "lucide-react";
 import { TopicoRow } from "@/components/estudo/topicos-catalogo";
 import { TopicosCatalogo } from "@/components/estudo/topicos-catalogo";
 import { cn } from "@/lib/utils";
@@ -16,7 +16,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {
-  priorizarTopicosEstudo,
   type TopicosDisciplinaResumo,
 } from "@/lib/topicos-catalogo-shared";
 import { DISCIPLINA_LABELS } from "@/types";
@@ -34,11 +33,6 @@ export function PainelCatalogoEdital({
   const { disciplina } = resumo;
   const [busca, setBusca] = useState("");
   const isTransito = disciplina === "legislacao_transito";
-
-  const sugeridos = useMemo(
-    () => priorizarTopicosEstudo(resumo.topicos),
-    [resumo.topicos],
-  );
 
   const resultadosBusca = useMemo(() => {
     const q = busca.trim().toLowerCase();
@@ -61,27 +55,27 @@ export function PainelCatalogoEdital({
     <Card className="overflow-hidden">
       <CardHeader className="pb-3">
         <div className="flex flex-wrap items-start justify-between gap-3">
-          <div>
+          <div className="min-w-0">
             <CardTitle className="text-base">
-              Microtópicos · {DISCIPLINA_LABELS[disciplina]}
+              {DISCIPLINA_LABELS[disciplina]}
             </CardTitle>
-            <CardDescription>Escolha um tópico e comece agora</CardDescription>
+            <CardDescription>Escolha um assunto e comece agora</CardDescription>
           </div>
           <Link
-            href={`/estudo/catalogo?disciplina=${disciplina}`}
+            href={`/estudo?disciplina=${disciplina}&modo=auto`}
             className={cn(
-              buttonVariants({ variant: "ghost", size: "sm" }),
-              "text-primary",
+              buttonVariants({ size: "sm" }),
+              "shrink-0",
+              isTransito && "bg-transito hover:bg-transito/90",
             )}
           >
-            Catálogo completo →
+            Estudar questões
           </Link>
         </div>
       </CardHeader>
 
       <CardContent className="flex flex-col gap-4">
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
             <Badge
               variant="outline"
               className={cn(
@@ -99,16 +93,6 @@ export function PainelCatalogoEdital({
             {taxaLabel && (
               <span className="text-xs text-muted-foreground">{taxaLabel}</span>
             )}
-          </div>
-          <Link
-            href={`/estudo?disciplina=${disciplina}&modo=auto`}
-            className={cn(
-              buttonVariants({ size: "sm" }),
-              isTransito && "bg-transito hover:bg-transito/90",
-            )}
-          >
-            Motor ATA · tudo
-          </Link>
         </div>
 
         <div className="relative">
@@ -132,7 +116,7 @@ export function PainelCatalogoEdital({
           <ul className="flex max-h-72 flex-col gap-1.5 overflow-y-auto">
             {resultadosBusca.length === 0 ? (
               <li className="py-6 text-center text-sm text-muted-foreground">
-                Nenhum microtópico para “{busca.trim()}”.
+                Nenhum assunto para “{busca.trim()}”.
               </li>
             ) : (
               resultadosBusca.map((topico) => (
@@ -142,57 +126,41 @@ export function PainelCatalogoEdital({
               ))
             )}
           </ul>
+        ) : resumo.totalMapeados > 0 ? (
+          <details className="group rounded-lg border border-border" open>
+            <summary className="cursor-pointer list-none px-4 py-3 text-sm font-medium marker:content-none [&::-webkit-details-marker]:hidden">
+              <span className="flex items-center justify-between gap-3">
+                Todos os assuntos ({resumo.totalMapeados})
+                <span
+                  className={cn(
+                    "inline-flex shrink-0 items-center gap-1 rounded-md border px-2.5 py-1 text-xs font-semibold transition-colors group-open:hidden",
+                    isTransito
+                      ? "border-transito/40 bg-transito/10 text-transito-foreground"
+                      : "border-primary/30 bg-primary/10 text-primary",
+                  )}
+                >
+                  Expandir assuntos
+                  <ChevronDown className="size-3.5" aria-hidden />
+                </span>
+                <span
+                  className={cn(
+                    "hidden shrink-0 items-center gap-1 text-xs font-medium group-open:inline-flex",
+                    isTransito ? "text-transito-foreground" : "text-primary",
+                  )}
+                >
+                  Ocultar assuntos
+                  <ChevronDown className="size-3.5 rotate-180" aria-hidden />
+                </span>
+              </span>
+            </summary>
+            <div className="border-t border-border px-2 pb-3 pt-2">
+              <TopicosCatalogo resumo={resumo} ocultarBusca />
+            </div>
+          </details>
         ) : (
-          <>
-            <section aria-labelledby="sugeridos-titulo">
-              <h3
-                id="sugeridos-titulo"
-                className="mb-2 text-xs font-semibold tracking-wide text-muted-foreground uppercase"
-              >
-                Sugeridos para você
-              </h3>
-              {sugeridos.length === 0 ? (
-              resumo.totalMapeados > 0 ? (
-                <p className="mb-3 text-sm text-muted-foreground">
-                  Nenhum microtópico com questões carregado ainda. Veja o
-                  catálogo completo abaixo ou tente atualizar a página.
-                </p>
-              ) : (
-                <p className="text-sm text-muted-foreground">
-                  Nenhum microtópico com questões nesta disciplina ainda.
-                </p>
-              )
-            ) : (
-                <ul className="flex flex-col gap-1.5">
-                  {sugeridos.map((topico) => (
-                    <li key={topico.id}>
-                      <TopicoRow topico={topico} disciplina={disciplina} />
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </section>
-
-            {(resumo.topicos.length > sugeridos.length ||
-              (sugeridos.length === 0 && resumo.totalMapeados > 0)) && (
-              <details
-                className="group rounded-lg border border-border"
-                open={sugeridos.length === 0 && resumo.totalMapeados > 0}
-              >
-                <summary className="cursor-pointer list-none px-4 py-3 text-sm font-medium marker:content-none [&::-webkit-details-marker]:hidden">
-                  <span className="flex items-center justify-between gap-2">
-                    Todos os microtópicos ({resumo.totalMapeados})
-                    <span className="text-xs font-normal text-muted-foreground group-open:hidden">
-                      expandir
-                    </span>
-                  </span>
-                </summary>
-                <div className="border-t border-border px-2 pb-3 pt-2">
-                  <TopicosCatalogo resumo={resumo} />
-                </div>
-              </details>
-            )}
-          </>
+          <p className="text-sm text-muted-foreground">
+            Nenhum assunto com questões nesta disciplina ainda.
+          </p>
         )}
       </CardContent>
     </Card>

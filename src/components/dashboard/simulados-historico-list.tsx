@@ -47,7 +47,7 @@ export function SimuladosHistoricoList({
           <div>
             <CardTitle className="text-base">Histórico de simulados</CardTitle>
             <CardDescription>
-              Espelhos entregues no período
+              Simulados entregues no período
               {melhorNota !== null && (
                 <> · melhor nota: {melhorNota} pts</>
               )}
@@ -66,7 +66,7 @@ export function SimuladosHistoricoList({
           <p className="py-6 text-center text-sm text-muted-foreground">
             Nenhum simulado entregue neste período.{" "}
             <Link href="/simulado" className="text-primary underline-offset-4 hover:underline">
-              Fazer espelho 60Q
+              Fazer simulado 60Q
             </Link>
           </p>
         ) : (

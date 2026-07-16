@@ -157,7 +157,7 @@ export function FeedbackElaborado({
               variant="outline"
               className="border-semaforo-verde/50 text-semaforo-verde"
             >
-              Microtópico dominado
+              Assunto dominado
             </Badge>
           )}
           {tipoErroLabel && (

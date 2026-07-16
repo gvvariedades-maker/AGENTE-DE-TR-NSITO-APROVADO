@@ -59,6 +59,10 @@ export async function finalizarSimulado(
     };
   }
 
+  const questionIds = payload.respostas
+    .map((r) => r.questionId)
+    .filter((id) => isQuestaoPersistivel(id));
+
   const [inserted] = await db
     .insert(simulados)
     .values({
@@ -68,6 +72,7 @@ export async function finalizarSimulado(
       notasDisciplinaJson: resultado.notasDisciplina,
       zerouDisciplina: resultado.zerouDisciplina,
       duracaoMin: payload.duracaoMin,
+      questionIds,
     })
     .returning({ id: simulados.id });
 

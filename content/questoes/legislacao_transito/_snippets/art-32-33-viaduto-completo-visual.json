@@ -1,0 +1,302 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CTB_art_32",
+  "macete_visual": "Viaduto sem SINAL · Cruzamento PROX · somam",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Viaduto sem sinalização e proximidade de cruzamento — art. 32 e art. 33 veda cumulativamente",
+    "eixos_legais": [
+      "CTB_art_32",
+      "CTB_art_33"
+    ],
+    "isca_por_alternativa": {
+      "B": "art. 32 só vale em rodovia — viaduto urbano ficaria de fora",
+      "C": "art. 33 só proíbe dentro do cruzamento, não a 35 m antes",
+      "D": "visibilidade boa no viaduto dispensa sinalização permissiva do art. 32"
+    },
+    "eficacia_pos_aula": [
+      "E1",
+      "E2",
+      "E3"
+    ],
+    "referencia_lote": "content/questoes/legislacao_transito/lote-215.json",
+    "gabarito": "A"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: duas vedações no mesmo caso",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito A.\n\nB — limitou a vedação em viaduto a rodovias: o caput vale para qualquer via de pista única com duplo sentido.\nC — restringiu a proibição ao interior do cruzamento: a lei fala em interseções e proximidades.\nD — inventou exceção por visibilidade no viaduto: sem sinalização permissiva, a vedação subsiste.\n\nNesta aula você fixa quando as duas normas de ultrapassagem se acumulam.",
+        "destaques": [
+          "Gabarito A",
+          "art. 32",
+          "art. 33"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "PISTA ÚNICA COM DUPLO SENTIDO: configuração que aciona o art. 32 antes de qualquer ultrapassagem.\n\nVIADUTO SEM SINALIZAÇÃO: ponte elevada sem marcação ou placa permissiva — item expresso da lista vedada.\n\nPROXIMIDADES DE INTERSEÇÃO: zona antes ou depois do cruzamento onde o art. 33 veda ultrapassar, além do interior.",
+        "destaques": [
+          "PISTA ÚNICA",
+          "VIADUTO",
+          "PROXIMIDADES"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: pode ultrapassar neste trecho?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Ultrapassagem em viaduto sem sinalização permissiva?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Manobra nas proximidades de interseção?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Gabarito A — viaduto e proximidade vedam",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Locais vedados pelo art. 32",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Trecho",
+          "Regra"
+        ],
+        "linhas": [
+          {
+            "faixa": "Curvas",
+            "classificacao": "Vedado — salvo sinalização"
+          },
+          {
+            "faixa": "Aclives sem visibilidade",
+            "classificacao": "Vedado — salvo sinalização"
+          },
+          {
+            "faixa": "Passagens de nível",
+            "classificacao": "Vedado — salvo sinalização"
+          },
+          {
+            "faixa": "Pontes e viadutos",
+            "classificacao": "Vedado — salvo sinalização",
+            "destaque": true
+          },
+          {
+            "faixa": "Travessias de pedestres",
+            "classificacao": "Vedado — salvo sinalização"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: uma norma × duas vedações",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a lei diz ✓"
+        ],
+        "linhas": [
+          [
+            "Só o viaduto ou só o cruzamento veda",
+            "Art. 32 e art. 33 se acumulam no mesmo caso"
+          ],
+          [
+            "Art. 33 só proíbe dentro do cruzamento",
+            "Interseções e proximidades vedam ultrapassagem"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "B — regra_excecao",
+            "Restringe art. 32 a rodovias — caput não distingue via urbana/rural"
+          ],
+          [
+            "C — termo_unico",
+            "Reduz proximidades do art. 33 ao interior do cruzamento"
+          ],
+          [
+            "D — regra_excecao",
+            "Visibilidade não substitui sinalização permissiva no viaduto"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o enunciado",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Fato do caso",
+          "Conclusão legal"
+        ],
+        "linhas": [
+          [
+            "Viaduto do Açude Velho, sem sinalização permissiva",
+            "Art. 32 veda a ultrapassagem"
+          ],
+          [
+            "A 35 m de cruzamento não sinalizado",
+            "Art. 33 veda nas proximidades da interseção"
+          ],
+          [
+            "Resultado",
+            "Gabarito A — cumulação das duas vedações"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Art. 32 × art. 33 — normas autônomas",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Art. 32 (viaduto)",
+            "Veda ultrapassar em ponte/viaduto sem sinalização"
+          ],
+          [
+            "Art. 33 (vizinho)",
+            "Veda ultrapassar nas interseções e proximidades"
+          ],
+          [
+            "Cumulação",
+            "Ambos incidem — uma norma não afasta a outra"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei32",
+      "titulo": "Art. 32 — viaduto e exceção",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 32",
+        "texto": "O condutor não poderá ultrapassar veículos em vias com duplo sentido de direção e pista única, nos trechos em curvas e em aclives sem visibilidade suficiente, nas passagens de nível, nas pontes e viadutos e nas travessias de pedestres, exceto quando houver sinalização permitindo a ultrapassagem.",
+        "trechos_grifados": [
+          {
+            "inicio": 82,
+            "fim": 93,
+            "motivo": "glossario — pista única com duplo sentido aciona o art. 32",
+            "texto_grifado": "pista única"
+          },
+          {
+            "inicio": 187,
+            "fim": 204,
+            "motivo": "mapa — viaduto do enunciado está na lista vedada",
+            "texto_grifado": "pontes e viadutos"
+          },
+          {
+            "inicio": 236,
+            "fim": 295,
+            "motivo": "contraste — exceção ausente no caso (sem sinalização)",
+            "texto_grifado": "exceto quando houver sinalização permitindo a ultrapassagem"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lei33",
+      "titulo": "Art. 33 — interseções e proximidades",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 33",
+        "texto": "Nas interseções e suas proximidades, o condutor não poderá efetuar ultrapassagem.",
+        "trechos_grifados": [
+          {
+            "inicio": 4,
+            "fim": 35,
+            "motivo": "caso — 35 m do cruzamento configura proximidade vedada",
+            "texto_grifado": "interseções e suas proximidades"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near/far-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Viaduto sem SINAL = art. 32 veda · Cruzamento + PROXIMIDADES = art. 33 veda · As duas normas somam.\nNear: mesmo viaduto a 200 m do cruzamento — só art. 32 incide.\nFar: aclive com sinalização permissiva — exceção do art. 32 autoriza ultrapassar.\nNão muda: pontes e viadutos vedam sem sinalização permissiva em pista única duplo sentido.\nCadeia: vizinho = art. 33 (interseções e proximidades).",
+        "destaques": [
+          "sem SINAL",
+          "PROXIMIDADES",
+          "somam"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "CTB art. 32",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    },
+    {
+      "rotulo": "CTB art. 33",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

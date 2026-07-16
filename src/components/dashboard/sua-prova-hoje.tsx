@@ -102,7 +102,7 @@ export function SuaProvaHoje({
 
         <div>
           <p className="mb-2 text-xs font-medium tracking-wide text-muted-foreground uppercase">
-            Piores tópicos
+            Piores assuntos
           </p>
           <ul className="flex flex-col gap-1.5">
             {pioresTopicos.map((p) => (
@@ -139,7 +139,7 @@ export function SuaProvaHoje({
               buttonVariants({ variant: "outline", size: "sm" }),
             )}
           >
-            Simulado espelho
+            Simulado
           </Link>
         </div>
       </CardContent>

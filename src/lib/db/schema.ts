@@ -80,6 +80,8 @@ export const simulados = pgTable("simulados", {
   notasDisciplinaJson: jsonb("notas_disciplina_json").notNull().default({}),
   zerouDisciplina: boolean("zerou_disciplina").notNull().default(false),
   duracaoMin: integer("duracao_min"),
+  /** Questões deste caderno — anti-repetição entre simulados. */
+  questionIds: uuid("question_ids").array().notNull().default([]),
   createdAt: timestamp("created_at", { withTimezone: true })
     .defaultNow()
     .notNull(),
@@ -117,6 +119,10 @@ export const studySessions = pgTable("study_sessions", {
   answeredCount: integer("answered_count").notNull().default(0),
   acertos: integer("acertos").notNull().default(0),
   erros: integer("erros").notNull().default(0),
+  /** Sessão gerada pelo CTA da missão do dia (fila da IA). */
+  missaoHoje: boolean("missao_hoje").notNull().default(false),
+  /** IDs escolhidos pela IA — progresso da missão só conta estes. */
+  plannedQuestionIds: uuid("planned_question_ids").array().notNull().default([]),
   startedAt: timestamp("started_at", { withTimezone: true })
     .defaultNow()
     .notNull(),
@@ -141,4 +147,18 @@ export const estudoReversoSessions = pgTable("estudo_reverso_sessions", {
     .defaultNow()
     .notNull(),
   concluidoEm: timestamp("concluido_em", { withTimezone: true }),
+});
+
+/** Parâmetros calibrados do Planejador Tutor (Camada 3). */
+export const userTutorCalib = pgTable("user_tutor_calib", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  userId: uuid("user_id").notNull().unique(),
+  capacidadeQuestoes: integer("capacidade_questoes").notNull().default(20),
+  biasRevisao: real("bias_revisao").notNull().default(0),
+  boostDisciplinasJson: jsonb("boost_disciplinas_json")
+    .notNull()
+    .default({}),
+  updatedAt: timestamp("updated_at", { withTimezone: true })
+    .defaultNow()
+    .notNull(),
 });

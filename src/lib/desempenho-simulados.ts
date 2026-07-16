@@ -12,8 +12,8 @@ import {
   getAttemptStatsByDisciplina,
 } from "@/lib/attempt-stats";
 import type { DesempenhoDisciplina, DesempenhoOverview } from "@/lib/desempenho";
-import { calcularDeSimulado, type SemaforoData } from "@/lib/semaforo";
-import { PROVA_DATA } from "@/types";
+import { getSemaforoData, type SemaforoData } from "@/lib/semaforo";
+import { diasParaProva } from "@/lib/prova-data";
 import {
   DISCIPLINAS,
   DISCIPLINA_LABELS,
@@ -47,11 +47,6 @@ const OVERVIEW_VAZIO: DesempenhoOverview = {
   erros: 0,
   taxaAcerto: 0,
 };
-
-function diasParaProva() {
-  const diff = PROVA_DATA.getTime() - Date.now();
-  return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
-}
 
 function semaforoVazio(): SemaforoData {
   const dias = diasParaProva();
@@ -87,6 +82,13 @@ function semaforoVazio(): SemaforoData {
     diasParaProva: dias,
     disciplinasEmRisco: [],
     fonte: "vazio",
+    espelho: {
+      janela: 3,
+      quantidade: 0,
+      ultimo: null,
+      media: null,
+      melhor: null,
+    },
   };
 }
 
@@ -196,22 +198,10 @@ export async function getDesempenhoSimuladosResumo(
         ? Math.max(...simuladosRows.map((s) => s.notaTotal))
         : null;
 
-    let semaforo: SemaforoData = semaforoVazio();
+    const semaforo = await getSemaforoData(userId);
     const notasUltimo =
       (ultimoRow?.notasDisciplinaJson as Partial<Record<Disciplina, number>>) ??
       {};
-
-    if (ultimoRow) {
-      const parcial = calcularDeSimulado(
-        ultimoRow.notaTotal,
-        ultimoRow.notasDisciplinaJson as Record<string, number>,
-      );
-      semaforo = {
-        ...parcial,
-        diasParaProva: diasParaProva(),
-        fonte: "simulado",
-      };
-    }
 
     const emRiscoSet = new Set(
       semaforo.disciplinasEmRisco.map((r) => r.disciplina),

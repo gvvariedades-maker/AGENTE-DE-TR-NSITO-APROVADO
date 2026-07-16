@@ -1,12 +1,22 @@
-import { eq, inArray, sql, and } from "drizzle-orm";
+import { eq, inArray, sql, and, notInArray } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { questions, topics } from "@/lib/db/schema";
 import type { ComentarioQuestao, Disciplina } from "@/types";
-import { SIMULADO_ESPELHO_DISTRIBUICAO } from "@/types";
+import { DISCIPLINAS, SIMULADO_ESPELHO_DISTRIBUICAO } from "@/types";
 import type { EstudoReversoVisual, EstudoReversoVisualV2 } from "@/types/estudo-reverso-visual";
 import { DEMO_ESTUDO_REVERSO_VISUAL } from "@/lib/demo-estudo-reverso-visual";
 import { resolveEstudoReversoVisual, resolveEstudoReversoVisualCompleto } from "@/lib/estudo-reverso-visual-fallback";
 import { sqlSomenteQuestoesReais } from "@/lib/questoes-reais";
+import { isQuestaoRealIdecan } from "@/lib/questoes-reais-tags";
+import { getHistoricoQuestoesSimulado } from "@/lib/simulado-historico";
+import {
+  embaralharCaderno,
+  montarCadernoEspelho,
+  type CandidatoCaderno,
+  type MetaCadernoEspelho,
+} from "@/lib/simulado-caderno";
+
+export type { MetaCadernoEspelho };
 
 export interface QuestaoUI {
   id: string;
@@ -142,13 +152,22 @@ export async function getQuestoesByIds(ids: string[]): Promise<QuestaoUI[]> {
 export async function getQuestoesLista(
   limit = 60,
   disciplina?: Disciplina,
-  options?: { excluirReais?: boolean },
+  options?: {
+    excluirReais?: boolean;
+    somenteReais?: boolean;
+    excluirIds?: string[];
+  },
 ): Promise<QuestaoUI[]> {
   try {
     const parts = [];
     if (disciplina) parts.push(eq(topics.disciplina, disciplina));
-    if (options?.excluirReais) {
+    if (options?.somenteReais) {
+      parts.push(sqlSomenteQuestoesReais("questions.tags"));
+    } else if (options?.excluirReais) {
       parts.push(sql`NOT (${sqlSomenteQuestoesReais("questions.tags")})`);
+    }
+    if (options?.excluirIds && options.excluirIds.length > 0) {
+      parts.push(notInArray(questions.id, options.excluirIds));
     }
     const conditions =
       parts.length > 1 ? and(...parts) : parts[0];
@@ -169,29 +188,89 @@ export async function getQuestoesLista(
   }
 }
 
-/** Simulado espelho: 8+4+4+4+5+5+30 = 60Q na proporção exata do edital. */
-export async function getQuestoesEspelho(): Promise<{
+/** Candidatos leves por disciplina — sem random() no SQL. */
+async function getCandidatosPorDisciplina(): Promise<
+  Partial<Record<Disciplina, CandidatoCaderno[]>>
+> {
+  try {
+    const rows = await db
+      .select({
+        id: questions.id,
+        topicId: questions.topicId,
+        dificuldade: questions.dificuldade,
+        estiloIdecan: questions.estiloIdecan,
+        tags: questions.tags,
+        disciplina: topics.disciplina,
+      })
+      .from(questions)
+      .innerJoin(topics, eq(questions.topicId, topics.id));
+
+    const porDisciplina: Partial<Record<Disciplina, CandidatoCaderno[]>> = {};
+    for (const d of DISCIPLINAS) {
+      porDisciplina[d] = [];
+    }
+
+    for (const row of rows) {
+      const lista = porDisciplina[row.disciplina];
+      if (!lista) continue;
+      lista.push({
+        id: row.id,
+        topicId: row.topicId,
+        disciplina: row.disciplina,
+        dificuldade: row.dificuldade,
+        estiloIdecan: row.estiloIdecan,
+        tags: row.tags ?? [],
+        isReal: isQuestaoRealIdecan(row.tags ?? []),
+      });
+    }
+
+    return porDisciplina;
+  } catch {
+    return {};
+  }
+}
+
+/** Simulado espelho: 8+4+4+4+5+5+30 = 60Q com cotas IDECAN e caderno inédito. */
+export async function getQuestoesEspelho(options?: {
+  userId?: string;
+}): Promise<{
   questoes: QuestaoUI[];
   porDisciplina: Partial<Record<Disciplina, number>>;
   totalEsperado: number;
+  questoesReaisCount: number;
+  metaCaderno: MetaCadernoEspelho;
 }> {
-  const porDisciplina: Partial<Record<Disciplina, number>> = {};
-  const questoes: QuestaoUI[] = [];
-  let totalEsperado = 0;
+  const totalEsperado = Object.values(SIMULADO_ESPELHO_DISTRIBUICAO).reduce(
+    (a, b) => a + b,
+    0,
+  );
 
-  for (const disciplina of Object.keys(
-    SIMULADO_ESPELHO_DISTRIBUICAO,
-  ) as Disciplina[]) {
-    const esperado = SIMULADO_ESPELHO_DISTRIBUICAO[disciplina];
-    totalEsperado += esperado;
-    const lote = await getQuestoesLista(esperado, disciplina, {
-      excluirReais: true,
-    });
-    porDisciplina[disciplina] = lote.length;
-    questoes.push(...lote);
+  const porDisciplinaCandidatos = await getCandidatosPorDisciplina();
+
+  let excluirIds = new Set<string>();
+  let lruRank = new Map<string, number>();
+  if (options?.userId) {
+    const historico = await getHistoricoQuestoesSimulado(options.userId);
+    excluirIds = historico.excluirIds;
+    lruRank = historico.lruRank;
   }
 
-  return { questoes, porDisciplina, totalEsperado };
+  const { ids, meta } = montarCadernoEspelho({
+    porDisciplina: porDisciplinaCandidatos,
+    excluirIds,
+    lruRank,
+  });
+
+  const questoesOrdenadas = await getQuestoesByIds(ids);
+  const questoes = embaralharCaderno(questoesOrdenadas);
+
+  return {
+    questoes,
+    porDisciplina: meta.porDisciplina,
+    totalEsperado,
+    questoesReaisCount: meta.reaisCount,
+    metaCaderno: meta,
+  };
 }
 
 export async function getQuestoesCount(): Promise<number> {

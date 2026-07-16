@@ -34,7 +34,7 @@ function motivoEliminacao(data: FinalizarSimuladoResult): string | null {
   if (resultado.notaTotal < MIN_PONTOS_TOTAL) {
     partes.push(`corte total (${MIN_PONTOS_TOTAL} pts)`);
   }
-  return partes.length > 0 ? partes.join(" · ") : "abaixo do espelho do edital";
+  return partes.length > 0 ? partes.join(" · ") : "abaixo do mínimo do edital";
 }
 
 export function SimuladoResultado({
@@ -77,7 +77,7 @@ export function SimuladoResultado({
                     "border-semaforo-verde/40 bg-semaforo-verde text-white",
                 )}
               >
-                {resultado.aprovado ? "Aprovado no espelho" : "Eliminado no espelho"}
+                {resultado.aprovado ? "Aprovado no simulado" : "Eliminado no simulado"}
               </Badge>
               {demo && (
                 <Badge variant="outline" className="text-[10px] font-normal">

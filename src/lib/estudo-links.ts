@@ -28,6 +28,10 @@ export function hrefEstudoCatalogo(disciplina: Disciplina): string {
   return `/estudo/catalogo?disciplina=${disciplina}`;
 }
 
+export function hrefEstudoRevisoes(): string {
+  return "/estudo?modo=revisoes";
+}
+
 export function hrefVitrineReais(): string {
   return "/estudo/reais";
 }

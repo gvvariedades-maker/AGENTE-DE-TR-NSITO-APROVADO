@@ -1,5 +1,11 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { BookOpen, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import { labelContagemQuestoes } from "@/lib/format-questoes";
 import type { DesempenhoDisciplina } from "@/lib/desempenho";
 import type { ZonaSemaforo } from "@/lib/edital-constants";
 import {
@@ -8,6 +14,9 @@ import {
   SIMULADO_ESPELHO_DISTRIBUICAO,
   type Disciplina,
 } from "@/types";
+import { PainelDisciplinasGuia } from "@/components/dashboard/painel-disciplinas-guia";
+
+const STORAGE_DISCIPLINAS_ABERTO = "disciplinas-seletor-aberto";
 
 const zonaDot: Record<ZonaSemaforo, string> = {
   verde: "bg-semaforo-verde",
@@ -19,69 +28,230 @@ const zonaDot: Record<ZonaSemaforo, string> = {
 interface PainelDisciplinasSeletorProps {
   disciplinaAtiva: Disciplina;
   desempenhoPorDisciplina: Map<Disciplina, DesempenhoDisciplina>;
+  questoesReaisAtivo: boolean;
+  questoesReaisDesc: string;
+  questoesReaisCount: number;
 }
 
 export function PainelDisciplinasSeletor({
   disciplinaAtiva,
   desempenhoPorDisciplina,
+  questoesReaisAtivo,
+  questoesReaisDesc,
+  questoesReaisCount,
 }: PainelDisciplinasSeletorProps) {
-  return (
-    <section aria-labelledby="disciplinas-titulo" className="flex flex-col gap-2.5">
-      <h2
-        id="disciplinas-titulo"
-        className="text-sm font-semibold text-foreground"
-      >
-        Disciplinas
-      </h2>
-      <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-        {DISCIPLINAS.map((d) => {
-          const ativo = d === disciplinaAtiva;
-          const isTransito = d === "legislacao_transito";
-          const desemp = desempenhoPorDisciplina.get(d);
-          const zona = desemp?.zona ?? "vazio";
-          const temDados = (desemp?.tentativas ?? 0) > 0;
+  const [aberto, setAberto] = useState(true);
+  const [montado, setMontado] = useState(false);
 
-          return (
-            <Link
-              key={d}
-              href={`/dashboard?disciplina=${d}`}
-              aria-current={ativo ? "true" : undefined}
-              className={cn(
-                "flex flex-col gap-1.5 rounded-xl border-2 px-3 py-2.5 transition-colors",
-                "focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50",
-                ativo
-                  ? isTransito
-                    ? "border-transito bg-transito/10"
-                    : "border-primary bg-primary/8"
-                  : "border-border bg-card hover:border-primary/40 hover:bg-muted/40",
-              )}
+  useEffect(() => {
+    setMontado(true);
+    try {
+      const salvo = localStorage.getItem(STORAGE_DISCIPLINAS_ABERTO);
+      if (salvo === "0") setAberto(false);
+      if (salvo === "1") setAberto(true);
+    } catch {
+      setAberto(true);
+    }
+
+    function abrirSeHash() {
+      if (typeof window === "undefined") return;
+      if (window.location.hash === "#disciplinas") {
+        setAberto(true);
+        try {
+          localStorage.setItem(STORAGE_DISCIPLINAS_ABERTO, "1");
+        } catch {
+          /* noop */
+        }
+      }
+    }
+
+    abrirSeHash();
+    window.addEventListener("hashchange", abrirSeHash);
+    return () => window.removeEventListener("hashchange", abrirSeHash);
+  }, []);
+
+  function alternar() {
+    setAberto((prev) => {
+      const next = !prev;
+      try {
+        localStorage.setItem(STORAGE_DISCIPLINAS_ABERTO, next ? "1" : "0");
+      } catch {
+        /* storage indisponível */
+      }
+      return next;
+    });
+  }
+
+  const labelAtiva = DISCIPLINA_LABELS[disciplinaAtiva];
+
+  function cardQuestoesReais() {
+    const cardClass = cn(
+      "flex flex-col gap-1.5 rounded-xl border-2 px-3 py-2.5 transition-colors",
+      "focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50",
+      questoesReaisAtivo
+        ? "border-border bg-background hover:border-primary/40 hover:bg-muted/40"
+        : "border-border bg-background opacity-70",
+    );
+
+    const conteudo = (
+      <>
+        <div className="flex items-center justify-between gap-1.5">
+          <span className="flex min-w-0 items-center gap-1.5">
+            <span
+              className="size-2 shrink-0 rounded-full bg-amber-500"
+              aria-hidden
+            />
+            <span className="truncate text-sm font-semibold">
+              Questões reais IDECAN
+            </span>
+          </span>
+          {questoesReaisCount > 0 && (
+            <span className="shrink-0 text-[11px] font-medium tabular-nums text-muted-foreground">
+              {labelContagemQuestoes(questoesReaisCount)}
+            </span>
+          )}
+        </div>
+        <span className="truncate text-xs text-muted-foreground">
+          {questoesReaisDesc}
+        </span>
+      </>
+    );
+
+    if (questoesReaisAtivo) {
+      return (
+        <Link
+          key="questoes-reais-idecan"
+          href="/estudo/reais"
+          role="listitem"
+          className={cardClass}
+        >
+          {conteudo}
+        </Link>
+      );
+    }
+
+    return (
+      <div key="questoes-reais-idecan" role="listitem" className={cardClass}>
+        {conteudo}
+      </div>
+    );
+  }
+
+  return (
+    <section
+      id="disciplinas"
+      aria-labelledby="disciplinas-titulo"
+      className="scroll-mt-20 flex flex-col gap-3"
+    >
+      <PainelDisciplinasGuia />
+
+      <div className="flex flex-col gap-2 rounded-xl border border-border bg-card p-3 sm:p-4">
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div className="min-w-0">
+            <h2
+              id="disciplinas-titulo"
+              className="text-sm font-semibold text-foreground"
             >
-              <div className="flex items-center justify-between gap-1.5">
-                <span className="flex min-w-0 items-center gap-1.5">
-                  <span
-                    className={cn("size-2 shrink-0 rounded-full", zonaDot[zona])}
-                    aria-hidden
-                  />
-                  <span
-                    className={cn(
-                      "truncate text-sm font-semibold",
-                      ativo &&
-                        (isTransito ? "text-transito-foreground" : "text-primary"),
-                    )}
-                  >
-                    {DISCIPLINA_LABELS[d]}
+              Disciplinas
+            </h2>
+            <p className="mt-0.5 text-xs text-muted-foreground">
+              Ativa:{" "}
+              <span className="font-medium text-foreground">{labelAtiva}</span>
+              {" · "}
+              toque em um card para estudar outra matéria
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={alternar}
+            aria-expanded={aberto}
+            aria-controls="disciplinas-lista"
+            className={cn(
+              buttonVariants({ size: "sm" }),
+              "shrink-0 gap-2",
+            )}
+          >
+            <BookOpen className="size-4" aria-hidden />
+            {aberto ? "Ocultar disciplinas" : "Ver disciplinas"}
+            <ChevronDown
+              className={cn(
+                "size-4 transition-transform",
+                aberto && "rotate-180",
+              )}
+              aria-hidden
+            />
+          </button>
+        </div>
+
+        {(!montado || aberto) && (
+          <div
+            id="disciplinas-lista"
+            role="list"
+            className="grid grid-cols-2 gap-2 sm:grid-cols-4"
+          >
+            {DISCIPLINAS.flatMap((d) => {
+              const ativo = d === disciplinaAtiva;
+              const isTransito = d === "legislacao_transito";
+              const desemp = desempenhoPorDisciplina.get(d);
+              const zona = desemp?.zona ?? "vazio";
+              const temDados = (desemp?.tentativas ?? 0) > 0;
+
+              const cardDisciplina = (
+                <Link
+                  key={d}
+                  href={`/dashboard?disciplina=${d}#disciplinas`}
+                  role="listitem"
+                  aria-current={ativo ? "true" : undefined}
+                  className={cn(
+                    "flex flex-col gap-1.5 rounded-xl border-2 px-3 py-2.5 transition-colors",
+                    "focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50",
+                    ativo
+                      ? isTransito
+                        ? "border-transito bg-transito/10"
+                        : "border-primary bg-primary/8"
+                      : "border-border bg-background hover:border-primary/40 hover:bg-muted/40",
+                  )}
+                >
+                  <div className="flex items-center justify-between gap-1.5">
+                    <span className="flex min-w-0 items-center gap-1.5">
+                      <span
+                        className={cn(
+                          "size-2 shrink-0 rounded-full",
+                          zonaDot[zona],
+                        )}
+                        aria-hidden
+                      />
+                      <span
+                        className={cn(
+                          "truncate text-sm font-semibold",
+                          ativo &&
+                            (isTransito
+                              ? "text-transito-foreground"
+                              : "text-primary"),
+                        )}
+                      >
+                        {DISCIPLINA_LABELS[d]}
+                      </span>
+                    </span>
+                    <span className="shrink-0 text-[10px] font-medium text-muted-foreground">
+                      {labelContagemQuestoes(SIMULADO_ESPELHO_DISTRIBUICAO[d])}
+                    </span>
+                  </div>
+                  <span className="text-xs text-muted-foreground">
+                    {temDados
+                      ? `${desemp!.taxaAcerto}% acerto`
+                      : "Sem tentativas"}
                   </span>
-                </span>
-                <span className="shrink-0 text-[11px] font-medium tabular-nums text-muted-foreground">
-                  {SIMULADO_ESPELHO_DISTRIBUICAO[d]}Q
-                </span>
-              </div>
-              <span className="text-xs text-muted-foreground">
-                {temDados ? `${desemp!.taxaAcerto}% acerto` : "Sem tentativas"}
-              </span>
-            </Link>
-          );
-        })}
+                </Link>
+              );
+
+              if (isTransito) {
+                return [cardDisciplina, cardQuestoesReais()];
+              }
+              return [cardDisciplina];
+            })}
+          </div>
+        )}
       </div>
     </section>
   );

@@ -41,7 +41,7 @@ export default async function EstudoCatalogoPage({
             Catálogo do edital
           </h1>
           <p className="text-sm text-muted-foreground">
-            Escolha a disciplina para ver os microtópicos do Anexo I retificado
+            Escolha a disciplina para ver os assuntos do Anexo I retificado
           </p>
         </header>
         <ul className="grid gap-2 sm:grid-cols-2">
@@ -130,7 +130,7 @@ export default async function EstudoCatalogoPage({
               {label}
             </h1>
             <p className="text-sm text-muted-foreground">
-              {resumo.totalMapeados} microtópicos mapeados ·{" "}
+              {resumo.totalMapeados} assuntos mapeados ·{" "}
               {resumo.totalEstudaveis} com questões
               {resumo.totalReais > 0 && (
                 <>
@@ -188,7 +188,7 @@ export default async function EstudoCatalogoPage({
         <Alert>
           <AlertTitle>Catálogo offline do edital</AlertTitle>
           <AlertDescription className="text-sm">
-            Os microtópicos aparecem a partir do Anexo I retificado. Se tudo
+            Os assuntos aparecem a partir do Anexo I retificado. Se tudo
             estiver como &quot;Em breve&quot;, o app não conseguiu ler o banco
             (reinicie o servidor após o seed) ou execute{" "}
             <code className="rounded bg-muted px-1">npm run db:seed:topics</code>{" "}

@@ -6,8 +6,6 @@ interface SessaoBarProps {
   atual: number;
   total: number;
   respondidas: number;
-  acertos: number;
-  erros: number;
 }
 
 /** Barra de sessão — progresso por questões confirmadas, não por posição. */
@@ -15,8 +13,6 @@ export function SessaoBar({
   atual,
   total,
   respondidas,
-  acertos,
-  erros,
 }: SessaoBarProps) {
   const pct = total > 0 ? (respondidas / total) * 100 : 0;
 
@@ -29,10 +25,6 @@ export function SessaoBar({
           </span>
           <span className="tabular-nums">
             {respondidas}/{total} confirmadas
-          </span>
-          <span className="flex gap-2 tabular-nums">
-            <span className="text-semaforo-verde">{acertos} ac.</span>
-            <span className="text-semaforo-vermelho">{erros} er.</span>
           </span>
         </div>
         <Progress

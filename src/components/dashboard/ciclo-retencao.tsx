@@ -11,25 +11,21 @@ import {
 const ESTADOS: {
   key: EstadoRetencao;
   label: string;
-  desc: string;
   cor: string;
 }[] = [
   {
     key: "aprendendo",
-    label: "Aprendendo",
-    desc: "intervalo < 7 dias",
+    label: "Ainda frescas",
     cor: "bg-retencao-aprendendo",
   },
   {
     key: "jovem",
-    label: "Jovem",
-    desc: "7–20 dias",
+    label: "Fixando",
     cor: "bg-retencao-jovem",
   },
   {
     key: "maduro",
-    label: "Maduro",
-    desc: "≥ 21 dias",
+    label: "Bem fixadas",
     cor: "bg-retencao-maduro",
   },
 ];
@@ -59,10 +55,10 @@ export function CicloRetencao({
     >
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-base">Mapa de memória</CardTitle>
+            <CardTitle className="text-base">Memória das questões</CardTitle>
             <CardDescription>
               {resumo.hasData
-                ? `${total} itens no ciclo de revisão`
+                ? "Das questões que você já estudou, quanto já grudou na cabeça."
                 : "Resolva questões para ativar o ciclo"}
             </CardDescription>
           </CardHeader>
@@ -99,7 +95,6 @@ export function CicloRetencao({
                       <p className="mt-1 text-2xl font-bold tabular-nums">
                         {resumo[e.key]}
                       </p>
-                      <p className="text-xs text-muted-foreground">{e.desc}</p>
                     </li>
                   ))}
                 </ul>
@@ -171,10 +166,10 @@ export function CicloRetencao({
     <section aria-labelledby="retencao-titulo" className="flex flex-col gap-4">
       <div>
         <h2 id="retencao-titulo" className="text-lg font-semibold">
-          Ciclo de retenção
+          Memória das questões
         </h2>
         <p className="text-sm text-muted-foreground">
-          Acompanhe como o conteúdo vai fixando na memória ao longo dos dias
+          Das questões que você já estudou, quanto já grudou na cabeça
         </p>
       </div>
       {cards}

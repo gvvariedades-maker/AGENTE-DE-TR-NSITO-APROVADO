@@ -23,7 +23,7 @@ export function HomeHero() {
           Agente de Trânsito Aprovado
         </h1>
         <p className="mt-1 max-w-xl text-sm text-muted-foreground">
-          Simulados espelho, estudo reverso e questões no DNA IDECAN.
+          Simulados, estudo reverso e questões no DNA IDECAN.
         </p>
       </div>
     </header>

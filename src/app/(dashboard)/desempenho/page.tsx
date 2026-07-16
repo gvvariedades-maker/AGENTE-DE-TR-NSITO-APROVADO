@@ -2,6 +2,8 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { DISCIPLINA_LABELS } from "@/types";
 import { calcularProximoPasso } from "@/lib/proximo-passo";
+import { montarPlanoProvaResumo } from "@/lib/plano-prova";
+import { diasParaProva } from "@/lib/prova-data";
 import { DISCIPLINAS, type Disciplina } from "@/types";
 import { CicloRetencao } from "@/components/dashboard/ciclo-retencao";
 import { ProximoPassoCard } from "@/components/dashboard/proximo-passo-card";
@@ -17,6 +19,7 @@ import {
 import { SemaforoCompacto } from "@/components/dashboard/semaforo-compacto";
 import { DesempenhoDonut } from "@/components/dashboard/desempenho-donut";
 import { DesempenhoDisciplinasLista } from "@/components/dashboard/desempenho-disciplinas-lista";
+import { PainelEspelhoResumo } from "@/components/dashboard/painel-espelho-resumo";
 import { SimuladosHistoricoList } from "@/components/dashboard/simulados-historico-list";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
@@ -71,18 +74,24 @@ export default async function DesempenhoPage({
     data: { user },
   } = await supabase.auth.getUser();
 
-  const { desempenho, simulados, retencao, questoesCount, topicosFoco } =
+  const { desempenho, simulados, retencao, topicosFoco } =
     await loadDesempenhoPageResumo(user?.id, { since, disciplinaFoco });
 
   const dadosAtivos = isSimulados ? simulados : desempenho;
   const { semaforo, overview } = dadosAtivos;
-  const emRisco = semaforo.disciplinasEmRisco.length > 0;
-  const proximo = calcularProximoPasso({
-    emRisco,
-    disciplinaRisco: semaforo.disciplinasEmRisco[0]?.disciplina,
+  const plano = montarPlanoProvaResumo({
+    dias: diasParaProva(),
+    topicosTotal: desempenho.topicosTotal,
+    topicosVistos: desempenho.topicosVistos,
+    coberturaEditalPct: desempenho.coberturaEditalPct,
     revisoesHoje: retencao.revisoesHoje,
-    questoesDisponiveis: questoesCount > 0,
+    memoriaAindaFrescas: retencao.aprendendo,
+    espelhoMedia: semaforo.espelho.media,
+    espelhoQuantidade: semaforo.espelho.quantidade,
+    disciplinaPrioritaria: semaforo.disciplinasEmRisco[0]?.disciplina,
+    hasData: desempenho.hasData || retencao.hasData,
   });
+  const proximo = calcularProximoPasso(plano);
 
   const temHistorico =
     desempenho.hasData ||
@@ -109,8 +118,8 @@ export default async function DesempenhoPage({
           <h1 className="text-2xl font-bold tracking-tight">Desempenho</h1>
           <p className="text-sm text-muted-foreground">
             {isSimulados
-              ? "Espelhos 60Q — nota real do edital e histórico de provas"
-              : "Visão clara do que está indo bem — e o que pode eliminar você"}
+              ? "Simulados 60Q — nota real do edital e histórico de provas"
+              : "Treino no período — acertos, cobertura e ritmo por disciplina"}
           </p>
         </div>
         <DesempenhoVisaoFilter
@@ -125,27 +134,29 @@ export default async function DesempenhoPage({
         />
       </header>
 
-      {isSimulados && simulados.ultimoSimulado && (
-        <div className="flex flex-wrap items-center gap-2 rounded-xl border border-border bg-card px-4 py-3 text-sm">
-          <span className="text-muted-foreground">Último espelho:</span>
-          <span className="font-bold tabular-nums">
-            {simulados.ultimoSimulado.notaTotal} pts
-          </span>
-          <Badge
-            variant={
-              simulados.ultimoSimulado.aprovado ? "default" : "destructive"
-            }
-            className={cn(
-              simulados.ultimoSimulado.aprovado &&
-                "border-semaforo-verde/40 bg-semaforo-verde text-white",
-            )}
-          >
-            {simulados.ultimoSimulado.aprovado ? "Aprovado" : "Eliminado"}
-          </Badge>
-          {simulados.melhorNota !== null && (
-            <span className="text-xs text-muted-foreground tabular-nums">
-              · melhor no período: {simulados.melhorNota} pts
-            </span>
+      {isSimulados && semaforo.espelho.quantidade > 0 && (
+        <div className="rounded-xl border border-border bg-card px-4 py-3">
+          <PainelEspelhoResumo espelho={semaforo.espelho} />
+          {simulados.ultimoSimulado && (
+            <div className="mt-3 flex flex-wrap items-center gap-2 border-t border-border pt-3 text-sm">
+              <Badge
+                variant={
+                  simulados.ultimoSimulado.aprovado ? "default" : "destructive"
+                }
+                className={cn(
+                  simulados.ultimoSimulado.aprovado &&
+                    "border-semaforo-verde/40 bg-semaforo-verde text-white",
+                )}
+              >
+                Último:{" "}
+                {simulados.ultimoSimulado.aprovado ? "Aprovado" : "Eliminado"}
+              </Badge>
+              {simulados.ultimoSimulado.duracaoMin !== null && (
+                <span className="text-xs text-muted-foreground tabular-nums">
+                  {simulados.ultimoSimulado.duracaoMin} min
+                </span>
+              )}
+            </div>
           )}
         </div>
       )}
@@ -154,7 +165,7 @@ export default async function DesempenhoPage({
         <Alert>
           <AlertTitle>Nenhum simulado no período</AlertTitle>
           <AlertDescription>
-            Faça um espelho de 60 questões para ver nota, semáforo e histórico
+            Faça um simulado de 60 questões para ver nota, semáforo e histórico
             aqui. Estudo avulso não entra nesta aba.
             <Link
               href="/simulado"
@@ -169,39 +180,6 @@ export default async function DesempenhoPage({
         </Alert>
       )}
 
-      {emRisco && (
-        <Alert variant="destructive">
-          <AlertTitle>
-            {isSimulados
-              ? "Abaixo do mínimo no último espelho"
-              : "Disciplinas abaixo do mínimo"}
-          </AlertTitle>
-          <AlertDescription>
-            <ul className="mt-2 list-inside list-disc text-sm">
-              {semaforo.disciplinasEmRisco.map((r) => (
-                <li key={r.disciplina}>
-                  {DISCIPLINA_LABELS[r.disciplina]}: {r.pontos.toFixed(1)} pts
-                  (mín. {r.minimo})
-                </li>
-              ))}
-            </ul>
-            <Link
-              href={
-                isSimulados
-                  ? "/simulado"
-                  : proximo.href
-              }
-              className={cn(
-                buttonVariants({ variant: "outline", size: "sm" }),
-                "mt-3",
-              )}
-            >
-              {isSimulados ? "Refazer simulado" : proximo.label}
-            </Link>
-          </AlertDescription>
-        </Alert>
-      )}
-
       {!isSimulados && disciplinaFoco ? (
         <section className="flex flex-col gap-4">
           <div className="flex flex-wrap items-end justify-between gap-2">
@@ -210,7 +188,7 @@ export default async function DesempenhoPage({
                 {DISCIPLINA_LABELS[disciplinaFoco]}
               </h2>
               <p className="text-sm text-muted-foreground">
-                Tópicos no período · {periodoLabel}
+                Assuntos no período · {periodoLabel}
               </p>
             </div>
             <Link
@@ -239,11 +217,39 @@ export default async function DesempenhoPage({
         </section>
       ) : (
         <>
-          <SemaforoCompacto
-            gerais={semaforo.gerais}
-            especificos={semaforo.especificos}
-            total={semaforo.total}
-          />
+          {!isSimulados && (
+            <div className="flex flex-wrap items-center gap-2 rounded-xl border border-border bg-card px-4 py-3">
+              <Badge
+                variant={
+                  plano.chegada === "verde"
+                    ? "default"
+                    : plano.chegada === "amarelo"
+                      ? "secondary"
+                      : "destructive"
+                }
+                className={cn(
+                  plano.chegada === "verde" &&
+                    "border-semaforo-verde/40 bg-semaforo-verde text-white",
+                )}
+              >
+                {plano.chegadaLabel}
+              </Badge>
+              <span className="text-sm text-muted-foreground">
+                {plano.diasParaProva} dias · {plano.faseLabel}
+                {plano.diasAtraso > 0
+                  ? ` · ${plano.diasAtraso} dia(s) de atraso`
+                  : " · no ritmo"}
+              </span>
+            </div>
+          )}
+
+          {isSimulados && (
+            <SemaforoCompacto
+              gerais={semaforo.gerais}
+              especificos={semaforo.especificos}
+              total={semaforo.total}
+            />
+          )}
 
           <section
             aria-labelledby="visao-geral-titulo"

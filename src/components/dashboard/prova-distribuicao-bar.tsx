@@ -35,7 +35,7 @@ export function ProvaDistribuicaoBar() {
             Mapa da prova
           </h2>
           <p className="text-sm text-muted-foreground">
-            Espelho IDECAN — 60 questões objetivas
+            Simulado IDECAN — 60 questões objetivas
           </p>
         </div>
         <p className="text-sm font-medium text-transito-foreground">

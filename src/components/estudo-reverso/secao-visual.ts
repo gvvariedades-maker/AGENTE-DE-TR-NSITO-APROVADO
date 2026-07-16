@@ -83,7 +83,7 @@ const SECAO_PADRAO: SecaoVisualMeta = {
   icon: BookOpen,
   accentClass: "text-transito-foreground",
   iconBgClass: "bg-transito/10",
-  rotulo: "Aula",
+  rotulo: "Estudo",
 };
 
 export function metaSecaoVisual(secao?: Secao): SecaoVisualMeta {
@@ -91,19 +91,14 @@ export function metaSecaoVisual(secao?: Secao): SecaoVisualMeta {
   return SECAO_VISUAL[secao];
 }
 
-/** Cor de preenchimento da barra de progresso por seção. */
-export function progressBarClass(secao?: Secao, ativo = false): string {
-  if (!ativo) return "bg-muted";
-  const map: Record<Secao, string> = {
-    diagnostico: "bg-semaforo-amarelo",
-    mapa: "bg-muted-foreground/50",
-    contraste: "bg-blue-500",
-    distratores: "bg-semaforo-vermelho",
-    metodo: "bg-transito",
-    lei: "bg-transito",
-    conceito: "bg-blue-500",
-    recall: "bg-semaforo-verde",
-    macete: "bg-semaforo-amarelo",
-  };
-  return secao ? map[secao] : "bg-transito";
+/**
+ * Barra monocromática (transito) — a cor da seção fica só no rótulo.
+ * `estado`: futuro | visto | atual
+ */
+export function progressBarClass(
+  estado: "futuro" | "visto" | "atual",
+): string {
+  if (estado === "futuro") return "bg-muted";
+  if (estado === "atual") return "bg-transito h-1.5";
+  return "bg-transito/55";
 }

@@ -3,7 +3,8 @@ export type ModoSessaoEstudo =
   | "normal"
   | "erros"
   | "pegadinha"
-  | "reais_idecan";
+  | "reais_idecan"
+  | "revisoes";
 
 export function parseModoSessao(raw?: string): ModoSessaoEstudo {
   const valid: ModoSessaoEstudo[] = [
@@ -12,6 +13,7 @@ export function parseModoSessao(raw?: string): ModoSessaoEstudo {
     "erros",
     "pegadinha",
     "reais_idecan",
+    "revisoes",
   ];
   if (raw && valid.includes(raw as ModoSessaoEstudo)) {
     return raw as ModoSessaoEstudo;
@@ -29,6 +31,8 @@ export function labelModoSessao(modo: ModoSessaoEstudo): string {
       return "Pegadinha IDECAN";
     case "reais_idecan":
       return "Questões reais IDECAN";
+    case "revisoes":
+      return "Revisões de hoje";
     case "erros":
       return "Caderno de erros";
     default:

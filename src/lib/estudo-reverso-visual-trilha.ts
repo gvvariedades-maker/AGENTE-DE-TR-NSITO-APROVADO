@@ -16,6 +16,11 @@ export function escolherTrilhaEstudoReverso(
   return completo ?? expresso;
 }
 
+export const LABEL_TRILHA_ESTUDO_REVERSO_COMPLETO = "Estudo reverso completo";
+export const LABEL_TRILHA_ESTUDO_REVERSO_RAPIDO = "Estudo reverso rápido";
+
 export function labelTrilhaEstudoReverso(visual: EstudoReversoVisual): string {
-  return isEstudoReversoVisualCompleto(visual) ? "Aula completa" : "Revisão rápida";
+  return isEstudoReversoVisualCompleto(visual)
+    ? LABEL_TRILHA_ESTUDO_REVERSO_COMPLETO
+    : LABEL_TRILHA_ESTUDO_REVERSO_RAPIDO;
 }

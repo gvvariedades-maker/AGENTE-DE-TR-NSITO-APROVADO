@@ -12,16 +12,10 @@ import {
   type ZonaSemaforo,
   isDisciplinaGeral,
 } from "@/lib/edital-constants";
-import {
-  DISCIPLINA_LABELS,
-  PROVA_DATA,
-  type Disciplina,
-} from "@/types";
-import { projetarPontosDisciplina } from "@/lib/semaforo-projecao";
-import {
-  getAttemptStatsByDisciplina,
-  type AttemptStatsDisciplina,
-} from "@/lib/attempt-stats";
+import { diasParaProva } from "@/lib/prova-data";
+import { DISCIPLINA_LABELS, type Disciplina } from "@/types";
+
+const JANELA_ESPELHO = 3;
 
 export interface ZonaMetrica {
   label: string;
@@ -33,6 +27,20 @@ export interface ZonaMetrica {
   statusLabel: string;
 }
 
+export interface NotaEspelho {
+  nota: number;
+  createdAt: Date;
+}
+
+/** Último, média e melhor entre os últimos N simulados entregues. */
+export interface EspelhoResumo {
+  janela: number;
+  quantidade: number;
+  ultimo: NotaEspelho | null;
+  media: number | null;
+  melhor: number | null;
+}
+
 export interface SemaforoData {
   gerais: ZonaMetrica;
   especificos: ZonaMetrica;
@@ -40,12 +48,9 @@ export interface SemaforoData {
   hasData: boolean;
   diasParaProva: number;
   disciplinasEmRisco: { disciplina: Disciplina; pontos: number; minimo: number }[];
-  fonte: "simulado" | "attempts" | "vazio";
-}
-
-function diasParaProva() {
-  const diff = PROVA_DATA.getTime() - Date.now();
-  return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
+  /** Só espelhos entregues — nunca projeção de treino. */
+  fonte: "simulado" | "vazio";
+  espelho: EspelhoResumo;
 }
 
 function calcularZona(
@@ -68,23 +73,8 @@ function statusLabel(zona: ZonaSemaforo): string {
     case "vermelho":
       return "Risco";
     case "vazio":
-      return "Sem dados";
+      return "Sem simulado";
   }
-}
-
-function agregarPorDisciplina(
-  rows: { disciplina: Disciplina; acertou: boolean }[],
-): Map<Disciplina, { acertos: number; tentativas: number }> {
-  const map = new Map<Disciplina, { acertos: number; tentativas: number }>();
-
-  for (const row of rows) {
-    const atual = map.get(row.disciplina) ?? { acertos: 0, tentativas: 0 };
-    atual.tentativas += 1;
-    if (row.acertou) atual.acertos += 1;
-    map.set(row.disciplina, atual);
-  }
-
-  return map;
 }
 
 function buildZona(
@@ -112,7 +102,7 @@ function buildZona(
 export function calcularDeSimulado(
   notaTotal: number,
   notasJson: Record<string, number>,
-): Omit<SemaforoData, "diasParaProva" | "fonte"> {
+): Omit<SemaforoData, "diasParaProva" | "fonte" | "espelho"> {
   const pontosPorDisciplina = notasJson as Partial<Record<Disciplina, number>>;
 
   let pontosGerais = 0;
@@ -171,135 +161,33 @@ export function calcularDeSimulado(
   };
 }
 
-function calcularDeStats(
-  stats: AttemptStatsDisciplina[],
-): Omit<SemaforoData, "diasParaProva" | "fonte"> {
-  const disciplinasEmRisco: SemaforoData["disciplinasEmRisco"] = [];
-  const pontosDisciplina = new Map<Disciplina, number>();
-
-  for (const row of stats) {
-    const pts = projetarPontosDisciplina(
-      row.acertos,
-      row.tentativas,
-      row.disciplina,
-    );
-    pontosDisciplina.set(row.disciplina, pts);
-
-    const minimo = isDisciplinaGeral(row.disciplina)
-      ? MIN_PONTOS_DISCIPLINA_GERAL
-      : MIN_PONTOS_DISCIPLINA_ESPECIFICO;
-
-    if (pts < minimo) {
-      disciplinasEmRisco.push({
-        disciplina: row.disciplina,
-        pontos: pts,
-        minimo,
-      });
-    }
-  }
-
-  let pontosGerais = 0;
-  for (const d of DISCIPLINAS_GERAIS) {
-    pontosGerais += pontosDisciplina.get(d) ?? 0;
-  }
-
-  let pontosEspecificos = 0;
-  for (const d of DISCIPLINAS_ESPECIFICOS) {
-    pontosEspecificos += pontosDisciplina.get(d) ?? 0;
-  }
-
-  const notaTotal = pontosGerais + pontosEspecificos;
-  const totalTentativas = stats.reduce((acc, row) => acc + row.tentativas, 0);
-
-  const emRiscoGerais = disciplinasEmRisco.some((r) =>
-    isDisciplinaGeral(r.disciplina),
-  );
-  const emRiscoEspecificos = disciplinasEmRisco.some(
-    (r) => !isDisciplinaGeral(r.disciplina),
-  );
-
+function espelhoVazio(): EspelhoResumo {
   return {
-    gerais: buildZona(
-      "Gerais",
-      pontosGerais,
-      MAX_PONTOS_GERAIS,
-      MIN_PONTOS_DISCIPLINA_GERAL,
-      emRiscoGerais,
-    ),
-    especificos: buildZona(
-      "Específicos",
-      pontosEspecificos,
-      MAX_PONTOS_ESPECIFICOS,
-      MIN_PONTOS_DISCIPLINA_ESPECIFICO,
-      emRiscoEspecificos,
-    ),
-    total: buildZona("Total", notaTotal, 100, MIN_PONTOS_TOTAL),
-    hasData: totalTentativas > 0,
-    disciplinasEmRisco,
+    janela: JANELA_ESPELHO,
+    quantidade: 0,
+    ultimo: null,
+    media: null,
+    melhor: null,
   };
 }
 
-function calcularDeAttempts(
-  rows: { disciplina: Disciplina; acertou: boolean }[],
-): Omit<SemaforoData, "diasParaProva" | "fonte"> {
-  const porDisciplina = agregarPorDisciplina(rows);
-  const disciplinasEmRisco: SemaforoData["disciplinasEmRisco"] = [];
-  const pontosDisciplina = new Map<Disciplina, number>();
+function montarEspelhoResumo(
+  rows: { notaTotal: number; createdAt: Date }[],
+): EspelhoResumo {
+  if (rows.length === 0) return espelhoVazio();
 
-  for (const [disciplina, stats] of porDisciplina) {
-    const pts = projetarPontosDisciplina(
-      stats.acertos,
-      stats.tentativas,
-      disciplina,
-    );
-    pontosDisciplina.set(disciplina, pts);
-
-    const minimo = isDisciplinaGeral(disciplina)
-      ? MIN_PONTOS_DISCIPLINA_GERAL
-      : MIN_PONTOS_DISCIPLINA_ESPECIFICO;
-
-    if (pts < minimo) {
-      disciplinasEmRisco.push({ disciplina, pontos: pts, minimo });
-    }
-  }
-
-  let pontosGerais = 0;
-  for (const d of DISCIPLINAS_GERAIS) {
-    pontosGerais += pontosDisciplina.get(d) ?? 0;
-  }
-
-  let pontosEspecificos = 0;
-  for (const d of DISCIPLINAS_ESPECIFICOS) {
-    pontosEspecificos += pontosDisciplina.get(d) ?? 0;
-  }
-
-  const notaTotal = pontosGerais + pontosEspecificos;
-
-  const emRiscoGerais = disciplinasEmRisco.some((r) =>
-    isDisciplinaGeral(r.disciplina),
-  );
-  const emRiscoEspecificos = disciplinasEmRisco.some(
-    (r) => !isDisciplinaGeral(r.disciplina),
-  );
+  const notas = rows.map((r) => r.notaTotal);
+  const ultimoRow = rows[0];
+  const media =
+    Math.round((notas.reduce((a, b) => a + b, 0) / notas.length) * 10) / 10;
+  const melhor = Math.max(...notas);
 
   return {
-    gerais: buildZona(
-      "Gerais",
-      pontosGerais,
-      MAX_PONTOS_GERAIS,
-      MIN_PONTOS_DISCIPLINA_GERAL,
-      emRiscoGerais,
-    ),
-    especificos: buildZona(
-      "Específicos",
-      pontosEspecificos,
-      MAX_PONTOS_ESPECIFICOS,
-      MIN_PONTOS_DISCIPLINA_ESPECIFICO,
-      emRiscoEspecificos,
-    ),
-    total: buildZona("Total", notaTotal, 100, MIN_PONTOS_TOTAL),
-    hasData: rows.length > 0,
-    disciplinasEmRisco,
+    janela: JANELA_ESPELHO,
+    quantidade: rows.length,
+    ultimo: { nota: ultimoRow.notaTotal, createdAt: ultimoRow.createdAt },
+    media,
+    melhor,
   };
 }
 
@@ -319,9 +207,11 @@ function semaforoVazio(): SemaforoData {
     diasParaProva: diasParaProva(),
     disciplinasEmRisco: [],
     fonte: "vazio",
+    espelho: espelhoVazio(),
   };
 }
 
+/** Semáforo e notas de espelho — apenas simulados entregues (últimos 3). */
 export async function getSemaforoData(
   userId?: string | null,
 ): Promise<SemaforoData> {
@@ -332,33 +222,37 @@ export async function getSemaforoData(
   }
 
   try {
-    const [ultimoSimulado] = await db
-      .select()
+    const recentes = await db
+      .select({
+        notaTotal: simulados.notaTotal,
+        notasDisciplinaJson: simulados.notasDisciplinaJson,
+        createdAt: simulados.createdAt,
+      })
       .from(simulados)
       .where(eq(simulados.userId, userId))
       .orderBy(desc(simulados.createdAt))
-      .limit(1);
+      .limit(JANELA_ESPELHO);
 
-    if (ultimoSimulado) {
-      const notasJson =
-        (ultimoSimulado.notasDisciplinaJson as Record<string, number>) ?? {};
-      return {
-        ...calcularDeSimulado(ultimoSimulado.notaTotal, notasJson),
-        diasParaProva: dias,
-        fonte: "simulado",
-      };
-    }
-
-    const stats = await getAttemptStatsByDisciplina(userId);
-
-    if (stats.length === 0) {
+    if (recentes.length === 0) {
       return { ...semaforoVazio(), diasParaProva: dias };
     }
 
+    const espelho = montarEspelhoResumo(
+      recentes.map((r) => ({
+        notaTotal: r.notaTotal,
+        createdAt: r.createdAt,
+      })),
+    );
+
+    const ultimo = recentes[0];
+    const notasJson =
+      (ultimo.notasDisciplinaJson as Record<string, number>) ?? {};
+
     return {
-      ...calcularDeStats(stats),
+      ...calcularDeSimulado(ultimo.notaTotal, notasJson),
       diasParaProva: dias,
-      fonte: "attempts",
+      fonte: "simulado",
+      espelho,
     };
   } catch {
     return { ...semaforoVazio(), diasParaProva: dias };

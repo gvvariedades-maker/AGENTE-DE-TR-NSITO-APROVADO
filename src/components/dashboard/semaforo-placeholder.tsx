@@ -17,9 +17,9 @@ export function SemaforoPlaceholder() {
       </CardHeader>
       <CardContent className="flex flex-col gap-3">
         <p className="text-sm text-muted-foreground">
-          Complete questões ou um simulado espelho para projetar seu risco de
-          eliminação por disciplina. O painel mostrará verde, amarelo ou
-          vermelho conforme o edital IDECAN.
+          Faça um simulado 60Q para acender o semáforo. Treino avulso
+          não entra na nota — só simulados entregues contam para aprovação no
+          edital IDECAN.
         </p>
         <p className="text-xs text-muted-foreground">
           Mínimos: 50 pts total · 1 pt (gerais) · 2 pts (específicos) por

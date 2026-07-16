@@ -10,39 +10,33 @@ const DIAS_LABEL = ["D", "S", "T", "Q", "Q", "S", "S"];
 
 export function PainelSparkline({ atividade, className }: PainelSparklineProps) {
   const max = Math.max(1, ...atividade.map((a) => a.total));
-  const totalSemana = atividade.reduce((s, a) => s + a.total, 0);
 
   return (
-    <div className={cn("flex flex-col gap-1.5", className)}>
-      <div className="flex items-baseline justify-between gap-2">
-        <span className="text-xs font-medium text-muted-foreground">
-          7 dias
-        </span>
-        <span className="text-xs tabular-nums text-muted-foreground">
-          {totalSemana} {totalSemana === 1 ? "questão" : "questões"}
-        </span>
-      </div>
+    <div className={cn("flex flex-col gap-2", className)}>
       <div
-        className="flex h-10 items-end justify-between gap-1"
+        className="flex h-12 items-end justify-between gap-1.5"
         role="img"
-        aria-label={`Atividade nos últimos 7 dias: ${totalSemana} questões`}
+        aria-label="Questões de treino nos últimos 7 dias"
       >
         {atividade.map((dia, i) => (
           <div
             key={dia.data}
-            className="flex flex-1 flex-col items-center gap-0.5"
-            title={`${dia.total} questões`}
+            className="flex flex-1 flex-col items-center gap-1"
+            title={`${DIAS_LABEL[i]}: ${dia.total} questões`}
           >
+            <span className="text-[10px] font-medium tabular-nums text-muted-foreground">
+              {dia.total > 0 ? dia.total : ""}
+            </span>
             <div
               className={cn(
-                "w-full min-h-0.5 rounded-sm transition-colors",
-                dia.total > 0 ? "bg-transito" : "bg-muted",
+                "w-full min-h-1 rounded-sm transition-colors",
+                dia.total > 0 ? "bg-transito" : "bg-muted/80",
               )}
               style={{
-                height: `${Math.max(2, (dia.total / max) * 32)}px`,
+                height: `${Math.max(4, (dia.total / max) * 36)}px`,
               }}
             />
-            <span className="text-[9px] text-muted-foreground/70">
+            <span className="text-[10px] text-muted-foreground">
               {DIAS_LABEL[i]}
             </span>
           </div>

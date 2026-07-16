@@ -9,7 +9,7 @@ import {
   useState,
   useTransition,
 } from "react";
-import { Flag } from "lucide-react";
+import { ArrowLeft, Flag } from "lucide-react";
 import { salvarTentativa } from "@/app/actions/estudo";
 import { concluirSessaoEstudo } from "@/app/actions/study-session";
 import {
@@ -20,16 +20,15 @@ import { labelTipoErro } from "@/lib/estudo-reverso-utils";
 import {
   contarMarcadasRevisao,
   contarRespondidas,
-  contarResultados,
   getEstadoQuestao,
   type EstadoQuestao,
 } from "@/lib/estado-questao";
 import { montarRespostasSimulado } from "@/lib/simulado-nota";
 import { SimuladoResultado } from "@/components/estudo/simulado-resultado";
 import { SimuladoBriefing } from "@/components/estudo/simulado-briefing";
-import { hrefEstudoCatalogo } from "@/lib/estudo-links";
 import { DISCIPLINA_LABELS, type Disciplina } from "@/types";
 import type { QuestaoUI } from "@/lib/questoes";
+import type { MetaCadernoEspelho } from "@/lib/simulado-caderno";
 import { AlternativaButton } from "@/components/estudo/alternativa-button";
 import { EnunciadoFormatado } from "@/components/estudo/enunciado-formatado";
 import { MapaQuestoes } from "@/components/estudo/mapa-questoes";
@@ -40,7 +39,10 @@ import { FeedbackResultado } from "@/components/estudo/feedback-resultado";
 import { EstudoReversoPlayer } from "@/components/estudo-reverso/estudo-reverso-player";
 import { ConfiancaFsrs } from "@/components/estudo/confianca-fsrs";
 import { registrarEstudoReverso } from "@/app/actions/estudo-reverso";
-import { escolherTrilhaEstudoReverso } from "@/lib/estudo-reverso-visual-trilha";
+import {
+  escolherTrilhaEstudoReverso,
+  LABEL_TRILHA_ESTUDO_REVERSO_COMPLETO,
+} from "@/lib/estudo-reverso-visual-trilha";
 import type { FsrsGrade } from "@/lib/srs";
 import type { EstudoReversoVisual } from "@/types/estudo-reverso-visual";
 import { FocusModeToggle } from "@/components/estudo/focus-mode-toggle";
@@ -63,6 +65,12 @@ interface QuestaoViewProps {
   catalogoDisciplina?: Disciplina;
   /** Total esperado no espelho (ex.: 60) — usado no briefing. */
   totalEsperado?: number;
+  /** Questões reais IDECAN neste caderno (quando disponíveis no banco). */
+  questoesReaisCount?: number;
+  /** Meta do montador de caderno (mix, reuso). */
+  metaCaderno?: MetaCadernoEspelho;
+  /** Ex.: "Revisão agendada" no modo só-revisões. */
+  rotuloSessao?: string;
 }
 
 const TECLA_PARA_LETRA: Record<string, string> = {
@@ -98,6 +106,9 @@ export function QuestaoView({
   sessionId,
   catalogoDisciplina,
   totalEsperado = TOTAL_ESPELHO,
+  questoesReaisCount = 0,
+  metaCaderno,
+  rotuloSessao,
 }: QuestaoViewProps) {
   const isSimulado = modo === "simulado";
   const isEstudo = modo === "estudo";
@@ -148,11 +159,6 @@ export function QuestaoView({
   const dominioAlcancado = estado?.dominioAlcancado ?? false;
   const tipoErroLabel = estado?.tipoErroLabel;
   const ultimoAttemptId = estado?.ultimoAttemptId;
-
-  const { acertos, erros } = useMemo(
-    () => contarResultados(estados),
-    [estados],
-  );
 
   const respondidas = useMemo(
     () => contarRespondidas(estados),
@@ -456,6 +462,8 @@ export function QuestaoView({
       <SimuladoBriefing
         totalQuestoes={total}
         totalEsperado={totalEsperado}
+        questoesReaisCount={questoesReaisCount}
+        metaCaderno={metaCaderno}
         isDemo={isDemo || total < totalEsperado}
         duracaoHoras={(duracaoMinutos ?? 240) / 60}
         onIniciar={iniciarProva}
@@ -482,11 +490,6 @@ export function QuestaoView({
   const mostrarProxima =
     navegacaoLateral && !ultimaQuestao && !aguardandoConfianca;
   const mostrarConcluirSessao = isEstudo && ultimaQuestao && confirmada;
-  const disciplinaCatalogo =
-    catalogoDisciplina ?? (isEstudo ? questao.disciplina : undefined);
-  const hrefCatalogo = disciplinaCatalogo
-    ? hrefEstudoCatalogo(disciplinaCatalogo)
-    : null;
   const emBranco = Math.max(0, total - respondidas);
   const botaoMarcarLabel =
     isSimulado && confirmada ? "Alterar resposta" : isEstudo ? "Confirmar resposta" : "Responder";
@@ -541,12 +544,22 @@ export function QuestaoView({
 
       {isEstudo && (
         <div className="sticky top-0 z-10 border-b border-border bg-background/95 backdrop-blur-sm">
+          <div className="flex items-center px-4 pt-2.5 pb-1">
+            <Link
+              href="/dashboard"
+              className={cn(
+                buttonVariants({ variant: "outline", size: "sm" }),
+                "min-h-9 gap-1.5 border-transito/50 bg-background font-semibold text-transito shadow-sm hover:bg-transito/10 hover:text-transito",
+              )}
+            >
+              <ArrowLeft className="size-4 shrink-0" aria-hidden />
+              Voltar
+            </Link>
+          </div>
           <SessaoBar
             atual={indice + 1}
             total={total}
             respondidas={respondidas}
-            acertos={acertos}
-            erros={erros}
           />
           {cartao}
         </div>
@@ -611,6 +624,14 @@ export function QuestaoView({
               <Badge variant="secondary" className="text-xs font-normal">
                 {DISCIPLINA_LABELS[questao.disciplina]}
               </Badge>
+              {rotuloSessao && (
+                <Badge
+                  variant="outline"
+                  className="border-semaforo-amarelo/40 bg-semaforo-amarelo/10 text-xs font-normal text-semaforo-amarelo"
+                >
+                  {rotuloSessao}
+                </Badge>
+              )}
               {!isSimulado && <BadgeQuestaoReal tags={questao.tags} />}
               {isDemo && (
                 <Badge variant="outline" className="text-xs font-normal">
@@ -705,18 +726,7 @@ export function QuestaoView({
 
           <footer className="sticky bottom-0 border-t border-border bg-background/95 p-4 backdrop-blur-sm">
             <div className="grid grid-cols-3 items-center gap-2">
-              <div className="flex flex-col items-start gap-1">
-                {isEstudo && hrefCatalogo && (
-                  <Link
-                    href={hrefCatalogo}
-                    className={cn(
-                      buttonVariants({ variant: "outline", size: "sm" }),
-                      "whitespace-nowrap",
-                    )}
-                  >
-                    Microtópicos
-                  </Link>
-                )}
+              <div className="flex items-center justify-start">
                 {navegacaoLateral && indice > 0 && (
                   <Button
                     variant="ghost"
@@ -776,7 +786,12 @@ export function QuestaoView({
                         setModoReverso(true);
                       }}
                     >
-                      Aula completa ({trilhaPadrao.telas.length} telas)
+                      <span className="flex flex-col items-center gap-0.5 leading-tight">
+                        <span>{LABEL_TRILHA_ESTUDO_REVERSO_COMPLETO}</span>
+                        <span className="text-xs font-normal opacity-90">
+                          {trilhaPadrao.telas.length} telas
+                        </span>
+                      </span>
                     </Button>
                   )}
               </div>

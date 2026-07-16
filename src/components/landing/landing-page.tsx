@@ -11,13 +11,8 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { diasParaProva } from "@/lib/prova-data";
 import { PROVA_DATA } from "@/types";
-
-function diasParaProva() {
-  const hoje = new Date();
-  const diff = PROVA_DATA.getTime() - hoje.getTime();
-  return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
-}
 
 function formatarDataProva() {
   return PROVA_DATA.toLocaleDateString("pt-BR", {
@@ -30,7 +25,7 @@ function formatarDataProva() {
 const PILARES = [
   {
     icon: Scale,
-    titulo: "Simulado espelho",
+    titulo: "Simulado",
     desc: "60 questões na proporção exata do edital — 4 horas como na prova.",
   },
   {
@@ -41,7 +36,7 @@ const PILARES = [
   {
     icon: BookMarked,
     titulo: "Questões reais IDECAN",
-    desc: "Provas do corpus superior com enunciado fiel e aula completa.",
+    desc: "Provas do corpus superior com enunciado fiel e estudo reverso completo.",
   },
   {
     icon: TrendingUp,
@@ -117,7 +112,7 @@ export function LandingPage() {
             </h1>
             <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
               Plataforma feita para quem vai disputar a prova de Agente de
-              Trânsito — simulados espelho, estudo reverso visual e treino
+              Trânsito — simulados, estudo reverso visual e treino
               calibrado na banca IDECAN.
             </p>
           </div>

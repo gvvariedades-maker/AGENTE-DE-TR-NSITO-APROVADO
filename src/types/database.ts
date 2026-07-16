@@ -190,6 +190,7 @@ export type Database = {
           id: string;
           nota_total: number;
           notas_disciplina_json: Json;
+          question_ids: string[];
           tipo: string;
           user_id: string;
           zerou_disciplina: boolean;
@@ -200,6 +201,7 @@ export type Database = {
           id?: string;
           nota_total: number;
           notas_disciplina_json?: Json;
+          question_ids?: string[];
           tipo?: string;
           user_id: string;
           zerou_disciplina?: boolean;
@@ -210,6 +212,7 @@ export type Database = {
           id?: string;
           nota_total?: number;
           notas_disciplina_json?: Json;
+          question_ids?: string[];
           tipo?: string;
           user_id?: string;
           zerou_disciplina?: boolean;
@@ -278,8 +281,10 @@ export type Database = {
           ended_at: string | null;
           erros: number;
           id: string;
+          missao_hoje: boolean;
           modo: string;
           planned_count: number;
+          planned_question_ids: string[];
           started_at: string;
           topico_slug: string | null;
           user_id: string;
@@ -292,8 +297,10 @@ export type Database = {
           ended_at?: string | null;
           erros?: number;
           id?: string;
+          missao_hoje?: boolean;
           modo?: string;
           planned_count?: number;
+          planned_question_ids?: string[];
           started_at?: string;
           topico_slug?: string | null;
           user_id: string;
@@ -306,8 +313,10 @@ export type Database = {
           ended_at?: string | null;
           erros?: number;
           id?: string;
+          missao_hoje?: boolean;
           modo?: string;
           planned_count?: number;
+          planned_question_ids?: string[];
           started_at?: string;
           topico_slug?: string | null;
           user_id?: string;

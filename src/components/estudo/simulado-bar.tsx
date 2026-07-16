@@ -44,7 +44,7 @@ export function SimuladoBar({
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-2">
           <div className="min-w-0">
             <p className="truncate text-[11px] font-semibold tracking-wide text-foreground uppercase">
-              Prova objetiva · Espelho IDECAN
+              Prova objetiva · Simulado IDECAN
             </p>
             <p className="truncate text-[10px] text-muted-foreground">
               Edital 04/2026 · STTP Campina Grande/PB · 4 horas · A–D

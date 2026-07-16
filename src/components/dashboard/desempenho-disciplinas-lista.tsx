@@ -72,8 +72,8 @@ export function DesempenhoDisciplinasLista({
         <CardTitle className="text-base">Desempenho por disciplinas</CardTitle>
         <CardDescription>
           {isSimulado
-            ? "Último espelho · taxa de acerto no período"
-            : "CTB em destaque · toque para ver tópicos"}
+            ? "Último simulado · taxa de acerto no período"
+            : "Taxa de acerto no treino · pontos projetados (não é nota de simulado)"}
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-1 flex-col gap-0 px-0">
@@ -111,7 +111,7 @@ export function DesempenhoDisciplinasLista({
                 <p className="text-[11px] text-muted-foreground tabular-nums">
                   {d.tentativas > 0
                     ? isSimulado
-                      ? `${d.acertos}/${d.tentativas} · ${d.pontos.toFixed(1)} pts espelho`
+                      ? `${d.acertos}/${d.tentativas} · ${d.pontos.toFixed(1)} pts simulado`
                       : `${d.acertos}/${d.tentativas} · ${d.pontos.toFixed(1)} pts proj.`
                     : isSimulado
                       ? "Sem questões de simulado no período"

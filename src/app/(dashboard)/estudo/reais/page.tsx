@@ -98,7 +98,7 @@ export default async function EstudoReaisPage({
                       {bloco.total} questão
                       {bloco.total > 1 ? "ões" : ""} real
                       {bloco.total > 1 ? "is" : ""} · {bloco.topicos.length}{" "}
-                      microtópico{bloco.topicos.length > 1 ? "s" : ""}
+                      assunto{bloco.topicos.length > 1 ? "s" : ""}
                     </span>
                   </Link>
                 </li>

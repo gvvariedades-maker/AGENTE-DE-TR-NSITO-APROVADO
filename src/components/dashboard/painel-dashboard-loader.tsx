@@ -1,17 +1,18 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import Link from "next/link";
-import { PainelHero } from "@/components/dashboard/painel-hero";
-import { PainelHeroSkeleton } from "@/components/dashboard/painel-hero-skeleton";
+import { PainelPlanoProva } from "@/components/dashboard/painel-plano-prova";
+import { PainelSemanaChegada } from "@/components/dashboard/painel-semana-chegada";
+import {
+  PainelPlanoSkeleton,
+  PainelSemanaChegadaSkeleton,
+} from "@/components/dashboard/painel-hero-skeleton";
 import { PainelDisciplinasSeletor } from "@/components/dashboard/painel-disciplinas-seletor";
 import { PainelCatalogoEditalLoader } from "@/components/dashboard/painel-catalogo-edital-loader";
-import { PainelMaisModos } from "@/components/dashboard/painel-mais-modos";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { calcularProximoPasso } from "@/lib/proximo-passo";
-import { DISCIPLINA_LABELS, type Disciplina } from "@/types";
+import type { Disciplina } from "@/types";
 import type { DashboardResumo } from "@/types/dashboard-resumo";
 
 interface PainelDashboardLoaderProps {
@@ -69,7 +70,8 @@ export function PainelDashboardLoader({
   if (loading) {
     return (
       <>
-        <PainelHeroSkeleton />
+        <PainelPlanoSkeleton />
+        <PainelSemanaChegadaSkeleton />
         <div className="h-10 w-full max-w-md animate-pulse rounded-lg bg-muted/60" />
       </>
     );
@@ -93,19 +95,7 @@ export function PainelDashboardLoader({
     );
   }
 
-  const { desempenho, retencao, atividadeHoje, questoesCount, questoesReaisCount, pioresTopicos } =
-    data;
-  const { semaforo } = desempenho;
-  const emRisco = semaforo.disciplinasEmRisco.length > 0;
-  const mostrarAlertaInicio =
-    !desempenho.hasData && semaforo.disciplinasEmRisco.length === 0;
-
-  const proximo = calcularProximoPasso({
-    emRisco,
-    disciplinaRisco: semaforo.disciplinasEmRisco[0]?.disciplina,
-    revisoesHoje: retencao.revisoesHoje,
-    questoesDisponiveis: questoesCount > 0,
-  });
+  const { desempenho, plano, semana, questoesReaisCount, dominio } = data;
 
   const desempenhoDisciplina = desempenho.disciplinas.find(
     (d) => d.disciplina === disciplinaAtiva,
@@ -124,62 +114,24 @@ export function PainelDashboardLoader({
 
   return (
     <>
-      <PainelHero
-        desempenho={desempenho}
-        retencao={retencao}
-        atividadeHoje={atividadeHoje}
-        proximo={proximo}
-        pioresTopicos={pioresTopicos}
+      <PainelPlanoProva
+        plano={plano}
+        missaoHoje={semana.missoes[0]}
+        dominio={dominio}
       />
-
-      {emRisco && desempenho.hasData ? (
-        <Alert variant="destructive">
-          <AlertTitle>Disciplinas abaixo do mínimo</AlertTitle>
-          <AlertDescription>
-            <ul className="mt-2 list-inside list-disc text-sm">
-              {semaforo.disciplinasEmRisco.map((r) => (
-                <li key={r.disciplina}>
-                  {DISCIPLINA_LABELS[r.disciplina]}: {r.pontos.toFixed(1)} pts
-                  (mín. {r.minimo})
-                </li>
-              ))}
-            </ul>
-            <Link
-              href={proximo.href}
-              className={cn(
-                buttonVariants({ variant: "outline", size: "sm" }),
-                "mt-3",
-              )}
-            >
-              {proximo.label}
-            </Link>
-          </AlertDescription>
-        </Alert>
-      ) : (
-        mostrarAlertaInicio && (
-          <Alert>
-            <AlertTitle>Primeiro passo</AlertTitle>
-            <AlertDescription className="text-sm">
-              Comece pelo CTB (50% da prova) ou pelo Motor ATA — o semáforo
-              mostra o progresso automaticamente.
-            </AlertDescription>
-          </Alert>
-        )
-      )}
+      <PainelSemanaChegada semana={semana} />
 
       <PainelDisciplinasSeletor
         disciplinaAtiva={disciplinaAtiva}
         desempenhoPorDisciplina={desempenhoPorDisciplina}
+        questoesReaisAtivo={reaisAtivo}
+        questoesReaisDesc={reaisDesc}
+        questoesReaisCount={questoesReaisCount}
       />
 
       <PainelCatalogoEditalLoader
         disciplina={disciplinaAtiva}
         desempenhoDisciplina={desempenhoDisciplina}
-      />
-
-      <PainelMaisModos
-        questoesReaisAtivo={reaisAtivo}
-        questoesReaisDesc={reaisDesc}
       />
     </>
   );

@@ -1,47 +1,89 @@
-import type { ConteudoTrechoLegal } from "@/types/estudo-reverso-visual";
+import type { CSSProperties } from "react";
+import type {
+  ConteudoTrechoLegal,
+  DestaqueTexto,
+} from "@/types/estudo-reverso-visual";
+import {
+  offsetsSegmentosTexto,
+  segmentarTextoPlano,
+} from "@/lib/estudo-reverso/segmentar-texto-estudo";
 import { cn } from "@/lib/utils";
+import { TelaConteudoShell } from "./tela-conteudo-shell";
+
+function renderTrechoComGrifos(
+  textoCompleto: string,
+  inicio: number,
+  fim: number,
+  grifos: DestaqueTexto[],
+) {
+  const slice = textoCompleto.slice(inicio, fim);
+  const grifosLocais = grifos
+    .filter((g) => g.fim > inicio && g.inicio < fim)
+    .map((g) => ({
+      inicio: Math.max(0, g.inicio - inicio),
+      fim: Math.min(slice.length, g.fim - inicio),
+      motivo: g.motivo,
+    }))
+    .sort((a, b) => a.inicio - b.inicio);
+
+  if (grifosLocais.length === 0) {
+    return slice;
+  }
+
+  const partes: { texto: string; grifo: boolean; motivo?: string }[] = [];
+  let cursor = 0;
+
+  for (const g of grifosLocais) {
+    if (g.inicio > cursor) {
+      partes.push({ texto: slice.slice(cursor, g.inicio), grifo: false });
+    }
+    partes.push({
+      texto: slice.slice(g.inicio, g.fim),
+      grifo: true,
+      motivo: g.motivo,
+    });
+    cursor = g.fim;
+  }
+  if (cursor < slice.length) {
+    partes.push({ texto: slice.slice(cursor), grifo: false });
+  }
+
+  return partes.map((p, i) => (
+    <span
+      key={i}
+      className={cn(
+        p.grifo &&
+          "grifo-sweep rounded px-0.5 font-semibold text-transito-foreground",
+      )}
+      title={p.grifo ? p.motivo : undefined}
+    >
+      {p.texto}
+    </span>
+  ));
+}
 
 export function TelaTrechoLegal({ conteudo }: { conteudo: ConteudoTrechoLegal }) {
   const texto = conteudo.texto;
   const grifos = conteudo.trechos_grifados ?? [];
-
-  const partes: { texto: string; grifo: boolean }[] = [];
-  let cursor = 0;
-
-  const ordenados = [...grifos].sort((a, b) => a.inicio - b.inicio);
-
-  for (const g of ordenados) {
-    if (g.inicio > cursor) {
-      partes.push({ texto: texto.slice(cursor, g.inicio), grifo: false });
-    }
-    partes.push({ texto: texto.slice(g.inicio, g.fim), grifo: true });
-    cursor = g.fim;
-  }
-  if (cursor < texto.length) {
-    partes.push({ texto: texto.slice(cursor), grifo: false });
-  }
+  const segmentos = segmentarTextoPlano(texto);
+  const offsets = offsetsSegmentosTexto(texto, segmentos);
 
   return (
-    <div className="space-y-2">
-      <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+    <div className="space-y-2.5">
+      <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
         {conteudo.fonte}
       </p>
-      <blockquote className="rounded-lg border border-transito/30 bg-transito/5 px-4 py-3 text-base leading-relaxed">
-        {partes.length > 0
-          ? partes.map((p, i) => (
-              <span
-                key={i}
-                className={cn(
-                  p.grifo &&
-                    "grifo-sweep rounded px-0.5 font-semibold text-transito-foreground",
-                )}
-                title={p.grifo ? ordenados.find((g) => texto.slice(g.inicio, g.fim) === p.texto)?.motivo : undefined}
-              >
-                {p.texto}
-              </span>
-            ))
-          : texto}
-      </blockquote>
+      <TelaConteudoShell variant="lei" className="space-y-3">
+        {offsets.map(({ inicio, fim }, idx) => (
+          <p
+            key={idx}
+            className="revelar-item text-[15px] leading-relaxed text-foreground"
+            style={{ "--i": idx } as CSSProperties}
+          >
+            {renderTrechoComGrifos(texto, inicio, fim, grifos)}
+          </p>
+        ))}
+      </TelaConteudoShell>
     </div>
   );
 }

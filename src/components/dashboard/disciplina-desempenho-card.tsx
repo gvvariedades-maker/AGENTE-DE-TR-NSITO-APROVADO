@@ -96,7 +96,7 @@ export function DisciplinaDesempenhoCard({
         {d.topicosTotal > 0 && (
           <div className="flex flex-col gap-1">
             <div className="flex justify-between text-xs text-muted-foreground">
-              <span>Cobertura de tópicos</span>
+              <span>Cobertura de assuntos</span>
               <span className="tabular-nums">
                 {d.topicosVistos}/{d.topicosTotal}
               </span>

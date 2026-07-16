@@ -13,10 +13,10 @@ export function PainelCatalogoSkeleton({
   disciplina: Disciplina;
 }) {
   return (
-    <Card className="overflow-hidden" aria-busy="true" aria-label="Carregando microtópicos">
+    <Card className="overflow-hidden" aria-busy="true" aria-label="Carregando assuntos">
       <CardHeader className="pb-3">
         <CardTitle className="text-base">
-          Microtópicos · {DISCIPLINA_LABELS[disciplina]}
+          {DISCIPLINA_LABELS[disciplina]}
         </CardTitle>
         <CardDescription>Carregando catálogo…</CardDescription>
       </CardHeader>

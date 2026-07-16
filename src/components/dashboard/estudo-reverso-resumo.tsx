@@ -22,7 +22,7 @@ export function EstudoReversoResumoCard({ resumo }: EstudoReversoResumoCardProps
       <CardHeader className="pb-2">
         <CardTitle className="text-base">Estudo reverso visual</CardTitle>
         <CardDescription>
-          Aulas completas após responder questões
+          Estudo reverso completo após responder questões
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
@@ -31,7 +31,7 @@ export function EstudoReversoResumoCard({ resumo }: EstudoReversoResumoCardProps
             {resumo.amostrasPosVisual > 0 && resumo.deltaAcerto !== null ? (
               <div className="rounded-lg border border-border bg-muted/20 px-4 py-3 text-center">
                 <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
-                  Ganho após a aula
+                  Ganho após o estudo reverso
                 </p>
                 <p
                   className={`mt-1 text-3xl font-bold tabular-nums ${
@@ -50,7 +50,7 @@ export function EstudoReversoResumoCard({ resumo }: EstudoReversoResumoCardProps
               </div>
             ) : (
               <p className="text-sm text-muted-foreground">
-                Conclua aulas após errar para medir o ganho de acerto.
+                Conclua o estudo reverso após errar para medir o ganho de acerto.
               </p>
             )}
 
@@ -71,15 +71,15 @@ export function EstudoReversoResumoCard({ resumo }: EstudoReversoResumoCardProps
 
             {resumo.amostrasPosVisual > 0 && (
               <p className="text-center text-xs text-muted-foreground">
-                Baseado em {resumo.amostrasPosVisual} reattempt(s) após aula
-                completa
+                Baseado em {resumo.amostrasPosVisual} reattempt(s) após estudo
+                reverso completo
               </p>
             )}
           </>
         ) : (
           <p className="text-sm text-muted-foreground">
-            Após responder uma questão, a aula completa de estudo reverso abre
-            automaticamente para fixar o microtópico.
+            Após responder uma questão, o estudo reverso completo abre
+            automaticamente para fixar o assunto.
           </p>
         )}
       </CardContent>
