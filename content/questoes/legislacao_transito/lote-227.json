@@ -1,0 +1,347 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_1009_alteracoes",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_prazo",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_1009_art_9",
+    "enunciado": "Condutor habilitado na categoria D, residente em Campina Grande/PB, coletou amostra para exame toxicológico previsto na Resolução CONTRAN nº 923/2022 em 10/03/2026. O laboratório credenciado entregou laudo negativo detalhado ao condutor em 05/04/2026 (26º dia após a coleta) e somente inseriu o resultado negativo no RENACH em 12/04/2026 (33º dia). Ao buscar renovar a CNH no DETRAN-PB em 15/04/2026, o atendente indeferiu o pedido, alegando descumprimento do prazo legal para inserção no RENACH. O laboratório sustenta que cumpriu a norma, pois o laudo foi entregue dentro de trinta dias da coleta. O supervisor da STTP consulta a correção do indeferimento. Considerando a Resolução CONTRAN nº 1.009/2024, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O indeferimento é legítimo: o art. 9º da Res. 923/2022, com redação da Res. 1.009/2024, exige laudo ao condutor e inserção no RENACH no prazo máximo de trinta dias da coleta — a inserção no 33º dia descumpre a norma.",
+      "B": "O indeferimento é ilegítimo: a entrega do laudo detalhado ao condutor no 26º dia satisfaz o art. 9º, podendo a inserção no RENACH ocorrer em prazo autônomo posterior.",
+      "C": "O indeferimento é ilegítimo: o art. 15 da Res. 923/2022 fixa prazo de sessenta dias para inserção no RENACH, de modo que a inclusão no 33º dia estaria dentro do limite legal.",
+      "D": "O indeferimento é legítimo somente se o resultado fosse positivo — para laudo negativo, a inserção no RENACH pode ocorrer após trinta dias da coleta sem impedir a renovação."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Prazo do art. 9º da Res. CONTRAN 923/2022 (redação Res. 1.009/2024) — laudo ao condutor e inserção no RENACH no mesmo prazo de trinta dias da coleta × confusão com obrigações autônomas ou com o art. 15.",
+      "fundamento_legal": "Res. CONTRAN 923/2022, art. 9º (Res. CONTRAN 1.009/2024): \"Os laboratórios devem entregar ao condutor, no prazo máximo de trinta dias, contados a partir da data da coleta, laudo laboratorial detalhado, em meio físico ou digital, em que conste a relação de substâncias testadas, seus respectivos resultados, bem como inserir o resultado do exame no sistema RENACH.\" Art. 15: inserção do resultado no RENACH no prazo máximo de trinta dias contados da coleta — reforço da mesma contagem.",
+      "passo_a_passo": [
+        "1. Caso: coleta em 10/03/2026 — laudo entregue no 26º dia — RENACH atualizado no 33º dia — DETRAN-PB indeferiu renovação — laboratório alega cumprimento pela entrega do laudo.",
+        "2. B erra por regra_excecao (trata entrega do laudo como suficiente e desloca a inserção no RENACH para prazo autônomo — art. 9º exige ambas as obrigações no mesmo prazo de trinta dias da coleta); C erra por numero_vizinho (inventa sessenta dias no art. 15 — prazo é trinta dias da coleta); D erra por termo_unico (condiciona o prazo de inserção ao resultado positivo — art. 9º não distingue negativo ou positivo para o prazo).",
+        "3. A correta: laudo no 26º dia não dispensa inserção no RENACH até o 30º dia — inclusão no 33º dia legitima o indeferimento."
+      ],
+      "pegadinha": "A IDECAN induz a crer que entregar o laudo em trinta dias basta — mas o caput do art. 9º acumula duas obrigações no mesmo prazo: laudo ao condutor e inserção no RENACH.",
+      "macete": "ART. 9 = LAUDO + RENACH · 30 dias da COLETA · as duas obrigações no mesmo prazo.",
+      "estudo_reverso": [
+        "Res. CONTRAN 1.009/2024 art. 3",
+        "Res. CONTRAN 923/2022 art. 9º",
+        "Res. CONTRAN 923/2022 art. 15",
+        "Res. CONTRAN 923/2022 art. 10-B"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Laudo entregue no prazo não dispensa inserção no RENACH — art. 9º exige as duas obrigações em 30 dias da coleta",
+      "eixos_legais": [
+        "CONTRAN_923_art_9",
+        "CONTRAN_923_art_15"
+      ],
+      "eixo_vizinho": "CONTRAN_923_art_15",
+      "isca_por_alternativa": {
+        "B": "entrega do laudo no 26º dia dispensa prazo autônomo para inserção no RENACH",
+        "C": "art. 15 concede sessenta dias para inserção no RENACH",
+        "D": "laudo negativo permite inserção no RENACH após trinta dias sem impedir renovação"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "numero_vizinho",
+        "termo_unico"
+      ],
+      "near_transfer": "Mesma coleta com laudo entregue no 29º dia e RENACH inserido no 31º dia — indeferimento permanece legítimo.",
+      "far_transfer": "Laboratório insere no RENACH no 20º dia mas só entrega laudo ao condutor no 32º dia — também descumpre o art. 9º, pois faltam as duas obrigações no prazo.",
+      "o_que_nao_muda": "Trinta dias contam da coleta e abrangem laudo ao condutor e inserção no RENACH — cumprimento parcial não regulariza.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "resolucao_1009",
+      "resolucao_923",
+      "toxicologico",
+      "renach",
+      "prazo_laboratorio",
+      "art_9"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_1009_art_9",
+      "macete_visual": "LAUDO + RENACH · 30 dias da coleta",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A: laudo no 26º dia não dispensa RENACH até o 30º — inserção no 33º legitima indeferimento.\n\nFar: RENACH no 20º dia com laudo só no 32º também descumpre.",
+            "destaques": ["Gabarito A", "LAUDO", "RENACH"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Duas obrigações no mesmo prazo",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Obrigação", "Prazo"],
+            "linhas": [
+              {
+                "faixa": "Laudo ao condutor",
+                "classificacao": "30 dias da coleta"
+              },
+              {
+                "faixa": "Inserção no RENACH",
+                "classificacao": "30 dias da coleta — mesma contagem",
+                "destaque": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "LAUDO + RENACH · 30 dias da COLETA · cumprimento parcial não basta.",
+            "destaques": ["LAUDO", "RENACH", "30 dias"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.009/2024",
+          "path": ".tmp-1009-full.txt"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 275,
+      "fundamento_slug": "CONTRAN_1009_art_9",
+      "macete_visual": "LAUDO + RENACH · 30 dias da coleta",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Laudo entregue no prazo não dispensa inserção no RENACH — art. 9º exige as duas obrigações em 30 dias da coleta",
+        "eixos_legais": [
+          "CONTRAN_923_art_9",
+          "CONTRAN_923_art_15"
+        ],
+        "isca_por_alternativa": {
+          "B": "entrega do laudo no 26º dia dispensa prazo autônomo para inserção no RENACH",
+          "C": "art. 15 concede sessenta dias para inserção no RENACH",
+          "D": "laudo negativo permite inserção no RENACH após trinta dias sem impedir renovação"
+        },
+        "eficacia_pos_aula": ["E1", "E2", "E3"]
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: laudo basta?",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A (indeferimento legítimo — RENACH no 33º dia descumpre o prazo).\n\nB — laudo no 26º dia dispensa prazo autônomo para RENACH: errado.\nC — sessenta dias para inserção no RENACH: errado.\nD — laudo negativo permite inserir após trinta dias: errado.\n\nPegadinha: entregar o laudo não substitui inserir no RENACH no mesmo prazo.",
+            "destaques": ["Gabarito A", "33º dia", "RENACH"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 marcos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "COLETA: dia zero — marco único dos trinta dias do art. 9º.\n\nLAUDO: entrega detalhada ao condutor — obrigação autônoma, mesmo prazo.\n\nRENACH: inserção do resultado no prontuário — obrigação cumulativa, não substituível pelo laudo físico.",
+            "destaques": ["COLETA", "LAUDO", "RENACH"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: cumpriu as duas obrigações?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Laudo entregue ao condutor em até 30 dias da coleta?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Resultado inserido no RENACH em até 30 dias da coleta?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Indeferimento legítimo — Gabarito A",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — laudo no 26º dia"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — RENACH no 33º dia"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa de obrigações do laboratório",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Obrigação", "Prazo"],
+            "linhas": [
+              {
+                "faixa": "Laudo detalhado ao condutor",
+                "classificacao": "30 dias da coleta"
+              },
+              {
+                "faixa": "Inserção no RENACH",
+                "classificacao": "30 dias da coleta — cumulativa",
+                "destaque": true
+              },
+              {
+                "faixa": "Validade do exame para renovação",
+                "classificacao": "90 dias da coleta — outro dispositivo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: laudo × RENACH",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Entregar laudo em trinta dias dispensa inserção no RENACH",
+                "Caput exige laudo ao condutor e inserção no RENACH no mesmo prazo"
+              ],
+              [
+                "RENACH pode ser inserido em prazo maior que o do laudo",
+                "Trinta dias da coleta abrangem as duas obrigações"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — regra_excecao",
+                "Trata laudo entregue como suficiente — ignora inserção cumulativa no RENACH no mesmo prazo"
+              ],
+              [
+                "C — numero_vizinho",
+                "Inventa sessenta dias no art. 15 — prazo é trinta dias da coleta"
+              ],
+              [
+                "D — termo_unico",
+                "Condiciona prazo de inserção ao resultado positivo — art. 9º não faz essa distinção"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos do indeferimento no DETRAN-PB",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              ["Coleta em 10/03/2026", "Marco dos 30 dias"],
+              ["Laudo entregue em 05/04/2026", "26º dia — dentro do prazo"],
+              ["RENACH inserido em 12/04/2026", "33º dia — fora do prazo"],
+              ["Resultado", "Gabarito A — indeferimento legítimo"]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Art. 9º × art. 15",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              [
+                "Art. 9º — laudo e RENACH",
+                "Duas obrigações cumulativas em 30 dias da coleta"
+              ],
+              [
+                "Art. 15 — inserção no RENACH",
+                "Reforça trinta dias da coleta para o prontuário eletrônico"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Res. 923/2022 — art. 9º (1.009/2024)",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 923/2022, art. 9º (Res. CONTRAN 1.009/2024)",
+            "texto": "Os laboratórios devem entregar ao condutor, no prazo máximo de trinta dias, contados a partir da data da coleta, laudo laboratorial detalhado, em meio físico ou digital, em que conste a relação de substâncias testadas, seus respectivos resultados, bem como inserir o resultado do exame no sistema RENACH.",
+            "trechos_grifados": [
+              {
+                "inicio": 63,
+                "fim": 74,
+                "motivo": "mapa e contraste — prazo único de 30 dias",
+                "texto_grifado": "trinta dias"
+              },
+              {
+                "inicio": 97,
+                "fim": 111,
+                "motivo": "fluxo e caso — marco é coleta de 10/03/2026",
+                "texto_grifado": "data da coleta"
+              },
+              {
+                "inicio": 257,
+                "fim": 303,
+                "motivo": "caso — obrigação descumprida no 33º dia",
+                "texto_grifado": "inserir o resultado do exame no sistema RENACH"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "LAUDO + RENACH · 30 dias da COLETA · cumprimento parcial não basta.\nNear: laudo no 29º dia e RENACH no 31º — indeferimento permanece legítimo.\nFar: RENACH no 20º dia com laudo só no 32º — também descumpre as duas obrigações.\nNão muda: trinta dias da coleta abrangem laudo e RENACH — uma sem a outra não regulariza.\nCadeia: vizinho = art. 15 (reforço do prazo de inserção no RENACH).",
+            "destaques": ["LAUDO", "RENACH", "30 dias"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.009/2024",
+          "path": ".tmp-1009-full.txt"
+        }
+      ]
+    }
+  }
+]

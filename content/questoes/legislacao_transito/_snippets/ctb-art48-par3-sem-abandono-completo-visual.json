@@ -1,0 +1,177 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 265,
+  "fundamento_slug": "CTB_art_48_par_3",
+  "macete_visual": "§3 = CONDUTOR NO CARRO · SÓ ONDE PERMITIR",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Permanecer no veículo não dispensa local autorizado — §3 limita onde estacionar mesmo sem abandono do condutor",
+    "eixos_legais": [
+      "CTB_art_48_par_3",
+      "CTB_art_48",
+      "CTB_art_47"
+    ],
+    "isca_por_alternativa": {
+      "A": "§3 dispensa local regulamentado quando o condutor permanece no veículo",
+      "B": "espera de passageiro é parada do art. 47 independente de vaga ou placa",
+      "D": "sem placa Proibido Estacionar só incide art. 181, II por afastamento do meio-fio"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-237.json",
+    "eficacia_pos_aula": ["E1", "E2", "E3"]
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: motorista no carro não abre a via",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C (autuação legítima — oito minutos sem vaga nem placa na Av. Epitácio Pessoa).\n\nA — permanência do condutor dispensaria local regulamentado: confunde estar no veículo com permissão de local.\nB — espera de oito minutos seria parada para embarque: equipara permanência a imobilização breve.\nD — sem placa Proibido Estacionar só valeria afastamento do meio-fio: transporta regra de distância e ignora limite de local.\n\nPegadinha: não abandonar o veículo não autoriza estacionar em qualquer trecho.",
+        "destaques": ["Gabarito C", "oito minutos", "local autorizado"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "SEM ABANDONO DO CONDUTOR: motorista permanece no veículo — hipótese do §3, mas não dispensa local autorizado.\n\nLOCAL PREVISTO OU SINALIZADO: vaga demarcada, estacionamento regulamentado ou outra hipótese expressa no CTB.\n\nPARADA DO ART. 47: com estacionamento proibido, imobilização breve só para embarque ou desembarque — não espera prolongada.",
+        "destaques": ["SEM ABANDONO", "LOCAL PREVISTO", "PARADA"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: pode estacionar aqui?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Condutor permanece no veículo?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Há local previsto no CTB ou sinalização específica?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Autuação legítima — Gabarito C", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim — condutor no banco" },
+          { "de": "p2", "para": "r1", "rotulo": "Não — sem vaga nem placa" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "O que o §3 exige",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Elemento", "Regra"],
+        "linhas": [
+          { "faixa": "Condutor no veículo", "classificacao": "Hipótese do §3 — não é abandono", "destaque": true },
+          { "faixa": "Local da permanência", "classificacao": "Somente previsto no CTB ou sinalizado" },
+          { "faixa": "Trecho sem vaga nem placa", "classificacao": "Não autoriza estacionamento pelo §3" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: poderá × somente",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Poderá estacionar em qualquer via se não abandonar", "Poderá somente nos locais previstos ou sinalizados"],
+          ["Espera de passageiro é sempre parada lícita", "Oito minutos aguardando é estacionamento sem local autorizado"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — termo_unico", "Amplia o poderá do §3 para dispensar local regulamentado pela presença do condutor"],
+          ["B — regra_excecao", "Equipara espera prolongada a parada do art. 47 sem proibição de estacionamento"],
+          ["D — gravidade", "Transporta inciso II do art. 181 e condiciona autuação a placa de proibição"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos da fiscalização na Av. Epitácio Pessoa",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Elemento", "Conclusão"],
+        "linhas": [
+          ["Oito minutos aguardando passageira", "Permanência — estacionamento, não parada rápida"],
+          ["Condutor no banco, motor desligado", "Sem abandono — mas §3 ainda exige local autorizado"],
+          ["Sem vaga demarcada nem placa regulamentada", "Trecho não previsto nem sinalizado"],
+          ["Resultado", "Gabarito C — autuação legítima"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "§3 × caput × art. 47",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Dispositivo", "Função no caso"],
+        "linhas": [
+          ["§3 — local", "Estacionar sem abandonar só onde o CTB ou placa permitir"],
+          ["Caput — posicionamento", "Como posicionar quando o local for lícito — paralelo junto ao meio-fio"],
+          ["Art. 47 — vizinho", "Parada breve para embarque ou desembarque — não espera de oito minutos em via aberta"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "CTB — art. 48, §3",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 48, §3",
+        "texto": "O estacionamento dos veículos sem abandono do condutor poderá ser feito somente nos locais previstos neste Código ou naqueles regulamentados por sinalização específica.",
+        "trechos_grifados": [
+          {
+            "inicio": 30,
+            "fim": 54,
+            "motivo": "caso — condutor no banco, sem abandono",
+            "texto_grifado": "sem abandono do condutor"
+          },
+          {
+            "inicio": 55,
+            "fim": 71,
+            "motivo": "contraste — poderá não significa qualquer via",
+            "texto_grifado": "poderá ser feito"
+          },
+          {
+            "inicio": 72,
+            "fim": 100,
+            "motivo": "mapa — limite de local",
+            "texto_grifado": "somente nos locais previstos"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "§3 = CONDUTOR NO CARRO · MAS SÓ ONDE A LEI OU PLACA PERMITIR.\nNear: mesma espera em vaga de estacionamento rotativo com placa regulamentada — local previsto autoriza.\nFar: veículo abandonado em via proibida — art. 181, XIX; §3 não é a regra aplicável.\nNão muda: estacionamento sem abandono só nos locais previstos no CTB ou sinalizados.\nCadeia: vizinho = caput do art. 48 (como posicionar quando o local for lícito).",
+        "destaques": ["CONDUTOR NO CARRO", "ONDE PERMITIR", "caput"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 48", "path": "conteúdo/legislação federal/lei-9503-ctb.html" },
+    { "rotulo": "CTB art. 47", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

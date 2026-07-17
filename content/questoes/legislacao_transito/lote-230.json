@@ -1,0 +1,337 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_1009_alteracoes",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_1009_art_10",
+    "enunciado": "Candidato residente em Campina Grande/PB, com habilitação na categoria B, requereu ao DETRAN-PB mudança para a categoria D. O CFC credenciado agendou, para 15/05/2026, avaliação psicológica e exame de aptidão física e mental junto ao órgão executivo de trânsito, e somente para 16/05/2026 a coleta de amostra para exame toxicológico de larga janela de detecção. O atendente do DETRAN-PB homologou o cronograma, sob o argumento de que o laudo negativo poderia ser inserido no RENACH antes da emissão da CNH. O supervisor da STTP consulta a regularidade da ordem dos exames. Considerando a Resolução CONTRAN nº 1.009/2024, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O agendamento é válido: resultado negativo inserido no RENACH em até trinta dias regulariza qualquer ordem entre o exame toxicológico e os exames do DETRAN.",
+      "B": "O agendamento é válido: o parágrafo único do art. 10 da Res. 923/2022 aplica-se somente à renovação da CNH, não à mudança de categoria B para D.",
+      "C": "O agendamento é irregular: o exame toxicológico deve ser realizado em etapa anterior aos exames do DETRAN previstos no art. 147 do CTB — avaliação psicofísica em 15/05 antes da coleta em 16/05 inverte a ordem legal.",
+      "D": "O agendamento é válido desde que a coleta ocorra em até noventa dias antes da emissão da CNH, independentemente da data dos exames psicofísicos do DETRAN."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Ordem dos exames — art. 10, parágrafo único, da Res. CONTRAN 923/2022 (redação Res. 1.009/2024): exame toxicológico em etapa anterior aos exames do art. 147 do CTB × confusão com prazos de entrega ou validade.",
+      "fundamento_legal": "Res. CONTRAN 923/2022, art. 10 (Res. CONTRAN 1.009/2024): \"Os condutores das categorias C, D e E deverão comprovar resultado negativo em exame toxicológico de larga janela de detecção para a obtenção e a renovação da Carteira Nacional de Habilitação (CNH), incluídas mudanças para estas categorias, nos termos do art. 148-A do CTB. Parágrafo único. No processo de habilitação para as categorias C, D e E, o exame de que trata o caput deverá ser realizado em etapa anterior aos exames realizados pelo órgão executivo de trânsito, previstos no art. 147 do (CTB).\"",
+      "passo_a_passo": [
+        "1. Caso: mudança B→D em Campina Grande — psicofísico no DETRAN em 15/05/2026 — coleta toxicológica só em 16/05/2026 — atendente homologou alegando inserção no RENACH antes da emissão.",
+        "2. A erra por regra_excecao (trata inserção no RENACH em trinta dias como suficiente para regularizar ordem invertida — parágrafo único exige etapa anterior, não posterior); B erra por termo_unico (restringe o parágrafo único à renovação — caput abrange obtenção, renovação e mudanças para C, D e E); D erra por numero_vizinho (transporta validade de noventa dias do art. 10-B para autorizar exame toxicológico após os exames do art. 147).",
+        "3. C correta: coleta em 16/05 após psicofísico em 15/05 descumpre a exigência de etapa anterior aos exames do DETRAN."
+      ],
+      "pegadinha": "A IDECAN induz a crer que basta inserir laudo negativo no RENACH antes da emissão — mas o parágrafo único do art. 10 fixa ordem cronológica de etapas: toxicológico antes dos exames do art. 147.",
+      "macete": "TOXICOLÓGICO ANTES · etapa anterior ao DETRAN (art. 147) · prazo de laudo ≠ ordem dos exames.",
+      "estudo_reverso": [
+        "Res. CONTRAN 1.009/2024 art. 3",
+        "Res. CONTRAN 923/2022 art. 10",
+        "CTB art. 147",
+        "Res. CONTRAN 923/2022 art. 10-B"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Inserir laudo no RENACH não regulariza ordem invertida — toxicológico deve preceder exames do art. 147 CTB",
+      "eixos_legais": [
+        "CONTRAN_923_art_10",
+        "CTB_art_147"
+      ],
+      "eixo_vizinho": "CONTRAN_923_art_10B",
+      "isca_por_alternativa": {
+        "A": "inserção no RENACH em trinta dias regulariza qualquer ordem dos exames",
+        "B": "parágrafo único do art. 10 vale só na renovação, não na mudança B→D",
+        "D": "coleta em até noventa dias antes da emissão dispensa ordem em relação ao psicofísico"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico",
+        "numero_vizinho"
+      ],
+      "near_transfer": "Mesma mudança B→D com coleta toxicológica no mesmo dia 15/05, mas após o exame psicofísico — irregularidade permanece.",
+      "far_transfer": "Renovação categoria E com exame periódico do art. 10-A agendado depois da avaliação psicofísica do DETRAN — mesma regra de etapa anterior aos exames do art. 147.",
+      "o_que_nao_muda": "Exame toxicológico em etapa anterior aos exames do órgão executivo previstos no art. 147 — ordem invertida não se regulariza por prazo de laudo ou validade.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "resolucao_1009",
+      "resolucao_923",
+      "toxicologico",
+      "habilitacao",
+      "art_10",
+      "art_147_ctb"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CONTRAN_1009_art_10",
+      "macete_visual": "TOXICOLÓGICO ANTES · etapa anterior ao DETRAN",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C: psicofísico em 15/05 antes da coleta em 16/05 inverte a ordem — toxicológico deve preceder exames do DETRAN.\n\nFar: renovação categoria E com mesma inversão — mesma regra de etapa anterior.",
+            "destaques": ["Gabarito C", "etapa anterior", "DETRAN"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Ordem das etapas",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Etapa", "Momento legal"],
+            "linhas": [
+              {
+                "faixa": "Coleta toxicológica",
+                "classificacao": "Primeira — etapa anterior",
+                "destaque": true
+              },
+              {
+                "faixa": "Exames DETRAN (art. 147)",
+                "classificacao": "Depois — psicofísico e aptidão"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "TOXICOLÓGICO ANTES · etapa anterior ao DETRAN (art. 147) · laudo no RENACH não corrige ordem.",
+            "destaques": ["TOXICOLÓGICO ANTES", "etapa anterior"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.009/2024",
+          "path": ".tmp-1009-full.txt"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CONTRAN_1009_art_10",
+      "macete_visual": "TOXICOLÓGICO ANTES · etapa anterior ao DETRAN",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Inserir laudo no RENACH não regulariza ordem invertida — toxicológico deve preceder exames do art. 147 CTB",
+        "eixos_legais": [
+          "CONTRAN_923_art_10",
+          "CTB_art_147"
+        ],
+        "isca_por_alternativa": {
+          "A": "inserção no RENACH em trinta dias regulariza qualquer ordem dos exames",
+          "B": "parágrafo único do art. 10 vale só na renovação, não na mudança B→D",
+          "D": "coleta em até noventa dias antes da emissão dispensa ordem em relação ao psicofísico"
+        },
+        "eficacia_pos_aula": ["E1", "E2", "E3"]
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: ordem dos exames",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (agendamento irregular — psicofísico em 15/05 antes da coleta em 16/05).\n\nA — inserção no RENACH em trinta dias regulariza ordem: errado.\nB — parágrafo único só na renovação, não na mudança B→D: errado.\nD — noventa dias antes da emissão dispensa ordem com psicofísico: errado.\n\nPegadinha: laudo no RENACH não substitui etapa anterior ao DETRAN.",
+            "destaques": ["Gabarito C", "15/05", "16/05"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 marcos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ETAPA ANTERIOR: coleta toxicológica vem antes dos exames do DETRAN — não é só prazo de entrega.\n\nEXAMES DO DETRAN: avaliação psicológica e aptidão física e mental — art. 147 do CTB.\n\nMUDANÇA B→D: caput abrange obtenção, renovação e mudanças para categorias C, D e E.",
+            "destaques": ["ETAPA ANTERIOR", "DETRAN", "B→D"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: toxicológico veio antes?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Coleta toxicológica ocorreu em etapa anterior aos exames do DETRAN?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Agendamento irregular — Gabarito C",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Não — psicofísico em 15/05, coleta em 16/05"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa de etapas do processo",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Etapa", "Regra"],
+            "linhas": [
+              {
+                "faixa": "Coleta toxicológica",
+                "classificacao": "Etapa anterior — obrigatória primeiro",
+                "destaque": true
+              },
+              {
+                "faixa": "Exames psicofísicos DETRAN",
+                "classificacao": "Etapa posterior — art. 147 CTB"
+              },
+              {
+                "faixa": "Inserção laudo no RENACH",
+                "classificacao": "Prazo de entrega — não redefine ordem"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: laudo × ordem",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Basta inserir laudo negativo no RENACH antes da emissão",
+                "Parágrafo único exige etapa anterior aos exames do DETRAN"
+              ],
+              [
+                "Validade de noventa dias autoriza coleta após psicofísico",
+                "Validade do exame é distinta da ordem cronológica das etapas"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Trata inserção no RENACH como regularizadora — ignora exigência de etapa anterior"
+              ],
+              [
+                "B — termo_unico",
+                "Restringe parágrafo único à renovação — caput abrange mudança B→D"
+              ],
+              [
+                "D — numero_vizinho",
+                "Transporta noventa dias de validade para autorizar ordem invertida"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos do cronograma homologado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              ["Mudança B→D em Campina Grande", "Caput do art. 10 se aplica"],
+              ["Psicofísico DETRAN em 15/05/2026", "Exame do art. 147 — etapa posterior"],
+              ["Coleta toxicológica em 16/05/2026", "Depois do psicofísico — ordem invertida"],
+              ["Resultado", "Gabarito C — agendamento irregular"]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Ordem × validade do exame",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              [
+                "Art. 10 — parágrafo único",
+                "Define ordem: toxicológico antes dos exames do DETRAN"
+              ],
+              [
+                "Art. 10-B — validade noventa dias",
+                "Prazo de utilização do resultado — não autoriza inverter etapas"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Res. 923/2022 — art. 10 (1.009/2024)",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 923/2022, art. 10 (Res. CONTRAN 1.009/2024)",
+            "texto": "No processo de habilitação para as categorias C, D e E, o exame de que trata o caput deverá ser realizado em etapa anterior aos exames realizados pelo órgão executivo de trânsito, previstos no art. 147 do (CTB).",
+            "trechos_grifados": [
+              {
+                "inicio": 109,
+                "fim": 123,
+                "motivo": "fluxo e contraste — ordem cronológica obrigatória",
+                "texto_grifado": "etapa anterior"
+              },
+              {
+                "inicio": 128,
+                "fim": 178,
+                "motivo": "caso — exames de 15/05 no DETRAN",
+                "texto_grifado": "exames realizados pelo órgão executivo de trânsito"
+              },
+              {
+                "inicio": 193,
+                "fim": 201,
+                "motivo": "eixo2 — vínculo com psicofísico do DETRAN",
+                "texto_grifado": "art. 147"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "TOXICOLÓGICO ANTES · etapa anterior ao DETRAN (art. 147) · laudo no RENACH não corrige ordem.\nNear: coleta no mesmo dia 15/05, mas após o psicofísico — irregularidade permanece.\nFar: renovação categoria E com exame periódico depois do psicofísico — mesma regra de etapa anterior.\nNão muda: toxicológico precede exames do órgão executivo — prazo de laudo ou validade não inverte etapas.\nCadeia: vizinho = art. 10-B (noventa dias de validade — conceito distinto da ordem).",
+            "destaques": ["TOXICOLÓGICO ANTES", "etapa anterior", "art. 147"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 1.009/2024",
+          "path": ".tmp-1009-full.txt"
+        }
+      ]
+    }
+  }
+]

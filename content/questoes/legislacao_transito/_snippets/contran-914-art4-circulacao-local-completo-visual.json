@@ -1,0 +1,270 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 265,
+  "fundamento_slug": "CONTRAN_914_art_4",
+  "macete_visual": "HOMOLOGA ≠ LIBERA VIA · art. 4 = local decide",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Homologação federal não garante circulação em qualquer via — art. 4º reserva decisão à autoridade local da circunscrição",
+    "eixos_legais": [
+      "CONTRAN_914_art_4",
+      "CONTRAN_914_art_2"
+    ],
+    "isca_por_alternativa": {
+      "A": "art. 4º limita-se a rodovias federais e homologação garante circulação irrestrita em vias municipais",
+      "C": "competência exclusiva do DETRAN-PB para regulamentar circulação de semirreboques",
+      "D": "art. 4º autoriza STTP a flexibilizar limites dimensionais do art. 3º quando homologado"
+    },
+    "eficacia_pos_aula": [
+      "E1",
+      "E2",
+      "E3"
+    ]
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: homologado libera via?",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B (restrição legítima — STTP decide circulação na via municipal).\n\nA — competência só em rodovias federais e homologação libera qualquer via: errado.\nC — competência exclusiva do DETRAN-PB: errado.\nD — poder local flexibiliza dimensões do semirreboque homologado: errado.\n\nPegadinha: homologação federal não substitui decisão local sobre circulação.",
+        "destaques": [
+          "Gabarito B",
+          "homologação",
+          "STTP"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 marcos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "HOMOLOGAÇÃO: requisito técnico federal do art. 2º — não é licença de circulação em toda via.\n\nCIRCUNSCRIÇÃO: trecho sob competência da autoridade de trânsito local (no caso, STTP em Campina Grande).\n\nCIRCULAÇÃO: autorizar ou vedar tráfego na via — distinto de CMT, cilindrada e dimensões.",
+        "destaques": [
+          "HOMOLOGAÇÃO",
+          "CIRCUNSCRIÇÃO",
+          "CIRCULAÇÃO"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: quem decide na via?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Via está sob circunscrição da autoridade local (STTP)?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Autoridade local vedou circulação com semirreboque nessa via?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Restrição legítima — Gabarito B",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — Av. Epitácio Pessoa municipal"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — ato restritivo da STTP"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Mapa: camadas da Res. 914",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Dispositivo",
+          "Função"
+        ],
+        "linhas": [
+          {
+            "faixa": "Art. 2º — cilindrada, homologação, CMT",
+            "classificacao": "Requisitos técnicos para tracionar"
+          },
+          {
+            "faixa": "Art. 3º — dimensões e equipamentos",
+            "classificacao": "Especificações do semirreboque"
+          },
+          {
+            "faixa": "Art. 4º — circulação na via",
+            "classificacao": "Autoridade local autoriza ou veda",
+            "destaque": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: homologação × via",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a lei diz ✓"
+        ],
+        "linhas": [
+          [
+            "Homologação federal garante circular em qualquer via pública",
+            "Art. 4º reserva à autoridade local decidir sobre circulação na via"
+          ],
+          [
+            "Art. 4º permite flexibilizar dimensões quando homologado",
+            "Art. 4º trata de circulação — limites do art. 3º são regra técnica distinta"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — competencia_snt",
+            "Restringe art. 4º a rodovias federais — via municipal também está sob circunscrição local"
+          ],
+          [
+            "C — competencia_snt",
+            "Atribui competência exclusiva ao DETRAN-PB — art. 4º aponta autoridade da via"
+          ],
+          [
+            "D — regra_excecao",
+            "Confunde decisão sobre circulação com flexibilização de dimensões do art. 3º"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos da restrição na Av. Epitácio Pessoa",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Elemento",
+          "Conclusão"
+        ],
+        "linhas": [
+          [
+            "Moto 150 cm³ + semirreboque homologado",
+            "Atende art. 2º — mas não encerra art. 4º"
+          ],
+          [
+            "Via sob circunscrição da STTP",
+            "Autoridade local competente"
+          ],
+          [
+            "Ato vedando circulação com semirreboque",
+            "Exercício do art. 4º"
+          ],
+          [
+            "Resultado",
+            "Gabarito B — restrição legítima"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Homologação federal × decisão local",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Órgão / camada",
+          "Papel no caso"
+        ],
+        "linhas": [
+          [
+            "Órgão máximo executivo da União — homologação",
+            "Valida requisitos técnicos do art. 2º"
+          ],
+          [
+            "STTP — autoridade de trânsito local",
+            "Decide circulação na via sob sua circunscrição (art. 4º)"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Res. 914/2022 — art. 4º",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 914/2022, art. 4º",
+        "texto": "Cabe à autoridade de trânsito decidir sobre a circulação de motocicleta e de motoneta com semirreboque acoplado na via sob sua circunscrição.",
+        "trechos_grifados": [
+          {
+            "inicio": 7,
+            "fim": 29,
+            "motivo": "hierarquia — STTP como autoridade local",
+            "texto_grifado": "autoridade de trânsito"
+          },
+          {
+            "inicio": 30,
+            "fim": 56,
+            "motivo": "fluxo e contraste — poder de autorizar ou vedar",
+            "texto_grifado": "decidir sobre a circulação"
+          },
+          {
+            "inicio": 115,
+            "fim": 140,
+            "motivo": "caso — Av. Epitácio Pessoa municipal",
+            "texto_grifado": "via sob sua circunscrição"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "HOMOLOGA ≠ LIBERA VIA · art. 4 = autoridade local decide circulação · art. 2/3 = requisitos técnicos.\nNear: mesma moto regular na BR-230 — autoridade da rodovia federal decide circulação naquela via.\nFar: semirreboque sem equipamento obrigatório — art. 4º não dispensa requisitos do art. 2º/3º nem tipificação do art. 5º.\nNão muda: autoridade da via decide circulação — homologação federal não substitui essa decisão.\nCadeia: vizinho = art. 2º (requisitos técnicos para tracionar).",
+        "destaques": [
+          "HOMOLOGA",
+          "art. 4",
+          "circunscrição"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 914/2022",
+      "path": ".tmp-lacunas/914.txt"
+    }
+  ]
+}

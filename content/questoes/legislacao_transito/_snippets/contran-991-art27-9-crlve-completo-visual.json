@@ -1,0 +1,274 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 265,
+  "fundamento_slug": "CONTRAN_918_art_27_9",
+  "macete_visual": "OPERADORA aprova = CRLV-e liberado",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "CRLV-e libera na aprovação da operadora — não após última prestação",
+    "eixos_legais": [
+      "CONTRAN_918_art_27_9",
+      "CONTRAN_991_art_27_caput"
+    ],
+    "isca_por_alternativa": {
+      "A": "CRLV-e só após última prestação quitada",
+      "B": "liberação depende da primeira parcela com SELIC",
+      "C": "DETRAN analisa antes da operadora liberar"
+    },
+    "eficacia_pos_aula": [
+      "E1",
+      "E2",
+      "E3"
+    ]
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: aprovação ≠ última parcela",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito D (indeferimento ilegítimo — CRLV-e libera na aprovação da operadora).\n\nA — CRLV-e só após última prestação quitada: errado.\nB — liberação depende da primeira parcela com SELIC: errado.\nC — DETRAN analisa antes da operadora liberar: errado.\n\nPegadinha: parcelar no crédito não adia a regularização do veículo até a última prestação.",
+        "destaques": [
+          "Gabarito D",
+          "operadora",
+          "última prestação"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "APROVAÇÃO E EFETIVAÇÃO: ato da operadora de cartão que confirma o parcelamento no crédito — gatilho do § 9º.\n\nCRLV-e: certificado digital de registro e licenciamento — liberado na efetivação do parcelamento.\n\nREGULARIZAÇÃO IMEDIATA: efeito do caput — veículo pode circular licenciado sem aguardar todas as prestações.",
+        "destaques": [
+          "APROVAÇÃO",
+          "CRLV-e",
+          "REGULARIZAÇÃO"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: parcelamento efetivado?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Parcelamento no cartão de crédito na parceria STTP?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Operadora aprovou e efetivou?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Libera licenciamento e CRLV-e — Gabarito D",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — 8 prestações"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — mesmo dia"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Quando libera o licenciamento",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Marco",
+          "Efeito no licenciamento"
+        ],
+        "linhas": [
+          {
+            "faixa": "Aprovação e efetivação pela operadora",
+            "classificacao": "Libera licenciamento e CRLV-e — § 9º",
+            "destaque": true
+          },
+          {
+            "faixa": "Quitação da última prestação",
+            "classificacao": "Não é o gatilho do § 9º"
+          },
+          {
+            "faixa": "Pagamento da primeira parcela isolada",
+            "classificacao": "Não substitui aprovação/efetivação da operadora"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: parcelar × adiar CRLV-e",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a lei diz ✓"
+        ],
+        "linhas": [
+          [
+            "Parcelar no crédito só regulariza após quitar todas as prestações",
+            "§ 9º: aprovação e efetivação pela operadora libera licenciamento e CRLV-e"
+          ],
+          [
+            "CRLV-e depende de análise prévia do DETRAN independente da operadora",
+            "Gatilho legal é a efetivação do parcelamento no crédito pela operadora"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Exige quitação integral da última prestação — ignora liberação imediata do § 9º na aprovação da operadora"
+          ],
+          [
+            "B — numero_vizinho",
+            "Condiciona liberação ao pagamento da primeira parcela com SELIC — gatilho é aprovação/efetivação, não parcela isolada"
+          ],
+          [
+            "C — termo_unico",
+            "Inventa análise documental exclusiva do DETRAN-PB — § 9º vincula liberação à aprovação da operadora de crédito"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos do parcelamento na STTP",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Elemento",
+          "Conclusão"
+        ],
+        "linhas": [
+          [
+            "Parcelamento 8× no cartão de crédito",
+            "Modalidade do § 9º"
+          ],
+          [
+            "Operadora aprovou e efetivou no mesmo dia",
+            "Gatilho de liberação"
+          ],
+          [
+            "STTP exigiu última prestação para CRLV-e",
+            "Indeferimento ilegítimo"
+          ],
+          [
+            "Resultado",
+            "Gabarito D"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Caput (991) × § 9º — regularização imediata",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Caput — regularização imediata do veículo",
+            "Política geral da parceria com cartão"
+          ],
+          [
+            "§ 9º — aprovação da operadora",
+            "Gatilho concreto: libera licenciamento e CRLV-e na efetivação do parcelamento"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Res. 918/2022 — art. 27, § 9º",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 918/2022, art. 27, § 9º",
+        "texto": "A aprovação e efetivação do parcelamento por meio do cartão de crédito pela operadora de cartão de crédito libera o licenciamento do veículo e a respectiva emissão do Certificado de Registro e Licenciamento do Veículo em meio digital (CRLV-e).",
+        "trechos_grifados": [
+          {
+            "inicio": 2,
+            "fim": 40,
+            "motivo": "fluxo — gatilho da operadora",
+            "texto_grifado": "aprovação e efetivação do parcelamento"
+          },
+          {
+            "inicio": 107,
+            "fim": 140,
+            "motivo": "contraste — libera licenciamento",
+            "texto_grifado": "libera o licenciamento do veículo"
+          },
+          {
+            "inicio": 235,
+            "fim": 241,
+            "motivo": "caso — CRLV-e digital",
+            "texto_grifado": "CRLV-e"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "OPERADORA aprova + efetiva = CRLV-e LIBERADO · não espera última parcela.\nNear: mesma parceria STTP, 12× no crédito — CRLV-e libera na aprovação da operadora, não na 12ª parcela.\nFar: pagamento à vista com débito na parceria — § 9º disciplina parcelamento no crédito; caput prevê regularização imediata, mas gatilho expresso é a operadora de crédito parcelado.\nNão muda: aprovação e efetivação do parcelamento no crédito pela operadora libera licenciamento e CRLV-e.\nCadeia: vizinho = caput art. 27 (regularização imediata — Res. 991/2023).",
+        "destaques": [
+          "OPERADORA",
+          "CRLV-e",
+          "última parcela"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 918/2022",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 918, DE 28 DE MARÇO DE 2022.pdf"
+    },
+    {
+      "rotulo": "Res. CONTRAN 991/2023",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 991, DE 19 DE ABRIL DE 2023.pdf"
+    }
+  ]
+}

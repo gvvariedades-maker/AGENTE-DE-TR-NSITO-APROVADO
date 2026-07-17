@@ -1,0 +1,268 @@
+{
+  "fundamento_slug": "CTB_art_2",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "diagrama_competencia",
+    "arquetipo_secundario": "comparacao",
+    "publico_alvo": "iniciante",
+    "duracao_estimada_seg": 255,
+    "fundamento_slug": "CTB_art_2",
+    "macete_visual": "ART. 2 = CIRCUNSCRIÇÃO · uso da via = órgão local",
+    "meta": {
+      "padrao_familia": "C_competencia_snt",
+      "pegadinha_em_uma_frase": "Vereador federaliza tudo no CONTRAN — art. 2º confere regulamentação do uso ao órgão com circunscrição sobre a via",
+      "eixos_legais": [
+        "CTB_art_2",
+        "CTB_art_5"
+      ],
+      "isca_por_alternativa": {
+        "A": "CONTRAN teria competência normativa exclusiva sobre circulação e estacionamento em qualquer logradouro urbano",
+        "B": "DETRAN-PB, e não a STTP, fixaria restrições em via urbana municipal",
+        "D": "legislador federal monopolizaria qualquer regra material de estacionamento, vedando adaptação municipal"
+      },
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Diagnóstico: quem regulamenta a avenida?",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito C (regulamentação válida pela circunscrição local).\n\nA — CONTRAN exclusivo em logradouro urbano: errado.\nB — DETRAN-PB em via municipal da STTP: errado.\nD — Município vedado de adaptar estacionamento local: errado.\n\nPegadinha: federalizar tudo no CONTRAN ignora quem tem circunscrição sobre a avenida.",
+          "destaques": [
+            "Gabarito C",
+            "CONTRAN",
+            "circunscrição"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Pré-treino: 3 termos do caso",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "CIRCUNSCRIÇÃO: poder de atuar sobre determinada via — no caso, avenida municipal sob a STTP.\n\nCONTRAN: órgão normativo máximo do SNT — não regulamenta cada logradouro.\n\nUSO DA VIA: circulação, estacionamento e ocupação adaptados à realidade local — art. 2º.",
+          "destaques": [
+            "CIRCUNSCRIÇÃO",
+            "CONTRAN",
+            "USO DA VIA"
+          ]
+        }
+      },
+      {
+        "id": "diagrama",
+        "titulo": "Quem faz o quê neste caso",
+        "secao": "metodo",
+        "tipo": "diagrama_competencia",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "contran",
+              "label": "CONTRAN — normas gerais do SNT",
+              "nivel": 0
+            },
+            {
+              "id": "sttp",
+              "label": "STTP — circunscrição na Avenida Epitácio Pessoa",
+              "nivel": 2
+            },
+            {
+              "id": "detran",
+              "label": "DETRAN-PB — esfera estadual (não esta via)",
+              "nivel": 1
+            },
+            {
+              "id": "via",
+              "label": "Logradouro urbano municipal",
+              "nivel": 2
+            }
+          ],
+          "arestas": [
+            {
+              "de": "sttp",
+              "para": "via",
+              "rotulo": "Regulamenta o uso — art. 2º"
+            },
+            {
+              "de": "contran",
+              "para": "sttp",
+              "rotulo": "Normas gerais do SNT — art. 5º"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Monopólio do CONTRAN?",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "O que o vereador pensa ✗",
+            "O que o art. 2º diz ✓"
+          ],
+          "linhas": [
+            [
+              "Só o CONTRAN pode fixar regras de estacionamento em qualquer via",
+              "O órgão com circunscrição sobre a via regulamenta seu uso"
+            ],
+            [
+              "Norma municipal sobre logradouro é sempre inválida",
+              "Peculiaridades locais e circunstâncias especiais orientam a regulamentação"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que cada alternativa erra",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Mecanismo + por quê"
+          ],
+          "linhas": [
+            [
+              "A — competencia_snt",
+              "Federaliza no CONTRAN o uso de logradouro urbano — art. 2º remete à circunscrição local."
+            ],
+            [
+              "B — termo_unico",
+              "Equipara via urbana municipal ao sistema rodoviário estadual — circunscrição é da STTP."
+            ],
+            [
+              "D — regra_excecao",
+              "Inventa vedação absoluta a normas municipais adaptadas, contrariando o art. 2º."
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Caso: Avenida Epitácio Pessoa",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Fato do enunciado",
+            "Consequência legal"
+          ],
+          "linhas": [
+            [
+              "Logradouro urbano municipal em Campina Grande",
+              "Via terrestre urbana — art. 2º, caput"
+            ],
+            [
+              "STTP pretende regras locais de estacionamento e velocidade",
+              "Órgão com circunscrição regulamenta o uso da via"
+            ],
+            [
+              "Vereador invoca monopólio do CONTRAN",
+              "Gabarito C — circunscrição prevalece sobre a isca federalizadora"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "mapa",
+        "titulo": "Mapa: via × quem regulamenta o uso",
+        "secao": "mapa",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Via / situação",
+            "Órgão com circunscrição"
+          ],
+          "linhas": [
+            [
+              "Avenida municipal (este caso)",
+              "STTP — órgão executivo municipal"
+            ],
+            [
+              "Rodovia federal",
+              "Órgão executivo rodoviário federal (PRF/DNIT)"
+            ],
+            [
+              "Norma geral do SNT",
+              "CONTRAN — não substitui circunscrição do art. 2º"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "hierarquia",
+        "titulo": "SNT municipal no art. 5º",
+        "secao": "conceito",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Dispositivo",
+            "Função no caso"
+          ],
+          "linhas": [
+            [
+              "Art. 2º, caput — circunscrição",
+              "STTP regulamenta o uso da avenida municipal"
+            ],
+            [
+              "Art. 5º — conceito do SNT",
+              "Município integra o SNT — não é estranho ao sistema"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Art. 2º, caput",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 2º",
+          "texto": "Art. 2º São vias terrestres urbanas e rurais as ruas, as avenidas, os logradouros, os caminhos, as passagens, as estradas e as rodovias, que terão seu uso regulamentado pelo órgão ou entidade com circunscrição sobre elas, de acordo com as peculiaridades locais e as circunstâncias especiais.",
+          "trechos_grifados": [
+            {
+              "inicio": 169,
+              "fim": 220,
+              "motivo": "contraste — órgão com circunscrição regulamenta o uso",
+              "texto_grifado": "pelo órgão ou entidade com circunscrição sobre elas"
+            },
+            {
+              "inicio": 222,
+              "fim": 290,
+              "motivo": "caso — peculiaridades locais da Avenida Epitácio Pessoa",
+              "texto_grifado": "de acordo com as peculiaridades locais e as circunstâncias especiais"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Macete + near/far-transfer",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "ART. 2 = CIRCUNSCRIÇÃO — quem cuida da via regulamenta o USO.\nNear: estacionamento rotativo em rua do centro — mesma STTP com circunscrição municipal.\nFar: CONTRAN edita resolução de sinalização — norma geral não apaga o art. 2º local.\nNão muda: uso regulamentado pelo órgão com circunscrição, conforme peculiaridades locais.\nCadeia: vizinho = art. 5º (Município integra o SNT).",
+          "destaques": [
+            "CIRCUNSCRIÇÃO",
+            "rotativo",
+            "CONTRAN",
+            "art. 5º"
+          ]
+        }
+      }
+    ],
+    "links_fonte": [
+      {
+        "rotulo": "Lei 9.503/97 — CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ]
+  }
+}

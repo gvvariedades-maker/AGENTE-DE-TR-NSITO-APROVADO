@@ -1,0 +1,287 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CTB_art_29_III_b",
+  "macete_visual": "RO-RO-DI · no anel = quem JÁ CIRCULA",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Na rotatória não sinalizada quem já circula pelo anel tem preferência — a regra da direita (alínea c) não alcança quem ingressa contra o fluxo do anel",
+    "eixos_legais": [
+      "CTB_art_29_III_b",
+      "CTB_art_215_I_a"
+    ],
+    "isca_por_alternativa": {
+      "A": "direita do condutor prevalece na rotatória sem sinalização",
+      "C": "rotatória sem placa permite negociar passagem livremente entre condutores",
+      "D": "anel da rotatória não gera preferência — só rodovia na alínea a"
+    },
+    "eixo_vizinho": "CTB_art_29_III_c",
+    "eixos_mecanismo": [
+      "numero_vizinho",
+      "regra_excecao",
+      "termo_unico"
+    ],
+    "near_transfer": "Mesma rotatória, mas o ingressante vem pela esquerda de quem circula no anel — ainda deve ceder: a alínea b protege quem já está no anel, não a posição relativa no braço de entrada.",
+    "far_transfer": "Em cruzamento comum sem rotatória nem rodovia, veículo que vem pela direita tem preferência (art. 29, III, c) — cenário distinto, mesma hierarquia RO-RO-DI.",
+    "o_que_nao_muda": "Em rotatória não sinalizada, quem já circula pelo anel tem preferência de passagem sobre quem ingressa — art. 29, III, b.",
+    "calibracao_corpus": "ok",
+    "eficacia_pos_aula": [
+      "E1",
+      "E2",
+      "E3"
+    ],
+    "referencia_lote": "content/questoes/legislacao_transito/lote-221.json"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: direita na rotatória",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — direita do condutor prevalece na rotatória sem sinalização.\nC — rotatória sem placa permite negociar passagem livremente.\nD — anel da rotatória não gera preferência — só rodovia.\n\nNesta aula você fixa quem já circula no anel e a autuação por não ceder passagem.",
+        "destaques": [
+          "Gabarito B",
+          "rotatória",
+          "anel"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "ROTATÓRIA: interseção em nível com circulação pelo anel — gatilho da alínea b do art. 29, III.\n\nCIRCULAR PELO ANEL: já estar no fluxo da rotatória — quem ingressa é o que deve ceder.\n\nINTERSEÇÃO NÃO SINALIZADA: sem semáforo nem placa de regulamentação da preferência — incide o inciso III.",
+        "destaques": [
+          "ROTATÓRIA",
+          "CIRCULAR PELO ANEL",
+          "NÃO SINALIZADA"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: quem passa na rotatória?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Conflito em rotatória não sinalizada?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Um veículo já circula pelo anel?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Preferência a quem circula no anel — III, b",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Ordem RO-RO-DI (art. 29, III)",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Prioridade",
+          "Quem tem preferência"
+        ],
+        "linhas": [
+          {
+            "faixa": "1º — alínea a",
+            "classificacao": "Quem circula pela RODOVIA"
+          },
+          {
+            "faixa": "2º — alínea b",
+            "classificacao": "Quem circula pela ROTATÓRIA",
+            "destaque": true
+          },
+          {
+            "faixa": "3º — alínea c",
+            "classificacao": "Nos demais casos, o que vier pela DIREITA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: direita × anel",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a lei diz ✓"
+        ],
+        "linhas": [
+          [
+            "Quem vem pela direita passa na rotatória",
+            "Alínea b: quem já circula no anel tem preferência"
+          ],
+          [
+            "Direita vale antes da rotatória",
+            "Ordem: rodovia → rotatória → direita"
+          ],
+          [
+            "Sem placa, ninguém tem preferência",
+            "Inciso III define a ordem legal"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Aplica alínea c (direita) ignorando alínea b da rotatória"
+          ],
+          [
+            "C — termo_unico",
+            "Inventa negociação livre — inciso III define ordem legal"
+          ],
+          [
+            "D — numero_vizinho",
+            "Só aceita alínea a (rodovia) e ignora alínea b da rotatória"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos da fiscalização na Av. Floriano Peixoto",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Elemento do enunciado",
+          "Conclusão legal"
+        ],
+        "linhas": [
+          [
+            "Automóvel já circulava pelo anel",
+            "Preferência do art. 29, III, b"
+          ],
+          [
+            "Ingressante forçou passagem pelo braço lateral",
+            "Não cedeu a quem circulava na rotatória"
+          ],
+          [
+            "Condutor invocou direita sobre quem estava no anel",
+            "Isca da alínea c — não se aplica aqui"
+          ],
+          [
+            "Resultado",
+            "Gabarito B — autuação legítima (art. 215, I, a)"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Circulação (III, b) × tipificação (215, I, a)",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Art. 29, III, b — circulação",
+            "Define quem tem preferência: quem já está no anel"
+          ],
+          [
+            "Art. 215, I, a — infração",
+            "Pune deixar de dar preferência a quem circula por rotatória"
+          ],
+          [
+            "Próximo na cadeia: III, c",
+            "Direita só nos demais casos — sem rodovia nem rotatória"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "CTB — art. 29, III",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 29, III",
+        "texto": "Quando veículos, transitando por fluxos que se cruzem, se aproximarem de local não sinalizado, terá preferência de passagem: a) no caso de apenas um fluxo ser proveniente de rodovia, aquele que estiver circulando por ela; b) no caso de rotatória, aquele que estiver circulando por ela; c) nos demais casos, o que vier pela direita do condutor.",
+        "trechos_grifados": [
+          {
+            "inicio": 225,
+            "fim": 284,
+            "motivo": "mapa — preferência na rotatória",
+            "texto_grifado": "no caso de rotatória, aquele que estiver circulando por ela"
+          },
+          {
+            "inicio": 289,
+            "fim": 342,
+            "motivo": "contraste — direita só nos demais casos",
+            "texto_grifado": "nos demais casos, o que vier pela direita do condutor"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "RO-RO-DI: rodovia > rotatória > direita · no anel = quem JÁ CIRCULA.\nNear: ingressante pela esquerda de quem está no anel — ainda cede ao fluxo do anel (alínea b).\nFar: cruzamento sem rotatória nem rodovia — direita (alínea c) nos demais casos.\nNão muda: em rotatória não sinalizada, quem já circula pelo anel tem preferência.\nCadeia: próximo = art. 29, III, c (direita) — só quando não há rotatória.",
+        "destaques": [
+          "RO-RO-DI",
+          "JÁ CIRCULA",
+          "alínea b"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "CTB art. 29, III",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    },
+    {
+      "rotulo": "CTB art. 215",
+      "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+    }
+  ]
+}

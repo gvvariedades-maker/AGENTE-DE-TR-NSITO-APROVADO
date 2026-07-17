@@ -1,0 +1,175 @@
+{
+  "versao": 2,
+  "arquetipo": "tabela_gradacao",
+  "arquetipo_secundario": "fluxograma_decisao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 265,
+  "fundamento_slug": "CTB_art_181_II",
+  "macete_visual": "50 cm–1 m = II leve · >1 m = III grave",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "85 cm do meio-fio é leve (inciso II) — caput do art. 48 não dispensa a faixa de 50 cm a 1 m",
+    "eixos_legais": [
+      "CTB_art_181_II",
+      "CTB_art_181_III",
+      "CTB_art_48"
+    ],
+    "isca_por_alternativa": {
+      "B": "qualquer afastamento acima de 50 cm seria grave pelo inciso III",
+      "C": "inciso I de esquina aplicaria em trecho reto",
+      "D": "caput do art. 48 dispensaria autuação por estar paralelo junto à guia"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-239.json",
+    "eficacia_pos_aula": ["E1", "E2", "E3"]
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: 85 cm é leve, não dispensa",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito A (infração leve — 85 cm do meio-fio na Rua Marechal Floriano Peixoto).\n\nB — qualquer afastamento acima de 50 cm seria grave: confunde limite de 1 m da faixa grave.\nC — regra de esquina em trecho reto: transporta distância da via transversal.\nD — posicionamento paralelo dispensaria autuação: troca exigência de posicionamento por tolerância de afastamento.\n\nPegadinha: junto à guia não anula a faixa de 50 cm a 1 m da infração leve.",
+        "destaques": ["Gabarito A", "85 cm", "leve"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "MEIO-FIO: guia da calçada — referência para medir o afastamento lateral do veículo.\n\nAFASTAMENTO: distância entre a roda e o meio-fio — no caso, 85 centímetros.\n\nPARALELO JUNTO À GUIA: exigência do caput do art. 48 — não elimina a faixa sancionada do inciso II.",
+        "destaques": ["MEIO-FIO", "AFASTAMENTO", "PARALELO"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: qual inciso do art. 181?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Afastamento entre 50 cm e 1 m?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Inciso II — leve — Gabarito A", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "r1", "rotulo": "Sim — 85 cm" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Mapa art. 181 — distâncias do meio-fio",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Situação", "Classificação"],
+        "linhas": [
+          { "faixa": "50 cm a 1 m do meio-fio", "classificacao": "Leve — inciso II", "destaque": true },
+          { "faixa": "Mais de 1 m do meio-fio", "classificacao": "Grave — inciso III" },
+          { "faixa": "Esquina < 5 m da transversal", "classificacao": "Média — inciso I" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: caput art. 48 × inciso II",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Paralelo junto à guia dispensa autuação", "Entre 50 cm e 1 m é infração leve pelo inciso II"],
+          ["Qualquer afastamento acima de 50 cm é grave", "Só acima de 1 m enquadra o inciso III"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["B — gravidade", "Equipara 85 cm ao inciso III — limite de grave é mais de 1 m"],
+          ["C — regra_excecao", "Aplica inciso I de esquina em trecho reto sem via transversal"],
+          ["D — termo_unico", "Troca posicionamento paralelo do caput por dispensa de afastamento medido"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos da fiscalização na Rua Marechal Floriano Peixoto",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Elemento", "Conclusão"],
+        "linhas": [
+          ["Roda dianteira a 85 cm do meio-fio", "Dentro da faixa 50 cm–1 m — inciso II"],
+          ["Trecho reto, sem esquina", "Inciso I não se aplica"],
+          ["Veículo paralelo ao fluxo", "Caput do art. 48 cumprido, mas não afasta inciso II"],
+          ["Resultado", "Gabarito A — infração leve"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Inciso II × inciso III × caput",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Dispositivo", "Função no caso"],
+        "linhas": [
+          ["Inciso II — faixa", "50 cm a 1 m = infração leve — 85 cm enquadra aqui"],
+          ["Inciso III — vizinho", "Mais de 1 m = infração grave"],
+          ["Caput art. 48 — posicionamento", "Paralelo junto à guia — não substitui inciso II"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "CTB — art. 181, II",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 181, II",
+        "texto": "II - afastado da guia da calçada (meio-fio) de cinquenta centímetros a um metro: Infração - leve; Penalidade - multa; Medida administrativa - remoção do veículo.",
+        "trechos_grifados": [
+          {
+            "inicio": 5,
+            "fim": 32,
+            "motivo": "caso — afastamento medido do meio-fio",
+            "texto_grifado": "afastado da guia da calçada"
+          },
+          {
+            "inicio": 44,
+            "fim": 79,
+            "motivo": "mapa — faixa do gabarito (85 cm)",
+            "texto_grifado": "de cinquenta centímetros a um metro"
+          },
+          {
+            "inicio": 81,
+            "fim": 96,
+            "motivo": "contraste — classificação leve",
+            "texto_grifado": "Infração - leve"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "MEIO-FIO: 50 cm–1 m = II leve · >1 m = III grave · esquina = I média.\nNear: mesmo automóvel a 1,20 m do meio-fio — inciso III, infração grave.\nFar: veículo a 20 cm do meio-fio em via reta — não enquadra II nem III.\nNão muda: afastamento entre 50 cm e 1 m = infração leve (inciso II).\nCadeia: vizinho = inciso III (mais de 1 m = grave).",
+        "destaques": ["II leve", "III grave", "50 cm–1 m"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 181", "path": "conteúdo/legislação federal/lei-9503-ctb.html" },
+    { "rotulo": "CTB art. 48", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CTB_art_57_par_unico",
+  "macete_visual": "EXCLUSIVA à direita → faixa ADJACENTE",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Faixa exclusiva à direita desloca o ciclomotor para a faixa adjacente — caput não autoriza invadir ônibus",
+    "eixos_legais": ["CTB_art_57_par_unico", "CTB_art_57"],
+    "isca_por_alternativa": {
+      "A": "caput autoriza faixa mais à direita mesmo exclusiva para ônibus",
+      "B": "calçada urbana em baixa velocidade quando faixa ocupada",
+      "C": "parágrafo único só vale em via de trânsito rápido"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-228.json",
+    "eficacia_pos_aula": ["E1", "E2", "E3"]
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: direita ≠ faixa de ônibus",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito D (autuação legítima — ciclomotor na faixa exclusiva de ônibus).\n\nA — caput manda na faixa mais à direita, mesmo exclusiva: ignora deslocamento para faixa adjacente.\nB — calçada urbana em baixa velocidade: o caput veda calçada em via urbana.\nC — parágrafo único só em via rápida: inventa limite geográfico.\n\nPegadinha: a regra geral é pela direita — mas exclusividade na faixa da direita muda a faixa obrigatória.",
+        "destaques": ["Gabarito D", "faixa exclusiva", "adjacente"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "FAIXA EXCLUSIVA: destinada a tipo específico de veículo — no caso, ônibus na faixa da direita.\n\nFAIXA ADJACENTE À DIREITA: faixa imediatamente à esquerda da exclusiva — destino do ciclomotor pelo parágrafo único.\n\nCICLOMOTOR: veículo de duas rodas com motor até 50 cm³ — sujeito do art. 57.",
+        "destaques": ["FAIXA EXCLUSIVA", "FAIXA ADJACENTE", "CICLOMOTOR"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: em qual faixa circular?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Via tem duas ou mais faixas?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Faixa da direita é exclusiva para outro veículo?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Faixa adjacente à direita — Gabarito D", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim — três faixas" },
+          { "de": "p2", "para": "r1", "rotulo": "Sim — ônibus" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Posicionamento do ciclomotor (art. 57)",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Situação", "Faixa do ciclomotor"],
+        "linhas": [
+          { "faixa": "Regra geral — caput", "classificacao": "Direita da pista: centro da faixa mais à direita ou bordo direito" },
+          { "faixa": "Direita exclusiva — § único", "classificacao": "Faixa adjacente à da direita", "destaque": true },
+          { "faixa": "Vedado — caput", "classificacao": "Calçadas de vias urbanas e vias de trânsito rápido" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: bordo direito × faixa de ônibus",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Caput autoriza a faixa mais à direita, inclusive exclusiva", "Parágrafo único desloca para faixa adjacente"],
+          ["Pode usar calçada se a faixa estiver ocupada", "Caput proíbe circulação sobre calçadas urbanas"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — regra_excecao", "Aplica o caput como permissão para faixa exclusiva — ignora o parágrafo único"],
+          ["B — termo_unico", "Troca vedação de calçada urbana por alternativa em baixa velocidade — caput proíbe absolutamente"],
+          ["C — numero_vizinho", "Restringe parágrafo único a via de trânsito rápido — dispositivo não distingue"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos da fiscalização na Av. Argemiro de Figueiredo",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Elemento", "Conclusão"],
+        "linhas": [
+          ["Ciclomotor na faixa exclusiva de ônibus", "Viola parágrafo único — deveria estar na adjacente"],
+          ["Três faixas com exclusividade sinalizada", "Gatilho do parágrafo único presente"],
+          ["Condutor invoca bordo direito do caput", "Caput não revoga deslocamento da faixa exclusiva"],
+          ["Resultado", "Gabarito D — autuação legítima"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Caput × parágrafo único",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Dispositivo", "Função no caso"],
+        "linhas": [
+          ["Caput — regra geral", "Direita da pista; veda calçada urbana e via rápida"],
+          ["Parágrafo único — exceção de faixa", "Exclusividade à direita → circular pela faixa adjacente"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "CTB — art. 57, parágrafo único",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 57, parágrafo único",
+        "texto": "Quando uma via comportar duas ou mais faixas de trânsito e a da direita for destinada ao uso exclusivo de outro tipo de veículo, os ciclomotores deverão circular pela faixa adjacente à da direita.",
+        "trechos_grifados": [
+          { "inicio": 89, "fim": 127, "motivo": "fluxo — gatilho da faixa de ônibus", "texto_grifado": "uso exclusivo de outro tipo de veículo" },
+          { "inicio": 132, "fim": 144, "motivo": "mapa — sujeito da regra", "texto_grifado": "ciclomotores" },
+          { "inicio": 167, "fim": 195, "motivo": "contraste — destino obrigatório", "texto_grifado": "faixa adjacente à da direita" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "DIREITA do caput · EXCLUSIVA à direita = faixa ADJACENTE (§ único) · calçada urbana = vedada.\nNear: faixa direita exclusiva para ciclovia — ciclomotor também na adjacente.\nFar: via sem exclusividade à direita — caput rege centro/bordo da faixa mais à direita.\nNão muda: exclusividade na faixa da direita → ciclomotor na faixa adjacente.\nCadeia: vizinho = caput (direita da pista e vedação de calçada).",
+        "destaques": ["ADJACENTE", "calçada", "caput"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 57", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

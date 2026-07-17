@@ -1,0 +1,274 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 275,
+  "fundamento_slug": "CONTRAN_918_art_27_7",
+  "macete_visual": "§6 relatórios · §7 sem contas = suspende",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Sem ônus para si não dispensa relatórios — ausência autoriza suspensão do § 7º",
+    "eixos_legais": [
+      "CONTRAN_918_art_27_7",
+      "CONTRAN_918_art_27_6"
+    ],
+    "isca_por_alternativa": {
+      "B": "sem ônus veda suspensão federal da parceria",
+      "C": "DETRAN-PB suspende arrecadação municipal",
+      "D": "só vale prazo do art. 26, não relatórios do § 6º"
+    },
+    "eficacia_pos_aula": [
+      "E1",
+      "E2",
+      "E3"
+    ]
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: sem ônus ≠ sem relatórios",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito A (SENATRAN pode suspender autorização de cartão).\n\nB — sem ônus veda suspensão federal da parceria: errado.\nC — DETRAN-PB suspende arrecadação municipal: errado.\nD — só vale prazo do vigésimo dia do mês subsequente, não relatórios da modalidade de cartão: errado.\n\nPegadinha: parceria sem ônus para a STTP não dispensa relatórios mensais discriminados ao órgão máximo executivo.",
+        "destaques": [
+          "Gabarito A",
+          "sem ônus",
+          "relatórios"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "RELATÓRIOS MENSAIS DISCRIMINADOS: prestação de contas do § 6º sobre valores arrecadados na modalidade de cartão.\n\nÓRGÃO MÁXIMO EXECUTIVO: SENATRAN — destinatário dos relatórios e agente da suspensão do § 7º.\n\nSEM ÔNUS PARA SI: custo da parceria não recai sobre o órgão arrecadador — não elimina dever de informar.",
+        "destaques": [
+          "RELATÓRIOS",
+          "SENATRAN",
+          "SEM ÔNUS"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: parceria de cartão ativa?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Modalidade de cartão autorizada na STTP?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Relatórios mensais discriminados enviados?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Suspensão possível — Gabarito A",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — parceria art. 27"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Não — 4 meses sem envio"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "§ 6º × § 7º — obrigação e consequência",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Dispositivo",
+          "Efeito"
+        ],
+        "linhas": [
+          {
+            "faixa": "§ 6º — relatórios mensais discriminados",
+            "classificacao": "Obrigação do órgão arrecadador na modalidade de cartão"
+          },
+          {
+            "faixa": "§ 7º — ausência de prestação de contas",
+            "classificacao": "SENATRAN pode suspender autorização de cartão",
+            "destaque": true
+          },
+          {
+            "faixa": "Caput — sem ônus para si",
+            "classificacao": "Custo da parceria não fica na STTP — não dispensa § 6º"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: sem ônus × prestação de contas",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a lei diz ✓"
+        ],
+        "linhas": [
+          [
+            "\"Sem ônus para si\" impede suspensão federal da parceria",
+            "§ 6º exige relatórios; § 7º autoriza suspender autorização de cartão na ausência de contas"
+          ],
+          [
+            "Prestação de contas é só a do art. 26 (vigésimo dia)",
+            "§ 6º cria dever específico de relatórios mensais na modalidade de cartão do art. 27"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "B — regra_excecao",
+            "Generaliza \"sem ônus para si\" como imunidade à suspensão — ignora dever de relatórios do § 6º e sanção do § 7º"
+          ],
+          [
+            "C — competencia_snt",
+            "Transfere suspensão ao DETRAN-PB — § 7º fixa o órgão máximo executivo de trânsito da União"
+          ],
+          [
+            "D — numero_vizinho",
+            "Confunde art. 26 (vigésimo dia do mês subsequente) com relatórios mensais do § 6º na modalidade de cartão"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos da parceria na STTP",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Elemento",
+          "Conclusão"
+        ],
+        "linhas": [
+          [
+            "Parceria de cartão autorizada",
+            "Modalidade do art. 27 sujeita ao § 6º"
+          ],
+          [
+            "4 meses sem relatórios mensais",
+            "Ausência de prestação de contas"
+          ],
+          [
+            "SENATRAN suspendeu autorização",
+            "Faculdade do § 7º"
+          ],
+          [
+            "Resultado",
+            "Gabarito A"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "§ 6º × art. 26 — prestações distintas",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "§ 6º — relatórios mensais na modalidade de cartão",
+            "Controle discriminado dos valores arrecadados por cartão — base da suspensão"
+          ],
+          [
+            "Art. 26 — informações até o vigésimo dia",
+            "Dever geral de informar arrecadação — não substitui nem exclui o § 6º do art. 27"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Res. 918/2022 — art. 27, § 7º",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 918/2022, art. 27, § 7º",
+        "texto": "Na ausência de prestação de contas a que se refere o § 6º, o órgão máximo executivo de trânsito da União poderá suspender a autorização para que os órgãos arrecadadores admitam o pagamento parcelado ou à vista de multas de trânsito por meio de cartões de débito ou crédito.",
+        "trechos_grifados": [
+          {
+            "inicio": 3,
+            "fim": 34,
+            "motivo": "contraste — ausência de contas",
+            "texto_grifado": "ausência de prestação de contas"
+          },
+          {
+            "inicio": 61,
+            "fim": 104,
+            "motivo": "mapa — órgão competente",
+            "texto_grifado": "órgão máximo executivo de trânsito da União"
+          },
+          {
+            "inicio": 105,
+            "fim": 135,
+            "motivo": "fluxo — suspensão autorizada",
+            "texto_grifado": "poderá suspender a autorização"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "§6 = RELATÓRIOS mensais discriminados · §7 = sem contas → SENATRAN SUSPENDE cartão · sem ônus ≠ sem prestação de contas.\nNear: mesma STTP, relatórios incompletos — ausência de prestação de contas mantém hipótese do § 7º.\nFar: arrecadação só na rede do art. 24, sem parceria de cartão — §§ 6º e 7º não se aplicam fora da modalidade do art. 27.\nNão muda: na parceria de cartão, relatórios mensais são obrigatórios e a ausência autoriza suspensão pelo órgão máximo executivo.\nCadeia: vizinho = § 6º (dever de informar antes da sanção).",
+        "destaques": [
+          "RELATÓRIOS",
+          "SUSPENDE",
+          "sem ônus"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 918/2022",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 918, DE 28 DE MARÇO DE 2022.pdf"
+    },
+    {
+      "rotulo": "Res. CONTRAN 991/2023",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 991, DE 19 DE ABRIL DE 2023.pdf"
+    }
+  ]
+}

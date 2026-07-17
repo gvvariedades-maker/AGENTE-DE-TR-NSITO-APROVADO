@@ -1,0 +1,177 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CTB_art_47",
+  "macete_visual": "DESCARGA = ESTACIONAMENTO · PARADA = EMBARQUE/DESEMBARQUE",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Carga ou descarga é estacionamento pelo parágrafo único — não vira parada do caput só porque o condutor ficou na cabine",
+    "eixos_legais": [
+      "CTB_art_47",
+      "CTB_art_47_par_unico",
+      "CTB_art_181_XVIII"
+    ],
+    "isca_por_alternativa": {
+      "A": "descarga de mercadorias é parada do art. 47, não estacionamento",
+      "C": "caput autoriza parada indispensável inclusive para carga e descarga",
+      "D": "placa Proibido Estacionar só vale com veículo abandonado e incide art. 181, XIX"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-236.json",
+    "eficacia_pos_aula": ["E1", "E2", "E3"]
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: descarga não é parada do caput",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B (autuação legítima — descarga doze minutos em Proibido Estacionar).\n\nA — descarga seria parada lícita: ignora que carga e descarga contam como estacionamento.\nC — caput autoriza parada para carga: amplia embarque e desembarque de passageiros a qualquer atividade.\nD — placa só vale com abandono e incide proibição total de parar: confunde placas de sinalização.\n\nPegadinha: condutor na cabine não transforma descarga em parada lícita.",
+        "destaques": ["Gabarito B", "descarga", "estacionamento"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "PARADA: imobilização breve — com estacionamento proibido, só para embarque ou desembarque de passageiros no tempo indispensável.\n\nESTACIONAMENTO: permanência mais longa na via — inclui operação de carga ou descarga.\n\nPROIBIDO ESTACIONAR: placa R-6 — veda estacionamento, mas admite parada para embarque e desembarque nos termos do caput.",
+        "destaques": ["PARADA", "ESTACIONAMENTO", "PROIBIDO ESTACIONAR"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: parada ou estacionamento?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "É operação de carga ou descarga?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Via proíbe estacionamento?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Estacionamento vedado — Gabarito B", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim — descarga de mercadorias" },
+          { "de": "p2", "para": "r1", "rotulo": "Sim — placa R-6" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "O que o art. 47 permite com estacionamento proibido",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Situação", "Enquadramento"],
+        "linhas": [
+          { "faixa": "Embarque/desembarque de passageiros", "classificacao": "Parada — tempo indispensável (caput)", "destaque": true },
+          { "faixa": "Operação de carga ou descarga", "classificacao": "Estacionamento (parágrafo único)" },
+          { "faixa": "Descarga em Proibido Estacionar", "classificacao": "Infração — art. 181, XVIII" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: condutor na cabine × equiparação legal",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Descarga com condutor presente é parada", "Carga ou descarga é estacionamento"],
+          ["Caput autoriza parada indispensável para qualquer fim", "Caput limita a embarque e desembarque de passageiros"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — regra_excecao", "Trata descarga como parada do caput, ignorando equiparação a estacionamento"],
+          ["C — termo_unico", "Amplia parada indispensável do caput para abranger carga e descarga"],
+          ["D — gravidade", "Confunde inciso XVIII (Proibido Estacionar) com XIX e inventa exigência de abandono do veículo"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos da fiscalização na Rua das Trincheiras",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Elemento", "Conclusão"],
+        "linhas": [
+          ["Caminhão imobilizado doze minutos para descarga", "Operação de descarga — estacionamento"],
+          ["Placa Proibido Estacionar", "Estacionamento vedado — só parada para embarque/desembarque"],
+          ["Condutor na cabine", "Não converte descarga em parada lícita"],
+          ["Resultado", "Gabarito B — autuação legítima"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Caput × parágrafo único × infração",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Dispositivo", "Função no caso"],
+        "linhas": [
+          ["Caput — parada", "Com estacionamento proibido, só embarque/desembarque no tempo indispensável"],
+          ["Parágrafo único — equiparação", "Carga ou descarga é estacionamento, não parada do caput"],
+          ["Art. 181, XVIII — vizinho", "Estacionar em local proibido pela placa — infração média"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "CTB — art. 47",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 47",
+        "texto": "Quando proibido o estacionamento na via, a parada deverá restringir-se ao tempo indispensável para embarque ou desembarque de passageiros, desde que não interrompa ou perturbe o fluxo de veículos ou a locomoção de pedestres. A operação de carga ou descarga será regulamentada pelo órgão ou entidade com circunscrição sobre a via e é considerada estacionamento.",
+        "trechos_grifados": [
+          {
+            "inicio": 74,
+            "fim": 122,
+            "motivo": "mapa — única parada admitida com estacionamento proibido",
+            "texto_grifado": "tempo indispensável para embarque ou desembarque"
+          },
+          {
+            "inicio": 331,
+            "fim": 359,
+            "motivo": "contraste — descarga não é parada do caput",
+            "texto_grifado": "é considerada estacionamento"
+          },
+          {
+            "inicio": 7,
+            "fim": 39,
+            "motivo": "caso — gatilho da via com placa R-6",
+            "texto_grifado": "proibido o estacionamento na via"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "DESCARGA = ESTACIONAMENTO · PARADA SÓ EMBARQUE/DESEMBARQUE.\nNear: automóvel embarca passageiro rapidamente em Proibido Estacionar — parada lícita do caput.\nFar: descarga em zona com Proibido Parar e Estacionar — inciso XIX, não regra de estacionamento proibido.\nNão muda: carga ou descarga é estacionamento; com estacionamento proibido, parada só para embarque ou desembarque.\nCadeia: vizinho = art. 181, XVIII (estacionar em local proibido pela placa).",
+        "destaques": ["DESCARGA", "EMBARQUE/DESEMBARQUE", "XVIII"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 47", "path": "conteúdo/legislação federal/lei-9503-ctb.html" },
+    { "rotulo": "CTB art. 181", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

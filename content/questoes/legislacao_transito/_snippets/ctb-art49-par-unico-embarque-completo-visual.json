@@ -1,0 +1,156 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 265,
+  "fundamento_slug": "CTB_art_49_par_unico",
+  "macete_visual": "PASSAGEIRO = calçada · CONDUTOR = exceção",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Exceção do parágrafo único é só para o condutor — passageiro desembarca sempre pelo lado da calçada",
+    "eixos_legais": ["CTB_art_49_par_unico", "CTB_art_49"],
+    "isca_por_alternativa": {
+      "B": "exceção do condutor alcança passageiros em parada junto ao meio-fio",
+      "C": "caput dispensa parágrafo único se não houver perigo",
+      "D": "via de mão única autoriza desembarque pelo lado da pista"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-226.json",
+    "eficacia_pos_aula": ["E1", "E2", "E3"]
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: exceção não se espalha",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito A (autuação legítima — passageira desceu pelo lado da pista).\n\nB — exceção do condutor vale para qualquer ocupante: amplia o que a lei não ampliou.\nC — ausência de perigo dispensa lado da calçada: confunde verificação de segurança com permissão lateral.\nD — mão única autoriza lado da pista: transporta regra de conversão ao desembarque.\n\nPegadinha: a exceção nominal é só para o condutor — passageiro não herda a exceção.",
+        "destaques": ["Gabarito A", "passageira", "condutor"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "LADO DA CALÇADA: face do veículo voltada para o meio-fio — lado obrigatório para passageiros.\n\nLADO DA PISTA: face voltada para a faixa de rolamento — onde a porta foi aberta no caso.\n\nEXCEÇÃO DO CONDUTOR: única hipótese em que o parágrafo único admite embarque ou desembarque fora do lado da calçada.",
+        "destaques": ["LADO DA CALÇADA", "LADO DA PISTA", "EXCEÇÃO DO CONDUTOR"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: de que lado embarcar ou desembarcar?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "Quem embarca ou desembarca?", "tipo": "pergunta" },
+          { "id": "p2", "label": "É o condutor do veículo?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Lado da calçada — Gabarito A", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Passageira na Av. Epitácio Pessoa" },
+          { "de": "p2", "para": "r1", "rotulo": "Não — passageiro" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Quem usa qual lado",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Ocupante", "Lado do embarque/desembarque"],
+        "linhas": [
+          { "faixa": "Passageiros", "classificacao": "Sempre do lado da calçada", "destaque": true },
+          { "faixa": "Condutor", "classificacao": "Exceção — pode ser fora do lado da calçada" },
+          { "faixa": "Antes de abrir porta (caput)", "classificacao": "Certificar que não há perigo — regra adicional" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: exceção do condutor × passageiro",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Exceção do condutor vale para qualquer ocupante", "Parágrafo único restringe a exceção ao condutor"],
+          ["Sem perigo imediato, pode desembarcar pelo lado da pista", "Caput exige segurança, mas não revoga o lado da calçada"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["B — regra_excecao", "Amplia exceção do condutor aos passageiros e inventa tolerância pelo lado da pista"],
+          ["C — termo_unico", "Troca certificação de perigo do caput por dispensa da regra lateral"],
+          ["D — numero_vizinho", "Transporta regra de conversão à esquerda ao desembarque de passageiros"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos da fiscalização na Av. Epitácio Pessoa",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Elemento", "Conclusão"],
+        "linhas": [
+          ["Passageira desce pelo lado da pista", "Viola parágrafo único — deveria ser lado da calçada"],
+          ["Veículo parado junto ao meio-fio", "Não autoriza desembarque lateral para passageiro"],
+          ["Condutor invoca exceção própria", "Exceção não se estende aos passageiros"],
+          ["Resultado", "Gabarito A — autuação legítima"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Caput × parágrafo único",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Dispositivo", "Função no caso"],
+        "linhas": [
+          ["Caput — segurança", "Exige certificar perigo antes de abrir porta — não define o lado"],
+          ["Parágrafo único — lado", "Define calçada para passageiros; exceção só ao condutor"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "CTB — art. 49, parágrafo único",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 49, parágrafo único",
+        "texto": "O embarque e o desembarque devem ocorrer sempre do lado da calçada, exceto para o condutor.",
+        "trechos_grifados": [
+          { "inicio": 2, "fim": 26, "motivo": "mapa — hipóteses reguladas", "texto_grifado": "embarque e o desembarque" },
+          { "inicio": 48, "fim": 66, "motivo": "contraste — lado obrigatório para passageiros", "texto_grifado": "do lado da calçada" },
+          { "inicio": 68, "fim": 90, "motivo": "caso — exceção que o condutor tentou estender", "texto_grifado": "exceto para o condutor" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "PASSAGEIRO = calçada · CONDUTOR = única exceção · caput = só verifica perigo, não troca o lado.\nNear: criança desce pela calçada, mas abre porta sobre ciclovia — caput exige certificar perigo; lado lateral foi respeitado.\nFar: condutor desce pelo lado da pista para ver pneu — única exceção expressa do parágrafo único.\nNão muda: passageiros embarcam e desembarcam do lado da calçada — exceção só ao condutor.\nCadeia: vizinho = caput (certificar perigo antes de abrir a porta).",
+        "destaques": ["calçada", "CONDUTOR", "caput"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 49", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

@@ -1,0 +1,357 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_991_multas",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CONTRAN_991_art_27_pagador",
+    "enunciado": "Em fiscalização da Superintendência de Trânsito e Transporte Público (STTP) de Campina Grande/PB, condutor autuado em flagrante — que não é o proprietário do veículo — procura o posto da parceria autorizada para quitar, à vista, com cartão de débito, a multa municipal lavrada em seu nome. O atendente recusa a operação, sob o argumento de que o caput do art. 27 da Resolução CONTRAN nº 918/2022, com a redação dada pela Resolução CONTRAN nº 991/2023, só permite o pagamento com cartão pelo proprietário registrado no DETRAN. Considerando as normas de arrecadação aplicáveis, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A recusa é legítima, pois o pagamento pelo art. 27 é exclusivo do proprietário, uma vez que o art. 6º da Resolução CONTRAN nº 918/2022 fixa a responsabilidade da penalidade ao proprietário do veículo.",
+      "B": "A recusa é legítima, pois somente o condutor identificado como infrator no auto pode quitar via parceria do art. 27, excluído o proprietário quando não conduzia o veículo.",
+      "C": "A recusa é ilegítima, pois o caput do art. 27, com a redação da Resolução CONTRAN nº 991/2023, disponibiliza o pagamento com cartão aos infratores ou proprietários de veículos, à vista ou em parcelas mensais.",
+      "D": "A recusa é ilegítima, pois qualquer terceiro com procuração pode quitar pela parceria do art. 27, independentemente de ser infrator ou proprietário."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Quem pode pagar multa na parceria do art. 27 — caput (redação Res. 991/2023): infratores ou proprietários, distinto da responsabilidade pelo cometimento da infração (art. 6º da Res. 918/2022).",
+      "fundamento_legal": "Res. CONTRAN 991/2023, art. 2º (art. 27, caput, da Res. 918/2022): \"disponibilizando aos infratores ou proprietários de veículos alternativas para quitar seus débitos à vista ou em parcelas mensais\". Res. CONTRAN 918/2022, art. 6º: o proprietário será considerado responsável pela infração nas hipóteses legais — regra de imputação da penalidade, não de quem pode efetuar o pagamento na parceria do art. 27.",
+      "passo_a_passo": [
+        "1. Caso: condutor autuado (não proprietário) tenta pagar à vista com débito na parceria autorizada da STTP — atendente exige proprietário.",
+        "2. A erra por numero_vizinho (confunde responsabilidade do proprietário no art. 6º com exclusividade de quem pode pagar no art. 27); B erra por regra_excecao (inventa que só o infrator identificado pode quitar — caput inclui também o proprietário); D erra por termo_unico (amplia o rol a qualquer terceiro com procuração — caput limita a infratores ou proprietários).",
+        "3. C correta: caput com redação da Res. 991/2023 autoriza infrator ou proprietário a quitar com cartão, à vista ou parcelado."
+      ],
+      "pegadinha": "A IDECAN induz a crer que responsabilidade do proprietário (art. 6º) restringe o pagamento ao proprietário — o caput do art. 27 enumera dois pagadores: infrator ou proprietário.",
+      "macete": "RESPONSÁVEL (art.6) ≠ QUEM PAGA (art.27) · caput = INFRATOR ou PROPRIETÁRIO · à vista ou parcela.",
+      "estudo_reverso": [
+        "Res. CONTRAN 991/2023 art. 2 (art. 27 caput)",
+        "Res. CONTRAN 918/2022 art. 6º",
+        "Res. CONTRAN 918/2022 art. 27, § 1º"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Art. 6 responsabiliza o proprietário — caput do art. 27 permite pagar ao infrator OU ao proprietário",
+      "eixos_legais": [
+        "CONTRAN_991_art_27_pagador",
+        "CONTRAN_918_art_6"
+      ],
+      "eixo_vizinho": "CONTRAN_918_art_6",
+      "isca_por_alternativa": {
+        "A": "art. 6 restringe pagamento ao proprietário",
+        "B": "só o condutor infrator pode quitar no art. 27",
+        "D": "qualquer terceiro com procuração pode pagar"
+      },
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
+      ],
+      "near_transfer": "Mesma parceria STTP, proprietário quita multa de infração praticada por locatário — caput também alcança o proprietário.",
+      "far_transfer": "Infração sem condutor identificado — proprietário quita na parceria autorizada, pois o caput não exige que o pagador seja o mesmo sujeito da autuação em flagrante.",
+      "o_que_nao_muda": "O rol do caput é binário: infrator ou proprietário — responsabilidade pelo cometimento (art. 6º) não restringe quem pode pagar no art. 27.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "multas",
+      "resolucao_991",
+      "resolucao_918",
+      "cartao_debito",
+      "pagador",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 60,
+      "fundamento_slug": "CONTRAN_991_art_27_pagador",
+      "macete_visual": "RESPONSÁVEL ≠ QUEM PAGA · infrator OU proprietário",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Condutor autuado (não proprietário) recusado na parceria da STTP.\n\nCaput: infrator OU proprietário podem pagar.\n\nGabarito C.",
+            "destaques": ["infrator", "proprietário", "Gabarito C"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Infrator ou proprietário?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Pagador é infrator ou proprietário?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Pode pagar — Gabarito C",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim — condutor autuado"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "RESPONSÁVEL (art.6) ≠ QUEM PAGA (art.27) · infrator OU proprietário.",
+            "destaques": ["RESPONSÁVEL", "infrator", "proprietário"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 991/2023",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 991, DE 19 DE ABRIL DE 2023.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CONTRAN_991_art_27_pagador",
+      "macete_visual": "RESPONSÁVEL ≠ QUEM PAGA · infrator OU proprietário",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Art. 6 responsabiliza o proprietário — caput do art. 27 permite pagar ao infrator OU ao proprietário",
+        "eixos_legais": [
+          "CONTRAN_991_art_27_pagador",
+          "CONTRAN_918_art_6"
+        ],
+        "isca_por_alternativa": {
+          "A": "art. 6 restringe pagamento ao proprietário",
+          "B": "só o condutor infrator pode quitar no art. 27",
+          "D": "qualquer terceiro com procuração pode pagar"
+        },
+        "eficacia_pos_aula": ["E1", "E2", "E3"]
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: responsável ≠ pagador",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (condutor autuado pode pagar na parceria autorizada).\n\nA — responsabilidade do proprietário restringe pagamento a ele: errado.\nB — só o condutor infrator pode quitar, excluindo proprietário: errado.\nD — qualquer terceiro com procuração pode pagar: errado.\n\nPegadinha: quem responde pela infração não define quem pode quitar na parceria com cartão.",
+            "destaques": ["Gabarito C", "condutor autuado", "proprietário"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 papéis do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "INFRATOR: condutor autuado em flagrante — um dos pagadores previstos no caput do art. 27.\n\nPROPRIETÁRIO: titular do registro do veículo — também pode quitar pela parceria, mesmo sem ter conduzido.\n\nRESPONSÁVEL (art. 6º): sujeito a quem a penalidade é imputada — regra distinta de quem efetua o pagamento.",
+            "destaques": ["INFRATOR", "PROPRIETÁRIO", "RESPONSÁVEL"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: pagador está no rol do caput?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Parceria com cartão autorizada pela STTP?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Pagador é infrator ou proprietário?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Pode quitar — Gabarito C",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — posto STTP"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — condutor autuado"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Caput do art. 27 — quem paga",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Sujeito", "Pode pagar na parceria?"],
+            "linhas": [
+              {
+                "faixa": "Infrator",
+                "classificacao": "Sim — caput expresso",
+                "destaque": true
+              },
+              {
+                "faixa": "Proprietário do veículo",
+                "classificacao": "Sim — caput expresso"
+              },
+              {
+                "faixa": "Terceiro com procuração",
+                "classificacao": "Não — fora do rol do caput"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: art. 6 × art. 27",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Proprietário responsável (art. 6) = só ele pode pagar no art. 27",
+                "Caput: infratores ou proprietários podem quitar com cartão"
+              ],
+              [
+                "Pagamento exige ser o mesmo sujeito da autuação em flagrante",
+                "Proprietário também pode pagar, mesmo sem ter conduzido"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — numero_vizinho",
+                "Transporta responsabilidade do art. 6º para exclusividade de pagamento no art. 27"
+              ],
+              [
+                "B — regra_excecao",
+                "Inventa que só o infrator identificado pode quitar — caput inclui também o proprietário"
+              ],
+              [
+                "D — termo_unico",
+                "Amplia o rol a qualquer terceiro com procuração — caput limita a infrator ou proprietário"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos do pagamento na STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              ["Condutor autuado em flagrante", "Infrator — pagador previsto no caput"],
+              ["Não é proprietário do veículo", "Não exclui pagamento pelo art. 27"],
+              ["Pagamento à vista com cartão de débito", "Modalidade prevista no caput"],
+              ["Resultado", "Gabarito C — recusa ilegítima"]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Art. 6º — responsável × pagador",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              [
+                "Art. 6º — responsabilidade do proprietário",
+                "Imputa penalidade — não define quem paga no art. 27"
+              ],
+              [
+                "Caput art. 27 (Res. 991/2023)",
+                "Enumera pagadores: infrator ou proprietário"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Res. 918/2022 — art. 27, caput (991)",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 991/2023, art. 2º (art. 27, caput, da Res. 918/2022)",
+            "texto": "Os órgãos arrecadadores poderão firmar, sem ônus para si, acordos e parcerias técnico-operacionais para viabilizar o pagamento de multas de trânsito com cartões de débito ou crédito, disponibilizando aos infratores ou proprietários de veículos alternativas para quitar seus débitos à vista ou em parcelas mensais, com a imediata regularização da situação do veículo.",
+            "trechos_grifados": [
+              {
+                "inicio": 204,
+                "fim": 243,
+                "motivo": "mapa e contraste — infrator ou proprietário",
+                "texto_grifado": "infratores ou proprietários de veículos"
+              },
+              {
+                "inicio": 282,
+                "fim": 312,
+                "motivo": "fluxo — à vista no caso do enunciado",
+                "texto_grifado": "à vista ou em parcelas mensais"
+              },
+              {
+                "inicio": 153,
+                "fim": 181,
+                "motivo": "caso — cartão de débito previsto no caput",
+                "texto_grifado": "cartões de débito ou crédito"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "RESPONSÁVEL (art.6) ≠ QUEM PAGA (art.27) · caput = INFRATOR ou PROPRIETÁRIO · à vista ou parcela.\nNear: proprietário quita multa do locatário na mesma parceria — caput alcança o proprietário.\nFar: infração sem condutor identificado — proprietário quita, pois o caput não exige autuação em flagrante.\nNão muda: rol binário infrator ou proprietário — art. 6 não restringe quem paga.\nCadeia: vizinho = art. 6º (responsabilidade pelo cometimento).",
+            "destaques": ["INFRATOR", "PROPRIETÁRIO", "art. 6º"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 991/2023",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 991, DE 19 DE ABRIL DE 2023.pdf"
+        },
+        {
+          "rotulo": "Res. CONTRAN 918/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 918, DE 28 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    }
+  }
+]

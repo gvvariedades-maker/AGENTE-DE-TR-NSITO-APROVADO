@@ -1,0 +1,275 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 280,
+  "fundamento_slug": "CONTRAN_1009_art_10B",
+  "macete_visual": "30 = laudo · 90 = validade · marco = coleta",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Prazo de 30 dias do art. 9º é entrega do laudo — validade do exame é 90 dias da coleta pelo art. 10-B",
+    "eixos_legais": [
+      "CONTRAN_923_art_10B",
+      "CONTRAN_923_art_9"
+    ],
+    "isca_por_alternativa": {
+      "A": "prazo de 30 dias do art. 9º encerra validade do exame para renovação",
+      "C": "validade de 90 dias inicia na inserção no RENACH, não na coleta",
+      "D": "art. 10-A reduz validade do exame de renovação a 60 dias"
+    },
+    "eficacia_pos_aula": [
+      "E1",
+      "E2",
+      "E3"
+    ]
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: 30 dias ou 90 dias?",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B (indeferimento ilegítimo — 87º dia ainda dentro da validade do exame).\n\nA — findos 30 dias para entrega do laudo, exame perde validade para renovação: errado.\nC — validade de 90 dias inicia na inserção no RENACH: errado.\nD — periodicidade do periódico reduz validade do exame de renovação a 60 dias: errado.\n\nPegadinha: prazo de entrega do laudo não é validade do exame para renovação.",
+        "destaques": [
+          "Gabarito B",
+          "87º dia",
+          "validade"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 prazos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "COLETA: data da amostra — marco inicial da validade de 90 dias do art. 10-B.\n\nLAUDO (art. 9º): laboratório entrega resultado em até 30 dias da coleta — prazo distinto da validade.\n\nVALIDADE (art. 10-B): 90 dias da coleta — resultado utilizável para todos os fins, inclusive renovação.",
+        "destaques": [
+          "COLETA",
+          "LAUDO",
+          "VALIDADE"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: exame ainda válido?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Pedido ocorreu dentro de 90 dias da coleta?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Resultado negativo já consta no RENACH?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Pode renovar — Gabarito B",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — 87º dia em 01/04/2026"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — laudo inserido até 20/01/2026"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Mapa de prazos toxicológicos",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Prazo / dispositivo",
+          "Função"
+        ],
+        "linhas": [
+          {
+            "faixa": "30 dias — art. 9º",
+            "classificacao": "Entrega do laudo ao condutor"
+          },
+          {
+            "faixa": "90 dias — art. 10-B",
+            "classificacao": "Validade do exame para todos os fins",
+            "destaque": true
+          },
+          {
+            "faixa": "2 anos e 6 meses — art. 10-A",
+            "classificacao": "Periodicidade do periódico (outro eixo)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: laudo × validade",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a lei diz ✓"
+        ],
+        "linhas": [
+          [
+            "Findos 30 dias do art. 9º, exame expira para renovação",
+            "Art. 10-B: 90 dias da coleta — utilizável para todos os fins"
+          ],
+          [
+            "Validade começa quando o RENACH registra o resultado",
+            "Marco é a data da coleta da amostra — não a inserção"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — numero_vizinho",
+            "Troca prazo de 30 dias do art. 9º (entrega do laudo) pela validade de 90 dias do art. 10-B"
+          ],
+          [
+            "C — regra_excecao",
+            "Inventa marco na inserção no RENACH — art. 10-B conta da coleta da amostra"
+          ],
+          [
+            "D — termo_unico",
+            "Transporta periodicidade do art. 10-A ou prazo fictício de 60 dias para exame de renovação do art. 10"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos do indeferimento no DETRAN-PB",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Elemento",
+          "Conclusão"
+        ],
+        "linhas": [
+          [
+            "Coleta em 05/01/2026",
+            "Marco dos 90 dias do art. 10-B"
+          ],
+          [
+            "Laudo entregue e inserido até 20/01/2026",
+            "Dentro dos 30 dias do art. 9º"
+          ],
+          [
+            "Pedido em 01/04/2026 — 87º dia",
+            "Ainda dentro dos 90 dias"
+          ],
+          [
+            "Resultado",
+            "Gabarito B — indeferimento ilegítimo"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Art. 9º × art. 10-B",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Art. 9º — 30 dias da coleta",
+            "Prazo para laboratório entregar laudo — não limita validade do exame"
+          ],
+          [
+            "Art. 10-B — 90 dias da coleta",
+            "Validade do resultado — renovação, mudança de categoria e demais fins"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Res. 923/2022 — art. 10-B (1.009/2024)",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 923/2022, art. 10-B (Res. CONTRAN 1.009/2024)",
+        "texto": "Os exames toxicológicos de que tratam os artigos 10 e 10-A desta Resolução terão validade de noventa dias, contados a partir da data da coleta da amostra, podendo seu resultado ser utilizado nesse período para todos os fins.",
+        "trechos_grifados": [
+          {
+            "inicio": 93,
+            "fim": 105,
+            "motivo": "mapa e contraste — validade de 90 dias distinta dos 30 do art. 9º",
+            "texto_grifado": "noventa dias"
+          },
+          {
+            "inicio": 128,
+            "fim": 153,
+            "motivo": "fluxo e caso — marco é a coleta de 05/01/2026",
+            "texto_grifado": "data da coleta da amostra"
+          },
+          {
+            "inicio": 205,
+            "fim": 223,
+            "motivo": "caso — renovação da CNH no 87º dia é fim previsto",
+            "texto_grifado": "para todos os fins"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "30 = laudo (art. 9) · 90 = validade (art. 10-B) · marco = coleta.\nNear: no 89º dia após coleta ainda renova; no 91º, art. 10-B não alcança.\nFar: mesmo exame negativo, dentro dos 90 dias, serve para mudança D→C — todos os fins.\nNão muda: validade conta da coleta — entrega do laudo em 30 dias não encerra o exame.\nCadeia: vizinho = art. 9º (prazo de entrega do laudo).",
+        "destaques": [
+          "30",
+          "90",
+          "coleta",
+          "art. 9º"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 1.009/2024",
+      "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 1.009, DE 24 DE ABRIL DE 2024.pdf"
+    },
+    {
+      "rotulo": "Res. CONTRAN 923/2022",
+      "path": ".tmp-1009-full.txt"
+    }
+  ]
+}

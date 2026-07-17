@@ -1,0 +1,360 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CONTRAN_991_multas",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 5,
+    "fundamento_slug": "CONTRAN_918_art_27_10",
+    "enunciado": "Proprietário de veículo licenciado em Campina Grande/PB aderiu, na parceria técnico-operacional autorizada pela Superintendência de Trânsito e Transporte Público (STTP) nos termos do art. 27 da Resolução CONTRAN nº 918/2022, com a redação dada pela Resolução CONTRAN nº 991/2023, ao parcelamento em seis prestações no cartão de crédito de três multas municipais já vencidas. O sistema da STTP liberou imediatamente o licenciamento do veículo após aprovação da operadora, mas calculou o valor das parcelas apenas sobre o montante original das multas, sem incluir juros de mora. O setor de arrecadação sustenta que a regularização imediata prevista no caput do art. 27 dispensa acréscimos, pois a parceria é firmada sem ônus para o órgão arrecadador. A auditoria interna questiona o critério. Considerando as normas de arrecadação aplicáveis, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "O cálculo está correto: a imediata regularização da situação do veículo prevista no caput do art. 27, com a redação da Resolução CONTRAN nº 991/2023, dispensa juros de mora no parcelamento firmado na parceria sem ônus para a STTP.",
+      "B": "O cálculo está incorreto por outro motivo: multas vencidas parceladas no cartão de crédito somente podem ser acrescidas do percentual fixo de 1% previsto no art. 22 da Resolução CONTRAN nº 918/2022, não da variação da taxa SELIC.",
+      "C": "O cálculo está incorreto: o § 10 do art. 27 da Resolução CONTRAN nº 918/2022 exige que o parcelamento de multas já vencidas seja acrescido de juros de mora equivalentes à taxa referencial do SELIC, nos termos do art. 284 do CTB e conforme disciplinado pelos arts. 22 e 23 da mesma Resolução.",
+      "D": "O cálculo está correto: os juros de mora da SELIC são encargos do titular do cartão previstos no § 5º do art. 27 e, por isso, não integram o valor das multas objeto do parcelamento."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "SELIC no parcelamento de multas vencidas (art. 27, § 10) — juros de mora obrigatórios × confusão com regularização imediata do caput, art. 22 (+1%) ou encargos do § 5º.",
+      "fundamento_legal": "Res. CONTRAN 918/2022, art. 27, § 10: \"O pagamento parcelado de multas já vencidas deverá ser acrescido de juros de mora equivalentes à taxa referencial do SELIC, nos termos do § 4º do art. 284 do CTB, conforme disciplinado pelos arts. 22 e 23 desta Resolução.\" Caput (redação Res. CONTRAN 991/2023): regularização imediata do veículo não dispensa o § 10. § 5º: encargos do parcelamento no crédito ficam com o titular — instituto distinto da mora SELIC.",
+      "passo_a_passo": [
+        "1. Caso: STTP parcela 3 multas vencidas em 6× no crédito, libera CRLV-e, mas não inclui SELIC — setor invoca regularização imediata e sem ônus.",
+        "2. A erra por regra_excecao (trata regularização imediata do caput e \"sem ônus para si\" como dispensa de juros de mora — § 10 impõe SELIC nas vencidas parceladas); B erra por numero_vizinho (restringe acréscimo ao 1% fixo do art. 22 — § 10 remete aos arts. 22 e 23 com SELIC); D erra por termo_unico (confunde encargos do titular no § 5º com juros de mora SELIC do § 10 sobre multas vencidas).",
+        "3. C correta: parcelamento de multas já vencidas exige acréscimo de mora SELIC conforme arts. 22 e 23 e art. 284 do CTB."
+      ],
+      "pegadinha": "A IDECAN induz a crer que regularização imediata do veículo no caput dispensa juros de mora — o § 10 fixa expressamente SELIC no parcelamento de multas já vencidas.",
+      "macete": "VENCIDA + PARCELAMENTO = SELIC (§10) · regularização imediata ≠ isenção de mora · §5 = encargos do cartão, não substitui SELIC.",
+      "estudo_reverso": [
+        "Res. CONTRAN 918/2022 art. 27, § 10",
+        "Res. CONTRAN 918/2022 art. 22",
+        "Res. CONTRAN 918/2022 art. 23"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Regularização imediata do caput não dispensa SELIC no parcelamento de multas já vencidas — § 10",
+      "eixos_legais": [
+        "CONTRAN_918_art_27_10",
+        "CONTRAN_918_art_22",
+        "CONTRAN_991_art_27_caput"
+      ],
+      "eixo_vizinho": "CONTRAN_918_art_22",
+      "isca_por_alternativa": {
+        "A": "regularização imediata dispensa juros de mora",
+        "B": "só vale acréscimo fixo de 1% do art. 22",
+        "D": "SELIC é encargo do titular do § 5º"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "numero_vizinho",
+        "termo_unico"
+      ],
+      "near_transfer": "Mesma parceria STTP, duas multas vencidas parceladas em 10× — SELIC do § 10 continua obrigatória sobre o montante vencido.",
+      "far_transfer": "Multa ainda dentro do prazo na notificação de penalidade, quitada à vista com desconto — arts. 20 e 21 vigem até vencimento; § 10 disciplina multas já vencidas no parcelamento.",
+      "o_que_nao_muda": "Parcelamento de multas já vencidas no art. 27 exige acréscimo de mora SELIC (§ 10), independentemente da regularização imediata do veículo ou da parceria sem ônus para o órgão arrecadador.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "multas",
+      "resolucao_991",
+      "resolucao_918",
+      "parcelamento",
+      "selic",
+      "juros_mora",
+      "art_27",
+      "sttp"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "duracao_estimada_seg": 60,
+      "fundamento_slug": "CONTRAN_918_art_27_10",
+      "macete_visual": "VENCIDA + PARCELA = SELIC §10",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "STTP parcelou multas vencidas sem incluir SELIC — invocou regularização imediata.\n\nVencida parcelada exige mora SELIC.\n\nGabarito C.",
+            "destaques": ["SELIC", "vencidas", "Gabarito C"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Multa já vencida no parcelamento?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Multas já vencidas no parcelamento?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Incluir SELIC — Gabarito C",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim — 3 multas vencidas"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VENCIDA + PARCELAMENTO = SELIC (§10).\nRegularização imediata ≠ isenção de mora.",
+            "destaques": ["SELIC", "VENCIDA", "PARCELAMENTO"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 918/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 918, DE 28 DE MARÇO DE 2022.pdf"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CONTRAN_918_art_27_10",
+      "macete_visual": "VENCIDA + PARCELA = SELIC §10",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Regularização imediata não dispensa SELIC em multas vencidas parceladas",
+        "eixos_legais": [
+          "CONTRAN_918_art_27_10",
+          "CONTRAN_918_art_22"
+        ],
+        "isca_por_alternativa": {
+          "A": "regularização imediata dispensa juros de mora",
+          "B": "só vale acréscimo fixo de 1% do art. 22",
+          "D": "SELIC é encargo do titular do § 5º"
+        },
+        "eficacia_pos_aula": ["E1", "E2", "E3"]
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: regularizar ≠ isentar mora",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (parcelamento de vencidas exige SELIC).\n\nA — regularização imediata dispensa juros de mora: errado.\nB — só vale acréscimo fixo de 1%: errado.\nD — SELIC é encargo do titular do cartão: errado.\n\nPegadinha: liberar o licenciamento na hora não elimina mora sobre multas já vencidas parceladas.",
+            "destaques": ["Gabarito C", "SELIC", "vencidas"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "MULTA VENCIDA: débito cujo prazo de pagamento na notificação já expirou — gatilho do § 10.\n\nSELIC: taxa referencial de juros de mora aplicável no parcelamento de vencidas.\n\nREGULARIZAÇÃO IMEDIATA: liberação do licenciamento após aprovação do parcelamento — não dispensa mora acumulada.",
+            "destaques": ["VENCIDA", "SELIC", "REGULARIZAÇÃO"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: multa vencida no parcelamento?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Parcelamento no cartão na parceria STTP?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Multas já vencidas incluídas?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Acréscimo SELIC obrigatório — Gabarito C",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — 6 prestações"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — 3 multas vencidas"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Graduação: à vista × vencida parcelada",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Situação", "Acréscimo"],
+            "linhas": [
+              {
+                "faixa": "Multa até vencimento (à vista)",
+                "classificacao": "Desconto 80% ou 60% — arts. 20 e 21"
+              },
+              {
+                "faixa": "Multa vencida parcelada no cartão",
+                "classificacao": "SELIC + regras dos arts. 22 e 23 — § 10",
+                "destaque": true
+              },
+              {
+                "faixa": "Encargos da operadora de cartão",
+                "classificacao": "Titular do cartão — § 5º (instituto distinto)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: regularizar × isentar mora",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              [
+                "Regularização imediata do veículo dispensa juros no parcelamento",
+                "§ 10: multas já vencidas parceladas devem ser acrescidas de mora SELIC"
+              ],
+              [
+                "Parceria sem ônus para a STTP isenta o pagador de mora",
+                "Sem ônus protege o órgão arrecadador — não afasta o § 10"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Generaliza regularização imediata e sem ônus como dispensa de mora — ignora § 10 expresso sobre SELIC"
+              ],
+              [
+                "B — numero_vizinho",
+                "Restringe acréscimo ao 1% fixo do art. 22 — § 10 remete aos arts. 22 e 23 com variação SELIC"
+              ],
+              [
+                "D — termo_unico",
+                "Confunde encargos do titular no § 5º com juros de mora SELIC do § 10 sobre multas vencidas"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos do parcelamento na STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              ["3 multas municipais já vencidas", "Hipótese do § 10"],
+              ["6 prestações no cartão de crédito", "Parcelamento do art. 27"],
+              ["Cálculo só sobre valor original", "Omitiu SELIC — incorreto"],
+              ["Resultado", "Gabarito C"]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "§ 10 × § 5º — mora × encargos",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              [
+                "§ 10 — multas vencidas parceladas",
+                "Juros de mora SELIC sobre o débito vencido"
+              ],
+              [
+                "§ 5º — encargos do parcelamento",
+                "Custos da operação de crédito do titular — não substitui mora SELIC"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Res. 918/2022 — art. 27, § 10",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 918/2022, art. 27, § 10",
+            "texto": "O pagamento parcelado de multas já vencidas deverá ser acrescido de juros de mora equivalentes à taxa referencial do SELIC, nos termos do § 4º do art. 284 do CTB, conforme disciplinado pelos arts. 22 e 23 desta Resolução.",
+            "trechos_grifados": [
+              {
+                "inicio": 25,
+                "fim": 43,
+                "motivo": "fluxo — multas vencidas",
+                "texto_grifado": "multas já vencidas"
+              },
+              {
+                "inicio": 97,
+                "fim": 122,
+                "motivo": "contraste — taxa SELIC",
+                "texto_grifado": "taxa referencial do SELIC"
+              },
+              {
+                "inicio": 191,
+                "fim": 220,
+                "motivo": "mapa — arts. 22 e 23",
+                "texto_grifado": "arts. 22 e 23 desta Resolução"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VENCIDA + PARCELAMENTO = SELIC (§10) · regularização imediata ≠ isenção de mora · §5 = encargos do cartão.\nNear: mesma parceria STTP, 2 multas vencidas em 10× — SELIC do § 10 permanece obrigatória.\nFar: multa quitada à vista antes do vencimento com desconto — arts. 20 e 21; § 10 trata vencidas no parcelamento.\nNão muda: parcelamento de multas já vencidas exige mora SELIC, ainda que o veículo seja regularizado na hora.\nCadeia: vizinho = art. 22 (+1% no mês seguinte — faixa anterior à SELIC plena).",
+            "destaques": ["SELIC", "VENCIDA", "§10"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 918/2022",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 918, DE 28 DE MARÇO DE 2022.pdf"
+        },
+        {
+          "rotulo": "Res. CONTRAN 991/2023",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 991, DE 19 DE ABRIL DE 2023.pdf"
+        }
+      ]
+    }
+  }
+]

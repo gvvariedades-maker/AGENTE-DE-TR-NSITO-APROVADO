@@ -1,0 +1,156 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 265,
+  "fundamento_slug": "CTB_art_48_par_2",
+  "macete_visual": "CAPUT paralelo · §2º moto PERPENDICULAR",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Caput manda paralelo — §2º impõe perpendicular para motos motorizadas de duas rodas",
+    "eixos_legais": ["CTB_art_48_par_2", "CTB_art_48"],
+    "isca_por_alternativa": {
+      "A": "caput paralelo vale para motocicletas sem exceção",
+      "B": "pisca-alerta autoriza moto na pista de rolamento",
+      "D": "perpendicular só para bicicletas, moto segue caput"
+    },
+    "referencia_lote": "content/questoes/legislacao_transito/lote-220.json",
+    "eficacia_pos_aula": ["E1", "E2", "E3"]
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: caput não é tudo",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C (autuação legítima — moto estava paralela, deveria estar perpendicular).\n\nA — regra paralela para todos: ignora a exceção das duas rodas motorizadas.\nB — pisca-alerta na pista: inventa tolerância.\nD — perpendicular só para bicicleta: troca o sujeito da norma especial.\n\nPegadinha: a regra geral é paralela; motos motorizadas exigem posição perpendicular.",
+        "destaques": ["Gabarito C", "paralela", "perpendicular"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do caso",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "PARALELO AO MEIO-FIO: posição ao longo da guia da calçada — regra do caput para a maioria dos veículos.\n\nPERPENDICULAR À GUIA: posição em ângulo reto em relação ao meio-fio — regra do §2º para motos.\n\nDUAS RODAS MOTORIZADAS: motocicletas, motonetas e ciclomotores — sujeitos do §2º, distintos de bicicletas.",
+        "destaques": ["PARALELO", "PERPENDICULAR", "DUAS RODAS MOTORIZADAS"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: qual regra de posicionamento?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          { "id": "p1", "label": "É estacionamento de veículo motorizado de duas rodas?", "tipo": "pergunta" },
+          { "id": "p2", "label": "Há sinalização que determine outra condição?", "tipo": "pergunta" },
+          { "id": "r1", "label": "Perpendicular junto ao meio-fio — Gabarito C", "tipo": "resultado" }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Sim — motocicleta" },
+          { "de": "p2", "para": "r1", "rotulo": "Não — sem placa diversa" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Posicionamento no art. 48",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Veículo", "Posição no estacionamento"],
+        "linhas": [
+          { "faixa": "Regra geral — caput", "classificacao": "Paralelo ao bordo da pista, junto à guia da calçada" },
+          { "faixa": "Duas rodas motorizadas — §2º", "classificacao": "Perpendicular à guia da calçada, junto a ela", "destaque": true },
+          { "faixa": "Exceção — ambos", "classificacao": "Sinalização que determine outra condição" }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: paralelo do caput × perpendicular do §2º",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+        "linhas": [
+          ["Caput paralelo vale para motocicletas", "§2º impõe perpendicular para veículos motorizados de duas rodas"],
+          ["Moto paralela junto ao meio-fio cumpre o art. 48", "Paralela viola o §2º — autuação legítima"]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          ["A — regra_excecao", "Aplica o caput como regra universal — ignora a exceção obrigatória do §2º para motos"],
+          ["B — numero_vizinho", "Transporta regra do acostamento do §1º para tolerância na pista com pisca-alerta"],
+          ["D — termo_unico", "Troca bicicleta por motocicleta — §2º alcança veículos motorizados de duas rodas"]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos da fiscalização na Rua Treze de Maio",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Elemento", "Conclusão"],
+        "linhas": [
+          ["Motocicleta estacionada paralela ao meio-fio", "Viola o §2º — deveria ser perpendicular"],
+          ["Condutor invoca caput do art. 48", "Caput não revoga a exceção do §2º"],
+          ["Sem sinalização diversa no trecho", "§2º pleno — perpendicular junto à guia"],
+          ["Resultado", "Gabarito C — autuação legítima"]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Caput × §2º — regra geral e especial",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Dispositivo", "Função no caso"],
+        "linhas": [
+          ["Caput — regra geral", "Paralelo junto ao meio-fio para a maioria dos veículos"],
+          ["§2º — especialidade", "Perpendicular para duas rodas motorizadas — prevalece sobre o caput"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "CTB — art. 48, §2º",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "CTB art. 48, §2º",
+        "texto": "O estacionamento dos veículos motorizados de duas rodas será feito em posição perpendicular à guia da calçada (meio-fio) e junto a ela, salvo quando houver sinalização que determine outra condição.",
+        "trechos_grifados": [
+          { "inicio": 21, "fim": 55, "motivo": "mapa — sujeito da exceção", "texto_grifado": "veículos motorizados de duas rodas" },
+          { "inicio": 78, "fim": 120, "motivo": "contraste — perpendicular, não paralelo", "texto_grifado": "perpendicular à guia da calçada (meio-fio)" },
+          { "inicio": 136, "fim": 196, "motivo": "fluxo — exceção por sinalização", "texto_grifado": "salvo quando houver sinalização que determine outra condição" }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "CAPUT = paralelo (carros) · §2º = moto PERPENDICULAR junto ao meio-fio · salvo placa.\nNear: moto perpendicular mas afastada da guia — ainda viola o §2º (exige junto a ela).\nFar: carro perpendicular na mesma via — caput exige paralelo; §2º não alcança quatro rodas.\nNão muda: duas rodas motorizadas = perpendicular junto à guia, salvo sinalização.\nCadeia: vizinho = caput (regra geral paralela).",
+        "destaques": ["PERPENDICULAR", "caput", "salvo placa"]
+      }
+    }
+  ],
+  "links_fonte": [
+    { "rotulo": "CTB art. 48", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+  ]
+}

@@ -1,0 +1,301 @@
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_estacionamento_parada",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
+    "fundamento_slug": "CTB_art_48_par_1",
+    "enunciado": "Na Av. Aníbal Ribeiro, em Campina Grande/PB, via urbana provida de acostamento demarcado e livre, agente da STTP autua condutor de caminhonete que realiza operação de carga na pista de rolamento, com o veículo posicionado paralelamente ao meio-fio e pisca-alerta acionado. O condutor sustenta que cumpriu o art. 48 do CTB, pois o caput exige posicionamento paralelo ao bordo da pista e junto à guia da calçada. O supervisor consulta a correção da autuação. Considerando as normas de parada, estacionamento e posicionamento na via, assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "A autuação é ilegítima, pois o caput do art. 48 impõe posicionamento paralelo junto à guia da calçada, o que foi observado, independentemente de haver acostamento na via.",
+      "B": "A autuação é ilegítima, pois o pisca-alerta de emergência, acionado durante a operação de carga, dispensa a retirada do veículo da pista de rolamento.",
+      "C": "A autuação é ilegítima, pois o §1º do art. 48 aplica-se somente a rodovias e vias de trânsito rápido, não a avenidas urbanas com acostamento.",
+      "D": "A autuação é legítima, pois o §1º do art. 48 exige que veículos parados, estacionados ou em operação de carga ou descarga fiquem fora da pista de rolamento quando a via dispõe de acostamento."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Posicionamento com acostamento — art. 48, §1º (fora da pista de rolamento) em contraste com o caput (paralelo junto à guia) e com art. 181, V.",
+      "fundamento_legal": "CTB, art. 48, caput: \"Nas paradas, operações de carga ou descarga e nos estacionamentos, o veículo deverá ser posicionado no sentido do fluxo, paralelo ao bordo da pista de rolamento e junto à guia da calçada (meio-fio), admitidas as exceções devidamente sinalizadas.\" Art. 48, §1º: \"Nas vias providas de acostamento, os veículos parados, estacionados ou em operação de carga ou descarga deverão estar situados fora da pista de rolamento.\" CTB, art. 181, V: estacionar na pista de rolamento de vias dotadas de acostamento — infração gravíssima.",
+      "passo_a_passo": [
+        "1. Caso: caminhonete em operação de carga na pista de rolamento da Av. Aníbal Ribeiro — acostamento demarcado e livre — condutor invoca caput do art. 48 — supervisor avalia autuação.",
+        "2. A erra por regra_excecao (aplica o caput como regra universal e ignora que o §1º, havendo acostamento, impõe posicionamento fora da pista de rolamento); B erra por termo_unico (trata pisca-alerta de advertência como dispensa de sair da pista — alerta não substitui a regra do acostamento); C erra por numero_vizinho (restringe o §1º a rodovias e vias de trânsito rápido — o dispositivo abrange qualquer via provida de acostamento).",
+        "3. D correta: com acostamento disponível, parada, estacionamento e carga ou descarga devem ocorrer fora da pista de rolamento."
+      ],
+      "pegadinha": "A IDECAN induz a parar no caput (paralelo junto ao meio-fio) — mas o §1º, quando há acostamento, define onde posicionar: fora da pista de rolamento.",
+      "macete": "COM ACOSTAMENTO → FORA da pista · caput = como posicionar · §1º = onde posicionar.",
+      "estudo_reverso": [
+        "CTB art. 48, §1º",
+        "CTB art. 48",
+        "CTB art. 181, V"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Paralelo junto ao meio-fio na pista não basta — com acostamento, o §1º manda sair da pista de rolamento",
+      "eixos_legais": [
+        "CTB_art_48_par_1",
+        "CTB_art_48",
+        "CTB_art_181_V"
+      ],
+      "eixo_vizinho": "CTB_art_181_V",
+      "isca_por_alternativa": {
+        "A": "caput paralelo junto à guia dispensa uso do acostamento",
+        "B": "pisca-alerta dispensa retirar veículo da pista de rolamento",
+        "C": "§1º só vale em rodovia e via de trânsito rápido"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico",
+        "numero_vizinho"
+      ],
+      "near_transfer": "Mesma Av. Aníbal Ribeiro, caminhonete estacionada na pista com acostamento livre — mesma exigência de posicionar fora da pista de rolamento.",
+      "far_transfer": "Mesma operação de carga em via urbana sem acostamento demarcado — prevalece o caput: paralelo, sentido do fluxo, junto à guia.",
+      "o_que_nao_muda": "Havendo acostamento, veículos parados, estacionados ou em carga ou descarga devem ficar fora da pista de rolamento.",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "estacionamento",
+      "parada",
+      "acostamento",
+      "art_48",
+      "carga_descarga",
+      "sttp",
+      "campina_grande"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 50,
+      "fundamento_slug": "CTB_art_48_par_1",
+      "macete_visual": "ACOSTAMENTO → FORA da pista",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D: carga na pista com acostamento livre — deve ficar fora da pista de rolamento.\n\nFar: mesma carga em via sem acostamento — regra geral de posicionamento paralelo junto à guia.",
+            "destaques": ["Gabarito D", "acostamento", "fora da pista"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Paralelo na pista × acostamento",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Lei ✓"],
+            "linhas": [
+              ["Paralelo junto ao meio-fio basta na pista", "Com acostamento, deve ficar fora da pista de rolamento"],
+              ["Pisca-alerta autoriza carga na via", "Alerta não revoga a regra do acostamento"]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Há acostamento?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Via dispõe de acostamento?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Fora da pista — Gabarito D", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "r1", "rotulo": "Sim — Av. Aníbal Ribeiro" }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "COM ACOSTAMENTO → FORA da pista · caput = como · §1º = onde.\nFar: via sem acostamento — caput rege posicionamento paralelo.",
+            "destaques": ["FORA da pista", "acostamento"]
+          }
+        }
+      ],
+      "links_fonte": [
+        { "rotulo": "CTB art. 48", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CTB_art_48_par_1",
+      "macete_visual": "ACOSTAMENTO → FORA da pista",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Paralelo junto ao meio-fio na pista não basta — com acostamento, o §1º manda sair da pista de rolamento",
+        "eixos_legais": [
+          "CTB_art_48_par_1",
+          "CTB_art_48",
+          "CTB_art_181_V"
+        ],
+        "isca_por_alternativa": {
+          "A": "caput paralelo junto à guia dispensa uso do acostamento",
+          "B": "pisca-alerta dispensa retirar veículo da pista de rolamento",
+          "C": "§1º só vale em rodovia e via de trânsito rápido"
+        },
+        "eficacia_pos_aula": ["E1", "E2", "E3"]
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: paralelo não basta na pista",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D (autuação legítima — carga na pista com acostamento livre).\n\nA — regra paralela junto à guia autoriza ficar na pista: ignora a exigência do acostamento.\nB — pisca-alerta dispensa sair da pista: troca advertência por permissão.\nC — norma do acostamento só em rodovia: inventa limite geográfico.\n\nPegadinha: a regra geral define como posicionar; com acostamento, define onde posicionar.",
+            "destaques": ["Gabarito D", "acostamento", "pista de rolamento"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PISTA DE ROLAMENTO: faixa por onde circulam os veículos — onde a caminhonete foi autuada.\n\nACOSTAMENTO: faixa lateral da via, fora da pista de rolamento — local exigido quando demarcado.\n\nOPERAÇÃO DE CARGA: hipótese expressamente abrangida pela regra de posicionamento com acostamento.",
+            "destaques": ["PISTA DE ROLAMENTO", "ACOSTAMENTO", "OPERAÇÃO DE CARGA"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: onde posicionar com acostamento?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              { "id": "p1", "label": "Via dispõe de acostamento demarcado?", "tipo": "pergunta" },
+              { "id": "p2", "label": "Veículo parado, estacionado ou em carga?", "tipo": "pergunta" },
+              { "id": "r1", "label": "Fora da pista — Gabarito D", "tipo": "resultado" }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "Sim — Av. Aníbal Ribeiro" },
+              { "de": "p2", "para": "r1", "rotulo": "Sim — operação de carga" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Caput × parágrafo primeiro",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Dispositivo", "O que define"],
+            "linhas": [
+              { "faixa": "Caput — regra geral", "classificacao": "Como posicionar: paralelo, sentido do fluxo, junto à guia" },
+              { "faixa": "§1º — com acostamento", "classificacao": "Onde posicionar: fora da pista de rolamento", "destaque": true },
+              { "faixa": "Hipóteses do §1º", "classificacao": "Parada, estacionamento, carga ou descarga" }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: paralelo na pista × acostamento",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "linhas": [
+              ["Paralelo junto ao meio-fio basta, mesmo na pista", "Com acostamento, deve ficar fora da pista de rolamento"],
+              ["Pisca-alerta autoriza operação de carga na via", "Alerta não revoga a regra do acostamento"]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              ["A — regra_excecao", "Aplica o caput como permissão para ficar na pista — ignora o parágrafo primeiro"],
+              ["B — termo_unico", "Troca pisca-alerta de advertência por dispensa de sair da pista"],
+              ["C — numero_vizinho", "Restringe o parágrafo primeiro a rodovia — lei não faz essa distinção"]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Fatos da fiscalização na Av. Aníbal Ribeiro",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Elemento", "Conclusão"],
+            "linhas": [
+              ["Caminhonete em carga na pista de rolamento", "Viola parágrafo primeiro — deveria estar no acostamento"],
+              ["Acostamento demarcado e livre", "Gatilho do parágrafo primeiro presente"],
+              ["Pisca-alerta acionado", "Não substitui posicionamento fora da pista"],
+              ["Resultado", "Gabarito D — autuação legítima"]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Caput × parágrafo primeiro × infração",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Dispositivo", "Função no caso"],
+            "linhas": [
+              ["Caput — como posicionar", "Paralelo, sentido do fluxo, junto à guia — não autoriza ficar na pista com acostamento"],
+              ["§1º — onde posicionar", "Prevalece: fora da pista de rolamento quando há acostamento"],
+              ["Art. 181, V — vizinho", "Estacionar na pista de via com acostamento — infração gravíssima"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "CTB — art. 48, §1º",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 48, §1º",
+            "texto": "Nas vias providas de acostamento, os veículos parados, estacionados ou em operação de carga ou descarga deverão estar situados fora da pista de rolamento.",
+            "trechos_grifados": [
+              {
+                "inicio": 4,
+                "fim": 32,
+                "motivo": "fluxo — gatilho do caso (acostamento demarcado)",
+                "texto_grifado": "vias providas de acostamento"
+              },
+              {
+                "inicio": 74,
+                "fim": 103,
+                "motivo": "caso — operação de carga do enunciado",
+                "texto_grifado": "operação de carga ou descarga"
+              },
+              {
+                "inicio": 127,
+                "fim": 153,
+                "motivo": "contraste — proibição de ficar na pista",
+                "texto_grifado": "fora da pista de rolamento"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + transferência",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "COM ACOSTAMENTO → FORA da pista · caput = como posicionar, §1º = onde posicionar.\nNear: mesma via, caminhonete estacionada na pista com acostamento livre — mesma exigência.\nFar: mesma carga em via sem acostamento — caput rege posicionamento paralelo junto à guia.\nNão muda: havendo acostamento, parada, estacionamento e carga ficam fora da pista de rolamento.\nCadeia: vizinho = art. 181, V (estacionar na pista de via com acostamento).",
+            "destaques": ["FORA da pista", "acostamento", "181, V"]
+          }
+        }
+      ],
+      "links_fonte": [
+        { "rotulo": "CTB art. 48", "path": "conteúdo/legislação federal/lei-9503-ctb.html" },
+        { "rotulo": "CTB art. 181", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+      ]
+    }
+  }
+]

@@ -1,0 +1,260 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CONTRAN_1013_art_7_par4",
+  "macete_visual": "30 DIAS CORREM · contestação NÃO suspende",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Contestação administrativa não suspende os 30 dias para pagar a tarifa — § 4º do art. 7º veda interromper o prazo do caput",
+    "eixos_legais": [
+      "CONTRAN_1013_art_7",
+      "CONTRAN_1013_art_9"
+    ],
+    "isca_por_alternativa": {
+      "A": "contestação suspende o prazo de trinta dias até conclusão da análise administrativa",
+      "B": "contestação prorroga automaticamente o prazo para sessenta dias da passagem",
+      "C": "prazo de trinta dias permanece suspenso enquanto houver contestação ou recurso pendente"
+    },
+    "eficacia_pos_aula": [
+      "E1",
+      "E2",
+      "E3"
+    ]
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: contestar congela prazo?",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito D (enquadramento legítimo — pagamento no 35º dia após contestação no 23º).\n\nA — contestação suspende prazo até análise: errado.\nB — prorrogação automática para sessenta dias: errado.\nC — prazo suspenso com recurso pendente: errado.\n\nPegadinha: contestar a tarifa não congela os trinta dias para pagamento.",
+        "destaques": [
+          "Gabarito D",
+          "35º dia",
+          "contestação"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 marcos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "TARIFA: valor devido pela passagem no free flow — prazo próprio de trinta dias.\n\nCONTESTAÇÃO: questionamento do valor cobrado — não suspende o prazo do caput.\n\nINFRAÇÃO 209-A: consequência de não pagar a tarifa no prazo — defesa prévia é da multa, não da tarifa.",
+        "destaques": [
+          "TARIFA",
+          "CONTESTAÇÃO",
+          "209-A"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: pagou em 30 dias?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Tarifa foi paga em até 30 dias da passagem pelo pedágio eletrônico?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Enquadramento legítimo — Gabarito D",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "r1",
+            "rotulo": "Não — pagamento no 35º dia, apesar da contestação"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Mapa: prazo e contestação",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Instituto",
+          "Regra"
+        ],
+        "linhas": [
+          {
+            "faixa": "Prazo do caput",
+            "classificacao": "30 dias da passagem — pagar tarifa",
+            "destaque": true
+          },
+          {
+            "faixa": "Contestação § 3º",
+            "classificacao": "Canal para questionar cobrança"
+          },
+          {
+            "faixa": "Efeito § 4º",
+            "classificacao": "Contestação não interrompe prazo do caput"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: contestar × pagar",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a lei diz ✓"
+        ],
+        "linhas": [
+          [
+            "Registrar contestação suspende os trinta dias para pagamento",
+            "§ 4º veda interromper o prazo previsto no caput"
+          ],
+          [
+            "Defesa prévia da multa dispensa pagar a tarifa em atraso",
+            "Defesa prévia garantida é da infração — tarifa tem prazo autônomo"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Trata contestação como suspensão do prazo — § 4º proíbe interromper o caput"
+          ],
+          [
+            "B — numero_vizinho",
+            "Inventa sessenta dias — caput fixa trinta dias da passagem"
+          ],
+          [
+            "C — termo_unico",
+            "Condiciona autuação ao julgamento da contestação — prazo do caput não fica suspenso"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos do free flow na Av. Epitácio Pessoa",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Elemento",
+          "Conclusão"
+        ],
+        "linhas": [
+          [
+            "Passagem em 05/06/2026",
+            "Marco dos 30 dias"
+          ],
+          [
+            "Contestação em 28/06/2026",
+            "23º dia — não suspende prazo"
+          ],
+          [
+            "Pagamento em 10/07/2026",
+            "35º dia — fora do prazo"
+          ],
+          [
+            "Resultado",
+            "Gabarito D — art. 209-A legítimo"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "eixo2",
+      "titulo": "Prazo da tarifa × infração 209-A",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Art. 7º — prazo e contestação",
+            "30 dias para tarifa — contestação não interrompe"
+          ],
+          [
+            "Art. 9º — inobservância",
+            "Não pagar no prazo configura infração do art. 209-A do CTB"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Res. 1.013/2024 — art. 7º",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 1.013/2024, art. 7º, caput e § 4º",
+        "texto": "Será concedido ao usuário o prazo de trinta dias, contados da data da passagem do veículo pelo pedágio eletrônico, para o pagamento da tarifa de pedágio. O registro da contestação de que trata o § 3º não interrompe o prazo previsto no caput, garantidos o direito de defesa prévia e de interposição de recursos, em caso de infração de trânsito.",
+        "trechos_grifados": [
+          {
+            "inicio": 37,
+            "fim": 48,
+            "motivo": "mapa e caso — marco de 05/06/2026",
+            "texto_grifado": "trinta dias"
+          },
+          {
+            "inicio": 95,
+            "fim": 113,
+            "motivo": "caso — passagem na Av. Epitácio Pessoa",
+            "texto_grifado": "pedágio eletrônico"
+          },
+          {
+            "inicio": 200,
+            "fim": 240,
+            "motivo": "fluxo e contraste — contestação no 23º dia",
+            "texto_grifado": "não interrompe o prazo previsto no caput"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "30 DIAS CORREM · contestação NÃO suspende · defesa prévia é da multa, não da tarifa.\nNear: contestação no 29º dia e pagamento no 32º — inobservância permanece.\nFar: pagar multa do 209-A sem quitar tarifa — art. 9º § 4º mantém débito da tarifa.\nNão muda: trinta dias da passagem para pagar tarifa — contestação não interrompe o caput.\nCadeia: vizinho = art. 9º (consequência da inobservância ao art. 7º).",
+        "destaques": [
+          "30 DIAS",
+          "contestação",
+          "tarifa"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 1.013/2024",
+      "path": ".tmp-lacunas/1013.txt"
+    }
+  ]
+}

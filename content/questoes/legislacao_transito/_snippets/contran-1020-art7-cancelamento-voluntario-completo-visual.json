@@ -1,0 +1,264 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 275,
+  "fundamento_slug": "CONTRAN_1020_art_7_cancelamento_voluntario",
+  "macete_visual": "VOLUNTÁRIO = sem motivação · cancelado = não conduz",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Cancelamento voluntário não exige motivação nem anuência da STTP — inciso I é hipótese autônoma dos incisos II e III",
+    "eixos_legais": [
+      "CONTRAN_1020_art_7_cancelamento_voluntario",
+      "CONTRAN_1020_art_7_par1"
+    ],
+    "isca_por_alternativa": {
+      "A": "multas em aberto impedem cancelamento voluntário até quitação",
+      "B": "cancelamento voluntário exige motivação e anuência da autoridade local",
+      "D": "competência exclusiva da SENATRAN para cancelar a CNH"
+    },
+    "eficacia_pos_aula": [
+      "E1",
+      "E2",
+      "E3"
+    ]
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: precisa motivar?",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C (procedimento ilegítimo — não exige motivação nem anuência da STTP).\n\nA — multas em aberto impedem cancelamento voluntário: errado.\nB — cancelamento voluntário exige motivação e anuência local: errado.\nD — competência exclusiva da SENATRAN: errado.\n\nPegadinha: pedido voluntário do condutor é hipótese autônoma — não se confunde com cancelamento de ofício.",
+        "destaques": [
+          "Gabarito C",
+          "sem motivação",
+          "STTP"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 hipóteses",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "VOLUNTÁRIO: pedido do condutor — sem motivação.\n\nDE OFÍCIO — IRREGULARIDADE: processo administrativo com contraditório e ampla defesa.\n\nDE OFÍCIO — IMPEDITIVA: infração impeditiva confirmada na Permissão para Dirigir.",
+        "destaques": [
+          "VOLUNTÁRIO",
+          "IRREGULARIDADE",
+          "IMPEDITIVA"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: qual hipótese de cancelamento?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Condutor solicita cancelamento sem motivar?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "É solicitação voluntária — não irregularidade nem impeditiva?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Pode cancelar — Gabarito C",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "Sim — caso do DETRAN-PB"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "Sim — pedido sem motivação"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Mapa das hipóteses de cancelamento",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Hipótese",
+          "Requisito"
+        ],
+        "linhas": [
+          {
+            "faixa": "Solicitação do condutor",
+            "classificacao": "Independe de motivação",
+            "destaque": true
+          },
+          {
+            "faixa": "Irregularidade na expedição",
+            "classificacao": "Processo administrativo com contraditório"
+          },
+          {
+            "faixa": "Infração impeditiva",
+            "classificacao": "Decisão definitiva na Permissão para Dirigir"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: voluntário × de ofício",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a lei diz ✓"
+        ],
+        "linhas": [
+          [
+            "Cancelamento voluntário exige motivação e anuência da STTP",
+            "Solicitação do condutor independentemente de motivação"
+          ],
+          [
+            "Só cancela por irregularidade ou infração impeditiva",
+            "Hipóteses de ofício são distintas do pedido voluntário"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Inventa que multas em aberto impedem cancelamento voluntário — pedido não condiciona quitação"
+          ],
+          [
+            "B — termo_unico",
+            "Transporta requisitos de cancelamento de ofício para a solicitação voluntária"
+          ],
+          [
+            "D — competencia_snt",
+            "Atribui cancelamento exclusivamente à SENATRAN — pedido tramita no DETRAN estadual"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos do pedido no DETRAN-PB",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Elemento",
+          "Conclusão"
+        ],
+        "linhas": [
+          [
+            "Condutor categoria B em Campina Grande",
+            "Pode solicitar cancelamento voluntário"
+          ],
+          [
+            "Sem apresentar motivação",
+            "Pedido não exige fundamentação"
+          ],
+          [
+            "Atendente exige anuência da STTP",
+            "Procedimento ilegítimo"
+          ],
+          [
+            "Resultado",
+            "Gabarito C — cancelado fica impedido de conduzir"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Canal do pedido × efeito",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Pedido de cancelamento pelo condutor",
+            "Tramita no órgão executivo estadual — não na SENATRAN"
+          ],
+          [
+            "Efeito do cancelamento",
+            "Impede conduzir em qualquer hipótese enquanto perdurar a situação"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Res. 1.020/2025 — cancelamento voluntário",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 1.020/2025, art. 7º, I e §1º",
+        "texto": "Art. 7º O cancelamento do documento de habilitação ocorrerá nas seguintes hipóteses: I - por solicitação do condutor, independentemente de motivação. § 1º O condutor com documento de habilitação cancelado, em qualquer das hipóteses previstas neste artigo, fica impedido de conduzir ciclomotores ou veículos das categorias A, B, C, D ou E em vias terrestres, enquanto perdurar a situação, sendo considerado inabilitado para todos os efeitos legais.",
+        "trechos_grifados": [
+          {
+            "inicio": 118,
+            "fim": 148,
+            "motivo": "contraste e fluxo — pedido voluntário sem motivação",
+            "texto_grifado": "independentemente de motivação"
+          },
+          {
+            "inicio": 256,
+            "fim": 281,
+            "motivo": "caso e hierarquia — efeito após cancelamento",
+            "texto_grifado": "fica impedido de conduzir"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "VOLUNTÁRIO = sem motivação · OFÍCIO = irregularidade ou impeditiva · cancelado = não conduz.\nNear: CNH vencida — pedido voluntário segue sem exigir motivação.\nFar: cancelamento de ofício após infração impeditiva na PD — hipótese distinta do pedido voluntário.\nNão muda: solicitação voluntária independe de motivação — cancelado não conduz em qualquer hipótese.\nCadeia: vizinho = pedido de cancelamento pelo condutor no órgão executivo estadual.",
+        "destaques": [
+          "VOLUNTÁRIO",
+          "sem motivação",
+          "não conduz"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 1.020/2025",
+      "path": ".tmp-1020-full.txt"
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 270,
+  "fundamento_slug": "CONTRAN_996_art_12",
+  "macete_visual": "ART. 12 = BICICLETA ELÉTRICA + EMI · sem CRLV-e",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Bicicleta elétrica pedal assistido não exige CRLV-e — art. 12 dispensa registro, licenciamento e emplacamento",
+    "eixos_legais": [
+      "CONTRAN_996_art_12",
+      "CONTRAN_996_art_13"
+    ],
+    "isca_por_alternativa": {
+      "B": "art. 12 só vale para equipamentos de mobilidade — bicicleta elétrica deve ser registrada como ciclomotor no DETRAN-PB",
+      "C": "dispensa de registro aplica-se apenas a bicicletas de propulsão humana, não às elétricas",
+      "D": "dispensa exige pré-cadastro no RENAVAM e só afasta emplacamento"
+    },
+    "eficacia_pos_aula": [
+      "E1",
+      "E2",
+      "E3"
+    ]
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: precisa de CRLV-e?",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito A (autuação ilegítima — bicicleta elétrica pedal assistido dispensada de registro).\n\nB — dispensa só para equipamentos de mobilidade, bicicleta elétrica vai ao DETRAN-PB: errado.\nC — dispensa só para bicicleta humana, não elétrica: errado.\nD — dispensa condicionada a pré-cadastro no RENAVAM: errado.\n\nPegadinha: motor auxiliar não transforma automaticamente em ciclomotor sujeito a CRLV-e.",
+        "destaques": [
+          "Gabarito A",
+          "pedal assistido",
+          "CRLV-e"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 marcos",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "BICICLETA ELÉTRICA: pedal assistido, sem acelerador, motor até 1000 W e 32 km/h — art. 2º, III.\n\nEMI: equipamento de mobilidade individual autopropelido — patinete, monociclo etc.\n\nCICLOMOTOR: até 50 cm³ ou 4 kW e 50 km/h — regime de registro do art. 13.",
+        "destaques": [
+          "BICICLETA ELÉTRICA",
+          "EMI",
+          "CICLOMOTOR"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: enquadra no art. 12?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Veículo é bicicleta elétrica ou equipamento de mobilidade individual?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Autuação por falta de registro é ilegítima — Gabarito A",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "r1",
+            "rotulo": "Sim — pedal assistido 750 W, sem acelerador"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Mapa: regime de registro",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Categoria",
+          "Registro / licenciamento"
+        ],
+        "linhas": [
+          {
+            "faixa": "Bicicleta elétrica",
+            "classificacao": "Dispensado — art. 12",
+            "destaque": true
+          },
+          {
+            "faixa": "Equipamento de mobilidade individual",
+            "classificacao": "Dispensado — art. 12"
+          },
+          {
+            "faixa": "Ciclomotor",
+            "classificacao": "Obrigatório — art. 13 + CAT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Armadilha: motor × CRLV-e",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o candidato pensa ✗",
+          "O que a lei diz ✓"
+        ],
+        "linhas": [
+          [
+            "Qualquer veículo com motor exige registro e emplacamento",
+            "Art. 12 dispensa bicicletas elétricas e equipamentos de mobilidade individual"
+          ],
+          [
+            "Bicicleta elétrica equivale a ciclomotor para fins de licenciamento",
+            "Ciclomotor segue art. 13 — bicicleta elétrica segue art. 12"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "B — competencia_snt",
+            "Exclui bicicleta elétrica do art. 12 e obriga registro no DETRAN-PB — caput inclui bicicletas elétricas"
+          ],
+          [
+            "C — termo_unico",
+            "Restringe dispensa a bicicleta humana — ignora menção expressa a bicicletas elétricas"
+          ],
+          [
+            "D — regra_excecao",
+            "Inventa pré-cadastro no RENAVAM como condição — art. 12 dispensa registro sem essa exigência"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Fatos da fiscalização STTP",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Elemento",
+          "Conclusão"
+        ],
+        "linhas": [
+          [
+            "Pedal assistido 750 W, 28 km/h, sem acelerador",
+            "Enquadra bicicleta elétrica — art. 2º, III"
+          ],
+          [
+            "Autuação por ausência de CRLV-e",
+            "Pressupõe obrigação de registro"
+          ],
+          [
+            "Art. 12 da Res. 996/2023",
+            "Dispensa registro, licenciamento e emplacamento"
+          ],
+          [
+            "Resultado",
+            "Gabarito A — autuação ilegítima"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Art. 12 × art. 13",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Dispositivo",
+          "Função no caso"
+        ],
+        "linhas": [
+          [
+            "Art. 12 — bicicleta elétrica e EMI",
+            "Dispensa registro, licenciamento e emplacamento"
+          ],
+          [
+            "Art. 13 — ciclomotor",
+            "Exige CAT, documentos e registro no DETRAN — regime distinto"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Res. 996/2023 — art. 12",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "Res. CONTRAN 996/2023, art. 12",
+        "texto": "As bicicletas elétricas e os equipamentos de mobilidade individual autopropelidos não são sujeitos ao registro, ao licenciamento e ao emplacamento para circulação nas vias, conforme art. 134-A do CTB.",
+        "trechos_grifados": [
+          {
+            "inicio": 3,
+            "fim": 23,
+            "motivo": "caso — pedal assistido do entregador",
+            "texto_grifado": "bicicletas elétricas"
+          },
+          {
+            "inicio": 29,
+            "fim": 81,
+            "motivo": "mapa — categoria irmã também dispensada",
+            "texto_grifado": "equipamentos de mobilidade individual autopropelidos"
+          },
+          {
+            "inicio": 82,
+            "fim": 110,
+            "motivo": "fluxo e contraste — dispensa de registro",
+            "texto_grifado": "não são sujeitos ao registro"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + transferência",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "ART. 12 = BICICLETA ELÉTRICA + EMI · sem registro/licença/placa · ciclomotor = art. 13.\nNear: patinete elétrico 800 W — equipamento de mobilidade também dispensado pelo art. 12.\nFar: ciclomotor 50 cm³ sem CRLV-e — art. 13 exige registro; art. 12 não se aplica.\nNão muda: bicicletas elétricas e EMI não são sujeitos a registro, licenciamento e emplacamento.\nCadeia: vizinho = art. 13 (ciclomotor com regime próprio de CAT e RENAVAM).",
+        "destaques": [
+          "ART. 12",
+          "EMI",
+          "art. 13"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Res. CONTRAN 996/2023",
+      "path": ".tmp-996-full.txt"
+    }
+  ]
+}

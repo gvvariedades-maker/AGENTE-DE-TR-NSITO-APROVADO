@@ -1,0 +1,264 @@
+{
+  "fundamento_slug": "CTB_art_2_par_unico",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "fluxograma_decisao",
+    "arquetipo_secundario": "tabela_gradacao",
+    "publico_alvo": "iniciante",
+    "duracao_estimada_seg": 260,
+    "fundamento_slug": "CTB_art_2_par_unico",
+    "macete_visual": "CONDOMÍNIO = VIA · trânsito inclui CARGA",
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Condomínio fechado não isenta do CTB — parágrafo único do art. 2º inclui vias internas e o §1º abrange carga",
+      "eixos_legais": [
+        "CTB_art_2_par_unico",
+        "CTB_art_1_par1"
+      ],
+      "isca_por_alternativa": {
+        "B": "segurança privada do condomínio teria competência exclusiva em detrimento da STTP",
+        "C": "descarga em via interna não configuraria trânsito por ser só circulação em movimento",
+        "D": "condomínio fechado exigiria via aberta ao público geral para o CTB alcançar"
+      },
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Diagnóstico: condomínio está no CTB?",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito A (autuação legítima em condomínio durante carga).\n\nB — segurança privada exclusiva em detrimento da STTP: errado.\nC — trânsito só em movimento, sem carga: errado.\nD — exige via aberta ao público geral: errado.\n\nPegadinha: área privada de condomínio não afasta o enquadramento como via terrestre.",
+          "destaques": [
+            "Gabarito A",
+            "segurança privada",
+            "carga"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Pré-treino: 3 termos",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "VIA TERRESTRE: ruas, avenidas e também vias internas de condomínio — parágrafo único do art. 2º.\n\nTRÂNSITO: circulação, parada, estacionamento e operação de carga ou descarga — §1º do art. 1º.\n\nCONDOMÍNIO AUTÔNOMO: unidades autônomas com vias internas sujeitas ao CTB.",
+          "destaques": [
+            "VIA TERRESTRE",
+            "TRÂNSITO",
+            "CONDOMÍNIO"
+          ]
+        }
+      },
+      {
+        "id": "fluxo",
+        "titulo": "Método: enquadra no CTB?",
+        "secao": "metodo",
+        "tipo": "fluxograma",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "p1",
+              "label": "Via interna de condomínio autônomo?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "p2",
+              "label": "Há operação de carga ou descarga?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "r1",
+              "label": "Gabarito A — CTB alcança o caso",
+              "tipo": "resultado"
+            }
+          ],
+          "arestas": [
+            {
+              "de": "p1",
+              "para": "p2",
+              "rotulo": "Sim — portaria do condomínio"
+            },
+            {
+              "de": "p2",
+              "para": "r1",
+              "rotulo": "Sim — caminhão em carga"
+            }
+          ]
+        }
+      },
+      {
+        "id": "mapa",
+        "titulo": "Mapa: o que conta como trânsito",
+        "secao": "mapa",
+        "tipo": "tabela_gradacao",
+        "conteudo": {
+          "titulo_colunas": [
+            "Situação",
+            "Alcance do CTB"
+          ],
+          "linhas": [
+            {
+              "faixa": "Circulação em movimento",
+              "classificacao": "Trânsito — §1º do art. 1º"
+            },
+            {
+              "faixa": "Parada e estacionamento",
+              "classificacao": "Trânsito — §1º do art. 1º"
+            },
+            {
+              "faixa": "Operação de carga ou descarga",
+              "classificacao": "Trânsito — §1º do art. 1º ← caso",
+              "destaque": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Privado × via terrestre",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "O que o condutor pensa ✗",
+            "O que a lei diz ✓"
+          ],
+          "linhas": [
+            [
+              "Condomínio fechado não é via terrestre para o CTB",
+              "Parágrafo único inclui vias internas de condomínio autônomo"
+            ],
+            [
+              "Descarga em portaria não é trânsito",
+              "Operação de carga ou descarga integra o conceito de trânsito"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que cada alternativa erra",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Mecanismo + por quê"
+          ],
+          "linhas": [
+            [
+              "B — competencia_snt",
+              "Segurança privada não tem exclusividade — STTP autua em via terrestre do condomínio."
+            ],
+            [
+              "C — termo_unico",
+              "Restringe trânsito ao movimento — §1º inclui carga e descarga."
+            ],
+            [
+              "D — regra_excecao",
+              "Exige circulação pública geral — parágrafo único abrange condomínio fechado."
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Caso: condomínio em Campina Grande",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Fato do enunciado",
+            "Consequência legal"
+          ],
+          "linhas": [
+            [
+              "Caminhão em via interna de condomínio na carga",
+              "Via terrestre + operação de carga = trânsito"
+            ],
+            [
+              "Administradora nega que descarga seja trânsito",
+              "§1º do art. 1º inclui carga — isca da alternativa C"
+            ],
+            [
+              "Condutor invoca área privada e segurança do empreendimento",
+              "Gabarito A — parágrafo único do art. 2º prevalece"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "hierarquia",
+        "titulo": "Dois dispositivos do caso",
+        "secao": "conceito",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Dispositivo",
+            "Função no caso"
+          ],
+          "linhas": [
+            [
+              "Art. 2º, parágrafo único — condomínio",
+              "Via interna de condomínio é via terrestre"
+            ],
+            [
+              "Art. 1º, §1º — conceito de trânsito",
+              "Carga na portaria integra trânsito, não mera logística privada"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Parágrafo único do art. 2º",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 2º, parágrafo único, e art. 1º, §1º",
+          "texto": "Parágrafo único. Para os efeitos deste Código, são consideradas vias terrestres as praias abertas à circulação pública, as vias internas pertencentes aos condomínios constituídos por unidades autônomas e as vias e áreas de estacionamento de estabelecimentos privados de uso coletivo. § 1º Considera-se trânsito a utilização das vias por pessoas, veículos e animais, isolados ou em grupos, conduzidos ou não, para fins de circulação, parada, estacionamento e operação de carga ou descarga.",
+          "trechos_grifados": [
+            {
+              "inicio": 120,
+              "fim": 201,
+              "motivo": "contraste — condomínio é via terrestre",
+              "texto_grifado": "as vias internas pertencentes aos condomínios constituídos por unidades autônomas"
+            },
+            {
+              "inicio": 458,
+              "fim": 487,
+              "motivo": "caso — carga na portaria integra trânsito",
+              "texto_grifado": "operação de carga ou descarga"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Macete + near/far-transfer",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "CONDOMÍNIO = VIA TERRESTRE · trânsito = circular + parar + carga.\nNear: estacionamento em área coletiva de shopping — também via terrestre pelo parágrafo único.\nFar: carroça em descarga rural — art. 3º alcança qualquer veículo; §1º inclui carga.\nNão muda: vias internas de condomínio são vias terrestres; carga integra trânsito.\nCadeia: vizinho = §1º do art. 1º (conceito amplo de trânsito).",
+          "destaques": [
+            "CONDOMÍNIO",
+            "shopping",
+            "carroça",
+            "carga"
+          ]
+        }
+      }
+    ],
+    "links_fonte": [
+      {
+        "rotulo": "Lei 9.503/97 — CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ]
+  }
+}
