@@ -1,0 +1,268 @@
+{
+  "tec_id": "3780621",
+  "disciplina": "legislacao_transito",
+  "gabarito": "A",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "fluxograma_decisao",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 210,
+    "fundamento_slug": "CTB_art_133",
+    "macete_visual": "Sistema OK = dispensa CRLV · RENACH não RENAVAM",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Blitz em CG — agente consulta sistema e dispensa porte do CRLV.",
+      "far_transfer": "CNH digital no celular + consulta informatizada — dispensa porte da habilitação (§ 1º-A).",
+      "o_que_nao_muda": "Porte do CRLV obrigatório, salvo acesso ao sistema que confirme licenciamento."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito A.\n\nB — CNH/PPD só em meio físico (a lei permite físico e/ou digital).\nC — CRLV só em meio digital (pode ser físico e/ou digital à escolha do proprietário).\nD — identificação da CNH no RENAVAM (cadastro do condutor fica no RENACH).\n\nPegadinha: cada errada parece certa — basta trocar meio, cadastro ou restringir formato.",
+          "destaques": [
+            "Gabarito A",
+            "RENACH",
+            "meio físico"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Quatro siglas que a banca mistura",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "CRLV: Certificado de Licenciamento Anual — porte obrigatório, com exceção do parágrafo único do art. 133.\nCNH: pode ser física ou digital — escolha do condutor (art. 159).\nRENACH: cadastro nacional de condutores — onde vai a identificação da CNH (art. 159, § 6º).\nRENAVAM: cadastro nacional de veículos — não recebe identificação da CNH.",
+          "destaques": [
+            "CRLV",
+            "RENACH",
+            "RENAVAM"
+          ]
+        }
+      },
+      {
+        "id": "fluxo",
+        "titulo": "Método: dispensa porte do CRLV?",
+        "secao": "metodo",
+        "tipo": "fluxograma",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "p1",
+              "label": "Agente acessa sistema informatizado?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "p2",
+              "label": "Confirma veículo licenciado?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "r1",
+              "label": "Dispensa porte do CRLV — gabarito A",
+              "tipo": "resultado"
+            }
+          ],
+          "arestas": [
+            {
+              "de": "p1",
+              "para": "p2",
+              "rotulo": "Sim"
+            },
+            {
+              "de": "p2",
+              "para": "r1",
+              "rotulo": "Sim"
+            }
+          ]
+        }
+      },
+      {
+        "id": "mapa",
+        "titulo": "Meio do documento: o que a lei permite",
+        "secao": "mapa",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Documento",
+            "Meio válido (CTB)"
+          ],
+          "linhas": [
+            [
+              "CRLV — art. 131",
+              "Físico e/ou digital — escolha do proprietário"
+            ],
+            [
+              "CNH — art. 159",
+              "Físico ou digital — escolha do condutor"
+            ],
+            [
+              "CNH para conduzir — § 5",
+              "Apresentada em original (não cópia)"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "CRLV só vale se estiver no bolso do motorista",
+              "Art. 133 — dispensa porte se sistema confirmar licenciamento"
+            ],
+            [
+              "CNH digital não vale na fiscalização",
+              "Art. 159 — pode ser emitida em meio físico ou digital"
+            ],
+            [
+              "Cadastro da CNH fica no RENAVAM",
+              "Art. 159, § 6º — registrada no RENACH"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que B, C e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "B — termo_unico",
+              "Restringe a meio físico — art. 159 permite físico e/ou digital"
+            ],
+            [
+              "C — termo_unico",
+              "Restringe a meio digital — art. 131: físico e/ou digital à escolha do proprietário"
+            ],
+            [
+              "D — termo_unico",
+              "Troca RENACH por RENAVAM — art. 159, § 6º"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Bate com a lei?"
+          ],
+          "linhas": [
+            [
+              "A — dispensa CRLV com sistema informatizado",
+              "Sim — art. 133, parágrafo único"
+            ],
+            [
+              "B — CNH/PPD só em meio físico",
+              "Não — art. 159"
+            ],
+            [
+              "C — CRLV só em meio digital",
+              "Não — art. 131"
+            ],
+            [
+              "D — CNH registrada no RENAVAM",
+              "Não — art. 159, § 6º (RENACH)"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto do CTB",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 133, parágrafo único",
+          "texto": "Parágrafo único. O porte será dispensado quando, no momento da fiscalização, for possível ter acesso ao devido sistema informatizado para verificar se o veículo está licenciado.",
+          "trechos_grifados": [
+            {
+              "inicio": 17,
+              "fim": 40,
+              "motivo": "lei — exceção à obrigatoriedade de porte",
+              "texto_grifado": "O porte será dispensado"
+            },
+            {
+              "inicio": 111,
+              "fim": 132,
+              "motivo": "lei — condição da dispensa",
+              "texto_grifado": "sistema informatizado"
+            },
+            {
+              "inicio": 153,
+              "fim": 176,
+              "motivo": "lei — o que o agente deve verificar",
+              "texto_grifado": "veículo está licenciado"
+            }
+          ]
+        }
+      },
+      {
+        "id": "lei2",
+        "titulo": "CRLV e cadastro da CNH",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 131 e art. 159, § 6º",
+          "texto": "Art. 131. O Certificado de Licenciamento Anual será expedido ao veículo licenciado, vinculado ao Certificado de Registro de Veículo, em meio físico e/ou digital, à escolha do proprietário, de acordo com o modelo e com as especificações estabelecidos pelo Contran. § 6º A identificação da Carteira Nacional de Habilitação expedida e a da autoridade expedidora serão registradas no RENACH.",
+          "trechos_grifados": [
+            {
+              "inicio": 133,
+              "fim": 160,
+              "motivo": "lei2 — CRLV não é só digital (isca C)",
+              "texto_grifado": "em meio físico e/ou digital"
+            },
+            {
+              "inicio": 377,
+              "fim": 386,
+              "motivo": "lei2 — cadastro da CNH (isca D)",
+              "texto_grifado": "no RENACH"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: porte do CRLV obrigatório — art. 133.\nNear: blitz com consulta informatizada dispensa porte do CRLV.\nFar: CNH digital + sistema confirma habilitação — dispensa porte da CNH (§ 1º-A).\nNão muda: sem acesso ao sistema, CRLV deve estar portado.\nCadeia: RENACH = condutor · RENAVAM = veículo.",
+          "destaques": [
+            "Near",
+            "Far",
+            "Não muda",
+            "RENACH"
+          ]
+        }
+      }
+    ]
+  }
+}

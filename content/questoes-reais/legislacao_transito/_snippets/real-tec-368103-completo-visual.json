@@ -1,0 +1,236 @@
+{
+  "tec_id": "368103",
+  "disciplina": "legislacao_transito",
+  "gabarito": "A",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "diagrama_competencia",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 210,
+    "fundamento_slug": "CTB_art_20_II",
+    "macete_visual": "PRF patrulha · Senatran RENACH",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "PRF também fiscaliza e aplica multa — art. 20, III.",
+      "far_transfer": "PM patrulha no Estado — PRF só em rodovia federal.",
+      "o_que_nao_muda": "Patrulhamento ostensivo federal = PRF (art. 20, II)."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito A.\n\nB — julgar recurso (é JARI/CETRAN, não PRF).\nC — designar junta especial de saúde (é CETRAN).\nD — organizar RENACH (é Senatran).\n\nPegadinha: a banca copia competências de outros órgãos e cola na PRF.",
+          "destaques": [
+            "Gabarito A",
+            "PRF",
+            "RENACH"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Três papéis que a banca mistura",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "PRF: polícia ostensiva em rodovias federais — patrulha e fiscaliza.\nCETRAN: julga recurso da JARI e designa junta especial de saúde.\nSenatran: órgão executivo máximo — mantém RENACH e RENAVAM.",
+          "destaques": [
+            "PRF",
+            "CETRAN",
+            "Senatran"
+          ]
+        }
+      },
+      {
+        "id": "diagrama",
+        "titulo": "Competências no SNT",
+        "secao": "metodo",
+        "tipo": "diagrama_competencia",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "prf",
+              "label": "PRF — patrulha federal",
+              "nivel": 0
+            },
+            {
+              "id": "cetran",
+              "label": "CETRAN — julga / junta",
+              "nivel": 1
+            },
+            {
+              "id": "senatran",
+              "label": "Senatran — RENACH",
+              "nivel": 1
+            }
+          ],
+          "arestas": [
+            {
+              "de": "prf",
+              "para": "cetran",
+              "rotulo": "não julga"
+            },
+            {
+              "de": "prf",
+              "para": "senatran",
+              "rotulo": "não cadastra"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "PRF julga recurso de infração",
+              "Julgar recurso é JARI e CETRAN"
+            ],
+            [
+              "PRF designa junta especial de saúde",
+              "Art. 14, XI — CETRAN designa junta"
+            ],
+            [
+              "PRF organiza e mantém o RENACH",
+              "Art. 19, VIII — Senatran mantém o RENACH"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que B, C e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "B — competencia_snt",
+              "Julgar recurso é JARI/CETRAN — não PRF"
+            ],
+            [
+              "C — competencia_snt",
+              "Junta especial é CETRAN — art. 14, XI"
+            ],
+            [
+              "D — competencia_snt",
+              "RENACH é Senatran — art. 19, VIII"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "É competência da PRF?"
+          ],
+          "linhas": [
+            [
+              "A — patrulhamento ostensivo",
+              "Sim — gabarito"
+            ],
+            [
+              "B — julgar recursos",
+              "Não — recursal"
+            ],
+            [
+              "C — junta especial de saúde",
+              "Não — CETRAN"
+            ],
+            [
+              "D — organizar RENACH",
+              "Não — Senatran"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto do CTB",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 20, II",
+          "texto": "Art. 20. Compete à Polícia Rodoviária Federal, no âmbito das rodovias e estradas federais: II - realizar o patrulhamento ostensivo, executando operações relacionadas com a segurança pública, com o objetivo de preservar a ordem, incolumidade das pessoas, o patrimônio da União e o de terceiros.",
+          "trechos_grifados": [
+            {
+              "inicio": 107,
+              "fim": 130,
+              "motivo": "lei — patrulhamento ostensivo (gabarito A)",
+              "texto_grifado": "patrulhamento ostensivo"
+            },
+            {
+              "inicio": 172,
+              "fim": 189,
+              "motivo": "lei — operações de segurança pública",
+              "texto_grifado": "segurança pública"
+            }
+          ]
+        }
+      },
+      {
+        "id": "lei2",
+        "titulo": "Competências que não são da PRF",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 14, XI e art. 19, VIII",
+          "texto": "Art. 14. Compete aos CETRAN: XI - designar, em caso de recursos deferidos e na hipótese de reavaliação dos exames, junta especial de saúde para examinar os candidatos à habilitação para conduzir veículos automotores. Art. 19. Compete ao órgão executivo máximo: VIII - organizar e manter o Registro Nacional de Carteiras de Habilitação - RENACH.",
+          "trechos_grifados": [
+            {
+              "inicio": 115,
+              "fim": 138,
+              "motivo": "lei2 — isca C (CETRAN, não PRF)",
+              "texto_grifado": "junta especial de saúde"
+            },
+            {
+              "inicio": 337,
+              "fim": 343,
+              "motivo": "lei2 — isca D (Senatran, não PRF)",
+              "texto_grifado": "RENACH"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: PRF patrulha ostensivamente em rodovia federal — art. 20, II.\nNear: PRF também fiscaliza e aplica multa — art. 20, III.\nFar: PM patrulha no Estado — esfera estadual/municipal.\nNão muda: patrulhamento ostensivo federal = PRF.\nCadeia: julgar recurso e RENACH não são da PRF.",
+          "destaques": [
+            "Near",
+            "Far",
+            "Não muda",
+            "PRF"
+          ]
+        }
+      }
+    ]
+  }
+}

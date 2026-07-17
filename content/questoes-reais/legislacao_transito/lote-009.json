@@ -399,5 +399,2684 @@
         }
       ]
     }
+  },
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_habilitacao",
+    "tipo": "lei_seca",
+    "estilo_idecan": "correta",
+    "dificuldade": 3,
+    "fundamento_slug": "CTB_art_133",
+    "enunciado": "Conforme previsto no Código de Trânsito Brasileiro (CTB), no tocante à documentação exigida do condutor e para o veículo, é correto informar que:",
+    "alternativas": {
+      "A": "Será dispensado o porte do Certificado de Licenciamento Anual, somente se o Agente fiscalizador tiver acesso ao sistema informatizado para verificar se o veículo está licenciado.",
+      "B": "A Carteira Nacional de Habilitação e a Permissão para Dirigir somente terão validade para a condução de veículo quando apresentadas em meio físico.",
+      "C": "O Certificado de Licenciamento Anual somente terá validade para a condução de veículo quando apresentado em meio digital.",
+      "D": "A identificação da Carteira Nacional de Habilitação expedida e a da autoridade expedidora serão registradas no RENAVAM."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Dispensa de porte do CRLV (art. 133, parágrafo único) e distratores que restringem CNH/CRLV a um único meio (arts. 131 e 159) ou trocam RENACH por RENAVAM (art. 159, § 6º).",
+      "fundamento_legal": "CTB, art. 133, parágrafo único: \"O porte será dispensado quando, no momento da fiscalização, for possível ter acesso ao devido sistema informatizado para verificar se o veículo está licenciado.\"",
+      "passo_a_passo": [
+        "1. O comando pede a alternativa correta sobre documentação do condutor e do veículo.",
+        "2. B erra por termo_unico (CNH/PPD não se limitam ao meio físico — art. 159 permite físico e/ou digital; § 5 exige original, não só físico); C erra por termo_unico (CRLV não é só digital — art. 131: físico e/ou digital à escolha do proprietário); D erra por termo_unico (cadastro da CNH é no RENACH — art. 159, § 6º, não no RENAVAM).",
+        "3. A correta: reproduz o art. 133, parágrafo único — dispensa do porte do CRLV se o agente acessar sistema informatizado e confirmar licenciamento."
+      ],
+      "pegadinha": "A banca troca uma palavra: somente físico × físico e/ou digital; somente digital × escolha do proprietário; RENAVAM × RENACH.",
+      "macete": "CRLV: porte obrigatório, salvo consulta informatizada. CNH: físico ou digital. Cadastro do condutor: RENACH.",
+      "estudo_reverso": [
+        "CTB art. 133",
+        "CTB art. 131",
+        "CTB art. 159 §§ 5 e 6",
+        "CTB art. 159 § 1º-A"
+      ]
+    },
+    "tags": [
+      "real_idecan",
+      "superior",
+      "ctb",
+      "art_133",
+      "documentacao",
+      "crlv",
+      "cnh"
+    ],
+    "meta": {
+      "origem": "real_idecan",
+      "nivel_escolaridade": "superior",
+      "fonte_arquivo": "CTB - IDECAN - SUPERIOR - TEC.pdf",
+      "tec_id": "3780621",
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Porte do CRLV dispensa com sistema informatizado — as erradas restringem meio físico/digital ou trocam RENACH por RENAVAM",
+      "eixos_legais": [
+        "CTB_art_133",
+        "CTB_art_131",
+        "CTB_art_159"
+      ],
+      "eixo_vizinho": "CTB_art_159_1A",
+      "isca_por_alternativa": {
+        "B": "CNH só vale em meio físico — a lei permite físico e/ou digital (art. 159)",
+        "C": "CRLV só vale em meio digital — art. 131 permite físico e/ou digital à escolha do proprietário",
+        "D": "Identificação da CNH no RENAVAM — art. 159, § 6º registra no RENACH"
+      },
+      "near_transfer": "Agente consulta o sistema e confirma licenciamento em Campina Grande — dispensa porte do CRLV no bloqueio (art. 133, parágrafo único).",
+      "far_transfer": "Condutor apresenta CNH digital no celular — válida; o § 1º-A dispensa porte da habilitação se o agente consultar o sistema.",
+      "o_que_nao_muda": "Porte do CRLV é obrigatório, exceto quando o agente acessa sistema informatizado e verifica licenciamento.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "macete_visual": "Sistema OK = dispensa CRLV · RENACH não RENAVAM"
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "duracao_estimada_seg": 45,
+      "fundamento_slug": "CTB_art_133",
+      "macete_visual": "Sistema OK = dispensa CRLV",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Gabarito A",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A. Dispensa porte do CRLV se o agente acessar sistema informatizado e verificar licenciamento.",
+            "destaques": [
+              "Gabarito A",
+              "dispensa",
+              "sistema informatizado"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Dispensa porte do CRLV?",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Agente acessa sistema informatizado?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Confirma veículo licenciado?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Dispensa porte do CRLV — art. 133",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Sistema confirma licenciamento = dispensa CRLV. CNH: físico ou digital. Condutor: RENACH.",
+            "destaques": [
+              "dispensa",
+              "RENACH"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 210,
+      "fundamento_slug": "CTB_art_133",
+      "macete_visual": "Sistema OK = dispensa CRLV · RENACH não RENAVAM",
+      "publico_alvo": "iniciante",
+      "links_fonte": [
+        {
+          "rotulo": "CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ],
+      "meta": {
+        "near_transfer": "Blitz em CG — agente consulta sistema e dispensa porte do CRLV.",
+        "far_transfer": "CNH digital no celular + consulta informatizada — dispensa porte da habilitação (§ 1º-A).",
+        "o_que_nao_muda": "Porte do CRLV obrigatório, salvo acesso ao sistema que confirme licenciamento."
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Você acertou — e a isca da banca",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — CNH/PPD só em meio físico (a lei permite físico e/ou digital).\nC — CRLV só em meio digital (pode ser físico e/ou digital à escolha do proprietário).\nD — identificação da CNH no RENAVAM (cadastro do condutor fica no RENACH).\n\nPegadinha: cada errada parece certa — basta trocar meio, cadastro ou restringir formato.",
+            "destaques": [
+              "Gabarito A",
+              "RENACH",
+              "meio físico"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Quatro siglas que a banca mistura",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CRLV: Certificado de Licenciamento Anual — porte obrigatório, com exceção do parágrafo único do art. 133.\nCNH: pode ser física ou digital — escolha do condutor (art. 159).\nRENACH: cadastro nacional de condutores — onde vai a identificação da CNH (art. 159, § 6º).\nRENAVAM: cadastro nacional de veículos — não recebe identificação da CNH.",
+            "destaques": [
+              "CRLV",
+              "RENACH",
+              "RENAVAM"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: dispensa porte do CRLV?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Agente acessa sistema informatizado?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Confirma veículo licenciado?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Dispensa porte do CRLV — gabarito A",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Meio do documento: o que a lei permite",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Documento",
+              "Meio válido (CTB)"
+            ],
+            "linhas": [
+              [
+                "CRLV — art. 131",
+                "Físico e/ou digital — escolha do proprietário"
+              ],
+              [
+                "CNH — art. 159",
+                "Físico ou digital — escolha do condutor"
+              ],
+              [
+                "CNH para conduzir — § 5",
+                "Apresentada em original (não cópia)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença do candidato × lei",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
+            "linhas": [
+              [
+                "CRLV só vale se estiver no bolso do motorista",
+                "Art. 133 — dispensa porte se sistema confirmar licenciamento"
+              ],
+              [
+                "CNH digital não vale na fiscalização",
+                "Art. 159 — pode ser emitida em meio físico ou digital"
+              ],
+              [
+                "Cadastro da CNH fica no RENAVAM",
+                "Art. 159, § 6º — registrada no RENACH"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que B, C e D enganam",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que erra"
+            ],
+            "linhas": [
+              [
+                "B — termo_unico",
+                "Restringe a meio físico — art. 159 permite físico e/ou digital"
+              ],
+              [
+                "C — termo_unico",
+                "Restringe a meio digital — art. 131: físico e/ou digital à escolha do proprietário"
+              ],
+              [
+                "D — termo_unico",
+                "Troca RENACH por RENAVAM — art. 159, § 6º"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Aplicando ao enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Bate com a lei?"
+            ],
+            "linhas": [
+              [
+                "A — dispensa CRLV com sistema informatizado",
+                "Sim — art. 133, parágrafo único"
+              ],
+              [
+                "B — CNH/PPD só em meio físico",
+                "Não — art. 159"
+              ],
+              [
+                "C — CRLV só em meio digital",
+                "Não — art. 131"
+              ],
+              [
+                "D — CNH registrada no RENAVAM",
+                "Não — art. 159, § 6º (RENACH)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Texto do CTB",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 133, parágrafo único",
+            "texto": "Parágrafo único. O porte será dispensado quando, no momento da fiscalização, for possível ter acesso ao devido sistema informatizado para verificar se o veículo está licenciado.",
+            "trechos_grifados": [
+              {
+                "inicio": 17,
+                "fim": 40,
+                "motivo": "lei — exceção à obrigatoriedade de porte",
+                "texto_grifado": "O porte será dispensado"
+              },
+              {
+                "inicio": 111,
+                "fim": 132,
+                "motivo": "lei — condição da dispensa",
+                "texto_grifado": "sistema informatizado"
+              },
+              {
+                "inicio": 153,
+                "fim": 176,
+                "motivo": "lei — o que o agente deve verificar",
+                "texto_grifado": "veículo está licenciado"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "CRLV e cadastro da CNH",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 131 e art. 159, § 6º",
+            "texto": "Art. 131. O Certificado de Licenciamento Anual será expedido ao veículo licenciado, vinculado ao Certificado de Registro de Veículo, em meio físico e/ou digital, à escolha do proprietário, de acordo com o modelo e com as especificações estabelecidos pelo Contran. § 6º A identificação da Carteira Nacional de Habilitação expedida e a da autoridade expedidora serão registradas no RENACH.",
+            "trechos_grifados": [
+              {
+                "inicio": 133,
+                "fim": 160,
+                "motivo": "lei2 — CRLV não é só digital (isca C)",
+                "texto_grifado": "em meio físico e/ou digital"
+              },
+              {
+                "inicio": 377,
+                "fim": 386,
+                "motivo": "lei2 — cadastro da CNH (isca D)",
+                "texto_grifado": "no RENACH"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Leve para a prova",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Regra: porte do CRLV obrigatório — art. 133.\nNear: blitz com consulta informatizada dispensa porte do CRLV.\nFar: CNH digital + sistema confirma habilitação — dispensa porte da CNH (§ 1º-A).\nNão muda: sem acesso ao sistema, CRLV deve estar portado.\nCadeia: RENACH = condutor · RENAVAM = veículo.",
+            "destaques": [
+              "Near",
+              "Far",
+              "Não muda",
+              "RENACH"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_lei_completa",
+    "tipo": "lei_seca",
+    "estilo_idecan": "correta",
+    "dificuldade": 3,
+    "fundamento_slug": "CTB_art_1_3",
+    "enunciado": "Conforme as disposições preliminares do Código de Trânsito Brasileiro (arts. 1º a 4º), é correto afirmar que:",
+    "alternativas": {
+      "A": "Considera-se trânsito a utilização das vias por pessoas, veículos e animais, isolados ou em grupos, conduzidos ou não, para fins de circulação, interrupção de marcha, estacionamento e operação de carga ou descarga.",
+      "B": "Para os efeitos deste Código, são consideradas vias terrestres as praias abertas à circulação pública, as vias internas pertencentes aos condomínios constituídos por unidades autônomas e as vias e áreas de estacionamento de estabelecimentos privados.",
+      "C": "São vias terrestres urbanas e rurais as ruas, as avenidas, os logradouros, os caminhos, as passagens, as estradas e as rodovias, que terão seu uso regulamentado pelo departamento executivo de trânsito da união, de acordo com as peculiaridades locais e as circunstâncias especiais.",
+      "D": "Os órgãos e entidades componentes do Sistema Nacional de Trânsito respondem, no âmbito das respectivas competências, objetivamente, por danos causados aos cidadãos em virtude de ação, omissão ou erro na execução e manutenção de programas, projetos e serviços que garantam o exercício do direito do trânsito seguro."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Responsabilidade objetiva do SNT (art. 1º, § 3º) e distratores nas definições de trânsito (§ 1º), vias terrestres (art. 2º caput e parágrafo único) e competência regulamentadora.",
+      "fundamento_legal": "CTB, art. 1º, § 3º: \"Os órgãos e entidades componentes do Sistema Nacional de Trânsito respondem, no âmbito das respectivas competências, objetivamente, por danos causados aos cidadãos em virtude de ação, omissão ou erro na execução e manutenção de programas, projetos e serviços que garantam o exercício do direito do trânsito seguro.\"",
+      "passo_a_passo": [
+        "1. O comando pede a alternativa correta sobre disposições preliminares (arts. 1º a 4º).",
+        "2. A erra por termo_unico (interrupção de marcha × parada, estacionamento — art. 1º, § 1º); B erra por termo_unico (omite de uso coletivo no estacionamento — art. 2º, parágrafo único); C erra por competencia_snt (regulamentação pelo órgão com circunscrição, não só pela União — art. 2º, caput).",
+        "3. D correta: reproduz literalmente o art. 1º, § 3º — responsabilidade objetiva dos integrantes do SNT."
+      ],
+      "pegadinha": "B parece copiar o parágrafo único do art. 2º, mas falta de uso coletivo; C troca circunscrição local por DENATRAN/União.",
+      "macete": "§ 3º = responsabilidade objetiva do SNT. Parágrafo único = coletivo. Art. 2º = quem tem circunscrição.",
+      "estudo_reverso": [
+        "CTB art. 1 §§ 1 e 3",
+        "CTB art. 2",
+        "CTB art. 3"
+      ]
+    },
+    "tags": [
+      "real_idecan",
+      "superior",
+      "ctb",
+      "art_1",
+      "disposicoes_preliminares",
+      "snt"
+    ],
+    "meta": {
+      "origem": "real_idecan",
+      "nivel_escolaridade": "superior",
+      "fonte_arquivo": "CTB - IDECAN - SUPERIOR - TEC.pdf",
+      "tec_id": "3872596",
+      "padrao_familia": "B_caso_literal",
+      "pegadinha_em_uma_frase": "Responsabilidade objetiva do SNT está no § 3º — as erradas trocam termo do § 1º, omitem coletivo ou confundem circunscrição com União",
+      "eixos_legais": [
+        "CTB_art_1",
+        "CTB_art_2"
+      ],
+      "eixo_vizinho": "CTB_art_3",
+      "isca_por_alternativa": {
+        "A": "Interrupção de marcha no conceito de trânsito — a lei diz parada e estacionamento",
+        "B": "Estacionamento de estabelecimento privado sem coletivo — parágrafo único exige uso coletivo",
+        "C": "Regulamentação só pela União — art. 2º caput: órgão com circunscrição sobre a via"
+      },
+      "near_transfer": "Via municipal em Campina Grande — uso regulamentado pela STTP (circunscrição local), não pelo DENATRAN.",
+      "far_transfer": "Acidente por omissão em manutenção de sinalização — órgão do SNT responde objetivamente (§ 3º), independentemente de culpa.",
+      "o_que_nao_muda": "Integrantes do SNT respondem objetivamente por danos de ação, omissão ou erro na execução de programas de trânsito seguro.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "macete_visual": "§3 objetiva · coletivo no §único · circunscrição local"
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "comparacao",
+      "duracao_estimada_seg": 45,
+      "fundamento_slug": "CTB_art_1_3",
+      "macete_visual": "§3 objetiva · coletivo · circunscrição local",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Gabarito D",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D. SNT responde objetivamente por danos na execução de programas de trânsito seguro.",
+            "destaques": [
+              "Gabarito D",
+              "objetivamente",
+              "SNT"
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "§ 3º em uma linha",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Quem",
+              "Como responde"
+            ],
+            "linhas": [
+              [
+                "Órgãos do SNT",
+                "Objetivamente — § 3º"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "§ 3º = objetiva do SNT. Parágrafo único = coletivo. Circunscrição local no art. 2º.",
+            "destaques": [
+              "objetiva",
+              "coletivo"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "comparacao",
+      "arquetipo_secundario": "fluxograma_decisao",
+      "duracao_estimada_seg": 210,
+      "fundamento_slug": "CTB_art_1_3",
+      "macete_visual": "§3 objetiva · coletivo · circunscrição local",
+      "publico_alvo": "iniciante",
+      "links_fonte": [
+        {
+          "rotulo": "CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ],
+      "meta": {
+        "near_transfer": "Rodovia estadual — regulamentação pelo órgão com circunscrição, não só União.",
+        "far_transfer": "Omissão em programa de educação de trânsito — responsabilidade objetiva do órgão do SNT.",
+        "o_que_nao_muda": "SNT responde objetivamente por danos de ação, omissão ou erro em programas de trânsito seguro."
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Você acertou — e a isca da banca",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — interrupção de marcha no conceito de trânsito (a lei diz parada e estacionamento).\nB — estacionamento de estabelecimento privado sem coletivo (parágrafo único exige uso coletivo).\nC — regulamentação só pela União (quem tem circunscrição sobre a via).\n\nPegadinha: cada errada parece cópia do CTB — falta uma palavra ou troca o órgão competente.",
+            "destaques": [
+              "Gabarito D",
+              "coletivo",
+              "circunscrição"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Três dispositivos que a banca mistura",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Conceito de trânsito: utilização das vias — circulação, parada, estacionamento e carga/descarga.\nVias terrestres: caput lista ruas e rodovias; parágrafo único amplia para praias, condomínios e estacionamento coletivo.\nResponsabilidade do SNT: objetiva por danos na execução de programas de trânsito seguro.",
+            "destaques": [
+              "parada",
+              "coletivo",
+              "objetiva"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual afirmativa é literal?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Reproduz texto sem trocar termo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Bate com dispositivo preliminar?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "D — responsabilidade objetiva do SNT",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Art. 2º: quem regulamenta e o que é via",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Tema",
+              "Regra correta"
+            ],
+            "linhas": [
+              [
+                "Regulamentação do uso",
+                "Órgão com circunscrição sobre a via"
+              ],
+              [
+                "Parágrafo único inclui",
+                "Praias, condomínio autônomo, estacionamento de uso coletivo"
+              ],
+              [
+                "Não inclui automaticamente",
+                "Qualquer estacionamento privado sem coletivo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença do candidato × lei",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
+            "linhas": [
+              [
+                "Trânsito inclui interrupção de marcha",
+                "§ 1º — parada e estacionamento"
+              ],
+              [
+                "Qualquer estacionamento privado é via terrestre",
+                "Parágrafo único — só de uso coletivo"
+              ],
+              [
+                "Só a União regulamenta vias urbanas",
+                "Caput — órgão com circunscrição local"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que A, B e C enganam",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que erra"
+            ],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Troca parada/estacionamento por interrupção de marcha"
+              ],
+              [
+                "B — termo_unico",
+                "Omite de uso coletivo no estacionamento privado"
+              ],
+              [
+                "C — competencia_snt",
+                "Troca circunscrição local por departamento da União"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Aplicando ao enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Bate com a lei?"
+            ],
+            "linhas": [
+              [
+                "A — interrupção de marcha",
+                "Não — § 1º"
+              ],
+              [
+                "B — estacionamento sem coletivo",
+                "Não — parágrafo único"
+              ],
+              [
+                "C — regulamentação pela União",
+                "Não — caput art. 2º"
+              ],
+              [
+                "D — responsabilidade objetiva do SNT",
+                "Sim — gabarito"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Texto do CTB",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 1º, § 3º",
+            "texto": "§ 3º Os órgãos e entidades componentes do Sistema Nacional de Trânsito respondem, no âmbito das respectivas competências, objetivamente, por danos causados aos cidadãos em virtude de ação, omissão ou erro na execução e manutenção de programas, projetos e serviços que garantam o exercício do direito do trânsito seguro.",
+            "trechos_grifados": [
+              {
+                "inicio": 122,
+                "fim": 135,
+                "motivo": "lei — responsabilidade objetiva do SNT",
+                "texto_grifado": "objetivamente"
+              },
+              {
+                "inicio": 183,
+                "fim": 204,
+                "motivo": "lei — hipóteses de responsabilização",
+                "texto_grifado": "ação, omissão ou erro"
+              },
+              {
+                "inicio": 303,
+                "fim": 318,
+                "motivo": "lei — direito garantido pelos programas",
+                "texto_grifado": "trânsito seguro"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Conceito de trânsito e circunscrição",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 1º, § 1º e art. 2º, caput",
+            "texto": "§ 1º Considera-se trânsito a utilização das vias por pessoas, veículos e animais, isolados ou em grupos, conduzidos ou não, para fins de circulação, parada, estacionamento e operação de carga ou descarga. Art. 2º São vias terrestres urbanas e rurais as ruas, as avenidas, os logradouros, os caminhos, as passagens, as estradas e as rodovias, que terão seu uso regulamentado pelo órgão ou entidade com circunscrição sobre elas, de acordo com as peculiaridades locais e as circunstâncias especiais.",
+            "trechos_grifados": [
+              {
+                "inicio": 149,
+                "fim": 171,
+                "motivo": "lei2 — isca A troca por interrupção de marcha",
+                "texto_grifado": "parada, estacionamento"
+              },
+              {
+                "inicio": 379,
+                "fim": 425,
+                "motivo": "lei2 — isca C troca por departamento da União",
+                "texto_grifado": "órgão ou entidade com circunscrição sobre elas"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Leve para a prova",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Regra: SNT responde objetivamente por danos em programas de trânsito seguro (§ 3º).\nNear: via municipal — regulamentação pela STTP, não só pela União.\nFar: omissão em educação de trânsito — mesma responsabilidade objetiva do órgão do SNT.\nNão muda: objetiva + ação/omissão/erro em programas de trânsito seguro.\nCadeia: parágrafo único do art. 2º exige coletivo no estacionamento.",
+            "destaques": [
+              "Near",
+              "Far",
+              "Não muda",
+              "coletivo"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_snt_competencias",
+    "tipo": "lei_seca",
+    "estilo_idecan": "correta",
+    "dificuldade": 3,
+    "fundamento_slug": "CTB_art_12_II",
+    "enunciado": "O Sistema Nacional de Trânsito (SNT) é composto por diversos órgãos e entidades, cada qual com funções específicas e complementares, visando garantir a segurança e a fluidez do tráfego nas vias públicas (arts. 5º a 25 do CTB). Sobre sua composição e competências, pode-se atestar que:",
+    "alternativas": {
+      "A": "Compete ao CONTRAN, dentre outras atribuições, coordenar os órgãos do Sistema Nacional de Trânsito, objetivando a integração de suas atividades e estabelecer as diretrizes do regimento das Juntas Administrativas de Recursos de Infrações.",
+      "B": "Compete ao Ministro dos Transportes designar o responsável pela coordenação máxima do Sistema Nacional de Trânsito, ao qual estará vinculado o CONTRAN e subordinado o órgão máximo executivo de trânsito da União.",
+      "C": "Compete aos Conselhos Estaduais de Trânsito e ao Conselho de Trânsito do Distrito Federal normatizar o processo de formação do candidato à obtenção da Carteira Nacional de Habilitação, estabelecendo seu conteúdo didático-pedagógico, carga horária, avaliações, exames, execução e fiscalização.",
+      "D": "Devem ser convidados a participar de reuniões do CONTRAN, sem direito a voto, representantes de órgãos e entidades setoriais responsáveis ou impactados pelas propostas ou matérias em exame, observando-se que o quórum de votação e de aprovação no CONTRAN é o de maioria relativa."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Competências do CONTRAN (arts. 12, II e VI) e distratores que atribuem ao CETRAN ou ao Ministro o que é do CONTRAN/Presidente, ou trocam maioria absoluta por relativa.",
+      "fundamento_legal": "CTB, art. 12, II e VI: coordenar os órgãos do SNT e estabelecer diretrizes do regimento das JARI.",
+      "passo_a_passo": [
+        "1. O comando pede a alternativa correta sobre composição e competências do SNT.",
+        "2. B erra por competencia_snt (coordenação máxima é designada pelo Presidente da República — art. 9º, não pelo Ministro dos Transportes); C erra por competencia_snt (normatizar formação do candidato à CNH é CONTRAN — art. 12, XV, não CETRAN/CONTRANDIFE); D erra por termo_unico (quórum é maioria absoluta — art. 10, § 6º, não relativa).",
+        "3. A correta: art. 12, II (coordenar órgãos do SNT) e VI (diretrizes do regimento das JARI)."
+      ],
+      "pegadinha": "A banca mistura quem coordena (Presidente × Ministro), quem normatiza CNH (CONTRAN × CETRAN) e o quórum (absoluta × relativa).",
+      "macete": "CONTRAN coordena SNT + regimento JARI. Presidente designa coordenação máxima. Quórum = absoluta.",
+      "estudo_reverso": [
+        "CTB art. 12",
+        "CTB art. 9",
+        "CTB art. 10 § 6",
+        "CTB art. 10-A"
+      ]
+    },
+    "tags": [
+      "real_idecan",
+      "superior",
+      "ctb",
+      "art_12",
+      "contran",
+      "snt"
+    ],
+    "meta": {
+      "origem": "real_idecan",
+      "nivel_escolaridade": "superior",
+      "fonte_arquivo": "CTB - IDECAN - SUPERIOR - TEC.pdf",
+      "tec_id": "2907069",
+      "padrao_familia": "C_competencia_snt",
+      "pegadinha_em_uma_frase": "Coordenar SNT e regimento JARI é CONTRAN — normatizar CNH e quórum relativo são iscas",
+      "eixos_legais": [
+        "CTB_art_12",
+        "CTB_art_9",
+        "CTB_art_10"
+      ],
+      "eixo_vizinho": "CTB_art_14",
+      "isca_por_alternativa": {
+        "B": "Ministro dos Transportes designa coordenação máxima — art. 9º é o Presidente da República",
+        "C": "CETRAN normatiza formação do candidato — art. 12, XV é competência do CONTRAN",
+        "D": "Quórum de maioria relativa — art. 10, § 6º exige maioria absoluta"
+      },
+      "near_transfer": "CETRAN julga recurso da JARI (art. 14, V, a) — mas regimento da JARI é CONTRAN (art. 12, VI).",
+      "far_transfer": "CONTRAN normatiza aprendizagem e habilitação (art. 12, X) — mesma lógica: normatizar é CONTRAN, não CETRAN.",
+      "o_que_nao_muda": "Coordenar órgãos do SNT e estabelecer diretrizes do regimento das JARI são competências do CONTRAN.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "macete_visual": "CONTRAN coordena · CETRAN julga · absoluta"
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "diagrama_competencia",
+      "duracao_estimada_seg": 45,
+      "fundamento_slug": "CTB_art_12_II",
+      "macete_visual": "CONTRAN coordena · CETRAN julga",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Gabarito A",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A. CONTRAN coordena o SNT e fixa diretrizes do regimento das JARI.",
+            "destaques": [
+              "Gabarito A",
+              "CONTRAN",
+              "JARI"
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "CONTRAN × CETRAN",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "CONTRAN",
+              "CETRAN"
+            ],
+            "linhas": [
+              [
+                "Coordena SNT + regimento JARI",
+                "Julga recurso da JARI"
+              ],
+              [
+                "Normatiza CNH (art. 12, XV)",
+                "Não normatiza formação"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CONTRAN coordena e normatiza · CETRAN julga · Quórum absoluta.",
+            "destaques": [
+              "CONTRAN",
+              "absoluta"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 210,
+      "fundamento_slug": "CTB_art_12_II",
+      "macete_visual": "CONTRAN coordena · CETRAN julga · absoluta",
+      "publico_alvo": "iniciante",
+      "links_fonte": [
+        {
+          "rotulo": "CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ],
+      "meta": {
+        "near_transfer": "Recurso da JARI vai ao CETRAN — regimento da JARI é CONTRAN.",
+        "far_transfer": "Normatizar habilitação é CONTRAN (art. 12, X) — não confundir com DETRAN estadual.",
+        "o_que_nao_muda": "Coordenar SNT + diretrizes do regimento JARI = CONTRAN (arts. 12, II e VI)."
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Você acertou — e a isca da banca",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — Ministro dos Transportes designa coordenação máxima (é o Presidente da República).\nC — CETRAN normatiza formação do candidato (é o CONTRAN).\nD — quórum de maioria relativa (é maioria absoluta).\n\nPegadinha: mistura quem coordena, quem normatiza e o quórum de votação.",
+            "destaques": [
+              "Gabarito A",
+              "CONTRAN",
+              "absoluta"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Três órgãos que a banca mistura",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CONTRAN: coordenador normativo do SNT — art. 7º, I.\nCETRAN/CONTRANDIFE: conselhos estaduais/DF — julgam recursos, não normatizam CNH.\nCoordenação máxima do SNT: designada pelo Presidente da República — art. 9º.",
+            "destaques": [
+              "CONTRAN",
+              "CETRAN",
+              "Presidente"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: é competência do CONTRAN?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Envolve coordenação do SNT?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Ou diretrizes do regimento JARI?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "CONTRAN — gabarito A",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Quem faz o quê no SNT",
+          "secao": "mapa",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Órgão",
+              "Competência-chave"
+            ],
+            "linhas": [
+              [
+                "CONTRAN",
+                "Coordena SNT + regimento JARI + normatiza CNH"
+              ],
+              [
+                "CETRAN",
+                "Julga recurso da JARI (art. 14, V, a)"
+              ],
+              [
+                "Presidente",
+                "Designa coordenação máxima do SNT (art. 9º)"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença do candidato × lei",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
+            "linhas": [
+              [
+                "Ministro dos Transportes coordena o SNT",
+                "Presidente designa ministério coordenador — art. 9º"
+              ],
+              [
+                "CETRAN normatiza formação do candidato",
+                "CONTRAN normatiza — art. 12, XV"
+              ],
+              [
+                "Quórum do CONTRAN é maioria relativa",
+                "Maioria absoluta — art. 10, § 6º"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que B, C e D enganam",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que erra"
+            ],
+            "linhas": [
+              [
+                "B — competencia_snt",
+                "Presidente da República designa — art. 9º"
+              ],
+              [
+                "C — competencia_snt",
+                "Normatizar CNH é CONTRAN — art. 12, XV"
+              ],
+              [
+                "D — termo_unico",
+                "Quórum absoluta — art. 10, § 6º"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Aplicando ao enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Bate com a lei?"
+            ],
+            "linhas": [
+              [
+                "A — CONTRAN coordena SNT + regimento JARI",
+                "Sim — gabarito"
+              ],
+              [
+                "B — Ministro designa coordenação máxima",
+                "Não — art. 9º"
+              ],
+              [
+                "C — CETRAN normatiza CNH",
+                "Não — art. 12, XV"
+              ],
+              [
+                "D — quórum relativa",
+                "Não — art. 10, § 6º"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Texto do CTB",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 12, II e VI",
+            "texto": "Art. 12. Compete ao CONTRAN: II - coordenar os órgãos do Sistema Nacional de Trânsito, objetivando a integração de suas atividades; VI - estabelecer as diretrizes do regimento das JARI.",
+            "trechos_grifados": [
+              {
+                "inicio": 34,
+                "fim": 85,
+                "motivo": "lei — coordenação do SNT (gabarito A)",
+                "texto_grifado": "coordenar os órgãos do Sistema Nacional de Trânsito"
+              },
+              {
+                "inicio": 137,
+                "fim": 184,
+                "motivo": "lei — regimento das JARI",
+                "texto_grifado": "estabelecer as diretrizes do regimento das JARI"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Coordenação máxima e quórum",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 9º e art. 10, § 6º",
+            "texto": "Art. 9º O Presidente da República designará o ministério ou órgão da Presidência responsável pela coordenação máxima do Sistema Nacional de Trânsito, ao qual estará vinculado o CONTRAN e subordinado o órgão máximo executivo de trânsito da União. § 6º O quórum de votação e de aprovação no Contran é o de maioria absoluta.",
+            "trechos_grifados": [
+              {
+                "inicio": 10,
+                "fim": 33,
+                "motivo": "lei2 — isca B troca por Ministro",
+                "texto_grifado": "Presidente da República"
+              },
+              {
+                "inicio": 304,
+                "fim": 320,
+                "motivo": "lei2 — isca D troca por relativa",
+                "texto_grifado": "maioria absoluta"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Leve para a prova",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Regra: CONTRAN coordena SNT e fixa regimento JARI (arts. 12, II e VI).\nNear: CETRAN julga recurso da JARI — mas regimento é CONTRAN.\nFar: normatizar habilitação também é CONTRAN — não CETRAN.\nNão muda: coordenar SNT + diretrizes JARI = CONTRAN.\nCadeia: quórum do CONTRAN = maioria absoluta.",
+            "destaques": [
+              "Near",
+              "Far",
+              "Não muda",
+              "absoluta"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_snt_competencias",
+    "tipo": "lei_seca",
+    "estilo_idecan": "correta",
+    "dificuldade": 2,
+    "fundamento_slug": "CTB_art_7_I",
+    "enunciado": "É o órgão máximo normativo e consultivo do Sistema Nacional de Trânsito no Brasil:",
+    "alternativas": {
+      "A": "JARI (Juntas Administrativas de Recursos de Infrações).",
+      "B": "CETRAN (Conselho Estadual de Trânsito).",
+      "C": "Polícia Rodoviária Federal.",
+      "D": "CONTRAN (Conselho Nacional de Trânsito)."
+    },
+    "gabarito": "D",
+    "comentario": {
+      "o_que_testa": "Identificação do CONTRAN como órgão máximo normativo e consultivo do SNT (art. 7º, I) e distratores que confundem JARI, CETRAN e PRF com o papel normativo máximo.",
+      "fundamento_legal": "CTB, art. 7º, I: \"o Conselho Nacional de Trânsito - CONTRAN, coordenador do Sistema e órgão máximo normativo e consultivo;\"",
+      "passo_a_passo": [
+        "1. O comando pede qual órgão é o máximo normativo e consultivo do SNT — definição expressa no art. 7º, I.",
+        "2. A erra por competencia_snt (JARI julga recurso de infração — art. 7º, VII, não normatiza o Sistema); B erra por competencia_snt (CETRAN é normativo consultivo estadual — art. 7º, II, sem o qualificativo máximo); C erra por competencia_snt (PRF é órgão executivo de patrulhamento — art. 7º, V, não normativo).",
+        "3. D correta: CONTRAN é coordenador do Sistema e órgão máximo normativo e consultivo — art. 7º, I."
+      ],
+      "pegadinha": "JARI, CETRAN e PRF integram o SNT — a banca troca quem normatiza (máximo) por quem julga, coordena no Estado ou patrulha.",
+      "macete": "Máximo normativo nacional = CONTRAN. CETRAN normatiza no Estado. JARI julga. PRF patrulha.",
+      "estudo_reverso": [
+        "CTB art. 7 §§ I, II, V e VII",
+        "CTB art. 12",
+        "CTB art. 14"
+      ]
+    },
+    "tags": [
+      "real_idecan",
+      "superior",
+      "ctb",
+      "art_7",
+      "contran",
+      "snt",
+      "competencia"
+    ],
+    "meta": {
+      "origem": "real_idecan",
+      "nivel_escolaridade": "superior",
+      "fonte_arquivo": "CTB - IDECAN - SUPERIOR - TEC.pdf",
+      "tec_id": "368097",
+      "padrao_familia": "C_competencia_snt",
+      "pegadinha_em_uma_frase": "Todos compõem o SNT — só o CONTRAN é máximo normativo e consultivo",
+      "eixos_legais": [
+        "CTB_art_7",
+        "CTB_art_12"
+      ],
+      "eixo_vizinho": "CTB_art_12",
+      "isca_por_alternativa": {
+        "A": "JARI julga recurso de infração — não é órgão normativo máximo",
+        "B": "CETRAN é normativo estadual — falta o qualificativo máximo nacional",
+        "C": "PRF patrulha rodovias federais — papel executivo, não normativo máximo"
+      },
+      "near_transfer": "CETRAN fixa diretrizes estaduais — mas o máximo normativo nacional continua sendo o CONTRAN.",
+      "far_transfer": "DETRAN-PB executa habilitação no Estado — normatizar o processo é CONTRAN, não DETRAN.",
+      "o_que_nao_muda": "O CONTRAN é o único órgão máximo normativo e consultivo do SNT.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "macete_visual": "CONTRAN = máximo normativo · CETRAN estadual"
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "diagrama_competencia",
+      "duracao_estimada_seg": 45,
+      "fundamento_slug": "CTB_art_7_I",
+      "macete_visual": "CONTRAN = máximo normativo · CETRAN estadual",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Gabarito D",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D. CONTRAN é o órgão máximo normativo e consultivo do SNT.",
+            "destaques": [
+              "Gabarito D",
+              "CONTRAN",
+              "máximo normativo"
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Quem normatiza no SNT",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Órgão",
+              "Papel no SNT"
+            ],
+            "linhas": [
+              [
+                "CONTRAN",
+                "Máximo normativo e consultivo"
+              ],
+              [
+                "CETRAN",
+                "Normativo estadual (não máximo)"
+              ],
+              [
+                "JARI",
+                "Julga recurso de infração"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Máximo normativo = CONTRAN. Far: DETRAN executa — CONTRAN normatiza habilitação.",
+            "destaques": [
+              "CONTRAN",
+              "DETRAN"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 210,
+      "fundamento_slug": "CTB_art_7_I",
+      "macete_visual": "CONTRAN = máximo normativo · CETRAN estadual",
+      "publico_alvo": "iniciante",
+      "links_fonte": [
+        {
+          "rotulo": "CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ],
+      "meta": {
+        "near_transfer": "CETRAN coordena no Estado — máximo normativo nacional é CONTRAN.",
+        "far_transfer": "DETRAN executa habilitação — normatizar é CONTRAN.",
+        "o_que_nao_muda": "Só o CONTRAN é máximo normativo e consultivo do SNT."
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Você acertou — e a isca da banca",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D.\n\nA — JARI julga recurso de infração (não normatiza o Sistema).\nB — CETRAN é normativo estadual (falta o qualificativo máximo).\nC — PRF patrulha rodovias (papel executivo, não normativo máximo).\n\nPegadinha: todos compõem o SNT — a banca troca quem normatiza por quem julga ou patrulha.",
+            "destaques": [
+              "Gabarito D",
+              "CONTRAN",
+              "máximo normativo"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Quatro órgãos que a banca mistura",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CONTRAN: coordenador do SNT e máximo normativo nacional.\nCETRAN/CONTRANDIFE: normativos consultivos estaduais — coordenam no Estado.\nJARI: primeira instância recursal de infrações.\nPRF: patrulhamento ostensivo em rodovias federais.",
+            "destaques": [
+              "CONTRAN",
+              "CETRAN",
+              "JARI",
+              "PRF"
+            ]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Hierarquia normativa do SNT",
+          "secao": "metodo",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "snt",
+                "label": "SNT",
+                "nivel": 0
+              },
+              {
+                "id": "contran",
+                "label": "CONTRAN — máximo normativo",
+                "nivel": 1
+              },
+              {
+                "id": "cetran",
+                "label": "CETRAN — normativo estadual",
+                "nivel": 2
+              },
+              {
+                "id": "jari",
+                "label": "JARI — julga recurso",
+                "nivel": 2
+              },
+              {
+                "id": "prf",
+                "label": "PRF — patrulha",
+                "nivel": 2
+              }
+            ],
+            "arestas": [
+              {
+                "de": "snt",
+                "para": "contran",
+                "rotulo": "coordena"
+              },
+              {
+                "de": "contran",
+                "para": "cetran",
+                "rotulo": "diretrizes"
+              },
+              {
+                "de": "snt",
+                "para": "jari",
+                "rotulo": "compõe"
+              },
+              {
+                "de": "snt",
+                "para": "prf",
+                "rotulo": "compõe"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença do candidato × lei",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
+            "linhas": [
+              [
+                "JARI é o órgão máximo normativo do SNT",
+                "Máximo normativo nacional é CONTRAN — art. 7º, I"
+              ],
+              [
+                "CETRAN normatiza o SNT em todo o Brasil",
+                "Só o CONTRAN tem o qualificativo máximo — art. 7º, I"
+              ],
+              [
+                "PRF normatiza o SNT por ser órgão federal",
+                "Normatizar máximo é CONTRAN — patrulha é papel executivo"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que A, B e C enganam",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que erra"
+            ],
+            "linhas": [
+              [
+                "A — competencia_snt",
+                "JARI julga recurso — não é órgão máximo normativo"
+              ],
+              [
+                "B — competencia_snt",
+                "CETRAN normatiza no Estado — sem qualificativo máximo nacional"
+              ],
+              [
+                "C — competencia_snt",
+                "PRF é executivo de patrulhamento — não normatiza o Sistema"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Aplicando ao enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "É máximo normativo?"
+            ],
+            "linhas": [
+              [
+                "A — JARI",
+                "Não — julga recurso"
+              ],
+              [
+                "B — CETRAN",
+                "Não — normativo estadual"
+              ],
+              [
+                "C — PRF",
+                "Não — patrulhamento"
+              ],
+              [
+                "D — CONTRAN",
+                "Sim — gabarito"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Texto do CTB",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 7º, I",
+            "texto": "I - o Conselho Nacional de Trânsito - CONTRAN, coordenador do Sistema e órgão máximo normativo e consultivo;",
+            "trechos_grifados": [
+              {
+                "inicio": 38,
+                "fim": 45,
+                "motivo": "lei — CONTRAN é o gabarito",
+                "texto_grifado": "CONTRAN"
+              },
+              {
+                "inicio": 47,
+                "fim": 69,
+                "motivo": "lei — coordena o SNT",
+                "texto_grifado": "coordenador do Sistema"
+              },
+              {
+                "inicio": 72,
+                "fim": 107,
+                "motivo": "lei — máximo normativo e consultivo",
+                "texto_grifado": "órgão máximo normativo e consultivo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Outros integrantes do art. 7º",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 7º, II e VII",
+            "texto": "II - os Conselhos Estaduais de Trânsito - CETRAN e o Conselho de Trânsito do Distrito Federal - CONTRANDIFE, órgãos normativos, consultivos e coordenadores; VII - as Juntas Administrativas de Recursos de Infrações - JARI.",
+            "trechos_grifados": [
+              {
+                "inicio": 109,
+                "fim": 155,
+                "motivo": "lei2 — CETRAN não é máximo (isca B)",
+                "texto_grifado": "órgãos normativos, consultivos e coordenadores"
+              },
+              {
+                "inicio": 166,
+                "fim": 213,
+                "motivo": "lei2 — JARI julga, não normatiza (isca A)",
+                "texto_grifado": "Juntas Administrativas de Recursos de Infrações"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Leve para a prova",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Regra: CONTRAN é o único máximo normativo e consultivo do SNT.\nNear: CETRAN coordena no Estado — máximo nacional continua sendo CONTRAN.\nFar: DETRAN executa habilitação — normatizar o processo é CONTRAN.\nNão muda: máximo normativo nacional = CONTRAN.\nCadeia: competências detalhadas do CONTRAN estão no art. 12.",
+            "destaques": [
+              "Near",
+              "Far",
+              "Não muda",
+              "CONTRAN"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_prf_competencias",
+    "tipo": "lei_seca",
+    "estilo_idecan": "correta",
+    "dificuldade": 2,
+    "fundamento_slug": "CTB_art_20_II",
+    "enunciado": "De acordo com o Código de Trânsito Brasileiro (arts. 5º a 25), compete à Polícia Rodoviária Federal, no âmbito das rodovias e estradas federais:",
+    "alternativas": {
+      "A": "Realizar o patrulhamento ostensivo, executando operações relacionadas com a segurança pública, com o objetivo de preservar a ordem, incolumidade das pessoas, o patrimônio da União e o de terceiros.",
+      "B": "Julgar os recursos interpostos pelos infratores.",
+      "C": "Designar, em caso de recursos deferidos e na hipótese de reavaliação dos exames, junta especial de saúde para examinar os candidatos à habilitação para conduzir veículos automotores.",
+      "D": "Organizar e manter o Registro Nacional de Carteiras de Habilitação — RENACH."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Competência da PRF em rodovias federais (art. 20, II — patrulhamento ostensivo) e distratores que atribuem à PRF julgamento recursal, junta de saúde ou RENACH.",
+      "fundamento_legal": "CTB, art. 20, II: realizar patrulhamento ostensivo em rodovias e estradas federais.",
+      "passo_a_passo": [
+        "1. O comando pede competência da PRF no âmbito de rodovias e estradas federais.",
+        "2. B erra por competencia_snt (julgar recurso é JARI/CETRAN — arts. 14 e 16); C erra por competencia_snt (junta especial de saúde é CETRAN — art. 14, XI); D erra por competencia_snt (RENACH é Senatran — art. 19, VIII).",
+        "3. A correta: patrulhamento ostensivo — art. 20, II."
+      ],
+      "pegadinha": "A banca copia competências do CETRAN ou do Senatran e cola na PRF — patrulhar é PRF, julgar e cadastrar não.",
+      "macete": "PRF patrulha (art. 20, II). CETRAN julga e designa junta. Senatran mantém RENACH.",
+      "estudo_reverso": [
+        "CTB art. 20",
+        "CTB art. 14",
+        "CTB art. 19",
+        "CTB art. 16"
+      ]
+    },
+    "tags": [
+      "real_idecan",
+      "superior",
+      "ctb",
+      "art_20",
+      "prf",
+      "snt"
+    ],
+    "meta": {
+      "origem": "real_idecan",
+      "nivel_escolaridade": "superior",
+      "fonte_arquivo": "CTB - IDECAN - SUPERIOR - TEC.pdf",
+      "tec_id": "368103",
+      "padrao_familia": "C_competencia_snt",
+      "pegadinha_em_uma_frase": "Patrulhar é PRF — julgar recurso, junta de saúde e RENACH são de outros órgãos",
+      "eixos_legais": [
+        "CTB_art_20",
+        "CTB_art_14",
+        "CTB_art_19"
+      ],
+      "eixo_vizinho": "CTB_art_21",
+      "isca_por_alternativa": {
+        "B": "Julgar recurso é JARI/CETRAN — não é competência da PRF",
+        "C": "Junta especial de saúde é CETRAN — art. 14, XI",
+        "D": "Organizar RENACH é Senatran — art. 19, VIII"
+      },
+      "near_transfer": "PRF também fiscaliza e aplica multa em rodovia federal (art. 20, III) — mas patrulhar ostensivamente é o inciso II.",
+      "far_transfer": "PM patrulha vias estaduais/municipais — mesma lógica ostensiva, esfera diferente.",
+      "o_que_nao_muda": "Patrulhamento ostensivo em rodovias federais é competência da PRF — art. 20, II.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "macete_visual": "PRF patrulha · Senatran RENACH"
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "diagrama_competencia",
+      "duracao_estimada_seg": 45,
+      "fundamento_slug": "CTB_art_20_II",
+      "macete_visual": "PRF patrulha · Senatran RENACH",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Gabarito A",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A. PRF realiza patrulhamento ostensivo em rodovias federais.",
+            "destaques": [
+              "Gabarito A",
+              "PRF",
+              "patrulhamento"
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "PRF × Senatran × CETRAN",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "PRF",
+              "Outros órgãos"
+            ],
+            "linhas": [
+              [
+                "Patrulha rodovia federal",
+                "Julga recurso / RENACH"
+              ],
+              [
+                "Art. 20, II",
+                "Art. 14 / art. 19"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PRF patrulha · CETRAN julga · Senatran RENACH.",
+            "destaques": [
+              "PRF",
+              "RENACH"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 210,
+      "fundamento_slug": "CTB_art_20_II",
+      "macete_visual": "PRF patrulha · Senatran RENACH",
+      "publico_alvo": "iniciante",
+      "links_fonte": [
+        {
+          "rotulo": "CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ],
+      "meta": {
+        "near_transfer": "PRF também fiscaliza e aplica multa — art. 20, III.",
+        "far_transfer": "PM patrulha no Estado — PRF só em rodovia federal.",
+        "o_que_nao_muda": "Patrulhamento ostensivo federal = PRF (art. 20, II)."
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Você acertou — e a isca da banca",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — julgar recurso (é JARI/CETRAN, não PRF).\nC — designar junta especial de saúde (é CETRAN).\nD — organizar RENACH (é Senatran).\n\nPegadinha: a banca copia competências de outros órgãos e cola na PRF.",
+            "destaques": [
+              "Gabarito A",
+              "PRF",
+              "RENACH"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Três papéis que a banca mistura",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PRF: polícia ostensiva em rodovias federais — patrulha e fiscaliza.\nCETRAN: julga recurso da JARI e designa junta especial de saúde.\nSenatran: órgão executivo máximo — mantém RENACH e RENAVAM.",
+            "destaques": [
+              "PRF",
+              "CETRAN",
+              "Senatran"
+            ]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Competências no SNT",
+          "secao": "metodo",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "prf",
+                "label": "PRF — patrulha federal",
+                "nivel": 0
+              },
+              {
+                "id": "cetran",
+                "label": "CETRAN — julga / junta",
+                "nivel": 1
+              },
+              {
+                "id": "senatran",
+                "label": "Senatran — RENACH",
+                "nivel": 1
+              }
+            ],
+            "arestas": [
+              {
+                "de": "prf",
+                "para": "cetran",
+                "rotulo": "não julga"
+              },
+              {
+                "de": "prf",
+                "para": "senatran",
+                "rotulo": "não cadastra"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença do candidato × lei",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
+            "linhas": [
+              [
+                "PRF julga recurso de infração",
+                "Julgar recurso é JARI e CETRAN"
+              ],
+              [
+                "PRF designa junta especial de saúde",
+                "Art. 14, XI — CETRAN designa junta"
+              ],
+              [
+                "PRF organiza e mantém o RENACH",
+                "Art. 19, VIII — Senatran mantém o RENACH"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que B, C e D enganam",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que erra"
+            ],
+            "linhas": [
+              [
+                "B — competencia_snt",
+                "Julgar recurso é JARI/CETRAN — não PRF"
+              ],
+              [
+                "C — competencia_snt",
+                "Junta especial é CETRAN — art. 14, XI"
+              ],
+              [
+                "D — competencia_snt",
+                "RENACH é Senatran — art. 19, VIII"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Aplicando ao enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "É competência da PRF?"
+            ],
+            "linhas": [
+              [
+                "A — patrulhamento ostensivo",
+                "Sim — gabarito"
+              ],
+              [
+                "B — julgar recursos",
+                "Não — recursal"
+              ],
+              [
+                "C — junta especial de saúde",
+                "Não — CETRAN"
+              ],
+              [
+                "D — organizar RENACH",
+                "Não — Senatran"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Texto do CTB",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 20, II",
+            "texto": "Art. 20. Compete à Polícia Rodoviária Federal, no âmbito das rodovias e estradas federais: II - realizar o patrulhamento ostensivo, executando operações relacionadas com a segurança pública, com o objetivo de preservar a ordem, incolumidade das pessoas, o patrimônio da União e o de terceiros.",
+            "trechos_grifados": [
+              {
+                "inicio": 107,
+                "fim": 130,
+                "motivo": "lei — patrulhamento ostensivo (gabarito A)",
+                "texto_grifado": "patrulhamento ostensivo"
+              },
+              {
+                "inicio": 172,
+                "fim": 189,
+                "motivo": "lei — operações de segurança pública",
+                "texto_grifado": "segurança pública"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Competências que não são da PRF",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 14, XI e art. 19, VIII",
+            "texto": "Art. 14. Compete aos CETRAN: XI - designar, em caso de recursos deferidos e na hipótese de reavaliação dos exames, junta especial de saúde para examinar os candidatos à habilitação para conduzir veículos automotores. Art. 19. Compete ao órgão executivo máximo: VIII - organizar e manter o Registro Nacional de Carteiras de Habilitação - RENACH.",
+            "trechos_grifados": [
+              {
+                "inicio": 115,
+                "fim": 138,
+                "motivo": "lei2 — isca C (CETRAN, não PRF)",
+                "texto_grifado": "junta especial de saúde"
+              },
+              {
+                "inicio": 337,
+                "fim": 343,
+                "motivo": "lei2 — isca D (Senatran, não PRF)",
+                "texto_grifado": "RENACH"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Leve para a prova",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Regra: PRF patrulha ostensivamente em rodovia federal — art. 20, II.\nNear: PRF também fiscaliza e aplica multa — art. 20, III.\nFar: PM patrulha no Estado — esfera estadual/municipal.\nNão muda: patrulhamento ostensivo federal = PRF.\nCadeia: julgar recurso e RENACH não são da PRF.",
+            "destaques": [
+              "Near",
+              "Far",
+              "Não muda",
+              "PRF"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_snt_competencias",
+    "tipo": "lei_seca",
+    "estilo_idecan": "incorreta",
+    "dificuldade": 2,
+    "fundamento_slug": "CTB_art_7",
+    "enunciado": "Conforme o Código de Trânsito Brasileiro (arts. 5º a 25), NÃO é órgão componente do Sistema Nacional de Trânsito:",
+    "alternativas": {
+      "A": "CADE (Conselho Administrativo de Defesa Econômica).",
+      "B": "CONTRAN (Conselho Nacional de Trânsito).",
+      "C": "CETRAN (Conselhos Estaduais de Trânsito).",
+      "D": "Polícia Rodoviária Federal."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Composição taxativa do SNT no art. 7º — CADE não integra; CONTRAN, CETRAN e PRF compõem.",
+      "fundamento_legal": "CTB, art. 7º: rol taxativo dos órgãos do SNT — CADE não consta na lista.",
+      "passo_a_passo": [
+        "1. O comando pede o que NÃO compõe o SNT — rol fechado do art. 7º.",
+        "2. B erra por competencia_snt (CONTRAN é inciso I); C erra por competencia_snt (CETRAN é inciso II); D erra por competencia_snt (PRF é inciso V).",
+        "3. A correta: CADE não integra o SNT — atua em defesa econômica, não em trânsito."
+      ],
+      "pegadinha": "A banca mistura conselhos nacionais e órgãos de segurança — só os do art. 7º compõem o SNT.",
+      "macete": "SNT = CONTRAN + CETRAN + executivos + PRF + PM + JARI. CADE FORA.",
+      "estudo_reverso": [
+        "CTB art. 7"
+      ]
+    },
+    "tags": [
+      "real_idecan",
+      "superior",
+      "ctb",
+      "art_7",
+      "snt",
+      "composicao",
+      "cade"
+    ],
+    "meta": {
+      "origem": "real_idecan",
+      "nivel_escolaridade": "superior",
+      "fonte_arquivo": "CTB - IDECAN - SUPERIOR - TEC.pdf",
+      "tec_id": "369570",
+      "padrao_familia": "C_competencia_snt",
+      "pegadinha_em_uma_frase": "CADE não está no art. 7º — CONTRAN, CETRAN e PRF compõem o SNT",
+      "eixos_legais": [
+        "CTB_art_7"
+      ],
+      "eixo_vizinho": "CTB_art_8",
+      "isca_por_alternativa": {
+        "B": "CONTRAN é inciso I do art. 7º — coordenador do SNT",
+        "C": "CETRAN é inciso II — conselhos estaduais de trânsito",
+        "D": "PRF é inciso V — integra o SNT"
+      },
+      "near_transfer": "Polícia Civil também fica fora do art. 7º — banca pode trocar CADE por Civil.",
+      "far_transfer": "CADE julga concentração econômica — não tem competência de trânsito no CTB.",
+      "o_que_nao_muda": "Rol do art. 7º é taxativo — CADE nunca integra o SNT.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "macete_visual": "CONTRAN+CETRAN+PRF sim · CADE fora"
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "diagrama_competencia",
+      "duracao_estimada_seg": 45,
+      "fundamento_slug": "CTB_art_7",
+      "macete_visual": "CONTRAN+CETRAN+PRF sim · CADE fora",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Gabarito A",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A. CADE não compõe o SNT — rol taxativo do art. 7º.",
+            "destaques": [
+              "Gabarito A",
+              "CADE",
+              "FORA"
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Dentro × fora",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Integra SNT",
+              "Fica de fora"
+            ],
+            "linhas": [
+              [
+                "CONTRAN, CETRAN, PRF",
+                "CADE, Polícia Civil"
+              ],
+              [
+                "Art. 7º",
+                "Defesa econômica"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CONTRAN + CETRAN + PRF = SNT · CADE FORA.",
+            "destaques": [
+              "SNT",
+              "CADE"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "diagrama_competencia",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 200,
+      "fundamento_slug": "CTB_art_7",
+      "macete_visual": "CONTRAN+CETRAN+PRF sim · CADE fora",
+      "publico_alvo": "iniciante",
+      "links_fonte": [
+        {
+          "rotulo": "CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ],
+      "meta": {
+        "near_transfer": "Polícia Civil também fica fora — mesma lógica de rol taxativo.",
+        "far_transfer": "CADE atua em defesa econômica — sem vínculo com trânsito.",
+        "o_que_nao_muda": "Só os do art. 7º compõem o SNT — CADE nunca entra."
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Você acertou — e a isca da banca",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — CONTRAN compõe o SNT.\nC — CETRAN compõe o SNT.\nD — PRF compõe o SNT.\n\nPegadinha: CADE é conselho nacional — mas não é de trânsito.",
+            "destaques": [
+              "Gabarito A",
+              "CADE",
+              "CONTRAN"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Quatro nomes que a banca mistura",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CONTRAN: coordenador do SNT — inciso I.\nCETRAN: conselhos estaduais — inciso II.\nPRF: patrulha rodovias federais — inciso V.\nCADE: defesa econômica — não consta no art. 7º.",
+            "destaques": [
+              "CONTRAN",
+              "CETRAN",
+              "CADE"
+            ]
+          }
+        },
+        {
+          "id": "diagrama",
+          "titulo": "Quem compõe o SNT",
+          "secao": "metodo",
+          "tipo": "diagrama_competencia",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "snt",
+                "label": "SNT (rol taxativo)",
+                "nivel": 0
+              },
+              {
+                "id": "contran",
+                "label": "CONTRAN (I)",
+                "nivel": 1
+              },
+              {
+                "id": "cetran",
+                "label": "CETRAN (II)",
+                "nivel": 1
+              },
+              {
+                "id": "prf",
+                "label": "PRF (V)",
+                "nivel": 1
+              },
+              {
+                "id": "cade",
+                "label": "CADE — FORA",
+                "nivel": 2
+              }
+            ],
+            "arestas": [
+              {
+                "de": "snt",
+                "para": "contran",
+                "rotulo": "compõe"
+              },
+              {
+                "de": "snt",
+                "para": "cetran",
+                "rotulo": "compõe"
+              },
+              {
+                "de": "snt",
+                "para": "prf",
+                "rotulo": "compõe"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença do candidato × lei",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
+            "linhas": [
+              [
+                "CADE compõe o SNT",
+                "CADE não consta no art. 7º"
+              ],
+              [
+                "CONTRAN não integra o SNT",
+                "CONTRAN é inciso I do art. 7º"
+              ],
+              [
+                "Polícia Civil integra o SNT",
+                "Civil não consta no art. 7º"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que B, C e D enganam",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que erra"
+            ],
+            "linhas": [
+              [
+                "B — competencia_snt",
+                "CONTRAN coordena o SNT — inciso I"
+              ],
+              [
+                "C — competencia_snt",
+                "CETRAN é conselho estadual — inciso II"
+              ],
+              [
+                "D — competencia_snt",
+                "PRF integra o SNT — inciso V"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Aplicando ao enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Compõe o SNT?"
+            ],
+            "linhas": [
+              [
+                "A — CADE",
+                "Não — gabarito"
+              ],
+              [
+                "B — CONTRAN",
+                "Sim"
+              ],
+              [
+                "C — CETRAN",
+                "Sim"
+              ],
+              [
+                "D — PRF",
+                "Sim"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Texto do CTB",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 7º, incisos I e II",
+            "texto": "Art. 7º Compõem o Sistema Nacional de Trânsito: I - o Conselho Nacional de Trânsito - CONTRAN, coordenador do Sistema e órgão máximo normativo e consultivo; II - os Conselhos Estaduais de Trânsito - CETRAN e o Conselho de Trânsito do Distrito Federal - CONTRANDIFE, órgãos normativos, consultivos e coordenadores.",
+            "trechos_grifados": [
+              {
+                "inicio": 86,
+                "fim": 93,
+                "motivo": "lei — CONTRAN integra (isca B)",
+                "texto_grifado": "CONTRAN"
+              },
+              {
+                "inicio": 199,
+                "fim": 205,
+                "motivo": "lei — CETRAN integra (isca C)",
+                "texto_grifado": "CETRAN"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "PRF e o que fica de fora",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 7º, incisos V a VII",
+            "texto": "V - a Polícia Rodoviária Federal; VI - as Polícias Militares dos Estados e do Distrito Federal; e VII - as Juntas Administrativas de Recursos de Infrações - JARI.",
+            "trechos_grifados": [
+              {
+                "inicio": 6,
+                "fim": 32,
+                "motivo": "lei2 — PRF integra (isca D)",
+                "texto_grifado": "Polícia Rodoviária Federal"
+              },
+              {
+                "inicio": 157,
+                "fim": 161,
+                "motivo": "lei2 — rol completo sem CADE",
+                "texto_grifado": "JARI"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Leve para a prova",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Regra: SNT = CONTRAN + CETRAN + executivos + PRF + PM + JARI.\nNear: Polícia Civil também fica fora do art. 7º.\nFar: CADE julga defesa econômica — sem competência de trânsito.\nNão muda: rol taxativo — CADE nunca integra o SNT.\nCadeia: conselho nacional ≠ automaticamente SNT.",
+            "destaques": [
+              "Near",
+              "Far",
+              "Não muda",
+              "CADE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_circulacao_conduta",
+    "tipo": "lei_seca",
+    "estilo_idecan": "correta",
+    "dificuldade": 2,
+    "fundamento_slug": "CTB_art_40_II",
+    "enunciado": "De acordo com as normas gerais de circulação e conduta (arts. 26 a 67 do CTB), é correto afirmar que:",
+    "alternativas": {
+      "A": "Nas vias não iluminadas, o condutor deve usar luz alta, exceto ao cruzar com outro veículo ou ao segui-lo.",
+      "B": "Os veículos que se deslocam sobre trilhos darão preferência de passagem sobre os demais, respeitadas as normas de circulação.",
+      "C": "O condutor deverá, a todo momento, ter domínio de seu veículo, dirigindo-o com atenção e cuidados dispensáveis à segurança do trânsito.",
+      "D": "Nas interseções e suas proximidades, o condutor poderá efetuar ultrapassagem."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Assertivas literais de circulação: luz alta em via não iluminada (art. 40, II) e distratores que invertem preferência de trilhos, trocam indispensáveis por dispensáveis ou liberam ultrapassagem em cruzamento.",
+      "fundamento_legal": "CTB, art. 40, II: luz alta em vias não iluminadas, exceto ao cruzar ou seguir outro veículo.",
+      "passo_a_passo": [
+        "1. O comando pede a alternativa correta entre normas de circulação e conduta.",
+        "2. B erra por termo_unico (trilhos terão preferência — art. 29, XII, não darão aos demais); C erra por termo_unico (cuidados indispensáveis — art. 28, não dispensáveis); D erra por regra_excecao (não poderá ultrapassar — art. 33, não poderá).",
+        "3. A correta: reproduz o art. 40, II sobre luz alta."
+      ],
+      "pegadinha": "A banca troca uma palavra: darão × terão, dispensáveis × indispensáveis, poderá × não poderá.",
+      "macete": "Luz alta na escura · trilhos TERÃO preferência · cuidados indispensáveis · sem ultrapassar no cruzamento.",
+      "estudo_reverso": [
+        "CTB art. 40",
+        "CTB art. 29",
+        "CTB art. 28",
+        "CTB art. 33"
+      ]
+    },
+    "tags": [
+      "real_idecan",
+      "superior",
+      "ctb",
+      "art_40",
+      "circulacao",
+      "luz_alta"
+    ],
+    "meta": {
+      "origem": "real_idecan",
+      "nivel_escolaridade": "superior",
+      "fonte_arquivo": "CTB - IDECAN - SUPERIOR - TEC.pdf",
+      "tec_id": "3872599",
+      "padrao_familia": "B_caso_literal",
+      "pegadinha_em_uma_frase": "Uma palavra muda tudo: darão × terão, dispensáveis × indispensáveis, poderá × não poderá",
+      "eixos_legais": [
+        "CTB_art_40",
+        "CTB_art_29",
+        "CTB_art_28",
+        "CTB_art_33"
+      ],
+      "eixo_vizinho": "CTB_art_32",
+      "isca_por_alternativa": {
+        "B": "darão preferência — lei diz terão preferência (quem cede é o outro veículo)",
+        "C": "cuidados dispensáveis — art. 28 exige indispensáveis",
+        "D": "poderá ultrapassar — art. 33 proíbe nas interseções"
+      },
+      "near_transfer": "Luz baixa/alta intermitente para advertir — art. 40, III, não é uso contínuo de alta.",
+      "far_transfer": "Art. 32 também proíbe ultrapassar em curvas e passagem de nível — mesma lógica de vedação.",
+      "o_que_nao_muda": "Via não iluminada = luz alta, exceto cruzar ou seguir outro veículo (art. 40, II).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "macete_visual": "Luz alta · trilhos terão · indispensável"
+    },
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "comparacao",
+      "duracao_estimada_seg": 45,
+      "fundamento_slug": "CTB_art_40_II",
+      "macete_visual": "Luz alta · trilhos terão · indispensável",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Gabarito A",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A. Em via não iluminada, use luz alta — exceto ao cruzar ou seguir outro veículo.",
+            "destaques": [
+              "Gabarito A",
+              "luz alta",
+              "não iluminadas"
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Palavra que muda",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Banca troca",
+              "Lei diz"
+            ],
+            "linhas": [
+              [
+                "darão preferência",
+                "terão preferência"
+              ],
+              [
+                "dispensáveis",
+                "indispensáveis"
+              ],
+              [
+                "poderá ultrapassar",
+                "não poderá"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Luz alta na escura · trilhos TERÃO preferência · indispensável · sem ultrapassar no cruzamento.",
+            "destaques": [
+              "TERÃO",
+              "indispensável"
+            ]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "comparacao",
+      "arquetipo_secundario": "fluxograma_decisao",
+      "duracao_estimada_seg": 210,
+      "fundamento_slug": "CTB_art_40_II",
+      "macete_visual": "Luz alta · trilhos terão · indispensável",
+      "publico_alvo": "iniciante",
+      "links_fonte": [
+        {
+          "rotulo": "CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
+      ],
+      "meta": {
+        "near_transfer": "Luz intermitente para advertir — art. 40, III.",
+        "far_transfer": "Art. 32 veda ultrapassagem em curva e passagem de nível.",
+        "o_que_nao_muda": "Via não iluminada = luz alta com exceção ao cruzar/seguir."
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Você acertou — e a isca da banca",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — trilhos darão preferência (a lei diz terão — quem cede é o outro).\nC — cuidados dispensáveis (é indispensáveis).\nD — poderá ultrapassar no cruzamento (é proibido).\n\nPegadinha: uma palavra invertida em cada assertiva falsa.",
+            "destaques": [
+              "Gabarito A",
+              "terão",
+              "indispensáveis"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Três pegadinhas de uma palavra",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "TERÃO × DARÃO: trilhos recebem preferência — não cedem aos demais.\nINDISPENSÁVEIS × DISPENSÁVEIS: domínio do veículo exige cuidado máximo.\nNÃO PODERÁ × PODERÁ: ultrapassagem vedada nas interseções.",
+            "destaques": [
+              "TERÃO",
+              "INDISPENSÁVEIS",
+              "NÃO PODERÁ"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: bate com a lei?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Fala de luz alta em via não iluminada?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Mantém exceção ao cruzar ou seguir?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito A — luz alta na via escura",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Crença do candidato × lei",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
+            "linhas": [
+              [
+                "Trilhos cedem passagem aos demais",
+                "Trilhos terão preferência sobre os demais"
+              ],
+              [
+                "Cuidados dispensáveis bastam ao condutor",
+                "Cuidados indispensáveis à segurança"
+              ],
+              [
+                "Ultrapassagem é livre nas interseções",
+                "Não poderá efetuar ultrapassagem nas interseções"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que B, C e D enganam",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Por que erra"
+            ],
+            "linhas": [
+              [
+                "B — termo_unico",
+                "darão × terão — inverte quem tem preferência"
+              ],
+              [
+                "C — termo_unico",
+                "dispensáveis × indispensáveis"
+              ],
+              [
+                "D — regra_excecao",
+                "poderá × não poderá nas interseções"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Aplicando ao enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Correta?"
+            ],
+            "linhas": [
+              [
+                "A — luz alta em via não iluminada",
+                "Sim — gabarito"
+              ],
+              [
+                "B — trilhos darão preferência",
+                "Não — terão"
+              ],
+              [
+                "C — cuidados dispensáveis",
+                "Não — indispensáveis"
+              ],
+              [
+                "D — ultrapassagem no cruzamento",
+                "Não — proibida"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Texto do CTB",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 40, II",
+            "texto": "Art. 40. O uso da luz: II - nas vias não iluminadas o condutor deve usar luz alta, exceto ao cruzar com outro veículo ou ao segui-lo.",
+            "trechos_grifados": [
+              {
+                "inicio": 73,
+                "fim": 81,
+                "motivo": "lei — luz alta (gabarito A)",
+                "texto_grifado": "luz alta"
+              },
+              {
+                "inicio": 83,
+                "fim": 132,
+                "motivo": "lei — exceções da luz alta",
+                "texto_grifado": "exceto ao cruzar com outro veículo ou ao segui-lo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "Trilhos, domínio e cruzamento",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 29, XII; art. 28 e art. 33",
+            "texto": "Art. 29: XII - os veículos que se deslocam sobre trilhos terão preferência de passagem sobre os demais, respeitadas as normas de circulação. Art. 28. O condutor deverá, a todo momento, ter domínio de seu veículo, dirigindo-o com atenção e cuidados indispensáveis à segurança do trânsito. Art. 33. Nas interseções e suas proximidades, o condutor não poderá efetuar ultrapassagem.",
+            "trechos_grifados": [
+              {
+                "inicio": 57,
+                "fim": 86,
+                "motivo": "lei2 — isca B troca por darão",
+                "texto_grifado": "terão preferência de passagem"
+              },
+              {
+                "inicio": 248,
+                "fim": 262,
+                "motivo": "lei2 — isca C troca por dispensáveis",
+                "texto_grifado": "indispensáveis"
+              },
+              {
+                "inicio": 345,
+                "fim": 377,
+                "motivo": "lei2 — isca D troca por poderá",
+                "texto_grifado": "não poderá efetuar ultrapassagem"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Leve para a prova",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Regra: via não iluminada = luz alta, exceto cruzar ou seguir outro veículo.\nNear: luz intermitente só para advertir — não é uso contínuo de alta.\nFar: art. 32 também veda ultrapassar em curva e passagem de nível.\nNão muda: terão (trilhos) · indispensáveis · não poderá (cruzamento).\nCadeia: leia a palavra que a banca trocou.",
+            "destaques": [
+              "Near",
+              "Far",
+              "Não muda",
+              "terão"
+            ]
+          }
+        }
+      ]
+    }
   }
 ]

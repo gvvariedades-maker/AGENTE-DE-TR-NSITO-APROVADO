@@ -1,0 +1,263 @@
+{
+  "tec_id": "368097",
+  "disciplina": "legislacao_transito",
+  "gabarito": "D",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "diagrama_competencia",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 210,
+    "fundamento_slug": "CTB_art_7_I",
+    "macete_visual": "CONTRAN = máximo normativo · CETRAN estadual",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "CETRAN coordena no Estado — máximo normativo nacional é CONTRAN.",
+      "far_transfer": "DETRAN executa habilitação — normatizar é CONTRAN.",
+      "o_que_nao_muda": "Só o CONTRAN é máximo normativo e consultivo do SNT."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito D.\n\nA — JARI julga recurso de infração (não normatiza o Sistema).\nB — CETRAN é normativo estadual (falta o qualificativo máximo).\nC — PRF patrulha rodovias (papel executivo, não normativo máximo).\n\nPegadinha: todos compõem o SNT — a banca troca quem normatiza por quem julga ou patrulha.",
+          "destaques": [
+            "Gabarito D",
+            "CONTRAN",
+            "máximo normativo"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Quatro órgãos que a banca mistura",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "CONTRAN: coordenador do SNT e máximo normativo nacional.\nCETRAN/CONTRANDIFE: normativos consultivos estaduais — coordenam no Estado.\nJARI: primeira instância recursal de infrações.\nPRF: patrulhamento ostensivo em rodovias federais.",
+          "destaques": [
+            "CONTRAN",
+            "CETRAN",
+            "JARI",
+            "PRF"
+          ]
+        }
+      },
+      {
+        "id": "diagrama",
+        "titulo": "Hierarquia normativa do SNT",
+        "secao": "metodo",
+        "tipo": "diagrama_competencia",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "snt",
+              "label": "SNT",
+              "nivel": 0
+            },
+            {
+              "id": "contran",
+              "label": "CONTRAN — máximo normativo",
+              "nivel": 1
+            },
+            {
+              "id": "cetran",
+              "label": "CETRAN — normativo estadual",
+              "nivel": 2
+            },
+            {
+              "id": "jari",
+              "label": "JARI — julga recurso",
+              "nivel": 2
+            },
+            {
+              "id": "prf",
+              "label": "PRF — patrulha",
+              "nivel": 2
+            }
+          ],
+          "arestas": [
+            {
+              "de": "snt",
+              "para": "contran",
+              "rotulo": "coordena"
+            },
+            {
+              "de": "contran",
+              "para": "cetran",
+              "rotulo": "diretrizes"
+            },
+            {
+              "de": "snt",
+              "para": "jari",
+              "rotulo": "compõe"
+            },
+            {
+              "de": "snt",
+              "para": "prf",
+              "rotulo": "compõe"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "JARI é o órgão máximo normativo do SNT",
+              "Máximo normativo nacional é CONTRAN — art. 7º, I"
+            ],
+            [
+              "CETRAN normatiza o SNT em todo o Brasil",
+              "Só o CONTRAN tem o qualificativo máximo — art. 7º, I"
+            ],
+            [
+              "PRF normatiza o SNT por ser órgão federal",
+              "Normatizar máximo é CONTRAN — patrulha é papel executivo"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que A, B e C enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "A — competencia_snt",
+              "JARI julga recurso — não é órgão máximo normativo"
+            ],
+            [
+              "B — competencia_snt",
+              "CETRAN normatiza no Estado — sem qualificativo máximo nacional"
+            ],
+            [
+              "C — competencia_snt",
+              "PRF é executivo de patrulhamento — não normatiza o Sistema"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "É máximo normativo?"
+          ],
+          "linhas": [
+            [
+              "A — JARI",
+              "Não — julga recurso"
+            ],
+            [
+              "B — CETRAN",
+              "Não — normativo estadual"
+            ],
+            [
+              "C — PRF",
+              "Não — patrulhamento"
+            ],
+            [
+              "D — CONTRAN",
+              "Sim — gabarito"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto do CTB",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 7º, I",
+          "texto": "I - o Conselho Nacional de Trânsito - CONTRAN, coordenador do Sistema e órgão máximo normativo e consultivo;",
+          "trechos_grifados": [
+            {
+              "inicio": 38,
+              "fim": 45,
+              "motivo": "lei — CONTRAN é o gabarito",
+              "texto_grifado": "CONTRAN"
+            },
+            {
+              "inicio": 47,
+              "fim": 69,
+              "motivo": "lei — coordena o SNT",
+              "texto_grifado": "coordenador do Sistema"
+            },
+            {
+              "inicio": 72,
+              "fim": 107,
+              "motivo": "lei — máximo normativo e consultivo",
+              "texto_grifado": "órgão máximo normativo e consultivo"
+            }
+          ]
+        }
+      },
+      {
+        "id": "lei2",
+        "titulo": "Outros integrantes do art. 7º",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 7º, II e VII",
+          "texto": "II - os Conselhos Estaduais de Trânsito - CETRAN e o Conselho de Trânsito do Distrito Federal - CONTRANDIFE, órgãos normativos, consultivos e coordenadores; VII - as Juntas Administrativas de Recursos de Infrações - JARI.",
+          "trechos_grifados": [
+            {
+              "inicio": 109,
+              "fim": 155,
+              "motivo": "lei2 — CETRAN não é máximo (isca B)",
+              "texto_grifado": "órgãos normativos, consultivos e coordenadores"
+            },
+            {
+              "inicio": 166,
+              "fim": 213,
+              "motivo": "lei2 — JARI julga, não normatiza (isca A)",
+              "texto_grifado": "Juntas Administrativas de Recursos de Infrações"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: CONTRAN é o único máximo normativo e consultivo do SNT.\nNear: CETRAN coordena no Estado — máximo nacional continua sendo CONTRAN.\nFar: DETRAN executa habilitação — normatizar o processo é CONTRAN.\nNão muda: máximo normativo nacional = CONTRAN.\nCadeia: competências detalhadas do CONTRAN estão no art. 12.",
+          "destaques": [
+            "Near",
+            "Far",
+            "Não muda",
+            "CONTRAN"
+          ]
+        }
+      }
+    ]
+  }
+}

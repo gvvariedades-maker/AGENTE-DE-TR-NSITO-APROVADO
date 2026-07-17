@@ -1,0 +1,251 @@
+{
+  "tec_id": "369570",
+  "disciplina": "legislacao_transito",
+  "gabarito": "A",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "diagrama_competencia",
+    "arquetipo_secundario": "comparacao",
+    "duracao_estimada_seg": 200,
+    "fundamento_slug": "CTB_art_7",
+    "macete_visual": "CONTRAN+CETRAN+PRF sim · CADE fora",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Polícia Civil também fica fora — mesma lógica de rol taxativo.",
+      "far_transfer": "CADE atua em defesa econômica — sem vínculo com trânsito.",
+      "o_que_nao_muda": "Só os do art. 7º compõem o SNT — CADE nunca entra."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito A.\n\nB — CONTRAN compõe o SNT.\nC — CETRAN compõe o SNT.\nD — PRF compõe o SNT.\n\nPegadinha: CADE é conselho nacional — mas não é de trânsito.",
+          "destaques": [
+            "Gabarito A",
+            "CADE",
+            "CONTRAN"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Quatro nomes que a banca mistura",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "CONTRAN: coordenador do SNT — inciso I.\nCETRAN: conselhos estaduais — inciso II.\nPRF: patrulha rodovias federais — inciso V.\nCADE: defesa econômica — não consta no art. 7º.",
+          "destaques": [
+            "CONTRAN",
+            "CETRAN",
+            "CADE"
+          ]
+        }
+      },
+      {
+        "id": "diagrama",
+        "titulo": "Quem compõe o SNT",
+        "secao": "metodo",
+        "tipo": "diagrama_competencia",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "snt",
+              "label": "SNT (rol taxativo)",
+              "nivel": 0
+            },
+            {
+              "id": "contran",
+              "label": "CONTRAN (I)",
+              "nivel": 1
+            },
+            {
+              "id": "cetran",
+              "label": "CETRAN (II)",
+              "nivel": 1
+            },
+            {
+              "id": "prf",
+              "label": "PRF (V)",
+              "nivel": 1
+            },
+            {
+              "id": "cade",
+              "label": "CADE — FORA",
+              "nivel": 2
+            }
+          ],
+          "arestas": [
+            {
+              "de": "snt",
+              "para": "contran",
+              "rotulo": "compõe"
+            },
+            {
+              "de": "snt",
+              "para": "cetran",
+              "rotulo": "compõe"
+            },
+            {
+              "de": "snt",
+              "para": "prf",
+              "rotulo": "compõe"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "CADE compõe o SNT",
+              "CADE não consta no art. 7º"
+            ],
+            [
+              "CONTRAN não integra o SNT",
+              "CONTRAN é inciso I do art. 7º"
+            ],
+            [
+              "Polícia Civil integra o SNT",
+              "Civil não consta no art. 7º"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que B, C e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "B — competencia_snt",
+              "CONTRAN coordena o SNT — inciso I"
+            ],
+            [
+              "C — competencia_snt",
+              "CETRAN é conselho estadual — inciso II"
+            ],
+            [
+              "D — competencia_snt",
+              "PRF integra o SNT — inciso V"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Compõe o SNT?"
+          ],
+          "linhas": [
+            [
+              "A — CADE",
+              "Não — gabarito"
+            ],
+            [
+              "B — CONTRAN",
+              "Sim"
+            ],
+            [
+              "C — CETRAN",
+              "Sim"
+            ],
+            [
+              "D — PRF",
+              "Sim"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto do CTB",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 7º, incisos I e II",
+          "texto": "Art. 7º Compõem o Sistema Nacional de Trânsito: I - o Conselho Nacional de Trânsito - CONTRAN, coordenador do Sistema e órgão máximo normativo e consultivo; II - os Conselhos Estaduais de Trânsito - CETRAN e o Conselho de Trânsito do Distrito Federal - CONTRANDIFE, órgãos normativos, consultivos e coordenadores.",
+          "trechos_grifados": [
+            {
+              "inicio": 86,
+              "fim": 93,
+              "motivo": "lei — CONTRAN integra (isca B)",
+              "texto_grifado": "CONTRAN"
+            },
+            {
+              "inicio": 199,
+              "fim": 205,
+              "motivo": "lei — CETRAN integra (isca C)",
+              "texto_grifado": "CETRAN"
+            }
+          ]
+        }
+      },
+      {
+        "id": "lei2",
+        "titulo": "PRF e o que fica de fora",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 7º, incisos V a VII",
+          "texto": "V - a Polícia Rodoviária Federal; VI - as Polícias Militares dos Estados e do Distrito Federal; e VII - as Juntas Administrativas de Recursos de Infrações - JARI.",
+          "trechos_grifados": [
+            {
+              "inicio": 6,
+              "fim": 32,
+              "motivo": "lei2 — PRF integra (isca D)",
+              "texto_grifado": "Polícia Rodoviária Federal"
+            },
+            {
+              "inicio": 157,
+              "fim": 161,
+              "motivo": "lei2 — rol completo sem CADE",
+              "texto_grifado": "JARI"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: SNT = CONTRAN + CETRAN + executivos + PRF + PM + JARI.\nNear: Polícia Civil também fica fora do art. 7º.\nFar: CADE julga defesa econômica — sem competência de trânsito.\nNão muda: rol taxativo — CADE nunca integra o SNT.\nCadeia: conselho nacional ≠ automaticamente SNT.",
+          "destaques": [
+            "Near",
+            "Far",
+            "Não muda",
+            "CADE"
+          ]
+        }
+      }
+    ]
+  }
+}

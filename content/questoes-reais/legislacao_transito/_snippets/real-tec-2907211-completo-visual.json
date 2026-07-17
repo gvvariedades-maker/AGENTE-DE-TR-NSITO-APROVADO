@@ -1,0 +1,242 @@
+{
+  "tec_id": "2907211",
+  "disciplina": "legislacao_transito",
+  "gabarito": "C",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "comparacao",
+    "arquetipo_secundario": "fluxograma_decisao",
+    "duracao_estimada_seg": 210,
+    "fundamento_slug": "CTB_art_40_V_a",
+    "macete_visual": "Baixa · breve · pisca emergência",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Luz alta em via não iluminada — art. 40, II.",
+      "far_transfer": "Art. 45 — não bloquear cruzamento com imobilização.",
+      "o_que_nao_muda": "Pisca-alerta em imobilização ou emergência."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito C.\n\nA — luz alta à noite (é luz baixa).\nB — buzina em toque longo urbano (é toque breve).\nD — pisca-alerta para reduzir velocidade (é sinalização devida).\n\nPegadinha: troca o equipamento certo para cada situação.",
+          "destaques": [
+            "Gabarito C",
+            "baixa",
+            "breve"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Três sinalizações que a banca mistura",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "FAROL: luz baixa à noite e em túneis/chuva — não alta.\nBUZINA: toque breve para advertir — longo só fora de área urbana.\nPISCA-ALERTA: imobilização ou emergência — não para reduzir velocidade.",
+          "destaques": [
+            "baixa",
+            "breve",
+            "PISCA-ALERTA"
+          ]
+        }
+      },
+      {
+        "id": "fluxo",
+        "titulo": "Método: emergência no leito viário",
+        "secao": "metodo",
+        "tipo": "fluxograma",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "p1",
+              "label": "Veículo imobilizado em emergência?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "p2",
+              "label": "Acionar pisca-alerta de imediato?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "r1",
+              "label": "Gabarito C — sinalizar imobilização",
+              "tipo": "resultado"
+            }
+          ],
+          "arestas": [
+            {
+              "de": "p1",
+              "para": "p2",
+              "rotulo": "Sim"
+            },
+            {
+              "de": "p2",
+              "para": "r1",
+              "rotulo": "Sim"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "Farol alto é obrigatório à noite",
+              "Luz baixa à noite e em túneis/chuva"
+            ],
+            [
+              "Buzina longa em área urbana é permitida",
+              "Toque breve nas advertências"
+            ],
+            [
+              "Pisca-alerta serve para reduzir velocidade",
+              "Indicar manobra com sinalização devida"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que A, B e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "A — termo_unico",
+              "alta × baixa — art. 40, I"
+            ],
+            [
+              "B — regra_excecao",
+              "longo × breve — art. 41"
+            ],
+            [
+              "D — termo_unico",
+              "pisca-alerta × seta — art. 43, III"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Correta?"
+          ],
+          "linhas": [
+            [
+              "A — luz alta à noite",
+              "Não — baixa"
+            ],
+            [
+              "B — buzina longa urbana",
+              "Não — breve"
+            ],
+            [
+              "C — pisca em emergência",
+              "Sim — gabarito"
+            ],
+            [
+              "D — pisca para reduzir",
+              "Não — seta"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto do CTB",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 40, V, a e art. 46",
+          "texto": "Art. 40, V, a: em imobilizações ou situações de emergência, o condutor utilizará o pisca-alerta. Art. 46: na imobilização temporária em emergência no leito viário, deverá ser providenciada a imediata sinalização de advertência.",
+          "trechos_grifados": [
+            {
+              "inicio": 18,
+              "fim": 58,
+              "motivo": "lei — hipótese do pisca-alerta (gabarito C)",
+              "texto_grifado": "imobilizações ou situações de emergência"
+            },
+            {
+              "inicio": 191,
+              "fim": 226,
+              "motivo": "lei — sinalizar imobilização emergencial",
+              "texto_grifado": "imediata sinalização de advertência"
+            }
+          ]
+        }
+      },
+      {
+        "id": "lei2",
+        "titulo": "Farol, buzina e redução de velocidade",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 40, I; art. 41 e art. 43, III",
+          "texto": "Art. 40, I: luz baixa à noite e em túneis/chuva. Art. 41: buzina em toque breve. Art. 43, III: indicar com antecedência e sinalização devida a redução de velocidade.",
+          "trechos_grifados": [
+            {
+              "inicio": 12,
+              "fim": 21,
+              "motivo": "lei2 — isca A troca por alta",
+              "texto_grifado": "luz baixa"
+            },
+            {
+              "inicio": 68,
+              "fim": 79,
+              "motivo": "lei2 — isca B troca por longo",
+              "texto_grifado": "toque breve"
+            },
+            {
+              "inicio": 122,
+              "fim": 140,
+              "motivo": "lei2 — isca D troca por pisca-alerta",
+              "texto_grifado": "sinalização devida"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: pisca-alerta em imobilização ou emergência.\nNear: luz alta só em via não iluminada — com exceções.\nFar: não bloquear cruzamento ao imobilizar.\nNão muda: baixa à noite · buzina breve · pisca em emergência.\nCadeia: triângulo a 30 m vem da norma do CONTRAN.",
+          "destaques": [
+            "Near",
+            "Far",
+            "Não muda",
+            "emergência"
+          ]
+        }
+      }
+    ]
+  }
+}

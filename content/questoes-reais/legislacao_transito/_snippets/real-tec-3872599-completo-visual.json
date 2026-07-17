@@ -1,0 +1,242 @@
+{
+  "tec_id": "3872599",
+  "disciplina": "legislacao_transito",
+  "gabarito": "A",
+  "estudo_reverso_visual_completo": {
+    "versao": 2,
+    "arquetipo": "comparacao",
+    "arquetipo_secundario": "fluxograma_decisao",
+    "duracao_estimada_seg": 210,
+    "fundamento_slug": "CTB_art_40_II",
+    "macete_visual": "Luz alta · trilhos terão · indispensável",
+    "publico_alvo": "iniciante",
+    "links_fonte": [
+      {
+        "rotulo": "CTB",
+        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+      }
+    ],
+    "meta": {
+      "near_transfer": "Luz intermitente para advertir — art. 40, III.",
+      "far_transfer": "Art. 32 veda ultrapassagem em curva e passagem de nível.",
+      "o_que_nao_muda": "Via não iluminada = luz alta com exceção ao cruzar/seguir."
+    },
+    "telas": [
+      {
+        "id": "contexto",
+        "titulo": "Você acertou — e a isca da banca",
+        "secao": "diagnostico",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Gabarito A.\n\nB — trilhos darão preferência (a lei diz terão — quem cede é o outro).\nC — cuidados dispensáveis (é indispensáveis).\nD — poderá ultrapassar no cruzamento (é proibido).\n\nPegadinha: uma palavra invertida em cada assertiva falsa.",
+          "destaques": [
+            "Gabarito A",
+            "terão",
+            "indispensáveis"
+          ]
+        }
+      },
+      {
+        "id": "glossario",
+        "titulo": "Três pegadinhas de uma palavra",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "TERÃO × DARÃO: trilhos recebem preferência — não cedem aos demais.\nINDISPENSÁVEIS × DISPENSÁVEIS: domínio do veículo exige cuidado máximo.\nNÃO PODERÁ × PODERÁ: ultrapassagem vedada nas interseções.",
+          "destaques": [
+            "TERÃO",
+            "INDISPENSÁVEIS",
+            "NÃO PODERÁ"
+          ]
+        }
+      },
+      {
+        "id": "fluxo",
+        "titulo": "Método: bate com a lei?",
+        "secao": "metodo",
+        "tipo": "fluxograma",
+        "conteudo": {
+          "nos": [
+            {
+              "id": "p1",
+              "label": "Fala de luz alta em via não iluminada?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "p2",
+              "label": "Mantém exceção ao cruzar ou seguir?",
+              "tipo": "pergunta"
+            },
+            {
+              "id": "r1",
+              "label": "Gabarito A — luz alta na via escura",
+              "tipo": "resultado"
+            }
+          ],
+          "arestas": [
+            {
+              "de": "p1",
+              "para": "p2",
+              "rotulo": "Sim"
+            },
+            {
+              "de": "p2",
+              "para": "r1",
+              "rotulo": "Sim"
+            }
+          ]
+        }
+      },
+      {
+        "id": "contraste",
+        "titulo": "Crença do candidato × lei",
+        "secao": "contraste",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Crença ✗",
+            "Lei ✓"
+          ],
+          "linhas": [
+            [
+              "Trilhos cedem passagem aos demais",
+              "Trilhos terão preferência sobre os demais"
+            ],
+            [
+              "Cuidados dispensáveis bastam ao condutor",
+              "Cuidados indispensáveis à segurança"
+            ],
+            [
+              "Ultrapassagem é livre nas interseções",
+              "Não poderá efetuar ultrapassagem nas interseções"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "distratores",
+        "titulo": "Por que B, C e D enganam",
+        "secao": "distratores",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Por que erra"
+          ],
+          "linhas": [
+            [
+              "B — termo_unico",
+              "darão × terão — inverte quem tem preferência"
+            ],
+            [
+              "C — termo_unico",
+              "dispensáveis × indispensáveis"
+            ],
+            [
+              "D — regra_excecao",
+              "poderá × não poderá nas interseções"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "caso",
+        "titulo": "Aplicando ao enunciado",
+        "secao": "metodo",
+        "tipo": "comparacao",
+        "conteudo": {
+          "colunas": [
+            "Alternativa",
+            "Correta?"
+          ],
+          "linhas": [
+            [
+              "A — luz alta em via não iluminada",
+              "Sim — gabarito"
+            ],
+            [
+              "B — trilhos darão preferência",
+              "Não — terão"
+            ],
+            [
+              "C — cuidados dispensáveis",
+              "Não — indispensáveis"
+            ],
+            [
+              "D — ultrapassagem no cruzamento",
+              "Não — proibida"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "lei",
+        "titulo": "Texto do CTB",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 40, II",
+          "texto": "Art. 40. O uso da luz: II - nas vias não iluminadas o condutor deve usar luz alta, exceto ao cruzar com outro veículo ou ao segui-lo.",
+          "trechos_grifados": [
+            {
+              "inicio": 73,
+              "fim": 81,
+              "motivo": "lei — luz alta (gabarito A)",
+              "texto_grifado": "luz alta"
+            },
+            {
+              "inicio": 83,
+              "fim": 132,
+              "motivo": "lei — exceções da luz alta",
+              "texto_grifado": "exceto ao cruzar com outro veículo ou ao segui-lo"
+            }
+          ]
+        }
+      },
+      {
+        "id": "lei2",
+        "titulo": "Trilhos, domínio e cruzamento",
+        "secao": "lei",
+        "tipo": "trecho_legal",
+        "conteudo": {
+          "fonte": "CTB art. 29, XII; art. 28 e art. 33",
+          "texto": "Art. 29: XII - os veículos que se deslocam sobre trilhos terão preferência de passagem sobre os demais, respeitadas as normas de circulação. Art. 28. O condutor deverá, a todo momento, ter domínio de seu veículo, dirigindo-o com atenção e cuidados indispensáveis à segurança do trânsito. Art. 33. Nas interseções e suas proximidades, o condutor não poderá efetuar ultrapassagem.",
+          "trechos_grifados": [
+            {
+              "inicio": 57,
+              "fim": 86,
+              "motivo": "lei2 — isca B troca por darão",
+              "texto_grifado": "terão preferência de passagem"
+            },
+            {
+              "inicio": 248,
+              "fim": 262,
+              "motivo": "lei2 — isca C troca por dispensáveis",
+              "texto_grifado": "indispensáveis"
+            },
+            {
+              "inicio": 345,
+              "fim": 377,
+              "motivo": "lei2 — isca D troca por poderá",
+              "texto_grifado": "não poderá efetuar ultrapassagem"
+            }
+          ]
+        }
+      },
+      {
+        "id": "macete",
+        "titulo": "Leve para a prova",
+        "secao": "macete",
+        "tipo": "texto_destaque",
+        "conteudo": {
+          "texto": "Regra: via não iluminada = luz alta, exceto cruzar ou seguir outro veículo.\nNear: luz intermitente só para advertir — não é uso contínuo de alta.\nFar: art. 32 também veda ultrapassar em curva e passagem de nível.\nNão muda: terão (trilhos) · indispensáveis · não poderá (cruzamento).\nCadeia: leia a palavra que a banca trocou.",
+          "destaques": [
+            "Near",
+            "Far",
+            "Não muda",
+            "terão"
+          ]
+        }
+      }
+    ]
+  }
+}
