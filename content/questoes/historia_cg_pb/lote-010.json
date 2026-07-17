@@ -1,0 +1,398 @@
+[
+  {
+    "disciplina": "historia_cg_pb",
+    "topico": "historia_pb_contexto",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_prazo",
+    "dificuldade": 4,
+    "fundamento_slug": "PB_contexto_capital_segunda_cidade",
+    "enunciado": "Na oficina da STTP sobre o contexto estadual da Paraíba, o instrutor distribui fichas com a posição de Campina Grande no estado. Um participante afirma que Campina Grande é a capital e sede do governo estadual, que o interior possui 233 municípios e que João Pessoa é apenas a segunda cidade em população. Assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Campina Grande é a 2ª cidade mais populosa da Paraíba; a capital e sede do executivo estadual é João Pessoa; o estado possui 223 municípios.",
+      "B": "Campina Grande é a capital da Paraíba; João Pessoa é a 2ª cidade em população; a divisão administrativa compreende 223 municípios.",
+      "C": "Campina Grande é a 2ª cidade do estado; a capital republicana situa-se no interior, em Filipéia; a Paraíba possui 223 municípios.",
+      "D": "Campina Grande supera João Pessoa em população; a constituição estadual de 1891 elevou CG à capital; o estado possui 223 municípios."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Contexto estadual da Paraíba — capital (João Pessoa), posição de Campina Grande como 2ª cidade mais populosa e divisão em 223 municípios — sem elevar CG à sede do executivo ou inverter a hierarquia demográfica.",
+      "fundamento_legal": "Base factual CG/PB (conteúdo/historia-cg-pb/base-factual.md): \"Capital — João Pessoa (antiga Parahyba / Filipéia)\"; \"Campina Grande no estado — 2ª cidade mais populosa da PB (estimativas recentes)\"; \"Divisão administrativa — 223 municípios (PB)\"; \"1891 — Primeira constituição estadual republicana\".",
+      "passo_a_passo": [
+        "1. O caso corrige três afirmações do participante: CG não é capital, não são 233 municípios e João Pessoa não é 2ª cidade — a base factual fixa João Pessoa como capital, CG como 2ª em população e 223 municípios.",
+        "2. B erra por termo_unico (inverte capital e 2ª cidade entre Campina Grande e João Pessoa); C erra por termo_unico (coloca a capital no interior em Filipéia, ignorando João Pessoa na costa) e regra_excecao (Filipéia como sede atual); D erra por regra_excecao (CG supera João Pessoa em população) e termo_unico (constituição de 1891 como elevação de CG à capital — foi constituição estadual republicana, não mudança de capital para o interior).",
+        "3. A correta: Campina Grande é a 2ª cidade mais populosa, João Pessoa é a capital e a Paraíba tem 223 municípios."
+      ],
+      "pegadinha": "A banca eleva Campina Grande à capital por ser a maior do interior — o candidato que confunde relevância regional com sede do executivo marca qualquer combinação que troca CG e João Pessoa.",
+      "macete": "Capital = João Pessoa | CG = 2ª cidade | 223 municípios | 1891 = constituição estadual (não capital CG).",
+      "estudo_reverso": [
+        "Capital da PB — João Pessoa",
+        "Campina Grande — 2ª cidade mais populosa",
+        "223 municípios na Paraíba"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Participante trata Campina Grande como capital e João Pessoa como 2ª cidade — inversão da hierarquia estadual",
+      "eixos_legais": [
+        "PB_contexto_capital_segunda_cidade"
+      ],
+      "isca_por_alternativa": {
+        "B": "inverte capital e 2ª cidade entre CG e João Pessoa",
+        "C": "coloca capital no interior (Filipéia) em vez de João Pessoa na costa",
+        "D": "CG supera capital em população e 1891 vira elevação de CG à capital"
+      },
+      "eixos_mecanismo": [
+        "termo_unico",
+        "regra_excecao"
+      ],
+      "near_transfer": "Mesma oficina, mas só a pergunta é qual cidade é capital — responda João Pessoa, independentemente de CG ser a 2ª em população.",
+      "far_transfer": "Se a banca cobrar a constituição estadual republicana de 1891 isoladamente, o eixo é marco político da PB — não confundir com elevação administrativa de Campina Grande (1864).",
+      "o_que_nao_muda": "A capital da Paraíba é João Pessoa; Campina Grande é a 2ª cidade mais populosa do estado (base factual).",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "contexto_pb",
+      "capital",
+      "joao_pessoa",
+      "segunda_cidade",
+      "223_municipios"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "PB_contexto_capital_segunda_cidade",
+      "macete_visual": "JP capital | CG 2ª | 223 municípios",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A: CG é 2ª cidade, João Pessoa é capital, 223 municípios — a banca inverte capital e 2ª cidade ou inventa 233 municípios.",
+            "destaques": ["Gabarito A", "João Pessoa", "223"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Capital × 2ª cidade",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Base factual ✓"],
+            "linhas": [
+              ["Campina Grande é capital", "João Pessoa é capital; CG é 2ª em população"],
+              ["233 municípios no estado", "223 municípios na Paraíba"]
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Decisão rápida",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Campina Grande é sede do executivo estadual?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Não — capital João Pessoa; CG é 2ª cidade",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Não"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Capital = João Pessoa | CG = 2ª cidade | 223 municípios.\nFar: 1891 = constituição estadual, não capital CG.",
+            "destaques": ["João Pessoa", "2ª cidade", "223"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Base factual — Paraíba contexto",
+          "path": "conteúdo/historia-cg-pb/base-factual.md"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 220,
+      "fundamento_slug": "PB_contexto_capital_segunda_cidade",
+      "macete_visual": "JP capital | CG 2ª | 223 municípios",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Participante trata Campina Grande como capital e João Pessoa como 2ª cidade",
+        "eixos_mecanismo": ["termo_unico", "regra_excecao"],
+        "isca_por_alternativa": {
+          "B": "inverte capital e 2ª cidade entre CG e João Pessoa",
+          "C": "coloca capital no interior (Filipéia) em vez de João Pessoa na costa",
+          "D": "CG supera capital em população e 1891 vira elevação de CG à capital"
+        },
+        "eficacia_pos_aula": ["E1", "E2", "E3"]
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: capital ≠ maior do interior",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — inverte capital e 2ª cidade entre Campina Grande e João Pessoa.\nC — coloca a capital no interior (Filipéia), ignorando João Pessoa na costa.\nD — faz CG superar a capital em população e trata 1891 como elevação de CG à capital.\n\nOficina STTP: corrigir três erros do participante sobre a hierarquia estadual.",
+            "destaques": ["Gabarito A", "João Pessoa", "2ª cidade"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do caso",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "CAPITAL: sede do executivo estadual — João Pessoa (antiga Parahyba / Filipéia), não Campina Grande.\n\n2ª CIDADE: Campina Grande no ranking populacional da PB — relevância regional sem ser capital.\n\n223 MUNICÍPIOS: divisão administrativa atual da Paraíba — não confundir com 233 do enunciado-isca.",
+            "destaques": ["CAPITAL", "2ª CIDADE", "223"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual é a capital?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Campina Grande é sede do executivo estadual?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Participante inverteu capital e 2ª cidade?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito A — João Pessoa capital; CG 2ª; 223 municípios",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Não"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa do contexto estadual",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Fato", "Dado correto"],
+            "linhas": [
+              {
+                "faixa": "Capital",
+                "classificacao": "João Pessoa — sede do executivo estadual",
+                "destaque": true
+              },
+              {
+                "faixa": "Campina Grande",
+                "classificacao": "2ª cidade mais populosa da PB"
+              },
+              {
+                "faixa": "Divisão administrativa",
+                "classificacao": "223 municípios"
+              },
+              {
+                "faixa": "1891",
+                "classificacao": "Primeira constituição estadual republicana (≠ capital CG)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: CG capital × JP 2ª cidade",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "O que o participante pensa ✗",
+              "O que a base factual diz ✓"
+            ],
+            "linhas": [
+              [
+                "Campina Grande é capital e sede do governo",
+                "Capital = João Pessoa; CG = 2ª em população"
+              ],
+              [
+                "João Pessoa é só a 2ª cidade",
+                "João Pessoa é a capital atual da Paraíba"
+              ],
+              [
+                "O estado tem 233 municípios",
+                "Divisão administrativa = 223 municípios"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "B — termo_unico",
+                "Inverte capital e 2ª cidade entre Campina Grande e João Pessoa"
+              ],
+              [
+                "C — termo_unico",
+                "Coloca capital no interior (Filipéia) — sede atual é João Pessoa na costa"
+              ],
+              [
+                "C — regra_excecao",
+                "Trata Filipéia como capital republicana atual, não nome histórico de João Pessoa"
+              ],
+              [
+                "D — regra_excecao",
+                "CG supera João Pessoa em população — base factual diz o contrário"
+              ],
+              [
+                "D — termo_unico",
+                "Constituição de 1891 vira elevação de CG à capital — marco estadual distinto"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo a oficina da STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Erro do participante",
+              "Correção"
+            ],
+            "linhas": [
+              [
+                "CG é capital",
+                "João Pessoa é capital; CG é 2ª cidade"
+              ],
+              [
+                "233 municípios",
+                "223 municípios na Paraíba"
+              ],
+              [
+                "João Pessoa é 2ª cidade",
+                "João Pessoa é capital — Gabarito A"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Capital × 2ª cidade × constituição",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Conceito",
+              "Função no caso"
+            ],
+            "linhas": [
+              [
+                "João Pessoa (capital)",
+                "Sede do executivo — resposta quando perguntam capital"
+              ],
+              [
+                "Campina Grande (2ª cidade)",
+                "Maior do interior, não capital"
+              ],
+              [
+                "Constituição de 1891",
+                "Marco republicano estadual — não troca capital para CG"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Base factual — contexto da Paraíba",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "conteúdo/historia-cg-pb/base-factual.md — Paraíba contexto",
+            "texto": "A capital da Paraíba é João Pessoa (antiga Parahyba / Filipéia). Campina Grande é a 2ª cidade mais populosa do estado. A divisão administrativa compreende 223 municípios. A primeira constituição estadual republicana da Paraíba data de 1891.",
+            "trechos_grifados": [
+              {
+                "inicio": 23,
+                "fim": 34,
+                "motivo": "contraste — capital correta (I isca troca por CG)",
+                "texto_grifado": "João Pessoa"
+              },
+              {
+                "inicio": 84,
+                "fim": 86,
+                "motivo": "mapa — posição de Campina Grande no estado",
+                "texto_grifado": "2ª"
+              },
+              {
+                "inicio": 155,
+                "fim": 158,
+                "motivo": "caso — corrige 233 do participante para dado oficial",
+                "texto_grifado": "223"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Capital = João Pessoa | CG = 2ª cidade | 223 municípios | 1891 = constituição estadual.\nNear: só pergunta capital → João Pessoa, sem inverter com CG.\nFar: constituição de 1891 isolada — marco republicano PB, não elevação de CG (1864 é cidade municipal).\nNão muda: capital João Pessoa; Campina Grande 2ª em população.",
+            "destaques": ["João Pessoa", "2ª cidade", "223"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Base factual — Paraíba contexto",
+          "path": "conteúdo/historia-cg-pb/base-factual.md"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,223 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 220,
+  "fundamento_slug": "CG_personagens_vereadores_1790",
+  "macete_visual": "Joaquim+Luiz vereadores 1790",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Estagiário credita governador/fundador ou família Oliveira Lêdo como vereadores, ou antecipa Joaquim e Luiz para 1864",
+    "eixos_mecanismo": ["termo_unico", "numero_vizinho"],
+    "isca_por_alternativa": {
+      "A": "atribui vereadoria a Manuel Soares (governador) e Teodósio (fundador)",
+      "B": "troca vereadores por Antônio e Constantino da família Oliveira Lêdo",
+      "D": "usa os nomes corretos mas desloca o marco de 1790 para 1864"
+    },
+    "eficacia_pos_aula": ["E1", "E2", "E3"],
+    "referencia_lote": "content/questoes/historia_cg_pb/lote-023.json",
+    "gabarito": "C"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: vereadores de 1790",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — atribui vereadoria a Manuel Soares (governador) e Teodósio (fundador).\nB — troca vereadores por Antônio e Constantino da família Oliveira Lêdo.\nD — usa Joaquim e Luiz, mas desloca o marco de 1790 para 1864.\n\nMemorial STTP: câmara da Vila Nova da Rainha em 1790.",
+        "destaques": ["Gabarito C", "1790", "Joaquim Gomes Correia"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 papéis do painel",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "VEREADOR (1790): Joaquim Gomes Correia e Luiz Pereira Pinto — primeiros da Vila Nova da Rainha.\n\nGOVERNADOR: Manuel Soares de Albergaria — cartas ao rei (1699), não vereador municipal.\n\nFAMÍLIA OLIVEIRA LÊDO: Teodósio (fundador), Antônio e Constantino (capitanias) — papéis distintos da vereadoria.",
+        "destaques": ["VEREADOR", "1790", "Manuel Soares"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: é vereador de 1790?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Marco é elevação a vila (1790)?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Personagem é 1º vereador da Rainha?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Gabarito C — Joaquim e Luiz",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Vila Nova da Rainha" },
+          { "de": "p2", "para": "r1", "rotulo": "Joaquim + Luiz" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Personagens × função histórica",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Nome", "Papel na base factual"],
+        "linhas": [
+          {
+            "faixa": "Joaquim Gomes Correia",
+            "classificacao": "1º vereador — Vila Nova da Rainha (1790)",
+            "destaque": true
+          },
+          {
+            "faixa": "Luiz Pereira Pinto",
+            "classificacao": "1º vereador — Vila Nova da Rainha (1790)",
+            "destaque": true
+          },
+          {
+            "faixa": "Manuel Soares (vizinho)",
+            "classificacao": "Governador da Paraíba — ≠ vereador"
+          },
+          {
+            "faixa": "Teodósio (vizinho)",
+            "classificacao": "Fundador creditado — ≠ vereador"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: vereador × governador × família",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o estagiário pensa ✗",
+          "O que a base factual diz ✓"
+        ],
+        "linhas": [
+          [
+            "Manuel Soares e Teodósio foram vereadores",
+            "Joaquim Gomes Correia e Luiz Pereira Pinto — 1ºs vereadores (1790)"
+          ],
+          [
+            "Antônio e Constantino vereadores de 1790",
+            "Antônio = capitão-mor Infantaria; Constantino = sucessor — ≠ vereadoria"
+          ],
+          [
+            "Joaquim e Luiz vereadores em 1864",
+            "1790 = vila e câmara; 1864 = elevação à cidade (Lei 127)"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          [
+            "A — termo_unico",
+            "Atribui vereadoria a Manuel Soares (governador) e Teodósio (fundador)"
+          ],
+          [
+            "B — termo_unico",
+            "Troca vereadores por Antônio e Constantino da família Oliveira Lêdo"
+          ],
+          [
+            "D — numero_vizinho",
+            "Usa Joaquim e Luiz corretos, mas desloca o marco de 1790 para 1864"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o memorial da STTP",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Ponto do painel", "Dado correto"],
+        "linhas": [
+          ["Marco administrativo", "Elevação a Vila Nova da Rainha — 1790"],
+          ["Primeiros vereadores", "Joaquim Gomes Correia e Luiz Pereira Pinto → Gabarito C"]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Vila 1790 × cidade 1864 × governador",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Marco", "Função no estudo"],
+        "linhas": [
+          ["1790 Vila Nova da Rainha", "Câmara municipal — núcleo do gabarito"],
+          ["1864 Lei Provincial nº 127 (vizinho)", "Elevação à cidade — ≠ vereadoria de 1790"],
+          ["Manuel Soares governador (vizinho)", "Cartas ao rei — ≠ vereador municipal"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Base factual — vereadores",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "conteúdo/historia-cg-pb/base-factual.md — Formação e Personagens",
+        "texto": "20/04/1790 — Vila — Elevada a Vila Nova da Rainha (Ouvidor Brederodes); criado o pelourinho. Joaquim Gomes Correia — Primeiro vereador da Vila Nova da Rainha (1790). Luiz Pereira Pinto — Primeiro vereador (1790). Manuel Soares de Albergaria — Governador da Paraíba (cartas ao rei).",
+        "trechos_grifados": [
+          {
+            "inicio": 30,
+            "fim": 49,
+            "motivo": "mapa — elevação a Vila Nova da Rainha",
+            "texto_grifado": "Vila Nova da Rainha"
+          },
+          {
+            "inicio": 93,
+            "fim": 114,
+            "motivo": "fluxo — 1º vereador de 1790",
+            "texto_grifado": "Joaquim Gomes Correia"
+          },
+          {
+            "inicio": 166,
+            "fim": 184,
+            "motivo": "contraste — par de vereadores",
+            "texto_grifado": "Luiz Pereira Pinto"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near/far-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Joaquim + Luiz = 1ºs vereadores (1790) | Manuel = governador | Teodósio = funda.\nNear: só um vereador de 1790 → Joaquim ou Luiz, não Manuel nem Oliveira Lêdo.\nFar: carta 1699 ou freguesia 1769 — marcos distintos da câmara de 1790.\nNão muda: Joaquim Gomes Correia e Luiz Pereira Pinto — primeiros vereadores da Vila Nova da Rainha em 1790.\nCadeia: vizinho = vila 1790 × cidade 1864 (CG_formacao_vila_cidade_1790_1864).",
+        "destaques": ["Joaquim", "Luiz", "1790"]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Base factual — Personagens e Formação",
+      "path": "conteúdo/historia-cg-pb/base-factual.md"
+    }
+  ]
+}

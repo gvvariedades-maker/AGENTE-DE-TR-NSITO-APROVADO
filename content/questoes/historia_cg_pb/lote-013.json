@@ -1,0 +1,287 @@
+[
+  {
+    "disciplina": "historia_cg_pb",
+    "topico": "historia_cg_pb_economia_cultura",
+    "tipo": "assertivas",
+    "estilo_idecan": "assertivas",
+    "dificuldade": 4,
+    "fundamento_slug": "CG_economia_cultura_populacao_polo_festas",
+    "enunciado": "No material de economia e cultura da STTP, analise as assertivas sobre Campina Grande e assinale a alternativa CORRETA:\n\nI. Ao final do século XIX, a cidade tinha cerca de 4 mil habitantes.\nII. Campina Grande é um dos principais polos industriais do Nordeste.\nIII. O Festival de Inverno substituiu o \"Maior São João do Mundo\" como maior festa junina do estado.",
+    "alternativas": {
+      "A": "Está correto o que se afirma em I e II, apenas — população do final do século XIX e polo industrial, sem aceitar a III.",
+      "B": "Está correto o que se afirma em I e III, apenas — inclui Festival de Inverno no lugar do Maior São João como festa junina.",
+      "C": "Está correto o que se afirma em II e III, apenas — polo industrial e Festival de Inverno como maior festa junina, descartando a população.",
+      "D": "Está correto o que se afirma em I, II e III — aceita as três assertivas, inclusive a substituição do São João pelo Festival de Inverno."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Economia e cultura de Campina Grande — população de cerca de 4 mil habitantes no final do século XIX, polo industrial do Nordeste e distinção entre Maior São João do Mundo (maior festa junina do estado) e Festival de Inverno (evento cultural distinto) — sem tratar o Festival como substituto junino.",
+      "fundamento_legal": "Base factual CG/PB (conteúdo/historia-cg-pb/base-factual.md): \"População (final séc. XIX) — Cerca de 4 mil habitantes\"; \"Polo industrial — Um dos principais polos industriais do Nordeste\"; \"São João — Maior São João do Mundo; maior festa junina do estado\"; \"Festival de Inverno — Evento cultural de destaque regional\".",
+      "passo_a_passo": [
+        "1. I correta (cerca de 4 mil habitantes no final do século XIX); II correta (polo industrial do Nordeste); III falsa — Festival de Inverno é evento cultural regional, não substitui o Maior São João como maior festa junina.",
+        "2. B erra por regra_excecao (aceita III falsa tratando Festival de Inverno como maior festa junina no lugar do São João); C erra por regra_excecao (marca II e III incluindo a III falsa) e termo_unico (descarta I correta da população); D erra por regra_excecao (compra I, II e III — aceita a substituição indevida do São João pelo Festival de Inverno).",
+        "3. Gabarito A: apenas I e II estão corretas."
+      ],
+      "pegadinha": "A banca mistura Festival de Inverno com Maior São João do Mundo — o candidato que não separa festa junina de evento cultural regional marca combinações que incluem a III.",
+      "macete": "4 mil (fim séc. XIX) + polo NE | São João = junina | Festival de Inverno ≠ substituto.",
+      "estudo_reverso": [
+        "~4 mil habitantes — final século XIX",
+        "Polo industrial do Nordeste",
+        "Maior São João ≠ Festival de Inverno"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "B_assertivas",
+      "pegadinha_em_uma_frase": "III trata Festival de Inverno como substituto do Maior São João — evento cultural ≠ maior festa junina",
+      "eixos_legais": [
+        "CG_economia_cultura_populacao_polo_festas"
+      ],
+      "eixo_vizinho": "CG_economia_cultura_algodao_saojoao",
+      "isca_por_alternativa": {
+        "B": "aceita III falsa e troca São João por Festival de Inverno como festa junina",
+        "C": "descarta população correta (I) e compra III falsa com II",
+        "D": "marca I, II e III — compra substituição indevida do São João"
+      },
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico"
+      ],
+      "near_transfer": "Se a banca cobrar só o Maior São João do Mundo, responda maior festa junina do estado — não confundir com Festival de Inverno.",
+      "far_transfer": "Se a banca cobrar algodão no século XIX ou hino de Guimarães, o eixo é salto econômico ou patrimônio simbólico — distinto de população e polo industrial.",
+      "o_que_nao_muda": "Maior São João do Mundo = maior festa junina do estado; Festival de Inverno = evento cultural regional (base factual).",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "economia_cultura",
+      "populacao",
+      "polo_industrial",
+      "sao_joao",
+      "festival_inverno",
+      "assertivas"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "matriz_assertivas",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 55,
+      "fundamento_slug": "CG_economia_cultura_populacao_polo_festas",
+      "macete_visual": "I+II certas | III isca Festival×São João",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Assertivas I–III: população e polo industrial corretos; III troca Festival de Inverno pelo Maior São João como festa junina.\n\nGabarito A: I e II.",
+            "destaques": ["Gabarito A", "Festival de Inverno", "São João"]
+          }
+        },
+        {
+          "id": "matriz",
+          "titulo": "Mapa I–II–III",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              { "id": "I", "texto": "~4 mil habitantes fim séc. XIX — correta", "correto": true },
+              { "id": "II", "texto": "Polo industrial do Nordeste — correta", "correto": true },
+              { "id": "III", "texto": "Festival substitui São João junino — ERRADA", "correto": false }
+            ],
+            "gabarito_resumo": "I e II corretas → alternativa A"
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "4 mil + polo NE (I+II) | São João = junina | Festival de Inverno ≠ substituto.",
+            "destaques": ["I+II", "São João", "Festival de Inverno"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Base factual — Economia e cultura",
+          "path": "conteúdo/historia-cg-pb/base-factual.md"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "matriz_assertivas",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 210,
+      "fundamento_slug": "CG_economia_cultura_populacao_polo_festas",
+      "macete_visual": "I+II certas | III isca Festival×São João",
+      "meta": {
+        "padrao_familia": "B_assertivas",
+        "pegadinha_em_uma_frase": "III trata Festival de Inverno como substituto do Maior São João",
+        "eixos_mecanismo": ["regra_excecao", "termo_unico"],
+        "isca_por_alternativa": {
+          "B": "aceita III falsa com I, descartando II",
+          "C": "descarta I e compra III falsa com II",
+          "D": "marca todas incluindo III falsa"
+        },
+        "eficacia_pos_aula": ["E1", "E2", "E3"]
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: III é a isca",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A (I e II corretas).\n\nB — aceita III falsa e troca São João por Festival de Inverno como festa junina.\nC — descarta população correta (I) e compra III falsa com o polo industrial.\nD — marca I, II e III — compra a substituição indevida do Maior São João.\n\nSTTP: separar festa junina de evento cultural regional.",
+            "destaques": ["Gabarito A", "III", "São João"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do enunciado",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "4 MIL HABITANTES: ordem de grandeza da população ao final do século XIX — dado cobrável da base factual.\n\nPOLO INDUSTRIAL: Campina Grande entre os principais polos industriais do Nordeste.\n\nMAIOR SÃO JOÃO DO MUNDO: maior festa junina do estado — distinta do Festival de Inverno (evento cultural regional).",
+            "destaques": ["4 MIL", "POLO INDUSTRIAL", "MAIOR SÃO JOÃO"]
+          }
+        },
+        {
+          "id": "matriz",
+          "titulo": "Classificar I–II–III",
+          "secao": "metodo",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              {
+                "id": "I",
+                "texto": "~4 mil habitantes fim séc. XIX — correta",
+                "correto": true
+              },
+              {
+                "id": "II",
+                "texto": "Polo industrial do Nordeste — correta",
+                "correto": true
+              },
+              {
+                "id": "III",
+                "texto": "Festival de Inverno substitui São João junino — ERRADA",
+                "correto": false
+              }
+            ],
+            "gabarito_resumo": "I e II corretas → alternativa A"
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Assertiva-isca: III",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "O que a III afirma ✗",
+              "O que a base factual diz ✓"
+            ],
+            "linhas": [
+              [
+                "Festival de Inverno substituiu o Maior São João como festa junina",
+                "Maior São João do Mundo = maior festa junina do estado"
+              ],
+              [
+                "Festival de Inverno é a marca junina principal",
+                "Festival de Inverno = evento cultural de destaque regional"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — regra_excecao",
+                "Marca I e III — aceita Festival de Inverno como maior festa junina no lugar do São João"
+              ],
+              [
+                "C — regra_excecao",
+                "Marca II e III — compra a III falsa sobre substituição do São João"
+              ],
+              [
+                "C — termo_unico",
+                "Descarta I correta da população e mantém apenas polo + festa errada"
+              ],
+              [
+                "D — regra_excecao",
+                "Marca I, II e III — trata todas como corretas incluindo a substituição indevida"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Montando o gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Assertiva", "Classificação"],
+            "linhas": [
+              ["I — ~4 mil habitantes fim séc. XIX", "✓ Correta"],
+              ["II — polo industrial do Nordeste", "✓ Correta"],
+              ["III — Festival substitui São João junino", "✗ Falsa → combinação I+II = Gabarito A"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Base factual — economia e cultura",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "conteúdo/historia-cg-pb/base-factual.md — Economia e desenvolvimento / Cultura",
+            "texto": "População ao final do século XIX: cerca de 4 mil habitantes. Campina Grande é um dos principais polos industriais do Nordeste. São João: Maior São João do Mundo — maior festa junina do estado. Festival de Inverno: evento cultural de destaque regional.",
+            "trechos_grifados": [
+              {
+                "inicio": 43,
+                "fim": 59,
+                "motivo": "matriz — população final século XIX (I)",
+                "texto_grifado": "4 mil habitantes"
+              },
+              {
+                "inicio": 61,
+                "fim": 125,
+                "motivo": "matriz — polo industrial do Nordeste (II)",
+                "texto_grifado": "Campina Grande é um dos principais polos industriais do Nordeste"
+              },
+              {
+                "inicio": 137,
+                "fim": 191,
+                "motivo": "contraste — Maior São João (≠ Festival da III)",
+                "texto_grifado": "Maior São João do Mundo — maior festa junina do estado"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "4 mil (fim séc. XIX) + polo NE (I+II) | São João = junina | Festival de Inverno ≠ substituto.\nNear: só Maior São João → maior festa junina do estado, não Festival de Inverno.\nFar: algodão ou hino Guimarães — outro eixo de cultura, mesma disciplina.\nNão muda: São João = festa junina; Festival de Inverno = evento cultural regional.\nCadeia: vizinho = algodão + Maior São João (CG_economia_cultura_algodao_saojoao).",
+            "destaques": ["I+II", "São João", "Festival de Inverno"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Base factual — Economia e cultura",
+          "path": "conteúdo/historia-cg-pb/base-factual.md"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,277 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 215,
+  "fundamento_slug": "CG_economia_cultura_museu_acude_par",
+  "macete_visual": "1814 Museu | 1976 Açude | 1790 vila",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Visitante inverte 1814↔1976 ou antecipa vila de 1790 para 1814",
+    "eixos_mecanismo": [
+      "numero_vizinho",
+      "termo_unico",
+      "regra_excecao"
+    ],
+    "isca_por_alternativa": {
+      "A": "inverte 1814 e 1976 entre Parque e Museu",
+      "B": "mistura vila 1790 com datas do museu e parque",
+      "D": "troca Museu por Parque e vila em 1814"
+    },
+    "eficacia_pos_aula": [
+      "E1",
+      "E2",
+      "E3"
+    ],
+    "referencia_lote": "content/questoes/historia_cg_pb/lote-015.json",
+    "gabarito": "C"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: Museu ≠ Parque",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito C.\n\nA — inverte 1814 e 1976 entre Parque do Açude Novo e cadeia/Museu.\nB — mistura vila de 1790 com museu e atribui elevação a vila a 1814.\nD — troca Museu por Parque e antecipa vila para 1814.\n\nRoteiro STTP: dois patrimônios com datas e funções distintas.",
+        "destaques": [
+          "Gabarito C",
+          "1814",
+          "1976"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do roteiro",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "MUSEU HISTÓRICO (1814): antiga cadeia municipal — edifício no largo da Matriz, hoje Av. Floriano Peixoto.\n\nPARQUE AÇUDE NOVO (1976): espaço de lazer inaugurado em 1976 — distinto da cadeia de 1814.\n\nVILA NOVA DA RAINHA (1790): elevação a vila com pelourinho — marco anterior, não confundir com 1814.",
+        "destaques": [
+          "MUSEU",
+          "1976",
+          "1790"
+        ]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: qual marco é qual data?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Marco é cadeia/Museu no largo da Matriz?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Marco é Parque do Açude Novo?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Gabarito C — 1814 e 1976",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          {
+            "de": "p1",
+            "para": "p2",
+            "rotulo": "1814"
+          },
+          {
+            "de": "p2",
+            "para": "r1",
+            "rotulo": "1976"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Par patrimonial Museu × Parque",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": [
+          "Ano",
+          "Marco patrimonial"
+        ],
+        "linhas": [
+          {
+            "faixa": "1814",
+            "classificacao": "Cadeia no largo da Matriz — Museu Histórico (Floriano Peixoto)"
+          },
+          {
+            "faixa": "1976",
+            "classificacao": "Inauguração do Parque do Açude Novo",
+            "destaque": true
+          },
+          {
+            "faixa": "1790 (vizinho)",
+            "classificacao": "Vila Nova da Rainha — ≠ Museu nem Parque"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: cadeia × parque × vila",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o visitante pensa ✗",
+          "O que a base factual diz ✓"
+        ],
+        "linhas": [
+          [
+            "Parque e Museu foram inaugurados no mesmo ano",
+            "1814 = cadeia/Museu; 1976 = Parque do Açude Novo"
+          ],
+          [
+            "Museu foi inaugurado em 1976 na Floriano Peixoto",
+            "Museu = cadeia de 1814; Parque = 1976"
+          ],
+          [
+            "Elevação a vila ocorreu em 1814",
+            "Vila Nova da Rainha = 1790; 1814 = cadeia municipal"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — numero_vizinho",
+            "Inverte 1814 e 1976 entre Parque do Açude Novo e cadeia/Museu"
+          ],
+          [
+            "B — regra_excecao",
+            "Mistura elevação a vila (1790) com datas do museu e do parque"
+          ],
+          [
+            "D — termo_unico",
+            "Troca Museu Histórico pelo Parque do Açude Novo e vice-versa"
+          ],
+          [
+            "D — regra_excecao",
+            "Antecipa elevação a vila para 1814 em vez de 1790"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o roteiro cultural",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Marco do roteiro",
+          "Dado correto"
+        ],
+        "linhas": [
+          [
+            "Museu Histórico e Geográfico",
+            "1814 — cadeia, largo da Matriz / Floriano Peixoto"
+          ],
+          [
+            "Parque do Açude Novo",
+            "1976 — inauguração → Gabarito C"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Patrimônio × formação administrativa",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Período",
+          "Função no estudo"
+        ],
+        "linhas": [
+          [
+            "1814 + 1976",
+            "Par Museu×Parque — núcleo do gabarito"
+          ],
+          [
+            "1790 (vizinho)",
+            "Vila Nova da Rainha — não antecipar para 1814"
+          ],
+          [
+            "1864",
+            "Cidade Lei 127 — marco posterior à cadeia e ao parque"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Base factual — cultura e patrimônio",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "conteúdo/historia-cg-pb/base-factual.md — Cultura e patrimônio / Formação",
+        "texto": "Em 1814 foi edificado o prédio da cadeia no largo da Matriz — hoje Av. Floriano Peixoto, sede do Museu Histórico e Geográfico. O Parque do Açude Novo foi inaugurado em 1976. Em 20/04/1790 Campina Grande foi elevada a Vila Nova da Rainha pelo Ouvidor Brederodes, com criação do pelourinho.",
+        "trechos_grifados": [
+          {
+            "inicio": 3,
+            "fim": 7,
+            "motivo": "mapa — cadeia/Museu (primeiro marco do par)",
+            "texto_grifado": "1814"
+          },
+          {
+            "inicio": 97,
+            "fim": 125,
+            "motivo": "fluxo — Museu Histórico no prédio da cadeia",
+            "texto_grifado": "Museu Histórico e Geográfico"
+          },
+          {
+            "inicio": 127,
+            "fim": 172,
+            "motivo": "contraste — Parque do Açude Novo (≠ 1814)",
+            "texto_grifado": "O Parque do Açude Novo foi inaugurado em 1976"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near/far-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "1814 cadeia/Museu (Matriz→Floriano) | 1976 Açude Novo | 1790 vila depois.\nNear: só ano do Parque → 1976, não 1814 nem 1966.\nFar: freguesia 1769 ou cidade 1864 — formação administrativa, não par Museu×Parque.\nNão muda: Museu/cadeia=1814; Parque Açude Novo=1976.\nCadeia: vizinho = freguesia/vila/museu na formação (CG_formacao_freguesia_vila_museu).",
+        "destaques": [
+          "1814",
+          "1976",
+          "Museu"
+        ]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Base factual — Cultura e patrimônio",
+      "path": "conteúdo/historia-cg-pb/base-factual.md"
+    }
+  ]
+}

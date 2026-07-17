@@ -1,0 +1,218 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 220,
+  "fundamento_slug": "CG_formacao_emancipacao_boavista_1994",
+  "macete_visual": "1994 Boa Vista | desmembra CG",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Colega antecipa 1994 para 1894/1874 ou desloca desmembramento para João Pessoa",
+    "eixos_mecanismo": ["numero_vizinho", "regra_excecao", "termo_unico"],
+    "isca_por_alternativa": {
+      "A": "antecipa 1994 para 1894 e nega vínculo distrital com CG",
+      "C": "mistura Quebra-quilos e credita desmembramento a João Pessoa",
+      "D": "troca 1994 por 1874 e nega emancipação municipal"
+    },
+    "eficacia_pos_aula": ["E1", "E2", "E3"],
+    "referencia_lote": "content/questoes/historia_cg_pb/lote-022.json",
+    "gabarito": "B"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: desmembra CG, não JP",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B.\n\nA — antecipa 1994 para 1894 e trata Boa Vista como município desde a fundação.\nC — mistura Quebra-quilos com emancipação e desloca desmembramento para João Pessoa.\nD — troca 1994 por 1874 e nega que Boa Vista vire município.\n\nArquivo STTP: emancipação distrital de 1994.",
+        "destaques": ["Gabarito B", "1994", "Campina Grande"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do arquivo",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "EMANCIPAÇÃO (1994): distrito de Boa Vista desmembra de Campina Grande e torna-se município.\n\nDESMEMBRAMENTO: vínculo distrital com Campina Grande — não com João Pessoa (capital estadual).\n\nQUEBRA-QUILOS (1874): movimento social regional — marco distinto da emancipação de 1994.",
+        "destaques": ["1994", "Boa Vista", "Campina Grande"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: é emancipação de Boa Vista?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Marco é desmembramento de distrito de CG?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Ano é 1994 — vira município?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Gabarito B — Boa Vista emancipada",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "Boa Vista" },
+          { "de": "p2", "para": "r1", "rotulo": "1994" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Linha do tempo — emancipação × vizinhos",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Ano", "Marco"],
+        "linhas": [
+          {
+            "faixa": "1994",
+            "classificacao": "Boa Vista — desmembra CG, vira município",
+            "destaque": true
+          },
+          {
+            "faixa": "1874 (vizinho)",
+            "classificacao": "Quebra-quilos — ≠ emancipação distrital"
+          },
+          {
+            "faixa": "1864 (vizinho)",
+            "classificacao": "CG elevada à cidade — ≠ Boa Vista 1994"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: ano × município-sede",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o colega pensa ✗",
+          "O que a base factual diz ✓"
+        ],
+        "linhas": [
+          [
+            "Emancipação em 1894 ou 1874",
+            "Emancipação de Boa Vista = 1994"
+          ],
+          [
+            "Desmembramento a partir de João Pessoa",
+            "Distrito desmembra de Campina Grande"
+          ],
+          [
+            "Quebra-quilos causou a emancipação",
+            "1874 = protesto social; 1994 = marco administrativo"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          [
+            "A — numero_vizinho",
+            "Antecipa 1994 para 1894 e nega o vínculo distrital correto com CG"
+          ],
+          [
+            "C — termo_unico",
+            "Mistura Quebra-quilos (1874) com emancipação e desloca desmembramento para João Pessoa"
+          ],
+          [
+            "D — numero_vizinho",
+            "Troca 1994 por 1874 e nega que Boa Vista vire município em 1994"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o arquivo da STTP",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Ponto do arquivo", "Dado correto"],
+        "linhas": [
+          ["Distrito e município-sede", "Boa Vista desmembra de Campina Grande"],
+          ["Ano e status", "1994 — torna-se município → Gabarito B"]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Boa Vista × Quebra-quilos × capital",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Marco", "Função no estudo"],
+        "linhas": [
+          ["1994 Boa Vista", "Desmembramento distrital — núcleo do gabarito"],
+          ["1874 Quebra-quilos (vizinho)", "Movimento social — ≠ causa da emancipação"],
+          ["João Pessoa capital (vizinho)", "Sede estadual — ≠ município-sede do desmembramento"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Base factual — emancipação",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "conteúdo/historia-cg-pb/base-factual.md — Formação de Campina Grande",
+        "texto": "Em 1994 o distrito de Boa Vista desmembra de Campina Grande e vira município. Em 1874 ocorre o movimento Quebra-quilos — não ficou restrito só a Campina Grande.",
+        "trechos_grifados": [
+          {
+            "inicio": 3,
+            "fim": 7,
+            "motivo": "mapa — ano da emancipação de Boa Vista",
+            "texto_grifado": "1994"
+          },
+          {
+            "inicio": 22,
+            "fim": 31,
+            "motivo": "fluxo — distrito emancipado",
+            "texto_grifado": "Boa Vista"
+          },
+          {
+            "inicio": 32,
+            "fim": 59,
+            "motivo": "contraste — desmembra de Campina Grande (≠ João Pessoa)",
+            "texto_grifado": "desmembra de Campina Grande"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near/far-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "1994 Boa Vista | desmembra CG → município | ≠ 1874 Quebra-quilos.\nNear: só o ano → 1994, não 1894 nem 1874.\nFar: vila 1790 ou cidade 1864 — elevações históricas de CG, não desmembramento distrital.\nNão muda: Boa Vista desmembra de Campina Grande e vira município em 1994.\nCadeia: vizinho = trio 1699/1874/1994 (CG_formacao_marcos_complementares).",
+        "destaques": ["1994", "Boa Vista", "Campina Grande"]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Base factual — Formação de Campina Grande",
+      "path": "conteúdo/historia-cg-pb/base-factual.md"
+    }
+  ]
+}

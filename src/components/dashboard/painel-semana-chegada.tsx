@@ -20,13 +20,13 @@ interface PainelSemanaChegadaProps {
 function labelTipo(tipo: TipoMissao): string {
   switch (tipo) {
     case "espelho":
-      return "Simulado";
+      return "simulado";
     case "folga":
-      return "Folga";
+      return "folga";
     case "revisoes":
-      return "Revisões";
+      return "revisões";
     default:
-      return "Estudo";
+      return "questões";
   }
 }
 
@@ -54,7 +54,7 @@ function CelulaDia({ missao }: { missao: MissaoDia }) {
   return (
     <div
       className={cn(
-        "flex min-w-0 flex-col items-center gap-1.5 rounded-lg border px-2 py-2.5 text-center transition-colors sm:px-1.5",
+        "flex min-w-0 flex-col items-center gap-1 rounded-lg border px-1 py-2 text-center transition-colors sm:gap-1.5 sm:px-1.5 sm:py-2.5",
         statusCellClasses(missao.status, isHoje),
       )}
       title={missao.motivo}
@@ -70,8 +70,8 @@ function CelulaDia({ missao }: { missao: MissaoDia }) {
 
       {missao.tipo === "espelho" ? (
         <ClipboardCheck
-          className="size-4 text-transito"
-          aria-label="Simulado"
+          className="size-4 shrink-0 text-transito"
+          aria-label="simulado"
         />
       ) : missao.tipo === "folga" ? (
         <Moon className="size-4 text-muted-foreground" aria-label="Folga" />
@@ -91,7 +91,7 @@ function CelulaDia({ missao }: { missao: MissaoDia }) {
         </span>
       )}
 
-      <span className="line-clamp-2 text-[10px] leading-tight text-muted-foreground">
+      <span className="w-full min-w-0 truncate text-[9px] leading-none text-muted-foreground sm:text-[10px]">
         {labelTipo(missao.tipo)}
       </span>
 
@@ -139,7 +139,7 @@ export function PainelSemanaChegada({ semana }: PainelSemanaChegadaProps) {
             </p>
           </div>
 
-          <div className="grid grid-cols-7 gap-1.5 sm:gap-2">
+          <div className="grid grid-cols-7 gap-1 sm:gap-2">
             {semana.missoes.map((missao) => (
               <CelulaDia key={missao.data} missao={missao} />
             ))}

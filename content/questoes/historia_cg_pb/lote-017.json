@@ -1,0 +1,330 @@
+[
+  {
+    "disciplina": "historia_cg_pb",
+    "topico": "historia_cg_pb_formacao",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_prazo",
+    "dificuldade": 4,
+    "fundamento_slug": "CG_formacao_vila_cidade_1790_1864",
+    "enunciado": "No dossiê de elevações administrativas da STTP, o estagiário confronta apenas dois marcos: a passagem a Vila Nova da Rainha com criação do pelourinho e a elevação à categoria de cidade por lei provincial. Um colega antecipa a Lei Provincial nº 127 para 1790, atribui o pelourinho à elevação de 1864 e troca as datas entre vila e cidade. Assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "20/04/1790: Vila Nova da Rainha — Ouvidor Brederodes, criação do pelourinho; 11/10/1864: elevação à cidade — Lei Provincial nº 127.",
+      "B": "11/10/1864: Vila Nova da Rainha com pelourinho; 20/04/1790: elevação à cidade pela Lei Provincial nº 127.",
+      "C": "20/04/1790: elevação à cidade — Lei Provincial nº 127; 11/10/1864: Vila Nova da Rainha com pelourinho (Brederodes).",
+      "D": "1790: freguesia de Nossa Senhora da Conceição; 1864: fundação do povoado dos Ariús na Borborema."
+    },
+    "gabarito": "A",
+    "comentario": {
+      "o_que_testa": "Par vila × cidade — Vila Nova da Rainha em 20/04/1790 (Ouvidor Brederodes, pelourinho) e elevação à categoria de cidade em 11/10/1864 (Lei Provincial nº 127) — sem inverter datas, antecipar a lei para 1790 ou confundir com freguesia (1769) ou fundação (1697).",
+      "fundamento_legal": "Base factual CG/PB (conteúdo/historia-cg-pb/base-factual.md): \"20/04/1790 — Vila — Elevada a Vila Nova da Rainha (Ouvidor Brederodes); criado o pelourinho\"; \"11/10/1864 — Cidade — Lei Provincial nº 127 — elevação à categoria de cidade\"; \"1769 — Freguesia — Elevada sob invocação de Nossa Senhora da Conceição\"; \"1/12/1697 — Fundação — Teodósio aldeia índios Ariús\".",
+      "passo_a_passo": [
+        "1. Dois marcos distintos: vila em 20/04/1790 (Vila Nova da Rainha + pelourinho, Brederodes) e cidade em 11/10/1864 (Lei Provincial nº 127) — cada um com data e conteúdo próprios na base factual.",
+        "2. B erra por numero_vizinho (inverte 1790 e 1864 entre vila e cidade); C erra por numero_vizinho (troca vila e cidade) e termo_unico (atribui Lei 127 a 1790); D erra por regra_excecao (antecipa freguesia de 1769 para 1790) e termo_unico (confunde fundação de 1697 com elevação de 1864).",
+        "3. A correta: 20/04/1790 Vila Nova da Rainha com pelourinho e 11/10/1864 elevação à cidade pela Lei Provincial nº 127."
+      ],
+      "pegadinha": "A banca inverte 1790↔1864 entre vila e cidade, antecipa a Lei Provincial nº 127 para 1790 ou mistura freguesia (1769) e fundação (1697) nos marcos de elevação.",
+      "macete": "1790 vila (Rainha + pelourinho + Brederodes) | 1864 cidade (Lei 127) | 1769 freguesia | 1697 funda.",
+      "estudo_reverso": [
+        "20/04/1790 — Vila Nova da Rainha + pelourinho",
+        "11/10/1864 — cidade Lei Provincial nº 127",
+        "1769 freguesia / 1697 fundação (vizinhos)"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Colega inverte 1790↔1864 ou antecipa Lei 127 para 1790 confundindo vila e cidade",
+      "eixos_legais": [
+        "CG_formacao_vila_cidade_1790_1864"
+      ],
+      "eixo_vizinho": "CG_formacao_marcos",
+      "isca_por_alternativa": {
+        "B": "inverte 1790 e 1864 entre vila com pelourinho e cidade Lei 127",
+        "C": "troca vila e cidade e coloca Lei 127 em 1790",
+        "D": "substitui vila/cidade por freguesia 1769 e fundação 1697"
+      },
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "termo_unico",
+        "regra_excecao"
+      ],
+      "near_transfer": "Mesmo par, mas só pergunta o ano da Vila Nova da Rainha — 1790 (20/04), não 1864 nem 1769.",
+      "far_transfer": "Se a banca cobrar cadeia/Museu (1814) ou sesmaria (1664), o eixo é patrimônio ou pré-fundação — distinto do par vila×cidade.",
+      "o_que_nao_muda": "Vila Nova da Rainha + pelourinho = 1790; cidade Lei Provincial nº 127 = 1864 (base factual).",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "formacao",
+      "1790",
+      "1864",
+      "vila_nova_da_rainha",
+      "lei_127"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "duracao_estimada_seg": 50,
+      "fundamento_slug": "CG_formacao_vila_cidade_1790_1864",
+      "macete_visual": "1790 vila | 1864 cidade Lei 127",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Par vila×cidade: 1790 Rainha + pelourinho × 1864 Lei 127 — a banca inverte datas ou antecipa a lei.\n\nGabarito A.",
+            "destaques": ["1790", "1864", "Gabarito A"]
+          }
+        },
+        {
+          "id": "gradacao",
+          "titulo": "Vila × cidade",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Data", "Marco"],
+            "linhas": [
+              { "faixa": "20/04/1790", "classificacao": "Vila Nova da Rainha + pelourinho" },
+              { "faixa": "11/10/1864", "classificacao": "Cidade — Lei Provincial nº 127", "destaque": true }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "1790 vila (Rainha + pelourinho) | 1864 cidade (Lei 127) | 1769 freguesia | 1697 funda.",
+            "destaques": ["1790", "1864", "Lei 127"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Base factual — Formação",
+          "path": "conteúdo/historia-cg-pb/base-factual.md"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 220,
+      "fundamento_slug": "CG_formacao_vila_cidade_1790_1864",
+      "macete_visual": "1790 vila | 1864 cidade Lei 127",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Colega inverte 1790↔1864 ou antecipa Lei 127 para 1790",
+        "eixos_mecanismo": ["numero_vizinho", "termo_unico", "regra_excecao"],
+        "isca_por_alternativa": {
+          "B": "inverte 1790 e 1864 entre vila e cidade",
+          "C": "troca vila/cidade e coloca Lei 127 em 1790",
+          "D": "substitui por freguesia 1769 e fundação 1697"
+        },
+        "eficacia_pos_aula": ["E1", "E2", "E3"]
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: vila ≠ cidade",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito A.\n\nB — inverte 1790 e 1864 entre vila com pelourinho e cidade Lei 127.\nC — troca vila e cidade e antecipa Lei 127 para 1790.\nD — substitui elevações por freguesia (1769) e fundação dos Ariús (1697).\n\nDossiê STTP: par 1790 vila × 1864 cidade.",
+            "destaques": ["Gabarito A", "1790", "1864"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do dossiê",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VILA NOVA DA RAINHA (1790): elevação a vila em 20/04/1790 — Ouvidor Brederodes cria o pelourinho.\n\nLEI PROVINCIAL Nº 127 (1864): elevação à categoria de cidade em 11/10/1864.\n\nFREGUESIA (1769): marco anterior — Nossa Senhora da Conceição; não confundir com vila nem cidade.",
+            "destaques": ["1790", "1864", "1769"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual marco é qual data?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Marco é Vila Nova da Rainha com pelourinho?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Marco é elevação à cidade — Lei 127?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito A — 20/04/1790 e 11/10/1864",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "1790" },
+              { "de": "p2", "para": "r1", "rotulo": "1864" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Linha do tempo — vila e cidade",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Data", "Elevação"],
+            "linhas": [
+              {
+                "faixa": "20/04/1790",
+                "classificacao": "Vila Nova da Rainha — Brederodes + pelourinho"
+              },
+              {
+                "faixa": "11/10/1864",
+                "classificacao": "Cidade — Lei Provincial nº 127",
+                "destaque": true
+              },
+              {
+                "faixa": "1769 (vizinho)",
+                "classificacao": "Freguesia — ≠ vila nem cidade"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: vila × cidade × vizinhos",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "O que o colega pensa ✗",
+              "O que a base factual diz ✓"
+            ],
+            "linhas": [
+              [
+                "Vila e cidade ocorreram no mesmo ano",
+                "1790 = vila + pelourinho; 1864 = cidade Lei 127"
+              ],
+              [
+                "Lei Provincial nº 127 é de 1790",
+                "Lei 127 = 11/10/1864; vila = 20/04/1790"
+              ],
+              [
+                "1864 é elevação a vila com pelourinho",
+                "Pelourinho = 1790; cidade = 1864"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "B — numero_vizinho",
+                "Inverte 1790 e 1864 entre vila com pelourinho e cidade Lei 127"
+              ],
+              [
+                "C — numero_vizinho",
+                "Troca vila e cidade entre 1790 e 1864"
+              ],
+              [
+                "C — termo_unico",
+                "Antecipa Lei Provincial nº 127 para 1790 em vez de 1864"
+              ],
+              [
+                "D — regra_excecao",
+                "Substitui vila/cidade por freguesia de 1769 e fundação de 1697"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o dossiê da STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Marco do dossiê", "Dado correto"],
+            "linhas": [
+              ["Vila Nova da Rainha", "20/04/1790 — Brederodes + pelourinho"],
+              ["Elevação à cidade", "11/10/1864 — Lei Provincial nº 127 → Gabarito A"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Freguesia × vila × cidade",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Marco", "Função no estudo"],
+            "linhas": [
+              ["1769 freguesia (vizinho)", "Anterior à vila — não antecipar Lei 127"],
+              ["1790–1864", "Par vila×cidade — núcleo do gabarito"],
+              ["1697 fundação (vizinho)", "Povoado dos Ariús — ≠ elevação administrativa"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Base factual — elevações",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "conteúdo/historia-cg-pb/base-factual.md — Formação de Campina Grande",
+            "texto": "Em 20/04/1790 Campina Grande foi elevada a Vila Nova da Rainha pelo Ouvidor Brederodes, com criação do pelourinho. Em 11/10/1864 foi elevada à categoria de cidade pela Lei Provincial nº 127. Em 1769 ocorreu a elevação a freguesia sob Nossa Senhora da Conceição.",
+            "trechos_grifados": [
+              {
+                "inicio": 3,
+                "fim": 13,
+                "motivo": "mapa — data da vila Nova da Rainha",
+                "texto_grifado": "20/04/1790"
+              },
+              {
+                "inicio": 43,
+                "fim": 62,
+                "motivo": "fluxo — Vila Nova da Rainha (Brederodes + pelourinho)",
+                "texto_grifado": "Vila Nova da Rainha"
+              },
+              {
+                "inicio": 168,
+                "fim": 189,
+                "motivo": "contraste — cidade Lei 127 (≠ 1790)",
+                "texto_grifado": "Lei Provincial nº 127"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "1790 vila (Rainha + pelourinho + Brederodes) | 1864 cidade (Lei 127).\nNear: só Vila Nova da Rainha → 20/04/1790, não 1864 nem 1769.\nFar: cadeia 1814 ou sesmaria 1664 — patrimônio/pré-fundação, não par vila×cidade.\nNão muda: vila=1790; cidade Lei 127=1864.\nCadeia: vizinho = tríade 1697/1790/1864 (CG_formacao_marcos).",
+            "destaques": ["1790", "1864", "Lei 127"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Base factual — Formação de Campina Grande",
+          "path": "conteúdo/historia-cg-pb/base-factual.md"
+        }
+      ]
+    }
+  }
+]

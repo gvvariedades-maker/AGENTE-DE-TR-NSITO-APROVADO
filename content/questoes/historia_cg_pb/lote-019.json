@@ -1,0 +1,334 @@
+[
+  {
+    "disciplina": "historia_cg_pb",
+    "topico": "historia_cg_pb_economia_cultura",
+    "tipo": "caso_pratico",
+    "estilo_idecan": "pegadinha_prazo",
+    "dificuldade": 4,
+    "fundamento_slug": "CG_economia_cultura_pib_ensino_superior",
+    "enunciado": "No seminário da STTP sobre desenvolvimento contemporâneo de Campina Grande, o palestrante apresenta três eixos verificáveis: o destaque em universidades e centros técnicos; a presença de múltiplas instituições de ensino superior; e o PIB municipal entre os maiores da Paraíba. Um participante resume que a cidade não possui ensino superior relevante, que o PIB atual equivale aos cerca de 4 mil habitantes do final do século XIX e que universidades ficam restritas ao litoral paraibano. Assinale a alternativa CORRETA:",
+    "alternativas": {
+      "A": "Sem ensino superior de destaque; PIB municipal entre os menores da Paraíba; universidades concentradas em João Pessoa por ausência de centros técnicos locais.",
+      "B": "Ensino superior restrito ao litoral; PIB irrelevante no estado; cultura do algodão no século XIX como único indicador econômico atual.",
+      "C": "Destaque em universidades e centros técnicos; múltiplas instituições de ensino superior; PIB municipal entre os maiores da Paraíba.",
+      "D": "PIB atual de cerca de 4 mil habitantes (final do século XIX); ensino superior inexistente; feiras da chapada como único motor econômico contemporâneo."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "o_que_testa": "Desenvolvimento contemporâneo de Campina Grande — destaque em universidades e centros técnicos, múltiplas IES e PIB municipal entre os maiores da Paraíba — sem negar ensino superior local, confundir PIB com população de ~4 mil (final séc. XIX) ou deslocar universidades só ao litoral.",
+      "fundamento_legal": "Base factual CG/PB (conteúdo/historia-cg-pb/base-factual.md): \"Tecnologia / ensino — Destaque em universidades e centros técnicos; múltiplas instituições de ensino superior\"; \"PIB municipal — Entre os maiores PIBs municipais da Paraíba (dados oficiais/IBGE — conferir série atual)\"; \"População (final séc. XIX) — Cerca de 4 mil habitantes\"; \"Salto econômico (séc. XIX) — Cultura do algodão como fator decisivo de desenvolvimento\".",
+      "passo_a_passo": [
+        "1. Três eixos do seminário: ensino superior local de destaque, múltiplas IES e PIB municipal entre os maiores da PB — dados distintos na base factual, sem confundir com população histórica.",
+        "2. A erra por regra_excecao (nega ensino superior de destaque e inverte PIB para entre os menores da PB); B erra por regra_excecao (restringe universidades ao litoral e trata PIB como irrelevante) e termo_unico (reduz economia atual ao algodão do século XIX); D erra por numero_vizinho (usa ~4 mil habitantes do final do século XIX como PIB/população atual) e regra_excecao (nega ensino superior e reduz economia a feiras históricas).",
+        "3. C correta: universidades e centros técnicos de destaque, múltiplas IES e PIB municipal entre os maiores da Paraíba."
+      ],
+      "pegadinha": "A banca confunde PIB municipal contemporâneo com a população de cerca de 4 mil habitantes do final do século XIX, nega ensino superior em Campina Grande ou desloca universidades exclusivamente ao litoral.",
+      "macete": "IES locais + PIB entre maiores da PB | 4 mil = pop. fim séc. XIX (≠ PIB atual) | algodão = salto histórico.",
+      "estudo_reverso": [
+        "Universidades e centros técnicos — destaque local",
+        "PIB municipal — entre os maiores da PB",
+        "~4 mil hab. — final século XIX (vizinho)"
+      ]
+    },
+    "meta": {
+      "padrao_familia": "A_caso_regra_excecao",
+      "pegadinha_em_uma_frase": "Participante troca PIB municipal por ~4 mil habitantes do século XIX ou nega ensino superior local",
+      "eixos_legais": [
+        "CG_economia_cultura_pib_ensino_superior"
+      ],
+      "eixo_vizinho": "CG_economia_cultura_populacao_polo_festas",
+      "isca_por_alternativa": {
+        "A": "nega ensino superior de destaque e inverte PIB para entre os menores da PB",
+        "B": "restringe universidades ao litoral e reduz economia atual ao algodão do século XIX",
+        "D": "usa ~4 mil habitantes do final do século XIX como PIB/população atual"
+      },
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
+      ],
+      "near_transfer": "Mesmo eixo, mas só pergunta o PIB municipal — entre os maiores da Paraíba, não confundir com população de ~4 mil do século XIX.",
+      "far_transfer": "Se a banca cobrar Maior São João ou Festival de Inverno, o eixo é cultura festiva — distinto de PIB e ensino superior.",
+      "o_que_nao_muda": "Campina Grande tem destaque em universidades/centros técnicos e PIB entre os maiores municipais da PB (base factual).",
+      "calibracao_corpus": "ok",
+      "eficacia_pos_aula": ["E1", "E2", "E3"]
+    },
+    "tags": [
+      "economia_cultura",
+      "pib",
+      "ensino_superior",
+      "universidades",
+      "desenvolvimento"
+    ],
+    "estudo_reverso_visual": {
+      "versao": 1,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "duracao_estimada_seg": 50,
+      "fundamento_slug": "CG_economia_cultura_pib_ensino_superior",
+      "macete_visual": "IES + PIB maiores PB | 4 mil ≠ PIB",
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "O que a IDECAN testou",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PIB × ensino superior: IES locais + PIB entre maiores da PB — a banca troca PIB por ~4 mil hab. do séc. XIX ou nega universidades.\n\nGabarito C.",
+            "destaques": ["PIB", "4 mil", "Gabarito C"]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "PIB × população histórica",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Crença ✗", "Base factual ✓"],
+            "linhas": [
+              ["PIB = 4 mil habitantes", "PIB municipal entre maiores da PB; 4 mil = pop. fim séc. XIX"],
+              ["Sem ensino superior local", "Universidades e centros técnicos de destaque"]
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete visual",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "IES locais + PIB maiores PB | 4 mil = pop. histórica (≠ PIB) | algodão = salto séc. XIX.",
+            "destaques": ["PIB", "IES", "4 mil"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Base factual — Economia e desenvolvimento",
+          "path": "conteúdo/historia-cg-pb/base-factual.md"
+        }
+      ]
+    },
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "comparacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 220,
+      "fundamento_slug": "CG_economia_cultura_pib_ensino_superior",
+      "macete_visual": "IES + PIB maiores PB | 4 mil ≠ PIB",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Participante troca PIB municipal por ~4 mil habitantes do século XIX",
+        "eixos_mecanismo": ["numero_vizinho", "regra_excecao", "termo_unico"],
+        "isca_por_alternativa": {
+          "A": "nega ensino superior e inverte PIB para entre os menores da PB",
+          "B": "restringe universidades ao litoral e reduz economia ao algodão",
+          "D": "usa ~4 mil habitantes do séc. XIX como PIB atual"
+        },
+        "eficacia_pos_aula": ["E1", "E2", "E3"]
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: PIB ≠ população histórica",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — nega ensino superior de destaque e inverte PIB para entre os menores da PB.\nB — restringe universidades ao litoral e reduz economia atual ao algodão do século XIX.\nD — usa ~4 mil habitantes do final do século XIX como PIB/população atual.\n\nSeminário STTP: ensino superior local + PIB entre maiores da Paraíba.",
+            "destaques": ["Gabarito C", "PIB", "4 mil"]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos do seminário",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PIB MUNICIPAL: entre os maiores PIBs municipais da Paraíba — indicador econômico contemporâneo (IBGE).\n\nENSINO SUPERIOR: destaque em universidades e centros técnicos; múltiplas IES em Campina Grande.\n\n~4 MIL HABITANTES: ordem de grandeza da população no final do século XIX — dado histórico, não PIB atual.",
+            "destaques": ["PIB MUNICIPAL", "ENSINO SUPERIOR", "4 MIL"]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: qual dado é qual?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Eixo é ensino superior local de destaque?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Eixo é PIB municipal entre maiores da PB?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito C — IES + PIB maiores da Paraíba",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              { "de": "p1", "para": "p2", "rotulo": "IES locais" },
+              { "de": "p2", "para": "r1", "rotulo": "PIB PB" }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa — desenvolvimento contemporâneo",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": ["Eixo", "Dado verificável"],
+            "linhas": [
+              {
+                "faixa": "Ensino superior",
+                "classificacao": "Universidades + centros técnicos de destaque"
+              },
+              {
+                "faixa": "PIB municipal",
+                "classificacao": "Entre os maiores da Paraíba",
+                "destaque": true
+              },
+              {
+                "faixa": "População (vizinho)",
+                "classificacao": "~4 mil hab. — final século XIX (≠ PIB)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "A armadilha: PIB × 4 mil habitantes",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "O que o participante pensa ✗",
+              "O que a base factual diz ✓"
+            ],
+            "linhas": [
+              [
+                "PIB atual = cerca de 4 mil habitantes",
+                "PIB entre maiores da PB; 4 mil = população fim séc. XIX"
+              ],
+              [
+                "Campina Grande sem ensino superior relevante",
+                "Destaque em universidades, centros técnicos e múltiplas IES"
+              ],
+              [
+                "Universidades só no litoral paraibano",
+                "Ensino superior de destaque na própria Campina Grande"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Nega ensino superior de destaque e inverte PIB para entre os menores da PB"
+              ],
+              [
+                "B — regra_excecao",
+                "Restringe universidades ao litoral e trata PIB como irrelevante no estado"
+              ],
+              [
+                "B — termo_unico",
+                "Reduz economia contemporânea ao algodão do século XIX como único indicador"
+              ],
+              [
+                "D — numero_vizinho",
+                "Usa ~4 mil habitantes do final do século XIX como PIB/população atual"
+              ],
+              [
+                "D — regra_excecao",
+                "Nega ensino superior e reduz economia contemporânea a feiras históricas"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o seminário da STTP",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Eixo do seminário", "Dado correto"],
+            "linhas": [
+              ["Ensino superior", "Universidades + centros técnicos + múltiplas IES"],
+              ["PIB municipal", "Entre os maiores da Paraíba → Gabarito C"]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "PIB × população × algodão",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": ["Indicador", "Função no estudo"],
+            "linhas": [
+              ["PIB municipal (contemporâneo)", "Entre maiores da PB — núcleo do gabarito"],
+              ["~4 mil hab. fim séc. XIX (vizinho)", "População histórica — não confundir com PIB"],
+              ["Algodão séc. XIX (vizinho)", "Salto econômico histórico — não apaga IES nem PIB atuais"]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Base factual — economia e ensino",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "conteúdo/historia-cg-pb/base-factual.md — Economia e desenvolvimento",
+            "texto": "Tecnologia e ensino: destaque em universidades e centros técnicos; múltiplas instituições de ensino superior. PIB municipal: entre os maiores PIBs municipais da Paraíba (dados oficiais/IBGE — conferir série atual). População no final do século XIX: cerca de 4 mil habitantes.",
+            "trechos_grifados": [
+              {
+                "inicio": 33,
+                "fim": 65,
+                "motivo": "mapa — universidades e centros técnicos de destaque",
+                "texto_grifado": "universidades e centros técnicos"
+              },
+              {
+                "inicio": 67,
+                "fim": 108,
+                "motivo": "fluxo — múltiplas IES locais",
+                "texto_grifado": "múltiplas instituições de ensino superior"
+              },
+              {
+                "inicio": 134,
+                "fim": 168,
+                "motivo": "contraste — PIB municipal (≠ 4 mil habitantes)",
+                "texto_grifado": "maiores PIBs municipais da Paraíba"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "IES locais + PIB maiores PB | 4 mil = pop. fim séc. XIX (≠ PIB).\nNear: só PIB municipal → entre os maiores da Paraíba, não ~4 mil do século XIX.\nFar: Maior São João ou Festival de Inverno — cultura festiva, não PIB/ensino.\nNão muda: universidades/centros técnicos de destaque + PIB entre maiores municipais da PB.\nCadeia: vizinho = ~4 mil hab. e polo festivo (CG_economia_cultura_populacao_polo_festas).",
+            "destaques": ["PIB", "IES", "4 mil"]
+          }
+        }
+      ],
+      "links_fonte": [
+        {
+          "rotulo": "Base factual — Economia e desenvolvimento",
+          "path": "conteúdo/historia-cg-pb/base-factual.md"
+        }
+      ]
+    }
+  }
+]

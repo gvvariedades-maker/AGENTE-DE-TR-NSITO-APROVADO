@@ -1,0 +1,223 @@
+{
+  "versao": 2,
+  "arquetipo": "fluxograma_decisao",
+  "arquetipo_secundario": "tabela_gradacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 220,
+  "fundamento_slug": "CG_formacao_fundacao_carta_1697_1699",
+  "macete_visual": "1697 funda | 1699 carta Manuel | 1769 freguesia",
+  "meta": {
+    "padrao_familia": "A_caso_regra_excecao",
+    "pegadinha_em_uma_frase": "Colega inverte 1697↔1699 ou antecipa freguesia de 1769 para 1699",
+    "eixos_mecanismo": ["numero_vizinho", "termo_unico", "regra_excecao"],
+    "isca_por_alternativa": {
+      "A": "inverte 1/12/1697 e 14/05/1699 entre aldeamento e carta",
+      "B": "credita carta de 1699 a Teodósio em vez de Manuel Soares",
+      "C": "antecipa freguesia de 1769 para 1699 e coloca carta em 1697"
+    },
+    "eficacia_pos_aula": ["E1", "E2", "E3"],
+    "referencia_lote": "content/questoes/historia_cg_pb/lote-012.json",
+    "gabarito": "D"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: fundação ≠ carta ao rei",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito D.\n\nA — inverte 1/12/1697 e 14/05/1699 entre aldeamento dos Ariús e carta ao rei.\nB — credita carta de 1699 a Teodósio e o trata como governador.\nC — coloca carta em 1697 e antecipa freguesia de 1769 para 14/05/1699.\n\nDossiê STTP: dois atos do século XVII com datas e autores distintos.",
+        "destaques": ["Gabarito D", "1697", "1699"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do dossiê",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "FUNDAÇÃO (1/12/1697): Teodósio aldeia índios Ariús na Serra da Borborema — origem do povoado.\n\nCARTA AO REI (14/05/1699): governador Manuel Soares de Albergaria notifica Portugal — distinta da fundação.\n\nFREGUESIA (1769): elevação sob Nossa Senhora da Conceição — marco posterior, não confundir com 1699.",
+        "destaques": ["FUNDAÇÃO", "CARTA AO REI", "1769"]
+      }
+    },
+    {
+      "id": "fluxo",
+      "titulo": "Método: qual ato é qual data?",
+      "secao": "metodo",
+      "tipo": "fluxograma",
+      "conteudo": {
+        "nos": [
+          {
+            "id": "p1",
+            "label": "Ato é aldeamento dos Ariús por Teodósio?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "p2",
+            "label": "Ato é carta de Manuel Soares ao rei?",
+            "tipo": "pergunta"
+          },
+          {
+            "id": "r1",
+            "label": "Gabarito D — 1/12/1697 e 14/05/1699",
+            "tipo": "resultado"
+          }
+        ],
+        "arestas": [
+          { "de": "p1", "para": "p2", "rotulo": "1/12/1697" },
+          { "de": "p2", "para": "r1", "rotulo": "14/05/1699" }
+        ]
+      }
+    },
+    {
+      "id": "mapa",
+      "titulo": "Linha do tempo — fundação e notificação",
+      "secao": "mapa",
+      "tipo": "tabela_gradacao",
+      "conteudo": {
+        "titulo_colunas": ["Data", "Ato"],
+        "linhas": [
+          {
+            "faixa": "1/12/1697",
+            "classificacao": "Teodósio aldeia Ariús na Borborema — fundação do povoado"
+          },
+          {
+            "faixa": "14/05/1699",
+            "classificacao": "Manuel Soares de Albergaria — carta ao rei de Portugal",
+            "destaque": true
+          },
+          {
+            "faixa": "1769",
+            "classificacao": "Freguesia N. Sra. da Conceição (vizinho — ≠ 1699)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "A armadilha: fundação × carta × freguesia",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que o colega pensa ✗",
+          "O que a base factual diz ✓"
+        ],
+        "linhas": [
+          [
+            "Fundação e carta ocorreram na mesma data",
+            "1/12/1697 = fundação; 14/05/1699 = carta ao rei"
+          ],
+          [
+            "Teodósio enviou a carta de 1699",
+            "Teodósio fundou em 1697; carta = Manuel Soares (governador)"
+          ],
+          [
+            "14/05/1699 é elevação a freguesia",
+            "Freguesia = 1769; 1699 = notificação colonial"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Alternativa", "Mecanismo + por quê"],
+        "linhas": [
+          [
+            "A — numero_vizinho",
+            "Inverte 1/12/1697 e 14/05/1699 entre aldeamento e carta ao rei"
+          ],
+          [
+            "B — termo_unico",
+            "Credita carta de 1699 a Teodósio em vez de Manuel Soares de Albergaria"
+          ],
+          [
+            "C — regra_excecao",
+            "Antecipa freguesia de 1769 para 14/05/1699"
+          ],
+          [
+            "C — numero_vizinho",
+            "Coloca carta de Manuel Soares em 1697 em vez da fundação"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Resolvendo o dossiê da STTP",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Ato do dossiê", "Dado correto"],
+        "linhas": [
+          ["Aldeamento dos Ariús", "1/12/1697 — Teodósio na Borborema"],
+          ["Notificação ao rei", "14/05/1699 — Manuel Soares de Albergaria"],
+          ["Gabarito", "Alternativa D"]
+        ]
+      }
+    },
+    {
+      "id": "hierarquia",
+      "titulo": "Fundação × notificação × elevações",
+      "secao": "conceito",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": ["Período", "Função no estudo"],
+        "linhas": [
+          ["1697–1699", "Fundação e carta ao rei — núcleo do gabarito"],
+          ["1769 (vizinho)", "Freguesia — marco posterior, não antecipar para 1699"],
+          ["1790", "Vila Nova da Rainha — após fundação, carta e freguesia"]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Base factual — fundação e carta",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "conteúdo/historia-cg-pb/base-factual.md — Formação de Campina Grande",
+        "texto": "Em 1/12/1697 Teodósio aldeia índios Ariús em chapada na Serra da Borborema — origem do povoado. O governador Manuel Soares de Albergaria notifica Portugal (14/05/1699). Em 1769 a povoação é elevada sob invocação de Nossa Senhora da Conceição.",
+        "trechos_grifados": [
+          {
+            "inicio": 3,
+            "fim": 12,
+            "motivo": "mapa — fundação Teodósio + Ariús (primeiro marco)",
+            "texto_grifado": "1/12/1697"
+          },
+          {
+            "inicio": 156,
+            "fim": 166,
+            "motivo": "fluxo — carta de Manuel Soares de Albergaria",
+            "texto_grifado": "14/05/1699"
+          },
+          {
+            "inicio": 172,
+            "fim": 176,
+            "motivo": "hierarquia — freguesia posterior (≠ 1699)",
+            "texto_grifado": "1769"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near/far-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "1697 funda (Teodósio + Ariús) | 1699 carta (Manuel Soares, 14/05) | 1769 freguesia depois.\nNear: só quem enviou a carta — Manuel Soares de Albergaria, não Teodósio.\nFar: freguesia 1769 ou vila 1790 — elevações posteriores, não antecipar para 1699.\nNão muda: fundação=1/12/1697; carta=14/05/1699.\nCadeia: vizinho = 1769 freguesia.",
+        "destaques": ["1697", "1699", "1769"]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Base factual — Formação de Campina Grande",
+      "path": "conteúdo/historia-cg-pb/base-factual.md"
+    }
+  ]
+}

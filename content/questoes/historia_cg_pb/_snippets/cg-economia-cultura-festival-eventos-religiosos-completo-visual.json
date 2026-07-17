@@ -1,0 +1,197 @@
+{
+  "versao": 2,
+  "arquetipo": "matriz_assertivas",
+  "arquetipo_secundario": "comparacao",
+  "publico_alvo": "iniciante",
+  "duracao_estimada_seg": 210,
+  "fundamento_slug": "CG_economia_cultura_festival_eventos_religiosos",
+  "macete_visual": "II+III certas | I isca Inverno≠São João",
+  "meta": {
+    "padrao_familia": "B_assertivas",
+    "pegadinha_em_uma_frase": "I equipara Festival de Inverno ao Maior São João do Mundo",
+    "eixos_mecanismo": ["termo_unico", "regra_excecao"],
+    "isca_por_alternativa": {
+      "A": "compra I falsa e marca todas como corretas",
+      "C": "mantém equivalência Inverno=São João e descarta III",
+      "D": "equipara Inverno a São João e descarta II ecumênica"
+    },
+    "eficacia_pos_aula": ["E1", "E2", "E3"],
+    "referencia_lote": "content/questoes/historia_cg_pb/lote-018.json",
+    "gabarito": "B"
+  },
+  "telas": [
+    {
+      "id": "contexto",
+      "titulo": "Diagnóstico: I é a isca",
+      "secao": "diagnostico",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Gabarito B (II e III corretas).\n\nA — compra I falsa e marca todas como corretas.\nC — mantém Festival de Inverno = Maior São João e descarta Consciência Cristã (III).\nD — equipara Inverno a São João e descarta Nova Consciência ecumênica (II).\n\nCultura CG: festa junina e festival de inverno são eventos distintos.",
+        "destaques": ["Gabarito B", "Festival de Inverno", "Maior São João"]
+      }
+    },
+    {
+      "id": "glossario",
+      "titulo": "Pré-treino: 3 termos do enunciado",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "FESTIVAL DE INVERNO: evento cultural de destaque regional em Campina Grande — não confundir com festa junina.\n\nMAIOR SÃO JOÃO DO MUNDO: marca da festa junina municipal — maior festa junina do estado.\n\nNOVA CONSCIÊNCIA / CONSCIÊNCIA CRISTÃ: encontros religiosos — ecumênico e carnaval, respectivamente.",
+        "destaques": ["FESTIVAL DE INVERNO", "MAIOR SÃO JOÃO", "NOVA CONSCIÊNCIA"]
+      }
+    },
+    {
+      "id": "matriz",
+      "titulo": "Classificar I–II–III",
+      "secao": "metodo",
+      "tipo": "matriz_assertivas",
+      "conteudo": {
+        "itens": [
+          {
+            "id": "I",
+            "texto": "Festival de Inverno = Maior São João — ERRADA (eventos distintos)",
+            "correto": false
+          },
+          {
+            "id": "II",
+            "texto": "Nova Consciência ecumênica — correta",
+            "correto": true
+          },
+          {
+            "id": "III",
+            "texto": "Consciência Cristã no carnaval — correta",
+            "correto": true
+          }
+        ],
+        "gabarito_resumo": "II e III corretas → alternativa B"
+      }
+    },
+    {
+      "id": "contraste",
+      "titulo": "Assertiva-isca: I",
+      "secao": "contraste",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "O que a I afirma ✗",
+          "O que a base factual diz ✓"
+        ],
+        "linhas": [
+          [
+            "Festival de Inverno é o Maior São João do Mundo",
+            "Inverno = evento regional; São João = festa junina distinta"
+          ],
+          [
+            "Um único megaevento cobre II e III",
+            "Festivais e encontros religiosos são eixos separados"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "distratores",
+      "titulo": "Por que cada alternativa erra",
+      "secao": "distratores",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Alternativa",
+          "Mecanismo + por quê"
+        ],
+        "linhas": [
+          [
+            "A — regra_excecao",
+            "Marca I, II e III — compra equivalência Inverno=São João como se todas fossem corretas"
+          ],
+          [
+            "C — termo_unico",
+            "Aceita I equiparando Festival de Inverno ao Maior São João do Mundo"
+          ],
+          [
+            "C — regra_excecao",
+            "Marca I e II — descarta III correta da Consciência Cristã no carnaval"
+          ],
+          [
+            "D — termo_unico",
+            "Mantém I com equivalência indevida entre Inverno e São João"
+          ],
+          [
+            "D — regra_excecao",
+            "Marca I e III — descarta II correta da Nova Consciência ecumênica"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "caso",
+      "titulo": "Montando o gabarito",
+      "secao": "metodo",
+      "tipo": "comparacao",
+      "conteudo": {
+        "colunas": [
+          "Assertiva",
+          "Classificação"
+        ],
+        "linhas": [
+          [
+            "I — Festival de Inverno = Maior São João",
+            "✗ Falsa"
+          ],
+          [
+            "II — Nova Consciência ecumênica",
+            "✓ Correta"
+          ],
+          [
+            "III — Consciência Cristã no carnaval",
+            "✓ Correta → combinação II+III = Gabarito B"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lei",
+      "titulo": "Base factual — cultura e eventos",
+      "secao": "lei",
+      "tipo": "trecho_legal",
+      "conteudo": {
+        "fonte": "conteúdo/historia-cg-pb/base-factual.md — Cultura e patrimônio",
+        "texto": "Festival de Inverno: evento cultural de destaque regional. São João: festa junina de grande porte — Maior São João do Mundo; maior festa junina do estado (marca cultural municipal). Encontros religiosos: Nova Consciência (ecumênico) e Consciência Cristã (carnaval).",
+        "trechos_grifados": [
+          {
+            "inicio": 0,
+            "fim": 19,
+            "motivo": "contraste — Festival de Inverno (≠ Maior São João da I)",
+            "texto_grifado": "Festival de Inverno"
+          },
+          {
+            "inicio": 100,
+            "fim": 123,
+            "motivo": "matriz — Maior São João do Mundo (festa junina distinta)",
+            "texto_grifado": "Maior São João do Mundo"
+          },
+          {
+            "inicio": 204,
+            "fim": 232,
+            "motivo": "matriz — Nova Consciência ecumênica (II correta)",
+            "texto_grifado": "Nova Consciência (ecumênico)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "macete",
+      "titulo": "Macete + near/far-transfer",
+      "secao": "macete",
+      "tipo": "texto_destaque",
+      "conteudo": {
+        "texto": "Inverno ≠ São João (II+III certas) | Nova Consciência ecumênico | Consciência Cristã carnaval.\nNear: só Nova Consciência → ecumênico, não carnaval nem festa junina.\nFar: hino Guimarães ou algodão século XIX — patrimônio/economia, não festivais.\nNão muda: Festival de Inverno ≠ Maior São João; Nova Consciência=ecumênico; Consciência Cristã=carnaval.\nCadeia: vizinho = Maior São João e polo festivo (CG_economia_cultura_populacao_polo_festas).",
+        "destaques": ["Inverno", "São João", "II+III"]
+      }
+    }
+  ],
+  "links_fonte": [
+    {
+      "rotulo": "Base factual — Cultura e patrimônio",
+      "path": "conteúdo/historia-cg-pb/base-factual.md"
+    }
+  ]
+}

@@ -919,9 +919,17 @@ export function isNivelLote007Ouro(input: {
 }): boolean {
   const v2 = input.estudo_reverso_visual_completo;
   if (!v2 || v2.versao !== 2) return false;
-  if (input.tipo !== "caso_pratico" || input.dificuldade < 3) return false;
+  if (input.dificuldade < 3) return false;
 
   const ids = new Set((v2.telas ?? []).map((t) => t.id));
+
+  // Família B — assertivas (história CG, CTB assertivas etc.)
+  if (input.tipo === "assertivas") {
+    const baseAssertivas = ["glossario", "matriz", "caso"] as const;
+    return baseAssertivas.every((id) => ids.has(id));
+  }
+
+  if (input.tipo !== "caso_pratico") return false;
   const competenciaSnt = passo2TemCompetenciaSnt(input.comentario?.passo_a_passo);
   const base = ["glossario", "caso"] as const;
   if (!base.every((id) => ids.has(id))) return false;

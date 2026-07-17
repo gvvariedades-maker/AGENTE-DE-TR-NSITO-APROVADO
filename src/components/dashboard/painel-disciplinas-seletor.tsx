@@ -95,25 +95,25 @@ export function PainelDisciplinasSeletor({
 
     const conteudo = (
       <>
-        <div className="flex items-center justify-between gap-1.5">
-          <span className="flex min-w-0 items-center gap-1.5">
-            <span
-              className="size-2 shrink-0 rounded-full bg-amber-500"
-              aria-hidden
-            />
-            <span className="truncate text-sm font-semibold">
+        <div className="flex items-start gap-1.5">
+          <span
+            className="mt-1.5 size-2 shrink-0 rounded-full bg-amber-500"
+            aria-hidden
+          />
+          <div className="min-w-0 flex-1">
+            <p className="text-sm font-semibold leading-snug">
               Questões reais IDECAN
-            </span>
-          </span>
-          {questoesReaisCount > 0 && (
-            <span className="shrink-0 text-[11px] font-medium tabular-nums text-muted-foreground">
-              {labelContagemQuestoes(questoesReaisCount)}
-            </span>
-          )}
+            </p>
+            {questoesReaisCount > 0 && (
+              <p className="mt-0.5 text-[11px] font-medium tabular-nums text-muted-foreground">
+                {labelContagemQuestoes(questoesReaisCount)}
+              </p>
+            )}
+            <p className="mt-0.5 line-clamp-2 text-xs text-muted-foreground">
+              {questoesReaisDesc}
+            </p>
+          </div>
         </div>
-        <span className="truncate text-xs text-muted-foreground">
-          {questoesReaisDesc}
-        </span>
       </>
     );
 
@@ -212,18 +212,18 @@ export function PainelDisciplinasSeletor({
                       : "border-border bg-background hover:border-primary/40 hover:bg-muted/40",
                   )}
                 >
-                  <div className="flex items-center justify-between gap-1.5">
-                    <span className="flex min-w-0 items-center gap-1.5">
-                      <span
+                  <div className="flex items-start gap-1.5">
+                    <span
+                      className={cn(
+                        "mt-1.5 size-2 shrink-0 rounded-full",
+                        zonaDot[zona],
+                      )}
+                      aria-hidden
+                    />
+                    <div className="min-w-0 flex-1">
+                      <p
                         className={cn(
-                          "size-2 shrink-0 rounded-full",
-                          zonaDot[zona],
-                        )}
-                        aria-hidden
-                      />
-                      <span
-                        className={cn(
-                          "truncate text-sm font-semibold",
+                          "text-sm font-semibold leading-snug",
                           ativo &&
                             (isTransito
                               ? "text-transito-foreground"
@@ -231,17 +231,16 @@ export function PainelDisciplinasSeletor({
                         )}
                       >
                         {DISCIPLINA_LABELS[d]}
-                      </span>
-                    </span>
-                    <span className="shrink-0 text-[10px] font-medium text-muted-foreground">
-                      {labelContagemQuestoes(SIMULADO_ESPELHO_DISTRIBUICAO[d])}
-                    </span>
+                      </p>
+                      <p className="mt-0.5 text-xs text-muted-foreground">
+                        {labelContagemQuestoes(SIMULADO_ESPELHO_DISTRIBUICAO[d])}
+                        {" · "}
+                        {temDados
+                          ? `${desemp!.taxaAcerto}% acerto`
+                          : "Sem tentativas"}
+                      </p>
+                    </div>
                   </div>
-                  <span className="text-xs text-muted-foreground">
-                    {temDados
-                      ? `${desemp!.taxaAcerto}% acerto`
-                      : "Sem tentativas"}
-                  </span>
                 </Link>
               );
 
