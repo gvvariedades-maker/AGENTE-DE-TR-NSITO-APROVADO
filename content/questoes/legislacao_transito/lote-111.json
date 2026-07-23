@@ -45,8 +45,18 @@
       },
       "eixos_mecanismo": [
         "regra_excecao",
-        "termo_unico"
-      ]
+        "termo_unico",
+        "gravidade"
+      ],
+      "near_transfer": "se o semáforo e a placa conflitarem sem agente presente, prevalece o semáforo sobre a placa — mas o agente sempre manda por cima.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "88 = via só com sinalização · 89-I = agente manda · 90 = sinal ruim = sem sanção.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     },
     "tags": [
       "sinalizacao",
@@ -69,7 +79,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito C (I e III). A isca é a II: sinalização incorreta afasta sanção — não autoriza autuação na blitz.",
-            "destaques": ["Gabarito C", "sinalização incorreta", "blitz"]
+            "destaques": [
+              "Gabarito C",
+              "sinalização incorreta",
+              "blitz"
+            ]
           }
         },
         {
@@ -78,9 +92,21 @@
           "tipo": "matriz_assertivas",
           "conteudo": {
             "itens": [
-              { "id": "I", "texto": "Reabertura só com sinalização — correta", "correto": true },
-              { "id": "II", "texto": "Sanções normais com sinal ruim — ERRADA", "correto": false },
-              { "id": "III", "texto": "Agente prevalece sobre semáforo — correta", "correto": true }
+              {
+                "id": "I",
+                "texto": "Reabertura só com sinalização — correta",
+                "correto": true
+              },
+              {
+                "id": "II",
+                "texto": "Sanções normais com sinal ruim — ERRADA",
+                "correto": false
+              },
+              {
+                "id": "III",
+                "texto": "Agente prevalece sobre semáforo — correta",
+                "correto": true
+              }
             ],
             "gabarito_resumo": "I e III corretas → alternativa C"
           }
@@ -91,7 +117,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "88 = via só com sinalização.\nAgente manda.\n90 = sinal ruim = sem sanção.",
-            "destaques": ["88", "agente", "sem sanção"]
+            "destaques": [
+              "88",
+              "agente",
+              "sem sanção"
+            ]
           }
         }
       ],
@@ -131,8 +161,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C (I e III corretas).\n\nA — marcou só II falsa: mantém sanções na blitz da STTP com sinalização incorreta.\nB — comprou II falsa junto com I sobre reabertura da Av. Epitácio Pessoa.\nD — tratou todas corretas, inclusive autuação na blitz com sinalização insuficiente.\n\nPegadinha: sinalização incorreta afasta sanção ao condutor — não autoriza autuação normal.",
-            "destaques": ["Gabarito C", "II", "blitz"]
+            "texto": "Gabarito C (I e III corretas). A — marcou só II falsa: mantém sanções na blitz da STTP com sinalização incorreta.\nB — comprou II falsa junto com I sobre reabertura da Av. Epitácio Pessoa.\nD — tratou todas corretas, inclusive autuação na blitz com sinalização insuficiente. Pegadinha: sinalização incorreta afasta sanção ao condutor — não autoriza autuação normal.",
+            "destaques": [
+              "Gabarito C",
+              "II",
+              "blitz"
+            ]
           }
         },
         {
@@ -141,7 +175,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "SINALIZAÇÃO VERTICAL E HORIZONTAL: placas, marcas no pavimento e dispositivos que orientam a circulação — exigência do art. 88 na entrega ou reabertura de via.\n\nPREVALÊNCIA: ordem de quem manda na via — agente acima de semáforo e demais sinais.\n\nDISPENSA DE SANÇÃO: sinalização insuficiente ou incorreta impede punir o condutor por desobediência à sinalização.",
-            "destaques": ["VERTICAL", "PREVALÊNCIA", "DISPENSA"]
+            "destaques": [
+              "VERTICAL",
+              "PREVALÊNCIA",
+              "DISPENSA"
+            ]
           }
         },
         {
@@ -151,9 +189,21 @@
           "tipo": "matriz_assertivas",
           "conteudo": {
             "itens": [
-              { "id": "I", "texto": "Reabertura só com sinalização — correta (via pavimentada)", "correto": true },
-              { "id": "II", "texto": "Sanções normais com sinal ruim — ERRADA (dispensa)", "correto": false },
-              { "id": "III", "texto": "Agente prevalece sobre semáforo — correta (hierarquia)", "correto": true }
+              {
+                "id": "I",
+                "texto": "Reabertura só com sinalização — correta (via pavimentada)",
+                "correto": true
+              },
+              {
+                "id": "II",
+                "texto": "Sanções normais com sinal ruim — ERRADA (dispensa)",
+                "correto": false
+              },
+              {
+                "id": "III",
+                "texto": "Agente prevalece sobre semáforo — correta (hierarquia)",
+                "correto": true
+              }
             ],
             "gabarito_resumo": "I e III corretas → alternativa C"
           }
@@ -164,11 +214,24 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Nível", "Prevalência"],
+            "titulo_colunas": [
+              "Nível",
+              "Prevalência"
+            ],
             "linhas": [
-              { "faixa": "1º — Agente de trânsito", "classificacao": "Prevalece sobre semáforo e sinais", "destaque": true },
-              { "faixa": "2º — Semáforo", "classificacao": "Prevalece sobre demais sinais" },
-              { "faixa": "3º — Sinais de regulamentação", "classificacao": "Prevalecem sobre normas gerais" }
+              {
+                "faixa": "1º — Agente de trânsito",
+                "classificacao": "Prevalece sobre semáforo e sinais",
+                "destaque": true
+              },
+              {
+                "faixa": "2º — Semáforo",
+                "classificacao": "Prevalece sobre demais sinais"
+              },
+              {
+                "faixa": "3º — Sinais de regulamentação",
+                "classificacao": "Prevalecem sobre normas gerais"
+              }
             ]
           }
         },
@@ -178,7 +241,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a II afirma ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que a II afirma ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Sanções aplicam normalmente com sinalização incorreta",
@@ -197,7 +263,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -220,7 +289,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Assertiva / fato", "V/F"],
+            "colunas": [
+              "Assertiva / fato",
+              "V/F"
+            ],
             "linhas": [
               [
                 "I — reabertura da Av. Epitácio Pessoa sem sinalização horizontal",
@@ -283,8 +355,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "88 = via só com sinalização.\nAgente manda.\n90 = sinal ruim = sem sanção.\n\nNear-transfer: se o semáforo e a placa conflitarem sem agente presente, prevalece o semáforo sobre a placa — mas o agente sempre manda por cima.",
-            "destaques": ["88", "agente", "sem sanção"]
+            "texto": "88 = via só com sinalização.\nAgente manda.\n90 = sinal ruim = sem sanção.\n\nNear-transfer: se o semáforo e a placa conflitarem sem agente presente, prevalece o semáforo sobre a placa — mas o agente sempre manda por cima.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "88",
+              "agente",
+              "sem sanção"
+            ]
           }
         }
       ],

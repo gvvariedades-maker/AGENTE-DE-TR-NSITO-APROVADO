@@ -42,12 +42,29 @@
     "meta": {
       "padrao_familia": "C_competencia_snt",
       "pegadinha_em_uma_frase": "Candidato estende PagTesouro do art. 25 federal à STTP municipal — art. 24 não foi alterado pela 991",
-      "eixos_legais": ["CONTRAN_918_art_24", "CONTRAN_991_art_25"],
+      "eixos_legais": [
+        "CONTRAN_918_art_24",
+        "CONTRAN_991_art_25"
+      ],
       "isca_por_alternativa": {
         "B": "991 unificou PagTesouro para todo o SNT",
         "C": "GRU obrigatória para todos após 991",
         "D": "rede bancária §2 dispensa documento art. 24"
-      }
+      },
+      "near_transfer": "DETRAN-PB quer recolher multas estaduais só pelo PagTesouro pós-991 — mesmo erro da STTP: art. 24 vale para entes subnacionais; PagTesouro é art. 25 da União.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "MUNICÍPIO/ESTADO = art.24 doc SENATRAN · FEDERAL = art.25 GRU",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "competencia_snt",
+        "regra_excecao",
+        "termo_unico"
+      ]
     },
     "estudo_reverso_visual": {
       "versao": 1,
@@ -63,7 +80,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "STTP quer PagTesouro como a PRF — Res. 991/2023 alterou art. 25 (União), não art. 24 (Municípios).\n\nGabarito A.",
-            "destaques": ["STTP", "art. 24", "Gabarito A"]
+            "destaques": [
+              "STTP",
+              "art. 24",
+              "Gabarito A"
+            ]
           }
         },
         {
@@ -71,10 +92,19 @@
           "titulo": "Municipal × federal",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Art. 24 (STTP)", "Art. 25 (PRF — 991)"],
+            "colunas": [
+              "Art. 24 (STTP)",
+              "Art. 25 (PRF — 991)"
+            ],
             "linhas": [
-              ["Documento próprio SENATRAN", "GRU Cobrança ou PagTesouro"],
-              ["Estados, DF e Municípios", "Órgãos autuadores da União"]
+              [
+                "Documento próprio SENATRAN",
+                "GRU Cobrança ou PagTesouro"
+              ],
+              [
+                "Estados, DF e Municípios",
+                "Órgãos autuadores da União"
+              ]
             ]
           }
         },
@@ -84,13 +114,33 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "senatran", "label": "SENATRAN — normas art. 24 e 25", "nivel": 0 },
-              { "id": "sttp", "label": "STTP Campina Grande — municipal", "nivel": 1 },
-              { "id": "doc24", "label": "Documento próprio art. 24", "nivel": 2 }
+              {
+                "id": "senatran",
+                "label": "SENATRAN — normas art. 24 e 25",
+                "nivel": 0
+              },
+              {
+                "id": "sttp",
+                "label": "STTP Campina Grande — municipal",
+                "nivel": 1
+              },
+              {
+                "id": "doc24",
+                "label": "Documento próprio art. 24",
+                "nivel": 2
+              }
             ],
             "arestas": [
-              { "de": "senatran", "para": "sttp", "rotulo": "art. 24" },
-              { "de": "sttp", "para": "doc24", "rotulo": "arrecada multas locais" }
+              {
+                "de": "senatran",
+                "para": "sttp",
+                "rotulo": "art. 24"
+              },
+              {
+                "de": "sttp",
+                "para": "doc24",
+                "rotulo": "arrecada multas locais"
+              }
             ]
           }
         },
@@ -102,8 +152,18 @@
             "fonte": "Res. CONTRAN 918/2022, art. 24",
             "texto": "Os órgãos e entidades executivos de trânsito e executivos rodoviários dos Estados, do Distrito Federal e dos Municípios, integrantes do SNT, para arrecadarem multas de trânsito de sua competência ou de terceiros, deverão utilizar o documento próprio de arrecadação de multas de trânsito estabelecido pelo órgão máximo executivo de trânsito da União, com vistas a garantir o repasse automático dos valores relativos ao FUNSET.",
             "trechos_grifados": [
-              { "inicio": 74, "fim": 119, "motivo": "STTP — Municípios no art. 24" },
-              { "inicio": 232, "fim": 264, "motivo": "documento próprio — não PagTesouro" }
+              {
+                "inicio": 74,
+                "fim": 119,
+                "motivo": "STTP — Municípios no art. 24",
+                "texto_grifado": "Estados, do Distrito Federal e dos Municípios"
+              },
+              {
+                "inicio": 232,
+                "fim": 264,
+                "motivo": "documento próprio — não PagTesouro",
+                "texto_grifado": "documento próprio de arrecadação"
+              }
             ]
           }
         },
@@ -113,7 +173,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "MUNICÍPIO/ESTADO = art.24 doc SENATRAN · FEDERAL = art.25 GRU|PagTesouro · 991 não unifica.",
-            "destaques": ["art. 24", "art. 25", "991"]
+            "destaques": [
+              "art. 24",
+              "art. 25",
+              "991"
+            ]
           }
         }
       ],
@@ -139,7 +203,10 @@
       "meta": {
         "padrao_familia": "C_competencia_snt",
         "pegadinha_em_uma_frase": "991 estende PagTesouro à STTP — art. 24 subnacional permanece",
-        "eixos_legais": ["CONTRAN_918_art_24", "CONTRAN_991_art_25"],
+        "eixos_legais": [
+          "CONTRAN_918_art_24",
+          "CONTRAN_991_art_25"
+        ],
         "isca_por_alternativa": {
           "B": "991 unificou PagTesouro para todo o SNT",
           "C": "GRU obrigatória para todos após 991",
@@ -153,8 +220,11 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A (art. 24 — documento próprio SENATRAN para Municípios; PagTesouro é art. 25 federal).\n\nB — 991 unificou PagTesouro no SNT inteiro: termo_unico — alterou só art. 25 da União.\nC — GRU obrigatória para todos: competencia_snt — GRU é meio federal do art. 25.\nD — rede bancária § 2º dispensa documento: regra_excecao — § 2º é forma de pagamento, não substitui caput.\n\nSTTP de Campina Grande quer PagTesouro como a PRF.",
-            "destaques": ["Gabarito A", "art. 24", "PagTesouro"]
+            "texto": "Gabarito A (dispositivo legal — documento próprio SENATRAN para Municípios; PagTesouro é dispositivo legal federal).\nB — 991 unificou PagTesouro para todo o SNT\nD — rede bancária parágrafo dispensa documento dispositivo legal\nC — GRU obrigatória para todos após 991",
+            "destaques": [
+              "Gabarito A",
+              "PagTesouro"
+            ]
           }
         },
         {
@@ -163,7 +233,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "STTP: órgão executivo de trânsito municipal — arrecadador subnacional no art. 24.\n\nPAGTESOURO: plataforma digital de pagamentos ao Tesouro — opção do art. 25 para autuadores da União (Res. 991/2023).\n\nDOCUMENTO PRÓPRIO: guia/boleto de multa padronizada pelo órgão máximo executivo — caput do art. 24.",
-            "destaques": ["STTP", "PAGTESOURO", "DOCUMENTO PRÓPRIO"]
+            "destaques": [
+              "STTP",
+              "PAGTESOURO",
+              "DOCUMENTO PRÓPRIO"
+            ]
           }
         },
         {
@@ -200,10 +274,26 @@
               }
             ],
             "arestas": [
-              { "de": "senatran", "para": "sttp", "rotulo": "art. 24" },
-              { "de": "senatran", "para": "prf", "rotulo": "art. 25" },
-              { "de": "sttp", "para": "doc24", "rotulo": "multas municipais" },
-              { "de": "prf", "para": "gru", "rotulo": "multas federais" }
+              {
+                "de": "senatran",
+                "para": "sttp",
+                "rotulo": "art. 24"
+              },
+              {
+                "de": "senatran",
+                "para": "prf",
+                "rotulo": "art. 25"
+              },
+              {
+                "de": "sttp",
+                "para": "doc24",
+                "rotulo": "multas municipais"
+              },
+              {
+                "de": "prf",
+                "para": "gru",
+                "rotulo": "multas federais"
+              }
             ]
           }
         },
@@ -213,7 +303,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "PagTesouro vale para STTP após a Res. 991/2023",
@@ -232,7 +325,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — termo_unico",
@@ -255,26 +351,53 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Elemento", "Conclusão"],
+            "colunas": [
+              "Elemento",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Órgão: STTP (Campina Grande/PB)", "Arrecadador municipal — art. 24"],
-              ["Norma impõe só PagTesouro", "Meio do art. 25 federal — inaplicável"],
-              ["Res. 991/2023 alterou art. 25", "Não revogou art. 24 subnacional"],
-              ["Resultado", "Gabarito A — documento próprio art. 24"]
+              [
+                "Órgão: STTP (Campina Grande/PB)",
+                "Arrecadador municipal — art. 24"
+              ],
+              [
+                "Norma impõe só PagTesouro",
+                "Meio do art. 25 federal — inaplicável"
+              ],
+              [
+                "Res. 991/2023 alterou art. 25",
+                "Não revogou art. 24 subnacional"
+              ],
+              [
+                "Resultado",
+                "Gabarito A — documento próprio art. 24"
+              ]
             ]
           }
         },
         {
-          "id": "mapa",
+          "id": "hierarquia",
           "titulo": "Matriz esfera × meio de arrecadação",
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Esfera / órgão", "Meio legal"],
+            "colunas": [
+              "Esfera / órgão",
+              "Meio legal"
+            ],
             "linhas": [
-              ["Estados, DF e Municípios (art. 24)", "Documento próprio do órgão máximo executivo"],
-              ["Órgãos autuadores da União (art. 25)", "GRU Cobrança ou PagTesouro — Res. 991/2023"],
-              ["Pagamento na rede bancária (art. 24, § 2º)", "Forma de quitação — não substitui documento do caput"]
+              [
+                "Estados, DF e Municípios (art. 24)",
+                "Documento próprio do órgão máximo executivo"
+              ],
+              [
+                "Órgãos autuadores da União (art. 25)",
+                "GRU Cobrança ou PagTesouro — Res. 991/2023"
+              ],
+              [
+                "Pagamento na rede bancária (art. 24, § 2º)",
+                "Forma de quitação — não substitui documento do caput"
+              ]
             ]
           }
         },
@@ -287,9 +410,24 @@
             "fonte": "Res. CONTRAN 918/2022, art. 24",
             "texto": "Os órgãos e entidades executivos de trânsito e executivos rodoviários dos Estados, do Distrito Federal e dos Municípios, integrantes do SNT, para arrecadarem multas de trânsito de sua competência ou de terceiros, deverão utilizar o documento próprio de arrecadação de multas de trânsito estabelecido pelo órgão máximo executivo de trânsito da União, com vistas a garantir o repasse automático dos valores relativos ao FUNSET.",
             "trechos_grifados": [
-              { "inicio": 74, "fim": 119, "motivo": "diagrama — Municípios (STTP) no art. 24" },
-              { "inicio": 232, "fim": 264, "motivo": "contraste — documento próprio, não PagTesouro" },
-              { "inicio": 305, "fim": 348, "motivo": "distratores — órgão máximo executivo padroniza o documento" }
+              {
+                "inicio": 74,
+                "fim": 119,
+                "motivo": "diagrama — Municípios (STTP) no art. 24",
+                "texto_grifado": "Estados, do Distrito Federal e dos Municípios"
+              },
+              {
+                "inicio": 232,
+                "fim": 264,
+                "motivo": "contraste — documento próprio, não PagTesouro",
+                "texto_grifado": "documento próprio de arrecadação"
+              },
+              {
+                "inicio": 305,
+                "fim": 348,
+                "motivo": "distratores — órgão máximo executivo padroniza o documento",
+                "texto_grifado": "órgão máximo executivo de trânsito da União"
+              }
             ]
           }
         },
@@ -299,8 +437,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "MUNICÍPIO/ESTADO = art.24 doc SENATRAN · FEDERAL = art.25 GRU|PagTesouro · 991 não unifica o SNT.\n\nNear-transfer: DETRAN-PB quer recolher multas estaduais só pelo PagTesouro pós-991 — mesmo erro da STTP: art. 24 vale para entes subnacionais; PagTesouro é art. 25 da União.",
-            "destaques": ["art. 24", "DETRAN-PB", "PagTesouro"]
+            "texto": "MUNICÍPIO/ESTADO = art.24 doc SENATRAN · FEDERAL = art.25 GRU|PagTesouro · 991 não unifica o SNT.\n\nNear-transfer: DETRAN-PB quer recolher multas estaduais só pelo PagTesouro pós-991 — mesmo erro da STTP: art. 24 vale para entes subnacionais; PagTesouro é art. 25 da União.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "art. 24",
+              "DETRAN-PB",
+              "PagTesouro"
+            ]
           }
         }
       ],

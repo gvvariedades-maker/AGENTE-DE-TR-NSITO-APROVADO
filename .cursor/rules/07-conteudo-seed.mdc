@@ -37,7 +37,7 @@ alwaysApply: false
 2. `npm run index:questoes` — regenerar mapa de eixos ocupados (`content/questoes/_index/cobertura.json`)
 3. `npm run db:seed:topics` — upsert `topics` (Anexo I retificado) — **obrigatório na 1ª vez ou após mudar edital**
 4. `npm run db:seed` — upsert topics + insert/update `questions` (rejeita lote sem `estudo_reverso_visual_completo`)
-5. Reais superior: extrair com `npm run extract:reais-superior` → montar com [prompt-questao-real-aula.md](../skills/examinador-idecan/prompt-questao-real-aula.md) → `validate:lote` → `npm run db:seed:reais`
+5. Reais superior: extrair com `npm run extract:reais-superior` → [GUIA.md](../../content/questoes-reais/GUIA.md) + [prompt-questao-real-aula.md](../skills/examinador-idecan/prompt-questao-real-aula.md) → `validate:lote` → `npm run db:seed:reais`
 
 Diagnóstico pós-seed: `npm run check:catalogo-db` e `npm run check:visual-completo`.
 

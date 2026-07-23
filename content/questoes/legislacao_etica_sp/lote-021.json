@@ -44,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Viatura e combustível da STTP em evento familiar é uso particular vedado — presteza e livro de ocorrências não legitimam desvio de patrimônio público.",
-            "destaques": ["particular", "vedado", "patrimônio"]
+            "destaques": [
+              "particular",
+              "vedado",
+              "patrimônio"
+            ]
           }
         },
         {
@@ -53,10 +57,24 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Viatura e cartão usados em atividade familiar?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Uso vedado — recurso público em favor particular", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Viatura e cartão usados em atividade familiar?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Uso vedado — recurso público em favor particular",
+                "tipo": "resultado"
+              }
             ],
-            "arestas": [{ "de": "p1", "para": "r1", "rotulo": "Sim" }]
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
           }
         },
         {
@@ -64,7 +82,10 @@
           "titulo": "Presteza × uso particular",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
               [
                 "Disponibilidade autoriza transporte familiar",
@@ -79,7 +100,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Recurso público em favor particular = vedado. Livro de ocorrências não autoriza — zelo pelo patrimônio.",
-            "destaques": ["vedado", "particular", "patrimônio"]
+            "destaques": [
+              "vedado",
+              "particular",
+              "patrimônio"
+            ]
           }
         }
       ],
@@ -101,7 +126,11 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Presteza ou livro de ocorrências induzem viatura e combustível em evento familiar",
-        "eixos_legais": ["L8112_art117_XVI", "L8112_art116_VII", "L8112_art116_V"],
+        "eixos_legais": [
+          "L8112_art117_XVI",
+          "L8112_art116_VII",
+          "L8112_art116_V"
+        ],
         "isca_por_alternativa": {
           "A": "presteza e disponibilidade permanente autorizam uso familiar",
           "C": "registro no livro de ocorrências regulariza deslocamento particular",
@@ -115,8 +144,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — presteza e disponibilidade: confunde atendimento ao público com transporte familiar.\nC — livro de ocorrências: trata registro interno como exceção à proibição.\nD — urbanidade e flexibilidade: usa cortesia no trato para autorizar uso privado da viatura.\n\nA isca é presteza, urbanidade ou livro da garagem legitimarem viatura e cartão em folga.",
-            "destaques": ["Gabarito B", "particular", "vedado"]
+            "texto": "Gabarito B. A — presteza e disponibilidade: confunde atendimento ao público com transporte familiar.\nC — livro de ocorrências: trata registro interno como exceção à proibição.\nD — urbanidade e flexibilidade: usa cortesia no trato para autorizar uso privado da viatura. A isca é presteza, urbanidade ou livro da garagem legitimarem viatura e cartão em folga.",
+            "destaques": [
+              "Gabarito B",
+              "particular",
+              "vedado"
+            ]
           }
         },
         {
@@ -125,7 +158,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "RECURSO MATERIAL: viatura, combustível, equipamentos da repartição — patrimônio público.\n\nATIVIDADE PARTICULAR: finalidade alheia ao serviço — no caso, evento social familiar.\n\nZELO PATRIMONIAL: economia e conservação do material público — dever positivo do servidor.",
-            "destaques": ["RECURSO", "PARTICULAR", "ZELO"]
+            "destaques": [
+              "RECURSO",
+              "PARTICULAR",
+              "ZELO"
+            ]
           }
         },
         {
@@ -152,8 +189,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -163,12 +208,27 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Norma", "Aplicação na STTP"],
+            "colunas": [
+              "Norma",
+              "Aplicação na STTP"
+            ],
             "linhas": [
-              ["Art. 117, XVI — proibição", "Viatura e cartão em evento familiar"],
-              ["Art. 116, VII — zelo", "Economia e conservação do patrimônio"],
-              ["Art. 116, V — presteza", "Atendimento ao público — não transporte familiar"],
-              ["Livro de ocorrências", "Controle interno — não autoriza uso privado"]
+              [
+                "Art. 117, XVI — proibição",
+                "Viatura e cartão em evento familiar"
+              ],
+              [
+                "Art. 116, VII — zelo",
+                "Economia e conservação do patrimônio"
+              ],
+              [
+                "Art. 116, V — presteza",
+                "Atendimento ao público — não transporte familiar"
+              ],
+              [
+                "Livro de ocorrências",
+                "Controle interno — não autoriza uso privado"
+              ]
             ]
           }
         },
@@ -178,7 +238,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Presteza autoriza disponibilidade total da viatura",
@@ -197,7 +260,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -220,12 +286,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Enquadramento"],
+            "colunas": [
+              "Fato do enunciado",
+              "Enquadramento"
+            ],
             "linhas": [
-              ["Viatura oficial em dia de folga", "Recurso material da repartição"],
-              ["Transporte de familiares a evento social", "Atividade particular vedada"],
-              ["Abastecimento com cartão corporativo", "Desvio de patrimônio público"],
-              ["Resultado", "Gabarito B — art. 117, XVI e art. 116, VII"]
+              [
+                "Viatura oficial em dia de folga",
+                "Recurso material da repartição"
+              ],
+              [
+                "Transporte de familiares a evento social",
+                "Atividade particular vedada"
+              ],
+              [
+                "Abastecimento com cartão corporativo",
+                "Desvio de patrimônio público"
+              ],
+              [
+                "Resultado",
+                "Gabarito B — art. 117, XVI e art. 116, VII"
+              ]
             ]
           }
         },
@@ -235,11 +316,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Mensagem"],
+            "colunas": [
+              "Dispositivo",
+              "Mensagem"
+            ],
             "linhas": [
-              ["Art. 117, XVI", "Veda uso de recursos da repartição em atividade particular"],
-              ["Art. 116, VII", "Dever de zelar pela economia e conservação do patrimônio"],
-              ["Art. 116, V", "Presteza no atendimento — não abrange favor familiar"]
+              [
+                "Art. 117, XVI",
+                "Veda uso de recursos da repartição em atividade particular"
+              ],
+              [
+                "Art. 116, VII",
+                "Dever de zelar pela economia e conservação do patrimônio"
+              ],
+              [
+                "Art. 116, V",
+                "Presteza no atendimento — não abrange favor familiar"
+              ]
             ]
           }
         },
@@ -291,8 +384,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Recurso público em favor particular = vedado (art. 117, XVI). Livro de ocorrências não autoriza — zelo pelo patrimônio (art. 116, VII).\n\nNear-transfer: agente usa impressora da STTP para imprimir convite de festa — também é recurso material em atividade particular, vedado pelo mesmo inciso.",
-            "destaques": ["vedado", "Near-transfer", "patrimônio"]
+            "texto": "Recurso público em favor particular = vedado (art. 117, XVI). Livro de ocorrências não autoriza — zelo pelo patrimônio (art. 116, VII).\n\nNear-transfer: agente usa impressora da STTP para imprimir convite de festa — também é recurso material em atividade particular, vedado pelo mesmo inciso.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "vedado",
+              "Near-transfer",
+              "patrimônio"
+            ]
           }
         }
       ],
@@ -310,6 +407,17 @@
       "lei_8112",
       "conduta",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "agente usa impressora da STTP para imprimir convite de festa — também é recurso material em atividade particular, vedado pelo mesmo inciso.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Recurso público em favor particular = vedado (art. 117, XVI). Livro de ocorrências não autoriza — zelo pelo patrimônio (art. 116, VII).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

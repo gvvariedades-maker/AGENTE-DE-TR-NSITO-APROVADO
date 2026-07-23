@@ -50,7 +50,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Pane no acostamento — pisca-alerta acionado.\n\nGabarito C: inciso V, alínea a.",
-            "destaques": ["pisca-alerta", "Gabarito C", "imobilização"]
+            "destaques": [
+              "pisca-alerta",
+              "Gabarito C",
+              "imobilização"
+            ]
           }
         },
         {
@@ -58,10 +62,19 @@
           "titulo": "Via manda × pane",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
-              ["Pisca só com placa na via", "Pane e emergência bastam na alínea a"],
-              ["Emergência = piscar farol", "Pisca-alerta é inciso V"]
+              [
+                "Pisca só com placa na via",
+                "Pane e emergência bastam na alínea a"
+              ],
+              [
+                "Emergência = piscar farol",
+                "Pisca-alerta é inciso V"
+              ]
             ]
           }
         },
@@ -71,11 +84,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Imobilização ou emergência?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Acionar pisca-alerta", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Imobilização ou emergência?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Acionar pisca-alerta",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -85,7 +110,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PISCA = IMOBILIZA/EMERGÊNCIA.\nOu via manda.\n≠ piscar farol.",
-            "destaques": ["IMOBILIZA", "pisca-alerta"]
+            "destaques": [
+              "IMOBILIZA",
+              "pisca-alerta"
+            ]
           }
         }
       ],
@@ -124,7 +152,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C.\n\nA — limitou à regulamentação da via: alínea a cobre imobilização e emergência.\nB — mandou piscar farol: inciso III é outro dispositivo — aqui é pisca-alerta parado.\nD — bastaram posição: imobilização por pane aciona pisca-alerta, não dispensa.\n\nNesta aula você fixa as duas hipóteses do inciso V e separa de piscar farol.",
+            "texto": "Gabarito C. A — limitou à regulamentação da via: alínea a cobre imobilização e emergência.\nB — mandou piscar farol: inciso III é outro dispositivo — aqui é pisca-alerta parado.\nD — bastaram posição: imobilização por pane aciona pisca-alerta, não dispensa. Nesta aula você fixa as duas hipóteses do inciso V e separa de piscar farol.",
             "destaques": [
               "Gabarito C",
               "imobilizações",
@@ -317,17 +345,20 @@
               {
                 "inicio": 23,
                 "fim": 35,
-                "motivo": "glossario — dispositivo acionado no caso"
+                "motivo": "glossario — dispositivo acionado no caso",
+                "texto_grifado": "pisca-alerta"
               },
               {
                 "inicio": 67,
                 "fim": 80,
-                "motivo": "caso — pane imobiliza o veículo no acostamento"
+                "motivo": "caso — pane imobiliza o veículo no acostamento",
+                "texto_grifado": "imobilizações"
               },
               {
                 "inicio": 84,
                 "fim": 107,
-                "motivo": "mapa — alínea a cobre emergência e imobilização"
+                "motivo": "mapa — alínea a cobre emergência e imobilização",
+                "texto_grifado": "situações de emergência"
               }
             ]
           }
@@ -338,7 +369,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "PISCA-ALERTA = IMOBILIZA/EMERGÊNCIA (a) · ou VIA MANDA (b).\n≠ piscar farol (inc. III).\nPane no acostamento → pisca, não só posição.\n\nNear-transfer: caminhão com pneu furado parado na margem à noite — acione pisca-alerta; não basta farol baixo ou posição.",
+            "texto": "PISCA-ALERTA = IMOBILIZA/EMERGÊNCIA (a) · ou VIA MANDA (b).\n≠ piscar farol (inc. III).\nPane no acostamento → pisca, não só posição.\n\nNear-transfer: caminhão com pneu furado parado na margem à noite — acione pisca-alerta; não basta farol baixo ou posição.\nNão muda: PISCA = IMOBILIZA/EMERGÊNCIA (a) · ou VIA MANDA (b) · ≠ piscar farol.",
             "destaques": [
               "IMOBILIZA/EMERGÊNCIA",
               "pisca-alerta",
@@ -352,6 +383,22 @@
           "rotulo": "CTB art. 40",
           "path": "conteúdo/legislação federal/lei-9503-ctb.html"
         }
+      ]
+    },
+    "meta": {
+      "near_transfer": "caminhão com pneu furado parado na margem à noite — acione pisca-alerta; não basta farol baixo ou posição.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "PISCA = IMOBILIZA/EMERGÊNCIA (a) · ou VIA MANDA (b) · ≠ piscar farol.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
       ]
     }
   }

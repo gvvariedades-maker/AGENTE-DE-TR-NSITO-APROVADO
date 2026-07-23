@@ -27,9 +27,7 @@
       "estudo_reverso": [
         "Res. CONTRAN 940/2022 art. 2",
         "Res. CONTRAN 940/2022 art. 3",
-        "Res. CONTRAN 940/2022 art. 5",
-        "CTB art. 230",
-        "CTB art. 244"
+        "Res. CONTRAN 940/2022 art. 5"
       ]
     },
     "meta": {
@@ -55,7 +53,11 @@
       "far_transfer": "Capacete modular com queixeira levantada em circulação — art. 4º e tipificação distinta no art. 5º.",
       "o_que_nao_muda": "Uso obrigatório com jugular afixada subsiste; dispensa do §2º alcança só certificação compulsória INMETRO.",
       "calibracao_corpus": "ok",
-      "eficacia_pos_aula": ["E1", "E2", "E3"]
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
     },
     "tags": [
       "contran_940",
@@ -79,7 +81,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito B: capacete nº 66 comprado no exterior dispensa certificação compulsória INMETRO — jugular correta mantém uso regular.",
-            "destaques": ["Gabarito B", "nº 66", "exterior"]
+            "destaques": [
+              "Gabarito B",
+              "nº 66",
+              "exterior"
+            ]
           }
         },
         {
@@ -88,11 +94,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Capacete nº 66 comprado no exterior?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Dispensa INMETRO compulsório — gabarito B", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Capacete nº 66 comprado no exterior?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Dispensa INMETRO compulsório — gabarito B",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim — caso da blitz" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim — caso da blitz"
+              }
             ]
           }
         },
@@ -102,7 +120,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": ">64 comprado no exterior = dispensa INMETRO.\nJugular sempre · art. 5º tipifica o caso.",
-            "destaques": [">64", "jugular", "INMETRO"]
+            "destaques": [
+              ">64",
+              "jugular",
+              "INMETRO"
+            ]
           }
         }
       ],
@@ -142,8 +164,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — INMETRO obrigatório sem exceção: ignora dispensa para numeração superior a 64 comprada no exterior.\nC — fiscalização exclusiva do órgão federal: agentes de trânsito também verificam na blitz.\nD — ausência de selo equivale a não usar capacete: há equipamento afixado com jugular.\n\nPegadinha: dispensa de certificação compulsória não dispensa uso nem jugular.",
-            "destaques": ["Gabarito B", "selo", "jugular"]
+            "texto": "Gabarito B. A — INMETRO obrigatório sem exceção: ignora dispensa para numeração superior a 64 comprada no exterior.\nC — fiscalização exclusiva do órgão federal: agentes de trânsito também verificam na blitz.\nD — ausência de selo equivale a não usar capacete: há equipamento afixado com jugular. Pegadinha: dispensa de certificação compulsória não dispensa uso nem jugular.",
+            "destaques": [
+              "Gabarito B",
+              "selo",
+              "jugular"
+            ]
           }
         },
         {
@@ -152,7 +178,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CERTIFICAÇÃO COMPULSÓRIA: exigência INMETRO do §1º — com exceção do §2º para nº >64 comprado no exterior.\n\nNUMERAÇÃO 66: tamanho superior a 64 — gatilho da dispensa do §2º no caso.\n\nCINTA JUGULAR: afixação obrigatória por debaixo do maxilar — regra do caput do art. 2º independente da dispensa.",
-            "destaques": ["COMPULSÓRIA", "66", "JUGULAR"]
+            "destaques": [
+              "COMPULSÓRIA",
+              "66",
+              "JUGULAR"
+            ]
           }
         },
         {
@@ -162,13 +192,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Numeração superior a 64?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Adquirido por pessoa física no exterior?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Dispensa INMETRO compulsório — gabarito B", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Numeração superior a 64?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Adquirido por pessoa física no exterior?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Dispensa INMETRO compulsório — gabarito B",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — capacete nº 66" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — comprado no exterior" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — capacete nº 66"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — comprado no exterior"
+              }
             ]
           }
         },
@@ -178,11 +228,26 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Hipótese", "Certificação INMETRO"],
+            "titulo_colunas": [
+              "Hipótese",
+              "Certificação INMETRO"
+            ],
             "linhas": [
-              { "faixa": "Capacete comum no Brasil", "classificacao": "Obrigatória — §1º", "destaque": false },
-              { "faixa": "Nº >64 comprado no exterior por PF", "classificacao": "Dispensada — §2º", "destaque": true },
-              { "faixa": "Uso com jugular afixada", "classificacao": "Sempre obrigatório — caput", "destaque": true }
+              {
+                "faixa": "Capacete comum no Brasil",
+                "classificacao": "Obrigatória — §1º",
+                "destaque": false
+              },
+              {
+                "faixa": "Nº >64 comprado no exterior por PF",
+                "classificacao": "Dispensada — §2º",
+                "destaque": true
+              },
+              {
+                "faixa": "Uso com jugular afixada",
+                "classificacao": "Sempre obrigatório — caput",
+                "destaque": true
+              }
             ]
           }
         },
@@ -192,7 +257,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Sem selo INMETRO = sem capacete",
@@ -211,7 +279,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -234,13 +305,31 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Avaliação"],
+            "colunas": [
+              "Fato do enunciado",
+              "Avaliação"
+            ],
             "linhas": [
-              ["Capacete nº 66", "Superior a 64 — gatilho do §2º"],
-              ["Comprado pessoalmente no exterior", "Pessoa física — dispensa INMETRO compulsório"],
-              ["Jugular afixada sob o maxilar", "Regular — caput do art. 2º"],
-              ["Sem selo INMETRO compulsório", "Não equivale a ausência de capacete"],
-              ["Resultado", "Alternativa B"]
+              [
+                "Capacete nº 66",
+                "Superior a 64 — gatilho do §2º"
+              ],
+              [
+                "Comprado pessoalmente no exterior",
+                "Pessoa física — dispensa INMETRO compulsório"
+              ],
+              [
+                "Jugular afixada sob o maxilar",
+                "Regular — caput do art. 2º"
+              ],
+              [
+                "Sem selo INMETRO compulsório",
+                "Não equivale a ausência de capacete"
+              ],
+              [
+                "Resultado",
+                "Alternativa B"
+              ]
             ]
           }
         },
@@ -250,12 +339,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Papel no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Papel no caso"
+            ],
             "linhas": [
-              ["Art. 2º, §1º", "Regra geral — certificação INMETRO compulsória"],
-              ["Art. 2º, §2º", "Exceção — nº >64 comprado no exterior por PF"],
-              ["Art. 2º, caput", "Uso obrigatório com jugular — subsiste no caso"],
-              ["Art. 5º", "Tipifica demais irregularidades conforme apuração"]
+              [
+                "Art. 2º, §1º",
+                "Regra geral — certificação INMETRO compulsória"
+              ],
+              [
+                "Art. 2º, §2º",
+                "Exceção — nº >64 comprado no exterior por PF"
+              ],
+              [
+                "Art. 2º, caput",
+                "Uso obrigatório com jugular — subsiste no caso"
+              ],
+              [
+                "Art. 5º",
+                "Tipifica demais irregularidades conforme apuração"
+              ]
             ]
           }
         },
@@ -302,7 +406,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": ">64 comprado no exterior = dispensa INMETRO · jugular sempre · art. 5º tipifica o caso.\n\nNear: capacete nº 65 comprado no exterior com jugular correta — mesma dispensa do §2º.\nFar: capacete modular com queixeira levantada em circulação — art. 4º e tipificação distinta.\nNão muda: uso com jugular afixada é obrigatório; dispensa alcança só certificação compulsória.\nCadeia: vizinho = art. 3º (itens de fiscalização pelos agentes).",
-            "destaques": [">64", "jugular", "art. 3º"]
+            "destaques": [
+              ">64",
+              "jugular",
+              "art. 3º"
+            ]
           }
         }
       ],

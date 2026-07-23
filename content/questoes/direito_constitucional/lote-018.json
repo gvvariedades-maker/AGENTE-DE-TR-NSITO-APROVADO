@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Blitz com foto identificável na rede oficial e áudio copiado sem consentimento. A banca trata fiscalização como salvo-conduto para expor imagem ou restringe prova ilícita só ao penal.",
-            "destaques": ["imagem", "prova ilícita", "STTP"]
+            "destaques": [
+              "imagem",
+              "prova ilícita",
+              "STTP"
+            ]
           }
         },
         {
@@ -69,8 +73,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — foto na rede oficial" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — áudio sem consentimento" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — foto na rede oficial"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — áudio sem consentimento"
+              }
             ]
           }
         },
@@ -79,10 +91,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["Segurança viária autoriza expor o condutor", "Imagem e intimidade são invioláveis"],
-              ["Prova ilícita só no penal", "LVI vale em qualquer processo"]
+              [
+                "Segurança viária autoriza expor o condutor",
+                "Imagem e intimidade são invioláveis"
+              ],
+              [
+                "Prova ilícita só no penal",
+                "LVI vale em qualquer processo"
+              ]
             ]
           }
         },
@@ -109,7 +130,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "X = imagem/intimidade INVIOLÁVEIS. LVI = prova ilícita INADMISSÍVEL. Fiscalizar trânsito não autoriza expor nem grampear.",
-            "destaques": ["X", "LVI", "fiscalizar"]
+            "destaques": [
+              "X",
+              "LVI",
+              "fiscalizar"
+            ]
           }
         }
       ],
@@ -131,7 +156,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Fiscalizar trânsito não autoriza expor imagem nem usar gravação clandestina — LVI vale em qualquer processo",
-        "eixos_legais": ["CF_art5_X", "CF_art5_LVI"],
+        "eixos_legais": [
+          "CF_art5_X",
+          "CF_art5_LVI"
+        ],
         "isca_por_alternativa": {
           "A": "interesse público na segurança viária autoriza divulgar imagem e usar material sem consentimento",
           "B": "prova ilícita só é vedada no processo penal, não no administrativo de trânsito",
@@ -145,8 +173,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D (imagem inviolável + prova ilícita inadmissível).\n\nA — segurança viária autoriza expor condutor e usar qualquer material da blitz.\nB — prova ilícita só vale no penal; no administrativo de trânsito tudo é válido.\nC — STTP publica fotos de autuados sem precisar de autorização.\n\nPromessa: separar fiscalização legítima de exposição identificável e gravação clandestina.",
-            "destaques": ["imagem", "prova ilícita", "blitz"]
+            "texto": "Gabarito D (imagem inviolável + prova ilícita inadmissível). A — segurança viária autoriza expor condutor e usar qualquer material da blitz.\nB — prova ilícita só vale no penal; no administrativo de trânsito tudo é válido.\nC — STTP publica fotos de autuados sem precisar de autorização. Promessa: separar fiscalização legítima de exposição identificável e gravação clandestina.",
+            "destaques": [
+              "imagem",
+              "prova ilícita",
+              "blitz"
+            ]
           }
         },
         {
@@ -155,7 +187,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "INVIOLÁVEL (art. 5º, X): intimidade, vida privada, honra e imagem não podem ser expostas sem base legal — publicação identificável na rede oficial ofende esse núcleo. PROVA ILÍCITA (art. 5º, LVI): obtida violando direito — cópia de áudio sem consentimento. PROCESSO: o LVI fala em \"processo\" sem restringir ao penal — inclui administrativo.",
-            "destaques": ["inviolável", "prova ilícita", "processo"]
+            "destaques": [
+              "inviolável",
+              "prova ilícita",
+              "processo"
+            ]
           }
         },
         {
@@ -182,8 +218,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — foto no perfil oficial" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — áudio copiado sem consentimento" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — foto no perfil oficial"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — áudio copiado sem consentimento"
+              }
             ]
           }
         },
@@ -193,11 +237,23 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Atuação", "Limite constitucional"],
+            "titulo_colunas": [
+              "Atuação",
+              "Limite constitucional"
+            ],
             "linhas": [
-              { "faixa": "Fiscalizar e autuar", "classificacao": "Legítima — competência da STTP" },
-              { "faixa": "Publicar imagem identificável", "classificacao": "Viola art. 5º, X — inviolável" },
-              { "faixa": "Copiar áudio sem consentimento", "classificacao": "Meio ilícito — art. 5º, LVI" },
+              {
+                "faixa": "Fiscalizar e autuar",
+                "classificacao": "Legítima — competência da STTP"
+              },
+              {
+                "faixa": "Publicar imagem identificável",
+                "classificacao": "Viola art. 5º, X — inviolável"
+              },
+              {
+                "faixa": "Copiar áudio sem consentimento",
+                "classificacao": "Meio ilícito — art. 5º, LVI"
+              },
               {
                 "faixa": "Usar prova ilícita no processo admin.",
                 "classificacao": "Inadmissível — LVI não restringe ao penal",
@@ -212,7 +268,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Segurança viária autoriza expor o condutor autuado",
@@ -231,7 +290,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -254,12 +316,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Conclusão"],
+            "colunas": [
+              "Fato do enunciado",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Foto identificável publicada no perfil oficial da STTP", "Viola art. 5º, X — imagem inviolável"],
-              ["Áudio de WhatsApp copiado sem consentimento do condutor", "Prova obtida por meio ilícito"],
-              ["Multa embasada nesses elementos no processo administrativo", "LVI torna prova inadmissível"],
-              ["Resultado", "Alternativa D"]
+              [
+                "Foto identificável publicada no perfil oficial da STTP",
+                "Viola art. 5º, X — imagem inviolável"
+              ],
+              [
+                "Áudio de WhatsApp copiado sem consentimento do condutor",
+                "Prova obtida por meio ilícito"
+              ],
+              [
+                "Multa embasada nesses elementos no processo administrativo",
+                "LVI torna prova inadmissível"
+              ],
+              [
+                "Resultado",
+                "Alternativa D"
+              ]
             ]
           }
         },
@@ -269,12 +346,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "O que protege no caso"],
+            "colunas": [
+              "Dispositivo",
+              "O que protege no caso"
+            ],
             "linhas": [
-              ["Art. 5º, X", "Imagem e intimidade — veda publicação identificável sem base"],
-              ["Art. 5º, LVI", "Processo — veda uso de prova obtida ilicitamente"],
-              ["Caso concreto", "Foto na rede + áudio clandestino — ambos os dispositivos violados"],
-              ["Fiscalização legítima", "Autuar recusa ao etilômetro ≠ expor nem grampear"]
+              [
+                "Art. 5º, X",
+                "Imagem e intimidade — veda publicação identificável sem base"
+              ],
+              [
+                "Art. 5º, LVI",
+                "Processo — veda uso de prova obtida ilicitamente"
+              ],
+              [
+                "Caso concreto",
+                "Foto na rede + áudio clandestino — ambos os dispositivos violados"
+              ],
+              [
+                "Fiscalização legítima",
+                "Autuar recusa ao etilômetro ≠ expor nem grampear"
+              ]
             ]
           }
         },
@@ -332,8 +424,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "X = imagem/intimidade INVIOLÁVEIS.\nLVI = prova ilícita INADMISSÍVEL em qualquer processo.\nFiscalizar ≠ expor nem grampear.\n\nNear-transfer: se a STTP só filmasse a blitz sem identificar rostos e autuasse com prova lícita (etilômetro recusado registrado em auto), o X não seria violado — mas áudio clandestino ainda cai no LVI.",
-            "destaques": ["X", "LVI", "fiscalizar"]
+            "texto": "X = imagem/intimidade INVIOLÁVEIS.\nLVI = prova ilícita INADMISSÍVEL em qualquer processo.\nFiscalizar ≠ expor nem grampear.\n\nNear-transfer: se a STTP só filmasse a blitz sem identificar rostos e autuasse com prova lícita (etilômetro recusado registrado em auto), o X não seria violado — mas áudio clandestino ainda cai no LVI.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "X",
+              "LVI",
+              "fiscalizar"
+            ]
           }
         }
       ],
@@ -355,6 +451,17 @@
       "prova_ilicita",
       "imagem",
       "intimidade"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se a STTP só filmasse a blitz sem identificar rostos e autuasse com prova lícita (etilômetro recusado registrado em auto), o X não seria violado — mas áudio clandestino ainda cai no LVI.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "IMAGEM/INTIMIDADE = invioláveis (X). Prova ILÍCITA = inadmissível em QUALQUER processo (LVI). Fiscalizar ≠ expor nem grampear.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

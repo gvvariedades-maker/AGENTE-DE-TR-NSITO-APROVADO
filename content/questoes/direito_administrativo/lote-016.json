@@ -44,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Estabilidade só em cargo efetivo via concurso — 3 anos (CF art. 41). Comissão não estabiliza; 2 anos da lei é pegadinha.",
-            "destaques": ["estabilidade", "cargo efetivo", "comissão"]
+            "destaques": [
+              "estabilidade",
+              "cargo efetivo",
+              "comissão"
+            ]
           }
         },
         {
@@ -52,7 +56,10 @@
           "titulo": "Efetivo × comissão",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha ✗", "CF art. 41 ✓"],
+            "colunas": [
+              "Pegadinha ✗",
+              "CF art. 41 ✓"
+            ],
             "linhas": [
               [
                 "Comissão de direção estabiliza em 3 anos",
@@ -67,13 +74,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Comissão gera estabilidade pelo tempo?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Três anos em efetivo via concurso?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito A — só efetivo estabiliza", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Comissão gera estabilidade pelo tempo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Três anos em efetivo via concurso?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito A — só efetivo estabiliza",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -85,8 +112,18 @@
             "fonte": "CF/88, art. 41, caput",
             "texto": "São estáveis após três anos de efetivo exercício os servidores nomeados para cargo de provimento efetivo em virtude de concurso público.",
             "trechos_grifados": [
-              { "inicio": 18, "fim": 48, "motivo": "três anos de efetivo exercício" },
-              { "inicio": 77, "fim": 104, "motivo": "provimento efetivo via concurso" }
+              {
+                "inicio": 18,
+                "fim": 48,
+                "motivo": "três anos de efetivo exercício",
+                "texto_grifado": "três anos de efetivo exercício"
+              },
+              {
+                "inicio": 77,
+                "fim": 104,
+                "motivo": "provimento efetivo via concurso",
+                "texto_grifado": "cargo de provimento efetivo"
+              }
             ]
           }
         },
@@ -96,7 +133,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "EFETIVO+concurso+3a = ESTÁVEL | COMISSÃO = livre exoneração | FUNÇÃO = só efetivo (art.37,V).",
-            "destaques": ["EFETIVO", "COMISSÃO", "3a"]
+            "destaques": [
+              "EFETIVO",
+              "COMISSÃO",
+              "3a"
+            ]
           }
         }
       ],
@@ -118,7 +159,11 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Cargo em comissão não estabiliza — só efetivo via concurso após 3 anos",
-        "eixos_legais": ["CF_art_41", "CF_art_37_V", "Lei8112_art3"],
+        "eixos_legais": [
+          "CF_art_41",
+          "CF_art_37_V",
+          "Lei8112_art3"
+        ],
         "isca_por_alternativa": {
           "B": "estende estabilidade do art. 41 ao cargo em comissão",
           "C": "usa prazo de 2 anos da Lei 8.112/90 em vez dos 3 da CF",
@@ -132,8 +177,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A.\n\nB — comissão estabiliza: art. 41 só alcança provimento efetivo.\nC — 2 anos na lei: CF exige 3 anos após EC 19/1998.\nD — particulares em função de confiança: art. 37, V exige cargo efetivo.\n\nPegadinha: tempo em comissão não gera estabilidade.",
-            "destaques": ["Gabarito A", "três anos", "comissão"]
+            "texto": "Gabarito A. B — comissão estabiliza: dispositivo legal só alcança provimento efetivo.\nC — 2 anos na lei: CF exige 3 anos após EC 19/1998.\nD — particulares em função de confiança: dispositivo legal, V exige cargo efetivo. Pegadinha: tempo em comissão não gera estabilidade.",
+            "destaques": [
+              "Gabarito A",
+              "três anos",
+              "comissão"
+            ]
           }
         },
         {
@@ -142,7 +191,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Cargo efetivo: provimento via concurso público — pode gerar estabilidade após 3 anos (CF art. 41).\nCargo em comissão: provimento de confiança — livre exoneração, sem estabilidade (Lei 8.112/90, art. 9, II).\nFunção de confiança: atribuições de direção/chefia/assessoramento — exercida por servidor em cargo efetivo (CF art. 37, V).",
-            "destaques": ["efetivo", "comissão", "função de confiança"]
+            "destaques": [
+              "efetivo",
+              "comissão",
+              "função de confiança"
+            ]
           }
         },
         {
@@ -169,8 +222,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -180,7 +241,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Tipo", "Regra"],
+            "titulo_colunas": [
+              "Tipo",
+              "Regra"
+            ],
             "linhas": [
               {
                 "faixa": "Cargo efetivo",
@@ -208,7 +272,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a banca insinua ✗", "Regra correta ✓"],
+            "colunas": [
+              "O que a banca insinua ✗",
+              "Regra correta ✓"
+            ],
             "linhas": [
               [
                 "Diretor em comissão há 4 anos é estável",
@@ -227,7 +294,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — regra_excecao",
@@ -250,12 +320,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso STTP", "Consequência"],
+            "colunas": [
+              "Fato do caso STTP",
+              "Consequência"
+            ],
             "linhas": [
-              ["Servidor em comissão há 4 anos", "Sem estabilidade — livre exoneração"],
-              ["Servidor efetivo com 2 anos e 8 meses", "Ainda não estável — faltam 4 meses"],
-              ["Exoneração imediata do efetivo sem PAD", "Ilegal se estável; possível se não estável"],
-              ["Resultado", "Alternativa A — única defensável"]
+              [
+                "Servidor em comissão há 4 anos",
+                "Sem estabilidade — livre exoneração"
+              ],
+              [
+                "Servidor efetivo com 2 anos e 8 meses",
+                "Ainda não estável — faltam 4 meses"
+              ],
+              [
+                "Exoneração imediata do efetivo sem PAD",
+                "Ilegal se estável; possível se não estável"
+              ],
+              [
+                "Resultado",
+                "Alternativa A — única defensável"
+              ]
             ]
           }
         },
@@ -271,12 +356,14 @@
               {
                 "inicio": 18,
                 "fim": 48,
-                "motivo": "contraste — três anos, não dois"
+                "motivo": "contraste — três anos, não dois",
+                "texto_grifado": "três anos de efetivo exercício"
               },
               {
                 "inicio": 77,
                 "fim": 104,
-                "motivo": "mapa — provimento efetivo via concurso"
+                "motivo": "mapa — provimento efetivo via concurso",
+                "texto_grifado": "cargo de provimento efetivo"
               }
             ]
           }
@@ -287,12 +374,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Instituto", "Quem exerce"],
+            "colunas": [
+              "Instituto",
+              "Quem exerce"
+            ],
             "linhas": [
-              ["Função de confiança", "Exclusivamente servidor em cargo efetivo"],
-              ["Cargo em comissão", "Direção, chefia, assessoramento — regras em lei"],
-              ["Alternativa D", "Errada — não admite particulares na função"],
-              ["Caso STTP", "Comissão ≠ estabilidade do art. 41"]
+              [
+                "Função de confiança",
+                "Exclusivamente servidor em cargo efetivo"
+              ],
+              [
+                "Cargo em comissão",
+                "Direção, chefia, assessoramento — regras em lei"
+              ],
+              [
+                "Alternativa D",
+                "Errada — não admite particulares na função"
+              ],
+              [
+                "Caso STTP",
+                "Comissão ≠ estabilidade do art. 41"
+              ]
             ]
           }
         },
@@ -302,8 +404,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "EFETIVO+concurso+3a = ESTÁVEL | COMISSÃO = livre exoneração | FUNÇÃO = só efetivo (art.37,V).\n\nNear-transfer: agente efetivo da STTP com 3 anos pede exoneração sumária do diretor em comissão — pode? Sim, comissão é de livre exoneração; o efetivo só perde cargo com PAD se já estável.",
-            "destaques": ["EFETIVO+3a", "COMISSÃO", "near-transfer"]
+            "texto": "EFETIVO+concurso+3a = ESTÁVEL | COMISSÃO = livre exoneração | FUNÇÃO = só efetivo (art.37,V).\n\nNear-transfer: agente efetivo da STTP com 3 anos pede exoneração sumária do diretor em comissão — pode? Sim, comissão é de livre exoneração; o efetivo só perde cargo com PAD se já estável.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "EFETIVO+3a",
+              "COMISSÃO",
+              "near-transfer"
+            ]
           }
         }
       ],
@@ -323,6 +429,17 @@
       "cargo_comissao",
       "estabilidade",
       "cf_88"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "agente efetivo da STTP com 3 anos pede exoneração sumária do diretor em comissão — pode? Sim, comissão é de livre exoneração; o efetivo só perde cargo com PAD se já estável.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "EFETIVO+concurso+3a = ESTÁVEL",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

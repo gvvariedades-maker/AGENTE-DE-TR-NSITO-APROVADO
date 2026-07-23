@@ -43,7 +43,12 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Roberto, 71 anos. A banca troca 70 por 65 ou nega exceção à obrigatoriedade do voto após os 18.",
-            "destaques": ["71 anos", "70", "65", "facultativo"]
+            "destaques": [
+              "71 anos",
+              "70",
+              "65",
+              "facultativo"
+            ]
           }
         },
         {
@@ -51,16 +56,28 @@
           "titulo": "Obrigatório × facultativo",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Eleitor", "Alistamento e voto"],
+            "titulo_colunas": [
+              "Eleitor",
+              "Alistamento e voto"
+            ],
             "linhas": [
-              { "faixa": "Maiores de 18 anos", "classificacao": "Obrigatório (regra)" },
+              {
+                "faixa": "Maiores de 18 anos",
+                "classificacao": "Obrigatório (regra)"
+              },
               {
                 "faixa": "Maiores de 70 anos",
                 "classificacao": "Facultativo (§1º, II, b)",
                 "destaque": true
               },
-              { "faixa": "16 a 17 anos", "classificacao": "Facultativo (§1º, II, c)" },
-              { "faixa": "Analfabetos", "classificacao": "Facultativo (§1º, II, a)" }
+              {
+                "faixa": "16 a 17 anos",
+                "classificacao": "Facultativo (§1º, II, c)"
+              },
+              {
+                "faixa": "Analfabetos",
+                "classificacao": "Facultativo (§1º, II, a)"
+              }
             ]
           }
         },
@@ -69,9 +86,15 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["Facultativo aos 65 anos", "Facultativo aos 70 anos (§1º, II, b)"]
+              [
+                "Facultativo aos 65 anos",
+                "Facultativo aos 70 anos (§1º, II, b)"
+              ]
             ]
           }
         },
@@ -83,7 +106,12 @@
             "fonte": "CF/88, art. 14, §1º",
             "texto": "§ 1º O alistamento eleitoral e o voto são: I - obrigatórios para os maiores de dezoito anos; II - facultativos para: a) os analfabetos; b) os maiores de setenta anos; c) os maiores de dezesseis e menores de dezoito anos.",
             "trechos_grifados": [
-              { "inicio": 142, "fim": 165, "motivo": "Roberto, 71 anos — facultativo" }
+              {
+                "inicio": 142,
+                "fim": 165,
+                "motivo": "Roberto, 71 anos — facultativo",
+                "texto_grifado": "maiores de setenta anos"
+              }
             ]
           }
         },
@@ -93,7 +121,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "18+ obrigatório. Facultativo: analfabeto · 70+ · 16–17. Pegadinha: 65 ≠ 70.",
-            "destaques": ["70+", "65", "18+"]
+            "destaques": [
+              "70+",
+              "65",
+              "18+"
+            ]
           }
         }
       ],
@@ -115,7 +147,9 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "A banca troca 70 anos por 65 na exceção do §1º, II, b",
-        "eixos_legais": ["CF_art14_par1_II_b"],
+        "eixos_legais": [
+          "CF_art14_par1_II_b"
+        ],
         "isca_por_alternativa": {
           "A": "memoriza 65 anos em vez do limite constitucional de 70",
           "B": "nega qualquer exceção à obrigatoriedade após os 18",
@@ -129,8 +163,13 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D (facultativo aos 70+).\n\nA — troca 70 por 65 anos (numero_vizinho).\nB — nega exceção etária; voto sempre obrigatório após 18.\nC — trata facultativo como impedimento de votar.\n\nRoberto, 71 anos: art. 14, §1º, II, b.",
-            "destaques": ["71 anos", "70", "65", "facultativo"]
+            "texto": "Gabarito D (facultativo aos 70+). A — troca 70 por 65 anos (numero_vizinho).\nB — nega exceção etária; voto sempre obrigatório após 18.\nC — trata facultativo como impedimento de votar. Roberto, 71 anos: dispositivo legal, II, b.",
+            "destaques": [
+              "71 anos",
+              "70",
+              "65",
+              "facultativo"
+            ]
           }
         },
         {
@@ -139,7 +178,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "SUFRÁGIO: exercício do voto (art. 14, caput). ALISTAMENTO: inscrição no eleitorado. FACULTATIVO × OBRIGATÓRIO: descumprir o obrigatório gera sanções; o facultativo pode ser exercido ou não sem essa penalidade.",
-            "destaques": ["sufrágio", "alistamento", "facultativo"]
+            "destaques": [
+              "sufrágio",
+              "alistamento",
+              "facultativo"
+            ]
           }
         },
         {
@@ -166,8 +209,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -177,7 +228,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Hipótese", "Alistamento e voto"],
+            "titulo_colunas": [
+              "Hipótese",
+              "Alistamento e voto"
+            ],
             "linhas": [
               {
                 "faixa": "Regra — maiores de 18",
@@ -205,7 +259,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Aos 65 anos o voto já é facultativo",
@@ -224,7 +281,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — numero_vizinho",
@@ -247,12 +307,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Consequência legal"],
+            "colunas": [
+              "Fato do enunciado",
+              "Consequência legal"
+            ],
             "linhas": [
-              ["Brasileiro nato, alfabetizado, 71 anos", "Sujeito ao art. 14, §1º"],
-              ["Maior de 18 anos", "Regra geral: obrigatório (inciso I)"],
-              ["Maior de 70 anos", "Exceção: facultativo (inciso II, b)"],
-              ["Resultado", "Pode deixar de votar sem sanção de obrigatoriedade → D"]
+              [
+                "Brasileiro nato, alfabetizado, 71 anos",
+                "Sujeito ao art. 14, §1º"
+              ],
+              [
+                "Maior de 18 anos",
+                "Regra geral: obrigatório (inciso I)"
+              ],
+              [
+                "Maior de 70 anos",
+                "Exceção: facultativo (inciso II, b)"
+              ],
+              [
+                "Resultado",
+                "Pode deixar de votar sem sanção de obrigatoriedade → D"
+              ]
             ]
           }
         },
@@ -268,12 +343,14 @@
               {
                 "inicio": 47,
                 "fim": 91,
-                "motivo": "mapa — regra geral obrigatória aos 18+"
+                "motivo": "mapa — regra geral obrigatória aos 18+",
+                "texto_grifado": "obrigatórios para os maiores de dezoito anos"
               },
               {
                 "inicio": 142,
                 "fim": 165,
-                "motivo": "contraste — exceção aos 70 anos (Roberto, 71)"
+                "motivo": "contraste — exceção aos 70 anos (Roberto, 71)",
+                "texto_grifado": "maiores de setenta anos"
               }
             ]
           }
@@ -284,8 +361,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "18+ = obrigatório. Facultativo: analfabeto · 70+ · 16–17.\n\nNear-transfer: Dona Lúcia, 68 anos e alfabetizada, pode deixar de votar sem sanção de obrigatoriedade? Não — só a partir dos 70; aos 68 ainda é obrigatório (inciso I).",
-            "destaques": ["70+", "68 anos", "obrigatório"]
+            "texto": "18+ = obrigatório. Facultativo: analfabeto · 70+ · 16–17.\n\nNear-transfer: Dona Lúcia, 68 anos e alfabetizada, pode deixar de votar sem sanção de obrigatoriedade? Não — só a partir dos 70; aos 68 ainda é obrigatório (inciso I).\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "70+",
+              "68 anos",
+              "obrigatório"
+            ]
           }
         }
       ],
@@ -301,6 +382,17 @@
       "art14",
       "sufragio",
       "voto_facultativo"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "Dona Lúcia, 68 anos e alfabetizada, pode deixar de votar sem sanção de obrigatoriedade? Não — só a partir dos 70; aos 68 ainda é obrigatório (inciso I).",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Voto obrigatório: 18+. Facultativo: analfabeto · 70+ · 16–17. Não confunda 65 com 70 — a CF não faculta pelo INSS, faculta pelo art. 14, §1º, II, b.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

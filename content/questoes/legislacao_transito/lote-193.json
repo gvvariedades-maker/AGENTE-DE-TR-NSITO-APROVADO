@@ -52,7 +52,11 @@
       "far_transfer": "Centro de convenções com art. 92 invocado para dispensar anuência — dispositivo vetado não fundamento jurídico.",
       "o_que_nao_muda": "Pólo atrativo exige anuência prévia + estacionamento + vias de acesso indicadas no projeto — requisitos cumulativos do art. 93.",
       "calibracao_corpus": "ok",
-      "eficacia_pos_aula": ["E1", "E2", "E3"]
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
     },
     "tags": [
       "engenharia_transito",
@@ -75,7 +79,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito A: ginásio escolar com fluxo concentrado é pólo atrativo — anuência, estacionamento e acessos no projeto.",
-            "destaques": ["Gabarito A", "pólo atrativo", "ginásio"]
+            "destaques": [
+              "Gabarito A",
+              "pólo atrativo",
+              "ginásio"
+            ]
           }
         },
         {
@@ -84,11 +92,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Edificação concentra fluxo de veículos?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Exige anuência STTP — gabarito A", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Edificação concentra fluxo de veículos?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Exige anuência STTP — gabarito A",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim — ginásio com 2.000 alunos" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim — ginásio com 2.000 alunos"
+              }
             ]
           }
         },
@@ -98,7 +118,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PÓLO ATRATIVO ≠ SÓ COMÉRCIO.\nANUÊNCIA + ESTACIONAMENTO + ACESSOS.",
-            "destaques": ["PÓLO ATRATIVO", "ANUÊNCIA"]
+            "destaques": [
+              "PÓLO ATRATIVO",
+              "ANUÊNCIA"
+            ]
           }
         }
       ],
@@ -124,8 +147,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A.\n\nB — limita pólo atrativo a hipermercados e shoppings.\nC — anuência exclusiva do CONTRAN em equipamento educacional.\nD — eventos nos fins de semana dispensam estacionamento e anuência.\n\nPegadinha: edificação escolar com fluxo concentrado enquadra-se como pólo atrativo.",
-            "destaques": ["Gabarito A", "escolar", "pólo atrativo"]
+            "texto": "Gabarito A. B — limita pólo atrativo a hipermercados e shoppings.\nC — anuência exclusiva do CONTRAN em equipamento educacional.\nD — eventos nos fins de semana dispensam estacionamento e anuência. Pegadinha: edificação escolar com fluxo concentrado enquadra-se como pólo atrativo.",
+            "destaques": [
+              "Gabarito A",
+              "escolar",
+              "pólo atrativo"
+            ]
           }
         },
         {
@@ -134,7 +161,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PÓLO ATRATIVO: edificação que concentra deslocamentos — escola, ginásio, shopping ou hospital grande.\n\nANUÊNCIA PRÉVIA: manifestação do órgão com circunscrição sobre a via antes da aprovação.\n\nREQUISITOS CUMULATIVOS: anuência + estacionamento + vias de acesso indicadas no projeto.",
-            "destaques": ["PÓLO ATRATIVO", "ANUÊNCIA", "CUMULATIVOS"]
+            "destaques": [
+              "PÓLO ATRATIVO",
+              "ANUÊNCIA",
+              "CUMULATIVOS"
+            ]
           }
         },
         {
@@ -144,13 +175,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Edificação pode transformar-se em pólo atrativo?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Projeto tem anuência, estacionamento e acessos?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Licença irregular — gabarito A", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Edificação pode transformar-se em pólo atrativo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Projeto tem anuência, estacionamento e acessos?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Licença irregular — gabarito A",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — ginásio com 2.000 alunos e eventos" },
-              { "de": "p2", "para": "r1", "rotulo": "Não — falta anuência e estacionamento" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — ginásio com 2.000 alunos e eventos"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — falta anuência e estacionamento"
+              }
             ]
           }
         },
@@ -160,12 +211,27 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Órgão / ato", "Função"],
+            "colunas": [
+              "Órgão / ato",
+              "Função"
+            ],
             "linhas": [
-              ["CONTRAN — normas nacionais", "Padrões de engenharia de tráfego — art. 91"],
-              ["STTP — anuência prévia", "Órgão com circunscrição na Av. Assis Chateaubriand"],
-              ["Projeto do ginásio", "Deve prever estacionamento e vias de acesso"],
-              ["Licença sem anuência", "Irregular — gabarito A"]
+              [
+                "CONTRAN — normas nacionais",
+                "Padrões de engenharia de tráfego — art. 91"
+              ],
+              [
+                "STTP — anuência prévia",
+                "Órgão com circunscrição na Av. Assis Chateaubriand"
+              ],
+              [
+                "Projeto do ginásio",
+                "Deve prever estacionamento e vias de acesso"
+              ],
+              [
+                "Licença sem anuência",
+                "Irregular — gabarito A"
+              ]
             ]
           }
         },
@@ -175,7 +241,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o secretário pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o secretário pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Art. 93 alcança só hipermercados e shoppings",
@@ -194,7 +263,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — termo_unico",
@@ -217,13 +289,31 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do ginásio escolar", "Avaliação"],
+            "colunas": [
+              "Fato do ginásio escolar",
+              "Avaliação"
+            ],
             "linhas": [
-              ["2.000 estudantes + eventos públicos", "Potencial pólo atrativo de trânsito"],
-              ["Sem estacionamento nem acessos no projeto", "Viola art. 93"],
-              ["Licença sem anuência da STTP", "Irregular"],
-              ["Argumento de equipamento educacional", "Não exclui art. 93"],
-              ["Resultado", "Alternativa A"]
+              [
+                "2.000 estudantes + eventos públicos",
+                "Potencial pólo atrativo de trânsito"
+              ],
+              [
+                "Sem estacionamento nem acessos no projeto",
+                "Viola art. 93"
+              ],
+              [
+                "Licença sem anuência da STTP",
+                "Irregular"
+              ],
+              [
+                "Argumento de equipamento educacional",
+                "Não exclui art. 93"
+              ],
+              [
+                "Resultado",
+                "Alternativa A"
+              ]
             ]
           }
         },
@@ -233,11 +323,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Efeito no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Efeito no caso"
+            ],
             "linhas": [
-              ["Art. 91 — CONTRAN normatiza", "Padrões de engenharia de tráfego — não dispensa anuência"],
-              ["Art. 93 — pólo atrativo", "Anuência + estacionamento + acessos cumulativos — gabarito A"],
-              ["Art. 92 — vetado", "Sem vigência — não fundamento para dispensar anuência"]
+              [
+                "Art. 91 — CONTRAN normatiza",
+                "Padrões de engenharia de tráfego — não dispensa anuência"
+              ],
+              [
+                "Art. 93 — pólo atrativo",
+                "Anuência + estacionamento + acessos cumulativos — gabarito A"
+              ],
+              [
+                "Art. 92 — vetado",
+                "Sem vigência — não fundamento para dispensar anuência"
+              ]
             ]
           }
         },
@@ -290,7 +392,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PÓLO ATRATIVO ≠ SÓ COMÉRCIO · ANUÊNCIA + ESTACIONAMENTO + ACESSOS.\nNear: escola com fluxo de pais no horário de entrada — mesmo regime se concentrar veículos.\nFar: centro de convenções com art. 92 invocado — dispositivo vetado não dispensa anuência.\nNão muda: requisitos cumulativos do art. 93 para edificação pólo atrativo.\nCadeia: vizinho = art. 92 (vetado — sem fundamento jurídico).",
-            "destaques": ["PÓLO ATRATIVO", "CUMULATIVOS", "vetado"]
+            "destaques": [
+              "PÓLO ATRATIVO",
+              "CUMULATIVOS",
+              "vetado"
+            ]
           }
         }
       ],

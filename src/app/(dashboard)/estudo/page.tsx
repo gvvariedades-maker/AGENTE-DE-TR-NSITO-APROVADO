@@ -23,6 +23,7 @@ import {
 import { hrefVitrineReais } from "@/lib/estudo-links";
 import { getEditalTopic, labelTopicoEdital } from "@/lib/edital-topicos";
 import { carregarMissaoHoje } from "@/lib/tutor/missao-hoje";
+import { buscarSessaoMissaoCorretiva } from "@/lib/missao/missao-pos-simulado";
 import type { SessaoMissaoContext } from "@/lib/estudo-reverso";
 
 export const dynamic = "force-dynamic";
@@ -40,18 +41,27 @@ function clampLimite(n: number): number {
 function parseLimit(
   raw: string | undefined,
   modo: ReturnType<typeof parseModoSessao>,
-  missaoHoje: boolean,
+  missaoAtiva: boolean,
 ): number {
   if (raw?.trim()) {
     const n = Number.parseInt(raw, 10);
-    if (!Number.isNaN(n)) return clampLimite(n);
+    if (!Number.isNaN(n)) {
+      if (missaoAtiva) {
+        return Math.min(LIMITE_MISSAO_MAX, Math.max(1, n));
+      }
+      return clampLimite(n);
+    }
   }
-  if (modo === "revisoes" && !missaoHoje) return LIMITE_REVISOES;
+  if (modo === "revisoes" && !missaoAtiva) return LIMITE_REVISOES;
   return LIMITE_SESSAO_PADRAO;
 }
 
 function parseMissaoHoje(raw?: string): boolean {
   return raw === "hoje";
+}
+
+function parseMissaoCorretiva(raw?: string): boolean {
+  return raw === "corretiva";
 }
 
 function parseDisciplina(raw?: string): Disciplina | undefined {
@@ -87,7 +97,9 @@ export default async function EstudoPage({
   const topico = parseTopico(topicoRaw);
   const modo = parseModoSessao(modoRaw);
   const missaoHoje = parseMissaoHoje(missaoRaw);
-  const limite = parseLimit(limitRaw, modo, missaoHoje);
+  const missaoCorretiva = parseMissaoCorretiva(missaoRaw);
+  const missaoAtiva = missaoHoje || missaoCorretiva;
+  const limite = parseLimit(limitRaw, modo, missaoAtiva);
 
   const supabase = await createClient();
   const {
@@ -115,42 +127,53 @@ export default async function EstudoPage({
     getEditalTopic(topico ?? "")?.disciplina;
 
   let questoesDb =
-    user && missaoHoje && missaoCtx
+    user && missaoCorretiva
       ? await (async () => {
-          if (disciplina) {
-            await invalidarFilasMissaoHojeOutrasDisciplinas(
+          const corretiva = await buscarSessaoMissaoCorretiva(user.id);
+          if (corretiva?.plannedQuestionIds.length) {
+            return getQuestoesByIds(corretiva.plannedQuestionIds);
+          }
+          return [];
+        })()
+      : user && missaoHoje && missaoCtx
+        ? await (async () => {
+            if (disciplina) {
+              await invalidarFilasMissaoHojeOutrasDisciplinas(
+                user.id,
+                disciplina,
+              );
+            }
+            const existente = await buscarSessaoMissaoHoje(
               user.id,
               disciplina,
             );
-          }
-          const existente = await buscarSessaoMissaoHoje(
-            user.id,
-            disciplina,
-          );
-          if (existente) {
-            return getQuestoesByIds(existente.plannedQuestionIds);
-          }
-          return montarSessaoEstudo(
-            user.id,
+            if (existente) {
+              return getQuestoesByIds(existente.plannedQuestionIds);
+            }
+            return montarSessaoEstudo(
+              user.id,
+              limite,
+              disciplina,
+              topico,
+              modo,
+              missaoCtx,
+            );
+          })()
+        : await montarSessaoEstudo(
+            user?.id,
             limite,
             disciplina,
             topico,
             modo,
             missaoCtx,
           );
-        })()
-      : await montarSessaoEstudo(
-          user?.id,
-          limite,
-          disciplina,
-          topico,
-          modo,
-          missaoCtx,
-        );
 
   let sessionId: string | undefined;
 
-  if (user && questoesDb.length > 0 && missaoHoje && missaoCtx) {
+  if (user && missaoCorretiva) {
+    const corretiva = await buscarSessaoMissaoCorretiva(user.id);
+    sessionId = corretiva?.id;
+  } else if (user && questoesDb.length > 0 && missaoHoje && missaoCtx) {
     const missaoSessao = await obterOuIniciarSessaoMissaoHoje({
       userId: user.id,
       modo,
@@ -200,6 +223,7 @@ export default async function EstudoPage({
         );
 
   const podeDemo =
+    !missaoCorretiva &&
     modo !== "reais_idecan" &&
     modo !== "revisoes" &&
     (modo === "auto" || modo === "normal") &&
@@ -241,7 +265,15 @@ export default async function EstudoPage({
   const sessaoRevisoesVazia =
     modo === "revisoes" && user && questoesDb.length === 0 && !isDemo;
 
-  const emSessao = questoes.length > 0 && !sessaoErrosVazia && !sessaoReaisVazia && !sessaoRevisoesVazia;
+  const sessaoCorretivaVazia =
+    missaoCorretiva && user && questoesDb.length === 0 && !isDemo;
+
+  const emSessao =
+    questoes.length > 0 &&
+    !sessaoErrosVazia &&
+    !sessaoReaisVazia &&
+    !sessaoRevisoesVazia &&
+    !sessaoCorretivaVazia;
   const modoLabel = labelModoSessao(modo);
 
   return (
@@ -269,9 +301,27 @@ export default async function EstudoPage({
         <SessaoPreview
           preview={preview}
           tituloFiltro={tituloFiltro}
-          missaoHoje={missaoHoje}
+          missaoHoje={missaoAtiva}
           metaQuestoes={limite}
         />
+      )}
+
+      {sessaoCorretivaVazia && (
+        <div className="mx-auto flex w-full max-w-lg flex-col gap-3 p-6">
+          <Alert>
+            <AlertTitle>Missão corretiva indisponível</AlertTitle>
+            <AlertDescription>
+              Não há fila corretiva de hoje. Finalize um simulado espelho para
+              gerar ~14 atividades por valor esperado.
+            </AlertDescription>
+          </Alert>
+          <Link
+            href="/simulado"
+            className={cn(buttonVariants({ size: "lg" }), "min-h-11")}
+          >
+            Ir ao simulado
+          </Link>
+        </div>
       )}
 
       {user &&
@@ -454,7 +504,13 @@ export default async function EstudoPage({
           isDemo={isDemo}
           sessionId={sessionId}
           catalogoDisciplina={disciplina}
-          rotuloSessao={modo === "revisoes" ? "Revisão agendada" : undefined}
+          rotuloSessao={
+            missaoCorretiva
+              ? "Missão corretiva"
+              : modo === "revisoes"
+                ? "Revisão agendada"
+                : undefined
+          }
         />
       )}
 

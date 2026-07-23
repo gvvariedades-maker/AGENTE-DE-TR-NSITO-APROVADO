@@ -52,7 +52,11 @@
       "far_transfer": "Em cruzamento sem trilhos nem rodovia, veículo que vem pela direita tem preferência (art. 29, III, c) — cenário distinto, mesma família de preferência.",
       "o_que_nao_muda": "Veículos que se deslocam sobre trilhos terão preferência de passagem sobre os demais — art. 29, XII.",
       "calibracao_corpus": "ok",
-      "eficacia_pos_aula": ["E1", "E2", "E3"]
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
     },
     "tags": [
       "preferencia",
@@ -76,7 +80,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Automóvel cortou composição sobre trilhos — condutor invocou direita.\n\nGabarito A: trilhos TERÃO preferência.\n\nFar: sem trilhos = direita nos demais casos.",
-            "destaques": ["trilhos", "Gabarito A", "TERÃO"]
+            "destaques": [
+              "trilhos",
+              "Gabarito A",
+              "TERÃO"
+            ]
           }
         },
         {
@@ -84,10 +92,19 @@
           "titulo": "TERÃO × DARÃO",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
-              ["Trilhos cedem aos demais", "Trilhos TERÃO preferência — demais cedem"],
-              ["Direita vence trilhos", "Inciso XII é autônomo"]
+              [
+                "Trilhos cedem aos demais",
+                "Trilhos TERÃO preferência — demais cedem"
+              ],
+              [
+                "Direita vence trilhos",
+                "Inciso XII é autônomo"
+              ]
             ]
           }
         },
@@ -97,11 +114,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Há veículo sobre trilhos no conflito?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Preferência a quem está nos trilhos", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Há veículo sobre trilhos no conflito?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Preferência a quem está nos trilhos",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -111,7 +140,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "TRILHOS = TERÃO.\nQuem cede é o outro.\n≠ direita · ≠ só parar.",
-            "destaques": ["TERÃO", "cede"]
+            "destaques": [
+              "TERÃO",
+              "cede"
+            ]
           }
         }
       ],
@@ -150,8 +182,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A.\n\nB — trilhos darão preferência aos demais: inverte TERÃO em DARÃO.\nC — direita prevalece mesmo com composição sobre trilhos.\nD — basta parar antes da linha férrea sem ceder à composição.\n\nNesta aula você fixa quem tem preferência quando há veículo sobre trilhos.",
-            "destaques": ["Gabarito A", "TERÃO", "trilhos"]
+            "texto": "Gabarito A. B — trilhos darão preferência aos demais: inverte TERÃO em DARÃO.\nC — direita prevalece mesmo com composição sobre trilhos.\nD — basta parar antes da linha férrea sem ceder à composição. Nesta aula você fixa quem tem preferência quando há veículo sobre trilhos.",
+            "destaques": [
+              "Gabarito A",
+              "TERÃO",
+              "trilhos"
+            ]
           }
         },
         {
@@ -160,7 +196,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "SOBRE TRILHOS: veículo cuja propulsão ocorre em linha férrea integrada à via — bonde, VLT ou composição ferroviária.\n\nTERÃO PREFERÊNCIA: os demais usuários devem ceder passagem — não o contrário.\n\nNORMAS DE CIRCULAÇÃO: demais regras do CTB continuam aplicáveis — a preferência não é licença para violar sinalização.",
-            "destaques": ["SOBRE TRILHOS", "TERÃO PREFERÊNCIA", "NORMAS DE CIRCULAÇÃO"]
+            "destaques": [
+              "SOBRE TRILHOS",
+              "TERÃO PREFERÊNCIA",
+              "NORMAS DE CIRCULAÇÃO"
+            ]
           }
         },
         {
@@ -170,13 +210,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Composição se desloca sobre trilhos no conflito?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Automóvel tentou passar à frente da composição?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Ceder passagem ao veículo sobre trilhos", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Composição se desloca sobre trilhos no conflito?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Automóvel tentou passar à frente da composição?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Ceder passagem ao veículo sobre trilhos",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -186,12 +246,28 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Hipótese", "Quem tem preferência"],
+            "titulo_colunas": [
+              "Hipótese",
+              "Quem tem preferência"
+            ],
             "linhas": [
-              { "faixa": "Rodovia — III, a", "classificacao": "Quem circula pela rodovia" },
-              { "faixa": "Rotatória — III, b", "classificacao": "Quem circula pelo anel" },
-              { "faixa": "Trilhos — XII", "classificacao": "Veículo que se desloca sobre trilhos", "destaque": true },
-              { "faixa": "Demais casos — III, c", "classificacao": "Quem vem pela direita" }
+              {
+                "faixa": "Rodovia — III, a",
+                "classificacao": "Quem circula pela rodovia"
+              },
+              {
+                "faixa": "Rotatória — III, b",
+                "classificacao": "Quem circula pelo anel"
+              },
+              {
+                "faixa": "Trilhos — XII",
+                "classificacao": "Veículo que se desloca sobre trilhos",
+                "destaque": true
+              },
+              {
+                "faixa": "Demais casos — III, c",
+                "classificacao": "Quem vem pela direita"
+              }
             ]
           }
         },
@@ -201,11 +277,23 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
-              ["Trilhos cedem passagem aos demais", "Trilhos TERÃO preferência — demais cedem"],
-              ["Direita vence composição sobre trilhos", "Inciso XII é autônomo — não cede à alínea c"],
-              ["Parar na linha férrea basta", "Art. 212 é parada antes de transpor — não substitui XII"]
+              [
+                "Trilhos cedem passagem aos demais",
+                "Trilhos TERÃO preferência — demais cedem"
+              ],
+              [
+                "Direita vence composição sobre trilhos",
+                "Inciso XII é autônomo — não cede à alínea c"
+              ],
+              [
+                "Parar na linha férrea basta",
+                "Art. 212 é parada antes de transpor — não substitui XII"
+              ]
             ]
           }
         },
@@ -215,11 +303,23 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
-              ["B — termo_unico", "Troca TERÃO por DARÃO — inverte quem cede passagem"],
-              ["C — regra_excecao", "Aplica direita (III, c) ignorando preferência do inciso XII"],
-              ["D — numero_vizinho", "Transporta parada do art. 212 negando preferência contínua do XII"]
+              [
+                "B — termo_unico",
+                "Troca TERÃO por DARÃO — inverte quem cede passagem"
+              ],
+              [
+                "C — regra_excecao",
+                "Aplica direita (III, c) ignorando preferência do inciso XII"
+              ],
+              [
+                "D — numero_vizinho",
+                "Transporta parada do art. 212 negando preferência contínua do XII"
+              ]
             ]
           }
         },
@@ -229,12 +329,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Elemento do enunciado", "Conclusão legal"],
+            "colunas": [
+              "Elemento do enunciado",
+              "Conclusão legal"
+            ],
             "linhas": [
-              ["Composição se deslocava sobre trilhos", "Inciso XII — preferência sobre os demais"],
-              ["Automóvel avançou à frente da composição", "Não cedeu passagem ao veículo preferencial"],
-              ["Condutor invocou direita sobre a composição", "Isca da alínea c — não prevalece sobre XII"],
-              ["Resultado", "Gabarito A — autuação legítima"]
+              [
+                "Composição se deslocava sobre trilhos",
+                "Inciso XII — preferência sobre os demais"
+              ],
+              [
+                "Automóvel avançou à frente da composição",
+                "Não cedeu passagem ao veículo preferencial"
+              ],
+              [
+                "Condutor invocou direita sobre a composição",
+                "Isca da alínea c — não prevalece sobre XII"
+              ],
+              [
+                "Resultado",
+                "Gabarito A — autuação legítima"
+              ]
             ]
           }
         },
@@ -244,11 +359,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Função no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Função no caso"
+            ],
             "linhas": [
-              ["Art. 29, XII — circulação", "Quem está sobre trilhos passa antes dos demais"],
-              ["Art. 212 — passagem em nível", "Parar antes de transpor a linha férrea — dever distinto"],
-              ["Próximo na cadeia: III, c", "Direita nos demais casos — quando não há trilhos no conflito"]
+              [
+                "Art. 29, XII — circulação",
+                "Quem está sobre trilhos passa antes dos demais"
+              ],
+              [
+                "Art. 212 — passagem em nível",
+                "Parar antes de transpor a linha férrea — dever distinto"
+              ],
+              [
+                "Próximo na cadeia: III, c",
+                "Direita nos demais casos — quando não há trilhos no conflito"
+              ]
             ]
           }
         },
@@ -289,7 +416,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "TRILHOS = TERÃO preferência (XII) · quem cede é o outro veículo.\nNear: automóvel pela esquerda da composição — ainda cede ao veículo sobre trilhos.\nFar: cruzamento sem trilhos — direita nos demais casos (III, c).\nNão muda: veículos sobre trilhos terão preferência de passagem sobre os demais.\nCadeia: vizinho = art. 212 (parar antes de transpor — dever distinto da preferência).",
-            "destaques": ["TERÃO", "Near", "art. 212"]
+            "destaques": [
+              "TERÃO",
+              "Near",
+              "art. 212"
+            ]
           }
         }
       ],

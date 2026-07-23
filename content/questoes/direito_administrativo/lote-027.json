@@ -45,7 +45,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Memorando interno na Av. Epitácio Pessoa ≠ autuação ao condutor. B iguala os poderes; C trata memorando como polícia; D nega polícia na autuação.",
-            "destaques": ["hierárquico", "poder de polícia", "memorando"]
+            "destaques": [
+              "hierárquico",
+              "poder de polícia",
+              "memorando"
+            ]
           }
         },
         {
@@ -53,7 +57,10 @@
           "titulo": "Hierárquico × polícia",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha ✗", "Regra ✓"],
+            "colunas": [
+              "Pegadinha ✗",
+              "Regra ✓"
+            ],
             "linhas": [
               [
                 "Memorando e autuação são o mesmo poder",
@@ -68,13 +75,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Ato organiza subordinados internamente?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Ato limita direitos de condutor na via?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito A — poderes distintos", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Ato organiza subordinados internamente?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Ato limita direitos de condutor na via?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito A — poderes distintos",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Memorando sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Autuação sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Memorando sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Autuação sim"
+              }
             ]
           }
         },
@@ -101,7 +128,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "HIERÁRQUICO = organiza agente | POLÍCIA = limita terceiro na via | memorando ≠ autuação.",
-            "destaques": ["HIERÁRQUICO", "POLÍCIA", "memorando"]
+            "destaques": [
+              "HIERÁRQUICO",
+              "POLÍCIA",
+              "memorando"
+            ]
           }
         }
       ],
@@ -123,7 +154,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Memorando interno confundido com poder de polícia sobre condutores",
-        "eixos_legais": ["Lei9784_art2", "Lei9784_art50"],
+        "eixos_legais": [
+          "Lei9784_art2",
+          "Lei9784_art50"
+        ],
         "isca_por_alternativa": {
           "B": "iguala hierárquico e polícia por operarem em trânsito",
           "C": "trata memorando de logística como restrição a usuários da via",
@@ -137,8 +171,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A.\n\nB — iguala hierárquico e polícia: institutos distintos com sujeitos diferentes.\nC — memorando como polícia: organiza agentes, não limita circulação de terceiros.\nD — autuação só hierárquica: multa limita direitos do condutor na via.\n\nNesta aula você separa organização interna de limitação a terceiros.",
-            "destaques": ["Gabarito A", "memorando", "autuação"]
+            "texto": "Gabarito A. B — iguala hierárquico e polícia: institutos distintos com sujeitos diferentes.\nC — memorando como polícia: organiza agentes, não limita circulação de terceiros.\nD — autuação só hierárquica: multa limita direitos do condutor na via. Nesta aula você separa organização interna de limitação a terceiros.",
+            "destaques": [
+              "Gabarito A",
+              "memorando",
+              "autuação"
+            ]
           }
         },
         {
@@ -147,7 +185,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PODER HIERÁRQUICO: prerrogativa de organizar, dirigir e fiscalizar a atuação dos subordinados na estrutura administrativa.\n\nPODER DE POLÍCIA: limita direitos de particulares com fundamento legal em favor do interesse público — autuação em via pública.\n\nLEGALIDADE: princípio basilar da atuação administrativa — vincula memorando e autuação à lei.",
-            "destaques": ["PODER HIERÁRQUICO", "PODER DE POLÍCIA", "LEGALIDADE"]
+            "destaques": [
+              "PODER HIERÁRQUICO",
+              "PODER DE POLÍCIA",
+              "LEGALIDADE"
+            ]
           }
         },
         {
@@ -174,8 +216,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — Av. Epitácio" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — velocidade" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — Av. Epitácio"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — velocidade"
+              }
             ]
           }
         },
@@ -185,7 +235,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Ato", "Poder"],
+            "titulo_colunas": [
+              "Ato",
+              "Poder"
+            ],
             "linhas": [
               {
                 "faixa": "Memorando interno",
@@ -213,7 +266,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a associação insinua ✗", "O que a lei distingue ✓"],
+            "colunas": [
+              "O que a associação insinua ✗",
+              "O que a lei distingue ✓"
+            ],
             "linhas": [
               [
                 "Memorando restringe circulação de usuários",
@@ -232,7 +288,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — termo_unico",
@@ -255,7 +314,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso STTP", "Classificação"],
+            "colunas": [
+              "Fato do caso STTP",
+              "Classificação"
+            ],
             "linhas": [
               [
                 "Memorando concentra fiscalização na Av. Epitácio Pessoa",
@@ -269,7 +331,10 @@
                 "Associação confunde os dois atos",
                 "Refutado — sujeitos e efeitos distintos"
               ],
-              ["Resultado", "Alternativa A — única correta"]
+              [
+                "Resultado",
+                "Alternativa A — única correta"
+              ]
             ]
           }
         },
@@ -279,11 +344,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Poder", "Alvo típico"],
+            "colunas": [
+              "Poder",
+              "Alvo típico"
+            ],
             "linhas": [
-              ["Hierárquico", "Subordinados — organização da atividade"],
-              ["Polícia", "Terceiros — limitação de direitos com lei"],
-              ["Disciplinar", "Servidores — sanção funcional interna"]
+              [
+                "Hierárquico",
+                "Subordinados — organização da atividade"
+              ],
+              [
+                "Polícia",
+                "Terceiros — limitação de direitos com lei"
+              ],
+              [
+                "Disciplinar",
+                "Servidores — sanção funcional interna"
+              ]
             ]
           }
         },
@@ -335,8 +412,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "HIERÁRQUICO = organiza agente | POLÍCIA = limita terceiro na via | memorando ≠ autuação.\n\nNear-transfer: se o superintendente suspendesse agente por desobedecer o memorando, seria poder disciplinar — não hierárquico sobre o condutor.",
-            "destaques": ["HIERÁRQUICO", "POLÍCIA", "near-transfer"]
+            "texto": "HIERÁRQUICO = organiza agente | POLÍCIA = limita terceiro na via | memorando ≠ autuação.\n\nNear-transfer: se o superintendente suspendesse agente por desobedecer o memorando, seria poder disciplinar — não hierárquico sobre o condutor.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "HIERÁRQUICO",
+              "POLÍCIA",
+              "near-transfer"
+            ]
           }
         }
       ],
@@ -356,6 +437,17 @@
       "poder_hierarquico",
       "lei_9784",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se o superintendente suspendesse agente por desobedecer o memorando, seria poder disciplinar — não hierárquico sobre o condutor.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "HIERÁRQUICO = organiza agente",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

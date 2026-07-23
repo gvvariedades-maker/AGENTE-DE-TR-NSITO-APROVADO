@@ -11,7 +11,7 @@
       "A": "Deve ser imposta advertência por escrito, pois a infração anterior é de natureza distinta e não configura reincidência na mesma conduta nos últimos doze meses.",
       "B": "Aplica-se a penalidade de multa, pois Cláudia cometeu outra infração nos últimos doze meses, afastando a advertência obrigatória prevista no art. 267 do CTB.",
       "C": "A autoridade de trânsito pode optar entre advertência por escrito e multa, conforme critério educativo, por se tratar de infração média passível de multa.",
-      "D": "Incidem cumulativamente advertência por escrito e multa, nos termos dos incisos I e II do art. 256 do CTB, por se tratar de condutas autônomas."
+      "D": "No caso de Cláudia, autuada pela STTP em Campina Grande por estacionamento (art. 181, IV), incidem cumulativamente advertência por escrito e multa, nos termos dos incisos I e II do art. 256 do CTB, por se tratar de condutas autônomas."
     },
     "gabarito": "B",
     "comentario": {
@@ -27,8 +27,7 @@
       "estudo_reverso": [
         "CTB art. 256",
         "CTB art. 267",
-        "CTB art. 181, IV",
-        "CTB art. 218, I"
+        "CTB art. 181, IV"
       ]
     },
     "estudo_reverso_visual": {
@@ -45,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Cláudia tem infração média há 9 meses. A banca troca 'qualquer infração em 12 meses' por 'mesma conduta' — pegadinha clássica do art. 267.",
-            "destaques": ["9 meses", "qualquer infração", "art. 267"]
+            "destaques": [
+              "9 meses",
+              "qualquer infração",
+              "art. 267"
+            ]
           }
         },
         {
@@ -53,10 +56,19 @@
           "titulo": "Mesma infração × qualquer infração",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Lei vigente"],
+            "colunas": [
+              "Pegadinha",
+              "Lei vigente"
+            ],
             "linhas": [
-              ["Só bloqueia se repetir a mesma conduta", "Bloqueia se houver qualquer infração em 12 meses"],
-              ["Estacionamento ≠ velocidade → advertência", "Art. 218 há 9 meses → multa na atual"]
+              [
+                "Só bloqueia se repetir a mesma conduta",
+                "Bloqueia se houver qualquer infração em 12 meses"
+              ],
+              [
+                "Estacionamento ≠ velocidade → advertência",
+                "Art. 218 há 9 meses → multa na atual"
+              ]
             ]
           }
         },
@@ -66,13 +78,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Infração leve ou média?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Outra infração nos últimos 12 meses?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Multa — gabarito B", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Infração leve ou média?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Outra infração nos últimos 12 meses?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Multa — gabarito B",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -87,7 +119,8 @@
               {
                 "inicio": 166,
                 "fim": 203,
-                "motivo": "qualquer infração em 12 meses afasta advertência"
+                "motivo": "qualquer infração em 12 meses afasta advertência",
+                "texto_grifado": "nenhuma outra infração nos últimos 12"
               }
             ]
           }
@@ -98,7 +131,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "0 infrações em 12 meses + leve/média = ADVERTÊNCIA obrigatória. Qualquer autuação no período → MULTA.",
-            "destaques": ["ADVERTÊNCIA", "MULTA", "12 meses"]
+            "destaques": [
+              "ADVERTÊNCIA",
+              "MULTA",
+              "12 meses"
+            ]
           }
         }
       ],
@@ -120,7 +157,11 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Qualquer infração em 12 meses afasta advertência — não só a mesma conduta",
-        "eixos_legais": ["CTB_art_267", "CTB_art_256_I", "CTB_art_256_II"],
+        "eixos_legais": [
+          "CTB_art_267",
+          "CTB_art_256_I",
+          "CTB_art_256_II"
+        ],
         "isca_por_alternativa": {
           "A": "exige mesma conduta — regra revogada do art. 267",
           "C": "transforma deverá em faculdade da autoridade",
@@ -134,8 +175,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B (multa — art. 267 afastado).\n\nA — exige mesma conduta: a lei vigente veda advertência ante qualquer infração em 12 meses.\nC — trata advertência como opção: o art. 267 usa 'deverá', não 'poderá'.\nD — cumula advertência e multa: o art. 267 define uma via conforme o prontuário.\n\nCláudia: art. 181, IV atual + art. 218, I há 9 meses.",
-            "destaques": ["Gabarito B", "9 meses", "qualquer infração"]
+            "texto": "Gabarito B (multa — dispositivo legal afastado). A — exige mesma conduta: a lei vigente veda advertência ante qualquer infração em 12 meses.\nC — trata advertência como opção: o dispositivo legal usa 'deverá', não 'poderá'.\nD — cumula advertência e multa: o dispositivo legal define uma via conforme o prontuário. Cláudia: dispositivo legal, IV atual + dispositivo legal, I há 9 meses.",
+            "destaques": [
+              "Gabarito B",
+              "9 meses",
+              "qualquer infração"
+            ]
           }
         },
         {
@@ -144,7 +189,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "ADVERTÊNCIA POR ESCRITO: penalidade do art. 256, I — substitui a multa quando o art. 267 autoriza.\n\nPRONTUÁRIO: histórico de autuações do condutor — base para verificar infrações nos últimos 12 meses.\n\nDEVERÁ (art. 267): obrigatoriedade da advertência quando cumpridos os requisitos — não é faculdade da autoridade.",
-            "destaques": ["ADVERTÊNCIA", "PRONTUÁRIO", "DEVERÁ"]
+            "destaques": [
+              "ADVERTÊNCIA",
+              "PRONTUÁRIO",
+              "DEVERÁ"
+            ]
           }
         },
         {
@@ -195,8 +244,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -206,15 +263,24 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Inciso", "Penalidade"],
+            "titulo_colunas": [
+              "Inciso",
+              "Penalidade"
+            ],
             "linhas": [
               {
                 "faixa": "I",
                 "classificacao": "Advertência por escrito",
                 "destaque": true
               },
-              { "faixa": "II", "classificacao": "Multa" },
-              { "faixa": "III", "classificacao": "Suspensão do direito de dirigir" }
+              {
+                "faixa": "II",
+                "classificacao": "Multa"
+              },
+              {
+                "faixa": "III",
+                "classificacao": "Suspensão do direito de dirigir"
+              }
             ]
           }
         },
@@ -224,7 +290,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Estacionamento e velocidade são infrações distintas → advertência",
@@ -243,7 +312,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -266,12 +338,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso", "Consequência legal"],
+            "colunas": [
+              "Fato do caso",
+              "Consequência legal"
+            ],
             "linhas": [
-              ["Infração atual: art. 181, IV — média", "Passível de advertência ou multa (art. 267)"],
-              ["Art. 218, I há 9 meses — também média", "Outra infração dentro de 12 meses"],
-              ["Prontuário não está limpo", "Advertência afastada → multa"],
-              ["Resultado", "Gabarito B"]
+              [
+                "Infração atual: art. 181, IV — média",
+                "Passível de advertência ou multa (art. 267)"
+              ],
+              [
+                "Art. 218, I há 9 meses — também média",
+                "Outra infração dentro de 12 meses"
+              ],
+              [
+                "Prontuário não está limpo",
+                "Advertência afastada → multa"
+              ],
+              [
+                "Resultado",
+                "Gabarito B"
+              ]
             ]
           }
         },
@@ -281,12 +368,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Função no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Função no caso"
+            ],
             "linhas": [
-              ["Art. 256, I — advertência", "Penalidade aplicável se art. 267 autorizar"],
-              ["Art. 256, II — multa", "Penalidade quando há infração prévia em 12 meses"],
-              ["Art. 267 — condição", "Deverá advertir só sem outra infração no período"],
-              ["Cláudia", "Art. 218, I no prontuário → multa na atual"]
+              [
+                "Art. 256, I — advertência",
+                "Penalidade aplicável se art. 267 autorizar"
+              ],
+              [
+                "Art. 256, II — multa",
+                "Penalidade quando há infração prévia em 12 meses"
+              ],
+              [
+                "Art. 267 — condição",
+                "Deverá advertir só sem outra infração no período"
+              ],
+              [
+                "Cláudia",
+                "Art. 218, I no prontuário → multa na atual"
+              ]
             ]
           }
         },
@@ -302,12 +404,14 @@
               {
                 "inicio": 0,
                 "fim": 7,
-                "motivo": "contraste — deverá, não poderá (faculdade)"
+                "motivo": "contraste — deverá, não poderá (faculdade)",
+                "texto_grifado": "Deverá "
               },
               {
                 "inicio": 166,
                 "fim": 203,
-                "motivo": "caso — Cláudia tem art. 218, I há 9 meses"
+                "motivo": "caso — Cláudia tem art. 218, I há 9 meses",
+                "texto_grifado": "nenhuma outra infração nos últimos 12"
               }
             ]
           }
@@ -318,8 +422,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "0 infrações em 12 meses + leve/média = ADVERTÊNCIA obrigatória. Qualquer autuação no período → MULTA.\n\nNear-transfer: Roberto, sem nenhuma infração nos últimos 12 meses, autuado por art. 181, IV (média) — deverá receber advertência por escrito (art. 267), não multa.",
-            "destaques": ["ADVERTÊNCIA", "MULTA", "Roberto"]
+            "texto": "0 infrações em 12 meses + leve/média = ADVERTÊNCIA obrigatória. Qualquer autuação no período → MULTA.\n\nNear-transfer: Roberto, sem nenhuma infração nos últimos 12 meses, autuado por art. 181, IV (média) — deverá receber advertência por escrito (art. 267), não multa.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "ADVERTÊNCIA",
+              "MULTA",
+              "Roberto"
+            ]
           }
         }
       ],
@@ -336,6 +444,22 @@
       "art_267",
       "art_256",
       "caso_pratico"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "Roberto, sem nenhuma infração nos últimos 12 meses, autuado por art. 181, IV (média) — deverá receber advertência por escrito (art. 267), não multa.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Art. 267: leve/média + zero infrações em 12 meses = advertência obrigatória. Qualquer autuação no período → multa.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "gravidade",
+        "regra_excecao",
+        "termo_unico"
+      ]
+    }
   }
 ]

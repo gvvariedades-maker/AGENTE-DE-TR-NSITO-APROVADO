@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Lei municipal transfere blitz de poluição da STTP para secretaria ambiental. A banca troca competência comum ambiental com privativa de legislar trânsito.",
-            "destaques": ["meio ambiente", "STTP", "trânsito"]
+            "destaques": [
+              "meio ambiente",
+              "STTP",
+              "trânsito"
+            ]
           }
         },
         {
@@ -52,14 +56,38 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "uniao", "label": "União — legisla trânsito (22, XI)", "nivel": 0 },
-              { "id": "cg", "label": "Campina Grande — lei deslocando STTP ✗", "nivel": 1 },
-              { "id": "sttp", "label": "STTP — fiscalização veicular no CTB", "nivel": 2 },
-              { "id": "amb", "label": "Secretaria Ambiental — apoio, não substitui STTP", "nivel": 2 }
+              {
+                "id": "uniao",
+                "label": "União — legisla trânsito (22, XI)",
+                "nivel": 0
+              },
+              {
+                "id": "cg",
+                "label": "Campina Grande — lei deslocando STTP ✗",
+                "nivel": 1
+              },
+              {
+                "id": "sttp",
+                "label": "STTP — fiscalização veicular no CTB",
+                "nivel": 2
+              },
+              {
+                "id": "amb",
+                "label": "Secretaria Ambiental — apoio, não substitui STTP",
+                "nivel": 2
+              }
             ],
             "arestas": [
-              { "de": "uniao", "para": "sttp", "rotulo": "Base federal de trânsito" },
-              { "de": "cg", "para": "amb", "rotulo": "Autuação exclusiva ilegal (A/C)" }
+              {
+                "de": "uniao",
+                "para": "sttp",
+                "rotulo": "Base federal de trânsito"
+              },
+              {
+                "de": "cg",
+                "para": "amb",
+                "rotulo": "Autuação exclusiva ilegal (A/C)"
+              }
             ]
           }
         },
@@ -68,10 +96,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["Ambiente exclusivo do Município afasta STTP", "Ambiente é comum (23, VI); trânsito é privativo da União (22, XI)"],
-              ["Art. 24, VI redistribui fiscalização veicular", "Legislar trânsito é art. 22, XI — não concorrente"]
+              [
+                "Ambiente exclusivo do Município afasta STTP",
+                "Ambiente é comum (23, VI); trânsito é privativo da União (22, XI)"
+              ],
+              [
+                "Art. 24, VI redistribui fiscalização veicular",
+                "Legislar trânsito é art. 22, XI — não concorrente"
+              ]
             ]
           }
         },
@@ -98,7 +135,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "23,VI = todos protegem ambiente. 22,XI = União legisla trânsito. Ambiente comum ≠ autuação veicular fora do CTB.",
-            "destaques": ["23, VI", "22, XI", "STTP"]
+            "destaques": [
+              "23, VI",
+              "22, XI",
+              "STTP"
+            ]
           }
         }
       ],
@@ -120,7 +161,10 @@
       "meta": {
         "padrao_familia": "C_competencia_snt",
         "pegadinha_em_uma_frase": "Ambiente é competência comum — mas legislar fiscalização veicular é privativa da União no art. 22, XI",
-        "eixos_legais": ["CF_art22_XI", "CF_art23_VI"],
+        "eixos_legais": [
+          "CF_art22_XI",
+          "CF_art23_VI"
+        ],
         "isca_por_alternativa": {
           "A": "proteção ambiental em vias municipais é exclusiva do Município, afastando a STTP",
           "B": "só o órgão máximo de trânsito da União fiscaliza veículos em qualquer via",
@@ -134,8 +178,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D (ambiente comum + trânsito privativo da União).\n\nA — secretaria ambiental exclusiva afasta STTP em blitz de poluição.\nB — só o órgão máximo de trânsito da União fiscaliza veículos em vias locais.\nC — legislação concorrente ambiental permite redistribuir autuação veicular para secretaria ambiental.\n\nPromessa: separar quem PROTEGE o ambiente de quem LEGISLA fiscalização veicular.",
-            "destaques": ["meio ambiente", "STTP", "privativa"]
+            "texto": "Gabarito D (ambiente comum + trânsito privativo da União). A — secretaria ambiental exclusiva afasta STTP em blitz de poluição.\nB — só o órgão máximo de trânsito da União fiscaliza veículos em vias locais.\nC — legislação concorrente ambiental permite redistribuir autuação veicular para secretaria ambiental. Promessa: separar quem PROTEGE o ambiente de quem LEGISLA fiscalização veicular.",
+            "destaques": [
+              "meio ambiente",
+              "STTP",
+              "privativa"
+            ]
           }
         },
         {
@@ -144,7 +192,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "COMPETÊNCIA COMUM (art. 23, VI): União, Estados, DF e Municípios protegem o meio ambiente — nenhum ente monopoliza. PRIVATIVA DA UNIÃO (art. 22, XI): só a União legisla trânsito e transporte — base do CTB e do órgão executivo municipal. LEGISLAÇÃO CONCORRENTE (art. 24, VI): normas ambientais suplementares — não autorizam deslocar fiscalização veicular da STTP.",
-            "destaques": ["comum", "privativa", "concorrente"]
+            "destaques": [
+              "comum",
+              "privativa",
+              "concorrente"
+            ]
           }
         },
         {
@@ -154,16 +206,48 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "uniao", "label": "União — legisla 22, XI (trânsito)", "nivel": 0 },
-              { "id": "cg", "label": "CG — lei excluindo STTP ✗", "nivel": 1 },
-              { "id": "sttp", "label": "STTP — fiscalização veicular (CTB)", "nivel": 2 },
-              { "id": "amb", "label": "Sec. Ambiente — políticas ambientais comuns", "nivel": 2 },
-              { "id": "todos", "label": "Todos — protegem ambiente (23, VI)", "nivel": 1 }
+              {
+                "id": "uniao",
+                "label": "União — legisla 22, XI (trânsito)",
+                "nivel": 0
+              },
+              {
+                "id": "cg",
+                "label": "CG — lei excluindo STTP ✗",
+                "nivel": 1
+              },
+              {
+                "id": "sttp",
+                "label": "STTP — fiscalização veicular (CTB)",
+                "nivel": 2
+              },
+              {
+                "id": "amb",
+                "label": "Sec. Ambiente — políticas ambientais comuns",
+                "nivel": 2
+              },
+              {
+                "id": "todos",
+                "label": "Todos — protegem ambiente (23, VI)",
+                "nivel": 1
+              }
             ],
             "arestas": [
-              { "de": "uniao", "para": "sttp", "rotulo": "Regime federal de trânsito" },
-              { "de": "cg", "para": "amb", "rotulo": "Autuação exclusiva (A falsa)" },
-              { "de": "todos", "para": "amb", "rotulo": "Ambiente comum, não exclusivo" }
+              {
+                "de": "uniao",
+                "para": "sttp",
+                "rotulo": "Regime federal de trânsito"
+              },
+              {
+                "de": "cg",
+                "para": "amb",
+                "rotulo": "Autuação exclusiva (A falsa)"
+              },
+              {
+                "de": "todos",
+                "para": "amb",
+                "rotulo": "Ambiente comum, não exclusivo"
+              }
             ]
           }
         },
@@ -173,7 +257,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Blitz de poluição é só da secretaria ambiental",
@@ -192,7 +279,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -215,12 +305,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Conclusão"],
+            "colunas": [
+              "Fato do enunciado",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Lei local autoriza secretaria ambiental a autuar veículos", "Legislar trânsito é privativa — 22, XI"],
-              ["STTP excluída de blitzes combinadas", "Município não redistribui fiscalização veicular por lei própria"],
-              ["Debate sobre competência exclusiva ou comum ambiental", "Ambiente é comum — 23, VI"],
-              ["Resultado", "Alternativa D"]
+              [
+                "Lei local autoriza secretaria ambiental a autuar veículos",
+                "Legislar trânsito é privativa — 22, XI"
+              ],
+              [
+                "STTP excluída de blitzes combinadas",
+                "Município não redistribui fiscalização veicular por lei própria"
+              ],
+              [
+                "Debate sobre competência exclusiva ou comum ambiental",
+                "Ambiente é comum — 23, VI"
+              ],
+              [
+                "Resultado",
+                "Alternativa D"
+              ]
             ]
           }
         },
@@ -230,12 +335,27 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Tema", "Quem atua / legisla"],
+            "colunas": [
+              "Tema",
+              "Quem atua / legisla"
+            ],
             "linhas": [
-              ["Proteger o meio ambiente", "Todos — art. 23, VI (comum)"],
-              ["Legislar trânsito e transporte", "União — art. 22, XI (privativa)"],
-              ["Normas ambientais suplementares", "Concorrente — art. 24, VI (não redistribui STTP)"],
-              ["Blitz de poluição veicular no caso", "STTP no regime federal — D correta"]
+              [
+                "Proteger o meio ambiente",
+                "Todos — art. 23, VI (comum)"
+              ],
+              [
+                "Legislar trânsito e transporte",
+                "União — art. 22, XI (privativa)"
+              ],
+              [
+                "Normas ambientais suplementares",
+                "Concorrente — art. 24, VI (não redistribui STTP)"
+              ],
+              [
+                "Blitz de poluição veicular no caso",
+                "STTP no regime federal — D correta"
+              ]
             ]
           }
         },
@@ -293,8 +413,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "23,VI = TODOS protegem ambiente (comum).\n22,XI = União LEGISLA trânsito (privativa).\nAmbiente comum ≠ autuação veicular fora do CTB.\n\nNear-transfer: se a secretaria ambiental fizesse campanha educativa contra poluição nas escolas, seria competência comum — mas autuar veículo em blitz continua no regime federal de trânsito.",
-            "destaques": ["23, VI", "22, XI", "STTP"]
+            "texto": "23,VI = TODOS protegem ambiente (comum).\n22,XI = União LEGISLA trânsito (privativa).\nAmbiente comum ≠ autuação veicular fora do CTB.\n\nNear-transfer: se a secretaria ambiental fizesse campanha educativa contra poluição nas escolas, seria competência comum — mas autuar veículo em blitz continua no regime federal de trânsito.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "23, VI",
+              "22, XI",
+              "STTP"
+            ]
           }
         }
       ],
@@ -316,6 +440,17 @@
       "meio_ambiente",
       "sttp",
       "fiscalizacao"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se a secretaria ambiental fizesse campanha educativa contra poluição nas escolas, seria competência comum — mas autuar veículo em blitz continua no regime federal de trânsito.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "23,VI = TODOS protegem ambiente (comum). 22,XI = União LEGISLA trânsito (privativa). Ambiente comum ≠ inventar autuação veicular fora do CTB.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

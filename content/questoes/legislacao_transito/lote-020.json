@@ -27,8 +27,7 @@
       "estudo_reverso": [
         "CTB art. 280",
         "CTB art. 280, §3",
-        "CTB art. 280, §4",
-        "CTB art. 281"
+        "CTB art. 280, §4"
       ]
     },
     "estudo_reverso_visual": {
@@ -45,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Estacionamento irregular sem condutor no local. Agente lavra AIT com dados do veículo e relato, sem assinatura.\n\nGabarito A: §3 autoriza relatar no próprio auto; VI exige assinatura só quando possível.",
-            "destaques": ["sem flagrante", "§3", "sempre que possível"]
+            "destaques": [
+              "sem flagrante",
+              "§3",
+              "sempre que possível"
+            ]
           }
         },
         {
@@ -54,13 +57,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Autuação em flagrante possível?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Dados I–III e relato no próprio AIT?", "tipo": "pergunta" },
-              { "id": "r1", "label": "§3 — procedimento válido sem assinatura", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Autuação em flagrante possível?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Dados I–III e relato no próprio AIT?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "§3 — procedimento válido sem assinatura",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Não" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Não"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -69,10 +92,19 @@
           "titulo": "Armadilha: assinatura × flagrante",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
-              ["Sem condutor = auto inválido", "§3 — relatar no próprio AIT"],
-              ["Assinatura sempre obrigatória", "VI — sempre que possível"]
+              [
+                "Sem condutor = auto inválido",
+                "§3 — relatar no próprio AIT"
+              ],
+              [
+                "Assinatura sempre obrigatória",
+                "VI — sempre que possível"
+              ]
             ]
           }
         },
@@ -82,7 +114,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Sem flagrante → relata no AIT (§3).\nAssinatura quando possível (VI).\nServidor STTP autua (§4).",
-            "destaques": ["§3", "VI", "§4"]
+            "destaques": [
+              "§3",
+              "VI",
+              "§4"
+            ]
           }
         }
       ],
@@ -104,7 +140,12 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Ausência de condutor não anula o auto — §3 prevê relato no AIT; assinatura é quando possível",
-        "eixos_legais": ["CTB_art_280_par_3", "CTB_art_280_VI", "CTB_art_280_par_4"],
+        "eixos_legais": [
+          "CTB_art_280_par_3",
+          "CTB_art_280_VI",
+          "CTB_art_280_par_4"
+        ],
+        "eixo_vizinho": "CTB_art_281",
         "isca_por_alternativa": {
           "B": "transforma 'sempre que possível' em assinatura obrigatória sempre",
           "C": "nega autuação sem flagrante — ignora o §3",
@@ -118,8 +159,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A.\n\nB — tratou assinatura como indispensável: o VI diz 'sempre que possível'.\nC — negou autuação fora de flagrante: o §3 autoriza relatar no próprio AIT.\nD — atribuiu autuação só à PM: o §4 admite servidor civil da STTP.\n\nNesta aula você separa flagrante, relato no auto e assinatura facultativa.",
-            "destaques": ["Gabarito A", "§3", "sempre que possível"]
+            "texto": "Gabarito A. B — tratou assinatura como indispensável: o VI diz 'sempre que possível'.\nC — negou autuação fora de flagrante: o parágrafo autoriza relatar no próprio AIT.\nD — atribuiu autuação só à PM: o parágrafo admite servidor civil da STTP. Nesta aula você separa flagrante, relato no auto e assinatura facultativa.",
+            "destaques": [
+              "Gabarito A",
+              "parágrafo",
+              "sempre que possível"
+            ]
           }
         },
         {
@@ -128,7 +173,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "FLAGRANTE: autuação no momento em que a infração é constatada com o infrator identificável no local.\n\nAUTO DE INFRAÇÃO (AIT): documento que inicia o processo administrativo — art. 280.\n\nSEMPRE QUE POSSÍVEL: regra de exceção do inciso VI — assinatura não é obrigatória quando impossível obtê-la.",
-            "destaques": ["FLAGRANTE", "AIT", "SEMPRE QUE POSSÍVEL"]
+            "destaques": [
+              "FLAGRANTE",
+              "AIT",
+              "SEMPRE QUE POSSÍVEL"
+            ]
           }
         },
         {
@@ -155,8 +204,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Não" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Não"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -166,7 +223,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Elemento", "Obrigatoriedade"],
+            "titulo_colunas": [
+              "Elemento",
+              "Obrigatoriedade"
+            ],
             "linhas": [
               {
                 "faixa": "I — Tipificação",
@@ -198,7 +258,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Sem condutor presente, o auto é inválido",
@@ -217,7 +280,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — termo_unico",
@@ -240,12 +306,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso", "Conclusão legal"],
+            "colunas": [
+              "Fato do caso",
+              "Conclusão legal"
+            ],
             "linhas": [
-              ["Estacionamento proibido, condutor ausente", "Não há flagrante — aplica §3"],
-              ["AIT com tipificação, local, data, hora, placa", "Incisos I a III preenchidos"],
-              ["Relato do fato na lavratura, sem assinatura", "§3 + VI — assinatura dispensada aqui"],
-              ["Resultado", "Gabarito A — procedimento válido"]
+              [
+                "Estacionamento proibido, condutor ausente",
+                "Não há flagrante — aplica §3"
+              ],
+              [
+                "AIT com tipificação, local, data, hora, placa",
+                "Incisos I a III preenchidos"
+              ],
+              [
+                "Relato do fato na lavratura, sem assinatura",
+                "§3 + VI — assinatura dispensada aqui"
+              ],
+              [
+                "Resultado",
+                "Gabarito A — procedimento válido"
+              ]
             ]
           }
         },
@@ -255,12 +336,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Função no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Função no caso"
+            ],
             "linhas": [
-              ["§2 — Meios de comprovação", "Declaração do agente, equipamento etc."],
-              ["§3 — Sem flagrante", "Relatar no próprio AIT com dados I–III"],
-              ["§4 — Quem autua", "Servidor civil STTP ou PM designado"],
-              ["Inciso VI — Assinatura", "Quando possível — não bloqueia o §3"]
+              [
+                "§2 — Meios de comprovação",
+                "Declaração do agente, equipamento etc."
+              ],
+              [
+                "§3 — Sem flagrante",
+                "Relatar no próprio AIT com dados I–III"
+              ],
+              [
+                "§4 — Quem autua",
+                "Servidor civil STTP ou PM designado"
+              ],
+              [
+                "Inciso VI — Assinatura",
+                "Quando possível — não bloqueia o §3"
+              ]
             ]
           }
         },
@@ -276,17 +372,20 @@
               {
                 "inicio": 21,
                 "fim": 42,
-                "motivo": "contraste — ausência de flagrante não impede autuação"
+                "motivo": "contraste — ausência de flagrante não impede autuação",
+                "texto_grifado": "autuação em flagrante"
               },
               {
                 "inicio": 94,
                 "fim": 121,
-                "motivo": "fluxo — relato no próprio AIT"
+                "motivo": "fluxo — relato no próprio AIT",
+                "texto_grifado": "no próprio auto de infração"
               },
               {
                 "inicio": 190,
                 "fim": 209,
-                "motivo": "mapa — dados obrigatórios I, II e III"
+                "motivo": "mapa — dados obrigatórios I, II e III",
+                "texto_grifado": "incisos I, II e III"
               }
             ]
           }
@@ -303,7 +402,8 @@
               {
                 "inicio": 24,
                 "fim": 43,
-                "motivo": "contraste — não é indispensável em todo caso"
+                "motivo": "contraste — não é indispensável em todo caso",
+                "texto_grifado": "sempre que possível"
               }
             ]
           }
@@ -314,8 +414,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Sem flagrante → relata no AIT (§3) · assinatura quando possível (VI) · STTP autua sim (§4).\n\nNear-transfer: radar flagra ultrapassagem e o veículo segue sem parar — o agente pode lavrar AIT com dados do veículo e relato no auto, sem assinatura do condutor ausente.",
-            "destaques": ["§3", "sempre que possível", "radar sem parada"]
+            "texto": "Sem flagrante → relata no AIT (§3) · assinatura quando possível (VI) · STTP autua sim (§4).\n\nNear-transfer: radar flagra ultrapassagem e o veículo segue sem parar — o agente pode lavrar AIT com dados do veículo e relato no auto, sem assinatura do condutor ausente.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.\n\nCadeia: próximo = art. 281 (procedimento após o relato no AIT).",
+            "destaques": [
+              "§3",
+              "sempre que possível",
+              "radar sem parada"
+            ]
           }
         }
       ],
@@ -332,6 +436,22 @@
       "art_280",
       "sem_flagrante",
       "assinatura"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "radar flagra ultrapassagem e o veículo segue sem parar — o agente pode lavrar AIT com dados do veículo e relato no auto, sem assinatura do condutor ausente.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Sem flagrante → relata no AIT (§3) · assinatura quando possível (VI) · STTP autua sim (§4).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "competencia_snt",
+        "regra_excecao",
+        "termo_unico"
+      ]
+    }
   }
 ]

@@ -3,7 +3,7 @@
     "disciplina": "legislacao_transito",
     "topico": "CONTRAN_1009_alteracoes",
     "tipo": "caso_pratico",
-    "estilo_idecan": "pegadinha_gravidade",
+    "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 4,
     "fundamento_slug": "CONTRAN_1009_art_16",
     "enunciado": "Em fiscalização da STTP em Campina Grande/PB, agente aborda condutor habilitado na categoria D cujo RENACH registra resultado positivo no exame toxicológico periódico previsto no art. 10-A da Resolução CONTRAN nº 923/2022. O DETRAN-PB já impôs suspensão do direito de dirigir por três meses com base na Resolução CONTRAN nº 1.009/2024. O supervisor municipal consulta se a STTP pode, cumulativamente, lavrar Auto de Infração pelo art. 165-C do CTB e aplicar multa gravíssima pelo mesmo fato. Considerando a Resolução CONTRAN nº 1.009/2024 e o CTB, assinale a alternativa CORRETA:",
@@ -44,8 +44,18 @@
       },
       "eixos_mecanismo": [
         "gravidade",
-        "regra_excecao"
-      ]
+        "regra_excecao",
+        "termo_unico"
+      ],
+      "near_transfer": "se o condutor estivesse dirigindo com positivo no exame do caput (não periódico), o eixo seria art. 165-C — hipótese distinta deste caso.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Periódico positivo (10-A) = só 3 meses suspensão · vedada cumulação (148-A §5 II).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     },
     "tags": [
       "resolucao_1009",
@@ -67,7 +77,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito B: exame periódico positivo gera só suspensão de 3 meses — vedada autuação cumulativa pela STTP.",
-            "destaques": ["Gabarito B", "periódico positivo", "cumulativa"]
+            "destaques": [
+              "Gabarito B",
+              "periódico positivo",
+              "cumulativa"
+            ]
           }
         },
         {
@@ -75,7 +89,10 @@
           "titulo": "Gravíssima × regime exclusivo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
               [
                 "Positivo periódico → art. 165-C gravíssima",
@@ -94,7 +111,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Periódico positivo = só 3 meses de suspensão.\nSem cumular gravíssima.",
-            "destaques": ["3 meses", "sem cumular"]
+            "destaques": [
+              "3 meses",
+              "sem cumular"
+            ]
           }
         }
       ],
@@ -133,8 +153,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — positivo no exame periódico configura gravíssima cumulável independentemente da suspensão do DETRAN-PB.\nC — exame periódico positivo autoriza multa gravíssima cumulativa à suspensão de três meses.\nD — multa gravíssima é principal e suspensão do DETRAN é medida acessória que não afasta autuação.\n\nPegadinha: exame periódico positivo tem regime exclusivo — só suspensão de três meses, sem outras penalidades.",
-            "destaques": ["Gabarito B", "exame periódico", "cumulativa"]
+            "texto": "Gabarito B. A — positivo no exame periódico configura gravíssima cumulável independentemente da suspensão do DETRAN-PB.\nC — exame periódico positivo autoriza multa gravíssima cumulativa à suspensão de três meses.\nD — multa gravíssima é principal e suspensão do DETRAN é medida acessória que não afasta autuação. Pegadinha: exame periódico positivo tem regime exclusivo — só suspensão de três meses, sem outras penalidades.",
+            "destaques": [
+              "Gabarito B",
+              "exame periódico",
+              "cumulativa"
+            ]
           }
         },
         {
@@ -143,7 +167,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "EXAME PERIÓDICO: toxicológico a cada 2 anos e 6 meses para categorias C, D e E — art. 10-A da Res. 923/2022.\n\nRENACH: prontuário eletrônico onde o laboratório insere o resultado positivo ou negativo.\n\nREGIME EXCLUSIVO: positivo no periódico → só suspensão de 3 meses — sem multa gravíssima cumulativa.",
-            "destaques": ["PERIÓDICO", "RENACH", "EXCLUSIVO"]
+            "destaques": [
+              "PERIÓDICO",
+              "RENACH",
+              "EXCLUSIVO"
+            ]
           }
         },
         {
@@ -165,7 +193,11 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim — caso da categoria D" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim — caso da categoria D"
+              }
             ]
           }
         },
@@ -175,7 +207,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Hipótese", "Consequência"],
+            "titulo_colunas": [
+              "Hipótese",
+              "Consequência"
+            ],
             "linhas": [
               {
                 "faixa": "Positivo no periódico — art. 10-A",
@@ -199,7 +234,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
               [
                 "Positivo periódico empilha art. 165-C sobre suspensão",
@@ -218,7 +256,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — gravidade",
@@ -241,7 +282,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso", "Consequência"],
+            "colunas": [
+              "Fato do caso",
+              "Consequência"
+            ],
             "linhas": [
               [
                 "Condutor categoria D — RENACH com positivo periódico",
@@ -268,7 +312,10 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Função"],
+            "colunas": [
+              "Dispositivo",
+              "Função"
+            ],
             "linhas": [
               [
                 "Res. 923/2022, art. 16 (Res. 1.009/2024)",
@@ -327,8 +374,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Periódico positivo = só 3 meses suspensão.\nSem cumular gravíssima.\n\nNear-transfer: se o condutor estivesse dirigindo com positivo no exame do caput (não periódico), o eixo seria art. 165-C — hipótese distinta deste caso.",
-            "destaques": ["3 meses", "sem cumular", "caput"]
+            "texto": "Periódico positivo = só 3 meses suspensão.\nSem cumular gravíssima.\n\nNear-transfer: se o condutor estivesse dirigindo com positivo no exame do caput (não periódico), o eixo seria art. 165-C — hipótese distinta deste caso.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "3 meses",
+              "sem cumular",
+              "caput"
+            ]
           }
         }
       ],

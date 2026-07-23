@@ -46,6 +46,7 @@ import type {
   EstudoReversoVisualV1,
   EstudoReversoVisualV2,
 } from "@/types/estudo-reverso-visual";
+import type { PedagogyConfig } from "@/types/pedagogy";
 
 export type {
   ArquetipoVisual,
@@ -68,5 +69,7 @@ export interface QuestaoSeed {
   comentario: ComentarioQuestao;
   estudo_reverso_visual?: EstudoReversoVisualV1;
   estudo_reverso_visual_completo?: EstudoReversoVisualV2;
+  /** PedagogyConfig — opcional; ausente = aula completa. */
+  pedagogy?: PedagogyConfig;
   tags?: string[];
 }

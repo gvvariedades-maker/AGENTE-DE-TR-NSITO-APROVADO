@@ -7,6 +7,10 @@ import {
   type ModoTentativa,
   type RegistrarTentativaResult,
 } from "@/lib/estudo-reverso";
+import {
+  isConfidenceLevel,
+  type ConfidenceLevel,
+} from "@/lib/srs/rating-policy";
 
 export interface TentativaPayload {
   questionId: string;
@@ -15,7 +19,12 @@ export interface TentativaPayload {
   modo: ModoTentativa;
   tempoSeg?: number;
   sessionId?: string;
+  /** Preferir `confidence` (Fase 1). Mantido para compatibilidade. */
   fsrsGrade?: FsrsGrade;
+  confidence?: ConfidenceLevel;
+  hintUsed?: boolean;
+  answerChanged?: boolean;
+  feedbackSeenBeforeAnswer?: boolean;
 }
 
 export type TentativaActionResult = RegistrarTentativaResult;
@@ -32,6 +41,10 @@ export async function salvarTentativa(
     return { ok: false, demo: true };
   }
 
+  const confidence = isConfidenceLevel(payload.confidence)
+    ? payload.confidence
+    : undefined;
+
   return registrarTentativa({
     userId: user.id,
     questionId: payload.questionId,
@@ -40,6 +53,10 @@ export async function salvarTentativa(
     modo: payload.modo,
     tempoSeg: payload.tempoSeg,
     sessionId: payload.sessionId,
+    confidence,
     fsrsGrade: payload.fsrsGrade,
+    hintUsed: payload.hintUsed,
+    answerChanged: payload.answerChanged,
+    feedbackSeenBeforeAnswer: payload.feedbackSeenBeforeAnswer,
   });
 }

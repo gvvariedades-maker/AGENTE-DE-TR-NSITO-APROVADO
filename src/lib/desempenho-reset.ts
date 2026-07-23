@@ -3,14 +3,18 @@ import { db } from "@/lib/db";
 import {
   attempts,
   estudoReversoSessions,
+  learningEvents,
   simulados,
   srsCards,
   studySessions,
+  userSkillMastery,
 } from "@/lib/db/schema";
 
 export interface DesempenhoResetContagem {
   estudoReverso: number;
   tentativas: number;
+  learningEvents: number;
+  mastery: number;
   srs: number;
   simulados: number;
   sessoes: number;
@@ -24,6 +28,16 @@ export async function resetDesempenhoUsuario(
       .delete(estudoReversoSessions)
       .where(eq(estudoReversoSessions.userId, userId))
       .returning({ id: estudoReversoSessions.id });
+
+    const events = await tx
+      .delete(learningEvents)
+      .where(eq(learningEvents.userId, userId))
+      .returning({ id: learningEvents.id });
+
+    const mastery = await tx
+      .delete(userSkillMastery)
+      .where(eq(userSkillMastery.userId, userId))
+      .returning({ skillId: userSkillMastery.skillId });
 
     const tentativas = await tx
       .delete(attempts)
@@ -48,6 +62,8 @@ export async function resetDesempenhoUsuario(
     return {
       estudoReverso: estudoReverso.length,
       tentativas: tentativas.length,
+      learningEvents: events.length,
+      mastery: mastery.length,
       srs: srs.length,
       simulados: simuladosRemovidos.length,
       sessoes: sessoes.length,

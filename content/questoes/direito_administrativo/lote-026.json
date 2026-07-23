@@ -44,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Portaria ilegal de 2017, anulação em 2025 com má-fé comprovada. A ignora exceção de má-fé; B inverte ex tunc/ex nunc; C confunde revogação com anulação.",
-            "destaques": ["decadência", "má-fé", "ex tunc"]
+            "destaques": [
+              "decadência",
+              "má-fé",
+              "ex tunc"
+            ]
           }
         },
         {
@@ -52,7 +56,10 @@
           "titulo": "Decadência absoluta × má-fé",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha ✗", "Art. 54 ✓"],
+            "colunas": [
+              "Pegadinha ✗",
+              "Art. 54 ✓"
+            ],
             "linhas": [
               [
                 "Cinco anos vedam anulação mesmo com má-fé",
@@ -67,13 +74,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Ato eivado de ilegalidade material?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Há má-fé comprovada após 5 anos?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito D — anula ex tunc", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Ato eivado de ilegalidade material?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Há má-fé comprovada após 5 anos?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito D — anula ex tunc",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — portaria 2017" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — portaria 2017"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -100,7 +127,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Deve ANULA (ilegal, ex tunc) | 5 anos DECAI | MÁ-FÉ salva | Pode REVOGA (conveniência, ex nunc).",
-            "destaques": ["ex tunc", "5 anos", "MÁ-FÉ"]
+            "destaques": [
+              "ex tunc",
+              "5 anos",
+              "MÁ-FÉ"
+            ]
           }
         }
       ],
@@ -122,7 +153,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Decadência absoluta ignora má-fé ou inverte ex tunc/ex nunc",
-        "eixos_legais": ["Lei9784_art53", "Lei9784_art54"],
+        "eixos_legais": [
+          "Lei9784_art53",
+          "Lei9784_art54"
+        ],
         "isca_por_alternativa": {
           "A": "decadência absoluta — ignora exceção de má-fé do art. 54",
           "B": "anulação ex nunc — inverte efeito temporal (é ex tunc)",
@@ -136,8 +170,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D.\n\nA — decadência absoluta: má-fé comprovada afasta a decadência quinquenal.\nB — anulação ex nunc: ilegalidade anula ex tunc, não preserva vantagem consolidada.\nC — revogação por ilegalidade: deve anular, não revogar por conveniência.\n\nNesta aula você fixa ANULA ex tunc + 5 anos + exceção de má-fé.",
-            "destaques": ["Gabarito D", "má-fé", "ex tunc"]
+            "texto": "Gabarito D. A — decadência absoluta: má-fé comprovada afasta a decadência quinquenal.\nB — anulação ex nunc: ilegalidade anula ex tunc, não preserva vantagem consolidada.\nC — revogação por ilegalidade: deve anular, não revogar por conveniência. Nesta aula você fixa ANULA ex tunc + 5 anos + exceção de má-fé.",
+            "destaques": [
+              "Gabarito D",
+              "má-fé",
+              "ex tunc"
+            ]
           }
         },
         {
@@ -146,7 +184,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "ANULAÇÃO: extinção de ato ilegal pela Administração — efeitos ex tunc (art. 53 — deve anular).\n\nDECADÊNCIA: perda do direito de anular após cinco anos, salvo má-fé comprovada (art. 54).\n\nREVOGAÇÃO: extinção por conveniência ou oportunidade — efeitos ex nunc (art. 53 — pode revogar).",
-            "destaques": ["ANULAÇÃO", "DECADÊNCIA", "REVOGAÇÃO"]
+            "destaques": [
+              "ANULAÇÃO",
+              "DECADÊNCIA",
+              "REVOGAÇÃO"
+            ]
           }
         },
         {
@@ -173,8 +215,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — sem base legal" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — sem base legal"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -184,7 +234,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Medida", "Fundamento"],
+            "titulo_colunas": [
+              "Medida",
+              "Fundamento"
+            ],
             "linhas": [
               {
                 "faixa": "Anulação",
@@ -212,7 +265,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o favorecido insinua ✗", "O que a lei exige ✓"],
+            "colunas": [
+              "O que o favorecido insinua ✗",
+              "O que a lei exige ✓"
+            ],
             "linhas": [
               [
                 "Cinco anos impedem anulação mesmo com má-fé",
@@ -231,7 +287,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -254,7 +313,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso STTP", "Consequência jurídica"],
+            "colunas": [
+              "Fato do caso STTP",
+              "Consequência jurídica"
+            ],
             "linhas": [
               [
                 "Portaria de 2017 sem base legal — vaga exclusiva no pátio",
@@ -268,7 +330,10 @@
                 "Má-fé do favorecido comprovada pela Controladoria",
                 "Exceção à decadência — anulação cabível"
               ],
-              ["Resultado", "Alternativa D — única correta"]
+              [
+                "Resultado",
+                "Alternativa D — única correta"
+              ]
             ]
           }
         },
@@ -278,11 +343,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Instituto", "Quando usar"],
+            "colunas": [
+              "Instituto",
+              "Quando usar"
+            ],
             "linhas": [
-              ["Anulação (art. 53)", "Vício de legalidade — efeitos ex tunc"],
-              ["Revogação (art. 53)", "Conveniência ou oportunidade — efeitos ex nunc"],
-              ["Convalidação (art. 55)", "Defeito sanável sem lesão nem prejuízo — outro caso"]
+              [
+                "Anulação (art. 53)",
+                "Vício de legalidade — efeitos ex tunc"
+              ],
+              [
+                "Revogação (art. 53)",
+                "Conveniência ou oportunidade — efeitos ex nunc"
+              ],
+              [
+                "Convalidação (art. 55)",
+                "Defeito sanável sem lesão nem prejuízo — outro caso"
+              ]
             ]
           }
         },
@@ -340,8 +417,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Deve ANULA (ilegal, ex tunc) | 5 anos DECAI | MÁ-FÉ salva | Pode REVOGA (conveniência, ex nunc).\n\nNear-transfer: se a portaria de 2017 fosse legal mas inconveniente ao novo gestor, caberia revogação ex nunc — não anulação.",
-            "destaques": ["ex tunc", "MÁ-FÉ", "near-transfer"]
+            "texto": "Deve ANULA (ilegal, ex tunc) | 5 anos DECAI | MÁ-FÉ salva | Pode REVOGA (conveniência, ex nunc).\n\nNear-transfer: se a portaria de 2017 fosse legal mas inconveniente ao novo gestor, caberia revogação ex nunc — não anulação.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "ex tunc",
+              "MÁ-FÉ",
+              "near-transfer"
+            ]
           }
         }
       ],
@@ -362,6 +443,17 @@
       "decadencia",
       "lei_9784",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se a portaria de 2017 fosse legal mas inconveniente ao novo gestor, caberia revogação ex nunc — não anulação.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Deve ANULA (ilegal, ex tunc)",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

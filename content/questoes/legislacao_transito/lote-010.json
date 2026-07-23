@@ -3,7 +3,7 @@
     "disciplina": "legislacao_transito",
     "topico": "CONTRAN_940_capacete",
     "tipo": "caso_pratico",
-    "estilo_idecan": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 4,
     "enunciado": "Durante fiscalização noturna da STTP em Campina Grande/PB, agente de trânsito observa motocicleta em circulação na via pública com condutor e passageiro. O condutor usa capacete modular com queixeira totalmente levantada e viseira de padrão fumê; o passageiro usa capacete certificado pelo INMETRO, porém sem a cinta jugular afixada por debaixo do maxilar inferior. Considerando a Resolução CONTRAN nº 940/2022 e o CTB, assinale a alternativa CORRETA quanto às infrações aplicáveis:",
     "alternativas": {
@@ -26,9 +26,7 @@
       "estudo_reverso": [
         "Res. CONTRAN 940/2022 art. 2",
         "Res. CONTRAN 940/2022 art. 4",
-        "Res. CONTRAN 940/2022 art. 5",
-        "CTB art. 169",
-        "CTB art. 244"
+        "Res. CONTRAN 940/2022 art. 5"
       ]
     },
     "estudo_reverso_visual": {
@@ -45,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Moto em circulação à noite: queixeira levantada + viseira fumê + jugular solta no passageiro. A banca troca PARADO por ANDANDO.\n\nGabarito C: art. 244, X/XI (condutor) + art. 169 (passageiro).",
-            "destaques": ["em circulação", "cristal à noite", "art. 169"]
+            "destaques": [
+              "em circulação",
+              "cristal à noite",
+              "art. 169"
+            ]
           }
         },
         {
@@ -54,17 +56,53 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Veículo em circulação?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Queixeira abaixada e travada (§3º, III)", "tipo": "resultado" },
-              { "id": "p2", "label": "Período noturno?", "tipo": "pergunta" },
-              { "id": "r2", "label": "Viseira padrão CRISTAL (§4º)", "tipo": "resultado" },
-              { "id": "r3", "label": "Pode manter viseira levantada (§3º, I)", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Veículo em circulação?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Queixeira abaixada e travada (§3º, III)",
+                "tipo": "resultado"
+              },
+              {
+                "id": "p2",
+                "label": "Período noturno?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r2",
+                "label": "Viseira padrão CRISTAL (§4º)",
+                "tipo": "resultado"
+              },
+              {
+                "id": "r3",
+                "label": "Pode manter viseira levantada (§3º, I)",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p1", "para": "r3", "rotulo": "Não — imobilizado" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não — diurno" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p1",
+                "para": "r3",
+                "rotulo": "Não — imobilizado"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — diurno"
+              }
             ]
           }
         },
@@ -73,11 +111,24 @@
           "titulo": "Enquadramento no CTB (art. 5º)",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Irregularidade", "Artigo CTB"],
+            "titulo_colunas": [
+              "Irregularidade",
+              "Artigo CTB"
+            ],
             "linhas": [
-              { "faixa": "Jugular não afixada", "classificacao": "Art. 169" },
-              { "faixa": "Queixeira levantada em movimento", "classificacao": "Art. 169 ou 244, X/XI" },
-              { "faixa": "Viseira fumê à noite", "classificacao": "Art. 244, X ou XI", "destaque": true }
+              {
+                "faixa": "Jugular não afixada",
+                "classificacao": "Art. 169"
+              },
+              {
+                "faixa": "Queixeira levantada em movimento",
+                "classificacao": "Art. 169 ou 244, X/XI"
+              },
+              {
+                "faixa": "Viseira fumê à noite",
+                "classificacao": "Art. 244, X ou XI",
+                "destaque": true
+              }
             ]
           }
         },
@@ -87,7 +138,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PARADO = pode levantar viseira (§3º, I).\nANDANDO = queixeira travada + viseira frontal.\nÀ NOITE = cristal obrigatório (§4º).\nJugular sempre sob o maxilar (art. 2º).",
-            "destaques": ["PARADO", "CRISTAL", "maxilar"]
+            "destaques": [
+              "PARADO",
+              "CRISTAL",
+              "maxilar"
+            ]
           }
         }
       ],
@@ -113,8 +168,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C. Se marcou B, confundiu regra de imobilizado com circulação.\n\nCom a moto em movimento à noite, queixeira deve estar travada e viseira cristal. Jugular solta no passageiro é art. 169 — não é ausência de capacete.",
-            "destaques": ["Gabarito C", "em circulação", "cristal"]
+            "texto": "Gabarito C. Se marcou B, confundiu regra de imobilizado com circulação. Com a moto em movimento à noite, queixeira deve estar travada e viseira cristal. Jugular solta no passageiro é dispositivo legal — não é ausência de capacete.",
+            "destaques": [
+              "Gabarito C",
+              "em circulação",
+              "cristal"
+            ]
           }
         },
         {
@@ -123,7 +182,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CAPACETE MODULAR: modelo com queixeira móvel — em circulação, deve estar abaixada e travada (art. 4º, §3º, III).\n\nVISEIRA CRISTAL: padrão transparente obrigatório no período noturno (art. 4º, §4º).\n\nCINTA JUGULAR: afixação por debaixo do maxilar inferior — condutor e passageiro (art. 2º).",
-            "destaques": ["MODULAR", "CRISTAL", "JUGULAR"]
+            "destaques": [
+              "MODULAR",
+              "CRISTAL",
+              "JUGULAR"
+            ]
           }
         },
         {
@@ -133,13 +196,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Condutor em circulação com queixeira levantada?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Viseira fumê no período noturno?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Condutor e passageiro irregulares — gabarito C", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Condutor em circulação com queixeira levantada?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Viseira fumê no período noturno?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Condutor e passageiro irregulares — gabarito C",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -149,12 +232,28 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Irregularidade (Res. 940)", "CTB"],
+            "titulo_colunas": [
+              "Irregularidade (Res. 940)",
+              "CTB"
+            ],
             "linhas": [
-              { "faixa": "Capacete sem jugular / queixeira", "classificacao": "Art. 169 (inciso I do art. 5º)" },
-              { "faixa": "Capacete fora das specs do art. 2º", "classificacao": "Art. 230, X (inciso II)" },
-              { "faixa": "Sem capacete ou uso indevido", "classificacao": "Art. 244, I ou II (inciso III)" },
-              { "faixa": "Sem viseira/óculos ou desacordo", "classificacao": "Art. 244, X ou XI (inciso IV)", "destaque": true }
+              {
+                "faixa": "Capacete sem jugular / queixeira",
+                "classificacao": "Art. 169 (inciso I do art. 5º)"
+              },
+              {
+                "faixa": "Capacete fora das specs do art. 2º",
+                "classificacao": "Art. 230, X (inciso II)"
+              },
+              {
+                "faixa": "Sem capacete ou uso indevido",
+                "classificacao": "Art. 244, I ou II (inciso III)"
+              },
+              {
+                "faixa": "Sem viseira/óculos ou desacordo",
+                "classificacao": "Art. 244, X ou XI (inciso IV)",
+                "destaque": true
+              }
             ]
           }
         },
@@ -164,11 +263,23 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
-              ["Viseira levantada vale sempre no semáforo", "§3º, I: só com veículo imobilizado na via"],
-              ["Fumê à noite é aceitável", "§4º: período noturno exige viseira cristal"],
-              ["Capacete na cabeça sem jugular = art. 244, I", "Art. 2º + art. 5º, I: enquadra no art. 169"]
+              [
+                "Viseira levantada vale sempre no semáforo",
+                "§3º, I: só com veículo imobilizado na via"
+              ],
+              [
+                "Fumê à noite é aceitável",
+                "§4º: período noturno exige viseira cristal"
+              ],
+              [
+                "Capacete na cabeça sem jugular = art. 244, I",
+                "Art. 2º + art. 5º, I: enquadra no art. 169"
+              ]
             ]
           }
         },
@@ -178,11 +289,23 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + letra da lei"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + letra da lei"
+            ],
             "linhas": [
-              ["A — gravidade", "Trata mal uso como art. 244, I — art. 5º distingue art. 169"],
-              ["B — regra_excecao", "Estende §3º, I (imobilizado) à circulação em movimento"],
-              ["D — regra_excecao", "Aplica exceção de cabine fechada (art. 1º, §único) à motocicleta"]
+              [
+                "A — gravidade",
+                "Trata mal uso como art. 244, I — art. 5º distingue art. 169"
+              ],
+              [
+                "B — regra_excecao",
+                "Estende §3º, I (imobilizado) à circulação em movimento"
+              ],
+              [
+                "D — regra_excecao",
+                "Aplica exceção de cabine fechada (art. 1º, §único) à motocicleta"
+              ]
             ]
           }
         },
@@ -192,11 +315,23 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato observado", "Enquadramento"],
+            "colunas": [
+              "Fato observado",
+              "Enquadramento"
+            ],
             "linhas": [
-              ["Condutor: queixeira levantada em circulação", "Art. 244, X/XI — art. 4º, §3º, III + art. 5º, IV"],
-              ["Condutor: viseira fumê à noite", "Art. 244, X/XI — art. 4º, §4º exige cristal"],
-              ["Passageiro: jugular não sob maxilar", "Art. 169 — art. 2º + art. 5º, I"]
+              [
+                "Condutor: queixeira levantada em circulação",
+                "Art. 244, X/XI — art. 4º, §3º, III + art. 5º, IV"
+              ],
+              [
+                "Condutor: viseira fumê à noite",
+                "Art. 244, X/XI — art. 4º, §4º exige cristal"
+              ],
+              [
+                "Passageiro: jugular não sob maxilar",
+                "Art. 169 — art. 2º + art. 5º, I"
+              ]
             ]
           }
         },
@@ -206,12 +341,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Exceção da Res. 940", "Aplica ao caso?"],
+            "colunas": [
+              "Exceção da Res. 940",
+              "Aplica ao caso?"
+            ],
             "linhas": [
-              ["Art. 1º, §único — cabine fechada", "Não — veículo é motocicleta comum"],
-              ["Art. 4º, §3º, I — viseira levantada", "Só imobilizado — aqui está em circulação"],
-              ["Art. 2º, II — numeração > 64 do exterior", "Não — capacete certificado INMETRO"],
-              ["Art. 3º, §único — retrorrefletivo", "Fabricação após 2007 — não isenta jugular"]
+              [
+                "Art. 1º, §único — cabine fechada",
+                "Não — veículo é motocicleta comum"
+              ],
+              [
+                "Art. 4º, §3º, I — viseira levantada",
+                "Só imobilizado — aqui está em circulação"
+              ],
+              [
+                "Art. 2º, II — numeração > 64 do exterior",
+                "Não — capacete certificado INMETRO"
+              ],
+              [
+                "Art. 3º, §único — retrorrefletivo",
+                "Fabricação após 2007 — não isenta jugular"
+              ]
             ]
           }
         },
@@ -224,7 +374,12 @@
             "fonte": "Res. CONTRAN 940/2022, art. 4º, §3º, III",
             "texto": "III - no caso dos capacetes modulares, além da viseira, conforme inciso II, a queixeira deve estar totalmente abaixada e travada.",
             "trechos_grifados": [
-              { "inicio": 76, "fim": 128, "motivo": "queixeira abaixada e travada em circulação" }
+              {
+                "inicio": 76,
+                "fim": 128,
+                "motivo": "queixeira abaixada e travada em circulação",
+                "texto_grifado": "a queixeira deve estar totalmente abaixada e travada"
+              }
             ]
           }
         },
@@ -237,7 +392,12 @@
             "fonte": "Res. CONTRAN 940/2022, art. 2º",
             "texto": "É obrigatório, para circular nas vias públicas, o uso de capacete motociclístico pelo condutor e passageiro de motocicleta, motoneta, ciclomotor, triciclo motorizado e quadriciclo motorizado, devidamente afixado à cabeça pelo conjunto formado pela cinta jugular e engate, por debaixo do maxilar inferior.",
             "trechos_grifados": [
-              { "inicio": 192, "fim": 303, "motivo": "cinta jugular por debaixo do maxilar — passageiro do caso" }
+              {
+                "inicio": 192,
+                "fim": 303,
+                "motivo": "cinta jugular por debaixo do maxilar — passageiro do caso",
+                "texto_grifado": "devidamente afixado à cabeça pelo conjunto formado pela cinta jugular e engate, por debaixo do maxilar inferior"
+              }
             ]
           }
         },
@@ -247,8 +407,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "PARADO = pode levantar viseira (§3º, I).\nANDANDO = queixeira travada + proteção aos olhos.\nÀ NOITE = cristal (§4º).\nJugular sob maxilar para condutor e passageiro (art. 2º).\n\nMesma lógica cai em fiscalização do selo INMETRO (art. 3º) e óculos de proteção (art. 4º, §2º).",
-            "destaques": ["PARADO", "CRISTAL", "maxilar"]
+            "texto": "PARADO = pode levantar viseira (§3º, I).\nANDANDO = queixeira travada + proteção aos olhos.\nÀ NOITE = cristal (§4º).\nJugular sob maxilar para condutor e passageiro (art. 2º).\n\nMesma lógica cai em fiscalização do selo INMETRO (art. 3º) e óculos de proteção (art. 4º, §2º).\nNear: Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "PARADO",
+              "CRISTAL",
+              "maxilar"
+            ]
           }
         }
       ],
@@ -259,6 +423,27 @@
         }
       ]
     },
-    "tags": ["capacete", "resolucao_940", "viseira", "modular", "motocicleta"]
+    "tags": [
+      "capacete",
+      "resolucao_940",
+      "viseira",
+      "modular",
+      "motocicleta"
+    ],
+    "meta": {
+      "near_transfer": "Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "PARADO = pode levantar viseira · ANDANDO = queixeira travada + cristal à noite · jugular = sempre sob o maxilar.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "gravidade",
+        "regra_excecao"
+      ]
+    }
   }
 ]

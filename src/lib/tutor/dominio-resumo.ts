@@ -1,9 +1,7 @@
-import { and, desc, eq, sql } from "drizzle-orm";
+import { sql } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { attempts, questions } from "@/lib/db/schema";
 import {
   calcularBacklogDominio,
-  classificarDominio,
   classificarDominioAgregado,
   CONTAGEM_DOMINIO_VAZIA,
   criarContagemDominio,
@@ -11,6 +9,7 @@ import {
   type NivelDominio,
   registrarNivelDominio,
 } from "@/lib/dominio-topico";
+import { verificarDominioTopicoComMastery } from "@/lib/mastery";
 import { calcularDebitoDiario } from "@/lib/plano-prova-calc";
 import { diasParaProva } from "@/lib/prova-data";
 import { DISCIPLINAS, type Disciplina } from "@/types";
@@ -158,18 +157,10 @@ export async function getDominioResumo(
   }
 }
 
-/** Verifica domínio de um tópico (mesma regra que estudo-reverso). */
+/** Verifica domínio de um tópico (mesma regra que estudo-reverso / Fase 3). */
 export async function verificarDominioTopicoPorId(
   userId: string,
   topicId: string,
 ): Promise<boolean> {
-  const rows = await db
-    .select({ acertou: attempts.acertou, createdAt: attempts.createdAt })
-    .from(attempts)
-    .innerJoin(questions, eq(attempts.questionId, questions.id))
-    .where(and(eq(attempts.userId, userId), eq(questions.topicId, topicId)))
-    .orderBy(desc(attempts.createdAt))
-    .limit(2);
-
-  return classificarDominio(rows) === "dominado";
+  return verificarDominioTopicoComMastery(userId, topicId);
 }

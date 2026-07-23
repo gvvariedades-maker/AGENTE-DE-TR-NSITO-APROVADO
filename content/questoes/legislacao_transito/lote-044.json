@@ -27,8 +27,7 @@
       "estudo_reverso": [
         "Res. CONTRAN 991/2023 art. 2",
         "Res. CONTRAN 918/2022 art. 24",
-        "Res. CONTRAN 918/2022 art. 25",
-        "Res. CONTRAN 918/2022 art. 27"
+        "Res. CONTRAN 918/2022 art. 25"
       ]
     },
     "tags": [
@@ -42,12 +41,28 @@
     "meta": {
       "padrao_familia": "C_competencia_snt",
       "pegadinha_em_uma_frase": "Candidato aplica o documento do art. 24 (subnacional) à PRF (União)",
-      "eixos_legais": ["CONTRAN_991_art_25", "CONTRAN_918_art_24"],
+      "eixos_legais": [
+        "CONTRAN_991_art_25",
+        "CONTRAN_918_art_24"
+      ],
       "isca_por_alternativa": {
         "A": "SNT inteiro usa art. 24",
         "B": "rede bancária do § 3º vale para federal",
         "D": "991 substituiu GRU por PagTesouro"
-      }
+      },
+      "near_transfer": "DNIT (autuador federal em rodovia) quer usar só o documento do DETRAN estadual — qual artigo veda? Art. 25: deve usar GRU ou PagTesouro, não o art. 24.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "FEDERAL autua = art. 25 → GRU ou PagTesouro · ESTADO/MUNICÍPIO = art. 24 → documento SENATRAN.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "competencia_snt",
+        "termo_unico"
+      ]
     },
     "estudo_reverso_visual": {
       "versao": 1,
@@ -63,7 +78,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PRF (União) não arrecada pelo documento do art. 24. Res. 991/2023: art. 25 = GRU Cobrança ou PagTesouro.\n\nGabarito C.",
-            "destaques": ["PRF", "art. 25", "PagTesouro"]
+            "destaques": [
+              "PRF",
+              "art. 25",
+              "PagTesouro"
+            ]
           }
         },
         {
@@ -71,10 +90,19 @@
           "titulo": "Federal × subnacional",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Art. 24 (Estados/DF/Municípios)", "Art. 25 (União — Res. 991)"],
+            "colunas": [
+              "Art. 24 (Estados/DF/Municípios)",
+              "Art. 25 (União — Res. 991)"
+            ],
             "linhas": [
-              ["Documento próprio do órgão máximo executivo", "GRU Cobrança ou PagTesouro"],
-              ["STTP, DETRAN estadual", "PRF, DNIT e demais autuadores federais"]
+              [
+                "Documento próprio do órgão máximo executivo",
+                "GRU Cobrança ou PagTesouro"
+              ],
+              [
+                "STTP, DETRAN estadual",
+                "PRF, DNIT e demais autuadores federais"
+              ]
             ]
           }
         },
@@ -83,9 +111,15 @@
           "titulo": "Armadilha: um documento para o SNT",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["Todo integrante do SNT usa art. 24", "União tem art. 25 próprio — GRU ou PagTesouro"]
+              [
+                "Todo integrante do SNT usa art. 24",
+                "União tem art. 25 próprio — GRU ou PagTesouro"
+              ]
             ]
           }
         },
@@ -100,7 +134,8 @@
               {
                 "inicio": 157,
                 "fim": 191,
-                "motivo": "PagTesouro — inovação da Res. 991/2023"
+                "motivo": "PagTesouro — inovação da Res. 991/2023",
+                "texto_grifado": "ou a plataforma digital PagTesouro"
               }
             ]
           }
@@ -111,7 +146,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "FEDERAL = art. 25 → GRU ou PagTesouro. ESTADO/MUNICÍPIO = art. 24 → documento SENATRAN.",
-            "destaques": ["art. 25", "art. 24"]
+            "destaques": [
+              "art. 25",
+              "art. 24"
+            ]
           }
         }
       ],
@@ -137,8 +175,11 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C (GRU Cobrança ou PagTesouro — art. 25 com redação da Res. 991/2023).\n\nA — aplica documento do art. 24 à PRF: confunde esfera federal com subnacional.\nB — usa rede bancária do § 3º do art. 24 como meio federal: artigo e esfera errados.\nD — afirma que 991 vedou a GRU: a resolução acrescentou PagTesouro, não substituiu a guia.\n\nPRF = órgão autuador da União → art. 25, não art. 24.",
-            "destaques": ["Gabarito C", "art. 25", "PRF"]
+            "texto": "Gabarito C (GRU Cobrança ou PagTesouro — dispositivo legal com redação da Res. 991/2023). A — aplica documento do dispositivo legal à PRF: confunde esfera federal com subnacional.\nB — usa rede bancária do parágrafo do dispositivo legal como meio federal: artigo e esfera errados.\nD — afirma que 991 vedou a GRU: a resolução acrescentou PagTesouro, não substituiu a guia. PRF = órgão autuador da União → dispositivo legal, não dispositivo legal.",
+            "destaques": [
+              "Gabarito C",
+              "PRF"
+            ]
           }
         },
         {
@@ -147,7 +188,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PRF: órgão autuador da União em rodovias federais — esfera federal.\n\nGRU: Guia de Recolhimento da União — meio de recolhimento federal (tipo Cobrança).\n\nPagTesouro: plataforma digital de pagamentos ao Tesouro — alternativa à GRU desde a Res. 991/2023.",
-            "destaques": ["PRF", "GRU", "PagTesouro"]
+            "destaques": [
+              "PRF",
+              "GRU",
+              "PagTesouro"
+            ]
           }
         },
         {
@@ -184,10 +229,26 @@
               }
             ],
             "arestas": [
-              { "de": "senatran", "para": "prf", "rotulo": "art. 25" },
-              { "de": "senatran", "para": "sttp", "rotulo": "art. 24" },
-              { "de": "prf", "para": "gru", "rotulo": "arrecada multas federais" },
-              { "de": "sttp", "para": "doc24", "rotulo": "arrecada multas locais" }
+              {
+                "de": "senatran",
+                "para": "prf",
+                "rotulo": "art. 25"
+              },
+              {
+                "de": "senatran",
+                "para": "sttp",
+                "rotulo": "art. 24"
+              },
+              {
+                "de": "prf",
+                "para": "gru",
+                "rotulo": "arrecada multas federais"
+              },
+              {
+                "de": "sttp",
+                "para": "doc24",
+                "rotulo": "arrecada multas locais"
+              }
             ]
           }
         },
@@ -197,7 +258,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Integrante do SNT = todos usam art. 24",
@@ -216,7 +280,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — competencia_snt",
@@ -239,12 +306,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Elemento", "Conclusão"],
+            "colunas": [
+              "Elemento",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Órgão: PRF (autuador da União)", "Esfera federal — art. 25 da Res. 918/2022"],
-              ["Norma propõe documento do art. 24", "Art. 24 não se aplica a autuadores da União"],
-              ["Res. 991/2023 alterou art. 25", "GRU Cobrança ou PagTesouro — duas vias válidas"],
-              ["Resultado", "Gabarito C"]
+              [
+                "Órgão: PRF (autuador da União)",
+                "Esfera federal — art. 25 da Res. 918/2022"
+              ],
+              [
+                "Norma propõe documento do art. 24",
+                "Art. 24 não se aplica a autuadores da União"
+              ],
+              [
+                "Res. 991/2023 alterou art. 25",
+                "GRU Cobrança ou PagTesouro — duas vias válidas"
+              ],
+              [
+                "Resultado",
+                "Gabarito C"
+              ]
             ]
           }
         },
@@ -254,11 +336,23 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Esfera / órgão", "Meio legal"],
+            "colunas": [
+              "Esfera / órgão",
+              "Meio legal"
+            ],
             "linhas": [
-              ["Estados, DF e Municípios (art. 24)", "Documento próprio do órgão máximo executivo"],
-              ["Órgãos autuadores da União (art. 25)", "GRU Cobrança ou PagTesouro — Res. 991/2023"],
-              ["Pagamento na rede bancária (art. 24, § 2º)", "Forma de quitação — não substitui art. 25"]
+              [
+                "Estados, DF e Municípios (art. 24)",
+                "Documento próprio do órgão máximo executivo"
+              ],
+              [
+                "Órgãos autuadores da União (art. 25)",
+                "GRU Cobrança ou PagTesouro — Res. 991/2023"
+              ],
+              [
+                "Pagamento na rede bancária (art. 24, § 2º)",
+                "Forma de quitação — não substitui art. 25"
+              ]
             ]
           }
         },
@@ -274,12 +368,14 @@
               {
                 "inicio": 3,
                 "fim": 29,
-                "motivo": "diagrama — órgãos autuadores da União (PRF)"
+                "motivo": "diagrama — órgãos autuadores da União (PRF)",
+                "texto_grifado": "órgãos autuadores da União"
               },
               {
                 "inicio": 157,
                 "fim": 191,
-                "motivo": "contraste — PagTesouro acrescentado pela Res. 991/2023"
+                "motivo": "contraste — PagTesouro acrescentado pela Res. 991/2023",
+                "texto_grifado": "ou a plataforma digital PagTesouro"
               }
             ]
           }
@@ -290,8 +386,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "FEDERAL autua = art. 25 → GRU ou PagTesouro. ESTADO/MUNICÍPIO = art. 24 → documento SENATRAN.\n\nNear-transfer: DNIT (autuador federal em rodovia) quer usar só o documento do DETRAN estadual — qual artigo veda? Art. 25: deve usar GRU ou PagTesouro, não o art. 24.",
-            "destaques": ["art. 25", "art. 24", "DNIT"]
+            "texto": "FEDERAL autua = art. 25 → GRU ou PagTesouro. ESTADO/MUNICÍPIO = art. 24 → documento SENATRAN.\n\nNear-transfer: DNIT (autuador federal em rodovia) quer usar só o documento do DETRAN estadual — qual artigo veda? Art. 25: deve usar GRU ou PagTesouro, não o art. 24.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "art. 25",
+              "art. 24",
+              "DNIT"
+            ]
           }
         }
       ],

@@ -168,11 +168,10 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A.\n\nB — facultativo em tudo: ignora alínea b) deverá quando a ficha exige.\nC — só com concomitantes: confunde com regra de múltiplos AITs.\nD — laudo pericial: inventa exigência e dispensa observações.\n\nArt. 169 — manobra brusca — campo observações deixado em branco.",
+            "texto": "Gabarito A. B — facultativo em tudo: ignora alínea b) deverá quando a ficha exige.\nC — só com concomitantes: confunde com regra de múltiplos AITs.\nD — laudo pericial: inventa exigência e dispensa observações. dispositivo legal — manobra brusca — campo observações deixado em branco.",
             "destaques": [
               "Gabarito A",
-              "deverá",
-              "art. 169"
+              "deverá"
             ]
           }
         },
@@ -372,13 +371,15 @@
             "trechos_grifados": [
               {
                 "inicio": 0,
-                "fim": 6,
-                "motivo": "contraste — verbo obrigatório da pegadinha"
+                "fim": 9,
+                "motivo": "contraste — verbo obrigatório da pegadinha",
+                "texto_grifado": "b) deverá"
               },
               {
                 "inicio": 191,
                 "fim": 199,
-                "motivo": "caso — exemplo expresso do enunciado"
+                "motivo": "caso — exemplo expresso do enunciado",
+                "texto_grifado": "do art. "
               }
             ]
           }
@@ -394,8 +395,9 @@
             "trechos_grifados": [
               {
                 "inicio": 0,
-                "fim": 6,
-                "motivo": "contraste — regra geral facultativa que a banca amplia"
+                "fim": 9,
+                "motivo": "contraste — regra geral facultativa que a banca amplia",
+                "texto_grifado": "a) poderá"
               }
             ]
           }
@@ -406,7 +408,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "PODERÁ = facultativo · DEVERÁ = ficha exige · art.169 = OBS obrigatória.\n\nNear-transfer: autuação por transporte irregular de criança sem dispositivo — se a ficha exige descrever a condição, observações passa de poderá a deverá.",
+            "texto": "PODERÁ = facultativo · DEVERÁ = ficha exige · art.169 = OBS obrigatória.\n\nNear-transfer: autuação por transporte irregular de criança sem dispositivo — se a ficha exige descrever a condição, observações passa de poderá a deverá.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "PODERÁ",
               "DEVERÁ",
@@ -420,6 +422,21 @@
           "rotulo": "MBFT — Seção 7",
           "path": "conteúdo/resoluções CONTRAN/MBFT-anexo-resolucao-985-2022-secao-07-autuacao.txt"
         }
+      ]
+    },
+    "meta": {
+      "near_transfer": "autuação por transporte irregular de criança sem dispositivo — se a ficha exige descrever a condição, observações passa de poderá a deverá.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "PODERÁ = facultativo · DEVERÁ = ficha exige · art.169 = OBS obrigatória.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico"
       ]
     }
   }

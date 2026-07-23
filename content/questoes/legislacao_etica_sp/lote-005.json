@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "STTP não dispensa a Câmara: art. 14 exige autorização legislativa para convênios com União ou Estado em competências comuns.",
-            "destaques": ["art. 14", "autorização legislativa", "STTP"]
+            "destaques": [
+              "art. 14",
+              "autorização legislativa",
+              "STTP"
+            ]
           }
         },
         {
@@ -52,13 +56,33 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "camara", "label": "Câmara — autorização legislativa (art. 14)", "nivel": 1 },
-              { "id": "executivo", "label": "Executivo municipal — firma convênio", "nivel": 2 },
-              { "id": "estado", "label": "Estado — parceiro no convênio", "nivel": 2 }
+              {
+                "id": "camara",
+                "label": "Câmara — autorização legislativa (art. 14)",
+                "nivel": 1
+              },
+              {
+                "id": "executivo",
+                "label": "Executivo municipal — firma convênio",
+                "nivel": 2
+              },
+              {
+                "id": "estado",
+                "label": "Estado — parceiro no convênio",
+                "nivel": 2
+              }
             ],
             "arestas": [
-              { "de": "camara", "para": "executivo", "rotulo": "autoriza" },
-              { "de": "executivo", "para": "estado", "rotulo": "convênio" }
+              {
+                "de": "camara",
+                "para": "executivo",
+                "rotulo": "autoriza"
+              },
+              {
+                "de": "executivo",
+                "para": "estado",
+                "rotulo": "convênio"
+              }
             ]
           }
         },
@@ -67,7 +91,10 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
               [
                 "Autarquia/STTP assina sem Câmara",
@@ -82,7 +109,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Convênio com União ou Estado (competência comum) = autorização legislativa prévia (art. 14).",
-            "destaques": ["autorização legislativa", "art. 14"]
+            "destaques": [
+              "autorização legislativa",
+              "art. 14"
+            ]
           }
         }
       ],
@@ -104,7 +134,11 @@
       "meta": {
         "padrao_familia": "C_competencia_snt",
         "pegadinha_em_uma_frase": "STTP não substitui a Câmara — art. 14 vale para convênio com Estado",
-        "eixos_legais": ["LOM_art14", "LOM_art11", "LOM_art22"],
+        "eixos_legais": [
+          "LOM_art14",
+          "LOM_art11",
+          "LOM_art22"
+        ],
         "isca_por_alternativa": {
           "B": "dispensa legislativa por valor reduzido e prazo curto",
           "C": "restringe autorização só a convênios com a União",
@@ -118,8 +152,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A.\n\nB — inventa dispensa por valor/prazo não previstos na LOM.\nC — corta o Estado do art. 14: União e Estado exigem autorização.\nD — STTP não firma convênio intergovernamental sem Câmara.\n\nA isca é achar que autarquia ou urgência operacional dispensam o Legislativo.",
-            "destaques": ["Gabarito A", "art. 14", "Câmara"]
+            "texto": "Gabarito A. B — inventa dispensa por valor/prazo não previstos na LOM.\nC — corta o Estado do dispositivo legal: União e Estado exigem autorização.\nD — STTP não firma convênio intergovernamental sem Câmara. A isca é achar que autarquia ou urgência operacional dispensam o Legislativo.",
+            "destaques": [
+              "Gabarito A",
+              "dispositivo legal",
+              "Câmara"
+            ]
           }
         },
         {
@@ -128,7 +166,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "COMPETÊNCIA COMUM: atribuição compartilhada entre Município, União e Estado (art. 11 e art. 14).\n\nAUTORIZAÇÃO LEGISLATIVA: aprovação prévia da Câmara Municipal antes do Executivo firmar o instrumento — art. 14.\n\nINSTRUMENTO EQUIVALENTE: convênio, contrato, acordo, ajuste ou outro instrumento legal — caput do art. 14.",
-            "destaques": ["COMPETÊNCIA COMUM", "AUTORIZAÇÃO LEGISLATIVA", "INSTRUMENTO"]
+            "destaques": [
+              "COMPETÊNCIA COMUM",
+              "AUTORIZAÇÃO LEGISLATIVA",
+              "INSTRUMENTO"
+            ]
           }
         },
         {
@@ -153,12 +195,28 @@
                 "label": "Executivo municipal — firma convênio",
                 "nivel": 2
               },
-              { "id": "estado", "label": "Estado da Paraíba — parceiro", "nivel": 2 }
+              {
+                "id": "estado",
+                "label": "Estado da Paraíba — parceiro",
+                "nivel": 2
+              }
             ],
             "arestas": [
-              { "de": "norma", "para": "camara", "rotulo": "exige autorização" },
-              { "de": "camara", "para": "executivo", "rotulo": "autoriza" },
-              { "de": "executivo", "para": "estado", "rotulo": "convênio educação trânsito" }
+              {
+                "de": "norma",
+                "para": "camara",
+                "rotulo": "exige autorização"
+              },
+              {
+                "de": "camara",
+                "para": "executivo",
+                "rotulo": "autoriza"
+              },
+              {
+                "de": "executivo",
+                "para": "estado",
+                "rotulo": "convênio educação trânsito"
+              }
             ]
           }
         },
@@ -168,7 +226,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "STTP assina convênio estadual direto",
@@ -187,7 +248,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — regra_excecao",
@@ -210,12 +274,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Elemento", "Conclusão"],
+            "colunas": [
+              "Elemento",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Convênio STTP × órgão estadual de trânsito", "Competência comum — art. 14"],
-              ["Campanhas em escolas municipais", "Instrumento legal entre Município e Estado"],
-              ["Prefeito quer assinar sem Câmara", "Vedado — exige autorização legislativa"],
-              ["Resultado", "Gabarito A"]
+              [
+                "Convênio STTP × órgão estadual de trânsito",
+                "Competência comum — art. 14"
+              ],
+              [
+                "Campanhas em escolas municipais",
+                "Instrumento legal entre Município e Estado"
+              ],
+              [
+                "Prefeito quer assinar sem Câmara",
+                "Vedado — exige autorização legislativa"
+              ],
+              [
+                "Resultado",
+                "Gabarito A"
+              ]
             ]
           }
         },
@@ -225,12 +304,27 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Situação", "Autorização legislativa?"],
+            "colunas": [
+              "Situação",
+              "Autorização legislativa?"
+            ],
             "linhas": [
-              ["Convênio com União (competência comum)", "Sim — art. 14"],
-              ["Convênio com Estado (competência comum)", "Sim — art. 14"],
-              ["Dispensa por valor reduzido/prazo curto", "Não prevista na LOM — isca B"],
-              ["Autarquia firma direto com Estado", "Não — Município + Câmara — isca D"]
+              [
+                "Convênio com União (competência comum)",
+                "Sim — art. 14"
+              ],
+              [
+                "Convênio com Estado (competência comum)",
+                "Sim — art. 14"
+              ],
+              [
+                "Dispensa por valor reduzido/prazo curto",
+                "Não prevista na LOM — isca B"
+              ],
+              [
+                "Autarquia firma direto com Estado",
+                "Não — Município + Câmara — isca D"
+              ]
             ]
           }
         },
@@ -246,17 +340,20 @@
               {
                 "inicio": 100,
                 "fim": 132,
-                "motivo": "diagrama — autorização legislativa prévia"
+                "motivo": "diagrama — autorização legislativa prévia",
+                "texto_grifado": "mediante autorização legislativa"
               },
               {
                 "inicio": 150,
                 "fim": 192,
-                "motivo": "contraste — União e Estado (não só União)"
+                "motivo": "contraste — União e Estado (não só União)",
+                "texto_grifado": "competências comuns com a União e o Estado"
               },
               {
                 "inicio": 20,
                 "fim": 49,
-                "motivo": "caso — convênio é um dos instrumentos cobertos"
+                "motivo": "caso — convênio é um dos instrumentos cobertos",
+                "texto_grifado": "convênios, contratos, acordos"
               }
             ]
           }
@@ -267,8 +364,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Competência comum + convênio com União ou Estado = autorização legislativa antes (art. 14).\n\nNear-transfer: Prefeitura pretende acordo de cooperação técnica com o Ministério dos Transportes para capacitação de agentes — mesma regra: Câmara autoriza antes do Executivo firmar.",
-            "destaques": ["art. 14", "Near-transfer", "Câmara"]
+            "texto": "Competência comum + convênio com União ou Estado = autorização legislativa antes (art. 14).\n\nNear-transfer: Prefeitura pretende acordo de cooperação técnica com o Ministério dos Transportes para capacitação de agentes — mesma regra: Câmara autoriza antes do Executivo firmar.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "art. 14",
+              "Near-transfer",
+              "Câmara"
+            ]
           }
         }
       ],
@@ -289,6 +390,17 @@
       "competencia_comum",
       "sttp",
       "autorizacao_legislativa"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "Prefeitura pretende acordo de cooperação técnica com o Ministério dos Transportes para capacitação de agentes — mesma regra: Câmara autoriza antes do Executivo firmar.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Convênio municipal com União ou Estado (competência comum) = autorização legislativa antes (art. 14).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

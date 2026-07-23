@@ -45,7 +45,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "I e III corretas. II trata autarquia e fundação como secretaria na direta — falsa. B para em I; C e D compram a II falsa.",
-            "destaques": ["STTP", "autarquia", "indireta"]
+            "destaques": [
+              "STTP",
+              "autarquia",
+              "indireta"
+            ]
           }
         },
         {
@@ -54,9 +58,21 @@
           "tipo": "matriz_assertivas",
           "conteudo": {
             "itens": [
-              { "id": "I", "texto": "STTP na direta, sem personalidade — correta", "correto": true },
-              { "id": "II", "texto": "Autarquia/fundação = direta sem PJ — ERRADA", "correto": false },
-              { "id": "III", "texto": "EP/SEM na indireta + direito privado — correta", "correto": true }
+              {
+                "id": "I",
+                "texto": "STTP na direta, sem personalidade — correta",
+                "correto": true
+              },
+              {
+                "id": "II",
+                "texto": "Autarquia/fundação = direta sem PJ — ERRADA",
+                "correto": false
+              },
+              {
+                "id": "III",
+                "texto": "EP/SEM na indireta + direito privado — correta",
+                "correto": true
+              }
             ],
             "gabarito_resumo": "I e III → alternativa A"
           }
@@ -66,7 +82,10 @@
           "titulo": "Assertiva-isca: II",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a II afirma ✗", "Classificação correta ✓"],
+            "colunas": [
+              "O que a II afirma ✗",
+              "Classificação correta ✓"
+            ],
             "linhas": [
               [
                 "Autarquia e fundação = direta como secretaria",
@@ -98,7 +117,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "DIRETA = órgão sem CNPJ próprio (STTP) | INDIRETA = entidade com personalidade | autarquia ≠ secretaria.",
-            "destaques": ["DIRETA", "INDIRETA", "autarquia"]
+            "destaques": [
+              "DIRETA",
+              "INDIRETA",
+              "autarquia"
+            ]
           }
         }
       ],
@@ -120,7 +143,10 @@
       "meta": {
         "padrao_familia": "B_assertivas",
         "pegadinha_em_uma_frase": "II classifica autarquia e fundação como secretaria na administração direta",
-        "eixos_legais": ["CF_art_37_caput", "CF_art_37_XIX"],
+        "eixos_legais": [
+          "CF_art_37_caput",
+          "CF_art_37_XIX"
+        ],
         "isca_por_alternativa": {
           "B": "marca só I sobre STTP na direta e nega III correta sobre EP/SEM na indireta",
           "C": "compra II falsa (autarquia e fundação como direta) com III",
@@ -134,8 +160,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A (I e III corretas).\n\nB — parou em I; negou III sobre EP/SEM na indireta com regime privado.\nC — comprou II falsa (autarquia e fundação como secretaria na direta).\nD — comprou II falsa e marcou todas corretas.\n\nPegadinha: autarquia e fundação têm personalidade jurídica — não são STTP.",
-            "destaques": ["Gabarito A", "STTP", "autarquia"]
+            "texto": "Gabarito A (I e III corretas). B — parou em I; negou III sobre EP/SEM na indireta com regime privado.\nC — comprou II falsa (autarquia e fundação como secretaria na direta).\nD — comprou II falsa e marcou todas corretas. Pegadinha: autarquia e fundação têm personalidade jurídica — não são STTP.",
+            "destaques": [
+              "Gabarito A",
+              "STTP",
+              "autarquia"
+            ]
           }
         },
         {
@@ -144,7 +174,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "ADMINISTRAÇÃO DIRETA: órgãos integrados ao ente, sem personalidade jurídica própria (secretarias — STTP).\n\nADMINISTRAÇÃO INDIRETA: entidades despersonalizadas do ente com personalidade jurídica (autarquias, fundações, EP, SEM).\n\nPERSONALIDADE JURÍDICA: capacidade de ser titular de direitos e obrigações — marca a indireta.",
-            "destaques": ["DIRETA", "INDIRETA", "PERSONALIDADE"]
+            "destaques": [
+              "DIRETA",
+              "INDIRETA",
+              "PERSONALIDADE"
+            ]
           }
         },
         {
@@ -180,13 +214,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "A II trata autarquia como secretaria?", "tipo": "pergunta" },
-              { "id": "p2", "label": "I e III batem com direta e indireta?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito A — I e III corretas", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "A II trata autarquia como secretaria?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "I e III batem com direta e indireta?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito A — I e III corretas",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — falsa" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — falsa"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -196,7 +250,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a II afirma ✗", "Classificação correta ✓"],
+            "colunas": [
+              "O que a II afirma ✗",
+              "Classificação correta ✓"
+            ],
             "linhas": [
               [
                 "Autarquia e fundação = direta como secretaria",
@@ -211,7 +268,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — termo_unico",
@@ -234,12 +294,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Assertiva", "Veredito"],
+            "colunas": [
+              "Assertiva",
+              "Veredito"
+            ],
             "linhas": [
-              ["I — STTP na direta sem PJ", "Correta — órgão integrado"],
-              ["II — autarquia/fundação = direta", "Falsa — são indireta com PJ"],
-              ["III — EP/SEM na indireta", "Correta — autorizadas por lei"],
-              ["Resultado", "I + III = alternativa A"]
+              [
+                "I — STTP na direta sem PJ",
+                "Correta — órgão integrado"
+              ],
+              [
+                "II — autarquia/fundação = direta",
+                "Falsa — são indireta com PJ"
+              ],
+              [
+                "III — EP/SEM na indireta",
+                "Correta — autorizadas por lei"
+              ],
+              [
+                "Resultado",
+                "I + III = alternativa A"
+              ]
             ]
           }
         },
@@ -249,11 +324,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Modalidade", "Exemplo / traço"],
+            "colunas": [
+              "Modalidade",
+              "Exemplo / traço"
+            ],
             "linhas": [
-              ["Administração direta", "STTP — secretaria integrada, sem CNPJ próprio"],
-              ["Administração indireta", "Autarquia, fundação, EP, SEM — personalidade jurídica"],
-              ["Pegadinha II", "Autarquia não é secretaria — refuta a assertiva falsa"]
+              [
+                "Administração direta",
+                "STTP — secretaria integrada, sem CNPJ próprio"
+              ],
+              [
+                "Administração indireta",
+                "Autarquia, fundação, EP, SEM — personalidade jurídica"
+              ],
+              [
+                "Pegadinha II",
+                "Autarquia não é secretaria — refuta a assertiva falsa"
+              ]
             ]
           }
         },
@@ -305,8 +392,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "DIRETA = órgão sem CNPJ próprio (STTP) | INDIRETA = entidade com personalidade | autarquia ≠ secretaria.\n\nNear-transfer: se a banca trocar III por \"empresa pública integra a administração direta como secretaria\", a assertiva fica falsa — EP e SEM são indireta autorizada por lei específica.",
-            "destaques": ["DIRETA", "INDIRETA", "near-transfer"]
+            "texto": "DIRETA = órgão sem CNPJ próprio (STTP) | INDIRETA = entidade com personalidade | autarquia ≠ secretaria.\n\nNear-transfer: se a banca trocar III por \"empresa pública integra a administração direta como secretaria\", a assertiva fica falsa — EP e SEM são indireta autorizada por lei específica.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "DIRETA",
+              "INDIRETA",
+              "near-transfer"
+            ]
           }
         }
       ],
@@ -323,6 +414,17 @@
       "sttp",
       "cf_37",
       "autarquia"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se a banca trocar III por \"empresa pública integra a administração direta como secretaria\", a assertiva fica falsa — EP e SEM são indireta autorizada por lei específica.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "DIRETA = órgão sem CNPJ próprio (STTP)",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

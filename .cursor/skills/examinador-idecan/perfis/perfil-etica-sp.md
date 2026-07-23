@@ -7,7 +7,7 @@ consumido_por: [examinador-idecan, professor-cadeia, estudo-reverso-visual]
 corpus_base: 62 questões IDECAN (análise 2026-07-10) — LGPD domina; ética pura só 8 Q
 cobertura_banco: 10 questões em content/questoes/legislacao_etica_sp/ (atualizado 2026-07-10)
 fonte_legal: conteúdo/municipal/lei-organica-campina-grande.txt + legislação federal/lei-13709-lgpd.html + lei-12527-lai.html + cf-1988.html (art. 37)
-versao: 1.0
+versao: 1.1
 ---
 
 # Perfil vertical — Legislação e Ética no Serviço Público
@@ -192,6 +192,33 @@ Contagem em `content/questoes/legislacao_etica_sp/lote-*.json` — **10 questõe
 
 ---
 
+## 13. Paridade IDECAN — coleta Tec Concursos
+
+**Status:** 🟡 **P1 — suplementar se teste cego falhar** · Corpus local **62 Q** (LGPD 54 + ética 8) está **próximo da meta** 80–120; Tec oferece **151** questões IDECAN só em **Ética no Serviço Público**.
+
+| Métrica | Valor |
+|---------|-------|
+| Corpus local | **62** questões (LGPD domina) |
+| Tec IDECAN + `Ética no Serviço Público` | **151** questões |
+| Gap estimado | **~20–60** (ética pura + LAI, se necessário) |
+| Banco inédito | 100% Lei Orgânica — lacuna LGPD/LAI persiste na **geração**, não no corpus |
+
+### Roteiro de coleta (Tec)
+
+1. **Banca: IDECAN** → **Matéria: Ética no Serviço Público** → **Todo o conteúdo**.
+2. Exportar **20–30 questões** de ética/princípios (complementar os 8 do corpus).
+3. LGPD: corpus local já tem 54 Q — só reexportar do Tec se precisar atualizar arts. 52–54 ou hipóteses art. 7º.
+4. LAI: buscar assunto `Lei de Acesso à Informação` ou `LAI` dentro de matérias afins (Direito Administrativo / Legislação).
+
+### Critério de “paridade OK”
+
+- [ ] Corpus ética pura ≥ **25** questões (além das 54 LGPD)
+- [ ] Banco com ≥ **15** questões LGPD/LAI (`legislacao_etica_sp`, não só Lei Orgânica)
+- [ ] Teste cego ≤ **55%** em 20 inéditas
+
+---
+
 ## Changelog
 
+- **1.1** (2026-07-19) — §13 Paridade IDECAN: Tec 151 Q ética; gap ~20–60; roteiro P1; critérios de paridade.
 - **1.0** (2026-07-10) — Perfil inicial: corpus 62 Q (LGPD 54 + ética 8); envelope 300–500 / alt 90–130; alerta de desbalanceamento (banco 100% Lei Orgânica × lacuna total LGPD/LAI); 5 microtópicos P1→P2; fila ROI priorizando LGPD/LAI; mapa visual Famílias A/B/C/D.

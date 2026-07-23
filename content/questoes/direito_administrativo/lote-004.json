@@ -45,7 +45,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Poder de polícia na autuação: limita direitos, delega pelo art. 12 e autoexecutoriedade só com lei. B trata autoexec como obrigatória; C veda delegação sem art. 13.",
-            "destaques": ["poder de polícia", "art. 12", "autoexecutoriedade"]
+            "destaques": [
+              "poder de polícia",
+              "art. 12",
+              "autoexecutoriedade"
+            ]
           }
         },
         {
@@ -53,7 +57,10 @@
           "titulo": "Autoexec facultativa × obrigatória",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha (B) ✗", "Regra correta ✓"],
+            "colunas": [
+              "Pegadinha (B) ✗",
+              "Regra correta ✓"
+            ],
             "linhas": [
               [
                 "Todo ato de poder de polícia é autoexecutório por natureza",
@@ -68,13 +75,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Autuação limita direitos do administrado?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Delegação é de normativo ou recurso administrativo?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito D — delega (art. 12) + autoexec com lei", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Autuação limita direitos do administrado?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Delegação é de normativo ou recurso administrativo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito D — delega (art. 12) + autoexec com lei",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -89,7 +116,8 @@
               {
                 "inicio": 80,
                 "fim": 112,
-                "motivo": "delegação de competência para autuar"
+                "motivo": "delegação de competência para autuar",
+                "texto_grifado": "delegar parte da sua competência"
               }
             ]
           }
@@ -100,7 +128,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "LIM-DELEGA-AUTO: limita direitos | delega (art. 12, ressalvado art. 13) | autoexec só com lei.",
-            "destaques": ["LIM-DELEGA-AUTO", "art. 12", "art. 13"]
+            "destaques": [
+              "LIM-DELEGA-AUTO",
+              "art. 12",
+              "art. 13"
+            ]
           }
         }
       ],
@@ -122,7 +154,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Autoexec obrigatória (B) ou delegação vedada sem art. 13 (C)",
-        "eixos_legais": ["Lei9784_art12", "Lei9784_art50"],
+        "eixos_legais": [
+          "Lei9784_art12",
+          "Lei9784_art50"
+        ],
         "isca_por_alternativa": {
           "A": "nega que autuação limita direitos — não é poder de polícia",
           "B": "trata autoexecutoriedade como atributo obrigatório de todo ato",
@@ -136,8 +171,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D.\n\nA — nega limitação de direitos: autuação com sanção é poder de polícia.\nB — autoexec obrigatória: é faculdade, depende de lei.\nC — delegação vedada: confunde exclusividade do titular com vedação absoluta.\n\nNesta aula você fixa LIM-DELEGA-AUTO e a diferença entre delegar competência e indelegar normativo.",
-            "destaques": ["Gabarito D", "poder de polícia", "art. 12"]
+            "texto": "Gabarito D. A — nega limitação de direitos: autuação com sanção é poder de polícia.\nB — autoexec obrigatória: é faculdade, depende de lei.\nC — delegação vedada: confunde exclusividade do titular com vedação absoluta. Nesta aula você fixa LIM-DELEGA-AUTO e a diferença entre delegar competência e indelegar normativo.",
+            "destaques": [
+              "Gabarito D",
+              "poder de polícia",
+              "dispositivo legal"
+            ]
           }
         },
         {
@@ -146,7 +185,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PODER DE POLÍCIA: prerrogativa da Administração para limitar direitos individuais em favor do interesse público, com fundamento legal.\n\nDELEGAÇÃO: transferência parcial de competência (art. 12), vedada para normativo, recurso e competência exclusiva (art. 13).\n\nAUTOEXECUTORIEDADE: faculdade de executar o ato sem ordem judicial prévia — só quando a lei autorizar.",
-            "destaques": ["PODER DE POLÍCIA", "DELEGAÇÃO", "AUTOEXECUTORIEDADE"]
+            "destaques": [
+              "PODER DE POLÍCIA",
+              "DELEGAÇÃO",
+              "AUTOEXECUTORIEDADE"
+            ]
           }
         },
         {
@@ -173,8 +216,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -184,7 +235,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Atributo", "Conteúdo"],
+            "titulo_colunas": [
+              "Atributo",
+              "Conteúdo"
+            ],
             "linhas": [
               {
                 "faixa": "Limitação de direitos",
@@ -212,7 +266,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a banca insinua ✗", "O que a lei exige ✓"],
+            "colunas": [
+              "O que a banca insinua ✗",
+              "O que a lei exige ✓"
+            ],
             "linhas": [
               [
                 "Todo poder de polícia é autoexecutório por natureza",
@@ -231,7 +288,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -254,7 +314,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso STTP", "Consequência jurídica"],
+            "colunas": [
+              "Fato do caso STTP",
+              "Consequência jurídica"
+            ],
             "linhas": [
               [
                 "Portaria delega autuação a agentes",
@@ -268,7 +331,10 @@
                 "Servidor invoca autoexec imediata sem lei",
                 "Inválido — autoexecutoriedade exige previsão legal"
               ],
-              ["Resultado", "Alternativa D — única defensável"]
+              [
+                "Resultado",
+                "Alternativa D — única defensável"
+              ]
             ]
           }
         },
@@ -278,11 +344,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Situação na autuação", "Exigência legal"],
+            "colunas": [
+              "Situação na autuação",
+              "Exigência legal"
+            ],
             "linhas": [
-              ["Multa limita direito patrimonial", "Motivação obrigatória — art. 50, I"],
-              ["Medida administrativa impõe sanção", "Motivação obrigatória — art. 50, II"],
-              ["Delegação de competência para autuar", "Publicação e especificação — art. 14"]
+              [
+                "Multa limita direito patrimonial",
+                "Motivação obrigatória — art. 50, I"
+              ],
+              [
+                "Medida administrativa impõe sanção",
+                "Motivação obrigatória — art. 50, II"
+              ],
+              [
+                "Delegação de competência para autuar",
+                "Publicação e especificação — art. 14"
+              ]
             ]
           }
         },
@@ -298,12 +376,14 @@
               {
                 "inicio": 47,
                 "fim": 78,
-                "motivo": "contraste — sem impedimento legal (art. 13) a delegação é admissível"
+                "motivo": "contraste — sem impedimento legal (art. 13) a delegação é admissível",
+                "texto_grifado": "se não houver impedimento legal"
               },
               {
                 "inicio": 80,
                 "fim": 112,
-                "motivo": "fluxo — delegação da competência para autuar"
+                "motivo": "fluxo — delegação da competência para autuar",
+                "texto_grifado": "delegar parte da sua competência"
               }
             ]
           }
@@ -320,12 +400,14 @@
               {
                 "inicio": 112,
                 "fim": 160,
-                "motivo": "mapa — autuação limita direitos do administrado"
+                "motivo": "mapa — autuação limita direitos do administrado",
+                "texto_grifado": "neguem, limitem ou afetem direitos ou interesses"
               },
               {
                 "inicio": 167,
                 "fim": 215,
-                "motivo": "hierarquia — sanção exige motivação"
+                "motivo": "hierarquia — sanção exige motivação",
+                "texto_grifado": "imponham ou agravem deveres, encargos ou sanções"
               }
             ]
           }
@@ -336,8 +418,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "LIM-DELEGA-AUTO: Limita direitos (interesse público) | Delega competência (art. 12, ressalvado art. 13) | Autoexec só com lei.\n\nNear-transfer: se o secretário delegasse a edição de portaria geral de prazos internos, seria válido? Não — art. 13, I veda delegar ato normativo (caso do lote-002).",
-            "destaques": ["LIM-DELEGA-AUTO", "art. 13, I", "near-transfer"]
+            "texto": "LIM-DELEGA-AUTO: Limita direitos (interesse público) | Delega competência (art. 12, ressalvado art. 13) | Autoexec só com lei.\n\nNear-transfer: se o secretário delegasse a edição de portaria geral de prazos internos, seria válido? Não — art. 13, I veda delegar ato normativo (caso do lote-002).\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "LIM-DELEGA-AUTO",
+              "art. 13, I",
+              "near-transfer"
+            ]
           }
         }
       ],
@@ -358,6 +444,17 @@
       "autoexecutoriedade",
       "lei_9784",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se o secretário delegasse a edição de portaria geral de prazos internos, seria válido? Não — art. 13, I veda delegar ato normativo (caso do lote-002).",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "LIM-DELEGA-AUTO: Limita direitos (interesse público)",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

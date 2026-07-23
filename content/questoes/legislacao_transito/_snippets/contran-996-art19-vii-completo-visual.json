@@ -1,302 +1,304 @@
-{
-  "fundamento_slug": "CONTRAN_996_art_19_VII",
-  "estudo_reverso_visual_completo": {
-    "versao": 2,
-    "arquetipo": "fluxograma_decisao",
-    "arquetipo_secundario": "tabela_gradacao",
-    "publico_alvo": "iniciante",
-    "duracao_estimada_seg": 270,
+[
+  {
     "fundamento_slug": "CONTRAN_996_art_19_VII",
-    "macete_visual": "Registrado ≠ moto em VTR · art. 244 §2º",
-    "meta": {
-      "padrao_familia": "A_caso_regra_excecao",
-      "pegadinha_em_uma_frase": "Registro e CNH não autorizam ciclomotor em via de trânsito rápido — art. 19 VII → art. 244 §2º (média)",
-      "eixos_legais": [
-        "CONTRAN_996_art_19_VII",
-        "CTB_art_244_par2"
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CONTRAN_996_art_19_VII",
+      "macete_visual": "Registrado ≠ moto em VTR · art. 244 §2º",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Registro e CNH não autorizam ciclomotor em via de trânsito rápido — art. 19 VII → art. 244 §2º (média)",
+        "eixos_legais": [
+          "CONTRAN_996_art_19_VII",
+          "CTB_art_244_par2"
+        ],
+        "isca_por_alternativa": {
+          "A": "ciclomotor registrado segue regras de motocicleta em VTR",
+          "B": "inciso VI só alcança bike elétrica — ciclomotor liberado",
+          "D": "dispensa de registro do art. 12 autoriza ciclomotor sem placa"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: ciclomotor em via de trânsito rápido",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C.\n\nA — registro e CNH equiparam ciclomotor a motocicleta em VTR.\nB — vedação do inciso VI só alcança bike elétrica; ciclomotor liberado.\nD — dispensa de registro autoriza ciclomotor sem placa.\n\nPegadinha: estar regular no DETRAN não significa poder usar qualquer via — vedação específica para VTR/rodovia.",
+            "destaques": [
+              "Gabarito C",
+              "registrado",
+              "via de trânsito rápido"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "VIA DE TRÂNSITO RÁPIDO: corredor urbano de fluxo acelerado — hipótese vedada sem infraestrutura própria.\n\nCICLOMOTOR: veículo de 2 ou 3 rodas com motor — sujeito a registro e licenciamento.\n\nINCISO VII: sanção específica para ciclomotor em VTR/rodovia — distinto do inciso VI (bicicleta elétrica).",
+            "destaques": [
+              "VTR",
+              "CICLOMOTOR",
+              "INCISO VII"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: cabe autuação?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Ciclomotor em via de trânsito rápido sem acostamento ou faixa própria?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Condutor invoca apenas registro e CNH?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Infração média configurada — gabarito C",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — caso do enunciado"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — regularidade documental não supre"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Onde o ciclomotor pode circular",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Via / situação",
+              "Regra"
+            ],
+            "linhas": [
+              {
+                "faixa": "Vias comuns urbanas",
+                "classificacao": "Segue CTB para ciclomotores — com registro"
+              },
+              {
+                "faixa": "Via de trânsito rápido sem faixa própria",
+                "classificacao": "Vedada — inciso VII → infração média",
+                "destaque": true
+              },
+              {
+                "faixa": "Rodovia com acostamento/faixa",
+                "classificacao": "Exceção expressa do dispositivo"
+              },
+              {
+                "faixa": "Registro e licenciamento",
+                "classificacao": "Não autoriza VTR sem infraestrutura"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Armadilha: registrado = motocicleta",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
+            "linhas": [
+              [
+                "Registro + CNH → regras de moto em VTR",
+                "Inciso VII mapeia infração específica do CTB"
+              ],
+              [
+                "Inciso VI só proíbe bike elétrica",
+                "Inciso VII alcança ciclomotor distintamente"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Registro e habilitação não equiparam ciclomotor a motocicleta em VTR"
+              ],
+              [
+                "B — numero_vizinho",
+                "Restringe vedação ao inciso VI — ignora VII para ciclomotor"
+              ],
+              [
+                "D — regra_excecao",
+                "Art. 12 dispensa registro de bike/EMI — não alcança ciclomotor do art. 13"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Resolvendo o enunciado",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Fato do caso",
+              "Consequência"
+            ],
+            "linhas": [
+              [
+                "Ciclomotor 3 kW, 45 km/h, registrado e licenciado",
+                "Regular perante DETRAN — não é EMI"
+              ],
+              [
+                "Via de trânsito rápido sem acostamento/faixa",
+                "Hipótese do inciso VII do art. 19"
+              ],
+              [
+                "Condutor com CNH A e capacete",
+                "Equipamentos corretos não afastam vedação de via"
+              ],
+              [
+                "Resultado",
+                "Alternativa C — infração média"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "eixo2",
+          "titulo": "Resolução × CTB — inciso VII",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Dispositivo",
+              "Função"
+            ],
+            "linhas": [
+              [
+                "Res. 996, art. 13",
+                "Exige registro e licenciamento de ciclomotor"
+              ],
+              [
+                "Res. 996, art. 12",
+                "Dispensa registro de bike elétrica e EMI — vizinho"
+              ],
+              [
+                "Res. 996, art. 19, VII",
+                "Mapeia infração art. 244 §2º para ciclomotor"
+              ],
+              [
+                "CTB, art. 244, §2º",
+                "Veda ciclomotor em VTR/rodovia sem faixa — média"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei1",
+          "titulo": "Art. 19, VII — sanção na Resolução",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "Res. CONTRAN 996/2023, art. 19, VII",
+            "texto": "VII - art. 244, § 2º, quando transitar com ciclomotores nas vias de trânsito rápido ou rodovias, salvo onde houver acostamento ou faixas de rolamento próprias.",
+            "trechos_grifados": [
+              {
+                "inicio": 6,
+                "fim": 20,
+                "motivo": "mapa — remissão ao CTB art. 244 §2º",
+                "texto_grifado": "art. 244, § 2º"
+              },
+              {
+                "inicio": 43,
+                "fim": 55,
+                "motivo": "fluxo — veículo do caso é ciclomotor",
+                "texto_grifado": "ciclomotores"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "CTB art. 244, §2º — vedação e gradação",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 244, §2º",
+            "texto": "§ 2º Aplica-se aos ciclomotores o disposto na alínea b do parágrafo anterior: transitar em vias de trânsito rápido ou rodovias, salvo acostamento ou faixas de rolamento próprias. Infração — média.",
+            "trechos_grifados": [
+              {
+                "inicio": 91,
+                "fim": 126,
+                "motivo": "contraste — vedação que registro não afasta",
+                "texto_grifado": "vias de trânsito rápido ou rodovias"
+              },
+              {
+                "inicio": 179,
+                "fim": 195,
+                "motivo": "mapa — gradação média do caso",
+                "texto_grifado": "Infração — média"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "REGISTRADO ≠ MOTO EM VTR.\nCiclomotor em VTR/rodovia = art. 244 §2º (inciso VII) · salvo acostamento/faixa · média.\n\nNear: mesmo ciclomotor com acostamento ou faixa própria — exceção afasta autuação.\nFar: bike elétrica na mesma VTR sem faixa — inciso VI → art. 244 §1º (dispositivo vizinho).\nNão muda: registro e CNH não suprem vedação de VTR sem infraestrutura.\nCadeia: vizinho = inciso VI (bicicleta elétrica).",
+            "destaques": [
+              "REGISTRADO",
+              "acostamento",
+              "inciso VI"
+            ]
+          }
+        }
       ],
-      "isca_por_alternativa": {
-        "A": "ciclomotor registrado segue regras de motocicleta em VTR",
-        "B": "inciso VI só alcança bike elétrica — ciclomotor liberado",
-        "D": "dispensa de registro do art. 12 autoriza ciclomotor sem placa"
-      }
-    },
-    "telas": [
-      {
-        "id": "contexto",
-        "titulo": "Diagnóstico: ciclomotor em via de trânsito rápido",
-        "secao": "diagnostico",
-        "tipo": "texto_destaque",
-        "conteudo": {
-          "texto": "Gabarito C.\n\nA — registro e CNH equiparam ciclomotor a motocicleta em VTR.\nB — vedação do inciso VI só alcança bike elétrica; ciclomotor liberado.\nD — dispensa de registro autoriza ciclomotor sem placa.\n\nPegadinha: estar regular no DETRAN não significa poder usar qualquer via — vedação específica para VTR/rodovia.",
-          "destaques": [
-            "Gabarito C",
-            "registrado",
-            "via de trânsito rápido"
-          ]
+      "links_fonte": [
+        {
+          "rotulo": "Res. CONTRAN 996/2023",
+          "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 996, DE 15 DE JUNHO DE 2023.pdf"
+        },
+        {
+          "rotulo": "CTB art. 244",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
         }
-      },
-      {
-        "id": "glossario",
-        "titulo": "Pré-treino: 3 termos",
-        "tipo": "texto_destaque",
-        "conteudo": {
-          "texto": "VIA DE TRÂNSITO RÁPIDO: corredor urbano de fluxo acelerado — hipótese vedada sem infraestrutura própria.\n\nCICLOMOTOR: veículo de 2 ou 3 rodas com motor — sujeito a registro e licenciamento.\n\nINCISO VII: sanção específica para ciclomotor em VTR/rodovia — distinto do inciso VI (bicicleta elétrica).",
-          "destaques": [
-            "VTR",
-            "CICLOMOTOR",
-            "INCISO VII"
-          ]
-        }
-      },
-      {
-        "id": "fluxo",
-        "titulo": "Método: cabe autuação?",
-        "secao": "metodo",
-        "tipo": "fluxograma",
-        "conteudo": {
-          "nos": [
-            {
-              "id": "p1",
-              "label": "Ciclomotor em via de trânsito rápido sem acostamento ou faixa própria?",
-              "tipo": "pergunta"
-            },
-            {
-              "id": "p2",
-              "label": "Condutor invoca apenas registro e CNH?",
-              "tipo": "pergunta"
-            },
-            {
-              "id": "r1",
-              "label": "Infração média configurada — gabarito C",
-              "tipo": "resultado"
-            }
-          ],
-          "arestas": [
-            {
-              "de": "p1",
-              "para": "p2",
-              "rotulo": "Sim — caso do enunciado"
-            },
-            {
-              "de": "p2",
-              "para": "r1",
-              "rotulo": "Sim — regularidade documental não supre"
-            }
-          ]
-        }
-      },
-      {
-        "id": "mapa",
-        "titulo": "Onde o ciclomotor pode circular",
-        "secao": "mapa",
-        "tipo": "tabela_gradacao",
-        "conteudo": {
-          "titulo_colunas": [
-            "Via / situação",
-            "Regra"
-          ],
-          "linhas": [
-            {
-              "faixa": "Vias comuns urbanas",
-              "classificacao": "Segue CTB para ciclomotores — com registro"
-            },
-            {
-              "faixa": "Via de trânsito rápido sem faixa própria",
-              "classificacao": "Vedada — inciso VII → infração média",
-              "destaque": true
-            },
-            {
-              "faixa": "Rodovia com acostamento/faixa",
-              "classificacao": "Exceção expressa do dispositivo"
-            },
-            {
-              "faixa": "Registro e licenciamento",
-              "classificacao": "Não autoriza VTR sem infraestrutura"
-            }
-          ]
-        }
-      },
-      {
-        "id": "contraste",
-        "titulo": "Armadilha: registrado = motocicleta",
-        "secao": "contraste",
-        "tipo": "comparacao",
-        "conteudo": {
-          "colunas": [
-            "Crença ✗",
-            "Lei ✓"
-          ],
-          "linhas": [
-            [
-              "Registro + CNH → regras de moto em VTR",
-              "Inciso VII mapeia infração específica do CTB"
-            ],
-            [
-              "Inciso VI só proíbe bike elétrica",
-              "Inciso VII alcança ciclomotor distintamente"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "distratores",
-        "titulo": "Por que cada alternativa erra",
-        "secao": "distratores",
-        "tipo": "comparacao",
-        "conteudo": {
-          "colunas": [
-            "Alternativa",
-            "Mecanismo + por quê"
-          ],
-          "linhas": [
-            [
-              "A — termo_unico",
-              "Registro e habilitação não equiparam ciclomotor a motocicleta em VTR"
-            ],
-            [
-              "B — numero_vizinho",
-              "Restringe vedação ao inciso VI — ignora VII para ciclomotor"
-            ],
-            [
-              "D — regra_excecao",
-              "Art. 12 dispensa registro de bike/EMI — não alcança ciclomotor do art. 13"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "caso",
-        "titulo": "Resolvendo o enunciado",
-        "secao": "metodo",
-        "tipo": "comparacao",
-        "conteudo": {
-          "colunas": [
-            "Fato do caso",
-            "Consequência"
-          ],
-          "linhas": [
-            [
-              "Ciclomotor 3 kW, 45 km/h, registrado e licenciado",
-              "Regular perante DETRAN — não é EMI"
-            ],
-            [
-              "Via de trânsito rápido sem acostamento/faixa",
-              "Hipótese do inciso VII do art. 19"
-            ],
-            [
-              "Condutor com CNH A e capacete",
-              "Equipamentos corretos não afastam vedação de via"
-            ],
-            [
-              "Resultado",
-              "Alternativa C — infração média"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "eixo2",
-        "titulo": "Resolução × CTB — inciso VII",
-        "secao": "conceito",
-        "tipo": "comparacao",
-        "conteudo": {
-          "colunas": [
-            "Dispositivo",
-            "Função"
-          ],
-          "linhas": [
-            [
-              "Res. 996, art. 13",
-              "Exige registro e licenciamento de ciclomotor"
-            ],
-            [
-              "Res. 996, art. 12",
-              "Dispensa registro de bike elétrica e EMI — vizinho"
-            ],
-            [
-              "Res. 996, art. 19, VII",
-              "Mapeia infração art. 244 §2º para ciclomotor"
-            ],
-            [
-              "CTB, art. 244, §2º",
-              "Veda ciclomotor em VTR/rodovia sem faixa — média"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "lei1",
-        "titulo": "Art. 19, VII — sanção na Resolução",
-        "secao": "lei",
-        "tipo": "trecho_legal",
-        "conteudo": {
-          "fonte": "Res. CONTRAN 996/2023, art. 19, VII",
-          "texto": "VII - art. 244, § 2º, quando transitar com ciclomotores nas vias de trânsito rápido ou rodovias, salvo onde houver acostamento ou faixas de rolamento próprias.",
-          "trechos_grifados": [
-            {
-              "inicio": 6,
-              "fim": 20,
-              "motivo": "mapa — remissão ao CTB art. 244 §2º",
-              "texto_grifado": "art. 244, § 2º"
-            },
-            {
-              "inicio": 43,
-              "fim": 55,
-              "motivo": "fluxo — veículo do caso é ciclomotor",
-              "texto_grifado": "ciclomotores"
-            }
-          ]
-        }
-      },
-      {
-        "id": "lei2",
-        "titulo": "CTB art. 244, §2º — vedação e gradação",
-        "secao": "lei",
-        "tipo": "trecho_legal",
-        "conteudo": {
-          "fonte": "CTB art. 244, §2º",
-          "texto": "§ 2º Aplica-se aos ciclomotores o disposto na alínea b do parágrafo anterior: transitar em vias de trânsito rápido ou rodovias, salvo acostamento ou faixas de rolamento próprias. Infração — média.",
-          "trechos_grifados": [
-            {
-              "inicio": 91,
-              "fim": 126,
-              "motivo": "contraste — vedação que registro não afasta",
-              "texto_grifado": "vias de trânsito rápido ou rodovias"
-            },
-            {
-              "inicio": 179,
-              "fim": 195,
-              "motivo": "mapa — gradação média do caso",
-              "texto_grifado": "Infração — média"
-            }
-          ]
-        }
-      },
-      {
-        "id": "macete",
-        "titulo": "Macete + near/far-transfer",
-        "secao": "macete",
-        "tipo": "texto_destaque",
-        "conteudo": {
-          "texto": "REGISTRADO ≠ MOTO EM VTR.\nCiclomotor em VTR/rodovia = art. 244 §2º (inciso VII) · salvo acostamento/faixa · média.\n\nNear: mesmo ciclomotor com acostamento ou faixa própria — exceção afasta autuação.\nFar: bike elétrica na mesma VTR sem faixa — inciso VI → art. 244 §1º (dispositivo vizinho).\nNão muda: registro e CNH não suprem vedação de VTR sem infraestrutura.\nCadeia: vizinho = inciso VI (bicicleta elétrica).",
-          "destaques": [
-            "REGISTRADO",
-            "acostamento",
-            "inciso VI"
-          ]
-        }
-      }
-    ],
-    "links_fonte": [
-      {
-        "rotulo": "Res. CONTRAN 996/2023",
-        "path": "conteúdo/resoluções CONTRAN/RESOLUÇÃO CONTRAN Nº 996, DE 15 DE JUNHO DE 2023.pdf"
-      },
-      {
-        "rotulo": "CTB art. 244",
-        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
-      }
-    ]
+      ]
+    }
   }
-}
+]

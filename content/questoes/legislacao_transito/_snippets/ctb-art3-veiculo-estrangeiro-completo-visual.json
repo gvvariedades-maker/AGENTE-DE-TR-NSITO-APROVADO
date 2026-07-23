@@ -1,260 +1,262 @@
-{
-  "fundamento_slug": "CTB_art_3",
-  "estudo_reverso_visual_completo": {
-    "versao": 2,
-    "arquetipo": "fluxograma_decisao",
-    "arquetipo_secundario": "tabela_gradacao",
-    "publico_alvo": "iniciante",
-    "duracao_estimada_seg": 255,
+[
+  {
     "fundamento_slug": "CTB_art_3",
-    "macete_visual": "ART. 3 = QUALQUER · nacional OU estrangeiro",
-    "meta": {
-      "padrao_familia": "A_caso_regra_excecao",
-      "pegadinha_em_uma_frase": "Placa estrangeira não isenta do CTB — art. 3º alcança veículos e condutores nacionais ou estrangeiros",
-      "eixos_legais": [
-        "CTB_art_3",
-        "CTB_art_1"
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 255,
+      "fundamento_slug": "CTB_art_3",
+      "macete_visual": "ART. 3 = QUALQUER · nacional OU estrangeiro",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Placa estrangeira não isenta do CTB — art. 3º alcança veículos e condutores nacionais ou estrangeiros",
+        "eixos_legais": [
+          "CTB_art_3",
+          "CTB_art_1"
+        ],
+        "isca_por_alternativa": {
+          "A": "CTB só valeria para veículos nacionais e habilitação brasileira",
+          "B": "art. 3º excluiria bicicletas e carroças por falar só em automotores",
+          "D": "placa estrangeira responderia só perante a PRF, não a STTP em via municipal"
+        },
+        "eficacia_pos_aula": [
+          "E1",
+          "E2",
+          "E3"
+        ]
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: estrangeiro está no CTB?",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (autuação legítima — placa estrangeira não isenta).\n\nA — CTB só para veículos nacionais: errado.\nB — exclui não automotores por leitura restrita: errado.\nD — competência exclusiva da PRF em via municipal: errado.\n\nPegadinha: placa estrangeira não desloca automaticamente a aplicação do CTB à PRF.",
+            "destaques": [
+              "Gabarito C",
+              "nacionais",
+              "PRF"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "QUALQUER VEÍCULO: automotor, bicicleta, carroça etc. — art. 3º não restringe a automotores.\n\nESTRANGEIRO: condutor ou veículo com registro no exterior — expressamente incluído no art. 3º.\n\nCOMPETÊNCIA: STTP autua em via municipal; PRF não monopoliza estrangeiros por placa.",
+            "destaques": [
+              "QUALQUER",
+              "ESTRANGEIRO",
+              "COMPETÊNCIA"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: alcança o art. 3º?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "Há veículo em via terrestre do território nacional?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Condutor ou veículo é nacional ou estrangeiro?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito C — CTB alcança o caso",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — automóvel em Campina Grande"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — placa estrangeira incluída"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa: quem o CTB alcança",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Sujeito",
+              "Alcance"
+            ],
+            "linhas": [
+              {
+                "faixa": "Qualquer veículo",
+                "classificacao": "Art. 3º — sem restringir a automotor"
+              },
+              {
+                "faixa": "Condutor nacional",
+                "classificacao": "Art. 3º — incluído"
+              },
+              {
+                "faixa": "Condutor estrangeiro",
+                "classificacao": "Art. 3º — incluído ← caso",
+                "destaque": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Isenção × alcance universal",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "O que o turista pensa ✗",
+              "O que o art. 3º diz ✓"
+            ],
+            "linhas": [
+              [
+                "Placa estrangeira isenta do CTB no Brasil",
+                "Aplicável a qualquer veículo e a condutores nacionais ou estrangeiros"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "A — regra_excecao",
+                "Inventa exclusão de veículos estrangeiros — art. 3º os inclui expressamente."
+              ],
+              [
+                "B — termo_unico",
+                "Restringe a automotores — a lei diz qualquer veículo."
+              ],
+              [
+                "D — competencia_snt",
+                "Desloca tudo à PRF em via municipal — parecer do DETRAN-PB não prevalece sobre o art. 3º."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Caso: turista em Campina Grande",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Fato do enunciado",
+              "Consequência legal"
+            ],
+            "linhas": [
+              [
+                "Automóvel argentino com placa estrangeira",
+                "Veículo e condutor estrangeiro — art. 3º alcança"
+              ],
+              [
+                "STTP autua estacionamento em via municipal",
+                "Competência municipal não afasta aplicação material do CTB"
+              ],
+              [
+                "DETRAN-PB cita competência exclusiva da PRF",
+                "Gabarito C — isca da alternativa D"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 3º e campo do art. 1º",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Dispositivo",
+              "Função no caso"
+            ],
+            "linhas": [
+              [
+                "Art. 1º — trânsito nas vias terrestres",
+                "CTB rege circulação no território nacional"
+              ],
+              [
+                "Art. 3º — sujeitos alcançados",
+                "Qualquer veículo; condutores nacionais ou estrangeiros"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 3º",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 3º",
+            "texto": "Art. 3º As disposições deste Código são aplicáveis a qualquer veículo, bem como aos proprietários, condutores dos veículos nacionais ou estrangeiros e às pessoas nele expressamente mencionadas.",
+            "trechos_grifados": [
+              {
+                "inicio": 51,
+                "fim": 69,
+                "motivo": "contraste — qualquer veículo, não só automotor",
+                "texto_grifado": "a qualquer veículo"
+              },
+              {
+                "inicio": 99,
+                "fim": 148,
+                "motivo": "caso — condutor de veículo estrangeiro incluído",
+                "texto_grifado": "condutores dos veículos nacionais ou estrangeiros"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "ART. 3 = QUALQUER VEÍCULO · nacional OU estrangeiro.\nNear: motocicleta estrangeira no centro — mesma regra do automóvel autuado.\nFar: carroça com condutor paraguaio em feira livre — qualquer veículo; imunidade diplomática é outro regime.\nNão muda: CTB alcança qualquer veículo e condutores nacionais ou estrangeiros.\nCadeia: vizinho = art. 1º (trânsito nas vias terrestres nacionais).",
+            "destaques": [
+              "QUALQUER",
+              "motocicleta",
+              "carroça",
+              "art. 1º"
+            ]
+          }
+        }
       ],
-      "isca_por_alternativa": {
-        "A": "CTB só valeria para veículos nacionais e habilitação brasileira",
-        "B": "art. 3º excluiria bicicletas e carroças por falar só em automotores",
-        "D": "placa estrangeira responderia só perante a PRF, não a STTP em via municipal"
-      },
-      "eficacia_pos_aula": [
-        "E1",
-        "E2",
-        "E3"
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.503/97 — CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
       ]
-    },
-    "telas": [
-      {
-        "id": "contexto",
-        "titulo": "Diagnóstico: estrangeiro está no CTB?",
-        "secao": "diagnostico",
-        "tipo": "texto_destaque",
-        "conteudo": {
-          "texto": "Gabarito C (autuação legítima — placa estrangeira não isenta).\n\nA — CTB só para veículos nacionais: errado.\nB — exclui não automotores por leitura restrita: errado.\nD — competência exclusiva da PRF em via municipal: errado.\n\nPegadinha: placa estrangeira não desloca automaticamente a aplicação do CTB à PRF.",
-          "destaques": [
-            "Gabarito C",
-            "nacionais",
-            "PRF"
-          ]
-        }
-      },
-      {
-        "id": "glossario",
-        "titulo": "Pré-treino: 3 termos",
-        "tipo": "texto_destaque",
-        "conteudo": {
-          "texto": "QUALQUER VEÍCULO: automotor, bicicleta, carroça etc. — art. 3º não restringe a automotores.\n\nESTRANGEIRO: condutor ou veículo com registro no exterior — expressamente incluído no art. 3º.\n\nCOMPETÊNCIA: STTP autua em via municipal; PRF não monopoliza estrangeiros por placa.",
-          "destaques": [
-            "QUALQUER",
-            "ESTRANGEIRO",
-            "COMPETÊNCIA"
-          ]
-        }
-      },
-      {
-        "id": "fluxo",
-        "titulo": "Método: alcança o art. 3º?",
-        "secao": "metodo",
-        "tipo": "fluxograma",
-        "conteudo": {
-          "nos": [
-            {
-              "id": "p1",
-              "label": "Há veículo em via terrestre do território nacional?",
-              "tipo": "pergunta"
-            },
-            {
-              "id": "p2",
-              "label": "Condutor ou veículo é nacional ou estrangeiro?",
-              "tipo": "pergunta"
-            },
-            {
-              "id": "r1",
-              "label": "Gabarito C — CTB alcança o caso",
-              "tipo": "resultado"
-            }
-          ],
-          "arestas": [
-            {
-              "de": "p1",
-              "para": "p2",
-              "rotulo": "Sim — automóvel em Campina Grande"
-            },
-            {
-              "de": "p2",
-              "para": "r1",
-              "rotulo": "Sim — placa estrangeira incluída"
-            }
-          ]
-        }
-      },
-      {
-        "id": "mapa",
-        "titulo": "Mapa: quem o CTB alcança",
-        "secao": "mapa",
-        "tipo": "tabela_gradacao",
-        "conteudo": {
-          "titulo_colunas": [
-            "Sujeito",
-            "Alcance"
-          ],
-          "linhas": [
-            {
-              "faixa": "Qualquer veículo",
-              "classificacao": "Art. 3º — sem restringir a automotor"
-            },
-            {
-              "faixa": "Condutor nacional",
-              "classificacao": "Art. 3º — incluído"
-            },
-            {
-              "faixa": "Condutor estrangeiro",
-              "classificacao": "Art. 3º — incluído ← caso",
-              "destaque": true
-            }
-          ]
-        }
-      },
-      {
-        "id": "contraste",
-        "titulo": "Isenção × alcance universal",
-        "secao": "contraste",
-        "tipo": "comparacao",
-        "conteudo": {
-          "colunas": [
-            "O que o turista pensa ✗",
-            "O que o art. 3º diz ✓"
-          ],
-          "linhas": [
-            [
-              "Placa estrangeira isenta do CTB no Brasil",
-              "Aplicável a qualquer veículo e a condutores nacionais ou estrangeiros"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "distratores",
-        "titulo": "Por que cada alternativa erra",
-        "secao": "distratores",
-        "tipo": "comparacao",
-        "conteudo": {
-          "colunas": [
-            "Alternativa",
-            "Mecanismo + por quê"
-          ],
-          "linhas": [
-            [
-              "A — regra_excecao",
-              "Inventa exclusão de veículos estrangeiros — art. 3º os inclui expressamente."
-            ],
-            [
-              "B — termo_unico",
-              "Restringe a automotores — a lei diz qualquer veículo."
-            ],
-            [
-              "D — competencia_snt",
-              "Desloca tudo à PRF em via municipal — parecer do DETRAN-PB não prevalece sobre o art. 3º."
-            ]
-          ]
-        }
-      },
-      {
-        "id": "caso",
-        "titulo": "Caso: turista em Campina Grande",
-        "secao": "metodo",
-        "tipo": "comparacao",
-        "conteudo": {
-          "colunas": [
-            "Fato do enunciado",
-            "Consequência legal"
-          ],
-          "linhas": [
-            [
-              "Automóvel argentino com placa estrangeira",
-              "Veículo e condutor estrangeiro — art. 3º alcança"
-            ],
-            [
-              "STTP autua estacionamento em via municipal",
-              "Competência municipal não afasta aplicação material do CTB"
-            ],
-            [
-              "DETRAN-PB cita competência exclusiva da PRF",
-              "Gabarito C — isca da alternativa D"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "hierarquia",
-        "titulo": "Art. 3º e campo do art. 1º",
-        "secao": "conceito",
-        "tipo": "comparacao",
-        "conteudo": {
-          "colunas": [
-            "Dispositivo",
-            "Função no caso"
-          ],
-          "linhas": [
-            [
-              "Art. 1º — trânsito nas vias terrestres",
-              "CTB rege circulação no território nacional"
-            ],
-            [
-              "Art. 3º — sujeitos alcançados",
-              "Qualquer veículo; condutores nacionais ou estrangeiros"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "lei",
-        "titulo": "Art. 3º",
-        "secao": "lei",
-        "tipo": "trecho_legal",
-        "conteudo": {
-          "fonte": "CTB art. 3º",
-          "texto": "Art. 3º As disposições deste Código são aplicáveis a qualquer veículo, bem como aos proprietários, condutores dos veículos nacionais ou estrangeiros e às pessoas nele expressamente mencionadas.",
-          "trechos_grifados": [
-            {
-              "inicio": 51,
-              "fim": 69,
-              "motivo": "contraste — qualquer veículo, não só automotor",
-              "texto_grifado": "a qualquer veículo"
-            },
-            {
-              "inicio": 99,
-              "fim": 148,
-              "motivo": "caso — condutor de veículo estrangeiro incluído",
-              "texto_grifado": "condutores dos veículos nacionais ou estrangeiros"
-            }
-          ]
-        }
-      },
-      {
-        "id": "macete",
-        "titulo": "Macete + near/far-transfer",
-        "secao": "macete",
-        "tipo": "texto_destaque",
-        "conteudo": {
-          "texto": "ART. 3 = QUALQUER VEÍCULO · nacional OU estrangeiro.\nNear: motocicleta estrangeira no centro — mesma regra do automóvel autuado.\nFar: carroça com condutor paraguaio em feira livre — qualquer veículo; imunidade diplomática é outro regime.\nNão muda: CTB alcança qualquer veículo e condutores nacionais ou estrangeiros.\nCadeia: vizinho = art. 1º (trânsito nas vias terrestres nacionais).",
-          "destaques": [
-            "QUALQUER",
-            "motocicleta",
-            "carroça",
-            "art. 1º"
-          ]
-        }
-      }
-    ],
-    "links_fonte": [
-      {
-        "rotulo": "Lei 9.503/97 — CTB",
-        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
-      }
-    ]
+    }
   }
-}
+]

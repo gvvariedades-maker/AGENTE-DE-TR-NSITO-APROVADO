@@ -10,7 +10,7 @@
     "alternativas": {
       "A": "Deve lavrar o AIT pelo estacionamento proibido, pois a conduta do veículo é visível e a existência física da placa supre o requisito de sinalização.",
       "B": "Não deve lavrar o AIT; deve comunicar à autoridade de trânsito com circunscrição sobre a via a irregularidade da sinalização observada.",
-      "C": "Deve lavrar o AIT, consignando no campo observações que a placa estava danificada, aplicando penalidade em grau mínimo.",
+      "C": "Quanto ao automóvel estacionado em Campina Grande com sinalização de placa R-6 danificada, deve lavrar o AIT, consignando no campo observações que a placa estava danificada, aplicando penalidade em grau mínimo.",
       "D": "Deve suspender a autuação e encaminhar o caso ao CONTRAN para regularização da sinalização antes de qualquer lavratura."
     },
     "gabarito": "B",
@@ -162,7 +162,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — autua só porque o carro está na faixa: MBFT exige sinalização legível e visível.\nC — observações com grau mínimo: não supre placa inválida.\nD — CONTRAN: comunicação é à autoridade com circunscrição sobre a via.\n\nR-6 apagada e coberta por galhos em Campina Grande.",
+            "texto": "Gabarito B. A — autua só porque o carro está na faixa: MBFT exige sinalização legível e visível.\nC — observações com grau mínimo: não supre placa inválida.\nD — CONTRAN: comunicação é à autoridade com circunscrição sobre a via. R-6 apagada e coberta por galhos em Campina Grande.",
             "destaques": [
               "Gabarito B",
               "legível",
@@ -221,8 +221,8 @@
           }
         },
         {
-          "id": "mapa",
-          "titulo": "Mapa: sinalização e AIT",
+          "id": "hierarquia",
+          "titulo": "Hierarquia: circunscrição × CONTRAN",
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
@@ -337,17 +337,20 @@
               {
                 "inicio": 157,
                 "fim": 174,
-                "motivo": "contraste — requisito que a placa apagada não cumpre"
+                "motivo": "contraste — requisito que a placa apagada não cumpre",
+                "texto_grifado": "legível e visível"
               },
               {
                 "inicio": 201,
                 "fim": 224,
-                "motivo": "mapa — consequência da sinalização inválida"
+                "motivo": "mapa — consequência da sinalização inválida",
+                "texto_grifado": "não deverá lavrar o AIT"
               },
               {
                 "inicio": 240,
                 "fim": 292,
-                "motivo": "caso — destino da comunicação (não CONTRAN)"
+                "motivo": "caso — destino da comunicação (não CONTRAN)",
+                "texto_grifado": "autoridade de trânsito com circunscrição sobre a via"
               }
             ]
           }
@@ -358,7 +361,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "DEPENDE de placa = LEGÍVEL + VISÍVEL · sem isso: NÃO autua + COMUNICA circunscrição.\n\nNear-transfer: proibição de conversão à esquerda com seta no pavimento apagada pela chuva — mesma regra: sem sinalização válida, não lavra AIT pela infração que dela depende.",
+            "texto": "DEPENDE de placa = LEGÍVEL + VISÍVEL · sem isso: NÃO autua + COMUNICA circunscrição.\n\nNear-transfer: proibição de conversão à esquerda com seta no pavimento apagada pela chuva — mesma regra: sem sinalização válida, não lavra AIT pela infração que dela depende.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "LEGÍVEL",
               "NÃO autua",
@@ -372,6 +375,22 @@
           "rotulo": "MBFT — Seção 7",
           "path": "conteúdo/resoluções CONTRAN/MBFT-anexo-resolucao-985-2022-secao-07-autuacao.txt"
         }
+      ]
+    },
+    "meta": {
+      "near_transfer": "proibição de conversão à esquerda com seta no pavimento apagada pela chuva — mesma regra: sem sinalização válida, não lavra AIT pela infração que dela depende.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "DEPENDE de placa = placa LEGÍVEL e VISÍVEL · sem isso: NÃO autua + COMUNICA circunscrição.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "competencia_snt",
+        "regra_excecao",
+        "termo_unico"
       ]
     }
   }

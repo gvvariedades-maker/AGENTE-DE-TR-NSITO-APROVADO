@@ -3,13 +3,13 @@
     "disciplina": "legislacao_transito",
     "topico": "CONTRAN_227_iluminacao",
     "tipo": "caso_pratico",
-    "estilo_idecan": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 4,
     "enunciado": "Durante fiscalização em Campina Grande/PB, agente da STTP intercepta caminhão inacabado (chassi com cabina, sem carroçaria), com destino à encarroçadora, trafegando em via pública. O veículo não possui lanternas delimitadoras traseiras, lanternas laterais traseiras nem retrorrefletores laterais traseiros. Os faróis dianteiros e as lanternas de freio estão instalados e funcionando. Considerando a Resolução CONTRAN nº 227/2007, assinale a alternativa CORRETA:",
     "alternativas": {
-      "A": "Configura infração do art. 230, IX, do CTB, por ausência de equipamento obrigatório do sistema de iluminação, independentemente do estágio de fabricação do veículo.",
+      "A": "Quanto ao caminhão inacabado com destino à encarroçadora, configura infração do art. 230, IX, do CTB, por ausência das lanternas delimitadoras traseiras e demais equipamentos do sistema de iluminação, independentemente do estágio de fabricação previsto na Resolução CONTRAN nº 227/2007.",
       "B": "Quanto às lanternas delimitadoras traseiras, lanternas laterais traseiras e retrorrefletores laterais traseiros, a situação é regular, pois o art. 1º, §2º, dispensa esses dispositivos em veículo inacabado (chassi com cabina e sem carroçaria), devendo ser aplicados quando da complementação (§3).",
-      "C": "A circulação é regular quanto a todo o sistema de iluminação, pois o art. 1º, §4º, dispensa todos os dispositivos luminosos em qualquer veículo inacabado em trânsito para complementação.",
+      "C": "A circulação do caminhão inacabado com destino à encarroçadora é regular quanto a todo o sistema de iluminação, pois o art. 1º, §4º, dispensa todos os dispositivos luminosos em qualquer veículo inacabado em trânsito para complementação.",
       "D": "Configura infração do art. 230, XIII, do CTB, por alteração do sistema de iluminação e de sinalização, uma vez que o conjunto de lanternas está incompleto em relação aos Anexos da Resolução."
     },
     "gabarito": "B",
@@ -26,9 +26,7 @@
       "estudo_reverso": [
         "Res. CONTRAN 227/2007 art. 1",
         "Res. CONTRAN 227/2007 art. 6-A",
-        "CTB art. 230",
-        "CTB art. 120",
-        "CTB art. 130"
+        "CTB art. 230"
       ]
     },
     "estudo_reverso_visual": {
@@ -45,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Caminhão inacabado sem lanternas traseiras/laterais. A banca troca INACABADO por SEM ILUMINAÇÃO.\n\nGabarito B: art. 1º, §2º dispensa — §3 exige na complementação.",
-            "destaques": ["inacabado", "§2º", "§3º"]
+            "destaques": [
+              "inacabado",
+              "§2º",
+              "§3º"
+            ]
           }
         },
         {
@@ -54,13 +56,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Chassi com cabina, sem carroçaria (§2º)?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Dispensa itens a–c do §2º — regular", "tipo": "resultado" },
-              { "id": "r2", "label": "Exige dispositivos — art. 230, IX", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Chassi com cabina, sem carroçaria (§2º)?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Dispensa itens a–c do §2º — regular",
+                "tipo": "resultado"
+              },
+              {
+                "id": "r2",
+                "label": "Exige dispositivos — art. 230, IX",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim — caso" },
-              { "de": "p1", "para": "r2", "rotulo": "Não — acabado" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim — caso"
+              },
+              {
+                "de": "p1",
+                "para": "r2",
+                "rotulo": "Não — acabado"
+              }
             ]
           }
         },
@@ -69,11 +91,24 @@
           "titulo": "Art. 1º, §2º — três dispensa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Dispositivo", "No caso"],
+            "titulo_colunas": [
+              "Dispositivo",
+              "No caso"
+            ],
             "linhas": [
-              { "faixa": "Lanternas delimitadoras traseiras", "classificacao": "Dispensadas — §2º, a", "destaque": true },
-              { "faixa": "Lanternas laterais traseiras", "classificacao": "Dispensadas — §2º, b" },
-              { "faixa": "Retrorrefletores laterais traseiros", "classificacao": "Dispensadas — §2º, c" }
+              {
+                "faixa": "Lanternas delimitadoras traseiras",
+                "classificacao": "Dispensadas — §2º, a",
+                "destaque": true
+              },
+              {
+                "faixa": "Lanternas laterais traseiras",
+                "classificacao": "Dispensadas — §2º, b"
+              },
+              {
+                "faixa": "Retrorrefletores laterais traseiros",
+                "classificacao": "Dispensadas — §2º, c"
+              }
             ]
           }
         },
@@ -83,7 +118,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Inacabado §2: dispensa 3 itens traseiros.\n§3: instala na complementação.\n§4 = outra hipótese — não generalize.",
-            "destaques": ["§2", "§3", "§4"]
+            "destaques": [
+              "§2",
+              "§3",
+              "§4"
+            ]
           }
         }
       ],
@@ -109,8 +148,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B. Se marcou A, autuou inacabado como se fosse veículo acabado.\n\nChassi com cabina, sem carroçaria, a caminho da encarroçadora: art. 1º, §2º dispensa lanternas delimitadoras traseiras, laterais traseiras e retrorrefletores laterais traseiros. §3º: aplicar na complementação.",
-            "destaques": ["Gabarito B", "§2º", "complementação"]
+            "texto": "Gabarito B. Se marcou A, autuou inacabado como se fosse veículo acabado. Chassi com cabina, sem carroçaria, a caminho da encarroçadora: dispositivo legal dispensa lanternas delimitadoras traseiras, laterais traseiras e retrorrefletores laterais traseiros. parágrafo: aplicar na complementação.",
+            "destaques": [
+              "Gabarito B",
+              "parágrafo",
+              "complementação"
+            ]
           }
         },
         {
@@ -119,7 +162,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "INACABADO: veículo ainda não complementado (chassi com cabina, sem carroçaria) — regra especial do §2º.\n\nCOMPLEMENTAÇÃO: instalação da carroçaria/dispositivos pendentes — marco do §3º.\n\nDISPOSITIVO DISPENSADO: não exigido nesta fase, mas obrigatório depois — não confundir com irregularidade.",
-            "destaques": ["INACABADO", "COMPLEMENTAÇÃO", "DISPENSADO"]
+            "destaques": [
+              "INACABADO",
+              "COMPLEMENTAÇÃO",
+              "DISPENSADO"
+            ]
           }
         },
         {
@@ -129,13 +176,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Inacabado — cabina sem carroçaria?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Falta dispositivo da lista a–c?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Regular — dispensado — gabarito B", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Inacabado — cabina sem carroçaria?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Falta dispositivo da lista a–c?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Regular — dispensado — gabarito B",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — caso" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — caso"
+              }
             ]
           }
         },
@@ -145,11 +212,24 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Inciso §2º", "Dispositivo dispensado"],
+            "titulo_colunas": [
+              "Inciso §2º",
+              "Dispositivo dispensado"
+            ],
             "linhas": [
-              { "faixa": "a", "classificacao": "Lanternas delimitadoras traseiras", "destaque": true },
-              { "faixa": "b", "classificacao": "Lanternas laterais traseiras e intermediárias" },
-              { "faixa": "c", "classificacao": "Retrorrefletores laterais traseiros e intermediários" }
+              {
+                "faixa": "a",
+                "classificacao": "Lanternas delimitadoras traseiras",
+                "destaque": true
+              },
+              {
+                "faixa": "b",
+                "classificacao": "Lanternas laterais traseiras e intermediárias"
+              },
+              {
+                "faixa": "c",
+                "classificacao": "Retrorrefletores laterais traseiros e intermediários"
+              }
             ]
           }
         },
@@ -159,11 +239,23 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
-              ["Inacabado = sem nenhuma lanterna", "§2º dispensa só itens a–c — faróis e freio podem ser exigidos"],
-              ["§4º vale para qualquer inacabado", "§4º é hipótese distinta: cabina incompleta ou sem cabina"],
-              ["Falta de lanterna = art. 230, XIII", "Dispensa legal não é alteração — é exceção do §2º"]
+              [
+                "Inacabado = sem nenhuma lanterna",
+                "§2º dispensa só itens a–c — faróis e freio podem ser exigidos"
+              ],
+              [
+                "§4º vale para qualquer inacabado",
+                "§4º é hipótese distinta: cabina incompleta ou sem cabina"
+              ],
+              [
+                "Falta de lanterna = art. 230, XIII",
+                "Dispensa legal não é alteração — é exceção do §2º"
+              ]
             ]
           }
         },
@@ -173,11 +265,23 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + letra da lei"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + letra da lei"
+            ],
             "linhas": [
-              ["A — termo_unico", "Ignora exceção do §2º — inacabado não é veículo acabado"],
-              ["C — regra_excecao", "Generaliza §4º para todo inacabado e todo o sistema"],
-              ["D — termo_unico", "Ausência prevista em lei ≠ alteração do sistema (art. 230, XIII)"]
+              [
+                "A — termo_unico",
+                "Ignora exceção do §2º — inacabado não é veículo acabado"
+              ],
+              [
+                "C — regra_excecao",
+                "Generaliza §4º para todo inacabado e todo o sistema"
+              ],
+              [
+                "D — termo_unico",
+                "Ausência prevista em lei ≠ alteração do sistema (art. 230, XIII)"
+              ]
             ]
           }
         },
@@ -187,11 +291,23 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato da fiscalização", "Avaliação"],
+            "colunas": [
+              "Fato da fiscalização",
+              "Avaliação"
+            ],
             "linhas": [
-              ["Chassi com cabina, sem carroçaria → encarroçadora", "Enquadra §2º do art. 1º"],
-              ["Faltam delimitadoras, laterais traseiras e retrorrefletores", "Itens a–c dispensados — regular"],
-              ["Faróis e lanternas de freio funcionando", "Outros dispositivos não abrangidos pelo §2º — gabarito B"]
+              [
+                "Chassi com cabina, sem carroçaria → encarroçadora",
+                "Enquadra §2º do art. 1º"
+              ],
+              [
+                "Faltam delimitadoras, laterais traseiras e retrorrefletores",
+                "Itens a–c dispensados — regular"
+              ],
+              [
+                "Faróis e lanternas de freio funcionando",
+                "Outros dispositivos não abrangidos pelo §2º — gabarito B"
+              ]
             ]
           }
         },
@@ -201,12 +317,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Hipótese", "Efeito"],
+            "colunas": [
+              "Hipótese",
+              "Efeito"
+            ],
             "linhas": [
-              ["§2º — cabina, sem carroçaria", "Dispensa itens a–c até complementação"],
-              ["§3º", "Instala dispositivos do §2º na complementação"],
-              ["§4º — cabina incompleta ou sem cabina", "Dispensa lista maior (inclui placa, ré)"],
-              ["Art. 6º-A", "Tipifica CTB art. 230 IX/XII/XIII/XXII quando exigência vigente"]
+              [
+                "§2º — cabina, sem carroçaria",
+                "Dispensa itens a–c até complementação"
+              ],
+              [
+                "§3º",
+                "Instala dispositivos do §2º na complementação"
+              ],
+              [
+                "§4º — cabina incompleta ou sem cabina",
+                "Dispensa lista maior (inclui placa, ré)"
+              ],
+              [
+                "Art. 6º-A",
+                "Tipifica CTB art. 230 IX/XII/XIII/XXII quando exigência vigente"
+              ]
             ]
           }
         },
@@ -219,7 +350,12 @@
             "fonte": "Res. CONTRAN 227/2007, art. 1º, §2º",
             "texto": "§ 2º Os veículos inacabados (chassi de caminhão com cabina e sem carroçaria com destino ao concessionário, encarroçador ou, ainda, a serem complementados por terceiros), não estão sujeitos à aplicação dos dispositivos relacionados abaixo: a) lanternas delimitadoras traseiras; b) lanternas laterais traseiras e intermediárias; c) retrorrefletores laterais traseiros e intermediários.",
             "trechos_grifados": [
-              { "inicio": 170, "fim": 217, "motivo": "dispensa legal dos três dispositivos ausentes" }
+              {
+                "inicio": 170,
+                "fim": 217,
+                "motivo": "dispensa legal dos três dispositivos ausentes",
+                "texto_grifado": "não estão sujeitos à aplicação dos dispositivos"
+              }
             ]
           }
         },
@@ -232,7 +368,12 @@
             "fonte": "Res. CONTRAN 227/2007, art. 1º, §3º",
             "texto": "§ 3º Os dispositivos mencionados no parágrafo anterior devem ser aplicados, conforme o caso, quando da complementação do veículo.",
             "trechos_grifados": [
-              { "inicio": 93, "fim": 128, "motivo": "marco de obrigatoriedade — encarroçadora" }
+              {
+                "inicio": 93,
+                "fim": 128,
+                "motivo": "marco de obrigatoriedade — encarroçadora",
+                "texto_grifado": "quando da complementação do veículo"
+              }
             ]
           }
         },
@@ -242,8 +383,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "227 inacabado: §2 = dispensa a–c (traseiro/lateral).\n§3 = instala na complementação.\n§4 = outra hipótese — cabina incompleta/sem cabina.\n\nMesma lógica cai em §9 (película em lanterna), §7 (8 faróis) e art. 6º-A (tipificação CTB).",
-            "destaques": ["§2", "§3", "§4"]
+            "texto": "227 inacabado: §2 = dispensa a–c (traseiro/lateral).\n§3 = instala na complementação.\n§4 = outra hipótese — cabina incompleta/sem cabina.\n\nMesma lógica cai em §9 (película em lanterna), §7 (8 faróis) e art. 6º-A (tipificação CTB).\nNear: Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nNão muda: 227 inacabado: §2 = dispensa 3 itens traseiros · §3 = na encarroça · §4 = outra hipótese (cabina incompleta/sem cabina).",
+            "destaques": [
+              "§2",
+              "§3",
+              "§4"
+            ]
           }
         }
       ],
@@ -258,6 +403,27 @@
         }
       ]
     },
-    "tags": ["iluminacao", "resolucao_227", "veiculo_inacabado", "encarroçadora", "lanternas"]
+    "tags": [
+      "iluminacao",
+      "resolucao_227",
+      "veiculo_inacabado",
+      "encarroçadora",
+      "lanternas"
+    ],
+    "meta": {
+      "near_transfer": "Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "227 inacabado: §2 = dispensa 3 itens traseiros · §3 = na encarroça · §4 = outra hipótese (cabina incompleta/sem cabina).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico"
+      ]
+    }
   }
 ]

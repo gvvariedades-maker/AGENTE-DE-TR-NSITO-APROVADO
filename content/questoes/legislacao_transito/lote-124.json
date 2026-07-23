@@ -46,7 +46,16 @@
         "regra_excecao",
         "competencia_snt",
         "numero_vizinho"
-      ]
+      ],
+      "near_transfer": "se Mariana tivesse postado a defesa nos Correios com carimbo ECT no último dia, o marco seria a data da entrega na ECT — não a do protocolo no domicílio.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "DOMICÍLIO (287) → data protocolo local · remessa imediata ao autuador · postal = ECT.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     },
     "tags": [
       "resolucao_900",
@@ -69,7 +78,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Defesa protocolada no DETRAN de João Pessoa — STTP exige seu próprio protocolo. A banca troca domicílio (art. 287) por autuador exclusivo.\n\nGabarito B: data do protocolo no domicílio + remessa imediata à STTP.",
-            "destaques": ["domicílio", "STTP", "tempestiva"]
+            "destaques": [
+              "domicílio",
+              "STTP",
+              "tempestiva"
+            ]
           }
         },
         {
@@ -77,7 +90,10 @@
           "titulo": "Autuador × domicílio",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
               [
                 "Só conta protocolo na STTP",
@@ -96,7 +112,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "DOMICÍLIO (287) → data protocolo local.\nRemessa imediata ao autuador.\nPostal = data ECT.",
-            "destaques": ["DOMICÍLIO", "remessa", "ECT"]
+            "destaques": [
+              "DOMICÍLIO",
+              "remessa",
+              "ECT"
+            ]
           }
         }
       ],
@@ -135,8 +155,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — tempestividade somente se verifica pela data do protocolo na STTP de Campina Grande.\nC — DETRAN/PB pode julgar e arquivar sem remessa à STTP por ser órgão do domicílio.\nD — fora da via postal com carimbo da ECT, só protocolo eletrônico no autuador contaria o prazo.\n\nPegadinha: protocolo no domicílio é válido — mas o DETRAN deve encaminhar imediatamente à STTP.",
-            "destaques": ["Gabarito B", "domicílio", "remessa"]
+            "texto": "Gabarito B. A — tempestividade somente se verifica pela data do protocolo na STTP de Campina Grande.\nC — DETRAN/PB pode julgar e arquivar sem remessa à STTP por ser órgão do domicílio.\nD — fora da via postal com carimbo da ECT, só protocolo eletrônico no autuador contaria o prazo. Pegadinha: protocolo no domicílio é válido — mas o DETRAN deve encaminhar imediatamente à STTP.",
+            "destaques": [
+              "Gabarito B",
+              "domicílio",
+              "remessa"
+            ]
           }
         },
         {
@@ -145,7 +169,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "DOMICÍLIO DO INFRATOR: residência de Mariana em João Pessoa — base para protocolo alternativo quando a infração ocorre em localidade diversa.\n\nÓRGÃO AUTUADOR: STTP de Campina Grande — destinatário da remessa após protocolo no domicílio.\n\nTEMPESTIVIDADE: marco temporal que preserva o prazo — distinto conforme via postal, domicílio ou protocolo direto no autuador.",
-            "destaques": ["DOMICÍLIO", "AUTUADOR", "TEMPESTIVIDADE"]
+            "destaques": [
+              "DOMICÍLIO",
+              "AUTUADOR",
+              "TEMPESTIVIDADE"
+            ]
           }
         },
         {
@@ -167,7 +195,11 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim — caso Mariana" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim — caso Mariana"
+              }
             ]
           }
         },
@@ -177,7 +209,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Via de apresentação", "Marco de tempestividade"],
+            "titulo_colunas": [
+              "Via de apresentação",
+              "Marco de tempestividade"
+            ],
             "linhas": [
               {
                 "faixa": "Protocolo direto no autuador (STTP)",
@@ -201,14 +236,17 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
               [
                 "Defesa fora da STTP é sempre intempestiva",
                 "No domicílio conta a data do protocolo local"
               ],
               [
-                "DETRAN do domicílio julga e arquiva",
+                "Protocolo fora da STTP encerra a defesa no domicílio",
                 "DETRAN remete imediatamente ao autuador"
               ]
             ]
@@ -220,7 +258,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -243,7 +284,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso", "Consequência"],
+            "colunas": [
+              "Fato do caso",
+              "Consequência"
+            ],
             "linhas": [
               [
                 "Mariana reside em João Pessoa; autuada em Campina Grande",
@@ -269,12 +313,15 @@
           }
         },
         {
-          "id": "eixo2",
+          "id": "hierarquia",
           "titulo": "Tempestividade × remessa — dois efeitos",
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Função no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Função no caso"
+            ],
             "linhas": [
               [
                 "Marco no domicílio",
@@ -333,8 +380,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "DOMICÍLIO (287) → data protocolo local.\nRemessa imediata ao autuador.\nPostal = data ECT.\n\nNear-transfer: se Mariana tivesse postado a defesa nos Correios com carimbo ECT no último dia, o marco seria a data da entrega na ECT — não a do protocolo no domicílio.",
-            "destaques": ["DOMICÍLIO", "remessa", "ECT"]
+            "texto": "DOMICÍLIO (287) → data protocolo local.\nRemessa imediata ao autuador.\nPostal = data ECT.\n\nNear-transfer: se Mariana tivesse postado a defesa nos Correios com carimbo ECT no último dia, o marco seria a data da entrega na ECT — não a do protocolo no domicílio.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "DOMICÍLIO",
+              "remessa",
+              "ECT"
+            ]
           }
         }
       ],

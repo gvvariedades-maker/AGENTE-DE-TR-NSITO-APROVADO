@@ -42,7 +42,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Ingresso às 23 h sem mandado nem consentimento. A banca trata suspeita de furto como flagrante delito ou ignora \"durante o dia\" no art. 5º, XI.",
-            "destaques": ["23 h", "flagrante", "durante o dia"]
+            "destaques": [
+              "23 h",
+              "flagrante",
+              "durante o dia"
+            ]
           }
         },
         {
@@ -51,13 +55,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Morador consentiu o ingresso?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Há flagrante delito em curso?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Sem exceção — entrada vedada", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Morador consentiu o ingresso?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Há flagrante delito em curso?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Sem exceção — entrada vedada",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Não" },
-              { "de": "p2", "para": "r1", "rotulo": "Só suspeita" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Não"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Só suspeita"
+              }
             ]
           }
         },
@@ -66,10 +90,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["Suspeita de furto = flagrante", "Flagrante exige crime em curso — não mera denúncia"],
-              ["Mandado vale à noite", "Ordem judicial só \"durante o dia\" (XI)"]
+              [
+                "Suspeita de furto = flagrante",
+                "Flagrante exige crime em curso — não mera denúncia"
+              ],
+              [
+                "Mandado vale à noite",
+                "Ordem judicial só \"durante o dia\" (XI)"
+              ]
             ]
           }
         },
@@ -102,7 +135,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "4 SALVOS: Flagrante · Desastre · Socorro · Ordem judicial DE DIA. Suspeita ≠ flagrante.",
-            "destaques": ["4 SALVOS", "DE DIA", "flagrante"]
+            "destaques": [
+              "4 SALVOS",
+              "DE DIA",
+              "flagrante"
+            ]
           }
         }
       ],
@@ -124,7 +161,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Suspeita de furto não é flagrante — e mandado domiciliar só vale durante o dia",
-        "eixos_legais": ["CF_art5_XI", "CF_art5_LXI"],
+        "eixos_legais": [
+          "CF_art5_XI",
+          "CF_art5_LXI"
+        ],
         "isca_por_alternativa": {
           "A": "suspeita de furto vira flagrante delito autorizando entrada noturna",
           "B": "agente STTP com PM autoriza ingresso domiciliar noturno",
@@ -138,8 +178,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C (exceções taxativas do domicílio).\n\nA — suspeita de furto vira crime em curso autorizando entrada às 23 h.\nB — agente de trânsito com PM abre a residência noturna por denúncia.\nD — mandado judicial cumpre-se de madrugada, sem limite horário.\n\nPromessa: fixar os quatro salvos e o limite diurno da ordem judicial.",
-            "destaques": ["XI", "flagrante", "durante o dia"]
+            "texto": "Gabarito C (exceções taxativas do domicílio). A — suspeita de furto vira crime em curso autorizando entrada às 23 h.\nB — agente de trânsito com PM abre a residência noturna por denúncia.\nD — mandado judicial cumpre-se de madrugada, sem limite horário. Promessa: fixar os quatro salvos e o limite diurno da ordem judicial.",
+            "destaques": [
+              "XI",
+              "flagrante",
+              "durante o dia"
+            ]
           }
         },
         {
@@ -148,7 +192,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "ASILO INVIOLÁVEL: a casa só admite ingresso sem consentimento nas exceções do art. 5º, XI. FLAGRANTE DELITO: crime em curso ou acabado de cometer — não basta suspeita ou denúncia. DURANTE O DIA: ordem judicial de busca domiciliar não autoriza penetração noturna pelo texto constitucional.",
-            "destaques": ["asilo inviolável", "flagrante delito", "durante o dia"]
+            "destaques": [
+              "asilo inviolável",
+              "flagrante delito",
+              "durante o dia"
+            ]
           }
         },
         {
@@ -175,8 +223,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Não" },
-              { "de": "p2", "para": "r1", "rotulo": "Só suspeita de furto" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Não"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Só suspeita de furto"
+              }
             ]
           }
         },
@@ -186,11 +242,23 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Exceção", "Quando autoriza ingresso"],
+            "titulo_colunas": [
+              "Exceção",
+              "Quando autoriza ingresso"
+            ],
             "linhas": [
-              { "faixa": "1º", "classificacao": "Flagrante delito" },
-              { "faixa": "2º", "classificacao": "Desastre" },
-              { "faixa": "3º", "classificacao": "Prestar socorro" },
+              {
+                "faixa": "1º",
+                "classificacao": "Flagrante delito"
+              },
+              {
+                "faixa": "2º",
+                "classificacao": "Desastre"
+              },
+              {
+                "faixa": "3º",
+                "classificacao": "Prestar socorro"
+              },
               {
                 "faixa": "4º",
                 "classificacao": "Durante o dia — determinação judicial",
@@ -205,7 +273,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Denúncia de furto autoriza entrada noturna",
@@ -224,7 +295,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -247,12 +321,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Conclusão"],
+            "colunas": [
+              "Fato do enunciado",
+              "Conclusão"
+            ],
             "linhas": [
-              ["23 h, sem mandado, sem consentimento do morador", "Ordem judicial diurna não existe — demais salvos não configurados"],
-              ["Denúncia anônima de veículo possivelmente furtado no quintal", "Suspeita ≠ flagrante delito em curso"],
-              ["Agente STTP com policiais militares tentam entrar", "Nenhum órgão do caso autoriza violar o XI"],
-              ["Resultado", "Alternativa C"]
+              [
+                "23 h, sem mandado, sem consentimento do morador",
+                "Ordem judicial diurna não existe — demais salvos não configurados"
+              ],
+              [
+                "Denúncia anônima de veículo possivelmente furtado no quintal",
+                "Suspeita ≠ flagrante delito em curso"
+              ],
+              [
+                "Agente STTP com policiais militares tentam entrar",
+                "Nenhum órgão do caso autoriza violar o XI"
+              ],
+              [
+                "Resultado",
+                "Alternativa C"
+              ]
             ]
           }
         },
@@ -262,12 +351,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "O que exige"],
+            "colunas": [
+              "Dispositivo",
+              "O que exige"
+            ],
             "linhas": [
-              ["Art. 5º, XI", "Exceção domiciliar — flagrante delito entre os 4 salvos"],
-              ["Art. 5º, LXI", "Prisão — flagrante delito ou ordem judicial escrita"],
-              ["Caso concreto", "Mera suspeita de furto não preenche flagrante em nenhum dos dois"],
-              ["Horário", "Mandado domiciliar: só durante o dia (XI)"]
+              [
+                "Art. 5º, XI",
+                "Exceção domiciliar — flagrante delito entre os 4 salvos"
+              ],
+              [
+                "Art. 5º, LXI",
+                "Prisão — flagrante delito ou ordem judicial escrita"
+              ],
+              [
+                "Caso concreto",
+                "Mera suspeita de furto não preenche flagrante em nenhum dos dois"
+              ],
+              [
+                "Horário",
+                "Mandado domiciliar: só durante o dia (XI)"
+              ]
             ]
           }
         },
@@ -325,8 +429,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "4 SALVOS: Flagrante · Desastre · Socorro · Ordem judicial DE DIA.\nSuspeita ≠ flagrante (XI e LXI).\n\nNear-transfer: se às 14 h houvesse mandado judicial válido e o morador recusasse, o ingresso poderia ser autorizado — mas às 23 h sem mandado a entrada continua vedada.",
-            "destaques": ["4 SALVOS", "DE DIA", "flagrante"]
+            "texto": "4 SALVOS: Flagrante · Desastre · Socorro · Ordem judicial DE DIA.\nSuspeita ≠ flagrante (XI e LXI).\n\nNear-transfer: se às 14 h houvesse mandado judicial válido e o morador recusasse, o ingresso poderia ser autorizado — mas às 23 h sem mandado a entrada continua vedada.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "4 SALVOS",
+              "DE DIA",
+              "flagrante"
+            ]
           }
         }
       ],
@@ -347,6 +455,17 @@
       "direitos_individuais",
       "flagrante_delito",
       "asilo_inviolavel"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se às 14 h houvesse mandado judicial válido e o morador recusasse, o ingresso poderia ser autorizado — mas às 23 h sem mandado a entrada continua vedada.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "DOMICÍLIO = consentimento OU 4 SALVOS: Flagrante · Desastre · Socorro · Ordem judicial DE DIA. Suspeita ≠ flagrante.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

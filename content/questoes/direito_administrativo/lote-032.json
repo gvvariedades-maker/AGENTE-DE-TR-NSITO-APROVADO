@@ -45,7 +45,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito B. A confunde revogação com anulação ex tunc; C exige anular ato legal; D veda autotutela. Portaria legal revogada não invalida multa pretérita.",
-            "destaques": ["ex nunc", "ex tunc", "revogação"]
+            "destaques": [
+              "ex nunc",
+              "ex tunc",
+              "revogação"
+            ]
           }
         },
         {
@@ -53,7 +57,10 @@
           "titulo": "Revogação × anulação",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha ✗", "Regra ✓"],
+            "colunas": [
+              "Pegadinha ✗",
+              "Regra ✓"
+            ],
             "linhas": [
               [
                 "Revogação invalida multas lavradas sob portaria vigente",
@@ -68,13 +75,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Portaria revogada era legal?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Revogação invalida multa da semana anterior?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito B — ex nunc", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Portaria revogada era legal?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Revogação invalida multa da semana anterior?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito B — ex nunc",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — legal" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — legal"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -101,7 +128,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "DEVE ANULA (ilegal, ex tunc) | PODE REVOGA (legal, ex nunc) | CONVALIDA defeito sanável.",
-            "destaques": ["ANULA", "REVOGA", "CONVALIDA"]
+            "destaques": [
+              "ANULA",
+              "REVOGA",
+              "CONVALIDA"
+            ]
           }
         }
       ],
@@ -123,7 +154,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Revogação de portaria legal tratada como anulação ex tunc da multa",
-        "eixos_legais": ["Lei9784_art53", "Lei9784_art55"],
+        "eixos_legais": [
+          "Lei9784_art53",
+          "Lei9784_art55"
+        ],
         "isca_por_alternativa": {
           "A": "aplica efeitos ex tunc à revogação e invalida autuação sob portaria vigente",
           "C": "exige anulação de ato legal sem vício por conveniência operacional",
@@ -137,8 +171,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — revogação ex tunc: invalida multa lavrada sob portaria vigente.\nC — anular ato legal: confunde revogação com anulação por ilegalidade.\nD — Judiciário para revogar: afasta autotutela administrativa.\n\nPegadinha: portaria legal revogada por conveniência não apaga autuações pretéritas válidas.",
-            "destaques": ["Gabarito B", "ex nunc", "autotutela"]
+            "texto": "Gabarito B. A — revogação ex tunc: invalida multa lavrada sob portaria vigente.\nC — anular ato legal: confunde revogação com anulação por ilegalidade.\nD — Judiciário para revogar: afasta autotutela administrativa. Pegadinha: portaria legal revogada por conveniência não apaga autuações pretéritas válidas.",
+            "destaques": [
+              "Gabarito B",
+              "ex nunc",
+              "autotutela"
+            ]
           }
         },
         {
@@ -147,7 +185,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "ANULAÇÃO: extinção de ato ilegal — dever da Administração, efeitos em regra ex tunc.\n\nREVOGAÇÃO: extinção de ato legal por conveniência ou oportunidade — poder discricionário, efeitos em regra ex nunc.\n\nCONVALIDAÇÃO: correção de defeito sanável sem lesão ao interesse público nem prejuízo a terceiros.",
-            "destaques": ["ANULAÇÃO", "REVOGAÇÃO", "CONVALIDAÇÃO"]
+            "destaques": [
+              "ANULAÇÃO",
+              "REVOGAÇÃO",
+              "CONVALIDAÇÃO"
+            ]
           }
         },
         {
@@ -157,13 +199,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Portaria da blitz era legal?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Revogação invalida multa da semana anterior?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito B — efeitos ex nunc", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Portaria da blitz era legal?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Revogação invalida multa da semana anterior?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito B — efeitos ex nunc",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — Av. Epitácio" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — Av. Epitácio"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -173,7 +235,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Espécie", "Hipótese e efeito"],
+            "titulo_colunas": [
+              "Espécie",
+              "Hipótese e efeito"
+            ],
             "linhas": [
               {
                 "faixa": "Anulação",
@@ -201,7 +266,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o condutor insinua ✗", "Extinção correta ✓"],
+            "colunas": [
+              "O que o condutor insinua ✗",
+              "Extinção correta ✓"
+            ],
             "linhas": [
               [
                 "Revogação invalida multa da semana anterior",
@@ -220,7 +288,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -243,7 +314,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso STTP", "Classificação"],
+            "colunas": [
+              "Fato do caso STTP",
+              "Classificação"
+            ],
             "linhas": [
               [
                 "Portaria legal fixava blitz na Av. Epitácio Pessoa",
@@ -257,7 +331,10 @@
                 "Condutor autuado na semana anterior",
                 "Multa lavrada sob vigência da portaria — mantida"
               ],
-              ["Resultado", "Alternativa B — única correta"]
+              [
+                "Resultado",
+                "Alternativa B — única correta"
+              ]
             ]
           }
         },
@@ -267,11 +344,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Verbo", "Situação no caso"],
+            "colunas": [
+              "Verbo",
+              "Situação no caso"
+            ],
             "linhas": [
-              ["Deve anular", "Ato ilegal — não é o caso da portaria legal"],
-              ["Pode revogar", "Ato legal por conveniência — caso da blitz"],
-              ["Pode convalidar", "Defeito sanável sem prejuízo — não é o caso"]
+              [
+                "Deve anular",
+                "Ato ilegal — não é o caso da portaria legal"
+              ],
+              [
+                "Pode revogar",
+                "Ato legal por conveniência — caso da blitz"
+              ],
+              [
+                "Pode convalidar",
+                "Defeito sanável sem prejuízo — não é o caso"
+              ]
             ]
           }
         },
@@ -335,8 +424,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "DEVE ANULA (ilegal, ex tunc) | PODE REVOGA (legal, ex nunc) | CONVALIDA defeito sanável.\n\nNear-transfer: se a portaria da blitz fosse ilegal por ausência de competência, caberia anulação ex tunc — não revogação por conveniência; se o auto de infração tivesse só vício formal sanável sem prejuízo, caberia convalidação.",
-            "destaques": ["ANULA", "REVOGA", "near-transfer"]
+            "texto": "DEVE ANULA (ilegal, ex tunc) | PODE REVOGA (legal, ex nunc) | CONVALIDA defeito sanável.\n\nNear-transfer: se a portaria da blitz fosse ilegal por ausência de competência, caberia anulação ex tunc — não revogação por conveniência; se o auto de infração tivesse só vício formal sanável sem prejuízo, caberia convalidação.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "ANULA",
+              "REVOGA",
+              "near-transfer"
+            ]
           }
         }
       ],
@@ -358,6 +451,17 @@
       "ex_tunc_ex_nunc",
       "lei_9784",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se a portaria da blitz fosse ilegal por ausência de competência, caberia anulação ex tunc — não revogação por conveniência; se o auto de infração tivesse só vício formal sanável sem prejuízo, caberia convalidação.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "DEVE ANULA (ilegal, ex tunc)",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

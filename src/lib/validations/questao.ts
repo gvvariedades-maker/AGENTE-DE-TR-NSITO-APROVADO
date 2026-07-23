@@ -9,6 +9,7 @@ import {
   resolveMetaTransferencia,
   validarTransferenciaPedagogica,
 } from "@/lib/validations/transferencia-pedagogica";
+import { pedagogyConfigSchema } from "@/lib/validations/pedagogy";
 import { DISCIPLINAS } from "@/types";
 
 const comentarioSchema = z.object({
@@ -35,6 +36,8 @@ const questaoSeedBaseSchema = z.object({
   comentario: comentarioSchema,
   estudo_reverso_visual: estudoReversoVisualSchema.optional(),
   estudo_reverso_visual_completo: estudoReversoVisualCompletoSchema.optional(),
+  /** Percursos adaptativos (Fase 4); ausente = aula completa. */
+  pedagogy: pedagogyConfigSchema.optional(),
   /** Dispositivo principal da pegadinha — espelha visual v2; usado no índice de cobertura. */
   fundamento_slug: z.string().min(1).optional(),
   meta: metaQuestaoSchema,

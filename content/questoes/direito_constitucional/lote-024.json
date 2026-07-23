@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Confinamento de 45 min na unidade móvel com porta trancada após recusa ao etilômetro. A banca oferece MS ou autoriza trancar na blitz — locomoção coercitiva pede habeas corpus.",
-            "destaques": ["confinamento", "habeas corpus", "etilômetro"]
+            "destaques": [
+              "confinamento",
+              "habeas corpus",
+              "etilômetro"
+            ]
           }
         },
         {
@@ -52,13 +56,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Há coação à liberdade de locomoção?", "tipo": "pergunta" },
-              { "id": "p2", "label": "A lesão é só direito líquido e certo sem locomoção?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Habeas corpus — LXVIII", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Há coação à liberdade de locomoção?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "A lesão é só direito líquido e certo sem locomoção?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Habeas corpus — LXVIII",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — porta trancada" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — porta trancada"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -67,10 +91,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["MS contra o auto na unidade trancada", "HC quando a lesão é locomoção"],
-              ["Blitz autoriza trancar até o teste", "Prisão só com flagrante ou ordem judicial"]
+              [
+                "MS contra o auto na unidade trancada",
+                "HC quando a lesão é locomoção"
+              ],
+              [
+                "Blitz autoriza trancar até o teste",
+                "Prisão só com flagrante ou ordem judicial"
+              ]
             ]
           }
         },
@@ -97,7 +130,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Trancado na unidade = HC. MS não substitui HC na locomoção. Recusa ao teste ≠ prisão sem flagrante.",
-            "destaques": ["HC", "MS", "flagrante"]
+            "destaques": [
+              "HC",
+              "MS",
+              "flagrante"
+            ]
           }
         }
       ],
@@ -119,7 +156,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Trancar condutor na unidade móvel pede HC — recusa ao etilômetro não autoriza prisão sem flagrante",
-        "eixos_legais": ["CF_art5_LXVIII", "CF_art5_LXI"],
+        "eixos_legais": [
+          "CF_art5_LXVIII",
+          "CF_art5_LXI"
+        ],
         "isca_por_alternativa": {
           "A": "mandado de segurança contra o auto com condutor trancado na unidade móvel",
           "C": "blitz autoriza trancar condutor até realizar o etilômetro sem flagrante",
@@ -133,8 +173,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B (habeas corpus por confinamento na unidade móvel).\n\nA — MS contra o auto com condutor trancado na blitz.\nC — fiscalização autoriza trancar até o etilômetro ser feito.\nD — HC vai ao órgão máximo de trânsito da União.\n\nPromessa: fixar quando trancar na unidade móvel configura coação e pede HC imediato.",
-            "destaques": ["confinamento", "habeas corpus", "etilômetro"]
+            "texto": "Gabarito B (habeas corpus por confinamento na unidade móvel). A — MS contra o auto com condutor trancado na blitz.\nC — fiscalização autoriza trancar até o etilômetro ser feito.\nD — HC vai ao órgão máximo de trânsito da União. Promessa: fixar quando trancar na unidade móvel configura coação e pede HC imediato.",
+            "destaques": [
+              "confinamento",
+              "habeas corpus",
+              "etilômetro"
+            ]
           }
         },
         {
@@ -143,7 +187,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "HABEAS CORPUS (art. 5º, LXVIII): protege liberdade de locomoção contra coação ilegal — confinamento com porta trancada preenche. PRISÃO (art. 5º, LXI): só em flagrante delito ou ordem judicial — recusa administrativa ao teste não é flagrante automático. MANDADO DE SEGURANÇA (art. 5º, LXIX): direito líquido e certo não amparado por HC — não substitui HC na locomoção.",
-            "destaques": ["habeas corpus", "flagrante", "MS"]
+            "destaques": [
+              "habeas corpus",
+              "flagrante",
+              "MS"
+            ]
           }
         },
         {
@@ -170,8 +218,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — 45 min trancado" },
-              { "de": "p2", "para": "r1", "rotulo": "Não — lesão é locomoção" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — 45 min trancado"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — lesão é locomoção"
+              }
             ]
           }
         },
@@ -181,11 +237,23 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Situação", "Remédio"],
+            "titulo_colunas": [
+              "Situação",
+              "Remédio"
+            ],
             "linhas": [
-              { "faixa": "Coação à locomoção (trancado)", "classificacao": "Habeas corpus — LXVIII" },
-              { "faixa": "Direito líquido e certo sem locomoção", "classificacao": "Mandado de segurança — LXIX" },
-              { "faixa": "Prisão sem flagrante nem ordem", "classificacao": "Ilegal — art. 5º, LXI" },
+              {
+                "faixa": "Coação à locomoção (trancado)",
+                "classificacao": "Habeas corpus — LXVIII"
+              },
+              {
+                "faixa": "Direito líquido e certo sem locomoção",
+                "classificacao": "Mandado de segurança — LXIX"
+              },
+              {
+                "faixa": "Prisão sem flagrante nem ordem",
+                "classificacao": "Ilegal — art. 5º, LXI"
+              },
               {
                 "faixa": "Confinamento na unidade móvel",
                 "classificacao": "HC — B correta",
@@ -200,7 +268,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Recusa ao etilômetro autoriza trancar o condutor",
@@ -219,7 +290,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -242,12 +316,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Conclusão"],
+            "colunas": [
+              "Fato do enunciado",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Porta trancada por fora por 45 minutos", "Coação à locomoção — LXVIII"],
-              ["Recusa ao teste inicial, sem flagrante nem ordem judicial", "Viola limites da prisão — LXI"],
-              ["Defesa impetra remédio imediato", "Habeas corpus, não MS contra o auto"],
-              ["Resultado", "Alternativa B"]
+              [
+                "Porta trancada por fora por 45 minutos",
+                "Coação à locomoção — LXVIII"
+              ],
+              [
+                "Recusa ao teste inicial, sem flagrante nem ordem judicial",
+                "Viola limites da prisão — LXI"
+              ],
+              [
+                "Defesa impetra remédio imediato",
+                "Habeas corpus, não MS contra o auto"
+              ],
+              [
+                "Resultado",
+                "Alternativa B"
+              ]
             ]
           }
         },
@@ -257,12 +346,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Papel no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Papel no caso"
+            ],
             "linhas": [
-              ["Art. 5º, LXVIII", "HC — coação à locomoção na unidade móvel"],
-              ["Art. 5º, LXI", "Limites da prisão — sem flagrante nem ordem judicial"],
-              ["Art. 5º, LXIX", "MS excluído — lesão é locomoção, não só o auto"],
-              ["Caso concreto", "Trancado na blitz → habeas corpus"]
+              [
+                "Art. 5º, LXVIII",
+                "HC — coação à locomoção na unidade móvel"
+              ],
+              [
+                "Art. 5º, LXI",
+                "Limites da prisão — sem flagrante nem ordem judicial"
+              ],
+              [
+                "Art. 5º, LXIX",
+                "MS excluído — lesão é locomoção, não só o auto"
+              ],
+              [
+                "Caso concreto",
+                "Trancado na blitz → habeas corpus"
+              ]
             ]
           }
         },
@@ -320,8 +424,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Trancado = HC (LXVIII).\nMS não substitui HC na locomoção (LXIX).\nRecusa ao teste ≠ flagrante automático (LXI).\n\nNear-transfer: se a PM mantivesse o condutor seis horas na base, também seria HC — mas na unidade móvel da STTP a coação é igualmente ilegal sem flagrante.",
-            "destaques": ["HC", "LXI", "trancado"]
+            "texto": "Trancado = HC (LXVIII).\nMS não substitui HC na locomoção (LXIX).\nRecusa ao teste ≠ flagrante automático (LXI).\n\nNear-transfer: se a PM mantivesse o condutor seis horas na base, também seria HC — mas na unidade móvel da STTP a coação é igualmente ilegal sem flagrante.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "HC",
+              "LXI",
+              "trancado"
+            ]
           }
         }
       ],
@@ -343,6 +451,17 @@
       "locomocao",
       "etilometro",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se a PM mantivesse o condutor seis horas na base, também seria HC — mas na unidade móvel da STTP a coação é igualmente ilegal sem flagrante.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Trancado = HC (LXVIII). MS não substitui HC na locomoção (LXIX). Recusa ao teste ≠ prisão sem flagrante (LXI).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

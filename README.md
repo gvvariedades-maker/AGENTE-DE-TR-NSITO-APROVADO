@@ -61,11 +61,12 @@ npm run check:visual-completo
 
 ## Estudo reverso visual
 
-Após responder uma questão no modo estudo, abre automaticamente a **aula completa** (7–11 telas) quando a questão tiver `estudo_reverso_visual_completo`. A trilha termina no **macete** ou **fechamento** — sem tela de recall livre.
+Após responder uma questão no modo estudo, abre automaticamente a trilha visual quando houver `estudo_reverso_visual_completo`. Sem `pedagogy_json`, abre a **aula completa** (7–11 telas). Com `pedagogy_json`, o `AdaptivePlayer` seleciona um subset conforme o path de intervenção (confirmação curta, reparo de misconception, etc.). A trilha termina no **macete** ou **fechamento** — sem tela de recall livre.
 
 | Trilha | Campo JSON | Telas | Badge no player |
 |--------|------------|-------|-----------------|
 | Aula completa (v2) | `estudo_reverso_visual_completo` | 7–11 | "Aula completa" |
+| Pedagogia adaptativa | `pedagogy` → `pedagogy_json` | subset por path | (mesmo player) |
 | Expressa legado (v1) | `estudo_reverso_visual` | 3–5 | "Revisão rápida" |
 
 | Recurso | Caminho |
@@ -94,6 +95,7 @@ Enunciados fiéis ao PDF Tec **SUPERIOR**; aulas com **paridade pedagógica** da
 
 | Recurso | Caminho |
 |---------|---------|
+| **Guia (comece aqui)** | `content/questoes-reais/GUIA.md` |
 | README do pipeline | `content/questoes-reais/README.md` |
 | Prompt Agent | `.cursor/skills/examinador-idecan/prompt-questao-real-nova-conversa.txt` |
 | Contrato ouro | `content/questoes-reais/_ouro/real-aula-nota-10.md` |

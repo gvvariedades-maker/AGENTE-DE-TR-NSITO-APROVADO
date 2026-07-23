@@ -44,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Servidor 8.112 = investidura em cargo público — terceirizado não entra; comissão também é cargo.",
-            "destaques": ["investidura", "cargo público", "terceirizado"]
+            "destaques": [
+              "investidura",
+              "cargo público",
+              "terceirizado"
+            ]
           }
         },
         {
@@ -52,7 +56,10 @@
           "titulo": "Atividade × investidura",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha ✗", "Art. 2 ✓"],
+            "colunas": [
+              "Pegadinha ✗",
+              "Art. 2 ✓"
+            ],
             "linhas": [
               [
                 "Quem atua na STTP é servidor, inclusive terceirizado",
@@ -67,13 +74,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Há investidura em cargo público?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Mera atividade na STTP basta?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito D — conceito de servidor", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Há investidura em cargo público?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Mera atividade na STTP basta?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito D — conceito de servidor",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -85,7 +112,12 @@
             "fonte": "Lei 8.112/90, art. 2",
             "texto": "Para os efeitos desta Lei, servidor é a pessoa legalmente investida em cargo público.",
             "trechos_grifados": [
-              { "inicio": 27, "fim": 82, "motivo": "núcleo do conceito" }
+              {
+                "inicio": 27,
+                "fim": 84,
+                "motivo": "núcleo do conceito",
+                "texto_grifado": "servidor é a pessoa legalmente investida em cargo público"
+              }
             ]
           }
         },
@@ -95,7 +127,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "SERVIDOR 8112 = investido em CARGO PÚBLICO | efetivo OU comissão | terceirizado ≠ servidor.",
-            "destaques": ["CARGO PÚBLICO", "efetivo", "terceirizado"]
+            "destaques": [
+              "CARGO PÚBLICO",
+              "efetivo",
+              "terceirizado"
+            ]
           }
         }
       ],
@@ -117,7 +153,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Trabalhar na STTP não é servidor — exige investidura em cargo público; comissão também conta",
-        "eixos_legais": ["Lei8112_art2", "Lei8112_art3"],
+        "eixos_legais": [
+          "Lei8112_art2",
+          "Lei8112_art3"
+        ],
         "isca_por_alternativa": {
           "A": "estende servidor a todo quem atua no órgão, inclusive terceirizado",
           "B": "restringe servidor só ao cargo efetivo, excluindo comissão",
@@ -131,8 +170,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D.\n\nA — todo na STTP: terceirizado não tem investidura em cargo público.\nB — só efetivo: art. 3, parágrafo único admite comissão.\nC — terceirizado relevante: função pública não substitui investidura.\n\nPegadinha: atividade no órgão ≠ servidor nos termos da Lei 8.112/90.",
-            "destaques": ["Gabarito D", "investidura", "cargo público"]
+            "texto": "Gabarito D. A — todo na STTP: terceirizado não tem investidura em cargo público.\nB — só efetivo: dispositivo legal, parágrafo único admite comissão.\nC — terceirizado relevante: função pública não substitui investidura. Pegadinha: atividade no órgão ≠ servidor nos termos da Lei 8.112/90.",
+            "destaques": [
+              "Gabarito D",
+              "investidura",
+              "cargo público"
+            ]
           }
         },
         {
@@ -141,7 +184,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Servidor (Lei 8.112/90): pessoa legalmente investida em cargo público — conceito estrito do regime estatutário federal.\nCargo público: conjunto de atribuições previsto na estrutura organizacional, provido em caráter efetivo ou em comissão (art. 3).\nAgente público (CF): categoria mais ampla — inclui quem atua em nome da entidade; nem todo agente é servidor da Lei 8.112/90.",
-            "destaques": ["Servidor", "Cargo público", "Agente público"]
+            "destaques": [
+              "Servidor",
+              "Cargo público",
+              "Agente público"
+            ]
           }
         },
         {
@@ -168,8 +215,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -179,7 +234,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Situação na STTP", "Servidor 8.112?"],
+            "titulo_colunas": [
+              "Situação na STTP",
+              "Servidor 8.112?"
+            ],
             "linhas": [
               {
                 "faixa": "Agente de trânsito — cargo efetivo",
@@ -207,7 +265,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a banca insinua ✗", "Art. 2 ✓"],
+            "colunas": [
+              "O que a banca insinua ✗",
+              "Art. 2 ✓"
+            ],
             "linhas": [
               [
                 "Quem trabalha na STTP é servidor, inclusive terceirizado",
@@ -226,7 +287,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -249,12 +313,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso STTP", "Consequência"],
+            "colunas": [
+              "Fato do caso STTP",
+              "Consequência"
+            ],
             "linhas": [
-              ["Agentes de trânsito em cargo efetivo", "Servidores — investidura formal"],
-              ["Dirigentes em cargo em comissão", "Também servidor — art. 3, parágrafo único"],
-              ["Coordenador terceirizado orienta escala", "Não é servidor 8.112 — vínculo privado"],
-              ["Resultado", "Alternativa D — única defensável"]
+              [
+                "Agentes de trânsito em cargo efetivo",
+                "Servidores — investidura formal"
+              ],
+              [
+                "Dirigentes em cargo em comissão",
+                "Também servidor — art. 3, parágrafo único"
+              ],
+              [
+                "Coordenador terceirizado orienta escala",
+                "Não é servidor 8.112 — vínculo privado"
+              ],
+              [
+                "Resultado",
+                "Alternativa D — única defensável"
+              ]
             ]
           }
         },
@@ -269,13 +348,15 @@
             "trechos_grifados": [
               {
                 "inicio": 27,
-                "fim": 82,
-                "motivo": "fluxo — núcleo investidura em cargo público"
+                "fim": 84,
+                "motivo": "fluxo — núcleo investidura em cargo público",
+                "texto_grifado": "servidor é a pessoa legalmente investida em cargo público"
               },
               {
                 "inicio": 47,
-                "fim": 66,
-                "motivo": "contraste — legalmente investida"
+                "fim": 67,
+                "motivo": "contraste — legalmente investida",
+                "texto_grifado": "legalmente investida"
               }
             ]
           }
@@ -286,12 +367,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Lição"],
+            "colunas": [
+              "Dispositivo",
+              "Lição"
+            ],
             "linhas": [
-              ["Art. 3 — cargo público", "Atribuições cometidas a servidor"],
-              ["Parágrafo único", "Provimento efetivo ou em comissão"],
-              ["Alternativa B", "Erra ao excluir comissão do conceito"],
-              ["Terceirizado", "Fora do art. 2 — sem cargo público"]
+              [
+                "Art. 3 — cargo público",
+                "Atribuições cometidas a servidor"
+              ],
+              [
+                "Parágrafo único",
+                "Provimento efetivo ou em comissão"
+              ],
+              [
+                "Alternativa B",
+                "Erra ao excluir comissão do conceito"
+              ],
+              [
+                "Terceirizado",
+                "Fora do art. 2 — sem cargo público"
+              ]
             ]
           }
         },
@@ -307,7 +403,8 @@
               {
                 "inicio": 141,
                 "fim": 190,
-                "motivo": "mapa — efetivo ou em comissão"
+                "motivo": "mapa — efetivo ou em comissão",
+                "texto_grifado": "para provimento em caráter efetivo ou em comissão"
               }
             ]
           }
@@ -318,8 +415,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "SERVIDOR 8112 = investido em CARGO PÚBLICO | efetivo OU comissão | terceirizado ≠ servidor.\n\nNear-transfer: estagiário remunerado da STTP com atribuições de gabinete — é servidor 8.112? Não, sem investidura em cargo público; estagiário é agente público amplo, mas não servidor estatutário federal.",
-            "destaques": ["CARGO PÚBLICO", "efetivo", "near-transfer"]
+            "texto": "SERVIDOR 8112 = investido em CARGO PÚBLICO | efetivo OU comissão | terceirizado ≠ servidor.\n\nNear-transfer: estagiário remunerado da STTP com atribuições de gabinete — é servidor 8.112? Não, sem investidura em cargo público; estagiário é agente público amplo, mas não servidor estatutário federal.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "CARGO PÚBLICO",
+              "efetivo",
+              "near-transfer"
+            ]
           }
         }
       ],
@@ -339,6 +440,17 @@
       "conceito_agente",
       "lei_8112",
       "art_2"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "estagiário remunerado da STTP com atribuições de gabinete — é servidor 8.112? Não, sem investidura em cargo público; estagiário é agente público amplo, mas não servidor estatutário federal.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "SERVIDOR 8112 = investido em CARGO PÚBLICO",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

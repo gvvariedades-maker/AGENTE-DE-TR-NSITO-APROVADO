@@ -11,6 +11,12 @@ import {
 import { createClient } from "@/lib/supabase/server";
 import { isQuestaoPersistivel } from "@/lib/estudo-reverso";
 import type { SemaforoData } from "@/lib/semaforo";
+import {
+  diagnosticarRespostasSimulado,
+  gerarMissaoPosSimulado,
+  type DiagnosticoSimuladoItem,
+  type MissaoPosSimulado,
+} from "@/lib/missao/missao-pos-simulado";
 
 export interface FinalizarSimuladoPayload {
   respostas: RespostaSimuladoItem[];
@@ -22,8 +28,14 @@ export interface FinalizarSimuladoResult {
   ok: boolean;
   demo?: boolean;
   resultado: ResultadoSimulado;
-  semaforo?: Pick<SemaforoData, "gerais" | "especificos" | "total" | "disciplinasEmRisco">;
+  semaforo?: Pick<
+    SemaforoData,
+    "gerais" | "especificos" | "total" | "disciplinasEmRisco"
+  >;
   simuladoId?: string;
+  /** Missão corretiva por valor (~14) — não reabre 60 aulas. */
+  missaoCorretiva?: MissaoPosSimulado;
+  diagnosticos?: DiagnosticoSimuladoItem[];
 }
 
 export async function finalizarSimulado(
@@ -76,6 +88,16 @@ export async function finalizarSimulado(
     })
     .returning({ id: simulados.id });
 
+  /** Mastery já atualizado por salvarTentativa durante a prova; aqui: diagnóstico + missão. */
+  const [diagnosticos, missaoCorretiva] = await Promise.all([
+    diagnosticarRespostasSimulado(user.id, payload.respostas),
+    gerarMissaoPosSimulado(user.id, payload.respostas),
+  ]);
+
+  const errosComDiagnostico = diagnosticos.filter(
+    (d) => !d.acertou && d.diagnostics?.feedbackSummary,
+  ).length;
+
   return {
     ok: true,
     resultado,
@@ -86,5 +108,10 @@ export async function finalizarSimulado(
       total: semaforoParcial.total,
       disciplinasEmRisco: semaforoParcial.disciplinasEmRisco,
     },
+    missaoCorretiva: {
+      ...missaoCorretiva,
+      errosComDiagnostico,
+    },
+    diagnosticos,
   };
 }

@@ -320,7 +320,7 @@ Rodar: `npm run analyze:idecan` (gera `.cursor/skills/examinador-idecan/scripts/
 
 ### Pipeline no app (só SUPERIOR)
 
-Para colocar a questão real no player com aula completa — **sem** misturar com inéditas:
+Para colocar a questão real no player com aula completa — **sem** misturar com inéditas. **Comece em:** [content/questoes-reais/GUIA.md](../../../content/questoes-reais/GUIA.md).
 
 1. `npm run extract:reais-superior -- --pdf "<PDF SUPERIOR>.pdf"`
 2. Prompt: [prompt-questao-real-nova-conversa.txt](prompt-questao-real-nova-conversa.txt) (troque `Disciplina:`) · completo: [prompt-questao-real-aula.md](prompt-questao-real-aula.md)
@@ -376,6 +376,7 @@ O `validate-questao.ts` já verifica citações contra `conteúdo/` (`--skip-cit
 - [prompt-questao-aula-completa.md](prompt-questao-aula-completa.md) — variantes (completo, curto, lote) + checklist
 - [prompt-questao-real-nova-conversa.txt](prompt-questao-real-nova-conversa.txt) — **prompt pronto** reais (troque `Disciplina:`)
 - [prompt-questao-real-aula.md](prompt-questao-real-aula.md) — questão **real** superior + aula (`content/questoes-reais/`)
+- [content/questoes-reais/GUIA.md](../../../content/questoes-reais/GUIA.md) — **hub único** pipeline reais
 - `npm run proxima -- <disciplina|all>` — escolhe tópico por déficit (prioridades em `scripts/edital-topics-prioridades.ts`)
 - [rubrica-indistinguibilidade.md](rubrica-indistinguibilidade.md) — paridade com questões reais
 - [teste-cego.md](teste-cego.md) — protocolo de comparação cega

@@ -6,10 +6,20 @@ import { diasParaProva } from "@/lib/prova-data";
 import { sqlSomenteQuestoesReais } from "@/lib/questoes-reais";
 import { getSemaforoData } from "@/lib/semaforo";
 import type { ModoSessaoEstudo } from "@/lib/motor-ata-shared";
+import { PESOS_EVIDENCIA_FASE } from "@/lib/motor-ata-terms";
 import { SIMULADO_ESPELHO_DISTRIBUICAO, type Disciplina } from "@/types";
 
 export type { ModoSessaoEstudo } from "@/lib/motor-ata-shared";
 export { parseModoSessao, labelModoSessao } from "@/lib/motor-ata-shared";
+export {
+  PESOS_EVIDENCIA_FASE,
+  scoreMasteryGap,
+  scoreHighConfidenceErrorRisk,
+  scoreTransferPending,
+  scoreForgettingRisk,
+  valorAtividadeCorretiva,
+  MISSAO_POS_SIMULADO_META,
+} from "@/lib/motor-ata-terms";
 
 /** Pesos versionados por fase — Motor ATA ROI (Camada 4). */
 export const PESOS_FASE: Record<
@@ -163,8 +173,9 @@ function pesoEditalDisciplina(disciplina: Disciplina): number {
 }
 
 /**
- * Seleciona questões de prática por score ponderado:
- * SRS vencido > disciplina em risco > sem tentativa > último erro > peso edital.
+ * Seleciona questões de prática por score ponderado.
+ * Prioridade: SRS vencido → disciplina em risco → high-conf error →
+ * mastery gap → peso edital → transfer → novo → forgetting → manutenção.
  */
 export async function buscarIdsPraticaPontuados(
   userId: string,
@@ -222,6 +233,9 @@ export async function buscarIdsPraticaPontuados(
           )})`
         : sql``;
 
+    /** Fase 5: holdout fora de estudo/repetição comum (só via gate de mastery). */
+    const filtroHoldoutSql = sql`AND q.assessment_pool <> 'holdout'`;
+
     const prioridadeDisciplinaSql =
       disciplinasPrioritarias.length > 0
         ? sql`CASE WHEN t.disciplina IN (${sql.join(
@@ -238,6 +252,12 @@ export async function buscarIdsPraticaPontuados(
     const penalidadeMaduro = pesos.penalidadeMaduro;
     const boostMissao = pesos.boostDisciplinaMissao;
     const boostTopico = pesos.boostTopicoAprendendo;
+
+    const ev = PESOS_EVIDENCIA_FASE[fase];
+    const pesoMasteryGap = ev.masteryGap;
+    const pesoHighConf = ev.highConfidenceError;
+    const pesoTransferPend = ev.transferPending;
+    const pesoForget = ev.forgettingRisk;
 
     const disciplinaMissao = filtros.disciplinaMissao;
     const boostDisciplinaMissaoSql = disciplinaMissao
@@ -273,10 +293,27 @@ export async function buscarIdsPraticaPontuados(
         SELECT DISTINCT ON (a.question_id)
           a.question_id,
           a.acertou,
-          a.created_at
+          a.created_at,
+          a.confidence
         FROM attempts a
         WHERE a.user_id = ${userId}::uuid
         ORDER BY a.question_id, a.created_at DESC
+      ),
+      primary_mastery AS (
+        SELECT DISTINCT ON (qs.question_id)
+          qs.question_id,
+          qs.transfer_level,
+          usm.mastery_probability,
+          usm.recall_score,
+          usm.transfer_score,
+          usm.high_confidence_error_count,
+          usm.state AS mastery_state
+        FROM question_skills qs
+        INNER JOIN user_skill_mastery usm
+          ON usm.skill_id = qs.skill_id
+          AND usm.user_id = ${userId}::uuid
+        WHERE qs.role = 'primary'
+        ORDER BY qs.question_id, qs.weight DESC
       )
       SELECT q.id
       FROM questions q
@@ -284,6 +321,7 @@ export async function buscarIdsPraticaPontuados(
       LEFT JOIN srs_cards sc
         ON sc.question_id = q.id AND sc.user_id = ${userId}::uuid
       LEFT JOIN latest_attempt la ON la.question_id = q.id
+      LEFT JOIN primary_mastery pm ON pm.question_id = q.id
       WHERE 1 = 1
       ${filtroDisciplinaSql}
       ${filtroTopicoSql}
@@ -291,9 +329,24 @@ export async function buscarIdsPraticaPontuados(
       ${filtroErrosSql}
       ${filtroReaisSql}
       ${filtroExcluirSql}
+      ${filtroHoldoutSql}
       ORDER BY (
         CASE WHEN sc.next_review IS NOT NULL AND sc.next_review <= NOW() THEN ${pesoSrs} ELSE 0 END
         + ${prioridadeDisciplinaSql}
+        + CASE
+            WHEN la.acertou = false AND COALESCE(la.confidence, 0) >= 3
+              AND la.created_at > NOW() - INTERVAL '7 days'
+            THEN ${pesoHighConf}
+            WHEN pm.mastery_state = 'at_risk' THEN ROUND(${pesoHighConf} * 0.9)
+            WHEN COALESCE(pm.high_confidence_error_count, 0) > 0
+            THEN ROUND(${pesoHighConf} * LEAST(1.0, 0.5 + pm.high_confidence_error_count * 0.2))
+            ELSE 0
+          END
+        + CASE
+            WHEN pm.mastery_probability IS NOT NULL
+            THEN ROUND((1.0 - GREATEST(0.0, LEAST(1.0, pm.mastery_probability::float8))) * ${pesoMasteryGap})
+            ELSE 0
+          END
         + CASE WHEN la.question_id IS NULL THEN ${pesoSemTentativa} ELSE 0 END
         + CASE WHEN la.acertou = false THEN ${pesoErro} ELSE 0 END
         + CASE WHEN COALESCE(sc.stability, 0) >= 21 THEN ${penalidadeMaduro} ELSE 0 END
@@ -301,6 +354,29 @@ export async function buscarIdsPraticaPontuados(
         + ${boostDisciplinaMissaoSql}
         + ${boostTopicoSql}
         + ${boostCalibSql}
+        + CASE
+            WHEN q.assessment_pool = 'transfer' THEN ${pesoTransferPend}
+            WHEN pm.recall_score IS NOT NULL
+              AND pm.transfer_score IS NOT NULL
+              AND (pm.recall_score - pm.transfer_score) >= 0.2
+            THEN ROUND(LEAST(1.0, (pm.recall_score - pm.transfer_score)::float8) * ${pesoTransferPend})
+            WHEN pm.transfer_level IN ('T2', 'T3')
+              AND COALESCE(pm.transfer_score, 0) < 0.4
+              AND COALESCE(pm.recall_score, 0) >= 0.5
+            THEN ROUND(${pesoTransferPend} * 0.7)
+            ELSE 0
+          END
+        + CASE
+            WHEN sc.last_review IS NOT NULL AND COALESCE(sc.stability, 0) > 0
+            THEN ROUND(
+              (1.0 - POWER(
+                1.0 + ((19.0 / 81.0) * EXTRACT(EPOCH FROM (NOW() - sc.last_review)) / 86400.0)
+                  / NULLIF(sc.stability, 0),
+                -0.5
+              )) * ${pesoForget}
+            )
+            ELSE 0
+          END
         + CASE t.disciplina
             WHEN 'portugues' THEN ${pesoPort}
             WHEN 'informatica' THEN ${pesoInf}

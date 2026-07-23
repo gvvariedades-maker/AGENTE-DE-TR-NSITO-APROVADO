@@ -52,7 +52,11 @@
       "far_transfer": "Semirreboque com PBT de 4.000 kg — inciso VIII exige identificação de eixo apenas acima de 3.500 kg em rebocados, patamar distinto do automotor.",
       "o_que_nao_muda": "PBT ≥ 4.536 kg em automotor exige identificação de câmbio e eixo de tração; sobre o VIN só é admitida película de proteção original do fabricante.",
       "calibracao_corpus": "ok",
-      "eficacia_pos_aula": ["E1", "E2", "E3"]
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
     },
     "tags": [
       "resolucao_968",
@@ -76,7 +80,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito B (I e II). A isca é a III: película transparente sobre o VIN não é permitida — só proteção original do fabricante.",
-            "destaques": ["Gabarito B", "película", "VIN"]
+            "destaques": [
+              "Gabarito B",
+              "película",
+              "VIN"
+            ]
           }
         },
         {
@@ -85,9 +93,21 @@
           "tipo": "matriz_assertivas",
           "conteudo": {
             "itens": [
-              { "id": "I", "texto": "Identificação da caixa de câmbio — correta", "correto": true },
-              { "id": "II", "texto": "Identificação do eixo de tração — correta", "correto": true },
-              { "id": "III", "texto": "Película transparente permitida — ERRADA", "correto": false }
+              {
+                "id": "I",
+                "texto": "Identificação da caixa de câmbio — correta",
+                "correto": true
+              },
+              {
+                "id": "II",
+                "texto": "Identificação do eixo de tração — correta",
+                "correto": true
+              },
+              {
+                "id": "III",
+                "texto": "Película transparente permitida — ERRADA",
+                "correto": false
+              }
             ],
             "gabarito_resumo": "I e II corretas → alternativa B"
           }
@@ -98,7 +118,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PBT ≥ 4.536 = câmbio + eixo.\nPelícula no VIN = só do fabricante.",
-            "destaques": ["4.536", "câmbio", "fabricante"]
+            "destaques": [
+              "4.536",
+              "câmbio",
+              "fabricante"
+            ]
           }
         }
       ],
@@ -138,8 +162,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B (I e II corretas).\n\nA — marcou só I sobre câmbio; esqueceu II do eixo de tração com PBT ≥ 4.536 kg.\nC — comprou III falsa: película transparente sobre o VIN para proteção.\nD — tratou todas corretas, inclusive película sobre a gravação do VIN.\n\nPegadinha: transparente não basta — lei veda qualquer película, salvo a de proteção original do fabricante.",
-            "destaques": ["Gabarito B", "III", "transparente"]
+            "texto": "Gabarito B (I e II corretas). A — marcou só I sobre câmbio; esqueceu II do eixo de tração com PBT ≥ 4.536 kg.\nC — comprou III falsa: película transparente sobre o VIN para proteção.\nD — tratou todas corretas, inclusive película sobre a gravação do VIN. Pegadinha: transparente não basta — lei veda qualquer película, salvo a de proteção original do fabricante.",
+            "destaques": [
+              "Gabarito B",
+              "III",
+              "transparente"
+            ]
           }
         },
         {
@@ -148,7 +176,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PBT 4.536 KG: patamar que aciona identificadores adicionais no art. 4º para automotores.\n\nIDENTIFICAÇÃO DE CÂMBIO: inciso III — número gravado na caixa de câmbio quando existente.\n\nPELÍCULA SOBRE VIN: §7 do art. 5º — vedada, exceto proteção original do fabricante.",
-            "destaques": ["4.536", "CÂMBIO", "PELÍCULA"]
+            "destaques": [
+              "4.536",
+              "CÂMBIO",
+              "PELÍCULA"
+            ]
           }
         },
         {
@@ -158,11 +190,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Automotor com PBT ≥ 4.536 kg?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Exige câmbio + eixo de tração — I e II corretas", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Automotor com PBT ≥ 4.536 kg?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Exige câmbio + eixo de tração — I e II corretas",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim — caminhão 8.200 kg" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim — caminhão 8.200 kg"
+              }
             ]
           }
         },
@@ -173,9 +217,21 @@
           "tipo": "matriz_assertivas",
           "conteudo": {
             "itens": [
-              { "id": "I", "texto": "Identificação da caixa de câmbio — correta (inciso III)", "correto": true },
-              { "id": "II", "texto": "Identificação do eixo de tração — correta (inciso VII)", "correto": true },
-              { "id": "III", "texto": "Película transparente permitida — ERRADA (§7 veda)", "correto": false }
+              {
+                "id": "I",
+                "texto": "Identificação da caixa de câmbio — correta (inciso III)",
+                "correto": true
+              },
+              {
+                "id": "II",
+                "texto": "Identificação do eixo de tração — correta (inciso VII)",
+                "correto": true
+              },
+              {
+                "id": "III",
+                "texto": "Película transparente permitida — ERRADA (§7 veda)",
+                "correto": false
+              }
             ],
             "gabarito_resumo": "I e II corretas → alternativa B"
           }
@@ -186,7 +242,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a III afirma ✗", "O que o §7 diz ✓"],
+            "colunas": [
+              "O que a III afirma ✗",
+              "O que o §7 diz ✓"
+            ],
             "linhas": [
               [
                 "Película transparente permitida se não impedir visualização",
@@ -205,7 +264,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -228,7 +290,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Assertiva / fato", "V/F"],
+            "colunas": [
+              "Assertiva / fato",
+              "V/F"
+            ],
             "linhas": [
               [
                 "I — câmbio identificado em automotor PBT ≥ 4.536 kg",
@@ -255,11 +320,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Papel no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Papel no caso"
+            ],
             "linhas": [
-              ["Art. 4º, III", "Exige identificação da caixa de câmbio — assertiva I"],
-              ["Art. 4º, VII", "Exige identificação do eixo de tração — assertiva II"],
-              ["Art. 5º, §7", "Veda película sobre VIN — invalida assertiva III"]
+              [
+                "Art. 4º, III",
+                "Exige identificação da caixa de câmbio — assertiva I"
+              ],
+              [
+                "Art. 4º, VII",
+                "Exige identificação do eixo de tração — assertiva II"
+              ],
+              [
+                "Art. 5º, §7",
+                "Veda película sobre VIN — invalida assertiva III"
+              ]
             ]
           }
         },
@@ -312,7 +389,12 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PBT ≥ 4.536 = câmbio + eixo · película no VIN = só do fabricante.\nNear: caminhão 5.000 kg sem ID no eixo — mesma exigência do inciso VII.\nFar: semirreboque 4.000 kg — eixo de rebocado só acima de 3.500 kg (inciso VIII).\nNão muda: automotor ≥ 4.536 exige câmbio e eixo; VIN só admite película original do fabricante.\nCadeia: vizinho = §7 do art. 5º (vedação de película).",
-            "destaques": ["4.536", "câmbio", "fabricante", "3.500"]
+            "destaques": [
+              "4.536",
+              "câmbio",
+              "fabricante",
+              "3.500"
+            ]
           }
         }
       ],

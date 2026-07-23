@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Custódia de 6 h na PM após blitz sem flagrante. A banca oferece MS ou custódia administrativa — locomoção coercitiva pede habeas corpus.",
-            "destaques": ["custódia", "habeas corpus", "locomoção"]
+            "destaques": [
+              "custódia",
+              "habeas corpus",
+              "locomoção"
+            ]
           }
         },
         {
@@ -52,13 +56,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Há coação à liberdade de locomoção?", "tipo": "pergunta" },
-              { "id": "p2", "label": "A lesão é só direito líquido e certo sem locomoção?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Habeas corpus — LXVIII", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Há coação à liberdade de locomoção?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "A lesão é só direito líquido e certo sem locomoção?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Habeas corpus — LXVIII",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -67,10 +91,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["MS contra o auto na custódia", "HC quando a lesão é locomoção (LXIX exclui MS)"],
-              ["Blitz autoriza custódia de horas", "Prisão só com flagrante ou ordem judicial (LXI)"]
+              [
+                "MS contra o auto na custódia",
+                "HC quando a lesão é locomoção (LXIX exclui MS)"
+              ],
+              [
+                "Blitz autoriza custódia de horas",
+                "Prisão só com flagrante ou ordem judicial (LXI)"
+              ]
             ]
           }
         },
@@ -97,7 +130,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Locomoção coercitiva = HC. MS só sem HC/HD. Prisão = flagrante ou ordem judicial.",
-            "destaques": ["HC", "MS", "flagrante"]
+            "destaques": [
+              "HC",
+              "MS",
+              "flagrante"
+            ]
           }
         }
       ],
@@ -119,7 +156,11 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Custódia na PM após blitz pede HC — MS não substitui quando a lesão é locomoção",
-        "eixos_legais": ["CF_art5_LXVIII", "CF_art5_LXI", "CF_art5_LXIX"],
+        "eixos_legais": [
+          "CF_art5_LXVIII",
+          "CF_art5_LXI",
+          "CF_art5_LXIX"
+        ],
         "isca_por_alternativa": {
           "B": "mandado de segurança contra auto ainda com condutor sob custódia na PM",
           "C": "custódia de até 12 h legítima na fiscalização sem flagrante",
@@ -133,8 +174,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A (habeas corpus por coação à locomoção).\n\nB — mandado de segurança contra o auto: ignora custódia ilegal e troca HC por MS.\nC — custódia de 12 h na blitz: inventa exceção sem flagrante delito.\nD — HC perante órgão de trânsito da União: confunde competência do SNT com remédio constitucional.\n\nPromessa: escolher HC quando a lesão imediata é locomoção.",
-            "destaques": ["habeas corpus", "custódia", "locomoção"]
+            "texto": "Gabarito A (habeas corpus por coação à locomoção). B — mandado de segurança contra o auto: ignora custódia ilegal e troca HC por MS.\nC — custódia de 12 h na blitz: inventa exceção sem flagrante delito.\nD — HC perante órgão de trânsito da União: confunde competência do SNT com remédio constitucional. Promessa: escolher HC quando a lesão imediata é locomoção.",
+            "destaques": [
+              "habeas corpus",
+              "custódia",
+              "locomoção"
+            ]
           }
         },
         {
@@ -143,7 +188,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "HABEAS CORPUS: protege locomoção contra coação ilegal ou abuso de poder. MANDADO DE SEGURANÇA: direito líquido e certo não amparado por HC ou habeas data. CUSTÓDIA SEM FLAGRANTE: exige ordem judicial escrita — fiscalização de trânsito não autoriza prisão administrativa por horas.",
-            "destaques": ["habeas corpus", "mandado de segurança", "flagrante"]
+            "destaques": [
+              "habeas corpus",
+              "mandado de segurança",
+              "flagrante"
+            ]
           }
         },
         {
@@ -170,8 +219,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — custódia na PM" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — custódia na PM"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -181,16 +238,28 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Remédio", "Quando cabe"],
+            "titulo_colunas": [
+              "Remédio",
+              "Quando cabe"
+            ],
             "linhas": [
               {
                 "faixa": "Habeas corpus (LXVIII)",
                 "classificacao": "Coação ilegal à locomoção",
                 "destaque": true
               },
-              { "faixa": "Mandado de segurança (LXIX)", "classificacao": "Direito líquido e certo — sem HC/HD" },
-              { "faixa": "Habeas data (LXXII)", "classificacao": "Dados pessoais em registros públicos" },
-              { "faixa": "Mandado de injunção (LXXI)", "classificacao": "Falta de norma regulamentadora" }
+              {
+                "faixa": "Mandado de segurança (LXIX)",
+                "classificacao": "Direito líquido e certo — sem HC/HD"
+              },
+              {
+                "faixa": "Habeas data (LXXII)",
+                "classificacao": "Dados pessoais em registros públicos"
+              },
+              {
+                "faixa": "Mandado de injunção (LXXI)",
+                "classificacao": "Falta de norma regulamentadora"
+              }
             ]
           }
         },
@@ -200,7 +269,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Contestou auto → mandado de segurança basta",
@@ -219,7 +291,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — termo_unico",
@@ -242,12 +317,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Conclusão"],
+            "colunas": [
+              "Fato do enunciado",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Seis horas na base da PM sem flagrante nem ordem judicial", "Coação à locomoção — cabe HC (LXVIII)"],
-              ["Condutor contestou autuação da STTP", "Não autoriza custódia prolongada (C falsa)"],
-              ["Defesa busca remédio imediato", "HC, não MS contra o auto (B falsa)"],
-              ["Resultado", "Alternativa A"]
+              [
+                "Seis horas na base da PM sem flagrante nem ordem judicial",
+                "Coação à locomoção — cabe HC (LXVIII)"
+              ],
+              [
+                "Condutor contestou autuação da STTP",
+                "Não autoriza custódia prolongada (C falsa)"
+              ],
+              [
+                "Defesa busca remédio imediato",
+                "HC, não MS contra o auto (B falsa)"
+              ],
+              [
+                "Resultado",
+                "Alternativa A"
+              ]
             ]
           }
         },
@@ -257,12 +347,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Papel no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Papel no caso"
+            ],
             "linhas": [
-              ["Art. 5º, LXVIII", "Habeas corpus — coação à locomoção"],
-              ["Art. 5º, LXI", "Veda custódia sem flagrante ou ordem judicial"],
-              ["Art. 5º, LXIX", "MS excluído quando couber HC"],
-              ["Caso concreto", "Custódia na PM → HC + violação do LXI"]
+              [
+                "Art. 5º, LXVIII",
+                "Habeas corpus — coação à locomoção"
+              ],
+              [
+                "Art. 5º, LXI",
+                "Veda custódia sem flagrante ou ordem judicial"
+              ],
+              [
+                "Art. 5º, LXIX",
+                "MS excluído quando couber HC"
+              ],
+              [
+                "Caso concreto",
+                "Custódia na PM → HC + violação do LXI"
+              ]
             ]
           }
         },
@@ -326,8 +431,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Locomoção coercitiva = HC (LXVIII).\nMS só sem HC/HD (LXIX).\nPrisão = flagrante ou ordem judicial (LXI).\n\nNear-transfer: se o condutor apenas recebesse multa e seguisse viagem, sem custódia, a discussão do auto poderia ser MS — mas retenção na PM muda o remédio para habeas corpus.",
-            "destaques": ["HC", "MS", "LXI"]
+            "texto": "Locomoção coercitiva = HC (LXVIII).\nMS só sem HC/HD (LXIX).\nPrisão = flagrante ou ordem judicial (LXI).\n\nNear-transfer: se o condutor apenas recebesse multa e seguisse viagem, sem custódia, a discussão do auto poderia ser MS — mas retenção na PM muda o remédio para habeas corpus.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "HC",
+              "MS",
+              "LXI"
+            ]
           }
         }
       ],
@@ -348,6 +457,17 @@
       "remedios_constitucionais",
       "locomocao",
       "blitz"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se o condutor apenas recebesse multa e seguisse viagem, sem custódia, a discussão do auto poderia ser MS — mas retenção na PM muda o remédio para habeas corpus.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Locomoção coercitiva = HC (LXVIII). MS só se não couber HC/HD (LXIX). Prisão = flagrante ou ordem judicial (LXI).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

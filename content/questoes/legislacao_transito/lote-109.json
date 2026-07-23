@@ -46,7 +46,16 @@
       "eixos_mecanismo": [
         "competencia_snt",
         "regra_excecao"
-      ]
+      ],
+      "near_transfer": "baixa de registro de veículo irrecuperável (art. 240) também está no rol privativo do §2 — não é da STTP municipal.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Cadastro/registro (241) = DETRAN privativo (22, §2) · circulação municipal = STTP (24, VI).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     },
     "tags": [
       "competencia_snt",
@@ -68,7 +77,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito D: cadastro de registro é competência privativa do DETRAN — STTP não autua cadastro.",
-            "destaques": ["Gabarito D", "cadastro", "DETRAN"]
+            "destaques": [
+              "Gabarito D",
+              "cadastro",
+              "DETRAN"
+            ]
           }
         },
         {
@@ -77,11 +90,23 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "detran", "label": "DETRAN-PB — autua art. 241", "nivel": 1 },
-              { "id": "sttp", "label": "STTP — circulação municipal", "nivel": 2 }
+              {
+                "id": "detran",
+                "label": "DETRAN-PB — autua art. 241",
+                "nivel": 1
+              },
+              {
+                "id": "sttp",
+                "label": "STTP — circulação municipal",
+                "nivel": 2
+              }
             ],
             "arestas": [
-              { "de": "detran", "para": "sttp", "rotulo": "exclusivo no cadastro" }
+              {
+                "de": "detran",
+                "para": "sttp",
+                "rotulo": "exclusivo no cadastro"
+              }
             ]
           }
         },
@@ -91,7 +116,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Cadastro/registro = DETRAN privativo.\nCirculação municipal = STTP.",
-            "destaques": ["DETRAN", "STTP"]
+            "destaques": [
+              "DETRAN",
+              "STTP"
+            ]
           }
         }
       ],
@@ -131,8 +159,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D.\n\nA — competência ampla da STTP pelo poder de polícia em vias municipais alcança cadastro de registro.\nB — CONTRAN lavra auto de infração ligada a cadastro de registro.\nC — STTP e DETRAN autuam concomitantemente cadastro sem exclusividade estadual.\n\nPegadinha: cadastro de registro é competência privativa do DETRAN — não se estende pela competência municipal de circulação.",
-            "destaques": ["Gabarito D", "cadastro de registro", "blitz documental"]
+            "texto": "Gabarito D. A — competência ampla da STTP pelo poder de polícia em vias municipais alcança cadastro de registro.\nB — CONTRAN lavra auto de infração ligada a cadastro de registro.\nC — STTP e DETRAN autuam concomitantemente cadastro sem exclusividade estadual. Pegadinha: cadastro de registro é competência privativa do DETRAN — não se estende pela competência municipal de circulação.",
+            "destaques": [
+              "Gabarito D",
+              "cadastro de registro",
+              "blitz documental"
+            ]
           }
         },
         {
@@ -141,7 +173,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "STTP: órgão executivo municipal de Campina Grande — fiscaliza circulação, estacionamento e parada.\n\nDETRAN-PB: órgão executivo estadual — registro, habilitação e infrações de competência privativa.\n\nCONTRAN: normatiza o SNT — não substitui executivo na autuação de cadastro.",
-            "destaques": ["STTP", "DETRAN-PB", "CONTRAN"]
+            "destaques": [
+              "STTP",
+              "DETRAN-PB",
+              "CONTRAN"
+            ]
           }
         },
         {
@@ -151,13 +187,33 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "detran", "label": "DETRAN-PB — privativo art. 241", "nivel": 1 },
-              { "id": "sttp", "label": "STTP — circulação municipal", "nivel": 2 },
-              { "id": "contran", "label": "CONTRAN — normatiza SNT", "nivel": 0 }
+              {
+                "id": "detran",
+                "label": "DETRAN-PB — privativo art. 241",
+                "nivel": 1
+              },
+              {
+                "id": "sttp",
+                "label": "STTP — circulação municipal",
+                "nivel": 2
+              },
+              {
+                "id": "contran",
+                "label": "CONTRAN — normatiza SNT",
+                "nivel": 0
+              }
             ],
             "arestas": [
-              { "de": "detran", "para": "sttp", "rotulo": "exclusivo no cadastro" },
-              { "de": "contran", "para": "detran", "rotulo": "normas gerais" }
+              {
+                "de": "detran",
+                "para": "sttp",
+                "rotulo": "exclusivo no cadastro"
+              },
+              {
+                "de": "contran",
+                "para": "detran",
+                "rotulo": "normas gerais"
+              }
             ]
           }
         },
@@ -167,14 +223,17 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
               [
                 "STTP autua qualquer infração em via municipal",
                 "Art. 22, §2, reserva art. 241 ao DETRAN estadual"
               ],
               [
-                "CONTRAN lavra auto de cadastro",
+                "Auto de cadastro é lavrado pelo órgão federal normatizador",
                 "CONTRAN normatiza — executivo estadual autua"
               ]
             ]
@@ -186,7 +245,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — competencia_snt",
@@ -209,7 +271,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso", "Consequência"],
+            "colunas": [
+              "Fato do caso",
+              "Consequência"
+            ],
             "linhas": [
               [
                 "Blitz documental da STTP em Campina Grande",
@@ -236,7 +301,10 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Infração / tema", "Órgão competente"],
+            "colunas": [
+              "Infração / tema",
+              "Órgão competente"
+            ],
             "linhas": [
               [
                 "Circulação, estacionamento, parada",
@@ -295,8 +363,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Cadastro/registro (241) = DETRAN privativo (22, §2).\nCirculação municipal = STTP (24, VI).\n\nNear-transfer: baixa de registro de veículo irrecuperável (art. 240) também está no rol privativo do §2 — não é da STTP municipal.",
-            "destaques": ["DETRAN privativo", "STTP", "art. 240"]
+            "texto": "Cadastro/registro (241) = DETRAN privativo (22, §2).\nCirculação municipal = STTP (24, VI).\n\nNear-transfer: baixa de registro de veículo irrecuperável (art. 240) também está no rol privativo do §2 — não é da STTP municipal.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "DETRAN privativo",
+              "STTP",
+              "art. 240"
+            ]
           }
         }
       ],

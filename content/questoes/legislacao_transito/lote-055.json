@@ -158,7 +158,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — dois AITs: MBFT veda estacionamento + documento sem condução constatada.\nC — só licenciamento: ignora regra do exemplo 181,I + 230,V.\nD — nenhum AIT: estacionamento na esquina dispensa prova de condução.\n\nVeículo na esquina, CRLV vencido, sem condutor.",
+            "texto": "Gabarito B. A — dois AITs: MBFT veda estacionamento + documento sem condução constatada.\nC — só licenciamento: ignora regra do exemplo 181,I + 230,V.\nD — nenhum AIT: estacionamento na esquina dispensa prova de condução. Veículo na esquina, CRLV vencido, sem condutor.",
             "destaques": [
               "Gabarito B",
               "não simultâneas",
@@ -363,12 +363,14 @@
               {
                 "inicio": 90,
                 "fim": 141,
-                "motivo": "contraste — veículo parado sem condução"
+                "motivo": "contraste — veículo parado sem condução",
+                "texto_grifado": "sem que tenha sido constatada a condução do veículo"
               },
               {
                 "inicio": 155,
                 "fim": 197,
-                "motivo": "caso — gabarito B no exemplo canônico"
+                "motivo": "caso — gabarito B no exemplo canônico",
+                "texto_grifado": "autuar apenas pela infração do art. 181, I"
               }
             ]
           }
@@ -385,7 +387,8 @@
               {
                 "inicio": 160,
                 "fim": 187,
-                "motivo": "mapa — licenciamento exige condução para coexistir"
+                "motivo": "mapa — licenciamento exige condução para coexistir",
+                "texto_grifado": "veículo esteja em movimento"
               }
             ]
           }
@@ -396,7 +399,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "ESTACIONADO≠CONDUZIDO · sem condução = só estacionamento · 181,I no exemplo.\n\nNear-transfer: veículo estacionado em local proibido por placa e sem cinto visível no banco — sem condução constatada, MBFT: autua só o estacionamento.",
+            "texto": "ESTACIONADO≠CONDUZIDO · sem condução = só estacionamento · 181,I no exemplo.\n\nNear-transfer: veículo estacionado em local proibido por placa e sem cinto visível no banco — sem condução constatada, MBFT: autua só o estacionamento.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "ESTACIONADO",
               "Near-transfer",
@@ -410,6 +413,22 @@
           "rotulo": "MBFT — Seção 7",
           "path": "conteúdo/resoluções CONTRAN/MBFT-anexo-resolucao-985-2022-secao-07-autuacao.txt"
         }
+      ]
+    },
+    "meta": {
+      "near_transfer": "veículo estacionado em local proibido por placa e sem cinto visível no banco — sem condução constatada, MBFT: autua só o estacionamento.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "ESTACIONADO≠CONDUZIDO · sem condução = só estacionamento · 181,I no exemplo.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "gravidade",
+        "regra_excecao",
+        "termo_unico"
       ]
     }
   }

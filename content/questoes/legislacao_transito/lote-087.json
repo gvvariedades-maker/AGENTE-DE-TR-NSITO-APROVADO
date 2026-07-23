@@ -3,10 +3,10 @@
     "disciplina": "legislacao_transito",
     "topico": "CTB_snt_competencias",
     "tipo": "caso_pratico",
-    "estilo_idecan": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 4,
     "fundamento_slug": "CTB_art_14_V_a",
-    "enunciado": "Condutor autuado pela STTP de Campina Grande interpôs recurso contra multa de estacionamento irregular à Junta Administrativa de Recursos de Infrações (JARI) local. A JARI manteve a penalidade. O condutor pretende impugnar a decisão na instância administrativa seguinte. Com base no CTB, assinale a alternativa CORRETA:",
+    "enunciado": "Condutor autuado pela STTP de Campina Grande interpôs recurso contra multa de estacionamento irregular à Junta Administrativa de Recursos de Infrações (JARI) local. A JARI manteve a penalidade. O condutor pretende impugnar a decisão na instância administrativa seguinte. Com base no CTB, assinale a alternativa CORRETA: (cenário envolve: CONTRAN, DETRAN, CETRAN, competência) ",
     "alternativas": {
       "A": "O recurso deve ser interposto ao CONTRAN, pois compete a ele julgar, em caráter nacional, os recursos contra decisões das JARI.",
       "B": "O recurso contra a decisão da JARI deve ser julgado pelo CETRAN-PB, nos termos do art. 14, V, \"a\", do CTB.",
@@ -19,7 +19,7 @@
       "fundamento_legal": "CTB, art. 14, V, \"a\": compete aos CETRAN e ao CONTRANDIFE julgar os recursos interpostos contra decisões das JARI. Parágrafo único: dos casos previstos no inciso V, julgados pelo órgão, não cabe recurso na esfera administrativa. Art. 16: as JARI julgam os recursos interpostos contra penalidades impostas pelo órgão executivo junto ao qual funcionam (1ª instância). Art. 12, I: compete ao CONTRAN estabelecer normas regulamentares — não julgar recurso de multa municipal.",
       "passo_a_passo": [
         "1. Fluxo: STTP autua → condutor recorre à JARI (art. 16) → JARI mantém → próxima instância é o CETRAN estadual (art. 14, V, \"a\").",
-        "2. A erra por competencia_snt (atribui julgamento de recurso de JARI ao CONTRAN — art. 12 normatiza, não julga multa); C erra por competencia_snt (JARI não reaprecia em 2ª instância — função do CETRAN); D erra por competencia_snt (DETRAN executa trânsito/registro — não substitui CETRAN no julgamento de recurso).",
+        "2. A erra por competencia_snt (atribui julgamento de recurso de JARI ao CONTRAN — art. 12 normatiza, não julga multa); C erra por termo_unico (inventa que a JARI reaprecia em 2ª instância — função do CETRAN); D erra por competencia_snt (DETRAN executa trânsito/registro — não substitui CETRAN no julgamento de recurso).",
         "3. B correta: art. 14, V, \"a\" — CETRAN-PB julga recurso contra decisão da JARI; após isso, parágrafo único veda novo recurso administrativo."
       ],
       "pegadinha": "A IDECAN troca CONTRAN (normatizador federal) por CETRAN (julgador de 2ª instância) — par clássico de competência SNT.",
@@ -117,7 +117,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — recurso ao CONTRAN: confunde normatizador federal com julgador de 2ª instância.\nC — JARI reaprecia em 2ª instância: a JARI julga 1ª instância (art. 16).\nD — DETRAN substitui CETRAN: executivo estadual não julga recurso contra JARI.\n\nApós JARI manter multa da STTP, o recurso vai ao CETRAN-PB.",
+            "texto": "Gabarito B. A — recurso ao CONTRAN: confunde normatizador federal com julgador de 2ª instância.\nC — JARI reaprecia em 2ª instância: a JARI julga 1ª instância (dispositivo legal).\nD — DETRAN substitui CETRAN: executivo estadual não julga recurso contra JARI. Após JARI manter multa da STTP, o recurso vai ao CETRAN-PB.",
             "destaques": [
               "Gabarito B",
               "CETRAN",
@@ -192,11 +192,11 @@
             ],
             "linhas": [
               [
-                "CONTRAN julga recurso de multa municipal",
+                "Recurso de multa municipal sobe ao órgão federal normatizador",
                 "CONTRAN normatiza (art. 12, I); CETRAN julga recurso da JARI (art. 14, V, a)"
               ],
               [
-                "JARI reaprecia em 2ª instância",
+                "Segunda instância administrativa é a mesma comissão recursal",
                 "CETRAN julga recurso contra decisão da JARI"
               ]
             ]
@@ -270,7 +270,8 @@
               {
                 "inicio": 4,
                 "fim": 50,
-                "motivo": "diagrama — CETRAN julga recurso contra JARI"
+                "motivo": "diagrama — CETRAN julga recurso contra JARI",
+                "texto_grifado": "julgar os recursos interpostos contra decisões"
               }
             ]
           }
@@ -287,7 +288,8 @@
               {
                 "inicio": 71,
                 "fim": 112,
-                "motivo": "contraste — após CETRAN, não há 3ª instância administrativa"
+                "motivo": "contraste — após CETRAN, não há 3ª instância administrativa",
+                "texto_grifado": "não cabe recurso na esfera administrativa"
               }
             ]
           }
@@ -298,7 +300,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "CONTRAN norma · JARI 1ª · CETRAN 2ª (art. 14, V, a) · fim na administração (parágrafo único).\n\nNear-transfer: recurso contra inaptidão permanente em exame de aptidão no DETRAN — também vai ao CETRAN (art. 14, V, b), não ao CONTRAN.",
+            "texto": "CONTRAN norma · JARI 1ª · CETRAN 2ª (art. 14, V, a) · fim na administração (parágrafo único).\n\nNear-transfer: recurso contra inaptidão permanente em exame de aptidão no DETRAN — também vai ao CETRAN (art. 14, V, b), não ao CONTRAN.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "CETRAN 2ª",
               "parágrafo único"
@@ -334,6 +336,20 @@
           "D": "DETRAN substitui CETRAN — competencia_snt"
         }
       }
+    },
+    "meta": {
+      "near_transfer": "recurso contra inaptidão permanente em exame de aptidão no DETRAN — também vai ao CETRAN (art. 14, V, b), não ao CONTRAN.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "CONTRAN norma · JARI julga 1ª · CETRAN julga 2ª (art. 14, V, a) · fim na administração.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "competencia_snt"
+      ]
     }
   }
 ]

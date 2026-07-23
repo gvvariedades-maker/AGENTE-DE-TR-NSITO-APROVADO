@@ -50,7 +50,11 @@
       "far_transfer": "Entulho na calçada não removível — art. 94 exige sinalização imediata pelo responsável pelo obstáculo.",
       "o_que_nao_muda": "Executor da obra ou evento deve sinalizar — §1º do art. 95; permissão prévia não desloca esse dever.",
       "calibracao_corpus": "ok",
-      "eficacia_pos_aula": ["E1", "E2", "E3"]
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
     },
     "tags": [
       "engenharia_transito",
@@ -73,7 +77,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito B: empreiteira sinaliza a obra — permissão da STTP não transfere o dever do §1º.",
-            "destaques": ["Gabarito B", "empreiteira", "STTP"]
+            "destaques": [
+              "Gabarito B",
+              "empreiteira",
+              "STTP"
+            ]
           }
         },
         {
@@ -82,11 +90,23 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "sttp", "label": "STTP — permissão prévia", "nivel": 2 },
-              { "id": "emp", "label": "Empreiteira — sinalizar obra", "nivel": 1 }
+              {
+                "id": "sttp",
+                "label": "STTP — permissão prévia",
+                "nivel": 2
+              },
+              {
+                "id": "emp",
+                "label": "Empreiteira — sinalizar obra",
+                "nivel": 1
+              }
             ],
             "arestas": [
-              { "de": "sttp", "para": "emp", "rotulo": "autoriza ≠ sinaliza" }
+              {
+                "de": "sttp",
+                "para": "emp",
+                "rotulo": "autoriza ≠ sinaliza"
+              }
             ]
           }
         },
@@ -96,7 +116,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "STTP AUTORIZA · EMPREITEIRA SINALIZA.",
-            "destaques": ["AUTORIZA", "SINALIZA"]
+            "destaques": [
+              "AUTORIZA",
+              "SINALIZA"
+            ]
           }
         }
       ],
@@ -122,8 +145,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — STTP sinaliza porque tem circunscrição: confunde autorizar com sinalizar.\nC — PM sinaliza obra em via municipal: policiamento não inclui sinalização.\nD — aviso de 48h dispensa sinalização física: comunicação não substitui dispositivos no trecho.\n\nPegadinha: executor da obra deve sinalizar — permissão não desloca dever à STTP.",
-            "destaques": ["Gabarito B", "empreiteira", "48h"]
+            "texto": "Gabarito B. A — STTP sinaliza porque tem circunscrição: confunde autorizar com sinalizar.\nC — PM sinaliza obra em via municipal: policiamento não inclui sinalização.\nD — aviso de 48h dispensa sinalização física: comunicação não substitui dispositivos no trecho. Pegadinha: executor da obra deve sinalizar — permissão não desloca dever à STTP.",
+            "destaques": [
+              "Gabarito B",
+              "empreiteira",
+              "48h"
+            ]
           }
         },
         {
@@ -132,7 +159,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "STTP: concede permissão prévia e publica aviso de 48h com rotas — não sinaliza a obra.\n\nEMPREITEIRA: executa a intervenção e deve sinalizar o trecho conforme o §1º.\n\nPM-PB: policiamento ostensivo — apoio operacional, sem sinalizar obra.",
-            "destaques": ["STTP", "EMPREITEIRA", "PM-PB"]
+            "destaques": [
+              "STTP",
+              "EMPREITEIRA",
+              "PM-PB"
+            ]
           }
         },
         {
@@ -142,13 +173,33 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "sttp", "label": "STTP — permissão + aviso 48h", "nivel": 2 },
-              { "id": "emp", "label": "Empreiteira — sinalizar obra", "nivel": 1 },
-              { "id": "pm", "label": "PM-PB — policiamento ostensivo", "nivel": 1 }
+              {
+                "id": "sttp",
+                "label": "STTP — permissão + aviso 48h",
+                "nivel": 2
+              },
+              {
+                "id": "emp",
+                "label": "Empreiteira — sinalizar obra",
+                "nivel": 1
+              },
+              {
+                "id": "pm",
+                "label": "PM-PB — policiamento ostensivo",
+                "nivel": 1
+              }
             ],
             "arestas": [
-              { "de": "sttp", "para": "emp", "rotulo": "autoriza ≠ sinaliza" },
-              { "de": "pm", "para": "emp", "rotulo": "apoio ≠ sinalização" }
+              {
+                "de": "sttp",
+                "para": "emp",
+                "rotulo": "autoriza ≠ sinaliza"
+              },
+              {
+                "de": "pm",
+                "para": "emp",
+                "rotulo": "apoio ≠ sinalização"
+              }
             ]
           }
         },
@@ -158,7 +209,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a empreiteira pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que a empreiteira pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Circunscrição da STTP inclui sinalizar a obra",
@@ -177,7 +231,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — competencia_snt",
@@ -200,13 +257,31 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Elemento", "Conclusão"],
+            "colunas": [
+              "Elemento",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Obra de rede na Av. Assis Chateaubriand", "Intervenção com permissão prévia"],
-              ["STTP concedeu permissão e aviso de 48h", "Atos da autoridade de trânsito"],
-              ["Faixa interditada sem sinalização", "Violação do §1º"],
-              ["Empreiteira atribui dever à STTP", "Confunde papéis — gabarito B"],
-              ["Resultado", "Alternativa B"]
+              [
+                "Obra de rede na Av. Assis Chateaubriand",
+                "Intervenção com permissão prévia"
+              ],
+              [
+                "STTP concedeu permissão e aviso de 48h",
+                "Atos da autoridade de trânsito"
+              ],
+              [
+                "Faixa interditada sem sinalização",
+                "Violação do §1º"
+              ],
+              [
+                "Empreiteira atribui dever à STTP",
+                "Confunde papéis — gabarito B"
+              ],
+              [
+                "Resultado",
+                "Alternativa B"
+              ]
             ]
           }
         },
@@ -216,12 +291,27 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Ator", "Função na obra"],
+            "colunas": [
+              "Ator",
+              "Função na obra"
+            ],
             "linhas": [
-              ["STTP", "Permissão prévia + aviso de 48h com rotas"],
-              ["Empreiteira", "Executar e sinalizar o trecho — §1º"],
-              ["PM-PB", "Policiamento ostensivo — sem sinalização"],
-              ["Aviso radiofônico", "Não substitui dispositivos físicos"]
+              [
+                "STTP",
+                "Permissão prévia + aviso de 48h com rotas"
+              ],
+              [
+                "Empreiteira",
+                "Executar e sinalizar o trecho — §1º"
+              ],
+              [
+                "PM-PB",
+                "Policiamento ostensivo — sem sinalização"
+              ],
+              [
+                "Aviso radiofônico",
+                "Não substitui dispositivos físicos"
+              ]
             ]
           }
         },
@@ -268,7 +358,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "STTP AUTORIZA · §2º = 48h COM ROTAS · §1º = EMPREITEIRA SINALIZA.\nNear: desfile autorizado — organizador sinaliza, não a STTP.\nFar: entulho na calçada — sinalização imediata pelo responsável pelo obstáculo.\nNão muda: executor da obra deve sinalizar — permissão não desloca o dever.\nCadeia: vizinho = art. 94 (obstáculo não removível).",
-            "destaques": ["EMPREITEIRA", "48h", "art. 94"]
+            "destaques": [
+              "EMPREITEIRA",
+              "48h",
+              "art. 94"
+            ]
           }
         }
       ],

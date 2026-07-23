@@ -44,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Operador privado não substitui o controlador nos pedidos do titular — confirmação simplificada é imediata, não cabe o prazo de 15 dias do acesso completo.",
-            "destaques": ["controlador", "imediato", "simplificado"]
+            "destaques": [
+              "controlador",
+              "imediato",
+              "simplificado"
+            ]
           }
         },
         {
@@ -53,10 +57,24 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Pedido em formato simplificado?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Resposta imediata — controlador responde", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Pedido em formato simplificado?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Resposta imediata — controlador responde",
+                "tipo": "resultado"
+              }
             ],
-            "arestas": [{ "de": "p1", "para": "r1", "rotulo": "Sim" }]
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
           }
         },
         {
@@ -64,7 +82,10 @@
           "titulo": "Operador × controlador",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
               [
                 "Pedidos do art. 18 só ao operador privado",
@@ -79,7 +100,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Simplificado = imediato (art. 19, I); completo = 15 dias (art. 19, II). Titular → controlador.",
-            "destaques": ["imediato", "15 dias", "controlador"]
+            "destaques": [
+              "imediato",
+              "15 dias",
+              "controlador"
+            ]
           }
         }
       ],
@@ -101,7 +126,11 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Operador privado ou prazo de 15 dias induzem negar resposta imediata na confirmação simplificada",
-        "eixos_legais": ["LGPD_art18", "LGPD_art19_I", "LGPD_art19_II"],
+        "eixos_legais": [
+          "LGPD_art18",
+          "LGPD_art19_I",
+          "LGPD_art19_II"
+        ],
         "isca_por_alternativa": {
           "B": "pedidos do art. 18 exclusivamente ao operador privado",
           "C": "prazo de 15 dias vale também para confirmação simplificada",
@@ -115,8 +144,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A.\n\nB — pedidos só ao operador: inverte controlador e operador nos direitos do titular.\nC — 15 dias para tudo: estende o prazo do acesso completo à confirmação simplificada.\nD — portabilidade verbal automática: ignora requisição expressa e regulamentação da ANPD.\n\nA isca é o operador privado ou o prazo de quinze dias empurrarem resposta tardia na confirmação simples.",
-            "destaques": ["Gabarito A", "imediato", "controlador"]
+            "texto": "Gabarito A. B — pedidos só ao operador: inverte controlador e operador nos direitos do titular.\nC — 15 dias para tudo: estende o prazo do acesso completo à confirmação simplificada.\nD — portabilidade verbal automática: ignora requisição expressa e regulamentação da ANPD. A isca é o operador privado ou o prazo de quinze dias empurrarem resposta tardia na confirmação simples.",
+            "destaques": [
+              "Gabarito A",
+              "imediato",
+              "controlador"
+            ]
           }
         },
         {
@@ -125,7 +158,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "TITULAR: pessoa natural a quem se referem os dados pessoais — art. 5º, V.\n\nCONTROLADOR: quem decide e responde aos direitos do titular — art. 5º, VI e art. 18.\n\nCONFIRMAÇÃO SIMPLIFICADA: resposta imediata sobre existência de tratamento — art. 19, I.",
-            "destaques": ["TITULAR", "CONTROLADOR", "SIMPLIFICADA"]
+            "destaques": [
+              "TITULAR",
+              "CONTROLADOR",
+              "SIMPLIFICADA"
+            ]
           }
         },
         {
@@ -152,8 +189,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -163,11 +208,23 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Tipo de resposta", "Prazo legal"],
+            "colunas": [
+              "Tipo de resposta",
+              "Prazo legal"
+            ],
             "linhas": [
-              ["Confirmação em formato simplificado (inciso I)", "Imediatamente"],
-              ["Declaração clara e completa (inciso II)", "Até 15 dias do requerimento"],
-              ["Portabilidade (art. 18, V)", "Requisição expressa + regulamentação ANPD"]
+              [
+                "Confirmação em formato simplificado (inciso I)",
+                "Imediatamente"
+              ],
+              [
+                "Declaração clara e completa (inciso II)",
+                "Até 15 dias do requerimento"
+              ],
+              [
+                "Portabilidade (art. 18, V)",
+                "Requisição expressa + regulamentação ANPD"
+              ]
             ]
           }
         },
@@ -177,7 +234,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Operador privado recebe todos os pedidos do titular",
@@ -196,7 +256,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — termo_unico",
@@ -219,12 +282,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Enquadramento legal"],
+            "colunas": [
+              "Fato do enunciado",
+              "Enquadramento legal"
+            ],
             "linhas": [
-              ["Pedido de confirmação simplificada nas autuações", "Art. 19, I — resposta imediata"],
-              ["Ouvidoria encaminha só à empresa operadora", "Errado — titular exerce direitos perante controlador"],
-              ["Jurídico aplica 15 dias à confirmação simples", "Confunde inciso II com inciso I"],
-              ["Resultado", "Gabarito A — STTP responde imediatamente"]
+              [
+                "Pedido de confirmação simplificada nas autuações",
+                "Art. 19, I — resposta imediata"
+              ],
+              [
+                "Ouvidoria encaminha só à empresa operadora",
+                "Errado — titular exerce direitos perante controlador"
+              ],
+              [
+                "Jurídico aplica 15 dias à confirmação simples",
+                "Confunde inciso II com inciso I"
+              ],
+              [
+                "Resultado",
+                "Gabarito A — STTP responde imediatamente"
+              ]
             ]
           }
         },
@@ -234,11 +312,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Mensagem"],
+            "colunas": [
+              "Dispositivo",
+              "Mensagem"
+            ],
             "linhas": [
-              ["Art. 18, caput", "Titular obtém direitos do controlador"],
-              ["Art. 19, I", "Confirmação simplificada — imediatamente"],
-              ["Art. 19, II", "Declaração completa — até 15 dias"]
+              [
+                "Art. 18, caput",
+                "Titular obtém direitos do controlador"
+              ],
+              [
+                "Art. 19, I",
+                "Confirmação simplificada — imediatamente"
+              ],
+              [
+                "Art. 19, II",
+                "Declaração completa — até 15 dias"
+              ]
             ]
           }
         },
@@ -290,8 +380,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Simplificado = imediato (art. 19, I); completo = 15 dias (art. 19, II). Titular fala com controlador (art. 18) — operador não substitui.\n\nNear-transfer: se o condutor pedir declaração completa com origem e finalidade do tratamento, a STTP pode levar até 15 dias — mas confirmação simples continua imediata.",
-            "destaques": ["imediato", "Near-transfer", "controlador"]
+            "texto": "Simplificado = imediato (art. 19, I); completo = 15 dias (art. 19, II). Titular fala com controlador (art. 18) — operador não substitui.\n\nNear-transfer: se o condutor pedir declaração completa com origem e finalidade do tratamento, a STTP pode levar até 15 dias — mas confirmação simples continua imediata.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "imediato",
+              "Near-transfer",
+              "controlador"
+            ]
           }
         }
       ],
@@ -309,6 +403,17 @@
       "direitos_titular",
       "prazos",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se o condutor pedir declaração completa com origem e finalidade do tratamento, a STTP pode levar até 15 dias — mas confirmação simples continua imediata.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Simplificado = imediato (art. 19, I); completo = 15 dias (art. 19, II). Titular fala com controlador (art. 18) — operador não substitui.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

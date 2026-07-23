@@ -44,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Documento parcialmente sigiloso exige acesso à parte pública — negativa integral é indevida. Recurso do interessado: 10 dias.",
-            "destaques": ["parcial", "parte pública", "10 dias"]
+            "destaques": [
+              "parcial",
+              "parte pública",
+              "10 dias"
+            ]
           }
         },
         {
@@ -53,10 +57,24 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Há trecho sigiloso e trecho público?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Fornecer parte não sigilosa — não negar tudo", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Há trecho sigiloso e trecho público?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Fornecer parte não sigilosa — não negar tudo",
+                "tipo": "resultado"
+              }
             ],
-            "arestas": [{ "de": "p1", "para": "r1", "rotulo": "Sim" }]
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
           }
         },
         {
@@ -64,9 +82,15 @@
           "titulo": "Negativa total × extrato",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["Qualquer sigilo veta o pedido inteiro", "Certidão ou extrato da parte não sigilosa"]
+              [
+                "Qualquer sigilo veta o pedido inteiro",
+                "Certidão ou extrato da parte não sigilosa"
+              ]
             ]
           }
         },
@@ -76,7 +100,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Sigilo parcial ≠ negativa total. Recurso do cidadão = 10 dias.",
-            "destaques": ["parcial", "10 dias", "extrato"]
+            "destaques": [
+              "parcial",
+              "10 dias",
+              "extrato"
+            ]
           }
         }
       ],
@@ -98,7 +126,11 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Trecho sigiloso induz negativa integral — §2 garante extrato da parte pública",
-        "eixos_legais": ["LAI_art3_I", "LAI_art7_par2", "LAI_art15"],
+        "eixos_legais": [
+          "LAI_art3_I",
+          "LAI_art7_par2",
+          "LAI_art15"
+        ],
         "isca_por_alternativa": {
           "A": "trecho sigiloso autoriza negar o pedido por completo",
           "B": "transparência ativa exige divulgar tudo sem ocultar",
@@ -112,8 +144,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D.\n\nA — negativa integral por trecho sigiloso: ignora acesso à parte não sigilosa.\nB — divulgar tudo no site sem ocultar: confunde transparência ativa com sigilo parcial.\nC — recurso em 5 dias: troca prazo do interessado pelo da autoridade superior.\n\nA isca é o anexo sigiloso empurrar para recusa total do relatório.",
-            "destaques": ["Gabarito D", "parcial", "10 dias"]
+            "texto": "Gabarito D. A — negativa integral por trecho sigiloso: ignora acesso à parte não sigilosa.\nB — divulgar tudo no site sem ocultar: confunde transparência ativa com sigilo parcial.\nC — recurso em 5 dias: troca prazo do interessado pelo da autoridade superior. A isca é o anexo sigiloso empurrar para recusa total do relatório.",
+            "destaques": [
+              "Gabarito D",
+              "parcial",
+              "10 dias"
+            ]
           }
         },
         {
@@ -122,7 +158,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "ACESSO PASSIVO: pedido do cidadão por informação — capítulo II da LAI.\n\nSIGILO PARCIAL: documento com trecho público e trecho classificado — não autoriza negativa integral.\n\nRECURSO DO INTERESSADO: manifestação contra indeferimento — prazo de 10 dias da ciência.",
-            "destaques": ["PASSIVO", "PARCIAL", "10 dias"]
+            "destaques": [
+              "PASSIVO",
+              "PARCIAL",
+              "10 dias"
+            ]
           }
         },
         {
@@ -149,8 +189,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -160,11 +208,23 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Situação", "Dever do órgão"],
+            "colunas": [
+              "Situação",
+              "Dever do órgão"
+            ],
             "linhas": [
-              ["Informação totalmente pública", "Fornecer acesso integral"],
-              ["Parcialmente sigilosa (caso)", "Certidão, extrato ou cópia redigida"],
-              ["Integralmente sigilosa e classificada", "Negar com fundamentação — exceção"]
+              [
+                "Informação totalmente pública",
+                "Fornecer acesso integral"
+              ],
+              [
+                "Parcialmente sigilosa (caso)",
+                "Certidão, extrato ou cópia redigida"
+              ],
+              [
+                "Integralmente sigilosa e classificada",
+                "Negar com fundamentação — exceção"
+              ]
             ]
           }
         },
@@ -174,7 +234,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Trecho sigiloso contamina o documento inteiro",
@@ -193,7 +256,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -216,12 +282,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Enquadramento"],
+            "colunas": [
+              "Fato do enunciado",
+              "Enquadramento"
+            ],
             "linhas": [
-              ["Estatísticas agregadas no relatório", "Parte não sigilosa — deve ser acessível"],
-              ["Anexo com identificação de agentes sigilosa", "Trecho a ocultar — não veta o restante"],
-              ["Negativa integral da STTP", "Indevida — art. 7º, §2"],
-              ["Resultado", "Gabarito D — recurso em 10 dias se mantido indeferimento"]
+              [
+                "Estatísticas agregadas no relatório",
+                "Parte não sigilosa — deve ser acessível"
+              ],
+              [
+                "Anexo com identificação de agentes sigilosa",
+                "Trecho a ocultar — não veta o restante"
+              ],
+              [
+                "Negativa integral da STTP",
+                "Indevida — art. 7º, §2"
+              ],
+              [
+                "Resultado",
+                "Gabarito D — recurso em 10 dias se mantido indeferimento"
+              ]
             ]
           }
         },
@@ -231,11 +312,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Função no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Função no caso"
+            ],
             "linhas": [
-              ["Art. 3º, I", "Publicidade é regra — sigilo é exceção"],
-              ["Art. 7º, §2", "Parte não sigilosa via certidão ou extrato"],
-              ["Art. 15", "Recurso do interessado em 10 dias"]
+              [
+                "Art. 3º, I",
+                "Publicidade é regra — sigilo é exceção"
+              ],
+              [
+                "Art. 7º, §2",
+                "Parte não sigilosa via certidão ou extrato"
+              ],
+              [
+                "Art. 15",
+                "Recurso do interessado em 10 dias"
+              ]
             ]
           }
         },
@@ -287,8 +380,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Sigilo parcial ≠ negativa total — extrato da parte pública. Recurso do cidadão = 10 dias.\n\nNear-transfer: relatório 100% sigiloso e formalmente classificado — aí sim pode haver negativa integral fundamentada.",
-            "destaques": ["parcial", "10 dias", "Near-transfer"]
+            "texto": "Sigilo parcial ≠ negativa total — extrato da parte pública. Recurso do cidadão = 10 dias.\n\nNear-transfer: relatório 100% sigiloso e formalmente classificado — aí sim pode haver negativa integral fundamentada.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "parcial",
+              "10 dias",
+              "Near-transfer"
+            ]
           }
         }
       ],
@@ -306,6 +403,17 @@
       "recurso",
       "sigilo",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "relatório 100% sigiloso e formalmente classificado — aí sim pode haver negativa integral fundamentada.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Sigilo parcial ≠ negativa total — extrato da parte pública. Recurso do cidadão = 10 dias (art. 15).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Obra da STTP suprime área verde sem estudo ambiental. A banca oferece MS individual ou restringe ao MS coletivo — lesão ao meio ambiente pede ação popular de qualquer cidadão.",
-            "destaques": ["ação popular", "meio ambiente", "MS coletivo"]
+            "destaques": [
+              "ação popular",
+              "meio ambiente",
+              "MS coletivo"
+            ]
           }
         },
         {
@@ -52,13 +56,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Lesão ao meio ambiente ou patrimônio público?", "tipo": "pergunta" },
-              { "id": "p2", "label": "É direito líquido e certo individual do vizinho?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Ação popular — LXXIII", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Lesão ao meio ambiente ou patrimônio público?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "É direito líquido e certo individual do vizinho?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Ação popular — LXXIII",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não — interesse difuso" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — interesse difuso"
+              }
             ]
           }
         },
@@ -67,10 +91,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["MS individual do vizinho", "Lesão difusa → ação popular"],
-              ["Só associação com 1 ano (MS coletivo)", "Qualquer cidadão no LXXIII"]
+              [
+                "MS individual do vizinho",
+                "Lesão difusa → ação popular"
+              ],
+              [
+                "Só associação com 1 ano (MS coletivo)",
+                "Qualquer cidadão no LXXIII"
+              ]
             ]
           }
         },
@@ -97,7 +130,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Meio ambiente + patrimônio público + qualquer cidadão = ação popular (LXXIII). MS coletivo = rol fechado (LXX).",
-            "destaques": ["ação popular", "meio ambiente", "LXX"]
+            "destaques": [
+              "ação popular",
+              "meio ambiente",
+              "LXX"
+            ]
           }
         }
       ],
@@ -119,7 +156,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Obra da STTP sem estudo ambiental lesa meio ambiente — qualquer cidadão propõe ação popular, não MS coletivo de rol restrito",
-        "eixos_legais": ["CF_art5_LXXIII", "CF_art5_LXX"],
+        "eixos_legais": [
+          "CF_art5_LXXIII",
+          "CF_art5_LXX"
+        ],
         "isca_por_alternativa": {
           "A": "mandado de segurança individual do vizinho pela perda da área verde",
           "C": "obras de mobilidade urbana dispensam ação popular ambiental",
@@ -133,8 +173,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B (ação popular por qualquer cidadão).\n\nA — MS individual do vizinho pela supressão da área verde.\nC — obra viária da STTP dispensa tutela por ação popular.\nD — só o órgão máximo de trânsito da União fiscaliza impacto ambiental.\n\nPromessa: separar ação popular universal de MS coletivo de rol restrito.",
-            "destaques": ["ação popular", "meio ambiente", "MS coletivo"]
+            "texto": "Gabarito B (ação popular por qualquer cidadão). A — MS individual do vizinho pela supressão da área verde.\nC — obra viária da STTP dispensa tutela por ação popular.\nD — só o órgão máximo de trânsito da União fiscaliza impacto ambiental. Promessa: separar ação popular universal de MS coletivo de rol restrito.",
+            "destaques": [
+              "ação popular",
+              "meio ambiente",
+              "MS coletivo"
+            ]
           }
         },
         {
@@ -143,7 +187,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "AÇÃO POPULAR (art. 5º, LXXIII): qualquer cidadão pode propor para tutelar patrimônio público, moralidade, meio ambiente e patrimônio cultural. MS COLETIVO (art. 5º, LXX): só partido, sindicato, entidade de classe ou associação com 1 ano — rol fechado. MS INDIVIDUAL (art. 5º, LXIX): direito líquido e certo individual — não lesão difusa.",
-            "destaques": ["ação popular", "MS coletivo", "líquido e certo"]
+            "destaques": [
+              "ação popular",
+              "MS coletivo",
+              "líquido e certo"
+            ]
           }
         },
         {
@@ -170,8 +218,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — área verde suprimida" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — cidadão autor" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — área verde suprimida"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — cidadão autor"
+              }
             ]
           }
         },
@@ -181,11 +237,23 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Remédio", "Legitimado"],
+            "titulo_colunas": [
+              "Remédio",
+              "Legitimado"
+            ],
             "linhas": [
-              { "faixa": "Ação popular — LXXIII", "classificacao": "Qualquer cidadão" },
-              { "faixa": "MS coletivo — LXX", "classificacao": "Partido, sindicato, associação 1 ano" },
-              { "faixa": "MS individual — LXIX", "classificacao": "Titular do direito líquido e certo" },
+              {
+                "faixa": "Ação popular — LXXIII",
+                "classificacao": "Qualquer cidadão"
+              },
+              {
+                "faixa": "MS coletivo — LXX",
+                "classificacao": "Partido, sindicato, associação 1 ano"
+              },
+              {
+                "faixa": "MS individual — LXIX",
+                "classificacao": "Titular do direito líquido e certo"
+              },
               {
                 "faixa": "Obra STTP sem estudo ambiental",
                 "classificacao": "Ação popular — meio ambiente + erário",
@@ -200,7 +268,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Vizinho prejudicado usa MS individual",
@@ -219,7 +290,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -242,12 +316,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Conclusão"],
+            "colunas": [
+              "Fato do enunciado",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Supressão de área verde e calçada para ampliar pátio", "Lesão ao meio ambiente e patrimônio público"],
-              ["Sem estudo de impacto ambiental", "Ato lesivo passível de anulação — LXXIII"],
-              ["Cidadão autor, não associação do rol do LXX", "Legitimidade universal — LXXIII"],
-              ["Resultado", "Alternativa B"]
+              [
+                "Supressão de área verde e calçada para ampliar pátio",
+                "Lesão ao meio ambiente e patrimônio público"
+              ],
+              [
+                "Sem estudo de impacto ambiental",
+                "Ato lesivo passível de anulação — LXXIII"
+              ],
+              [
+                "Cidadão autor, não associação do rol do LXX",
+                "Legitimidade universal — LXXIII"
+              ],
+              [
+                "Resultado",
+                "Alternativa B"
+              ]
             ]
           }
         },
@@ -257,12 +346,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Papel no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Papel no caso"
+            ],
             "linhas": [
-              ["Art. 5º, LXXIII", "Ação popular — qualquer cidadão, meio ambiente"],
-              ["Art. 5º, LXX", "MS coletivo — rol restrito, não substitui popular"],
-              ["Art. 5º, LXIX", "MS individual — excluído, lesão não é líquida e certa"],
-              ["Caso concreto", "Obra ambientalmente ilegal → ação popular"]
+              [
+                "Art. 5º, LXXIII",
+                "Ação popular — qualquer cidadão, meio ambiente"
+              ],
+              [
+                "Art. 5º, LXX",
+                "MS coletivo — rol restrito, não substitui popular"
+              ],
+              [
+                "Art. 5º, LXIX",
+                "MS individual — excluído, lesão não é líquida e certa"
+              ],
+              [
+                "Caso concreto",
+                "Obra ambientalmente ilegal → ação popular"
+              ]
             ]
           }
         },
@@ -326,8 +430,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Meio ambiente + patrimônio + QUALQUER cidadão = AÇÃO POPULAR (LXXIII).\nMS coletivo = rol fechado (LXX).\nMS individual = líquido e certo (LXIX).\n\nNear-transfer: se o contrato da STTP terceirizasse multas sem licitação, também seria ação popular — mas por moralidade e erário, não meio ambiente.",
-            "destaques": ["ação popular", "LXX", "meio ambiente"]
+            "texto": "Meio ambiente + patrimônio + QUALQUER cidadão = AÇÃO POPULAR (LXXIII).\nMS coletivo = rol fechado (LXX).\nMS individual = líquido e certo (LXIX).\n\nNear-transfer: se o contrato da STTP terceirizasse multas sem licitação, também seria ação popular — mas por moralidade e erário, não meio ambiente.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "ação popular",
+              "LXX",
+              "meio ambiente"
+            ]
           }
         }
       ],
@@ -349,6 +457,17 @@
       "meio_ambiente",
       "patrimonio_publico",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se o contrato da STTP terceirizasse multas sem licitação, também seria ação popular — mas por moralidade e erário, não meio ambiente.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Meio ambiente + patrimônio público + QUALQUER cidadão = AÇÃO POPULAR (LXXIII). MS coletivo = rol fechado (LXX). MS individual = líquido e certo (LXIX).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

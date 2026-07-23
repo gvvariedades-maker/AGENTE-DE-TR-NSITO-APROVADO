@@ -1,3 +1,7 @@
+import type { AttemptDiagnostics } from "@/lib/diagnostics/diagnose-from-passo";
+import type { SkillMasterySnapshot } from "@/lib/mastery/update-skill-mastery";
+import type { ConfidenceLevel } from "@/lib/srs/rating-policy";
+
 export interface EstadoQuestao {
   selecionada: string | null;
   confirmada: boolean;
@@ -7,7 +11,15 @@ export interface EstadoQuestao {
   acertou?: boolean;
   dominioAlcancado?: boolean;
   tipoErroLabel?: string;
+  /** Frase do diagnóstico por alternativa (Fase 1). */
+  diagnosticoFrase?: string;
   ultimoAttemptId?: string;
+  /** Confiança registrada (Fase 1) — usada no player adaptativo. */
+  confidence?: ConfidenceLevel;
+  diagnostics?: AttemptDiagnostics;
+  masteryUpdates?: SkillMasterySnapshot[];
+  /** Novice-gate resolvido no servidor (Fase 4). */
+  isNovice?: boolean;
 }
 
 export const ESTADO_QUESTAO_INICIAL: EstadoQuestao = {

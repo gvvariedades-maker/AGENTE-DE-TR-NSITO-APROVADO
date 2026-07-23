@@ -44,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Campanha educativa com foto e conquistas do diretor → promoção pessoal vedada pelo §1º, mesmo com tema de trânsito.",
-            "destaques": ["publicidade", "promoção pessoal", "§ 1º"]
+            "destaques": [
+              "publicidade",
+              "promoção pessoal",
+              "§ 1º"
+            ]
           }
         },
         {
@@ -52,7 +56,10 @@
           "titulo": "Educativo × promoção pessoal",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha ✗", "§ 1º ✓"],
+            "colunas": [
+              "Pegadinha ✗",
+              "§ 1º ✓"
+            ],
             "linhas": [
               [
                 "Conteúdo educativo autoriza foto e nome do dirigente",
@@ -67,13 +74,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Campanha destaca autoridade pessoalmente?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Tema educativo dispensa a vedação?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito C — promoção pessoal vedada", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Campanha destaca autoridade pessoalmente?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Tema educativo dispensa a vedação?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito C — promoção pessoal vedada",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -85,7 +112,12 @@
             "fonte": "CF/88, art. 37, § 1º",
             "texto": "A publicidade dos atos, programas, obras, serviços e campanhas dos órgãos públicos deverá ter caráter educativo, informativo ou de orientação social, dela não podendo constar nomes, símbolos ou imagens que caracterizem promoção pessoal de autoridades ou servidores públicos.",
             "trechos_grifados": [
-              { "inicio": 219, "fim": 250, "motivo": "vedação à promoção pessoal" }
+              {
+                "inicio": 219,
+                "fim": 250,
+                "motivo": "vedação à promoção pessoal",
+                "texto_grifado": "promoção pessoal de autoridades"
+              }
             ]
           }
         },
@@ -95,7 +127,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PUBL educativa/informativa | ZERO promoção pessoal (§1º) | IMPESSOAL ≠ marketing do chefe.",
-            "destaques": ["PUBL", "promoção pessoal", "§1º"]
+            "destaques": [
+              "PUBL",
+              "promoção pessoal",
+              "§1º"
+            ]
           }
         }
       ],
@@ -117,7 +153,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Caráter educativo da campanha não autoriza promoção pessoal do dirigente",
-        "eixos_legais": ["CF_art_37_1", "CF_art_37"],
+        "eixos_legais": [
+          "CF_art_37_1",
+          "CF_art_37"
+        ],
         "isca_por_alternativa": {
           "A": "educativo dispensa vedação à promoção pessoal",
           "B": "eficiência justifica destacar o dirigente na peça",
@@ -131,8 +170,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C.\n\nA — educativo autoriza promoção pessoal: §1º veda ambos juntos.\nB — eficiência para credibilidade: confunde princípio com marketing pessoal.\nD — impessoalidade só em concurso: alcança toda a Administração (caput).\n\nPegadinha: tema de trânsito não salva foto e conquistas do diretor.",
-            "destaques": ["Gabarito C", "promoção pessoal", "§ 1º"]
+            "texto": "Gabarito C. A — educativo autoriza promoção pessoal: parágrafo veda ambos juntos.\nB — eficiência para credibilidade: confunde princípio com marketing pessoal.\nD — impessoalidade só em concurso: alcança toda a Administração (caput). Pegadinha: tema de trânsito não salva foto e conquistas do diretor.",
+            "destaques": [
+              "Gabarito C",
+              "promoção pessoal",
+              "parágrafo"
+            ]
           }
         },
         {
@@ -141,7 +184,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Publicidade: transparência dos atos e programas — regra constitucional do art. 37, caput.\nImpessoalidade: Administração age em nome do interesse público, não de pessoas ou vantagens pessoais.\nPromoção pessoal: uso de nome, símbolo ou imagem de autoridade para autopromoção — vedada no § 1º.",
-            "destaques": ["Publicidade", "Impessoalidade", "Promoção pessoal"]
+            "destaques": [
+              "Publicidade",
+              "Impessoalidade",
+              "Promoção pessoal"
+            ]
           }
         },
         {
@@ -168,8 +215,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -179,7 +234,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Princípio", "Núcleo no caso"],
+            "titulo_colunas": [
+              "Princípio",
+              "Núcleo no caso"
+            ],
             "linhas": [
               {
                 "faixa": "Publicidade",
@@ -211,7 +269,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a banca insinua ✗", "§ 1º ✓"],
+            "colunas": [
+              "O que a banca insinua ✗",
+              "§ 1º ✓"
+            ],
             "linhas": [
               [
                 "Campanha de trânsito educativa pode exibir o diretor",
@@ -230,7 +291,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -253,12 +317,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso STTP", "Consequência"],
+            "colunas": [
+              "Fato do caso STTP",
+              "Consequência"
+            ],
             "linhas": [
-              ["Foto e nome do diretor-geral em destaque", "Promoção pessoal — vedada §1º"],
-              ["Texto sobre conquistas pessoais da gestão", "Viola impessoalidade e publicidade"],
-              ["Tema educativo de trânsito", "Não dispensa a vedação constitucional"],
-              ["Resultado", "Alternativa C — única defensável"]
+              [
+                "Foto e nome do diretor-geral em destaque",
+                "Promoção pessoal — vedada §1º"
+              ],
+              [
+                "Texto sobre conquistas pessoais da gestão",
+                "Viola impessoalidade e publicidade"
+              ],
+              [
+                "Tema educativo de trânsito",
+                "Não dispensa a vedação constitucional"
+              ],
+              [
+                "Resultado",
+                "Alternativa C — única defensável"
+              ]
             ]
           }
         },
@@ -274,17 +353,20 @@
               {
                 "inicio": 102,
                 "fim": 148,
-                "motivo": "mapa — finalidade educativa da publicidade"
+                "motivo": "mapa — finalidade educativa da publicidade",
+                "texto_grifado": "educativo, informativo ou de orientação social"
               },
               {
                 "inicio": 155,
                 "fim": 180,
-                "motivo": "fluxo — nomes vedados na peça"
+                "motivo": "fluxo — nomes vedados na peça",
+                "texto_grifado": "não podendo constar nomes"
               },
               {
                 "inicio": 219,
                 "fim": 250,
-                "motivo": "contraste — promoção pessoal de autoridades"
+                "motivo": "contraste — promoção pessoal de autoridades",
+                "texto_grifado": "promoção pessoal de autoridades"
               }
             ]
           }
@@ -295,12 +377,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Princípio", "Alcance"],
+            "colunas": [
+              "Princípio",
+              "Alcance"
+            ],
             "linhas": [
-              ["Impessoalidade (caput)", "Toda a Administração — não só concursos"],
-              ["Publicidade (caput + §1º)", "Campanhas institucionais incluídas"],
-              ["Alternativa D", "Errada — restringe impessoalidade indevidamente"],
-              ["Caso STTP", "Interesse público — não marketing do chefe"]
+              [
+                "Impessoalidade (caput)",
+                "Toda a Administração — não só concursos"
+              ],
+              [
+                "Publicidade (caput + §1º)",
+                "Campanhas institucionais incluídas"
+              ],
+              [
+                "Alternativa D",
+                "Errada — restringe impessoalidade indevidamente"
+              ],
+              [
+                "Caso STTP",
+                "Interesse público — não marketing do chefe"
+              ]
             ]
           }
         },
@@ -310,8 +407,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "PUBL educativa/informativa | ZERO promoção pessoal (§1º) | IMPESSOAL ≠ marketing do chefe.\n\nNear-transfer: cartaz de estacionamento rotativo com logo da STTP e foto do secretário — pode? Não, se houver promoção pessoal; publicidade deve informar o serviço, não o gestor.",
-            "destaques": ["ZERO promoção pessoal", "§1º", "near-transfer"]
+            "texto": "PUBL educativa/informativa | ZERO promoção pessoal (§1º) | IMPESSOAL ≠ marketing do chefe.\n\nNear-transfer: cartaz de estacionamento rotativo com logo da STTP e foto do secretário — pode? Não, se houver promoção pessoal; publicidade deve informar o serviço, não o gestor.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "ZERO promoção pessoal",
+              "§1º",
+              "near-transfer"
+            ]
           }
         }
       ],
@@ -327,6 +428,17 @@
       "publicidade",
       "impessoalidade",
       "cf_88"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "cartaz de estacionamento rotativo com logo da STTP e foto do secretário — pode? Não, se houver promoção pessoal; publicidade deve informar o serviço, não o gestor.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "PUBL educativa/informativa",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

@@ -3,7 +3,7 @@
     "disciplina": "legislacao_transito",
     "topico": "CONTRAN_996_mobilidade",
     "tipo": "caso_pratico",
-    "estilo_idecan": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 4,
     "enunciado": "Durante fiscalização em Campina Grande/PB, agente da STTP aborda condutor que trafega com patinete elétrico (equipamento de mobilidade individual autopropelido) em via arterial cujo limite regulamentado de velocidade é 60 km/h, fora de ciclovia ou ciclofaixa. O equipamento possui motor de 500 W e velocidade máxima de fabricação de 25 km/h. Considerando a Resolução CONTRAN nº 996/2023, assinale a alternativa CORRETA:",
     "alternativas": {
@@ -26,9 +26,7 @@
       "estudo_reverso": [
         "Res. CONTRAN 996/2023 art. 2",
         "Res. CONTRAN 996/2023 art. 9",
-        "Res. CONTRAN 996/2023 art. 10",
-        "Res. CONTRAN 996/2023 art. 12",
-        "CTB art. 134-A"
+        "Res. CONTRAN 996/2023 art. 10"
       ]
     },
     "estudo_reverso_visual": {
@@ -45,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Patinete em arterial de 60 km/h. A banca troca SEM PLACA por QUALQUER VIA.\n\nGabarito A: art. 9º, III — EMI só em via de até 40 km/h regulamentados.",
-            "destaques": ["40 km/h", "sem placa", "art. 9º"]
+            "destaques": [
+              "40 km/h",
+              "sem placa",
+              "art. 9º"
+            ]
           }
         },
         {
@@ -54,13 +56,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Via com limite regulamentado ≤ 40 km/h?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Pode — art. 9º, III (entre outras)", "tipo": "resultado" },
-              { "id": "r2", "label": "Irregular — salvo art. 10 autorizar", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Via com limite regulamentado ≤ 40 km/h?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Pode — art. 9º, III (entre outras)",
+                "tipo": "resultado"
+              },
+              {
+                "id": "r2",
+                "label": "Irregular — salvo art. 10 autorizar",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim" },
-              { "de": "p1", "para": "r2", "rotulo": "Não — 60 km/h" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p1",
+                "para": "r2",
+                "rotulo": "Não — 60 km/h"
+              }
             ]
           }
         },
@@ -69,11 +91,24 @@
           "titulo": "Art. 9º — onde o EMI pode ir",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Local", "Limite"],
+            "titulo_colunas": [
+              "Local",
+              "Limite"
+            ],
             "linhas": [
-              { "faixa": "Calçada/pedestres", "classificacao": "6 km/h — inciso I" },
-              { "faixa": "Ciclovia/ciclofaixa", "classificacao": "Velocidade regulamentada — II" },
-              { "faixa": "Via comum", "classificacao": "Até 40 km/h regulamentados — III", "destaque": true }
+              {
+                "faixa": "Calçada/pedestres",
+                "classificacao": "6 km/h — inciso I"
+              },
+              {
+                "faixa": "Ciclovia/ciclofaixa",
+                "classificacao": "Velocidade regulamentada — II"
+              },
+              {
+                "faixa": "Via comum",
+                "classificacao": "Até 40 km/h regulamentados — III",
+                "destaque": true
+              }
             ]
           }
         },
@@ -83,7 +118,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "EMI: via ≤ 40 km/h regulamentada.\nSem placa (art. 12) ≠ qualquer via.\nExceção local só com estudo — art. 10.",
-            "destaques": ["40 km/h", "art. 12", "art. 10"]
+            "destaques": [
+              "40 km/h",
+              "art. 12",
+              "art. 10"
+            ]
           }
         }
       ],
@@ -109,8 +148,11 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A. Se marcou C, confundiu dispensa de registro com liberdade de via.\n\nPatinete (EMI) em arterial de 60 km/h viola o art. 9º, III — teto de 40 km/h da via regulamentada. O art. 12 só dispensa placa; não autoriza arteriais rápidas.",
-            "destaques": ["Gabarito A", "40 km/h", "art. 12"]
+            "texto": "Gabarito A. Se marcou C, confundiu dispensa de registro com liberdade de via. Patinete (EMI) em arterial de 60 km/h viola o dispositivo legal, III — teto de 40 km/h da via regulamentada. O dispositivo legal só dispensa placa; não autoriza arteriais rápidas.",
+            "destaques": [
+              "Gabarito A",
+              "40 km/h"
+            ]
           }
         },
         {
@@ -119,7 +161,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "EMI: equipamento autopropelido com até 1000 W e 32 km/h de fabricação — patinete elétrico do caso (art. 2º, II).\n\nVIA REGULAMENTADA: limite de velocidade fixado pelo órgão com circunscrição — aqui, 60 km/h.\n\nART. 12: dispensa registro/licenciamento de EMI e bicicleta elétrica — não dispensa regras de circulação.",
-            "destaques": ["EMI", "REGULAMENTADA", "ART. 12"]
+            "destaques": [
+              "EMI",
+              "REGULAMENTADA",
+              "ART. 12"
+            ]
           }
         },
         {
@@ -129,11 +175,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Via com limite acima de 40 km/h?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Irregular — gabarito A", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Via com limite acima de 40 km/h?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Irregular — gabarito A",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim — 60 km/h" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim — 60 km/h"
+              }
             ]
           }
         },
@@ -143,11 +201,24 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Hipótese", "Limite / local"],
+            "titulo_colunas": [
+              "Hipótese",
+              "Limite / local"
+            ],
             "linhas": [
-              { "faixa": "I — pedestres", "classificacao": "6 km/h em áreas de pedestres" },
-              { "faixa": "II — ciclovias", "classificacao": "Velocidade regulamentada do órgão local" },
-              { "faixa": "III — vias comuns", "classificacao": "Até 40 km/h regulamentados", "destaque": true }
+              {
+                "faixa": "I — pedestres",
+                "classificacao": "6 km/h em áreas de pedestres"
+              },
+              {
+                "faixa": "II — ciclovias",
+                "classificacao": "Velocidade regulamentada do órgão local"
+              },
+              {
+                "faixa": "III — vias comuns",
+                "classificacao": "Até 40 km/h regulamentados",
+                "destaque": true
+              }
             ]
           }
         },
@@ -157,11 +228,23 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
-              ["Sem placa = qualquer via", "Art. 12 dispensa registro — não dispensa art. 9º"],
-              ["Como bicicleta, usa arteriais", "Art. 11 + art. 9º, III: via ≤ 40 km/h"],
-              ["25 km/h basta para arterial", "Limite é da VIA (60 km/h), não do equipamento"]
+              [
+                "Sem placa = qualquer via",
+                "Art. 12 dispensa registro — não dispensa art. 9º"
+              ],
+              [
+                "Como bicicleta, usa arteriais",
+                "Art. 11 + art. 9º, III: via ≤ 40 km/h"
+              ],
+              [
+                "25 km/h basta para arterial",
+                "Limite é da VIA (60 km/h), não do equipamento"
+              ]
             ]
           }
         },
@@ -171,11 +254,23 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + letra da lei"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + letra da lei"
+            ],
             "linhas": [
-              ["B — regra_excecao", "Art. 11 não afasta teto de 40 km/h do art. 9º, III"],
-              ["C — termo_unico", "Art. 12 dispensa placa — não autoriza via de 60 km/h"],
-              ["D — numero_vizinho", "45 km/h é exceção de bike esportiva (§3º) — não vale para EMI"]
+              [
+                "B — regra_excecao",
+                "Art. 11 não afasta teto de 40 km/h do art. 9º, III"
+              ],
+              [
+                "C — termo_unico",
+                "Art. 12 dispensa placa — não autoriza via de 60 km/h"
+              ],
+              [
+                "D — numero_vizinho",
+                "45 km/h é exceção de bike esportiva (§3º) — não vale para EMI"
+              ]
             ]
           }
         },
@@ -185,11 +280,23 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato da fiscalização", "Avaliação"],
+            "colunas": [
+              "Fato da fiscalização",
+              "Avaliação"
+            ],
             "linhas": [
-              ["Patinete 500 W / 25 km/h fabricação", "Enquadra EMI — art. 2º, II"],
-              ["Via arterial 60 km/h, fora de ciclovia", "Acima do teto de 40 km/h do art. 9º, III"],
-              ["Sem autorização art. 10", "Circulação irregular — gabarito A"]
+              [
+                "Patinete 500 W / 25 km/h fabricação",
+                "Enquadra EMI — art. 2º, II"
+              ],
+              [
+                "Via arterial 60 km/h, fora de ciclovia",
+                "Acima do teto de 40 km/h do art. 9º, III"
+              ],
+              [
+                "Sem autorização art. 10",
+                "Circulação irregular — gabarito A"
+              ]
             ]
           }
         },
@@ -199,12 +306,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Tipo", "Registro / regra-chave"],
+            "colunas": [
+              "Tipo",
+              "Registro / regra-chave"
+            ],
             "linhas": [
-              ["EMI (patinete)", "Sem registro (art. 12) — via ≤ 40 km/h (art. 9º, III)"],
-              ["Bicicleta elétrica", "Sem registro — pedal assistido, sem acelerador (art. 2º, III)"],
-              ["Ciclomotor", "Exige registro/licenciamento (art. 13) — capacete (art. 19, V)"],
-              ["Exceção local", "Art. 10 — estudo técnico pode alterar vias/velocidades"]
+              [
+                "EMI (patinete)",
+                "Sem registro (art. 12) — via ≤ 40 km/h (art. 9º, III)"
+              ],
+              [
+                "Bicicleta elétrica",
+                "Sem registro — pedal assistido, sem acelerador (art. 2º, III)"
+              ],
+              [
+                "Ciclomotor",
+                "Exige registro/licenciamento (art. 13) — capacete (art. 19, V)"
+              ],
+              [
+                "Exceção local",
+                "Art. 10 — estudo técnico pode alterar vias/velocidades"
+              ]
             ]
           }
         },
@@ -217,7 +339,12 @@
             "fonte": "Res. CONTRAN 996/2023, art. 9º, III",
             "texto": "A circulação de equipamentos de mobilidade individual autopropelidos pode ser autorizada pelo órgão ou entidade com circunscrição sobre a via nas seguintes situações: I - em áreas de circulação de pedestres, limitada à velocidade máxima de 6 km/h; II - em ciclovias, ciclofaixas e ciclorrotas, limitada à velocidade máxima regulamentada pelo órgão com circunscrição sobre a via; e III - em vias com velocidade máxima regulamentada de até 40 km/h.",
             "trechos_grifados": [
-              { "inicio": 427, "fim": 473, "motivo": "teto de 40 km/h — arterial 60 km/h viola" }
+              {
+                "inicio": 417,
+                "fim": 446,
+                "motivo": "teto de 40 km/h — arterial 60 km/h viola",
+                "texto_grifado": "regulamentada de até 40 km/h."
+              }
             ]
           }
         },
@@ -230,7 +357,12 @@
             "fonte": "Res. CONTRAN 996/2023, art. 12",
             "texto": "As bicicletas elétricas e os equipamentos de mobilidade individual autopropelidos não são sujeitos ao registro, ao licenciamento e ao emplacamento para circulação nas vias, conforme art. 134-A do CTB.",
             "trechos_grifados": [
-              { "inicio": 82, "fim": 146, "motivo": "sem placa — não significa qualquer via (distrator C)" }
+              {
+                "inicio": 82,
+                "fim": 146,
+                "motivo": "sem placa — não significa qualquer via (distrator C)",
+                "texto_grifado": "não são sujeitos ao registro, ao licenciamento e ao emplacamento"
+              }
             ]
           }
         },
@@ -240,8 +372,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "EMI: via ≤ 40 km/h regulamentada (art. 9º, III).\nSem placa (art. 12) ≠ qualquer via.\nExceção só com estudo do órgão local (art. 10).\n\nMesma lógica cai em ciclomotor (registro obrigatório), bicicleta elétrica (sem acelerador) e penalidades do art. 19.",
-            "destaques": ["40 km/h", "sem placa", "art. 10"]
+            "texto": "EMI: via ≤ 40 km/h regulamentada (art. 9º, III).\nSem placa (art. 12) ≠ qualquer via.\nExceção só com estudo do órgão local (art. 10).\n\nMesma lógica cai em ciclomotor (registro obrigatório), bicicleta elétrica (sem acelerador) e penalidades do art. 19.\nNear: Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "40 km/h",
+              "sem placa",
+              "art. 10"
+            ]
           }
         }
       ],
@@ -256,6 +392,28 @@
         }
       ]
     },
-    "tags": ["mobilidade_individual", "resolucao_996", "patinete", "bicicleta_eletrica", "via_40kmh"]
+    "tags": [
+      "mobilidade_individual",
+      "resolucao_996",
+      "patinete",
+      "bicicleta_eletrica",
+      "via_40kmh"
+    ],
+    "meta": {
+      "near_transfer": "Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "EMI: via ≤ 40 km/h · sem placa ≠ qualquer via · art. 10 pode autorizar exceção local.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
+      ]
+    }
   }
 ]

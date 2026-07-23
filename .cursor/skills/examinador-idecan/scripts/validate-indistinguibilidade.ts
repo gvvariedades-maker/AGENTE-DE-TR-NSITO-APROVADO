@@ -290,6 +290,8 @@ function validarLote(questoes: QuestaoSeedImportInput[]): Achado[] {
   const achados: Achado[] = [];
   if (questoes.length < 8) return achados;
 
+  const isRealLote = questoes.every((q) => q.meta?.origem === "real_idecan");
+
   const gabaritos: Record<string, number> = { A: 0, B: 0, C: 0, D: 0 };
   let comComando = 0;
   const porTopico: Record<string, number> = {};
@@ -301,47 +303,49 @@ function validarLote(questoes: QuestaoSeedImportInput[]): Achado[] {
   }
 
   const total = questoes.length;
-  for (const [letra, count] of Object.entries(gabaritos)) {
-    const pct = (count / total) * 100;
-    if (pct < 15 || pct > 35) {
-      achados.push({
-        questao: 0,
-        topico: "LOTE",
-        nivel: "erro",
-        codigo: "GAB",
-        mensagem: `Gabarito ${letra} com ${pct.toFixed(0)}% (meta 15–35% por letra)`,
-      });
-    }
-  }
-
-  let consecutivos = 1;
-  for (let i = 1; i < questoes.length; i++) {
-    if (questoes[i]?.gabarito === questoes[i - 1]?.gabarito) {
-      consecutivos++;
-      if (consecutivos > 2) {
+  if (!isRealLote) {
+    for (const [letra, count] of Object.entries(gabaritos)) {
+      const pct = (count / total) * 100;
+      if (pct < 15 || pct > 35) {
         achados.push({
           questao: 0,
           topico: "LOTE",
           nivel: "erro",
           codigo: "GAB",
-          mensagem: `Mais de 2 gabaritos "${questoes[i]?.gabarito}" consecutivos (Q${i}–Q${i + 1})`,
+          mensagem: `Gabarito ${letra} com ${pct.toFixed(0)}% (meta 15–35% por letra)`,
         });
-        break;
       }
-    } else {
-      consecutivos = 1;
     }
-  }
 
-  for (const [topico, count] of Object.entries(porTopico)) {
-    if (count > 3) {
-      achados.push({
-        questao: 0,
-        topico: "LOTE",
-        nivel: "erro",
-        codigo: "COB",
-        mensagem: `Microtópico "${topico}" com ${count} questões (máx. 3 por lote)`,
-      });
+    let consecutivos = 1;
+    for (let i = 1; i < questoes.length; i++) {
+      if (questoes[i]?.gabarito === questoes[i - 1]?.gabarito) {
+        consecutivos++;
+        if (consecutivos > 2) {
+          achados.push({
+            questao: 0,
+            topico: "LOTE",
+            nivel: "erro",
+            codigo: "GAB",
+            mensagem: `Mais de 2 gabaritos "${questoes[i]?.gabarito}" consecutivos (Q${i}–Q${i + 1})`,
+          });
+          break;
+        }
+      } else {
+        consecutivos = 1;
+      }
+    }
+
+    for (const [topico, count] of Object.entries(porTopico)) {
+      if (count > 3) {
+        achados.push({
+          questao: 0,
+          topico: "LOTE",
+          nivel: "erro",
+          codigo: "COB",
+          mensagem: `Microtópico "${topico}" com ${count} questões (máx. 3 por lote)`,
+        });
+      }
     }
   }
 

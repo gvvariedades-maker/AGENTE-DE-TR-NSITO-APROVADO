@@ -50,7 +50,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Animal na pista — piscar farol para quem vem de frente.\n\nGabarito B: inciso III — risco ao sentido contrário.",
-            "destaques": ["sentido contrário", "Gabarito B", "inciso III"]
+            "destaques": [
+              "sentido contrário",
+              "Gabarito B",
+              "inciso III"
+            ]
           }
         },
         {
@@ -58,10 +62,19 @@
           "titulo": "Ultrapassar × alertar risco",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
-              ["Piscar só para ultrapassar", "Também alerta risco a quem vem de frente"],
-              ["Perigo exige pisca-alerta", "Inciso III autoriza farol intermitente"]
+              [
+                "Piscar só para ultrapassar",
+                "Também alerta risco a quem vem de frente"
+              ],
+              [
+                "Perigo exige pisca-alerta",
+                "Inciso III autoriza farol intermitente"
+              ]
             ]
           }
         },
@@ -71,11 +84,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Alerta risco a sentido contrário?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Piscar farol permitido (inc. III)", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Alerta risco a sentido contrário?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Piscar farol permitido (inc. III)",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -85,7 +110,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PISCAR FAROL = 2 FINS.\nUltrapassar OU risco contrário.\nCurto e intermitente.",
-            "destaques": ["2 FINS", "risco contrário"]
+            "destaques": [
+              "2 FINS",
+              "risco contrário"
+            ]
           }
         }
       ],
@@ -124,7 +152,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — limitou a ultrapassar: inciso III também admite advertir risco a quem vem no sentido contrário.\nC — exigiu pisca-alerta: alerta com farol intermitente é hipótese própria do inciso III.\nD — vedou em rodovia: não há proibição por tipo de via — valem as duas finalidades legais.\n\nNesta aula você fixa as duas portas do piscar de farol e separa de pisca-alerta.",
+            "texto": "Gabarito B. A — limitou a ultrapassar: inciso III também admite advertir risco a quem vem no sentido contrário.\nC — exigiu pisca-alerta: alerta com farol intermitente é hipótese própria do inciso III.\nD — vedou em rodovia: não há proibição por tipo de via — valem as duas finalidades legais. Nesta aula você fixa as duas portas do piscar de farol e separa de pisca-alerta.",
             "destaques": [
               "Gabarito B",
               "sentido contrário",
@@ -320,17 +348,20 @@
               {
                 "inicio": 44,
                 "fim": 56,
-                "motivo": "glossario — troca breve de luzes do caso"
+                "motivo": "glossario — troca breve de luzes do caso",
+                "texto_grifado": "intermitente"
               },
               {
                 "inicio": 184,
                 "fim": 195,
-                "motivo": "mapa — primeira finalidade (ultrapassar)"
+                "motivo": "mapa — primeira finalidade (ultrapassar)",
+                "texto_grifado": "ultrapassar"
               },
               {
                 "inicio": 257,
                 "fim": 274,
-                "motivo": "caso — advertir risco a quem vem de frente"
+                "motivo": "caso — advertir risco a quem vem de frente",
+                "texto_grifado": "risco à segurança"
               }
             ]
           }
@@ -341,7 +372,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "PISCAR FAROL = 2 FINS (inc. III).\nUltrapassar o da frente OU risco ao contrário.\nCurto e intermitente — não é cumprimento.\n≠ pisca-alerta (inc. V).\n\nNear-transfer: ao ver buraco na sua faixa à noite, um piscar breve para o carro que vem pode ser lícito — alerta risco no sentido contrário.",
+            "texto": "PISCAR FAROL = 2 FINS (inc. III).\nUltrapassar o da frente OU risco ao contrário.\nCurto e intermitente — não é cumprimento.\n≠ pisca-alerta (inc. V).\n\nNear-transfer: ao ver buraco na sua faixa à noite, um piscar breve para o carro que vem pode ser lícito — alerta risco no sentido contrário.\nNão muda: PISCAR FAROL = 2 FINS · ultrapassar OU risco contrário · curto · ≠ pisca-alerta.",
             "destaques": [
               "2 FINS",
               "risco ao contrário",
@@ -355,6 +386,21 @@
           "rotulo": "CTB art. 40",
           "path": "conteúdo/legislação federal/lei-9503-ctb.html"
         }
+      ]
+    },
+    "meta": {
+      "near_transfer": "ao ver buraco na sua faixa à noite, um piscar breve para o carro que vem pode ser lícito — alerta risco no sentido contrário.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "PISCAR FAROL = 2 FINS · ultrapassar OU risco contrário · curto · ≠ pisca-alerta.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico"
       ]
     }
   }

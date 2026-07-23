@@ -27,8 +27,7 @@
       "estudo_reverso": [
         "Res. CONTRAN 900/2022 art. 2",
         "Res. CONTRAN 900/2022 art. 9",
-        "Res. CONTRAN 900/2022 art. 10",
-        "CTB art. 231"
+        "Res. CONTRAN 900/2022 art. 10"
       ]
     },
     "meta": {
@@ -54,7 +53,11 @@
       "far_transfer": "Requerente desiste por escrito antes do julgamento — art. 11 encerra o recurso, cenário distinto da intimação não atendida.",
       "o_que_nao_muda": "Descumprimento da intimação não impede julgamento; órgão supre informações disponíveis nos próprios arquivos.",
       "calibracao_corpus": "ok",
-      "eficacia_pos_aula": ["E1", "E2", "E3"]
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
     },
     "tags": [
       "contran_900",
@@ -77,7 +80,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito B: sem manifesto a JARI julga no estado — órgão supre dados disponíveis nos arquivos.",
-            "destaques": ["Gabarito B", "julga no estado", "suprir"]
+            "destaques": [
+              "Gabarito B",
+              "julga no estado",
+              "suprir"
+            ]
           }
         },
         {
@@ -85,9 +92,15 @@
           "titulo": "Intimação × admissibilidade",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
-              ["Sem manifesto, arquiva sem julgar", "§ único do art. 9: julga no estado"]
+              [
+                "Sem manifesto, arquiva sem julgar",
+                "§ único do art. 9: julga no estado"
+              ]
             ]
           }
         },
@@ -97,7 +110,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "INTIMAÇÃO ≠ ADMISSIBILIDADE · não atendeu = julga no estado · órgão supre o que tiver.",
-            "destaques": ["INTIMAÇÃO", "julga no estado", "suprir"]
+            "destaques": [
+              "INTIMAÇÃO",
+              "julga no estado",
+              "suprir"
+            ]
           }
         }
       ],
@@ -137,8 +154,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — recurso arquivado sem julgamento por descumprimento da intimação da JARI.\nC — manifesto de carga torna-se indispensável à admissibilidade do recurso.\nD — intimação suspende prazo recursal e retorna processo à defesa prévia na STTP.\n\nPegadinha: não atender intimação não arquiva — julga-se no estado e o órgão supre o disponível.",
-            "destaques": ["Gabarito B", "intimação", "arquivamento"]
+            "texto": "Gabarito B. A — recurso arquivado sem julgamento por descumprimento da intimação da JARI.\nC — manifesto de carga torna-se indispensável à admissibilidade do recurso.\nD — intimação suspende prazo recursal e retorna processo à defesa prévia na STTP. Pegadinha: não atender intimação não arquiva — julga-se no estado e o órgão supre o disponível.",
+            "destaques": [
+              "Gabarito B",
+              "intimação",
+              "arquivamento"
+            ]
           }
         },
         {
@@ -147,7 +168,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "INTIMAÇÃO PROBATÓRIA: pedido de documentos complementares na fase recursal — distinto da admissibilidade inicial.\n\nJULGAMENTO NO ESTADO: análise do recurso mesmo sem o documento solicitado — regra do § único do art. 9.\n\nSUPRIMENTO PELO ÓRGÃO: completar informações disponíveis nos arquivos do autuador — dever do art. 10.",
-            "destaques": ["INTIMAÇÃO", "NO ESTADO", "SUPRIMENTO"]
+            "destaques": [
+              "INTIMAÇÃO",
+              "NO ESTADO",
+              "SUPRIMENTO"
+            ]
           }
         },
         {
@@ -157,13 +182,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "JARI intimou documento complementar no prazo?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Requerente atendeu a intimação?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Julgar no estado + suprir o disponível — gabarito B", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "JARI intimou documento complementar no prazo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Requerente atendeu a intimação?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Julgar no estado + suprir o disponível — gabarito B",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — manifesto em 10 dias" },
-              { "de": "p2", "para": "r1", "rotulo": "Não — caso da transportadora" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — manifesto em 10 dias"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — caso da transportadora"
+              }
             ]
           }
         },
@@ -173,12 +218,28 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Momento", "Efeito legal"],
+            "titulo_colunas": [
+              "Momento",
+              "Efeito legal"
+            ],
             "linhas": [
-              { "faixa": "Admissibilidade inicial", "classificacao": "Requisitos do art. 3º e art. 4º" },
-              { "faixa": "Intimação probatória", "classificacao": "Pedido facultativo — art. 9º, caput" },
-              { "faixa": "Não atendimento da intimação", "classificacao": "Julgamento no estado — § único", "destaque": true },
-              { "faixa": "Dados nos arquivos do autuador", "classificacao": "Suprimento obrigatório — art. 10" }
+              {
+                "faixa": "Admissibilidade inicial",
+                "classificacao": "Requisitos do art. 3º e art. 4º"
+              },
+              {
+                "faixa": "Intimação probatória",
+                "classificacao": "Pedido facultativo — art. 9º, caput"
+              },
+              {
+                "faixa": "Não atendimento da intimação",
+                "classificacao": "Julgamento no estado — § único",
+                "destaque": true
+              },
+              {
+                "faixa": "Dados nos arquivos do autuador",
+                "classificacao": "Suprimento obrigatório — art. 10"
+              }
             ]
           }
         },
@@ -188,7 +249,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Relator ✗", "Resolução ✓"],
+            "colunas": [
+              "Relator ✗",
+              "Resolução ✓"
+            ],
             "linhas": [
               [
                 "Sem manifesto, arquiva sem julgar",
@@ -207,7 +271,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -230,13 +297,31 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso", "Consequência"],
+            "colunas": [
+              "Fato do caso",
+              "Consequência"
+            ],
             "linhas": [
-              ["Transportadora solidariamente responsável", "Legítima — art. 2º, IV"],
-              ["Intimação de manifesto em 10 dias", "Facultativa — art. 9º, caput"],
-              ["Não atendimento da intimação", "Julgar no estado — § único"],
-              ["AIT nos arquivos da STTP", "Suprir — art. 10"],
-              ["Resultado", "Alternativa B"]
+              [
+                "Transportadora solidariamente responsável",
+                "Legítima — art. 2º, IV"
+              ],
+              [
+                "Intimação de manifesto em 10 dias",
+                "Facultativa — art. 9º, caput"
+              ],
+              [
+                "Não atendimento da intimação",
+                "Julgar no estado — § único"
+              ],
+              [
+                "AIT nos arquivos da STTP",
+                "Suprir — art. 10"
+              ],
+              [
+                "Resultado",
+                "Alternativa B"
+              ]
             ]
           }
         },
@@ -246,12 +331,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Função no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Função no caso"
+            ],
             "linhas": [
-              ["Art. 9º, caput — intimação", "JARI pode pedir manifesto de carga"],
-              ["Art. 9º, § único", "Sem manifesto, julga no estado"],
-              ["Art. 10 — suprimento", "STTP completa AIT e dados disponíveis"],
-              ["Art. 5º, § único — vizinho", "Admissibilidade não exige cópias do autuador"]
+              [
+                "Art. 9º, caput — intimação",
+                "JARI pode pedir manifesto de carga"
+              ],
+              [
+                "Art. 9º, § único",
+                "Sem manifesto, julga no estado"
+              ],
+              [
+                "Art. 10 — suprimento",
+                "STTP completa AIT e dados disponíveis"
+              ],
+              [
+                "Art. 5º, § único — vizinho",
+                "Admissibilidade não exige cópias do autuador"
+              ]
             ]
           }
         },
@@ -298,7 +398,12 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "INTIMAÇÃO ≠ ADMISSIBILIDADE · não atendeu = julga no estado · órgão supre o que tiver.\n\nNear: transportadora juntou manifesto no prazo — análise com o documento, sem mudar a regra do § único.\nFar: desistência por escrito antes do julgamento — art. 11 encerra o recurso, cenário distinto.\nNão muda: descumprimento da intimação não impede julgamento; órgão supre o disponível.\nCadeia: vizinho = art. 5 (admissibilidade não exige cópias emitidas pelo autuador).",
-            "destaques": ["INTIMAÇÃO", "julga no estado", "art. 11", "art. 5"]
+            "destaques": [
+              "INTIMAÇÃO",
+              "julga no estado",
+              "art. 11",
+              "art. 5"
+            ]
           }
         }
       ],

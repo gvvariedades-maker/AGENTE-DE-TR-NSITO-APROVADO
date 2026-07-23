@@ -36,14 +36,14 @@ import { SimuladoBar } from "@/components/estudo/simulado-bar";
 import { SessaoBar } from "@/components/estudo/sessao-bar";
 import { FeedbackElaborado } from "@/components/estudo/feedback-elaborado";
 import { FeedbackResultado } from "@/components/estudo/feedback-resultado";
-import { EstudoReversoPlayer } from "@/components/estudo-reverso/estudo-reverso-player";
-import { ConfiancaFsrs } from "@/components/estudo/confianca-fsrs";
+import { AdaptivePlayer } from "@/components/estudo-reverso/adaptive-player";
+import { ConfiancaFsrs, type ConfiancaSelecao } from "@/components/estudo/confianca-fsrs";
 import { registrarEstudoReverso } from "@/app/actions/estudo-reverso";
 import {
   escolherTrilhaEstudoReverso,
   LABEL_TRILHA_ESTUDO_REVERSO_COMPLETO,
 } from "@/lib/estudo-reverso-visual-trilha";
-import type { FsrsGrade } from "@/lib/srs";
+import { resolveAdaptiveLesson } from "@/lib/tutor/resolve-adaptive-lesson";
 import type { EstudoReversoVisual } from "@/types/estudo-reverso-visual";
 import { FocusModeToggle } from "@/components/estudo/focus-mode-toggle";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -158,7 +158,12 @@ export function QuestaoView({
   const marcadaRevisao = estado?.marcadaRevisao ?? false;
   const dominioAlcancado = estado?.dominioAlcancado ?? false;
   const tipoErroLabel = estado?.tipoErroLabel;
+  const diagnosticoFrase = estado?.diagnosticoFrase;
   const ultimoAttemptId = estado?.ultimoAttemptId;
+  const confidenceRegistrada = estado?.confidence;
+  const diagnosticsEstado = estado?.diagnostics;
+  const masteryUpdatesEstado = estado?.masteryUpdates;
+  const isNoviceEstado = estado?.isNovice;
 
   const respondidas = useMemo(
     () => contarRespondidas(estados),
@@ -220,7 +225,7 @@ export function QuestaoView({
   }, [questao, isSimulado, marcadaRevisao, patchEstado]);
 
   const salvarComConfianca = useCallback(
-    (fsrsGrade: FsrsGrade) => {
+    (selecao: ConfiancaSelecao) => {
       if (!selecionada || !questao || !isEstudo) return;
 
       const acertou = selecionada === questao.gabarito;
@@ -238,7 +243,8 @@ export function QuestaoView({
           modo: "estudo",
           tempoSeg,
           sessionId,
-          fsrsGrade,
+          confidence: selecao.confidence,
+          fsrsGrade: selecao.fsrsRating,
         });
 
         patchEstado(questao.id, {
@@ -246,7 +252,13 @@ export function QuestaoView({
           tipoErroLabel: result.tipoErro
             ? labelTipoErro(result.tipoErro)
             : undefined,
+          diagnosticoFrase:
+            result.diagnostics?.feedbackSummary ?? undefined,
           ultimoAttemptId: result.attemptId,
+          confidence: selecao.confidence,
+          diagnostics: result.diagnostics,
+          masteryUpdates: result.masteryUpdates,
+          isNovice: result.isNovice,
         });
 
         if (questao.estudoReversoVisual || questao.estudoReversoVisualCompleto) {
@@ -486,6 +498,20 @@ export function QuestaoView({
   );
   const trilhaPadrao =
     questao.estudoReversoVisualCompleto ?? questao.estudoReversoVisual;
+  const planoAdaptativo =
+    trilhaPadrao && revelada
+      ? resolveAdaptiveLesson({
+          visual: trilhaPadrao,
+          pedagogy: questao.pedagogy,
+          acertou: Boolean(acertou),
+          confidence: confidenceRegistrada,
+          diagnostics: diagnosticsEstado,
+          masteryUpdates: masteryUpdatesEstado,
+          isNovice: isNoviceEstado,
+        })
+      : null;
+  const telasPlayerCount =
+    planoAdaptativo?.build.telas.length ?? trilhaPadrao?.telas.length ?? 0;
   const navegacaoLateral = isEstudo || isSimulado;
   const mostrarProxima =
     navegacaoLateral && !ultimaQuestao && !aguardandoConfianca;
@@ -690,6 +716,7 @@ export function QuestaoView({
                   gabarito={questao.gabarito}
                   dominioAlcancado={dominioAlcancado}
                   tipoErroLabel={tipoErroLabel}
+                  diagnosticoFrase={diagnosticoFrase}
                 />
               ) : (
                 questao.comentario && (
@@ -699,6 +726,7 @@ export function QuestaoView({
                     comentario={questao.comentario}
                     dominioAlcancado={dominioAlcancado}
                     tipoErroLabel={tipoErroLabel}
+                    diagnosticoFrase={diagnosticoFrase}
                   />
                 )
               )}
@@ -706,8 +734,16 @@ export function QuestaoView({
           )}
 
           {modoReverso && trilhaReversoAtiva && (
-            <EstudoReversoPlayer
+            <AdaptivePlayer
               visual={trilhaReversoAtiva}
+              pedagogy={questao.pedagogy}
+              context={{
+                acertou: Boolean(acertou),
+                confidence: confidenceRegistrada,
+                diagnostics: diagnosticsEstado,
+                masteryUpdates: masteryUpdatesEstado,
+                isNovice: isNoviceEstado,
+              }}
               onFechar={() => {
                 setModoReverso(false);
                 setTrilhaReversoAtiva(null);
@@ -787,9 +823,13 @@ export function QuestaoView({
                       }}
                     >
                       <span className="flex flex-col items-center gap-0.5 leading-tight">
-                        <span>{LABEL_TRILHA_ESTUDO_REVERSO_COMPLETO}</span>
+                        <span>
+                          {planoAdaptativo?.adaptive
+                            ? "Rever trilha"
+                            : LABEL_TRILHA_ESTUDO_REVERSO_COMPLETO}
+                        </span>
                         <span className="text-xs font-normal opacity-90">
-                          {trilhaPadrao.telas.length} telas
+                          {telasPlayerCount} telas
                         </span>
                       </span>
                     </Button>

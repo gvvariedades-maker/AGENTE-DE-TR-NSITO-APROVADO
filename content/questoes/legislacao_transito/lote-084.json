@@ -50,7 +50,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Verde com fila — preso no cruzamento.\n\nGabarito B: art. 45 — não bloquear.",
-            "destaques": ["verde", "Gabarito B", "cruzamento"]
+            "destaques": [
+              "verde",
+              "Gabarito B",
+              "cruzamento"
+            ]
           }
         },
         {
@@ -58,10 +62,19 @@
           "titulo": "Verde × passar limpo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
-              ["Verde manda entrar sempre", "Não entrar se ficar preso no cruzamento"],
-              ["Art. 44 basta", "Art. 45 veda bloquear interseção"]
+              [
+                "Verde manda entrar sempre",
+                "Não entrar se ficar preso no cruzamento"
+              ],
+              [
+                "Art. 44 basta",
+                "Art. 45 veda bloquear interseção"
+              ]
             ]
           }
         },
@@ -71,11 +84,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Risco de ficar preso no cruzamento?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Não entrar — aguardar", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Risco de ficar preso no cruzamento?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Não entrar — aguardar",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -85,7 +110,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "VERDE ≠ ENTRAR SEM PASSAR LIMPO.\nNão bloqueie o transversal.",
-            "destaques": ["PASSAR LIMPO", "transversal"]
+            "destaques": [
+              "PASSAR LIMPO",
+              "transversal"
+            ]
           }
         }
       ],
@@ -124,7 +152,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — verde liberou tudo: art. 45 veda entrar se puder ficar imobilizado no cruzamento.\nC — exigiu sinal desfavorável: a regra vale justamente com semáforo favorável.\nD — citou só velocidade moderada: art. 44 não substitui proibição de bloquear a interseção.\n\nNesta aula você fixa verde ≠ direito de entrar sem passar limpo.",
+            "texto": "Gabarito B. A — verde liberou tudo: dispositivo legal veda entrar se puder ficar imobilizado no cruzamento.\nC — exigiu sinal desfavorável: a regra vale justamente com semáforo favorável.\nD — citou só velocidade moderada: dispositivo legal não substitui proibição de bloquear a interseção. Nesta aula você fixa verde ≠ direito de entrar sem passar limpo.",
             "destaques": [
               "Gabarito B",
               "semáforo favorável",
@@ -320,17 +348,20 @@
               {
                 "inicio": 21,
                 "fim": 70,
-                "motivo": "contraste — verde não dispensa avaliar passagem limpa"
+                "motivo": "contraste — verde não dispensa avaliar passagem limpa",
+                "texto_grifado": "indicação luminosa do semáforo lhe seja favorável"
               },
               {
                 "inicio": 184,
                 "fim": 202,
-                "motivo": "caso — veículo preso na fila do cruzamento"
+                "motivo": "caso — veículo preso na fila do cruzamento",
+                "texto_grifado": "área do cruzamento"
               },
               {
                 "inicio": 242,
                 "fim": 262,
-                "motivo": "glossario — fluxo perpendicular obstruído"
+                "motivo": "glossario — fluxo perpendicular obstruído",
+                "texto_grifado": "trânsito transversal"
               }
             ]
           }
@@ -341,7 +372,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "VERDE ≠ ENTRAR SEM PASSAR LIMPO (art. 45).\nFila à frente → aguarde antes da faixa.\nNão bloqueie o transversal.\nArt. 44 é aproximar; 45 é não ficar preso.\n\nNear-transfer: no verde, se o carro da frente não avançou e a interseção está cheia, não entre — espere atrás da linha de retenção.",
+            "texto": "VERDE ≠ ENTRAR SEM PASSAR LIMPO (art. 45).\nFila à frente → aguarde antes da faixa.\nNão bloqueie o transversal.\nArt. 44 é aproximar; 45 é não ficar preso.\n\nNear-transfer: no verde, se o carro da frente não avançou e a interseção está cheia, não entre — espere atrás da linha de retenção.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "VERDE ≠ ENTRAR",
               "área do cruzamento",
@@ -355,6 +386,22 @@
           "rotulo": "CTB art. 45",
           "path": "conteúdo/legislação federal/lei-9503-ctb.html"
         }
+      ]
+    },
+    "meta": {
+      "near_transfer": "no verde, se o carro da frente não avançou e a interseção está cheia, não entre — espere atrás da linha de retenção.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "VERDE ≠ ENTRAR · se não passa limpo · não bloquear transversal.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
       ]
     }
   }

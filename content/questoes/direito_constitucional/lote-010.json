@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Lei publicada em abril/2026, pleito em outubro/2026. A banca confunde vigência imediata com a regra antiga de vacatio de um ano.",
-            "destaques": ["publicação", "um ano", "pleito"]
+            "destaques": [
+              "publicação",
+              "um ano",
+              "pleito"
+            ]
           }
         },
         {
@@ -51,15 +55,24 @@
           "titulo": "Vigor × aplicação",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Cenário", "Efeito"],
+            "titulo_colunas": [
+              "Cenário",
+              "Efeito"
+            ],
             "linhas": [
-              { "faixa": "Publicação da lei", "classificacao": "Vigência imediata (regra)" },
+              {
+                "faixa": "Publicação da lei",
+                "classificacao": "Vigência imediata (regra)"
+              },
               {
                 "faixa": "Eleição até 1 ano da vigência",
                 "classificacao": "Norma não se aplica ao pleito (exceção)",
                 "destaque": true
               },
-              { "faixa": "Eleição após 1 ano da vigência", "classificacao": "Norma aplica-se ao pleito" }
+              {
+                "faixa": "Eleição após 1 ano da vigência",
+                "classificacao": "Norma aplica-se ao pleito"
+              }
             ]
           }
         },
@@ -68,10 +81,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["Vigora só 1 ano após promulgação", "Vigora na publicação (EC 4/1993)"],
-              ["Aplica-se ao pleito do mesmo ano", "Não aplica se eleição ≤ 1 ano da vigência"]
+              [
+                "Vigora só 1 ano após promulgação",
+                "Vigora na publicação (EC 4/1993)"
+              ],
+              [
+                "Aplica-se ao pleito do mesmo ano",
+                "Não aplica se eleição ≤ 1 ano da vigência"
+              ]
             ]
           }
         },
@@ -83,8 +105,18 @@
             "fonte": "CF/88, art. 16",
             "texto": "A lei que alterar o processo eleitoral entrará em vigor na data de sua publicação, não se aplicando à eleição que ocorra até um ano da data de sua vigência.",
             "trechos_grifados": [
-              { "inicio": 59, "fim": 81, "motivo": "vigência na publicação" },
-              { "inicio": 121, "fim": 155, "motivo": "não aplica até 1 ano" }
+              {
+                "inicio": 59,
+                "fim": 81,
+                "motivo": "vigência na publicação",
+                "texto_grifado": "data de sua publicação"
+              },
+              {
+                "inicio": 121,
+                "fim": 155,
+                "motivo": "não aplica até 1 ano",
+                "texto_grifado": "até um ano da data de sua vigência"
+              }
             ]
           }
         },
@@ -94,7 +126,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Publica = vigora. Eleição ≤ 1 ano = não aplica. Abril → outubro = mesmo ciclo, fora do pleito.",
-            "destaques": ["publicação", "um ano", "não aplica"]
+            "destaques": [
+              "publicação",
+              "um ano",
+              "não aplica"
+            ]
           }
         }
       ],
@@ -116,7 +152,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Confunde vigência na publicação com a redação antiga de vacatio de um ano após promulgação",
-        "eixos_legais": ["CF_art16_vigencia", "CF_art16_nao_aplicacao"],
+        "eixos_legais": [
+          "CF_art16_vigencia",
+          "CF_art16_nao_aplicacao"
+        ],
         "isca_por_alternativa": {
           "B": "revive vigência só um ano após promulgação — redação pré-EC 4/1993",
           "C": "trata pleito municipal como exceção à cláusula de não aplicação em um ano",
@@ -130,8 +169,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A (vigência na publicação + não aplica ao pleito ≤ 1 ano).\n\nB — vacatio de 1 ano após promulgação: regra_excecao da redação antiga.\nC — aplica imediata por ser municipal: termo_unico — ignora a exceção temporal.\nD — dois anos de espera: numero_vizinho.\n\nAbril → outubro/2026 ≈ 6 meses: norma vigora, mas não rege essa eleição.",
-            "destaques": ["publicação", "outubro/2026", "um ano"]
+            "texto": "Gabarito A (vigência na publicação + não aplica ao pleito ≤ 1 ano). B — vacatio de 1 ano após promulgação: regra_excecao da redação antiga.\nC — aplica imediata por ser municipal: termo_unico — ignora a exceção temporal.\nD — dois anos de espera: numero_vizinho. Abril → outubro/2026 ≈ 6 meses: norma vigora, mas não rege essa eleição.",
+            "destaques": [
+              "publicação",
+              "outubro/2026",
+              "um ano"
+            ]
           }
         },
         {
@@ -140,7 +183,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "VIGÊNCIA: momento em que a lei passa a existir no ordenamento — no art. 16, é a data da publicação. APLICABILIDADE: se a norma pode reger um pleito específico — vedada à eleição até um ano da vigência. PROCESSO ELEITORAL: regras de alistamento, propaganda, votação e apuração sujeitas ao art. 16.",
-            "destaques": ["vigência", "aplicabilidade", "processo eleitoral"]
+            "destaques": [
+              "vigência",
+              "aplicabilidade",
+              "processo eleitoral"
+            ]
           }
         },
         {
@@ -167,8 +214,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -178,7 +233,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Hipótese", "Efeito legal"],
+            "titulo_colunas": [
+              "Hipótese",
+              "Efeito legal"
+            ],
             "linhas": [
               {
                 "faixa": "Regra — publicação da lei",
@@ -206,7 +264,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Lei eleitoral só vigora um ano depois de promulgada",
@@ -225,7 +286,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — regra_excecao",
@@ -248,12 +312,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Consequência legal"],
+            "colunas": [
+              "Fato do enunciado",
+              "Consequência legal"
+            ],
             "linhas": [
-              ["Lei altera processo eleitoral", "Hipótese do art. 16"],
-              ["Publicação em abril de 2026", "Vigência imediata na data da publicação"],
-              ["Pleito municipal em outubro de 2026", "Intervalo inferior a um ano da vigência"],
-              ["Resultado", "Norma vigora, mas não rege outubro/2026 → Gabarito A"]
+              [
+                "Lei altera processo eleitoral",
+                "Hipótese do art. 16"
+              ],
+              [
+                "Publicação em abril de 2026",
+                "Vigência imediata na data da publicação"
+              ],
+              [
+                "Pleito municipal em outubro de 2026",
+                "Intervalo inferior a um ano da vigência"
+              ],
+              [
+                "Resultado",
+                "Norma vigora, mas não rege outubro/2026 → Gabarito A"
+              ]
             ]
           }
         },
@@ -269,12 +348,14 @@
               {
                 "inicio": 59,
                 "fim": 81,
-                "motivo": "mapa — vigência na publicação"
+                "motivo": "mapa — vigência na publicação",
+                "texto_grifado": "data de sua publicação"
               },
               {
                 "inicio": 121,
                 "fim": 155,
-                "motivo": "contraste — não aplica até 1 ano"
+                "motivo": "contraste — não aplica até 1 ano",
+                "texto_grifado": "até um ano da data de sua vigência"
               }
             ]
           }
@@ -285,8 +366,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "PUBLICA = vigora | ELEIÇÃO ≤ 1 ano = não aplica. Não confunda com a regra antiga (1 ano para vigorar).\n\nNear-transfer: mesma lei publicada em janeiro de 2024 e pleito em outubro de 2025 — passou mais de um ano da vigência; a norma aplica-se a esse pleito.",
-            "destaques": ["publicação", "um ano", "janeiro/2024"]
+            "texto": "PUBLICA = vigora | ELEIÇÃO ≤ 1 ano = não aplica. Não confunda com a regra antiga (1 ano para vigorar).\n\nNear-transfer: mesma lei publicada em janeiro de 2024 e pleito em outubro de 2025 — passou mais de um ano da vigência; a norma aplica-se a esse pleito.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "publicação",
+              "um ano",
+              "janeiro/2024"
+            ]
           }
         }
       ],
@@ -302,6 +387,17 @@
       "processo_eleitoral",
       "vigencia_lei",
       "direitos_politicos"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "mesma lei publicada em janeiro de 2024 e pleito em outubro de 2025 — passou mais de um ano da vigência; a norma aplica-se a esse pleito.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "PUBLICA = vigora",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

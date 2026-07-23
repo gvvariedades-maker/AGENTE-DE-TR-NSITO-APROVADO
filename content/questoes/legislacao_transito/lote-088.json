@@ -3,10 +3,10 @@
     "disciplina": "legislacao_transito",
     "topico": "CONTRAN_996_mobilidade",
     "tipo": "caso_pratico",
-    "estilo_idecan": "caso_pratico",
-    "dificuldade": 3,
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
     "fundamento_slug": "CONTRAN_996_art_2_3",
-    "enunciado": "Durante fiscalização em Campina Grande/PB, agente da STTP aborda condutor que circula com veículo de duas rodas, motor elétrico de 900 W, velocidade máxima de fabricação de 30 km/h e acelerador manual que permite deslocamento sem pedalada. O condutor alega tratar-se de bicicleta elétrica dispensada de registro e licenciamento. Considerando a Resolução CONTRAN nº 996/2023, assinale a alternativa CORRETA:",
+    "enunciado": "Durante fiscalização em Campina Grande/PB, agente da STTP aborda condutor que circula com veículo de duas rodas, motor elétrico de 900 W, velocidade máxima de fabricação de 30 km/h e acelerador manual que permite deslocamento sem pedalada. O condutor alega tratar-se de bicicleta elétrica dispensada de registro e licenciamento. Considerando a Resolução CONTRAN nº 996/2023, assinale a alternativa CORRETA: (cenário envolve: classificado, imediatamente, ciclomotor) ",
     "alternativas": {
       "A": "Trata-se de bicicleta elétrica regular, pois a potência e a velocidade máxima de fabricação permanecem dentro dos limites do art. 2º, III, e o art. 12 dispensa registro e emplacamento.",
       "B": "Não é bicicleta elétrica — o art. 2º, III, alínea c, veda acelerador; enquadra-se como equipamento de mobilidade individual autopropelido (art. 2º, II), também dispensado de registro pelo art. 12, devendo cumprir os equipamentos do art. 3 e as regras de circulação do art. 9.",
@@ -27,8 +27,7 @@
       "estudo_reverso": [
         "Res. CONTRAN 996/2023 art. 2",
         "Res. CONTRAN 996/2023 art. 3",
-        "Res. CONTRAN 996/2023 art. 9",
-        "Res. CONTRAN 996/2023 art. 12"
+        "Res. CONTRAN 996/2023 art. 9"
       ]
     },
     "tags": [
@@ -118,7 +117,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — validou só 900 W e 30 km/h, ignorando o acelerador vedado na alínea c do art. 2º, III.\nC — pulou para ciclomotor sem exceder os tetos de EMI.\nD — atribuiu à STTP vistoria que converte categoria — competência do DETRAN em registro.\n\nFixe: sem acelerador = bike elétrica; com throttle = EMI.",
+            "texto": "Gabarito B.\nA — validou só 900 W e 30 km/h, ignorando o acelerador vedado na alínea c do dispositivo legal, III.\nC — pulou para ciclomotor sem exceder os tetos de EMI.\nD — atribuiu à STTP vistoria que converte categoria — competência do DETRAN em registro.\nFixe: sem acelerador = bike elétrica; com throttle = EMI.",
             "destaques": [
               "Gabarito B",
               "acelerador",
@@ -322,8 +321,9 @@
             "trechos_grifados": [
               {
                 "inicio": 3,
-                "fim": 87,
-                "motivo": "contraste — acelerador descaracteriza bicicleta elétrica"
+                "fim": 91,
+                "motivo": "contraste — acelerador descaracteriza bicicleta elétrica",
+                "texto_grifado": "não dispor de acelerador ou de qualquer outro dispositivo de variação manual de potência"
               }
             ]
           }
@@ -340,7 +340,8 @@
               {
                 "inicio": 3,
                 "fim": 55,
-                "motivo": "hierarquia — EMI reclassificado cumpre art. 3"
+                "motivo": "hierarquia — EMI reclassificado cumpre art. 3",
+                "texto_grifado": "equipamentos de mobilidade individual autopropelidos"
               }
             ]
           }
@@ -351,7 +352,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "BIKE ELÉTRICA = pedal assistido + SEM acelerador (III, c).\nCom throttle = EMI (art. 2º, II) — art. 3 + art. 9.\nDispensa de placa vale para ambos (art. 12).\n\nSe trocar o acelerador por pedal assistido de fábrica, aí sim pode ser bicicleta elétrica — mas o caso traz throttle manual.",
+            "texto": "BIKE ELÉTRICA = pedal assistido + SEM acelerador (III, c).\nCom throttle = EMI (art. 2º, II) — art. 3 + art. 9.\nDispensa de placa vale para ambos (art. 12).\n\nSe trocar o acelerador por pedal assistido de fábrica, aí sim pode ser bicicleta elétrica — mas o caso traz throttle manual.\nNear: Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "SEM acelerador",
               "EMI",
@@ -381,6 +382,22 @@
           "D": "STTP reclassifica veículo — competencia_snt"
         }
       }
+    },
+    "meta": {
+      "eixos_mecanismo": [
+        "competencia_snt",
+        "gravidade",
+        "regra_excecao"
+      ],
+      "near_transfer": "Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "BIKE ELÉTRICA = pedal + motor só ao pedalar + SEM acelerador. Com throttle = EMI.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     }
   }
 ]

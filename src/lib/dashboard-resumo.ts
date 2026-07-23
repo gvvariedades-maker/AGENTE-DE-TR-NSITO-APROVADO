@@ -16,6 +16,10 @@ import {
   getDominioResumo,
 } from "@/lib/tutor/dominio-resumo";
 import {
+  getPainelDominioEvidencias,
+  painelDominioVazio,
+} from "@/lib/mastery/painel-dominio-evidencias";
+import {
   montarHistoricoCalib,
   recalcularCalibracao,
 } from "@/lib/tutor/calibracao";
@@ -191,6 +195,12 @@ export async function loadDashboardResumo(
     dominioResumoVazio(),
     "dominio",
   );
+  const dominioEvidencias = await withTimeout(
+    getPainelDominioEvidencias(userId),
+    QUERY_MS,
+    painelDominioVazio(),
+    "dominioEvidencias",
+  );
   const calibracaoRaw = await withTimeout(
     getTutorCalibracao(userId),
     QUERY_MS,
@@ -248,6 +258,7 @@ export async function loadDashboardResumo(
     plano,
     semana,
     dominio,
+    dominioEvidencias,
     calibracao,
     atividadeHoje,
     questoesCount,

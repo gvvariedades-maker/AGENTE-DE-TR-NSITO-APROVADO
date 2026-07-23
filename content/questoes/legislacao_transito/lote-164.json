@@ -52,7 +52,11 @@
       "far_transfer": "Ciclista desmontado empurrando bike na calçada obstruída — art. 68, §6, exige sinalização provisória, outro dispositivo.",
       "o_que_nao_muda": "Quem não concluiu a travessia na faixa semafórica mantém preferência após mudança do semáforo.",
       "calibracao_corpus": "ok",
-      "eficacia_pos_aula": ["E1", "E2", "E3"]
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
     },
     "tags": [
       "ctb",
@@ -76,7 +80,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito C: semáforo verde para veículos não cancela preferência de quem ainda está na faixa.",
-            "destaques": ["Gabarito C", "faixa", "semáforo"]
+            "destaques": [
+              "Gabarito C",
+              "faixa",
+              "semáforo"
+            ]
           }
         },
         {
@@ -84,9 +92,15 @@
           "titulo": "Semáforo verde × travessia incompleta",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Motorista ✗", "Lei ✓"],
+            "colunas": [
+              "Motorista ✗",
+              "Lei ✓"
+            ],
             "linhas": [
-              ["Semáforo liberou = posso passar", "§ único protege quem não concluiu"]
+              [
+                "Semáforo liberou = posso passar",
+                "§ único protege quem não concluiu"
+              ]
             ]
           }
         },
@@ -96,7 +110,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "NÃO CONCLUIU = § ÚNICO PROTEGE.\nSemáforo verde para veículos não cancela.",
-            "destaques": ["NÃO CONCLUIU", "§ ÚNICO"]
+            "destaques": [
+              "NÃO CONCLUIU",
+              "§ ÚNICO"
+            ]
           }
         }
       ],
@@ -135,8 +152,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C.\n\nA — semáforo verde para veículos cessa preferência do pedestre na faixa.\nB — parar na faixa autoriza o veículo passar com travessia incompleta.\nD — semáforo afasta toda prioridade do caput.\n\nPegadinha: mudança de fase não cancela quem ainda não concluiu a travessia.",
-            "destaques": ["Gabarito C", "faixa", "travessia"]
+            "texto": "Gabarito C. A — semáforo verde para veículos cessa preferência do pedestre na faixa.\nB — parar na faixa autoriza o veículo passar com travessia incompleta.\nD — semáforo afasta toda prioridade do caput. Pegadinha: mudança de fase não cancela quem ainda não concluiu a travessia.",
+            "destaques": [
+              "Gabarito C",
+              "faixa",
+              "travessia"
+            ]
           }
         },
         {
@@ -145,7 +166,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "FAIXA DE PEDESTRES: travessia delimitada na pista — regra do art. 70.\n\nFOCO DE PEDESTRES: sinalização semafórica específica para travessia — integra o controle de passagem.\n\nTRAVESIA INCOMPLETA: pedestre ainda sobre a faixa quando muda a fase do semáforo — hipótese do § único.",
-            "destaques": ["FAIXA", "FOCO", "INCOMPLETA"]
+            "destaques": [
+              "FAIXA",
+              "FOCO",
+              "INCOMPLETA"
+            ]
           }
         },
         {
@@ -155,13 +180,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Pedestre ainda na faixa sem concluir travessia?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Semáforo mudou liberando veículos?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Motorista aguarda — gabarito C", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Pedestre ainda na faixa sem concluir travessia?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Semáforo mudou liberando veículos?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Motorista aguarda — gabarito C",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — idoso no meio da faixa" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — § único mantém preferência" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — idoso no meio da faixa"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — § único mantém preferência"
+              }
             ]
           }
         },
@@ -171,11 +216,26 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Hipótese", "Regra"],
+            "titulo_colunas": [
+              "Hipótese",
+              "Regra"
+            ],
             "linhas": [
-              { "faixa": "Faixa sem semáforo", "classificacao": "Caput — prioridade de passagem", "destaque": false },
-              { "faixa": "Faixa com semáforo — fase pedestre", "classificacao": "Disposições gerais do CTB", "destaque": false },
-              { "faixa": "Travessia incompleta após mudança de fase", "classificacao": "§ único — preferência mantida", "destaque": true }
+              {
+                "faixa": "Faixa sem semáforo",
+                "classificacao": "Caput — prioridade de passagem",
+                "destaque": false
+              },
+              {
+                "faixa": "Faixa com semáforo — fase pedestre",
+                "classificacao": "Disposições gerais do CTB",
+                "destaque": false
+              },
+              {
+                "faixa": "Travessia incompleta após mudança de fase",
+                "classificacao": "§ único — preferência mantida",
+                "destaque": true
+              }
             ]
           }
         },
@@ -185,7 +245,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o motorista pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o motorista pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Semáforo liberou veículos = posso passar",
@@ -204,7 +267,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -227,13 +293,31 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato da Avenida Epitácio Pessoa", "Avaliação"],
+            "colunas": [
+              "Fato da Avenida Epitácio Pessoa",
+              "Avaliação"
+            ],
             "linhas": [
-              ["Faixa com foco de pedestres", "Sinalização semafórica de controle"],
-              ["Idoso no meio da faixa ajustando bolsa", "Travessia não concluída"],
-              ["Semáforo muda liberando veículos", "§ único mantém preferência"],
-              ["Motorista alega prioridade", "Deve aguardar — gabarito C"],
-              ["Resultado", "Alternativa C"]
+              [
+                "Faixa com foco de pedestres",
+                "Sinalização semafórica de controle"
+              ],
+              [
+                "Idoso no meio da faixa ajustando bolsa",
+                "Travessia não concluída"
+              ],
+              [
+                "Semáforo muda liberando veículos",
+                "§ único mantém preferência"
+              ],
+              [
+                "Motorista alega prioridade",
+                "Deve aguardar — gabarito C"
+              ],
+              [
+                "Resultado",
+                "Alternativa C"
+              ]
             ]
           }
         },
@@ -243,11 +327,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Efeito no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Efeito no caso"
+            ],
             "linhas": [
-              ["Caput — prioridade na faixa", "Regra geral — exceto com semáforo"],
-              ["Exceção semafórica do caput", "Aplica disposições do CTB na faixa sinalizada"],
-              ["§ único — travessia incompleta", "Preferência mantida após mudança de fase — gabarito C"]
+              [
+                "Caput — prioridade na faixa",
+                "Regra geral — exceto com semáforo"
+              ],
+              [
+                "Exceção semafórica do caput",
+                "Aplica disposições do CTB na faixa sinalizada"
+              ],
+              [
+                "§ único — travessia incompleta",
+                "Preferência mantida após mudança de fase — gabarito C"
+              ]
             ]
           }
         },
@@ -294,7 +390,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "FAIXA + SEMÁFORO = CAPUT EXCETA · NÃO CONCLUIU = § ÚNICO PROTEGE.\n\nNear: pedestre a um passo da calçada quando muda o semáforo — motorista ainda aguarda.\nFar: calçada obstruída com ciclista desmontado — art. 68, §6, exige sinalização provisória.\nNão muda: travessia incompleta na faixa semafórica mantém preferência após mudança de fase.\nCadeia: vizinho = art. 69, III, b (não demorar na pista sem necessidade).",
-            "destaques": ["§ ÚNICO", "NÃO CONCLUIU", "art. 69"]
+            "destaques": [
+              "§ ÚNICO",
+              "NÃO CONCLUIU",
+              "art. 69"
+            ]
           }
         }
       ],

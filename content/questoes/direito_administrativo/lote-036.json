@@ -45,7 +45,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "I e III corretas. II trata fundação como STTP na direta — falsa. B nega I; C e D compram a II falsa.",
-            "destaques": ["Lei 8.112", "fundação", "subsidiária"]
+            "destaques": [
+              "Lei 8.112",
+              "fundação",
+              "subsidiária"
+            ]
           }
         },
         {
@@ -54,9 +58,21 @@
           "tipo": "matriz_assertivas",
           "conteudo": {
             "itens": [
-              { "id": "I", "texto": "8112 só federal — correta", "correto": true },
-              { "id": "II", "texto": "Fundação = direta como STTP — ERRADA", "correto": false },
-              { "id": "III", "texto": "Subsidiária = lei cada caso — correta", "correto": true }
+              {
+                "id": "I",
+                "texto": "8112 só federal — correta",
+                "correto": true
+              },
+              {
+                "id": "II",
+                "texto": "Fundação = direta como STTP — ERRADA",
+                "correto": false
+              },
+              {
+                "id": "III",
+                "texto": "Subsidiária = lei cada caso — correta",
+                "correto": true
+              }
             ],
             "gabarito_resumo": "I e III → alternativa A"
           }
@@ -66,7 +82,10 @@
           "titulo": "Assertiva-isca: II",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a II afirma ✗", "Classificação correta ✓"],
+            "colunas": [
+              "O que a II afirma ✗",
+              "Classificação correta ✓"
+            ],
             "linhas": [
               [
                 "Fundação municipal = direta como STTP",
@@ -98,7 +117,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "8112 = FEDERAL | FUNDAÇÃO = indireta | SUBSIDIÁRIA = lei em cada caso.",
-            "destaques": ["8112", "FUNDAÇÃO", "SUBSIDIÁRIA"]
+            "destaques": [
+              "8112",
+              "FUNDAÇÃO",
+              "SUBSIDIÁRIA"
+            ]
           }
         }
       ],
@@ -120,7 +143,10 @@
       "meta": {
         "padrao_familia": "B_assertivas",
         "pegadinha_em_uma_frase": "II classifica fundação municipal na administração direta como a STTP",
-        "eixos_legais": ["Lei8112_art1", "CF_art_37_XX"],
+        "eixos_legais": [
+          "Lei8112_art1",
+          "CF_art_37_XX"
+        ],
         "isca_por_alternativa": {
           "B": "marca só III sobre autorização legislativa e nega I correta sobre alcance federal da Lei 8.112/1990",
           "C": "compra II falsa (fundação na direta como STTP) com III correta",
@@ -134,8 +160,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A (I e III corretas).\n\nB — parou em III; negou I sobre alcance federal da Lei 8.112/1990.\nC — comprou II falsa (fundação na direta como STTP).\nD — comprou II falsa e marcou todas corretas.\n\nPegadinha: fundação municipal é indireta — não se confunde com secretaria.",
-            "destaques": ["Gabarito A", "fundação", "subsidiária"]
+            "texto": "Gabarito A (I e III corretas). B — parou em III; negou I sobre alcance federal da Lei 8.112/1990.\nC — comprou II falsa (fundação na direta como STTP).\nD — comprou II falsa e marcou todas corretas. Pegadinha: fundação municipal é indireta — não se confunde com secretaria.",
+            "destaques": [
+              "Gabarito A",
+              "fundação",
+              "subsidiária"
+            ]
           }
         },
         {
@@ -144,7 +174,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "ENTIDADE ADMINISTRATIVA: autarquia, fundação, empresa pública ou sociedade de economia mista — personalidade jurídica na indireta.\n\nLEI 8.112/1990: regime jurídico dos servidores da União, autarquias federais e fundações públicas federais.\n\nSUBSIDIÁRIA: criação e participação societária exigem autorização legislativa em cada caso.",
-            "destaques": ["ENTIDADE", "8112", "SUBSIDIÁRIA"]
+            "destaques": [
+              "ENTIDADE",
+              "8112",
+              "SUBSIDIÁRIA"
+            ]
           }
         },
         {
@@ -180,13 +214,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "A II trata fundação como STTP?", "tipo": "pergunta" },
-              { "id": "p2", "label": "I e III batem com federal e XX?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito A — I e III corretas", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "A II trata fundação como STTP?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "I e III batem com federal e XX?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito A — I e III corretas",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — falsa" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — falsa"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -196,7 +250,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a II afirma ✗", "Classificação correta ✓"],
+            "colunas": [
+              "O que a II afirma ✗",
+              "Classificação correta ✓"
+            ],
             "linhas": [
               [
                 "Fundação municipal = direta como STTP",
@@ -211,7 +268,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — termo_unico",
@@ -234,12 +294,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Assertiva", "Veredito"],
+            "colunas": [
+              "Assertiva",
+              "Veredito"
+            ],
             "linhas": [
-              ["I — alcance da Lei 8.112/1990", "Correta — âmbito federal"],
-              ["II — fundação = direta", "Falsa — fundação é indireta"],
-              ["III — subsidiária e participação", "Correta — autorização em cada caso"],
-              ["Resultado", "I + III = alternativa A"]
+              [
+                "I — alcance da Lei 8.112/1990",
+                "Correta — âmbito federal"
+              ],
+              [
+                "II — fundação = direta",
+                "Falsa — fundação é indireta"
+              ],
+              [
+                "III — subsidiária e participação",
+                "Correta — autorização em cada caso"
+              ],
+              [
+                "Resultado",
+                "I + III = alternativa A"
+              ]
             ]
           }
         },
@@ -249,11 +324,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Entidade", "Traço distintivo"],
+            "colunas": [
+              "Entidade",
+              "Traço distintivo"
+            ],
             "linhas": [
-              ["STTP (secretaria)", "Administração direta — sem personalidade própria"],
-              ["Fundação municipal", "Administração indireta — personalidade jurídica"],
-              ["Subsidiária de autarquia", "Autorização legislativa em cada caso"]
+              [
+                "STTP (secretaria)",
+                "Administração direta — sem personalidade própria"
+              ],
+              [
+                "Fundação municipal",
+                "Administração indireta — personalidade jurídica"
+              ],
+              [
+                "Subsidiária de autarquia",
+                "Autorização legislativa em cada caso"
+              ]
             ]
           }
         },
@@ -311,8 +398,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "8112 = FEDERAL | FUNDAÇÃO = indireta | SUBSIDIÁRIA = lei em cada caso (XX).\n\nNear-transfer: se a banca trocar III por \"subsidiária de autarquia municipal pode ser criada por decreto do Prefeito após lei que criou a autarquia-mãe\", a assertiva fica falsa — o inciso XX exige autorização legislativa em cada caso, não basta a lei originária.",
-            "destaques": ["8112", "FUNDAÇÃO", "near-transfer"]
+            "texto": "8112 = FEDERAL | FUNDAÇÃO = indireta | SUBSIDIÁRIA = lei em cada caso (XX).\n\nNear-transfer: se a banca trocar III por \"subsidiária de autarquia municipal pode ser criada por decreto do Prefeito após lei que criou a autarquia-mãe\", a assertiva fica falsa — o inciso XX exige autorização legislativa em cada caso, não basta a lei originária.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "8112",
+              "FUNDAÇÃO",
+              "near-transfer"
+            ]
           }
         }
       ],
@@ -333,6 +424,17 @@
       "fundação",
       "subsidiaria",
       "cf_37"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se a banca trocar III por \"subsidiária de autarquia municipal pode ser criada por decreto do Prefeito após lei que criou a autarquia-mãe\", a assertiva fica falsa — o inciso XX exige autorização legislativa em cada caso, não basta a lei originária.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "8112 = FEDERAL",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

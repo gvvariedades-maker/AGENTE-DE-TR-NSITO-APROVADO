@@ -83,7 +83,8 @@ function tokensSignificativos(texto: string): string[] {
     .filter((t) => t.length >= 4 && !STOPWORDS.has(t));
 }
 
-function passo2MecanismoPorLetra(
+/** Extrai o slug IDECAN associado à letra no passo 2 (ex.: "A erra por numero_vizinho"). */
+export function passo2MecanismoPorLetra(
   passo2: string,
   letra: string,
 ): string | null {

@@ -45,7 +45,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito B — só III. A compra I falsa (conselho só Executivo); C e D compram II falsa (estável imune ao PAD).",
-            "destaques": ["escolas de governo", "conselho", "estabilidade"]
+            "destaques": [
+              "escolas de governo",
+              "conselho",
+              "estabilidade"
+            ]
           }
         },
         {
@@ -54,9 +58,21 @@
           "tipo": "matriz_assertivas",
           "conteudo": {
             "itens": [
-              { "id": "I", "texto": "Conselho só Executivo — ERRADA", "correto": false },
-              { "id": "II", "texto": "Estável imune ao PAD — ERRADA", "correto": false },
-              { "id": "III", "texto": "Escolas de governo — correta", "correto": true }
+              {
+                "id": "I",
+                "texto": "Conselho só Executivo — ERRADA",
+                "correto": false
+              },
+              {
+                "id": "II",
+                "texto": "Estável imune ao PAD — ERRADA",
+                "correto": false
+              },
+              {
+                "id": "III",
+                "texto": "Escolas de governo — correta",
+                "correto": true
+              }
             ],
             "gabarito_resumo": "Apenas III → alternativa B"
           }
@@ -66,7 +82,10 @@
           "titulo": "Assertiva-isca: II",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a II afirma ✗", "Regime correto ✓"],
+            "colunas": [
+              "O que a II afirma ✗",
+              "Regime correto ✓"
+            ],
             "linhas": [
               [
                 "Estável só perde cargo por sentença judicial",
@@ -98,7 +117,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CONSELHO = todos os Poderes | ESCOLA DE GOVERNO = §2 | ESTÁVEL ≠ imune ao PAD.",
-            "destaques": ["CONSELHO", "ESCOLA", "PAD"]
+            "destaques": [
+              "CONSELHO",
+              "ESCOLA",
+              "PAD"
+            ]
           }
         }
       ],
@@ -120,7 +143,10 @@
       "meta": {
         "padrao_familia": "B_assertivas",
         "pegadinha_em_uma_frase": "II trata estabilidade como imunidade absoluta ao PAD",
-        "eixos_legais": ["CF_art_39_caput", "CF_art_39_2"],
+        "eixos_legais": [
+          "CF_art_39_caput",
+          "CF_art_39_2"
+        ],
         "isca_por_alternativa": {
           "A": "valida I falsa sobre conselho exclusivo do Executivo junto com III",
           "C": "compra II falsa sobre vedação de PAD após estabilização com III",
@@ -134,8 +160,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B (apenas III correta).\n\nA — compra I falsa: conselho não é só Executivo.\nC — compra II falsa: estável pode responder a PAD.\nD — compra I e II falsas e marca todas corretas.\n\nPegadinha: estabilidade não é imunidade absoluta ao processo administrativo.",
-            "destaques": ["Gabarito B", "escolas de governo", "PAD"]
+            "texto": "Gabarito B (apenas III correta). A — compra I falsa: conselho não é só Executivo.\nC — compra II falsa: estável pode responder a PAD.\nD — compra I e II falsas e marca todas corretas. Pegadinha: estabilidade não é imunidade absoluta ao processo administrativo.",
+            "destaques": [
+              "Gabarito B",
+              "escolas de governo",
+              "PAD"
+            ]
           }
         },
         {
@@ -144,7 +174,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CONSELHO DE POLÍTICA DE ADMINISTRAÇÃO E REMUNERAÇÃO: órgão colegiado de organização do regime de pessoal — integrado por servidores designados pelos respectivos Poderes.\n\nESCOLA DE GOVERNO: instrumento de formação e aperfeiçoamento de servidores previsto no § 2º do art. 39.\n\nESTABILIDADE: proteção após três anos em cargo efetivo de concurso — não impede PAD com ampla defesa.",
-            "destaques": ["CONSELHO", "ESCOLA DE GOVERNO", "ESTABILIDADE"]
+            "destaques": [
+              "CONSELHO",
+              "ESCOLA DE GOVERNO",
+              "ESTABILIDADE"
+            ]
           }
         },
         {
@@ -180,13 +214,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "A II veda PAD após estabilização?", "tipo": "pergunta" },
-              { "id": "p2", "label": "A III bate com escolas de governo?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito B — apenas III", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "A II veda PAD após estabilização?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "A III bate com escolas de governo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito B — apenas III",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — falsa" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — falsa"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -196,7 +250,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a II afirma ✗", "Regime constitucional ✓"],
+            "colunas": [
+              "O que a II afirma ✗",
+              "Regime constitucional ✓"
+            ],
             "linhas": [
               [
                 "Estável só perde cargo por sentença judicial",
@@ -211,7 +268,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -234,12 +294,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Assertiva", "Veredito"],
+            "colunas": [
+              "Assertiva",
+              "Veredito"
+            ],
             "linhas": [
-              ["I — conselho só Executivo", "Falsa — respectivos Poderes"],
-              ["II — estável imune ao PAD", "Falsa — PAD com ampla defesa"],
-              ["III — escolas de governo", "Correta — § 2º"],
-              ["Resultado", "Apenas III = alternativa B"]
+              [
+                "I — conselho só Executivo",
+                "Falsa — respectivos Poderes"
+              ],
+              [
+                "II — estável imune ao PAD",
+                "Falsa — PAD com ampla defesa"
+              ],
+              [
+                "III — escolas de governo",
+                "Correta — § 2º"
+              ],
+              [
+                "Resultado",
+                "Apenas III = alternativa B"
+              ]
             ]
           }
         },
@@ -249,11 +324,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Papel na organização"],
+            "colunas": [
+              "Dispositivo",
+              "Papel na organização"
+            ],
             "linhas": [
-              ["Art. 39, caput — conselho", "Política de administração e remuneração"],
-              ["Art. 39, § 2º — escolas", "Formação e promoção na carreira"],
-              ["Art. 41, § 1º, II — PAD", "Refuta II — estável não é imune"]
+              [
+                "Art. 39, caput — conselho",
+                "Política de administração e remuneração"
+              ],
+              [
+                "Art. 39, § 2º — escolas",
+                "Formação e promoção na carreira"
+              ],
+              [
+                "Art. 41, § 1º, II — PAD",
+                "Refuta II — estável não é imune"
+              ]
             ]
           }
         },
@@ -311,8 +398,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "CONSELHO = todos os Poderes | ESCOLA DE GOVERNO = §2 | ESTÁVEL ≠ imune ao PAD.\n\nNear-transfer: se a banca trocar III por \"escolas de governo são obrigatórias para todo servidor celetista da STTP\", a assertiva fica falsa — o § 2º faculta a participação como requisito de promoção, não impõe regime celetista.",
-            "destaques": ["CONSELHO", "ESCOLA", "near-transfer"]
+            "texto": "CONSELHO = todos os Poderes | ESCOLA DE GOVERNO = §2 | ESTÁVEL ≠ imune ao PAD.\n\nNear-transfer: se a banca trocar III por \"escolas de governo são obrigatórias para todo servidor celetista da STTP\", a assertiva fica falsa — o § 2º faculta a participação como requisito de promoção, não impõe regime celetista.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "CONSELHO",
+              "ESCOLA",
+              "near-transfer"
+            ]
           }
         }
       ],
@@ -329,6 +420,17 @@
       "escolas_de_governo",
       "estabilidade",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se a banca trocar III por \"escolas de governo são obrigatórias para todo servidor celetista da STTP\", a assertiva fica falsa — o § 2º faculta a participação como requisito de promoção, não impõe regime celetista.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "CONSELHO = todos os Poderes",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

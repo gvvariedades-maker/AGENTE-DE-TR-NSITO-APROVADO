@@ -45,8 +45,18 @@
       },
       "eixos_mecanismo": [
         "regra_excecao",
-        "termo_unico"
-      ]
+        "termo_unico",
+        "gravidade"
+      ],
+      "near_transfer": "se a banca trocar motocicleta por automóvel de passeio, volta a exigência da segunda gravação — a isenção do §4 não alcança carros.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "VIN = 17 chars · TRATOR = fora · MOTO = sem 2ª gravação.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     },
     "tags": [
       "resolucao_968",
@@ -69,7 +79,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito B (I e II). A isca é a III: motocicleta é isenta da segunda gravação do VIN.",
-            "destaques": ["Gabarito B", "motocicleta", "segunda gravação"]
+            "destaques": [
+              "Gabarito B",
+              "motocicleta",
+              "segunda gravação"
+            ]
           }
         },
         {
@@ -78,9 +92,21 @@
           "tipo": "matriz_assertivas",
           "conteudo": {
             "itens": [
-              { "id": "I", "texto": "VIN 17 caracteres — correta", "correto": true },
-              { "id": "II", "texto": "Tratores dispensados — correta", "correto": true },
-              { "id": "III", "texto": "2ª gravação obrigatória em moto — ERRADA", "correto": false }
+              {
+                "id": "I",
+                "texto": "VIN 17 caracteres — correta",
+                "correto": true
+              },
+              {
+                "id": "II",
+                "texto": "Tratores dispensados — correta",
+                "correto": true
+              },
+              {
+                "id": "III",
+                "texto": "2ª gravação obrigatória em moto — ERRADA",
+                "correto": false
+              }
             ],
             "gabarito_resumo": "I e II corretas → alternativa B"
           }
@@ -91,7 +117,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "VIN = 17 caracteres.\nTrator = fora.\nMoto = sem 2ª gravação.",
-            "destaques": ["17", "trator", "moto"]
+            "destaques": [
+              "17",
+              "trator",
+              "moto"
+            ]
           }
         }
       ],
@@ -131,8 +161,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B (I e II corretas).\n\nA — marcou só II sobre tratores; esqueceu I do VIN na motocicleta vistoriada.\nC — comprou III falsa: segunda gravação obrigatória em motocicletas.\nD — tratou todas corretas, inclusive obrigatoriedade da segunda gravação na moto.\n\nPegadinha: motocicletas estão isentas da segunda gravação do VIN — não obrigadas.",
-            "destaques": ["Gabarito B", "III", "motocicleta"]
+            "texto": "Gabarito B (I e II corretas). A — marcou só II sobre tratores; esqueceu I do VIN na motocicleta vistoriada.\nC — comprou III falsa: segunda gravação obrigatória em motocicletas.\nD — tratou todas corretas, inclusive obrigatoriedade da segunda gravação na moto. Pegadinha: motocicletas estão isentas da segunda gravação do VIN — não obrigadas.",
+            "destaques": [
+              "Gabarito B",
+              "III",
+              "motocicleta"
+            ]
           }
         },
         {
@@ -141,7 +175,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "VIN: Número de Identificação do Veículo — 17 caracteres em WMI, VDS e VIS.\n\nSEGUNDA GRAVAÇÃO: réplica do VIN em outro ponto do chassi ou monobloco — nem todo veículo exige.\n\nEXCEÇÃO DO ART. 2º: tratores e outros veículos listados ficam fora da identificação desta Resolução.",
-            "destaques": ["VIN", "SEGUNDA GRAVAÇÃO", "TRATOR"]
+            "destaques": [
+              "VIN",
+              "SEGUNDA GRAVAÇÃO",
+              "TRATOR"
+            ]
           }
         },
         {
@@ -151,9 +189,21 @@
           "tipo": "matriz_assertivas",
           "conteudo": {
             "itens": [
-              { "id": "I", "texto": "VIN 17 caracteres WMI/VDS/VIS — correta", "correto": true },
-              { "id": "II", "texto": "Tratores dispensados — correta", "correto": true },
-              { "id": "III", "texto": "2ª gravação obrigatória em moto — ERRADA (§4 isenta)", "correto": false }
+              {
+                "id": "I",
+                "texto": "VIN 17 caracteres WMI/VDS/VIS — correta",
+                "correto": true
+              },
+              {
+                "id": "II",
+                "texto": "Tratores dispensados — correta",
+                "correto": true
+              },
+              {
+                "id": "III",
+                "texto": "2ª gravação obrigatória em moto — ERRADA (§4 isenta)",
+                "correto": false
+              }
             ],
             "gabarito_resumo": "I e II corretas → alternativa B"
           }
@@ -164,12 +214,29 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Veículo", "Segunda gravação"],
+            "titulo_colunas": [
+              "Veículo",
+              "Segunda gravação"
+            ],
             "linhas": [
-              { "faixa": "Automóvel comum", "classificacao": "Obrigatória (regra geral)", "destaque": false },
-              { "faixa": "Motocicleta / motoneta", "classificacao": "Isenta — caso da vistoria", "destaque": true },
-              { "faixa": "Trator", "classificacao": "Fora do regime da Res. 968" },
-              { "faixa": "Reboque / semirreboque", "classificacao": "Regra específica na longarina esquerda" }
+              {
+                "faixa": "Automóvel comum",
+                "classificacao": "Obrigatória (regra geral)",
+                "destaque": false
+              },
+              {
+                "faixa": "Motocicleta / motoneta",
+                "classificacao": "Isenta — caso da vistoria",
+                "destaque": true
+              },
+              {
+                "faixa": "Trator",
+                "classificacao": "Fora do regime da Res. 968"
+              },
+              {
+                "faixa": "Reboque / semirreboque",
+                "classificacao": "Regra específica na longarina esquerda"
+              }
             ]
           }
         },
@@ -179,7 +246,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a III afirma ✗", "O que o §4 diz ✓"],
+            "colunas": [
+              "O que a III afirma ✗",
+              "O que o §4 diz ✓"
+            ],
             "linhas": [
               [
                 "Segunda gravação obrigatória em motocicletas",
@@ -198,7 +268,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -221,7 +294,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Assertiva / fato", "V/F"],
+            "colunas": [
+              "Assertiva / fato",
+              "V/F"
+            ],
             "linhas": [
               [
                 "I — VIN com 17 caracteres na motocicleta importada",
@@ -284,8 +360,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "VIN = 17 caracteres.\nTrator = fora.\nMoto = sem 2ª gravação.\n\nNear-transfer: se a banca trocar motocicleta por automóvel de passeio, volta a exigência da segunda gravação — a isenção do §4 não alcança carros.",
-            "destaques": ["17", "moto", "automóvel"]
+            "texto": "VIN = 17 caracteres.\nTrator = fora.\nMoto = sem 2ª gravação.\n\nNear-transfer: se a banca trocar motocicleta por automóvel de passeio, volta a exigência da segunda gravação — a isenção do §4 não alcança carros.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "17",
+              "moto",
+              "automóvel"
+            ]
           }
         }
       ],

@@ -45,7 +45,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Suspensão interna ao agente ≠ autuação ao motorista na Av. Epitácio Pessoa. A iguala os poderes; B internaliza a polícia; C dispensa contraditório na suspensão.",
-            "destaques": ["poder disciplinar", "poder de polícia", "Av. Epitácio Pessoa"]
+            "destaques": [
+              "poder disciplinar",
+              "poder de polícia",
+              "Av. Epitácio Pessoa"
+            ]
           }
         },
         {
@@ -53,7 +57,10 @@
           "titulo": "Disciplinar × polícia",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha ✗", "Regra ✓"],
+            "colunas": [
+              "Pegadinha ✗",
+              "Regra ✓"
+            ],
             "linhas": [
               [
                 "Mesmo poder porque ambos limitam condutas",
@@ -68,13 +75,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "A medida atinge servidor no vínculo?", "tipo": "pergunta" },
-              { "id": "p2", "label": "A medida limita direitos de terceiro na via?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito D — poderes distintos", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "A medida atinge servidor no vínculo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "A medida limita direitos de terceiro na via?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito D — poderes distintos",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Suspensão sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Autuação sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Suspensão sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Autuação sim"
+              }
             ]
           }
         },
@@ -101,7 +128,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "DISCIPLINAR = servidor | POLÍCIA = terceiro na via | interesse público não funde os dois.",
-            "destaques": ["DISCIPLINAR", "POLÍCIA", "terceiro"]
+            "destaques": [
+              "DISCIPLINAR",
+              "POLÍCIA",
+              "terceiro"
+            ]
           }
         }
       ],
@@ -123,7 +154,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Igualar poder disciplinar e poder de polícia por interesse público genérico",
-        "eixos_legais": ["Lei8112_art127", "Lei9784_art50"],
+        "eixos_legais": [
+          "Lei8112_art127",
+          "Lei9784_art50"
+        ],
         "isca_por_alternativa": {
           "A": "iguala disciplinar e polícia por interesse público — são poderes distintos",
           "B": "internaliza poder de polícia só na esfera servidor — autuação na via é polícia",
@@ -137,8 +171,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D.\n\nA — iguala os poderes por interesse público: disciplinar e polícia são distintos.\nB — polícia só interna: autuação na Av. Epitácio Pessoa é poder de polícia sobre terceiro.\nC — suspensão como polícia sem contraditório: é sanção disciplinar ao agente.\n\nNesta aula você separa servidor (disciplinar) de terceiro na via (polícia).",
-            "destaques": ["Gabarito D", "poderes distintos", "Av. Epitácio Pessoa"]
+            "texto": "Gabarito D. A — iguala os poderes por interesse público: disciplinar e polícia são distintos.\nB — polícia só interna: autuação na Av. Epitácio Pessoa é poder de polícia sobre terceiro.\nC — suspensão como polícia sem contraditório: é sanção disciplinar ao agente. Nesta aula você separa servidor (disciplinar) de terceiro na via (polícia).",
+            "destaques": [
+              "Gabarito D",
+              "poderes distintos",
+              "Av. Epitácio Pessoa"
+            ]
           }
         },
         {
@@ -147,7 +185,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PODER DISCIPLINAR: prerrogativa da Administração para sancionar servidores por infração funcional no vínculo (advertência, suspensão, demissão).\n\nPODER DE POLÍCIA: limita direitos de particulares com fundamento legal em favor do interesse público — autuação em via pública.\n\nCONTRADITÓRIO: direito de defesa no processo administrativo disciplinar, nos termos da Lei nº 9.784/1999.",
-            "destaques": ["PODER DISCIPLINAR", "PODER DE POLÍCIA", "CONTRADITÓRIO"]
+            "destaques": [
+              "PODER DISCIPLINAR",
+              "PODER DE POLÍCIA",
+              "CONTRADITÓRIO"
+            ]
           }
         },
         {
@@ -174,8 +216,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Suspensão: sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Autuação: sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Suspensão: sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Autuação: sim"
+              }
             ]
           }
         },
@@ -185,7 +235,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Sanção", "Esfera"],
+            "titulo_colunas": [
+              "Sanção",
+              "Esfera"
+            ],
             "linhas": [
               {
                 "faixa": "Advertência",
@@ -213,7 +266,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o sindicato insinua ✗", "O que a lei distingue ✓"],
+            "colunas": [
+              "O que o sindicato insinua ✗",
+              "O que a lei distingue ✓"
+            ],
             "linhas": [
               [
                 "Disciplinar e polícia são o mesmo poder",
@@ -232,7 +288,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -255,7 +314,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso STTP", "Poder exercido"],
+            "colunas": [
+              "Fato do caso STTP",
+              "Poder exercido"
+            ],
             "linhas": [
               [
                 "Suspensão de 3 dias ao agente sem identificação",
@@ -269,7 +331,10 @@
                 "Sindicato alega identidade dos poderes",
                 "Refutado — sujeitos e fundamentos distintos"
               ],
-              ["Resultado", "Alternativa D — única correta"]
+              [
+                "Resultado",
+                "Alternativa D — única correta"
+              ]
             ]
           }
         },
@@ -279,11 +344,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Medida", "Regime jurídico"],
+            "colunas": [
+              "Medida",
+              "Regime jurídico"
+            ],
             "linhas": [
-              ["Suspensão ao agente pelo superintendente", "Lei 8.112/90 — penalidades disciplinares"],
-              ["Autuação ao motorista na via pública", "Poder de polícia — limitação de direitos de terceiro"],
-              ["Contraditório na apuração disciplinar", "Lei 9.784/99 — processo administrativo"]
+              [
+                "Suspensão ao agente pelo superintendente",
+                "Lei 8.112/90 — penalidades disciplinares"
+              ],
+              [
+                "Autuação ao motorista na via pública",
+                "Poder de polícia — limitação de direitos de terceiro"
+              ],
+              [
+                "Contraditório na apuração disciplinar",
+                "Lei 9.784/99 — processo administrativo"
+              ]
             ]
           }
         },
@@ -335,8 +412,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "DISCIPLINAR = servidor | POLÍCIA = terceiro na via | interesse público não funde os dois.\n\nNear-transfer: se o superintendente apenas orientasse o agente a colocar o distintivo, sem suspensão, seria poder hierárquico — não confundir com autuação do motorista na Av. Epitácio Pessoa.",
-            "destaques": ["DISCIPLINAR", "POLÍCIA", "near-transfer"]
+            "texto": "DISCIPLINAR = servidor | POLÍCIA = terceiro na via | interesse público não funde os dois.\n\nNear-transfer: se o superintendente apenas orientasse o agente a colocar o distintivo, sem suspensão, seria poder hierárquico — não confundir com autuação do motorista na Av. Epitácio Pessoa.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "DISCIPLINAR",
+              "POLÍCIA",
+              "near-transfer"
+            ]
           }
         }
       ],
@@ -357,6 +438,17 @@
       "lei_8112",
       "lei_9784",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se o superintendente apenas orientasse o agente a colocar o distintivo, sem suspensão, seria poder hierárquico — não confundir com autuação do motorista na Av. Epitácio Pessoa.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "DISCIPLINAR = servidor",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

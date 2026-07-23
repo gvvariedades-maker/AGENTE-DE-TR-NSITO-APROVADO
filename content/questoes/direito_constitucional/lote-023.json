@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Blitz com exigência de WhatsApp e retenção de celular sem ordem judicial. A banca trata fiscalização como salvo-conduto para violar sigilo ou restringe o XII só ao penal concluído.",
-            "destaques": ["sigilo", "celular", "blitz"]
+            "destaques": [
+              "sigilo",
+              "celular",
+              "blitz"
+            ]
           }
         },
         {
@@ -52,13 +56,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Houve exigência de acesso a comunicações sem ordem judicial?", "tipo": "pergunta" },
-              { "id": "p2", "label": "O aparelho foi retido sem devido processo legal?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Viola XII e LIV — medida ilegítima", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Houve exigência de acesso a comunicações sem ordem judicial?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "O aparelho foi retido sem devido processo legal?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Viola XII e LIV — medida ilegítima",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — WhatsApp exigido" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — celular retido na blitz" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — WhatsApp exigido"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — celular retido na blitz"
+              }
             ]
           }
         },
@@ -67,10 +91,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["Fiscalização autoriza acessar WhatsApp", "Sigilo exige ordem judicial (XII)"],
-              ["Agente retém celular na blitz", "Bem exige devido processo legal (LIV)"]
+              [
+                "Fiscalização autoriza acessar WhatsApp",
+                "Sigilo exige ordem judicial (XII)"
+              ],
+              [
+                "Agente retém celular na blitz",
+                "Bem exige devido processo legal (LIV)"
+              ]
             ]
           }
         },
@@ -97,7 +130,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "XII = sigilo de comunicações — ordem judicial. LIV = devido processo antes de reter bem. Fiscalizar ≠ invadir celular.",
-            "destaques": ["XII", "LIV", "fiscalizar"]
+            "destaques": [
+              "XII",
+              "LIV",
+              "fiscalizar"
+            ]
           }
         }
       ],
@@ -119,7 +156,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Fiscalizar trânsito não autoriza quebrar sigilo de WhatsApp nem reter celular sem devido processo",
-        "eixos_legais": ["CF_art5_XII", "CF_art5_LIV"],
+        "eixos_legais": [
+          "CF_art5_XII",
+          "CF_art5_LIV"
+        ],
         "isca_por_alternativa": {
           "A": "fiscalização autoriza acessar comunicações e reter celular sem ordem judicial",
           "B": "STTP tem poder exclusivo de inspecionar dados do condutor na blitz",
@@ -133,8 +173,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D (sigilo violado + bem retido sem processo).\n\nA — blitz autoriza acessar WhatsApp e reter celular sem mandado.\nB — STTP inspeciona dados e comunicações com poder exclusivo na blitz.\nC — sigilo do XII só protege após investigação criminal concluída.\n\nPromessa: fixar quando exigir mensagens ou reter aparelho na fiscalização é inconstitucional.",
-            "destaques": ["sigilo", "celular", "WhatsApp"]
+            "texto": "Gabarito D (sigilo violado + bem retido sem processo). A — blitz autoriza acessar WhatsApp e reter celular sem mandado.\nB — STTP inspeciona dados e comunicações com poder exclusivo na blitz.\nC — sigilo do XII só protege após investigação criminal concluída. Promessa: fixar quando exigir mensagens ou reter aparelho na fiscalização é inconstitucional.",
+            "destaques": [
+              "sigilo",
+              "celular",
+              "WhatsApp"
+            ]
           }
         },
         {
@@ -143,7 +187,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "SIGILO DE COMUNICAÇÕES (art. 5º, XII): correspondência, dados e telefonia são invioláveis — quebra só com ordem judicial nas hipóteses legais. DEVIDO PROCESSO LEGAL (art. 5º, LIV): ninguém perde liberdade ou bens sem processo. FISCALIZAÇÃO DE TRÂNSITO: autuar e exigir testes — não autoriza invadir comunicações nem apreender celular arbitrariamente.",
-            "destaques": ["sigilo", "devido processo", "fiscalização"]
+            "destaques": [
+              "sigilo",
+              "devido processo",
+              "fiscalização"
+            ]
           }
         },
         {
@@ -170,8 +218,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — WhatsApp exigido" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — aparelho retido" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — WhatsApp exigido"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — aparelho retido"
+              }
             ]
           }
         },
@@ -181,11 +237,23 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Medida na blitz", "Limite"],
+            "titulo_colunas": [
+              "Medida na blitz",
+              "Limite"
+            ],
             "linhas": [
-              { "faixa": "Autuar e exigir teste", "classificacao": "Legítima — fiscalização" },
-              { "faixa": "Exigir acesso a WhatsApp", "classificacao": "Viola sigilo — art. 5º, XII" },
-              { "faixa": "Reter celular do condutor", "classificacao": "Privação de bem — art. 5º, LIV" },
+              {
+                "faixa": "Autuar e exigir teste",
+                "classificacao": "Legítima — fiscalização"
+              },
+              {
+                "faixa": "Exigir acesso a WhatsApp",
+                "classificacao": "Viola sigilo — art. 5º, XII"
+              },
+              {
+                "faixa": "Reter celular do condutor",
+                "classificacao": "Privação de bem — art. 5º, LIV"
+              },
               {
                 "faixa": "Sem ordem judicial nem processo",
                 "classificacao": "Ilegítima — D correta",
@@ -200,7 +268,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Blitz autoriza ver mensagens do condutor",
@@ -219,7 +290,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -242,12 +316,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Conclusão"],
+            "colunas": [
+              "Fato do enunciado",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Exigência de desbloquear WhatsApp sem ordem judicial", "Viola sigilo — art. 5º, XII"],
-              ["Retenção do celular até verificação", "Privação de bem sem processo — art. 5º, LIV"],
-              ["Agente da STTP na fiscalização de trânsito", "Não autoriza quebrar sigilo nem reter bem"],
-              ["Resultado", "Alternativa D"]
+              [
+                "Exigência de desbloquear WhatsApp sem ordem judicial",
+                "Viola sigilo — art. 5º, XII"
+              ],
+              [
+                "Retenção do celular até verificação",
+                "Privação de bem sem processo — art. 5º, LIV"
+              ],
+              [
+                "Agente da STTP na fiscalização de trânsito",
+                "Não autoriza quebrar sigilo nem reter bem"
+              ],
+              [
+                "Resultado",
+                "Alternativa D"
+              ]
             ]
           }
         },
@@ -257,12 +346,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "O que protege no caso"],
+            "colunas": [
+              "Dispositivo",
+              "O que protege no caso"
+            ],
             "linhas": [
-              ["Art. 5º, XII", "Sigilo de dados e comunicações telefônicas"],
-              ["Art. 5º, LIV", "Devido processo antes de privar bens"],
-              ["Caso concreto", "Acesso a WhatsApp + retenção de celular — ambos violados"],
-              ["Fiscalização legítima", "Autuar uso de celular ao volante ≠ invadir mensagens"]
+              [
+                "Art. 5º, XII",
+                "Sigilo de dados e comunicações telefônicas"
+              ],
+              [
+                "Art. 5º, LIV",
+                "Devido processo antes de privar bens"
+              ],
+              [
+                "Caso concreto",
+                "Acesso a WhatsApp + retenção de celular — ambos violados"
+              ],
+              [
+                "Fiscalização legítima",
+                "Autuar uso de celular ao volante ≠ invadir mensagens"
+              ]
             ]
           }
         },
@@ -326,8 +430,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "XII = SIGILO — ordem judicial para quebrar comunicações.\nLIV = BEM — devido processo antes de reter.\nFiscalizar ≠ invadir WhatsApp nem guardar celular.\n\nNear-transfer: se o agente só autuasse por uso de celular ao volante com prova lícita (flagrante visual), não violaria o XII — mas exigir senha do WhatsApp e reter o aparelho cai no XII + LIV.",
-            "destaques": ["XII", "LIV", "fiscalizar"]
+            "texto": "XII = SIGILO — ordem judicial para quebrar comunicações.\nLIV = BEM — devido processo antes de reter.\nFiscalizar ≠ invadir WhatsApp nem guardar celular.\n\nNear-transfer: se o agente só autuasse por uso de celular ao volante com prova lícita (flagrante visual), não violaria o XII — mas exigir senha do WhatsApp e reter o aparelho cai no XII + LIV.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "XII",
+              "LIV",
+              "fiscalizar"
+            ]
           }
         }
       ],
@@ -349,6 +457,17 @@
       "devido_processo",
       "direitos_individuais",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se o agente só autuasse por uso de celular ao volante com prova lícita (flagrante visual), não violaria o XII — mas exigir senha do WhatsApp e reter o aparelho cai no XII + LIV.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "SIGILO (XII) = ordem judicial para quebrar comunicações. BEM (LIV) = devido processo antes de reter. Fiscalizar ≠ invadir nem apreender celular.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

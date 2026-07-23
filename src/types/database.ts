@@ -17,7 +17,14 @@ export type Database = {
       attempts: {
         Row: {
           acertou: boolean;
+          answer_changed: boolean;
+          confidence: number | null;
           created_at: string;
+          diagnostics_json: Json | null;
+          exposure_count: number;
+          feedback_seen_before_answer: boolean;
+          fsrs_rating: number | null;
+          hint_used: boolean;
           id: string;
           modo: string;
           question_id: string;
@@ -29,7 +36,14 @@ export type Database = {
         };
         Insert: {
           acertou: boolean;
+          answer_changed?: boolean;
+          confidence?: number | null;
           created_at?: string;
+          diagnostics_json?: Json | null;
+          exposure_count?: number;
+          feedback_seen_before_answer?: boolean;
+          fsrs_rating?: number | null;
+          hint_used?: boolean;
           id?: string;
           modo?: string;
           question_id: string;
@@ -41,7 +55,14 @@ export type Database = {
         };
         Update: {
           acertou?: boolean;
+          answer_changed?: boolean;
+          confidence?: number | null;
           created_at?: string;
+          diagnostics_json?: Json | null;
+          exposure_count?: number;
+          feedback_seen_before_answer?: boolean;
+          fsrs_rating?: number | null;
+          hint_used?: boolean;
           id?: string;
           modo?: string;
           question_id?: string;
@@ -57,6 +78,266 @@ export type Database = {
             columns: ["question_id"];
             isOneToOne: false;
             referencedRelation: "questions";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      alternative_diagnostics: {
+        Row: {
+          alternative: string;
+          error_type: string | null;
+          feedback_json: Json;
+          mechanism_slug: string | null;
+          misconception_id: string | null;
+          question_id: string;
+        };
+        Insert: {
+          alternative: string;
+          error_type?: string | null;
+          feedback_json?: Json;
+          mechanism_slug?: string | null;
+          misconception_id?: string | null;
+          question_id: string;
+        };
+        Update: {
+          alternative?: string;
+          error_type?: string | null;
+          feedback_json?: Json;
+          mechanism_slug?: string | null;
+          misconception_id?: string | null;
+          question_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "alternative_diagnostics_misconception_id_fkey";
+            columns: ["misconception_id"];
+            isOneToOne: false;
+            referencedRelation: "misconceptions";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "alternative_diagnostics_question_id_fkey";
+            columns: ["question_id"];
+            isOneToOne: false;
+            referencedRelation: "questions";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      learning_events: {
+        Row: {
+          event_type: string;
+          id: string;
+          occurred_at: string;
+          payload_json: Json;
+          question_id: string | null;
+          session_id: string | null;
+          user_id: string;
+        };
+        Insert: {
+          event_type: string;
+          id?: string;
+          occurred_at?: string;
+          payload_json?: Json;
+          question_id?: string | null;
+          session_id?: string | null;
+          user_id: string;
+        };
+        Update: {
+          event_type?: string;
+          id?: string;
+          occurred_at?: string;
+          payload_json?: Json;
+          question_id?: string | null;
+          session_id?: string | null;
+          user_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "learning_events_question_id_fkey";
+            columns: ["question_id"];
+            isOneToOne: false;
+            referencedRelation: "questions";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      misconceptions: {
+        Row: {
+          active: boolean;
+          code: string;
+          correct_rule: string;
+          created_at: string;
+          id: string;
+          mistaken_belief: string;
+          name: string;
+          repair_strategy_json: Json;
+          skill_code: string | null;
+          skill_id: string | null;
+        };
+        Insert: {
+          active?: boolean;
+          code: string;
+          correct_rule: string;
+          created_at?: string;
+          id?: string;
+          mistaken_belief: string;
+          name: string;
+          repair_strategy_json?: Json;
+          skill_code?: string | null;
+          skill_id?: string | null;
+        };
+        Update: {
+          active?: boolean;
+          code?: string;
+          correct_rule?: string;
+          created_at?: string;
+          id?: string;
+          mistaken_belief?: string;
+          name?: string;
+          repair_strategy_json?: Json;
+          skill_code?: string | null;
+          skill_id?: string | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "misconceptions_skill_id_fkey";
+            columns: ["skill_id"];
+            isOneToOne: false;
+            referencedRelation: "skills";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      skills: {
+        Row: {
+          active: boolean;
+          code: string;
+          created_at: string;
+          edital_weight: number;
+          id: string;
+          kind: string;
+          name: string;
+          topic_id: string | null;
+        };
+        Insert: {
+          active?: boolean;
+          code: string;
+          created_at?: string;
+          edital_weight?: number;
+          id?: string;
+          kind?: string;
+          name: string;
+          topic_id?: string | null;
+        };
+        Update: {
+          active?: boolean;
+          code?: string;
+          created_at?: string;
+          edital_weight?: number;
+          id?: string;
+          kind?: string;
+          name?: string;
+          topic_id?: string | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "skills_topic_id_fkey";
+            columns: ["topic_id"];
+            isOneToOne: false;
+            referencedRelation: "topics";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      question_skills: {
+        Row: {
+          question_id: string;
+          role: string;
+          skill_id: string;
+          transfer_level: string;
+          weight: number;
+        };
+        Insert: {
+          question_id: string;
+          role?: string;
+          skill_id: string;
+          transfer_level?: string;
+          weight?: number;
+        };
+        Update: {
+          question_id?: string;
+          role?: string;
+          skill_id?: string;
+          transfer_level?: string;
+          weight?: number;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "question_skills_question_id_fkey";
+            columns: ["question_id"];
+            isOneToOne: false;
+            referencedRelation: "questions";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "question_skills_skill_id_fkey";
+            columns: ["skill_id"];
+            isOneToOne: false;
+            referencedRelation: "skills";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      user_skill_mastery: {
+        Row: {
+          user_id: string;
+          skill_id: string;
+          recall_score: number;
+          transfer_score: number;
+          calibration_score: number;
+          mastery_probability: number;
+          state: string;
+          novel_correct_count: number;
+          delayed_correct_count: number;
+          high_confidence_error_count: number;
+          last_evidence_at: string | null;
+          updated_at: string;
+        };
+        Insert: {
+          user_id: string;
+          skill_id: string;
+          recall_score?: number;
+          transfer_score?: number;
+          calibration_score?: number;
+          mastery_probability?: number;
+          state?: string;
+          novel_correct_count?: number;
+          delayed_correct_count?: number;
+          high_confidence_error_count?: number;
+          last_evidence_at?: string | null;
+          updated_at?: string;
+        };
+        Update: {
+          user_id?: string;
+          skill_id?: string;
+          recall_score?: number;
+          transfer_score?: number;
+          calibration_score?: number;
+          mastery_probability?: number;
+          state?: string;
+          novel_correct_count?: number;
+          delayed_correct_count?: number;
+          high_confidence_error_count?: number;
+          last_evidence_at?: string | null;
+          updated_at?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "user_skill_mastery_skill_id_fkey";
+            columns: ["skill_id"];
+            isOneToOne: false;
+            referencedRelation: "skills";
             referencedColumns: ["id"];
           },
         ];
@@ -122,6 +403,7 @@ export type Database = {
           alt_c: string;
           alt_d: string;
           alt_e: string | null;
+          assessment_pool: string;
           comentario_json: Json;
           created_at: string;
           dificuldade: number;
@@ -131,6 +413,7 @@ export type Database = {
           estudo_reverso_visual_json: Json | null;
           gabarito: string;
           id: string;
+          pedagogy_json: Json | null;
           tags: string[] | null;
           tipo: string;
           topic_id: string;
@@ -141,6 +424,7 @@ export type Database = {
           alt_c: string;
           alt_d: string;
           alt_e?: string | null;
+          assessment_pool?: string;
           comentario_json?: Json;
           created_at?: string;
           dificuldade?: number;
@@ -150,6 +434,7 @@ export type Database = {
           estudo_reverso_visual_json?: Json | null;
           gabarito: string;
           id?: string;
+          pedagogy_json?: Json | null;
           tags?: string[] | null;
           tipo?: string;
           topic_id: string;
@@ -160,6 +445,7 @@ export type Database = {
           alt_c?: string;
           alt_d?: string;
           alt_e?: string | null;
+          assessment_pool?: string;
           comentario_json?: Json;
           created_at?: string;
           dificuldade?: number;
@@ -169,6 +455,7 @@ export type Database = {
           estudo_reverso_visual_json?: Json | null;
           gabarito?: string;
           id?: string;
+          pedagogy_json?: Json | null;
           tags?: string[] | null;
           tipo?: string;
           topic_id?: string;
@@ -179,6 +466,54 @@ export type Database = {
             columns: ["topic_id"];
             isOneToOne: false;
             referencedRelation: "topics";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      question_relations: {
+        Row: {
+          changed_elements_json: Json;
+          created_at: string;
+          distance: number;
+          id: string;
+          invariants_json: Json;
+          relation_type: string;
+          source_question_id: string;
+          target_question_id: string;
+        };
+        Insert: {
+          changed_elements_json?: Json;
+          created_at?: string;
+          distance?: number;
+          id?: string;
+          invariants_json?: Json;
+          relation_type: string;
+          source_question_id: string;
+          target_question_id: string;
+        };
+        Update: {
+          changed_elements_json?: Json;
+          created_at?: string;
+          distance?: number;
+          id?: string;
+          invariants_json?: Json;
+          relation_type?: string;
+          source_question_id?: string;
+          target_question_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "question_relations_source_question_id_fkey";
+            columns: ["source_question_id"];
+            isOneToOne: false;
+            referencedRelation: "questions";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "question_relations_target_question_id_fkey";
+            columns: ["target_question_id"];
+            isOneToOne: false;
+            referencedRelation: "questions";
             referencedColumns: ["id"];
           },
         ];

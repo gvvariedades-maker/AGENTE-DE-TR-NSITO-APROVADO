@@ -52,7 +52,11 @@
       "far_transfer": "Ciclista desmontado empurrando a bicicleta na calçada obstruída — art. 68, §1, equipara-se ao pedestre; §6 exige sinalização provisória.",
       "o_que_nao_muda": "Faixas e passagens devem permanecer em boas condições de visibilidade, higiene, segurança e sinalização — art. 71.",
       "calibracao_corpus": "ok",
-      "eficacia_pos_aula": ["E1", "E2", "E3"]
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
     },
     "tags": [
       "ctb",
@@ -76,7 +80,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito B: art. 71 — quem tem circunscrição sobre a via mantém faixas e passagens.",
-            "destaques": ["Gabarito B", "circunscrição", "manter"]
+            "destaques": [
+              "Gabarito B",
+              "circunscrição",
+              "manter"
+            ]
           }
         },
         {
@@ -85,11 +93,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Ente com circunscrição sobre a via?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Deve manter faixa — gabarito B", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Ente com circunscrição sobre a via?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Deve manter faixa — gabarito B",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim — STTP na via municipal" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim — STTP na via municipal"
+              }
             ]
           }
         },
@@ -99,7 +119,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CIRCUNSCRIÇÃO MANTÉM · PINTURA APAGADA ≠ FAIXA EXTINTA.",
-            "destaques": ["CIRCUNSCRIÇÃO", "MANTÉM"]
+            "destaques": [
+              "CIRCUNSCRIÇÃO",
+              "MANTÉM"
+            ]
           }
         }
       ],
@@ -125,8 +148,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — manutenção exclusiva do órgão federal normatizador: errado.\nC — pintura apagada extingue faixa e prioridade: ignora dever de manutenção.\nD — dever só da Secretaria de Obras: restringe circunscrição ao ente de obras.\n\nPegadinha: quem tem circunscrição sobre a via deve manter faixas e passagens.",
-            "destaques": ["Gabarito B", "circunscrição", "manter"]
+            "texto": "Gabarito B. A — manutenção exclusiva do órgão federal normatizador: errado.\nC — pintura apagada extingue faixa e prioridade: ignora dever de manutenção.\nD — dever só da Secretaria de Obras: restringe circunscrição ao ente de obras. Pegadinha: quem tem circunscrição sobre a via deve manter faixas e passagens.",
+            "destaques": [
+              "Gabarito B",
+              "circunscrição",
+              "manter"
+            ]
           }
         },
         {
@@ -135,7 +162,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CIRCUNSCRIÇÃO SOBRE A VIA: poder de regulamentar, sinalizar e fiscalizar aquele trecho — STTP na via municipal.\n\nFAIXA DELIMITADA: travessia demarcada na pista — prioridade do art. 70.\n\nMANUTENÇÃO OBRIGATÓRIA: visibilidade, higiene, segurança e sinalização — art. 71.",
-            "destaques": ["CIRCUNSCRIÇÃO", "DELIMITADA", "MANUTENÇÃO"]
+            "destaques": [
+              "CIRCUNSCRIÇÃO",
+              "DELIMITADA",
+              "MANUTENÇÃO"
+            ]
           }
         },
         {
@@ -145,13 +176,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Faixa ou passagem em condição inadequada?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Há ente com circunscrição sobre a via?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Dever de manter — gabarito B", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Faixa ou passagem em condição inadequada?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Há ente com circunscrição sobre a via?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Dever de manter — gabarito B",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — pintura apagada na Epitácio Pessoa" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — art. 71" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — pintura apagada na Epitácio Pessoa"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — art. 71"
+              }
             ]
           }
         },
@@ -161,12 +212,27 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Hipótese", "Regra"],
+            "colunas": [
+              "Hipótese",
+              "Regra"
+            ],
             "linhas": [
-              ["Pintura apagada", "Dever de manutenção persiste — art. 71"],
-              ["Pedestre na faixa delimitada", "Prioridade de passagem — art. 70"],
-              ["Condutor alega demarcação invisível", "Não transfere dever ao pedestre"],
-              ["Responsável pela conservação", "Órgão com circunscrição — gabarito B"]
+              [
+                "Pintura apagada",
+                "Dever de manutenção persiste — art. 71"
+              ],
+              [
+                "Pedestre na faixa delimitada",
+                "Prioridade de passagem — art. 70"
+              ],
+              [
+                "Condutor alega demarcação invisível",
+                "Não transfere dever ao pedestre"
+              ],
+              [
+                "Responsável pela conservação",
+                "Órgão com circunscrição — gabarito B"
+              ]
             ]
           }
         },
@@ -176,7 +242,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o condutor pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o condutor pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Sem pintura visível = travessia extinta",
@@ -195,7 +264,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — competencia_snt",
@@ -218,13 +290,31 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato da Avenida Epitácio Pessoa", "Avaliação"],
+            "colunas": [
+              "Fato da Avenida Epitácio Pessoa",
+              "Avaliação"
+            ],
             "linhas": [
-              ["Pintura apagada e cones improvisados", "Condição inadequada de visibilidade"],
-              ["Local habitual de travessia", "Faixa delimitada — art. 70"],
-              ["Condutor invoca demarcação invisível", "Não afasta dever de manutenção"],
-              ["STTP com circunscrição na via municipal", "Art. 71 — gabarito B"],
-              ["Resultado", "Alternativa B"]
+              [
+                "Pintura apagada e cones improvisados",
+                "Condição inadequada de visibilidade"
+              ],
+              [
+                "Local habitual de travessia",
+                "Faixa delimitada — art. 70"
+              ],
+              [
+                "Condutor invoca demarcação invisível",
+                "Não afasta dever de manutenção"
+              ],
+              [
+                "STTP com circunscrição na via municipal",
+                "Art. 71 — gabarito B"
+              ],
+              [
+                "Resultado",
+                "Alternativa B"
+              ]
             ]
           }
         },
@@ -234,11 +324,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Efeito no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Efeito no caso"
+            ],
             "linhas": [
-              ["Art. 71 — manutenção obrigatória", "Ente com circunscrição deve conservar faixa — gabarito B"],
-              ["Art. 70 — prioridade na faixa", "Pedestre na travessia delimitada tem preferência"],
-              ["Pintura apagada", "Agrava dever de manutenção — não zera prioridade"]
+              [
+                "Art. 71 — manutenção obrigatória",
+                "Ente com circunscrição deve conservar faixa — gabarito B"
+              ],
+              [
+                "Art. 70 — prioridade na faixa",
+                "Pedestre na travessia delimitada tem preferência"
+              ],
+              [
+                "Pintura apagada",
+                "Agrava dever de manutenção — não zera prioridade"
+              ]
             ]
           }
         },
@@ -291,7 +393,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CIRCUNSCRIÇÃO MANTÉM A FAIXA · PINTURA APAGADA ≠ PRIORIDADE ZERO.\nNear: passagem elevada deteriorada na mesma via — dever de manutenção persiste.\nFar: ciclista desmontado na calçada obstruída — equipara-se ao pedestre; exige sinalização provisória.\nNão muda: faixas e passagens devem ficar em boas condições de visibilidade e sinalização.\nCadeia: vizinho = art. 68, §6 (obstrução de calçada).",
-            "destaques": ["CIRCUNSCRIÇÃO", "MANUTENÇÃO", "§6"]
+            "destaques": [
+              "CIRCUNSCRIÇÃO",
+              "MANUTENÇÃO",
+              "§6"
+            ]
           }
         }
       ],

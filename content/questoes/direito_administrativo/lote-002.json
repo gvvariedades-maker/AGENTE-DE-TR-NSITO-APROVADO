@@ -44,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Regra geral para todos os setores = ato normativo. Art. 13, I veda delegar edição de atos normativos — mesmo em organização interna.",
-            "destaques": ["ato normativo", "art. 13", "delegação"]
+            "destaques": [
+              "ato normativo",
+              "art. 13",
+              "delegação"
+            ]
           }
         },
         {
@@ -52,7 +56,10 @@
           "titulo": "Normativo × individual",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha ✗", "Classificação ✓"],
+            "colunas": [
+              "Pegadinha ✗",
+              "Classificação ✓"
+            ],
             "linhas": [
               [
                 "Norma interna = ato individual",
@@ -67,13 +74,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Regra geral para todos os setores?", "tipo": "pergunta" },
-              { "id": "p2", "label": "É edição de ato normativo?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Delegação vedada — normativo indelegável", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Regra geral para todos os setores?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "É edição de ato normativo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Delegação vedada — normativo indelegável",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -88,7 +115,8 @@
               {
                 "inicio": 39,
                 "fim": 76,
-                "motivo": "vedação à delegação de atos normativos"
+                "motivo": "vedação à delegação de atos normativos",
+                "texto_grifado": "a edição de atos de caráter normativo"
               }
             ]
           }
@@ -99,7 +127,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "NOR-REC-EXC: normativo, recurso e competência exclusiva não se delegam (art. 13).",
-            "destaques": ["NOR-REC-EXC", "art. 13"]
+            "destaques": [
+              "NOR-REC-EXC",
+              "art. 13"
+            ]
           }
         }
       ],
@@ -121,7 +152,9 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Regra geral interna é ato normativo — não se delega (art. 13, I)",
-        "eixos_legais": ["Lei9784_art13"],
+        "eixos_legais": [
+          "Lei9784_art13"
+        ],
         "isca_por_alternativa": {
           "A": "trata norma geral interna como ato individual delegável",
           "C": "valida delegação por classificar o ato como enunciativo",
@@ -135,8 +168,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B (delegação inválida).\n\nA — confundiu regra geral interna com ato individual.\nC — tratou normativo como enunciativo delegável.\nD — inventou exceção para cargo em comissão.\n\nPegadinha: organização interna ≠ ato individual quando a norma é geral.",
-            "destaques": ["ato normativo", "delegação", "art. 13"]
+            "texto": "Gabarito B (delegação inválida). A — confundiu regra geral interna com ato individual.\nC — tratou normativo como enunciativo delegável.\nD — inventou exceção para cargo em comissão. Pegadinha: organização interna ≠ ato individual quando a norma é geral.",
+            "destaques": [
+              "ato normativo",
+              "delegação",
+              "dispositivo legal"
+            ]
           }
         },
         {
@@ -145,7 +182,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Ato normativo: regra geral, abstrata, aplicável a situações futuras e indeterminadas.\nAto individual (concreto): decide caso específico, com efeitos diretos sobre destinatário identificado.\nDelegação: transferência de competência, vedada para atos normativos pelo art. 13, I.",
-            "destaques": ["normativo", "individual", "delegação"]
+            "destaques": [
+              "normativo",
+              "individual",
+              "delegação"
+            ]
           }
         },
         {
@@ -172,8 +213,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -183,16 +232,28 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Espécie", "Característica"],
+            "titulo_colunas": [
+              "Espécie",
+              "Característica"
+            ],
             "linhas": [
               {
                 "faixa": "Normativo (geral)",
                 "classificacao": "Regra abstrata para situações futuras",
                 "destaque": true
               },
-              { "faixa": "Individual (concreto)", "classificacao": "Decide caso específico identificado" },
-              { "faixa": "Enunciativo", "classificacao": "Declara direito já existente" },
-              { "faixa": "Constitutivo", "classificacao": "Cria, modifica ou extingue direito" }
+              {
+                "faixa": "Individual (concreto)",
+                "classificacao": "Decide caso específico identificado"
+              },
+              {
+                "faixa": "Enunciativo",
+                "classificacao": "Declara direito já existente"
+              },
+              {
+                "faixa": "Constitutivo",
+                "classificacao": "Cria, modifica ou extingue direito"
+              }
             ]
           }
         },
@@ -202,7 +263,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença (A/C/D) ✗", "Classificação correta ✓"],
+            "colunas": [
+              "Crença (A/C/D) ✗",
+              "Classificação correta ✓"
+            ],
             "linhas": [
               [
                 "Norma interna de prazos = ato individual delegável",
@@ -217,7 +281,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -240,12 +307,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso", "Consequência"],
+            "colunas": [
+              "Fato do caso",
+              "Consequência"
+            ],
             "linhas": [
-              ["Prazos para todos os setores", "Ato normativo (geral), não individual"],
-              ["Delegação de edição de norma", "Vedada pelo art. 13, I"],
-              ["Portaria delegatória publicada", "Não convalida — matéria indelegável"],
-              ["Resultado", "Alternativa B — delegação inválida"]
+              [
+                "Prazos para todos os setores",
+                "Ato normativo (geral), não individual"
+              ],
+              [
+                "Delegação de edição de norma",
+                "Vedada pelo art. 13, I"
+              ],
+              [
+                "Portaria delegatória publicada",
+                "Não convalida — matéria indelegável"
+              ],
+              [
+                "Resultado",
+                "Alternativa B — delegação inválida"
+              ]
             ]
           }
         },
@@ -261,7 +343,8 @@
               {
                 "inicio": 39,
                 "fim": 76,
-                "motivo": "fluxo — edição de atos normativos é indelegável"
+                "motivo": "fluxo — edição de atos normativos é indelegável",
+                "texto_grifado": "a edição de atos de caráter normativo"
               }
             ]
           }
@@ -272,8 +355,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "NOR-REC-EXC: normativo, recurso e competência exclusiva não se delegam (art. 13, I–III).\n\nNear-transfer: se o diretor delegasse a decisão de recurso administrativo de um condutor, seria válido? Não — art. 13, II também veda.",
-            "destaques": ["NOR-REC-EXC", "art. 13, II", "recurso"]
+            "texto": "NOR-REC-EXC: normativo, recurso e competência exclusiva não se delegam (art. 13, I–III).\n\nNear-transfer: se o diretor delegasse a decisão de recurso administrativo de um condutor, seria válido? Não — art. 13, II também veda.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "NOR-REC-EXC",
+              "art. 13, II",
+              "recurso"
+            ]
           }
         }
       ],
@@ -290,6 +377,17 @@
       "ato_normativo",
       "delegacao",
       "lei_9784"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se o diretor delegasse a decisão de recurso administrativo de um condutor, seria válido? Não — art. 13, II também veda.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "NOR-REC-EXC: Normativo, Recurso e Competência exclusiva não se delegam (art. 13, I–III).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

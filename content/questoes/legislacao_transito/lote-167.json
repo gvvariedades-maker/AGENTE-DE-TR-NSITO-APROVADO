@@ -51,7 +51,11 @@
       "far_transfer": "Obra com interdição parcial sem permissão da STTP — art. 95 exige autorização prévia do órgão com circunscrição.",
       "o_que_nao_muda": "Obstáculo não removível exige sinalização imediata; lombada sonora como redutor só com caso especial do órgão competente nos padrões CONTRAN.",
       "calibracao_corpus": "ok",
-      "eficacia_pos_aula": ["E1", "E2", "E3"]
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
     },
     "tags": [
       "engenharia_transito",
@@ -76,7 +80,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito B: entulho exige sinalização imediata; lombada sonora só com caso especial do órgão competente.",
-            "destaques": ["Gabarito B", "entulho", "lombada"]
+            "destaques": [
+              "Gabarito B",
+              "entulho",
+              "lombada"
+            ]
           }
         },
         {
@@ -85,11 +93,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Obstáculo não removível na calçada?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Sinalizar imediatamente", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Obstáculo não removível na calçada?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Sinalizar imediatamente",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim — entulho" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim — entulho"
+              }
             ]
           }
         },
@@ -99,7 +119,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "94 caput = sinalizar obstáculo.\n§ único = lombada proibida salvo caso especial + CONTRAN.",
-            "destaques": ["sinalizar", "lombada", "CONTRAN"]
+            "destaques": [
+              "sinalizar",
+              "lombada",
+              "CONTRAN"
+            ]
           }
         }
       ],
@@ -138,8 +162,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — lombadas sinalizadas são válidas como redutor: confunde caput com parágrafo único.\nC — CONTRAN autoriza exclusivamente lombadas municipais: inverte papéis do órgão local.\nD — entulho dispensa sinalização com retirada em 24h: inventa prazo inexistente.\n\nPegadinha: sinalizar obstáculo não legitima lombada sonora sem caso especial autorizado.",
-            "destaques": ["Gabarito B", "lombada", "entulho"]
+            "texto": "Gabarito B. A — lombadas sinalizadas são válidas como redutor: confunde caput com parágrafo único.\nC — CONTRAN autoriza exclusivamente lombadas municipais: inverte papéis do órgão local.\nD — entulho dispensa sinalização com retirada em 24h: inventa prazo inexistente. Pegadinha: sinalizar obstáculo não legitima lombada sonora sem caso especial autorizado.",
+            "destaques": [
+              "Gabarito B",
+              "lombada",
+              "entulho"
+            ]
           }
         },
         {
@@ -148,7 +176,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "OBSTÁCULO NÃO REMOVÍVEL: entulho na calçada que ainda não foi retirado — exige sinalização imediata (caput do art. 94).\n\nLOMBADA SONORA: sonorizador instalado como redutor de velocidade — vedado pelo parágrafo único salvo caso especial.\n\nÓRGÃO COMPETENTE: define caso especial nos padrões do CONTRAN — não é autorização automática por sinalização.",
-            "destaques": ["OBSTÁCULO", "LOMBADA", "ÓRGÃO"]
+            "destaques": [
+              "OBSTÁCULO",
+              "LOMBADA",
+              "ÓRGÃO"
+            ]
           }
         },
         {
@@ -158,13 +190,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Lombada sonora como redutor sem caso especial?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Entulho na calçada não removível sem sinalização?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Irregular — gabarito B", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Lombada sonora como redutor sem caso especial?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Entulho na calçada não removível sem sinalização?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Irregular — gabarito B",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — sem autorização do órgão competente" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — STTP notificou sinalização" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — sem autorização do órgão competente"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — STTP notificou sinalização"
+              }
             ]
           }
         },
@@ -174,7 +226,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Lombada sinalizada é redutor válido",
@@ -193,7 +248,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -216,13 +274,31 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Elemento", "Conclusão"],
+            "colunas": [
+              "Elemento",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Entulho na calçada obstruindo pedestres", "Obstáculo — sinalização imediata se não retirado"],
-              ["Lombadas sonoras com placas de advertência", "Redutor vedado sem caso especial"],
-              ["Sem definição de caso especial pelo órgão competente", "Irregular — parágrafo único"],
-              ["STTP notificou sinalização do entulho", "Correto — caput"],
-              ["Resultado", "Gabarito B"]
+              [
+                "Entulho na calçada obstruindo pedestres",
+                "Obstáculo — sinalização imediata se não retirado"
+              ],
+              [
+                "Lombadas sonoras com placas de advertência",
+                "Redutor vedado sem caso especial"
+              ],
+              [
+                "Sem definição de caso especial pelo órgão competente",
+                "Irregular — parágrafo único"
+              ],
+              [
+                "STTP notificou sinalização do entulho",
+                "Correto — caput"
+              ],
+              [
+                "Resultado",
+                "Gabarito B"
+              ]
             ]
           }
         },
@@ -232,12 +308,27 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Dever no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Dever no caso"
+            ],
             "linhas": [
-              ["Caput — obstáculo na calçada", "Sinalizar imediatamente se não puder retirar"],
-              ["Parágrafo único — lombada sonora", "Proibida como redutor salvo caso especial"],
-              ["Órgão competente + CONTRAN", "Define caso especial nos padrões nacionais"],
-              ["STTP", "Notifica sinalização do entulho — não autoriza lombada por si só"]
+              [
+                "Caput — obstáculo na calçada",
+                "Sinalizar imediatamente se não puder retirar"
+              ],
+              [
+                "Parágrafo único — lombada sonora",
+                "Proibida como redutor salvo caso especial"
+              ],
+              [
+                "Órgão competente + CONTRAN",
+                "Define caso especial nos padrões nacionais"
+              ],
+              [
+                "STTP",
+                "Notifica sinalização do entulho — não autoriza lombada por si só"
+              ]
             ]
           }
         },
@@ -247,11 +338,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Papel no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Papel no caso"
+            ],
             "linhas": [
-              ["Caput do art. 94", "Sinalização imediata do entulho não removível na calçada"],
-              ["Parágrafo único do art. 94", "Veda lombada sonora como redutor — exige caso especial"],
-              ["CONTRAN", "Estabelece padrões para caso especial — não substitui órgão local"]
+              [
+                "Caput do art. 94",
+                "Sinalização imediata do entulho não removível na calçada"
+              ],
+              [
+                "Parágrafo único do art. 94",
+                "Veda lombada sonora como redutor — exige caso especial"
+              ],
+              [
+                "CONTRAN",
+                "Estabelece padrões para caso especial — não substitui órgão local"
+              ]
             ]
           }
         },
@@ -298,7 +401,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "94 caput = sinalizar obstáculo · § único = lombada proibida salvo caso especial + CONTRAN.\n\nNear: galho caído na via sem remoção imediata — mesmo dever de sinalização do caput.\nFar: obra com interdição sem permissão da STTP — art. 95 exige autorização prévia do órgão da via.\nNão muda: obstáculo não removível exige sinalização; lombada sonora só com caso especial autorizado.\nCadeia: vizinho = art. 95 (obra ou evento que perturba a via).",
-            "destaques": ["sinalizar", "lombada", "art. 95"]
+            "destaques": [
+              "sinalizar",
+              "lombada",
+              "art. 95"
+            ]
           }
         }
       ],

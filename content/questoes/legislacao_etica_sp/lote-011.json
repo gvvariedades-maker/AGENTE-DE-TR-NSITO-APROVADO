@@ -44,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Contratada privada não torna o tratamento dependente de consentimento nem inverte controlador e operador — STTP decide; empresa executa; políticas públicas dispensam consentimento.",
-            "destaques": ["consentimento", "controlador", "políticas públicas"]
+            "destaques": [
+              "consentimento",
+              "controlador",
+              "políticas públicas"
+            ]
           }
         },
         {
@@ -53,10 +57,24 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "STTP define finalidades e regras?", "tipo": "pergunta" },
-              { "id": "r1", "label": "STTP controladora — empresa operadora", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "STTP define finalidades e regras?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "STTP controladora — empresa operadora",
+                "tipo": "resultado"
+              }
             ],
-            "arestas": [{ "de": "p1", "para": "r1", "rotulo": "Sim" }]
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
           }
         },
         {
@@ -64,7 +82,10 @@
           "titulo": "Consentimento × política pública",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
               [
                 "Operador privado exige consentimento prévio",
@@ -79,7 +100,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Controlador decide; operador executa; encarregado é canal — contratada privada não vira controladora.",
-            "destaques": ["Controlador", "operador", "políticas públicas"]
+            "destaques": [
+              "Controlador",
+              "operador",
+              "políticas públicas"
+            ]
           }
         }
       ],
@@ -101,7 +126,11 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Contratada privada induz consentimento obrigatório ou inversão controlador-operador",
-        "eixos_legais": ["LGPD_art5_VI_VII", "LGPD_art7_III", "LGPD_art39"],
+        "eixos_legais": [
+          "LGPD_art5_VI_VII",
+          "LGPD_art7_III",
+          "LGPD_art39"
+        ],
         "isca_por_alternativa": {
           "A": "operador privado afasta hipóteses do art. 7º — exige consentimento",
           "B": "quem hospeda fisicamente o banco é controlador",
@@ -115,8 +144,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C.\n\nA — operador privado afasta hipóteses legais: ignora tratamento para políticas públicas.\nB — quem hospeda o banco é controlador: inverte papéis de controlador e operador.\nD — encarregado com artigo errado: confunde dispositivo do encarregado com outro da LGPD.\n\nA isca é a contratada privada empurrar para consentimento ou inversão de papéis.",
-            "destaques": ["Gabarito C", "políticas públicas", "controlador"]
+            "texto": "Gabarito C. A — operador privado afasta hipóteses legais: ignora tratamento para políticas públicas.\nB — quem hospeda o banco é controlador: inverte papéis de controlador e operador.\nD — encarregado com artigo errado: confunde dispositivo do encarregado com outro da LGPD. A isca é a contratada privada empurrar para consentimento ou inversão de papéis.",
+            "destaques": [
+              "Gabarito C",
+              "políticas públicas",
+              "controlador"
+            ]
           }
         },
         {
@@ -125,7 +158,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CONTROLADOR: quem decide sobre o tratamento — art. 5º, VI (no caso, a STTP).\n\nOPERADOR: quem trata em nome do controlador — art. 5º, VII (a empresa contratada).\n\nENCARREGADO: canal entre titulares, controlador e ANPD — art. 5º, VIII; não decide finalidades.",
-            "destaques": ["CONTROLADOR", "OPERADOR", "ENCARREGADO"]
+            "destaques": [
+              "CONTROLADOR",
+              "OPERADOR",
+              "ENCARREGADO"
+            ]
           }
         },
         {
@@ -152,8 +189,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -163,11 +208,23 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Agente no caso", "Papel legal"],
+            "colunas": [
+              "Agente no caso",
+              "Papel legal"
+            ],
             "linhas": [
-              ["STTP", "Controladora — decide o tratamento (art. 5º, VI)"],
-              ["Empresa contratada", "Operadora — trata em nome da STTP (art. 5º, VII)"],
-              ["Encarregado (DPO)", "Canal de comunicação — não define finalidades (art. 5º, VIII)"]
+              [
+                "STTP",
+                "Controladora — decide o tratamento (art. 5º, VI)"
+              ],
+              [
+                "Empresa contratada",
+                "Operadora — trata em nome da STTP (art. 5º, VII)"
+              ],
+              [
+                "Encarregado (DPO)",
+                "Canal de comunicação — não define finalidades (art. 5º, VIII)"
+              ]
             ]
           }
         },
@@ -177,7 +234,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Operador privado exige consentimento prévio",
@@ -196,7 +256,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -219,12 +282,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Enquadramento legal"],
+            "colunas": [
+              "Fato do enunciado",
+              "Enquadramento legal"
+            ],
             "linhas": [
-              ["STTP define dados, finalidades e regras de acesso", "Controladora — art. 5º, VI"],
-              ["Empresa armazena e processa por instrução da STTP", "Operadora — art. 5º, VII e art. 39"],
-              ["Autuações vinculadas a política pública de trânsito", "Hipótese art. 7º, III — sem consentimento"],
-              ["Resultado", "Gabarito C"]
+              [
+                "STTP define dados, finalidades e regras de acesso",
+                "Controladora — art. 5º, VI"
+              ],
+              [
+                "Empresa armazena e processa por instrução da STTP",
+                "Operadora — art. 5º, VII e art. 39"
+              ],
+              [
+                "Autuações vinculadas a política pública de trânsito",
+                "Hipótese art. 7º, III — sem consentimento"
+              ],
+              [
+                "Resultado",
+                "Gabarito C"
+              ]
             ]
           }
         },
@@ -234,11 +312,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Quem", "Obrigação"],
+            "colunas": [
+              "Quem",
+              "Obrigação"
+            ],
             "linhas": [
-              ["Operador (empresa)", "Tratar segundo instruções do controlador — art. 39"],
-              ["Controlador (STTP)", "Verificar observância das instruções e das normas — art. 39"],
-              ["Encarregado", "Canal titular ↔ ANPD — art. 41, § 2º (não contrata nem define finalidades)"]
+              [
+                "Operador (empresa)",
+                "Tratar segundo instruções do controlador — art. 39"
+              ],
+              [
+                "Controlador (STTP)",
+                "Verificar observância das instruções e das normas — art. 39"
+              ],
+              [
+                "Encarregado",
+                "Canal titular ↔ ANPD — art. 41, § 2º (não contrata nem define finalidades)"
+              ]
             ]
           }
         },
@@ -296,8 +386,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Controlador decide; operador executa; encarregado é canal — contratada privada não vira controladora nem exige consentimento se couber art. 7º, III.\n\nNear-transfer: se a STTP apenas terceiriza backup em nuvem, mas continua definindo finalidades e acesso, permanece controladora e a nuvem é operadora.",
-            "destaques": ["Controlador", "operador", "Near-transfer"]
+            "texto": "Controlador decide; operador executa; encarregado é canal — contratada privada não vira controladora nem exige consentimento se couber art. 7º, III.\n\nNear-transfer: se a STTP apenas terceiriza backup em nuvem, mas continua definindo finalidades e acesso, permanece controladora e a nuvem é operadora.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "Controlador",
+              "operador",
+              "Near-transfer"
+            ]
           }
         }
       ],
@@ -315,6 +409,17 @@
       "consentimento",
       "politicas_publicas",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se a STTP apenas terceiriza backup em nuvem, mas continua definindo finalidades e acesso, permanece controladora e a nuvem é operadora.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Controlador decide; operador executa; encarregado é canal (DPO) — contratada privada não vira controladora nem exige consentimento se couber art. 7º, III.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

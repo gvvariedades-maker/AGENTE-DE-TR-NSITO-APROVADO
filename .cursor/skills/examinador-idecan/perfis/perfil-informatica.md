@@ -7,7 +7,7 @@ consumido_por: [examinador-idecan, professor-cadeia, estudo-reverso-visual]
 corpus_base: 486 questões IDECAN (análise 2026-07-10)
 cobertura_banco: 6 questões em content/questoes/informatica/ (atualizado 2026-07-10)
 fonte_legal: conceitos atuais Windows/Linux/Office/Internet (sem versão obsoleta — Anexo I, Noções de Informática)
-versao: 1.0
+versao: 1.1
 ---
 
 # Perfil vertical — Noções de Informática
@@ -207,6 +207,21 @@ Hardware/memórias/periféricos · editor de textos (formatação, tabelas, queb
 
 ---
 
+## 13. Paridade IDECAN — coleta Tec Concursos
+
+**Status:** 🟢 **Manutenção** — Corpus local **486 Q** excede meta. Tec confirma oferta ampla: **1.287** questões IDECAN em `Informática`.
+
+| Métrica | Valor |
+|---------|-------|
+| Corpus local | **486** questões |
+| Tec IDECAN + Informática | **1.287** questões |
+| Meta paridade (camada 1) | ✅ Atingida |
+
+**Quando reexportar:** questões de **correspondência** (~4% no corpus) ou segurança/Office se teste cego falhar. Fluxo: [perfil-banca.md](../perfil-banca.md) § Paridade IDECAN.
+
+---
+
 ## Changelog
 
+- **1.1** (2026-07-19) — §13 Paridade IDECAN: corpus OK; Tec 1.287 Q; manutenção.
 - **1.0** (2026-07-10) — Perfil inicial: corpus 486 Q IDECAN; envelope enunciado 250–500 / alternativas 40–80; correspondência (4,1%) destacada como assinatura da disciplina; mecanismos análogos técnicos; 8 microtópicos P1→P5; cobertura 6 Q do banco; fila ROI segurança→SO→internet; mapa visual Famílias A/B/D.

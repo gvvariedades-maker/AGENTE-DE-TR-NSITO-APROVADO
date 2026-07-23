@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Lei estadual afasta PRF em trecho urbano da BR-230. A banca troca competência legislativa federal com exclusividade da PM ou da STTP no perímetro urbano.",
-            "destaques": ["PRF", "rodovia federal", "PM"]
+            "destaques": [
+              "PRF",
+              "rodovia federal",
+              "PM"
+            ]
           }
         },
         {
@@ -52,14 +56,38 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "uniao", "label": "União — legisla trânsito e PRF (22, XI/XXII)", "nivel": 0 },
-              { "id": "pb", "label": "Paraíba — lei afastando PRF ✗", "nivel": 1 },
-              { "id": "prf", "label": "PRF — rodovia federal", "nivel": 2 },
-              { "id": "pm", "label": "PM — não exclusiva por lei estadual", "nivel": 2 }
+              {
+                "id": "uniao",
+                "label": "União — legisla trânsito e PRF (22, XI/XXII)",
+                "nivel": 0
+              },
+              {
+                "id": "pb",
+                "label": "Paraíba — lei afastando PRF ✗",
+                "nivel": 1
+              },
+              {
+                "id": "prf",
+                "label": "PRF — rodovia federal",
+                "nivel": 2
+              },
+              {
+                "id": "pm",
+                "label": "PM — não exclusiva por lei estadual",
+                "nivel": 2
+              }
             ],
             "arestas": [
-              { "de": "uniao", "para": "prf", "rotulo": "Define competência da PRF" },
-              { "de": "pb", "para": "pm", "rotulo": "Exclusividade ilegal (A falsa)" }
+              {
+                "de": "uniao",
+                "para": "prf",
+                "rotulo": "Define competência da PRF"
+              },
+              {
+                "de": "pb",
+                "para": "pm",
+                "rotulo": "Exclusividade ilegal (A falsa)"
+              }
             ]
           }
         },
@@ -68,10 +96,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["Trecho urbano = PM exclusiva", "Legislar competência da PRF é da União"],
-              ["STTP substitui PRF na BR-230", "Rodovia federal ≠ via municipal"]
+              [
+                "Trecho urbano = PM exclusiva",
+                "Legislar competência da PRF é da União"
+              ],
+              [
+                "STTP substitui PRF na BR-230",
+                "Rodovia federal ≠ via municipal"
+              ]
             ]
           }
         },
@@ -98,7 +135,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "22,XI = legislar trânsito. 22,XXII = competência da PRF. Estado não afasta PRF em rodovia federal.",
-            "destaques": ["22, XI", "22, XXII", "PRF"]
+            "destaques": [
+              "22, XI",
+              "22, XXII",
+              "PRF"
+            ]
           }
         }
       ],
@@ -120,7 +161,10 @@
       "meta": {
         "padrao_familia": "C_competencia_snt",
         "pegadinha_em_uma_frase": "Estado não legisla exclusividade da PM em rodovia federal — competência da PRF é matéria privativa da União",
-        "eixos_legais": ["CF_art22_XI", "CF_art22_XXII"],
+        "eixos_legais": [
+          "CF_art22_XI",
+          "CF_art22_XXII"
+        ],
         "isca_por_alternativa": {
           "A": "trecho urbano da BR-230 autoriza PM exclusiva por interesse local",
           "B": "STTP substitui PRF no perímetro urbano da rodovia federal",
@@ -134,8 +178,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C (União legisla trânsito e competência da PRF).\n\nA — trecho urbano da BR-230 vira exclusividade da PM estadual.\nB — STTP substitui a PRF no perímetro urbano.\nD — legislação concorrente permite ao Estado redistribuir PRF, PM e STTP.\n\nPromessa: separar quem LEGISLA competências de quem PATRULHA rodovia federal.",
-            "destaques": ["PRF", "rodovia federal", "legislar"]
+            "texto": "Gabarito C (União legisla trânsito e competência da PRF). A — trecho urbano da BR-230 vira exclusividade da PM estadual.\nB — STTP substitui a PRF no perímetro urbano.\nD — legislação concorrente permite ao Estado redistribuir PRF, PM e STTP. Promessa: separar quem LEGISLA competências de quem PATRULHA rodovia federal.",
+            "destaques": [
+              "PRF",
+              "rodovia federal",
+              "legislar"
+            ]
           }
         },
         {
@@ -144,7 +192,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PRIVATIVA DA UNIÃO (art. 22): só a União legisla sobre os temas do rol — inclusive trânsito (XI) e competência da PRF (XXII). RODOVIA FEDERAL: via sob jurisdição federal — trecho urbano não transfere legislação ao Estado. ÓRGÃO EXECUTIVO MUNICIPAL (STTP): atua em vias municipais — não substitui PRF em BR federal.",
-            "destaques": ["privativa", "rodovia federal", "STTP"]
+            "destaques": [
+              "privativa",
+              "rodovia federal",
+              "STTP"
+            ]
           }
         },
         {
@@ -154,16 +206,48 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "uniao", "label": "União — legisla 22, XI e XXII", "nivel": 0 },
-              { "id": "pb", "label": "Paraíba — lei afastando PRF ✗", "nivel": 1 },
-              { "id": "prf", "label": "PRF — patrulhamento em rodovia federal", "nivel": 2 },
-              { "id": "sttp", "label": "STTP — vias municipais (não BR)", "nivel": 2 },
-              { "id": "pm", "label": "PM — apoio, sem exclusividade por lei estadual", "nivel": 2 }
+              {
+                "id": "uniao",
+                "label": "União — legisla 22, XI e XXII",
+                "nivel": 0
+              },
+              {
+                "id": "pb",
+                "label": "Paraíba — lei afastando PRF ✗",
+                "nivel": 1
+              },
+              {
+                "id": "prf",
+                "label": "PRF — patrulhamento em rodovia federal",
+                "nivel": 2
+              },
+              {
+                "id": "sttp",
+                "label": "STTP — vias municipais (não BR)",
+                "nivel": 2
+              },
+              {
+                "id": "pm",
+                "label": "PM — apoio, sem exclusividade por lei estadual",
+                "nivel": 2
+              }
             ],
             "arestas": [
-              { "de": "uniao", "para": "prf", "rotulo": "Define competência da PRF" },
-              { "de": "pb", "para": "pm", "rotulo": "Exclusividade ilegal (A falsa)" },
-              { "de": "sttp", "para": "prf", "rotulo": "Não substitui em BR (B falsa)" }
+              {
+                "de": "uniao",
+                "para": "prf",
+                "rotulo": "Define competência da PRF"
+              },
+              {
+                "de": "pb",
+                "para": "pm",
+                "rotulo": "Exclusividade ilegal (A falsa)"
+              },
+              {
+                "de": "sttp",
+                "para": "prf",
+                "rotulo": "Não substitui em BR (B falsa)"
+              }
             ]
           }
         },
@@ -173,7 +257,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Trecho urbano transfere competência ao Estado",
@@ -192,7 +279,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -215,12 +305,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Conclusão"],
+            "colunas": [
+              "Fato do enunciado",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Lei estadual afasta PRF e dá exclusividade à PM", "Estado não legisla competência da PRF — 22, XXII"],
-              ["BR-230 em trecho urbano de Campina Grande", "Continua rodovia federal — 22, XI"],
-              ["STTP e PRF debatem competência legislativa", "Privativa da União — não STTP nem Estado"],
-              ["Resultado", "Alternativa C"]
+              [
+                "Lei estadual afasta PRF e dá exclusividade à PM",
+                "Estado não legisla competência da PRF — 22, XXII"
+              ],
+              [
+                "BR-230 em trecho urbano de Campina Grande",
+                "Continua rodovia federal — 22, XI"
+              ],
+              [
+                "STTP e PRF debatem competência legislativa",
+                "Privativa da União — não STTP nem Estado"
+              ],
+              [
+                "Resultado",
+                "Alternativa C"
+              ]
             ]
           }
         },
@@ -230,11 +335,23 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Tema", "Quem legisla"],
+            "colunas": [
+              "Tema",
+              "Quem legisla"
+            ],
             "linhas": [
-              ["Trânsito e transporte", "União — art. 22, XI (privativa)"],
-              ["Competência da PRF", "União — art. 22, XXII (privativa)"],
-              ["Normas gerais concorrentes", "União, Estados, DF — art. 24 (não redistribui PRF)"]
+              [
+                "Trânsito e transporte",
+                "União — art. 22, XI (privativa)"
+              ],
+              [
+                "Competência da PRF",
+                "União — art. 22, XXII (privativa)"
+              ],
+              [
+                "Normas gerais concorrentes",
+                "União, Estados, DF — art. 24 (não redistribui PRF)"
+              ]
             ]
           }
         },
@@ -292,8 +409,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "22,XI = União LEGISLA trânsito.\n22,XXII = União define competência da PRF.\nTrecho urbano ≠ transferir rodovia federal ao Estado.\n\nNear-transfer: se a STTP autuasse estacionamento em rua municipal, seria competência executiva municipal — mas afastar a PRF da BR-230 exige lei federal, não estadual.",
-            "destaques": ["22, XI", "22, XXII", "PRF"]
+            "texto": "22,XI = União LEGISLA trânsito.\n22,XXII = União define competência da PRF.\nTrecho urbano ≠ transferir rodovia federal ao Estado.\n\nNear-transfer: se a STTP autuasse estacionamento em rua municipal, seria competência executiva municipal — mas afastar a PRF da BR-230 exige lei federal, não estadual.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "22, XI",
+              "22, XXII",
+              "PRF"
+            ]
           }
         }
       ],
@@ -311,6 +432,17 @@
       "prf",
       "rodovia_federal",
       "pm"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se a STTP autuasse estacionamento em rua municipal, seria competência executiva municipal — mas afastar a PRF da BR-230 exige lei federal, não estadual.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Legislar TRÂNSITO (22, XI) e competência da PRF (22, XXII) = União privativa. Estado não afasta PRF em rodovia federal.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

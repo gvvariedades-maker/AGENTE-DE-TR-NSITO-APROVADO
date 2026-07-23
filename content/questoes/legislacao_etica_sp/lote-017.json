@@ -44,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Dado não compilado — não é imediato. Prazo padrão é 20 dias; mais 10 só com justificativa. Dez dias é recurso, não resposta ao pedido.",
-            "destaques": ["20 dias", "10 dias", "imediato"]
+            "destaques": [
+              "20 dias",
+              "10 dias",
+              "imediato"
+            ]
           }
         },
         {
@@ -52,11 +56,24 @@
           "titulo": "Prazos de resposta — art. 11",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Situação", "Prazo"],
+            "titulo_colunas": [
+              "Situação",
+              "Prazo"
+            ],
             "linhas": [
-              { "faixa": "Informação disponível", "classificacao": "Imediato (caput)" },
-              { "faixa": "Sem acesso imediato (caso)", "classificacao": "20 dias (§1)", "destaque": true },
-              { "faixa": "Prorrogação justificada", "classificacao": "+10 dias (§2)" }
+              {
+                "faixa": "Informação disponível",
+                "classificacao": "Imediato (caput)"
+              },
+              {
+                "faixa": "Sem acesso imediato (caso)",
+                "classificacao": "20 dias (§1)",
+                "destaque": true
+              },
+              {
+                "faixa": "Prorrogação justificada",
+                "classificacao": "+10 dias (§2)"
+              }
             ]
           }
         },
@@ -65,10 +82,19 @@
           "titulo": "Armadilha dos vizinhos",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["Resposta em 10 dias (art. 15)", "20 dias no art. 11, §1"],
-              ["30 dias sem justificativa", "20 + 10 apenas com justificativa expressa"]
+              [
+                "Resposta em 10 dias (art. 15)",
+                "20 dias no art. 11, §1"
+              ],
+              [
+                "30 dias sem justificativa",
+                "20 + 10 apenas com justificativa expressa"
+              ]
             ]
           }
         },
@@ -78,7 +104,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Imediato · 20 dias · +10 justificado. Dez dias é recurso (art. 15), não prazo de resposta.",
-            "destaques": ["20 dias", "recurso", "justificativa"]
+            "destaques": [
+              "20 dias",
+              "recurso",
+              "justificativa"
+            ]
           }
         }
       ],
@@ -100,7 +130,11 @@
       "meta": {
         "padrao_familia": "D_gradacao",
         "pegadinha_em_uma_frase": "Setores empurram 10 dias do recurso ou 30 dias sem justificativa no pedido não imediato",
-        "eixos_legais": ["LAI_art11_caput", "LAI_art11_par1", "LAI_art11_par2"],
+        "eixos_legais": [
+          "LAI_art11_caput",
+          "LAI_art11_par1",
+          "LAI_art11_par2"
+        ],
         "isca_por_alternativa": {
           "A": "30 dias sem justificativa como prazo único de compilação",
           "B": "10 dias do art. 15 aplicados ao prazo de resposta",
@@ -114,8 +148,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C.\n\nA — 30 dias sem justificativa: confunde teto de 20+10 com prazo automático.\nB — 10 dias do recurso: aplica prazo do interessado ao prazo de resposta.\nD — desoneração pelo site: usa exceção da publicação para afastar prazo de resposta.\n\nA isca são os setores da STTP empurrando 10 ou 30 dias no dado ainda não compilado.",
-            "destaques": ["Gabarito C", "20 dias", "justificativa"]
+            "texto": "Gabarito C. A — 30 dias sem justificativa: confunde teto de 20+10 com prazo automático.\nB — 10 dias do recurso: aplica prazo do interessado ao prazo de resposta.\nD — desoneração pelo site: usa exceção da publicação para afastar prazo de resposta. A isca são os setores da STTP empurrando 10 ou 30 dias no dado ainda não compilado.",
+            "destaques": [
+              "Gabarito C",
+              "20 dias",
+              "justificativa"
+            ]
           }
         },
         {
@@ -124,7 +162,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "ACESSO IMEDIATO: quando a informação já está disponível — caput do art. 11.\n\nPRAZO DE RESPOSTA: até 20 dias se não houver acesso imediato — §1 do art. 11.\n\nRECURSO DO INTERESSADO: 10 dias da ciência do indeferimento — art. 15 (não confundir com resposta).",
-            "destaques": ["IMEDIATO", "20 dias", "RECURSO"]
+            "destaques": [
+              "IMEDIATO",
+              "20 dias",
+              "RECURSO"
+            ]
           }
         },
         {
@@ -133,11 +175,24 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Situação", "Prazo legal"],
+            "titulo_colunas": [
+              "Situação",
+              "Prazo legal"
+            ],
             "linhas": [
-              { "faixa": "Informação disponível", "classificacao": "Acesso imediato (caput)" },
-              { "faixa": "Sem acesso imediato (caso STTP)", "classificacao": "20 dias (§1)", "destaque": true },
-              { "faixa": "Prorrogação justificada", "classificacao": "+10 dias (§2)" }
+              {
+                "faixa": "Informação disponível",
+                "classificacao": "Acesso imediato (caput)"
+              },
+              {
+                "faixa": "Sem acesso imediato (caso STTP)",
+                "classificacao": "20 dias (§1)",
+                "destaque": true
+              },
+              {
+                "faixa": "Prorrogação justificada",
+                "classificacao": "+10 dias (§2)"
+              }
             ]
           }
         },
@@ -147,7 +202,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Resposta ao pedido em 10 dias (art. 15)",
@@ -166,7 +224,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — numero_vizinho",
@@ -189,12 +250,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato / argumento", "Enquadramento"],
+            "colunas": [
+              "Fato / argumento",
+              "Enquadramento"
+            ],
             "linhas": [
-              ["Dado de autuações ainda não compilado", "Sem acesso imediato — §1, não caput isolado"],
-              ["Comunicação cita 10 dias", "Confunde art. 15 (recurso) com art. 11 (resposta)"],
-              ["Jurídico propõe 30 dias sem justificativa", "Teto 20+10 exige justificativa no §2"],
-              ["Resultado", "Gabarito C — até 20 dias, prorrogável +10"]
+              [
+                "Dado de autuações ainda não compilado",
+                "Sem acesso imediato — §1, não caput isolado"
+              ],
+              [
+                "Comunicação cita 10 dias",
+                "Confunde art. 15 (recurso) com art. 11 (resposta)"
+              ],
+              [
+                "Jurídico propõe 30 dias sem justificativa",
+                "Teto 20+10 exige justificativa no §2"
+              ],
+              [
+                "Resultado",
+                "Gabarito C — até 20 dias, prorrogável +10"
+              ]
             ]
           }
         },
@@ -252,8 +328,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Imediato se pronto · 20 dias · +10 com justificativa. Dez dias é recurso (art. 15), não prazo de resposta.\n\nNear-transfer: relatório já publicado no portal da transparência — STTP pode indicar o link (§6), mas se o vereador não tiver meios, mantém-se o dever de fornecer.",
-            "destaques": ["20 dias", "Near-transfer", "recurso"]
+            "texto": "Imediato se pronto · 20 dias · +10 com justificativa. Dez dias é recurso (art. 15), não prazo de resposta.\n\nNear-transfer: relatório já publicado no portal da transparência — STTP pode indicar o link (§6), mas se o vereador não tiver meios, mantém-se o dever de fornecer.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "20 dias",
+              "Near-transfer",
+              "recurso"
+            ]
           }
         }
       ],
@@ -270,6 +350,17 @@
       "pedido_informacao",
       "acesso_passivo",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "relatório já publicado no portal da transparência — STTP pode indicar o link (§6), mas se o vereador não tiver meios, mantém-se o dever de fornecer.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "LAI resposta: imediato se pronto · 20 dias · +10 com justificativa — 10 dias é recurso (art. 15), não prazo de resposta.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Suspensão de CNH homologada sem defesa prévia na STTP. A banca oferece HC ou dispensa de contraditório — lesão a direito líquido e certo pede mandado de segurança.",
-            "destaques": ["mandado de segurança", "contraditório", "defesa prévia"]
+            "destaques": [
+              "mandado de segurança",
+              "contraditório",
+              "defesa prévia"
+            ]
           }
         },
         {
@@ -52,13 +56,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Há coação à locomoção da pessoa?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Lesão a direito líquido e certo de autoridade pública?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Mandado de segurança — LXIX + LV", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Há coação à locomoção da pessoa?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Lesão a direito líquido e certo de autoridade pública?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Mandado de segurança — LXIX + LV",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Não — só suspensão de CNH" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — sem defesa prévia" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Não — só suspensão de CNH"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — sem defesa prévia"
+              }
             ]
           }
         },
@@ -67,10 +91,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["Suspensão de CNH = habeas corpus", "HC é coação pessoal à locomoção"],
-              ["Infração grave dispensa defesa", "Contraditório vale no administrativo"]
+              [
+                "Suspensão de CNH = habeas corpus",
+                "HC é coação pessoal à locomoção"
+              ],
+              [
+                "Infração grave dispensa defesa",
+                "Contraditório vale no administrativo"
+              ]
             ]
           }
         },
@@ -97,7 +130,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Defesa violada + autoridade = MS (LXIX + LV). Pessoa coacta = HC. Infração grave ≠ sem contraditório.",
-            "destaques": ["MS", "LV", "HC"]
+            "destaques": [
+              "MS",
+              "LV",
+              "HC"
+            ]
           }
         }
       ],
@@ -119,7 +156,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Suspensão de CNH sem defesa prévia pede MS — não HC nem dispensa de contraditório",
-        "eixos_legais": ["CF_art5_LXIX", "CF_art5_LV"],
+        "eixos_legais": [
+          "CF_art5_LXIX",
+          "CF_art5_LV"
+        ],
         "isca_por_alternativa": {
           "B": "suspensão de CNH vira coação pessoal à locomoção (habeas corpus)",
           "C": "homologação é exclusiva do órgão máximo de trânsito da União, sem MS municipal",
@@ -133,8 +173,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A (mandado de segurança por violação ao contraditório).\n\nB — suspensão de CNH vira coação pessoal pedindo habeas corpus.\nC — só o órgão máximo de trânsito da União homologa, sem MS contra a STTP.\nD — infração grave dispensa defesa prévia no processo administrativo.\n\nPromessa: fixar quando a omissão de defesa pede MS e não HC.",
-            "destaques": ["mandado de segurança", "contraditório", "defesa prévia"]
+            "texto": "Gabarito A (mandado de segurança por violação ao contraditório). B — suspensão de CNH vira coação pessoal pedindo habeas corpus.\nC — só o órgão máximo de trânsito da União homologa, sem MS contra a STTP.\nD — infração grave dispensa defesa prévia no processo administrativo. Promessa: fixar quando a omissão de defesa pede MS e não HC.",
+            "destaques": [
+              "mandado de segurança",
+              "contraditório",
+              "defesa prévia"
+            ]
           }
         },
         {
@@ -143,7 +187,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "DIREITO LÍQUIDO E CERTO: demonstrável de plano — omissão de defesa prévia com recurso ignorado. CONTRADITÓRIO E AMPLA DEFESA (art. 5º, LV): valem no processo administrativo. MS (art. 5º, LXIX): tutela direito não amparado por HC ou habeas data contra autoridade pública.",
-            "destaques": ["líquido e certo", "contraditório", "MS"]
+            "destaques": [
+              "líquido e certo",
+              "contraditório",
+              "MS"
+            ]
           }
         },
         {
@@ -170,8 +218,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Não — só suspensão de CNH" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — sem defesa prévia" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Não — só suspensão de CNH"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — sem defesa prévia"
+              }
             ]
           }
         },
@@ -181,11 +237,23 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Lesão", "Remédio"],
+            "titulo_colunas": [
+              "Lesão",
+              "Remédio"
+            ],
             "linhas": [
-              { "faixa": "Coação pessoal à locomoção", "classificacao": "Habeas corpus — LXVIII" },
-              { "faixa": "Direito líquido e certo à defesa", "classificacao": "Mandado de segurança — LXIX" },
-              { "faixa": "Acesso a dados próprios", "classificacao": "Habeas data — excluído no LXIX" },
+              {
+                "faixa": "Coação pessoal à locomoção",
+                "classificacao": "Habeas corpus — LXVIII"
+              },
+              {
+                "faixa": "Direito líquido e certo à defesa",
+                "classificacao": "Mandado de segurança — LXIX"
+              },
+              {
+                "faixa": "Acesso a dados próprios",
+                "classificacao": "Habeas data — excluído no LXIX"
+              },
               {
                 "faixa": "Omissão de defesa prévia na STTP",
                 "classificacao": "MS — viola LV",
@@ -200,7 +268,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Suspender CNH = prender o condutor (HC)",
@@ -219,7 +290,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — termo_unico",
@@ -242,12 +316,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Conclusão"],
+            "colunas": [
+              "Fato do enunciado",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Homologação de suspensão sem prazo de defesa prévia", "Viola contraditório e ampla defesa — LV"],
-              ["Recurso administrativo protocolado e ignorado", "Direito líquido e certo — LXIX"],
-              ["Ato do diretor da STTP contra o condutor", "Autoridade pública — cabe MS"],
-              ["Resultado", "Alternativa A"]
+              [
+                "Homologação de suspensão sem prazo de defesa prévia",
+                "Viola contraditório e ampla defesa — LV"
+              ],
+              [
+                "Recurso administrativo protocolado e ignorado",
+                "Direito líquido e certo — LXIX"
+              ],
+              [
+                "Ato do diretor da STTP contra o condutor",
+                "Autoridade pública — cabe MS"
+              ],
+              [
+                "Resultado",
+                "Alternativa A"
+              ]
             ]
           }
         },
@@ -257,12 +346,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Papel no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Papel no caso"
+            ],
             "linhas": [
-              ["Art. 5º, LV", "Contraditório e ampla defesa no administrativo"],
-              ["Art. 5º, LXIX", "MS quando direito líquido e certo não couber HC/HD"],
-              ["Art. 5º, LXVIII", "Excluído — sem custódia ou coação pessoal"],
-              ["Caso concreto", "Omissão de defesa → MS, não HC"]
+              [
+                "Art. 5º, LV",
+                "Contraditório e ampla defesa no administrativo"
+              ],
+              [
+                "Art. 5º, LXIX",
+                "MS quando direito líquido e certo não couber HC/HD"
+              ],
+              [
+                "Art. 5º, LXVIII",
+                "Excluído — sem custódia ou coação pessoal"
+              ],
+              [
+                "Caso concreto",
+                "Omissão de defesa → MS, não HC"
+              ]
             ]
           }
         },
@@ -326,8 +430,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Defesa violada + autoridade = MS (LXIX + LV).\nPessoa coacta = HC (LXVIII).\nInfração grave ≠ sem contraditório.\n\nNear-transfer: se o condutor estivesse preso na base da PM, seria HC — mas omissão de defesa prévia na homologação pede mandado de segurança.",
-            "destaques": ["MS", "LV", "HC"]
+            "texto": "Defesa violada + autoridade = MS (LXIX + LV).\nPessoa coacta = HC (LXVIII).\nInfração grave ≠ sem contraditório.\n\nNear-transfer: se o condutor estivesse preso na base da PM, seria HC — mas omissão de defesa prévia na homologação pede mandado de segurança.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "MS",
+              "LV",
+              "HC"
+            ]
           }
         }
       ],
@@ -349,6 +457,17 @@
       "contraditorio",
       "ampla_defesa",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se o condutor estivesse preso na base da PM, seria HC — mas omissão de defesa prévia na homologação pede mandado de segurança.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Defesa administrativa violada + autoridade = MS (LXIX + LV). Pessoa coacta = HC (LXVIII). Infração grave ≠ sem defesa.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

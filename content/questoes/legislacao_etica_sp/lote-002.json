@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Conselho consultivo também é vedado — art. 109, § 1º proíbe conselho em empresa com contrato municipal, com pena de demissão.",
-            "destaques": ["conselho", "demissão", "§ 1º"]
+            "destaques": [
+              "conselho",
+              "demissão",
+              "§ 1º"
+            ]
           }
         },
         {
@@ -52,13 +56,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Empresa tem contrato com o Município?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Servidor integraria conselho dessa empresa?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito C — vedação + demissão", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Empresa tem contrato com o Município?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Servidor integraria conselho dessa empresa?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito C — vedação + demissão",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -67,9 +91,15 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["Só diretor é vedado", "Conselho também — § 1º"]
+              [
+                "Só diretor é vedado",
+                "Conselho também — § 1º"
+              ]
             ]
           }
         },
@@ -79,7 +109,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Servidor + conselho/diretoria + empresa contratada = demissão.",
-            "destaques": ["conselho", "demissão"]
+            "destaques": [
+              "conselho",
+              "demissão"
+            ]
           }
         }
       ],
@@ -101,7 +134,11 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Conselho consultivo conta — não só diretor — e STTP não escapa do Município",
-        "eixos_legais": ["LOM_art109_par1", "LOM_art96_II", "LOM_art97"],
+        "eixos_legais": [
+          "LOM_art109_par1",
+          "LOM_art96_II",
+          "LOM_art97"
+        ],
         "isca_por_alternativa": {
           "A": "restringe vedação a diretor, ignora conselho",
           "B": "separa autarquia da Prefeitura para liberar conselho",
@@ -115,8 +152,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C.\n\nA — acha que só diretor é vedado: conselho está no § 1º.\nB — separa STTP da Prefeitura: contrato é com o Município.\nD — inventa advertência: a pena na LOM é demissão.\n\nNesta aula você fixa a tríade servidor + conselho + empresa contratada.",
-            "destaques": ["Gabarito C", "conselho", "demissão"]
+            "texto": "Gabarito C. A — acha que só diretor é vedado: conselho está no parágrafo.\nB — separa STTP da Prefeitura: contrato é com o Município.\nD — inventa advertência: a pena na LOM é demissão. Nesta aula você fixa a tríade servidor + conselho + empresa contratada.",
+            "destaques": [
+              "Gabarito C",
+              "conselho",
+              "demissão"
+            ]
           }
         },
         {
@@ -125,7 +166,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "SERVIDOR MUNICIPAL: abrange administração direta, autarquias e fundações (art. 109, caput).\n\nCONSELHO: órgão colegiado consultivo — equiparado a diretor na vedação do § 1º.\n\nMUNICÍPIO: ente contratante amplo — contrato da Prefeitura ou de autarquia municipal.",
-            "destaques": ["SERVIDOR", "CONSELHO", "MUNICÍPIO"]
+            "destaques": [
+              "SERVIDOR",
+              "CONSELHO",
+              "MUNICÍPIO"
+            ]
           }
         },
         {
@@ -135,13 +180,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "A empresa mantém contrato com o Município?", "tipo": "pergunta" },
-              { "id": "p2", "label": "O servidor integraria conselho dessa empresa?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito C — vedação + demissão", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "A empresa mantém contrato com o Município?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "O servidor integraria conselho dessa empresa?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito C — vedação + demissão",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -151,7 +216,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Vínculo vedado", "Exemplo no caso"],
+            "titulo_colunas": [
+              "Vínculo vedado",
+              "Exemplo no caso"
+            ],
             "linhas": [
               {
                 "faixa": "Diretor",
@@ -175,7 +243,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Só cargo de diretor gera incompatibilidade",
@@ -194,7 +265,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -217,7 +291,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Conclusão legal"],
+            "colunas": [
+              "Fato do enunciado",
+              "Conclusão legal"
+            ],
             "linhas": [
               [
                 "Empresa vencedora de licitação municipal de radares",
@@ -227,7 +304,10 @@
                 "Convite a conselho consultivo (não diretor)",
                 "Conselho está no § 1º — não escapa"
               ],
-              ["Resultado", "Gabarito C — demissão se descumprir"]
+              [
+                "Resultado",
+                "Gabarito C — demissão se descumprir"
+              ]
             ]
           }
         },
@@ -237,11 +317,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Tese errada", "Correção"],
+            "colunas": [
+              "Tese errada",
+              "Correção"
+            ],
             "linhas": [
-              ["STTP autárquica ≠ Município contratante", "Autarquia integra administração municipal"],
-              ["Contrato da Prefeitura não alcança servidor da STTP", "Servidor de autarquia é servidor municipal (art. 109)"],
-              ["Pena seria advertência", "§ 1º fixa demissão"]
+              [
+                "STTP autárquica ≠ Município contratante",
+                "Autarquia integra administração municipal"
+              ],
+              [
+                "Contrato da Prefeitura não alcança servidor da STTP",
+                "Servidor de autarquia é servidor municipal (art. 109)"
+              ],
+              [
+                "Pena seria advertência",
+                "§ 1º fixa demissão"
+              ]
             ]
           }
         },
@@ -257,17 +349,20 @@
               {
                 "inicio": 45,
                 "fim": 62,
-                "motivo": "contraste — conselho está na vedação, não só diretor"
+                "motivo": "contraste — conselho está na vedação, não só diretor",
+                "texto_grifado": "integrar conselho"
               },
               {
                 "inicio": 102,
                 "fim": 149,
-                "motivo": "caso — contrato municipal de radares enquadra o Município"
+                "motivo": "caso — contrato municipal de radares enquadra o Município",
+                "texto_grifado": "qualquer modalidade de contrato com o Município"
               },
               {
                 "inicio": 151,
                 "fim": 171,
-                "motivo": "distratores — pena é demissão, não advertência"
+                "motivo": "distratores — pena é demissão, não advertência",
+                "texto_grifado": "sob pena de demissão"
               }
             ]
           }
@@ -278,8 +373,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Servidor + conselho/diretoria + empresa contratada pelo Município = demissão (§ 1º).\n\nNear-transfer: convite para conselho de empresa fornecedora da Câmara Municipal — a vedação permanece, pois o contrato é com o Município.",
-            "destaques": ["demissão", "Near-transfer", "Município"]
+            "texto": "Servidor + conselho/diretoria + empresa contratada pelo Município = demissão (§ 1º).\n\nNear-transfer: convite para conselho de empresa fornecedora da Câmara Municipal — a vedação permanece, pois o contrato é com o Município.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "demissão",
+              "Near-transfer",
+              "Município"
+            ]
           }
         }
       ],
@@ -290,6 +389,23 @@
         }
       ]
     },
-    "tags": ["lei_organica_cg", "servidor_publico", "incompatibilidade", "sttp", "etica"]
+    "tags": [
+      "lei_organica_cg",
+      "servidor_publico",
+      "incompatibilidade",
+      "sttp",
+      "etica"
+    ],
+    "meta": {
+      "near_transfer": "convite para conselho de empresa fornecedora da Câmara Municipal — a vedação permanece, pois o contrato é com o Município.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Servidor + conselho/diretoria + empresa contratada pelo Município = demissão (art. 109, § 1º).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

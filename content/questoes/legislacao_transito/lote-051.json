@@ -3,7 +3,7 @@
     "disciplina": "legislacao_transito",
     "topico": "CONTRAN_985_mbft",
     "tipo": "caso_pratico",
-    "estilo_idecan": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 5,
     "fundamento_slug": "CONTRAN_985_mbft_sinistro_materialidade",
     "enunciado": "Em atendimento a sinistro de trânsito em Campina Grande/PB, agente da STTP constata condutor com forte odor etílico e fala arrastada, mas não há etilômetro no local, o condutor recusa testes e não há outros elementos objetivos que comprovem influência de álcool na condução. O agente pretende lavrar Auto de Infração de Trânsito por embriaguez com base apenas na impressão pessoal. Considerando o MBFT (Resolução CONTRAN nº 985/2022), seção 7 — Autuação, assinale a alternativa CORRETA:",
@@ -166,7 +166,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C.\n\nA — autua por impressão: MBFT veda presunção subjetiva isolada.\nB — recolhe CNH sem prova: gravidade não supre materialidade.\nD — veda AIT em sinistro: MBFT prevê autuação com convicção suficiente.\n\nOdor etílico, sem etilômetro nem outros elementos objetivos.",
+            "texto": "Gabarito C. A — autua por impressão: MBFT veda presunção subjetiva isolada.\nD — veda AIT em sinistro: MBFT prevê autuação com convicção suficiente. Odor etílico, sem etilômetro nem outros elementos objetivos.\nB — recolhe CNH sem prova por classificação errada",
             "destaques": [
               "Gabarito C",
               "materialidade",
@@ -371,12 +371,14 @@
               {
                 "inicio": 158,
                 "fim": 192,
-                "motivo": "mapa — requisito positivo para autuar"
+                "motivo": "mapa — requisito positivo para autuar",
+                "texto_grifado": "elementos de convicção suficientes"
               },
               {
                 "inicio": 354,
                 "fim": 395,
-                "motivo": "contraste — veda odor/impressão isolados"
+                "motivo": "contraste — veda odor/impressão isolados",
+                "texto_grifado": "não de mera presunção subjetiva do agente"
               }
             ]
           }
@@ -387,7 +389,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "SINISTRO = convicção + MATERIALIDADE · odor sozinho ≠ AIT.\n\nNear-transfer: mesmo sinistro, mas condutor não apresenta CNH e confessa não ser habilitado — aí há materialidade para autuar não habilitado.",
+            "texto": "SINISTRO = convicção + MATERIALIDADE · odor sozinho ≠ AIT.\n\nNear-transfer: mesmo sinistro, mas condutor não apresenta CNH e confessa não ser habilitado — aí há materialidade para autuar não habilitado.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "MATERIALIDADE",
               "Near-transfer",
@@ -401,6 +403,22 @@
           "rotulo": "MBFT — Seção 7",
           "path": "conteúdo/resoluções CONTRAN/MBFT-anexo-resolucao-985-2022-secao-07-autuacao.txt"
         }
+      ]
+    },
+    "meta": {
+      "near_transfer": "mesmo sinistro, mas condutor não apresenta CNH e confessa não ser habilitado — aí há materialidade para autuar não habilitado.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "SINISTRO = convicção + MATERIALIDADE · odor sozinho ≠ AIT.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "competencia_snt",
+        "gravidade",
+        "regra_excecao"
       ]
     }
   }

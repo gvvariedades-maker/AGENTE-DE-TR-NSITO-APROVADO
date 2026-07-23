@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Notificação de condução coercitiva futura após blitz. A banca nega HC preventivo ou inventa poder coercitivo da fiscalização — ameaça à locomoção pede habeas corpus.",
-            "destaques": ["ameaça", "habeas corpus", "locomoção"]
+            "destaques": [
+              "ameaça",
+              "habeas corpus",
+              "locomoção"
+            ]
           }
         },
         {
@@ -52,13 +56,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Há ameaça de coação à locomoção?", "tipo": "pergunta" },
-              { "id": "p2", "label": "A lesão é só direito líquido e certo sem locomoção?", "tipo": "pergunta" },
-              { "id": "r1", "label": "HC preventivo — LXVIII", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Há ameaça de coação à locomoção?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "A lesão é só direito líquido e certo sem locomoção?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "HC preventivo — LXVIII",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — condução coercitiva anunciada" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — condução coercitiva anunciada"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -67,10 +91,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["HC só após privação consumada", "LXVIII inclui quem se acha ameaçado"],
-              ["Blitz autoriza condução coercitiva", "Locomoção livre — sem flagrante ou ordem judicial"]
+              [
+                "HC só após privação consumada",
+                "LXVIII inclui quem se acha ameaçado"
+              ],
+              [
+                "Blitz autoriza condução coercitiva",
+                "Locomoção livre — sem flagrante ou ordem judicial"
+              ]
             ]
           }
         },
@@ -97,7 +130,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "AMEAÇA = HC preventivo (LXVIII). Locomoção livre (XV). Fiscalizar ≠ conduzir coercitivamente.",
-            "destaques": ["ameaça", "HC", "locomoção"]
+            "destaques": [
+              "ameaça",
+              "HC",
+              "locomoção"
+            ]
           }
         }
       ],
@@ -119,7 +156,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "HC preventivo cabe na ameaça de condução coercitiva — fiscalizar trânsito não autoriza privar locomoção",
-        "eixos_legais": ["CF_art5_LXVIII", "CF_art5_XV"],
+        "eixos_legais": [
+          "CF_art5_LXVIII",
+          "CF_art5_XV"
+        ],
         "isca_por_alternativa": {
           "A": "habeas corpus só após privação consumada, não na mera notificação de condução futura",
           "B": "fiscalização de trânsito autoriza condução coercitiva para esclarecimentos sem ordem judicial",
@@ -133,8 +173,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C (habeas corpus preventivo por ameaça de coação).\n\nA — HC só depois da privação consumada; notificação futura não basta.\nB — STTP com PM pode conduzir coercitivamente para esclarecimentos na blitz.\nD — HC contra a ameaça vai ao órgão máximo de trânsito da União.\n\nPromessa: fixar quando a ameaça de condução coercitiva autoriza HC imediato.",
-            "destaques": ["ameaça", "preventivo", "locomoção"]
+            "texto": "Gabarito C (habeas corpus preventivo por ameaça de coação). A — HC só depois da privação consumada; notificação futura não basta.\nB — STTP com PM pode conduzir coercitivamente para esclarecimentos na blitz.\nD — HC contra a ameaça vai ao órgão máximo de trânsito da União. Promessa: fixar quando a ameaça de condução coercitiva autoriza HC imediato.",
+            "destaques": [
+              "ameaça",
+              "preventivo",
+              "locomoção"
+            ]
           }
         },
         {
@@ -143,7 +187,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "HC PREVENTIVO: impetrado quando há ameaça de coação — o LXVIII fala em quem \"sofrer ou se achar ameaçado\". LOCOMOÇÃO LIVRE (art. 5º, XV): entrar, permanecer ou sair com bens — condução coercitiva sem base legal a ameaça. MS (art. 5º, LXIX): não substitui HC quando a lesão é à locomoção.",
-            "destaques": ["preventivo", "locomoção", "MS"]
+            "destaques": [
+              "preventivo",
+              "locomoção",
+              "MS"
+            ]
           }
         },
         {
@@ -170,8 +218,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — notificação de condução futura" },
-              { "de": "p2", "para": "r1", "rotulo": "Não — lesão é locomoção" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — notificação de condução futura"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — lesão é locomoção"
+              }
             ]
           }
         },
@@ -181,11 +237,23 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Situação", "Remédio"],
+            "titulo_colunas": [
+              "Situação",
+              "Remédio"
+            ],
             "linhas": [
-              { "faixa": "Privação consumada", "classificacao": "Habeas corpus — LXVIII" },
-              { "faixa": "Ameaça de coação", "classificacao": "HC preventivo — LXVIII" },
-              { "faixa": "Só lesão a direito líquido e certo", "classificacao": "Mandado de segurança — LXIX" },
+              {
+                "faixa": "Privação consumada",
+                "classificacao": "Habeas corpus — LXVIII"
+              },
+              {
+                "faixa": "Ameaça de coação",
+                "classificacao": "HC preventivo — LXVIII"
+              },
+              {
+                "faixa": "Só lesão a direito líquido e certo",
+                "classificacao": "Mandado de segurança — LXIX"
+              },
               {
                 "faixa": "Condução coercitiva sem flagrante/ordem",
                 "classificacao": "Ilegal — viola XV e LXI",
@@ -200,7 +268,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "HC só depois que a PM levar o condutor",
@@ -219,7 +290,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -242,12 +316,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Conclusão"],
+            "colunas": [
+              "Fato do enunciado",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Notificação de condução coercitiva na manhã seguinte", "Ameaça de coação — LXVIII"],
-              ["Sem flagrante delito nem ordem judicial escrita", "Viola limites da prisão — LXI"],
-              ["Motorista de aplicativo impetra remédio imediato", "HC preventivo, não MS (LXIX)"],
-              ["Resultado", "Alternativa C"]
+              [
+                "Notificação de condução coercitiva na manhã seguinte",
+                "Ameaça de coação — LXVIII"
+              ],
+              [
+                "Sem flagrante delito nem ordem judicial escrita",
+                "Viola limites da prisão — LXI"
+              ],
+              [
+                "Motorista de aplicativo impetra remédio imediato",
+                "HC preventivo, não MS (LXIX)"
+              ],
+              [
+                "Resultado",
+                "Alternativa C"
+              ]
             ]
           }
         },
@@ -257,12 +346,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "O que exige no caso"],
+            "colunas": [
+              "Dispositivo",
+              "O que exige no caso"
+            ],
             "linhas": [
-              ["Art. 5º, LXVIII", "HC quando há coação ou ameaça à locomoção"],
-              ["Art. 5º, XV", "Locomoção livre — entrar, permanecer, sair com bens"],
-              ["Caso concreto", "Notificação de condução coercitiva ameaça ambos"],
-              ["Fiscalização legítima", "Autuar e exigir teste ≠ convocar coercitivamente"]
+              [
+                "Art. 5º, LXVIII",
+                "HC quando há coação ou ameaça à locomoção"
+              ],
+              [
+                "Art. 5º, XV",
+                "Locomoção livre — entrar, permanecer, sair com bens"
+              ],
+              [
+                "Caso concreto",
+                "Notificação de condução coercitiva ameaça ambos"
+              ],
+              [
+                "Fiscalização legítima",
+                "Autuar e exigir teste ≠ convocar coercitivamente"
+              ]
             ]
           }
         },
@@ -326,8 +430,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "AMEAÇA = HC preventivo (LXVIII).\nLocomoção LIVRE (XV).\nFiscalizar ≠ conduzir coercitivamente.\n\nNear-transfer: se a PM já tivesse o condutor na base por 6 h sem flagrante, seria HC repressivo pelo mesmo LXVIII — mas a notificação futura também configura ameaça.",
-            "destaques": ["AMEAÇA", "XV", "LXVIII"]
+            "texto": "AMEAÇA = HC preventivo (LXVIII).\nLocomoção LIVRE (XV).\nFiscalizar ≠ conduzir coercitivamente.\n\nNear-transfer: se a PM já tivesse o condutor na base por 6 h sem flagrante, seria HC repressivo pelo mesmo LXVIII — mas a notificação futura também configura ameaça.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "AMEAÇA",
+              "XV",
+              "LXVIII"
+            ]
           }
         }
       ],
@@ -349,6 +457,17 @@
       "hc_preventivo",
       "locomocao",
       "remedios_constitucionais"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se a PM já tivesse o condutor na base por 6 h sem flagrante, seria HC repressivo pelo mesmo LXVIII — mas a notificação futura também configura ameaça.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "AMEAÇA de coação = HC preventivo (LXVIII). Locomoção livre (XV). Fiscalizar ≠ conduzir coercitivamente. MS não substitui HC na locomoção.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

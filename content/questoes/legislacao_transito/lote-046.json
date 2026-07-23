@@ -3,7 +3,7 @@
     "disciplina": "legislacao_transito",
     "topico": "CONTRAN_985_mbft",
     "tipo": "caso_pratico",
-    "estilo_idecan": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 5,
     "fundamento_slug": "CONTRAN_985_mbft_concomitantes",
     "enunciado": "Durante fiscalização móvel em Campina Grande/PB, agente da STTP aborda condutor de automóvel em movimento que trafega sem utilizar o cinto de segurança e, simultaneamente, segurando telefone celular com a mão. Ambas as condutas são constatadas na mesma abordagem. Considerando o MBFT (Resolução CONTRAN nº 985/2022), seção 7 — Autuação, assinale a alternativa CORRETA quanto à lavratura do Auto de Infração de Trânsito (AIT):",
@@ -27,8 +27,7 @@
       "estudo_reverso": [
         "MBFT seção 7 concomitantes",
         "CTB art. 167",
-        "CTB art. 252",
-        "CTB art. 266"
+        "CTB art. 252"
       ]
     },
     "tags": [
@@ -170,7 +169,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D.\n\nA — um AIT com observações: regra de concorrentes/mesma raiz, não de concomitantes.\nB — só celular por gravidade: MBFT não autoriza escolher a mais grave.\nC — só cinto por ordem da abordagem: condutas são independentes.\n\nCinto + celular na mesma abordagem em Campina Grande.",
+            "texto": "Gabarito D. B — só celular por troca de classificação errada: MBFT não autoriza escolher a mais grave.\nC — só cinto por ordem da abordagem: condutas são independentes. Cinto + celular na mesma abordagem em Campina Grande.\nA — unifica em 1 AIT com observações",
             "destaques": [
               "Gabarito D",
               "concomitantes",
@@ -375,12 +374,14 @@
               {
                 "inicio": 59,
                 "fim": 71,
-                "motivo": "contraste — cinto e celular não se implicam"
+                "motivo": "contraste — cinto e celular não se implicam",
+                "texto_grifado": "independente"
               },
               {
                 "inicio": 124,
                 "fim": 171,
-                "motivo": "mapa — regra dos concomitantes"
+                "motivo": "mapa — regra dos concomitantes",
+                "texto_grifado": "tantos AITs quanto forem as condutas realizadas"
               }
             ]
           }
@@ -397,7 +398,8 @@
               {
                 "inicio": 0,
                 "fim": 118,
-                "motivo": "caso — par canônico do MBFT para 2 AITs"
+                "motivo": "caso — par canônico do MBFT para 2 AITs",
+                "texto_grifado": "Condutor que não usa o cinto de segurança (art.167) e que está segurando telefone celular (art. 252, parágrafo único)."
               }
             ]
           }
@@ -408,7 +410,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "CONCOMITANTE=N AITs · INDEPENDENTES · 167+252=2 autos · ≠ concorrente.\n\nNear-transfer: mesmo condutor avança o sinal vermelho e excede o limite em 15% — MBFT exemplifica como concomitante: dois AITs distintos.",
+            "texto": "CONCOMITANTE=N AITs · INDEPENDENTES · 167+252=2 autos · ≠ concorrente.\n\nNear-transfer: mesmo condutor avança o sinal vermelho e excede o limite em 15% — MBFT exemplifica como concomitante: dois AITs distintos.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "N AITs",
               "Near-transfer",
@@ -422,6 +424,22 @@
           "rotulo": "MBFT — Seção 7",
           "path": "conteúdo/resoluções CONTRAN/MBFT-anexo-resolucao-985-2022-secao-07-autuacao.txt"
         }
+      ]
+    },
+    "meta": {
+      "near_transfer": "mesmo condutor avança o sinal vermelho e excede o limite em 15% — MBFT exemplifica como concomitante: dois AITs distintos.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "CONCOMITANTE = N AITs · INDEPENDENTES · 167+252 = 2 autos · ≠ concorrente.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "gravidade",
+        "regra_excecao",
+        "termo_unico"
       ]
     }
   }

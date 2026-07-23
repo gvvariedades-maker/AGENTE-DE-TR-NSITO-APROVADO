@@ -43,7 +43,12 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Acidente fatal municipal: a banca confunde PM ostensiva (§5) ou PRF (caput) com polícia judiciária da polícia civil (§4).",
-            "destaques": ["§4", "polícia civil", "PM", "PRF"]
+            "destaques": [
+              "§4",
+              "polícia civil",
+              "PM",
+              "PRF"
+            ]
           }
         },
         {
@@ -52,13 +57,33 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "cf144", "label": "Art. 144 — órgãos de segurança", "nivel": 0 },
-              { "id": "civil", "label": "Polícia civil — judiciária (§4)", "nivel": 1 },
-              { "id": "pm", "label": "PM — ostensiva (§5)", "nivel": 1 }
+              {
+                "id": "cf144",
+                "label": "Art. 144 — órgãos de segurança",
+                "nivel": 0
+              },
+              {
+                "id": "civil",
+                "label": "Polícia civil — judiciária (§4)",
+                "nivel": 1
+              },
+              {
+                "id": "pm",
+                "label": "PM — ostensiva (§5)",
+                "nivel": 1
+              }
             ],
             "arestas": [
-              { "de": "civil", "para": "cf144", "rotulo": "Apuração penal comum" },
-              { "de": "pm", "para": "cf144", "rotulo": "Não é judiciária" }
+              {
+                "de": "civil",
+                "para": "cf144",
+                "rotulo": "Apuração penal comum"
+              },
+              {
+                "de": "pm",
+                "para": "cf144",
+                "rotulo": "Não é judiciária"
+              }
             ]
           }
         },
@@ -67,10 +92,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["PM apura crimes comuns", "Polícia civil — §4"],
-              ["PRF substitui civil em toda rodovia", "Ressalvada competência da União"]
+              [
+                "PM apura crimes comuns",
+                "Polícia civil — §4"
+              ],
+              [
+                "PRF substitui civil em toda rodovia",
+                "Ressalvada competência da União"
+              ]
             ]
           }
         },
@@ -82,8 +116,18 @@
             "fonte": "CF/88, art. 144, § 4º",
             "texto": "Às polícias civis, dirigidas por delegados de polícia de carreira, incumbem, ressalvada a competência da União, as funções de polícia judiciária e a apuração de infrações penais, exceto as militares.",
             "trechos_grifados": [
-              { "inicio": 126, "fim": 144, "motivo": "polícia judiciária" },
-              { "inicio": 3, "fim": 17, "motivo": "polícias civis" }
+              {
+                "inicio": 126,
+                "fim": 144,
+                "motivo": "polícia judiciária",
+                "texto_grifado": "polícia judiciária"
+              },
+              {
+                "inicio": 3,
+                "fim": 17,
+                "motivo": "polícias civis",
+                "texto_grifado": "polícias civis"
+              }
             ]
           }
         },
@@ -93,7 +137,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "§4 = civil + judiciária + penal comum. §5 = PM ostensiva. Guarda municipal não apura crime.",
-            "destaques": ["§4", "§5", "guarda"]
+            "destaques": [
+              "§4",
+              "§5",
+              "guarda"
+            ]
           }
         }
       ],
@@ -115,7 +163,11 @@
       "meta": {
         "padrao_familia": "C_competencia_snt",
         "pegadinha_em_uma_frase": "Troca ostensiva da PM ou patrulhamento da PRF pela judiciária da polícia civil (§4)",
-        "eixos_legais": ["CF_art144_par4", "CF_art144_par5", "CF_art144_par8"],
+        "eixos_legais": [
+          "CF_art144_par4",
+          "CF_art144_par5",
+          "CF_art144_par8"
+        ],
         "isca_por_alternativa": {
           "A": "atribui à PM do §5 a apuração de crimes comuns — função do §4",
           "B": "trata PRF como exclusiva em toda judiciária em rodovia federal",
@@ -129,8 +181,13 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C (§4 — polícia civil).\n\nA — PM apura crime comum: confunde ostensiva (§5) com judiciária (§4).\nB — PRF exclusiva em rodovia: regra_excecao — ignora ressalva da competência da União e o papel da polícia civil.\nD — guarda apura homicídio: termo_unico — §8 não prevê investigação criminal.\n\nHomicídio culposo em trânsito municipal → polícia civil estadual.",
-            "destaques": ["§4", "polícia civil", "PM", "guarda"]
+            "texto": "Gabarito C (parágrafo — polícia civil). A — PM apura crime comum: confunde ostensiva (parágrafo) com judiciária (parágrafo).\nB — PRF exclusiva em rodovia: regra_excecao — ignora ressalva da competência da União e o papel da polícia civil.\nD — guarda apura homicídio: termo_unico — parágrafo não prevê investigação criminal. Homicídio culposo em trânsito municipal → polícia civil estadual.",
+            "destaques": [
+              "parágrafo",
+              "polícia civil",
+              "PM",
+              "guarda"
+            ]
           }
         },
         {
@@ -139,7 +196,12 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "§4 — polícia CIVIL: judiciária + apuração penal comum (exceto militar), ressalvada competência federal. §5 — PM: ostensiva e ordem pública. Caput, II — PRF: patrulhamento em rodovias federais. §8 — guardas municipais: proteção de bens, serviços e instalações.",
-            "destaques": ["§4", "§5", "PRF", "§8"]
+            "destaques": [
+              "§4",
+              "§5",
+              "PRF",
+              "§8"
+            ]
           }
         },
         {
@@ -149,17 +211,53 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "inquerito", "label": "Homicídio culposo em trânsito municipal", "nivel": 0 },
-              { "id": "civil", "label": "Polícia civil — judiciária (§4)", "nivel": 1 },
-              { "id": "pm", "label": "PM — ostensiva e ordem (§5)", "nivel": 1 },
-              { "id": "prf", "label": "PRF — patrulhamento rodoviário", "nivel": 1 },
-              { "id": "guarda", "label": "Guarda municipal — proteção patrimonial (§8)", "nivel": 2 }
+              {
+                "id": "inquerito",
+                "label": "Homicídio culposo em trânsito municipal",
+                "nivel": 0
+              },
+              {
+                "id": "civil",
+                "label": "Polícia civil — judiciária (§4)",
+                "nivel": 1
+              },
+              {
+                "id": "pm",
+                "label": "PM — ostensiva e ordem (§5)",
+                "nivel": 1
+              },
+              {
+                "id": "prf",
+                "label": "PRF — patrulhamento rodoviário",
+                "nivel": 1
+              },
+              {
+                "id": "guarda",
+                "label": "Guarda municipal — proteção patrimonial (§8)",
+                "nivel": 2
+              }
             ],
             "arestas": [
-              { "de": "inquerito", "para": "civil", "rotulo": "Apuração penal comum" },
-              { "de": "inquerito", "para": "pm", "rotulo": "Apoio ostensivo — não judiciária" },
-              { "de": "inquerito", "para": "prf", "rotulo": "Só se via federal + competência própria" },
-              { "de": "guarda", "para": "inquerito", "rotulo": "Sem função de inquérito" }
+              {
+                "de": "inquerito",
+                "para": "civil",
+                "rotulo": "Apuração penal comum"
+              },
+              {
+                "de": "inquerito",
+                "para": "pm",
+                "rotulo": "Apoio ostensivo — não judiciária"
+              },
+              {
+                "de": "inquerito",
+                "para": "prf",
+                "rotulo": "Só se via federal + competência própria"
+              },
+              {
+                "de": "guarda",
+                "para": "inquerito",
+                "rotulo": "Sem função de inquérito"
+              }
             ]
           }
         },
@@ -169,7 +267,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "PM apura infrações penais comuns no Estado",
@@ -188,7 +289,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — competencia_snt",
@@ -211,12 +315,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Elemento", "Conclusão"],
+            "colunas": [
+              "Elemento",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Acidente com vítima fatal em via municipal", "Infração penal comum — não militar"],
-              ["Debate sobre polícia judiciária no Estado", "Hipótese do art. 144, §4"],
-              ["PM atuou na preservação da ordem", "Ostensiva (§5) — não substitui inquérito civil"],
-              ["Resultado", "Gabarito C — polícia civil apura, ressalvada competência da União"]
+              [
+                "Acidente com vítima fatal em via municipal",
+                "Infração penal comum — não militar"
+              ],
+              [
+                "Debate sobre polícia judiciária no Estado",
+                "Hipótese do art. 144, §4"
+              ],
+              [
+                "PM atuou na preservação da ordem",
+                "Ostensiva (§5) — não substitui inquérito civil"
+              ],
+              [
+                "Resultado",
+                "Gabarito C — polícia civil apura, ressalvada competência da União"
+              ]
             ]
           }
         },
@@ -226,12 +345,27 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Função constitucional"],
+            "colunas": [
+              "Dispositivo",
+              "Função constitucional"
+            ],
             "linhas": [
-              ["§ 4º", "Polícia civil — judiciária e apuração penal (exceto militar)"],
-              ["§ 5º", "PM — polícia ostensiva e preservação da ordem pública"],
-              ["Caput, II", "PRF — patrulhamento em rodovias federais"],
-              ["§ 8º", "Guardas municipais — proteção de bens, serviços e instalações"]
+              [
+                "§ 4º",
+                "Polícia civil — judiciária e apuração penal (exceto militar)"
+              ],
+              [
+                "§ 5º",
+                "PM — polícia ostensiva e preservação da ordem pública"
+              ],
+              [
+                "Caput, II",
+                "PRF — patrulhamento em rodovias federais"
+              ],
+              [
+                "§ 8º",
+                "Guardas municipais — proteção de bens, serviços e instalações"
+              ]
             ]
           }
         },
@@ -244,9 +378,24 @@
             "fonte": "CF/88, art. 144, § 4º",
             "texto": "Às polícias civis, dirigidas por delegados de polícia de carreira, incumbem, ressalvada a competência da União, as funções de polícia judiciária e a apuração de infrações penais, exceto as militares.",
             "trechos_grifados": [
-              { "inicio": 3, "fim": 17, "motivo": "diagrama — polícias civis" },
-              { "inicio": 126, "fim": 144, "motivo": "contraste — polícia judiciária" },
-              { "inicio": 179, "fim": 198, "motivo": "mapa — exceto militares" }
+              {
+                "inicio": 3,
+                "fim": 17,
+                "motivo": "diagrama — polícias civis",
+                "texto_grifado": "polícias civis"
+              },
+              {
+                "inicio": 126,
+                "fim": 144,
+                "motivo": "contraste — polícia judiciária",
+                "texto_grifado": "polícia judiciária"
+              },
+              {
+                "inicio": 179,
+                "fim": 198,
+                "motivo": "mapa — exceto militares",
+                "texto_grifado": "exceto as militares"
+              }
             ]
           }
         },
@@ -256,8 +405,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "§4 = CIVIL + judiciária + penal comum (exceto militar) | §5 = PM ostensiva | §8 = guarda patrimonial.\n\nNear-transfer: mesmo homicídio culposo em acidente na BR-230 (rodovia federal) — quem apura? Polícia civil estadual no núcleo do §4 (ressalvada competência federal da União); PRF patrulha a via, mas não substitui a civil em toda judiciária.",
-            "destaques": ["§4", "BR-230", "competência da União"]
+            "texto": "§4 = CIVIL + judiciária + penal comum (exceto militar) | §5 = PM ostensiva | §8 = guarda patrimonial.\n\nNear-transfer: mesmo homicídio culposo em acidente na BR-230 (rodovia federal) — quem apura? Polícia civil estadual no núcleo do §4 (ressalvada competência federal da União); PRF patrulha a via, mas não substitui a civil em toda judiciária.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "§4",
+              "BR-230",
+              "competência da União"
+            ]
           }
         }
       ],
@@ -273,6 +426,17 @@
       "policia_civil",
       "policia_judiciaria",
       "competencia_constitucional"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "mesmo homicídio culposo em acidente na BR-230 (rodovia federal) — quem apura? Polícia civil estadual no núcleo do §4 (ressalvada competência federal da União); PRF patrulha a via, mas não substitui a civil em toda judiciária.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "§4 = CIVIL + judiciária + apuração penal (exceto militar)",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

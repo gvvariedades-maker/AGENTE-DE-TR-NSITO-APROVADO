@@ -1,6 +1,16 @@
-import { and, desc, eq, lte, notInArray, sql } from "drizzle-orm";
+import { and, eq, lte, ne, notInArray, sql } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { attempts, questions, srsCards, topics } from "@/lib/db/schema";
+import {
+  diagnoseAttempt,
+  type AttemptDiagnostics,
+} from "@/lib/diagnostics/diagnose-attempt";
+import { appendLearningEvent } from "@/lib/learning-events/append";
+import {
+  updateSkillMastery,
+  verificarDominioTopicoComMastery,
+  type SkillMasterySnapshot,
+} from "@/lib/mastery";
 import {
   agendarProximaRevisao,
   criarCardInicial,
@@ -8,8 +18,15 @@ import {
   type FsrsState,
   type SrsCardState,
 } from "@/lib/srs";
+import {
+  isConfidenceLevel,
+  resolveFsrsRating,
+  type ConfidenceLevel,
+} from "@/lib/srs/rating-policy";
 import { getQuestoesByIds, mapRowToQuestao, type QuestaoUI } from "@/lib/questoes";
 import { sqlSomenteQuestoesReais } from "@/lib/questoes-reais";
+import { parsePedagogyConfig } from "@/lib/tutor/pedagogy-config";
+import { checkNoviceGate } from "@/lib/tutor/novice-gate-db";
 import { PROVA_DATA, type Disciplina } from "@/types";
 import {
   buscarIdsPraticaPontuados,
@@ -109,24 +126,15 @@ export function classificarErro(
   return "decoreba";
 }
 
-/** Domínio = 2 acertos seguidos no mesmo microtópico, espaçados >= 1h (03-estudo-reverso.mdc). */
+/**
+ * Domínio do tópico (Fase 3): agrega mastery das skills se cobertura ≥ 50%;
+ * senão fallback à regra legada (2 acertos ≥ 1h).
+ */
 export async function verificarDominioTopico(
   userId: string,
   topicId: string,
 ): Promise<boolean> {
-  const rows = await db
-    .select({ acertou: attempts.acertou, createdAt: attempts.createdAt })
-    .from(attempts)
-    .innerJoin(questions, eq(attempts.questionId, questions.id))
-    .where(and(eq(attempts.userId, userId), eq(questions.topicId, topicId)))
-    .orderBy(desc(attempts.createdAt))
-    .limit(2);
-
-  if (rows.length < 2 || !rows.every((r) => r.acertou)) return false;
-
-  const diffMs =
-    rows[0].createdAt.getTime() - rows[1].createdAt.getTime();
-  return diffMs >= 60 * 60 * 1000;
+  return verificarDominioTopicoComMastery(userId, topicId);
 }
 
 export interface RegistrarTentativaInput {
@@ -137,8 +145,19 @@ export interface RegistrarTentativaInput {
   modo: ModoTentativa;
   tempoSeg?: number;
   sessionId?: string;
-  /** Nota FSRS explícita (1–4). Se omitida, deriva de acertou (3/1). */
+  /**
+   * Confiança subjetiva (Fase 1: 1|3). Se informada, deriva `fsrsRating`
+   * via rating-policy (erro sempre Again).
+   */
+  confidence?: ConfidenceLevel;
+  /**
+   * Nota FSRS explícita (1–4). Preferir `confidence`; se ambos ausentes,
+   * deriva de acertou (3/1). Em erro, sempre força 1.
+   */
   fsrsGrade?: FsrsGrade;
+  hintUsed?: boolean;
+  answerChanged?: boolean;
+  feedbackSeenBeforeAnswer?: boolean;
 }
 
 export interface RegistrarTentativaResult {
@@ -147,6 +166,26 @@ export interface RegistrarTentativaResult {
   attemptId?: string;
   tipoErro?: TipoErro;
   dominioAlcancado?: boolean;
+  confidence?: ConfidenceLevel;
+  diagnostics?: AttemptDiagnostics;
+  /** Snapshots de mastery atualizados nesta tentativa (Fase 3). */
+  masteryUpdates?: SkillMasterySnapshot[];
+  /** Novice-gate (Fase 4) — pré-requisito sem evidência. */
+  isNovice?: boolean;
+}
+
+function resolverFsrsGrade(input: RegistrarTentativaInput): FsrsGrade {
+  if (!input.acertou) return 1;
+  if (isConfidenceLevel(input.confidence)) {
+    return resolveFsrsRating({
+      acertou: true,
+      confidence: input.confidence,
+    });
+  }
+  if (input.fsrsGrade === 1 || input.fsrsGrade === 2 || input.fsrsGrade === 3 || input.fsrsGrade === 4) {
+    return input.fsrsGrade;
+  }
+  return 3;
 }
 
 export async function registrarTentativa(
@@ -161,6 +200,8 @@ export async function registrarTentativa(
       topicId: questions.topicId,
       estiloIdecan: questions.estiloIdecan,
       disciplina: topics.disciplina,
+      comentarioJson: questions.comentarioJson,
+      pedagogyJson: questions.pedagogyJson,
     })
     .from(questions)
     .innerJoin(topics, eq(questions.topicId, topics.id))
@@ -179,92 +220,203 @@ export async function registrarTentativa(
     );
   }
 
-  const [inserted] = await db
-    .insert(attempts)
-    .values({
-      userId: input.userId,
-      questionId: input.questionId,
-      sessionId: input.sessionId ?? null,
-      resposta: input.resposta,
-      acertou: input.acertou,
-      tempoSeg: input.tempoSeg ?? null,
-      modo: input.modo,
-      tipoErro: tipoErro ?? null,
-    })
-    .returning({ id: attempts.id });
+  const passoAPasso = Array.isArray(
+    (questaoRow.comentarioJson as { passo_a_passo?: unknown } | null)
+      ?.passo_a_passo,
+  )
+    ? (
+        (questaoRow.comentarioJson as { passo_a_passo: string[] })
+          .passo_a_passo
+      )
+    : null;
+
+  const diagnostics = await diagnoseAttempt({
+    questionId: input.questionId,
+    resposta: input.resposta,
+    acertou: input.acertou,
+    passoAPasso,
+  });
+
+  const confidence = isConfidenceLevel(input.confidence)
+    ? input.confidence
+    : undefined;
+  const fsrsRating = resolverFsrsGrade(input);
+
+  const [{ count: priorCount }] = await db
+    .select({ count: sql<number>`count(*)::int` })
+    .from(attempts)
+    .where(
+      and(
+        eq(attempts.userId, input.userId),
+        eq(attempts.questionId, input.questionId),
+      ),
+    );
+
+  const exposureCount = priorCount ?? 0;
+
+  const { attemptId, dominioAlcancado, masteryUpdates } = await db.transaction(
+    async (tx) => {
+      const [inserted] = await tx
+        .insert(attempts)
+        .values({
+          userId: input.userId,
+          questionId: input.questionId,
+          sessionId: input.sessionId ?? null,
+          resposta: input.resposta,
+          acertou: input.acertou,
+          tempoSeg: input.tempoSeg ?? null,
+          modo: input.modo,
+          tipoErro: tipoErro ?? null,
+          confidence: confidence ?? null,
+          fsrsRating,
+          exposureCount,
+          hintUsed: input.hintUsed ?? false,
+          answerChanged: input.answerChanged ?? false,
+          feedbackSeenBeforeAnswer: input.feedbackSeenBeforeAnswer ?? false,
+          diagnosticsJson: diagnostics,
+        })
+        .returning({ id: attempts.id });
+
+      await appendLearningEvent({
+        userId: input.userId,
+        eventType: "question_answered",
+        questionId: input.questionId,
+        sessionId: input.sessionId,
+        payload: {
+          attemptId: inserted.id,
+          acertou: input.acertou,
+          resposta: input.resposta,
+          modo: input.modo,
+          exposureCount,
+          diagnostics,
+        },
+        tx,
+      });
+
+      if (confidence !== undefined) {
+        await appendLearningEvent({
+          userId: input.userId,
+          eventType: "confidence_recorded",
+          questionId: input.questionId,
+          sessionId: input.sessionId,
+          payload: {
+            attemptId: inserted.id,
+            confidence,
+            fsrsRating,
+            acertou: input.acertou,
+          },
+          tx,
+        });
+      }
+
+      const masteryResult = await updateSkillMastery({
+        userId: input.userId,
+        questionId: input.questionId,
+        acertou: input.acertou,
+        mode: input.modo,
+        confidence,
+        exposureCount,
+        hintUsed: input.hintUsed,
+        answerChanged: input.answerChanged,
+        feedbackSeenBeforeAnswer: input.feedbackSeenBeforeAnswer,
+        tx,
+      });
+
+      let dominio = false;
+
+      if (input.modo === "estudo") {
+        const now = new Date();
+
+        const [existing] = await tx
+          .select()
+          .from(srsCards)
+          .where(
+            and(
+              eq(srsCards.userId, input.userId),
+              eq(srsCards.questionId, input.questionId),
+            ),
+          )
+          .limit(1);
+
+        const cardState = existing
+          ? rowToCardState(existing)
+          : criarCardInicial();
+
+        const scheduled = agendarProximaRevisao(cardState, fsrsRating, now, {
+          examDate: PROVA_DATA,
+          requestedRetention:
+            calcularFase(diasParaProva()) === "semana_final"
+              ? 0.92
+              : undefined,
+        });
+
+        const valores = {
+          nextReview: scheduled.nextReview,
+          intervalDays: scheduled.intervalDays,
+          difficulty: scheduled.difficulty,
+          stability: scheduled.stability,
+          reps: scheduled.reps,
+          lapses: scheduled.lapses,
+          state: scheduled.state,
+          lastReview: scheduled.lastReview,
+        };
+
+        if (existing) {
+          await tx
+            .update(srsCards)
+            .set(valores)
+            .where(eq(srsCards.id, existing.id));
+        } else {
+          await tx.insert(srsCards).values({
+            userId: input.userId,
+            questionId: input.questionId,
+            ...valores,
+          });
+        }
+
+        if (input.acertou) {
+          dominio = await verificarDominioTopicoComMastery(
+            input.userId,
+            questaoRow.topicId,
+            tx,
+          );
+        }
+      }
+
+      return {
+        attemptId: inserted.id,
+        dominioAlcancado: dominio,
+        masteryUpdates: masteryResult.updated,
+      };
+    },
+  );
 
   if (input.sessionId && input.modo === "estudo") {
     await registrarRespostaSessao(input.sessionId, input.acertou);
   }
 
-  let dominioAlcancado = false;
-
-  if (input.modo === "estudo") {
-    const now = new Date();
-
-    const [existing] = await db
-      .select()
-      .from(srsCards)
-      .where(
-        and(
-          eq(srsCards.userId, input.userId),
-          eq(srsCards.questionId, input.questionId),
-        ),
-      )
-      .limit(1);
-
-    const cardState = existing
-      ? rowToCardState(existing)
-      : criarCardInicial();
-
-    const scheduled = agendarProximaRevisao(
-      cardState,
-      input.fsrsGrade ?? input.acertou,
-      now,
-      {
-        examDate: PROVA_DATA,
-        requestedRetention:
-          calcularFase(diasParaProva()) === "semana_final" ? 0.92 : undefined,
-      },
-    );
-
-    const valores = {
-      nextReview: scheduled.nextReview,
-      intervalDays: scheduled.intervalDays,
-      difficulty: scheduled.difficulty,
-      stability: scheduled.stability,
-      reps: scheduled.reps,
-      lapses: scheduled.lapses,
-      state: scheduled.state,
-      lastReview: scheduled.lastReview,
-    };
-
-    if (existing) {
-      await db
-        .update(srsCards)
-        .set(valores)
-        .where(eq(srsCards.id, existing.id));
-    } else {
-      await db.insert(srsCards).values({
+  const pedagogy = parsePedagogyConfig(questaoRow.pedagogyJson);
+  let isNovice = false;
+  if (pedagogy?.prerequisiteSkillCodes?.length) {
+    try {
+      isNovice = await checkNoviceGate({
         userId: input.userId,
-        questionId: input.questionId,
-        ...valores,
+        pedagogy,
       });
-    }
-
-    if (input.acertou) {
-      dominioAlcancado = await verificarDominioTopico(
-        input.userId,
-        questaoRow.topicId,
-      );
+    } catch {
+      isNovice = false;
     }
   }
 
   return {
     ok: true,
-    attemptId: inserted.id,
+    attemptId,
     tipoErro,
     dominioAlcancado,
+    confidence,
+    diagnostics,
+    masteryUpdates,
+    isNovice,
   };
 }
 
@@ -279,37 +431,21 @@ export async function buscarIdsRevisaoPendentes(
   const conditions = [
     eq(srsCards.userId, userId),
     lte(srsCards.nextReview, new Date()),
+    /** Fase 5: holdout fora de repetição comum. */
+    ne(questions.assessmentPool, "holdout"),
     disciplina ? eq(topics.disciplina, disciplina) : undefined,
     topicoSlug ? eq(topics.nome, topicoSlug) : undefined,
     somenteReaisIdecan ? sqlSomenteQuestoesReais("questions.tags") : undefined,
   ].filter(Boolean);
 
-  const needsJoin =
-    disciplina !== undefined ||
-    topicoSlug !== undefined ||
-    somenteReaisIdecan;
-
-  if (needsJoin) {
-    const rows = await db
-      .select({ questionId: srsCards.questionId })
-      .from(srsCards)
-      .innerJoin(questions, eq(srsCards.questionId, questions.id))
-      .innerJoin(topics, eq(questions.topicId, topics.id))
-      .where(and(...conditions))
-      .orderBy(srsCards.nextReview)
-      .limit(limit);
-    return rows.map((r) => r.questionId);
-  }
-
   const rows = await db
     .select({ questionId: srsCards.questionId })
     .from(srsCards)
-    .where(
-      and(eq(srsCards.userId, userId), lte(srsCards.nextReview, new Date())),
-    )
+    .innerJoin(questions, eq(srsCards.questionId, questions.id))
+    .innerJoin(topics, eq(questions.topicId, topics.id))
+    .where(and(...conditions))
     .orderBy(srsCards.nextReview)
     .limit(limit);
-
   return rows.map((r) => r.questionId);
 }
 
@@ -543,6 +679,8 @@ async function buscarQuestoesNovas(
       topicoSlug ? eq(topics.nome, topicoSlug) : undefined,
       excluirIds.length > 0 ? notInArray(questions.id, excluirIds) : undefined,
       somenteReaisIdecan ? sqlSomenteQuestoesReais("questions.tags") : undefined,
+      /** Fase 5: holdout fora de “novas aleatórias”. */
+      ne(questions.assessmentPool, "holdout"),
     ].filter(Boolean);
 
     const conditions = filters.length > 0 ? and(...filters) : undefined;

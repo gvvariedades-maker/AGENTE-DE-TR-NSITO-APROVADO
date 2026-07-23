@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "STTP não cobra taxa de petição em defesa de direito nem de certidão de interesse pessoal — art. 97, § 2º.",
-            "destaques": ["§ 2º", "certidão", "STTP"]
+            "destaques": [
+              "§ 2º",
+              "certidão",
+              "STTP"
+            ]
           }
         },
         {
@@ -52,11 +56,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "É petição em defesa de direito ou certidão de interesse pessoal?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito C — independe de taxas (§ 2º)", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "É petição em defesa de direito ou certidão de interesse pessoal?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito C — independe de taxas (§ 2º)",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -65,7 +81,10 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
               [
                 "Autarquia cobra certidão por autonomia financeira",
@@ -80,7 +99,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Petição em defesa de direito + certidão pessoal = sem taxa (art. 97, § 2º).",
-            "destaques": ["sem taxa", "§ 2º"]
+            "destaques": [
+              "sem taxa",
+              "§ 2º"
+            ]
           }
         }
       ],
@@ -102,7 +124,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Candidato acha que autarquia cobra certidão ou que isenção vale só para petição",
-        "eixos_legais": ["LOM_art97_par2", "LOM_art97"],
+        "eixos_legais": [
+          "LOM_art97_par2",
+          "LOM_art97"
+        ],
         "isca_por_alternativa": {
           "A": "exclui certidões e cria exceção para autarquia",
           "B": "restringe isenção à Câmara Municipal",
@@ -116,8 +141,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C.\n\nA — exclui certidões e inventa taxa na autarquia: § 2º inclui ambas.\nB — limita isenção à Câmara: repartições públicas incluem STTP.\nD — mistura § 3º (publicidade de gastos) com cobrança de taxa.\n\nA isca é achar que autarquia ou só petição escapam da gratuidade.",
-            "destaques": ["Gabarito C", "§ 2º", "certidão"]
+            "texto": "Gabarito C. A — exclui certidões e inventa taxa na autarquia: parágrafo inclui ambas.\nB — limita isenção à Câmara: repartições públicas incluem STTP.\nD — mistura parágrafo (publicidade de gastos) com cobrança de taxa. A isca é achar que autarquia ou só petição escapam da gratuidade.",
+            "destaques": [
+              "Gabarito C",
+              "parágrafo",
+              "certidão"
+            ]
           }
         },
         {
@@ -126,7 +155,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PETIÇÃO EM DEFESA DE DIREITOS: requerimento contra ilegalidade ou abuso de poder — gratuita (art. 97, § 2º).\n\nCERTIDÃO DE INTERESSE PESSOAL: documento em repartição pública para defesa de direitos ou esclarecimento pessoal — também gratuita.\n\nREPARTIÇÃO PÚBLICA: órgão da administração municipal direta ou indireta — STTP integra a administração indireta (art. 97, caput).",
-            "destaques": ["PETIÇÃO", "CERTIDÃO", "REPARTIÇÃO"]
+            "destaques": [
+              "PETIÇÃO",
+              "CERTIDÃO",
+              "REPARTIÇÃO"
+            ]
           }
         },
         {
@@ -136,13 +169,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Pedido é petição em defesa de direito ou certidão de interesse pessoal?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Órgão é repartição pública municipal (inclui STTP)?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito C — independe de pagamento de taxas", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Pedido é petição em defesa de direito ou certidão de interesse pessoal?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Órgão é repartição pública municipal (inclui STTP)?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito C — independe de pagamento de taxas",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -152,7 +205,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Dispositivo", "Conteúdo"],
+            "titulo_colunas": [
+              "Dispositivo",
+              "Conteúdo"
+            ],
             "linhas": [
               {
                 "faixa": "Caput",
@@ -176,7 +232,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "STTP cobra certidão por ser autarquia",
@@ -195,7 +254,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -218,12 +280,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Conclusão legal"],
+            "colunas": [
+              "Fato do enunciado",
+              "Conclusão legal"
+            ],
             "linhas": [
-              ["Certidão de autos vinculados ao CPF", "Certidão em repartição pública — § 2º"],
-              ["Petição em defesa de direito contra cobrança", "Petição gratuita — § 2º"],
-              ["Exigência de taxa de expediente", "Vedada pelo art. 97, § 2º"],
-              ["Resultado", "Gabarito C"]
+              [
+                "Certidão de autos vinculados ao CPF",
+                "Certidão em repartição pública — § 2º"
+              ],
+              [
+                "Petição em defesa de direito contra cobrança",
+                "Petição gratuita — § 2º"
+              ],
+              [
+                "Exigência de taxa de expediente",
+                "Vedada pelo art. 97, § 2º"
+              ],
+              [
+                "Resultado",
+                "Gabarito C"
+              ]
             ]
           }
         },
@@ -233,11 +310,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Tese errada", "Correção"],
+            "colunas": [
+              "Tese errada",
+              "Correção"
+            ],
             "linhas": [
-              ["Autarquia não segue princípios do art. 97", "Caput inclui administração indireta e fundacional"],
-              ["Gratuidade só na Prefeitura direta", "§ 2º: repartições públicas — STTP inclusa"],
-              ["§ 3º autoriza emolumentos", "§ 3º trata de publicidade de gastos com publicidade"]
+              [
+                "Autarquia não segue princípios do art. 97",
+                "Caput inclui administração indireta e fundacional"
+              ],
+              [
+                "Gratuidade só na Prefeitura direta",
+                "§ 2º: repartições públicas — STTP inclusa"
+              ],
+              [
+                "§ 3º autoriza emolumentos",
+                "§ 3º trata de publicidade de gastos com publicidade"
+              ]
             ]
           }
         },
@@ -253,12 +342,14 @@
               {
                 "inicio": 120,
                 "fim": 158,
-                "motivo": "caso — certidão em repartição pública (STTP)"
+                "motivo": "caso — certidão em repartição pública (STTP)",
+                "texto_grifado": "certidões junto a repartições públicas"
               },
               {
                 "inicio": 236,
                 "fim": 268,
-                "motivo": "contraste — independem de pagamento de taxas"
+                "motivo": "contraste — independem de pagamento de taxas",
+                "texto_grifado": "independem de pagamento de taxas"
               }
             ]
           }
@@ -275,7 +366,8 @@
               {
                 "inicio": 2,
                 "fim": 50,
-                "motivo": "hierarquia — STTP integra administração indireta"
+                "motivo": "hierarquia — STTP integra administração indireta",
+                "texto_grifado": "administração pública municipal direta, indireta"
               }
             ]
           }
@@ -286,8 +378,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Petição em defesa de direito + certidão pessoal = sem taxa (art. 97, § 2º) — vale na STTP e em qualquer repartição municipal.\n\nNear-transfer: morador protocola petição na Secretaria de Obras contra obra irregular em via pública — mesma regra: atendimento independe de pagamento de taxas.",
-            "destaques": ["sem taxa", "Near-transfer", "§ 2º"]
+            "texto": "Petição em defesa de direito + certidão pessoal = sem taxa (art. 97, § 2º) — vale na STTP e em qualquer repartição municipal.\n\nNear-transfer: morador protocola petição na Secretaria de Obras contra obra irregular em via pública — mesma regra: atendimento independe de pagamento de taxas.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "sem taxa",
+              "Near-transfer",
+              "§ 2º"
+            ]
           }
         }
       ],
@@ -304,6 +400,17 @@
       "sttp",
       "certidao",
       "peticao"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "morador protocola petição na Secretaria de Obras contra obra irregular em via pública — mesma regra: atendimento independe de pagamento de taxas.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Petição em defesa de direito + certidão pessoal = sem taxa (art. 97, § 2º) — vale na STTP.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

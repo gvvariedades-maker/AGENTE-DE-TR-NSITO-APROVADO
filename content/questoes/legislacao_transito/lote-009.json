@@ -3,7 +3,7 @@
     "disciplina": "legislacao_transito",
     "topico": "CONTRAN_432_alcoolemia",
     "tipo": "caso_pratico",
-    "estilo_idecan": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 4,
     "enunciado": "Durante blitz noturna da STTP em Campina Grande/PB, agente de trânsito aborda condutor de automóvel que apresenta olhos vermelhos, odor de álcool no hálito e fala arrastada. O condutor recusa-se a realizar o teste com etilômetro, alegando que prefere aguardar o exame de sangue. O agente preenche o termo do Anexo II da Resolução CONTRAN nº 432/2013, descrevendo o conjunto de sinais observados, e encaminha o condutor para coleta de sangue. Considerando o CTB e a Resolução CONTRAN nº 432/2013, assinale a alternativa CORRETA quanto aos procedimentos de fiscalização:",
     "alternativas": {
@@ -26,10 +26,7 @@
       "estudo_reverso": [
         "Res. CONTRAN 432/2013 art. 3",
         "Res. CONTRAN 432/2013 art. 5",
-        "Res. CONTRAN 432/2013 art. 6",
-        "CTB art. 165",
-        "CTB art. 165-A",
-        "CTB art. 277"
+        "Res. CONTRAN 432/2013 art. 6"
       ]
     },
     "estudo_reverso_visual": {
@@ -46,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Blitz: sinais + recusa ao etilômetro + exame de sangue encaminhado. A banca troca ESPERA pelo resultado por AUTUAÇÃO IMEDIATA.\n\nGabarito B: art. 3º, §3º da Res. 432/2013 + art. 165-A do CTB.",
-            "destaques": ["AUTUAÇÃO IMEDIATA", "conjunto de sinais", "165-A"]
+            "destaques": [
+              "AUTUAÇÃO IMEDIATA",
+              "conjunto de sinais",
+              "165-A"
+            ]
           }
         },
         {
@@ -55,17 +56,53 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Conjunto de sinais (art. 5º, §1º)?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Pode autuar sem aguardar sangue (art. 3º, §3º)", "tipo": "resultado" },
-              { "id": "p2", "label": "Condutor recusou etilômetro?", "tipo": "pergunta" },
-              { "id": "r2", "label": "Infração autônoma art. 165-A (art. 277, §3º)", "tipo": "resultado" },
-              { "id": "r3", "label": "Aguardar todos os exames antes de autuar", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Conjunto de sinais (art. 5º, §1º)?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Pode autuar sem aguardar sangue (art. 3º, §3º)",
+                "tipo": "resultado"
+              },
+              {
+                "id": "p2",
+                "label": "Condutor recusou etilômetro?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r2",
+                "label": "Infração autônoma art. 165-A (art. 277, §3º)",
+                "tipo": "resultado"
+              },
+              {
+                "id": "r3",
+                "label": "Aguardar todos os exames antes de autuar",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p1", "para": "r3", "rotulo": "Não" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — cumula 165-A" },
-              { "de": "p2", "para": "r1", "rotulo": "Não — só art. 165" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p1",
+                "para": "r3",
+                "rotulo": "Não"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — cumula 165-A"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — só art. 165"
+              }
             ]
           }
         },
@@ -74,11 +111,23 @@
           "titulo": "Aguardar × autuar já",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença errada ✗", "Lei ✓"],
+            "colunas": [
+              "Crença errada ✗",
+              "Lei ✓"
+            ],
             "linhas": [
-              ["Sem etilômetro, não autua", "§3º do art. 3º: autua sem aguardar sangue"],
-              ["Um sinal basta", "Art. 5º, §1º: conjunto de sinais"],
-              ["Recusa isenta", "Art. 277, §3º: penalidades do 165-A"]
+              [
+                "Sem etilômetro, não autua",
+                "§3º do art. 3º: autua sem aguardar sangue"
+              ],
+              [
+                "Um sinal basta",
+                "Art. 5º, §1º: conjunto de sinais"
+              ],
+              [
+                "Recusa isenta",
+                "Art. 277, §3º: penalidades do 165-A"
+              ]
             ]
           }
         },
@@ -88,7 +137,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "SINAIS + RECUSA = AUTUA JÁ.\n\nConjunto de sinais (não um só) + recusa = 165-A autônoma.\n\nExame de sangue complementa — não trava a autuação administrativa.",
-            "destaques": ["AUTUA JÁ", "conjunto", "165-A"]
+            "destaques": [
+              "AUTUA JÁ",
+              "conjunto",
+              "165-A"
+            ]
           }
         }
       ],
@@ -114,8 +167,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B. Se marcou A, caiu na isca: você achou que precisa aguardar o exame de sangue.\n\nNa Res. 432/2013, com conjunto de sinais ou medição do etilômetro, o agente autua na hora — mesmo com exame complementar em curso. A recusa ao etilômetro ainda gera infração autônoma do art. 165-A.",
-            "destaques": ["Gabarito B", "autua na hora", "165-A"]
+            "texto": "Gabarito B. Se marcou A, caiu na isca: você achou que precisa aguardar o exame de sangue. Na Res. 432/2013, com conjunto de sinais ou medição do etilômetro, o agente autua na hora — mesmo com exame complementar em curso. A recusa ao etilômetro ainda gera infração autônoma do dispositivo legal-A.",
+            "destaques": [
+              "Gabarito B",
+              "autua na hora",
+              "165-A"
+            ]
           }
         },
         {
@@ -124,7 +181,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "ETILÔMETRO: aparelho que mede álcool no ar alveolar — procedimento prioritário na fiscalização (art. 3º, §2º).\n\nAUTUAÇÃO ADMINISTRATIVA: lavratura do auto de infração com penalidades do CTB — distinta do crime do art. 306.\n\nCONJUNTO DE SINAIS: não basta um sinal isolado; o agente deve descrever múltiplos sinais do Anexo II (art. 5º, §1º).",
-            "destaques": ["ETILÔMETRO", "AUTUAÇÃO ADMINISTRATIVA", "CONJUNTO DE SINAIS"]
+            "destaques": [
+              "ETILÔMETRO",
+              "AUTUAÇÃO ADMINISTRATIVA",
+              "CONJUNTO DE SINAIS"
+            ]
           }
         },
         {
@@ -134,13 +195,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Conjunto de sinais de alteração?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Recusa ao etilômetro?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Autua já — gabarito B", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Conjunto de sinais de alteração?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Recusa ao etilômetro?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Autua já — gabarito B",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -150,12 +231,28 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Procedimento", "Função na fiscalização"],
+            "titulo_colunas": [
+              "Procedimento",
+              "Função na fiscalização"
+            ],
             "linhas": [
-              { "faixa": "III — etilômetro", "classificacao": "Prioritário (§2º) — medição em mg/L", "destaque": true },
-              { "faixa": "IV — sinais pelo agente", "classificacao": "Conjunto de sinais do Anexo II (art. 5º)" },
-              { "faixa": "I — exame de sangue", "classificacao": "Complementar — não trava autuação (§3º)" },
-              { "faixa": "Recusa a qualquer um", "classificacao": "Infração autônoma art. 165-A (CTB art. 277, §3º)" }
+              {
+                "faixa": "III — etilômetro",
+                "classificacao": "Prioritário (§2º) — medição em mg/L",
+                "destaque": true
+              },
+              {
+                "faixa": "IV — sinais pelo agente",
+                "classificacao": "Conjunto de sinais do Anexo II (art. 5º)"
+              },
+              {
+                "faixa": "I — exame de sangue",
+                "classificacao": "Complementar — não trava autuação (§3º)"
+              },
+              {
+                "faixa": "Recusa a qualquer um",
+                "classificacao": "Infração autônoma art. 165-A (CTB art. 277, §3º)"
+              }
             ]
           }
         },
@@ -165,11 +262,23 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
-              ["Sem etilômetro, não há autuação", "Sinais + termo Anexo II bastam para art. 165"],
-              ["Precisa aguardar resultado do sangue", "Art. 3º, §3º: autua sem esperar exame complementar"],
-              ["Recusa isenta de penalidade", "Art. 277, §3º: recusa = art. 165-A autônoma"]
+              [
+                "Sem etilômetro, não há autuação",
+                "Sinais + termo Anexo II bastam para art. 165"
+              ],
+              [
+                "Precisa aguardar resultado do sangue",
+                "Art. 3º, §3º: autua sem esperar exame complementar"
+              ],
+              [
+                "Recusa isenta de penalidade",
+                "Art. 277, §3º: recusa = art. 165-A autônoma"
+              ]
             ]
           }
         },
@@ -179,11 +288,23 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + letra da lei"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + letra da lei"
+            ],
             "linhas": [
-              ["A — regra_excecao", "Exige aguardar sangue — o §3º do art. 3º dispensa essa espera"],
-              ["C — termo_unico", "Um sinal isolado não basta — art. 5º, §1º exige conjunto"],
-              ["D — regra_excecao", "Recusa não isenta — art. 277, §3º impõe penalidades do 165-A"]
+              [
+                "A — regra_excecao",
+                "Exige aguardar sangue — o §3º do art. 3º dispensa essa espera"
+              ],
+              [
+                "C — termo_unico",
+                "Um sinal isolado não basta — art. 5º, §1º exige conjunto"
+              ],
+              [
+                "D — regra_excecao",
+                "Recusa não isenta — art. 277, §3º impõe penalidades do 165-A"
+              ]
             ]
           }
         },
@@ -193,11 +314,23 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato da blitz", "Consequência legal"],
+            "colunas": [
+              "Fato da blitz",
+              "Consequência legal"
+            ],
             "linhas": [
-              ["Olhos vermelhos + odor + fala arrastada", "Conjunto de sinais — art. 5º, §1º + Anexo II"],
-              ["Recusa ao etilômetro", "Infração autônoma art. 165-A (art. 277, §3º)"],
-              ["Encaminhamento para sangue", "Autuação imediata — art. 3º, §3º dispensa espera"]
+              [
+                "Olhos vermelhos + odor + fala arrastada",
+                "Conjunto de sinais — art. 5º, §1º + Anexo II"
+              ],
+              [
+                "Recusa ao etilômetro",
+                "Infração autônoma art. 165-A (art. 277, §3º)"
+              ],
+              [
+                "Encaminhamento para sangue",
+                "Autuação imediata — art. 3º, §3º dispensa espera"
+              ]
             ]
           }
         },
@@ -207,12 +340,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Hipótese", "Consequência"],
+            "colunas": [
+              "Hipótese",
+              "Consequência"
+            ],
             "linhas": [
-              ["Condução sob influência (sinais/etilômetro)", "Infração administrativa art. 165 do CTB"],
-              ["Recusa aos procedimentos do art. 277", "Infração autônoma art. 165-A — cumulável"],
-              ["Etilômetro ≥ 0,34 mg/L (valor considerado)", "Art. 165 + crime art. 306 do CTB"],
-              ["Recusa + sinais de alteração", "165-A + possível crime art. 306 (Res. 432, art. 6º, §único)"]
+              [
+                "Condução sob influência (sinais/etilômetro)",
+                "Infração administrativa art. 165 do CTB"
+              ],
+              [
+                "Recusa aos procedimentos do art. 277",
+                "Infração autônoma art. 165-A — cumulável"
+              ],
+              [
+                "Etilômetro ≥ 0,34 mg/L (valor considerado)",
+                "Art. 165 + crime art. 306 do CTB"
+              ],
+              [
+                "Recusa + sinais de alteração",
+                "165-A + possível crime art. 306 (Res. 432, art. 6º, §único)"
+              ]
             ]
           }
         },
@@ -225,8 +373,18 @@
             "fonte": "Res. CONTRAN 432/2013, art. 3º, §3º",
             "texto": "Se o condutor apresentar sinais de alteração da capacidade psicomotora na forma do art. 5º ou haja comprovação dessa situação por meio do teste de etilômetro e houver encaminhamento do condutor para a realização do exame de sangue ou exame clínico, não será necessário aguardar o resultado desses exames para fins de autuação administrativa.",
             "trechos_grifados": [
-              { "inicio": 25, "fim": 90, "motivo": "sinais na forma do art. 5º — base do caso" },
-              { "inicio": 249, "fim": 340, "motivo": "não aguardar exame — autuação imediata" }
+              {
+                "inicio": 25,
+                "fim": 90,
+                "motivo": "sinais na forma do art. 5º — base do caso",
+                "texto_grifado": "sinais de alteração da capacidade psicomotora na forma do art. 5º"
+              },
+              {
+                "inicio": 249,
+                "fim": 340,
+                "motivo": "não aguardar exame — autuação imediata",
+                "texto_grifado": "não será necessário aguardar o resultado desses exames para fins de autuação administrativa"
+              }
             ]
           }
         },
@@ -239,8 +397,18 @@
             "fonte": "CTB art. 277, §3º",
             "texto": "Serão aplicadas as penalidades e medidas administrativas estabelecidas no art. 165-A deste Código ao condutor que se recusar a se submeter a qualquer dos procedimentos previstos no caput deste artigo.",
             "trechos_grifados": [
-              { "inicio": 74, "fim": 84, "motivo": "165-A — infração autônoma da recusa" },
-              { "inicio": 117, "fim": 138, "motivo": "recusar a se submeter — gatilho da penalidade" }
+              {
+                "inicio": 74,
+                "fim": 84,
+                "motivo": "165-A — infração autônoma da recusa",
+                "texto_grifado": "art. 165-A"
+              },
+              {
+                "inicio": 117,
+                "fim": 138,
+                "motivo": "recusar a se submeter — gatilho da penalidade",
+                "texto_grifado": "recusar a se submeter"
+              }
             ]
           }
         },
@@ -250,8 +418,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "SINAIS + RECUSA = AUTUA JÁ.\n\nConjunto de sinais (art. 5º, §1º) + recusa = 165-A autônoma (art. 277, §3º).\n\nMesma lógica cai em blitz com etilômetro (art. 3º, §2º) e nos limites admin × crime (arts. 6º e 7º da Res. 432/2013).",
-            "destaques": ["AUTUA JÁ", "conjunto de sinais", "165-A"]
+            "texto": "SINAIS + RECUSA = AUTUA JÁ.\n\nConjunto de sinais (art. 5º, §1º) + recusa = 165-A autônoma (art. 277, §3º).\n\nMesma lógica cai em blitz com etilômetro (art. 3º, §2º) e nos limites admin × crime (arts. 6º e 7º da Res. 432/2013).\nNear: Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "AUTUA JÁ",
+              "conjunto de sinais",
+              "165-A"
+            ]
           }
         }
       ],
@@ -266,6 +438,27 @@
         }
       ]
     },
-    "tags": ["alcoolemia", "etilometro", "resolucao_432", "recusa_teste", "fiscalizacao"]
+    "tags": [
+      "alcoolemia",
+      "etilometro",
+      "resolucao_432",
+      "recusa_teste",
+      "fiscalizacao"
+    ],
+    "meta": {
+      "near_transfer": "Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "SINAIS + RECUSA = AUTUA JÁ · conjunto de sinais (não um só) · recusa = 165-A autônoma.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico"
+      ]
+    }
   }
 ]

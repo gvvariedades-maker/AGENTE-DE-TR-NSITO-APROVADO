@@ -12,12 +12,10 @@
  * Referência normativa das fórmulas (fonte oficial, não inventada):
  * https://github.com/open-spaced-repetition/awesome-fsrs/wiki/The-Algorithm
  *
- * Limitação assumida nesta MVP: como `attempts.acertou` é booleano, não há
- * distinção Hard/Easy (grades 2 e 4 do FSRS original) — apenas Again (1) ou
- * Good (3). Isso é uma simplificação aceitável (o modelo ainda é muito mais
- * preciso que um cronograma fixo), mas a precisão total do FSRS só é
- * alcançada com as 4 notas. Ver `FsrsGrade` para evoluir isso depois com um
- * botão de confiança na UI (ex.: "fácil" vs "acertei mas na dúvida").
+ * Limitação histórica: com `attempts.acertou` booleano só havia Again/Good.
+ * Fase 1 do Motor de Evidências grava `confidence` (1|3) e `fsrs_rating`
+ * derivado (`src/lib/srs/rating-policy.ts`): erro → sempre 1; acerto na dúvida → 2;
+ * acerto com certeza → 4.
  */
 
 /** 1 = Again (errou), 2 = Hard, 3 = Good (padrão para acerto), 4 = Easy */

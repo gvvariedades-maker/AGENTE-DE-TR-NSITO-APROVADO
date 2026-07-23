@@ -26,8 +26,7 @@
       "estudo_reverso": [
         "Res. CONTRAN 918/2022 art. 4",
         "CTB art. 280",
-        "CTB art. 281",
-        "CTB art. 282"
+        "CTB art. 281"
       ]
     },
     "estudo_reverso_visual": {
@@ -44,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "NA expedida com 41 dias de atraso. A banca troca prazo de DEFESA por prazo de EXPEDIÇÃO da NA.\n\nGabarito B: art. 4º, §1º — não expediu em 30 dias = arquiva AIT.",
-            "destaques": ["30 dias", "arquivamento", "dois relógios"]
+            "destaques": [
+              "30 dias",
+              "arquivamento",
+              "dois relógios"
+            ]
           }
         },
         {
@@ -53,13 +56,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "NA expedida em até 30 dias da infração?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Processo segue — defesa conta da expedição", "tipo": "resultado" },
-              { "id": "r2", "label": "Arquivamento do AIT — art. 4º, §1º", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "NA expedida em até 30 dias da infração?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Processo segue — defesa conta da expedição",
+                "tipo": "resultado"
+              },
+              {
+                "id": "r2",
+                "label": "Arquivamento do AIT — art. 4º, §1º",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim" },
-              { "de": "p1", "para": "r2", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p1",
+                "para": "r2",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -68,10 +91,20 @@
           "titulo": "Dois prazos de 30 dias",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Prazo", "Marco inicial"],
+            "titulo_colunas": [
+              "Prazo",
+              "Marco inicial"
+            ],
             "linhas": [
-              { "faixa": "Expedir NA", "classificacao": "30 dias da INFRAÇÃO — caput", "destaque": true },
-              { "faixa": "Apresentar defesa", "classificacao": "30 dias da EXPEDIÇÃO da NA — §2º" }
+              {
+                "faixa": "Expedir NA",
+                "classificacao": "30 dias da INFRAÇÃO — caput",
+                "destaque": true
+              },
+              {
+                "faixa": "Apresentar defesa",
+                "classificacao": "30 dias da EXPEDIÇÃO da NA — §2º"
+              }
             ]
           }
         },
@@ -81,7 +114,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "30 dias INFRAÇÃO → expedir NA.\nNão expediu = ARQUIVA (§1º).\nDefesa conta da EXPEDIÇÃO da NA — relógio separado.",
-            "destaques": ["INFRAÇÃO", "ARQUIVA", "EXPEDIÇÃO"]
+            "destaques": [
+              "INFRAÇÃO",
+              "ARQUIVA",
+              "EXPEDIÇÃO"
+            ]
           }
         }
       ],
@@ -107,8 +144,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B. Se marcou A, usou o prazo de defesa como prazo de expedição da NA.\n\nArt. 4º tem dois marcos: 30 dias da infração para EXPEDIR a NA; se falhar, arquiva. O prazo de defesa só começa depois que a NA sai.",
-            "destaques": ["Gabarito B", "dois relógios", "arquivamento"]
+            "texto": "Gabarito B. Se marcou A, usou o prazo de defesa como prazo de expedição da NA. dispositivo legal tem dois marcos: 30 dias da infração para EXPEDIR a NA; se falhar, arquiva. O prazo de defesa só começa depois que a NA sai.",
+            "destaques": [
+              "Gabarito B",
+              "dois relógios",
+              "arquivamento"
+            ]
           }
         },
         {
@@ -117,7 +158,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "AIT: Auto de Infração de Trânsito — inicia o processo administrativo (art. 2º, I).\n\nNA: Notificação de Autuação — dá ciência ao proprietário da autuação (art. 2º, II).\n\nARQUIVAMENTO: extinção do processo por vício formal — aqui, NA fora do prazo (art. 4º, §1º).",
-            "destaques": ["AIT", "NA", "ARQUIVAMENTO"]
+            "destaques": [
+              "AIT",
+              "NA",
+              "ARQUIVAMENTO"
+            ]
           }
         },
         {
@@ -127,11 +172,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "NA expedida em até 30 dias?", "tipo": "pergunta" },
-              { "id": "r1", "label": "AIT arquivado — gabarito B", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "NA expedida em até 30 dias?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "AIT arquivado — gabarito B",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Não — 41 dias" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Não — 41 dias"
+              }
             ]
           }
         },
@@ -141,12 +198,28 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Etapa", "Prazo / marco"],
+            "titulo_colunas": [
+              "Etapa",
+              "Prazo / marco"
+            ],
             "linhas": [
-              { "faixa": "1º — lavratura AIT", "classificacao": "Data do cometimento da infração" },
-              { "faixa": "2º — expedir NA", "classificacao": "Até 30 dias da infração — caput", "destaque": true },
-              { "faixa": "3º — defesa prévia", "classificacao": "≥ 30 dias da expedição da NA — §2º" },
-              { "faixa": "Se falhar etapa 2", "classificacao": "Arquivamento — §1º" }
+              {
+                "faixa": "1º — lavratura AIT",
+                "classificacao": "Data do cometimento da infração"
+              },
+              {
+                "faixa": "2º — expedir NA",
+                "classificacao": "Até 30 dias da infração — caput",
+                "destaque": true
+              },
+              {
+                "faixa": "3º — defesa prévia",
+                "classificacao": "≥ 30 dias da expedição da NA — §2º"
+              },
+              {
+                "faixa": "Se falhar etapa 2",
+                "classificacao": "Arquivamento — §1º"
+              }
             ]
           }
         },
@@ -156,11 +229,23 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
-              ["30 dias sempre contam da infração", "Defesa conta da expedição da NA (§2º)"],
-              ["NA tardia vale se der prazo de defesa", "Fora de 30 dias da infração = arquiva (§1º)"],
-              ["Arquivamento exige 180 dias", "180 dias é outro prazo do CTB — não do art. 4º"]
+              [
+                "30 dias sempre contam da infração",
+                "Defesa conta da expedição da NA (§2º)"
+              ],
+              [
+                "NA tardia vale se der prazo de defesa",
+                "Fora de 30 dias da infração = arquiva (§1º)"
+              ],
+              [
+                "Arquivamento exige 180 dias",
+                "180 dias é outro prazo do CTB — não do art. 4º"
+              ]
             ]
           }
         },
@@ -170,11 +255,23 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + letra da lei"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + letra da lei"
+            ],
             "linhas": [
-              ["A — termo_unico", "Confunde prazo de defesa (§2º) com prazo de expedição da NA (caput)"],
-              ["C — numero_vizinho", "Inventa 180 dias — arquivamento é aos 30 dias da infração (§1º)"],
-              ["D — regra_excecao", "NA tardia válida se defesa ok — §1º arquiva sem exceção"]
+              [
+                "A — termo_unico",
+                "Confunde prazo de defesa (§2º) com prazo de expedição da NA (caput)"
+              ],
+              [
+                "C — numero_vizinho",
+                "Inventa 180 dias — arquivamento é aos 30 dias da infração (§1º)"
+              ],
+              [
+                "D — regra_excecao",
+                "NA tardia válida se defesa ok — §1º arquiva sem exceção"
+              ]
             ]
           }
         },
@@ -184,11 +281,23 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dado da auditoria", "Consequência"],
+            "colunas": [
+              "Dado da auditoria",
+              "Consequência"
+            ],
             "linhas": [
-              ["Infração: 10/01/2026", "Marco inicial do prazo do caput"],
-              ["NA expedida: 20/02/2026", "41 dias — ultrapassa 30 dias"],
-              ["AIT regular e consistente", "Regularidade formal não salva o atraso na NA"]
+              [
+                "Infração: 10/01/2026",
+                "Marco inicial do prazo do caput"
+              ],
+              [
+                "NA expedida: 20/02/2026",
+                "41 dias — ultrapassa 30 dias"
+              ],
+              [
+                "AIT regular e consistente",
+                "Regularidade formal não salva o atraso na NA"
+              ]
             ]
           }
         },
@@ -198,12 +307,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Atos", "Papel no processo"],
+            "colunas": [
+              "Atos",
+              "Papel no processo"
+            ],
             "linhas": [
-              ["AIT lavrado", "Início — art. 3º"],
-              ["NA expedida no prazo", "Ciência ao proprietário — art. 4º"],
-              ["Defesa prévia", "Após NA — prazo do §2º"],
-              ["NP (notificação de penalidade)", "Fase posterior — se defesa indeferida/ausente"]
+              [
+                "AIT lavrado",
+                "Início — art. 3º"
+              ],
+              [
+                "NA expedida no prazo",
+                "Ciência ao proprietário — art. 4º"
+              ],
+              [
+                "Defesa prévia",
+                "Após NA — prazo do §2º"
+              ],
+              [
+                "NP (notificação de penalidade)",
+                "Fase posterior — se defesa indeferida/ausente"
+              ]
             ]
           }
         },
@@ -216,7 +340,12 @@
             "fonte": "Res. CONTRAN 918/2022, art. 4º, caput",
             "texto": "Com exceção do disposto no § 5º do art. 3º, após a verificação da regularidade e da consistência do AIT, o órgão autuador expedirá, no prazo máximo de 30 (trinta) dias contados da data do cometimento da infração, a NA dirigida ao proprietário do veículo, na qual deverão constar os dados mínimos definidos no art. 280 do CTB.",
             "trechos_grifados": [
-              { "inicio": 132, "fim": 211, "motivo": "30 dias da infração — caso estourou em 41" }
+              {
+                "inicio": 132,
+                "fim": 211,
+                "motivo": "30 dias da infração — caso estourou em 41",
+                "texto_grifado": "no prazo máximo de 30 (trinta) dias contados da data do cometimento da infração"
+              }
             ]
           }
         },
@@ -229,7 +358,12 @@
             "fonte": "Res. CONTRAN 918/2022, art. 4º, §1º",
             "texto": "A não expedição da NA no prazo previsto no caput ensejará o arquivamento do AIT.",
             "trechos_grifados": [
-              { "inicio": 49, "fim": 79, "motivo": "consequência do atraso — gabarito B" }
+              {
+                "inicio": 49,
+                "fim": 79,
+                "motivo": "consequência do atraso — gabarito B",
+                "texto_grifado": "ensejará o arquivamento do AIT"
+              }
             ]
           }
         },
@@ -239,8 +373,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "30 dias INFRAÇÃO → expedir NA.\nNão expediu = ARQUIVA (§1º).\nDefesa = 30 dias da EXPEDIÇÃO da NA (§2º) — relógio separado.\n\nMesma lógica cai em identificação do condutor (art. 5º) e NA que vale como AIT (art. 3º, §5º).",
-            "destaques": ["INFRAÇÃO", "ARQUIVA", "EXPEDIÇÃO"]
+            "texto": "30 dias INFRAÇÃO → expedir NA.\nNão expediu = ARQUIVA (§1º).\nDefesa = 30 dias da EXPEDIÇÃO da NA (§2º) — relógio separado.\n\nMesma lógica cai em identificação do condutor (art. 5º) e NA que vale como AIT (art. 3º, §5º).\nNear: Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "INFRAÇÃO",
+              "ARQUIVA",
+              "EXPEDIÇÃO"
+            ]
           }
         }
       ],
@@ -251,6 +389,28 @@
         }
       ]
     },
-    "tags": ["multas", "resolucao_918", "notificacao_autuacao", "prazo", "arquivamento"]
+    "tags": [
+      "multas",
+      "resolucao_918",
+      "notificacao_autuacao",
+      "prazo",
+      "arquivamento"
+    ],
+    "meta": {
+      "near_transfer": "Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "30 dias INFRAÇÃO → expedir NA · não saiu = ARQUIVA · defesa conta da EXPEDIÇÃO da NA.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
+      ]
+    }
   }
 ]

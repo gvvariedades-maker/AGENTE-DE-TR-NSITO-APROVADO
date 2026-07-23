@@ -27,8 +27,7 @@
       "estudo_reverso": [
         "Res. CONTRAN 900/2022 art. 5",
         "Res. CONTRAN 900/2022 art. 4",
-        "Res. CONTRAN 900/2022 art. 3",
-        "CTB art. 281"
+        "Res. CONTRAN 900/2022 art. 3"
       ]
     },
     "meta": {
@@ -54,7 +53,11 @@
       "far_transfer": "Na JARI, órgão intima manifesto de carga e o requerente não atende — art. 9º manda julgar no estado, não negar conhecimento por documento probatório.",
       "o_que_nao_muda": "O § único vale em qualquer fase para admissibilidade — documento emitido pelo autuador não pode ser exigido em cópia; 1 AIT por requerimento (art. 3º, § único) permanece.",
       "calibracao_corpus": "ok",
-      "eficacia_pos_aula": ["E1", "E2", "E3"]
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
     },
     "tags": [
       "resolucao_900",
@@ -76,7 +79,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito B: faltam só cópias da STTP — § único dispensa documentos do autuador na admissibilidade.",
-            "destaques": ["Gabarito B", "§ único", "admissibilidade"]
+            "destaques": [
+              "Gabarito B",
+              "§ único",
+              "admissibilidade"
+            ]
           }
         },
         {
@@ -85,11 +92,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Documento emitido pelo autuador?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Não exige cópia — conhecida", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Documento emitido pelo autuador?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Não exige cópia — conhecida",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim — notificação e AIT da STTP" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim — notificação e AIT da STTP"
+              }
             ]
           }
         },
@@ -99,7 +118,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Autuador emitiu = não exige cópia.\nCNH e procuração do requerente = sim.",
-            "destaques": ["autuador", "não exige", "CNH"]
+            "destaques": [
+              "autuador",
+              "não exige",
+              "CNH"
+            ]
           }
         }
       ],
@@ -139,8 +162,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — cópia da notificação ou do AIT sempre indispensável.\nC — só conhecida se a STTP fornecer cópias antes do prazo.\nD — exigência documental compete ao Detran-PB licenciador.\n\nPegadinha: lista formal do inciso II não vence a exceção de admissibilidade para documentos do autuador.",
-            "destaques": ["Gabarito B", "§ único", "admissibilidade"]
+            "texto": "Gabarito B. A — cópia da notificação ou do AIT sempre indispensável.\nC — só conhecida se a STTP fornecer cópias antes do prazo.\nD — exigência documental compete ao Detran-PB licenciador. Pegadinha: lista formal do inciso II não vence a exceção de admissibilidade para documentos do autuador.",
+            "destaques": [
+              "Gabarito B",
+              "§ único",
+              "admissibilidade"
+            ]
           }
         },
         {
@@ -149,7 +176,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "ADMISSIBILIDADE: exame formal do requerimento — distinto do mérito da infração.\n\nDOCUMENTO DO AUTUADOR: notificação, AIT ou penalidade emitidos pela STTP.\n\nREQUERENTE: proprietário ou legitimado — CNH e procuração são dele, não do órgão.",
-            "destaques": ["ADMISSIBILIDADE", "AUTUADOR", "REQUERENTE"]
+            "destaques": [
+              "ADMISSIBILIDADE",
+              "AUTUADOR",
+              "REQUERENTE"
+            ]
           }
         },
         {
@@ -159,13 +190,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Defesa tempestiva e assinada?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Faltam só cópias emitidas pelo autuador?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Conhecida — gabarito B", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Defesa tempestiva e assinada?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Faltam só cópias emitidas pelo autuador?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Conhecida — gabarito B",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — Roberto protocolou na STTP" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — § único dispensa" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — Roberto protocolou na STTP"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — § único dispensa"
+              }
             ]
           }
         },
@@ -175,7 +226,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Documento", "Na admissibilidade"],
+            "titulo_colunas": [
+              "Documento",
+              "Na admissibilidade"
+            ],
             "linhas": [
               {
                 "faixa": "Cópia da notificação/AIT da STTP",
@@ -203,7 +257,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
               [
                 "Inciso II torna cópia do AIT obrigatória sempre",
@@ -222,7 +279,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -245,7 +305,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso", "Consequência"],
+            "colunas": [
+              "Fato do caso",
+              "Consequência"
+            ],
             "linhas": [
               [
                 "Requerimento assinado com placa e nº do AIT",
@@ -272,7 +335,10 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Função no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Função no caso"
+            ],
             "linhas": [
               [
                 "Art. 5º, II",
@@ -332,7 +398,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Autuador emitiu = não exige cópia (§ único) · CNH/procuração do requerente = sim.\nNear: mesma defesa sem cópia da CNH — inciso III permanece exigível; dispensa não alcança documento de Roberto.\nFar: JARI intima manifesto e requerente não atende — julga no estado, não nega conhecimento.\nNão muda: § único vale em qualquer fase; 1 AIT por requerimento permanece.\nCadeia: vizinho = art. 4º (hipóteses taxativas de não conhecimento).",
-            "destaques": ["§ único", "CNH", "art. 4º"]
+            "destaques": [
+              "§ único",
+              "CNH",
+              "art. 4º"
+            ]
           }
         }
       ],

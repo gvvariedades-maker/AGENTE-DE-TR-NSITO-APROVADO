@@ -44,7 +44,16 @@
       "eixos_mecanismo": [
         "competencia_snt",
         "regra_excecao"
-      ]
+      ],
+      "near_transfer": "se a banca trocar arena por hospital regional com fluxo intenso, permanecem anuência do órgão da via e estacionamento — o pólo atrativo não muda o regime.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "91 = CONTRAN normatiza · 93 = órgão da via anuencia + estacionamento.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     },
     "tags": [
       "engenharia_transito",
@@ -67,7 +76,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito B: CONTRAN normatiza engenharia de tráfego, mas pólo atrativo ainda exige anuência da STTP e estacionamento.",
-            "destaques": ["Gabarito B", "anuência", "estacionamento"]
+            "destaques": [
+              "Gabarito B",
+              "anuência",
+              "estacionamento"
+            ]
           }
         },
         {
@@ -75,7 +88,10 @@
           "titulo": "Normatizar × anuir",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
               [
                 "Normas do CONTRAN dispensam STTP",
@@ -94,7 +110,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CONTRAN normatiza.\nÓrgão da via anuencia.\nPólo atrativo = estacionamento.",
-            "destaques": ["CONTRAN", "anuencia", "estacionamento"]
+            "destaques": [
+              "CONTRAN",
+              "anuencia",
+              "estacionamento"
+            ]
           }
         }
       ],
@@ -133,8 +153,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — normas do CONTRAN substituem anuência da STTP na arena de Campina Grande.\nC — anuência prévia de pólo atrativo compete exclusivamente ao CONTRAN.\nD — normas do CONTRAN dispensam área de estacionamento no projeto.\n\nPegadinha: normatização federal não elimina anuência local nem estacionamento no pólo atrativo.",
-            "destaques": ["Gabarito B", "arena", "estacionamento"]
+            "texto": "Gabarito B. A — normas do CONTRAN substituem anuência da STTP na arena de Campina Grande.\nC — anuência prévia de pólo atrativo compete exclusivamente ao CONTRAN.\nD — normas do CONTRAN dispensam área de estacionamento no projeto. Pegadinha: normatização federal não elimina anuência local nem estacionamento no pólo atrativo.",
+            "destaques": [
+              "Gabarito B",
+              "arena",
+              "estacionamento"
+            ]
           }
         },
         {
@@ -143,7 +167,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "ENGENHARIA DE TRÁFEGO: planejamento e soluções viárias — normas nacionais editadas pelo CONTRAN.\n\nPÓLO ATRATIVO: empreendimento que concentra fluxo de veículos — shopping, arena, hospital grande.\n\nCIRCUNSCRIÇÃO SOBRE A VIA: órgão responsável pela via — em Campina Grande, a STTP nas vias municipais.",
-            "destaques": ["ENGENHARIA", "PÓLO ATRATIVO", "STTP"]
+            "destaques": [
+              "ENGENHARIA",
+              "PÓLO ATRATIVO",
+              "STTP"
+            ]
           }
         },
         {
@@ -170,8 +198,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — arena poliesportiva" },
-              { "de": "p2", "para": "r1", "rotulo": "Requisitos do pólo atrativo" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — arena poliesportiva"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Requisitos do pólo atrativo"
+              }
             ]
           }
         },
@@ -181,7 +217,10 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Órgão / ato", "Função"],
+            "colunas": [
+              "Órgão / ato",
+              "Função"
+            ],
             "linhas": [
               [
                 "CONTRAN — normas nacionais",
@@ -204,7 +243,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
               [
                 "Normas do CONTRAN dispensam anuência da STTP",
@@ -223,7 +265,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — competencia_snt",
@@ -246,7 +291,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso", "Consequência"],
+            "colunas": [
+              "Fato do caso",
+              "Consequência"
+            ],
             "linhas": [
               [
                 "Arena poliesportiva em via de grande fluxo — Campina Grande",
@@ -268,12 +316,15 @@
           }
         },
         {
-          "id": "eixo2",
+          "id": "hierarquia",
           "titulo": "Dois dispositivos no gabarito",
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Função no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Função no caso"
+            ],
             "linhas": [
               [
                 "Art. 91 — CONTRAN",
@@ -332,8 +383,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "91 = CONTRAN normatiza.\n93 = órgão da via anuencia + estacionamento.\n\nNear-transfer: se a banca trocar arena por hospital regional com fluxo intenso, permanecem anuência do órgão da via e estacionamento — o pólo atrativo não muda o regime.",
-            "destaques": ["CONTRAN", "anuencia", "pólo atrativo"]
+            "texto": "91 = CONTRAN normatiza.\n93 = órgão da via anuencia + estacionamento.\n\nNear-transfer: se a banca trocar arena por hospital regional com fluxo intenso, permanecem anuência do órgão da via e estacionamento — o pólo atrativo não muda o regime.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "CONTRAN",
+              "anuencia",
+              "pólo atrativo"
+            ]
           }
         }
       ],

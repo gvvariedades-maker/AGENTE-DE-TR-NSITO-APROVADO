@@ -7,7 +7,7 @@ consumido_por: [examinador-idecan, professor-cadeia, estudo-reverso-visual]
 corpus_base: 11 questões IDECAN Campina Grande 2021 (GCM/AAd/ASE) — `questões reais/HISTORIA CAMPINA GRANDE - IDECAN - CG 2021 GCM AAd ASE - TEC.pdf`
 cobertura_banco: 3 questões (2026-07-11) — formação (2) + personagens (1)
 fonte_legal: conteúdo/historia-cg-pb/base-factual.md (única fonte curada)
-versao: 1.0
+versao: 1.1
 ---
 
 # Perfil vertical — História de Campina Grande e Paraíba
@@ -174,6 +174,38 @@ Contagem em `content/questoes/historia_cg_pb/` — **0 questões** (2026-07-10).
 
 ---
 
+## 13. Paridade IDECAN — coleta Tec Concursos
+
+**Status:** 🔴 **P0 — segundo maior gap** · Corpus local **9 Q** (PDF CG 2021 GCM) vs meta **30–40 Q** → faltam **~25–35 questões reais** para calibrar forma IDECAN sem alucinar conteúdo.
+
+| Métrica | Valor |
+|---------|-------|
+| Corpus local | **9** questões (`HISTORIA CAMPINA GRANDE - IDECAN - CG 2021…`) |
+| Tec IDECAN | Poucas por matéria isolada — buscar por **assunto** |
+| Meta paridade (camada 1) | **30–35** exportações IDECAN com viés CG/PB |
+| Fonte de conteúdo | Continua sendo `base-factual.md` — Tec só calibra **forma** |
+
+### Roteiro de coleta (Tec)
+
+1. **Banca: IDECAN** (total no Tec: **38.424** questões).
+2. **Matéria e assunto** → **Pesquisar por nome** → termos (um caderno por termo, depois deduplicar):
+   - `Campina Grande`
+   - `História da Paraíba`
+   - `Paraíba` (revisar manualmente — descartar o que não for edital)
+3. Filtrar visualmente questões sobre **formação da cidade**, **personagens**, **contexto estadual** — alinhar aos slugs `historia_cg_pb_*`.
+4. Exportar **30–35 questões** → `conteúdo/questões reais/HISTORIA CG PB - IDECAN - TEC 02.pdf`.
+5. Para cada questão exportada: validar fato contra `base-factual.md`; descartar ou marcar `[verificar]` se divergir.
+
+### Critério de “paridade OK”
+
+- [ ] Corpus ≥ **30** questões IDECAN com foco CG/PB
+- [ ] Comando assertivas (~73% no corpus CG 2021) confirmado no novo lote
+- [ ] Teste cego ≤ **55%** em 20 inéditas
+- [ ] **Zero** fatos novos no banco sem entrada na `base-factual.md`
+
+---
+
 ## Changelog
 
+- **1.1** (2026-07-19) — §13 Paridade IDECAN: gap ~25–35 Q; roteiro Tec por assunto (Campina Grande/Paraíba); P0; critérios anti-alucinação mantidos.
 - **1.0** (2026-07-10) — Perfil inicial: **sem corpus IDECAN e sem lei** (perfil enxuto, anti-alucinação reforçado); envelope global 150–400 / alt 40–90; base factual como única fonte; 4 microtópicos operacionais; banco vazio (lacuna total); fila ROI formação→personagens→cultura→PB; mapa visual Famílias A/D.

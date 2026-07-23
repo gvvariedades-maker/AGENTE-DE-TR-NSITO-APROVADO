@@ -44,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Três esferas independentes (art. 125). Absolvição só afasta disciplina se negar fato ou autoria (art. 126) — não qualquer absolvição.",
-            "destaques": ["independentes", "cumular-se", "art. 126"]
+            "destaques": [
+              "independentes",
+              "cumular-se",
+              "art. 126"
+            ]
           }
         },
         {
@@ -52,7 +56,10 @@
           "titulo": "Absolvição × disciplina",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha ✗", "Art. 126 ✓"],
+            "colunas": [
+              "Pegadinha ✗",
+              "Art. 126 ✓"
+            ],
             "linhas": [
               [
                 "Qualquer absolvição criminal impede demissão",
@@ -67,13 +74,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Mesmo fato em civil, penal e disciplinar?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Absolvição negou fato ou autoria?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito D — esferas cumulam", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Mesmo fato em civil, penal e disciplinar?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Absolvição negou fato ou autoria?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito D — esferas cumulam",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -85,8 +112,18 @@
             "fonte": "Lei 8.112/90, arts. 125 e 126",
             "texto": "Art. 125. As sanções civis, penais e administrativas poderão cumular-se, sendo independentes entre si. Art. 126. A responsabilidade administrativa do servidor será afastada no caso de absolvição criminal que negue a existência do fato ou sua autoria.",
             "trechos_grifados": [
-              { "inicio": 79, "fim": 101, "motivo": "esferas independentes" },
-              { "inicio": 208, "fim": 249, "motivo": "exceção — negar fato ou autoria" }
+              {
+                "inicio": 79,
+                "fim": 101,
+                "motivo": "esferas independentes",
+                "texto_grifado": "independentes entre si"
+              },
+              {
+                "inicio": 208,
+                "fim": 249,
+                "motivo": "exceção — negar fato ou autoria",
+                "texto_grifado": "negue a existência do fato ou sua autoria"
+              }
             ]
           }
         },
@@ -96,7 +133,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "125 = CUMULA e INDEPENDE | 126 = afasta só se negar FATO ou AUTORIA.",
-            "destaques": ["CUMULA", "FATO", "AUTORIA"]
+            "destaques": [
+              "CUMULA",
+              "FATO",
+              "AUTORIA"
+            ]
           }
         }
       ],
@@ -118,7 +159,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Absolvição criminal genérica não barra disciplina — só se negar fato ou autoria",
-        "eixos_legais": ["Lei8112_art125", "Lei8112_art126"],
+        "eixos_legais": [
+          "Lei8112_art125",
+          "Lei8112_art126"
+        ],
         "isca_por_alternativa": {
           "A": "qualquer absolvição criminal impede penalidade administrativa",
           "B": "disciplinar depende de trânsito em julgado da ação penal",
@@ -132,8 +176,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D.\n\nA — absolvição sempre impede disciplina: art. 126 é mais restrito.\nB — disciplinar após penal: esferas são independentes (art. 125).\nC — civil extingue disciplina: cumulam-se (art. 125).\n\nPegadinha: insuficiência de provas ≠ negar fato ou autoria.",
-            "destaques": ["Gabarito D", "independentes", "art. 126"]
+            "texto": "Gabarito D. A — absolvição sempre impede disciplina: dispositivo legal é mais restrito.\nB — disciplinar após penal: esferas são independentes (dispositivo legal).\nC — civil extingue disciplina: cumulam-se (dispositivo legal). Pegadinha: insuficiência de provas ≠ negar fato ou autoria.",
+            "destaques": [
+              "Gabarito D",
+              "independentes",
+              "dispositivo legal"
+            ]
           }
         },
         {
@@ -142,7 +190,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Responsabilidade civil: reparar dano ao erário ou a terceiros — ação de ressarcimento.\nResponsabilidade penal: sanção criminal pelo mesmo fato ilícito.\nResponsabilidade administrativa: penalidade disciplinar (advertência a demissão) — arts. 125 e 126.",
-            "destaques": ["civil", "penal", "administrativa"]
+            "destaques": [
+              "civil",
+              "penal",
+              "administrativa"
+            ]
           }
         },
         {
@@ -169,8 +221,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -180,7 +240,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Esfera", "Exemplo no caso"],
+            "titulo_colunas": [
+              "Esfera",
+              "Exemplo no caso"
+            ],
             "linhas": [
               {
                 "faixa": "Civil",
@@ -208,7 +271,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a banca insinua ✗", "Lei 8.112/90 ✓"],
+            "colunas": [
+              "O que a banca insinua ✗",
+              "Lei 8.112/90 ✓"
+            ],
             "linhas": [
               [
                 "Absolvição criminal impede sempre demissão",
@@ -227,7 +293,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -250,12 +319,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso STTP", "Consequência"],
+            "colunas": [
+              "Fato do caso STTP",
+              "Consequência"
+            ],
             "linhas": [
-              ["Desvio de multas — ação de ressarcimento", "Esfera civil em curso"],
-              ["Mesmo fato — processo disciplinar", "Esfera administrativa independente"],
-              ["Defesa invoca absolvição por insuficiência de provas", "Não negou fato nem autoria — art. 126 não afasta"],
-              ["Resultado", "Alternativa D — única defensável"]
+              [
+                "Desvio de multas — ação de ressarcimento",
+                "Esfera civil em curso"
+              ],
+              [
+                "Mesmo fato — processo disciplinar",
+                "Esfera administrativa independente"
+              ],
+              [
+                "Defesa invoca absolvição por insuficiência de provas",
+                "Não negou fato nem autoria — art. 126 não afasta"
+              ],
+              [
+                "Resultado",
+                "Alternativa D — única defensável"
+              ]
             ]
           }
         },
@@ -271,12 +355,14 @@
               {
                 "inicio": 51,
                 "fim": 61,
-                "motivo": "mapa — esferas cumulam"
+                "motivo": "mapa — esferas cumulam",
+                "texto_grifado": "cumular-se"
               },
               {
                 "inicio": 69,
                 "fim": 91,
-                "motivo": "contraste — independentes entre si"
+                "motivo": "contraste — independentes entre si",
+                "texto_grifado": "independentes entre si"
               }
             ]
           }
@@ -293,12 +379,14 @@
               {
                 "inicio": 95,
                 "fim": 121,
-                "motivo": "fluxo — negar existência do fato"
+                "motivo": "fluxo — negar existência do fato",
+                "texto_grifado": "negue a existência do fato"
               },
               {
                 "inicio": 125,
                 "fim": 136,
-                "motivo": "fluxo — negar autoria"
+                "motivo": "fluxo — negar autoria",
+                "texto_grifado": "sua autoria"
               }
             ]
           }
@@ -309,8 +397,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "125 = CUMULA e INDEPENDE | 126 = afasta só se negar FATO ou AUTORIA.\n\nNear-transfer: agente absolvido penalmente por atipicidade da conduta — afasta demissão? Sim, se a sentença negar o fato ou a autoria; absolvição só por falta de prova não basta.",
-            "destaques": ["CUMULA", "FATO ou AUTORIA", "near-transfer"]
+            "texto": "125 = CUMULA e INDEPENDE | 126 = afasta só se negar FATO ou AUTORIA.\n\nNear-transfer: agente absolvido penalmente por atipicidade da conduta — afasta demissão? Sim, se a sentença negar o fato ou a autoria; absolvição só por falta de prova não basta.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "CUMULA",
+              "FATO ou AUTORIA",
+              "near-transfer"
+            ]
           }
         }
       ],
@@ -326,6 +418,17 @@
       "esferas_independentes",
       "processo_disciplinar",
       "lei_8112"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "agente absolvido penalmente por atipicidade da conduta — afasta demissão? Sim, se a sentença negar o fato ou a autoria; absolvição só por falta de prova não basta.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "125 = CUMULA e INDEPENDE",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

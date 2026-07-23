@@ -27,8 +27,7 @@
       "estudo_reverso": [
         "MBFT seção 7 concomitantes",
         "CTB art. 208",
-        "CTB art. 218, I",
-        "CTB art. 266"
+        "CTB art. 218, I"
       ]
     },
     "tags": [
@@ -159,7 +158,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C.\n\nA — um AIT com observações: regra de concorrentes/mesma raiz, não de concomitantes.\nB — só semáforo: MBFT não autoriza escolher a mais grave.\nD — só velocidade: ignora conduta independente do semáforo.\n\nSinal vermelho + velocidade 15% no mesmo cruzamento.",
+            "texto": "Gabarito C. B — só semáforo: MBFT não autoriza escolher a mais grave.\nD — só velocidade: ignora conduta independente do semáforo. Sinal vermelho + velocidade 15% no mesmo cruzamento.\nA — unifica em 1 AIT com observações",
             "destaques": [
               "Gabarito C",
               "concomitantes",
@@ -364,12 +363,14 @@
               {
                 "inicio": 48,
                 "fim": 86,
-                "motivo": "contraste — critério de independência"
+                "motivo": "contraste — critério de independência",
+                "texto_grifado": "de maneira independente umas da outras"
               },
               {
                 "inicio": 124,
                 "fim": 171,
-                "motivo": "mapa — N AITs para concomitantes"
+                "motivo": "mapa — N AITs para concomitantes",
+                "texto_grifado": "tantos AITs quanto forem as condutas realizadas"
               }
             ]
           }
@@ -386,12 +387,14 @@
               {
                 "inicio": 12,
                 "fim": 47,
-                "motivo": "caso — primeira conduta independente"
+                "motivo": "caso — primeira conduta independente",
+                "texto_grifado": "avança o sinal vermelho do semáforo"
               },
               {
                 "inicio": 65,
                 "fim": 110,
-                "motivo": "caso — segunda conduta independente"
+                "motivo": "caso — segunda conduta independente",
+                "texto_grifado": "excede o limite de velocidade em menos de 20%"
               }
             ]
           }
@@ -402,7 +405,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "CONCOMITANTE = N AITs · INDEPENDENTES · 208+218,I = 2 · ≠ unificar.\n\nNear-transfer: ultrapassar pelo acostamento implica transitar no acostamento — aí é concorrente e cabe 1 AIT pela conduta principal.",
+            "texto": "CONCOMITANTE = N AITs · INDEPENDENTES · 208+218,I = 2 · ≠ unificar.\n\nNear-transfer: ultrapassar pelo acostamento implica transitar no acostamento — aí é concorrente e cabe 1 AIT pela conduta principal.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "CONCOMITANTE",
               "Near-transfer",
@@ -416,6 +419,22 @@
           "rotulo": "MBFT — Seção 7",
           "path": "conteúdo/resoluções CONTRAN/MBFT-anexo-resolucao-985-2022-secao-07-autuacao.txt"
         }
+      ]
+    },
+    "meta": {
+      "near_transfer": "ultrapassar pelo acostamento implica transitar no acostamento — aí é concorrente e cabe 1 AIT pela conduta principal.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "CONCOMITANTE = N AITs · INDEPENDENTES · 208+218,I = 2 · ≠ unificar.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "gravidade",
+        "regra_excecao",
+        "termo_unico"
       ]
     }
   }

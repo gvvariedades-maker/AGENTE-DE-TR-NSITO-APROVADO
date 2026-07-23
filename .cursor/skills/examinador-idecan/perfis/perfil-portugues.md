@@ -7,7 +7,7 @@ consumido_por: [examinador-idecan, professor-cadeia, estudo-reverso-visual]
 corpus_base: 197 questões IDECAN (análise 2026-07-10)
 cobertura_banco: 4 questões em content/questoes/portugues/ (atualizado 2026-07-10)
 fonte_legal: norma culta (sem diploma legal específico no edital — Anexo I, Língua Portuguesa)
-versao: 1.0
+versao: 1.1
 ---
 
 # Perfil vertical — Língua Portuguesa
@@ -205,6 +205,21 @@ Coesão/referência · concordância nominal/verbal · regência + crase · colo
 
 ---
 
+## 13. Paridade IDECAN — coleta Tec Concursos
+
+**Status:** 🟢 **Manutenção** — Corpus local **197 Q** supera meta **80–120**. Gap real do projeto é **banco inédito** (4 Q), não corpus de calibração.
+
+| Métrica | Valor |
+|---------|-------|
+| Corpus local | **197** questões |
+| Meta paridade (camada 1) | ✅ Atingida |
+| Tec (referência) | `Língua Portuguesa (Português)` + IDECAN |
+
+**Quando reexportar:** só se teste cego reprovar blocos de texto-base; priorizar exportações com **texto longo + 3–4 questões encadeadas** (padrão IDECAN). Ver [perfil-banca.md](../perfil-banca.md) § Paridade IDECAN.
+
+---
+
 ## Changelog
 
+- **1.1** (2026-07-19) — §13 Paridade IDECAN: corpus OK; prioridade é geração no banco, não coleta Tec.
 - **1.0** (2026-07-10) — Perfil inicial: corpus 197 Q IDECAN; envelope texto-base 800–1.500 chars + comando CORRETA dominante (42,6%); mecanismos análogos semânticos; 12 microtópicos P1→P5; cobertura 4 Q do banco (lacuna alta); fila ROI por bloco de texto; mapa visual Famílias A/B/D.

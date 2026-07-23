@@ -9,7 +9,7 @@
     "enunciado": "Em via urbana de Campina Grande/PB, um condutor aproxima-se em velocidade elevada de cruzamento semafórico, mantendo ritmo que impede deter o veículo com segurança caso um pedestre com direito de passagem ingresse na faixa. Considerando as normas de circulação e conduta do Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
     "alternativas": {
       "A": "Ao aproximar-se de cruzamento, o condutor deve transitar em velocidade moderada, de modo a poder deter o veículo com segurança para dar passagem a pedestres e veículos preferenciais, conforme o art. 44 do CTB.",
-      "B": "O art. 44 do CTB aplica-se apenas a cruzamentos sem sinalização, não a cruzamentos semafóricos como o do caso.",
+      "B": "No cruzamento semafórico de Campina Grande, com pedestre em risco, o art. 44 do CTB aplica-se apenas a cruzamentos sem sinalização, não a cruzamentos semafóricos como o do caso.",
       "C": "Com semáforo favorável ao condutor, dispensa-se velocidade moderada na aproximação, bastando reduzir após iniciada a travessia do pedestre.",
       "D": "Na aproximação de cruzamento semafórico, prevalece o art. 44-A do CTB, que autoriza conversão à direita no sinal vermelho, dispensando prudência especial do art. 44."
     },
@@ -50,7 +50,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Aproximação rápida de cruzamento semafórico.\n\nGabarito A: art. 44 — velocidade moderada.",
-            "destaques": ["cruzamento", "Gabarito A", "moderada"]
+            "destaques": [
+              "cruzamento",
+              "Gabarito A",
+              "moderada"
+            ]
           }
         },
         {
@@ -58,10 +62,19 @@
           "titulo": "Verde × moderar",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
-              ["Semáforo verde dispensa moderar", "Qualquer cruzamento exige prudência"],
-              ["Só vale sem placa", "Qualquer tipo de cruzamento"]
+              [
+                "Semáforo verde dispensa moderar",
+                "Qualquer cruzamento exige prudência"
+              ],
+              [
+                "Só vale sem placa",
+                "Qualquer tipo de cruzamento"
+              ]
             ]
           }
         },
@@ -71,11 +84,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Aproxima-se de cruzamento?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Velocidade moderada — poder parar", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Aproxima-se de cruzamento?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Velocidade moderada — poder parar",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -85,7 +110,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CRUZAMENTO = MODERADA.\nPedestre + preferencial.\nQualquer tipo.",
-            "destaques": ["MODERADA", "qualquer tipo"]
+            "destaques": [
+              "MODERADA",
+              "qualquer tipo"
+            ]
           }
         }
       ],
@@ -124,7 +152,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A.\n\nB — limitou a semáforo ausente: lei diz qualquer tipo de cruzamento.\nC — invocou farol verde: semáforo não dispensa velocidade moderada ao aproximar.\nD — citou conversão no vermelho: art. 44-A é hipótese distinta da prudência do art. 44.\n\nNesta aula você fixa velocidade moderada e passagem a pedestre e preferenciais.",
+            "texto": "Gabarito A. B — limitou a semáforo ausente: lei diz qualquer tipo de cruzamento.\nC — invocou farol verde: semáforo não dispensa velocidade moderada ao aproximar.\nD — citou conversão no vermelho: dispositivo legal-A é hipótese distinta da prudência do dispositivo legal. Nesta aula você fixa velocidade moderada e passagem a pedestre e preferenciais.",
             "destaques": [
               "Gabarito A",
               "velocidade moderada",
@@ -320,17 +348,20 @@
               {
                 "inicio": 28,
                 "fim": 55,
-                "motivo": "contraste — semáforo não exclui a regra"
+                "motivo": "contraste — semáforo não exclui a regra",
+                "texto_grifado": "qualquer tipo de cruzamento"
               },
               {
                 "inicio": 130,
                 "fim": 149,
-                "motivo": "caso — ritmo alto do condutor"
+                "motivo": "caso — ritmo alto do condutor",
+                "texto_grifado": "velocidade moderada"
               },
               {
                 "inicio": 222,
                 "fim": 230,
-                "motivo": "glossario — pedestre com passagem a garantir"
+                "motivo": "glossario — pedestre com passagem a garantir",
+                "texto_grifado": "pedestre"
               }
             ]
           }
@@ -341,7 +372,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "CRUZAMENTO = MODERADA + PRUDÊNCIA.\nQualquer tipo — com ou sem semáforo.\nParar se preciso: pedestre + preferencial.\n44-A (virar no vermelho) é outra história.\n\nNear-transfer: ao ver cruzamento semafórico à frente, reduza antes da faixa — verde não autoriza chegar sem poder parar para pedestre.",
+            "texto": "CRUZAMENTO = MODERADA + PRUDÊNCIA.\nQualquer tipo — com ou sem semáforo.\nParar se preciso: pedestre + preferencial.\n44-A (virar no vermelho) é outra história.\n\nNear-transfer: ao ver cruzamento semafórico à frente, reduza antes da faixa — verde não autoriza chegar sem poder parar para pedestre.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "MODERADA",
               "qualquer tipo",
@@ -355,6 +386,22 @@
           "rotulo": "CTB art. 44",
           "path": "conteúdo/legislação federal/lei-9503-ctb.html"
         }
+      ]
+    },
+    "meta": {
+      "near_transfer": "ao ver cruzamento semafórico à frente, reduza antes da faixa — verde não autoriza chegar sem poder parar para pedestre.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "CRUZAMENTO = MODERADA · parar p/ PED + preferência · qualquer tipo.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
       ]
     }
   }

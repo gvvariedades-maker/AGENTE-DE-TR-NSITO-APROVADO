@@ -46,7 +46,16 @@
         "competencia_snt",
         "termo_unico",
         "regra_excecao"
-      ]
+      ],
+      "near_transfer": "conflito de circunscrição entre DETRAN-PB e PRF na BR-230 — não é disputa municipal; sobe ao CONTRAN.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Município × Município = CETRAN (14, IX) · União/UF/DF = CONTRAN (12, XIV) · JARI = recurso de multa.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     },
     "tags": [
       "snt",
@@ -68,7 +77,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito B: CETRAN-PB dirime conflito Campina Grande × Queimadas. A isca é subir ao CONTRAN por envolver o Estado.",
-            "destaques": ["Gabarito B", "CETRAN", "municípios"]
+            "destaques": [
+              "Gabarito B",
+              "CETRAN",
+              "municípios"
+            ]
           }
         },
         {
@@ -77,13 +90,33 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "cetran", "label": "CETRAN-PB — dirime", "nivel": 1 },
-              { "id": "cg", "label": "STTP Campina Grande", "nivel": 2 },
-              { "id": "qm", "label": "STTP Queimadas", "nivel": 2 }
+              {
+                "id": "cetran",
+                "label": "CETRAN-PB — dirime",
+                "nivel": 1
+              },
+              {
+                "id": "cg",
+                "label": "STTP Campina Grande",
+                "nivel": 2
+              },
+              {
+                "id": "qm",
+                "label": "STTP Queimadas",
+                "nivel": 2
+              }
             ],
             "arestas": [
-              { "de": "cetran", "para": "cg", "rotulo": "circunscrição" },
-              { "de": "cetran", "para": "qm", "rotulo": "circunscrição" }
+              {
+                "de": "cetran",
+                "para": "cg",
+                "rotulo": "circunscrição"
+              },
+              {
+                "de": "cetran",
+                "para": "qm",
+                "rotulo": "circunscrição"
+              }
             ]
           }
         },
@@ -93,7 +126,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Município × Município = CETRAN.\nUnião/UF/DF = CONTRAN.\nJARI = recurso de multa.",
-            "destaques": ["CETRAN", "CONTRAN"]
+            "destaques": [
+              "CETRAN",
+              "CONTRAN"
+            ]
           }
         }
       ],
@@ -132,8 +168,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — sobe ao CONTRAN por envolver a Paraíba: esfera União/UF/DF, não disputa intermunicipal.\nC — manda à JARI: julga recursos de infração, não circunscrição entre órgãos.\nD — Detran autua no local: não substitui o CETRAN nem os executivos municipais.\n\nPegadinha: Campina Grande × Queimadas = CETRAN estadual.",
-            "destaques": ["Gabarito B", "CETRAN", "municípios"]
+            "texto": "Gabarito B. A — sobe ao CONTRAN por envolver a Paraíba: esfera União/UF/DF, não disputa intermunicipal.\nC — manda à JARI: julga recursos de infração, não circunscrição entre órgãos.\nD — Detran autua no local: não substitui o CETRAN nem os executivos municipais. Pegadinha: Campina Grande × Queimadas = CETRAN estadual.",
+            "destaques": [
+              "Gabarito B",
+              "CETRAN",
+              "municípios"
+            ]
           }
         },
         {
@@ -142,7 +182,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CETRAN: Conselho Estadual de Trânsito — coordena o SNT no Estado e dirime conflitos municipais.\n\nCONTRAN: colegiado normativo federal — dirime conflitos na esfera União/UF/DF.\n\nJARI: Junta Administrativa de Recursos de Infrações — julga recursos contra penalidades, não circunscrição.",
-            "destaques": ["CETRAN", "CONTRAN", "JARI"]
+            "destaques": [
+              "CETRAN",
+              "CONTRAN",
+              "JARI"
+            ]
           }
         },
         {
@@ -152,14 +196,38 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "contran", "label": "CONTRAN — esfera federal", "nivel": 0 },
-              { "id": "cetran", "label": "CETRAN-PB — dirime municipal", "nivel": 1 },
-              { "id": "cg", "label": "STTP Campina Grande", "nivel": 2 },
-              { "id": "qm", "label": "STTP Queimadas", "nivel": 2 }
+              {
+                "id": "contran",
+                "label": "CONTRAN — esfera federal",
+                "nivel": 0
+              },
+              {
+                "id": "cetran",
+                "label": "CETRAN-PB — dirime municipal",
+                "nivel": 1
+              },
+              {
+                "id": "cg",
+                "label": "STTP Campina Grande",
+                "nivel": 2
+              },
+              {
+                "id": "qm",
+                "label": "STTP Queimadas",
+                "nivel": 2
+              }
             ],
             "arestas": [
-              { "de": "cetran", "para": "cg", "rotulo": "dirime circunscrição" },
-              { "de": "cetran", "para": "qm", "rotulo": "dirime circunscrição" }
+              {
+                "de": "cetran",
+                "para": "cg",
+                "rotulo": "dirime circunscrição"
+              },
+              {
+                "de": "cetran",
+                "para": "qm",
+                "rotulo": "dirime circunscrição"
+              }
             ]
           }
         },
@@ -182,7 +250,11 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim — CG × Queimadas" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim — CG × Queimadas"
+              }
             ]
           }
         },
@@ -192,14 +264,17 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
               [
                 "Estado da PB envolvido → CONTRAN decide",
                 "Conflito entre municípios → CETRAN estadual"
               ],
               [
-                "JARI uniformiza quem autua no local",
+                "Conflito territorial entre cidades vai à comissão recursal local",
                 "JARI julga recursos de infração — não circunscrição"
               ]
             ]
@@ -211,7 +286,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — competencia_snt",
@@ -234,7 +312,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Elemento", "Conclusão"],
+            "colunas": [
+              "Elemento",
+              "Conclusão"
+            ],
             "linhas": [
               [
                 "Avenida limítrofe CG × Queimadas",
@@ -261,7 +342,10 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Função no SNT"],
+            "colunas": [
+              "Dispositivo",
+              "Função no SNT"
+            ],
             "linhas": [
               [
                 "Art. 14, IX — CETRAN",
@@ -324,8 +408,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Município × Município → CETRAN · União/UF/DF → CONTRAN.\n\nNear-transfer: conflito de circunscrição entre DETRAN-PB e PRF na BR-230 — não é disputa municipal; sobe ao CONTRAN.",
-            "destaques": ["CETRAN", "CONTRAN", "BR-230"]
+            "texto": "Município × Município → CETRAN · União/UF/DF → CONTRAN.\n\nNear-transfer: conflito de circunscrição entre DETRAN-PB e PRF na BR-230 — não é disputa municipal; sobe ao CONTRAN.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "CETRAN",
+              "CONTRAN",
+              "BR-230"
+            ]
           }
         }
       ],

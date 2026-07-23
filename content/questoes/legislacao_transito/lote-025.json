@@ -3,15 +3,15 @@
     "disciplina": "legislacao_transito",
     "topico": "CTB_crimes_transito",
     "tipo": "caso_pratico",
-    "estilo_idecan": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 5,
     "fundamento_slug": "CTB_art_305",
     "enunciado": "Gustavo, ao conduzir automóvel em via urbana de Campina Grande à noite, atinge ciclista que sofre ferimentos leves e permanece consciente. Gustavo reduz a velocidade, verifica a vítima, mas não aciona a polícia nem permanece no local, afastando-se do sinistro com o veículo e dirigindo até sua residência para fugir à responsabilidade penal e civil. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
     "alternativas": {
       "A": "Configura o crime previsto no art. 305 do CTB, com penas de detenção de seis meses a um ano, ou multa.",
       "B": "Trata-se exclusivamente de infração administrativa, não alcançada pela tipificação penal do CTB, por não haver vítima fatal.",
-      "C": "Incide apenas o crime de omissão de socorro do art. 304, pois a fuga do local substitui a tipificação da evasão prevista no art. 305.",
-      "D": "Sujeita-se às penas de detenção de seis meses a três anos previstas no art. 306, por colocar em risco a incolumidade de terceiro."
+      "C": "No caso de Gustavo, que atingiu ciclista em Campina Grande e afastou-se do local do sinistro, incide apenas o crime de omissão de socorro do art. 304, pois a fuga do local substitui a tipificação da evasão prevista no art. 305.",
+      "D": "No caso de Gustavo, que atingiu ciclista em Campina Grande e fugiu ao sinistro, sujeita-se às penas de detenção de seis meses a três anos previstas no art. 306, por colocar em risco a incolumidade de terceiro."
     },
     "gabarito": "A",
     "comentario": {
@@ -27,8 +27,7 @@
       "estudo_reverso": [
         "CTB art. 304",
         "CTB art. 305",
-        "CTB art. 306",
-        "CTB art. 256, § 1º"
+        "CTB art. 306"
       ]
     },
     "estudo_reverso_visual": {
@@ -45,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gustavo fugiu do sinistro para escapar da responsabilidade. A banca troca art. 305 por omissão de socorro (304) ou embriaguez (306).",
-            "destaques": ["art. 305", "fugir", "sinistro"]
+            "destaques": [
+              "art. 305",
+              "fugir",
+              "sinistro"
+            ]
           }
         },
         {
@@ -53,11 +56,23 @@
           "titulo": "305 × 304 × 306",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crime", "Núcleo"],
+            "colunas": [
+              "Crime",
+              "Núcleo"
+            ],
             "linhas": [
-              ["Art. 304", "Não prestar socorro no sinistro"],
-              ["Art. 305", "Afastar-se do local para fugir à responsabilidade"],
-              ["Art. 306", "Capacidade psicomotora alterada"]
+              [
+                "Art. 304",
+                "Não prestar socorro no sinistro"
+              ],
+              [
+                "Art. 305",
+                "Afastar-se do local para fugir à responsabilidade"
+              ],
+              [
+                "Art. 306",
+                "Capacidade psicomotora alterada"
+              ]
             ]
           }
         },
@@ -67,13 +82,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Afastou-se do local do sinistro?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Para fugir à responsabilidade?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Art. 305 — gabarito A", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Afastou-se do local do sinistro?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Para fugir à responsabilidade?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Art. 305 — gabarito A",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -88,7 +123,8 @@
               {
                 "inicio": 55,
                 "fim": 99,
-                "motivo": "dolo de evasão — Gustavo fugiu à responsabilidade"
+                "motivo": "dolo de evasão — Gustavo fugiu à responsabilidade",
+                "texto_grifado": "para fugir à responsabilidade penal ou civil"
               }
             ]
           }
@@ -99,7 +135,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "305 = FUGIU do sinistro · 304 = NÃO SOCORREU · Penas 305: 6m–1a ou multa.",
-            "destaques": ["305", "6m–1a", "multa"]
+            "destaques": [
+              "305",
+              "6m–1a",
+              "multa"
+            ]
           }
         }
       ],
@@ -121,7 +161,11 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Fugir do sinistro (305) ≠ omitir socorro (304) — penas distintas do art. 306",
-        "eixos_legais": ["CTB_art_305", "CTB_art_304", "CTB_art_306"],
+        "eixos_legais": [
+          "CTB_art_305",
+          "CTB_art_304",
+          "CTB_art_306"
+        ],
         "isca_por_alternativa": {
           "B": "nega crime penal por ausência de morte",
           "C": "substitui evasão por omissão de socorro",
@@ -135,8 +179,11 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A (art. 305 — evasão do sinistro).\n\nB — nega tipificação penal sem morte: art. 305 não exige vítima fatal.\nC — troca 305 por 304: fuga e omissão de socorro são crimes distintos.\nD — aplica penas do art. 306 (6m–3a): caso não trata de embriaguez.\n\nGustavo: afastou-se do sinistro para fugir à responsabilidade penal e civil.",
-            "destaques": ["Gabarito A", "art. 305", "fugir"]
+            "texto": "Gabarito A (dispositivo legal — evasão do sinistro). B — nega tipificação penal sem morte: dispositivo legal não exige vítima fatal.\nC — troca 305 por 304: fuga e omissão de socorro são crimes distintos.\nD — aplica penas do dispositivo legal (6m–3a): caso não trata de embriaguez. Gustavo: afastou-se do sinistro para fugir à responsabilidade penal e civil.",
+            "destaques": [
+              "Gabarito A",
+              "fugir"
+            ]
           }
         },
         {
@@ -145,7 +192,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "SINISTRO: evento de trânsito com dano — redação vigente do CTB nos crimes dos arts. 304 e 305.\n\nEVASÃO (art. 305): afastar-se do local para fugir à responsabilidade penal ou civil.\n\nOMISSÃO DE SOCORRO (art. 304): deixar de prestar auxílio imediato à vítima na ocasião do sinistro.",
-            "destaques": ["SINISTRO", "EVASÃO", "OMISSÃO DE SOCORRO"]
+            "destaques": [
+              "SINISTRO",
+              "EVASÃO",
+              "OMISSÃO DE SOCORRO"
+            ]
           }
         },
         {
@@ -172,8 +223,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -183,15 +242,24 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Artigo", "Conduta típica"],
+            "titulo_colunas": [
+              "Artigo",
+              "Conduta típica"
+            ],
             "linhas": [
-              { "faixa": "Art. 304", "classificacao": "Omitir socorro na ocasião do sinistro" },
+              {
+                "faixa": "Art. 304",
+                "classificacao": "Omitir socorro na ocasião do sinistro"
+              },
               {
                 "faixa": "Art. 305",
                 "classificacao": "Afastar-se do local para fugir à responsabilidade",
                 "destaque": true
               },
-              { "faixa": "Art. 306", "classificacao": "Conduzir com capacidade psicomotora alterada" }
+              {
+                "faixa": "Art. 306",
+                "classificacao": "Conduzir com capacidade psicomotora alterada"
+              }
             ]
           }
         },
@@ -201,7 +269,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Sem morte, só há infração administrativa",
@@ -220,7 +291,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — regra_excecao",
@@ -243,12 +317,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso", "Consequência legal"],
+            "colunas": [
+              "Fato do caso",
+              "Consequência legal"
+            ],
             "linhas": [
-              ["Atropela ciclista — ferimentos leves", "Sinistro configurado"],
-              ["Não aciona polícia e abandona o local", "Afastamento do sinistro"],
-              ["Dirige até casa para fugir à responsabilidade", "Dolo do art. 305"],
-              ["Resultado", "Gabarito A — detenção 6m–1a ou multa"]
+              [
+                "Atropela ciclista — ferimentos leves",
+                "Sinistro configurado"
+              ],
+              [
+                "Não aciona polícia e abandona o local",
+                "Afastamento do sinistro"
+              ],
+              [
+                "Dirige até casa para fugir à responsabilidade",
+                "Dolo do art. 305"
+              ],
+              [
+                "Resultado",
+                "Gabarito A — detenção 6m–1a ou multa"
+              ]
             ]
           }
         },
@@ -258,12 +347,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Artigo", "Penas"],
+            "colunas": [
+              "Artigo",
+              "Penas"
+            ],
             "linhas": [
-              ["Art. 305 — evasão", "Detenção 6 meses a 1 ano, ou multa"],
-              ["Art. 304 — omissão de socorro", "Detenção 6 meses a 1 ano, ou multa (se não houver crime mais grave)"],
-              ["Art. 306 — embriaguez", "Detenção 6 meses a 3 anos + multa + suspensão/proibição"],
-              ["Caso Gustavo", "Art. 305 — não art. 306"]
+              [
+                "Art. 305 — evasão",
+                "Detenção 6 meses a 1 ano, ou multa"
+              ],
+              [
+                "Art. 304 — omissão de socorro",
+                "Detenção 6 meses a 1 ano, ou multa (se não houver crime mais grave)"
+              ],
+              [
+                "Art. 306 — embriaguez",
+                "Detenção 6 meses a 3 anos + multa + suspensão/proibição"
+              ],
+              [
+                "Caso Gustavo",
+                "Art. 305 — não art. 306"
+              ]
             ]
           }
         },
@@ -279,12 +383,14 @@
               {
                 "inicio": 36,
                 "fim": 53,
-                "motivo": "caso — Gustavo abandonou o local do sinistro"
+                "motivo": "caso — Gustavo abandonou o local do sinistro",
+                "texto_grifado": "local do sinistro"
               },
               {
                 "inicio": 55,
                 "fim": 99,
-                "motivo": "contraste — dolo de fugir à responsabilidade"
+                "motivo": "contraste — dolo de fugir à responsabilidade",
+                "texto_grifado": "para fugir à responsabilidade penal ou civil"
               }
             ]
           }
@@ -300,13 +406,15 @@
             "trechos_grifados": [
               {
                 "inicio": 8,
-                "fim": 38,
-                "motivo": "hierarquia — distinto do art. 306 (até 3 anos)"
+                "fim": 40,
+                "motivo": "hierarquia — distinto do art. 306 (até 3 anos)",
+                "texto_grifado": "detenção, de seis meses a um ano"
               },
               {
                 "inicio": 42,
-                "fim": 47,
-                "motivo": "distratores — alternativa D erra o quantum"
+                "fim": 50,
+                "motivo": "distratores — alternativa D erra o quantum",
+                "texto_grifado": "ou multa"
               }
             ]
           }
@@ -317,8 +425,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "305 = FUGIU do sinistro para escapar · 304 = NÃO SOCORREU · 306 = embriaguez. Penas 305: 6m–1a ou multa.\n\nNear-transfer: Lúcia presta socorro, chama o SAMU, mas foge antes da polícia para evitar responsabilidade civil — ainda configura art. 305 (fuga), mesmo tendo socorrido.",
-            "destaques": ["305", "6m–1a", "Lúcia"]
+            "texto": "305 = FUGIU do sinistro para escapar · 304 = NÃO SOCORREU · 306 = embriaguez. Penas 305: 6m–1a ou multa.\n\nNear-transfer: Lúcia presta socorro, chama o SAMU, mas foge antes da polícia para evitar responsabilidade civil — ainda configura art. 305 (fuga), mesmo tendo socorrido.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "305",
+              "6m–1a",
+              "Lúcia"
+            ]
           }
         }
       ],
@@ -335,6 +447,22 @@
       "evasao",
       "sinistro",
       "caso_pratico"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "Lúcia presta socorro, chama o SAMU, mas foge antes da polícia para evitar responsabilidade civil — ainda configura art. 305 (fuga), mesmo tendo socorrido.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "305 = FUGIU do sinistro para escapar · 304 = NÃO SOCORREU · 306 = embriaguez. Penas 305: 6m–1a ou multa.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
+      ]
+    }
   }
 ]

@@ -157,7 +157,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — aplica penalidade: MBFT define AIT como peça informativa.\nC — qualquer cidadão: MBFT veda autuação por solicitação de terceiros.\nD — dispensa CTB: MBFT remete expressamente ao art. 280.\n\nAgente trata AIT como penalidade e dispensa registro do fato.",
+            "texto": "Gabarito B. A — aplica penalidade: MBFT define AIT como peça informativa.\nC — qualquer cidadão: MBFT veda autuação por solicitação de terceiros.\nD — dispensa CTB: MBFT remete expressamente ao dispositivo legal. Agente trata AIT como penalidade e dispensa registro do fato.",
             "destaques": [
               "Gabarito B",
               "peça informativa",
@@ -362,12 +362,14 @@
               {
                 "inicio": 8,
                 "fim": 65,
-                "motivo": "contraste — AIT não é penalidade"
+                "motivo": "contraste — AIT não é penalidade",
+                "texto_grifado": "peça informativa que dá início ao processo administrativo"
               },
               {
                 "inicio": 254,
                 "fim": 300,
-                "motivo": "caso — fato obrigatório no AIT"
+                "motivo": "caso — fato obrigatório no AIT",
+                "texto_grifado": "registro do fato que fundamentou sua lavratura"
               }
             ]
           }
@@ -384,7 +386,8 @@
               {
                 "inicio": 13,
                 "fim": 58,
-                "motivo": "mapa — natureza da autuação"
+                "motivo": "mapa — natureza da autuação",
+                "texto_grifado": "ato administrativo, vinculado na forma da lei"
               }
             ]
           }
@@ -395,7 +398,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "AIT = INÍCIO · peça informativa · ≠ penalidade · registra fato · art. 280.\n\nNear-transfer: após o AIT, a autoridade de trânsito aplica a penalidade no processo — quem multa não é o documento, é a decisão administrativa.",
+            "texto": "AIT = INÍCIO · peça informativa · ≠ penalidade · registra fato · art. 280.\n\nNear-transfer: após o AIT, a autoridade de trânsito aplica a penalidade no processo — quem multa não é o documento, é a decisão administrativa.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "INÍCIO",
               "Near-transfer",
@@ -409,6 +412,22 @@
           "rotulo": "MBFT — Seção 7",
           "path": "conteúdo/resoluções CONTRAN/MBFT-anexo-resolucao-985-2022-secao-07-autuacao.txt"
         }
+      ]
+    },
+    "meta": {
+      "near_transfer": "após o AIT, a autoridade de trânsito aplica a penalidade no processo — quem multa não é o documento, é a decisão administrativa.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "AIT = INÍCIO · peça informativa · ≠ penalidade · registra fato · art. 280.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "competencia_snt",
+        "regra_excecao",
+        "termo_unico"
       ]
     }
   }

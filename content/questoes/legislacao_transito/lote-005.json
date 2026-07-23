@@ -4,8 +4,8 @@
     "topico": "CTB_estacionamento_parada",
     "tipo": "caso_pratico",
     "estilo_idecan": "pegadinha_prazo",
-    "dificuldade": 3,
-    "enunciado": "Em Campina Grande, agente da STTP flagra veículo estacionado na esquina da Av. Epitácio Pessoa com a Rua das Trincheiras, com a lateral a 3 metros do alinhamento da via transversal. Considerando o CTB, assinale a alternativa CORRETA quanto à infração:",
+    "dificuldade": 4,
+    "enunciado": "Em Campina Grande, agente da STTP flagra veículo estacionado na esquina da Av. Epitácio Pessoa com a Rua das Trincheiras, com a lateral a 3 metros do alinhamento da via transversal. O condutor alega tratar-se de infração leve, que não há autuação por se tratar de parada e não estacionamento, ou que a penalidade seria grave por afastamento do meio-fio. Considerando o CTB, assinale a alternativa CORRETA quanto à infração:",
     "alternativas": {
       "A": "Trata-se de infração leve, pois o veículo está a menos de 50 cm do meio-fio.",
       "B": "Não há autuação, pois a distância mínima de cinco metros só vale para parada, não para estacionamento.",
@@ -41,7 +41,7 @@
           "titulo": "O que a IDECAN testou",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "STTP autua carro a 3 m da via transversal em esquina. A banca cobra o art. 181, I — cinco metros.",
+            "texto": "STTP autua carro a 3 m da via transversal em esquina. A banca cobra o dispositivo legal, I — cinco metros.",
             "destaques": [
               "3 m",
               "esquina"
@@ -49,7 +49,7 @@
           }
         },
         {
-          "id": "tabela",
+          "id": "gradacao",
           "titulo": "Mapa art. 181 — estacionamento",
           "tipo": "tabela_gradacao",
           "conteudo": {
@@ -75,7 +75,7 @@
           }
         },
         {
-          "id": "contraste",
+          "id": "glossario",
           "titulo": "Pegadinha central",
           "tipo": "comparacao",
           "conteudo": {
@@ -152,12 +152,14 @@
               {
                 "inicio": 0,
                 "fim": 20,
-                "motivo": "conduta"
+                "motivo": "conduta",
+                "texto_grifado": "Estacionar o veículo"
               },
               {
-                "inicio": 40,
-                "fim": 55,
-                "motivo": "cinco metros"
+                "inicio": 38,
+                "fim": 59,
+                "motivo": "cinco metros",
+                "texto_grifado": "menos de cinco metros"
               }
             ]
           }
@@ -167,7 +169,7 @@
           "titulo": "Macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Esquina = 5 m da transversal (181-I). Meio-fio: outra tabela (II e III).",
+            "texto": "Esquina = 5 m da transversal (181-I). Meio-fio: outra tabela (II e III).\nNear: Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "5 m",
               "181-I"
@@ -186,7 +188,23 @@
       "estacionamento",
       "esquina",
       "art181"
-    ]
+    ],
+    "meta": {
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "gravidade",
+        "regra_excecao"
+      ],
+      "near_transfer": "Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Esquina = 5 m da transversal (181-I). Meio-fio: 50 cm a 1 m leve; >1 m grave.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   },
   {
     "disciplina": "legislacao_transito",
@@ -194,7 +212,7 @@
     "tipo": "caso_pratico",
     "estilo_idecan": "pegadinha_percentual",
     "dificuldade": 4,
-    "enunciado": "Radar da STTP na BR-230 registra veículo a 78 km/h em trecho com velocidade máxima regulamentada de 60 km/h. A medição é considerada hábil. Com base no art. 218 do CTB, assinale a alternativa CORRETA:",
+    "enunciado": "Radar da STTP na BR-230 registra veículo a 78 km/h em trecho com velocidade máxima regulamentada de 60 km/h, configurando excesso de 30% acima do limite. A medição é considerada hábil e o agente avalia a classificação da infração e eventual suspensão do direito de dirigir. Com base no art. 218 do CTB, assinale a alternativa CORRETA:",
     "alternativas": {
       "A": "Infração média, pois o excesso é de até 20% sobre o limite.",
       "B": "Infração grave, pois o excesso supera 20% e não ultrapassa 50% do limite.",
@@ -229,15 +247,14 @@
           "titulo": "O que a IDECAN testou",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "78 km/h em limite 60 = +30%. A banca cobra as três faixas percentuais do art. 218.",
+            "texto": "78 km/h em limite 60 = +30%. A banca cobra as três faixas percentuais do dispositivo legal.",
             "destaques": [
-              "30%",
-              "art. 218"
+              "30%"
             ]
           }
         },
         {
-          "id": "tabela",
+          "id": "gradacao",
           "titulo": "Faixas do art. 218",
           "tipo": "tabela_gradacao",
           "conteudo": {
@@ -263,7 +280,7 @@
           }
         },
         {
-          "id": "contraste",
+          "id": "glossario",
           "titulo": "Pegadinha central",
           "tipo": "comparacao",
           "conteudo": {
@@ -339,8 +356,9 @@
             "trechos_grifados": [
               {
                 "inicio": 0,
-                "fim": 30,
-                "motivo": "faixa percentual"
+                "fim": 32,
+                "motivo": "faixa percentual",
+                "texto_grifado": "Quando a velocidade for superior"
               }
             ]
           }
@@ -350,7 +368,7 @@
           "titulo": "Macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "218: ≤20% média | 20–50% grave | >50% gravíssima. Calcule o % primeiro.",
+            "texto": "218: ≤20% média | 20–50% grave | >50% gravíssima. Calcule o % primeiro.\nNear: Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "20%",
               "50%"
@@ -369,15 +387,31 @@
       "velocidade",
       "art218",
       "radar"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Art. 218: até 20% média",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "gravidade",
+        "regra_excecao"
+      ]
+    }
   },
   {
     "disciplina": "legislacao_transito",
     "topico": "CTB_cinto_seguranca",
     "tipo": "caso_pratico",
     "estilo_idecan": "pegadinha_pode_deve",
-    "dificuldade": 3,
-    "enunciado": "Durante blitz da STTP em Campina Grande, agente aborda automóvel com condutor e passageiro do banco dianteiro sem cinto de segurança. O condutor alega que só pode autuar quem está no volante. Com base no CTB, assinale a alternativa CORRETA:",
+    "dificuldade": 4,
+    "enunciado": "Durante blitz da STTP em Campina Grande, agente aborda automóvel com condutor e passageiro do banco dianteiro sem cinto de segurança, inclusive com o veículo parado em semáforo vermelho. O condutor alega que a autuação somente pode recair sobre quem está no volante, que o passageiro não responde pela infração e que a penalidade seria média. Com base no CTB, assinale a alternativa CORRETA:",
     "alternativas": {
       "A": "Condutor e passageiro podem ser autuados pelo art. 167 — infração grave, com retenção até o uso do cinto.",
       "B": "Somente o condutor responde, pois o art. 167 atinge exclusivamente quem dirige o veículo.",
@@ -413,7 +447,7 @@
           "titulo": "O que a IDECAN testou",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Blitz STTP: motorista e passageiro sem cinto. A banca cobra se você sabe que ambos se enquadram no art. 167.",
+            "texto": "Blitz STTP: motorista e passageiro sem cinto. A banca cobra se você sabe que ambos se enquadram no dispositivo legal.",
             "destaques": [
               "cinto",
               "167"
@@ -421,7 +455,7 @@
           }
         },
         {
-          "id": "comparacao",
+          "id": "gradacao",
           "titulo": "Quem o art. 167 alcança",
           "tipo": "comparacao",
           "conteudo": {
@@ -442,7 +476,7 @@
           }
         },
         {
-          "id": "contraste",
+          "id": "glossario",
           "titulo": "Pegadinha central",
           "tipo": "comparacao",
           "conteudo": {
@@ -519,7 +553,8 @@
               {
                 "inicio": 7,
                 "fim": 35,
-                "motivo": "condutor ou passageiro"
+                "motivo": "condutor ou passageiro",
+                "texto_grifado": "o condutor ou passageiro de "
               }
             ]
           }
@@ -529,7 +564,7 @@
           "titulo": "Macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "167 = condutor OU passageiro sem cinto → grave + retenção.",
+            "texto": "167 = condutor OU passageiro sem cinto → grave + retenção.\nNear: Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "167",
               "grave"
@@ -548,15 +583,31 @@
       "cinto",
       "art167",
       "blitz"
-    ]
+    ],
+    "meta": {
+      "eixos_mecanismo": [
+        "gravidade",
+        "regra_excecao",
+        "termo_unico"
+      ],
+      "near_transfer": "Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "167 = condutor OU passageiro sem cinto → grave + retenção.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   },
   {
     "disciplina": "legislacao_transito",
     "topico": "CTB_preferencia",
     "tipo": "caso_pratico",
     "estilo_idecan": "pegadinha_pode_deve",
-    "dificuldade": 3,
-    "enunciado": "Em cruzamento não sinalizado no bairro Universitário, Campina Grande, veículo A avança pela via à direita de veículo B, que trafegava pela esquerda. Ambos pretendiam seguir em frente. Não há rotatória nem rodovia. Segundo o CTB, assinale a alternativa CORRETA:",
+    "dificuldade": 4,
+    "enunciado": "Em cruzamento não sinalizado no bairro Universitário, Campina Grande, veículo A avança pela via à direita de veículo B, que trafegava pela esquerda. Ambos pretendiam seguir em frente. Não há rotatória nem rodovia e não existe regra geral de preferência sem observar quem vem pela direita. Segundo o CTB, assinale a alternativa CORRETA:",
     "alternativas": {
       "A": "Tem preferência o veículo que vier pela esquerda, por ser a via de maior largura no cruzamento.",
       "B": "Não existe regra de preferência de passagem em cruzamento urbano sem sinalização horizontal.",
@@ -591,7 +642,7 @@
           "titulo": "O que a IDECAN testou",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Cruzamento sem placa em CG: B veio pela direita de A. A banca cobra preferência do art. 29, III, c.",
+            "texto": "Cruzamento sem placa em CG: B veio pela direita de A. A banca cobra preferência do dispositivo legal, III, c.",
             "destaques": [
               "direita",
               "29"
@@ -644,7 +695,7 @@
           }
         },
         {
-          "id": "contraste",
+          "id": "glossario",
           "titulo": "Pegadinha central",
           "tipo": "comparacao",
           "conteudo": {
@@ -719,9 +770,10 @@
             "texto": "Nos demais casos, terá preferência de passagem o que vier pela direita do condutor.",
             "trechos_grifados": [
               {
-                "inicio": 45,
+                "inicio": 38,
                 "fim": 53,
-                "motivo": "direita"
+                "motivo": "direita",
+                "texto_grifado": "passagem o que "
               }
             ]
           }
@@ -731,7 +783,7 @@
           "titulo": "Macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Sem sinal? Direita preferência (29-III-c).",
+            "texto": "Sem sinal? Direita preferência (29-III-c).\nNear: Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "direita",
               "29"
@@ -750,14 +802,30 @@
       "preferencia",
       "art29",
       "cruzamento"
-    ]
+    ],
+    "meta": {
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
+      ],
+      "near_transfer": "Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Sem sinal? Direita preferência (29-III-c). Rotatória e rodovia têm regras próprias.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   },
   {
     "disciplina": "legislacao_transito",
     "topico": "CTB_posicionamento_via",
     "tipo": "caso_pratico",
     "estilo_idecan": "pegadinha_pode_deve",
-    "dificuldade": 2,
+    "dificuldade": 4,
     "enunciado": "Durante operação da STTP na Av. Assis Chateaubriand, em Campina Grande, agente fiscaliza veículos estacionados em trecho urbano com acostamento demarcado. O condutor de um automóvel alega poder manter o carro em qualquer ângulo em relação ao meio-fio, desde que não obstrua o trânsito. Considerando as regras de posicionamento do CTB, assinale a alternativa CORRETA:",
     "alternativas": {
       "A": "O condutor pode estacionar em qualquer posição em relação ao meio-fio, desde que não obstrua a via.",
@@ -793,15 +861,14 @@
           "titulo": "O que a IDECAN testou",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Questão de posicionamento na via. A banca cobra o caput do art. 48 e exceções do §1º e §2º.",
+            "texto": "Questão de posicionamento na via. A banca cobra o caput do dispositivo legal e exceções do parágrafo e parágrafo.",
             "destaques": [
-              "paralelo",
-              "art. 48"
+              "paralelo"
             ]
           }
         },
         {
-          "id": "comparacao",
+          "id": "gradacao",
           "titulo": "Pode vs deve — posicionamento",
           "tipo": "comparacao",
           "conteudo": {
@@ -822,7 +889,7 @@
           }
         },
         {
-          "id": "contraste",
+          "id": "glossario",
           "titulo": "Pegadinha central",
           "tipo": "comparacao",
           "conteudo": {
@@ -897,14 +964,16 @@
             "texto": "Nas paradas, operações de carga ou descarga e nos estacionamentos, o veículo deverá ser posicionado no sentido do fluxo, paralelo ao bordo da pista e junto à guia da calçada.",
             "trechos_grifados": [
               {
-                "inicio": 95,
+                "inicio": 88,
                 "fim": 103,
-                "motivo": "paralelo"
+                "motivo": "paralelo",
+                "texto_grifado": "posicionado no "
               },
               {
                 "inicio": 130,
-                "fim": 145,
-                "motivo": "junto à guia"
+                "fim": 147,
+                "motivo": "junto à guia",
+                "texto_grifado": "ao bordo da pista"
               }
             ]
           }
@@ -914,7 +983,7 @@
           "titulo": "Macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "48: paralelo junto ao meio-fio. Moto = perpendicular (§2º).",
+            "texto": "48: paralelo junto ao meio-fio. Moto = perpendicular (§2º).\nNear: Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "48",
               "paralelo"
@@ -933,6 +1002,22 @@
       "art48",
       "estacionamento",
       "posicionamento"
-    ]
+    ],
+    "meta": {
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
+      ],
+      "near_transfer": "Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Art. 48: paralelo + junto ao meio-fio. Moto = perpendicular (§2º).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

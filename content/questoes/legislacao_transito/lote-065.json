@@ -50,7 +50,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Retorno sem local apropriado — condutor parado na pista com pisca-alerta.\n\nGabarito D: aguardar no acostamento à direita (art. 37).",
-            "destaques": ["art. 37", "à direita", "Gabarito D"]
+            "destaques": [
+              "art. 37",
+              "à direita",
+              "Gabarito D"
+            ]
           }
         },
         {
@@ -58,10 +62,19 @@
           "titulo": "Esquerda da manobra × direita da espera",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
-              ["Quem vira à esquerda espera à esquerda", "Art. 37: acostamento à direita"],
-              ["Pisca-alerta dispensa sair da pista", "Deve aguardar fora da faixa de rolamento"]
+              [
+                "Quem vira à esquerda espera à esquerda",
+                "Art. 37: acostamento à direita"
+              ],
+              [
+                "Pisca-alerta dispensa sair da pista",
+                "Deve aguardar fora da faixa de rolamento"
+              ]
             ]
           }
         },
@@ -97,7 +110,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Sem local apropriado?\nACOSTAMENTO à DIREITA.\nConversão à esquerda ≠ espera à esquerda.",
-            "destaques": ["à DIREITA", "local apropriado"]
+            "destaques": [
+              "à DIREITA",
+              "local apropriado"
+            ]
           }
         }
       ],
@@ -136,7 +152,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D.\n\nA — achou que pisca-alerta libera parar na pista: sem local apropriado, deve usar o acostamento.\nB — mandou esperar à esquerda: o art. 37 exige acostamento à direita, mesmo convertendo à esquerda.\nC — citou art. 39 e vedou espera no acostamento: o art. 37 prevê exatamente essa espera à direita.\n\nNesta aula você fixa a regra geral (local apropriado) e a subsidiária (acostamento à direita).",
+            "texto": "Gabarito D. A — achou que pisca-alerta libera parar na pista: sem local apropriado, deve usar o acostamento.\nB — mandou esperar à esquerda: o dispositivo legal exige acostamento à direita, mesmo convertendo à esquerda.\nC — citou dispositivo legal e vedou espera no acostamento: o dispositivo legal prevê exatamente essa espera à direita. Nesta aula você fixa a regra geral (local apropriado) e a subsidiária (acostamento à direita).",
             "destaques": [
               "Gabarito D",
               "à direita",
@@ -322,7 +338,7 @@
           }
         },
         {
-          "id": "lei37",
+          "id": "lei2",
           "titulo": "Art. 37 — literal da regra",
           "secao": "lei",
           "tipo": "trecho_legal",
@@ -333,17 +349,20 @@
               {
                 "inicio": 36,
                 "fim": 56,
-                "motivo": "glossario — conversão à esquerda do enunciado"
+                "motivo": "glossario — conversão à esquerda do enunciado",
+                "texto_grifado": "conversão à esquerda"
               },
               {
                 "inicio": 104,
                 "fim": 122,
-                "motivo": "mapa — regra preferencial (local apropriado)"
+                "motivo": "mapa — regra preferencial (local apropriado)",
+                "texto_grifado": "locais apropriados"
               },
               {
                 "inicio": 182,
                 "fim": 204,
-                "motivo": "contraste — acostamento à direita (gabarito D)"
+                "motivo": "contraste — acostamento à direita (gabarito D)",
+                "texto_grifado": "acostamento, à direita"
               }
             ]
           }
@@ -354,7 +373,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Sem local apropriado? ACOSTAMENTO à DIREITA.\nConversão à esquerda ≠ espera à esquerda.\nPisca-alerta não dispensa sair da pista.\n\nNear-transfer: há local apropriado sinalizado para retorno — o condutor executa a manobra no ponto previsto, sem bloquear a faixa de rolamento aguardando brecha.",
+            "texto": "Sem local apropriado? ACOSTAMENTO à DIREITA.\nConversão à esquerda ≠ espera à esquerda.\nPisca-alerta não dispensa sair da pista.\n\nNear-transfer: há local apropriado sinalizado para retorno — o condutor executa a manobra no ponto previsto, sem bloquear a faixa de rolamento aguardando brecha.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "à DIREITA",
               "local apropriado",
@@ -372,6 +391,21 @@
           "rotulo": "CTB art. 39",
           "path": "conteúdo/legislação federal/lei-9503-ctb.html"
         }
+      ]
+    },
+    "meta": {
+      "near_transfer": "há local apropriado sinalizado para retorno — o condutor executa a manobra no ponto previsto, sem bloquear a faixa de rolamento aguardando brecha.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Sem local? ACOSTAMENTO à DIREITA · conversão ≠ lado da espera · pisca não dispensa.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico"
       ]
     }
   }

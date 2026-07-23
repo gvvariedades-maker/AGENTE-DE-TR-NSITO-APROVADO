@@ -3,7 +3,7 @@
     "disciplina": "legislacao_transito",
     "topico": "CTB_habilitacao",
     "tipo": "caso_pratico",
-    "estilo_idecan": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 4,
     "fundamento_slug": "CTB_art_145_II_a",
     "enunciado": "Ricardo, condutor com vinte e quatro anos de idade, solicita ao Detran da Paraíba habilitação na categoria D para conduzir veículo de transporte escolar em Campina Grande. Possui Carteira Nacional de Habilitação na categoria B há vinte meses. Nos últimos doze meses, constam em seu prontuário uma infração gravíssima e duas infrações graves. Ricardo já concluiu, com aprovação, o curso especializado exigido para a categoria pretendida. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA quanto à aptidão de Ricardo para obter a habilitação na categoria D:",
@@ -27,8 +27,7 @@
       "estudo_reverso": [
         "CTB art. 145",
         "CTB art. 145, II, a",
-        "CTB art. 145, III",
-        "CTB art. 146"
+        "CTB art. 145, III"
       ]
     },
     "estudo_reverso_visual": {
@@ -45,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Categoria D para transporte escolar. Ricardo tem curso ok e só 1 gravíssima — mas só 20 meses na B.\n\nGabarito D: faltam 4 meses para os 2 anos exigidos no art. 145, II, a.",
-            "destaques": ["20 meses", "2 anos", "art. 145"]
+            "destaques": [
+              "20 meses",
+              "2 anos",
+              "art. 145"
+            ]
           }
         },
         {
@@ -54,15 +57,43 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "21 anos ou mais?", "tipo": "pergunta" },
-              { "id": "p2", "label": "2 anos na B ou 1 ano na C?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Inciso II, a ok — segue inciso III", "tipo": "resultado" },
-              { "id": "r2", "label": "Não apto — falta tempo na categoria anterior", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "21 anos ou mais?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "2 anos na B ou 1 ano na C?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Inciso II, a ok — segue inciso III",
+                "tipo": "resultado"
+              },
+              {
+                "id": "r2",
+                "label": "Não apto — falta tempo na categoria anterior",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" },
-              { "de": "p2", "para": "r2", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r2",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -71,11 +102,24 @@
           "titulo": "Requisitos art. 145 (categoria D)",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Requisito", "Ricardo"],
+            "titulo_colunas": [
+              "Requisito",
+              "Ricardo"
+            ],
             "linhas": [
-              { "faixa": "I — 21+ anos", "classificacao": "24 anos ✓" },
-              { "faixa": "II, a — 2 anos B ou 1 ano C", "classificacao": "20 meses ✗", "destaque": true },
-              { "faixa": "III — máx. 1 gravíssima/12 meses", "classificacao": "1 gravíssima ✓" }
+              {
+                "faixa": "I — 21+ anos",
+                "classificacao": "24 anos ✓"
+              },
+              {
+                "faixa": "II, a — 2 anos B ou 1 ano C",
+                "classificacao": "20 meses ✗",
+                "destaque": true
+              },
+              {
+                "faixa": "III — máx. 1 gravíssima/12 meses",
+                "classificacao": "1 gravíssima ✓"
+              }
             ]
           }
         },
@@ -84,10 +128,19 @@
           "titulo": "Pegadinha: infrações × tempo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Isca ✗", "Lei ✓"],
+            "colunas": [
+              "Isca ✗",
+              "Lei ✓"
+            ],
             "linhas": [
-              ["Graves impedem a CNH D", "Só conta gravíssima — máx. 1 em 12 meses"],
-              ["Curso dispensa tempo na B", "Parágrafo único só dispensa inciso III"]
+              [
+                "Graves impedem a CNH D",
+                "Só conta gravíssima — máx. 1 em 12 meses"
+              ],
+              [
+                "Curso dispensa tempo na B",
+                "Parágrafo único só dispensa inciso III"
+              ]
             ]
           }
         },
@@ -97,12 +150,19 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CAT D: 21+ anos · 2 anos B ou 1 ano C · no máx. 1 gravíssima em 12 meses · curso especializado.\n\n20 meses ≠ 24 meses — prazo é literal.",
-            "destaques": ["2 anos B", "1 gravíssima", "literal"]
+            "destaques": [
+              "2 anos B",
+              "1 gravíssima",
+              "literal"
+            ]
           }
         }
       ],
       "links_fonte": [
-        { "rotulo": "CTB art. 145", "path": "conteúdo/legislação federal/lei-9503-ctb.html" }
+        {
+          "rotulo": "CTB art. 145",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
       ]
     },
     "estudo_reverso_visual_completo": {
@@ -120,8 +180,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D. Se marcou A ou C, caiu na isca: você focou em infrações ou no curso e ignorou o TEMPO na categoria B.\n\nPara categoria D o art. 145 exige, no mínimo, 2 anos na B ou 1 ano na C. Ricardo tem só 20 meses.",
-            "destaques": ["Gabarito D", "2 anos na B", "20 meses"]
+            "texto": "Gabarito D. Se marcou A ou C, caiu na isca: você focou em infrações ou no curso e ignorou o TEMPO na categoria B. Para categoria D o dispositivo legal exige, no mínimo, 2 anos na B ou 1 ano na C. Ricardo tem só 20 meses.",
+            "destaques": [
+              "Gabarito D",
+              "2 anos na B",
+              "20 meses"
+            ]
           }
         },
         {
@@ -130,7 +194,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CATEGORIA D: habilitação para veículos de transporte de passageiros (ônibus, micro-ônibus etc.).\n\nTRANSPORTE ESCOLAR: modalidade prevista no caput do art. 145 — sujeita aos mesmos requisitos das categorias D e E.\n\nGRAVÍSSIMA × GRAVE: o inciso III do art. 145 só conta gravíssimas — infrações graves não bloqueiam a habilitação.",
-            "destaques": ["CATEGORIA D", "TRANSPORTE ESCOLAR", "GRAVÍSSIMA × GRAVE"]
+            "destaques": [
+              "CATEGORIA D",
+              "TRANSPORTE ESCOLAR",
+              "GRAVÍSSIMA × GRAVE"
+            ]
           }
         },
         {
@@ -140,13 +208,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Ricardo tem 21 anos ou mais?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Dois anos completos na categoria B?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Não apto — gabarito D", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Ricardo tem 21 anos ou mais?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Dois anos completos na categoria B?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Não apto — gabarito D",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não — 20 meses" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — 20 meses"
+              }
             ]
           }
         },
@@ -156,16 +244,28 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Inciso", "Exigência legal"],
+            "titulo_colunas": [
+              "Inciso",
+              "Exigência legal"
+            ],
             "linhas": [
-              { "faixa": "I", "classificacao": "Maior de 21 anos" },
+              {
+                "faixa": "I",
+                "classificacao": "Maior de 21 anos"
+              },
               {
                 "faixa": "II, a",
                 "classificacao": "Mín. 2 anos na B ou 1 ano na C",
                 "destaque": true
               },
-              { "faixa": "III", "classificacao": "No máx. 1 gravíssima em 12 meses" },
-              { "faixa": "IV", "classificacao": "Curso especializado + prática em risco" }
+              {
+                "faixa": "III",
+                "classificacao": "No máx. 1 gravíssima em 12 meses"
+              },
+              {
+                "faixa": "IV",
+                "classificacao": "Curso especializado + prática em risco"
+              }
             ]
           }
         },
@@ -175,11 +275,23 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
-              ["Infrações graves impedem a CNH D", "Inciso III: só gravíssima — máx. 1 em 12 meses"],
-              ["Curso especializado dispensa tempo na B", "Parágrafo único: dispensa só inciso III"],
-              ["20 meses ≈ 2 anos", "Prazo literal: 24 meses na categoria B"]
+              [
+                "Infrações graves impedem a CNH D",
+                "Inciso III: só gravíssima — máx. 1 em 12 meses"
+              ],
+              [
+                "Curso especializado dispensa tempo na B",
+                "Parágrafo único: dispensa só inciso III"
+              ],
+              [
+                "20 meses ≈ 2 anos",
+                "Prazo literal: 24 meses na categoria B"
+              ]
             ]
           }
         },
@@ -189,11 +301,23 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + letra da lei"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + letra da lei"
+            ],
             "linhas": [
-              ["A — regra_excecao", "Junta requisitos parciais e ignora os 2 anos na B (II, a)"],
-              ["B — numero_vizinho", "20 meses ≠ 2 anos — prazo mínimo é literal"],
-              ["C — termo_unico", "Confunde infração grave com impeditiva — inciso III só veda mais de 1 gravíssima"]
+              [
+                "A — regra_excecao",
+                "Junta requisitos parciais e ignora os 2 anos na B (II, a)"
+              ],
+              [
+                "B — numero_vizinho",
+                "20 meses ≠ 2 anos — prazo mínimo é literal"
+              ],
+              [
+                "C — termo_unico",
+                "Confunde infração grave com impeditiva — inciso III só veda mais de 1 gravíssima"
+              ]
             ]
           }
         },
@@ -203,12 +327,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dado do caso", "Conclusão legal"],
+            "colunas": [
+              "Dado do caso",
+              "Conclusão legal"
+            ],
             "linhas": [
-              ["24 anos", "Inciso I — ok"],
-              ["20 meses na categoria B", "Inciso II, a — falta 4 meses → NÃO APTO"],
-              ["1 gravíssima + 2 graves em 12 meses", "Inciso III — ok (só 1 gravíssima)"],
-              ["Curso especializado aprovado", "Inciso IV — ok, mas não supre II, a"]
+              [
+                "24 anos",
+                "Inciso I — ok"
+              ],
+              [
+                "20 meses na categoria B",
+                "Inciso II, a — falta 4 meses → NÃO APTO"
+              ],
+              [
+                "1 gravíssima + 2 graves em 12 meses",
+                "Inciso III — ok (só 1 gravíssima)"
+              ],
+              [
+                "Curso especializado aprovado",
+                "Inciso IV — ok, mas não supre II, a"
+              ]
             ]
           }
         },
@@ -218,12 +357,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Requisito", "Pode ser dispensado?"],
+            "colunas": [
+              "Requisito",
+              "Pode ser dispensado?"
+            ],
             "linhas": [
-              ["Tempo na categoria B/C (II, a)", "Não — requisito objetivo"],
-              ["Limite de gravíssimas (III)", "Curso (IV) independe do III — parágrafo único"],
-              ["Idade mínima 21 anos (I)", "Não — requisito objetivo"],
-              ["Resultado Ricardo", "Falha no II, a — demais requisitos não compensam"]
+              [
+                "Tempo na categoria B/C (II, a)",
+                "Não — requisito objetivo"
+              ],
+              [
+                "Limite de gravíssimas (III)",
+                "Curso (IV) independe do III — parágrafo único"
+              ],
+              [
+                "Idade mínima 21 anos (I)",
+                "Não — requisito objetivo"
+              ],
+              [
+                "Resultado Ricardo",
+                "Falha no II, a — demais requisitos não compensam"
+              ]
             ]
           }
         },
@@ -236,8 +390,18 @@
             "fonte": "CTB art. 145, II, a",
             "texto": "II - estar habilitado: a) no mínimo há dois anos na categoria B, ou no mínimo há um ano na categoria C, quando pretender habilitar-se na categoria D;",
             "trechos_grifados": [
-              { "inicio": 39, "fim": 63, "motivo": "2 anos na B — requisito que Ricardo não cumpre" },
-              { "inicio": 81, "fim": 102, "motivo": "alternativa: 1 ano na C" }
+              {
+                "inicio": 39,
+                "fim": 63,
+                "motivo": "2 anos na B — requisito que Ricardo não cumpre",
+                "texto_grifado": "dois anos na categoria B"
+              },
+              {
+                "inicio": 81,
+                "fim": 102,
+                "motivo": "alternativa: 1 ano na C",
+                "texto_grifado": "um ano na categoria C"
+              }
             ]
           }
         },
@@ -253,7 +417,8 @@
               {
                 "inicio": 23,
                 "fim": 54,
-                "motivo": "só gravíssima conta — graves do Ricardo não impedem"
+                "motivo": "só gravíssima conta — graves do Ricardo não impedem",
+                "texto_grifado": "mais de uma infração gravíssima"
               }
             ]
           }
@@ -264,8 +429,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "CAT D: 21+ anos · 2 anos B ou 1 ano C · no máx. 1 gravíssima em 12 meses · curso especializado.\n\nCAT E: 21+ · 1 ano na C (art. 145, II, b). Curso dispensa só inciso III — nunca o tempo na categoria.\n\nMesma lógica cai em transporte escolar, coletivo e produto perigoso (caput do art. 145).",
-            "destaques": ["2 anos B", "1 gravíssima", "CAT E"]
+            "texto": "CAT D: 21+ anos · 2 anos B ou 1 ano C · no máx. 1 gravíssima em 12 meses · curso especializado.\n\nCAT E: 21+ · 1 ano na C (art. 145, II, b). Curso dispensa só inciso III — nunca o tempo na categoria.\n\nMesma lógica cai em transporte escolar, coletivo e produto perigoso (caput do art. 145).\nNear: Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "2 anos B",
+              "1 gravíssima",
+              "CAT E"
+            ]
           }
         }
       ],
@@ -282,6 +451,22 @@
       "categoria_d",
       "transporte_escolar",
       "caso_pratico"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "CAT D: 21+ anos · 2 anos B ou 1 ano C · no máx. 1 gravíssima em 12 meses · curso especializado.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
+      ]
+    }
   }
 ]

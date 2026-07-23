@@ -44,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Backup nos EUA exige hipótese do art. 33 — operador privado e cadastro genérico não dispensam. Política pública pode usar inciso VII, mas com publicidade.",
-            "destaques": ["internacional", "específico", "publicidade"]
+            "destaques": [
+              "internacional",
+              "específico",
+              "publicidade"
+            ]
           }
         },
         {
@@ -53,10 +57,24 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Dados replicados em servidor nos EUA?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Exige hipótese legal — não basta nuvem privada", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Dados replicados em servidor nos EUA?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Exige hipótese legal — não basta nuvem privada",
+                "tipo": "resultado"
+              }
             ],
-            "arestas": [{ "de": "p1", "para": "r1", "rotulo": "Sim" }]
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
           }
         },
         {
@@ -64,7 +82,10 @@
           "titulo": "Genérico × específico",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
               [
                 "Cadastro genérico autoriza transferência",
@@ -79,7 +100,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Art. 33 taxativo. Genérico ≠ VIII. Política pública = VII + publicidade.",
-            "destaques": ["taxativo", "específico", "publicidade"]
+            "destaques": [
+              "taxativo",
+              "específico",
+              "publicidade"
+            ]
           }
         }
       ],
@@ -101,7 +126,11 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Nuvem privada, cadastro genérico ou política pública induzem dispensar hipóteses do art. 33",
-        "eixos_legais": ["LGPD_art33", "LGPD_art33_VIII", "LGPD_art33_VII"],
+        "eixos_legais": [
+          "LGPD_art33",
+          "LGPD_art33_VIII",
+          "LGPD_art33_VII"
+        ],
         "isca_por_alternativa": {
           "A": "operador privado dispensa hipóteses de transferência internacional",
           "B": "consentimento genérico do cadastro substitui o específico do inciso VIII",
@@ -115,8 +144,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D.\n\nA — operador privado dispensa análise legal: trata contratação como exceção às hipóteses de transferência.\nB — cadastro genérico: confunde com consentimento específico e em destaque.\nC — política pública sem publicidade: ignora dever de dar publicidade na hipótese administrativa.\n\nA isca é backup nos EUA empurrar nuvem, cadastro ou política pública para pular a taxatividade da transferência internacional.",
-            "destaques": ["Gabarito D", "taxativo", "específico"]
+            "texto": "Gabarito D. A — operador privado dispensa análise legal: trata contratação como exceção às hipóteses de transferência.\nB — cadastro genérico: confunde com consentimento específico e em destaque.\nC — política pública sem publicidade: ignora dever de dar publicidade na hipótese administrativa. A isca é backup nos EUA empurrar nuvem, cadastro ou política pública para pular a taxatividade da transferência internacional.",
+            "destaques": [
+              "Gabarito D",
+              "taxativo",
+              "específico"
+            ]
           }
         },
         {
@@ -125,7 +158,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "TRANSFERÊNCIA INTERNACIONAL: envio ou cópia de dados pessoais para país estrangeiro — regime do art. 33.\n\nCONSENTIMENTO ESPECÍFICO: autorização destacada para finalidade concreta — inciso VIII do art. 33.\n\nPOLÍTICA PÚBLICA: hipótese do inciso VII — exige publicidade nos termos do art. 23.",
-            "destaques": ["INTERNACIONAL", "ESPECÍFICO", "POLÍTICA PÚBLICA"]
+            "destaques": [
+              "INTERNACIONAL",
+              "ESPECÍFICO",
+              "POLÍTICA PÚBLICA"
+            ]
           }
         },
         {
@@ -152,8 +189,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -163,12 +208,27 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Hipótese", "No caso da STTP"],
+            "colunas": [
+              "Hipótese",
+              "No caso da STTP"
+            ],
             "linhas": [
-              ["Inciso VII — política pública", "Possível para trânsito, com publicidade"],
-              ["Inciso VIII — consentimento específico", "Cadastro genérico não substitui"],
-              ["Operador privado no exterior", "Não dispensa análise do art. 33"],
-              ["País com proteção adequada (I)", "EUA exigem avaliação — não automático"]
+              [
+                "Inciso VII — política pública",
+                "Possível para trânsito, com publicidade"
+              ],
+              [
+                "Inciso VIII — consentimento específico",
+                "Cadastro genérico não substitui"
+              ],
+              [
+                "Operador privado no exterior",
+                "Não dispensa análise do art. 33"
+              ],
+              [
+                "País com proteção adequada (I)",
+                "EUA exigem avaliação — não automático"
+              ]
             ]
           }
         },
@@ -178,7 +238,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Cadastro genérico autoriza backup nos EUA",
@@ -197,7 +260,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -220,12 +286,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Enquadramento"],
+            "colunas": [
+              "Fato do enunciado",
+              "Enquadramento"
+            ],
             "linhas": [
-              ["Réplica do banco em servidor nos EUA", "Transferência internacional — art. 33"],
-              ["TI alega dispensa por operador privado", "Contratação não substitui hipótese legal"],
-              ["Jurídico invoca cadastro genérico", "Não equivale ao inciso VIII"],
-              ["Resultado", "Gabarito D — VII com publicidade ou VIII específico"]
+              [
+                "Réplica do banco em servidor nos EUA",
+                "Transferência internacional — art. 33"
+              ],
+              [
+                "TI alega dispensa por operador privado",
+                "Contratação não substitui hipótese legal"
+              ],
+              [
+                "Jurídico invoca cadastro genérico",
+                "Não equivale ao inciso VIII"
+              ],
+              [
+                "Resultado",
+                "Gabarito D — VII com publicidade ou VIII específico"
+              ]
             ]
           }
         },
@@ -235,11 +316,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Mensagem"],
+            "colunas": [
+              "Dispositivo",
+              "Mensagem"
+            ],
             "linhas": [
-              ["Art. 33, caput", "Transferência internacional só nas hipóteses listadas"],
-              ["Art. 33, VIII", "Consentimento específico, em destaque, com aviso internacional"],
-              ["Art. 33, VII + art. 23", "Política pública com publicidade — não transferência automática"]
+              [
+                "Art. 33, caput",
+                "Transferência internacional só nas hipóteses listadas"
+              ],
+              [
+                "Art. 33, VIII",
+                "Consentimento específico, em destaque, com aviso internacional"
+              ],
+              [
+                "Art. 33, VII + art. 23",
+                "Política pública com publicidade — não transferência automática"
+              ]
             ]
           }
         },
@@ -297,8 +390,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Transferência internacional = art. 33 taxativo. Genérico ≠ VIII. Política pública = VII + publicidade (art. 23).\n\nNear-transfer: backup em datacenter em São Paulo, mas empresa controladora sediada no exterior — ainda pode configurar transferência internacional se o acesso ocorrer fora do Brasil.",
-            "destaques": ["taxativo", "Near-transfer", "publicidade"]
+            "texto": "Transferência internacional = art. 33 taxativo. Genérico ≠ VIII. Política pública = VII + publicidade (art. 23).\n\nNear-transfer: backup em datacenter em São Paulo, mas empresa controladora sediada no exterior — ainda pode configurar transferência internacional se o acesso ocorrer fora do Brasil.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "taxativo",
+              "Near-transfer",
+              "publicidade"
+            ]
           }
         }
       ],
@@ -316,6 +413,17 @@
       "consentimento",
       "politicas_publicas",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "backup em datacenter em São Paulo, mas empresa controladora sediada no exterior — ainda pode configurar transferência internacional se o acesso ocorrer fora do Brasil.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Transferência internacional = art. 33 taxativo. Genérico ≠ específico (VIII). Política pública = VII + publicidade (art. 23).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

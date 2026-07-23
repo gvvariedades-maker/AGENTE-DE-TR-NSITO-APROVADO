@@ -45,7 +45,16 @@
         "regra_excecao",
         "termo_unico",
         "numero_vizinho"
-      ]
+      ],
+      "near_transfer": "se a banca trocar MR 0,32 por 0,38 mg/L, entra crime do art. 306 sem mudar o piso de 0,05 para infração.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "ADMIN = MR ≥ 0,05 (art. 6 II) · CRIME = MR ≥ 0,34 (art. 7 II) · VC = MR − EM (Anexo I).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     },
     "tags": [
       "alcoolemia",
@@ -67,7 +76,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito B: MR 0,32 gera art. 165 (limite 0,05) mas não crime (limite 0,34). A isca é tratar 0,34 como único patamar.",
-            "destaques": ["Gabarito B", "0,05", "0,34"]
+            "destaques": [
+              "Gabarito B",
+              "0,05",
+              "0,34"
+            ]
           }
         },
         {
@@ -75,10 +88,19 @@
           "titulo": "Admin × crime no etilômetro",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Infração admin (art. 165)", "Crime (art. 306)"],
+            "colunas": [
+              "Infração admin (art. 165)",
+              "Crime (art. 306)"
+            ],
             "linhas": [
-              ["MR ≥ 0,05 mg/L — art. 6º, II", "MR ≥ 0,34 mg/L — art. 7º, II"],
-              ["MR 0,32 → configura", "MR 0,32 → não configura"]
+              [
+                "MR ≥ 0,05 mg/L — art. 6º, II",
+                "MR ≥ 0,34 mg/L — art. 7º, II"
+              ],
+              [
+                "MR 0,32 → configura",
+                "MR 0,32 → não configura"
+              ]
             ]
           }
         },
@@ -88,7 +110,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "ADMIN = MR ≥ 0,05.\nCRIME = MR ≥ 0,34.\nVC = MR − margem (Anexo I) — limite compara MR.",
-            "destaques": ["0,05", "0,34", "MR"]
+            "destaques": [
+              "0,05",
+              "0,34",
+              "MR"
+            ]
           }
         }
       ],
@@ -127,8 +153,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — 0,34 como único limite libera condutor com etilômetro de 0,32 mg/L.\nC — exame de sangue com qualquer concentração dispensa margem do Anexo I.\nD — limite de 0,05 vale para VC de 0,29, não para MR de 0,32.\n\nPegadinha: infração administrativa começa em MR 0,05 — não em 0,34.",
-            "destaques": ["Gabarito B", "0,32 mg/L", "0,05"]
+            "texto": "Gabarito B. A — 0,34 como único limite libera condutor com etilômetro de 0,32 mg/L.\nC — exame de sangue com qualquer concentração dispensa margem do Anexo I.\nD — limite de 0,05 vale para VC de 0,29, não para MR de 0,32. Pegadinha: infração administrativa começa em MR 0,05 — não em 0,34.",
+            "destaques": [
+              "Gabarito B",
+              "0,32 mg/L",
+              "0,05"
+            ]
           }
         },
         {
@@ -137,7 +167,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "MR (MEDIÇÃO REALIZADA): leitura bruta do etilômetro — patamar de comparação nos arts. 6º e 7º.\n\nVC (VALOR CONSIDERADO): MR menos erro máximo admissível — preenchimento do auto conforme Anexo I.\n\nFAIXA INTERMEDIÁRIA: entre 0,05 e 0,33 mg/L de MR há art. 165 sem crime do art. 306.",
-            "destaques": ["MR", "VC", "FAIXA INTERMEDIÁRIA"]
+            "destaques": [
+              "MR",
+              "VC",
+              "FAIXA INTERMEDIÁRIA"
+            ]
           }
         },
         {
@@ -159,7 +193,11 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim — 0,32 mg/L no caso" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim — 0,32 mg/L no caso"
+              }
             ]
           }
         },
@@ -169,7 +207,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Patamar MR", "Consequência"],
+            "titulo_colunas": [
+              "Patamar MR",
+              "Consequência"
+            ],
             "linhas": [
               {
                 "faixa": "MR < 0,05 mg/L",
@@ -193,7 +234,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
               [
                 "Abaixo de 0,34 mg/L não autua",
@@ -212,7 +256,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -235,7 +282,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso", "Consequência"],
+            "colunas": [
+              "Fato do caso",
+              "Consequência"
+            ],
             "linhas": [
               [
                 "MR 0,32 mg/L na blitz da STTP",
@@ -262,7 +312,10 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Regime", "Dispositivo"],
+            "colunas": [
+              "Regime",
+              "Dispositivo"
+            ],
             "linhas": [
               [
                 "Infração art. 165 do CTB",
@@ -317,8 +370,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "ADMIN = MR ≥ 0,05 (art. 6 II).\nCRIME = MR ≥ 0,34 (art. 7 II).\nVC = MR − margem — limite compara MR.\n\nNear-transfer: se a banca trocar MR 0,32 por 0,38 mg/L, entra crime do art. 306 sem mudar o piso de 0,05 para infração.",
-            "destaques": ["0,05", "0,34", "0,38"]
+            "texto": "ADMIN = MR ≥ 0,05 (art. 6 II).\nCRIME = MR ≥ 0,34 (art. 7 II).\nVC = MR − margem — limite compara MR.\n\nNear-transfer: se a banca trocar MR 0,32 por 0,38 mg/L, entra crime do art. 306 sem mudar o piso de 0,05 para infração.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "0,05",
+              "0,34",
+              "0,38"
+            ]
           }
         }
       ],

@@ -3,7 +3,7 @@
     "disciplina": "legislacao_transito",
     "topico": "CONTRAN_36_advertencia",
     "tipo": "caso_pratico",
-    "estilo_idecan": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 4,
     "enunciado": "Durante patrulhamento noturno em Campina Grande/PB, agente da STTP encontra automóvel imobilizado no leito viário por pane mecânica. O condutor acionou as luzes de advertência (pisca-alerta), mas posicionou o triângulo de sinalização a 18 metros da parte traseira do veículo. Considerando o CTB e a Resolução CONTRAN nº 36/1998, assinale a alternativa CORRETA:",
     "alternativas": {
@@ -26,8 +26,7 @@
       "estudo_reverso": [
         "CTB art. 46",
         "Res. CONTRAN 36/1998 art. 1",
-        "CTB art. 230, IX",
-        "CTB art. 230, X"
+        "CTB art. 230, IX"
       ]
     },
     "estudo_reverso_visual": {
@@ -44,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Pane noturna: pisca-alerta OK, triângulo a 18 m. A banca troca PISCA SOZINHO por PISCA + TRIÂNGULO a 30 m.\n\nGabarito C: art. 1º da Res. 36/1998 + art. 46 do CTB.",
-            "destaques": ["30 metros", "cumulativamente", "art. 46"]
+            "destaques": [
+              "30 metros",
+              "cumulativamente",
+              "art. 46"
+            ]
           }
         },
         {
@@ -53,16 +56,48 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Veículo imobilizado em emergência?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Pisca-alerta imediato + triângulo ≥ 30 m", "tipo": "resultado" },
-              { "id": "p2", "label": "Triângulo a ≥ 30 m da traseira?", "tipo": "pergunta" },
-              { "id": "r2", "label": "Regular — art. 1º Res. 36", "tipo": "resultado" },
-              { "id": "r3", "label": "Irregular — distância insuficiente", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Veículo imobilizado em emergência?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Pisca-alerta imediato + triângulo ≥ 30 m",
+                "tipo": "resultado"
+              },
+              {
+                "id": "p2",
+                "label": "Triângulo a ≥ 30 m da traseira?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r2",
+                "label": "Regular — art. 1º Res. 36",
+                "tipo": "resultado"
+              },
+              {
+                "id": "r3",
+                "label": "Irregular — distância insuficiente",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r3", "rotulo": "Não — 18 m" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r3",
+                "rotulo": "Não — 18 m"
+              }
             ]
           }
         },
@@ -71,10 +106,20 @@
           "titulo": "Dois requisitos cumulativos",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Requisito", "Regra"],
+            "titulo_colunas": [
+              "Requisito",
+              "Regra"
+            ],
             "linhas": [
-              { "faixa": "1º — imediato", "classificacao": "Pisca-alerta acionado" },
-              { "faixa": "2º — distância", "classificacao": "Triângulo ≥ 30 m da traseira", "destaque": true }
+              {
+                "faixa": "1º — imediato",
+                "classificacao": "Pisca-alerta acionado"
+              },
+              {
+                "faixa": "2º — distância",
+                "classificacao": "Triângulo ≥ 30 m da traseira",
+                "destaque": true
+              }
             ]
           }
         },
@@ -84,7 +129,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PISCA + TRIÂNGULO — os dois, sempre.\n30 m mínimos da parte TRASEIRA.\nArt. 46 do CTB remete à forma do CONTRAN.",
-            "destaques": ["PISCA + TRIÂNGULO", "30 m", "CONTRAN"]
+            "destaques": [
+              "PISCA + TRIÂNGULO",
+              "30 m",
+              "CONTRAN"
+            ]
           }
         }
       ],
@@ -110,8 +159,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C. Se marcou A, validou só o pisca-alerta.\n\nNa pane, a Res. 36/1998 exige duas medidas: pisca imediato + triângulo a no mínimo 30 m da traseira. 18 m é insuficiente — vale em via urbana e rodovia (art. 46 do CTB).",
-            "destaques": ["Gabarito C", "30 metros", "cumulativamente"]
+            "texto": "Gabarito C. Se marcou A, validou só o pisca-alerta. Na pane, a Res. 36/1998 exige duas medidas: pisca imediato + triângulo a no mínimo 30 m da traseira. 18 m é insuficiente — vale em via urbana e rodovia (dispositivo legal do CTB).",
+            "destaques": [
+              "Gabarito C",
+              "30 metros",
+              "cumulativamente"
+            ]
           }
         },
         {
@@ -120,7 +173,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "LEITO VIÁRIO: parte da via destinada ao trânsito de veículos — art. 46 do CTB não distingue urbana de rodovia.\n\nPISCA-ALERTA: luzes de advertência acionadas de imediato na imobilização (art. 1º da Res. 36).\n\nTRIÂNGULO: equipamento de sinalização colocado a no mínimo 30 m da parte traseira do veículo.",
-            "destaques": ["LEITO VIÁRIO", "PISCA-ALERTA", "30 m"]
+            "destaques": [
+              "LEITO VIÁRIO",
+              "PISCA-ALERTA",
+              "30 m"
+            ]
           }
         },
         {
@@ -130,13 +187,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Imobilização por emergência?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Triângulo a pelo menos 30 m?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Irregular — gabarito C", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Imobilização por emergência?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Triângulo a pelo menos 30 m?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Irregular — gabarito C",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não — 18 m" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — 18 m"
+              }
             ]
           }
         },
@@ -146,11 +223,24 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Etapa", "Obrigação"],
+            "titulo_colunas": [
+              "Etapa",
+              "Obrigação"
+            ],
             "linhas": [
-              { "faixa": "1º — imediato", "classificacao": "Acionar pisca-alerta" },
-              { "faixa": "2º — simultâneo", "classificacao": "Colocar triângulo ou similar", "destaque": true },
-              { "faixa": "Distância mínima", "classificacao": "30 m da parte traseira" }
+              {
+                "faixa": "1º — imediato",
+                "classificacao": "Acionar pisca-alerta"
+              },
+              {
+                "faixa": "2º — simultâneo",
+                "classificacao": "Colocar triângulo ou similar",
+                "destaque": true
+              },
+              {
+                "faixa": "Distância mínima",
+                "classificacao": "30 m da parte traseira"
+              }
             ]
           }
         },
@@ -160,11 +250,23 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
-              ["Pisca-alerta substitui triângulo", "Art. 1º: cumulativamente pisca + triângulo"],
-              ["18 m basta se visível", "Distância mínima: 30 m da traseira"],
-              ["Só vale em rodovia", "Art. 46: leito viário — qualquer via"]
+              [
+                "Pisca-alerta substitui triângulo",
+                "Art. 1º: cumulativamente pisca + triângulo"
+              ],
+              [
+                "18 m basta se visível",
+                "Distância mínima: 30 m da traseira"
+              ],
+              [
+                "Só vale em rodovia",
+                "Art. 46: leito viário — qualquer via"
+              ]
             ]
           }
         },
@@ -174,11 +276,23 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + letra da lei"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + letra da lei"
+            ],
             "linhas": [
-              ["A — regra_excecao", "Pisca substitui triângulo — art. 1º exige ambos cumulativamente"],
-              ["B — numero_vizinho", "18 m em vez de 30 m mínimos — inventa critério de visibilidade"],
-              ["D — regra_excecao", "Restringe Res. 36 a rodovias — art. 46 fala em leito viário"]
+              [
+                "A — regra_excecao",
+                "Pisca substitui triângulo — art. 1º exige ambos cumulativamente"
+              ],
+              [
+                "B — numero_vizinho",
+                "18 m em vez de 30 m mínimos — inventa critério de visibilidade"
+              ],
+              [
+                "D — regra_excecao",
+                "Restringe Res. 36 a rodovias — art. 46 fala em leito viário"
+              ]
             ]
           }
         },
@@ -188,11 +302,23 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato da pane", "Avaliação legal"],
+            "colunas": [
+              "Fato da pane",
+              "Avaliação legal"
+            ],
             "linhas": [
-              ["Pisca-alerta acionado", "Requisito 1º atendido — art. 1º, início"],
-              ["Triângulo a 18 m da traseira", "Abaixo do mínimo de 30 m — irregular"],
-              ["Via urbana noturna", "Art. 46 alcança — sem exceção urbana na Res. 36"]
+              [
+                "Pisca-alerta acionado",
+                "Requisito 1º atendido — art. 1º, início"
+              ],
+              [
+                "Triângulo a 18 m da traseira",
+                "Abaixo do mínimo de 30 m — irregular"
+              ],
+              [
+                "Via urbana noturna",
+                "Art. 46 alcança — sem exceção urbana na Res. 36"
+              ]
             ]
           }
         },
@@ -202,12 +328,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Papel"],
+            "colunas": [
+              "Dispositivo",
+              "Papel"
+            ],
             "linhas": [
-              ["CTB art. 46", "Dever genérico de sinalizar na forma CONTRAN"],
-              ["Res. 36 art. 1º", "Concretiza: pisca + triângulo a 30 m"],
-              ["CTB art. 230, IX", "Equipamento obrigatório inoperante/ausente"],
-              ["CTB art. 230, X", "Equipamento em desacordo com CONTRAN"]
+              [
+                "CTB art. 46",
+                "Dever genérico de sinalizar na forma CONTRAN"
+              ],
+              [
+                "Res. 36 art. 1º",
+                "Concretiza: pisca + triângulo a 30 m"
+              ],
+              [
+                "CTB art. 230, IX",
+                "Equipamento obrigatório inoperante/ausente"
+              ],
+              [
+                "CTB art. 230, X",
+                "Equipamento em desacordo com CONTRAN"
+              ]
             ]
           }
         },
@@ -220,8 +361,18 @@
             "fonte": "Res. CONTRAN 36/1998, art. 1º",
             "texto": "Art. 1º O condutor deverá acionar de imediato as luzes de advertência (pisca-alerta) providenciando a colocação do triângulo de sinalização ou equipamento similar à distância mínima de 30 metros da parte traseira do veículo.",
             "trechos_grifados": [
-              { "inicio": 26, "fim": 84, "motivo": "pisca-alerta imediato — 1º requisito" },
-              { "inicio": 165, "fim": 212, "motivo": "30 m mínimos da traseira — 18 m viola" }
+              {
+                "inicio": 26,
+                "fim": 84,
+                "motivo": "pisca-alerta imediato — 1º requisito",
+                "texto_grifado": "acionar de imediato as luzes de advertência (pisca-alerta)"
+              },
+              {
+                "inicio": 165,
+                "fim": 212,
+                "motivo": "30 m mínimos da traseira — 18 m viola",
+                "texto_grifado": "distância mínima de 30 metros da parte traseira"
+              }
             ]
           }
         },
@@ -234,7 +385,12 @@
             "fonte": "CTB art. 46",
             "texto": "Sempre que for necessária a imobilização temporária de um veículo no leito viário, em situação de emergência, deverá ser providenciada a imediata sinalização de advertência, na forma estabelecida pelo CONTRAN.",
             "trechos_grifados": [
-              { "inicio": 174, "fim": 208, "motivo": "forma do CONTRAN — Res. 36 concretiza" }
+              {
+                "inicio": 174,
+                "fim": 208,
+                "motivo": "forma do CONTRAN — Res. 36 concretiza",
+                "texto_grifado": "na forma estabelecida pelo CONTRAN"
+              }
             ]
           }
         },
@@ -244,8 +400,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "PISCA + TRIÂNGULO — cumulativos, sem substituição.\n30 m mínimos da parte TRASEIRA (não do condutor).\nArt. 46 remete ao CONTRAN — vale em qualquer leito viário.\n\nMesma lógica cai em equipamentos obrigatórios (art. 230, IX/X) e sinalização de carga (Res. 36/970).",
-            "destaques": ["PISCA + TRIÂNGULO", "30 m", "leito viário"]
+            "texto": "PISCA + TRIÂNGULO — cumulativos, sem substituição.\n30 m mínimos da parte TRASEIRA (não do condutor).\nArt. 46 remete ao CONTRAN — vale em qualquer leito viário.\n\nMesma lógica cai em equipamentos obrigatórios (art. 230, IX/X) e sinalização de carga (Res. 36/970).\nNear: Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "PISCA + TRIÂNGULO",
+              "30 m",
+              "leito viário"
+            ]
           }
         }
       ],
@@ -260,6 +420,27 @@
         }
       ]
     },
-    "tags": ["sinalizacao_advertencia", "resolucao_36", "triangulo", "pisca_alerta", "imobilizacao"]
+    "tags": [
+      "sinalizacao_advertencia",
+      "resolucao_36",
+      "triangulo",
+      "pisca_alerta",
+      "imobilizacao"
+    ],
+    "meta": {
+      "near_transfer": "Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "PISCA + TRIÂNGULO · mínimo 30 m da TRASEIRA · art. 46 remete ao CONTRAN.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao"
+      ]
+    }
   }
 ]

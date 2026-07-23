@@ -44,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Omitir autuação por favor ao empresário é ordem manifestamente ilegal — o agente deve recusar. Hierarquia verbal e urbanidade não autorizam favorecimento.",
-            "destaques": ["ilegal", "impessoalidade", "recusa"]
+            "destaques": [
+              "ilegal",
+              "impessoalidade",
+              "recusa"
+            ]
           }
         },
         {
@@ -53,10 +57,24 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Ordem de omitir autuação por favor pessoal?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Recusa correta — ordem manifestamente ilegal", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Ordem de omitir autuação por favor pessoal?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Recusa correta — ordem manifestamente ilegal",
+                "tipo": "resultado"
+              }
             ],
-            "arestas": [{ "de": "p1", "para": "r1", "rotulo": "Sim" }]
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
           }
         },
         {
@@ -64,7 +82,10 @@
           "titulo": "Hierarquia × ilegalidade",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
               [
                 "Chefe verbal obriga omitir autuação",
@@ -79,7 +100,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Ordem ilegal = não cumpre. Urbanidade ≠ favor. Crime tipificado não é único teste de ilegalidade.",
-            "destaques": ["ilegal", "urbanidade", "impessoalidade"]
+            "destaques": [
+              "ilegal",
+              "urbanidade",
+              "impessoalidade"
+            ]
           }
         }
       ],
@@ -101,7 +126,11 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Hierarquia verbal ou urbanidade induzem omitir autuação por favor — ordem manifestamente ilegal não se cumpre",
-        "eixos_legais": ["L8112_art116_IV", "L8112_art116_I", "CF_art37_impessoalidade"],
+        "eixos_legais": [
+          "L8112_art116_IV",
+          "L8112_art116_I",
+          "CF_art37_impessoalidade"
+        ],
         "isca_por_alternativa": {
           "A": "só recusa se houver tipificação penal expressa",
           "B": "urbanidade dispensa autuação por relação institucional",
@@ -115,8 +144,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C.\n\nA — tipificação penal expressa: reduz ilegalidade manifesta ao crime tipificado.\nB — urbanidade com empresário: usa cortesia para dispensar dever funcional.\nD — representação facultativa: legitima obediência à ordem ilegal.\n\nA isca é o supervisor e a ouvidoria empurrarem hierarquia ou urbanidade para omitir autuação.",
-            "destaques": ["Gabarito C", "ilegal", "impessoalidade"]
+            "texto": "Gabarito C. A — tipificação penal expressa: reduz ilegalidade manifesta ao crime tipificado.\nB — urbanidade com empresário: usa cortesia para dispensar dever funcional.\nD — representação facultativa: legitima obediência à ordem ilegal. A isca é o supervisor e a ouvidoria empurrarem hierarquia ou urbanidade para omitir autuação.",
+            "destaques": [
+              "Gabarito C",
+              "ilegal",
+              "impessoalidade"
+            ]
           }
         },
         {
@@ -125,7 +158,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "ORDEM MANIFESTAMENTE ILEGAL: comando superior que viola a lei de forma evidente — não deve ser cumprido.\n\nIMPESSOALIDADE: tratar casos iguais de forma igual, sem favor por vínculo pessoal ou político.\n\nZELO: exercer com dedicação as atribuições do cargo — inclui lavrar autuação quando cabível.",
-            "destaques": ["ILEGAL", "IMPESSOALIDADE", "ZELO"]
+            "destaques": [
+              "ILEGAL",
+              "IMPESSOALIDADE",
+              "ZELO"
+            ]
           }
         },
         {
@@ -152,8 +189,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -163,12 +208,27 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Princípio / dever", "No caso do agente"],
+            "colunas": [
+              "Princípio / dever",
+              "No caso do agente"
+            ],
             "linhas": [
-              ["Legalidade", "Omitir infração viola normas de trânsito"],
-              ["Impessoalidade", "Favorecimento ao empresário aliado"],
-              ["Moralidade", "Conduta incompatível com ética pública"],
-              ["Zelo funcional", "Dever de exercer atribuições com dedicação"]
+              [
+                "Legalidade",
+                "Omitir infração viola normas de trânsito"
+              ],
+              [
+                "Impessoalidade",
+                "Favorecimento ao empresário aliado"
+              ],
+              [
+                "Moralidade",
+                "Conduta incompatível com ética pública"
+              ],
+              [
+                "Zelo funcional",
+                "Dever de exercer atribuições com dedicação"
+              ]
             ]
           }
         },
@@ -178,7 +238,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Ordem verbal do chefe sempre obriga",
@@ -197,7 +260,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -220,12 +286,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Enquadramento"],
+            "colunas": [
+              "Fato do enunciado",
+              "Enquadramento"
+            ],
             "linhas": [
-              ["Ordem de não autuar empresário aliado", "Ordem manifestamente ilegal"],
-              ["Agente recusa cumprir", "Conduta correta — art. 116, IV"],
-              ["Supervisor alega desobediência", "Ilegalidade manifesta dispensa cumprimento"],
-              ["Resultado", "Gabarito C — zelo + impessoalidade"]
+              [
+                "Ordem de não autuar empresário aliado",
+                "Ordem manifestamente ilegal"
+              ],
+              [
+                "Agente recusa cumprir",
+                "Conduta correta — art. 116, IV"
+              ],
+              [
+                "Supervisor alega desobediência",
+                "Ilegalidade manifesta dispensa cumprimento"
+              ],
+              [
+                "Resultado",
+                "Gabarito C — zelo + impessoalidade"
+              ]
             ]
           }
         },
@@ -235,11 +316,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Mensagem"],
+            "colunas": [
+              "Dispositivo",
+              "Mensagem"
+            ],
             "linhas": [
-              ["Art. 116, IV", "Cumprir ordens exceto manifestamente ilegais"],
-              ["Art. 116, I", "Zelo e dedicação nas atribuições do cargo"],
-              ["CF, art. 37 — impessoalidade", "Veda favor por vínculo pessoal ou político"]
+              [
+                "Art. 116, IV",
+                "Cumprir ordens exceto manifestamente ilegais"
+              ],
+              [
+                "Art. 116, I",
+                "Zelo e dedicação nas atribuições do cargo"
+              ],
+              [
+                "CF, art. 37 — impessoalidade",
+                "Veda favor por vínculo pessoal ou político"
+              ]
             ]
           }
         },
@@ -291,8 +384,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Ordem ilegal = não cumpre (art. 116, IV). Urbanidade ≠ favor. Crime tipificado não é único teste de ilegalidade manifesta.\n\nNear-transfer: supervisor ordena registrar infração inexistente para atingir meta — também é ordem manifestamente ilegal, passível de recusa.",
-            "destaques": ["ilegal", "Near-transfer", "impessoalidade"]
+            "texto": "Ordem ilegal = não cumpre (art. 116, IV). Urbanidade ≠ favor. Crime tipificado não é único teste de ilegalidade manifesta.\n\nNear-transfer: supervisor ordena registrar infração inexistente para atingir meta — também é ordem manifestamente ilegal, passível de recusa.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "ilegal",
+              "Near-transfer",
+              "impessoalidade"
+            ]
           }
         }
       ],
@@ -314,6 +411,17 @@
       "zelo",
       "lei_8112",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "supervisor ordena registrar infração inexistente para atingir meta — também é ordem manifestamente ilegal, passível de recusa.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Ordem ilegal = não cumpre (art. 116, IV). Urbanidade ≠ favor. Crime tipificado não é único critério de ilegalidade manifesta.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

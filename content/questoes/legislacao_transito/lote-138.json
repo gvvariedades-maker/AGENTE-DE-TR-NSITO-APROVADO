@@ -52,7 +52,11 @@
       "far_transfer": "Lombada sonora instalada sem anuência — art. 94, parágrafo único, exige caso especial do órgão competente nos padrões do CONTRAN.",
       "o_que_nao_muda": "Obra ou evento que perturba a via exige permissão prévia do órgão com circunscrição; interdição exige aviso de 48h (salvo emergência).",
       "calibracao_corpus": "ok",
-      "eficacia_pos_aula": ["E1", "E2", "E3"]
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
     },
     "tags": [
       "engenharia_transito",
@@ -76,7 +80,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito C: permissão prévia da STTP e aviso de 48h com caminhos alternativos — licença cultural não basta.",
-            "destaques": ["STTP", "48h", "licença cultural"]
+            "destaques": [
+              "STTP",
+              "48h",
+              "licença cultural"
+            ]
           }
         },
         {
@@ -85,12 +93,28 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "sttp", "label": "STTP — permissão prévia (art. 95)", "nivel": 2 },
-              { "id": "pref", "label": "Prefeitura — licença cultural", "nivel": 1 },
-              { "id": "pm", "label": "PM — policiamento ostensivo", "nivel": 1 }
+              {
+                "id": "sttp",
+                "label": "STTP — permissão prévia (art. 95)",
+                "nivel": 2
+              },
+              {
+                "id": "pref",
+                "label": "Prefeitura — licença cultural",
+                "nivel": 1
+              },
+              {
+                "id": "pm",
+                "label": "PM — policiamento ostensivo",
+                "nivel": 1
+              }
             ],
             "arestas": [
-              { "de": "pref", "para": "sttp", "rotulo": "não substitui permissão" }
+              {
+                "de": "pref",
+                "para": "sttp",
+                "rotulo": "não substitui permissão"
+              }
             ]
           }
         },
@@ -100,7 +124,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "95 = STTP autoriza + 48h com rotas.\nPM policia — não autoriza evento.",
-            "destaques": ["STTP", "48h", "PM"]
+            "destaques": [
+              "STTP",
+              "48h",
+              "PM"
+            ]
           }
         }
       ],
@@ -126,8 +154,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C.\n\nA — licença cultural dispensa permissão da STTP: confunde atos distintos.\nB — desfile cívico com PM dispensa permissão: inventa exceção inexistente.\nD — aviso de 12h basta para evento cultural: prazo insuficiente para interdição.\n\nPegadinha: interdição de via exige permissão da STTP e aviso de 48 horas.",
-            "destaques": ["licença cultural", "STTP", "12h"]
+            "texto": "Gabarito C. A — licença cultural dispensa permissão da STTP: confunde atos distintos.\nB — desfile cívico com PM dispensa permissão: inventa exceção inexistente.\nD — aviso de 12h basta para evento cultural: prazo insuficiente para interdição. Pegadinha: interdição de via exige permissão da STTP e aviso de 48 horas.",
+            "destaques": [
+              "licença cultural",
+              "STTP",
+              "12h"
+            ]
           }
         },
         {
@@ -136,7 +168,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "STTP: órgão com circunscrição sobre a via — concede permissão prévia para obra ou evento (art. 95).\n\nPREFEITURA: licença cultural — não substitui permissão de trânsito.\n\nPM: policiamento ostensivo — apoio operacional, sem autorizar interdição da via.",
-            "destaques": ["STTP", "PREFEITURA", "PM"]
+            "destaques": [
+              "STTP",
+              "PREFEITURA",
+              "PM"
+            ]
           }
         },
         {
@@ -146,15 +182,43 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "sttp", "label": "STTP — permissão prévia e aviso 48h", "nivel": 2 },
-              { "id": "pref", "label": "Prefeitura — licença cultural", "nivel": 1 },
-              { "id": "pm", "label": "PM-PB — policiamento ostensivo", "nivel": 1 },
-              { "id": "org", "label": "Organizador — sinalizar evento (§1º)", "nivel": 1 }
+              {
+                "id": "sttp",
+                "label": "STTP — permissão prévia e aviso 48h",
+                "nivel": 2
+              },
+              {
+                "id": "pref",
+                "label": "Prefeitura — licença cultural",
+                "nivel": 1
+              },
+              {
+                "id": "pm",
+                "label": "PM-PB — policiamento ostensivo",
+                "nivel": 1
+              },
+              {
+                "id": "org",
+                "label": "Organizador — sinalizar evento (§1º)",
+                "nivel": 1
+              }
             ],
             "arestas": [
-              { "de": "pref", "para": "sttp", "rotulo": "licença ≠ permissão" },
-              { "de": "pm", "para": "sttp", "rotulo": "apoio ≠ autorização" },
-              { "de": "org", "para": "sttp", "rotulo": "depende de permissão" }
+              {
+                "de": "pref",
+                "para": "sttp",
+                "rotulo": "licença ≠ permissão"
+              },
+              {
+                "de": "pm",
+                "para": "sttp",
+                "rotulo": "apoio ≠ autorização"
+              },
+              {
+                "de": "org",
+                "para": "sttp",
+                "rotulo": "depende de permissão"
+              }
             ]
           }
         },
@@ -164,7 +228,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Licença cultural autoriza interdição da via",
@@ -183,7 +250,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -206,28 +276,61 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Elemento", "Conclusão"],
+            "colunas": [
+              "Elemento",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Desfile com interdição parcial na Av. Epitácio Pessoa", "Obra ou evento — art. 95"],
-              ["Licença cultural sem permissão STTP", "Irregular — falta permissão prévia"],
-              ["PM apenas no policiamento ostensivo", "Não supre permissão de trânsito"],
-              ["Aviso radiofônico 12h sem rotas alternativas", "Não cumpre §2º — exige 48h"],
-              ["Resultado", "Gabarito C"]
+              [
+                "Desfile com interdição parcial na Av. Epitácio Pessoa",
+                "Obra ou evento — art. 95"
+              ],
+              [
+                "Licença cultural sem permissão STTP",
+                "Irregular — falta permissão prévia"
+              ],
+              [
+                "PM apenas no policiamento ostensivo",
+                "Não supre permissão de trânsito"
+              ],
+              [
+                "Aviso radiofônico 12h sem rotas alternativas",
+                "Não cumpre §2º — exige 48h"
+              ],
+              [
+                "Resultado",
+                "Gabarito C"
+              ]
             ]
           }
         },
         {
-          "id": "mapa",
-          "titulo": "Matriz: órgão × função",
+          "id": "gradacao",
+          "titulo": "Graduação: órgão × função no evento",
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Órgão", "Função no caso"],
+            "colunas": [
+              "Órgão",
+              "Função no caso"
+            ],
             "linhas": [
-              ["STTP", "Permissão prévia + aviso de 48h com caminhos alternativos"],
-              ["Prefeitura", "Licença cultural — não autoriza interdição de via"],
-              ["PM-PB", "Policiamento ostensivo — sem permissão de trânsito"],
-              ["Organizador", "Obrigação de sinalizar — §1º do art. 95"]
+              [
+                "STTP",
+                "Permissão prévia + aviso de 48h com caminhos alternativos"
+              ],
+              [
+                "Prefeitura",
+                "Licença cultural — não autoriza interdição de via"
+              ],
+              [
+                "PM-PB",
+                "Policiamento ostensivo — sem permissão de trânsito"
+              ],
+              [
+                "Organizador",
+                "Obrigação de sinalizar — §1º do art. 95"
+              ]
             ]
           }
         },
@@ -298,7 +401,12 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "95 = STTP autoriza + 48h com rotas · PM policia, não autoriza evento.\nNear: obra de pavimentação com interdição — mesma permissão prévia e aviso de 48h.\nFar: lombada sonora sem anuência — art. 94, parágrafo único, exige órgão competente nos padrões do CONTRAN.\nNão muda: obra ou evento que perturba a via exige permissão prévia; interdição exige 48h (salvo emergência).\nCadeia: vizinho = §1º (organizador sinaliza o evento).",
-            "destaques": ["STTP", "48h", "lombada", "§1º"]
+            "destaques": [
+              "STTP",
+              "48h",
+              "lombada",
+              "§1º"
+            ]
           }
         }
       ],

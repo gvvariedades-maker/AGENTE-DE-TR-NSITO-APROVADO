@@ -128,6 +128,7 @@ function questionValuesFromSeed(topicId: string, q: QuestaoSeedImportInput) {
     comentarioJson: q.comentario,
     estudoReversoVisualJson: q.estudo_reverso_visual ?? null,
     estudoReversoVisualCompletoJson: q.estudo_reverso_visual_completo,
+    pedagogyJson: q.pedagogy ?? null,
     tags,
   };
 }

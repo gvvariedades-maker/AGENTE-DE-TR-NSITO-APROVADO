@@ -21,6 +21,8 @@ import { DesempenhoDonut } from "@/components/dashboard/desempenho-donut";
 import { DesempenhoDisciplinasLista } from "@/components/dashboard/desempenho-disciplinas-lista";
 import { PainelEspelhoResumo } from "@/components/dashboard/painel-espelho-resumo";
 import { SimuladosHistoricoList } from "@/components/dashboard/simulados-historico-list";
+import { MasteryDebugPanel } from "@/components/dashboard/mastery-debug-panel";
+import { PainelDominioEvidenciasCard } from "@/components/dashboard/painel-dominio-evidencias";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -36,6 +38,10 @@ import {
   parsePeriodoDesempenho,
   periodoSince,
 } from "@/lib/desempenho-periodo";
+import {
+  getPainelDominioEvidencias,
+  getUserMasteryDebug,
+} from "@/lib/mastery";
 
 export const dynamic = "force-dynamic";
 
@@ -54,6 +60,7 @@ export default async function DesempenhoPage({
     reset?: string;
     periodo?: string;
     visao?: string;
+    debug?: string;
   }>;
 }) {
   const {
@@ -61,10 +68,12 @@ export default async function DesempenhoPage({
     reset,
     periodo: periodoRaw,
     visao: visaoRaw,
+    debug: debugRaw,
   } = await searchParams;
   const disciplinaFoco = parseDisciplina(disciplinaRaw);
   const periodo = parsePeriodoDesempenho(periodoRaw);
   const visao = parseVisaoDesempenho(visaoRaw);
+  const showMasteryDebug = debugRaw === "mastery";
   const isSimulados = visao === "simulados";
   const since = periodoSince(periodo);
   const periodoLabel = labelPeriodo(periodo);
@@ -74,8 +83,14 @@ export default async function DesempenhoPage({
     data: { user },
   } = await supabase.auth.getUser();
 
-  const { desempenho, simulados, retencao, topicosFoco } =
-    await loadDesempenhoPageResumo(user?.id, { since, disciplinaFoco });
+  const [{ desempenho, simulados, retencao, topicosFoco }, masteryDebug, dominioEvidencias] =
+    await Promise.all([
+      loadDesempenhoPageResumo(user?.id, { since, disciplinaFoco }),
+      showMasteryDebug && user?.id
+        ? getUserMasteryDebug(user.id)
+        : Promise.resolve(null),
+      getPainelDominioEvidencias(user?.id),
+    ]);
 
   const dadosAtivos = isSimulados ? simulados : desempenho;
   const { semaforo, overview } = dadosAtivos;
@@ -286,6 +301,8 @@ export default async function DesempenhoPage({
 
       {!isSimulados && (
         <>
+          <PainelDominioEvidenciasCard painel={dominioEvidencias} />
+
           <div className="grid gap-4 md:grid-cols-5">
             <ProximoPassoCard
               className="md:col-span-2"
@@ -322,6 +339,8 @@ export default async function DesempenhoPage({
       )}
 
       <ResetDesempenhoForm temHistorico={temHistorico} />
+
+      {masteryDebug && <MasteryDebugPanel summary={masteryDebug} />}
     </div>
   );
 }

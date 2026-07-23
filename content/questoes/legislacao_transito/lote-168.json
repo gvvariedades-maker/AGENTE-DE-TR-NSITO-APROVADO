@@ -53,7 +53,11 @@
       "far_transfer": "Obra na via que perturba circulação — art. 95 exige permissão prévia do órgão com circunscrição, outro dispositivo.",
       "o_que_nao_muda": "Pólo atrativo exige anuência prévia cumulativa com estacionamento e acessos no projeto; art. 92 vetado não fundamento jurídico.",
       "calibracao_corpus": "ok",
-      "eficacia_pos_aula": ["E1", "E2", "E3"]
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
     },
     "tags": [
       "engenharia_transito",
@@ -78,7 +82,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito A: dispositivo vetado não dispensa anuência; projeto com estacionamento e acessos ainda exige anuência prévia da STTP.",
-            "destaques": ["Gabarito A", "vetado", "anuência"]
+            "destaques": [
+              "Gabarito A",
+              "vetado",
+              "anuência"
+            ]
           }
         },
         {
@@ -87,11 +95,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Licença sem anuência prévia da STTP?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Irregular — gabarito A", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Licença sem anuência prévia da STTP?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Irregular — gabarito A",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim — centro de convenções" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim — centro de convenções"
+              }
             ]
           }
         },
@@ -101,7 +121,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "92 = VETADO · 93 = anuência + estacionamento + acessos · 91 = CONTRAN normatiza.",
-            "destaques": ["VETADO", "anuência", "CONTRAN"]
+            "destaques": [
+              "VETADO",
+              "anuência",
+              "CONTRAN"
+            ]
           }
         }
       ],
@@ -141,8 +165,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A.\n\nB — invoca dispositivo vetado para validar licença sem anuência da STTP.\nC — anuência exclusiva do CONTRAN no centro de convenções.\nD — estacionamento e acessos dispensam anuência prévia.\n\nPegadinha: projeto completo não substitui anuência prévia — dispositivo invocado não está em vigor.",
-            "destaques": ["Gabarito A", "vetado", "centro de convenções"]
+            "texto": "Gabarito A. B — invoca dispositivo vetado para validar licença sem anuência da STTP.\nC — anuência exclusiva do CONTRAN no centro de convenções.\nD — estacionamento e acessos dispensam anuência prévia. Pegadinha: projeto completo não substitui anuência prévia — dispositivo invocado não está em vigor.",
+            "destaques": [
+              "Gabarito A",
+              "vetado",
+              "centro de convenções"
+            ]
           }
         },
         {
@@ -151,7 +179,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PÓLO ATRATIVO: empreendimento que concentra fluxo — centro de convenções em via arterial.\n\nDISPOSITIVO VETADO: art. 92 sem vigência — não pode fundamentar aprovação sem anuência de trânsito.\n\nREQUISITOS CUMULATIVOS: anuência prévia + estacionamento + acessos no projeto — todos exigidos para pólo atrativo.",
-            "destaques": ["PÓLO", "VETADO", "CUMULATIVOS"]
+            "destaques": [
+              "PÓLO",
+              "VETADO",
+              "CUMULATIVOS"
+            ]
           }
         },
         {
@@ -161,13 +193,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Pólo atrativo licenciado sem anuência da STTP?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Fundamento invoca dispositivo vetado?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Irregular — gabarito A", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Pólo atrativo licenciado sem anuência da STTP?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Fundamento invoca dispositivo vetado?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Irregular — gabarito A",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — centro de convenções" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — dispositivo vetado invocado" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — centro de convenções"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — dispositivo vetado invocado"
+              }
             ]
           }
         },
@@ -177,11 +229,26 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Requisito", "No caso"],
+            "titulo_colunas": [
+              "Requisito",
+              "No caso"
+            ],
             "linhas": [
-              { "faixa": "Anuência prévia da STTP", "classificacao": "Ausente — irregular", "destaque": true },
-              { "faixa": "Área de estacionamento", "classificacao": "Presente no projeto", "destaque": false },
-              { "faixa": "Vias de acesso no projeto", "classificacao": "Presentes — não dispensam anuência", "destaque": true }
+              {
+                "faixa": "Anuência prévia da STTP",
+                "classificacao": "Ausente — irregular",
+                "destaque": true
+              },
+              {
+                "faixa": "Área de estacionamento",
+                "classificacao": "Presente no projeto",
+                "destaque": false
+              },
+              {
+                "faixa": "Vias de acesso no projeto",
+                "classificacao": "Presentes — não dispensam anuência",
+                "destaque": true
+              }
             ]
           }
         },
@@ -191,7 +258,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o jurídico pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o jurídico pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Estacionamento e acessos dispensam anuência da STTP",
@@ -210,7 +280,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — regra_excecao",
@@ -233,13 +306,31 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do centro de convenções", "Avaliação"],
+            "colunas": [
+              "Fato do centro de convenções",
+              "Avaliação"
+            ],
             "linhas": [
-              ["Pólo atrativo de trânsito", "Aplica art. 93"],
-              ["Estacionamento e acessos no projeto", "Presentes — não dispensam anuência"],
-              ["Licença sem anuência da STTP", "Irregular"],
-              ["Invocação do art. 92", "Dispositivo vetado — isca"],
-              ["Resultado", "Alternativa A"]
+              [
+                "Pólo atrativo de trânsito",
+                "Aplica art. 93"
+              ],
+              [
+                "Estacionamento e acessos no projeto",
+                "Presentes — não dispensam anuência"
+              ],
+              [
+                "Licença sem anuência da STTP",
+                "Irregular"
+              ],
+              [
+                "Invocação do art. 92",
+                "Dispositivo vetado — isca"
+              ],
+              [
+                "Resultado",
+                "Alternativa A"
+              ]
             ]
           }
         },
@@ -249,11 +340,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Papel no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Papel no caso"
+            ],
             "linhas": [
-              ["Art. 92 — vetado", "Sem vigência — não fundamento para dispensar anuência"],
-              ["Art. 93", "Exige anuência prévia + estacionamento + acessos — gabarito A"],
-              ["Art. 91 — CONTRAN", "Normatiza engenharia de tráfego — não substitui anuência local"]
+              [
+                "Art. 92 — vetado",
+                "Sem vigência — não fundamento para dispensar anuência"
+              ],
+              [
+                "Art. 93",
+                "Exige anuência prévia + estacionamento + acessos — gabarito A"
+              ],
+              [
+                "Art. 91 — CONTRAN",
+                "Normatiza engenharia de tráfego — não substitui anuência local"
+              ]
             ]
           }
         },
@@ -300,7 +403,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "92 = VETADO · 93 = anuência + estacionamento + acessos · 91 = CONTRAN normatiza, não anuencia.\n\nNear: arena com estacionamento e acessos mas sem anuência da STTP — mesmo regime cumulativo.\nFar: obra na via que perturba circulação — art. 95 exige permissão prévia do órgão da via.\nNão muda: pólo atrativo exige anuência prévia cumulativa; dispositivo vetado não fundamento jurídico.\nCadeia: vizinho = art. 93 (requisitos do pólo atrativo).",
-            "destaques": ["VETADO", "anuência", "art. 95"]
+            "destaques": [
+              "VETADO",
+              "anuência",
+              "art. 95"
+            ]
           }
         }
       ],

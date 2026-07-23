@@ -45,7 +45,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "II e III corretas. I restringe LIMPE à direta — falsa. A compra I falsa; B para em II; D marca todas corretas.",
-            "destaques": ["LIMPE", "STTP", "indireta"]
+            "destaques": [
+              "LIMPE",
+              "STTP",
+              "indireta"
+            ]
           }
         },
         {
@@ -54,9 +58,21 @@
           "tipo": "matriz_assertivas",
           "conteudo": {
             "itens": [
-              { "id": "I", "texto": "LIMPE só na direta — ERRADA", "correto": false },
-              { "id": "II", "texto": "STTP na direta — correta", "correto": true },
-              { "id": "III", "texto": "EP/SEM indireta + privado — correta", "correto": true }
+              {
+                "id": "I",
+                "texto": "LIMPE só na direta — ERRADA",
+                "correto": false
+              },
+              {
+                "id": "II",
+                "texto": "STTP na direta — correta",
+                "correto": true
+              },
+              {
+                "id": "III",
+                "texto": "EP/SEM indireta + privado — correta",
+                "correto": true
+              }
             ],
             "gabarito_resumo": "II e III → alternativa C"
           }
@@ -66,7 +82,10 @@
           "titulo": "Assertiva-isca: I",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a I afirma ✗", "Alcance correto ✓"],
+            "colunas": [
+              "O que a I afirma ✗",
+              "Alcance correto ✓"
+            ],
             "linhas": [
               [
                 "Princípios só na administração direta",
@@ -98,7 +117,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "LIMPE = direta E indireta | STTP = direta | EP/SEM = indireta + regime privado.",
-            "destaques": ["LIMPE", "STTP", "EP/SEM"]
+            "destaques": [
+              "LIMPE",
+              "STTP",
+              "EP/SEM"
+            ]
           }
         }
       ],
@@ -120,7 +143,10 @@
       "meta": {
         "padrao_familia": "B_assertivas",
         "pegadinha_em_uma_frase": "I restringe LIMPE à administração direta, excluindo autarquias e empresas estatais",
-        "eixos_legais": ["CF_art_37_caput", "CF_art_173_1_II"],
+        "eixos_legais": [
+          "CF_art_37_caput",
+          "CF_art_173_1_II"
+        ],
         "isca_por_alternativa": {
           "A": "valida I falsa que nega LIMPE na indireta junto com III correta",
           "B": "marca só II sobre STTP na direta e nega III correta sobre EP/SEM na indireta",
@@ -134,8 +160,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C (II e III corretas).\n\nA — comprou I falsa (LIMPE só na direta) com III.\nB — parou em II; negou III sobre EP/SEM na indireta com regime privado.\nD — comprou I falsa e marcou todas corretas.\n\nPegadinha: princípios constitucionais vinculam direta e indireta — não só secretarias.",
-            "destaques": ["Gabarito C", "LIMPE", "STTP"]
+            "texto": "Gabarito C (II e III corretas). A — comprou I falsa (LIMPE só na direta) com III.\nB — parou em II; negou III sobre EP/SEM na indireta com regime privado.\nD — comprou I falsa e marcou todas corretas. Pegadinha: princípios constitucionais vinculam direta e indireta — não só secretarias.",
+            "destaques": [
+              "Gabarito C",
+              "LIMPE",
+              "STTP"
+            ]
           }
         },
         {
@@ -144,7 +174,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "ADMINISTRAÇÃO DIRETA: órgãos integrados ao ente, sem personalidade jurídica própria (STTP).\n\nADMINISTRAÇÃO INDIRETA: entidades com personalidade jurídica despersonalizadas do ente (autarquia, fundação, EP, SEM).\n\nREGIME PRIVADO: EP e SEM submetem-se ao direito das empresas privadas na gestão empresarial — distinto das autarquias.",
-            "destaques": ["DIRETA", "INDIRETA", "REGIME PRIVADO"]
+            "destaques": [
+              "DIRETA",
+              "INDIRETA",
+              "REGIME PRIVADO"
+            ]
           }
         },
         {
@@ -180,13 +214,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "A I exclui LIMPE da indireta?", "tipo": "pergunta" },
-              { "id": "p2", "label": "II e III batem com direta e indireta?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito C — II e III corretas", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "A I exclui LIMPE da indireta?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "II e III batem com direta e indireta?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito C — II e III corretas",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — falsa" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — falsa"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -196,7 +250,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a I afirma ✗", "Alcance correto ✓"],
+            "colunas": [
+              "O que a I afirma ✗",
+              "Alcance correto ✓"
+            ],
             "linhas": [
               [
                 "Princípios só na administração direta",
@@ -211,7 +268,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — competencia_snt",
@@ -234,12 +294,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Assertiva", "Veredito"],
+            "colunas": [
+              "Assertiva",
+              "Veredito"
+            ],
             "linhas": [
-              ["I — LIMPE só na direta", "Falsa — caput alcança indireta"],
-              ["II — STTP na direta", "Correta — órgão integrado"],
-              ["III — EP/SEM na indireta", "Correta — regime privado"],
-              ["Resultado", "II + III = alternativa C"]
+              [
+                "I — LIMPE só na direta",
+                "Falsa — caput alcança indireta"
+              ],
+              [
+                "II — STTP na direta",
+                "Correta — órgão integrado"
+              ],
+              [
+                "III — EP/SEM na indireta",
+                "Correta — regime privado"
+              ],
+              [
+                "Resultado",
+                "II + III = alternativa C"
+              ]
             ]
           }
         },
@@ -249,11 +324,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Modalidade", "Exemplo / traço"],
+            "colunas": [
+              "Modalidade",
+              "Exemplo / traço"
+            ],
             "linhas": [
-              ["Administração direta", "STTP — sem CNPJ próprio, subordinada ao Prefeito"],
-              ["Administração indireta", "Autarquia, fundação, EP, SEM — personalidade jurídica"],
-              ["Pegadinha I", "LIMPE não se limita à direta — refuta a assertiva falsa"]
+              [
+                "Administração direta",
+                "STTP — sem CNPJ próprio, subordinada ao Prefeito"
+              ],
+              [
+                "Administração indireta",
+                "Autarquia, fundação, EP, SEM — personalidade jurídica"
+              ],
+              [
+                "Pegadinha I",
+                "LIMPE não se limita à direta — refuta a assertiva falsa"
+              ]
             ]
           }
         },
@@ -311,8 +398,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "LIMPE = direta E indireta | STTP = direta | EP/SEM = indireta + regime privado.\n\nNear-transfer: se a banca trocar III por \"autarquia municipal submete-se integralmente ao regime jurídico das empresas privadas\", a assertiva fica falsa — autarquia segue direito público; regime privado é de EP e SEM.",
-            "destaques": ["LIMPE", "STTP", "near-transfer"]
+            "texto": "LIMPE = direta E indireta | STTP = direta | EP/SEM = indireta + regime privado.\n\nNear-transfer: se a banca trocar III por \"autarquia municipal submete-se integralmente ao regime jurídico das empresas privadas\", a assertiva fica falsa — autarquia segue direito público; regime privado é de EP e SEM.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "LIMPE",
+              "STTP",
+              "near-transfer"
+            ]
           }
         }
       ],
@@ -333,6 +424,17 @@
       "limpe",
       "sttp",
       "cf_173"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se a banca trocar III por \"autarquia municipal submete-se integralmente ao regime jurídico das empresas privadas\", a assertiva fica falsa — autarquia segue direito público; regime privado é de EP e SEM.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "LIMPE = direta E indireta",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

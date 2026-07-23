@@ -8,7 +8,7 @@ corpus_base: 168 questões IDECAN (análise 2026-07-10)
 cobertura_banco: 105 questões em content/questoes/legislacao_transito/ (atualizado 2026-07-10)
 fonte_legal: conteúdo/legislação federal/lei-9503-ctb.html + conteúdo/resoluções CONTRAN/ + conteúdo/senatran/
 prevalece: Retificação 01/2026 do Anexo I
-versao: 1.1
+versao: 1.2
 ---
 
 # Perfil vertical — Legislação de Trânsito
@@ -310,7 +310,22 @@ Ordem recomendada para próximos lotes (`examinador-idecan` + `estudo-reverso-vi
 
 ---
 
+## 13. Paridade IDECAN — coleta Tec Concursos
+
+**Status:** 🟢 **Manutenção** — Corpus local **168 Q** já atinge meta **80–120** para DNA estatístico. Prioridade é **cobertura edital** (lacunas CONTRAN/SENATRAN no banco), não nova coleta em massa.
+
+| Métrica | Valor |
+|---------|-------|
+| Corpus local | **168** questões (CTB + CONTRAN) |
+| Meta paridade (camada 1) | ✅ Atingida |
+| Tec (referência) | Buscar `Legislação de Trânsito` ou `Código de Trânsito Brasileiro (CTB)` + IDECAN |
+
+**Quando reexportar do Tec:** apenas para eixos novos pós-retificação (ex.: Res. 1013, 1020, 996) se `validate:indistinguibilidade` reprovar lote inédito. Fluxo: ver [perfil-banca.md](../perfil-banca.md) § Paridade IDECAN.
+
+---
+
 ## Changelog
 
+- **1.2** (2026-07-19) — §13 Paridade IDECAN: corpus OK; foco em lacunas edital, não coleta massiva.
 - **1.1** (2026-07-10) — Front-matter alinhado ao corpus 2026-07-10; cobertura corrigida 106→105; campo `grupo` adicionado.
 - **1.0** (2026-07-10) — Perfil inicial: corpus 168 Q IDECAN; sub-mecanismos de trânsito; 14 microtópicos CTB + 22 CONTRAN + SENATRAN; cobertura 106 Q do banco; fila ROI; mapa visual Famílias A–D.

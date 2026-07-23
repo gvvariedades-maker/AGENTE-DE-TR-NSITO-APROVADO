@@ -3,8 +3,8 @@
     "disciplina": "legislacao_transito",
     "topico": "CONTRAN_1013_free_flow",
     "tipo": "caso_pratico",
-    "estilo_idecan": "caso_pratico",
-    "dificuldade": 3,
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
     "fundamento_slug": "CONTRAN_1013_art_9",
     "enunciado": "Condutor com veículo licenciado em Campina Grande/PB foi autuado por evasão de pedágio (CTB, art. 209-A) após passagem em sistema free flow na BR-230 sem quitar a tarifa no prazo do art. 7º da Res. CONTRAN nº 1.013/2024. Quitou integralmente a multa de trânsito no DETRAN-PB e questiona se ainda deve pagar a tarifa de pedágio pendente à concessionária. Considerando a Resolução CONTRAN nº 1.013/2024, assinale a alternativa CORRETA:",
     "alternativas": {
@@ -113,10 +113,10 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — achou que multa quitada apaga tarifa: §4º diz o contrário.\nC — atribuiu cobrança só à STTP: tarifa é da concessionária/canais válidos.\nD — reiniciou prazo de 30 dias no pagamento da multa: marco é a passagem (art. 7º).\n\nFixe: sanção de trânsito e tarifa de pedágio são dívidas separadas.",
+            "texto": "Gabarito B.\nA — achou que multa quitada apaga tarifa: parágrafo diz o contrário.\nC — atribuiu cobrança só à STTP: tarifa é da concessionária/canais válidos.\nD — reiniciou prazo de 30 dias no pagamento da multa: marco é a passagem (dispositivo legal).\nFixe: sanção de trânsito e tarifa de pedágio são dívidas separadas.",
             "destaques": [
               "Gabarito B",
-              "§4º",
+              "parágrafo",
               "tarifa"
             ]
           }
@@ -317,8 +317,9 @@
             "trechos_grifados": [
               {
                 "inicio": 77,
-                "fim": 143,
-                "motivo": "contraste — multa paga não elimina tarifa"
+                "fim": 147,
+                "motivo": "contraste — multa paga não elimina tarifa",
+                "texto_grifado": "não desobriga o usuário de realizar o pagamento das tarifas de pedágio"
               }
             ]
           }
@@ -335,7 +336,8 @@
               {
                 "inicio": 98,
                 "fim": 108,
-                "motivo": "mapa — sanção de trânsito distinta da tarifa"
+                "motivo": "mapa — sanção de trânsito distinta da tarifa",
+                "texto_grifado": "art. 209-A"
               }
             ]
           }
@@ -346,7 +348,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "MULTA PAGA ≠ TARIFA QUITADA (§4º).\n30 dias da PASSAGEM para tarifa (art. 7º).\nContestação não para o relógio (§4º do art. 7º).\n\nSe só contestasse a cobrança sem pagar multa, o prazo da tarifa seguiria correndo.",
+            "texto": "MULTA PAGA ≠ TARIFA QUITADA (§4º).\n30 dias da PASSAGEM para tarifa (art. 7º).\nContestação não para o relógio (§4º do art. 7º).\n\nSe só contestasse a cobrança sem pagar multa, o prazo da tarifa seguiria correndo.\nNear: Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "§4º",
               "30 dias",
@@ -375,6 +377,22 @@
           "D": "prazo reinicia com multa — numero_vizinho"
         }
       }
+    },
+    "meta": {
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "competencia_snt",
+        "regra_excecao"
+      ],
+      "near_transfer": "Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "MULTA PAGA ≠ TARIFA QUITADA · art. 9º §4º · 30 dias da passagem (art. 7º).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     }
   }
 ]

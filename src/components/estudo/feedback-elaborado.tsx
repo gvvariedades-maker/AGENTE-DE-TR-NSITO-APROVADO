@@ -19,6 +19,8 @@ interface FeedbackElaboradoProps {
   comentario: ComentarioQuestao;
   dominioAlcancado?: boolean;
   tipoErroLabel?: string;
+  /** Frase específica da alternativa (diagnóstico Fase 1). */
+  diagnosticoFrase?: string | null;
 }
 
 /**
@@ -31,6 +33,7 @@ export function FeedbackElaborado({
   comentario,
   dominioAlcancado,
   tipoErroLabel,
+  diagnosticoFrase,
 }: FeedbackElaboradoProps) {
   const [passo, setPasso] = useState(0);
 
@@ -166,6 +169,11 @@ export function FeedbackElaborado({
             </Badge>
           )}
         </div>
+        {diagnosticoFrase && (
+          <p className="text-xs leading-relaxed text-muted-foreground">
+            {diagnosticoFrase}
+          </p>
+        )}
         <div className="flex gap-1 pt-1">
           {etapas.map((_, i) => (
             <div

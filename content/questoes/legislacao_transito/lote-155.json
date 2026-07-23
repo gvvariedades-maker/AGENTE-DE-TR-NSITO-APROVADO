@@ -27,8 +27,7 @@
       "estudo_reverso": [
         "Res. CONTRAN 432/2013 art. 8",
         "Res. CONTRAN 432/2013 art. 5",
-        "CTB art. 165-A",
-        "CTB art. 277"
+        "CTB art. 165-A"
       ]
     },
     "meta": {
@@ -55,7 +54,11 @@
       "far_transfer": "Vítima fatal de acidente — art. 11 impõe exame de alcoolemia obrigatório, cenário distinto de blitz com sinais.",
       "o_que_nao_muda": "Campos do AIT seguem o meio de prova utilizado; sinais/termo não exigem dados do etilômetro; recusa cumula 165-A.",
       "calibracao_corpus": "ok",
-      "eficacia_pos_aula": ["E1", "E2", "E3"]
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
     },
     "tags": [
       "embriaguez",
@@ -78,7 +81,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito B: AIT por sinais/termo não exige dados do etilômetro — art. 8 inc. II; recusa cumula 165-A.",
-            "destaques": ["Gabarito B", "inc. II", "165-A"]
+            "destaques": [
+              "Gabarito B",
+              "inc. II",
+              "165-A"
+            ]
           }
         },
         {
@@ -86,9 +93,15 @@
           "titulo": "Etilômetro obrigatório no AIT?",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Defesa ✗", "Resolução ✓"],
+            "colunas": [
+              "Defesa ✗",
+              "Resolução ✓"
+            ],
             "linhas": [
-              ["Falta dados do aparelho = nulo", "Inc. II cobre sinais/termo — inc. III só se houve teste"]
+              [
+                "Falta dados do aparelho = nulo",
+                "Inc. II cobre sinais/termo — inc. III só se houve teste"
+              ]
             ]
           }
         },
@@ -98,7 +111,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "AIT = CAMPO POR PROVA · sinais → inc. II · etilômetro → inc. III · recusa → inc. IV + 165-A.",
-            "destaques": ["CAMPO POR PROVA", "inc. II", "165-A"]
+            "destaques": [
+              "CAMPO POR PROVA",
+              "inc. II",
+              "165-A"
+            ]
           }
         }
       ],
@@ -138,8 +155,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — dados do etilômetro seriam obrigatórios mesmo com prova por sinais.\nC — só subsistiria a recusa, sem embriaguez pelos sinais do termo.\nD — termo inválido por lavrar embriaguez antes de esgotar teste com aparelho.\n\nPegadinha: campos do AIT variam conforme o meio de prova usado.",
-            "destaques": ["Gabarito B", "nulidade", "etilômetro"]
+            "texto": "Gabarito B. A — dados do etilômetro seriam obrigatórios mesmo com prova por sinais.\nC — só subsistiria a recusa, sem embriaguez pelos sinais do termo.\nD — termo inválido por lavrar embriaguez antes de esgotar teste com aparelho. Pegadinha: campos do AIT variam conforme o meio de prova usado.",
+            "destaques": [
+              "Gabarito B",
+              "nulidade",
+              "etilômetro"
+            ]
           }
         },
         {
@@ -148,7 +169,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CAMPO POR PROVA: cada inciso do art. 8º cobre o meio utilizado — sinais, etilômetro ou encaminhamento.\n\nTERMO ANEXO II: descrição dos sinais que acompanha o AIT — art. 5º, §2.\n\nRECUSA AUTÔNOMA: negativa ao teste gera infração própria do art. 165-A — art. 277, §3.",
-            "destaques": ["CAMPO POR PROVA", "ANEXO II", "165-A"]
+            "destaques": [
+              "CAMPO POR PROVA",
+              "ANEXO II",
+              "165-A"
+            ]
           }
         },
         {
@@ -158,13 +183,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Prova por sinais/termo Anexo II?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Houve recusa ao etilômetro?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Inc. II + inc. IV + 165-A — gabarito B", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Prova por sinais/termo Anexo II?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Houve recusa ao etilômetro?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Inc. II + inc. IV + 165-A — gabarito B",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — caso da blitz" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — recusa registrada" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — caso da blitz"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — recusa registrada"
+              }
             ]
           }
         },
@@ -174,12 +219,28 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Meio de prova", "Campo exigido no AIT"],
+            "titulo_colunas": [
+              "Meio de prova",
+              "Campo exigido no AIT"
+            ],
             "linhas": [
-              { "faixa": "Sinais / termo Anexo II", "classificacao": "Inciso II — art. 5º", "destaque": true },
-              { "faixa": "Teste de etilômetro", "classificacao": "Inciso III — marca, MR, VC" },
-              { "faixa": "Encaminhamento a exame", "classificacao": "Inciso I — referência ao procedimento" },
-              { "faixa": "Recusa, fotos, vídeos", "classificacao": "Inciso IV — conforme o caso" }
+              {
+                "faixa": "Sinais / termo Anexo II",
+                "classificacao": "Inciso II — art. 5º",
+                "destaque": true
+              },
+              {
+                "faixa": "Teste de etilômetro",
+                "classificacao": "Inciso III — marca, MR, VC"
+              },
+              {
+                "faixa": "Encaminhamento a exame",
+                "classificacao": "Inciso I — referência ao procedimento"
+              },
+              {
+                "faixa": "Recusa, fotos, vídeos",
+                "classificacao": "Inciso IV — conforme o caso"
+              }
             ]
           }
         },
@@ -189,7 +250,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Defesa ✗", "Resolução ✓"],
+            "colunas": [
+              "Defesa ✗",
+              "Resolução ✓"
+            ],
             "linhas": [
               [
                 "AIT nulo sem marca/modelo/MR do aparelho",
@@ -208,7 +272,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -231,12 +298,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso", "Consequência"],
+            "colunas": [
+              "Fato do caso",
+              "Consequência"
+            ],
             "linhas": [
-              ["Conjunto de sinais + termo Anexo II", "Inciso II do art. 8º"],
-              ["Recusa ao etilômetro registrada", "Inciso IV + art. 165-A"],
-              ["Ausência de dados do aparelho", "Regular — não houve teste"],
-              ["Resultado", "Alternativa B"]
+              [
+                "Conjunto de sinais + termo Anexo II",
+                "Inciso II do art. 8º"
+              ],
+              [
+                "Recusa ao etilômetro registrada",
+                "Inciso IV + art. 165-A"
+              ],
+              [
+                "Ausência de dados do aparelho",
+                "Regular — não houve teste"
+              ],
+              [
+                "Resultado",
+                "Alternativa B"
+              ]
             ]
           }
         },
@@ -246,12 +328,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Inciso", "Quando preencher"],
+            "colunas": [
+              "Inciso",
+              "Quando preencher"
+            ],
             "linhas": [
-              ["Inciso II — sinais/termo", "Prova por art. 5º e Anexo II — caso da blitz"],
-              ["Inciso III — etilômetro", "Somente se houve teste com aparelho"],
-              ["Inciso IV — recusa", "Registrar negativa ao procedimento"],
-              ["Vizinho — art. 3º, §3º", "Com sinais, autua sem aguardar sangue"]
+              [
+                "Inciso II — sinais/termo",
+                "Prova por art. 5º e Anexo II — caso da blitz"
+              ],
+              [
+                "Inciso III — etilômetro",
+                "Somente se houve teste com aparelho"
+              ],
+              [
+                "Inciso IV — recusa",
+                "Registrar negativa ao procedimento"
+              ],
+              [
+                "Vizinho — art. 3º, §3º",
+                "Com sinais, autua sem aguardar sangue"
+              ]
             ]
           }
         },
@@ -298,7 +395,12 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "AIT = CAMPO POR PROVA · sinais → inc. II · etilômetro → inc. III · recusa → inc. IV + 165-A.\n\nNear: etilômetro MR 0,12 mg/L — inciso III passa a exigir marca, modelo, série e medição.\nFar: vítima fatal — art. 11 impõe exame obrigatório, cenário distinto.\nNão muda: campos seguem o meio de prova; sinais não exigem dados do aparelho.\nCadeia: vizinho = art. 3º, §3º (autua sem aguardar sangue com sinais).",
-            "destaques": ["CAMPO POR PROVA", "inc. III", "art. 11", "art. 3º"]
+            "destaques": [
+              "CAMPO POR PROVA",
+              "inc. III",
+              "art. 11",
+              "art. 3º"
+            ]
           }
         }
       ],

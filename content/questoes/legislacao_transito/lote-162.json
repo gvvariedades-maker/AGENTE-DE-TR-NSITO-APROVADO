@@ -3,7 +3,7 @@
     "disciplina": "legislacao_transito",
     "topico": "CONTRAN_914_semirreboque",
     "tipo": "caso_pratico",
-    "estilo_idecan": "pegadinha_numero",
+    "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 4,
     "fundamento_slug": "CONTRAN_914_art_2",
     "enunciado": "Em blitz da STTP em Campina Grande/PB, fiscal aborda condutor de motoneta com motor de 118 cm³ de cilindrada tracionando semirreboque especialmente projetado para motocicletas, homologado pelo órgão máximo executivo de trânsito da União, com todos os equipamentos obrigatórios previstos na Resolução CONTRAN nº 914/2022 e dimensões dentro dos limites legais. O CRLV-e registra CMT de 120 kg; a carga tracionada (semirreboque vazio de 50 kg + carga de 40 kg) totaliza 90 kg. Considerando a Resolução CONTRAN nº 914/2022, assinale a alternativa CORRETA:",
@@ -27,9 +27,7 @@
       "estudo_reverso": [
         "Res. CONTRAN 914/2022 art. 2",
         "Res. CONTRAN 914/2022 art. 4",
-        "Res. CONTRAN 914/2022 art. 5",
-        "CTB art. 244",
-        "CTB art. 230"
+        "Res. CONTRAN 914/2022 art. 5"
       ]
     },
     "meta": {
@@ -55,7 +53,11 @@
       "far_transfer": "Automóvel rebocando trailer sem freio de serviço — CTB art. 230, VII, outro dispositivo de equipamento.",
       "o_que_nao_muda": "Homologação e equipamentos conformes não substituem o requisito de motor com mais de 120 cm³.",
       "calibracao_corpus": "ok",
-      "eficacia_pos_aula": ["E1", "E2", "E3"]
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
     },
     "tags": [
       "semirreboque",
@@ -78,7 +80,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Motoneta 118 cm³ com semirreboque homologado e CMT ok — mas cilindrada abaixo do mínimo.\n\nGabarito C: art. 244, VI por violar art. 2º (>120 cm³).",
-            "destaques": ["118 cm³", "homologado", "art. 244, VI"]
+            "destaques": [
+              "118 cm³",
+              "homologado",
+              "art. 244, VI"
+            ]
           }
         },
         {
@@ -87,11 +93,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Motor com mais de 120 cm³?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Art. 244, VI — art. 2º violado", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Motor com mais de 120 cm³?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Art. 244, VI — art. 2º violado",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Não — 118 cm³" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Não — 118 cm³"
+              }
             ]
           }
         },
@@ -101,7 +119,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": ">120 cm³ é porta de entrada.\nHomologado + CMT ok ≠ cilindrada dispensada.\nArt. 4º = via — não reduz cilindrada.",
-            "destaques": [">120 cm³", "homologado", "art. 4º"]
+            "destaques": [
+              ">120 cm³",
+              "homologado",
+              "art. 4º"
+            ]
           }
         }
       ],
@@ -140,8 +162,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C.\n\nA — homologação e equipamentos dispensam cilindrada mínima.\nB — equipamento em desacordo quando todos estão presentes.\nD — STTP autoriza motonetas até 120 cm³ via competência local.\n\nPegadinha: 118 cm³ não atende mais de 120 cm³ — demais requisitos não salvam.",
-            "destaques": ["Gabarito C", "118 cm³", "homologado"]
+            "texto": "Gabarito C. A — homologação e equipamentos dispensam cilindrada mínima.\nB — equipamento em desacordo quando todos estão presentes.\nD — STTP autoriza motonetas até 120 cm³ via competência local. Pegadinha: 118 cm³ não atende mais de 120 cm³ — demais requisitos não salvam.",
+            "destaques": [
+              "Gabarito C",
+              "118 cm³",
+              "homologado"
+            ]
           }
         },
         {
@@ -150,7 +176,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CILINDRADA: volume do motor em cm³ — art. 2º exige mais de 120 cm³ para tracionar semirreboque.\n\nHOMOLOGAÇÃO: aprovação pelo órgão máximo executivo de trânsito da União — requisito cumulativo, não substitui cilindrada.\n\nCMT: capacidade máxima de tração no CRLV-e — 90 kg tracionados estão dentro dos 120 kg, mas cilindrada falhou antes.",
-            "destaques": ["CILINDRADA", "HOMOLOGAÇÃO", "CMT"]
+            "destaques": [
+              "CILINDRADA",
+              "HOMOLOGAÇÃO",
+              "CMT"
+            ]
           }
         },
         {
@@ -160,13 +190,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Motor com mais de 120 cm³?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Homologação e CMT respeitadas?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Cilindrada insuficiente — gabarito C", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Motor com mais de 120 cm³?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Homologação e CMT respeitadas?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Cilindrada insuficiente — gabarito C",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Não — 118 cm³" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — mas cilindrada já falhou" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Não — 118 cm³"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — mas cilindrada já falhou"
+              }
             ]
           }
         },
@@ -176,11 +226,24 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Violação", "CTB"],
+            "titulo_colunas": [
+              "Violação",
+              "CTB"
+            ],
             "linhas": [
-              { "faixa": "Sem equipamento obrigatório", "classificacao": "Art. 230, IX — inciso I" },
-              { "faixa": "Equipamento em desacordo", "classificacao": "Art. 230, X — inciso II" },
-              { "faixa": "Art. 2º (cilindrada, homologação, CMT)", "classificacao": "Art. 244, VI — inciso III", "destaque": true }
+              {
+                "faixa": "Sem equipamento obrigatório",
+                "classificacao": "Art. 230, IX — inciso I"
+              },
+              {
+                "faixa": "Equipamento em desacordo",
+                "classificacao": "Art. 230, X — inciso II"
+              },
+              {
+                "faixa": "Art. 2º (cilindrada, homologação, CMT)",
+                "classificacao": "Art. 244, VI — inciso III",
+                "destaque": true
+              }
             ]
           }
         },
@@ -190,7 +253,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Homologado + equipado = pode tracionar",
@@ -213,7 +279,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -236,13 +305,31 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato da blitz STTP", "Avaliação"],
+            "colunas": [
+              "Fato da blitz STTP",
+              "Avaliação"
+            ],
             "linhas": [
-              ["Motoneta 118 cm³", "Abaixo do mínimo >120 cm³ — falha art. 2º"],
-              ["Semirreboque homologado e equipado", "Atende art. 2º, I e II e art. 3º"],
-              ["90 kg tracionados ≤ CMT 120 kg", "CMT ok — não é o problema"],
-              ["Dimensões dentro dos limites", "Art. 3º, III atendido"],
-              ["Resultado", "Alternativa C — art. 244, VI"]
+              [
+                "Motoneta 118 cm³",
+                "Abaixo do mínimo >120 cm³ — falha art. 2º"
+              ],
+              [
+                "Semirreboque homologado e equipado",
+                "Atende art. 2º, I e II e art. 3º"
+              ],
+              [
+                "90 kg tracionados ≤ CMT 120 kg",
+                "CMT ok — não é o problema"
+              ],
+              [
+                "Dimensões dentro dos limites",
+                "Art. 3º, III atendido"
+              ],
+              [
+                "Resultado",
+                "Alternativa C — art. 244, VI"
+              ]
             ]
           }
         },
@@ -252,12 +339,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Hipótese Res. 914/2022", "Tipificação CTB"],
+            "colunas": [
+              "Hipótese Res. 914/2022",
+              "Tipificação CTB"
+            ],
             "linhas": [
-              ["Falta equipamento obrigatório", "Art. 230, IX — art. 5º, I"],
-              ["Equipamento em desacordo", "Art. 230, X — art. 5º, II"],
-              ["Violação do art. 2º (cilindrada, CMT, homologação)", "Art. 244, VI — art. 5º, III"],
-              ["Art. 4º — circulação na via", "Competência local — não altera art. 2º"]
+              [
+                "Falta equipamento obrigatório",
+                "Art. 230, IX — art. 5º, I"
+              ],
+              [
+                "Equipamento em desacordo",
+                "Art. 230, X — art. 5º, II"
+              ],
+              [
+                "Violação do art. 2º (cilindrada, CMT, homologação)",
+                "Art. 244, VI — art. 5º, III"
+              ],
+              [
+                "Art. 4º — circulação na via",
+                "Competência local — não altera art. 2º"
+              ]
             ]
           }
         },
@@ -304,7 +406,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "914: >120 cm³ + homologado + CMT no CRLV-e.\n118 cm³ = art. 244, VI (art. 5º, III).\nArt. 4º = pode ou não circular na via — não reduz cilindrada.\n\nNear: motoneta 125 cm³ com mesma carga — atende cilindrada, mas ainda precisa homologação e CMT.\nFar: automóvel rebocando trailer sem freio — CTB art. 230, VII, outro dispositivo.\nNão muda: homologação e equipamentos não substituem motor com mais de 120 cm³.\nCadeia: vizinho = art. 3º (equipamentos e dimensões do semirreboque).",
-            "destaques": [">120 cm³", "art. 244, VI", "art. 3º"]
+            "destaques": [
+              ">120 cm³",
+              "art. 244, VI",
+              "art. 3º"
+            ]
           }
         }
       ],

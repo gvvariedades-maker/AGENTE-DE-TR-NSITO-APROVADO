@@ -3,15 +3,15 @@
     "disciplina": "legislacao_transito",
     "topico": "CTB_crimes_transito",
     "tipo": "caso_pratico",
-    "estilo_idecan": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 4,
     "fundamento_slug": "CTB_art_307",
     "enunciado": "Ricardo teve imposta penalidade de suspensão do direito de dirigir com fundamento no CTB e foi regularmente notificado. Durante a vigência da suspensão, agentes da STTP em Campina Grande o abordam conduzindo automóvel em via pública. Ricardo apresenta Carteira Nacional de Habilitação válida, mas com o direito de dirigir suspenso. Considerando o Código de Trânsito Brasileiro, assinale a alternativa CORRETA:",
     "alternativas": {
-      "A": "Configura apenas infração administrativa do art. 162, II, do CTB, com multa isolada, sem repercussão penal autônoma.",
+      "A": "No caso de Ricardo, com suspensão em vigor abordado pela STTP em Campina Grande, configura apenas infração administrativa do art. 162, II, do CTB, com multa isolada, sem repercussão penal autônoma.",
       "B": "Configura crime previsto no art. 307, com penas de detenção de seis meses a um ano, multa e nova imposição de idêntico prazo de suspensão.",
       "C": "Configura crime do art. 309, por dirigir sem habilitação válida, gerando perigo de dano.",
-      "D": "Impõe-se somente a penalidade de cassação da CNH prevista no art. 263, sem tipificação penal autônoma."
+      "D": "No caso de Ricardo, com suspensão em vigor abordado pela STTP em Campina Grande, impõe-se somente a penalidade de cassação da CNH prevista no art. 263, sem tipificação penal autônoma."
     },
     "gabarito": "B",
     "comentario": {
@@ -27,9 +27,7 @@
       "estudo_reverso": [
         "CTB art. 162",
         "CTB art. 256",
-        "CTB art. 263",
-        "CTB art. 307",
-        "CTB art. 309"
+        "CTB art. 263"
       ]
     },
     "estudo_reverso_visual": {
@@ -46,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Ricardo dirige com CNH suspensa em vigência. A banca troca crime do art. 307 por infração isolada do art. 162.",
-            "destaques": ["art. 307", "suspensão", "art. 162"]
+            "destaques": [
+              "art. 307",
+              "suspensão",
+              "art. 162"
+            ]
           }
         },
         {
@@ -54,11 +56,23 @@
           "titulo": "307 × 309 × 162",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Instituto", "Hipótese"],
+            "colunas": [
+              "Instituto",
+              "Hipótese"
+            ],
             "linhas": [
-              ["Art. 307", "Violar suspensão ou proibição de habilitar-se"],
-              ["Art. 309", "Dirigir sem CNH ou com direito cassado"],
-              ["Art. 162, II", "Infração admin — CNH suspensa (cumula)"]
+              [
+                "Art. 307",
+                "Violar suspensão ou proibição de habilitar-se"
+              ],
+              [
+                "Art. 309",
+                "Dirigir sem CNH ou com direito cassado"
+              ],
+              [
+                "Art. 162, II",
+                "Infração admin — CNH suspensa (cumula)"
+              ]
             ]
           }
         },
@@ -68,13 +82,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Suspensão imposta com fundamento no CTB?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Condutor dirigiu durante a vigência?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Crime de violar suspensão — gabarito B", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Suspensão imposta com fundamento no CTB?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Condutor dirigiu durante a vigência?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Crime de violar suspensão — gabarito B",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -83,10 +117,19 @@
           "titulo": "Admin × penal",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Confusão ✗", "Regra ✓"],
+            "colunas": [
+              "Confusão ✗",
+              "Regra ✓"
+            ],
             "linhas": [
-              ["CNH suspensa = só multa do art. 162", "Art. 307 tipifica crime autônomo"],
-              ["Suspensão = art. 309 sem habilitação", "309 é sem CNH ou cassação — não suspensão"]
+              [
+                "CNH suspensa = só multa do art. 162",
+                "Art. 307 tipifica crime autônomo"
+              ],
+              [
+                "Suspensão = art. 309 sem habilitação",
+                "309 é sem CNH ou cassação — não suspensão"
+              ]
             ]
           }
         },
@@ -96,7 +139,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "307 = DIRIGIU com suspensão vigente · 309 = sem CNH ou CASSADO · 162 admin cumula.",
-            "destaques": ["307", "309", "162"]
+            "destaques": [
+              "307",
+              "309",
+              "162"
+            ]
           }
         }
       ],
@@ -118,7 +165,11 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "CNH suspensa não se resolve só com infração do art. 162 — violar suspensão é crime (art. 307)",
-        "eixos_legais": ["CTB_art_307", "CTB_art_162_II", "CTB_art_309"],
+        "eixos_legais": [
+          "CTB_art_307",
+          "CTB_art_162_II",
+          "CTB_art_309"
+        ],
         "isca_por_alternativa": {
           "A": "reduz a conduta à multa administrativa do art. 162, II",
           "C": "equipara suspensão temporária a dirigir sem habilitação (art. 309)",
@@ -132,8 +183,11 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B (art. 307 — violar suspensão).\n\nA — só art. 162, II: infração admin não elide crime de trânsito (art. 256, § 1º).\nC — art. 309: exige ausência de habilitação ou cassação — Ricardo tem CNH suspensa, não cassada.\nD — art. 263: cassação é penalidade administrativa distinta — não substitui art. 307.\n\nRicardo dirigiu durante suspensão notificada com fundamento no CTB.",
-            "destaques": ["Gabarito B", "art. 307", "suspensão vigente"]
+            "texto": "Gabarito B (dispositivo legal — violar suspensão). A — só dispositivo legal, II: infração admin não elide crime de trânsito (dispositivo legal).\nC — dispositivo legal: exige ausência de habilitação ou cassação — Ricardo tem CNH suspensa, não cassada.\nD — dispositivo legal: cassação é penalidade administrativa distinta — não substitui dispositivo legal. Ricardo dirigiu durante suspensão notificada com fundamento no CTB.",
+            "destaques": [
+              "Gabarito B",
+              "suspensão vigente"
+            ]
           }
         },
         {
@@ -142,7 +196,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "SUSPENSÃO (art. 261): penalidade administrativa que retira temporariamente o direito de dirigir — violá-la no período tipifica art. 307.\n\nCASSAÇÃO (art. 263): retira definitivamente a CNH — hipótese do art. 309, não do art. 307.\n\nINFRAÇÃO ADMIN (art. 162, II): autuação por dirigir com CNH suspensa — cumula com crime do art. 307.",
-            "destaques": ["SUSPENSÃO", "CASSAÇÃO", "art. 162, II"]
+            "destaques": [
+              "SUSPENSÃO",
+              "CASSAÇÃO",
+              "art. 162, II"
+            ]
           }
         },
         {
@@ -169,8 +227,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -180,15 +246,24 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Situação", "Consequência principal"],
+            "titulo_colunas": [
+              "Situação",
+              "Consequência principal"
+            ],
             "linhas": [
               {
                 "faixa": "Dirigir com suspensão vigente (CTB)",
                 "classificacao": "Crime — art. 307",
                 "destaque": true
               },
-              { "faixa": "Dirigir sem CNH ou cassado", "classificacao": "Crime — art. 309" },
-              { "faixa": "Autuação administrativa CNH suspensa", "classificacao": "Infração — art. 162, II (cumula)" }
+              {
+                "faixa": "Dirigir sem CNH ou cassado",
+                "classificacao": "Crime — art. 309"
+              },
+              {
+                "faixa": "Autuação administrativa CNH suspensa",
+                "classificacao": "Infração — art. 162, II (cumula)"
+              }
             ]
           }
         },
@@ -198,7 +273,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "CNH suspensa = só multa do art. 162, II",
@@ -217,7 +295,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -240,13 +321,31 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso", "Consequência legal"],
+            "colunas": [
+              "Fato do caso",
+              "Consequência legal"
+            ],
             "linhas": [
-              ["Suspensão imposta com fundamento no CTB", "Hipótese do art. 307"],
-              ["Notificação regular + vigência da suspensão", "Conduta típica configurada"],
-              ["Apresenta CNH válida, mas suspensa", "Não é art. 309 — não houve cassação"],
-              ["Autuação possível em paralelo", "Art. 162, II — cumula com art. 307"],
-              ["Resultado", "Gabarito B — detenção 6m–1a + multa + nova suspensão"]
+              [
+                "Suspensão imposta com fundamento no CTB",
+                "Hipótese do art. 307"
+              ],
+              [
+                "Notificação regular + vigência da suspensão",
+                "Conduta típica configurada"
+              ],
+              [
+                "Apresenta CNH válida, mas suspensa",
+                "Não é art. 309 — não houve cassação"
+              ],
+              [
+                "Autuação possível em paralelo",
+                "Art. 162, II — cumula com art. 307"
+              ],
+              [
+                "Resultado",
+                "Gabarito B — detenção 6m–1a + multa + nova suspensão"
+              ]
             ]
           }
         },
@@ -256,12 +355,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Artigo", "Conteúdo"],
+            "colunas": [
+              "Artigo",
+              "Conteúdo"
+            ],
             "linhas": [
-              ["Art. 307 — penas", "Detenção 6m–1a + multa + nova suspensão de idêntico prazo"],
-              ["Art. 309 — penas", "Detenção 6m–1a ou multa — sem CNH ou cassado"],
-              ["Art. 256, § 1º", "Penalidade administrativa não elide crime de trânsito"],
-              ["Caso Ricardo", "Art. 307 — não só art. 162"]
+              [
+                "Art. 307 — penas",
+                "Detenção 6m–1a + multa + nova suspensão de idêntico prazo"
+              ],
+              [
+                "Art. 309 — penas",
+                "Detenção 6m–1a ou multa — sem CNH ou cassado"
+              ],
+              [
+                "Art. 256, § 1º",
+                "Penalidade administrativa não elide crime de trânsito"
+              ],
+              [
+                "Caso Ricardo",
+                "Art. 307 — não só art. 162"
+              ]
             ]
           }
         },
@@ -277,12 +391,14 @@
               {
                 "inicio": 0,
                 "fim": 18,
-                "motivo": "caso — Ricardo violou suspensão vigente"
+                "motivo": "caso — Ricardo violou suspensão vigente",
+                "texto_grifado": "Violar a suspensão"
               },
               {
                 "inicio": 106,
                 "fim": 141,
-                "motivo": "contraste — fundamento no CTB distingue de outras sanções"
+                "motivo": "contraste — fundamento no CTB distingue de outras sanções",
+                "texto_grifado": "imposta com fundamento neste Código"
               }
             ]
           }
@@ -298,13 +414,15 @@
             "trechos_grifados": [
               {
                 "inicio": 8,
-                "fim": 38,
-                "motivo": "hierarquia — quantum distinto do art. 309 (ou multa)"
+                "fim": 40,
+                "motivo": "hierarquia — quantum distinto do art. 309 (ou multa)",
+                "texto_grifado": "detenção, de seis meses a um ano"
               },
               {
                 "inicio": 54,
                 "fim": 78,
-                "motivo": "caso — nova suspensão de idêntico prazo"
+                "motivo": "caso — nova suspensão de idêntico prazo",
+                "texto_grifado": "nova imposição adicional"
               }
             ]
           }
@@ -315,8 +433,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "307 = DIRIGIU com suspensão vigente · 309 = sem CNH ou CASSADO · 162 admin cumula.\n\nNear-transfer: Paula teve a CNH cassada pelo art. 263 e é flagrada dirigindo — não é art. 307 (suspensão), e sim art. 309 (dirigir com direito cassado).",
-            "destaques": ["307", "309", "Paula"]
+            "texto": "307 = DIRIGIU com suspensão vigente · 309 = sem CNH ou CASSADO · 162 admin cumula.\n\nNear-transfer: Paula teve a CNH cassada pelo art. 263 e é flagrada dirigindo — não é art. 307 (suspensão), e sim art. 309 (dirigir com direito cassado).\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "307",
+              "309",
+              "Paula"
+            ]
           }
         }
       ],
@@ -334,6 +456,22 @@
       "cnh",
       "regra_excecao",
       "caso_pratico"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "Paula teve a CNH cassada pelo art. 263 e é flagrada dirigindo — não é art. 307 (suspensão), e sim art. 309 (dirigir com direito cassado).",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "307 = DIRIGIU com suspensão vigente · 309 = sem CNH ou CASSADO · 162 = infração admin (cumula).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "gravidade",
+        "regra_excecao",
+        "termo_unico"
+      ]
+    }
   }
 ]

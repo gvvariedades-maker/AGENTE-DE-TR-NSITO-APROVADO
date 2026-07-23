@@ -52,7 +52,11 @@
       "far_transfer": "Em rodovia estadual, PM só fiscaliza com convênio como agente do órgão executivo rodoviário — mesma regra do art. 23, III, em outro tipo de via e outro executivo.",
       "o_que_nao_muda": "A Polícia Militar nunca exerce competência autônoma de autuação — apenas como agente do executivo de trânsito ou rodoviário, quando e conforme convênio (art. 23, III).",
       "calibracao_corpus": "ok",
-      "eficacia_pos_aula": ["E1", "E2", "E3"]
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
     },
     "tags": [
       "competencia_snt",
@@ -76,7 +80,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito B: PM só fiscaliza com convênio, como agente do executivo — não com competência autônoma em via municipal.",
-            "destaques": ["convênio", "agente", "STTP"]
+            "destaques": [
+              "convênio",
+              "agente",
+              "STTP"
+            ]
           }
         },
         {
@@ -85,11 +93,23 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "sttp", "label": "STTP — autua direto (art. 24, VI)", "nivel": 2 },
-              { "id": "pm", "label": "PM — agente com convênio (art. 23, III)", "nivel": 1 }
+              {
+                "id": "sttp",
+                "label": "STTP — autua direto (art. 24, VI)",
+                "nivel": 2
+              },
+              {
+                "id": "pm",
+                "label": "PM — agente com convênio (art. 23, III)",
+                "nivel": 1
+              }
             ],
             "arestas": [
-              { "de": "pm", "para": "sttp", "rotulo": "depende de convênio" }
+              {
+                "de": "pm",
+                "para": "sttp",
+                "rotulo": "depende de convênio"
+              }
             ]
           }
         },
@@ -98,9 +118,15 @@
           "titulo": "Autonomia × agente",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha ✗", "Lei ✓"],
+            "colunas": [
+              "Pegadinha ✗",
+              "Lei ✓"
+            ],
             "linhas": [
-              ["PM autua sozinha em via municipal", "PM fiscaliza só com convênio, como agente (art. 23, III)"]
+              [
+                "PM autua sozinha em via municipal",
+                "PM fiscaliza só com convênio, como agente (art. 23, III)"
+              ]
             ]
           }
         },
@@ -110,7 +136,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PM = agente com convênio (23, III).\nSTTP = executivo direto (24, VI).\nFar: rodovia estadual — mesma lógica de convênio.",
-            "destaques": ["convênio", "24, VI", "rodovia"]
+            "destaques": [
+              "convênio",
+              "24, VI",
+              "rodovia"
+            ]
           }
         }
       ],
@@ -136,8 +166,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — PM autônoma e exclusiva em via municipal sem convênio: errado.\nC — CONTRAN autoriza cada blitz municipal: confunde normatizar com operar.\nD — STTP privativa e PM totalmente vedada: ignora possibilidade de convênio.\n\nPegadinha: PM não tem competência própria de autuação — só atua como agente do executivo, com convênio.",
-            "destaques": ["convênio", "agente", "STTP"]
+            "texto": "Gabarito B. A — PM autônoma e exclusiva em via municipal sem convênio: errado.\nC — CONTRAN autoriza cada blitz municipal: confunde normatizar com operar.\nD — STTP privativa e PM totalmente vedada: ignora possibilidade de convênio. Pegadinha: PM não tem competência própria de autuação — só atua como agente do executivo, com convênio.",
+            "destaques": [
+              "convênio",
+              "agente",
+              "STTP"
+            ]
           }
         },
         {
@@ -146,7 +180,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "STTP: órgão executivo municipal de Campina Grande — fiscaliza e autua diretamente em vias terrestres (art. 24, VI).\n\nPM: policiamento ostensivo — fiscaliza trânsito somente como agente do executivo, com convênio (art. 23, III).\n\nCONTRAN: normatiza o SNT (art. 12) — não autoriza blitz caso a caso.",
-            "destaques": ["STTP", "PM", "CONTRAN"]
+            "destaques": [
+              "STTP",
+              "PM",
+              "CONTRAN"
+            ]
           }
         },
         {
@@ -156,13 +194,33 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "contran", "label": "CONTRAN — normatiza SNT (art. 12)", "nivel": 0 },
-              { "id": "sttp", "label": "STTP — autua direto (art. 24, VI)", "nivel": 2 },
-              { "id": "pm", "label": "PM — agente com convênio (art. 23, III)", "nivel": 1 }
+              {
+                "id": "contran",
+                "label": "CONTRAN — normatiza SNT (art. 12)",
+                "nivel": 0
+              },
+              {
+                "id": "sttp",
+                "label": "STTP — autua direto (art. 24, VI)",
+                "nivel": 2
+              },
+              {
+                "id": "pm",
+                "label": "PM — agente com convênio (art. 23, III)",
+                "nivel": 1
+              }
             ],
             "arestas": [
-              { "de": "pm", "para": "sttp", "rotulo": "convênio obrigatório" },
-              { "de": "sttp", "para": "contran", "rotulo": "executa normas" }
+              {
+                "de": "pm",
+                "para": "sttp",
+                "rotulo": "convênio obrigatório"
+              },
+              {
+                "de": "sttp",
+                "para": "contran",
+                "rotulo": "executa normas"
+              }
             ]
           }
         },
@@ -172,10 +230,19 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
-              ["PM autua sozinha em via municipal", "PM só fiscaliza com convênio, como agente (art. 23, III)"],
-              ["CONTRAN libera cada blitz", "CONTRAN normatiza — executivo municipal autua (art. 24, VI)"]
+              [
+                "Fiscalização em via municipal dispensa convênio policial",
+                "PM só fiscaliza com convênio, como agente (art. 23, III)"
+              ],
+              [
+                "Cada blitz precisa de autorização do órgão federal",
+                "CONTRAN normatiza — executivo municipal autua (art. 24, VI)"
+              ]
             ]
           }
         },
@@ -185,11 +252,23 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
-              ["A — competencia_snt", "Atribui competência autônoma à PM — art. 23, III exige convênio e atuação como agente"],
-              ["C — competencia_snt", "Confunde normatização do CONTRAN (art. 12) com autorização operacional de blitz"],
-              ["D — regra_excecao", "Veda totalmente a PM — o art. 23, III admite atuação como agente com convênio"]
+              [
+                "A — competencia_snt",
+                "Atribui competência autônoma à PM — art. 23, III exige convênio e atuação como agente"
+              ],
+              [
+                "C — competencia_snt",
+                "Confunde normatização do CONTRAN (art. 12) com autorização operacional de blitz"
+              ],
+              [
+                "D — regra_excecao",
+                "Veda totalmente a PM — o art. 23, III admite atuação como agente com convênio"
+              ]
             ]
           }
         },
@@ -199,12 +278,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Elemento", "Conclusão"],
+            "colunas": [
+              "Elemento",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Via municipal de Campina Grande", "Esfera do executivo municipal"],
-              ["PM lavra auto sem convênio", "Viola art. 23, III — falta convênio e papel de agente"],
-              ["STTP é o executivo local", "Pode autuar diretamente pelo art. 24, VI"],
-              ["Resultado", "Gabarito B — regra do convênio"]
+              [
+                "Via municipal de Campina Grande",
+                "Esfera do executivo municipal"
+              ],
+              [
+                "PM lavra auto sem convênio",
+                "Viola art. 23, III — falta convênio e papel de agente"
+              ],
+              [
+                "STTP é o executivo local",
+                "Pode autuar diretamente pelo art. 24, VI"
+              ],
+              [
+                "Resultado",
+                "Gabarito B — regra do convênio"
+              ]
             ]
           }
         },
@@ -214,11 +308,23 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Órgão", "Função no SNT (caso)"],
+            "colunas": [
+              "Órgão",
+              "Função no SNT (caso)"
+            ],
             "linhas": [
-              ["CONTRAN", "Normatiza procedimentos — não autua em blitz municipal"],
-              ["STTP", "Executivo municipal — autua direto em vias terrestres"],
-              ["PM-PB", "Agente do executivo — só com convênio firmado"]
+              [
+                "CONTRAN",
+                "Normatiza procedimentos — não autua em blitz municipal"
+              ],
+              [
+                "STTP",
+                "Executivo municipal — autua direto em vias terrestres"
+              ],
+              [
+                "PM-PB",
+                "Agente do executivo — só com convênio firmado"
+              ]
             ]
           }
         },
@@ -258,11 +364,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Função no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Função no caso"
+            ],
             "linhas": [
-              ["Art. 24, VI — STTP", "Executivo municipal autua diretamente em vias terrestres"],
-              ["Art. 23, III — PM", "Só fiscaliza como agente, com convênio"],
-              ["Art. 24, V — vizinho", "Diretrizes de policiamento ostensivo em conjunto com a PM"]
+              [
+                "Art. 24, VI — STTP",
+                "Executivo municipal autua diretamente em vias terrestres"
+              ],
+              [
+                "Art. 23, III — PM",
+                "Só fiscaliza como agente, com convênio"
+              ],
+              [
+                "Art. 24, V — vizinho",
+                "Diretrizes de policiamento ostensivo em conjunto com a PM"
+              ]
             ]
           }
         },
@@ -303,7 +421,12 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PM = agente com convênio (23, III) · STTP = executivo direto (24, VI).\nNear: com convênio PM-STTP, PM autua como agente concomitantemente.\nFar: em rodovia estadual, PM só com convênio como agente do rodoviário.\nNão muda: PM nunca tem competência autônoma de autuação.\nCadeia: próximo = art. 24, V (diretrizes de policiamento ostensivo em conjunto).",
-            "destaques": ["convênio", "rodovia estadual", "autônoma", "art. 24, V"]
+            "destaques": [
+              "convênio",
+              "rodovia estadual",
+              "autônoma",
+              "art. 24, V"
+            ]
           }
         }
       ],

@@ -42,12 +42,29 @@
     "meta": {
       "padrao_familia": "A_caso_regra_excecao",
       "pegadinha_em_uma_frase": "Caput autoriza parceria sem ônus — não dispensa autorização prévia do § 1º",
-      "eixos_legais": ["CONTRAN_991_art_27_1", "CONTRAN_918_art_27"],
+      "eixos_legais": [
+        "CONTRAN_991_art_27_1",
+        "CONTRAN_918_art_27"
+      ],
       "isca_por_alternativa": {
         "A": "sem ônus + regularização dispensam SENATRAN",
         "C": "CETRAN-PB autoriza no lugar da União",
         "D": "IPVA e licenciamento entram no art. 27"
-      }
+      },
+      "near_transfer": "DETRAN estadual quer parcelar IPVA no mesmo gateway de multas sem pedir autorização à União — duplo erro: § 1º exige autorização e 991 não inclui IPVA no art. 27.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "PODE firmar parceria (caput) · DEVE pedir OK SENATRAN antes (§ 1º) · 991 = só MULTAS no cartão.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "competencia_snt",
+        "regra_excecao",
+        "termo_unico"
+      ]
     },
     "estudo_reverso_visual": {
       "versao": 1,
@@ -63,7 +80,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "STTP firmou parceria com cartão sem ônus, sem pedido prévio à SENATRAN.\n\nCaput permite parceria — § 1º exige autorização prévia.\n\nGabarito B.",
-            "destaques": ["sem ônus", "§ 1º", "Gabarito B"]
+            "destaques": [
+              "sem ônus",
+              "§ 1º",
+              "Gabarito B"
+            ]
           }
         },
         {
@@ -72,11 +93,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Autorização prévia à União solicitada?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Deve solicitar — Gabarito B (§ 1º)", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Autorização prévia à União solicitada?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Deve solicitar — Gabarito B (§ 1º)",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Não — caso STTP" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Não — caso STTP"
+              }
             ]
           }
         },
@@ -85,7 +118,10 @@
           "titulo": "Pode firmar × deve autorizar",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
               [
                 "Caput sem ônus dispensa SENATRAN",
@@ -102,8 +138,18 @@
             "fonte": "Res. CONTRAN 991/2023, art. 2º (art. 27, § 1º, da Res. 918/2022)",
             "texto": "Os órgãos arrecadadores deverão solicitar autorização ao órgão máximo executivo de trânsito da União para viabilizar o pagamento de multas de trânsito com cartões de débito ou crédito.",
             "trechos_grifados": [
-              { "inicio": 24, "fim": 53, "motivo": "autorização prévia obrigatória" },
-              { "inicio": 132, "fim": 150, "motivo": "somente multas de trânsito (991)" }
+              {
+                "inicio": 24,
+                "fim": 53,
+                "motivo": "autorização prévia obrigatória",
+                "texto_grifado": "deverão solicitar autorização"
+              },
+              {
+                "inicio": 132,
+                "fim": 150,
+                "motivo": "somente multas de trânsito (991)",
+                "texto_grifado": "multas de trânsito"
+              }
             ]
           }
         },
@@ -113,7 +159,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PODE firmar parceria (caput) · DEVE pedir OK SENATRAN antes (§ 1º) · 991 = só MULTAS no cartão.",
-            "destaques": ["DEVE", "SENATRAN", "MULTAS"]
+            "destaques": [
+              "DEVE",
+              "SENATRAN",
+              "MULTAS"
+            ]
           }
         }
       ],
@@ -139,7 +189,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Caput autoriza parceria sem ônus — não dispensa autorização prévia do § 1º",
-        "eixos_legais": ["CONTRAN_991_art_27_1", "CONTRAN_918_art_27"],
+        "eixos_legais": [
+          "CONTRAN_991_art_27_1",
+          "CONTRAN_918_art_27"
+        ],
         "isca_por_alternativa": {
           "A": "sem ônus + regularização dispensam SENATRAN",
           "C": "CETRAN-PB autoriza no lugar da União",
@@ -153,8 +206,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B (solicitar autorização prévia ao órgão máximo executivo da União — § 1º com redação da Res. 991/2023).\n\nA — caput sem ônus + regularização imediata dispensam autorização: regra_excecao — § 1º é cumulativo.\nC — CETRAN-PB autoriza no lugar da União: competencia_snt — competência é do órgão máximo executivo federal.\nD — inclui IPVA e licenciamento no art. 27: termo_unico — 991 restringiu cartão a multas de trânsito.\n\nSTTP firmou parceria com cartão sem pedido prévio à SENATRAN.",
-            "destaques": ["Gabarito B", "§ 1º", "cumulativo"]
+            "texto": "Gabarito B (solicitar autorização prévia ao órgão máximo executivo da União — parágrafo com redação da Res. 991/2023).\nA — sem ônus + regularização dispensam SENATRAN\nD — IPVA e licenciamento entram no dispositivo legal\nC — CETRAN-PB autoriza no lugar da União",
+            "destaques": [
+              "Gabarito B",
+              "parágrafo",
+              "cumulativo"
+            ]
           }
         },
         {
@@ -163,7 +220,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "ÓRGÃO ARRECADADOR: ente que recebe o valor da multa (STTP, DETRAN, PRF…).\n\nÓRGÃO MÁXIMO EXECUTIVO DA UNIÃO: SENATRAN — autoriza operações com cartão no § 1º.\n\nPARCEIRO SEM ÔNUS: credenciadora assume custos — caput permite firmar acordo, não dispensa § 1º.",
-            "destaques": ["ARRECADADOR", "SENATRAN", "SEM ÔNUS"]
+            "destaques": [
+              "ARRECADADOR",
+              "SENATRAN",
+              "SEM ÔNUS"
+            ]
           }
         },
         {
@@ -173,31 +234,60 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Parceria para cartão firmada sem ônus?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Autorização prévia ao órgão máximo executivo solicitada?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Deve solicitar antes — Gabarito B (§ 1º)", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Parceria para cartão firmada sem ônus?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Autorização prévia ao órgão máximo executivo solicitada?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Deve solicitar antes — Gabarito B (§ 1º)",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — caso STTP" },
-              { "de": "p2", "para": "r1", "rotulo": "Não — sem pedido prévio" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — caso STTP"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — sem pedido prévio"
+              }
             ]
           }
         },
         {
-          "id": "mapa",
+          "id": "hierarquia",
           "titulo": "Art. 27 — caput × § 1º × Res. 991",
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Dispositivo", "Efeito legal"],
+            "titulo_colunas": [
+              "Dispositivo",
+              "Efeito legal"
+            ],
             "linhas": [
-              { "faixa": "Caput — parceria sem ônus", "classificacao": "Pode firmar acordo técnico-operacional" },
+              {
+                "faixa": "Caput — parceria sem ônus",
+                "classificacao": "Pode firmar acordo técnico-operacional"
+              },
               {
                 "faixa": "§ 1º — autorização prévia",
                 "classificacao": "Deve solicitar ao órgão máximo executivo da União",
                 "destaque": true
               },
-              { "faixa": "Res. 991/2023", "classificacao": "Cartão restrito a multas de trânsito (sem demais débitos)" }
+              {
+                "faixa": "Res. 991/2023",
+                "classificacao": "Cartão restrito a multas de trânsito (sem demais débitos)"
+              }
             ]
           }
         },
@@ -207,7 +297,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Caput sem ônus dispensa autorização da União",
@@ -226,7 +319,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -249,12 +345,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Elemento", "Conclusão"],
+            "colunas": [
+              "Elemento",
+              "Conclusão"
+            ],
             "linhas": [
-              ["STTP + credenciadora sem ônus", "Caput permite firmar parceria"],
-              ["Sem solicitação prévia à União", "Viola § 1º — deve pedir autorização"],
-              ["Só multas de trânsito no cartão", "Escopo da redação 991/2023"],
-              ["Resultado", "Gabarito B"]
+              [
+                "STTP + credenciadora sem ônus",
+                "Caput permite firmar parceria"
+              ],
+              [
+                "Sem solicitação prévia à União",
+                "Viola § 1º — deve pedir autorização"
+              ],
+              [
+                "Só multas de trânsito no cartão",
+                "Escopo da redação 991/2023"
+              ],
+              [
+                "Resultado",
+                "Gabarito B"
+              ]
             ]
           }
         },
@@ -264,7 +375,10 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Antes (918/2022)", "Depois (991/2023)"],
+            "colunas": [
+              "Antes (918/2022)",
+              "Depois (991/2023)"
+            ],
             "linhas": [
               [
                 "Multas e demais débitos do veículo no § 1º",
@@ -286,9 +400,24 @@
             "fonte": "Res. CONTRAN 991/2023, art. 2º (art. 27, § 1º, da Res. 918/2022)",
             "texto": "Os órgãos arrecadadores deverão solicitar autorização ao órgão máximo executivo de trânsito da União para viabilizar o pagamento de multas de trânsito com cartões de débito ou crédito.",
             "trechos_grifados": [
-              { "inicio": 24, "fim": 53, "motivo": "fluxo — autorização prévia obrigatória" },
-              { "inicio": 57, "fim": 100, "motivo": "distratores — CETRAN não substitui órgão máximo executivo" },
-              { "inicio": 132, "fim": 150, "motivo": "escopo — somente multas de trânsito (991)" }
+              {
+                "inicio": 24,
+                "fim": 53,
+                "motivo": "fluxo — autorização prévia obrigatória",
+                "texto_grifado": "deverão solicitar autorização"
+              },
+              {
+                "inicio": 57,
+                "fim": 100,
+                "motivo": "distratores — CETRAN não substitui órgão máximo executivo",
+                "texto_grifado": "órgão máximo executivo de trânsito da União"
+              },
+              {
+                "inicio": 132,
+                "fim": 150,
+                "motivo": "escopo — somente multas de trânsito (991)",
+                "texto_grifado": "multas de trânsito"
+              }
             ]
           }
         },
@@ -298,8 +427,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "PODE firmar parceria (caput) · DEVE pedir OK SENATRAN antes (§ 1º) · 991 = só MULTAS no cartão.\n\nNear-transfer: DETRAN estadual quer parcelar IPVA no mesmo gateway de multas sem pedir autorização à União — duplo erro: § 1º exige autorização e 991 não inclui IPVA no art. 27.",
-            "destaques": ["DEVE", "SENATRAN", "IPVA"]
+            "texto": "PODE firmar parceria (caput) · DEVE pedir OK SENATRAN antes (§ 1º) · 991 = só MULTAS no cartão.\n\nNear-transfer: DETRAN estadual quer parcelar IPVA no mesmo gateway de multas sem pedir autorização à União — duplo erro: § 1º exige autorização e 991 não inclui IPVA no art. 27.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "DEVE",
+              "SENATRAN",
+              "IPVA"
+            ]
           }
         }
       ],

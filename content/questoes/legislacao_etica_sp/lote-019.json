@@ -44,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Vazamento com risco relevante exige comunicação à ANPD e aos titulares pelo controlador — encarregado não substitui. Segurança é dever de todos os agentes, não só do operador.",
-            "destaques": ["ANPD", "titulares", "controlador"]
+            "destaques": [
+              "ANPD",
+              "titulares",
+              "controlador"
+            ]
           }
         },
         {
@@ -53,10 +57,24 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Incidente com risco ou dano relevante?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Controlador comunica ANPD e titulares", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Incidente com risco ou dano relevante?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Controlador comunica ANPD e titulares",
+                "tipo": "resultado"
+              }
             ],
-            "arestas": [{ "de": "p1", "para": "r1", "rotulo": "Sim" }]
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
           }
         },
         {
@@ -64,7 +82,10 @@
           "titulo": "Encarregado × controlador",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
               [
                 "Basta comunicar só à ANPD pelo encarregado",
@@ -79,7 +100,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Incidente relevante = ANPD + titular. Segurança = todos os agentes. Encarregado é canal, não controlador.",
-            "destaques": ["ANPD", "titulares", "agentes"]
+            "destaques": [
+              "ANPD",
+              "titulares",
+              "agentes"
+            ]
           }
         }
       ],
@@ -101,7 +126,11 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Encarregado ou operador privado induzem comunicar só à ANPD e excluir controlador da segurança",
-        "eixos_legais": ["LGPD_art48", "LGPD_art46", "LGPD_art41"],
+        "eixos_legais": [
+          "LGPD_art48",
+          "LGPD_art46",
+          "LGPD_art41"
+        ],
         "isca_por_alternativa": {
           "A": "encarregado substitui controlador e dispensa aviso ao titular",
           "C": "operador privado comunica sozinho aos titulares",
@@ -115,8 +144,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — encarregado substitui controlador: dispensa aviso aos titulares e confunde papéis.\nC — operador comunica sozinho: transfere dever do controlador ao contratado.\nD — segurança só no operador: exclui STTP das medidas de segurança.\n\nA isca é o vazamento empurrar comunicação exclusiva à ANPD ou ao prestador privado.",
-            "destaques": ["Gabarito B", "titulares", "controlador"]
+            "texto": "Gabarito B. A — encarregado substitui controlador: dispensa aviso aos titulares e confunde papéis.\nC — operador comunica sozinho: transfere dever do controlador ao contratado.\nD — segurança só no operador: exclui STTP das medidas de segurança. A isca é o vazamento empurrar comunicação exclusiva à ANPD ou ao prestador privado.",
+            "destaques": [
+              "Gabarito B",
+              "titulares",
+              "controlador"
+            ]
           }
         },
         {
@@ -125,7 +158,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CONTROLADOR: quem decide e responde pelo tratamento — no caso, a STTP.\n\nENCARREGADO: canal entre titulares, controlador e ANPD — não substitui o controlador na comunicação do art. 48.\n\nAGENTE DE TRATAMENTO: controlador ou operador — ambos devem adotar medidas de segurança.",
-            "destaques": ["CONTROLADOR", "ENCARREGADO", "AGENTE"]
+            "destaques": [
+              "CONTROLADOR",
+              "ENCARREGADO",
+              "AGENTE"
+            ]
           }
         },
         {
@@ -152,8 +189,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -163,12 +208,27 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Agente", "Obrigação no caso"],
+            "colunas": [
+              "Agente",
+              "Obrigação no caso"
+            ],
             "linhas": [
-              ["Controlador (STTP)", "Comunicar ANPD e titulares — incidente relevante"],
-              ["Encarregado", "Canal de reclamações — não substitui comunicação legal"],
-              ["Operador contratado", "Medidas de segurança + seguir instruções do controlador"],
-              ["Todos os agentes", "Adotar medidas técnicas e administrativas — art. 46"]
+              [
+                "Controlador (STTP)",
+                "Comunicar ANPD e titulares — incidente relevante"
+              ],
+              [
+                "Encarregado",
+                "Canal de reclamações — não substitui comunicação legal"
+              ],
+              [
+                "Operador contratado",
+                "Medidas de segurança + seguir instruções do controlador"
+              ],
+              [
+                "Todos os agentes",
+                "Adotar medidas técnicas e administrativas — art. 46"
+              ]
             ]
           }
         },
@@ -178,7 +238,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Encarregado comunica só à ANPD",
@@ -197,7 +260,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -220,12 +286,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Enquadramento"],
+            "colunas": [
+              "Fato do enunciado",
+              "Enquadramento"
+            ],
             "linhas": [
-              ["Exposição de nome, CPF e endereço de centenas", "Incidente com risco ou dano relevante"],
-              ["Encarregado comunica só à ANPD", "Insuficiente — titulares também devem ser avisados"],
-              ["Operador alega aviso facultativo ao titular", "Dever do controlador — art. 48"],
-              ["Resultado", "Gabarito B — art. 48 + art. 46"]
+              [
+                "Exposição de nome, CPF e endereço de centenas",
+                "Incidente com risco ou dano relevante"
+              ],
+              [
+                "Encarregado comunica só à ANPD",
+                "Insuficiente — titulares também devem ser avisados"
+              ],
+              [
+                "Operador alega aviso facultativo ao titular",
+                "Dever do controlador — art. 48"
+              ],
+              [
+                "Resultado",
+                "Gabarito B — art. 48 + art. 46"
+              ]
             ]
           }
         },
@@ -235,11 +316,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Mensagem"],
+            "colunas": [
+              "Dispositivo",
+              "Mensagem"
+            ],
             "linhas": [
-              ["Art. 46", "Medidas de segurança — todos os agentes de tratamento"],
-              ["Art. 48", "Incidente relevante — controlador comunica ANPD e titular"],
-              ["Art. 41", "Encarregado é canal — não substitui controlador"]
+              [
+                "Art. 46",
+                "Medidas de segurança — todos os agentes de tratamento"
+              ],
+              [
+                "Art. 48",
+                "Incidente relevante — controlador comunica ANPD e titular"
+              ],
+              [
+                "Art. 41",
+                "Encarregado é canal — não substitui controlador"
+              ]
             ]
           }
         },
@@ -297,8 +390,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Incidente relevante = ANPD + titular (art. 48). Segurança = todos os agentes (art. 46). Encarregado é canal — não substitui controlador.\n\nNear-transfer: vazamento de apenas 3 titulares sem risco relevante — ainda assim medidas de segurança do art. 46 se aplicam; comunicação do art. 48 depende do critério de relevância.",
-            "destaques": ["ANPD", "Near-transfer", "agentes"]
+            "texto": "Incidente relevante = ANPD + titular (art. 48). Segurança = todos os agentes (art. 46). Encarregado é canal — não substitui controlador.\n\nNear-transfer: vazamento de apenas 3 titulares sem risco relevante — ainda assim medidas de segurança do art. 46 se aplicam; comunicação do art. 48 depende do critério de relevância.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "ANPD",
+              "Near-transfer",
+              "agentes"
+            ]
           }
         }
       ],
@@ -316,6 +413,17 @@
       "controlador",
       "vazamento",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "vazamento de apenas 3 titulares sem risco relevante — ainda assim medidas de segurança do art. 46 se aplicam; comunicação do art. 48 depende do critério de relevância.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Incidente relevante = ANPD + titular (art. 48). Segurança = todos os agentes (art. 46). Encarregado é canal — não substitui controlador.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

@@ -33,19 +33,27 @@ aluno" (ver `.cursor/skills/frontend-design/retencao-visual.md`).
 ## Estudo Reverso Visual (pós-resposta)
 
 - Abre **automaticamente** após confirmar resposta no modo estudo, quando a questão tiver trilha visual aplicável
-- Coleta de **confiança FSRS** (4 notas) **antes** de persistir tentativa e abrir o player
+- Coleta de **confiança** (escala subjetiva → FSRS) **antes** de persistir tentativa e abrir o player
 - Com visual na questão: só `FeedbackResultado` (gabarito em uma linha); `FeedbackElaborado` fica para questões **sem** visual
 - Player segmentado: `src/components/estudo-reverso/estudo-reverso-player.tsx`
+- Player adaptativo (Fase 4): `src/components/estudo-reverso/adaptive-player.tsx` — subset de telas v2 via `pedagogy_json`
 - Roteamento de trilha: `src/lib/estudo-reverso-visual-trilha.ts`
+- Política de intervenção: `src/lib/tutor/intervention-policy.ts` + builder `intervention-builder.ts`
+- Novice-gate: `src/lib/tutor/novice-gate.ts` (0 evidência em pré-requisito → `prerequisite_repair`)
 
-### Aula completa (v2) — padrão único
+### Aula completa (v2) — conteúdo canônico
 
 | Trilha | Campo JSON | Coluna DB | Telas |
 |--------|------------|-----------|-------|
 | Aula completa | `estudo_reverso_visual_completo` | `estudo_reverso_visual_completo_json` | 7–11 |
+| Pedagogia adaptativa | `pedagogy` | `pedagogy_json` | subset por path |
 
 - Toda questão seedada deve ter `estudo_reverso_visual_completo`
-- O player abre **sempre** a aula completa após confirmar resposta (quando existir)
+- **`pedagogy_json` ausente** → comportamento legado: player abre a **aula completa** após confirmar resposta
+- **`pedagogy_json` presente** → path de intervenção seleciona subset (máx. 2 telas expositivas seguidas nos paths curtos)
+- Trilha **completa** só nos paths `guided_learning`, `misconception_repair` e `prerequisite_repair` (novice)
+- Acerto confiante + mastery alto → `fast_confirmation` (confirmação curta, tipicamente macete)
+- Acerto na dúvida → `uncertain_correct`; erro com misconception → `misconception_repair`
 - Campo legado `estudo_reverso_visual` (v1 expressa) permanece no schema como fallback de geração, não como trilha preferida
 - Sessões em `estudo_reverso_sessions`; métricas por conclusão da aula
 - Skill: `.cursor/skills/estudo-reverso-visual/` (**v3.4** — modos EXPRESSA e COMPLETA; far-transfer + E1–E3)
@@ -124,6 +132,7 @@ mais `interval_days`): `aprendendo` (<7d) → `jovem` (7-21d) → `maduro`
 
 ## Changelog
 
+- **2026-07-23** — Fase 4 Motor de Evidências: `pedagogy_json` + intervention-policy/builder + AdaptivePlayer + novice-gate; trilha completa só em guided/misconception/novice; acerto confiante + mastery alto → confirmação curta.
 - **2026-07-11** — skills examinador-idecan v2.1 + estudo-reverso-visual v3.4: macete com near/far-transfer, `meta.o_que_nao_muda`, `eixo_vizinho`, checklist eficácia E1–E3 (gate editorial #18/#19).
 - **2026-07-08 (f)** — skill estudo-reverso-visual v3 unificada; `validate:lote`; v2 obrigatório no seed; núcleo v2 + passo 2 com slugs; CI + git hooks.
 - **2026-07-08 (c)** — com estudo reverso visual na questão, remove `FeedbackElaborado` da UI (evita duplicar conteúdo da trilha); `comentario` JSON permanece no seed como fonte editorial.

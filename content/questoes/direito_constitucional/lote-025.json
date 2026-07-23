@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Veículo retido no pátio da concessionária de rotativo após pagamento comprovado. A banca oferece HC, habeas data ou prazo de 72h — agente de empresa pública lesando direito líquido e certo pede mandado de segurança.",
-            "destaques": ["mandado de segurança", "concessionária", "direito líquido"]
+            "destaques": [
+              "mandado de segurança",
+              "concessionária",
+              "direito líquido"
+            ]
           }
         },
         {
@@ -52,13 +56,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Há coação à locomoção da pessoa?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Agente de PJ violou direito líquido e certo?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Mandado de segurança — LXIX", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Há coação à locomoção da pessoa?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Agente de PJ violou direito líquido e certo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Mandado de segurança — LXIX",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Não — só veículo retido" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — pagamento ignorado" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Não — só veículo retido"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — pagamento ignorado"
+              }
             ]
           }
         },
@@ -67,10 +91,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["HC pelo veículo no pátio", "MS — lesão é líquida e certa, não locomoção pessoal"],
-              ["Habeas data para corrigir sistema", "MS — liberação após pagamento, não só retificar dado"]
+              [
+                "HC pelo veículo no pátio",
+                "MS — lesão é líquida e certa, não locomoção pessoal"
+              ],
+              [
+                "Habeas data para corrigir sistema",
+                "MS — liberação após pagamento, não só retificar dado"
+              ]
             ]
           }
         },
@@ -97,7 +130,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Agente de concessionária + líquido e certo = MS (LXIX). Pessoa coacta = HC. Só corrigir dado = habeas data. Pagou ≠ 72h no pátio.",
-            "destaques": ["MS", "agente", "líquido e certo"]
+            "destaques": [
+              "MS",
+              "agente",
+              "líquido e certo"
+            ]
           }
         }
       ],
@@ -119,7 +156,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Retenção após pagamento no rotativo pede MS contra agente da concessionária — não HC, habeas data nem prazo de 72h",
-        "eixos_legais": ["CF_art5_LXIX", "CF_art5_LXVIII"],
+        "eixos_legais": [
+          "CF_art5_LXIX",
+          "CF_art5_LXVIII"
+        ],
         "isca_por_alternativa": {
           "A": "habeas corpus pela retenção do veículo no pátio da concessionária",
           "B": "habeas data para retificar registro de pagamento no sistema municipal",
@@ -133,8 +173,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C (mandado de segurança contra agente da concessionária).\n\nA — habeas corpus pelo veículo retido no pátio rotativo.\nB — habeas data para corrigir o registro de pagamento no sistema.\nD — concessionária mantém o carro 72h por divergência de sistema sem remédio.\n\nPromessa: fixar quando o preposto da empresa contratada responde por MS e não por HC ou habeas data.",
-            "destaques": ["mandado de segurança", "concessionária", "rotativo"]
+            "texto": "Gabarito C (mandado de segurança contra agente da concessionária). A — habeas corpus pelo veículo retido no pátio rotativo.\nB — habeas data para corrigir o registro de pagamento no sistema.\nD — concessionária mantém o carro 72h por divergência de sistema sem remédio. Promessa: fixar quando o preposto da empresa contratada responde por MS e não por HC ou habeas data.",
+            "destaques": [
+              "mandado de segurança",
+              "concessionária",
+              "rotativo"
+            ]
           }
         },
         {
@@ -143,7 +187,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "DIREITO LÍQUIDO E CERTO: demonstrável de plano — pagamento comprovado e retenção indevida. AGENTE DE PESSOA JURÍDICA (art. 5º, LXIX): preposto de concessionária que exerce atribuições do Poder Público responde como autoridade para fins de MS. HABEAS DATA (art. 5º, LXXII): acesso ou retificação de dados próprios — não substitui MS quando a lesão é liberação de bem após pagamento.",
-            "destaques": ["líquido e certo", "agente", "habeas data"]
+            "destaques": [
+              "líquido e certo",
+              "agente",
+              "habeas data"
+            ]
           }
         },
         {
@@ -170,8 +218,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Não — só veículo no pátio" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — pagamento ignorado" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Não — só veículo no pátio"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — pagamento ignorado"
+              }
             ]
           }
         },
@@ -181,11 +237,23 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Lesão", "Remédio"],
+            "titulo_colunas": [
+              "Lesão",
+              "Remédio"
+            ],
             "linhas": [
-              { "faixa": "Coação pessoal à locomoção", "classificacao": "Habeas corpus — LXVIII" },
-              { "faixa": "Direito líquido e certo contra agente de PJ", "classificacao": "Mandado de segurança — LXIX" },
-              { "faixa": "Acesso ou retificação de dados próprios", "classificacao": "Habeas data — LXXII" },
+              {
+                "faixa": "Coação pessoal à locomoção",
+                "classificacao": "Habeas corpus — LXVIII"
+              },
+              {
+                "faixa": "Direito líquido e certo contra agente de PJ",
+                "classificacao": "Mandado de segurança — LXIX"
+              },
+              {
+                "faixa": "Acesso ou retificação de dados próprios",
+                "classificacao": "Habeas data — LXXII"
+              },
               {
                 "faixa": "Retenção após pagamento no rotativo",
                 "classificacao": "MS — C correta",
@@ -200,7 +268,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Veículo no pátio = habeas corpus",
@@ -219,7 +290,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -242,12 +316,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Conclusão"],
+            "colunas": [
+              "Fato do enunciado",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Comprovante de pagamento pelo aplicativo municipal", "Direito líquido e certo à liberação"],
-              ["Preposto da concessionária nega liberação por 72h", "Agente de PJ no exercício de atribuições públicas"],
-              ["Proprietário impetra contra agente da pessoa jurídica", "Mandado de segurança — LXIX"],
-              ["Resultado", "Alternativa C"]
+              [
+                "Comprovante de pagamento pelo aplicativo municipal",
+                "Direito líquido e certo à liberação"
+              ],
+              [
+                "Preposto da concessionária nega liberação por 72h",
+                "Agente de PJ no exercício de atribuições públicas"
+              ],
+              [
+                "Proprietário impetra contra agente da pessoa jurídica",
+                "Mandado de segurança — LXIX"
+              ],
+              [
+                "Resultado",
+                "Alternativa C"
+              ]
             ]
           }
         },
@@ -257,12 +346,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Papel no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Papel no caso"
+            ],
             "linhas": [
-              ["Art. 5º, LXIX", "MS — agente de concessionária + direito líquido e certo"],
-              ["Art. 5º, LXVIII", "HC excluído — sem coação à locomoção pessoal"],
-              ["Art. 5º, LXXII", "Habeas data excluído — lesão não é só retificar dado"],
-              ["Caso concreto", "Retenção após pagamento → mandado de segurança"]
+              [
+                "Art. 5º, LXIX",
+                "MS — agente de concessionária + direito líquido e certo"
+              ],
+              [
+                "Art. 5º, LXVIII",
+                "HC excluído — sem coação à locomoção pessoal"
+              ],
+              [
+                "Art. 5º, LXXII",
+                "Habeas data excluído — lesão não é só retificar dado"
+              ],
+              [
+                "Caso concreto",
+                "Retenção após pagamento → mandado de segurança"
+              ]
             ]
           }
         },
@@ -314,8 +418,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Agente de concessionária + líquido e certo = MS (LXIX).\nPessoa coacta = HC (LXVIII).\nSó corrigir dado = habeas data (LXXII).\nPagou ≠ ficar 72h no pátio.\n\nNear-transfer: se o preposto negasse apenas acesso ao extrato de débitos no sistema, caberia habeas data — mas reter o veículo após pagamento comprovado pede mandado de segurança.",
-            "destaques": ["MS", "agente", "habeas data"]
+            "texto": "Agente de concessionária + líquido e certo = MS (LXIX).\nPessoa coacta = HC (LXVIII).\nSó corrigir dado = habeas data (LXXII).\nPagou ≠ ficar 72h no pátio.\n\nNear-transfer: se o preposto negasse apenas acesso ao extrato de débitos no sistema, caberia habeas data — mas reter o veículo após pagamento comprovado pede mandado de segurança.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "MS",
+              "agente",
+              "habeas data"
+            ]
           }
         }
       ],
@@ -337,6 +445,17 @@
       "agente_pessoa_juridica",
       "estacionamento_rotativo",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se o preposto negasse apenas acesso ao extrato de débitos no sistema, caberia habeas data — mas reter o veículo após pagamento comprovado pede mandado de segurança.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Agente de concessionária + líquido e certo = MS (LXIX). Pessoa coacta = HC (LXVIII). Só corrigir dado = habeas data (LXXII). Pagou ≠ ficar 72h no pátio.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

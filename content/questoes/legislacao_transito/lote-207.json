@@ -27,8 +27,7 @@
       "estudo_reverso": [
         "Res. CONTRAN 918/2022 art. 9",
         "Res. CONTRAN 918/2022 art. 4",
-        "CTB art. 281",
-        "CTB art. 282"
+        "CTB art. 281"
       ]
     },
     "meta": {
@@ -54,7 +53,11 @@
       "far_transfer": "Infração com defesa em tempo hábil e NP expedida no 350º dia da infração — ainda regular pelo § 3º, dentro de 360 dias.",
       "o_que_nao_muda": "Prazo da NP sempre conta da data da infração — defesa em tempo hábil só troca o teto de 180 para 360 dias.",
       "calibracao_corpus": "ok",
-      "eficacia_pos_aula": ["E1", "E2", "E3"]
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
     },
     "tags": [
       "resolucao_918",
@@ -77,7 +80,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito B: NP no 222º dia com defesa prévia — teto de 360 dias, não 180.",
-            "destaques": ["Gabarito B", "222 dias", "360 dias"]
+            "destaques": [
+              "Gabarito B",
+              "222 dias",
+              "360 dias"
+            ]
           }
         },
         {
@@ -85,10 +92,20 @@
           "titulo": "Prazo da NP",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Situação", "Prazo máximo"],
+            "titulo_colunas": [
+              "Situação",
+              "Prazo máximo"
+            ],
             "linhas": [
-              { "faixa": "Sem defesa ou fora do prazo", "classificacao": "180 dias da infração" },
-              { "faixa": "Defesa prévia em tempo hábil", "classificacao": "360 dias da infração", "destaque": true }
+              {
+                "faixa": "Sem defesa ou fora do prazo",
+                "classificacao": "180 dias da infração"
+              },
+              {
+                "faixa": "Defesa prévia em tempo hábil",
+                "classificacao": "360 dias da infração",
+                "destaque": true
+              }
             ]
           }
         },
@@ -98,7 +115,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Sem defesa = 180 dias.\nCom defesa = 360 dias.\nAmbos da infração.",
-            "destaques": ["180", "360", "infração"]
+            "destaques": [
+              "180",
+              "360",
+              "infração"
+            ]
           }
         }
       ],
@@ -138,8 +159,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — teto sempre 180 dias, mesmo com defesa prévia.\nC — prazo de 360 dias conta da defesa e já passou de 360 dias.\nD — NP só vale em 30 dias como a NA.\n\nPegadinha: defesa em tempo hábil amplia o teto para 360 dias contados da infração.",
-            "destaques": ["Gabarito B", "222 dias", "defesa prévia"]
+            "texto": "Gabarito B. A — teto sempre 180 dias, mesmo com defesa prévia.\nC — prazo de 360 dias conta da defesa e já passou de 360 dias.\nD — NP só vale em 30 dias como a NA. Pegadinha: defesa em tempo hábil amplia o teto para 360 dias contados da infração.",
+            "destaques": [
+              "Gabarito B",
+              "222 dias",
+              "defesa prévia"
+            ]
           }
         },
         {
@@ -148,7 +173,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "NOTIFICAÇÃO DE PENALIDADE: comunicação da multa após julgamento da defesa — prazo do art. 9º.\n\nDEFESA PRÉVIA EM TEMPO HÁBIL: apresentada dentro do prazo da NA — gatilho do teto de 360 dias.\n\nMARCO INICIAL: data do cometimento da infração — não a data da defesa nem da NA.",
-            "destaques": ["NP", "DEFESA PRÉVIA", "MARCO INICIAL"]
+            "destaques": [
+              "NP",
+              "DEFESA PRÉVIA",
+              "MARCO INICIAL"
+            ]
           }
         },
         {
@@ -157,7 +186,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Situação", "Prazo máximo"],
+            "titulo_colunas": [
+              "Situação",
+              "Prazo máximo"
+            ],
             "linhas": [
               {
                 "faixa": "Defesa indeferida ou não apresentada",
@@ -182,13 +214,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Defesa prévia apresentada em tempo hábil?", "tipo": "pergunta" },
-              { "id": "p2", "label": "NP expedida em até 360 dias da infração?", "tipo": "pergunta" },
-              { "id": "r1", "label": "NP válida — gabarito B", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Defesa prévia apresentada em tempo hábil?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "NP expedida em até 360 dias da infração?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "NP válida — gabarito B",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — defesa em 28/01/2026" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — 222 dias < 360" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — defesa em 28/01/2026"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — 222 dias < 360"
+              }
             ]
           }
         },
@@ -198,7 +250,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
               [
                 "NP sempre deve sair em até 180 dias da infração",
@@ -217,7 +272,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — numero_vizinho",
@@ -240,7 +298,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Conta", "Resultado"],
+            "colunas": [
+              "Conta",
+              "Resultado"
+            ],
             "linhas": [
               [
                 "Data da infração",
@@ -271,7 +332,10 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Função no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Função no caso"
+            ],
             "linhas": [
               [
                 "Art. 9º, § 2º",
@@ -335,7 +399,12 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Sem defesa = 180 dias · com defesa = 360 dias · ambos da INFRAÇÃO · NA = 30 dias.\nNear: mesma NP no 222º dia sem defesa prévia — irregular (ultrapassa 180).\nFar: defesa em tempo hábil e NP no 350º dia — ainda regular dentro de 360.\nNão muda: marco inicial é sempre a data da infração.\nCadeia: vizinho = 30 dias para expedir NA no art. 4º.",
-            "destaques": ["180", "360", "infração", "30 dias"]
+            "destaques": [
+              "180",
+              "360",
+              "infração",
+              "30 dias"
+            ]
           }
         }
       ],

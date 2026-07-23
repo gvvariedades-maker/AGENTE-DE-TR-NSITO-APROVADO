@@ -45,8 +45,18 @@
       "eixos_mecanismo": [
         "termo_unico",
         "competencia_snt",
-        "gravidade"
-      ]
+        "gravidade",
+        "regra_excecao"
+      ],
+      "near_transfer": "se o macaco estivesse totalmente ausente do porta-malas, a autuação também subsistiria — o §2 cobre ausência e mau funcionamento na fiscalização.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "993: presença ≠ funcionamento · §2 constata operação · art. 8 = art. 230.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     },
     "tags": [
       "contran_993",
@@ -67,7 +77,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito B: macaco inoperante não atende — fiscalização constata funcionamento, não só presença.",
-            "destaques": ["Gabarito B", "funcionamento", "inoperante"]
+            "destaques": [
+              "Gabarito B",
+              "funcionamento",
+              "inoperante"
+            ]
           }
         },
         {
@@ -75,7 +89,10 @@
           "titulo": "Presença × funcionamento",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
               [
                 "Macaco no porta-malas basta",
@@ -94,7 +111,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Presença ≠ funcionamento.\n§2 constata operação · art. 8 = art. 230.",
-            "destaques": ["funcionamento", "art. 230"]
+            "destaques": [
+              "funcionamento",
+              "art. 230"
+            ]
           }
         }
       ],
@@ -133,8 +153,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — presença do macaco no porta-malas atende ao Anexo I independentemente de estar operante.\nC — fiscalização municipal da STTP só pode verificar documentos de porte obrigatório, não funcionamento de equipamentos.\nD — macaco inoperante configura apenas irregularidade administrativa sem enquadramento nas penalidades da Resolução.\n\nPegadinha: presença formal não dispensa constatação de funcionamento pelo agente.",
-            "destaques": ["Gabarito B", "inoperante", "funcionamento"]
+            "texto": "Gabarito B. A — presença do macaco no porta-malas atende ao Anexo I independentemente de estar operante.\nC — fiscalização municipal da STTP só pode verificar documentos de porte obrigatório, não funcionamento de equipamentos.\nD — macaco inoperante configura apenas irregularidade administrativa sem enquadramento nas penalidades da Resolução. Pegadinha: presença formal não dispensa constatação de funcionamento pelo agente.",
+            "destaques": [
+              "Gabarito B",
+              "inoperante",
+              "funcionamento"
+            ]
           }
         },
         {
@@ -143,7 +167,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "ANEXO I, TABELA 1: lista equipamentos para veículos leves — macaco obrigatório para automóveis.\n\nFUNCIONAMENTO: condição operacional do equipamento — exigência do §2 do art. 3º para a fiscalização.\n\nREQUISITOS DA RESOLUÇÃO: presença e operacionalidade — desprovimento enseja art. 230 do CTB pelo art. 8º.",
-            "destaques": ["TABELA 1", "FUNCIONAMENTO", "REQUISITOS"]
+            "destaques": [
+              "TABELA 1",
+              "FUNCIONAMENTO",
+              "REQUISITOS"
+            ]
           }
         },
         {
@@ -170,8 +198,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — macaco no porta-malas" },
-              { "de": "p2", "para": "r1", "rotulo": "Não — inoperante" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — macaco no porta-malas"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — inoperante"
+              }
             ]
           }
         },
@@ -181,7 +217,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Situação", "Consequência"],
+            "titulo_colunas": [
+              "Situação",
+              "Consequência"
+            ],
             "linhas": [
               {
                 "faixa": "Macaco ausente",
@@ -205,7 +244,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
               [
                 "Presença do macaco basta para o Anexo I",
@@ -224,7 +266,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -247,7 +292,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso", "Consequência"],
+            "colunas": [
+              "Fato do caso",
+              "Consequência"
+            ],
             "linhas": [
               [
                 "Macaco no porta-malas do automóvel",
@@ -269,12 +317,15 @@
           }
         },
         {
-          "id": "eixo2",
+          "id": "hierarquia",
           "titulo": "Caput × §2 × art. 8º",
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Função no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Função no caso"
+            ],
             "linhas": [
               [
                 "Art. 3º, caput — Anexo I",
@@ -333,8 +384,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Presença ≠ funcionamento.\n§2 constata operação · art. 8 = art. 230.\n\nNear-transfer: se o macaco estivesse totalmente ausente do porta-malas, a autuação também subsistiria — o §2 cobre ausência e mau funcionamento na fiscalização.",
-            "destaques": ["funcionamento", "ausência", "art. 230"]
+            "texto": "Presença ≠ funcionamento.\n§2 constata operação · art. 8 = art. 230.\n\nNear-transfer: se o macaco estivesse totalmente ausente do porta-malas, a autuação também subsistiria — o §2 cobre ausência e mau funcionamento na fiscalização.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "funcionamento",
+              "ausência",
+              "art. 230"
+            ]
           }
         }
       ],

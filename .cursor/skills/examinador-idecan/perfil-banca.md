@@ -229,3 +229,54 @@ Distribuição global A 23% | B 22% | C 21% | D 22% | E 12% — em lotes **A–D
 - Validar fundamento com `npm run validate:questoes`
 - Validar paridade com `npm run validate:indistinguibilidade` + [rubrica-indistinguibilidade.md](rubrica-indistinguibilidade.md) + [teste-cego.md](teste-cego.md)
 - Não copiar enunciados do corpus — só calibrar extensão e comando
+
+---
+
+## Paridade IDECAN — corpus local × Tec Concursos
+
+**Atualizado:** 2026-07-19 · Fonte Tec: conta logada, filtro **Banca → IDECAN** em [tecconcursos.com.br/questoes/filtrar](https://www.tecconcursos.com.br/questoes/filtrar).
+
+### Metodologia (3 camadas)
+
+| Camada | Objetivo | Critério de “pronto” |
+|--------|----------|----------------------|
+| **1 — DNA estatístico** | Envelope de forma (comando, chars, mecanismos, gabaritos) | **80–120** questões reais IDECAN por disciplina geral; **30–40** para História CG/PB |
+| **2 — Cobertura edital** | Microtópicos do Anexo I retificado | `cobertura.json` sem lacunas P1 |
+| **3 — Teste cego** | Indistinguibilidade da banca | Acurácia ≤ **55%** em amostra ≥ 20 itens ([teste-cego.md](teste-cego.md)) |
+
+### Panorama consolidado
+
+| Disciplina (slug) | Corpus local | Tec IDECAN (medido) | Meta paridade | Gap coleta | Prioridade |
+|-------------------|-------------:|--------------------:|--------------:|-----------:|:----------:|
+| `legislacao_transito` | 168 | —* | 80–120 | 0 | 🟢 Manutenção |
+| `portugues` | 197 | —* | 80–120 | 0 | 🟢 Manutenção |
+| `informatica` | 486 | **1.287** | 80–120 | 0 | 🟢 Manutenção |
+| `direito_constitucional` | 538 | —* | 80–120 | 0 | 🟢 Manutenção |
+| `legislacao_etica_sp` | 62 | **151** | 80–120 | **~20–60** | 🟡 Média |
+| `direito_administrativo` | **98** | **1.385** | 80–120 | 0 | 🟢 Manutenção |
+| `historia_cg_pb` | **9** | —* | 30–40 | **~25–35** | 🔴 **P0** |
+
+\*Contagem por matéria no Tec exige filtro adicional (expandir pasta → **“Todo o conteúdo de [matéria]”**). Total IDECAN no Tec: **38.424** questões.
+
+### Roteiro de coleta no Tec (ordem obrigatória)
+
+1. **Direito Administrativo** — matéria: `Direito Administrativo (Doutrina e Leis Federais)` · exportar **80–100** questões · evitar viés “regime disciplinar Salvador” (corpus atual) · priorizar CF 37–41, atos, poder de polícia, licitação 14.133.
+2. **História CG/PB** — buscar assuntos: `Campina Grande`, `História da Paraíba`, `História do Brasil` (filtrar CG/PB no enunciado) · meta **30–35** questões · cruzar com `conteúdo/historia-cg-pb/base-factual.md`.
+3. **Legislação/Ética SP** — matéria: `Ética no Serviço Público` (151 no Tec) + PDFs LGPD já no corpus · suplementar **LGPD/LAI** se teste cego falhar.
+4. **Demais disciplinas** — só se teste cego ou `validate:indistinguibilidade` reprovar; corpus local já cobre DNA estatístico.
+
+**Fluxo no filtro:** Banca → IDECAN → Matéria e assunto → ícone de pasta → **Todo o conteúdo de "[matéria]"** → Gerar caderno → exportar PDF → `conteúdo/questões reais/` → `npm run analyze:idecan`.
+
+**Nomes exatos no Tec (referência):**
+
+| Edital | Nome no Tec |
+|--------|-------------|
+| Dir. Administrativo | `Direito Administrativo (Doutrina e Leis Federais)` |
+| Dir. Constitucional | `Direito Constitucional` |
+| Português | `Língua Portuguesa (Português)` |
+| Informática | `Informática` |
+| Ética/LGPD | `Ética no Serviço Público` (+ corpus LGPD separado) |
+| Trânsito | `Legislação de Trânsito` ou `Código de Trânsito Brasileiro (CTB)` |
+| História CG/PB | assuntos `Campina Grande` / `História da Paraíba` |
+
+Detalhes por disciplina: `perfis/perfil-{disciplina}.md` § Paridade IDECAN.

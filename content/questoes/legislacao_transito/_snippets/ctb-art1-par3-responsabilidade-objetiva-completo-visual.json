@@ -1,260 +1,262 @@
-{
-  "fundamento_slug": "CTB_art_1_par3",
-  "estudo_reverso_visual_completo": {
-    "versao": 2,
-    "arquetipo": "fluxograma_decisao",
-    "arquetipo_secundario": "tabela_gradacao",
-    "publico_alvo": "iniciante",
-    "duracao_estimada_seg": 265,
+[
+  {
     "fundamento_slug": "CTB_art_1_par3",
-    "macete_visual": "§3 = OBJETIVA · STTP no SNT",
-    "meta": {
-      "padrao_familia": "A_caso_regra_excecao",
-      "pegadinha_em_uma_frase": "Procuradoria exige culpa do agente — §3º fixa responsabilidade objetiva da STTP no âmbito de sua competência",
-      "eixos_legais": [
-        "CTB_art_1_par3",
-        "CTB_art_1_par2"
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "fluxograma_decisao",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 265,
+      "fundamento_slug": "CTB_art_1_par3",
+      "macete_visual": "§3 = OBJETIVA · STTP no SNT",
+      "meta": {
+        "padrao_familia": "A_caso_regra_excecao",
+        "pegadinha_em_uma_frase": "Procuradoria exige culpa do agente — §3º fixa responsabilidade objetiva da STTP no âmbito de sua competência",
+        "eixos_legais": [
+          "CTB_art_1_par3",
+          "CTB_art_1_par2"
+        ],
+        "isca_por_alternativa": {
+          "A": "vítima precisaria provar culpa do agente ou omissão dolosa do órgão",
+          "B": "omissão na sinalização só geraria dever de indenizar com programa escrito aprovado pelo CONTRAN",
+          "C": "responsabilidade do §3º seria competência exclusiva da União, excluindo a STTP municipal"
+        },
+        "eficacia_pos_aula": [
+          "E1",
+          "E2",
+          "E3"
+        ]
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: culpa ou objetiva?",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito D (STTP responde objetivamente pela omissão na sinalização).\n\nA — culpa do agente ou dolo do órgão: errado.\nB — exige programa escrito do CONTRAN: errado.\nC — responsabilidade só da União: errado.\n\nPegadinha: confundir responsabilidade civil do SNT com culpa subjetiva do agente de trânsito.",
+            "destaques": [
+              "Gabarito D",
+              "culpa",
+              "União"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "OBJETIVA: basta dano + nexo causal — não se discute culpa do agente.\n\nSUBJETIVA: exige prova de dolo ou negligência — não é o §3º.\n\nTRÂNSITO SEGURO: direito-dever do §2º; programas e serviços do §3º.",
+            "destaques": [
+              "OBJETIVA",
+              "SUBJETIVA",
+              "TRÂNSITO SEGURO"
+            ]
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: STTP no §3º?",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "STTP é órgão componente do SNT?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Houve omissão em programa de trânsito seguro?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito D — responsabilidade objetiva",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — executivo municipal de trânsito"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — sinalização inadequada no cruzamento"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mapa",
+          "titulo": "Mapa: parágrafos do art. 1º",
+          "secao": "mapa",
+          "tipo": "tabela_gradacao",
+          "conteudo": {
+            "titulo_colunas": [
+              "Dispositivo",
+              "Conteúdo"
+            ],
+            "linhas": [
+              {
+                "faixa": "§2º",
+                "classificacao": "Trânsito seguro = direito de todos + dever do SNT"
+              },
+              {
+                "faixa": "§3º",
+                "classificacao": "Responsabilidade OBJETIVA dos órgãos do SNT ← D",
+                "destaque": true
+              },
+              {
+                "faixa": "§5º",
+                "classificacao": "Prioridade à defesa da vida nas ações do SNT"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Subjetiva × objetiva",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "O que a Procuradoria pensa ✗",
+              "O que o §3º diz ✓"
+            ],
+            "linhas": [
+              [
+                "Vítima deve provar culpa do agente da STTP",
+                "Órgãos do SNT respondem objetivamente no âmbito de suas competências"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Troca objetiva por subjetiva — §3º não exige prova de culpa do agente."
+              ],
+              [
+                "B — regra_excecao",
+                "Inventa condição de programa escrito do CONTRAN — omissão em serviço de trânsito seguro já alcança o §3º."
+              ],
+              [
+                "C — competencia_snt",
+                "Exclui STTP municipal — todos os componentes do SNT estão no §3º."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Caso: cruzamento de Campina Grande",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Fato do enunciado",
+              "Consequência legal"
+            ],
+            "linhas": [
+              [
+                "Pedestre atropelado sem sinalização adequada",
+                "Possível omissão em programa de trânsito seguro"
+              ],
+              [
+                "Ação contra a STTP municipal",
+                "Órgão do SNT no âmbito de sua competência"
+              ],
+              [
+                "Procuradoria exige culpa do agente",
+                "Gabarito D — teoria objetiva do §3º"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "§3º e o dever do §2º",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Dispositivo",
+              "Função no caso"
+            ],
+            "linhas": [
+              [
+                "§2º — direito-dever do trânsito seguro",
+                "STTP deve adotar medidas para assegurar trânsito seguro"
+              ],
+              [
+                "§3º — responsabilidade objetiva",
+                "Omissão na sinalização gera dever de indenizar sem provar culpa"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "Art. 1º, §3º",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB art. 1º, §3º",
+            "texto": "§ 3º Os órgãos e entidades componentes do Sistema Nacional de Trânsito respondem, no âmbito das respectivas competências, objetivamente, por danos causados aos cidadãos em virtude de ação, omissão ou erro na execução e manutenção de programas, projetos e serviços que garantam o exercício do direito do trânsito seguro.",
+            "trechos_grifados": [
+              {
+                "inicio": 122,
+                "fim": 135,
+                "motivo": "contraste — responsabilidade objetiva, não subjetiva",
+                "texto_grifado": "objetivamente"
+              },
+              {
+                "inicio": 189,
+                "fim": 318,
+                "motivo": "caso — omissão em programa de trânsito seguro",
+                "texto_grifado": "omissão ou erro na execução e manutenção de programas, projetos e serviços que garantam o exercício do direito do trânsito seguro"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "§3 = OBJETIVA · dano + nexo em trânsito seguro · STTP integra o SNT.\nNear: faixa de pedestres sem pintura em escola — mesma responsabilidade objetiva da STTP.\nFar: DETRAN em programa de reciclagem com dano ao cidadão — também §3º objetivo.\nNão muda: órgãos do SNT respondem objetivamente por omissão em programas de trânsito seguro.\nCadeia: vizinho = §2º (dever de assegurar trânsito seguro).",
+            "destaques": [
+              "OBJETIVA",
+              "escola",
+              "DETRAN",
+              "§2º"
+            ]
+          }
+        }
       ],
-      "isca_por_alternativa": {
-        "A": "vítima precisaria provar culpa do agente ou omissão dolosa do órgão",
-        "B": "omissão na sinalização só geraria dever de indenizar com programa escrito aprovado pelo CONTRAN",
-        "C": "responsabilidade do §3º seria competência exclusiva da União, excluindo a STTP municipal"
-      },
-      "eficacia_pos_aula": [
-        "E1",
-        "E2",
-        "E3"
+      "links_fonte": [
+        {
+          "rotulo": "Lei 9.503/97 — CTB",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        }
       ]
-    },
-    "telas": [
-      {
-        "id": "contexto",
-        "titulo": "Diagnóstico: culpa ou objetiva?",
-        "secao": "diagnostico",
-        "tipo": "texto_destaque",
-        "conteudo": {
-          "texto": "Gabarito D (STTP responde objetivamente pela omissão na sinalização).\n\nA — culpa do agente ou dolo do órgão: errado.\nB — exige programa escrito do CONTRAN: errado.\nC — responsabilidade só da União: errado.\n\nPegadinha: confundir responsabilidade civil do SNT com culpa subjetiva do agente de trânsito.",
-          "destaques": [
-            "Gabarito D",
-            "culpa",
-            "União"
-          ]
-        }
-      },
-      {
-        "id": "glossario",
-        "titulo": "Pré-treino: 3 termos",
-        "tipo": "texto_destaque",
-        "conteudo": {
-          "texto": "OBJETIVA: basta dano + nexo causal — não se discute culpa do agente.\n\nSUBJETIVA: exige prova de dolo ou negligência — não é o §3º.\n\nTRÂNSITO SEGURO: direito-dever do §2º; programas e serviços do §3º.",
-          "destaques": [
-            "OBJETIVA",
-            "SUBJETIVA",
-            "TRÂNSITO SEGURO"
-          ]
-        }
-      },
-      {
-        "id": "fluxo",
-        "titulo": "Método: STTP no §3º?",
-        "secao": "metodo",
-        "tipo": "fluxograma",
-        "conteudo": {
-          "nos": [
-            {
-              "id": "p1",
-              "label": "STTP é órgão componente do SNT?",
-              "tipo": "pergunta"
-            },
-            {
-              "id": "p2",
-              "label": "Houve omissão em programa de trânsito seguro?",
-              "tipo": "pergunta"
-            },
-            {
-              "id": "r1",
-              "label": "Gabarito D — responsabilidade objetiva",
-              "tipo": "resultado"
-            }
-          ],
-          "arestas": [
-            {
-              "de": "p1",
-              "para": "p2",
-              "rotulo": "Sim — executivo municipal de trânsito"
-            },
-            {
-              "de": "p2",
-              "para": "r1",
-              "rotulo": "Sim — sinalização inadequada no cruzamento"
-            }
-          ]
-        }
-      },
-      {
-        "id": "mapa",
-        "titulo": "Mapa: parágrafos do art. 1º",
-        "secao": "mapa",
-        "tipo": "tabela_gradacao",
-        "conteudo": {
-          "titulo_colunas": [
-            "Dispositivo",
-            "Conteúdo"
-          ],
-          "linhas": [
-            {
-              "faixa": "§2º",
-              "classificacao": "Trânsito seguro = direito de todos + dever do SNT"
-            },
-            {
-              "faixa": "§3º",
-              "classificacao": "Responsabilidade OBJETIVA dos órgãos do SNT ← D",
-              "destaque": true
-            },
-            {
-              "faixa": "§5º",
-              "classificacao": "Prioridade à defesa da vida nas ações do SNT"
-            }
-          ]
-        }
-      },
-      {
-        "id": "contraste",
-        "titulo": "Subjetiva × objetiva",
-        "secao": "contraste",
-        "tipo": "comparacao",
-        "conteudo": {
-          "colunas": [
-            "O que a Procuradoria pensa ✗",
-            "O que o §3º diz ✓"
-          ],
-          "linhas": [
-            [
-              "Vítima deve provar culpa do agente da STTP",
-              "Órgãos do SNT respondem objetivamente no âmbito de suas competências"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "distratores",
-        "titulo": "Por que cada alternativa erra",
-        "secao": "distratores",
-        "tipo": "comparacao",
-        "conteudo": {
-          "colunas": [
-            "Alternativa",
-            "Mecanismo + por quê"
-          ],
-          "linhas": [
-            [
-              "A — termo_unico",
-              "Troca objetiva por subjetiva — §3º não exige prova de culpa do agente."
-            ],
-            [
-              "B — regra_excecao",
-              "Inventa condição de programa escrito do CONTRAN — omissão em serviço de trânsito seguro já alcança o §3º."
-            ],
-            [
-              "C — competencia_snt",
-              "Exclui STTP municipal — todos os componentes do SNT estão no §3º."
-            ]
-          ]
-        }
-      },
-      {
-        "id": "caso",
-        "titulo": "Caso: cruzamento de Campina Grande",
-        "secao": "metodo",
-        "tipo": "comparacao",
-        "conteudo": {
-          "colunas": [
-            "Fato do enunciado",
-            "Consequência legal"
-          ],
-          "linhas": [
-            [
-              "Pedestre atropelado sem sinalização adequada",
-              "Possível omissão em programa de trânsito seguro"
-            ],
-            [
-              "Ação contra a STTP municipal",
-              "Órgão do SNT no âmbito de sua competência"
-            ],
-            [
-              "Procuradoria exige culpa do agente",
-              "Gabarito D — teoria objetiva do §3º"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "hierarquia",
-        "titulo": "§3º e o dever do §2º",
-        "secao": "conceito",
-        "tipo": "comparacao",
-        "conteudo": {
-          "colunas": [
-            "Dispositivo",
-            "Função no caso"
-          ],
-          "linhas": [
-            [
-              "§2º — direito-dever do trânsito seguro",
-              "STTP deve adotar medidas para assegurar trânsito seguro"
-            ],
-            [
-              "§3º — responsabilidade objetiva",
-              "Omissão na sinalização gera dever de indenizar sem provar culpa"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "lei",
-        "titulo": "Art. 1º, §3º",
-        "secao": "lei",
-        "tipo": "trecho_legal",
-        "conteudo": {
-          "fonte": "CTB art. 1º, §3º",
-          "texto": "§ 3º Os órgãos e entidades componentes do Sistema Nacional de Trânsito respondem, no âmbito das respectivas competências, objetivamente, por danos causados aos cidadãos em virtude de ação, omissão ou erro na execução e manutenção de programas, projetos e serviços que garantam o exercício do direito do trânsito seguro.",
-          "trechos_grifados": [
-            {
-              "inicio": 122,
-              "fim": 135,
-              "motivo": "contraste — responsabilidade objetiva, não subjetiva",
-              "texto_grifado": "objetivamente"
-            },
-            {
-              "inicio": 189,
-              "fim": 318,
-              "motivo": "caso — omissão em programa de trânsito seguro",
-              "texto_grifado": "omissão ou erro na execução e manutenção de programas, projetos e serviços que garantam o exercício do direito do trânsito seguro"
-            }
-          ]
-        }
-      },
-      {
-        "id": "macete",
-        "titulo": "Macete + near/far-transfer",
-        "secao": "macete",
-        "tipo": "texto_destaque",
-        "conteudo": {
-          "texto": "§3 = OBJETIVA · dano + nexo em trânsito seguro · STTP integra o SNT.\nNear: faixa de pedestres sem pintura em escola — mesma responsabilidade objetiva da STTP.\nFar: DETRAN em programa de reciclagem com dano ao cidadão — também §3º objetivo.\nNão muda: órgãos do SNT respondem objetivamente por omissão em programas de trânsito seguro.\nCadeia: vizinho = §2º (dever de assegurar trânsito seguro).",
-          "destaques": [
-            "OBJETIVA",
-            "escola",
-            "DETRAN",
-            "§2º"
-          ]
-        }
-      }
-    ],
-    "links_fonte": [
-      {
-        "rotulo": "Lei 9.503/97 — CTB",
-        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
-      }
-    ]
+    }
   }
-}
+]

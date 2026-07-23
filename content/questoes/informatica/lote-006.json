@@ -132,7 +132,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B (verificar firewall).\n\nA — atribui portas ao antivírus: função é do firewall.\nC — iguala firewall e antivírus: camadas distintas no manual.\nD — desinstalar antivírus libera intranet: bloqueio é regra de rede.\n\nInternet OK, portal interno da prefeitura bloqueado na STTP.",
+            "texto": "Gabarito B (verificar firewall). A — atribui portas ao antivírus: função é do firewall.\nC — iguala firewall e antivírus: camadas distintas no manual.\nD — desinstalar antivírus libera intranet: bloqueio é regra de rede. Internet OK, portal interno da prefeitura bloqueado na STTP.",
             "destaques": [
               "firewall",
               "antivírus",
@@ -284,7 +284,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Firewall = rede e portas | Antivírus = arquivos e processos.\n\nNear-transfer: estação lenta e pop-up de vírus — antivírus; só intranet da prefeitura falha com internet OK — firewall.",
+            "texto": "Firewall = rede e portas | Antivírus = arquivos e processos.\n\nNear-transfer: estação lenta e pop-up de vírus — antivírus; só intranet da prefeitura falha com internet OK — firewall.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "Firewall",
               "Antivírus",
@@ -316,6 +316,17 @@
           "D": "desinstalar antivírus libera intranet bloqueada"
         }
       }
+    },
+    "meta": {
+      "near_transfer": "estação lenta e pop-up de vírus — antivírus; só intranet da prefeitura falha com internet OK — firewall.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Firewall = portas e tráfego de rede",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     }
   }
 ]

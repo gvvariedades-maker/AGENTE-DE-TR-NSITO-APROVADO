@@ -7,7 +7,7 @@ consumido_por: [examinador-idecan, professor-cadeia, estudo-reverso-visual]
 corpus_base: 12 questões IDECAN (análise 2026-07-10) — AMOSTRA FRACA E ENVIESADA
 cobertura_banco: 23 questões em content/questoes/direito_administrativo/ (atualizado 2026-07-10)
 fonte_legal: conteúdo/legislação federal/cf-1988.html (arts. 37–41) + lei-9784-processo-administrativo.html + lei-14133-licitacoes.html
-versao: 1.0
+versao: 1.1
 ---
 
 # Perfil vertical — Noções de Direito Administrativo
@@ -198,6 +198,47 @@ Conceito/organização/finalidade da Administração (1.1) · administração di
 
 ---
 
+## 13. Paridade IDECAN — coleta Tec Concursos
+
+**Status:** 🟡 **P0 em progresso** — export concluído (2026-07-19) · Corpus local **98 Q** (12 + 86 novas) → meta **80–120** ✅
+
+| Métrica | Valor |
+|---------|-------|
+| Corpus local (`corpus-idecan-stats.json`) | **98** questões (12 antigas + **86** do TEC 02) |
+| Tec IDECAN + matéria | **1.385** questões (`Direito Administrativo (Doutrina e Leis Federais)`) |
+| Caderno Tec | [DIREITO ADMINISTRATIVO - IDECAN - TEC 02](https://www.tecconcursos.com.br/questoes/cadernos/98801700) |
+| PDF exportado | `conteúdo/questões reais/DIREITO ADMINISTRATIVO - IDECAN - SUPERIOR - TEC 02.pdf` (90 Q, 4 anuladas/certas não parseadas) |
+| `npm run analyze:idecan` | ✅ atualizado — `por_disciplina.direito_administrativo.total` = **98** |
+
+### Roteiro de coleta (Tec)
+
+1. [Filtrar questões](https://www.tecconcursos.com.br/questoes/filtrar) → **Banca: IDECAN**.
+2. **Matéria e assunto** → expandir pasta → **Todo o conteúdo de "Direito Administrativo (Doutrina e Leis Federais)"**.
+3. Opcional (refino): **Órgão** com concursos de trânsito/STTP/município; não restringir demais na 1ª leva.
+4. Gerar caderno de **80–100 questões** (misturar anos; incluir 4 alternativas A–D).
+5. Salvar PDF em `conteúdo/questões reais/DIREITO ADMINISTRATIVO - IDECAN - TEC 02.pdf`.
+6. Rodar `npm run analyze:idecan` e atualizar este perfil com métricas medidas.
+
+### O que priorizar na exportação
+
+| Eixo (edital) | Por quê |
+|---------------|---------|
+| Poder de polícia + atos administrativos | Base da autuação STTP |
+| Princípios art. 37 + organização da Adm. | Lacuna item 1 do Anexo |
+| Processo administrativo (Lei 9.784) | `numero_vizinho` + fluxo |
+| Licitação/contratos (Lei 14.133) | `regra_excecao` frequente |
+
+### Critério de “paridade OK”
+
+- [x] Corpus ≥ **80** questões IDECAN de administrativo (**98**)
+- [x] `npm run analyze:idecan` atualizado
+- [ ] Teste cego ≤ **55%** em lote de 20 inéditas (`direito_administrativo`)
+- [ ] Envelope validado pós-export: enunciado **250–450** chars · alternativa **80–120** chars
+
+---
+
 ## Changelog
 
+- **1.2** (2026-07-19) — Export Tec: 1.385 Q disponíveis; PDF TEC 02 (90 Q → 86 parseadas); corpus **98**; paridade camada 1 atingida; parser suporta gabarito consolidado.
+- **1.1** (2026-07-19) — §13 Paridade IDECAN: gap ~70–110 Q; roteiro Tec P0; nome exato da matéria no Tec; critérios de paridade.
 - **1.0** (2026-07-10) — Perfil inicial: corpus 12 Q (amostra fraca/enviesada — alerta explícito); envelope 250–450 / alt 80–120; foco Poder de Polícia (cargo); 9 microtópicos P1→P5; cobertura 23 Q (itens 2–7 cobertos, item 1 em lacuna); fila ROI; mapa visual Famílias A/B/C.

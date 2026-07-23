@@ -45,7 +45,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Autuação STTP com remoção: poder de polícia municipal + motivação na sanção. B transfere tudo à PM; C dispensa motivação por ato vinculado.",
-            "destaques": ["poder de polícia", "segurança viária", "motivação"]
+            "destaques": [
+              "poder de polícia",
+              "segurança viária",
+              "motivação"
+            ]
           }
         },
         {
@@ -53,7 +57,10 @@
           "titulo": "PM exclusiva × agentes municipais",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha ✗", "CF §10 ✓"],
+            "colunas": [
+              "Pegadinha ✗",
+              "CF §10 ✓"
+            ],
             "linhas": [
               [
                 "Segurança viária é competência exclusiva da PM",
@@ -68,13 +75,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Autuação limita direitos ou impõe sanção?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Competência é só da PM, sem § 10?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito D — poder de polícia + §10 + motivação", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Autuação limita direitos ou impõe sanção?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Competência é só da PM, sem § 10?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito D — poder de polícia + §10 + motivação",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -101,7 +128,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "VIÁRIA ≠ PM exclusiva | AUTUA = POLÍCIA (limita direitos) | SANÇÃO = MOTIVA (art. 50, II).",
-            "destaques": ["VIÁRIA", "POLÍCIA", "MOTIVA"]
+            "destaques": [
+              "VIÁRIA",
+              "POLÍCIA",
+              "MOTIVA"
+            ]
           }
         }
       ],
@@ -123,7 +154,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "PM exclusiva (B) ou ato vinculado dispensa motivação (C)",
-        "eixos_legais": ["CF_art_144_10", "Lei9784_art50"],
+        "eixos_legais": [
+          "CF_art_144_10",
+          "Lei9784_art50"
+        ],
         "isca_por_alternativa": {
           "A": "nega poder de polícia — trata autuação como mera orientação sem limitar direitos",
           "B": "transfere segurança viária exclusivamente à PM — ignora art. 144, § 10",
@@ -137,8 +171,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D.\n\nA — nega poder de polícia: multa e remoção limitam direitos.\nB — PM exclusiva: a Constituição atribui competência aos agentes municipais.\nC — dispensa motivação: impor sanção exige fundamentação explícita.\n\nNesta aula você fixa VIÁRIA ≠ PM exclusiva e o vínculo autuação → poder de polícia → motivação.",
-            "destaques": ["Gabarito D", "poder de polícia", "segurança viária"]
+            "texto": "Gabarito D. A — nega poder de polícia: multa e remoção limitam direitos.\nB — PM exclusiva: a Constituição atribui competência aos agentes municipais.\nC — dispensa motivação: impor sanção exige fundamentação explícita. Nesta aula você fixa VIÁRIA ≠ PM exclusiva e o vínculo autuação → poder de polícia → motivação.",
+            "destaques": [
+              "Gabarito D",
+              "poder de polícia",
+              "segurança viária"
+            ]
           }
         },
         {
@@ -147,7 +185,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PODER DE POLÍCIA: prerrogativa da Administração para restringir direitos individuais em favor do interesse público, com fundamento legal.\n\nSEGURANÇA VIÁRIA: atividade constitucional (CF art. 144, § 10) que compreende fiscalização de trânsito — distinta da segurança pública do caput.\n\nMOTIVAÇÃO: indicação de fatos e fundamentos jurídicos quando o ato impõe sanção (Lei 9.784/99, art. 50, II).",
-            "destaques": ["PODER DE POLÍCIA", "SEGURANÇA VIÁRIA", "MOTIVAÇÃO"]
+            "destaques": [
+              "PODER DE POLÍCIA",
+              "SEGURANÇA VIÁRIA",
+              "MOTIVAÇÃO"
+            ]
           }
         },
         {
@@ -174,8 +216,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -185,7 +235,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Elemento", "Na autuação STTP"],
+            "titulo_colunas": [
+              "Elemento",
+              "Na autuação STTP"
+            ],
             "linhas": [
               {
                 "faixa": "Limitação de direitos",
@@ -213,7 +266,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a banca insinua ✗", "O que a CF exige ✓"],
+            "colunas": [
+              "O que a banca insinua ✗",
+              "O que a CF exige ✓"
+            ],
             "linhas": [
               [
                 "Segurança viária é competência exclusiva da Polícia Militar",
@@ -232,7 +288,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -255,7 +314,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso STTP", "Consequência jurídica"],
+            "colunas": [
+              "Fato do caso STTP",
+              "Consequência jurídica"
+            ],
             "linhas": [
               [
                 "Estacionamento em faixa amarela de retenção",
@@ -269,7 +331,10 @@
                 "Defesa invoca competência exclusiva da PM",
                 "Refutada pelo art. 144, § 10 — agentes municipais competentes"
               ],
-              ["Resultado", "Alternativa D — única defensável"]
+              [
+                "Resultado",
+                "Alternativa D — única defensável"
+              ]
             ]
           }
         },
@@ -279,11 +344,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Instituto", "Conteúdo constitucional"],
+            "colunas": [
+              "Instituto",
+              "Conteúdo constitucional"
+            ],
             "linhas": [
-              ["Segurança pública (art. 144, caput)", "PM, PC, PRF — dever do Estado"],
-              ["Segurança viária (art. 144, § 10)", "Fiscalização de trânsito — agentes municipais"],
-              ["Poder de polícia na autuação", "Limita direitos com base legal — não é orientação"]
+              [
+                "Segurança pública (art. 144, caput)",
+                "PM, PC, PRF — dever do Estado"
+              ],
+              [
+                "Segurança viária (art. 144, § 10)",
+                "Fiscalização de trânsito — agentes municipais"
+              ],
+              [
+                "Poder de polícia na autuação",
+                "Limita direitos com base legal — não é orientação"
+              ]
             ]
           }
         },
@@ -335,8 +412,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "VIÁRIA ≠ PM exclusiva | AUTUA = POLÍCIA (limita direitos) | SANÇÃO = MOTIVA (art. 50, II).\n\nNear-transfer: se o agente apenas orientasse o motorista a sair da faixa sem lavrar auto, ainda seria poder de polícia? Orientação sem sanção pode ser fiscalização educativa — mas autuação com multa sempre limita direitos e exige motivação.",
-            "destaques": ["VIÁRIA", "POLÍCIA", "near-transfer"]
+            "texto": "VIÁRIA ≠ PM exclusiva | AUTUA = POLÍCIA (limita direitos) | SANÇÃO = MOTIVA (art. 50, II).\n\nNear-transfer: se o agente apenas orientasse o motorista a sair da faixa sem lavrar auto, ainda seria poder de polícia? Orientação sem sanção pode ser fiscalização educativa — mas autuação com multa sempre limita direitos e exige motivação.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "VIÁRIA",
+              "POLÍCIA",
+              "near-transfer"
+            ]
           }
         }
       ],
@@ -358,6 +439,17 @@
       "lei_9784",
       "motivacao",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se o agente apenas orientasse o motorista a sair da faixa sem lavrar auto, ainda seria poder de polícia? Orientação sem sanção pode ser fiscalização educativa — mas autuação com multa sempre limita direitos e exige motivação.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "VIÁRIA ≠ PM exclusiva",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

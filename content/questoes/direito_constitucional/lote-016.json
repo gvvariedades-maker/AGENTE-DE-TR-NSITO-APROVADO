@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Contrato sem licitação da STTP. A banca oferece MS individual ou restringe legitimidade — lesão ao erário pede ação popular de qualquer cidadão.",
-            "destaques": ["ação popular", "patrimônio público", "MS"]
+            "destaques": [
+              "ação popular",
+              "patrimônio público",
+              "MS"
+            ]
           }
         },
         {
@@ -52,13 +56,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Lesão ao patrimônio público ou moralidade?", "tipo": "pergunta" },
-              { "id": "p2", "label": "É direito líquido e certo individual?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Ação popular — LXXIII", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Lesão ao patrimônio público ou moralidade?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "É direito líquido e certo individual?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Ação popular — LXXIII",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não — coletivo" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — coletivo"
+              }
             ]
           }
         },
@@ -67,10 +91,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["MS individual do cidadão", "Lesão coletiva → ação popular (LXXIII)"],
-              ["Só MP ou associação pode propor", "Qualquer cidadão é parte legítima"]
+              [
+                "MS individual do cidadão",
+                "Lesão coletiva → ação popular (LXXIII)"
+              ],
+              [
+                "Só MP ou associação pode propor",
+                "Qualquer cidadão é parte legítima"
+              ]
             ]
           }
         },
@@ -97,7 +130,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Patrimônio público + moralidade + qualquer cidadão = ação popular (LXXIII).",
-            "destaques": ["ação popular", "qualquer cidadão", "patrimônio público"]
+            "destaques": [
+              "ação popular",
+              "qualquer cidadão",
+              "patrimônio público"
+            ]
           }
         }
       ],
@@ -119,7 +156,11 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Contrato sem licitação lesa erário — qualquer cidadão propõe ação popular, não MS individual",
-        "eixos_legais": ["CF_art5_LXXIII", "CF_art5_LXIX", "CF_art5_LXX"],
+        "eixos_legais": [
+          "CF_art5_LXXIII",
+          "CF_art5_LXIX",
+          "CF_art5_LXX"
+        ],
         "isca_por_alternativa": {
           "A": "mandado de segurança individual do contribuinte contra contrato lesivo coletivo",
           "B": "ação popular restrita ao MP ou associação com 1 ano",
@@ -133,8 +174,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C (ação popular por qualquer cidadão).\n\nA — mandado de segurança individual: troca lesão coletiva por direito líquido e certo.\nB — só MP ou associação: ignora legitimidade universal do LXXIII.\nD — órgão de trânsito da União julga: confunde SNT com via judicial.\n\nPromessa: fixar quando a lesão ao erário pede ação popular.",
-            "destaques": ["ação popular", "mandado de segurança", "qualquer cidadão"]
+            "texto": "Gabarito C (ação popular por qualquer cidadão). A — mandado de segurança individual: troca lesão coletiva por direito líquido e certo.\nB — só MP ou associação: ignora legitimidade universal do LXXIII.\nD — órgão de trânsito da União julga: confunde SNT com via judicial. Promessa: fixar quando a lesão ao erário pede ação popular.",
+            "destaques": [
+              "ação popular",
+              "mandado de segurança",
+              "qualquer cidadão"
+            ]
           }
         },
         {
@@ -143,7 +188,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "AÇÃO POPULAR: qualquer cidadão pode anular ato lesivo ao patrimônio público, moralidade administrativa, meio ambiente ou patrimônio cultural. MANDADO DE SEGURANÇA: tutela direito líquido e certo individual contra autoridade. MANDADO DE SEGURANÇA COLETIVO (LXX): partido, sindicato ou associação — rol fechado, distinto da ação popular.",
-            "destaques": ["ação popular", "mandado de segurança", "coletivo"]
+            "destaques": [
+              "ação popular",
+              "mandado de segurança",
+              "coletivo"
+            ]
           }
         },
         {
@@ -170,8 +219,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — contrato sem licitação" },
-              { "de": "p2", "para": "r1", "rotulo": "Não — interesse difuso" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — contrato sem licitação"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — interesse difuso"
+              }
             ]
           }
         },
@@ -181,16 +238,28 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Remédio", "Legitimado / objeto"],
+            "titulo_colunas": [
+              "Remédio",
+              "Legitimado / objeto"
+            ],
             "linhas": [
               {
                 "faixa": "Ação popular (LXXIII)",
                 "classificacao": "Qualquer cidadão — patrimônio público, moralidade, ambiente",
                 "destaque": true
               },
-              { "faixa": "MS coletivo (LXX)", "classificacao": "Partido, sindicato, associação (1 ano)" },
-              { "faixa": "MS individual (LXIX)", "classificacao": "Direito líquido e certo — pessoa determinada" },
-              { "faixa": "Habeas corpus (LXVIII)", "classificacao": "Locomoção da pessoa" }
+              {
+                "faixa": "MS coletivo (LXX)",
+                "classificacao": "Partido, sindicato, associação (1 ano)"
+              },
+              {
+                "faixa": "MS individual (LXIX)",
+                "classificacao": "Direito líquido e certo — pessoa determinada"
+              },
+              {
+                "faixa": "Habeas corpus (LXVIII)",
+                "classificacao": "Locomoção da pessoa"
+              }
             ]
           }
         },
@@ -200,7 +269,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Contribuinte ofendido → mandado de segurança",
@@ -219,7 +291,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — termo_unico",
@@ -242,12 +317,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Conclusão"],
+            "colunas": [
+              "Fato do enunciado",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Terceirização de arrecadação sem licitação", "Lesão ao patrimônio público e moralidade"],
-              ["Cidadão propõe ação", "Legitimidade universal — LXXIII"],
-              ["Município indica MS individual", "Pegadinha — lesão não é direito líquido e certo (A falsa)"],
-              ["Resultado", "Alternativa C"]
+              [
+                "Terceirização de arrecadação sem licitação",
+                "Lesão ao patrimônio público e moralidade"
+              ],
+              [
+                "Cidadão propõe ação",
+                "Legitimidade universal — LXXIII"
+              ],
+              [
+                "Município indica MS individual",
+                "Pegadinha — lesão não é direito líquido e certo (A falsa)"
+              ],
+              [
+                "Resultado",
+                "Alternativa C"
+              ]
             ]
           }
         },
@@ -257,12 +347,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Papel no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Papel no caso"
+            ],
             "linhas": [
-              ["Art. 5º, LXXIII", "Ação popular — qualquer cidadão, patrimônio público"],
-              ["Art. 5º, LXIX", "MS individual — não tutela lesão difusa ao erário"],
-              ["Art. 5º, LXX", "MS coletivo — rol restrito (partido, sindicato, associação)"],
-              ["Caso concreto", "Contrato ilegal da STTP → ação popular"]
+              [
+                "Art. 5º, LXXIII",
+                "Ação popular — qualquer cidadão, patrimônio público"
+              ],
+              [
+                "Art. 5º, LXIX",
+                "MS individual — não tutela lesão difusa ao erário"
+              ],
+              [
+                "Art. 5º, LXX",
+                "MS coletivo — rol restrito (partido, sindicato, associação)"
+              ],
+              [
+                "Caso concreto",
+                "Contrato ilegal da STTP → ação popular"
+              ]
             ]
           }
         },
@@ -320,8 +425,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Erário + moralidade + QUALQUER cidadão = AÇÃO POPULAR (LXXIII).\nMS individual = direito líquido e certo (LXIX).\nMS coletivo = rol fechado (LXX).\n\nNear-transfer: se o cidadão quisesse apenas liberar seu veículo quitado no pátio, seria mandado de segurança — mas contrato sem licitação lesando o Município pede ação popular.",
-            "destaques": ["ação popular", "LXIX", "qualquer cidadão"]
+            "texto": "Erário + moralidade + QUALQUER cidadão = AÇÃO POPULAR (LXXIII).\nMS individual = direito líquido e certo (LXIX).\nMS coletivo = rol fechado (LXX).\n\nNear-transfer: se o cidadão quisesse apenas liberar seu veículo quitado no pátio, seria mandado de segurança — mas contrato sem licitação lesando o Município pede ação popular.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "ação popular",
+              "LXIX",
+              "qualquer cidadão"
+            ]
           }
         }
       ],
@@ -342,6 +451,17 @@
       "remedios_constitucionais",
       "patrimonio_publico",
       "moralidade_administrativa"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se o cidadão quisesse apenas liberar seu veículo quitado no pátio, seria mandado de segurança — mas contrato sem licitação lesando o Município pede ação popular.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Patrimônio público + moralidade + qualquer cidadão = AÇÃO POPULAR (LXXIII). Direito individual líquido e certo = MS (LXIX).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

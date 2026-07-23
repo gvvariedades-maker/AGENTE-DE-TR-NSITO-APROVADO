@@ -138,7 +138,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D (ransomware).\n\nA — trata como spyware: suporte já descartou monitoramento sem criptografar Autuacoes_2026.\nB — classifica como worm: TI descartou replicação automática na rede sem abrir anexo.\nC — generaliza como vírus comum: ignora o pedido de resgate em criptomoeda.\n\nAnexo Relatorio_Multas.pdf.exe era programa disfarçado de PDF.",
+            "texto": "Gabarito D (ransomware). A — trata como spyware: suporte já descartou monitoramento sem criptografar Autuacoes_2026.\nB — classifica como worm: TI descartou replicação automática na rede sem abrir anexo.\nC — generaliza como vírus comum: ignora o pedido de resgate em criptomoeda. Anexo Relatorio_Multas.pdf.exe era programa disfarçado de PDF.",
             "destaques": [
               "ransomware",
               "criptografados",
@@ -294,7 +294,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Ransomware = cripto + resgate | Worm = espalha sozinho | Trojan = disfarce | Spyware = espiona.\n\nNear-transfer: colega abre \"boleto.docx.exe\" e a tela pede bitcoin — ransomware, não worm.",
+            "texto": "Ransomware = cripto + resgate | Worm = espalha sozinho | Trojan = disfarce | Spyware = espiona.\n\nNear-transfer: colega abre \"boleto.docx.exe\" e a tela pede bitcoin — ransomware, não worm.\nNão muda: Ransomware = criptografa + pede resgate",
             "destaques": [
               "ransomware",
               "worm",
@@ -326,6 +326,17 @@
           "C": "generaliza como vírus — ignora sequestro por criptografia"
         }
       }
+    },
+    "meta": {
+      "near_transfer": "colega abre \"boleto.docx.exe\" e a tela pede bitcoin — ransomware, não worm.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Ransomware = criptografa + pede resgate",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     }
   }
 ]

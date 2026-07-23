@@ -1,5 +1,7 @@
 # Prompt — Questão REAL IDECAN (superior) + aula completa
 
+> **Hub único:** [content/questoes-reais/GUIA.md](../../../content/questoes-reais/GUIA.md) — fluxo, curadoria, gates.
+
 Pipeline **paralelo** às inéditas. Não use `npm run proxima`. Não grave em `content/questoes/`.
 
 **Paridade pedagógica:** enunciado e dificuldade podem diferir do PDF; a aula completa deve ter a **mesma qualidade** das inéditas (hub v3.4 + gate editorial 12/12).
@@ -89,6 +91,7 @@ Reportar: tec_id, gabarito, família, fundamento, nº telas, checklist 12/12, ga
 
 ## Referência
 
+- **Hub (comece aqui):** [content/questoes-reais/GUIA.md](../../../content/questoes-reais/GUIA.md)
 - README: `content/questoes-reais/README.md`
 - Ouro aula: `content/questoes-reais/_ouro/real-aula-nota-10.md`
 - Extração: `scripts/extrair-questoes-reais-superior.py`

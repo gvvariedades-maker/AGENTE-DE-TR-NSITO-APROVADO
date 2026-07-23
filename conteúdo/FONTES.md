@@ -175,7 +175,7 @@ Apostilas e PDFs comentados para estudo e referência no Cursor. **Não** entram
 
 **Corpus:** `npm run analyze:idecan` → `corpus-idecan-stats.json` + `perfil-banca.md`.
 
-**No app (aula completa):** só nível **SUPERIOR** → `content/questoes-reais/` (pipeline paralelo às inéditas; ver README e `prompt-questao-real-aula.md`). Extração: `npm run extract:reais-superior`.
+**No app (aula completa):** só nível **SUPERIOR** → `content/questoes-reais/` (pipeline paralelo às inéditas; ver [GUIA.md](../content/questoes-reais/GUIA.md)). Extração: `npm run extract:reais-superior`.
 
 | Disciplina | Arquivos em `questões reais/` | Status |
 |------------|-------------------------------|--------|

@@ -9,6 +9,8 @@ interface FeedbackResultadoProps {
   gabarito: string;
   dominioAlcancado?: boolean;
   tipoErroLabel?: string;
+  /** Frase específica da alternativa (diagnóstico Fase 1). */
+  diagnosticoFrase?: string | null;
 }
 
 /** KR mínimo pós-resposta — usado quando há estudo reverso visual na questão. */
@@ -17,47 +19,55 @@ export function FeedbackResultado({
   gabarito,
   dominioAlcancado,
   tipoErroLabel,
+  diagnosticoFrase,
 }: FeedbackResultadoProps) {
   return (
-    <div
-      className={cn(
-        "flex flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-lg border px-3 py-2 text-center",
-        acertou
-          ? "border-semaforo-verde/30 bg-semaforo-verde/5"
-          : "border-semaforo-vermelho/30 bg-semaforo-vermelho/5",
-      )}
-    >
-      {acertou ? (
-        <Check className="size-4 shrink-0 text-semaforo-verde" aria-hidden />
-      ) : (
-        <X className="size-4 shrink-0 text-semaforo-vermelho" aria-hidden />
-      )}
-      <span
+    <div className="space-y-2">
+      <div
         className={cn(
-          "text-sm font-semibold",
-          acertou ? "text-semaforo-verde" : "text-semaforo-vermelho",
+          "flex flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-lg border px-3 py-2 text-center",
+          acertou
+            ? "border-semaforo-verde/30 bg-semaforo-verde/5"
+            : "border-semaforo-vermelho/30 bg-semaforo-vermelho/5",
         )}
       >
-        {acertou ? "Correto" : "Incorreto"}
-      </span>
-      {!acertou && (
-        <span className="text-sm text-muted-foreground">
-          · Gabarito{" "}
-          <span className="font-semibold text-foreground">{gabarito}</span>
-        </span>
-      )}
-      {dominioAlcancado && (
-        <Badge
-          variant="outline"
-          className="border-semaforo-verde/50 text-semaforo-verde"
+        {acertou ? (
+          <Check className="size-4 shrink-0 text-semaforo-verde" aria-hidden />
+        ) : (
+          <X className="size-4 shrink-0 text-semaforo-vermelho" aria-hidden />
+        )}
+        <span
+          className={cn(
+            "text-sm font-semibold",
+            acertou ? "text-semaforo-verde" : "text-semaforo-vermelho",
+          )}
         >
-          Assunto dominado
-        </Badge>
-      )}
-      {tipoErroLabel && (
-        <Badge variant="outline" className="text-xs">
-          {tipoErroLabel}
-        </Badge>
+          {acertou ? "Correto" : "Incorreto"}
+        </span>
+        {!acertou && (
+          <span className="text-sm text-muted-foreground">
+            · Gabarito{" "}
+            <span className="font-semibold text-foreground">{gabarito}</span>
+          </span>
+        )}
+        {dominioAlcancado && (
+          <Badge
+            variant="outline"
+            className="border-semaforo-verde/50 text-semaforo-verde"
+          >
+            Assunto dominado
+          </Badge>
+        )}
+        {tipoErroLabel && (
+          <Badge variant="outline" className="text-xs">
+            {tipoErroLabel}
+          </Badge>
+        )}
+      </div>
+      {diagnosticoFrase && (
+        <p className="rounded-md border border-border/60 bg-muted/40 px-3 py-2 text-center text-xs leading-relaxed text-muted-foreground">
+          {diagnosticoFrase}
+        </p>
       )}
     </div>
   );

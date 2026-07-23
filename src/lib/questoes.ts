@@ -1,11 +1,13 @@
-import { eq, inArray, sql, and, notInArray } from "drizzle-orm";
+import { eq, inArray, sql, and, notInArray, ne } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { questions, topics } from "@/lib/db/schema";
 import type { ComentarioQuestao, Disciplina } from "@/types";
 import { DISCIPLINAS, SIMULADO_ESPELHO_DISTRIBUICAO } from "@/types";
 import type { EstudoReversoVisual, EstudoReversoVisualV2 } from "@/types/estudo-reverso-visual";
+import type { PedagogyConfig } from "@/types/pedagogy";
 import { DEMO_ESTUDO_REVERSO_VISUAL } from "@/lib/demo-estudo-reverso-visual";
 import { resolveEstudoReversoVisual, resolveEstudoReversoVisualCompleto } from "@/lib/estudo-reverso-visual-fallback";
+import { parsePedagogyConfig } from "@/lib/tutor/pedagogy-config";
 import { sqlSomenteQuestoesReais } from "@/lib/questoes-reais";
 import { isQuestaoRealIdecan } from "@/lib/questoes-reais-tags";
 import { getHistoricoQuestoesSimulado } from "@/lib/simulado-historico";
@@ -15,6 +17,7 @@ import {
   type CandidatoCaderno,
   type MetaCadernoEspelho,
 } from "@/lib/simulado-caderno";
+import { isSimuladoEligiblePool } from "@/lib/transfer/assessment-pool";
 
 export type { MetaCadernoEspelho };
 
@@ -27,6 +30,8 @@ export interface QuestaoUI {
   comentario: ComentarioQuestao | null;
   estudoReversoVisual: EstudoReversoVisual | null;
   estudoReversoVisualCompleto: EstudoReversoVisualV2 | null;
+  /** null = aula completa (legado); objeto = player adaptativo. */
+  pedagogy: PedagogyConfig | null;
   tags: string[];
 }
 
@@ -62,6 +67,7 @@ const QUESTAO_DEMO: QuestaoUI = {
   },
   estudoReversoVisual: DEMO_ESTUDO_REVERSO_VISUAL,
   estudoReversoVisualCompleto: null,
+  pedagogy: null,
   tags: [],
 };
 
@@ -77,6 +83,7 @@ function mapRowToQuestao(row: {
   comentarioJson: unknown;
   estudoReversoVisualJson: unknown;
   estudoReversoVisualCompletoJson: unknown;
+  pedagogyJson?: unknown;
   disciplina: Disciplina;
   tags?: string[] | null;
 }): QuestaoUI {
@@ -102,6 +109,7 @@ function mapRowToQuestao(row: {
     estudoReversoVisualCompleto: resolveEstudoReversoVisualCompleto(
       row.estudoReversoVisualCompletoJson,
     ),
+    pedagogy: parsePedagogyConfig(row.pedagogyJson ?? null),
     tags: row.tags ?? [],
   };
 }
@@ -120,6 +128,7 @@ const questaoSelectFields = {
   comentarioJson: questions.comentarioJson,
   estudoReversoVisualJson: questions.estudoReversoVisualJson,
   estudoReversoVisualCompletoJson: questions.estudoReversoVisualCompletoJson,
+  pedagogyJson: questions.pedagogyJson,
   disciplina: topics.disciplina,
   tags: questions.tags,
 } as const;
@@ -156,6 +165,8 @@ export async function getQuestoesLista(
     excluirReais?: boolean;
     somenteReais?: boolean;
     excluirIds?: string[];
+    /** Default true — holdout fora de listas de estudo. */
+    excluirHoldout?: boolean;
   },
 ): Promise<QuestaoUI[]> {
   try {
@@ -168,6 +179,9 @@ export async function getQuestoesLista(
     }
     if (options?.excluirIds && options.excluirIds.length > 0) {
       parts.push(notInArray(questions.id, options.excluirIds));
+    }
+    if (options?.excluirHoldout !== false) {
+      parts.push(ne(questions.assessmentPool, "holdout"));
     }
     const conditions =
       parts.length > 1 ? and(...parts) : parts[0];
@@ -201,6 +215,7 @@ async function getCandidatosPorDisciplina(): Promise<
         estiloIdecan: questions.estiloIdecan,
         tags: questions.tags,
         disciplina: topics.disciplina,
+        assessmentPool: questions.assessmentPool,
       })
       .from(questions)
       .innerJoin(topics, eq(questions.topicId, topics.id));
@@ -211,6 +226,7 @@ async function getCandidatosPorDisciplina(): Promise<
     }
 
     for (const row of rows) {
+      if (!isSimuladoEligiblePool(row.assessmentPool)) continue;
       const lista = porDisciplina[row.disciplina];
       if (!lista) continue;
       lista.push({

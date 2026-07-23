@@ -159,7 +159,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D.\n\nA — dois AITs: MBFT veda estacionamento + cinto sem condução constatada.\nB — só cinto: prioriza risco ignorando o 2º exemplo MBFT.\nC — condutor presente: presença não supre condução constatada.\n\nEstacionado por placa, condutor sem cinto, veículo parado.",
+            "texto": "Gabarito D. A — dois AITs: MBFT veda estacionamento + cinto sem condução constatada.\nB — só cinto: prioriza risco ignorando o 2º exemplo MBFT.\nC — condutor presente: presença não supre condução constatada. Estacionado por placa, condutor sem cinto, veículo parado.",
             "destaques": [
               "Gabarito D",
               "181,XVIII",
@@ -364,12 +364,14 @@
               {
                 "inicio": 135,
                 "fim": 186,
-                "motivo": "contraste — veículo parado sem condução"
+                "motivo": "contraste — veículo parado sem condução",
+                "texto_grifado": "sem que tenha sido constatada a condução do veículo"
               },
               {
                 "inicio": 200,
                 "fim": 246,
-                "motivo": "caso — gabarito D no exemplo canônico"
+                "motivo": "caso — gabarito D no exemplo canônico",
+                "texto_grifado": "autuar apenas pela infração no art. 181, XVIII"
               }
             ]
           }
@@ -386,7 +388,8 @@
               {
                 "inicio": 85,
                 "fim": 120,
-                "motivo": "mapa — veda combinar estacionamento e cinto"
+                "motivo": "mapa — veda combinar estacionamento e cinto",
+                "texto_grifado": "estacionamento e outra de movimento"
               }
             ]
           }
@@ -397,7 +400,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "PARADO+CINTO≠2 AITs · sem condução = só estacionamento · 181,XVIII no 2º exemplo.\n\nNear-transfer: mesmo local, mas agente vê o veículo saindo da vaga com condutor sem cinto — aí há condução constatada e o cinto pode ser autuado.",
+            "texto": "PARADO+CINTO≠2 AITs · sem condução = só estacionamento · 181,XVIII no 2º exemplo.\n\nNear-transfer: mesmo local, mas agente vê o veículo saindo da vaga com condutor sem cinto — aí há condução constatada e o cinto pode ser autuado.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "PARADO+CINTO",
               "Near-transfer",
@@ -411,6 +414,22 @@
           "rotulo": "MBFT — Seção 7",
           "path": "conteúdo/resoluções CONTRAN/MBFT-anexo-resolucao-985-2022-secao-07-autuacao.txt"
         }
+      ]
+    },
+    "meta": {
+      "near_transfer": "mesmo local, mas agente vê o veículo saindo da vaga com condutor sem cinto — aí há condução constatada e o cinto pode ser autuado.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "PARADO+CINTO≠2 AITs · sem condução = só estacionamento · 181,XVIII no 2º exemplo.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "gravidade",
+        "regra_excecao",
+        "termo_unico"
       ]
     }
   }

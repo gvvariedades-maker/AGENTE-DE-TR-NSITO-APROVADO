@@ -275,7 +275,7 @@ npm run validate:lote -- content/questoes-reais/.../lote.json
 npm run db:seed:reais
 ```
 
-Prompt: `.cursor/skills/examinador-idecan/prompt-questao-real-aula.md` · README: `content/questoes-reais/README.md`
+Prompt: [content/questoes-reais/GUIA.md](../../../content/questoes-reais/GUIA.md) · README: `content/questoes-reais/README.md`
 
 ### Enforcement automático (v3.1)
 

@@ -45,7 +45,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "I e III corretas. II inventa lucro e favorecimento privado — viola impessoalidade. B para em I; C e D compram a II falsa.",
-            "destaques": ["LIMPE", "concurso", "impessoalidade"]
+            "destaques": [
+              "LIMPE",
+              "concurso",
+              "impessoalidade"
+            ]
           }
         },
         {
@@ -54,9 +58,21 @@
           "tipo": "matriz_assertivas",
           "conteudo": {
             "itens": [
-              { "id": "I", "texto": "Direta e indireta + LIMPE — correta", "correto": true },
-              { "id": "II", "texto": "Lucro e interesse privado — ERRADA", "correto": false },
-              { "id": "III", "texto": "Organização + concurso — correta", "correto": true }
+              {
+                "id": "I",
+                "texto": "Direta e indireta + LIMPE — correta",
+                "correto": true
+              },
+              {
+                "id": "II",
+                "texto": "Lucro e interesse privado — ERRADA",
+                "correto": false
+              },
+              {
+                "id": "III",
+                "texto": "Organização + concurso — correta",
+                "correto": true
+              }
             ],
             "gabarito_resumo": "I e III → alternativa A"
           }
@@ -66,7 +82,10 @@
           "titulo": "Assertiva-isca: II",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a II afirma ✗", "Finalidade correta ✓"],
+            "colunas": [
+              "O que a II afirma ✗",
+              "Finalidade correta ✓"
+            ],
             "linhas": [
               [
                 "Administração busca lucro e privilegia interesses privados",
@@ -98,7 +117,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "LIMPE no caput | Direta + indireta | Concurso = regra | Interesse público ≠ lucro.",
-            "destaques": ["LIMPE", "concurso", "interesse público"]
+            "destaques": [
+              "LIMPE",
+              "concurso",
+              "interesse público"
+            ]
           }
         }
       ],
@@ -120,7 +143,10 @@
       "meta": {
         "padrao_familia": "B_assertivas",
         "pegadinha_em_uma_frase": "II trata Administração como atividade lucrativa com favorecimento privado",
-        "eixos_legais": ["CF_art_37_caput", "CF_art_37_II"],
+        "eixos_legais": [
+          "CF_art_37_caput",
+          "CF_art_37_II"
+        ],
         "isca_por_alternativa": {
           "B": "marca só I e ignora III correta sobre concurso público",
           "C": "compra II falsa (lucro e interesse privado) com III",
@@ -134,8 +160,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A (I e III corretas).\n\nB — parou em I; ignorou III sobre concurso como regra.\nC — comprou II falsa (lucro e favorecimento privado).\nD — comprou II falsa e marcou todas corretas.\n\nPegadinha: Administração não busca lucro — impessoalidade e interesse público.",
-            "destaques": ["Gabarito A", "LIMPE", "concurso"]
+            "texto": "Gabarito A (I e III corretas). B — parou em I; ignorou III sobre concurso como regra.\nC — comprou II falsa (lucro e favorecimento privado).\nD — comprou II falsa e marcou todas corretas. Pegadinha: Administração não busca lucro — impessoalidade e interesse público.",
+            "destaques": [
+              "Gabarito A",
+              "LIMPE",
+              "concurso"
+            ]
           }
         },
         {
@@ -144,7 +174,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "ADMINISTRAÇÃO DIRETA: órgãos integrados na estrutura do ente (secretarias, ministérios).\n\nADMINISTRAÇÃO INDIRETA: entidades com personalidade jurídica (autarquias, fundações, empresas públicas).\n\nLIMPE: legalidade, impessoalidade, moralidade, publicidade e eficiência — princípios expressos do caput.",
-            "destaques": ["DIRETA", "INDIRETA", "LIMPE"]
+            "destaques": [
+              "DIRETA",
+              "INDIRETA",
+              "LIMPE"
+            ]
           }
         },
         {
@@ -180,13 +214,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "A II trata lucro e favorecimento privado?", "tipo": "pergunta" },
-              { "id": "p2", "label": "I e III batem com caput e concurso?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito A — I e III corretas", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "A II trata lucro e favorecimento privado?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "I e III batem com caput e concurso?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito A — I e III corretas",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — falsa" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — falsa"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -196,7 +250,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a II afirma ✗", "Conceito correto ✓"],
+            "colunas": [
+              "O que a II afirma ✗",
+              "Conceito correto ✓"
+            ],
             "linhas": [
               [
                 "Finalidade lucrativa e favorecimento privado",
@@ -211,7 +268,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — termo_unico",
@@ -234,12 +294,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Assertiva", "Veredito"],
+            "colunas": [
+              "Assertiva",
+              "Veredito"
+            ],
             "linhas": [
-              ["I — direta/indireta + LIMPE", "Correta — caput"],
-              ["II — lucro e interesse privado", "Falsa — viola impessoalidade"],
-              ["III — organização + concurso", "Correta — inciso II"],
-              ["Resultado", "I + III = alternativa A"]
+              [
+                "I — direta/indireta + LIMPE",
+                "Correta — caput"
+              ],
+              [
+                "II — lucro e interesse privado",
+                "Falsa — viola impessoalidade"
+              ],
+              [
+                "III — organização + concurso",
+                "Correta — inciso II"
+              ],
+              [
+                "Resultado",
+                "I + III = alternativa A"
+              ]
             ]
           }
         },
@@ -249,11 +324,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Modalidade", "Exemplo no ente"],
+            "colunas": [
+              "Modalidade",
+              "Exemplo no ente"
+            ],
             "linhas": [
-              ["Administração direta", "Secretarias e órgãos integrados — STTP"],
-              ["Administração indireta", "Autarquias e fundações com personalidade jurídica"],
-              ["Princípio impessoalidade", "Refuta assertiva II — sem favorecimento privado"]
+              [
+                "Administração direta",
+                "Secretarias e órgãos integrados — STTP"
+              ],
+              [
+                "Administração indireta",
+                "Autarquias e fundações com personalidade jurídica"
+              ],
+              [
+                "Princípio impessoalidade",
+                "Refuta assertiva II — sem favorecimento privado"
+              ]
             ]
           }
         },
@@ -305,8 +392,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "LIMPE no caput | Direta + indireta | Concurso = regra | Interesse público ≠ lucro.\n\nNear-transfer: se a banca trocar III por \"concurso é exceção e nomeação livre é regra\", a assertiva fica falsa — o caput do inciso II inverte a regra.",
-            "destaques": ["LIMPE", "concurso", "near-transfer"]
+            "texto": "LIMPE no caput | Direta + indireta | Concurso = regra | Interesse público ≠ lucro.\n\nNear-transfer: se a banca trocar III por \"concurso é exceção e nomeação livre é regra\", a assertiva fica falsa — o caput do inciso II inverte a regra.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "LIMPE",
+              "concurso",
+              "near-transfer"
+            ]
           }
         }
       ],
@@ -323,6 +414,17 @@
       "cf_37",
       "concurso_publico",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se a banca trocar III por \"concurso é exceção e nomeação livre é regra\", a assertiva fica falsa — o caput do inciso II inverte a regra.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "LIMPE no caput",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

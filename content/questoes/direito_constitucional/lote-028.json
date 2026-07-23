@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Lista pública de autuados por embriaguez antes do julgamento penal e sem defesa prévia. A banca troca presunção de inocência com interesse público na blitz.",
-            "destaques": ["presunção de inocência", "defesa prévia", "embriaguez"]
+            "destaques": [
+              "presunção de inocência",
+              "defesa prévia",
+              "embriaguez"
+            ]
           }
         },
         {
@@ -52,13 +56,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Houve defesa prévia no administrativo?", "tipo": "pergunta" },
-              { "id": "p2", "label": "A publicação antecipa culpa antes do trânsito em julgado?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Viola LV e LVII — ilegítimo", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Houve defesa prévia no administrativo?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "A publicação antecipa culpa antes do trânsito em julgado?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Viola LV e LVII — ilegítimo",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Não — lista sem defesa" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — nomes e fotos" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Não — lista sem defesa"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — nomes e fotos"
+              }
             ]
           }
         },
@@ -67,10 +91,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["Segurança viária dispensa defesa e inocência", "LV no administrativo + LVII até trânsito em julgado"],
-              ["LVII só vale com processo penal aberto", "Presunção de inocência não autoriza lista pública antecipada"]
+              [
+                "Segurança viária dispensa defesa e inocência",
+                "LV no administrativo + LVII até trânsito em julgado"
+              ],
+              [
+                "LVII só vale com processo penal aberto",
+                "Presunção de inocência não autoriza lista pública antecipada"
+              ]
             ]
           }
         },
@@ -97,7 +130,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Culpado só após trânsito em julgado penal (LVII). Defesa no administrativo (LV). Fiscalizar ≠ expor lista identificável.",
-            "destaques": ["LVII", "LV", "defesa"]
+            "destaques": [
+              "LVII",
+              "LV",
+              "defesa"
+            ]
           }
         }
       ],
@@ -119,7 +156,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Lista pública de embriaguez antes do julgamento viola LVII — e pular defesa prévia viola LV no administrativo",
-        "eixos_legais": ["CF_art5_LVII", "CF_art5_LV"],
+        "eixos_legais": [
+          "CF_art5_LVII",
+          "CF_art5_LV"
+        ],
         "isca_por_alternativa": {
           "A": "interesse público dispensa defesa prévia e presunção de inocência na lista de autuados",
           "B": "só o Ministério Público estadual pode publicar nomes e fotos de autuados",
@@ -133,8 +173,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C (presunção de inocência + defesa no administrativo).\n\nA — segurança viária dispensa defesa prévia e inocência na lista pública.\nB — só o Ministério Público pode publicar nomes e fotos de autuados.\nD — presunção de inocência só vale com processo penal aberto, não na autuação.\n\nPromessa: fixar quando publicar autuados por embriaguez viola LVII e omitir defesa fere LV.",
-            "destaques": ["presunção de inocência", "defesa prévia", "lista"]
+            "texto": "Gabarito C (presunção de inocência + defesa no administrativo). A — segurança viária dispensa defesa prévia e inocência na lista pública.\nB — só o Ministério Público pode publicar nomes e fotos de autuados.\nD — presunção de inocência só vale com processo penal aberto, não na autuação. Promessa: fixar quando publicar autuados por embriaguez viola LVII e omitir defesa fere LV.",
+            "destaques": [
+              "presunção de inocência",
+              "defesa prévia",
+              "lista"
+            ]
           }
         },
         {
@@ -143,7 +187,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PRESUNÇÃO DE INOCÊNCIA (art. 5º, LVII): ninguém é culpado até trânsito em julgado de sentença penal condenatória — lista pública antecipada trata o autuado como culpado. CONTRADITÓRIO E AMPLA DEFESA (art. 5º, LV): valem no processo administrativo de trânsito — defesa prévia não pode ser suprimida. INTERESSE PÚBLICO: não autoriza exceção inexistente à CF na divulgação identificável.",
-            "destaques": ["inocência", "contraditório", "administrativo"]
+            "destaques": [
+              "inocência",
+              "contraditório",
+              "administrativo"
+            ]
           }
         },
         {
@@ -170,8 +218,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Não — sem defesa prévia" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — nomes e fotos" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Não — sem defesa prévia"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — nomes e fotos"
+              }
             ]
           }
         },
@@ -181,11 +237,23 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Garantia", "Aplicação no caso"],
+            "titulo_colunas": [
+              "Garantia",
+              "Aplicação no caso"
+            ],
             "linhas": [
-              { "faixa": "Presunção de inocência — LVII", "classificacao": "Até trânsito em julgado penal" },
-              { "faixa": "Contraditório e ampla defesa — LV", "classificacao": "Processo administrativo de trânsito" },
-              { "faixa": "Interesse público na blitz", "classificacao": "Não dispensa LV nem LVII" },
+              {
+                "faixa": "Presunção de inocência — LVII",
+                "classificacao": "Até trânsito em julgado penal"
+              },
+              {
+                "faixa": "Contraditório e ampla defesa — LV",
+                "classificacao": "Processo administrativo de trânsito"
+              },
+              {
+                "faixa": "Interesse público na blitz",
+                "classificacao": "Não dispensa LV nem LVII"
+              },
               {
                 "faixa": "Lista pública antecipada",
                 "classificacao": "Ilegítima — C correta",
@@ -200,7 +268,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Segurança viária autoriza expor embriaguez na lista",
@@ -219,7 +290,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -242,12 +316,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Conclusão"],
+            "colunas": [
+              "Fato do enunciado",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Nomes e fotos publicados antes do trânsito em julgado penal", "Viola presunção de inocência — LVII"],
-              ["Sem defesa prévia no procedimento administrativo", "Viola contraditório e ampla defesa — LV"],
-              ["Motorista listado contesta a medida", "Ambas as violações são ilegítimas"],
-              ["Resultado", "Alternativa C"]
+              [
+                "Nomes e fotos publicados antes do trânsito em julgado penal",
+                "Viola presunção de inocência — LVII"
+              ],
+              [
+                "Sem defesa prévia no procedimento administrativo",
+                "Viola contraditório e ampla defesa — LV"
+              ],
+              [
+                "Motorista listado contesta a medida",
+                "Ambas as violações são ilegítimas"
+              ],
+              [
+                "Resultado",
+                "Alternativa C"
+              ]
             ]
           }
         },
@@ -257,12 +346,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Papel no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Papel no caso"
+            ],
             "linhas": [
-              ["Art. 5º, LVII", "Presunção de inocência — lista antecipada trata como culpado"],
-              ["Art. 5º, LV", "Contraditório e ampla defesa — defesa prévia omitida"],
-              ["Interesse público", "Não cria exceção à CF"],
-              ["Caso concreto", "Publicação + omissão de defesa → alternativa C"]
+              [
+                "Art. 5º, LVII",
+                "Presunção de inocência — lista antecipada trata como culpado"
+              ],
+              [
+                "Art. 5º, LV",
+                "Contraditório e ampla defesa — defesa prévia omitida"
+              ],
+              [
+                "Interesse público",
+                "Não cria exceção à CF"
+              ],
+              [
+                "Caso concreto",
+                "Publicação + omissão de defesa → alternativa C"
+              ]
             ]
           }
         },
@@ -320,8 +424,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "CULPADO só após trânsito em julgado penal (LVII).\nDEFESA vale no administrativo (LV).\nFiscalizar ≠ expor lista identificável.\n\nNear-transfer: se a STTP apenas autuasse sem publicar nomes e abrisse defesa prévia, a autuação administrativa poderia seguir — mas a lista antecipada com fotos viola LVII e a omissão de defesa fere LV.",
-            "destaques": ["LVII", "LV", "defesa"]
+            "texto": "CULPADO só após trânsito em julgado penal (LVII).\nDEFESA vale no administrativo (LV).\nFiscalizar ≠ expor lista identificável.\n\nNear-transfer: se a STTP apenas autuasse sem publicar nomes e abrisse defesa prévia, a autuação administrativa poderia seguir — mas a lista antecipada com fotos viola LVII e a omissão de defesa fere LV.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "LVII",
+              "LV",
+              "defesa"
+            ]
           }
         }
       ],
@@ -343,6 +451,17 @@
       "contraditorio",
       "embriaguez",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se a STTP apenas autuasse sem publicar nomes e abrisse defesa prévia, a autuação administrativa poderia seguir — mas a lista antecipada com fotos viola LVII e a omissão de defesa fere LV.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "CULPADO só após trânsito em julgado penal (LVII). DEFESA vale no administrativo (LV). Fiscalizar ≠ expor nem pular defesa prévia.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

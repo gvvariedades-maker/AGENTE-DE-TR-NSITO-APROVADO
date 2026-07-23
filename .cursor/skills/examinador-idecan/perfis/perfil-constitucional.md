@@ -7,7 +7,7 @@ consumido_por: [examinador-idecan, professor-cadeia, estudo-reverso-visual]
 corpus_base: 538 questões IDECAN (análise 2026-07-10)
 cobertura_banco: 16 questões em content/questoes/direito_constitucional/ (atualizado 2026-07-10)
 fonte_legal: conteúdo/legislação federal/cf-1988.html
-versao: 1.0
+versao: 1.1
 ---
 
 # Perfil vertical — Noções de Direito Constitucional
@@ -206,6 +206,21 @@ Art. 5º detalhado (incisos além do LV/LXVIII) · direitos sociais (art. 6º) �
 
 ---
 
+## 13. Paridade IDECAN — coleta Tec Concursos
+
+**Status:** 🟢 **Manutenção** — Corpus local **538 Q** é o maior do projeto; meta **80–120** amplamente superada.
+
+| Métrica | Valor |
+|---------|-------|
+| Corpus local | **538** questões |
+| Meta paridade (camada 1) | ✅ Atingida |
+| Tec (referência) | `Direito Constitucional` + IDECAN |
+
+**Quando reexportar:** art. **5º** (lacuna no banco) ou remédios HD/MI/ação popular se teste cego reprovar. Priorizar questões com **art. 144** apenas se precisar variar distratores — banco já saturado nesse eixo.
+
+---
+
 ## Changelog
 
+- **1.1** (2026-07-19) — §13 Paridade IDECAN: corpus OK; coleta opcional para lacunas art. 5º/remédios.
 - **1.0** (2026-07-10) — Perfil inicial: corpus 538 Q IDECAN; envelope 300–550 / alt 80–130; `competencia_snt` dominante (340); foco art. 144 (cargo); 11 microtópicos P1→P5; cobertura 16 Q (art. 144 saturado, art. 5º/remédios em lacuna); fila ROI; mapa visual Famílias A/B/C/D.

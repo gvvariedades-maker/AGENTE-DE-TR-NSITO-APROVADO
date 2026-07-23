@@ -1,5 +1,7 @@
 # Questões reais IDECAN (nível superior)
 
+> **Guia completo (comece aqui):** [GUIA.md](./GUIA.md) — fluxo em 5 passos, curadoria, gates e links.
+
 Pipeline **paralelo** às inéditas em `content/questoes/`. Não entra no `npm run proxima` nem no índice de cobertura das inéditas.
 
 ## Política
@@ -21,6 +23,7 @@ Pipeline **paralelo** às inéditas em `content/questoes/`. Não entra no `npm r
 content/questoes-reais/
   _ouro/                        # contrato aula nota 10 (Agent)
   _raw/                         # extração bruta do PDF (não seedar)
+  _fila/                        # curadoria pendente de aula completa (não seedar)
   {disciplina}/
     lote-001.json               # seedável
     _snippets/real-tec-*-completo-visual.json
@@ -32,10 +35,8 @@ content/questoes-reais/
 # 1. Extrair só PDFs SUPERIOR
 python scripts/extrair-questoes-reais-superior.py --pdf "CTB - IDECAN - SUPERIOR - TEC.pdf"
 
-# 2. Montar 1 questão + aula (prompt Agent)
-#    .cursor/skills/examinador-idecan/prompt-questao-real-nova-conversa.txt  (troque Disciplina:)
-#    Detalhes: prompt-questao-real-aula.md
-#    Ouro: content/questoes-reais/_ouro/real-aula-nota-10.md
+# 2. Montar 1 questão + aula — ver GUIA.md §2
+#    prompt: .cursor/skills/examinador-idecan/prompt-questao-real-nova-conversa.txt
 
 # 3. Validar (inclui validate:aula-real em path questoes-reais)
 npm run validate:lote -- content/questoes-reais/legislacao_transito/lote-001.json
@@ -46,7 +47,7 @@ npm run db:seed -- --only-reais
 
 Legado (não usar em lote novo): `--legacy-aula-real` e/ou `--legacy-transferencia`.
 
-Documentação global: `README.md` (raiz), `.cursor/skills/estudo-reverso-visual/DOCUMENTACAO.md` §7, `.cursor/skills/examinador-idecan/SKILL.md` § Pipeline no app.
+Documentação global: [GUIA.md](./GUIA.md) (hub), `README.md` (raiz), `.cursor/skills/estudo-reverso-visual/DOCUMENTACAO.md` §7.
 
 ## Separação das inéditas
 
@@ -59,6 +60,7 @@ Documentação global: `README.md` (raiz), `.cursor/skills/estudo-reverso-visual
 
 | Arquivo | Disciplina | Qtd | Fonte PDF |
 |---------|------------|-----|-----------|
+| `direito_administrativo/lote-001.json` … `lote-012.json` | Dir. Administrativo | 95 | `DIREITO ADMINISTRATIVO - IDECAN - SUPERIOR - TEC 02.pdf` |
 | `direito_constitucional/lote-001.json` | Constitucional | 3 | `CONSTITUCIONAL - IDECAN - SUPERIOR - TEC.pdf`, `... 02.pdf` |
 | `legislacao_transito/lote-001.json` | Trânsito | 5 | `CTB - IDECAN - SUPERIOR - TEC.pdf` |
 | `legislacao_transito/lote-002.json` | Trânsito | 2 | `IDECAN - 2026 - IF Sudeste - MG - Professor - Transporte e Trânsito` |

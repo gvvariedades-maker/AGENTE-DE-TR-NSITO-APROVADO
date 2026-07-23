@@ -9,6 +9,7 @@ import {
 } from "@/components/dashboard/painel-hero-skeleton";
 import { PainelDisciplinasSeletor } from "@/components/dashboard/painel-disciplinas-seletor";
 import { PainelCatalogoEditalLoader } from "@/components/dashboard/painel-catalogo-edital-loader";
+import { PainelDominioEvidenciasCard } from "@/components/dashboard/painel-dominio-evidencias";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -95,7 +96,8 @@ export function PainelDashboardLoader({
     );
   }
 
-  const { desempenho, plano, semana, questoesReaisCount, dominio } = data;
+  const { desempenho, plano, semana, questoesReaisCount, dominio, dominioEvidencias } =
+    data;
 
   const desempenhoDisciplina = desempenho.disciplinas.find(
     (d) => d.disciplina === disciplinaAtiva,
@@ -112,6 +114,26 @@ export function PainelDashboardLoader({
         ? "Corpus superior IDECAN"
         : "Aguardando seed no banco";
 
+  const painelDominio = dominioEvidencias ?? {
+    totalSkills: 0,
+    byState: {
+      unseen: 0,
+      learning: 0,
+      consolidating: 0,
+      mastered: 0,
+      at_risk: 0,
+    },
+    masteredCount: 0,
+    delayedRetentionCount: 0,
+    transferReadyCount: 0,
+    highConfErrorSkills: 0,
+    atRiskCount: 0,
+    withoutEvidenceCount: 0,
+    memorizedWithoutMastery: [],
+    topAtRisk: [],
+    hasData: false,
+  };
+
   return (
     <>
       <PainelPlanoProva
@@ -119,6 +141,7 @@ export function PainelDashboardLoader({
         missaoHoje={semana.missoes[0]}
         dominio={dominio}
       />
+      <PainelDominioEvidenciasCard painel={painelDominio} />
       <PainelSemanaChegada semana={semana} />
 
       <PainelDisciplinasSeletor

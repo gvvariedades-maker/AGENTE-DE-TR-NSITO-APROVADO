@@ -44,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Biometria facial vinculada ao condutor é dado sensível — exige regime especial, não basta consentimento genérico do cadastro.",
-            "destaques": ["sensível", "biometria", "genérico"]
+            "destaques": [
+              "sensível",
+              "biometria",
+              "genérico"
+            ]
           }
         },
         {
@@ -53,10 +57,24 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Biometria vinculada à pessoa natural?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Regime sensível — não só consentimento genérico", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Biometria vinculada à pessoa natural?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Regime sensível — não só consentimento genérico",
+                "tipo": "resultado"
+              }
             ],
-            "arestas": [{ "de": "p1", "para": "r1", "rotulo": "Sim" }]
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
+            ]
           }
         },
         {
@@ -64,9 +82,15 @@
           "titulo": "Genérico × específico",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["Cláusula única do cadastro basta", "Consentimento específico e destacado (art. 11)"]
+              [
+                "Cláusula única do cadastro basta",
+                "Consentimento específico e destacado (art. 11)"
+              ]
             ]
           }
         },
@@ -76,7 +100,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Sensível = art. 11. Biometria não é CPF — art. 9 informa, não substitui base legal.",
-            "destaques": ["art. 11", "Sensível", "biometria"]
+            "destaques": [
+              "art. 11",
+              "Sensível",
+              "biometria"
+            ]
           }
         }
       ],
@@ -98,7 +126,11 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Cláusula genérica do cadastro não governa biometria — regime do art. 11",
-        "eixos_legais": ["LGPD_art5_II", "LGPD_art11_I", "LGPD_art11_II_g"],
+        "eixos_legais": [
+          "LGPD_art5_II",
+          "LGPD_art11_I",
+          "LGPD_art11_II_g"
+        ],
         "isca_por_alternativa": {
           "B": "consentimento genérico do art. 7º, I dispensa regime do art. 11",
           "C": "biometria = dado comum como nome e CPF",
@@ -112,8 +144,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A.\n\nB — consentimento genérico do cadastro basta: ignora regime especial para sensíveis.\nC — biometria = dado comum: confunde dado pessoal e dado sensível.\nD — dever de informação substitui consentimento específico: informação não é base de tratamento.\n\nA isca é a cláusula única do formulário empurrar para regime comum do consentimento genérico.",
-            "destaques": ["Gabarito A", "sensível", "art. 11"]
+            "texto": "Gabarito A. B — consentimento genérico do cadastro basta: ignora regime especial para sensíveis.\nC — biometria = dado comum: confunde dado pessoal e dado sensível.\nD — dever de informação substitui consentimento específico: informação não é base de tratamento. A isca é a cláusula única do formulário empurrar para regime comum do consentimento genérico.",
+            "destaques": [
+              "Gabarito A",
+              "sensível",
+              "dispositivo legal"
+            ]
           }
         },
         {
@@ -122,7 +158,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "DADO PESSOAL: informação de pessoa identificada ou identificável — art. 5º, I (ex.: nome, CPF).\n\nDADO SENSÍVEL: inclui biometria vinculada à pessoa — art. 5º, II (imagem facial do condutor).\n\nCONSENTIMENTO ESPECÍFICO E DESTACADO: exigência do art. 11 para sensíveis — não basta cláusula genérica.",
-            "destaques": ["DADO PESSOAL", "DADO SENSÍVEL", "ESPECÍFICO E DESTACADO"]
+            "destaques": [
+              "DADO PESSOAL",
+              "DADO SENSÍVEL",
+              "ESPECÍFICO E DESTACADO"
+            ]
           }
         },
         {
@@ -149,8 +189,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -160,11 +208,23 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Tipo de dado", "Hipóteses legais"],
+            "colunas": [
+              "Tipo de dado",
+              "Hipóteses legais"
+            ],
             "linhas": [
-              ["Dado pessoal comum (nome, CPF)", "Art. 7º — inclusive consentimento (inciso I)"],
-              ["Dado sensível (biometria facial)", "Art. 11 — consentimento específico ou inciso II"],
-              ["Cláusula genérica do cadastro", "Insuficiente para sensível — isca B"]
+              [
+                "Dado pessoal comum (nome, CPF)",
+                "Art. 7º — inclusive consentimento (inciso I)"
+              ],
+              [
+                "Dado sensível (biometria facial)",
+                "Art. 11 — consentimento específico ou inciso II"
+              ],
+              [
+                "Cláusula genérica do cadastro",
+                "Insuficiente para sensível — isca B"
+              ]
             ]
           }
         },
@@ -174,7 +234,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Uma cláusula no cadastro cobre biometria",
@@ -193,7 +256,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — regra_excecao",
@@ -216,12 +282,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Enquadramento"],
+            "colunas": [
+              "Fato do enunciado",
+              "Enquadramento"
+            ],
             "linhas": [
-              ["Imagem facial para autenticação cadastral", "Biometria sensível — art. 5º, II"],
-              ["Única cláusula de consentimento (art. 7º, I)", "Genérica — insuficiente para art. 11"],
-              ["Autenticação em sistema eletrônico", "Possível hipótese art. 11, II, g"],
-              ["Resultado", "Gabarito A"]
+              [
+                "Imagem facial para autenticação cadastral",
+                "Biometria sensível — art. 5º, II"
+              ],
+              [
+                "Única cláusula de consentimento (art. 7º, I)",
+                "Genérica — insuficiente para art. 11"
+              ],
+              [
+                "Autenticação em sistema eletrônico",
+                "Possível hipótese art. 11, II, g"
+              ],
+              [
+                "Resultado",
+                "Gabarito A"
+              ]
             ]
           }
         },
@@ -231,11 +312,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Função no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Função no caso"
+            ],
             "linhas": [
-              ["Art. 7º, I", "Consentimento para dados comuns — não basta sozinho para sensível"],
-              ["Art. 11", "Regime próprio para sensíveis — específico ou inciso II"],
-              ["Art. 9º", "Transparência e informação — não substitui hipótese do art. 11"]
+              [
+                "Art. 7º, I",
+                "Consentimento para dados comuns — não basta sozinho para sensível"
+              ],
+              [
+                "Art. 11",
+                "Regime próprio para sensíveis — específico ou inciso II"
+              ],
+              [
+                "Art. 9º",
+                "Transparência e informação — não substitui hipótese do art. 11"
+              ]
             ]
           }
         },
@@ -287,8 +380,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Sensível = art. 11 (específico + destacado ou inciso II). Biometria não é CPF — art. 9 informa, não substitui base legal.\n\nNear-transfer: STTP coleta apenas CPF e nome com cláusula genérica — regime do art. 7º, I pode bastar; biometria exigiria art. 11.",
-            "destaques": ["art. 11", "Near-transfer", "Sensível"]
+            "texto": "Sensível = art. 11 (específico + destacado ou inciso II). Biometria não é CPF — art. 9 informa, não substitui base legal.\n\nNear-transfer: STTP coleta apenas CPF e nome com cláusula genérica — regime do art. 7º, I pode bastar; biometria exigiria art. 11.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "art. 11",
+              "Near-transfer",
+              "Sensível"
+            ]
           }
         }
       ],
@@ -306,6 +403,17 @@
       "consentimento",
       "art_11",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "STTP coleta apenas CPF e nome com cláusula genérica — regime do art. 7º, I pode bastar; biometria exigiria art. 11.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Sensível = art. 11 (específico + destacado ou inciso II) — biometria não é CPF; art. 9 informa, não substitui base legal.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

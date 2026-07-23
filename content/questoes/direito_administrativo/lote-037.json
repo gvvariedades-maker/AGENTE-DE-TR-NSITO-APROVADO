@@ -45,7 +45,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito C. A usa decreto para dispensar licitação; B reserva licitação só à autarquia; D afasta princípios públicos por autonomia empresarial.",
-            "destaques": ["empresa pública", "licitação", "regime híbrido"]
+            "destaques": [
+              "empresa pública",
+              "licitação",
+              "regime híbrido"
+            ]
           }
         },
         {
@@ -54,13 +58,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "EP contrata obra sem licitação?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Regime privado dispensa princípios públicos?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito C — regime híbrido", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "EP contrata obra sem licitação?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Regime privado dispensa princípios públicos?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito C — regime híbrido",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Pretende sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Pretende sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -69,7 +93,10 @@
           "titulo": "Pegadinha: privado × público",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a EP sustenta ✗", "Regime correto ✓"],
+            "colunas": [
+              "O que a EP sustenta ✗",
+              "Regime correto ✓"
+            ],
             "linhas": [
               [
                 "Autonomia empresarial dispensa licitação",
@@ -101,7 +128,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "EP = gestão PRIVADA + contratação PÚBLICA (licitação + princípios) | decreto não dispensa.",
-            "destaques": ["EP", "licitação", "princípios"]
+            "destaques": [
+              "EP",
+              "licitação",
+              "princípios"
+            ]
           }
         }
       ],
@@ -123,7 +154,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Autonomia empresarial da EP dispensa licitação e princípios públicos nas contratações",
-        "eixos_legais": ["CF_art_173_1_III", "CF_art_37_XXI"],
+        "eixos_legais": [
+          "CF_art_173_1_III",
+          "CF_art_37_XXI"
+        ],
         "isca_por_alternativa": {
           "A": "decreto do Prefeito dispensa licitação da empresa pública vinculada à STTP",
           "B": "reserva licitação só à autarquia e trata EP como sociedade privada pura",
@@ -137,8 +171,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C.\n\nA — decreto do Prefeito dispensa licitação da EP.\nB — licitação só para autarquia; EP como privada pura.\nD — autonomia empresarial afasta princípios públicos e licitação.\n\nPegadinha: empresa pública tem gestão privada, mas contratações seguem princípios da Administração.",
-            "destaques": ["Gabarito C", "licitação", "empresa pública"]
+            "texto": "Gabarito C. A — decreto do Prefeito dispensa licitação da EP.\nB — licitação só para autarquia; EP como privada pura.\nD — autonomia empresarial afasta princípios públicos e licitação. Pegadinha: empresa pública tem gestão privada, mas contratações seguem princípios da Administração.",
+            "destaques": [
+              "Gabarito C",
+              "licitação",
+              "empresa pública"
+            ]
           }
         },
         {
@@ -147,7 +185,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "REGIME HÍBRIDO: empresa pública combina direito privado na gestão empresarial com princípios públicos nas contratações.\n\nLICITAÇÃO: processo público para obras, serviços, compras e alienações — vincula a Administração e suas empresas públicas.\n\nPRINCÍPIOS DA ADMINISTRAÇÃO: legalidade, impessoalidade, moralidade, publicidade e eficiência — não se afastam nas contratações da EP.",
-            "destaques": ["REGIME HÍBRIDO", "LICITAÇÃO", "PRINCÍPIOS"]
+            "destaques": [
+              "REGIME HÍBRIDO",
+              "LICITAÇÃO",
+              "PRINCÍPIOS"
+            ]
           }
         },
         {
@@ -157,13 +199,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Contratação é obra/serviço da EP?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Regime privado dispensa licitação?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito C — licitação + princípios", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Contratação é obra/serviço da EP?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Regime privado dispensa licitação?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito C — licitação + princípios",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — reforma pátio" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — reforma pátio"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -173,7 +235,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Esfera", "Regra na EP"],
+            "titulo_colunas": [
+              "Esfera",
+              "Regra na EP"
+            ],
             "linhas": [
               {
                 "faixa": "Gestão empresarial",
@@ -202,7 +267,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a EP sustenta ✗", "Regime correto ✓"],
+            "colunas": [
+              "O que a EP sustenta ✗",
+              "Regime correto ✓"
+            ],
             "linhas": [
               [
                 "Autonomia empresarial dispensa licitação",
@@ -221,7 +289,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — competencia_snt",
@@ -244,7 +315,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso STTP", "Regime"],
+            "colunas": [
+              "Fato do caso STTP",
+              "Regime"
+            ],
             "linhas": [
               [
                 "Prefeito cogita decreto para contratação direta",
@@ -258,7 +332,10 @@
                 "Veículos removidos pela STTP no depósito",
                 "Interesse público vincula entidade estatal"
               ],
-              ["Resultado", "Alternativa C — única correta"]
+              [
+                "Resultado",
+                "Alternativa C — única correta"
+              ]
             ]
           }
         },
@@ -268,11 +345,23 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dimensão", "Regime aplicável"],
+            "colunas": [
+              "Dimensão",
+              "Regime aplicável"
+            ],
             "linhas": [
-              ["Gestão empresarial", "Direito privado — art. 173, § 1º, II"],
-              ["Obras e serviços", "Licitação + princípios públicos — § 1º, III"],
-              ["Pegadinha do caso", "Autonomia não elimina licitação na reforma do pátio"]
+              [
+                "Gestão empresarial",
+                "Direito privado — art. 173, § 1º, II"
+              ],
+              [
+                "Obras e serviços",
+                "Licitação + princípios públicos — § 1º, III"
+              ],
+              [
+                "Pegadinha do caso",
+                "Autonomia não elimina licitação na reforma do pátio"
+              ]
             ]
           }
         },
@@ -330,8 +419,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "EP = gestão PRIVADA + contratação PÚBLICA (licitação + princípios) | decreto não dispensa.\n\nNear-transfer: se a banca trocar o caso por sociedade de economia mista municipal contratando guincho sem licitação alegando regime privado, a resposta permanece — SEM também integra a indireta e as contratações observam princípios da Administração Pública.",
-            "destaques": ["EP", "licitação", "near-transfer"]
+            "texto": "EP = gestão PRIVADA + contratação PÚBLICA (licitação + princípios) | decreto não dispensa.\n\nNear-transfer: se a banca trocar o caso por sociedade de economia mista municipal contratando guincho sem licitação alegando regime privado, a resposta permanece — SEM também integra a indireta e as contratações observam princípios da Administração Pública.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "EP",
+              "licitação",
+              "near-transfer"
+            ]
           }
         }
       ],
@@ -352,6 +445,17 @@
       "licitacao",
       "cf_173",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se a banca trocar o caso por sociedade de economia mista municipal contratando guincho sem licitação alegando regime privado, a resposta permanece — SEM também integra a indireta e as contratações observam princípios da Administração Pública.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "EP = gestão PRIVADA + contratação PÚBLICA (licitação + princípios)",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

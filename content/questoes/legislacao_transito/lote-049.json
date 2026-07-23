@@ -8,10 +8,10 @@
     "fundamento_slug": "CONTRAN_991_art_2",
     "enunciado": "Sobre as alterações introduzidas pela Resolução CONTRAN nº 991/2023 na Resolução CONTRAN nº 918/2022, analise as assertivas e assinale a alternativa CORRETA:\n\nI. A Resolução altera o art. 25 da Res. CONTRAN nº 918/2022 para que os órgãos autuadores da União utilizem a GRU do tipo Cobrança ou a plataforma digital PagTesouro.\nII. Com a redação da Res. 991/2023, o art. 27 da Res. CONTRAN nº 918/2022 autoriza o pagamento com cartão de débito ou crédito de multas de trânsito e demais débitos do veículo, inclusive IPVA e taxas de licenciamento.\nIII. A Resolução CONTRAN nº 991/2023 entrou em vigor em 2 de maio de 2023.\nIV. O § 1º do art. 27 da Res. CONTRAN nº 918/2022, com a redação da Res. 991/2023, condiciona o pagamento de multas com cartão à autorização prévia do órgão máximo executivo de trânsito da União.",
     "alternativas": {
-      "A": "Está correto o que se afirma em I, III e IV, apenas.",
-      "B": "Está correto o que se afirma em I e II, apenas.",
-      "C": "Está correto o que se afirma em II e III, apenas.",
-      "D": "Está correto o que se afirma em I, II, III e IV."
+      "A": "Está correto o que se afirma em I, III e IV, apenas, quanto às alterações da Res. 991/2023.",
+      "B": "Está correto o que se afirma em I e II, apenas, quanto às alterações da Resolução CONTRAN nº 991/2023 na Res. 918/2022.",
+      "C": "Está correto o que se afirma em II e III, apenas, quanto às alterações da Resolução CONTRAN nº 991/2023 na Res. 918/2022.",
+      "D": "Está correto o que se afirma em I, II, III e IV, quanto às alterações da Res. CONTRAN 991/2023 na Res. 918/2022."
     },
     "gabarito": "A",
     "comentario": {
@@ -27,8 +27,7 @@
       "estudo_reverso": [
         "Res. CONTRAN 991/2023 art. 2",
         "Res. CONTRAN 991/2023 art. 3",
-        "Res. CONTRAN 918/2022 art. 25",
-        "Res. CONTRAN 918/2022 art. 27"
+        "Res. CONTRAN 918/2022 art. 25"
       ]
     },
     "tags": [
@@ -42,12 +41,29 @@
     "meta": {
       "padrao_familia": "B_assertivas",
       "pegadinha_em_uma_frase": "II mantém demais débitos/IPVA no art. 27 — 991 restringiu a multas",
-      "eixos_legais": ["CONTRAN_991_art_2", "CONTRAN_991_art_3", "CONTRAN_991_art_27"],
+      "eixos_legais": [
+        "CONTRAN_991_art_2",
+        "CONTRAN_991_art_3",
+        "CONTRAN_991_art_27"
+      ],
       "isca_por_alternativa": {
         "B": "compra II com redação pré-991",
         "C": "II falsa + III sem I e IV",
         "D": "marca todas incluindo II"
-      }
+      },
+      "near_transfer": "assertiva diz que cartão no art. 27 quita multa + taxa de expedição do CRLV — ainda errada: 991 limitou a multas de trânsito, não taxas administrativas do veículo.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "991 = art.25 GRU",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico"
+      ]
     },
     "estudo_reverso_visual": {
       "versao": 1,
@@ -63,7 +79,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Assertiva II usa redação antiga — cartão no art. 27 abrangia demais débitos. Res. 991/2023 limitou a multas de trânsito.\n\nGabarito A: I, III e IV.",
-            "destaques": ["II", "multas", "Gabarito A"]
+            "destaques": [
+              "II",
+              "multas",
+              "Gabarito A"
+            ]
           }
         },
         {
@@ -72,10 +92,26 @@
           "tipo": "matriz_assertivas",
           "conteudo": {
             "itens": [
-              { "id": "I", "texto": "Art. 25 — GRU ou PagTesouro", "correto": true },
-              { "id": "II", "texto": "Cartão para multas + IPVA — ERRADA", "correto": false },
-              { "id": "III", "texto": "Vigor 02/05/2023", "correto": true },
-              { "id": "IV", "texto": "§ 1º — autorização SENATRAN", "correto": true }
+              {
+                "id": "I",
+                "texto": "Art. 25 — GRU ou PagTesouro",
+                "correto": true
+              },
+              {
+                "id": "II",
+                "texto": "Cartão para multas + IPVA — ERRADA",
+                "correto": false
+              },
+              {
+                "id": "III",
+                "texto": "Vigor 02/05/2023",
+                "correto": true
+              },
+              {
+                "id": "IV",
+                "texto": "§ 1º — autorização SENATRAN",
+                "correto": true
+              }
             ],
             "gabarito_resumo": "I, III e IV → alternativa A"
           }
@@ -85,7 +121,10 @@
           "titulo": "Assertiva-isca: II",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a II afirma ✗", "Redação 991/2023 ✓"],
+            "colunas": [
+              "O que a II afirma ✗",
+              "Redação 991/2023 ✓"
+            ],
             "linhas": [
               [
                 "Multas + demais débitos (IPVA, licenciamento)",
@@ -105,7 +144,8 @@
               {
                 "inicio": 132,
                 "fim": 150,
-                "motivo": "somente multas de trânsito"
+                "motivo": "somente multas de trânsito",
+                "texto_grifado": "multas de trânsito"
               }
             ]
           }
@@ -116,7 +156,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "991: art.25 GRU|PagTesouro · art.27 cartão SÓ multas + OK SENATRAN · vigor 02/05/2023.",
-            "destaques": ["SÓ multas", "02/05/2023"]
+            "destaques": [
+              "SÓ multas",
+              "02/05/2023"
+            ]
           }
         }
       ],
@@ -142,8 +185,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A (I, III e IV corretas).\n\nB — inclui II com \"demais débitos\" e IPVA: redação pré-991.\nC — marca II falsa com III, esquecendo I e IV corretas.\nD — trata todas como corretas, comprando II errada.\n\nA Res. 991/2023 restringiu o cartão do art. 27 a multas de trânsito.",
-            "destaques": ["Gabarito A", "II", "multas"]
+            "texto": "Gabarito A (I, III e IV corretas). B — inclui II com \"demais débitos\" e IPVA: redação pré-991.\nC — marca II falsa com III, esquecendo I e IV corretas.\nD — trata todas como corretas, comprando II errada. A Res. 991/2023 restringiu o cartão do dispositivo legal a multas de trânsito.",
+            "destaques": [
+              "Gabarito A",
+              "II",
+              "multas"
+            ]
           }
         },
         {
@@ -152,7 +199,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PagTesouro: plataforma digital de pagamentos ao Tesouro — alternativa à GRU no art. 25 (991).\n\nDEMAIS DÉBITOS: IPVA, licenciamento etc. — a redação antiga do art. 27 incluía; a 991 retirou do cartão.\n\nÓRGÃO MÁXIMO EXECUTIVO DA UNIÃO: SENATRAN — autoriza cartão no § 1º do art. 27.",
-            "destaques": ["PagTesouro", "DEMAIS DÉBITOS", "SENATRAN"]
+            "destaques": [
+              "PagTesouro",
+              "DEMAIS DÉBITOS",
+              "SENATRAN"
+            ]
           }
         },
         {
@@ -162,13 +213,21 @@
           "tipo": "matriz_assertivas",
           "conteudo": {
             "itens": [
-              { "id": "I", "texto": "Art. 25 — GRU ou PagTesouro (União) — correta", "correto": true },
+              {
+                "id": "I",
+                "texto": "Art. 25 — GRU ou PagTesouro (União) — correta",
+                "correto": true
+              },
               {
                 "id": "II",
                 "texto": "Cartão para multas + IPVA/licenciamento — ERRADA",
                 "correto": false
               },
-              { "id": "III", "texto": "Vigor em 02/05/2023 — correta", "correto": true },
+              {
+                "id": "III",
+                "texto": "Vigor em 02/05/2023 — correta",
+                "correto": true
+              },
               {
                 "id": "IV",
                 "texto": "§ 1º exige autorização prévia SENATRAN — correta",
@@ -184,16 +243,28 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Dispositivo", "Efeito da Res. 991"],
+            "titulo_colunas": [
+              "Dispositivo",
+              "Efeito da Res. 991"
+            ],
             "linhas": [
-              { "faixa": "Art. 25", "classificacao": "GRU Cobrança ou PagTesouro (órgãos da União)" },
+              {
+                "faixa": "Art. 25",
+                "classificacao": "GRU Cobrança ou PagTesouro (órgãos da União)"
+              },
               {
                 "faixa": "Art. 27 — cartão",
                 "classificacao": "Somente multas de trânsito (sem demais débitos)",
                 "destaque": true
               },
-              { "faixa": "Art. 27, § 1º", "classificacao": "Autorização prévia do órgão máximo executivo" },
-              { "faixa": "Art. 3º", "classificacao": "Vigor em 02 de maio de 2023" }
+              {
+                "faixa": "Art. 27, § 1º",
+                "classificacao": "Autorização prévia do órgão máximo executivo"
+              },
+              {
+                "faixa": "Art. 3º",
+                "classificacao": "Vigor em 02 de maio de 2023"
+              }
             ]
           }
         },
@@ -203,7 +274,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a II afirma ✗", "Redação 991/2023 ✓"],
+            "colunas": [
+              "O que a II afirma ✗",
+              "Redação 991/2023 ✓"
+            ],
             "linhas": [
               [
                 "Cartão para multas e demais débitos (IPVA, licenciamento)",
@@ -222,7 +296,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — termo_unico",
@@ -245,13 +322,31 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Assertiva", "Veredito"],
+            "colunas": [
+              "Assertiva",
+              "Veredito"
+            ],
             "linhas": [
-              ["I — art. 25 GRU ou PagTesouro", "Correta"],
-              ["II — cartão com IPVA e licenciamento", "Falsa — só multas (991)"],
-              ["III — vigor 02/05/2023", "Correta"],
-              ["IV — § 1º autorização SENATRAN", "Correta"],
-              ["Resultado", "I + III + IV = alternativa A"]
+              [
+                "I — art. 25 GRU ou PagTesouro",
+                "Correta"
+              ],
+              [
+                "II — cartão com IPVA e licenciamento",
+                "Falsa — só multas (991)"
+              ],
+              [
+                "III — vigor 02/05/2023",
+                "Correta"
+              ],
+              [
+                "IV — § 1º autorização SENATRAN",
+                "Correta"
+              ],
+              [
+                "Resultado",
+                "I + III + IV = alternativa A"
+              ]
             ]
           }
         },
@@ -267,12 +362,14 @@
               {
                 "inicio": 132,
                 "fim": 150,
-                "motivo": "contraste — somente multas (II errada)"
+                "motivo": "contraste — somente multas (II errada)",
+                "texto_grifado": "multas de trânsito"
               },
               {
                 "inicio": 24,
                 "fim": 53,
-                "motivo": "matriz — deverão solicitar autorização (IV)"
+                "motivo": "matriz — deverão solicitar autorização (IV)",
+                "texto_grifado": "deverão solicitar autorização"
               }
             ]
           }
@@ -283,8 +380,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "991 = art.25 GRU|PagTesouro · art.27 cartão SÓ multas + OK SENATRAN · vigor 02/05/2023.\n\nNear-transfer: assertiva diz que cartão no art. 27 quita multa + taxa de expedição do CRLV — ainda errada: 991 limitou a multas de trânsito, não taxas administrativas do veículo.",
-            "destaques": ["SÓ multas", "02/05/2023", "CRLV"]
+            "texto": "991 = art.25 GRU|PagTesouro · art.27 cartão SÓ multas + OK SENATRAN · vigor 02/05/2023.\n\nNear-transfer: assertiva diz que cartão no art. 27 quita multa + taxa de expedição do CRLV — ainda errada: 991 limitou a multas de trânsito, não taxas administrativas do veículo.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "SÓ multas",
+              "02/05/2023",
+              "CRLV"
+            ]
           }
         }
       ],

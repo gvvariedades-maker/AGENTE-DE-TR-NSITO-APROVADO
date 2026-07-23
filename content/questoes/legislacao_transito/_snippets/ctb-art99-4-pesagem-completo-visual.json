@@ -1,291 +1,293 @@
-{
-  "disciplina": "legislacao_transito",
-  "topico": "CTB_veiculos",
-  "fundamento_slug": "CTB_art_99_4_pesagem",
-  "gabarito": "C",
-  "pegadinha": "Confissão em blitz sem balança não autoriza autuação — § 4 exige pesagem além da tolerância",
-  "estudo_reverso_visual_completo": {
-    "versao": 2,
-    "arquetipo": "matriz_assertivas",
-    "arquetipo_secundario": "tabela_gradacao",
-    "publico_alvo": "iniciante",
-    "duracao_estimada_seg": 270,
+[
+  {
+    "disciplina": "legislacao_transito",
+    "topico": "CTB_veiculos",
     "fundamento_slug": "CTB_art_99_4_pesagem",
-    "macete_visual": "Pesagem + tolerância · PBT ≤ fabricante",
-    "meta": {
-      "padrao_familia": "B_assertivas",
-      "pegadinha_em_uma_frase": "Confissão em blitz sem balança não autoriza autuação — § 4 exige pesagem além da tolerância",
-      "eixos_legais": [
-        "CTB_art_99_4",
-        "CTB_art_99_1",
-        "CTB_art_100"
+    "gabarito": "C",
+    "pegadinha": "Confissão em blitz sem balança não autoriza autuação — § 4 exige pesagem além da tolerância",
+    "estudo_reverso_visual_completo": {
+      "versao": 2,
+      "arquetipo": "matriz_assertivas",
+      "arquetipo_secundario": "tabela_gradacao",
+      "publico_alvo": "iniciante",
+      "duracao_estimada_seg": 270,
+      "fundamento_slug": "CTB_art_99_4_pesagem",
+      "macete_visual": "Pesagem + tolerância · PBT ≤ fabricante",
+      "meta": {
+        "padrao_familia": "B_assertivas",
+        "pegadinha_em_uma_frase": "Confissão em blitz sem balança não autoriza autuação — § 4 exige pesagem além da tolerância",
+        "eixos_legais": [
+          "CTB_art_99_4",
+          "CTB_art_99_1",
+          "CTB_art_100"
+        ],
+        "isca_por_alternativa": {
+          "A": "confissão do condutor dispensa pesagem em equipamento na blitz sem balança",
+          "B": "aceita autuação por estimativa visual com confissão junto com pesagem com tolerância",
+          "D": "trata autuação por estimativa visual com confissão como correta junto com I e III"
+        }
+      },
+      "telas": [
+        {
+          "id": "contexto",
+          "titulo": "Diagnóstico: autuação sem balança",
+          "secao": "diagnostico",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Gabarito C (I e III corretas).\n\nA — confissão do condutor dispensa pesagem na blitz sem balança.\nB — pesagem com tolerância e autuação por estimativa visual com confissão.\nD — trata I, II e III como corretas.\n\nPegadinha: confissão visual não substitui pesagem exigida para autuação.",
+            "destaques": [
+              "Gabarito C",
+              "confissão",
+              "balança"
+            ]
+          }
+        },
+        {
+          "id": "glossario",
+          "titulo": "Pré-treino: 3 termos",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "PESAGEM: aferição do excesso por equipamento homologado ou documento fiscal — base do § 1.\n\nTOLERÂNCIA: percentual admitido sobre limites de PBT e por eixo — só autua além dela.\n\nPBT DO FABRICANTE: peso bruto total máximo fixado pelo fabricante — teto do art. 100.",
+            "destaques": [
+              "PESAGEM",
+              "TOLERÂNCIA",
+              "FABRICANTE"
+            ]
+          }
+        },
+        {
+          "id": "matriz",
+          "titulo": "Classificar I–III",
+          "secao": "metodo",
+          "tipo": "matriz_assertivas",
+          "conteudo": {
+            "itens": [
+              {
+                "id": "I",
+                "texto": "Autuação só na pesagem além da tolerância — correta",
+                "correto": true
+              },
+              {
+                "id": "II",
+                "texto": "Confissão visual dispensa balança — ERRADA",
+                "correto": false
+              },
+              {
+                "id": "III",
+                "texto": "PBT não pode exceder fabricante — correta",
+                "correto": true
+              }
+            ],
+            "gabarito_resumo": "I e III → alternativa C"
+          }
+        },
+        {
+          "id": "fluxo",
+          "titulo": "Método: montar o gabarito",
+          "secao": "metodo",
+          "tipo": "fluxograma",
+          "conteudo": {
+            "nos": [
+              {
+                "id": "p1",
+                "label": "II autoriza autuação sem balança com confissão?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "I e III estão corretas?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito C — I e III apenas",
+                "tipo": "resultado"
+              }
+            ],
+            "arestas": [
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Não — II falsa"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — pesagem e fabricante"
+              }
+            ]
+          }
+        },
+        {
+          "id": "contraste",
+          "titulo": "Assertiva-isca: II",
+          "secao": "contraste",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "O que a II afirma ✗",
+              "O que a lei diz ✓"
+            ],
+            "linhas": [
+              [
+                "Confissão em blitz sem balança autoriza autuação",
+                "Autuação só por ocasião da pesagem além da tolerância"
+              ],
+              [
+                "Estimativa visual substitui equipamento de pesagem",
+                "Excesso aferido por equipamento ou documento fiscal"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "distratores",
+          "titulo": "Por que cada alternativa erra",
+          "secao": "distratores",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
+            "linhas": [
+              [
+                "A — termo_unico",
+                "Marca só II falsa — ignora I e III corretas"
+              ],
+              [
+                "B — regra_excecao",
+                "Aceita I mas compra II que autoriza autuação sem pesagem"
+              ],
+              [
+                "D — gravidade",
+                "Trata II falsa como correta junto com I e III"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "caso",
+          "titulo": "Montando o gabarito",
+          "secao": "metodo",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Assertiva",
+              "Veredito"
+            ],
+            "linhas": [
+              [
+                "I — autuação só na pesagem além da tolerância",
+                "Correta"
+              ],
+              [
+                "II — confissão visual dispensa balança",
+                "Falsa"
+              ],
+              [
+                "III — PBT não pode exceder fabricante",
+                "Correta"
+              ],
+              [
+                "Resultado",
+                "I e III = alternativa C"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "hierarquia",
+          "titulo": "Art. 99, § 4 × art. 100",
+          "secao": "conceito",
+          "tipo": "comparacao",
+          "conteudo": {
+            "colunas": [
+              "Dispositivo",
+              "Função no caso"
+            ],
+            "linhas": [
+              [
+                "Art. 99, § 4",
+                "Autuação só na pesagem além da tolerância — I correta"
+              ],
+              [
+                "Art. 99, § 1",
+                "Excesso aferido por equipamento ou documento fiscal — não por confissão"
+              ],
+              [
+                "Art. 100",
+                "PBT não pode exceder limite do fabricante — III correta"
+              ],
+              [
+                "Caso BR-230",
+                "Excesso na tolerância + PBT acima do CRLV — II falsa"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "lei",
+          "titulo": "CTB art. 99 — § 4",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 99, § 4",
+            "texto": "§ 4 Somente poderá haver autuação, por ocasião da pesagem do veículo, quando o veículo ou a combinação de veículos ultrapassar os limites de peso fixados, acrescidos da respectiva tolerância.",
+            "trechos_grifados": [
+              {
+                "inicio": 4,
+                "fim": 190,
+                "motivo": "matriz — I correta: autuação condicionada à pesagem além da tolerância",
+                "texto_grifado": "Somente poderá haver autuação, por ocasião da pesagem do veículo, quando o veículo ou a combinação de veículos ultrapassar os limites de peso fixados, acrescidos da respectiva tolerância"
+              }
+            ]
+          }
+        },
+        {
+          "id": "lei2",
+          "titulo": "CTB art. 100 — caput",
+          "secao": "lei",
+          "tipo": "trecho_legal",
+          "conteudo": {
+            "fonte": "CTB, art. 100, caput",
+            "texto": "Art. 100. Nenhum veículo ou combinação de veículos poderá transitar com lotação de passageiros, com peso bruto total, ou com peso bruto total combinado com peso por eixo, superior ao fixado pelo fabricante, nem ultrapassar a capacidade máxima de tração da unidade tratora.",
+            "trechos_grifados": [
+              {
+                "inicio": 96,
+                "fim": 205,
+                "motivo": "caso — III correta: PBT não pode exceder limite do fabricante",
+                "texto_grifado": "com peso bruto total, ou com peso bruto total combinado com peso por eixo, superior ao fixado pelo fabricante"
+              }
+            ]
+          }
+        },
+        {
+          "id": "macete",
+          "titulo": "Macete + near/far-transfer",
+          "secao": "macete",
+          "tipo": "texto_destaque",
+          "conteudo": {
+            "texto": "Pesagem + tolerância = autua · Confissão visual ≠ pesagem · PBT ≤ fabricante.\nNear: excesso além da tolerância na balança homologada — autuação pelo § 4.\nFar: ônibus com lotação acima da capacidade do fabricante — art. 100 veda sem depender de balança.\nNão muda: autuação por excesso exige pesagem com ultrapassagem além da tolerância — confissão não substitui.\nCadeia: vizinho = autorização especial para carga fora dos limites.",
+            "destaques": [
+              "pesagem",
+              "tolerância",
+              "fabricante",
+              "lotação"
+            ]
+          }
+        }
       ],
-      "isca_por_alternativa": {
-        "A": "confissão do condutor dispensa pesagem em equipamento na blitz sem balança",
-        "B": "aceita autuação por estimativa visual com confissão junto com pesagem com tolerância",
-        "D": "trata autuação por estimativa visual com confissão como correta junto com I e III"
-      }
-    },
-    "telas": [
-      {
-        "id": "contexto",
-        "titulo": "Diagnóstico: autuação sem balança",
-        "secao": "diagnostico",
-        "tipo": "texto_destaque",
-        "conteudo": {
-          "texto": "Gabarito C (I e III corretas).\n\nA — confissão do condutor dispensa pesagem na blitz sem balança.\nB — pesagem com tolerância e autuação por estimativa visual com confissão.\nD — trata I, II e III como corretas.\n\nPegadinha: confissão visual não substitui pesagem exigida para autuação.",
-          "destaques": [
-            "Gabarito C",
-            "confissão",
-            "balança"
-          ]
+      "links_fonte": [
+        {
+          "rotulo": "CTB art. 99",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
+        },
+        {
+          "rotulo": "CTB art. 100",
+          "path": "conteúdo/legislação federal/lei-9503-ctb.html"
         }
-      },
-      {
-        "id": "glossario",
-        "titulo": "Pré-treino: 3 termos",
-        "tipo": "texto_destaque",
-        "conteudo": {
-          "texto": "PESAGEM: aferição do excesso por equipamento homologado ou documento fiscal — base do § 1.\n\nTOLERÂNCIA: percentual admitido sobre limites de PBT e por eixo — só autua além dela.\n\nPBT DO FABRICANTE: peso bruto total máximo fixado pelo fabricante — teto do art. 100.",
-          "destaques": [
-            "PESAGEM",
-            "TOLERÂNCIA",
-            "FABRICANTE"
-          ]
-        }
-      },
-      {
-        "id": "matriz",
-        "titulo": "Classificar I–III",
-        "secao": "metodo",
-        "tipo": "matriz_assertivas",
-        "conteudo": {
-          "itens": [
-            {
-              "id": "I",
-              "texto": "Autuação só na pesagem além da tolerância — correta",
-              "correto": true
-            },
-            {
-              "id": "II",
-              "texto": "Confissão visual dispensa balança — ERRADA",
-              "correto": false
-            },
-            {
-              "id": "III",
-              "texto": "PBT não pode exceder fabricante — correta",
-              "correto": true
-            }
-          ],
-          "gabarito_resumo": "I e III → alternativa C"
-        }
-      },
-      {
-        "id": "fluxo",
-        "titulo": "Método: montar o gabarito",
-        "secao": "metodo",
-        "tipo": "fluxograma",
-        "conteudo": {
-          "nos": [
-            {
-              "id": "p1",
-              "label": "II autoriza autuação sem balança com confissão?",
-              "tipo": "pergunta"
-            },
-            {
-              "id": "p2",
-              "label": "I e III estão corretas?",
-              "tipo": "pergunta"
-            },
-            {
-              "id": "r1",
-              "label": "Gabarito C — I e III apenas",
-              "tipo": "resultado"
-            }
-          ],
-          "arestas": [
-            {
-              "de": "p1",
-              "para": "p2",
-              "rotulo": "Não — II falsa"
-            },
-            {
-              "de": "p2",
-              "para": "r1",
-              "rotulo": "Sim — pesagem e fabricante"
-            }
-          ]
-        }
-      },
-      {
-        "id": "contraste",
-        "titulo": "Assertiva-isca: II",
-        "secao": "contraste",
-        "tipo": "comparacao",
-        "conteudo": {
-          "colunas": [
-            "O que a II afirma ✗",
-            "O que a lei diz ✓"
-          ],
-          "linhas": [
-            [
-              "Confissão em blitz sem balança autoriza autuação",
-              "Autuação só por ocasião da pesagem além da tolerância"
-            ],
-            [
-              "Estimativa visual substitui equipamento de pesagem",
-              "Excesso aferido por equipamento ou documento fiscal"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "distratores",
-        "titulo": "Por que cada alternativa erra",
-        "secao": "distratores",
-        "tipo": "comparacao",
-        "conteudo": {
-          "colunas": [
-            "Alternativa",
-            "Mecanismo + por quê"
-          ],
-          "linhas": [
-            [
-              "A — termo_unico",
-              "Marca só II falsa — ignora I e III corretas"
-            ],
-            [
-              "B — regra_excecao",
-              "Aceita I mas compra II que autoriza autuação sem pesagem"
-            ],
-            [
-              "D — gravidade",
-              "Trata II falsa como correta junto com I e III"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "caso",
-        "titulo": "Montando o gabarito",
-        "secao": "metodo",
-        "tipo": "comparacao",
-        "conteudo": {
-          "colunas": [
-            "Assertiva",
-            "Veredito"
-          ],
-          "linhas": [
-            [
-              "I — autuação só na pesagem além da tolerância",
-              "Correta"
-            ],
-            [
-              "II — confissão visual dispensa balança",
-              "Falsa"
-            ],
-            [
-              "III — PBT não pode exceder fabricante",
-              "Correta"
-            ],
-            [
-              "Resultado",
-              "I e III = alternativa C"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "hierarquia",
-        "titulo": "Art. 99, § 4 × art. 100",
-        "secao": "conceito",
-        "tipo": "comparacao",
-        "conteudo": {
-          "colunas": [
-            "Dispositivo",
-            "Função no caso"
-          ],
-          "linhas": [
-            [
-              "Art. 99, § 4",
-              "Autuação só na pesagem além da tolerância — I correta"
-            ],
-            [
-              "Art. 99, § 1",
-              "Excesso aferido por equipamento ou documento fiscal — não por confissão"
-            ],
-            [
-              "Art. 100",
-              "PBT não pode exceder limite do fabricante — III correta"
-            ],
-            [
-              "Caso BR-230",
-              "Excesso na tolerância + PBT acima do CRLV — II falsa"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "lei",
-        "titulo": "CTB art. 99 — § 4",
-        "secao": "lei",
-        "tipo": "trecho_legal",
-        "conteudo": {
-          "fonte": "CTB, art. 99, § 4",
-          "texto": "§ 4 Somente poderá haver autuação, por ocasião da pesagem do veículo, quando o veículo ou a combinação de veículos ultrapassar os limites de peso fixados, acrescidos da respectiva tolerância.",
-          "trechos_grifados": [
-            {
-              "inicio": 4,
-              "fim": 190,
-              "motivo": "matriz — I correta: autuação condicionada à pesagem além da tolerância",
-              "texto_grifado": "Somente poderá haver autuação, por ocasião da pesagem do veículo, quando o veículo ou a combinação de veículos ultrapassar os limites de peso fixados, acrescidos da respectiva tolerância"
-            }
-          ]
-        }
-      },
-      {
-        "id": "lei2",
-        "titulo": "CTB art. 100 — caput",
-        "secao": "lei",
-        "tipo": "trecho_legal",
-        "conteudo": {
-          "fonte": "CTB, art. 100, caput",
-          "texto": "Art. 100. Nenhum veículo ou combinação de veículos poderá transitar com lotação de passageiros, com peso bruto total, ou com peso bruto total combinado com peso por eixo, superior ao fixado pelo fabricante, nem ultrapassar a capacidade máxima de tração da unidade tratora.",
-          "trechos_grifados": [
-            {
-              "inicio": 96,
-              "fim": 205,
-              "motivo": "caso — III correta: PBT não pode exceder limite do fabricante",
-              "texto_grifado": "com peso bruto total, ou com peso bruto total combinado com peso por eixo, superior ao fixado pelo fabricante"
-            }
-          ]
-        }
-      },
-      {
-        "id": "macete",
-        "titulo": "Macete + near/far-transfer",
-        "secao": "macete",
-        "tipo": "texto_destaque",
-        "conteudo": {
-          "texto": "Pesagem + tolerância = autua · Confissão visual ≠ pesagem · PBT ≤ fabricante.\nNear: excesso além da tolerância na balança homologada — autuação pelo § 4.\nFar: ônibus com lotação acima da capacidade do fabricante — art. 100 veda sem depender de balança.\nNão muda: autuação por excesso exige pesagem com ultrapassagem além da tolerância — confissão não substitui.\nCadeia: vizinho = autorização especial para carga fora dos limites.",
-          "destaques": [
-            "pesagem",
-            "tolerância",
-            "fabricante",
-            "lotação"
-          ]
-        }
-      }
-    ],
-    "links_fonte": [
-      {
-        "rotulo": "CTB art. 99",
-        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
-      },
-      {
-        "rotulo": "CTB art. 100",
-        "path": "conteúdo/legislação federal/lei-9503-ctb.html"
-      }
-    ]
+      ]
+    }
   }
-}
+]

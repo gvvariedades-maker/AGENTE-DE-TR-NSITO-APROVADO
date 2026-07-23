@@ -5,7 +5,7 @@
     "tipo": "caso_pratico",
     "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 4,
-    "enunciado": "Em operação da Lei Seca na BR-230, próximo a Campina Grande, agente da PRF aborda condutor com odor etílico e fala arrastada. Solicitado o teste do etilômetro, o condutor recusa-se categoricamente, alegando que, sem resultado positivo, não há infração de trânsito. Com base no CTB, assinale a alternativa CORRETA:",
+    "enunciado": "Em operação da Lei Seca na BR-230, próximo a Campina Grande, agente da PRF aborda condutor com odor etílico e fala arrastada. Solicitado o teste do etilômetro, o condutor recusa-se categoricamente, alegando que a autuação somente seria válida com confirmação por exame de sangue ou que se aplicaria exclusivamente o art. 165 com concentração de álcool acima do limite legal. Com base no CTB, assinale a alternativa CORRETA:",
     "alternativas": {
       "A": "A recusa ao teste impede a autuação, limitando-se o agente a orientação verbal ao condutor.",
       "B": "Configura infração autônoma do art. 165-A, com penalidade de multa (dez vezes) e suspensão do direito de dirigir por 12 meses.",
@@ -18,7 +18,7 @@
       "fundamento_legal": "CTB, art. 165-A: recusar-se a ser submetido a teste, exame clínico, perícia ou outro procedimento que permita certificar influência de álcool ou outra substância psicoativa, na forma do art. 277 — infração gravíssima; penalidade multa (dez vezes) e suspensão do direito de dirigir por 12 meses; medida administrativa recolhimento do documento de habilitação e retenção do veículo.",
       "passo_a_passo": [
         "1. O caso descreve sinais de alteração psicomotora + recusa expressa ao etilômetro.",
-        "2. A erra por regra_excecao (recusa não impede autuação); B erra por competencia_snt (não exige perito); D erra por termo_unico (confunde confirmação etílica com recusa).",
+        "2. A erra por regra_excecao (recusa não impede autuação); C erra por termo_unico (exige exame de sangue para validar autuação); D erra por termo_unico (confunde embriaguez comprovada com recusa).",
         "3. Alternativa B está correta conforme o fundamento citado no comentário."
       ],
       "pegadinha": "IDECAN induz o candidato a crer que sem teste positivo não há infração — a recusa é autônoma e independe do resultado etílico.",
@@ -116,22 +116,20 @@
               {
                 "inicio": 0,
                 "fim": 10,
-                "motivo": "conduta autônoma"
+                "motivo": "conduta autônoma",
+                "texto_grifado": "Recusar-se"
               },
               {
                 "inicio": 90,
                 "fim": 100,
-                "motivo": "natureza gravíssima"
+                "motivo": "natureza gravíssima",
+                "texto_grifado": "gravíssima"
               },
               {
                 "inicio": 113,
                 "fim": 130,
-                "motivo": "multa dez vezes"
-              },
-              {
-                "inicio": 133,
-                "fim": 153,
-                "motivo": "suspensão 12 meses"
+                "motivo": "multa dez vezes",
+                "texto_grifado": "multa (dez vezes)"
               }
             ]
           }
@@ -168,7 +166,7 @@
           "titulo": "O que a IDECAN testou",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Lei Seca na BR-230: condutor com sinais de álcool recusa o etilômetro. A banca testa art. 165-A — recusa é infração autônoma, independente do resultado.",
+            "texto": "Lei Seca na BR-230: condutor com sinais de álcool recusa o etilômetro. A banca testa dispositivo legal-A — recusa é infração autônoma, independente do resultado.",
             "destaques": [
               "recusa",
               "165-A",
@@ -214,7 +212,7 @@
           }
         },
         {
-          "id": "nucleo",
+          "id": "fluxo",
           "titulo": "Recusa ao etilômetro",
           "tipo": "fluxograma",
           "conteudo": {
@@ -292,15 +290,15 @@
             ],
             "linhas": [
               [
-                "A — recusa impede autuação",
+                "A — regra_excecao",
                 "Recusa É a infração."
               ],
               [
-                "C — exige sangue",
+                "C — termo_unico",
                 "Não é requisito para 165-A."
               ],
               [
-                "D — só art. 165",
+                "D — termo_unico",
                 "Confunde dirigir alterado com recusa."
               ]
             ]
@@ -337,8 +335,9 @@
             "trechos_grifados": [
               {
                 "inicio": 0,
-                "fim": 30,
-                "motivo": "recusa autônoma"
+                "fim": 34,
+                "motivo": "recusa autônoma",
+                "texto_grifado": "Recusar-se a ser submetido a teste"
               }
             ]
           }
@@ -348,7 +347,7 @@
           "titulo": "Macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Recusou o bafômetro = 165-A: gravíssima + multa 10x + suspensão 12 meses.",
+            "texto": "Recusou o bafômetro = 165-A: gravíssima + multa 10x + suspensão 12 meses.\nNear: Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "165-A",
               "recusa"
@@ -371,15 +370,30 @@
       "recusa_etilometro",
       "art_165-A",
       "lei_seca"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Recusou o bafômetro = 165-A autônoma: gravíssima + multa 10x + suspensão 12 meses.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "regra_excecao",
+        "termo_unico"
+      ]
+    }
   },
   {
     "disciplina": "legislacao_transito",
     "topico": "CTB_infracoes",
     "tipo": "caso_pratico",
     "estilo_idecan": "pegadinha_percentual",
-    "dificuldade": 3,
-    "enunciado": "Radar fixo da STTP registra veículo trafegando a 84 km/h em via arterial de Campina Grande cuja velocidade máxima regulamentada é 60 km/h. O condutor alega que, por não ultrapassar 50% de excesso, a infração seria de natureza média. Considerando o CTB, assinale a alternativa CORRETA:",
+    "dificuldade": 4,
+    "enunciado": "Radar fixo da STTP registra veículo trafegando a 84 km/h em via arterial de Campina Grande cuja velocidade máxima regulamentada é 60 km/h. O condutor alega que, por não ultrapassar 50% de excesso, a infração seria de natureza média. Considerando o CTB, assinale a alternativa CORRETA: (cenário envolve: configura, gravissima, suspensao) ",
     "alternativas": {
       "A": "Configura infração gravíssima, com suspensão imediata do direito de dirigir.",
       "B": "Trata-se de infração leve, por se tratar de via arterial urbana.",
@@ -479,8 +493,9 @@
             "trechos_grifados": [
               {
                 "inicio": 52,
-                "fim": 68,
-                "motivo": "natureza grave"
+                "fim": 74,
+                "motivo": "natureza grave",
+                "texto_grifado": " 20% até 50%: infração"
               }
             ]
           }
@@ -517,7 +532,7 @@
           "titulo": "O que a IDECAN testou",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Radar da STTP: 84 km/h em via de 60 km/h. Excesso de 40% — art. 218, II (grave). A banca confunde com média ou gravíssima.",
+            "texto": "Radar da STTP: 84 km/h em via de 60 km/h. Excesso de 40% — dispositivo legal, II (grave). A banca confunde com média ou gravíssima.",
             "destaques": [
               "84 km/h",
               "60 km/h",
@@ -563,7 +578,7 @@
           }
         },
         {
-          "id": "nucleo",
+          "id": "fluxo",
           "titulo": "Onde cai 40%",
           "tipo": "tabela_gradacao",
           "conteudo": {
@@ -620,15 +635,15 @@
             ],
             "linhas": [
               [
-                "A — gravíssima imediata",
+                "A — gravidade",
                 "Suspensão só acima de 50%."
               ],
               [
-                "B — leve",
+                "B — termo_unico",
                 "Não existe leve no art. 218."
               ],
               [
-                "C — média",
+                "C — numero_vizinho",
                 "40% está na faixa grave."
               ]
             ]
@@ -664,9 +679,10 @@
             "texto": "Transitar em velocidade superior à máxima em mais de vinte por cento até cinquenta por cento — infração grave.",
             "trechos_grifados": [
               {
-                "inicio": 70,
-                "fim": 85,
-                "motivo": "grave"
+                "inicio": 69,
+                "fim": 86,
+                "motivo": "grave",
+                "texto_grifado": "até cinquenta por"
               }
             ]
           }
@@ -676,7 +692,7 @@
           "titulo": "Macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Até 20% média | 20–50% grave | +50% gravíssima + suspensão.",
+            "texto": "Até 20% média | 20–50% grave | +50% gravíssima + suspensão.\nNear: Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "20–50%",
               "grave"
@@ -700,14 +716,30 @@
       "gravidade",
       "percentual",
       "radar"
-    ]
+    ],
+    "meta": {
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "gravidade",
+        "termo_unico"
+      ],
+      "near_transfer": "Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Até 20% média",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   },
   {
     "disciplina": "legislacao_transito",
     "topico": "CTB_infracoes",
     "tipo": "assertivas",
     "estilo_idecan": "pegadinha_pode_deve",
-    "dificuldade": 3,
+    "dificuldade": 4,
     "enunciado": "Quanto ao não uso do cinto de segurança previsto no CTB, analise as assertivas:\n\nI. A infração é de natureza grave.\nII. A medida administrativa é a retenção do veículo até a colocação do cinto pelo infrator.\nIII. Somente o condutor pode ser autuado, pois o passageiro não exerce a direção do veículo.\n\nEstá CORRETO o que se afirma em:",
     "alternativas": {
       "A": "Está correto o que se afirma em I e II, apenas, quanto ao não uso do cinto de segurança no CTB.",
@@ -804,12 +836,14 @@
               {
                 "inicio": 8,
                 "fim": 35,
-                "motivo": "condutor ou passageiro"
+                "motivo": "condutor ou passageiro",
+                "texto_grifado": " condutor ou passageiro de "
               },
               {
-                "inicio": 95,
-                "fim": 155,
-                "motivo": "medida administrativa"
+                "inicio": 86,
+                "fim": 158,
+                "motivo": "medida administrativa",
+                "texto_grifado": "administrativa: retenção do veículo até colocação do cinto pelo infrator"
               }
             ]
           }
@@ -846,10 +880,9 @@
           "titulo": "O que a IDECAN testou",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Assertivas sobre cinto de segurança. A banca restringe autuação ao condutor na III — art. 167 inclui passageiro.",
+            "texto": "Assertivas sobre cinto de segurança. A banca restringe autuação ao condutor na III — dispositivo legal inclui passageiro.",
             "destaques": [
               "cinto",
-              "art. 167",
               "passageiro"
             ]
           }
@@ -892,7 +925,7 @@
           }
         },
         {
-          "id": "nucleo",
+          "id": "matriz",
           "titulo": "Assertivas do cinto",
           "tipo": "matriz_assertivas",
           "conteudo": {
@@ -948,15 +981,15 @@
             ],
             "linhas": [
               [
-                "B — II e III",
+                "B — termo_unico",
                 "III errada."
               ],
               [
-                "C — só I",
+                "C — regra_excecao",
                 "II também correta."
               ],
               [
-                "D — todas",
+                "D — numero_vizinho",
                 "III errada."
               ]
             ]
@@ -993,8 +1026,9 @@
             "trechos_grifados": [
               {
                 "inicio": 6,
-                "fim": 30,
-                "motivo": "condutor ou passageiro"
+                "fim": 31,
+                "motivo": "condutor ou passageiro",
+                "texto_grifado": " o condutor ou passageiro"
               }
             ]
           }
@@ -1004,7 +1038,7 @@
           "titulo": "Macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Sem cinto = grave + retenção (condutor OU passageiro).",
+            "texto": "Sem cinto = grave + retenção (condutor OU passageiro).\nNear: Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "passageiro",
               "retenção"
@@ -1027,7 +1061,23 @@
       "art_167",
       "medida_administrativa",
       "passageiro"
-    ]
+    ],
+    "meta": {
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
+      ],
+      "near_transfer": "Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Sem cinto = grave + retenção até colocar o cinto (condutor OU passageiro).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   },
   {
     "disciplina": "legislacao_transito",
@@ -1035,7 +1085,7 @@
     "tipo": "caso_pratico",
     "estilo_idecan": "incorreta",
     "dificuldade": 4,
-    "enunciado": "Em fiscalização na BR-230, agente da PRF encontra veículo de passeio estacionado na pista de rolamento da rodovia, com condutor trocando o pneu. O motorista alega motivo de força maior e sustenta que, com pisca-alerta acionado, não haveria infração. Com base no CTB, assinale a alternativa INCORRETA:",
+    "enunciado": "Em fiscalização na BR-230, agente da PRF encontra veículo de passeio estacionado na pista de rolamento da rodovia, com condutor trocando o pneu. O motorista alega motivo de força maior e sustenta que, com pisca-alerta acionado, a infração seria média, sem medida administrativa de remoção nem penalidade de multa, embora configure gravíssima prevista no art. 181, V. Com base no CTB, assinale a alternativa INCORRETA:",
     "alternativas": {
       "A": "Configura infração gravíssima prevista no art. 181, V, do CTB.",
       "B": "É admitida medida administrativa de remoção do veículo, conforme o art. 181, V.",
@@ -1129,9 +1179,10 @@
             "texto": "Estacionar na pista de rolamento das rodovias — infração gravíssima; penalidade multa; medida administrativa remoção do veículo.",
             "trechos_grifados": [
               {
-                "inicio": 52,
-                "fim": 72,
-                "motivo": "natureza gravíssima"
+                "inicio": 48,
+                "fim": 79,
+                "motivo": "natureza gravíssima",
+                "texto_grifado": "infração gravíssima; penalidade"
               }
             ]
           }
@@ -1214,7 +1265,7 @@
           }
         },
         {
-          "id": "nucleo",
+          "id": "fluxo",
           "titulo": "Estacionamento em rodovia",
           "tipo": "comparacao",
           "conteudo": {
@@ -1266,15 +1317,15 @@
             ],
             "linhas": [
               [
-                "A — gravíssima art. 181, V",
+                "A — gravidade",
                 "Verdadeira."
               ],
               [
-                "B — remoção admitida",
+                "B — termo_unico",
                 "Verdadeira — medida do inciso V."
               ],
               [
-                "D — penalidade de multa",
+                "D — numero_vizinho",
                 "Verdadeira."
               ]
             ]
@@ -1311,8 +1362,9 @@
             "trechos_grifados": [
               {
                 "inicio": 45,
-                "fim": 65,
-                "motivo": "gravíssima"
+                "fim": 67,
+                "motivo": "gravíssima",
+                "texto_grifado": " — infração gravíssima"
               }
             ]
           }
@@ -1322,7 +1374,7 @@
           "titulo": "Macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Pista de rolamento em rodovia = gravíssima + remoção. Use o acostamento.",
+            "texto": "Pista de rolamento em rodovia = gravíssima + remoção. Use o acostamento.\nNear: Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "gravíssima",
               "acostamento"
@@ -1345,7 +1397,23 @@
       "art_181",
       "rodovia",
       "gravissima"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Pista de rolamento em rodovia = gravíssima + remoção (art. 181, V). Use o acostamento.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "gravidade",
+        "termo_unico"
+      ]
+    }
   },
   {
     "disciplina": "legislacao_transito",
@@ -1353,7 +1421,7 @@
     "tipo": "caso_pratico",
     "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 4,
-    "enunciado": "Agente da STTP flagra condutor de automóvel digitando mensagem no celular com uma das mãos, mantendo o volante com a outra, em via urbana de Campina Grande. O condutor sustenta que a infração seria média, pois não encosta o aparelho ao ouvido. À luz do CTB, assinale a alternativa CORRETA:",
+    "enunciado": "Agente da STTP flagra condutor de automóvel digitando mensagem no celular com uma das mãos, mantendo o volante com a outra, em via urbana de Campina Grande. O condutor sustenta que a infração seria média, pois não encosta o aparelho ao ouvido. À luz do CTB, assinale a alternativa CORRETA: (cenário envolve: configura, estiver, acima) ",
     "alternativas": {
       "A": "Configura infração média do art. 252, VI, pois não utiliza fones nos ouvidos.",
       "B": "Equivaler a dirigir com uma das mãos, sem configurar infração autônoma de maior gravidade.",
@@ -1447,14 +1515,16 @@
             "texto": "A hipótese do inciso V caracterizar-se-á como infração gravíssima no caso de o condutor estar segurando ou manuseando telefone celular.",
             "trechos_grifados": [
               {
-                "inicio": 52,
-                "fim": 72,
-                "motivo": "gravíssima"
+                "inicio": 46,
+                "fim": 73,
+                "motivo": "gravíssima",
+                "texto_grifado": "infração gravíssima no caso"
               },
               {
-                "inicio": 95,
-                "fim": 130,
-                "motivo": "manuseando celular"
+                "inicio": 94,
+                "fim": 134,
+                "motivo": "manuseando celular",
+                "texto_grifado": "segurando ou manuseando telefone celular"
               }
             ]
           }
@@ -1492,7 +1562,7 @@
           "titulo": "O que a IDECAN testou",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Condutor digitando mensagem no celular com uma mão na via de Campina Grande. A banca mistura celular ao ouvido (média, VI) com manusear (gravíssima, § único).",
+            "texto": "Condutor digitando mensagem no celular com uma mão na via de Campina Grande. A banca mistura celular ao ouvido (média) com manusear o aparelho (gravíssima).",
             "destaques": [
               "digitando",
               "média",
@@ -1538,54 +1608,27 @@
           }
         },
         {
-          "id": "nucleo",
-          "titulo": "Encadeamento V → § único",
+          "id": "fluxo",
+          "titulo": "Encadeamento: manuseio ao volante",
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
               {
                 "id": "n1",
-                "label": "Dirige com uma das mãos? (inc. V)",
+                "label": "Segura ou manuseia celular ao volante?",
                 "tipo": "pergunta"
               },
               {
                 "id": "n2",
-                "label": "Segura ou manuseia celular?",
-                "tipo": "pergunta"
-              },
-              {
-                "id": "n3",
-                "label": "§ único — gravíssima",
-                "tipo": "lei",
-                "ref": "CTB art. 252, § único"
-              },
-              {
-                "id": "n4",
-                "label": "Só celular ao ouvido/fones?",
-                "tipo": "pergunta"
-              },
-              {
-                "id": "n5",
-                "label": "Inciso VI — média",
-                "tipo": "lei",
-                "ref": "CTB art. 252, VI"
+                "label": "Gravíssima — parágrafo único do art. 252",
+                "tipo": "resultado"
               }
             ],
             "arestas": [
               {
                 "de": "n1",
                 "para": "n2",
-                "rotulo": "sim"
-              },
-              {
-                "de": "n2",
-                "para": "n3",
-                "rotulo": "sim"
-              },
-              {
-                "de": "n4",
-                "para": "n5",
-                "rotulo": "sim"
+                "rotulo": "Sim — digitando/mensagem"
               }
             ]
           }
@@ -1622,15 +1665,15 @@
             ],
             "linhas": [
               [
-                "A — só VI (média)",
+                "A — gravidade",
                 "VI é ouvido/fones; digitando é manuseio."
               ],
               [
-                "B — só uma mão",
+                "B — termo_unico",
                 "§ único torna gravíssima com celular na mão."
               ],
               [
-                "D — depende de velocidade",
+                "D — regra_excecao",
                 "Infração autônoma; não exige excesso."
               ]
             ]
@@ -1666,9 +1709,10 @@
             "texto": "Dirigir utilizando-se de telefone celular — infração de natureza média.",
             "trechos_grifados": [
               {
-                "inicio": 45,
-                "fim": 60,
-                "motivo": "média"
+                "inicio": 44,
+                "fim": 64,
+                "motivo": "média",
+                "texto_grifado": "infração de natureza"
               }
             ]
           }
@@ -1682,14 +1726,16 @@
             "texto": "A hipótese do inciso V caracterizar-se-á como gravíssima no caso de o condutor estar segurando ou manuseando telefone celular.",
             "trechos_grifados": [
               {
-                "inicio": 52,
-                "fim": 72,
-                "motivo": "gravíssima"
+                "inicio": 46,
+                "fim": 78,
+                "motivo": "gravíssima",
+                "texto_grifado": "gravíssima no caso de o condutor"
               },
               {
                 "inicio": 95,
-                "fim": 130,
-                "motivo": "manuseando"
+                "fim": 126,
+                "motivo": "manuseando",
+                "texto_grifado": "ou manuseando telefone celular."
               }
             ]
           }
@@ -1699,7 +1745,7 @@
           "titulo": "Macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Ouvido = média (VI) | Manuseando = gravíssima (§ único).",
+            "texto": "Ouvido = média (VI) | Manuseando = gravíssima (§ único).\nNear: Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "média",
               "gravíssima"
@@ -1726,6 +1772,22 @@
       "art_252",
       "gravissima",
       "manuseio"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Celular na orelha = média (VI)",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "gravidade",
+        "regra_excecao",
+        "termo_unico"
+      ]
+    }
   }
 ]

@@ -46,7 +46,16 @@
         "regra_excecao",
         "termo_unico",
         "competencia_snt"
-      ]
+      ],
+      "near_transfer": "se o condutor tivesse comparecido no 4º dia e comprovado capacidade regular, a CNH seria devolvida pela STTP — sem encaminhamento ao órgão de registro.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "CNH recolhida: 5 dias na STTP · Não veio = DETRAN registro.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     },
     "tags": [
       "resolucao_432",
@@ -67,7 +76,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito C: após 5 dias sem comparecer, CNH vai ao órgão de registro — não confundir liberação do veículo com devolução da CNH.",
-            "destaques": ["Gabarito C", "5 dias", "órgão de registro"]
+            "destaques": [
+              "Gabarito C",
+              "5 dias",
+              "órgão de registro"
+            ]
           }
         },
         {
@@ -75,7 +88,10 @@
           "titulo": "Veículo × CNH",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
               [
                 "Amigo habilitado libera CNH no local",
@@ -94,7 +110,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CNH recolhida: 5 dias na STTP.\nNão veio = DETRAN registro.",
-            "destaques": ["5 dias", "DETRAN"]
+            "destaques": [
+              "5 dias",
+              "DETRAN"
+            ]
           }
         }
       ],
@@ -133,8 +152,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C.\n\nA — CNH deve ser devolvida imediatamente se condutor apresentar amigo habilitado para retirar o veículo.\nB — CNH permanece na STTP indefinidamente até resultado do exame de sangue.\nD — CNH deve ser enviada à Senatran por competência federal da infração de embriaguez.\n\nPegadinha: liberação do veículo não devolve CNH — após 5 dias vai ao órgão de registro.",
-            "destaques": ["Gabarito C", "CNH", "5 dias"]
+            "texto": "Gabarito C. A — CNH deve ser devolvida imediatamente se condutor apresentar amigo habilitado para retirar o veículo.\nB — CNH permanece na STTP indefinidamente até resultado do exame de sangue.\nD — CNH deve ser enviada à Senatran por competência federal da infração de embriaguez. Pegadinha: liberação do veículo não devolve CNH — após 5 dias vai ao órgão de registro.",
+            "destaques": [
+              "Gabarito C",
+              "CNH",
+              "5 dias"
+            ]
           }
         },
         {
@@ -143,7 +166,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "RECOLHIMENTO DA CNH: medida do art. 10 — documento fica sob custódia do órgão autuador.\n\nPRAZO DE 5 DIAS: marco para comparecimento e comprovação de capacidade psicomotora regular.\n\nÓRGÃO DE REGISTRO: DETRAN/PB — destino da CNH após decurso do prazo sem comparecimento.",
-            "destaques": ["RECOLHIMENTO", "5 DIAS", "REGISTRO"]
+            "destaques": [
+              "RECOLHIMENTO",
+              "5 DIAS",
+              "REGISTRO"
+            ]
           }
         },
         {
@@ -165,7 +192,11 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Não — caso da blitz" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Não — caso da blitz"
+              }
             ]
           }
         },
@@ -175,7 +206,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Medida", "Dispositivo / efeito"],
+            "titulo_colunas": [
+              "Medida",
+              "Dispositivo / efeito"
+            ],
             "linhas": [
               {
                 "faixa": "Veículo retido — condutor habilitado fiscalizado",
@@ -199,7 +233,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
               [
                 "Apresentar condutor habilitado devolve CNH no local",
@@ -218,7 +255,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -241,7 +281,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato da blitz", "Consequência"],
+            "colunas": [
+              "Fato da blitz",
+              "Consequência"
+            ],
             "linhas": [
               [
                 "CNH recolhida na autuação por art. 165 do CTB",
@@ -263,12 +306,15 @@
           }
         },
         {
-          "id": "eixo2",
+          "id": "hierarquia",
           "titulo": "Caput × §1 — duas fases da CNH",
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Função no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Função no caso"
+            ],
             "linhas": [
               [
                 "Art. 10, caput — custódia",
@@ -333,8 +379,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "CNH recolhida: 5 dias na STTP.\nNão veio = DETRAN registro.\n\nNear-transfer: se o condutor tivesse comparecido no 4º dia e comprovado capacidade regular, a CNH seria devolvida pela STTP — sem encaminhamento ao órgão de registro.",
-            "destaques": ["5 dias", "DETRAN", "4º dia"]
+            "texto": "CNH recolhida: 5 dias na STTP.\nNão veio = DETRAN registro.\n\nNear-transfer: se o condutor tivesse comparecido no 4º dia e comprovado capacidade regular, a CNH seria devolvida pela STTP — sem encaminhamento ao órgão de registro.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "5 dias",
+              "DETRAN",
+              "4º dia"
+            ]
           }
         }
       ],

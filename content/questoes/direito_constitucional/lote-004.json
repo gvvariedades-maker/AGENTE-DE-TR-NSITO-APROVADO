@@ -43,7 +43,12 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "STTP municipal: a banca confunde PM (§5) ou PRF (caput) com segurança viária do § 10 — executivo + agente local.",
-            "destaques": ["§ 10", "STTP", "PM", "PRF"]
+            "destaques": [
+              "§ 10",
+              "STTP",
+              "PM",
+              "PRF"
+            ]
           }
         },
         {
@@ -52,13 +57,33 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "caput", "label": "Art. 144 caput — 6 órgãos", "nivel": 0 },
-              { "id": "pm", "label": "PM — ostensiva (§5)", "nivel": 1 },
-              { "id": "sttp", "label": "STTP — segurança viária (§10, II)", "nivel": 2 }
+              {
+                "id": "caput",
+                "label": "Art. 144 caput — 6 órgãos",
+                "nivel": 0
+              },
+              {
+                "id": "pm",
+                "label": "PM — ostensiva (§5)",
+                "nivel": 1
+              },
+              {
+                "id": "sttp",
+                "label": "STTP — segurança viária (§10, II)",
+                "nivel": 2
+              }
             ],
             "arestas": [
-              { "de": "caput", "para": "pm", "rotulo": "Não é §10" },
-              { "de": "sttp", "para": "caput", "rotulo": "Instituto à parte" }
+              {
+                "de": "caput",
+                "para": "pm",
+                "rotulo": "Não é §10"
+              },
+              {
+                "de": "sttp",
+                "para": "caput",
+                "rotulo": "Instituto à parte"
+              }
             ]
           }
         },
@@ -67,10 +92,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["PM exclusiva na segurança viária", "Executivo + agente municipal (§10, II)"],
-              ["Só fiscalização no §10", "Educação + engenharia + fiscalização (§10, I)"]
+              [
+                "PM exclusiva na segurança viária",
+                "Executivo + agente municipal (§10, II)"
+              ],
+              [
+                "Só fiscalização no §10",
+                "Educação + engenharia + fiscalização (§10, I)"
+              ]
             ]
           }
         },
@@ -82,7 +116,12 @@
             "fonte": "CF/88, art. 144, § 10, II",
             "texto": "II - compete, no âmbito dos Estados, do Distrito Federal e dos Municípios, aos respectivos órgãos ou entidades executivos e seus agentes de trânsito, estruturados em Carreira, na forma da lei.",
             "trechos_grifados": [
-              { "inicio": 91, "fim": 121, "motivo": "STTP = órgão executivo municipal" }
+              {
+                "inicio": 91,
+                "fim": 121,
+                "motivo": "STTP = órgão executivo municipal",
+                "texto_grifado": "órgãos ou entidades executivos"
+              }
             ]
           }
         },
@@ -92,7 +131,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CAPUT ≠ §10. Segurança viária = executivo + agente (Estado/DF/Município). PM = §5.",
-            "destaques": ["§10", "executivo", "PM"]
+            "destaques": [
+              "§10",
+              "executivo",
+              "PM"
+            ]
           }
         }
       ],
@@ -114,7 +157,10 @@
       "meta": {
         "padrao_familia": "C_competencia_snt",
         "pegadinha_em_uma_frase": "Confunde PM (§5) ou PRF (caput) com segurança viária do §10, II",
-        "eixos_legais": ["CF_art144_par10_I", "CF_art144_par10_II"],
+        "eixos_legais": [
+          "CF_art144_par10_I",
+          "CF_art144_par10_II"
+        ],
         "isca_por_alternativa": {
           "A": "atribui exclusividade à PM do §5",
           "B": "reduz §10, I a só fiscalização e joga educação/engenharia ao CONTRAN",
@@ -128,8 +174,13 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C (§10, II — executivo + agente).\n\nA — PM exclusiva: confunde ostensiva (§5) com segurança viária.\nB — só fiscalização + CONTRAN: ignora educação e engenharia do §10, I.\nD — PRF em todo território: mistura caput com §10.\n\nSTTP fiscaliza no município — fundamento no §10, não no caput.",
-            "destaques": ["§10", "STTP", "caput", "PM"]
+            "texto": "Gabarito C (parágrafo, II — executivo + agente). A — PM exclusiva: confunde ostensiva (parágrafo) com segurança viária.\nB — só fiscalização + CONTRAN: ignora educação e engenharia do parágrafo, I.\nD — PRF em todo território: mistura caput com parágrafo. STTP fiscaliza no município — fundamento no parágrafo, não no caput.",
+            "destaques": [
+              "parágrafo",
+              "STTP",
+              "caput",
+              "PM"
+            ]
           }
         },
         {
@@ -138,7 +189,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CAPUT art. 144: seis órgãos de segurança pública (PF, PRF, civis, PM…). §5: PM faz polícia ostensiva — não é segurança viária. §10: segurança VIÁRIA (educação + engenharia + fiscalização) nos executivos e agentes locais.",
-            "destaques": ["caput", "§5", "§10"]
+            "destaques": [
+              "caput",
+              "§5",
+              "§10"
+            ]
           }
         },
         {
@@ -148,16 +203,48 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "caput", "label": "Caput — 6 órgãos segurança pública", "nivel": 0 },
-              { "id": "pm", "label": "PM — ostensiva e ordem pública (§5)", "nivel": 1 },
-              { "id": "prf", "label": "PRF — rodovias federais (caput, II)", "nivel": 1 },
-              { "id": "sttp", "label": "STTP — segurança viária municipal (§10, II)", "nivel": 2 },
-              { "id": "agente", "label": "Agente de trânsito em via pública", "nivel": 2 }
+              {
+                "id": "caput",
+                "label": "Caput — 6 órgãos segurança pública",
+                "nivel": 0
+              },
+              {
+                "id": "pm",
+                "label": "PM — ostensiva e ordem pública (§5)",
+                "nivel": 1
+              },
+              {
+                "id": "prf",
+                "label": "PRF — rodovias federais (caput, II)",
+                "nivel": 1
+              },
+              {
+                "id": "sttp",
+                "label": "STTP — segurança viária municipal (§10, II)",
+                "nivel": 2
+              },
+              {
+                "id": "agente",
+                "label": "Agente de trânsito em via pública",
+                "nivel": 2
+              }
             ],
             "arestas": [
-              { "de": "sttp", "para": "agente", "rotulo": "fiscalização viária" },
-              { "de": "pm", "para": "caput", "rotulo": "Fora do §10" },
-              { "de": "prf", "para": "caput", "rotulo": "Via federal ≠ regra do §10, II" }
+              {
+                "de": "sttp",
+                "para": "agente",
+                "rotulo": "fiscalização viária"
+              },
+              {
+                "de": "pm",
+                "para": "caput",
+                "rotulo": "Fora do §10"
+              },
+              {
+                "de": "prf",
+                "para": "caput",
+                "rotulo": "Via federal ≠ regra do §10, II"
+              }
             ]
           }
         },
@@ -167,7 +254,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Segurança viária é função exclusiva da PM",
@@ -186,7 +276,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — competencia_snt",
@@ -209,12 +302,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Elemento", "Conclusão"],
+            "colunas": [
+              "Elemento",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Capacitação na STTP de Campina Grande", "Órgão executivo municipal de trânsito"],
-              ["Fiscalização do trânsito urbano", "Segurança viária — art. 144, §10"],
-              ["Agentes de trânsito estruturados em carreira", "Hipótese do §10, II"],
-              ["Resultado", "Gabarito C — competência constitucional do executivo local"]
+              [
+                "Capacitação na STTP de Campina Grande",
+                "Órgão executivo municipal de trânsito"
+              ],
+              [
+                "Fiscalização do trânsito urbano",
+                "Segurança viária — art. 144, §10"
+              ],
+              [
+                "Agentes de trânsito estruturados em carreira",
+                "Hipótese do §10, II"
+              ],
+              [
+                "Resultado",
+                "Gabarito C — competência constitucional do executivo local"
+              ]
             ]
           }
         },
@@ -224,12 +332,27 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "O que regula"],
+            "colunas": [
+              "Dispositivo",
+              "O que regula"
+            ],
             "linhas": [
-              ["Caput + incisos I–VI", "Órgãos de segurança pública (PF, PRF, PM…)"],
-              ["§ 8º", "Guardas municipais — proteção de bens e instalações"],
-              ["§ 10, I", "Conteúdo da segurança viária (educação, engenharia, fiscalização)"],
-              ["§ 10, II", "Quem exerce: executivos + agentes (Estado/DF/Município)"]
+              [
+                "Caput + incisos I–VI",
+                "Órgãos de segurança pública (PF, PRF, PM…)"
+              ],
+              [
+                "§ 8º",
+                "Guardas municipais — proteção de bens e instalações"
+              ],
+              [
+                "§ 10, I",
+                "Conteúdo da segurança viária (educação, engenharia, fiscalização)"
+              ],
+              [
+                "§ 10, II",
+                "Quem exerce: executivos + agentes (Estado/DF/Município)"
+              ]
             ]
           }
         },
@@ -245,7 +368,8 @@
               {
                 "inicio": 91,
                 "fim": 121,
-                "motivo": "diagrama — STTP como órgão executivo municipal"
+                "motivo": "diagrama — STTP como órgão executivo municipal",
+                "texto_grifado": "órgãos ou entidades executivos"
               }
             ]
           }
@@ -256,8 +380,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "CAPUT ≠ §10: caput = segurança pública | §10 = viária (educação + engenharia + fiscalização) → executivo + agente local.\n\nNear-transfer: mesma fiscalização em rodovia federal — quem exerce? PRF no patrulhamento federal (caput, II), não o executivo municipal do §10, II.",
-            "destaques": ["§10", "PRF", "executivo municipal"]
+            "texto": "CAPUT ≠ §10: caput = segurança pública | §10 = viária (educação + engenharia + fiscalização) → executivo + agente local.\n\nNear-transfer: mesma fiscalização em rodovia federal — quem exerce? PRF no patrulhamento federal (caput, II), não o executivo municipal do §10, II.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "§10",
+              "PRF",
+              "executivo municipal"
+            ]
           }
         }
       ],
@@ -273,6 +401,17 @@
       "seguranca_viaria",
       "sttp",
       "competencia_constitucional"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "mesma fiscalização em rodovia federal — quem exerce? PRF no patrulhamento federal (caput, II), não o executivo municipal do §10, II.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "CAPUT ≠ §10: caput = 6 órgãos de segurança pública",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

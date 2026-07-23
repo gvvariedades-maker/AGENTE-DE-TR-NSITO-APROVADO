@@ -3,7 +3,7 @@
     "disciplina": "legislacao_transito",
     "topico": "CONTRAN_985_mbft",
     "tipo": "caso_pratico",
-    "estilo_idecan": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 5,
     "fundamento_slug": "CONTRAN_985_mbft",
     "enunciado": "Durante operação de fiscalização de trânsito em Campina Grande/PB, o agente A, posicionado em posto avançado, constata motorista ultrapassando pelo acostamento (CTB, art. 202). Um pedestre que presenciou o fato solicita ao agente B, na mesma operação, que lavre o auto. O agente B não viu a conduta, mas recebe a informação do agente A, que também participa da operação. Considerando o MBFT (Resolução CONTRAN nº 985/2022), seção 7 — Autuação, assinale a alternativa CORRETA quanto à lavratura do Auto de Infração de Trânsito (AIT):",
@@ -27,8 +27,7 @@
       "estudo_reverso": [
         "MBFT seção 7 concorrentes",
         "MBFT seção 7 terceiros",
-        "CTB art. 202",
-        "CTB art. 193"
+        "CTB art. 202"
       ]
     },
     "estudo_reverso_visual": {
@@ -157,7 +156,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C.\n\nA — dois AITs 202+193: MBFT trata como concorrentes (um AIT no 202).\nB — pedestre solicitou: vedação é autuação por terceiro, não agente A informando agente B na operação.\nD — só agente A lavra: a exceção permite outro agente na operação com informação nas observações.\n\nUltrapassagem pelo acostamento na operação STTP.",
+            "texto": "Gabarito C. A — dois AITs 202+193: MBFT trata como concorrentes (um AIT no 202).\nB — pedestre solicitou: vedação é autuação por terceiro, não agente A informando agente B na operação.\nD — só agente A lavra: a exceção permite outro agente na operação com informação nas observações. Ultrapassagem pelo acostamento na operação STTP.",
             "destaques": [
               "Gabarito C",
               "concorrentes",
@@ -364,12 +363,14 @@
               {
                 "inicio": 146,
                 "fim": 158,
-                "motivo": "mapa — concorrente exige um único AIT"
+                "motivo": "mapa — concorrente exige um único AIT",
+                "texto_grifado": "um único AIT"
               },
               {
                 "inicio": 315,
                 "fim": 340,
-                "motivo": "hierarquia — exemplo 202 absorve 193"
+                "motivo": "hierarquia — exemplo 202 absorve 193",
+                "texto_grifado": "autuar apenas no art. 202"
               }
             ]
           }
@@ -386,12 +387,14 @@
               {
                 "inicio": 32,
                 "fim": 56,
-                "motivo": "contraste — pedido de terceiro (pedestre) é vedado"
+                "motivo": "contraste — pedido de terceiro (pedestre) é vedado",
+                "texto_grifado": "solicitação de terceiros"
               },
               {
                 "inicio": 126,
                 "fim": 150,
-                "motivo": "caso — exceção quando agentes atuam na operação"
+                "motivo": "caso — exceção quando agentes atuam na operação",
+                "texto_grifado": "operação de fiscalização"
               }
             ]
           }
@@ -402,7 +405,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "1 AIT na principal (202) · concorrente ≠ concomitante · agente→agente na operação (obs.) · terceiro NÃO.\n\nNear-transfer: mesmo motorista também excedeu velocidade em faixa exclusiva de ônibus — condutas concomitantes → dois AITs distintos.",
+            "texto": "1 AIT na principal (202) · concorrente ≠ concomitante · agente→agente na operação (obs.) · terceiro NÃO.\n\nNear-transfer: mesmo motorista também excedeu velocidade em faixa exclusiva de ônibus — condutas concomitantes → dois AITs distintos.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "1 AIT",
               "concorrente",
@@ -426,6 +429,22 @@
       "art_202",
       "art_193",
       "operacao_fiscalizacao"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "mesmo motorista também excedeu velocidade em faixa exclusiva de ônibus — condutas concomitantes → dois AITs distintos.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "1 AIT na principal (202) · concorrente ≠ concomitante · agente→agente na operação OK · terceiro NÃO.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "competencia_snt",
+        "regra_excecao",
+        "termo_unico"
+      ]
+    }
   }
 ]

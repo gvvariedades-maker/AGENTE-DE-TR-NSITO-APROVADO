@@ -3,12 +3,12 @@
     "disciplina": "legislacao_transito",
     "topico": "CONTRAN_242_imagens",
     "tipo": "caso_pratico",
-    "estilo_idecan": "caso_pratico",
+    "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 4,
     "enunciado": "Durante fiscalização em Campina Grande/PB, agente da STTP aborda automóvel em movimento cujo condutor utiliza tablet de 10 polegadas fixado no painel dianteiro, exibindo vídeo de entretenimento (streaming). O equipamento está instalado provisoriamente no habitáculo, conforme admite o art. 2º da Resolução CONTRAN nº 242/2007, mas não possui mecanismo automático que o torne inoperante ou o comute para função de auxílio à orientação quando o veículo está em movimento. O condutor alega que o art. 1º da mesma Resolução autoriza geradores de imagem. Considerando a Resolução CONTRAN nº 242/2007, assinale a alternativa CORRETA:",
     "alternativas": {
       "A": "A utilização é regular, pois o art. 1º permite aparelho gerador de imagem cartográfica com interface de geoprocessamento para orientar o condutor, abrangendo qualquer exibição de imagens no painel dianteiro.",
-      "B": "A infração enquadra-se no art. 230, XIII, do CTB, por alteração do sistema de iluminação e de sinalização do veículo.",
+      "B": "A infração do tablet no painel dianteiro com vídeo de entretenimento (streaming) enquadra-se no art. 230, XIII, do CTB, por alteração do sistema de iluminação e de sinalização do veículo, e não no art. 230, XII da Resolução CONTRAN nº 242/2007.",
       "C": "A utilização é regular, pois o art. 2º, §2º, exige apenas que equipamentos provisórios estejam fixados no pára-brisa ou no painel dianteiro em circulação, independentemente da finalidade das imagens exibidas.",
       "D": "A infração enquadra-se no art. 230, XII, do CTB, pois o art. 3º veda equipamento gerador de imagens para entretenimento na parte dianteira sem mecanismo automático de inoperância em movimento, e o art. 4º remete a essa tipificação."
     },
@@ -26,9 +26,7 @@
       "estudo_reverso": [
         "Res. CONTRAN 242/2007 art. 1",
         "Res. CONTRAN 242/2007 art. 2",
-        "Res. CONTRAN 242/2007 art. 3",
-        "Res. CONTRAN 242/2007 art. 4",
-        "CTB art. 230"
+        "Res. CONTRAN 242/2007 art. 3"
       ]
     },
     "estudo_reverso_visual": {
@@ -45,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Tablet no painel com streaming em movimento. A banca troca ONDE FIXAR por O QUE EXIBIR.\n\nGabarito D: art. 3º + art. 4º — CTB art. 230, XII.",
-            "destaques": ["entretenimento", "art. 3º", "art. 230, XII"]
+            "destaques": [
+              "entretenimento",
+              "art. 3º",
+              "art. 230, XII"
+            ]
           }
         },
         {
@@ -54,13 +56,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Imagens para entretenimento na parte dianteira?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Verifica exceções do art. 3º", "tipo": "resultado" },
-              { "id": "r2", "label": "Pode ser art. 1º — navegação/auxílio", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Imagens para entretenimento na parte dianteira?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Verifica exceções do art. 3º",
+                "tipo": "resultado"
+              },
+              {
+                "id": "r2",
+                "label": "Pode ser art. 1º — navegação/auxílio",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim — streaming" },
-              { "de": "p1", "para": "r2", "rotulo": "Não — só mapa/GPS" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim — streaming"
+              },
+              {
+                "de": "p1",
+                "para": "r2",
+                "rotulo": "Não — só mapa/GPS"
+              }
             ]
           }
         },
@@ -69,10 +91,20 @@
           "titulo": "Art. 3º — duas exceções à vedação",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Exceção", "Requisito"],
+            "titulo_colunas": [
+              "Exceção",
+              "Requisito"
+            ],
             "linhas": [
-              { "faixa": "I — parte dianteira", "classificacao": "Bloqueio automático em movimento", "destaque": true },
-              { "faixa": "II — entretenimento", "classificacao": "Só passageiros dos bancos traseiros veem" }
+              {
+                "faixa": "I — parte dianteira",
+                "classificacao": "Bloqueio automático em movimento",
+                "destaque": true
+              },
+              {
+                "faixa": "II — entretenimento",
+                "classificacao": "Só passageiros dos bancos traseiros veem"
+              }
             ]
           }
         },
@@ -82,7 +114,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "GPS/mapa = art. 1º permitido.\nVídeo na frente em movimento = art. 3º vedado.\nTipificação: art. 230, XII (art. 4º).",
-            "destaques": ["art. 1º", "art. 3º", "art. 230, XII"]
+            "destaques": [
+              "art. 1º",
+              "art. 3º",
+              "art. 230, XII"
+            ]
           }
         }
       ],
@@ -108,8 +144,10 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D. Se marcou C, usou o art. 2º, §2º como salvo-conduto para qualquer imagem.\n\nTablet no painel com streaming em movimento, sem bloqueio automático. É entretenimento vedado pelo art. 3º — tipificação art. 230, XII pelo art. 4º.",
-            "destaques": ["Gabarito D", "art. 2º, §2º", "art. 3º"]
+            "texto": "Gabarito D. Se marcou C, usou o dispositivo legal como salvo-conduto para qualquer imagem. Tablet no painel com streaming em movimento, sem bloqueio automático. É entretenimento vedado pelo dispositivo legal — tipificação dispositivo legal, XII pelo dispositivo legal.",
+            "destaques": [
+              "Gabarito D"
+            ]
           }
         },
         {
@@ -118,7 +156,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "GERADOR DE IMAGEM: equipamento que exibe mapas, símbolos ou vídeo no habitáculo — destino define se é art. 1º ou art. 3º.\n\nENTRETENIMENTO: imagens para lazer (streaming, filmes) — vedado na frente em movimento sem bloqueio automático.\n\nINSTALAÇÃO PROVISÓRIA: fixação temporária no habitáculo — art. 2º, §2º exige pára-brisa ou painel, mas não altera o art. 3º.",
-            "destaques": ["GERADOR", "ENTRETENIMENTO", "PROVISÓRIA"]
+            "destaques": [
+              "GERADOR",
+              "ENTRETENIMENTO",
+              "PROVISÓRIA"
+            ]
           }
         },
         {
@@ -128,13 +170,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Streaming no painel com veículo em movimento?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Equipamento bloqueia sozinho ao trafegar?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Infração — gabarito D", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Streaming no painel com veículo em movimento?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Equipamento bloqueia sozinho ao trafegar?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Infração — gabarito D",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -144,11 +206,24 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Dispositivo", "Finalidade"],
+            "titulo_colunas": [
+              "Dispositivo",
+              "Finalidade"
+            ],
             "linhas": [
-              { "faixa": "Art. 1º — permitido", "classificacao": "Imagem cartográfica, manobra, trajeto" },
-              { "faixa": "Art. 3º — vedado", "classificacao": "Entretenimento na parte dianteira", "destaque": true },
-              { "faixa": "Art. 3º, II — exceção", "classificacao": "Entretenimento só para bancos traseiros" }
+              {
+                "faixa": "Art. 1º — permitido",
+                "classificacao": "Imagem cartográfica, manobra, trajeto"
+              },
+              {
+                "faixa": "Art. 3º — vedado",
+                "classificacao": "Entretenimento na parte dianteira",
+                "destaque": true
+              },
+              {
+                "faixa": "Art. 3º, II — exceção",
+                "classificacao": "Entretenimento só para bancos traseiros"
+              }
             ]
           }
         },
@@ -158,11 +233,23 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
-              ["Art. 1º autoriza qualquer imagem no painel", "Art. 1º: gerador cartográfico de orientação — não streaming"],
-              ["Painel dianteiro = sempre regular (§2º)", "§2º define localização — não dispensa art. 3º"],
-              ["Sem bloqueio, mas é só acessório provisório", "Provisório ou não: entretenimento na frente exige bloqueio automático"]
+              [
+                "Art. 1º autoriza qualquer imagem no painel",
+                "Art. 1º: gerador cartográfico de orientação — não streaming"
+              ],
+              [
+                "Painel dianteiro = sempre regular (§2º)",
+                "§2º define localização — não dispensa art. 3º"
+              ],
+              [
+                "Sem bloqueio, mas é só acessório provisório",
+                "Provisório ou não: entretenimento na frente exige bloqueio automático"
+              ]
             ]
           }
         },
@@ -172,11 +259,23 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + letra da lei"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + letra da lei"
+            ],
             "linhas": [
-              ["A — termo_unico", "Art. 1º não abrange vídeo de entretenimento — só orientação cartográfica"],
-              ["B — termo_unico", "Não é iluminação/sinalização — é art. 230, XII, não XIII"],
-              ["C — regra_excecao", "Art. 2º, §2º trata de onde fixar — não autoriza conteúdo de entretenimento"]
+              [
+                "A — termo_unico",
+                "Art. 1º não abrange vídeo de entretenimento — só orientação cartográfica"
+              ],
+              [
+                "B — termo_unico",
+                "Não é iluminação/sinalização — é art. 230, XII, não XIII"
+              ],
+              [
+                "C — regra_excecao",
+                "Art. 2º, §2º trata de onde fixar — não autoriza conteúdo de entretenimento"
+              ]
             ]
           }
         },
@@ -186,11 +285,23 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato da fiscalização", "Avaliação"],
+            "colunas": [
+              "Fato da fiscalização",
+              "Avaliação"
+            ],
             "linhas": [
-              ["Tablet no painel com streaming em movimento", "Entretenimento na parte dianteira — art. 3º"],
-              ["Sem mecanismo automático de bloqueio", "Inciso I do art. 3º não atendido"],
-              ["Art. 4º remete ao CTB", "Infração art. 230, XII — gabarito D"]
+              [
+                "Tablet no painel com streaming em movimento",
+                "Entretenimento na parte dianteira — art. 3º"
+              ],
+              [
+                "Sem mecanismo automático de bloqueio",
+                "Inciso I do art. 3º não atendido"
+              ],
+              [
+                "Art. 4º remete ao CTB",
+                "Infração art. 230, XII — gabarito D"
+              ]
             ]
           }
         },
@@ -200,12 +311,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Situação", "Inciso CTB"],
+            "colunas": [
+              "Situação",
+              "Inciso CTB"
+            ],
             "linhas": [
-              ["Equipamento ou acessório proibido (Res. 242)", "Art. 230, XII — art. 4º da Res. 242"],
-              ["Iluminação ou sinalização alterada (Res. 227)", "Art. 230, XIII — outra resolução"],
-              ["Equipamento obrigatório ausente", "Art. 230, IX"],
-              ["Entretenimento só nos bancos traseiros", "Exceção art. 3º, II — regular"]
+              [
+                "Equipamento ou acessório proibido (Res. 242)",
+                "Art. 230, XII — art. 4º da Res. 242"
+              ],
+              [
+                "Iluminação ou sinalização alterada (Res. 227)",
+                "Art. 230, XIII — outra resolução"
+              ],
+              [
+                "Equipamento obrigatório ausente",
+                "Art. 230, IX"
+              ],
+              [
+                "Entretenimento só nos bancos traseiros",
+                "Exceção art. 3º, II — regular"
+              ]
             ]
           }
         },
@@ -218,7 +344,12 @@
             "fonte": "Res. CONTRAN 242/2007, art. 3º, I",
             "texto": "Art. 3º Fica proibida a instalação, em veiculo automotor, de equipamento capaz de gerar imagens para fins de entretenimento, salvo se: I - instalado na parte dianteira, possuir mecanismo automático que o torne inoperante ou o comute para a função de informação de auxílio à orientação do condutor, independente da vontade do condutor e/ou dos passageiros, quando o veículo estiver em movimento;",
             "trechos_grifados": [
-              { "inicio": 82, "fim": 123, "motivo": "entretenimento vedado — streaming no painel" }
+              {
+                "inicio": 82,
+                "fim": 123,
+                "motivo": "entretenimento vedado — streaming no painel",
+                "texto_grifado": "gerar imagens para fins de entretenimento"
+              }
             ]
           }
         },
@@ -231,7 +362,12 @@
             "fonte": "Res. CONTRAN 242/2007, art. 4º",
             "texto": "Art. 4º O descumprimento do disposto nesta Resolução constitui-se em infração de trânsito prevista no art. 230, inciso XII do Código de Trânsito Brasileiro.",
             "trechos_grifados": [
-              { "inicio": 102, "fim": 122, "motivo": "tipificação CTB — gabarito D" }
+              {
+                "inicio": 102,
+                "fim": 122,
+                "motivo": "tipificação CTB — gabarito D",
+                "texto_grifado": "art. 230, inciso XII"
+              }
             ]
           }
         },
@@ -241,8 +377,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "242: GPS/mapa = art. 1º permitido.\nVídeo na frente em movimento = art. 3º vedado.\nTipificação: art. 230, XII (art. 4º).\n\nMesma lógica cai em art. 2º (onde fixar), exceção dos bancos traseiros (II) e confusão com Res. 227 (art. 230, XIII).",
-            "destaques": ["art. 1º", "art. 3º", "art. 230, XII"]
+            "texto": "242: GPS/mapa = art. 1º permitido.\nVídeo na frente em movimento = art. 3º vedado.\nTipificação: art. 230, XII (art. 4º).\n\nMesma lógica cai em art. 2º (onde fixar), exceção dos bancos traseiros (II) e confusão com Res. 227 (art. 230, XIII).\nNear: Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "art. 1º",
+              "art. 3º",
+              "art. 230, XII"
+            ]
           }
         }
       ],
@@ -257,6 +397,28 @@
         }
       ]
     },
-    "tags": ["gerador_imagens", "resolucao_242", "entretenimento", "tablet", "art_230_xii"]
+    "tags": [
+      "gerador_imagens",
+      "resolucao_242",
+      "entretenimento",
+      "tablet",
+      "art_230_xii"
+    ],
+    "meta": {
+      "near_transfer": "Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "242: GPS/mapa = art. 1º · vídeo na frente em movimento = art. 3º · tipificação = art. 230, XII.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "gravidade",
+        "regra_excecao",
+        "termo_unico"
+      ]
+    }
   }
 ]

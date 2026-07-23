@@ -84,12 +84,35 @@ def parsear_blocos(texto: str) -> list[str]:
     return [p.strip() for p in partes if len(p.strip()) > 80]
 
 
-def parsear_questao(bloco: str, disciplina: str, arquivo: str) -> Questao | None:
+def extrair_gabaritos_consolidados(texto: str) -> dict[int, str]:
+    """PDFs com gabarito no fim (ex.: export Imprimir → No fim do caderno)."""
+    m = re.search(r"\bGabarito\b\s+(.+)$", texto, re.IGNORECASE | re.DOTALL)
+    if not m:
+        return {}
+    bloco = m.group(1)
+    pares = re.findall(
+        r"(\d+)\)\s*(?:\[)?(A|B|C|D|E|Certo|Errado|Anulada)(?:\])?",
+        bloco,
+        re.IGNORECASE,
+    )
+    out: dict[int, str] = {}
+    for num, letra in pares:
+        letra_up = letra.upper()
+        if letra_up in {"A", "B", "C", "D", "E"}:
+            out[int(num)] = letra_up
+    return out
+
+
+def parsear_questao(bloco: str, disciplina: str, arquivo: str, gabarito_override: str | None = None) -> Questao | None:
     gab = re.search(r"Gabarito:\s*([A-Ea-e])\b", bloco)
-    if not gab:
+    if gab:
+        gabarito = gab.group(1).upper()
+        corpo = bloco[: gab.start()].strip()
+    elif gabarito_override:
+        gabarito = gabarito_override.upper()
+        corpo = bloco.strip()
+    else:
         return None
-    gabarito = gab.group(1).upper()
-    corpo = bloco[: gab.start()].strip()
 
     # alternativas a) b) c) ...
     alt_pattern = re.compile(
@@ -166,9 +189,15 @@ def main() -> None:
         disciplina = inferir_disciplina(pdf.name)
         texto = extrair_texto_pdf(pdf)
         blocos = parsear_blocos(texto)
+        gabaritos_fim = extrair_gabaritos_consolidados(texto)
         count = 0
+        questao_idx = 0
         for bloco in blocos:
-            q = parsear_questao(bloco, disciplina, pdf.name)
+            if not re.search(r"www\.tecconcursos\.com\.br/questoes/\d+", bloco):
+                continue
+            questao_idx += 1
+            override = gabaritos_fim.get(questao_idx) if not re.search(r"Gabarito:\s*[A-Ea-e]", bloco) else None
+            q = parsear_questao(bloco, disciplina, pdf.name, gabarito_override=override)
             if q:
                 todas.append(q)
                 count += 1

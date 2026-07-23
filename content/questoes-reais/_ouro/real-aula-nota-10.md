@@ -80,6 +80,7 @@ Legado (não usar em lote novo): `--legacy-aula-real`.
 
 ## Links
 
+- **Hub (comece aqui):** [GUIA.md](../GUIA.md)
 - README pipeline: `content/questoes-reais/README.md`
 - Hub: `.cursor/skills/estudo-reverso-visual/exemplos-ouro/PADRAO-AULA-COMPLETA-v3.md`
 - Prompt: `.cursor/skills/examinador-idecan/prompt-questao-real-aula.md`

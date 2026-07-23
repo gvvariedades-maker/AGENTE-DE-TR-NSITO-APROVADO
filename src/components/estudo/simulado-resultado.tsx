@@ -295,9 +295,17 @@ export function SimuladoResultado({
         </ul>
       </section>
 
-      {/* CTAs — uma primária clara */}
+      {/* CTAs — missão corretiva (Fase 6) tem prioridade sobre estudo genérico */}
       <footer className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
-        {!resultado.aprovado ? (
+        {data.missaoCorretiva &&
+        data.missaoCorretiva.questionIds.length > 0 ? (
+          <Link
+            href={data.missaoCorretiva.href}
+            className={cn(buttonVariants({ size: "lg" }), "min-h-11 flex-1")}
+          >
+            {data.missaoCorretiva.titulo}
+          </Link>
+        ) : !resultado.aprovado ? (
           <Link
             href={hrefEstudoRisco}
             className={cn(buttonVariants({ size: "lg" }), "min-h-11 flex-1")}
@@ -323,18 +331,23 @@ export function SimuladoResultado({
         >
           Novo simulado
         </Link>
-        {!resultado.aprovado && (
-          <Link
-            href="/dashboard"
-            className={cn(
-              buttonVariants({ variant: "ghost", size: "lg" }),
-              "min-h-11 sm:flex-none",
-            )}
-          >
-            Painel
-          </Link>
-        )}
+        <Link
+          href="/dashboard#dominio-evidencias"
+          className={cn(
+            buttonVariants({ variant: "ghost", size: "lg" }),
+            "min-h-11 sm:flex-none",
+          )}
+        >
+          Domínio
+        </Link>
       </footer>
+      {data.missaoCorretiva && data.missaoCorretiva.questionIds.length > 0 && (
+        <p className="text-center text-[11px] text-muted-foreground">
+          {data.missaoCorretiva.motivo}
+          {data.missaoCorretiva.errosComDiagnostico > 0 &&
+            ` · ${data.missaoCorretiva.errosComDiagnostico} erro(s) com diagnóstico por alternativa.`}
+        </p>
+      )}
     </div>
   );
 }

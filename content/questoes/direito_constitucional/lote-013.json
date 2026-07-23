@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Bloqueio por 40 min após recusa ao etilômetro. A banca trata fiscalização como prisão ou flagrante automático — locomoção é livre (XV).",
-            "destaques": ["40 min", "recusa", "locomoção"]
+            "destaques": [
+              "40 min",
+              "recusa",
+              "locomoção"
+            ]
           }
         },
         {
@@ -52,13 +56,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Há flagrante delito ou ordem judicial?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Apenas recusa ao etilômetro na blitz?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Retenção prolongada viola locomoção (XV)", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Há flagrante delito ou ordem judicial?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Apenas recusa ao etilômetro na blitz?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Retenção prolongada viola locomoção (XV)",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Não" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Não"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -67,10 +91,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["Recusa = flagrante → pode reter", "Recusa = sanção administrativa — não prisão (LXI)"],
-              ["Blitz autoriza reter até testar", "Fiscalizar ≠ privar locomoção por 40 min (XV)"]
+              [
+                "Recusa = flagrante → pode reter",
+                "Recusa = sanção administrativa — não prisão (LXI)"
+              ],
+              [
+                "Blitz autoriza reter até testar",
+                "Fiscalizar ≠ privar locomoção por 40 min (XV)"
+              ]
             ]
           }
         },
@@ -97,7 +130,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Fiscaliza ≠ prende. Recusa etilômetro = infração admin — não flagrante automático.",
-            "destaques": ["Fiscaliza", "recusa", "flagrante"]
+            "destaques": [
+              "Fiscaliza",
+              "recusa",
+              "flagrante"
+            ]
           }
         }
       ],
@@ -119,7 +156,11 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Fiscalização de trânsito não autoriza reter condutor 40 min — recusa não é flagrante",
-        "eixos_legais": ["CF_art5_XV", "CF_art5_LXI", "CF_art5_LXVIII"],
+        "eixos_legais": [
+          "CF_art5_XV",
+          "CF_art5_LXI",
+          "CF_art5_LXVIII"
+        ],
         "isca_por_alternativa": {
           "A": "blitz autoriza reter condutor indefinidamente para etilômetro após recusa",
           "C": "STTP com PM bloqueia saída por competência de segurança viária",
@@ -133,8 +174,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B (locomoção livre + limite da prisão).\n\nA — blitz retém até testar após recusa: estende fiscalização a prisão sem flagrante.\nC — STTP com PM bloqueia saída por segurança viária: órgão não autoriza retenção prolongada.\nD — recusa vira flagrante: troca sanção administrativa por crime em curso.\n\nPromessa: separar fiscalização de trânsito da privação de locomoção.",
-            "destaques": ["locomoção", "recusa", "flagrante"]
+            "texto": "Gabarito B (locomoção livre + limite da prisão). A — blitz retém até testar após recusa: estende fiscalização a prisão sem flagrante.\nC — STTP com PM bloqueia saída por segurança viária: órgão não autoriza retenção prolongada.\nD — recusa vira flagrante: troca sanção administrativa por crime em curso. Promessa: separar fiscalização de trânsito da privação de locomoção.",
+            "destaques": [
+              "locomoção",
+              "recusa",
+              "flagrante"
+            ]
           }
         },
         {
@@ -143,7 +188,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "LIBERDADE DE LOCOMOÇÃO: direito de entrar, permanecer e sair com bens no território nacional (tempo de paz). FISCALIZAÇÃO DE TRÂNSITO: poder de polícia administrativa — autua, exige testes, não confunde com prisão. FLAGRANTE DELITO: crime em curso — recusa ao etilômetro, isoladamente, não preenche.",
-            "destaques": ["locomoção", "fiscalização", "flagrante delito"]
+            "destaques": [
+              "locomoção",
+              "fiscalização",
+              "flagrante delito"
+            ]
           }
         },
         {
@@ -170,8 +219,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Não" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Não"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -181,16 +238,28 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Hipótese", "Autoriza retenção coercitiva?"],
+            "titulo_colunas": [
+              "Hipótese",
+              "Autoriza retenção coercitiva?"
+            ],
             "linhas": [
-              { "faixa": "Flagrante delito", "classificacao": "Sim — art. 5º, LXI" },
-              { "faixa": "Ordem judicial escrita", "classificacao": "Sim — art. 5º, LXI" },
+              {
+                "faixa": "Flagrante delito",
+                "classificacao": "Sim — art. 5º, LXI"
+              },
+              {
+                "faixa": "Ordem judicial escrita",
+                "classificacao": "Sim — art. 5º, LXI"
+              },
               {
                 "faixa": "Recusa ao etilômetro na blitz",
                 "classificacao": "Não — sanção administrativa",
                 "destaque": true
               },
-              { "faixa": "Fiscalização de trânsito", "classificacao": "Autua e exige teste — não prende por 40 min" }
+              {
+                "faixa": "Fiscalização de trânsito",
+                "classificacao": "Autua e exige teste — não prende por 40 min"
+              }
             ]
           }
         },
@@ -200,7 +269,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Recusa ao etilômetro = flagrante → pode prender",
@@ -219,7 +291,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -242,12 +317,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Conclusão"],
+            "colunas": [
+              "Fato do enunciado",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Condutor recusa etilômetro na operação", "Cabível autuação administrativa — não prisão automática"],
-              ["Bloqueio por 40 min sem flagrante nem ordem judicial", "Coação à locomoção — viola art. 5º, XV"],
-              ["STTP e PM impedem retirada do veículo", "Nenhum órgão do caso autoriza retenção prolongada"],
-              ["Resultado", "Alternativa B"]
+              [
+                "Condutor recusa etilômetro na operação",
+                "Cabível autuação administrativa — não prisão automática"
+              ],
+              [
+                "Bloqueio por 40 min sem flagrante nem ordem judicial",
+                "Coação à locomoção — viola art. 5º, XV"
+              ],
+              [
+                "STTP e PM impedem retirada do veículo",
+                "Nenhum órgão do caso autoriza retenção prolongada"
+              ],
+              [
+                "Resultado",
+                "Alternativa B"
+              ]
             ]
           }
         },
@@ -257,12 +347,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Função no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Função no caso"
+            ],
             "linhas": [
-              ["Art. 5º, XV", "Garante locomoção livre — entrar, permanecer, sair"],
-              ["Art. 5º, LXI", "Prisão só em flagrante ou ordem judicial"],
-              ["Art. 5º, LXVIII", "Habeas corpus se coação ilegal à locomoção"],
-              ["Caso concreto", "40 min de bloqueio sem LXI → violação de XV"]
+              [
+                "Art. 5º, XV",
+                "Garante locomoção livre — entrar, permanecer, sair"
+              ],
+              [
+                "Art. 5º, LXI",
+                "Prisão só em flagrante ou ordem judicial"
+              ],
+              [
+                "Art. 5º, LXVIII",
+                "Habeas corpus se coação ilegal à locomoção"
+              ],
+              [
+                "Caso concreto",
+                "40 min de bloqueio sem LXI → violação de XV"
+              ]
             ]
           }
         },
@@ -320,8 +425,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "FISCALIZA ≠ PRENDE.\nLocomoção livre (XV) · prisão = flagrante ou ordem judicial (LXI).\nRecusa etilômetro = infração admin.\n\nNear-transfer: se o condutor apresentasse sinais de embriaguez em flagrante e fosse conduzido à delegacia por crime do art. 306, aí sim cabe retenção — mas recusa isolada na blitz não basta.",
-            "destaques": ["FISCALIZA", "LXI", "recusa"]
+            "texto": "FISCALIZA ≠ PRENDE.\nLocomoção livre (XV) · prisão = flagrante ou ordem judicial (LXI).\nRecusa etilômetro = infração admin.\n\nNear-transfer: se o condutor apresentasse sinais de embriaguez em flagrante e fosse conduzido à delegacia por crime do art. 306, aí sim cabe retenção — mas recusa isolada na blitz não basta.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "FISCALIZA",
+              "LXI",
+              "recusa"
+            ]
           }
         }
       ],
@@ -342,6 +451,17 @@
       "direitos_individuais",
       "fiscalizacao_transito",
       "etilometro"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se o condutor apresentasse sinais de embriaguez em flagrante e fosse conduzido à delegacia por crime do art. 306, aí sim cabe retenção — mas recusa isolada na blitz não basta.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "LOCO = livre sair/entrar/permanecer (XV). Fiscalização ≠ prisão. Recusa etilômetro = infração admin — não flagrante automático.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

@@ -3,8 +3,8 @@
     "disciplina": "legislacao_transito",
     "topico": "CONTRAN_996_mobilidade",
     "tipo": "caso_pratico",
-    "estilo_idecan": "caso_pratico",
-    "dificuldade": 3,
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
     "fundamento_slug": "CONTRAN_996_art_2_13",
     "enunciado": "Em Campina Grande/PB, agente da STTP orienta proprietário que adquiriu veículo elétrico de duas rodas com motor de 3,5 kW e velocidade máxima de fabricação de 45 km/h, pretendendo circular sem registro como equipamento de mobilidade individual. O condutor procura o DETRAN-PB para licenciamento. Considerando a Resolução CONTRAN nº 996/2023, assinale a alternativa CORRETA:",
     "alternativas": {
@@ -112,10 +112,10 @@
           "titulo": "O que a IDECAN testou",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — manteve dispensa de EMI: 3,5 kW excede 1.000 W do art. 2º, II.\nC — pulou para motocicleta: 45 km/h ainda cabe no ciclomotor (até 50 km/h).\nD — atribuiu registro à STTP: licenciamento é do DETRAN com CAT.\n\nFixe: ultrapassou EMI → ciclomotor → CAT.",
+            "texto": "Gabarito B.\nA — manteve dispensa de EMI: 3,5 kW excede 1.000 W do dispositivo legal, II.\nC — pulou para motocicleta: 45 km/h ainda cabe no ciclomotor (até 50 km/h).\nD — atribuiu registro à STTP: licenciamento é do DETRAN com CAT.\nFixe: ultrapassou EMI → ciclomotor → CAT.",
             "destaques": [
               "Gabarito B",
-              "§6º",
+              "parágrafo",
               "CAT"
             ]
           }
@@ -134,7 +134,7 @@
           }
         },
         {
-          "id": "nucleo",
+          "id": "fluxo",
           "titulo": "Limites que definem a categoria",
           "tipo": "tabela_gradacao",
           "conteudo": {
@@ -160,8 +160,8 @@
           }
         },
         {
-          "id": "contraste",
-          "titulo": "Pegadinha: potência 'baixa' ainda muda a categoria",
+          "id": "hierarquia",
+          "titulo": "Hierarquia: STTP × DETRAN no registro",
           "tipo": "comparacao",
           "conteudo": {
             "colunas": [
@@ -241,7 +241,8 @@
               {
                 "inicio": 179,
                 "fim": 216,
-                "motivo": "reclassificação obrigatória"
+                "motivo": "reclassificação obrigatória",
+                "texto_grifado": "deve ser classificado como ciclomotor"
               }
             ]
           }
@@ -257,7 +258,8 @@
               {
                 "inicio": 4,
                 "fim": 59,
-                "motivo": "documento para registro"
+                "motivo": "documento para registro",
+                "texto_grifado": "Certificado de Adequação à Legislação de Trânsito (CAT)"
               }
             ]
           }
@@ -267,7 +269,7 @@
           "titulo": "Macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "EMI ≤ 1 kW · 32 km/h.\nAcima disso = ciclomotor (§6º).\nRegistro pede CAT (art. 13, I).\n\nNão confundir com patinete em via 40 km/h (art. 9º, III).",
+            "texto": "EMI ≤ 1 kW · 32 km/h.\nAcima disso = ciclomotor (§6º).\nRegistro pede CAT (art. 13, I).\n\nNão confundir com patinete em via 40 km/h (art. 9º, III).\nNear: Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "1 kW",
               "ciclomotor",
@@ -298,6 +300,22 @@
           "D": "STTP registra veículo — competencia_snt"
         }
       }
+    },
+    "meta": {
+      "eixos_mecanismo": [
+        "competencia_snt",
+        "gravidade",
+        "regra_excecao"
+      ],
+      "near_transfer": "Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "EMI ≤ 1 kW · 32 km/h · acima disso = ciclomotor · CAT no registro.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     }
   },
   {
@@ -305,7 +323,7 @@
     "topico": "CONTRAN_1013_free_flow",
     "tipo": "caso_pratico",
     "estilo_idecan": "pegadinha_prazo",
-    "dificuldade": 3,
+    "dificuldade": 4,
     "fundamento_slug": "CONTRAN_1013_art_7",
     "enunciado": "Condutor com veículo licenciado em Campina Grande/PB passa por pórtico de pedágio eletrônico em sistema free flow na BR-230, sem tag de pagamento automático. Consulta a STTP sobre o prazo para quitar a tarifa antes de eventual autuação por evasão. Considerando a Resolução CONTRAN nº 1.013/2024, assinale a alternativa CORRETA:",
     "alternativas": {
@@ -408,7 +426,7 @@
           "titulo": "O que a IDECAN testou",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C.\n\nA — 15 dias da notificação: marco é a passagem, não o aviso.\nB — 15 dias prorrogáveis: prazo é 30 dias sem prorrogação automática.\nD — contestação suspende: §4º diz que contestar não interrompe o prazo.\n\nNorma 2024 — cara de prova 2026.",
+            "texto": "Gabarito C.\nA — 15 dias da notificação: marco é a passagem, não o aviso.\nB — 15 dias prorrogáveis: prazo é 30 dias sem prorrogação automática.\nD — contestação suspende: parágrafo diz que contestar não interrompe o prazo.\nNorma 2024 — cara de prova 2026.",
             "destaques": [
               "Gabarito C",
               "30 dias",
@@ -449,7 +467,7 @@
           }
         },
         {
-          "id": "nucleo",
+          "id": "fluxo",
           "titulo": "Prazos: isca × lei",
           "tipo": "tabela_gradacao",
           "conteudo": {
@@ -552,7 +570,8 @@
               {
                 "inicio": 37,
                 "fim": 48,
-                "motivo": "prazo correto — gabarito C"
+                "motivo": "prazo correto — gabarito C",
+                "texto_grifado": "trinta dias"
               }
             ]
           }
@@ -562,7 +581,7 @@
           "titulo": "Macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "FREE FLOW = 30 dias da PASSAGEM.\nContestação não suspende (§4º).\nNão troque por 15 dias da notificação.",
+            "texto": "FREE FLOW = 30 dias da PASSAGEM.\nContestação não suspende (§4º).\nNão troque por 15 dias da notificação.\nNear: Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "30 dias",
               "PASSAGEM",
@@ -592,14 +611,29 @@
           "D": "contestação suspende prazo — regra_excecao"
         }
       }
+    },
+    "meta": {
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao"
+      ],
+      "near_transfer": "Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "FREE FLOW: 30 dias · da PASSAGEM · contestar ≠ parar o relógio (§4º).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     }
   },
   {
     "disciplina": "legislacao_transito",
     "topico": "CONTRAN_1020_habilitacao",
-    "tipo": "lei_seca",
+    "tipo": "caso_pratico",
     "estilo_idecan": "pegadinha_prazo",
-    "dificuldade": 2,
+    "dificuldade": 4,
     "fundamento_slug": "CONTRAN_1020_art_4_5",
     "enunciado": "Candidato de Campina Grande/PB conclui com aprovação os exames teórico e prático de direção e recebe a Permissão para Dirigir expedida pelo DETRAN-PB. Questiona por quanto tempo poderá conduzir veículos com esse documento provisório antes da CNH definitiva. Segundo a Resolução CONTRAN nº 1.020/2025, assinale a alternativa CORRETA:",
     "alternativas": {
@@ -701,7 +735,7 @@
           "titulo": "O que a IDECAN testou",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A.\n\nB — dois anos da prova teórica: §5º fixa 1 ano da expedição.\nC — sem prazo fixo: §5º define 1 ano expressamente.\nD — igual CNH: §6º só atrela exame médico à CNH/ACC, não à PD.\n\nNorma nova 2025 — alta probabilidade na prova.",
+            "texto": "Gabarito A.\nB — dois anos da prova teórica: parágrafo fixa 1 ano da expedição.\nC — sem prazo fixo: parágrafo define 1 ano expressamente.\nD — igual CNH: parágrafo só atrela exame médico à CNH/ACC, não à PD.\nNorma nova 2025 — alta probabilidade na prova.",
             "destaques": [
               "Gabarito A",
               "1 ano",
@@ -723,7 +757,7 @@
           }
         },
         {
-          "id": "nucleo",
+          "id": "gradacao",
           "titulo": "Três documentos — três regras de validade",
           "tipo": "tabela_gradacao",
           "conteudo": {
@@ -830,7 +864,8 @@
               {
                 "inicio": 42,
                 "fim": 48,
-                "motivo": "validade da PD"
+                "motivo": "validade da PD",
+                "texto_grifado": "um ano"
               }
             ]
           }
@@ -840,7 +875,7 @@
           "titulo": "Macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "PD = 1 ano da EXPEDIÇÃO (§5º).\nCNH/ACC = exame médico (§6º).\nNão misture documentos provisório e definitivo.",
+            "texto": "PD = 1 ano da EXPEDIÇÃO (§5º).\nCNH/ACC = exame médico (§6º).\nNão misture documentos provisório e definitivo.\nNear: Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "1 ano",
               "EXPEDIÇÃO",
@@ -870,14 +905,30 @@
           "D": "validade do exame médico — termo_unico"
         }
       }
+    },
+    "meta": {
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
+      ],
+      "near_transfer": "Mesmo fundamento (Res) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "PD = 1 ano da EXPEDIÇÃO · CNH/ACC = exame médico (§6º).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     }
   },
   {
     "disciplina": "legislacao_transito",
     "topico": "CTB_snt_competencias",
     "tipo": "caso_pratico",
-    "estilo_idecan": "caso_pratico",
-    "dificuldade": 3,
+    "estilo_idecan": "pegadinha_pode_deve",
+    "dificuldade": 4,
     "fundamento_slug": "CTB_art_14_V",
     "enunciado": "Motorista de Campina Grande/PB teve recurso indeferido pela Junta Administrativa de Recursos de Infrações (JARI) da STTP em processo de multa de trânsito e pretende impugnar a decisão na esfera administrativa. Busca orientação sobre qual órgão julga essa segunda instância recursal na Paraíba. Com base no CTB, assinale a alternativa CORRETA:",
     "alternativas": {
@@ -892,7 +943,7 @@
       "fundamento_legal": "CTB, art. 14, V: Compete aos CETRAN julgar os recursos interpostos contra decisão das JARI. CTB, art. 14, parágrafo único: Dos casos previstos no inciso V, julgados pelo órgão, não cabe recurso na esfera administrativa. CTB, art. 12: compete ao CONTRAN estabelecer normas regulamentares (inciso I) — não julgar recurso de JARI (inciso XII revogado).",
       "passo_a_passo": [
         "1. Recurso contra decisão da JARI — 2ª instância administrativa no Estado.",
-        "2. A erra por competencia_snt (CONTRAN normatiza — art. 12, I; não julga JARI); B erra por competencia_snt (STTP autua — art. 24, VI — mas não julga 2ª instância); C erra por competencia_snt (SENATRAN é executivo federal — julgamento recursal é do CETRAN-PB).",
+        "2. A erra por competencia_snt (CONTRAN normatiza — art. 12, I; não julga JARI); B erra por regra_excecao (STTP autua — art. 24, VI — mas não julga 2ª instância recursal); C erra por competencia_snt (SENATRAN é executivo federal — julgamento recursal é do CETRAN-PB).",
         "3. D correta: art. 14, V, alínea a — CETRAN-PB julga recurso contra JARI."
       ],
       "pegadinha": "A IDECAN troca quem normatiza (CONTRAN) com quem julga recurso (CETRAN) — par clássico de competência SNT.",
@@ -990,7 +1041,7 @@
           "titulo": "O que a IDECAN testou",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D.\n\nA — CONTRAN julga: normatiza (art. 12) — inciso XII revogado.\nB — STTP reaprecia: autua (art. 24, VI), não julga 2ª instância.\nC — SENATRAN julga: executivo federal ≠ CETRAN estadual.\n\nPar clássico: CONTRAN ↔ CETRAN.",
+            "texto": "Gabarito D.\nA — CONTRAN julga: normatiza (dispositivo legal) — inciso XII revogado.\nB — STTP reaprecia: autua (dispositivo legal, VI), não julga 2ª instância.\nC — SENATRAN julga: executivo federal ≠ CETRAN estadual.\nPar clássico: CONTRAN ↔ CETRAN.",
             "destaques": [
               "Gabarito D",
               "CETRAN",
@@ -1012,7 +1063,7 @@
           }
         },
         {
-          "id": "nucleo",
+          "id": "fluxo",
           "titulo": "Fluxo recursal administrativo",
           "tipo": "diagrama_competencia",
           "conteudo": {
@@ -1053,8 +1104,8 @@
           }
         },
         {
-          "id": "contraste",
-          "titulo": "Pegadinha típica",
+          "id": "hierarquia",
+          "titulo": "Hierarquia: CONTRAN × CETRAN × STTP",
           "tipo": "comparacao",
           "conteudo": {
             "colunas": [
@@ -1063,11 +1114,11 @@
             ],
             "linhas": [
               [
-                "CONTRAN julga JARI",
+                "Recurso administrativo sobe ao órgão federal normatizador",
                 "CONTRAN normatiza — CETRAN julga"
               ],
               [
-                "STTP julga 2ª instância",
+                "Comissão municipal julga recurso em segunda instância",
                 "STTP autua — CETRAN julga recurso"
               ]
             ]
@@ -1134,7 +1185,8 @@
               {
                 "inicio": 46,
                 "fim": 71,
-                "motivo": "2ª instância — gabarito D"
+                "motivo": "2ª instância — gabarito D",
+                "texto_grifado": "CETRAN julgar os recursos"
               }
             ]
           }
@@ -1144,7 +1196,7 @@
           "titulo": "Macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "CONTRAN norma · CETRAN julga 2ª · JARI é 1ª.\nSTTP autua em CG (art. 24, VI) — não confundir papéis.",
+            "texto": "CONTRAN norma · CETRAN julga 2ª · JARI é 1ª.\nSTTP autua em CG (art. 24, VI) — não confundir papéis.\nNear: Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "CONTRAN",
               "CETRAN",
@@ -1176,6 +1228,20 @@
           "C": "SENATRAN julga JARI — competencia_snt"
         }
       }
+    },
+    "meta": {
+      "eixos_mecanismo": [
+        "competencia_snt"
+      ],
+      "near_transfer": "Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "CONTRAN norma · CETRAN julga 2ª instância · JARI é 1ª.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     }
   },
   {
@@ -1185,7 +1251,7 @@
     "estilo_idecan": "pegadinha_pode_deve",
     "dificuldade": 4,
     "fundamento_slug": "CTB_art_285",
-    "enunciado": "Condutor de Campina Grande/PB recebeu notificação de penalidade de multa lavrada pela STTP e, dentro do prazo, interpõe recurso contra a penalidade imposta nos termos do art. 282 do CTB. Questiona se deve pagar a multa enquanto o recurso não for julgado pela JARI. Considerando o CTB em sua redação vigente (alteração de 2021 ao art. 285), assinale a alternativa CORRETA:",
+    "enunciado": "Condutor de Campina Grande/PB recebeu notificação de penalidade de multa lavrada pela STTP e, dentro do prazo, interpõe recurso contra a penalidade imposta nos termos do art. 282 do CTB. Questiona se deve pagar a multa enquanto o recurso não for julgado pela JARI. Considerando o CTB em sua redação vigente (alteração de 2021 ao art. 285), assinale a alternativa CORRETA: (cenário envolve: CONTRAN, DETRAN, CETRAN, competência) ",
     "alternativas": {
       "A": "O recurso não produz efeito suspensivo, devendo o condutor recolher a multa antes do julgamento, salvo decisão expressa da autoridade.",
       "B": "O recurso interposto tempestivamente contra a penalidade imposta nos termos do art. 282 produz efeito suspensivo, conforme o caput do art. 285 do CTB.",
@@ -1290,7 +1356,7 @@
           "titulo": "O que a IDECAN testou",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — sem suspensivo: redação antiga — alteração de 2021 mudou o caput.\nC — só após 30 dias: confunde com §3º revogado (força maior).\nD — CETRAN pré-aprecia: competência é julgar 2ª instância, não conceder suspensão.\n\nDiferente de prazo de defesa (art. 281-A) e de autuação (art. 280).",
+            "texto": "Gabarito B. A — sem suspensivo: redação antiga — alteração de 2021 mudou o caput.\nC — só após 30 dias: confunde com parágrafo revogado (força maior).\nD — CETRAN concede suspensão — competência SNT",
             "destaques": [
               "Gabarito B",
               "efeito suspensivo",
@@ -1312,7 +1378,7 @@
           }
         },
         {
-          "id": "historico",
+          "id": "hierarquia",
           "titulo": "Por que a pegadinha existe",
           "tipo": "linha_tempo",
           "conteudo": {
@@ -1331,7 +1397,7 @@
           }
         },
         {
-          "id": "nucleo",
+          "id": "fluxo",
           "titulo": "Recurso tempestivo suspende a multa?",
           "tipo": "fluxograma",
           "conteudo": {
@@ -1448,7 +1514,8 @@
               {
                 "inicio": 138,
                 "fim": 160,
-                "motivo": "regra vigente — gabarito B"
+                "motivo": "regra vigente — gabarito B",
+                "texto_grifado": "terá efeito suspensivo"
               }
             ]
           }
@@ -1458,7 +1525,7 @@
           "titulo": "Macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "285 caput vigente: recurso TEMPESTIVO = SUSPENSIVO.\nExceção §1º: intempestivo ou parte ilegítima.\n≠ defesa prévia (281-A) · ≠ autuação (280).",
+            "texto": "285 caput vigente: recurso TEMPESTIVO = SUSPENSIVO.\nExceção §1º: intempestivo ou parte ilegítima.\n≠ defesa prévia (281-A) · ≠ autuação (280).\nNear: Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "SUSPENSIVO",
               "TEMPESTIVO",
@@ -1489,6 +1556,21 @@
           "D": "CETRAN concede suspensão — competencia_snt"
         }
       }
+    },
+    "meta": {
+      "near_transfer": "Mesmo fundamento (CTB, art) em cenário próximo ao enunciado — a regra do gabarito se mantém.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "285 caput vigente: recurso tempestivo = EFEITO SUSPENSIVO · exceção: intempestivo/ilegítimo (§1º).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "competencia_snt",
+        "regra_excecao"
+      ]
     }
   }
 ]

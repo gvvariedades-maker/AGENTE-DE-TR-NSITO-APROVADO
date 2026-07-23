@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Veículo quitado retido 30 dias por \"auditoria\" sem lei. A banca oferece HC ou ação popular — direito líquido e certo contra autoridade pede mandado de segurança.",
-            "destaques": ["mandado de segurança", "direito líquido", "HC"]
+            "destaques": [
+              "mandado de segurança",
+              "direito líquido",
+              "HC"
+            ]
           }
         },
         {
@@ -52,13 +56,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Há coação à locomoção da pessoa?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Lesão a direito líquido e certo de autoridade pública?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Mandado de segurança — LXIX", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Há coação à locomoção da pessoa?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Lesão a direito líquido e certo de autoridade pública?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Mandado de segurança — LXIX",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Não" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Não"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -67,10 +91,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["Sem carro = habeas corpus", "HC é locomoção da pessoa (LXVIII)"],
-              ["Retenção ilegal = ação popular", "MS tutela direito individual líquido e certo"]
+              [
+                "Sem carro = habeas corpus",
+                "HC é locomoção da pessoa (LXVIII)"
+              ],
+              [
+                "Retenção ilegal = ação popular",
+                "MS tutela direito individual líquido e certo"
+              ]
             ]
           }
         },
@@ -97,7 +130,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Líquido e certo + autoridade = MS (LXIX). Pessoa presa/coacta = HC. Interesse coletivo = ação popular.",
-            "destaques": ["MS", "HC", "ação popular"]
+            "destaques": [
+              "MS",
+              "HC",
+              "ação popular"
+            ]
           }
         }
       ],
@@ -119,7 +156,11 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Veículo quitado retido sem lei pede MS — não HC nem ação popular",
-        "eixos_legais": ["CF_art5_LXIX", "CF_art5_LXVIII", "CF_art5_LXXIII"],
+        "eixos_legais": [
+          "CF_art5_LXIX",
+          "CF_art5_LXVIII",
+          "CF_art5_LXXIII"
+        ],
         "isca_por_alternativa": {
           "A": "retenção do veículo no pátio vira coação pessoal à locomoção (HC)",
           "C": "STTP retém no pátio por auditoria interna sem ordem judicial",
@@ -133,8 +174,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B (mandado de segurança por direito líquido e certo).\n\nA — habeas corpus pelo veículo retido: confunde bem com locomoção pessoal.\nC — STTP retém por auditoria interna: inventa competência sem base legal.\nD — ação popular para liberar o carro: troca tutela individual por remédio coletivo.\n\nPromessa: separar MS, HC e ação popular no mesmo caso.",
-            "destaques": ["mandado de segurança", "habeas corpus", "ação popular"]
+            "texto": "Gabarito B (mandado de segurança por direito líquido e certo). A — habeas corpus pelo veículo retido: confunde bem com locomoção pessoal.\nC — STTP retém por auditoria interna: inventa competência sem base legal.\nD — ação popular para liberar o carro: troca tutela individual por remédio coletivo. Promessa: separar MS, HC e ação popular no mesmo caso.",
+            "destaques": [
+              "mandado de segurança",
+              "habeas corpus",
+              "ação popular"
+            ]
           }
         },
         {
@@ -143,7 +188,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "DIREITO LÍQUIDO E CERTO: direito evidente, pronto para exame imediato pelo juiz — base do mandado de segurança. HABEAS CORPUS: coação à liberdade de locomoção da pessoa — não se confunde com retenção de veículo. AÇÃO POPULAR: tutela de interesses coletivos (patrimônio público, moralidade, meio ambiente) — não substitui o MS individual.",
-            "destaques": ["líquido e certo", "locomoção", "ação popular"]
+            "destaques": [
+              "líquido e certo",
+              "locomoção",
+              "ação popular"
+            ]
           }
         },
         {
@@ -170,8 +219,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Não — só veículo no pátio" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim — chefe da STTP" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Não — só veículo no pátio"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim — chefe da STTP"
+              }
             ]
           }
         },
@@ -181,16 +238,28 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Remédio", "Quando cabe"],
+            "titulo_colunas": [
+              "Remédio",
+              "Quando cabe"
+            ],
             "linhas": [
               {
                 "faixa": "Mandado de segurança (LXIX)",
                 "classificacao": "Direito líquido e certo — autoridade pública",
                 "destaque": true
               },
-              { "faixa": "Habeas corpus (LXVIII)", "classificacao": "Coação à locomoção da pessoa" },
-              { "faixa": "Habeas data (LXXII)", "classificacao": "Dados pessoais em registros públicos" },
-              { "faixa": "Ação popular (LXXIII)", "classificacao": "Lesão a patrimônio público / moralidade coletiva" }
+              {
+                "faixa": "Habeas corpus (LXVIII)",
+                "classificacao": "Coação à locomoção da pessoa"
+              },
+              {
+                "faixa": "Habeas data (LXXII)",
+                "classificacao": "Dados pessoais em registros públicos"
+              },
+              {
+                "faixa": "Ação popular (LXXIII)",
+                "classificacao": "Lesão a patrimônio público / moralidade coletiva"
+              }
             ]
           }
         },
@@ -200,7 +269,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Sem o carro = habeas corpus",
@@ -219,7 +291,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -242,12 +317,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Conclusão"],
+            "colunas": [
+              "Fato do enunciado",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Multas e taxas quitadas + documentação apresentada", "Direito líquido e certo à liberação"],
-              ["Chefe da STTP mantém retenção por 30 dias sem lei", "Ato de autoridade pública ilegal"],
-              ["Condutor não está sob custódia pessoal", "Afasta habeas corpus (A falsa)"],
-              ["Resultado", "Alternativa B — mandado de segurança"]
+              [
+                "Multas e taxas quitadas + documentação apresentada",
+                "Direito líquido e certo à liberação"
+              ],
+              [
+                "Chefe da STTP mantém retenção por 30 dias sem lei",
+                "Ato de autoridade pública ilegal"
+              ],
+              [
+                "Condutor não está sob custódia pessoal",
+                "Afasta habeas corpus (A falsa)"
+              ],
+              [
+                "Resultado",
+                "Alternativa B — mandado de segurança"
+              ]
             ]
           }
         },
@@ -257,12 +347,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Papel no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Papel no caso"
+            ],
             "linhas": [
-              ["Art. 5º, LXIX", "MS — direito líquido e certo contra chefe da STTP"],
-              ["Art. 5º, LXVIII", "HC excluído — sem coação à locomoção pessoal"],
-              ["Art. 5º, LXXIII", "Ação popular — não tutela liberação individual do veículo"],
-              ["Caso concreto", "Retenção após quitação → MS, não HC nem popular"]
+              [
+                "Art. 5º, LXIX",
+                "MS — direito líquido e certo contra chefe da STTP"
+              ],
+              [
+                "Art. 5º, LXVIII",
+                "HC excluído — sem coação à locomoção pessoal"
+              ],
+              [
+                "Art. 5º, LXXIII",
+                "Ação popular — não tutela liberação individual do veículo"
+              ],
+              [
+                "Caso concreto",
+                "Retenção após quitação → MS, não HC nem popular"
+              ]
             ]
           }
         },
@@ -320,8 +425,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Líquido e certo + autoridade = MS (LXIX).\nPessoa coacta = HC (LXVIII).\nPatrimônio público coletivo = ação popular (LXXIII).\n\nNear-transfer: se o condutor estivesse preso na base da PM por recusar o teste, o remédio seria habeas corpus — mas veículo quitado retido no pátio pede mandado de segurança.",
-            "destaques": ["MS", "HC", "ação popular"]
+            "texto": "Líquido e certo + autoridade = MS (LXIX).\nPessoa coacta = HC (LXVIII).\nPatrimônio público coletivo = ação popular (LXXIII).\n\nNear-transfer: se o condutor estivesse preso na base da PM por recusar o teste, o remédio seria habeas corpus — mas veículo quitado retido no pátio pede mandado de segurança.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "MS",
+              "HC",
+              "ação popular"
+            ]
           }
         }
       ],
@@ -342,6 +451,17 @@
       "remedios_constitucionais",
       "direito_liquido_certo",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se o condutor estivesse preso na base da PM por recusar o teste, o remédio seria habeas corpus — mas veículo quitado retido no pátio pede mandado de segurança.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Líquido e certo + autoridade pública = MS (LXIX). Locomoção da PESSOA = HC (LXVIII). Patrimônio público coletivo = ação popular (LXXIII).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

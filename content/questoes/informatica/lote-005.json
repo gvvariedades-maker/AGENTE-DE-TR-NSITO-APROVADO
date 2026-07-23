@@ -147,7 +147,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B (completo + incrementais até terça).\n\nA — dispensa incrementais: só o domingo não chega ao estado de terça.\nC — trata incremental como diferencial: terça não acumula tudo desde domingo.\nD — inventa diferencial: política STTP usa incremental de segunda a sábado.\n\nRansomware na quarta — recuperar pasta de autuações até terça-feira.",
+            "texto": "Gabarito B (completo + incrementais até terça). A — dispensa incrementais: só o domingo não chega ao estado de terça.\nC — trata incremental como diferencial: terça não acumula tudo desde domingo.\nD — inventa diferencial: política STTP usa incremental de segunda a sábado. Ransomware na quarta — recuperar pasta de autuações até terça-feira.",
             "destaques": [
               "incremental",
               "completo",
@@ -358,7 +358,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Completo = tudo | Incremental = desde o anterior | Diferencial = desde o último completo.\n\nNear-transfer: backup completo no sábado e incremental no domingo — restaurar domingo exige sábado + incremental, não só o completo isolado se a política for em cadeia.",
+            "texto": "Completo = tudo | Incremental = desde o anterior | Diferencial = desde o último completo.\n\nNear-transfer: backup completo no sábado e incremental no domingo — restaurar domingo exige sábado + incremental, não só o completo isolado se a política for em cadeia.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "Incremental",
               "Diferencial",
@@ -390,6 +390,17 @@
           "D": "inventa backup diferencial na política incremental"
         }
       }
+    },
+    "meta": {
+      "near_transfer": "backup completo no sábado e incremental no domingo — restaurar domingo exige sábado + incremental, não só o completo isolado se a política for em cadeia.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Completo = tudo",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
     }
   }
 ]

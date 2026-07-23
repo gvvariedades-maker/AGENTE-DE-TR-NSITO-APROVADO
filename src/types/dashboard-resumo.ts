@@ -5,6 +5,7 @@ import type { PiorTopico } from "@/lib/piores-topicos-shared";
 import type { SemanaChegadaResumo } from "@/lib/semana-chegada";
 import type { DominioResumo } from "@/lib/tutor/dominio-resumo";
 import type { TutorCalibracao } from "@/lib/tutor/calibracao";
+import type { PainelDominioEvidencias } from "@/lib/mastery/painel-dominio-evidencias";
 
 export interface DashboardResumo {
   desempenho: DesempenhoResumo;
@@ -12,6 +13,8 @@ export interface DashboardResumo {
   plano: PlanoProvaResumo;
   semana: SemanaChegadaResumo;
   dominio: DominioResumo;
+  /** Domínio por skill (Fase 6) — separado do semáforo. */
+  dominioEvidencias: PainelDominioEvidencias;
   calibracao: TutorCalibracao;
   atividadeHoje: { questoes: number; acertos: number };
   questoesCount: number;

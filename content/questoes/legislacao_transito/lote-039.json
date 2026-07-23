@@ -11,7 +11,7 @@
       "A": "Configura infração grave por deixar de dar preferência a veículo que vier da direita, em interseção não sinalizada, nos termos do art. 215, I, b, do CTB.",
       "B": "Não há infração, pois em cruzamento sem sinalização a preferência é do veículo que circula por via de maior hierarquia ou rodovia, conforme o art. 215, I, a, do CTB.",
       "C": "Configura infração gravíssima por deixar de dar preferência de passagem a pedestre na faixa, nos termos do art. 214, I, do CTB.",
-      "D": "Configura infração média por entrar na via sem precauções adequadas, conforme o art. 216 do CTB."
+      "D": "No cruzamento sem sinalização de Campina Grande autuado pela STTP, configura infração média por entrar na via sem precauções adequadas, conforme o art. 216 do CTB."
     },
     "gabarito": "A",
     "comentario": {
@@ -27,9 +27,7 @@
       "estudo_reverso": [
         "CTB art. 215",
         "CTB art. 215, I, b",
-        "CTB art. 215, I, a",
-        "CTB art. 214",
-        "CTB art. 29"
+        "CTB art. 215, I, a"
       ]
     },
     "estudo_reverso_visual": {
@@ -46,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Cruzamento sem sinal — não cedeu quem vinha da direita. A banca inventa hierarquia de via.\n\nGabarito A: art. 215, I, b — grave.",
-            "destaques": ["direita", "215, I, b", "GRAVE"]
+            "destaques": [
+              "direita",
+              "215, I, b",
+              "GRAVE"
+            ]
           }
         },
         {
@@ -67,7 +69,11 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -76,10 +82,19 @@
           "titulo": "Armadilha: fluxo × direita",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Confusão ✗", "Regra ✓"],
+            "colunas": [
+              "Confusão ✗",
+              "Regra ✓"
+            ],
             "linhas": [
-              ["Via com mais fluxo = preferência", "Sem sinal = cede à direita — alínea b"],
-              ["Preferência veicular = art. 214", "214 é pedestre — 215 é veículo"]
+              [
+                "Via com mais fluxo = preferência",
+                "Sem sinal = cede à direita — alínea b"
+              ],
+              [
+                "Preferência veicular = art. 214",
+                "214 é pedestre — 215 é veículo"
+              ]
             ]
           }
         },
@@ -89,7 +104,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "215, I, b: sem sinal = DIREITA.\nGRAVE.\nAlínea a só com rodovia/rotatória.",
-            "destaques": ["DIREITA", "GRAVE", "215"]
+            "destaques": [
+              "DIREITA",
+              "GRAVE",
+              "215"
+            ]
           }
         }
       ],
@@ -111,7 +130,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Em cruzamento sem sinalização, quem não cede à direita responde pelo art. 215, I, b — grave; fluxo da via não substitui a regra",
-        "eixos_legais": ["CTB_art_215_I_b", "CTB_art_215_I_a"],
+        "eixos_legais": [
+          "CTB_art_215_I_b",
+          "CTB_art_215_I_a"
+        ],
         "isca_por_alternativa": {
           "B": "inventa hierarquia de fluxo e aplica alínea a sem rodovia ou rotatória",
           "C": "confunde preferência veicular com pedestre na faixa — art. 214, I",
@@ -125,8 +147,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A.\n\nB — inventou hierarquia de via e aplicou alínea a: não há rodovia nem rotatória no caso — vale a regra da direita.\nC — confundiu preferência veicular com pedestre: art. 214, I, é gravíssima e exige pedestre na faixa.\nD — aplicou art. 216 (área lindeira, média): o fato é cruzamento sem sinalização entre vias.\n\nCondutor não cedeu passagem a automóvel que chegou pela direita.",
-            "destaques": ["Gabarito A", "direita", "sem sinalização"]
+            "texto": "Gabarito A. B — inventou hierarquia de via e aplicou alínea a: não há rodovia nem rotatória no caso — vale a regra da direita.\nC — confundiu preferência veicular com pedestre: dispositivo legal, I, é gravíssima e exige pedestre na faixa.\nD — aplicou dispositivo legal (área lindeira, média): o fato é cruzamento sem sinalização entre vias. Condutor não cedeu passagem a automóvel que chegou pela direita.",
+            "destaques": [
+              "Gabarito A",
+              "direita",
+              "sem sinalização"
+            ]
           }
         },
         {
@@ -135,7 +161,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "INTERSEÇÃO NÃO SINALIZADA: cruzamento sem semáforo nem placa de preferência — regra do art. 215, I.\n\nPREFERÊNCIA À DIREITA: ceder passagem ao veículo que se aproxima pelo lado direito — alínea b.\n\nRODOVIA OU ROTATÓRIA: hipótese da alínea a — só quando o veículo preferencial circula por essas vias.",
-            "destaques": ["NÃO SINALIZADA", "DIREITA", "ROTATÓRIA"]
+            "destaques": [
+              "NÃO SINALIZADA",
+              "DIREITA",
+              "ROTATÓRIA"
+            ]
           }
         },
         {
@@ -162,8 +192,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -173,12 +211,27 @@
           "secao": "mapa",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Hipótese", "Dispositivo"],
+            "colunas": [
+              "Hipótese",
+              "Dispositivo"
+            ],
             "linhas": [
-              ["Sem sinal — veículo na rodovia ou rotatória", "I, a — grave"],
-              ["Sem sinal — veículo pela direita", "I, b — grave"],
-              ["Com placa Dê a Preferência", "II — grave"],
-              ["Caso (direita, sem sinal)", "I, b — grave"]
+              [
+                "Sem sinal — veículo na rodovia ou rotatória",
+                "I, a — grave"
+              ],
+              [
+                "Sem sinal — veículo pela direita",
+                "I, b — grave"
+              ],
+              [
+                "Com placa Dê a Preferência",
+                "II — grave"
+              ],
+              [
+                "Caso (direita, sem sinal)",
+                "I, b — grave"
+              ]
             ]
           }
         },
@@ -188,7 +241,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Via com maior fluxo tem preferência",
@@ -207,7 +263,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — regra_excecao",
@@ -230,12 +289,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso", "Conclusão legal"],
+            "colunas": [
+              "Fato do caso",
+              "Conclusão legal"
+            ],
             "linhas": [
-              ["Cruzamento sem sinalização", "Hipótese do art. 215, I"],
-              ["Automóvel chegou pela direita", "Alínea b — preferência"],
-              ["Condutor não cedeu passagem", "Infração configurada"],
-              ["Resultado", "Gabarito A — infração grave"]
+              [
+                "Cruzamento sem sinalização",
+                "Hipótese do art. 215, I"
+              ],
+              [
+                "Automóvel chegou pela direita",
+                "Alínea b — preferência"
+              ],
+              [
+                "Condutor não cedeu passagem",
+                "Infração configurada"
+              ],
+              [
+                "Resultado",
+                "Gabarito A — infração grave"
+              ]
             ]
           }
         },
@@ -245,12 +319,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Artigo", "O que exige"],
+            "colunas": [
+              "Artigo",
+              "O que exige"
+            ],
             "linhas": [
-              ["Art. 215", "Dar preferência veicular — grave"],
-              ["Art. 214", "Dar preferência a pedestre — gravíssima"],
-              ["Art. 216", "Entrar em área lindeira com precaução — média"],
-              ["Caso (direita, sem sinal)", "Art. 215, I, b"]
+              [
+                "Art. 215",
+                "Dar preferência veicular — grave"
+              ],
+              [
+                "Art. 214",
+                "Dar preferência a pedestre — gravíssima"
+              ],
+              [
+                "Art. 216",
+                "Entrar em área lindeira com precaução — média"
+              ],
+              [
+                "Caso (direita, sem sinal)",
+                "Art. 215, I, b"
+              ]
             ]
           }
         },
@@ -266,17 +355,20 @@
               {
                 "inicio": 46,
                 "fim": 72,
-                "motivo": "mapa — interseção não sinalizada, alínea b"
+                "motivo": "mapa — interseção não sinalizada, alínea b",
+                "texto_grifado": "interseção não sinalizada:"
               },
               {
                 "inicio": 76,
                 "fim": 105,
-                "motivo": "contraste — preferência à direita, não ao fluxo maior"
+                "motivo": "contraste — preferência à direita, não ao fluxo maior",
+                "texto_grifado": "a veículo que vier da direita"
               },
               {
                 "inicio": 118,
                 "fim": 123,
-                "motivo": "gradacao — art. 215 é grave, não gravíssima nem média"
+                "motivo": "gradacao — art. 215 é grave, não gravíssima nem média",
+                "texto_grifado": "grave"
               }
             ]
           }
@@ -287,8 +379,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "215, I, b: sem sinal = DIREITA · GRAVE · alínea a só com rodovia/rotatória · ≠ 214 (pedestre).\n\nNear-transfer: mesmo cruzamento, mas com placa R-1 (Dê a Preferência) — inciso II do art. 215; o dever de ceder persiste, mas a fonte da preferência é a sinalização, não a direita.",
-            "destaques": ["DIREITA", "II", "GRAVE"]
+            "texto": "215, I, b: sem sinal = DIREITA · GRAVE · alínea a só com rodovia/rotatória · ≠ 214 (pedestre).\n\nNear-transfer: mesmo cruzamento, mas com placa R-1 (Dê a Preferência) — inciso II do art. 215; o dever de ceder persiste, mas a fonte da preferência é a sinalização, não a direita.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "DIREITA",
+              "II",
+              "GRAVE"
+            ]
           }
         }
       ],
@@ -305,6 +401,22 @@
       "preferencia",
       "intersecao",
       "direita"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "mesmo cruzamento, mas com placa R-1 (Dê a Preferência) — inciso II do art. 215; o dever de ceder persiste, mas a fonte da preferência é a sinalização, não a direita.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "215, I, b: sem sinal = DIREITA · GRAVE · alínea a só com rodovia/rotatória · ≠ 214 (pedestre).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "gravidade",
+        "regra_excecao",
+        "termo_unico"
+      ]
+    }
   }
 ]

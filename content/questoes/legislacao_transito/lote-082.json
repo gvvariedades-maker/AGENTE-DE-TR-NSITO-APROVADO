@@ -10,7 +10,7 @@
     "alternativas": {
       "A": "Enquanto o automóvel não ultrapassar o limite máximo da via, é lícito trafegar em qualquer velocidade reduzida, ainda que forme fila atrás.",
       "B": "A conduta irregular restringe-se a não certificar-se de que pode reduzir a velocidade sem inconvenientes, conforme o art. 43, II, do CTB.",
-      "C": "O inciso I do art. 43 aplica-se apenas em vias urbanas, não em rodovias como a BR-230.",
+      "C": "Na BR-230 nas proximidades de Campina Grande, ao seguir caminhonete muito devagar, o inciso I do art. 43 aplica-se apenas em vias urbanas, não em rodovias como a BR-230.",
       "D": "Transitar em velocidade anormalmente reduzida sem causa justificada obstrui a marcha dos demais veículos, nos termos do art. 43, I, do CTB."
     },
     "gabarito": "D",
@@ -50,7 +50,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "30 km/h na BR com fila atrás — sem impedimento.\n\nGabarito D: art. 43, I.",
-            "destaques": ["fila", "Gabarito D", "sem causa"]
+            "destaques": [
+              "fila",
+              "Gabarito D",
+              "sem causa"
+            ]
           }
         },
         {
@@ -58,10 +62,19 @@
           "titulo": "Máximo × lentidão anormal",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
-              ["Abaixo do máximo = sempre lícito", "Lentidão anormal sem causa obstrui"],
-              ["Só vale no urbano", "Inciso I é norma geral"]
+              [
+                "Abaixo do máximo = sempre lícito",
+                "Lentidão anormal sem causa obstrui"
+              ],
+              [
+                "Só vale no urbano",
+                "Inciso I é norma geral"
+              ]
             ]
           }
         },
@@ -71,11 +84,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Lentidão anormal sem causa justificada?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Obstrução vedada", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Lentidão anormal sem causa justificada?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Obstrução vedada",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -85,7 +110,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "LENTO SEM CAUSA = OBSTRUIR.\nCausa justificada libera.\n≠ só limite máx.",
-            "destaques": ["SEM CAUSA", "OBSTRUIR"]
+            "destaques": [
+              "SEM CAUSA",
+              "OBSTRUIR"
+            ]
           }
         }
       ],
@@ -124,7 +152,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito D.\n\nA — bastou estar abaixo do máximo: inciso I veda lentidão anormal sem causa justificada.\nB — citou só redução gradual: inciso II não substitui a regra de obstrução do inciso I.\nC — limitou ao urbano: inciso I não restringe o tipo de via.\n\nNesta aula você fixa causa justificada × velocidade anormalmente reduzida.",
+            "texto": "Gabarito D. A — bastou estar abaixo do máximo: inciso I veda lentidão anormal sem causa justificada.\nB — citou só redução gradual: inciso II não substitui a regra de obstrução do inciso I.\nC — limitou ao urbano: inciso I não restringe o tipo de via. Nesta aula você fixa causa justificada × velocidade anormalmente reduzida.",
             "destaques": [
               "Gabarito D",
               "causa justificada",
@@ -320,17 +348,20 @@
               {
                 "inicio": 19,
                 "fim": 32,
-                "motivo": "caso — fila formada atrás do automóvel"
+                "motivo": "caso — fila formada atrás do automóvel",
+                "texto_grifado": "marcha normal"
               },
               {
                 "inicio": 67,
                 "fim": 88,
-                "motivo": "contraste — ausência de pane ou chuva no caso"
+                "motivo": "contraste — ausência de pane ou chuva no caso",
+                "texto_grifado": "sem causa justificada"
               },
               {
                 "inicio": 108,
                 "fim": 140,
-                "motivo": "glossario — 30 km/h no fluxo da rodovia"
+                "motivo": "glossario — 30 km/h no fluxo da rodovia",
+                "texto_grifado": "velocidade anormalmente reduzida"
               }
             ]
           }
@@ -341,7 +372,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "LENTO SEM CAUSA = OBSTRUIR (inc. I).\nAbaixo do máximo ≠ livre para arrastar fila.\nCausa justificada libera.\nReduzir com cuidado é inciso II.\n\nNear-transfer: turista a 25 km/h na BR tirando fotos sem impedimento — pode violar inciso I; com neblina densa, a lentidão pode ser justificada.",
+            "texto": "LENTO SEM CAUSA = OBSTRUIR (inc. I).\nAbaixo do máximo ≠ livre para arrastar fila.\nCausa justificada libera.\nReduzir com cuidado é inciso II.\n\nNear-transfer: turista a 25 km/h na BR tirando fotos sem impedimento — pode violar inciso I; com neblina densa, a lentidão pode ser justificada.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
             "destaques": [
               "SEM CAUSA",
               "anormalmente reduzida",
@@ -355,6 +386,22 @@
           "rotulo": "CTB art. 43",
           "path": "conteúdo/legislação federal/lei-9503-ctb.html"
         }
+      ]
+    },
+    "meta": {
+      "near_transfer": "turista a 25 km/h na BR tirando fotos sem impedimento — pode violar inciso I; com neblina densa, a lentidão pode ser justificada.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "LENTO SEM CAUSA = OBSTRUIR · justificada OK · ≠ só limite máx.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
       ]
     }
   }

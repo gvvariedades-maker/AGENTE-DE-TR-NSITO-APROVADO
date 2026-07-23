@@ -51,7 +51,11 @@
       "far_transfer": "Recurso contra multa lavrada pela STTP em via municipal — JARI/CETRAN julga penalidade (art. 14, V), não dirimência de circunscrição entre órgãos.",
       "o_que_nao_muda": "A chave é o âmbito do conflito — municipal = CETRAN; União/UF/DF = CONTRAN.",
       "calibracao_corpus": "ok",
-      "eficacia_pos_aula": ["E1", "E2", "E3"]
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ]
     },
     "tags": [
       "snt",
@@ -75,7 +79,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Gabarito C: DETRAN-PB × DETRAN-PE na divisa → CONTRAN (art. 12, XIV). A isca é mandar ao CETRAN porque a consulta veio de Campina Grande.",
-            "destaques": ["Gabarito C", "CONTRAN", "DETRAN"]
+            "destaques": [
+              "Gabarito C",
+              "CONTRAN",
+              "DETRAN"
+            ]
           }
         },
         {
@@ -84,13 +92,33 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "contran", "label": "CONTRAN — dirime UF × UF", "nivel": 0 },
-              { "id": "pb", "label": "DETRAN-PB", "nivel": 1 },
-              { "id": "pe", "label": "DETRAN-PE", "nivel": 1 }
+              {
+                "id": "contran",
+                "label": "CONTRAN — dirime UF × UF",
+                "nivel": 0
+              },
+              {
+                "id": "pb",
+                "label": "DETRAN-PB",
+                "nivel": 1
+              },
+              {
+                "id": "pe",
+                "label": "DETRAN-PE",
+                "nivel": 1
+              }
             ],
             "arestas": [
-              { "de": "contran", "para": "pb", "rotulo": "circunscrição" },
-              { "de": "contran", "para": "pe", "rotulo": "circunscrição" }
+              {
+                "de": "contran",
+                "para": "pb",
+                "rotulo": "circunscrição"
+              },
+              {
+                "de": "contran",
+                "para": "pe",
+                "rotulo": "circunscrição"
+              }
             ]
           }
         },
@@ -100,7 +128,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Estado × Estado = CONTRAN.\nMunicípio × Município = CETRAN.",
-            "destaques": ["CONTRAN", "CETRAN"]
+            "destaques": [
+              "CONTRAN",
+              "CETRAN"
+            ]
           }
         }
       ],
@@ -139,8 +170,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito C.\n\nA — CETRAN-PB porque a consulta veio de Campina Grande: conselho estadual dirime só conflitos municipais.\nB — CETRAN-PE por ser UF vizinha: mesmo erro de esfera.\nD — DETRAN-PB fixa sozinho: não há competência unilateral entre UFs.\n\nPegadinha: DETRAN-PB × DETRAN-PE = CONTRAN federal.",
-            "destaques": ["Gabarito C", "CONTRAN", "DETRAN"]
+            "texto": "Gabarito C. A — CETRAN-PB porque a consulta veio de Campina Grande: conselho estadual dirime só conflitos municipais.\nB — CETRAN-PE por ser UF vizinha: mesmo erro de esfera.\nD — DETRAN-PB fixa sozinho: não há competência unilateral entre UFs. Pegadinha: DETRAN-PB × DETRAN-PE = CONTRAN federal.",
+            "destaques": [
+              "Gabarito C",
+              "CONTRAN",
+              "DETRAN"
+            ]
           }
         },
         {
@@ -149,7 +184,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "CONTRAN: colegiado normativo federal — dirime conflitos de circunscrição na esfera União/UF/DF.\n\nCETRAN: conselho estadual — dirime conflitos entre municípios.\n\nDETRAN: órgão executivo estadual — opera trânsito, não dirime circunscrição entre UFs.",
-            "destaques": ["CONTRAN", "CETRAN", "DETRAN"]
+            "destaques": [
+              "CONTRAN",
+              "CETRAN",
+              "DETRAN"
+            ]
           }
         },
         {
@@ -159,15 +198,43 @@
           "tipo": "diagrama_competencia",
           "conteudo": {
             "nos": [
-              { "id": "contran", "label": "CONTRAN — dirime UF × UF", "nivel": 0 },
-              { "id": "cetran", "label": "CETRAN — só municipal", "nivel": 1 },
-              { "id": "pb", "label": "DETRAN-PB", "nivel": 2 },
-              { "id": "pe", "label": "DETRAN-PE", "nivel": 2 }
+              {
+                "id": "contran",
+                "label": "CONTRAN — dirime UF × UF",
+                "nivel": 0
+              },
+              {
+                "id": "cetran",
+                "label": "CETRAN — só municipal",
+                "nivel": 1
+              },
+              {
+                "id": "pb",
+                "label": "DETRAN-PB",
+                "nivel": 2
+              },
+              {
+                "id": "pe",
+                "label": "DETRAN-PE",
+                "nivel": 2
+              }
             ],
             "arestas": [
-              { "de": "contran", "para": "pb", "rotulo": "dirime circunscrição" },
-              { "de": "contran", "para": "pe", "rotulo": "dirime circunscrição" },
-              { "de": "cetran", "para": "pb", "rotulo": "não alcança inter-UF" }
+              {
+                "de": "contran",
+                "para": "pb",
+                "rotulo": "dirime circunscrição"
+              },
+              {
+                "de": "contran",
+                "para": "pe",
+                "rotulo": "dirime circunscrição"
+              },
+              {
+                "de": "cetran",
+                "para": "pb",
+                "rotulo": "não alcança inter-UF"
+              }
             ]
           }
         },
@@ -190,7 +257,11 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim — PB × PE na BR-230" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim — PB × PE na BR-230"
+              }
             ]
           }
         },
@@ -200,7 +271,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
               [
                 "Consulta de Campina Grande → CETRAN-PB decide",
@@ -219,7 +293,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — competencia_snt",
@@ -242,7 +319,10 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Elemento", "Conclusão"],
+            "colunas": [
+              "Elemento",
+              "Conclusão"
+            ],
             "linhas": [
               [
                 "BR-230 na divisa PB/PE",
@@ -269,7 +349,10 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Função no SNT"],
+            "colunas": [
+              "Dispositivo",
+              "Função no SNT"
+            ],
             "linhas": [
               [
                 "Art. 12, XIV — CONTRAN",
@@ -329,7 +412,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Estado × Estado → CONTRAN · Município × Município → CETRAN.\n\nNear: STTP Campina Grande × STTP Queimadas — CETRAN-PB, não CONTRAN.\n\nFar: recurso de multa municipal — JARI/CETRAN, não circunscrição.\n\nO que NÃO muda: o âmbito do conflito define o órgão dirimidor.\n\nCadeia: vizinho = art. 14, IX (CETRAN dirime municipal).",
-            "destaques": ["CONTRAN", "CETRAN", "âmbito"]
+            "destaques": [
+              "CONTRAN",
+              "CETRAN",
+              "âmbito"
+            ]
           }
         }
       ],

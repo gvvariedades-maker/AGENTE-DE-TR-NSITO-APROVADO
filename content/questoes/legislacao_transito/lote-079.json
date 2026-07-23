@@ -50,7 +50,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Descarga noturna sem luzes de posição.\n\nGabarito A: art. 40, VII.",
-            "destaques": ["posição", "Gabarito A", "descarga"]
+            "destaques": [
+              "posição",
+              "Gabarito A",
+              "descarga"
+            ]
           }
         },
         {
@@ -58,10 +62,19 @@
           "titulo": "Placa × posição parado",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Crença ✗", "Lei ✓"],
+            "colunas": [
+              "Crença ✗",
+              "Lei ✓"
+            ],
             "linhas": [
-              ["Placa substitui posição parado", "VI é em circulação — VII exige posição"],
-              ["Via iluminada dispensa", "Inciso VII não prevê exceção"]
+              [
+                "Placa substitui posição parado",
+                "VI é em circulação — VII exige posição"
+              ],
+              [
+                "Via iluminada dispensa",
+                "Inciso VII não prevê exceção"
+              ]
             ]
           }
         },
@@ -71,11 +84,23 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Parado à noite para descarga?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Luzes de posição acesas", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Parado à noite para descarga?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Luzes de posição acesas",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "r1", "rotulo": "Sim" }
+              {
+                "de": "p1",
+                "para": "r1",
+                "rotulo": "Sim"
+              }
             ]
           }
         },
@@ -85,7 +110,10 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "PARADO À NOITE = POSIÇÃO.\nEmbarque/carga/descarga.\n≠ placa (VI).",
-            "destaques": ["POSIÇÃO", "à noite"]
+            "destaques": [
+              "POSIÇÃO",
+              "à noite"
+            ]
           }
         }
       ],
@@ -124,7 +152,7 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A.\n\nB — citou luz de placa: inciso VI vale em circulação, não substitui posição parado.\nC — exigiu pisca-alerta: inciso V é outra hipótese — aqui é luz de posição no inciso VII.\nD — dispensou por via iluminada: lei não cria essa exceção para embarque/carga.\n\nNesta aula você fixa quando acender posição parado à noite.",
+            "texto": "Gabarito A. B — citou luz de placa: inciso VI vale em circulação, não substitui posição parado.\nC — exigiu pisca-alerta: inciso V é outra hipótese — aqui é luz de posição no inciso VII.\nD — dispensou por via iluminada: lei não cria essa exceção para embarque/carga. Nesta aula você fixa quando acender posição parado à noite.",
             "destaques": [
               "Gabarito A",
               "luzes de posição",
@@ -320,17 +348,20 @@
               {
                 "inicio": 33,
                 "fim": 40,
-                "motivo": "glossario — parada noturna do caso"
+                "motivo": "glossario — parada noturna do caso",
+                "texto_grifado": "à noite"
               },
               {
                 "inicio": 45,
                 "fim": 61,
-                "motivo": "contraste — dispositivo omitido pelo condutor"
+                "motivo": "contraste — dispositivo omitido pelo condutor",
+                "texto_grifado": "luzes de posição"
               },
               {
                 "inicio": 157,
                 "fim": 180,
-                "motivo": "caso — descarga de mercadorias na via urbana"
+                "motivo": "caso — descarga de mercadorias na via urbana",
+                "texto_grifado": "descarga de mercadorias"
               }
             ]
           }
@@ -341,7 +372,7 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "PARADO À NOITE = POSIÇÃO (inc. VII).\nEmbarque · carga · descarga.\nCirculando à noite = placa (inc. VI).\nPane = pisca-alerta (inc. V).\n\nNear-transfer: ônibus parado à noite em ponto para embarque deve manter posição acesa — farol alto não substitui.",
+            "texto": "PARADO À NOITE = POSIÇÃO (inc. VII).\nEmbarque · carga · descarga.\nCirculando à noite = placa (inc. VI).\nPane = pisca-alerta (inc. V).\n\nNear-transfer: ônibus parado à noite em ponto para embarque deve manter posição acesa — farol alto não substitui.\nNão muda: PARADO À NOITE = POSIÇÃO · embarque/carga/descarga · ≠ placa (VI).",
             "destaques": [
               "PARADO À NOITE",
               "POSIÇÃO",
@@ -355,6 +386,22 @@
           "rotulo": "CTB art. 40",
           "path": "conteúdo/legislação federal/lei-9503-ctb.html"
         }
+      ]
+    },
+    "meta": {
+      "near_transfer": "ônibus parado à noite em ponto para embarque deve manter posição acesa — farol alto não substitui.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "PARADO À NOITE = POSIÇÃO · embarque/carga/descarga · ≠ placa (VI).",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok",
+      "eixos_mecanismo": [
+        "numero_vizinho",
+        "regra_excecao",
+        "termo_unico"
       ]
     }
   }

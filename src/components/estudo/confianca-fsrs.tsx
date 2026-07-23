@@ -1,19 +1,28 @@
 "use client";
 
 import type { FsrsGrade } from "@/lib/srs";
+import {
+  resolveRatingPolicy,
+  type ConfidenceLevel,
+} from "@/lib/srs/rating-policy";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+export type ConfiancaSelecao = {
+  confidence: ConfidenceLevel;
+  fsrsRating: FsrsGrade;
+};
+
 interface ConfiancaFsrsProps {
   acertou: boolean;
-  onSelecionar: (grade: FsrsGrade) => void;
+  onSelecionar: (selecao: ConfiancaSelecao) => void;
   disabled?: boolean;
   className?: string;
 }
 
 /**
- * Coleta nota FSRS (1–4) pós-resposta para agendamento mais preciso.
- * Acerto: Good (3) vs Easy (4). Erro: Again (1) vs Hard (2, “quase acertei”).
+ * Coleta confiança subjetiva (1|3) e deriva nota FSRS via rating-policy.
+ * Erro → sempre Again (1). Acerto na dúvida → Hard (2). Acerto certo → Easy (4).
  */
 export function ConfiancaFsrs({
   acertou,
@@ -21,6 +30,10 @@ export function ConfiancaFsrs({
   disabled,
   className,
 }: ConfiancaFsrsProps) {
+  const escolher = (confidence: ConfidenceLevel) => {
+    onSelecionar(resolveRatingPolicy({ acertou, confidence }));
+  };
+
   return (
     <div
       className={cn(
@@ -41,7 +54,7 @@ export function ConfiancaFsrs({
               variant="outline"
               size="sm"
               disabled={disabled}
-              onClick={() => onSelecionar(3)}
+              onClick={() => escolher(1)}
             >
               Acertei na dúvida
             </Button>
@@ -49,7 +62,7 @@ export function ConfiancaFsrs({
               type="button"
               size="sm"
               disabled={disabled}
-              onClick={() => onSelecionar(4)}
+              onClick={() => escolher(3)}
             >
               Acertei com certeza
             </Button>
@@ -61,7 +74,7 @@ export function ConfiancaFsrs({
               variant="outline"
               size="sm"
               disabled={disabled}
-              onClick={() => onSelecionar(1)}
+              onClick={() => escolher(1)}
             >
               Não sabia
             </Button>
@@ -69,7 +82,7 @@ export function ConfiancaFsrs({
               type="button"
               size="sm"
               disabled={disabled}
-              onClick={() => onSelecionar(2)}
+              onClick={() => escolher(3)}
             >
               Quase acertei
             </Button>

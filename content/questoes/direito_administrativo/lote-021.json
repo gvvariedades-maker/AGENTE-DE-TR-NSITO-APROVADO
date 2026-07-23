@@ -44,7 +44,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Três formas de prestar serviço público — direta, concessão ou permissão — sempre com licitação (art. 175, caput).",
-            "destaques": ["diretamente", "concessão", "licitação"]
+            "destaques": [
+              "diretamente",
+              "concessão",
+              "licitação"
+            ]
           }
         },
         {
@@ -52,7 +56,10 @@
           "titulo": "Só direta × três formas",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha ✗", "Art. 175 ✓"],
+            "colunas": [
+              "Pegadinha ✗",
+              "Art. 175 ✓"
+            ],
             "linhas": [
               [
                 "Só prestação direta — vedada delegação",
@@ -67,13 +74,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "Parecer veda concessão e permissão?", "tipo": "pergunta" },
-              { "id": "p2", "label": "Permissão dispensa licitação?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Gabarito B — três formas com licitação", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "Parecer veda concessão e permissão?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "Permissão dispensa licitação?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Gabarito B — três formas com licitação",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -85,7 +112,12 @@
             "fonte": "CF/88, art. 175, caput",
             "texto": "Incumbe ao Poder Público, na forma da lei, diretamente ou sob regime de concessão ou permissão, sempre através de licitação, a prestação de serviços públicos.",
             "trechos_grifados": [
-              { "inicio": 43, "fim": 94, "motivo": "três formas de prestação" }
+              {
+                "inicio": 43,
+                "fim": 94,
+                "motivo": "três formas de prestação",
+                "texto_grifado": "diretamente ou sob regime de concessão ou permissão"
+              }
             ]
           }
         },
@@ -95,7 +127,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "175 caput = DIRETA | CONCESSÃO | PERMISSÃO | SEMPRE licitação.",
-            "destaques": ["DIRETA", "CONCESSÃO", "licitação"]
+            "destaques": [
+              "DIRETA",
+              "CONCESSÃO",
+              "licitação"
+            ]
           }
         }
       ],
@@ -117,7 +153,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Não existe só prestação direta nem permissão sem licitação — o caput lista três formas",
-        "eixos_legais": ["CF_art_175", "CF_art_175_pu_I"],
+        "eixos_legais": [
+          "CF_art_175",
+          "CF_art_175_pu_I"
+        ],
         "isca_por_alternativa": {
           "A": "reduz prestação à Administração direta, vedando delegação",
           "C": "equipara concessão e permissão e dispensa licitação",
@@ -131,8 +170,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito B.\n\nA — só direta: caput admite concessão e permissão.\nC — idênticas e sem licitação: modalidades distintas e licitação obrigatória.\nD — autorização do chefe: não substitui licitação constitucional.\n\nPegadinha: três formas, uma regra — sempre licitação.",
-            "destaques": ["Gabarito B", "concessão", "permissão"]
+            "texto": "Gabarito B. A — só direta: caput admite concessão e permissão.\nC — idênticas e sem licitação: modalidades distintas e licitação obrigatória.\nD — autorização do chefe: não substitui licitação constitucional. Pegadinha: três formas, uma regra — sempre licitação.",
+            "destaques": [
+              "Gabarito B",
+              "concessão",
+              "permissão"
+            ]
           }
         },
         {
@@ -141,7 +184,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Prestação direta: o próprio Poder Público executa o serviço — ex.: STTP como autarquia municipal.\nConcessão: delegação mediante contrato especial, com fiscalização e possível caducidade (§ único, I).\nPermissão: delegação precária e revogável — também exige licitação (caput do art. 175).",
-            "destaques": ["Prestação direta", "Concessão", "Permissão"]
+            "destaques": [
+              "Prestação direta",
+              "Concessão",
+              "Permissão"
+            ]
           }
         },
         {
@@ -168,8 +215,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim" },
-              { "de": "p2", "para": "r1", "rotulo": "Não" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não"
+              }
             ]
           }
         },
@@ -179,7 +234,10 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Forma", "Regra"],
+            "titulo_colunas": [
+              "Forma",
+              "Regra"
+            ],
             "linhas": [
               {
                 "faixa": "Diretamente",
@@ -209,7 +267,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que a banca insinua ✗", "Art. 175 ✓"],
+            "colunas": [
+              "O que a banca insinua ✗",
+              "Art. 175 ✓"
+            ],
             "linhas": [
               [
                 "Só prestação direta — vedada delegação",
@@ -228,7 +289,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "A — regra_excecao",
@@ -251,12 +315,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do caso Campina Grande", "Consequência"],
+            "colunas": [
+              "Fato do caso Campina Grande",
+              "Consequência"
+            ],
             "linhas": [
-              ["Parecer veda concessão e permissão", "Contraria o caput do art. 175"],
-              ["Defesa de permissão sem licitação", "Caput impõe licitação em qualquer forma"],
-              ["STTP como autarquia", "Hipótese de prestação direta"],
-              ["Resultado", "Alternativa B — única defensável"]
+              [
+                "Parecer veda concessão e permissão",
+                "Contraria o caput do art. 175"
+              ],
+              [
+                "Defesa de permissão sem licitação",
+                "Caput impõe licitação em qualquer forma"
+              ],
+              [
+                "STTP como autarquia",
+                "Hipótese de prestação direta"
+              ],
+              [
+                "Resultado",
+                "Alternativa B — única defensável"
+              ]
             ]
           }
         },
@@ -272,17 +351,20 @@
               {
                 "inicio": 43,
                 "fim": 94,
-                "motivo": "mapa — diretamente, concessão ou permissão"
+                "motivo": "mapa — diretamente, concessão ou permissão",
+                "texto_grifado": "diretamente ou sob regime de concessão ou permissão"
               },
               {
                 "inicio": 96,
                 "fim": 123,
-                "motivo": "contraste — sempre através de licitação"
+                "motivo": "contraste — sempre através de licitação",
+                "texto_grifado": "sempre através de licitação"
               },
               {
                 "inicio": 127,
                 "fim": 157,
-                "motivo": "fluxo — prestação de serviços públicos"
+                "motivo": "fluxo — prestação de serviços públicos",
+                "texto_grifado": "prestação de serviços públicos"
               }
             ]
           }
@@ -293,12 +375,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Modalidade", "Traço"],
+            "colunas": [
+              "Modalidade",
+              "Traço"
+            ],
             "linhas": [
-              ["Concessão", "Contrato especial — caducidade e fiscalização"],
-              ["Permissão", "Delegação precária — não é cópia da concessão"],
-              ["Alternativa C", "Erra ao equiparar e dispensar licitação"],
-              ["Caput", "Ambas exigem licitação"]
+              [
+                "Concessão",
+                "Contrato especial — caducidade e fiscalização"
+              ],
+              [
+                "Permissão",
+                "Delegação precária — não é cópia da concessão"
+              ],
+              [
+                "Alternativa C",
+                "Erra ao equiparar e dispensar licitação"
+              ],
+              [
+                "Caput",
+                "Ambas exigem licitação"
+              ]
             ]
           }
         },
@@ -314,7 +411,8 @@
               {
                 "inicio": 4,
                 "fim": 59,
-                "motivo": "eixo2 — concessionárias e permissionárias"
+                "motivo": "eixo2 — concessionárias e permissionárias",
+                "texto_grifado": "o regime das empresas concessionárias e permissionárias"
               }
             ]
           }
@@ -325,8 +423,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "175 caput = DIRETA | CONCESSÃO | PERMISSÃO | SEMPRE licitação.\n\nNear-transfer: Município delega coleta de resíduos por permissão sem licitação — válido? Não: caput do art. 175 exige licitação em qualquer forma de prestação.",
-            "destaques": ["DIRETA", "PERMISSÃO", "near-transfer"]
+            "texto": "175 caput = DIRETA | CONCESSÃO | PERMISSÃO | SEMPRE licitação.\n\nNear-transfer: Município delega coleta de resíduos por permissão sem licitação — válido? Não: caput do art. 175 exige licitação em qualquer forma de prestação.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "DIRETA",
+              "PERMISSÃO",
+              "near-transfer"
+            ]
           }
         }
       ],
@@ -342,6 +444,17 @@
       "concessao_permissao",
       "cf_175",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "Município delega coleta de resíduos por permissão sem licitação — válido? Não: caput do art. 175 exige licitação em qualquer forma de prestação.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "175 caput = DIRETA",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]

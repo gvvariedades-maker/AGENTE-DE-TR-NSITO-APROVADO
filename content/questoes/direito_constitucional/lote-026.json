@@ -43,7 +43,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Leilão irregular de veículos apreendidos no pátio da STTP por preço vil. A banca oferece MS individual ou leilão simplificado — lesão ao erário pede ação popular de qualquer cidadão.",
-            "destaques": ["ação popular", "leilão", "patrimônio público"]
+            "destaques": [
+              "ação popular",
+              "leilão",
+              "patrimônio público"
+            ]
           }
         },
         {
@@ -52,13 +56,33 @@
           "tipo": "fluxograma",
           "conteudo": {
             "nos": [
-              { "id": "p1", "label": "A lesão é ao patrimônio público ou moralidade?", "tipo": "pergunta" },
-              { "id": "p2", "label": "É direito líquido e certo individual?", "tipo": "pergunta" },
-              { "id": "r1", "label": "Ação popular — LXXIII", "tipo": "resultado" }
+              {
+                "id": "p1",
+                "label": "A lesão é ao patrimônio público ou moralidade?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "p2",
+                "label": "É direito líquido e certo individual?",
+                "tipo": "pergunta"
+              },
+              {
+                "id": "r1",
+                "label": "Ação popular — LXXIII",
+                "tipo": "resultado"
+              }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — leilão vil" },
-              { "de": "p2", "para": "r1", "rotulo": "Não — interesse difuso" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — leilão vil"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — interesse difuso"
+              }
             ]
           }
         },
@@ -67,10 +91,19 @@
           "titulo": "Armadilha",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Pegadinha", "Correto"],
+            "colunas": [
+              "Pegadinha",
+              "Correto"
+            ],
             "linhas": [
-              ["MS individual pelo leilão irregular", "Ação popular — lesão difusa ao erário"],
-              ["Leilão simplificado sem edital", "Patrimônio público exige tutela coletiva"]
+              [
+                "MS individual pelo leilão irregular",
+                "Ação popular — lesão difusa ao erário"
+              ],
+              [
+                "Leilão simplificado sem edital",
+                "Patrimônio público exige tutela coletiva"
+              ]
             ]
           }
         },
@@ -97,7 +130,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "Erário + moralidade + qualquer cidadão = ação popular. MS individual = líquido e certo. Leilão vil no pátio ≠ competência exclusiva da União.",
-            "destaques": ["ação popular", "erário", "MS"]
+            "destaques": [
+              "ação popular",
+              "erário",
+              "MS"
+            ]
           }
         }
       ],
@@ -119,7 +156,10 @@
       "meta": {
         "padrao_familia": "A_caso_regra_excecao",
         "pegadinha_em_uma_frase": "Leilão irregular de veículos apreendidos pede ação popular — não MS individual nem leilão simplificado sem edital",
-        "eixos_legais": ["CF_art5_LXXIII", "CF_art5_LXIX"],
+        "eixos_legais": [
+          "CF_art5_LXXIII",
+          "CF_art5_LXIX"
+        ],
         "isca_por_alternativa": {
           "B": "mandado de segurança individual pelo leilão por preço vil no pátio municipal",
           "C": "STTP pode fazer leilão simplificado sem edital por urgência de desocupação do pátio",
@@ -133,8 +173,12 @@
           "secao": "diagnostico",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Gabarito A (ação popular pelo leilão irregular da STTP).\n\nB — mandado de segurança individual pelo preço vil no pátio.\nC — leilão simplificado sem edital por urgência de desocupação.\nD — só o órgão máximo de trânsito da União aliena veículos apreendidos.\n\nPromessa: fixar quando leilão lesando o erário pede ação popular e não MS individual.",
-            "destaques": ["ação popular", "leilão", "STTP"]
+            "texto": "Gabarito A (ação popular pelo leilão irregular da STTP). B — mandado de segurança individual pelo preço vil no pátio.\nC — leilão simplificado sem edital por urgência de desocupação.\nD — só o órgão máximo de trânsito da União aliena veículos apreendidos. Promessa: fixar quando leilão lesando o erário pede ação popular e não MS individual.",
+            "destaques": [
+              "ação popular",
+              "leilão",
+              "STTP"
+            ]
           }
         },
         {
@@ -143,7 +187,11 @@
           "tipo": "texto_destaque",
           "conteudo": {
             "texto": "AÇÃO POPULAR (art. 5º, LXXIII): qualquer cidadão pode anular ato lesivo ao patrimônio público, moralidade administrativa, meio ambiente ou patrimônio histórico. PATRIMÔNIO PÚBLICO: bens e receitas do erário — veículos apreendidos alienados por preço vil lesam o Município. MANDADO DE SEGURANÇA (art. 5º, LXIX): tutela direito líquido e certo individual — não substitui lesão difusa ao erário.",
-            "destaques": ["ação popular", "patrimônio público", "MS"]
+            "destaques": [
+              "ação popular",
+              "patrimônio público",
+              "MS"
+            ]
           }
         },
         {
@@ -170,8 +218,16 @@
               }
             ],
             "arestas": [
-              { "de": "p1", "para": "p2", "rotulo": "Sim — leilão sem edital" },
-              { "de": "p2", "para": "r1", "rotulo": "Não — interesse difuso" }
+              {
+                "de": "p1",
+                "para": "p2",
+                "rotulo": "Sim — leilão sem edital"
+              },
+              {
+                "de": "p2",
+                "para": "r1",
+                "rotulo": "Não — interesse difuso"
+              }
             ]
           }
         },
@@ -181,11 +237,23 @@
           "secao": "mapa",
           "tipo": "tabela_gradacao",
           "conteudo": {
-            "titulo_colunas": ["Lesão", "Remédio"],
+            "titulo_colunas": [
+              "Lesão",
+              "Remédio"
+            ],
             "linhas": [
-              { "faixa": "Patrimônio público + moralidade", "classificacao": "Ação popular — LXXIII" },
-              { "faixa": "Direito líquido e certo individual", "classificacao": "Mandado de segurança — LXIX" },
-              { "faixa": "Interesse coletivo com rol restrito", "classificacao": "MS coletivo — LXX" },
+              {
+                "faixa": "Patrimônio público + moralidade",
+                "classificacao": "Ação popular — LXXIII"
+              },
+              {
+                "faixa": "Direito líquido e certo individual",
+                "classificacao": "Mandado de segurança — LXIX"
+              },
+              {
+                "faixa": "Interesse coletivo com rol restrito",
+                "classificacao": "MS coletivo — LXX"
+              },
               {
                 "faixa": "Leilão vil de veículos apreendidos",
                 "classificacao": "Ação popular — A correta",
@@ -200,7 +268,10 @@
           "secao": "contraste",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["O que o candidato pensa ✗", "O que a lei diz ✓"],
+            "colunas": [
+              "O que o candidato pensa ✗",
+              "O que a lei diz ✓"
+            ],
             "linhas": [
               [
                 "Cidadão prejudicado pode pedir MS individual",
@@ -219,7 +290,10 @@
           "secao": "distratores",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Alternativa", "Mecanismo + por quê"],
+            "colunas": [
+              "Alternativa",
+              "Mecanismo + por quê"
+            ],
             "linhas": [
               [
                 "B — termo_unico",
@@ -242,12 +316,27 @@
           "secao": "metodo",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Fato do enunciado", "Conclusão"],
+            "colunas": [
+              "Fato do enunciado",
+              "Conclusão"
+            ],
             "linhas": [
-              ["Arrematação por preço vil a empresa de parente do gestor", "Lesão à moralidade administrativa"],
-              ["Sem edital público nem avaliação prévia", "Lesão ao patrimônio público — LXXIII"],
-              ["Cidadão ajuíza ação contra o leilão", "Ação popular, não MS individual"],
-              ["Resultado", "Alternativa A"]
+              [
+                "Arrematação por preço vil a empresa de parente do gestor",
+                "Lesão à moralidade administrativa"
+              ],
+              [
+                "Sem edital público nem avaliação prévia",
+                "Lesão ao patrimônio público — LXXIII"
+              ],
+              [
+                "Cidadão ajuíza ação contra o leilão",
+                "Ação popular, não MS individual"
+              ],
+              [
+                "Resultado",
+                "Alternativa A"
+              ]
             ]
           }
         },
@@ -257,12 +346,27 @@
           "secao": "conceito",
           "tipo": "comparacao",
           "conteudo": {
-            "colunas": ["Dispositivo", "Papel no caso"],
+            "colunas": [
+              "Dispositivo",
+              "Papel no caso"
+            ],
             "linhas": [
-              ["Art. 5º, LXXIII", "Ação popular — qualquer cidadão, patrimônio público"],
-              ["Art. 5º, LXIX", "MS individual — não tutela lesão difusa ao erário"],
-              ["Art. 5º, LXX", "MS coletivo — rol restrito, não substitui LXXIII"],
-              ["Caso concreto", "Leilão irregular da STTP → ação popular"]
+              [
+                "Art. 5º, LXXIII",
+                "Ação popular — qualquer cidadão, patrimônio público"
+              ],
+              [
+                "Art. 5º, LXIX",
+                "MS individual — não tutela lesão difusa ao erário"
+              ],
+              [
+                "Art. 5º, LXX",
+                "MS coletivo — rol restrito, não substitui LXXIII"
+              ],
+              [
+                "Caso concreto",
+                "Leilão irregular da STTP → ação popular"
+              ]
             ]
           }
         },
@@ -320,8 +424,12 @@
           "secao": "macete",
           "tipo": "texto_destaque",
           "conteudo": {
-            "texto": "Erário + moralidade + QUALQUER cidadão = AÇÃO POPULAR (LXXIII).\nMS individual = direito líquido e certo (LXIX).\nLeilão vil ≠ leilão simplificado sem edital.\n\nNear-transfer: se o cidadão quisesse apenas liberar seu carro quitado no pátio, seria mandado de segurança — mas leilão irregular de dezenas de veículos lesando o Município pede ação popular.",
-            "destaques": ["ação popular", "LXIX", "leilão"]
+            "texto": "Erário + moralidade + QUALQUER cidadão = AÇÃO POPULAR (LXXIII).\nMS individual = direito líquido e certo (LXIX).\nLeilão vil ≠ leilão simplificado sem edital.\n\nNear-transfer: se o cidadão quisesse apenas liberar seu carro quitado no pátio, seria mandado de segurança — mas leilão irregular de dezenas de veículos lesando o Município pede ação popular.\nFar: Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+            "destaques": [
+              "ação popular",
+              "LXIX",
+              "leilão"
+            ]
           }
         }
       ],
@@ -343,6 +451,17 @@
       "moralidade_administrativa",
       "leilao_veiculos",
       "sttp"
-    ]
+    ],
+    "meta": {
+      "near_transfer": "se o cidadão quisesse apenas liberar seu carro quitado no pátio, seria mandado de segurança — mas leilão irregular de dezenas de veículos lesando o Município pede ação popular.",
+      "far_transfer": "Mesmo dispositivo em contexto distinto (outro órgão ou tipo de fato) — o invariante legal não muda.",
+      "o_que_nao_muda": "Erário + moralidade + QUALQUER cidadão = AÇÃO POPULAR (LXXIII). Direito individual líquido e certo = MS (LXIX). Leilão vil ≠ leilão simplificado.",
+      "eficacia_pos_aula": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "calibracao_corpus": "ok"
+    }
   }
 ]
